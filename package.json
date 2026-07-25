@@ -1,0 +1,17 @@
+{
+  "name": "lejardindespensees-website",
+  "version": "1.0.0",
+  "description": "Site officiel de Le Jardin des Pensées (@lejardindespensees)",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y http-server -p 3000 -c-1"
+  },
+  "keywords": [
+    "sagesse",
+    "philosophie",
+    "quotes",
+    "tiktok"
+  ],
+  "author": "Antigravity",
+  "license": "ISC"
+}

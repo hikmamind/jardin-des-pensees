@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ar" data-theme="dark" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>حكمة ونور | Sagesse & Lumière - @lejardindespensees</title>
+  <meta name="description" content="Bienvenue sur le site officiel de @lejardindespensees (حكمة ونور). Découvrez nos citations de sagesse, nos fiches de penseurs stoïciens, nos conseils psychologiques et développement personnel.">
+  <meta name="keywords" content="sagesse, philosophie, citation, paix interieure, stoicisme, marc aurele, seneque, socrate, jung, developpement personnel, psychologie, lejardindespensees">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="حكمة ونور | Sagesse & Lumière">
+  <meta property="og:description" content="Cultivez votre jardin intérieur avec @lejardindespensees. Sagesse des grands penseurs et conseils psychologiques.">
+  <meta property="og:image" content="avatar.jpg">
+  <meta property="og:url" content="https://lejardindespensees.com">
+  <meta property="og:type" content="website">
+
+  <!-- Google AdSense Official Script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1234567890123456" crossorigin="anonymous"></script>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Decorative Glowing Orbs -->
+  <div class="glowing-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Header Sticky Navigation Bar -->
+  <header class="navbar-header">
+    <nav class="navbar" aria-label="Navigation principale">
+      <div class="nav-brand">
+        <svg class="brand-logo" viewBox="0 0 24 24">
+          <path d="M12 2c0 0-4 6-4 9s2 5 4 5 4-2 4-5-4-9-4-9z" fill="none" stroke="currentColor" stroke-width="2"></path>
+        </svg>
+        <span class="brand-name" id="navBrandName">حكمة ونور</span>
+      </div>
+      
+      <!-- Hamburger Menu for Mobile -->
+      <button class="nav-hamburger" id="navHamburger" aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <!-- Navigation Menu -->
+      <div class="nav-menu" id="navMenu">
+        <a href="#homeSection" class="nav-link active" data-i18n="home">Accueil</a>
+        <div class="nav-dropdown-item" id="thinkersDropdownContainer">
+          <a href="thinkers/" class="nav-link" id="thinkersNavLink" data-i18n="thinkers">Penseurs</a>
+          <!-- Dropdown sub-menu -->
+          <div class="nav-sub-menu" id="thinkersSubMenu">
+            <a href="thinkers/?thinker=schopenhauer" class="sub-link" data-thinker="schopenhauer" data-i18n="schopenhauerName">Schopenhauer</a>
+            <a href="thinkers/?thinker=nietzsche" class="sub-link" data-thinker="nietzsche" data-i18n="nietzscheName">Nietzsche</a>
+            <a href="thinkers/?thinker=camus" class="sub-link" data-thinker="camus" data-i18n="camusName">Camus</a>
+            <a href="thinkers/?thinker=marcaurele" class="sub-link" data-thinker="marcaurele" data-i18n="marcaureleName">Marc Aurèle</a>
+            <a href="thinkers/?thinker=seneque" class="sub-link" data-thinker="seneque" data-i18n="senequeName">Sénèque</a>
+            <a href="thinkers/?thinker=kant" class="sub-link" data-thinker="kant" data-i18n="kantName">Kant</a>
+            <a href="thinkers/?thinker=hegel" class="sub-link" data-thinker="hegel" data-i18n="hegelName">Hegel</a>
+            <a href="thinkers/?thinker=all" class="sub-link see-all" data-thinker="all" data-i18n="seeAllThinkers">Tous les penseurs →</a>
+          </div>
+        </div>
+        <div class="nav-dropdown-item" id="articlesDropdownContainer">
+          <a href="articles/" class="nav-link" id="articlesNavLink" data-i18n="articles">Articles</a>
+          <!-- Dropdown sub-menu -->
+          <div class="nav-sub-menu" id="articlesSubMenu">
+            <a href="articles/?category=philosophy" class="sub-link" data-category="philosophy" data-i18n="philosophy">Philosophie</a>
+            <a href="articles/?category=psychology" class="sub-link" data-category="psychology" data-i18n="psychologySub">Psychologie</a>
+            <a href="articles/?category=development" class="sub-link" data-category="development" data-i18n="development">Développement personnel</a>
+            <a href="articles/?category=history" class="sub-link" data-category="history" data-i18n="history">Histoire des idées</a>
+            <a href="articles/?category=all" class="sub-link see-all" data-category="all" data-i18n="seeAll">Voir tous →</a>
+          </div>
+        </div>
+        <a href="#wisdomSection" class="nav-link" data-i18n="quotes">Citations</a>
+        <a href="#advicesSection" class="nav-link" data-i18n="psychology">Psychologie</a>
+        <a href="shop/" class="nav-link" data-i18n="shop">Boutique</a>
+        <a href="#helpSection" class="nav-link" data-i18n="helpTitle">Aide & FAQ</a>
+        <a href="#contactSection" class="nav-link" data-i18n="about">À propos</a>
+        
+        <div class="nav-actions">
+          <!-- Language Selector -->
+          <div class="lang-selector">
+            <button class="lang-btn" id="langBtn" aria-label="Changer de langue">
+              <svg class="globe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px; height:16px;">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              <span id="activeLangName">AR</span>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+              <button class="lang-opt" data-lang="fr" aria-label="Français">Français</button>
+              <button class="lang-opt" data-lang="en" aria-label="English">English</button>
+              <button class="lang-opt" data-lang="ar" aria-label="العربية">العربية</button>
+            </div>
+          </div>
+          
+          <!-- Theme Toggle -->
+          <button id="themeToggleBtn" class="theme-btn-nav" aria-label="Changer de thème">
+            <svg class="sun-icon" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <main>
+
+      <!-- Home / Profile Section -->
+      <section id="homeSection" class="scroll-section">
+        <div class="profile-card" id="profileCard">
+          <div class="avatar-wrapper">
+            <div class="avatar-glow"></div>
+            <img src="avatar.jpg" alt="Photo de profil" class="avatar-image" id="avatarImage">
+          </div>
+          
+          <div class="profile-info">
+            <h1 class="profile-name" id="displayName">حكمة ونور | Sagesse & Lumière</h1>
+            <a href="https://www.tiktok.com/@lejardindespensees" target="_blank" class="profile-handle" id="username">@lejardindespensees</a>
+            
+            <p class="profile-bio" id="bio">
+              Philosophie Stoïcienne, Sagesse des grands penseurs et Conseils Psychologiques. 🏛️🌿✨
+            </p>
+          </div>
+
+          <!-- Statistics Grid -->
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-valueCount stat-value" id="followersCount">0</span>
+              <span class="stat-label" data-i18n="followers">Abonnés</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-valueCount stat-value" id="likesCount">0</span>
+              <span class="stat-label" data-i18n="likes">J'aime</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-valueCount stat-value" id="viewsCount">0</span>
+              <span class="stat-label" data-i18n="views">Vues</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Thinkers Section -->
+      <section id="featuredThinkersSection" class="scroll-section" aria-labelledby="thinkers-heading">
+        <h2 id="thinkers-heading" class="section-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px; height:20px; color:var(--accent-gold);">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+          <span class="serif-title" data-i18n="thinkers">Grands Penseurs</span>
+        </h2>
+        <div class="thinkers-grid" id="thinkersList">
+          <!-- Dynamically populated thinkers -->
+        </div>
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 50px;">
+          <a href="thinkers/" class="btn-primary-outline" data-i18n="seeAllThinkers">Tous les penseurs →</a>
+        </div>
+      </section>
+
+      <!-- Latest Articles Section -->
+      <section id="latestArticlesSection" class="scroll-section" aria-labelledby="latest-articles-heading">
+        <h2 id="latest-articles-heading" class="section-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px; height:20px; color:var(--accent-gold);">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          </svg>
+          <span class="serif-title" data-i18n="articles">Derniers Articles</span>
+        </h2>
+        <div class="articles-grid" id="articlesList">
+          <!-- Dynamically populated articles -->
+        </div>
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 50px;">
+          <a href="articles/" class="btn-primary-outline" data-i18n="seeAll">Voir tous les articles →</a>
+        </div>
+      </section>
+
+
+
+
+
+      <!-- Daily Wisdom Section -->
+      <section id="wisdomSection" class="scroll-section" aria-labelledby="wisdom-heading">
+        <h2 id="wisdom-heading" class="section-title">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2z"></path><path d="M12 6l-6 12h12l-6-12z"></path></svg>
+          <span class="serif-title" data-i18n="wisdomTitle">La Pensée du Jour</span>
+        </h2>
+        <div class="wisdom-card">
+          <div class="wisdom-avatar-container" id="wisdomAvatarContainer" style="display: none;">
+            <img src="" alt="" class="wisdom-avatar" id="wisdomAvatar">
+          </div>
+          <div class="wisdom-text" id="wisdomText">
+            "La paix intérieure commence au moment où vous choisissez de ne pas laisser une autre personne ou un événement contrôler vos émotions."
+          </div>
+          <div class="wisdom-translation" id="wisdomTranslation">
+            "تبدأ الطمأنينة الداخلية عندما تختار ألا تسمح لشخص آخر أو لحدث ما بالتحكم في مشاعرك."
+          </div>
+          <div class="wisdom-author" id="wisdomAuthor">
+            Sagesse Contemporaine
+          </div>
+          <button id="nextWisdomBtn" class="wisdom-btn">
+            <span data-i18n="generateBtn">Générer une pensée</span>
+            <svg viewBox="0 0 24 24"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- Philosophy Personality Quiz Section -->
+      <section id="quizSection" class="scroll-section" aria-labelledby="quiz-heading">
+        <h2 id="quiz-heading" class="section-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+          <span class="serif-title" data-i18n="quizTitle">Test de Personnalité Philosophique</span>
+        </h2>
+        
+        <div class="quiz-card">
+          <!-- Progress Bar -->
+          <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="quizProgressBar"></div>
+          </div>
+          
+          <!-- Screens Container -->
+          <div id="quizScreenContainer">
+            <!-- Dynamically populated quiz screens -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Google AdSense Banner Slot 1 -->
+      <div class="adsense-mock-container">
+        <span class="adsense-label">Publicité Google AdSense</span>
+        <div class="adsense-mock-slot">
+          <ins class="adsbygoogle"
+               style="display:block; text-align:center;"
+               data-ad-layout="in-article"
+               data-ad-format="fluid"
+               data-ad-client="ca-pub-1234567890123456"
+               data-ad-slot="9876543210"></ins>
+          <div class="adsense-mock-title">Sagesse Quotidienne & Livres Stoïciens</div>
+          <div class="adsense-mock-desc">Découvrez notre sélection de guides pratiques pour cultiver la paix intérieure et le calme mental au quotidien.</div>
+        </div>
+      </div>
+
+      <!-- Psychological Advice Section -->
+      <section id="advicesSection" class="scroll-section" aria-labelledby="advices-heading">
+        <h2 id="advices-heading" class="section-title">
+          <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          <span class="serif-title" data-i18n="psychology">Psychologie & Conseils</span>
+        </h2>
+        <div class="advices-container" id="advicesList">
+          <!-- Dynamically populated advices -->
+        </div>
+      </section>
+
+      <!-- Link Hub Section -->
+      <section id="linksSection" class="scroll-section" aria-labelledby="links-heading">
+        <h2 id="links-heading" class="section-title">
+          <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span class="serif-title" data-i18n="resourcesTitle">Ressources & Liens utiles</span>
+        </h2>
+        <div class="links-list" id="linksList">
+          <!-- Dynamically populated links -->
+        </div>
+      </section>
+
+      <!-- Popular Videos Section -->
+      <section id="videosSection" class="scroll-section" aria-labelledby="videos-heading">
+        <h2 id="videos-heading" class="section-title">
+          <svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+          <span class="serif-title" data-i18n="videosTitle">Vidéos Populaires</span>
+        </h2>
+        <div class="video-grid" id="videoGrid">
+          <!-- Dynamically populated videos -->
+        </div>
+      </section>
+
+      <!-- Google AdSense Banner Slot 2 -->
+      <div class="adsense-mock-container">
+        <span class="adsense-label">Publicité Google AdSense</span>
+        <div class="adsense-mock-slot">
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-1234567890123456"
+               data-ad-slot="1122334455"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <div class="adsense-mock-title">Soutenez le Jardin des Pensées</div>
+          <div class="adsense-mock-desc">Vos visites régulières et votre soutien nous aident à maintenir le projet actif. Merci pour votre fidélité !</div>
+        </div>
+      </div>
+
+      <!-- Help & Donations Section -->
+      <section id="helpSection" class="scroll-section" aria-labelledby="help-heading">
+        <h2 id="help-heading" class="section-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+          <span class="serif-title" data-i18n="helpTitle">Aide & FAQ</span>
+        </h2>
+        <p class="section-subtitle" style="text-align: center; color: var(--text-secondary); max-width: 600px; margin: -10px auto 30px;" data-i18n="helpSubtitle">
+          Trouvez des réponses rapides à vos questions sur les guides et notre boutique.
+        </p>
+
+        <!-- FAQ Accordion Container -->
+        <div class="faq-container" id="faqList">
+          <!-- Dynamically populated questions and answers -->
+        </div>
+
+        <h2 class="section-title" style="margin-top: 50px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+          </svg>
+          <span class="serif-title" data-i18n="donationTitle">Soutenir le Projet</span>
+        </h2>
+        <p class="section-subtitle" style="text-align: center; color: var(--text-secondary); max-width: 600px; margin: -10px auto 30px;" data-i18n="donationSubtitle">
+          Votre générosité nous aide à continuer de partager la sagesse et à maintenir ce site vivant.
+        </p>
+
+        <!-- Donation cards grid -->
+        <div class="donation-grid">
+          <!-- PayPal Card -->
+          <div class="donation-card">
+            <div class="donation-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="2" y1="10" x2="22" y2="10"></line>
+                <path d="M12 22v-5"></path>
+                <path d="M17 22H7"></path>
+              </svg>
+            </div>
+            <h3 class="donation-title" data-i18n="donatePaypal">Don via PayPal</h3>
+            <p class="donation-desc" data-i18n="donatePaypalDesc">Soutenez-nous facilement via votre compte PayPal sécurisé en quelques clics.</p>
+            <a href="https://paypal.me/lejardindespensees" target="_blank" class="donation-action-btn" style="text-decoration: none;">
+              <span data-i18n="donateBtn">Faire un don</span>
+            </a>
+          </div>
+
+          <!-- Visa/Card Card -->
+          <div class="donation-card">
+            <div class="donation-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                <line x1="1" y1="10" x2="23" y2="10"></line>
+              </svg>
+            </div>
+            <h3 class="donation-title" data-i18n="donateVisa">Carte Bancaire (Visa)</h3>
+            <p class="donation-desc" data-i18n="donateVisaDesc">Faites un don unique et sécurisé par carte bancaire avec notre simulateur intégré.</p>
+            <button class="donation-action-btn" id="donateVisaBtn">
+              <span data-i18n="donateBtn">Faire un don</span>
+            </button>
+          </div>
+
+          <!-- Cryptocurrencies Card -->
+          <div class="donation-card">
+            <div class="donation-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h3 class="donation-title" data-i18n="donateCrypto">Cryptomonnaies</h3>
+            <p class="donation-desc" style="margin-bottom: 10px;" data-i18n="donateCryptoDesc">Copiez l'une de nos adresses de portefeuille pour envoyer un don en cryptomonnaies.</p>
+            
+            <div class="crypto-list">
+              <div class="crypto-row">
+                <div class="crypto-details">
+                  <span class="crypto-name">Bitcoin (BTC)</span>
+                  <span class="crypto-address" id="btcAddress">bc1qxy2kg3ut5g4...</span>
+                </div>
+                <button class="copy-btn" data-clipboard-target="#btcAddress" data-full-address="bc1qxy2kg3ut5g4h2adg934sjlkwj92jkh293j2k" aria-label="Copier l'adresse Bitcoin">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span class="copy-tooltip">Copié !</span>
+                </button>
+              </div>
+              <div class="crypto-row">
+                <div class="crypto-details">
+                  <span class="crypto-name">Ethereum (ETH)</span>
+                  <span class="crypto-address" id="ethAddress">0x71C7656EC7ab8...</span>
+                </div>
+                <button class="copy-btn" data-clipboard-target="#ethAddress" data-full-address="0x71C7656EC7ab88db09531d6512f8a5a41be08c7e" aria-label="Copier l'adresse Ethereum">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span class="copy-tooltip">Copié !</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form Section -->
+      <section id="contactSection" class="scroll-section" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" class="section-title">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span class="serif-title" data-i18n="contactTitle">Collaborations & Contact</span>
+        </h2>
+        <div class="contact-card">
+          <form id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="contactName" class="form-label" data-i18n="contactName">Votre nom / Entreprise</label>
+              <input type="text" id="contactName" class="form-control" placeholder="" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="contactEmail" class="form-label" data-i18n="contactEmail">Adresse Email</label>
+              <input type="email" id="contactEmail" class="form-control" placeholder="" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="contactMessage" class="form-label" data-i18n="contactMessage">Votre Message</label>
+              <textarea id="contactMessage" class="form-control" placeholder="" required></textarea>
+            </div>
+            
+            <button type="submit" id="submitBtn" class="submit-btn">
+              <span data-i18n="submitBtn">Envoyer le Message</span>
+              <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+            
+            <div id="formFeedback" class="form-feedback" role="alert"></div>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2026 حكمة ونور | Le Jardin des Pensées. <span data-i18n="credits">Conçu avec sagesse, calme et sérénité. ✨🌿</span></p>
+    </footer>
+  </div>
+
+  <!-- Video Lightbox Modal -->
+  <div class="modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Lecteur vidéo">
+    <button class="modal-close" id="modalCloseBtn" aria-label="Fermer le lecteur">&times;</button>
+    <div class="modal-content">
+      <div class="video-wrapper">
+        <iframe id="videoIframe" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Donation Simulation Modal -->
+  <div class="modal" id="donationModal" role="dialog" aria-modal="true" aria-label="Faire un don">
+    <button class="modal-close" id="donationModalCloseBtn" aria-label="Fermer la fenêtre">&times;</button>
+    <div class="modal-content" style="max-width: 500px; padding: 40px; border-radius: 24px; background: rgba(13, 30, 19, 0.98); border: 1px solid var(--card-border); backdrop-filter: blur(30px);">
+      <h2 class="serif-title" id="donationModalTitle" style="font-size: 1.6rem; margin-bottom: 20px; color: var(--text-primary);" data-i18n="donationTitle">Soutenir le Projet</h2>
+      
+      <!-- Interactive credit card preview -->
+      <div class="mock-credit-card">
+        <div class="card-chip"></div>
+        <div class="card-number-display" id="donationCardNumDisplay">•••• •••• •••• ••••</div>
+        <div class="card-holder-display" id="donationCardHolderDisplay">NOM DU TITULAIRE</div>
+      </div>
+      
+      <!-- Fake Donation Form -->
+      <form id="donationForm" style="display: flex; flex-direction: column; gap: 15px;">
+        <!-- Donation Amount Selection -->
+        <div class="donation-amount-grid">
+          <button type="button" class="amount-btn active" data-amount="5">5 €</button>
+          <button type="button" class="amount-btn" data-amount="10">10 €</button>
+          <button type="button" class="amount-btn" data-amount="20">20 €</button>
+          <button type="button" class="amount-btn" data-amount="custom" data-i18n="donateCustom">Autre</button>
+        </div>
+        
+        <!-- Custom amount input (initially hidden) -->
+        <div class="custom-amount-wrapper" id="customAmountWrapper" style="display: none;">
+          <span class="custom-amount-symbol">€</span>
+          <input type="number" id="customAmountInput" class="contact-input custom-amount-input" min="1" placeholder="Ex: 50">
+        </div>
+
+        <div class="form-group">
+          <label style="display: block; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 5px;" data-i18n="checkoutName">Nom du titulaire</label>
+          <input type="text" id="donationHolderInput" required class="contact-input" placeholder="Ex: Jean Dupont" style="width: 100%;">
+        </div>
+        <div class="form-group">
+          <label style="display: block; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 5px;" data-i18n="checkoutCard">Numéro de carte (Factice)</label>
+          <input type="text" id="donationNumberInput" required maxlength="19" class="contact-input" placeholder="1234 5678 1234 5678" style="width: 100%;">
+        </div>
+        
+        <div id="donationFeedback" class="form-feedback" style="display: none; margin-top: 10px;"></div>
+        
+        <button type="submit" class="submit-btn" id="donationSubmitBtn" style="margin-top: 15px; width: 100%;">
+          <span data-i18n="donateSubmit">Envoyer le don</span>
+          <svg viewBox="0 0 24 24" style="width: 16px; height: 16px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Script Modules -->
+  <script type="module" src="app_v11.js"></script>
+</body>
+</html>

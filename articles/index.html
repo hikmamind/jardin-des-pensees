@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ar" data-theme="dark" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Articles & Réflexions - Le Jardin des Pensées</title>
+  <meta name="description" content="Découvrez nos articles et réflexions de sagesse, stoïcisme, psychologie clinique et développement personnel. Cultivez votre esprit.">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  
+  <!-- Google AdSense Official Script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1234567890123456" crossorigin="anonymous"></script>
+
+  <!-- Main Stylesheet (Shared) -->
+  <link rel="stylesheet" href="../style.css">
+  
+  <!-- Page Specific Styles (for Search & Tags) -->
+  <style>
+    .search-filter-container {
+      margin: 40px 0 30px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      backdrop-filter: var(--glass-blur);
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 8px 32px var(--shadow-color);
+    }
+    
+    .search-wrapper {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    
+    .search-input {
+      width: 100%;
+      background: rgba(18, 30, 23, 0.3);
+      border: 1px solid var(--card-border);
+      color: var(--text-primary);
+      border-radius: 30px;
+      padding: 14px 24px 14px 50px;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: all var(--transition-speed);
+    }
+    
+    [data-theme="light"] .search-input {
+      background: rgba(255, 255, 255, 0.8);
+    }
+    
+    .search-input:focus {
+      outline: none;
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 12px var(--accent-gold-glow);
+    }
+    
+    .search-icon {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      color: var(--text-secondary);
+      width: 20px;
+      height: 20px;
+      pointer-events: none;
+    }
+    
+    [dir="rtl"] .search-input {
+      padding: 14px 50px 14px 24px;
+    }
+    
+    [dir="rtl"] .search-icon {
+      left: auto;
+      right: 20px;
+    }
+    
+    /* Category Tag pills */
+    .tags-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    
+    .tag-btn {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--card-border);
+      color: var(--text-secondary);
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition-speed);
+    }
+    
+    .tag-btn:hover, .tag-btn.active {
+      color: var(--text-primary);
+      border-color: var(--accent-green);
+      background: rgba(52, 211, 153, 0.08);
+      box-shadow: 0 0 10px var(--accent-green-glow);
+    }
+    
+    .tag-btn.active {
+      background: var(--accent-green);
+      color: #122319;
+    }
+    
+    /* Dedicated Articles layout */
+    .articles-hero {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .articles-hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+    
+    .articles-hero p {
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .no-results {
+      text-align: center;
+      padding: 40px;
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Decorative Glowing Orbs -->
+  <div class="glowing-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Header Sticky Navigation Bar -->
+  <header class="navbar-header">
+    <nav class="navbar" aria-label="Navigation principale">
+      <a href="../" class="nav-brand">
+        <svg class="brand-logo" viewBox="0 0 24 24">
+          <path d="M12 2c0 0-4 6-4 9s2 5 4 5 4-2 4-5-4-9-4-9z" fill="none" stroke="currentColor" stroke-width="2"></path>
+        </svg>
+        <span class="brand-name" id="navBrandName">حكمة ونور</span>
+      </a>
+      
+      <!-- Hamburger Menu for Mobile -->
+      <button class="nav-hamburger" id="navHamburger" aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <!-- Navigation Menu -->
+      <div class="nav-menu" id="navMenu">
+        <a href="../#homeSection" class="nav-link" data-i18n="home">Accueil</a>
+        <div class="nav-dropdown-item" id="thinkersDropdownContainer">
+          <a href="../thinkers/" class="nav-link" id="thinkersNavLink" data-i18n="thinkers">Penseurs</a>
+          <!-- Dropdown sub-menu -->
+          <div class="nav-sub-menu" id="thinkersSubMenu">
+            <a href="../thinkers/?thinker=schopenhauer" class="sub-link" data-thinker="schopenhauer" data-i18n="schopenhauerName">Schopenhauer</a>
+            <a href="../thinkers/?thinker=nietzsche" class="sub-link" data-thinker="nietzsche" data-i18n="nietzscheName">Nietzsche</a>
+            <a href="../thinkers/?thinker=camus" class="sub-link" data-thinker="camus" data-i18n="camusName">Camus</a>
+            <a href="../thinkers/?thinker=marcaurele" class="sub-link" data-thinker="marcaurele" data-i18n="marcaureleName">Marc Aurèle</a>
+            <a href="../thinkers/?thinker=seneque" class="sub-link" data-thinker="seneque" data-i18n="senequeName">Sénèque</a>
+            <a href="../thinkers/?thinker=kant" class="sub-link" data-thinker="kant" data-i18n="kantName">Kant</a>
+            <a href="../thinkers/?thinker=hegel" class="sub-link" data-thinker="hegel" data-i18n="hegelName">Hegel</a>
+            <a href="../thinkers/?thinker=all" class="sub-link see-all" data-thinker="all" data-i18n="seeAllThinkers">Tous les penseurs →</a>
+          </div>
+        </div>
+        
+        <div class="nav-dropdown-item" id="articlesDropdownContainer">
+          <a href="#" class="nav-link active" id="articlesNavLink" data-i18n="articles">Articles</a>
+          <!-- Dropdown sub-menu -->
+          <div class="nav-sub-menu" id="articlesSubMenu">
+            <a href="?category=philosophy" class="sub-link" data-category="philosophy" data-i18n="philosophy">Philosophie</a>
+            <a href="?category=psychology" class="sub-link" data-category="psychology" data-i18n="psychologySub">Psychologie</a>
+            <a href="?category=development" class="sub-link" data-category="development" data-i18n="development">Développement personnel</a>
+            <a href="?category=history" class="sub-link" data-category="history" data-i18n="history">Histoire des idées</a>
+            <a href="?category=all" class="sub-link see-all" data-category="all" data-i18n="seeAll">Voir tous →</a>
+          </div>
+        </div>
+        
+        <a href="../#wisdomSection" class="nav-link" data-i18n="quotes">Citations</a>
+        <a href="../#advicesSection" class="nav-link" data-i18n="psychology">Psychologie</a>
+        <a href="../shop/" class="nav-link" data-i18n="shop">Boutique</a>
+        <a href="../#helpSection" class="nav-link" data-i18n="helpTitle">Aide & FAQ</a>
+        <a href="../#contactSection" class="nav-link" data-i18n="about">À propos</a>
+        
+        <div class="nav-actions">
+          <!-- Language Selector -->
+          <div class="lang-selector">
+            <button class="lang-btn" id="langBtn" aria-label="Changer de langue">
+              <svg class="globe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px; height:16px;">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              <span id="activeLangName">AR</span>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+              <button class="lang-opt" data-lang="fr" aria-label="Français">Français</button>
+              <button class="lang-opt" data-lang="en" aria-label="English">English</button>
+              <button class="lang-opt" data-lang="ar" aria-label="العربية">العربية</button>
+            </div>
+          </div>
+          
+          <!-- Theme Toggle -->
+          <button id="themeToggleBtn" class="theme-btn-nav" aria-label="Changer de thème">
+            <svg class="sun-icon" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <main style="padding-top: 20px;">
+      
+      <!-- Hero Header for Articles -->
+      <section class="articles-hero">
+        <h1 class="serif-title" data-i18n="articlesTitle">Articles & Réflexions</h1>
+        <p data-i18n="bio">Stoïcisme, philosophie classique, psychologie et croissance personnelle.</p>
+      </section>
+
+      <!-- Google AdSense Banner Slot -->
+      <div class="adsense-mock-container">
+        <span class="adsense-label">Publicité Google AdSense</span>
+        <div class="adsense-mock-slot">
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-1234567890123456"
+               data-ad-slot="3344556677"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <div class="adsense-mock-title">Découvrez nos formations et lectures stoïciennes</div>
+          <div class="adsense-mock-desc">Sagesse des anciens appliquée à la vie active. Devenez résilient, fort et serein.</div>
+        </div>
+      </div>
+
+      <!-- Search and Filter Container -->
+      <section class="search-filter-container">
+        <div class="search-wrapper">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <!-- The placeholder is dynamically translated -->
+          <input type="text" id="searchInput" class="search-input" placeholder="Rechercher un article...">
+        </div>
+        
+        <!-- Filter pills -->
+        <div class="tags-container" id="tagsContainer">
+          <button class="tag-btn active" data-category="all" data-i18n="seeAll">Voir tous</button>
+          <button class="tag-btn" data-category="philosophy" data-i18n="philosophy">Philosophie</button>
+          <button class="tag-btn" data-category="psychology" data-i18n="psychologySub">Psychologie</button>
+          <button class="tag-btn" data-category="development" data-i18n="development">Développement personnel</button>
+          <button class="tag-btn" data-category="history" data-i18n="history">Histoire des idées</button>
+        </div>
+      </section>
+
+      <!-- Articles Grid -->
+      <section aria-labelledby="articles-heading">
+        <div class="articles-grid" id="articlesList" style="margin-top: 40px;">
+          <!-- Dynamically populated articles -->
+        </div>
+        <div id="noResults" class="no-results" style="display: none;">
+          Aucun article ne correspond à votre recherche.
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" style="margin-top: 80px;">
+      <p>&copy; 2026 حكمة ونور | Le Jardin des Pensées. <span data-i18n="credits">Conçu avec sagesse, calme et sérénité. ✨🌿</span></p>
+    </footer>
+  </div>
+
+  <!-- Article Reader Modal -->
+  <div class="modal" id="articleModal" role="dialog" aria-modal="true" aria-label="Lecteur d'article">
+    <button class="modal-close" id="articleModalCloseBtn" aria-label="Fermer le lecteur">&times;</button>
+    <div class="modal-content" style="max-width: 800px; padding: 40px; border-radius: 24px; background: rgba(13, 30, 19, 0.98); border: 1px solid var(--card-border); backdrop-filter: blur(30px);">
+      <span class="article-meta" id="modalArticleMeta" style="font-size: 0.85rem; color: var(--accent-gold); font-weight: 600;"></span>
+      <h2 class="serif-title" id="modalArticleTitle" style="font-size: 1.8rem; margin: 15px 0 20px; color: var(--text-primary);"></h2>
+      
+      <!-- Article Cover Image in Modal -->
+      <div class="modal-article-image-container" id="modalArticleImageContainer" style="display: none; margin-bottom: 20px; border-radius: 16px; overflow: hidden; height: 260px; border: 1px solid var(--card-border);">
+        <img src="" id="modalArticleImage" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+
+      <div class="article-body-text" id="modalArticleBody" style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; max-height: 55vh; overflow-y: auto; padding-right: 15px; margin-bottom: 25px; text-align: justify;">
+        <!-- Full content paragraphs will go here -->
+      </div>
+      <div style="display: flex; gap: 15px; align-items: center; border-top: 1px solid var(--card-border); padding-top: 20px;">
+        <a href="" download target="_blank" id="modalDownloadBtn" class="article-download-link" style="color: var(--accent-gold); text-decoration: none; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 5px;">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          <span data-i18n="downloadWord">Télécharger Document</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script Modules -->
+  <script type="module" src="articles_v11.js"></script>
+</body>
+</html>

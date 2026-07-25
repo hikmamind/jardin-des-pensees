@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>الرواقية: فلسفة القوة والهدوء في مواجهة الحياة</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+    
+    :root {
+      --bg-cream: #FAF6F0;
+      --dark-green: #0D1E13;
+      --accent-gold: #DFB15B;
+      --text-charcoal: #2C3E35;
+    }
+    
+    body {
+      background-color: var(--bg-cream);
+      color: var(--text-charcoal);
+      font-family: 'Amiri', serif;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+    
+    .no-print {
+      background: var(--dark-green);
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      border-bottom: 2px solid var(--accent-gold);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .no-print button {
+      background: var(--accent-gold);
+      color: var(--dark-green);
+      border: none;
+      padding: 10px 25px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      font-family: 'Amiri', serif;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    
+    .no-print button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(223, 177, 91, 0.4);
+    }
+
+    .book-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    
+    .page {
+      background: white;
+      border: 3px double var(--accent-gold);
+      border-radius: 12px;
+      padding: 50px 60px;
+      margin-bottom: 50px;
+      box-shadow: 0 10px 30px rgba(13, 30, 19, 0.05);
+      position: relative;
+      min-height: 850px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+    }
+    
+    .cover-page {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 850px;
+    }
+    
+    .cover-title {
+      font-size: 3.5rem;
+      color: var(--dark-green);
+      margin: 20px 0;
+      font-weight: bold;
+    }
+    
+    .cover-subtitle {
+      font-size: 1.8rem;
+      color: var(--accent-gold);
+      margin-bottom: 40px;
+      border-bottom: 2px solid var(--accent-gold);
+      padding-bottom: 20px;
+      width: 80%;
+    }
+    
+    .cover-desc {
+      font-size: 1.3rem;
+      color: var(--text-charcoal);
+      line-height: 1.8;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+    
+    .cover-footer {
+      font-size: 1.2rem;
+      color: var(--dark-green);
+      font-weight: bold;
+      margin-top: 60px;
+    }
+    
+    .page-content-row {
+      display: flex;
+      gap: 40px;
+      align-items: stretch;
+      margin-top: 20px;
+    }
+    
+    .text-column {
+      flex: 1.6;
+    }
+    
+    .illustration-column {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #FAF7F2;
+      border-radius: 12px;
+      border: 1px solid rgba(223, 177, 91, 0.15);
+      padding: 30px;
+      box-shadow: inset 0 0 15px rgba(13, 30, 19, 0.02);
+    }
+    
+    .paragraph-text {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      text-align: justify;
+      color: var(--text-charcoal);
+      margin-bottom: 20px;
+    }
+    
+    .page-footer {
+      border-top: 1px solid #f0f0f0;
+      padding-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1rem;
+      color: #999;
+      margin-top: 40px;
+    }
+    
+    @media (max-width: 768px) {
+      .page-content-row {
+        flex-direction: column;
+      }
+      .illustration-column {
+        min-height: 200px;
+        order: -1;
+      }
+    }
+    
+    @media print {
+      body {
+        background: white;
+      }
+      .no-print {
+        display: none;
+      }
+      .book-container {
+        margin: 0;
+        max-width: 100%;
+        padding: 0;
+      }
+      .page {
+        border: none;
+        box-shadow: none;
+        margin: 0;
+        padding: 40px;
+        page-break-after: always;
+        min-height: 100vh;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="no-print">
+    <button onclick="window.print()">🖨️ طباعة أو حفظ كملف PDF</button>
+  </div>
+
+  <div class="book-container">
+    
+    <!-- Cover Page -->
+    <div class="page cover-page">
+      <div class="cover-title">الرواقية: فلسفة القوة والهدوء في مواجهة الحياة</div>
+      <div class="cover-subtitle">دليل المرونة النفسية والسلام الداخلي</div>
+      <div style="margin: 30px 0;">
+        
+  <svg viewBox="0 0 100 100" width="100%" height="240">
+    <circle cx="50" cy="50" r="28" fill="none" stroke="var(--dark-green)" stroke-width="3"/>
+    <circle cx="50" cy="50" r="3" fill="var(--accent-gold)"/>
+    <line x1="50" y1="22" x2="50" y2="27" stroke="var(--dark-green)" stroke-width="2"/>
+    <line x1="50" y1="73" x2="50" y2="78" stroke="var(--dark-green)" stroke-width="2"/>
+    <line x1="22" y1="50" x2="27" y2="50" stroke="var(--dark-green)" stroke-width="2"/>
+    <line x1="73" y1="50" x2="78" y2="50" stroke="var(--dark-green)" stroke-width="2"/>
+    <path d="M 50,50 L 56,38 L 50,26 L 44,38 Z" fill="var(--accent-gold)"/>
+    <path d="M 50,50 L 56,62 L 50,74 L 44,62 Z" fill="var(--dark-green)"/>
+  </svg>
+
+      </div>
+      <div class="cover-footer">HIKMA & NOUR | الحكمة • الفلسفة • علم النفس</div>
+    </div>
+    
+    <!-- Reading Page -->
+    <div class="page">
+      <div>
+        <div class="cover-title" style="font-size: 2.2rem; text-align: center;">الرواقية: فلسفة القوة والهدوء في مواجهة الحياة</div>
+        <div class="cover-subtitle" style="font-size: 1.4rem; text-align: center; margin: 10px auto 30px; width: 60%;">دليل المرونة النفسية والسلام الداخلي</div>
+        
+        <div class="page-content-row">
+          <!-- Text side -->
+          <div class="text-column">
+            <p class="paragraph-text">في عالمنا المعاصر الذي يتسم بالتدفق المستمر للمعلومات، والضغوط المهنية المتزايدة، وحالة عدم اليقين العام، أصبحت مسألة البحث عن طمأنينة النفس وسلامها الداخلي أولوية قصوى. في هذا السياق بالذات، تشهد الفلسفة الرواقية (Stoicism) — وهي مدرسة فلسفية أسسها زينون الكيتيومي في أثينا في القرن الثالث قبل الميلاد — نهضة استثنائية متجددة. لقد صُممت هذه الفلسفة في الأصل لتكون بمثابة طب للروح وتدريب عملي للعقل، وليس مجرد نظريات ميتافيزيقية مجردة، وهي تقدم اليوم حلولاً عملية لمواجهة أزمات الحياة بشجاعة ووضوح عقلاني.</p><p class="paragraph-text">وتوضح لنا سير الرموز الكبار للرواقية الرومانية الإمبراطورية — وهم العبد المحرر إبيكتيتوس، والكاتب ومستشار الدولة سينيكا، والإمبراطور الروماني ماركوس أوريليوس — مدى مرونة هذا المذهب وقابليته للتطبيق في شتى الظروف. فسواء كان الأمر يتعلق بتحمل قيود العبودية، أو الإبحار في دهاليز السياسة المضطربة في القصر الإمبراطوري، أو حكم أعتى إمبراطورية في التاريخ وسط انتشار الوباء والحروب، فإن الرواقية تدرس دائماً نفس المنهج: إعادة صياغة علاقتنا الذهنية بالعالم الخارجي وتصحيح أحكامنا.</p><p class="paragraph-text">يرتكز المبدأ الأساسي للرواقية، كما صاغه إبيكتيتوس في كتابه 'الدليل' (Enchiridion)، على التمييز الشهير المعروف بـ 'ثنائية التحكم'. يقسم الرواقيون العالم إلى فئتين لا تداخل بينهما. الأولى: أشياء تقع تحت سيطرتنا الكاملة والمباشرة، وتشمل آرائنا، رغباتنا، أحكامنا العقلية، وقراراتنا الشخصية. والثانية: أشياء خارجة تماماً عن إرادتنا، مثل طبيعة أجسادنا، الثروة، سمعتنا في المجتمع، الماضي، المستقبل، وتصرفات الآخرين. ويرى الرواقيون أن كل المعاناة النفسية والقلق لا ينبعان من الأحداث ذاتها، بل من محاولتنا الواهمة للسيطرة على ما لا نملك سلطاناً عليه.</p><p class="paragraph-text">من خلال تحرير طاقتنا الذهنية من هاجس التحكم في النتائج الخارجية، يمكننا إعادة توجيهها بالكامل نحو خياراتنا الأخلاقية وتطوير فضائلنا الشخصية. لا تعني الرواقية السلبية أو تبلد المشاعر (وهو فهم خاطئ شائع تاريخياً)، بل تعني العمل بنشاط من أجل الصالح العام مع قبول النتائج برضا تام دون سخط. هذا هو جوهر مبدأ 'حب القدر' (Amor Fati): قبول الواقع ليس كعقاب، بل كمادة خام لبناء الفضيلة والقوة النفسية.</p><p class="paragraph-text">ممارسة أخرى رواقية هامة هي التأمل في فكرة الموت والزوال (Memento Mori). تذكير أنفسنا يومياً بأن وقتنا في هذا العالم محدود ومؤقت ليس دعوة للتشاؤم أو الكآبة، بل هو بمثابة مصفاة تمنحنا رؤية واضحة للحياة. إنها تساعدنا على تجاهل الخلافات التافهة، والتخلص من صراعات الأنا غير المجدية، والاستمتاع الحقيقي باللحظة الراهنة. يذكرنا سينيكا في كتابه 'قصر الحياة' بأننا لا نملك عمراً قصيراً، ولكننا نهدر الكثير منه في التوافه والانتظار.</p><p class="paragraph-text">أخيراً، ممارسة 'توقع الأزمات قبل حدوثها' (Premeditatio Malorum) تعني تخيل العقبات أو الإخفاقات المحتملة ذهنياً بشكل هادئ وعقلاني. من خلال تصور أسوأ السيناريوهات الممكنة مسبقاً، يستطيع الإنسان التغلب على صدمة المفاجأة ويستعد بوضع خطط بديلة وعقلانية. عندما تقع الأزمة، لا تفاجئ الفيلسوف الرواقي لأنه قد واجهها وتغلب عليها ذهنياً بالفعل. الرواقية المعاصرة هي حصن عقلي متين، يعلمنا الحفاظ على ثباتنا وكرامتنا وسلامنا الداخلي في جميع ظروف الحياة.</p>
+          </div>
+          
+          <!-- Illustration side -->
+          <div class="illustration-column">
+            
+  <svg viewBox="0 0 100 100" width="100%" height="240">
+    <circle cx="50" cy="50" r="28" fill="none" stroke="var(--dark-green)" stroke-width="3"/>
+    <circle cx="50" cy="50" r="3" fill="var(--accent-gold)"/>
+    <line x1="50" y1="22" x2="50" y2="27" stroke="var(--dark-green)" stroke-width="2"/>
+    <line x1="50" y1="73" x2="50" y2="78" stroke="var(--dark-green)" stroke-width="2"/>
+    <line x1="22" y1="50" x2="27" y2="50" stroke="var(--dark-green)" stroke-width="2"/>
+    <line x1="73" y1="50" x2="78" y2="50" stroke="var(--dark-green)" stroke-width="2"/>
+    <path d="M 50,50 L 56,38 L 50,26 L 44,38 Z" fill="var(--accent-gold)"/>
+    <path d="M 50,50 L 56,62 L 50,74 L 44,62 Z" fill="var(--dark-green)"/>
+  </svg>
+
+          </div>
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>دليل الرواقية الكامل</span>
+        <span>2</span>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

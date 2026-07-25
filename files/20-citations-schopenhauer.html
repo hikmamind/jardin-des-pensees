@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>20 اقتباساً لآرثر شوبنهاور - كتاب كامل</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+    
+    :root {
+      --bg-cream: #FAF6F0;
+      --dark-green: #0D1E13;
+      --accent-gold: #DFB15B;
+      --text-charcoal: #2C3E35;
+    }
+    
+    body {
+      background-color: var(--bg-cream);
+      color: var(--text-charcoal);
+      font-family: 'Amiri', serif;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+    
+    .no-print {
+      background: var(--dark-green);
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      border-bottom: 2px solid var(--accent-gold);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .no-print button {
+      background: var(--accent-gold);
+      color: var(--dark-green);
+      border: none;
+      padding: 10px 25px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      font-family: 'Amiri', serif;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    
+    .no-print button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(223, 177, 91, 0.4);
+    }
+
+    .book-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    
+    .page {
+      background: white;
+      border: 3px double var(--accent-gold);
+      border-radius: 12px;
+      padding: 50px 60px;
+      margin-bottom: 50px;
+      box-shadow: 0 10px 30px rgba(13, 30, 19, 0.05);
+      position: relative;
+      min-height: 850px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+    }
+    
+    .cover-page {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 850px;
+    }
+    
+    .cover-title {
+      font-size: 3.5rem;
+      color: var(--dark-green);
+      margin: 20px 0;
+      font-weight: bold;
+    }
+    
+    .cover-subtitle {
+      font-size: 1.8rem;
+      color: var(--accent-gold);
+      margin-bottom: 40px;
+      border-bottom: 2px solid var(--accent-gold);
+      padding-bottom: 20px;
+      width: 80%;
+    }
+    
+    .cover-desc {
+      font-size: 1.3rem;
+      color: var(--text-charcoal);
+      line-height: 1.8;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+    
+    .cover-footer {
+      font-size: 1.2rem;
+      color: var(--dark-green);
+      font-weight: bold;
+      margin-top: 60px;
+    }
+    
+    .quote-num {
+      font-size: 3rem;
+      font-weight: bold;
+      color: var(--accent-gold);
+      text-align: center;
+      margin-top: 10px;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .quote-text {
+      font-size: 1.8rem;
+      color: var(--dark-green);
+      text-align: center;
+      font-style: italic;
+      line-height: 1.7;
+      margin: 30px 0;
+      position: relative;
+      font-weight: bold;
+    }
+    
+    .page-content-row {
+      display: flex;
+      gap: 40px;
+      align-items: stretch;
+      margin-top: 20px;
+    }
+    
+    .text-column {
+      flex: 1.6;
+    }
+    
+    .illustration-column {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #FAF7F2;
+      border-radius: 12px;
+      border: 1px solid rgba(223, 177, 91, 0.15);
+      padding: 30px;
+      box-shadow: inset 0 0 15px rgba(13, 30, 19, 0.02);
+    }
+    
+    .section-title {
+      font-size: 1.3rem;
+      color: var(--accent-gold);
+      border-bottom: 1px solid rgba(223, 177, 91, 0.3);
+      padding-bottom: 5px;
+      margin-top: 25px;
+      font-weight: bold;
+    }
+    
+    .section-content {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      text-align: justify;
+      color: var(--text-charcoal);
+      margin-top: 8px;
+    }
+    
+    .page-footer {
+      border-top: 1px solid #f0f0f0;
+      padding-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1rem;
+      color: #999;
+      margin-top: 40px;
+    }
+    
+    @media (max-width: 768px) {
+      .page-content-row {
+        flex-direction: column;
+      }
+      .illustration-column {
+        min-height: 200px;
+        order: -1;
+      }
+    }
+    
+    @media print {
+      body {
+        background: white;
+      }
+      .no-print {
+        display: none;
+      }
+      .book-container {
+        margin: 0;
+        max-width: 100%;
+        padding: 0;
+      }
+      .page {
+        border: none;
+        box-shadow: none;
+        margin: 0;
+        padding: 40px;
+        page-break-after: always;
+        min-height: 100vh;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="no-print">
+    <button onclick="window.print()">🖨️ طباعة أو حفظ كملف PDF</button>
+  </div>
+
+  <div class="book-container">
+    
+    <!-- Cover -->
+    <div class="page cover-page">
+      <div class="cover-title">20 اقتباساً لآرثر شوبنهاور</div>
+      <div class="cover-subtitle">مع شرح وتأملات فلسفية عميقة</div>
+      <div class="cover-desc">
+        رحلة في الحكمة، والمعاناة، وفهم النفس من خلال أشهر أفكار شوبنهاور
+      </div>
+      <div class="cover-footer">HIKMA & NOUR | الحكمة • الفلسفة • علم النفس</div>
+    </div>
+    
+    <!-- Intro -->
+    <div class="page">
+      <div class="cover-title" style="font-size: 2.2rem; text-align: center;">مقدمة | رحلة في عمق الفكر الإنساني</div>
+      <div class="quote-text" style="font-size: 1.5rem; margin: 20px 0;">" لسنا معذبين بالأشياء نفسها، بل برؤيتنا للأشياء. "</div>
+      
+      <div class="section-title">لماذا شوبنهاور؟</div>
+      <div class="section-content">
+        آرثر شوبنهاور (1788-1860) هو أحد أكثر الفلاسفة عمقاً وصدقاً في تاريخ الفكر الإنساني. لم يكن فيلسوفاً يبحث عن الشهرة أو المجد، بل كان مفكراً وحيداً، تأمل الحياة بعيون نافذة، ورأى ما لا يريد الكثيرون رؤيته: أن الألم جزء لا يتجزأ من الوجود الإنساني، وأن السعادة ليست سوى لحظات نادرة من غياب هذا الألم.
+      </div>
+      
+      <div class="section-title">عن هذا الكتاب</div>
+      <div class="section-content">
+        هذا الكتاب ليس مجرد مجموعة اقتباسات، بل هو دعوة لرحلة فكرية وروحية في أعماق فلسفة شوبنهاور. اخترنا لكم 20 اقتباساً من أنضج وأعمق ما قاله، وشرحنا كل واحد منها بلغة مبسطة، مع دروس عملية وتأملات تساعدك على فهم هذه الحكمة وتطبيقها في حياتك اليومية.
+      </div>
+      
+      <div class="page-footer">
+        <span>مقدمة الكتاب</span>
+        <span>1</span>
+      </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="page">
+      <div>
+        <div class="quote-num">01</div>
+        <div class="quote-text">" الحياة تتأرجح كالبندول إلى الأمام وإلى الخلف بين الألم، والملل. "</div>
+        
+        <div class="page-content-row">
+          
+          <!-- Text side -->
+          <div class="text-column">
+            <div class="section-title">✒️ الشرح</div>
+            <div class="section-content">يرى شوبنهاور أن حياتنا محكومة بحركتين أساسيتين: الألم عندما تسيطر علينا الرغبة ولا نمتلك ما نريد، والملل عندما نحقق ما نريد فتزول الرغبة ويحل الفراغ. بين هذين القطبين ندور دون أن نجد سكوناً حقيقياً.</div>
+            
+            <div class="section-title">☀️ الدرس العملي</div>
+            <div class="section-content">لا تنتظر حياة خالية من الألم أو الملل. بل تعلم كيف تجعل وعيك أعمق من هذه التأرجحات السطحية.</div>
+            
+            <div class="section-title">❓ سؤال للتأمل</div>
+            <div class="section-content">هل أنت أسير البحث عن شيء جديد، أم أنك تعرف كيف تجد معنى حتى في لحظات الفراغ؟</div>
+          </div>
+          
+          <!-- Illustration side -->
+          <div class="illustration-column">
+            
+    <svg viewBox="0 0 100 120" width="100%" height="240">
+      <rect x="20" y="10" width="60" height="8" rx="2" fill="var(--dark-green)"/>
+      <rect x="20" y="102" width="60" height="8" rx="2" fill="var(--dark-green)"/>
+      <line x1="26" y1="18" x2="26" y2="102" stroke="var(--dark-green)" stroke-width="4"/>
+      <line x1="74" y1="18" x2="74" y2="102" stroke="var(--dark-green)" stroke-width="4"/>
+      <path d="M 32,18 C 32,50 45,55 45,60 C 45,65 32,70 32,102 L 68,102 C 68,70 55,65 55,60 C 55,55 68,50 68,18 Z" fill="none" stroke="var(--dark-green)" stroke-width="3"/>
+      <path d="M 34,22 L 66,22 C 63,42 53,49 50,54 C 47,49 37,42 34,22 Z" fill="var(--accent-gold)"/>
+      <line x1="50" y1="55" x2="50" y2="98" stroke="var(--accent-gold)" stroke-width="2" stroke-dasharray="3,3"/>
+      <path d="M 36,98 C 42,92 58,92 64,98 Z" fill="var(--accent-gold)"/>
+    </svg>
+  
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>20 اقتباساً لآرثر شوبنهاور</span>
+        <span>2</span>
+      </div>
+    </div>
+  
+    <!-- Page 3 -->
+    <div class="page">
+      <div>
+        <div class="quote-num">02</div>
+        <div class="quote-text">" السعادة ليست إلا غياب الألم "</div>
+        
+        <div class="page-content-row">
+          
+          <!-- Text side -->
+          <div class="text-column">
+            <div class="section-title">✒️ الشرح</div>
+            <div class="section-content">يرى شوبنهاور أن حياتنا تتأرجح بين الألم والرغبة. فنحن نعيش في حالة من النقص والاحتياج الدائم، وما نسميه 'سعادة' ليس سوى لحظة قصيرة يتوقف فيها الألم أو تزول الرغبة مؤقتاً. لذلك، لا ينبغي أن نبحث عن السعادة في تحقيق المزيد، بل في تقدير لحظات السكون والرضا التي يشبهها هذا العالم.</div>
+            
+            <div class="section-title">☀️ الدرس العملي</div>
+            <div class="section-content">لا تربط سعادتك بما لا تملك، بل بتقدير ما لا يؤلمك الآن.</div>
+            
+            <div class="section-title">❓ سؤال للتأمل</div>
+            <div class="section-content">هل تربط سعادتك دائماً بتحقيق المزيد من الرغبات، أم بتقدير اللحظات التي لا يؤلمك فيها شيء؟</div>
+          </div>
+          
+          <!-- Illustration side -->
+          <div class="illustration-column">
+            
+    <svg viewBox="0 0 100 100" width="100%" height="240">
+      <path d="M 15,70 L 65,70 C 70,70 75,72 75,75 L 25,75 C 20,75 15,72 15,70 Z" fill="var(--dark-green)"/>
+      <rect x="20" y="60" width="50" height="10" rx="1" fill="var(--accent-gold)"/>
+      <path d="M 20,60 L 20,70 L 15,70 L 15,60 Z" fill="var(--dark-green)"/>
+      <path d="M 25,50 L 70,50 C 74,50 77,52 77,55 L 32,55 C 28,55 25,52 25,50 Z" fill="var(--accent-gold)"/>
+      <rect x="30" y="42" width="42" height="8" rx="1" fill="var(--dark-green)"/>
+      <path d="M 30,42 L 30,50 L 25,50 L 25,42 Z" fill="var(--accent-gold)"/>
+      <ellipse cx="40" cy="30" rx="7" ry="3" fill="var(--dark-green)"/>
+      <rect x="37" y="22" width="6" height="8" fill="var(--dark-green)"/>
+      <path d="M 39,24 C 35,15 25,5 15,2" fill="none" stroke="var(--accent-gold)" stroke-width="2" stroke-linecap="round"/>
+      <path d="M 39,24 C 38,20 35,12 28,8 C 22,5 18,3 15,2 C 18,6 23,12 28,15 C 33,18 36,21 39,24 Z" fill="var(--accent-gold)" opacity="0.8"/>
+    </svg>
+  
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>20 اقتباساً لآرثر شوبنهاور</span>
+        <span>3</span>
+      </div>
+    </div>
+  
+    <!-- Page 4 -->
+    <div class="page">
+      <div>
+        <div class="quote-num">03</div>
+        <div class="quote-text">" لا يمكن للمرء أن يكون نفسه إلا عندما يكون وحيداً؛ فمن لا يحب العزلة لا يحب الحرية. "</div>
+        
+        <div class="page-content-row">
+          
+          <!-- Text side -->
+          <div class="text-column">
+            <div class="section-title">✒️ الشرح</div>
+            <div class="section-content">يرى شوبنهاور أن المجتمع يفرض علينا ارتداء الأقنعة لنتوافق مع الآخرين، مما يجعلنا نفقد أصالتنا. في العزلة فقط، يمكننا التخلص من هذه الأقنعة ونكون حقيقتنا، مما يمنحنا الحرية الفكرية والروحية التامة.</div>
+            
+            <div class="section-title">☀️ الدرس العملي</div>
+            <div class="section-content">لا تخش العزلة، بل احتضنها كفرصة لاكتشاف ذاتك الحقيقية. اجعل من خلوتك مساحة لبناء استقلاليتك الفكرية وقوتك الداخلية، بدلاً من البحث عن التحقق من الآخرين.</div>
+            
+            <div class="section-title">❓ سؤال للتأمل</div>
+            <div class="section-content">عندما تجلس بمفردك تماماً، هل تشعر بالسلام والحرية أم بالقلق والحاجة للهروب؟ وكيف يمكنك تحويل أوقات عزلتك إلى مساحة للنمو؟</div>
+          </div>
+          
+          <!-- Illustration side -->
+          <div class="illustration-column">
+            
+    <svg viewBox="0 0 100 100" width="100%" height="240">
+      <path d="M 80,90 L 75,60 C 73,50 65,40 55,35 C 45,30 25,28 10,28" fill="none" stroke="var(--dark-green)" stroke-width="4"/>
+      <circle cx="15" cy="25" r="10" fill="var(--accent-gold)" opacity="0.6"/>
+      <circle cx="35" cy="20" r="12" fill="var(--dark-green)" opacity="0.7"/>
+      <circle cx="55" cy="28" r="8" fill="var(--accent-gold)" opacity="0.5"/>
+      <line x1="25" y1="80" x2="60" y2="80" stroke="var(--dark-green)" stroke-width="3"/>
+      <line x1="30" y1="80" x2="30" y2="90" stroke="var(--dark-green)" stroke-width="2"/>
+      <line x1="55" y1="80" x2="55" y2="90" stroke="var(--dark-green)" stroke-width="2"/>
+      <circle cx="42" cy="62" r="4" fill="var(--accent-gold)"/>
+      <path d="M 42,66 C 42,72 38,75 40,80 L 46,80 L 44,72 Z" fill="var(--dark-green)"/>
+    </svg>
+  
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>20 اقتباساً لآرثر شوبنهاور</span>
+        <span>4</span>
+      </div>
+    </div>
+  
+    <!-- Page 5 -->
+    <div class="page">
+      <div>
+        <div class="quote-num">04</div>
+        <div class="quote-text">" كل صبي ذكي هو عبقري محتمل، وكل رجل غبي هو طفل لم يكتمل نموه. "</div>
+        
+        <div class="page-content-row">
+          
+          <!-- Text side -->
+          <div class="text-column">
+            <div class="section-title">✒️ الشرح</div>
+            <div class="section-content">يشير شوبنهاور إلى أن الطفولة تتميز بالدهشة والفضول وحب المعرفة المطلق، وهي سمات العبقرية. بينما البالغ الغبي يفقد هذه الدهشة دون اكتساب نضج حقيقي.</div>
+            
+            <div class="section-title">☀️ الدرس العملي</div>
+            <div class="section-content">حافظ على فضول الطفولة ودهشتها كبوابة للإبداع والتعلم المستمر.</div>
+            
+            <div class="section-title">❓ سؤال للتأمل</div>
+            <div class="section-content">متى كانت آخر مرة شعرت فيها بالدهشة الخالصة تجاه أمر بسيط في العالم؟</div>
+          </div>
+          
+          <!-- Illustration side -->
+          <div class="illustration-column">
+            
+    <svg viewBox="0 0 100 100" width="100%" height="240">
+      <circle cx="50" cy="50" r="28" fill="none" stroke="var(--dark-green)" stroke-width="3"/>
+      <circle cx="50" cy="50" r="3" fill="var(--accent-gold)"/>
+      <line x1="50" y1="22" x2="50" y2="27" stroke="var(--dark-green)" stroke-width="2"/>
+      <line x1="50" y1="73" x2="50" y2="78" stroke="var(--dark-green)" stroke-width="2"/>
+      <line x1="22" y1="50" x2="27" y2="50" stroke="var(--dark-green)" stroke-width="2"/>
+      <line x1="73" y1="50" x2="78" y2="50" stroke="var(--dark-green)" stroke-width="2"/>
+      <path d="M 50,50 L 56,38 L 50,26 L 44,38 Z" fill="var(--accent-gold)"/>
+      <path d="M 50,50 L 56,62 L 50,74 L 44,62 Z" fill="var(--dark-green)"/>
+    </svg>
+  
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>20 اقتباساً لآرثر شوبنهاور</span>
+        <span>5</span>
+      </div>
+    </div>
+  
+    <!-- Page 6 -->
+    <div class="page">
+      <div>
+        <div class="quote-num">05</div>
+        <div class="quote-text">" العقل هو مجرد وكيل لإرادة الحياة. "</div>
+        
+        <div class="page-content-row">
+          
+          <!-- Text side -->
+          <div class="text-column">
+            <div class="section-title">✒️ الشرح</div>
+            <div class="section-content">يرى شوبنهاور أن عقولنا لا تقودنا بشكل عقلاني تماماً، بل هي أدوات طيعة تخدم 'إرادة الحياة' (الغرائز والرغبة العميقة في البقاء والتكاثر).</div>
+            
+            <div class="section-title">☀️ الدرس العملي</div>
+            <div class="section-content">كن واعيًا بدوافعك العميقة؛ فكثير من التبريرات العقلانية هي مجرد غطاء لغرائز ورغبات خفية.</div>
+            
+            <div class="section-title">❓ سؤال للتأمل</div>
+            <div class="section-content">هل قراراتك الأخيرة نابعة من تفكير عقلاني حقيقي، أم أنها تبرير لرغبة عاطفية ملحة؟</div>
+          </div>
+          
+          <!-- Illustration side -->
+          <div class="illustration-column">
+            
+    <svg viewBox="0 0 100 100" width="100%" height="240">
+      <path d="M 30,30 C 50,30 65,45 65,65 C 65,72 62,78 58,82 C 72,78 80,65 80,50 C 80,30 65,15 45,15 C 38,15 32,18 28,22 C 29,25 30,27 30,30 Z" fill="var(--accent-gold)"/>
+      <circle cx="20" cy="40" r="1.5" fill="var(--dark-green)"/>
+      <circle cx="75" cy="25" r="1" fill="var(--dark-green)"/>
+      <circle cx="60" cy="15" r="2" fill="var(--accent-gold)"/>
+    </svg>
+  
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>20 اقتباساً لآرثر شوبنهاور</span>
+        <span>6</span>
+      </div>
+    </div>
+  
+    <!-- Page 7 -->
+    <div class="page">
+      <div>
+        <div class="quote-num">06</div>
+        <div class="quote-text">" الثروة مثل ماء البحر؛ كلما شربت منها زاد عطشك، وكذلك الشهرة. "</div>
+        
+        <div class="page-content-row">
+          
+          <!-- Text side -->
+          <div class="text-column">
+            <div class="section-title">✒️ الشرح</div>
+            <div class="section-content">المطامع المادية لا تشبع أبداً لأن تحقيق الرغبة لا ينهي التوق، بل يفتح الباب لرغبات أكبر وأكثر تطلباً.</div>
+            
+            <div class="section-title">☀️ الدرس العملي</div>
+            <div class="section-content">ابحث عن القناعة الداخلية والتحرر من عبودية الاستهلاك اللانهائي.</div>
+            
+            <div class="section-title">❓ سؤال للتأمل</div>
+            <div class="section-content">ما هو الشيء الذي تظن أنك بحاجة إليه لتسعد، وهل سيمنحك حقاً سلاماً دائماً؟</div>
+          </div>
+          
+          <!-- Illustration side -->
+          <div class="illustration-column">
+            
+    <svg viewBox="0 0 100 120" width="100%" height="240">
+      <rect x="20" y="10" width="60" height="8" rx="2" fill="var(--dark-green)"/>
+      <rect x="20" y="102" width="60" height="8" rx="2" fill="var(--dark-green)"/>
+      <line x1="26" y1="18" x2="26" y2="102" stroke="var(--dark-green)" stroke-width="4"/>
+      <line x1="74" y1="18" x2="74" y2="102" stroke="var(--dark-green)" stroke-width="4"/>
+      <path d="M 32,18 C 32,50 45,55 45,60 C 45,65 32,70 32,102 L 68,102 C 68,70 55,65 55,60 C 55,55 68,50 68,18 Z" fill="none" stroke="var(--dark-green)" stroke-width="3"/>
+      <path d="M 34,22 L 66,22 C 63,42 53,49 50,54 C 47,49 37,42 34,22 Z" fill="var(--accent-gold)"/>
+      <line x1="50" y1="55" x2="50" y2="98" stroke="var(--accent-gold)" stroke-width="2" stroke-dasharray="3,3"/>
+      <path d="M 36,98 C 42,92 58,92 64,98 Z" fill="var(--accent-gold)"/>
+    </svg>
+  
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>20 اقتباساً لآرثر شوبنهاور</span>
+        <span>7</span>
+      </div>
+    </div>
+  
+    <!-- Page 8 -->
+    <div class="page">
+      <div>
+        <div class="quote-num">07</div>
+        <div class="quote-text">" كل صديق هو مرآة تعكس جزءاً من هويتنا، وإلا لمللنا منه سريعاً. "</div>
+        
+        <div class="page-content-row">
+          
+          <!-- Text side -->
+          <div class="text-column">
+            <div class="section-title">✒️ الشرح</div>
+            <div class="section-content">نحن ننجذب لمن يشبهوننا أو يعبرون عن جوانب نقدّرها في أنفسنا. العلاقات الإنسانية هي مرآة لوعينا الذاتي.</div>
+            
+            <div class="section-title">☀️ الدرس العملي</div>
+            <div class="section-content">اختر أصدقاءك بعناية، لأنهم يعكسون من أنت ويؤثرون في نموك النفسي.</div>
+            
+            <div class="section-title">❓ سؤال للتأمل</div>
+            <div class="section-content">ما الذي تعكسه علاقاتك الحالية عن صفاتك الداخلية وقيمك؟</div>
+          </div>
+          
+          <!-- Illustration side -->
+          <div class="illustration-column">
+            
+    <svg viewBox="0 0 100 100" width="100%" height="240">
+      <path d="M 15,70 L 65,70 C 70,70 75,72 75,75 L 25,75 C 20,75 15,72 15,70 Z" fill="var(--dark-green)"/>
+      <rect x="20" y="60" width="50" height="10" rx="1" fill="var(--accent-gold)"/>
+      <path d="M 20,60 L 20,70 L 15,70 L 15,60 Z" fill="var(--dark-green)"/>
+      <path d="M 25,50 L 70,50 C 74,50 77,52 77,55 L 32,55 C 28,55 25,52 25,50 Z" fill="var(--accent-gold)"/>
+      <rect x="30" y="42" width="42" height="8" rx="1" fill="var(--dark-green)"/>
+      <path d="M 30,42 L 30,50 L 25,50 L 25,42 Z" fill="var(--accent-gold)"/>
+      <ellipse cx="40" cy="30" rx="7" ry="3" fill="var(--dark-green)"/>
+      <rect x="37" y="22" width="6" height="8" fill="var(--dark-green)"/>
+      <path d="M 39,24 C 35,15 25,5 15,2" fill="none" stroke="var(--accent-gold)" stroke-width="2" stroke-linecap="round"/>
+      <path d="M 39,24 C 38,20 35,12 28,8 C 22,5 18,3 15,2 C 18,6 23,12 28,15 C 33,18 36,21 39,24 Z" fill="var(--accent-gold)" opacity="0.8"/>
+    </svg>
+  
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>20 اقتباساً لآرثر شوبنهاور</span>
+        <span>8</span>
+      </div>
+    </div>
+  
+    <!-- Page 9 -->
+    <div class="page">
+      <div>
+        <div class="quote-num">08</div>
+        <div class="quote-text">" أكبر الأخطاء هو التضحية بالصحة من أجل أي شيء آخر، سواء كان الثروة، أو الشهرة، أو العلم. "</div>
+        
+        <div class="page-content-row">
+          
+          <!-- Text side -->
+          <div class="text-column">
+            <div class="section-title">✒️ الشرح</div>
+            <div class="section-content">بدون صحة الجسد والنفس، لا يمكن الاستمتاع بأي إنجاز أو متعة مادية. الصحة هي القاعدة التي يُبنى عليها الوجود.</div>
+            
+            <div class="section-title">☀️ الدرس العملي</div>
+            <div class="section-content">ضع سلامتك الجسدية والنفسية فوق كل اعتبار ومكسب خارجي مؤقت.</div>
+            
+            <div class="section-title">❓ سؤال للتأمل</div>
+            <div class="section-content">هل تهمل جسدك وراحتك النفسية في سبيل تحقيق أهداف مادية أو مهنية؟</div>
+          </div>
+          
+          <!-- Illustration side -->
+          <div class="illustration-column">
+            
+    <svg viewBox="0 0 100 100" width="100%" height="240">
+      <path d="M 80,90 L 75,60 C 73,50 65,40 55,35 C 45,30 25,28 10,28" fill="none" stroke="var(--dark-green)" stroke-width="4"/>
+      <circle cx="15" cy="25" r="10" fill="var(--accent-gold)" opacity="0.6"/>
+      <circle cx="35" cy="20" r="12" fill="var(--dark-green)" opacity="0.7"/>
+      <circle cx="55" cy="28" r="8" fill="var(--accent-gold)" opacity="0.5"/>
+      <line x1="25" y1="80" x2="60" y2="80" stroke="var(--dark-green)" stroke-width="3"/>
+      <line x1="30" y1="80" x2="30" y2="90" stroke="var(--dark-green)" stroke-width="2"/>
+      <line x1="55" y1="80" x2="55" y2="90" stroke="var(--dark-green)" stroke-width="2"/>
+      <circle cx="42" cy="62" r="4" fill="var(--accent-gold)"/>
+      <path d="M 42,66 C 42,72 38,75 40,80 L 46,80 L 44,72 Z" fill="var(--dark-green)"/>
+    </svg>
+  
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>20 اقتباساً لآرثر شوبنهاور</span>
+        <span>9</span>
+      </div>
+    </div>
+  
+    <!-- Page 10 -->
+    <div class="page">
+      <div>
+        <div class="quote-num">09</div>
+        <div class="quote-text">" الأصدقاء يصفون أنفسهم بأنهم مخلصون، لكن الأعداء هم المخلصون حقاً؛ فمنهم تعرف الحقيقة كاملة. "</div>
+        
+        <div class="page-content-row">
+          
+          <!-- Text side -->
+          <div class="text-column">
+            <div class="section-title">✒️ الشرح</div>
+            <div class="section-content">النقد الصادق والقاسي غالباً ما يأتي من الخصوم الذين لا يجاملون، بينما الأصدقاء قد يخفون الحقيقة تجنباً لإيذاء المشاعر.</div>
+            
+            <div class="section-title">☀️ الدرس العملي</div>
+            <div class="section-content">لا تنزعج من نقد أعدائك، بل استخدمه كمرآة كاشفة لتصحيح عيوبك الحقيقية.</div>
+            
+            <div class="section-title">❓ سؤال للتأمل</div>
+            <div class="section-content">كيف يمكنك تحويل هجمات ونقد الآخرين إلى دروس لبناء قوتك وتطوير ذاتك؟</div>
+          </div>
+          
+          <!-- Illustration side -->
+          <div class="illustration-column">
+            
+    <svg viewBox="0 0 100 100" width="100%" height="240">
+      <circle cx="50" cy="50" r="28" fill="none" stroke="var(--dark-green)" stroke-width="3"/>
+      <circle cx="50" cy="50" r="3" fill="var(--accent-gold)"/>
+      <line x1="50" y1="22" x2="50" y2="27" stroke="var(--dark-green)" stroke-width="2"/>
+      <line x1="50" y1="73" x2="50" y2="78" stroke="var(--dark-green)" stroke-width="2"/>
+      <line x1="22" y1="50" x2="27" y2="50" stroke="var(--dark-green)" stroke-width="2"/>
+      <line x1="73" y1="50" x2="78" y2="50" stroke="var(--dark-green)" stroke-width="2"/>
+      <path d="M 50,50 L 56,38 L 50,26 L 44,38 Z" fill="var(--accent-gold)"/>
+      <path d="M 50,50 L 56,62 L 50,74 L 44,62 Z" fill="var(--dark-green)"/>
+    </svg>
+  
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>20 اقتباساً لآرثر شوبنهاور</span>
+        <span>10</span>
+      </div>
+    </div>
+  
+    <!-- Page 11 -->
+    <div class="page">
+      <div>
+        <div class="quote-num">10</div>
+        <div class="quote-text">" الموت هو المعلم الحقيقي للحياة، وبدونه لما كان هناك فلسفة. "</div>
+        
+        <div class="page-content-row">
+          
+          <!-- Text side -->
+          <div class="text-column">
+            <div class="section-title">✒️ الشرح</div>
+            <div class="section-content">حتمية الموت والوعي بالفناء هما الدافعان الأساسيان وراء بحث الإنسان عن المعنى وفهم طبيعة الوجود.</div>
+            
+            <div class="section-title">☀️ الدرس العملي</div>
+            <div class="section-content">تذكر الموت ليس كدعوة للاستسلام، بل كحافز لعيش كل يوم بوعي وعمق.</div>
+            
+            <div class="section-title">❓ سؤال للتأمل</div>
+            <div class="section-content">كيف تتغير أولوياتك اليومية إذا تذكرت أن وقتك في هذا العالم محدود؟</div>
+          </div>
+          
+          <!-- Illustration side -->
+          <div class="illustration-column">
+            
+    <svg viewBox="0 0 100 100" width="100%" height="240">
+      <path d="M 30,30 C 50,30 65,45 65,65 C 65,72 62,78 58,82 C 72,78 80,65 80,50 C 80,30 65,15 45,15 C 38,15 32,18 28,22 C 29,25 30,27 30,30 Z" fill="var(--accent-gold)"/>
+      <circle cx="20" cy="40" r="1.5" fill="var(--dark-green)"/>
+      <circle cx="75" cy="25" r="1" fill="var(--dark-green)"/>
+      <circle cx="60" cy="15" r="2" fill="var(--accent-gold)"/>
+    </svg>
+  
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>20 اقتباساً لآرثر شوبنهاور</span>
+        <span>11</span>
+      </div>
+    </div>
+  
+    <!-- Page 12 -->
+    <div class="page">
+      <div>
+        <div class="quote-num">11</div>
+        <div class="quote-text">" ما يملكه الإنسان في نفسه هو ما يحدد سعادته، وليس ما يملكه في يديه. "</div>
+        
+        <div class="page-content-row">
+          
+          <!-- Text side -->
+          <div class="text-column">
+            <div class="section-title">✒️ الشرح</div>
+            <div class="section-content">العالم الداخلي (الأفكار، المشاعر، المعرفة) هو المصدر الحقيقي للرضا، بينما الممتلكات الخارجية زائلة ولا تملأ الفراغ الروحي.</div>
+            
+            <div class="section-title">☀️ الدرس العملي</div>
+            <div class="section-content">استثمر في عقلك وروحك؛ فثروتك الحقيقية هي ما تحمله في داخلك.</div>
+            
+            <div class="section-title">❓ سؤال للتأمل</div>
+            <div class="section-content">لو جردت من كل ممتلكاتك المادية اليوم، ما الذي يتبقى منك ويسعدك؟</div>
+          </div>
+          
+          <!-- Illustration side -->
+          <div class="illustration-column">
+            
+    <svg viewBox="0 0 100 120" width="100%" height="240">
+      <rect x="20" y="10" width="60" height="8" rx="2" fill="var(--dark-green)"/>
+      <rect x="20" y="102" width="60" height="8" rx="2" fill="var(--dark-green)"/>
+      <line x1="26" y1="18" x2="26" y2="102" stroke="var(--dark-green)" stroke-width="4"/>
+      <line x1="74" y1="18" x2="74" y2="102" stroke="var(--dark-green)" stroke-width="4"/>
+      <path d="M 32,18 C 32,50 45,55 45,60 C 45,65 32,70 32,102 L 68,102 C 68,70 55,65 55,60 C 55,55 68,50 68,18 Z" fill="none" stroke="var(--dark-green)" stroke-width="3"/>
+      <path d="M 34,22 L 66,22 C 63,42 53,49 50,54 C 47,49 37,42 34,22 Z" fill="var(--accent-gold)"/>
+      <line x1="50" y1="55" x2="50" y2="98" stroke="var(--accent-gold)" stroke-width="2" stroke-dasharray="3,3"/>
+      <path d="M 36,98 C 42,92 58,92 64,98 Z" fill="var(--accent-gold)"/>
+    </svg>
+  
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>20 اقتباساً لآرثر شوبنهاور</span>
+        <span>12</span>
+      </div>
+    </div>
+  
+    <!-- Page 13 -->
+    <div class="page">
+      <div>
+        <div class="quote-num">12</div>
+        <div class="quote-text">" العبقرية تسدد هدفاً لا يمكن لأحد رؤيته، أما الموهبة فتسدد هدفاً لا يمكن لأحد إصابته. "</div>
+        
+        <div class="page-content-row">
+          
+          <!-- Text side -->
+          <div class="text-column">
+            <div class="section-title">✒️ الشرح</div>
+            <div class="section-content">الموهوب يفعل ما يراه الجميع بشكل أفضل، أما العبقري فيأتي بأفكار ورؤى سابقة لعصره تماماً لا يستطيع الآخرون حتى تخيلها.</div>
+            
+            <div class="section-title">☀️ الدرس العملي</div>
+            <div class="section-content">ثق برؤيتك الفريدة ولا تخش السير في طرق غير مألوفة، حتى لو لم يفهمك الآخرون.</div>
+            
+            <div class="section-title">❓ سؤال للتأمل</div>
+            <div class="section-content">هل تمتلك فكرة أو شغفاً تخشى التعبير عنه لمجرد أنه يختلف عن السائد؟</div>
+          </div>
+          
+          <!-- Illustration side -->
+          <div class="illustration-column">
+            
+    <svg viewBox="0 0 100 100" width="100%" height="240">
+      <path d="M 15,70 L 65,70 C 70,70 75,72 75,75 L 25,75 C 20,75 15,72 15,70 Z" fill="var(--dark-green)"/>
+      <rect x="20" y="60" width="50" height="10" rx="1" fill="var(--accent-gold)"/>
+      <path d="M 20,60 L 20,70 L 15,70 L 15,60 Z" fill="var(--dark-green)"/>
+      <path d="M 25,50 L 70,50 C 74,50 77,52 77,55 L 32,55 C 28,55 25,52 25,50 Z" fill="var(--accent-gold)"/>
+      <rect x="30" y="42" width="42" height="8" rx="1" fill="var(--dark-green)"/>
+      <path d="M 30,42 L 30,50 L 25,50 L 25,42 Z" fill="var(--accent-gold)"/>
+      <ellipse cx="40" cy="30" rx="7" ry="3" fill="var(--dark-green)"/>
+      <rect x="37" y="22" width="6" height="8" fill="var(--dark-green)"/>
+      <path d="M 39,24 C 35,15 25,5 15,2" fill="none" stroke="var(--accent-gold)" stroke-width="2" stroke-linecap="round"/>
+      <path d="M 39,24 C 38,20 35,12 28,8 C 22,5 18,3 15,2 C 18,6 23,12 28,15 C 33,18 36,21 39,24 Z" fill="var(--accent-gold)" opacity="0.8"/>
+    </svg>
+  
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>20 اقتباساً لآرثر شوبنهاور</span>
+        <span>13</span>
+      </div>
+    </div>
+  
+    <!-- Page 14 -->
+    <div class="page">
+      <div>
+        <div class="quote-num">13</div>
+        <div class="quote-text">" من الصعب جداً العثور على السعادة في أنفسنا، ومن المستحيل العثور عليها في أي مكان آخر. "</div>
+        
+        <div class="page-content-row">
+          
+          <!-- Text side -->
+          <div class="text-column">
+            <div class="section-title">✒️ الشرح</div>
+            <div class="section-content">البحث عن السعادة في الظروف الخارجية أو الأشخاص الآخرين وهم يؤدي للخيبة. السلام يبدأ وينتهي في العقل.</div>
+            
+            <div class="section-title">☀️ الدرس العملي</div>
+            <div class="section-content">توقف عن البحث في الخارج، وركز على تصالحك مع ذاتك وتهدئة اضطراباتك الداخلية.</div>
+            
+            <div class="section-title">❓ سؤال للتأمل</div>
+            <div class="section-content">أين تبحث عن السعادة في أغلب الأوقات: في إنجازاتك وعلاقاتك، أم في سكينتك الداخلية؟</div>
+          </div>
+          
+          <!-- Illustration side -->
+          <div class="illustration-column">
+            
+    <svg viewBox="0 0 100 100" width="100%" height="240">
+      <path d="M 80,90 L 75,60 C 73,50 65,40 55,35 C 45,30 25,28 10,28" fill="none" stroke="var(--dark-green)" stroke-width="4"/>
+      <circle cx="15" cy="25" r="10" fill="var(--accent-gold)" opacity="0.6"/>
+      <circle cx="35" cy="20" r="12" fill="var(--dark-green)" opacity="0.7"/>
+      <circle cx="55" cy="28" r="8" fill="var(--accent-gold)" opacity="0.5"/>
+      <line x1="25" y1="80" x2="60" y2="80" stroke="var(--dark-green)" stroke-width="3"/>
+      <line x1="30" y1="80" x2="30" y2="90" stroke="var(--dark-green)" stroke-width="2"/>
+      <line x1="55" y1="80" x2="55" y2="90" stroke="var(--dark-green)" stroke-width="2"/>
+      <circle cx="42" cy="62" r="4" fill="var(--accent-gold)"/>
+      <path d="M 42,66 C 42,72 38,75 40,80 L 46,80 L 44,72 Z" fill="var(--dark-green)"/>
+    </svg>
+  
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>20 اقتباساً لآرثر شوبنهاور</span>
+        <span>14</span>
+      </div>
+    </div>
+  
+    <!-- Page 15 -->
+    <div class="page">
+      <div>
+        <div class="quote-num">14</div>
+        <div class="quote-text">" يمكن للكلب أن ينظر إلى الملك، ولكن هذا لا يجعله يفهم معنى الملكية. "</div>
+        
+        <div class="page-content-row">
+          
+          <!-- Text side -->
+          <div class="text-column">
+            <div class="section-title">✒️ الشرح</div>
+            <div class="section-content">كل شخص يدرك العالم على قدر وعيه وفهمه فقط؛ العقول الضيقة لا يمكنها استيعاب الأفكار العميقة مهما بلغت بساطتها.</div>
+            
+            <div class="section-title">☀️ الدرس العملي</div>
+            <div class="section-content">لا تضيع وقتك في شرح أفكارك العميقة لمن لا يملك القدرة الروحية أو العقلية لاستيعابها.</div>
+            
+            <div class="section-title">❓ سؤال للتأمل</div>
+            <div class="section-content">هل ترهق نفسك بمحاولة إقناع أشخاص لا يريدون أو لا يستطيعون فهم وجهة نظرك؟</div>
+          </div>
+          
+          <!-- Illustration side -->
+          <div class="illustration-column">
+            
+    <svg viewBox="0 0 100 100" width="100%" height="240">
+      <circle cx="50" cy="50" r="28" fill="none" stroke="var(--dark-green)" stroke-width="3"/>
+      <circle cx="50" cy="50" r="3" fill="var(--accent-gold)"/>
+      <line x1="50" y1="22" x2="50" y2="27" stroke="var(--dark-green)" stroke-width="2"/>
+      <line x1="50" y1="73" x2="50" y2="78" stroke="var(--dark-green)" stroke-width="2"/>
+      <line x1="22" y1="50" x2="27" y2="50" stroke="var(--dark-green)" stroke-width="2"/>
+      <line x1="73" y1="50" x2="78" y2="50" stroke="var(--dark-green)" stroke-width="2"/>
+      <path d="M 50,50 L 56,38 L 50,26 L 44,38 Z" fill="var(--accent-gold)"/>
+      <path d="M 50,50 L 56,62 L 50,74 L 44,62 Z" fill="var(--dark-green)"/>
+    </svg>
+  
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>20 اقتباساً لآرثر شوبنهاور</span>
+        <span>15</span>
+      </div>
+    </div>
+  
+    <!-- Page 16 -->
+    <div class="page">
+      <div>
+        <div class="quote-num">15</div>
+        <div class="quote-text">" التسامح مع الحماقة هو قناع للجبن والخوف من المواجهة. "</div>
+        
+        <div class="page-content-row">
+          
+          <!-- Text side -->
+          <div class="text-column">
+            <div class="section-title">✒️ الشرح</div>
+            <div class="section-content">السكوت عن الخطأ والتظاهر بالرضا لمجرد تجنب النزاع يضعف الشخصية ويفقد الإنسان احترامه لذاته.</div>
+            
+            <div class="section-title">☀️ الدرس العملي</div>
+            <div class="section-content">تعلم كيف تقول 'لا' وتضع حدوداً واضحة لحماية سلامك النفسي ومبادئك.</div>
+            
+            <div class="section-title">❓ سؤال للتأمل</div>
+            <div class="section-content">في أي المواقف تتنازل عن مبادئك وتصمت تجنباً للمواجهة أو الخلاف؟</div>
+          </div>
+          
+          <!-- Illustration side -->
+          <div class="illustration-column">
+            
+    <svg viewBox="0 0 100 100" width="100%" height="240">
+      <path d="M 30,30 C 50,30 65,45 65,65 C 65,72 62,78 58,82 C 72,78 80,65 80,50 C 80,30 65,15 45,15 C 38,15 32,18 28,22 C 29,25 30,27 30,30 Z" fill="var(--accent-gold)"/>
+      <circle cx="20" cy="40" r="1.5" fill="var(--dark-green)"/>
+      <circle cx="75" cy="25" r="1" fill="var(--dark-green)"/>
+      <circle cx="60" cy="15" r="2" fill="var(--accent-gold)"/>
+    </svg>
+  
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>20 اقتباساً لآرثر شوبنهاور</span>
+        <span>16</span>
+      </div>
+    </div>
+  
+    <!-- Page 17 -->
+    <div class="page">
+      <div>
+        <div class="quote-num">16</div>
+        <div class="quote-text">" المهارة في كتمان الأسرار هي أولى خطوات النضج والنجاح. "</div>
+        
+        <div class="page-content-row">
+          
+          <!-- Text side -->
+          <div class="text-column">
+            <div class="section-title">✒️ الشرح</div>
+            <div class="section-content">البوح بكل شيء يفقدك الغموض ويجعلك مكشوفاً وتسهل السيطرة عليك؛ الاحتفاظ بخصوصيتك يحمي خططك وأهدافك.</div>
+            
+            <div class="section-title">☀️ الدرس العملي</div>
+            <div class="section-content">اجعل أهدافك الكبرى وخصوصياتك طي الكتمان حتى تتحقق على أرض الواقع.</div>
+            
+            <div class="section-title">❓ سؤال للتأمل</div>
+            <div class="section-content">هل تشعر برغبة ملحة دائماً في مشاركة كل تفاصيل حياتك وأهدافك مع الآخرين؟</div>
+          </div>
+          
+          <!-- Illustration side -->
+          <div class="illustration-column">
+            
+    <svg viewBox="0 0 100 120" width="100%" height="240">
+      <rect x="20" y="10" width="60" height="8" rx="2" fill="var(--dark-green)"/>
+      <rect x="20" y="102" width="60" height="8" rx="2" fill="var(--dark-green)"/>
+      <line x1="26" y1="18" x2="26" y2="102" stroke="var(--dark-green)" stroke-width="4"/>
+      <line x1="74" y1="18" x2="74" y2="102" stroke="var(--dark-green)" stroke-width="4"/>
+      <path d="M 32,18 C 32,50 45,55 45,60 C 45,65 32,70 32,102 L 68,102 C 68,70 55,65 55,60 C 55,55 68,50 68,18 Z" fill="none" stroke="var(--dark-green)" stroke-width="3"/>
+      <path d="M 34,22 L 66,22 C 63,42 53,49 50,54 C 47,49 37,42 34,22 Z" fill="var(--accent-gold)"/>
+      <line x1="50" y1="55" x2="50" y2="98" stroke="var(--accent-gold)" stroke-width="2" stroke-dasharray="3,3"/>
+      <path d="M 36,98 C 42,92 58,92 64,98 Z" fill="var(--accent-gold)"/>
+    </svg>
+  
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>20 اقتباساً لآرثر شوبنهاور</span>
+        <span>17</span>
+      </div>
+    </div>
+  
+    <!-- Page 18 -->
+    <div class="page">
+      <div>
+        <div class="quote-num">17</div>
+        <div class="quote-text">" الشرف لا يُكتسب، بل يجب فقط ألا يُفقد. "</div>
+        
+        <div class="page-content-row">
+          
+          <!-- Text side -->
+          <div class="text-column">
+            <div class="section-title">✒️ الشرح</div>
+            <div class="section-content">يولد الإنسان حراً شريفاً بطبيعته، والأفعال السيئة والدناءة هي ما تلطخ هذا الشرف وتفقده احترامه لنفسه.</div>
+            
+            <div class="section-title">☀️ الدرس العملي</div>
+            <div class="section-content">حافظ على نزاهتك وصدقك؛ فاستعادة السمعة المفقودة أصعب بكثير من الحفاظ عليها.</div>
+            
+            <div class="section-title">❓ سؤال للتأمل</div>
+            <div class="section-content">ما هي الحدود الأخلاقية التي تتعهد أمام نفسك بألا تتخطاها أبداً مهما كانت الإغراءات؟</div>
+          </div>
+          
+          <!-- Illustration side -->
+          <div class="illustration-column">
+            
+    <svg viewBox="0 0 100 100" width="100%" height="240">
+      <path d="M 15,70 L 65,70 C 70,70 75,72 75,75 L 25,75 C 20,75 15,72 15,70 Z" fill="var(--dark-green)"/>
+      <rect x="20" y="60" width="50" height="10" rx="1" fill="var(--accent-gold)"/>
+      <path d="M 20,60 L 20,70 L 15,70 L 15,60 Z" fill="var(--dark-green)"/>
+      <path d="M 25,50 L 70,50 C 74,50 77,52 77,55 L 32,55 C 28,55 25,52 25,50 Z" fill="var(--accent-gold)"/>
+      <rect x="30" y="42" width="42" height="8" rx="1" fill="var(--dark-green)"/>
+      <path d="M 30,42 L 30,50 L 25,50 L 25,42 Z" fill="var(--accent-gold)"/>
+      <ellipse cx="40" cy="30" rx="7" ry="3" fill="var(--dark-green)"/>
+      <rect x="37" y="22" width="6" height="8" fill="var(--dark-green)"/>
+      <path d="M 39,24 C 35,15 25,5 15,2" fill="none" stroke="var(--accent-gold)" stroke-width="2" stroke-linecap="round"/>
+      <path d="M 39,24 C 38,20 35,12 28,8 C 22,5 18,3 15,2 C 18,6 23,12 28,15 C 33,18 36,21 39,24 Z" fill="var(--accent-gold)" opacity="0.8"/>
+    </svg>
+  
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>20 اقتباساً لآرثر شوبنهاور</span>
+        <span>18</span>
+      </div>
+    </div>
+  
+    <!-- Page 19 -->
+    <div class="page">
+      <div>
+        <div class="quote-num">18</div>
+        <div class="quote-text">" قراءة الكتب الجيدة كالحوار مع عظماء العصور الماضية. "</div>
+        
+        <div class="page-content-row">
+          
+          <!-- Text side -->
+          <div class="text-column">
+            <div class="section-title">✒️ الشرح</div>
+            <div class="section-content">القراءة تفتح باباً مباشرًا لعقول الفلاسفة والعلماء عبر التاريخ، وتختصر عليك سنوات من التجارب والأخطاء.</div>
+            
+            <div class="section-title">☀️ الدرس العملي</div>
+            <div class="section-content">اجعل القراءة اليومية غذاء لعقلك لتوسيع مداركك والاستفادة من حكمة الأجيال السابقة.</div>
+            
+            <div class="section-title">❓ سؤال للتأمل</div>
+            <div class="section-content">ما هو الكتاب الذي غير نظرتك للحياة بشكل كامل، وكيف أثر في قراراتك؟</div>
+          </div>
+          
+          <!-- Illustration side -->
+          <div class="illustration-column">
+            
+    <svg viewBox="0 0 100 100" width="100%" height="240">
+      <path d="M 80,90 L 75,60 C 73,50 65,40 55,35 C 45,30 25,28 10,28" fill="none" stroke="var(--dark-green)" stroke-width="4"/>
+      <circle cx="15" cy="25" r="10" fill="var(--accent-gold)" opacity="0.6"/>
+      <circle cx="35" cy="20" r="12" fill="var(--dark-green)" opacity="0.7"/>
+      <circle cx="55" cy="28" r="8" fill="var(--accent-gold)" opacity="0.5"/>
+      <line x1="25" y1="80" x2="60" y2="80" stroke="var(--dark-green)" stroke-width="3"/>
+      <line x1="30" y1="80" x2="30" y2="90" stroke="var(--dark-green)" stroke-width="2"/>
+      <line x1="55" y1="80" x2="55" y2="90" stroke="var(--dark-green)" stroke-width="2"/>
+      <circle cx="42" cy="62" r="4" fill="var(--accent-gold)"/>
+      <path d="M 42,66 C 42,72 38,75 40,80 L 46,80 L 44,72 Z" fill="var(--dark-green)"/>
+    </svg>
+  
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>20 اقتباساً لآرثر شوبنهاور</span>
+        <span>19</span>
+      </div>
+    </div>
+  
+    <!-- Page 20 -->
+    <div class="page">
+      <div>
+        <div class="quote-num">19</div>
+        <div class="quote-text">" الفن هو الطريقة الوحيدة للهروب من عبودية الرغبة اللامتناهية. "</div>
+        
+        <div class="page-content-row">
+          
+          <!-- Text side -->
+          <div class="text-column">
+            <div class="section-title">✒️ الشرح</div>
+            <div class="section-content">التأمل الجمالي في اللوحات والموسيقى يفصل عقولنا عن السعي الدائم وراء إرضاء الرغبات، ويمنحنا سكينة روحية مؤقتة.</div>
+            
+            <div class="section-title">☀️ الدرس العملي</div>
+            <div class="section-content">امنح نفسك لحظات للتأمل الفني والموسيقي لتهدئة ضغوط السعي اليومي المستمر.</div>
+            
+            <div class="section-title">❓ سؤال للتأمل</div>
+            <div class="section-content">كيف تؤثر الموسيقى أو الفنون البصرية في حالتك المزاجية وقدرتك على الاسترخاء؟</div>
+          </div>
+          
+          <!-- Illustration side -->
+          <div class="illustration-column">
+            
+    <svg viewBox="0 0 100 100" width="100%" height="240">
+      <circle cx="50" cy="50" r="28" fill="none" stroke="var(--dark-green)" stroke-width="3"/>
+      <circle cx="50" cy="50" r="3" fill="var(--accent-gold)"/>
+      <line x1="50" y1="22" x2="50" y2="27" stroke="var(--dark-green)" stroke-width="2"/>
+      <line x1="50" y1="73" x2="50" y2="78" stroke="var(--dark-green)" stroke-width="2"/>
+      <line x1="22" y1="50" x2="27" y2="50" stroke="var(--dark-green)" stroke-width="2"/>
+      <line x1="73" y1="50" x2="78" y2="50" stroke="var(--dark-green)" stroke-width="2"/>
+      <path d="M 50,50 L 56,38 L 50,26 L 44,38 Z" fill="var(--accent-gold)"/>
+      <path d="M 50,50 L 56,62 L 50,74 L 44,62 Z" fill="var(--dark-green)"/>
+    </svg>
+  
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>20 اقتباساً لآرثر شوبنهاور</span>
+        <span>20</span>
+      </div>
+    </div>
+  
+    <!-- Page 21 -->
+    <div class="page">
+      <div>
+        <div class="quote-num">20</div>
+        <div class="quote-text">" الحكيم لا يبحث عن اللذة، بل يبحث عن الخلو من الألم. "</div>
+        
+        <div class="page-content-row">
+          
+          <!-- Text side -->
+          <div class="text-column">
+            <div class="section-title">✒️ الشرح</div>
+            <div class="section-content">مطاردة اللذات المتطرفة تنتهي غالباً بالندم والألم. الحكمة تكمن في الحفاظ على حياة هادئة ومتوازنة خالية من الاضطرابات.</div>
+            
+            <div class="section-title">☀️ الدرس العملي</div>
+            <div class="section-content">اختر السلام المستقر والهدوء النفسي على الإثارة المؤقتة واللذات العابرة.</div>
+            
+            <div class="section-title">❓ سؤال للتأمل</div>
+            <div class="section-content">هل تبحث في حياتك عن الإثارة والشهوات اللحظية، أم تسعى لبناء سلام دائم ومستقر؟</div>
+          </div>
+          
+          <!-- Illustration side -->
+          <div class="illustration-column">
+            
+    <svg viewBox="0 0 100 100" width="100%" height="240">
+      <path d="M 30,30 C 50,30 65,45 65,65 C 65,72 62,78 58,82 C 72,78 80,65 80,50 C 80,30 65,15 45,15 C 38,15 32,18 28,22 C 29,25 30,27 30,30 Z" fill="var(--accent-gold)"/>
+      <circle cx="20" cy="40" r="1.5" fill="var(--dark-green)"/>
+      <circle cx="75" cy="25" r="1" fill="var(--dark-green)"/>
+      <circle cx="60" cy="15" r="2" fill="var(--accent-gold)"/>
+    </svg>
+  
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>20 اقتباساً لآرثر شوبنهاور</span>
+        <span>21</span>
+      </div>
+    </div>
+  
+  </div>
+
+</body>
+</html>
