@@ -1,6 +1,7 @@
 {
   "name": "lejardindespensees-website",
   "version": "1.0.0",
+  "type": "module",
   "description": "Site officiel de Le Jardin des Pensées (@lejardindespensees)",
   "main": "index.html",
   "scripts": {
