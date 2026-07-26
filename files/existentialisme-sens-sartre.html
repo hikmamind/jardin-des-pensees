@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>الوجودية والبحث عن المعنى: فلسفة جان بول سارتر</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+    
+    :root {
+      --bg-cream: #FAF6F0;
+      --dark-green: #0D1E13;
+      --accent-gold: #DFB15B;
+      --text-charcoal: #2C3E35;
+    }
+    
+    body {
+      background-color: var(--bg-cream);
+      color: var(--text-charcoal);
+      font-family: 'Amiri', serif;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+    
+    .no-print {
+      background: var(--dark-green);
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      border-bottom: 2px solid var(--accent-gold);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .no-print button {
+      background: var(--accent-gold);
+      color: var(--dark-green);
+      border: none;
+      padding: 10px 25px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      font-family: 'Amiri', serif;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    
+    .no-print button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(223, 177, 91, 0.4);
+    }
+
+    .book-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    
+    .page {
+      background: white;
+      border: 3px double var(--accent-gold);
+      border-radius: 12px;
+      padding: 50px 60px;
+      margin-bottom: 50px;
+      box-shadow: 0 10px 30px rgba(13, 30, 19, 0.05);
+      position: relative;
+      min-height: 850px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+    }
+    
+    .cover-page {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 850px;
+    }
+    
+    .cover-title {
+      font-size: 3.5rem;
+      color: var(--dark-green);
+      margin: 20px 0;
+      font-weight: bold;
+    }
+    
+    .cover-subtitle {
+      font-size: 1.8rem;
+      color: var(--accent-gold);
+      margin-bottom: 40px;
+      border-bottom: 2px solid var(--accent-gold);
+      padding-bottom: 20px;
+      width: 80%;
+    }
+    
+    .cover-footer {
+      font-size: 1.2rem;
+      color: var(--dark-green);
+      font-weight: bold;
+      margin-top: 60px;
+    }
+    
+    .page-content-row {
+      display: flex;
+      gap: 40px;
+      align-items: stretch;
+      margin-top: 20px;
+    }
+    
+    .text-column {
+      flex: 1.6;
+    }
+    
+    .illustration-column {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #FAF7F2;
+      border-radius: 12px;
+      border: 1px solid rgba(223, 177, 91, 0.15);
+      padding: 30px;
+      box-shadow: inset 0 0 15px rgba(13, 30, 19, 0.02);
+    }
+    
+    .paragraph-text {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      text-align: justify;
+      color: var(--text-charcoal);
+      margin-bottom: 20px;
+    }
+    
+    .page-footer {
+      border-top: 1px solid #f0f0f0;
+      padding-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1rem;
+      color: #999;
+      margin-top: 40px;
+    }
+    
+    @media (max-width: 768px) {
+      .page-content-row {
+        flex-direction: column;
+      }
+      .illustration-column {
+        min-height: 200px;
+        order: -1;
+      }
+    }
+    
+    @media print {
+      body {
+        background: white;
+      }
+      .no-print {
+        display: none;
+      }
+      .book-container {
+        margin: 0;
+        max-width: 100%;
+        padding: 0;
+      }
+      .page {
+        border: none;
+        box-shadow: none;
+        margin: 0;
+        padding: 40px;
+        page-break-after: always;
+        min-height: 100vh;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="no-print">
+    <button onclick="window.print()">🖨️ طباعة أو حفظ كملف PDF</button>
+  </div>
+
+  <div class="book-container">
+    
+    <!-- Cover Page -->
+    <div class="page cover-page">
+      <div class="cover-title">الوجودية والبحث عن المعنى: فلسفة جان بول سارتر</div>
+      <div class="cover-subtitle">صناعة الهوية والأصالة والحرية الفردية المطلقة</div>
+      <div style="margin: 30px 0;">
+        
+  <svg viewBox="0 0 100 100" width="100%" height="240">
+    <circle cx="50" cy="50" r="35" fill="none" stroke="var(--dark-green)" stroke-width="2"/>
+    <path d="M 50,15 L 54,46 L 85,50 L 54,54 L 50,85 L 46,54 L 15,50 L 46,46 Z" fill="var(--accent-gold)"/>
+    <circle cx="50" cy="50" r="4" fill="var(--dark-green)"/>
+    <path d="M 75,25 L 85,15 M 75,15 L 85,25" stroke="var(--accent-gold)" stroke-width="2"/>
+  </svg>
+
+      </div>
+      <div class="cover-footer">HIKMA & NOUR | الحكمة • الفلسفة • علم النفس</div>
+    </div>
+    
+    <!-- Reading Page -->
+    <div class="page">
+      <div>
+        <div class="cover-title" style="font-size: 2.2rem; text-align: center;">الوجودية والبحث عن المعنى: فلسفة جان بول سارتر</div>
+        <div class="cover-subtitle" style="font-size: 1.4rem; text-align: center; margin: 10px auto 30px; width: 60%;">صناعة الهوية والأصالة والحرية الفردية المطلقة</div>
+        
+        <div class="page-content-row">
+          <!-- Text side -->
+          <div class="text-column">
+            <p class="paragraph-text">تعد الفلسفة الوجودية، كما بلورها المفكر الفرنسي جان بول سارتر، واحدة من أكثر التيارات الفكرية جرأة في تفسير طبيعة الوجود البشري. تنطلق هذه الفلسفة من مقولة سارتر الشهيرة: 'الوجود يسبق الجوهر'. ومعناها البسيط أن الإنسان يوجد أولاً في هذا العالم، يقابل نفسه، يثور ويسلك، ثم بعد ذلك يعرف نفسه ويصنع جوهره وهويته الخاصة من خلال خياراته الحرة الفردية. وعلى عكس الأشياء المصنعة (كالطاولة أو القلم) التي يسبق تصميمها وجوهرها وجودها الفعلي، فإن الإنسان يولد صفحة بيضاء بلا مخطط مسبق ولا غاية محددة سلفاً.</p><p class="paragraph-text">هذه الحرية المطلقة التي يتمتع بها الإنسان ليست ترفاً أو مصدراً للبهجة المستمرة، بل هي عبء ثقيل ومسؤولية كبرى. يصف سارتر هذه الحالة بقوله: 'الإنسان محكوم عليه بأن يكون حراً'. فنحن لم نختر أن نولد، ولكن بمجرد أن نُلقى في الوجود، نصبح مسؤولين مسؤولية تامة عن كل فعل نسلكه وعن الشخص الذي نكونه. لا يوجد مكان للاختباء خلف الأعذار أو إلقاء اللوم على الظروف الاجتماعية، أو الوراثة، أو الآخرين؛ كل فرد هو صانع مصيره الخاص بمفرده.</p>
+          </div>
+          
+          <!-- Illustration side -->
+          <div class="illustration-column">
+            
+  <svg viewBox="0 0 100 100" width="100%" height="240">
+    <circle cx="50" cy="50" r="35" fill="none" stroke="var(--dark-green)" stroke-width="2"/>
+    <path d="M 50,15 L 54,46 L 85,50 L 54,54 L 50,85 L 46,54 L 15,50 L 46,46 Z" fill="var(--accent-gold)"/>
+    <circle cx="50" cy="50" r="4" fill="var(--dark-green)"/>
+    <path d="M 75,25 L 85,15 M 75,15 L 85,25" stroke="var(--accent-gold)" stroke-width="2"/>
+  </svg>
+
+          </div>
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>الفلسفة الوجودية وأصالة الذات</span>
+        <span>1</span>
+      </div>
+    </div>
+
+    <!-- Reading Page 2 -->
+    <div class="page">
+      <div>
+        <div class="cover-title" style="font-size: 2.2rem; text-align: center;">الوجودية والبحث عن المعنى: فلسفة جان بول سارتر</div>
+        <div class="cover-subtitle" style="font-size: 1.4rem; text-align: center; margin: 10px auto 30px; width: 60%;">صناعة الهوية والأصالة والحرية الفردية المطلقة</div>
+        
+        <div class="page-content-row">
+          <!-- Text side -->
+          <div class="text-column">
+            <p class="paragraph-text">وفي مقابل هذه الحرية، يعيش الإنسان صراعاً دائماً مع ما يسمى 'سوء النية' (Mauvaise foi). وهو الخداع الذاتي الذي يمارسه المرء عندما يتظاهر بأنه غير حر، أو أنه مجبر على اتباع نمط حياة معين أو دور اجتماعي يفرضه عليه المجتمع كقناع يخفي وراءه خوفه من اتخاذ القرار وتحمل العواقب. يضرب سارتر مثالاً بنادل المقهى الذي يبالغ في حركاته وإيماءاته ليتقمص تماماً دور النادل ويوهم نفسه بأنه نادل بالضرورة، هرباً من حقيقة أنه إنسان حر يستطيع تغيير واقعه في أي لحظة.</p><p class="paragraph-text">إن مواجهة القلق الوجودي الناتج عن إدراك الحرية تتطلب شجاعة فائقة للعيش بأصالة (Authenticité). الأصالة تعني أن نختار خياراتنا بوعي كامل وتوافق تام مع قيمنا الخاصة، دون الرضوخ الأعمى للقطيع أو توقعات الآخرين. الحياة الوجودية هي رحلة مستمرة لابتكار المعنى في عالم صامت؛ فنحن من يمنح الأشياء قيمتها، ونحن من يقرر ما هو خير وما هو شر بالنسبة لنا. إن الوجودية دعوة ملهمة للعمل والالتزام، ومحفز قوي لتجاوز السلبية وصنع القيمة والحرية من خلال الفعل البشري الواعي.</p>
+          </div>
+          
+          <!-- Illustration side -->
+          <div class="illustration-column">
+            
+  <svg viewBox="0 0 100 100" width="100%" height="240">
+    <circle cx="50" cy="50" r="35" fill="none" stroke="var(--dark-green)" stroke-width="2"/>
+    <path d="M 50,15 L 54,46 L 85,50 L 54,54 L 50,85 L 46,54 L 15,50 L 46,46 Z" fill="var(--accent-gold)"/>
+    <circle cx="50" cy="50" r="4" fill="var(--dark-green)"/>
+    <path d="M 75,25 L 85,15 M 75,15 L 85,25" stroke="var(--accent-gold)" stroke-width="2"/>
+  </svg>
+
+          </div>
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>الفلسفة الوجودية وأصالة الذات</span>
+        <span>2</span>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

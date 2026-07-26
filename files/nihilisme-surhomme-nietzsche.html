@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تجاوز العدمية وإرادة القوة: فلسفة الإنسان المتفوق عند نيتشه</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+    
+    :root {
+      --bg-cream: #FAF6F0;
+      --dark-green: #0D1E13;
+      --accent-gold: #DFB15B;
+      --text-charcoal: #2C3E35;
+    }
+    
+    body {
+      background-color: var(--bg-cream);
+      color: var(--text-charcoal);
+      font-family: 'Amiri', serif;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+    
+    .no-print {
+      background: var(--dark-green);
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      border-bottom: 2px solid var(--accent-gold);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .no-print button {
+      background: var(--accent-gold);
+      color: var(--dark-green);
+      border: none;
+      padding: 10px 25px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      font-family: 'Amiri', serif;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    
+    .no-print button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(223, 177, 91, 0.4);
+    }
+
+    .book-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    
+    .page {
+      background: white;
+      border: 3px double var(--accent-gold);
+      border-radius: 12px;
+      padding: 50px 60px;
+      margin-bottom: 50px;
+      box-shadow: 0 10px 30px rgba(13, 30, 19, 0.05);
+      position: relative;
+      min-height: 850px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+    }
+    
+    .cover-page {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 850px;
+    }
+    
+    .cover-title {
+      font-size: 3.5rem;
+      color: var(--dark-green);
+      margin: 20px 0;
+      font-weight: bold;
+    }
+    
+    .cover-subtitle {
+      font-size: 1.8rem;
+      color: var(--accent-gold);
+      margin-bottom: 40px;
+      border-bottom: 2px solid var(--accent-gold);
+      padding-bottom: 20px;
+      width: 80%;
+    }
+    
+    .cover-footer {
+      font-size: 1.2rem;
+      color: var(--dark-green);
+      font-weight: bold;
+      margin-top: 60px;
+    }
+    
+    .page-content-row {
+      display: flex;
+      gap: 40px;
+      align-items: stretch;
+      margin-top: 20px;
+    }
+    
+    .text-column {
+      flex: 1.6;
+    }
+    
+    .illustration-column {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #FAF7F2;
+      border-radius: 12px;
+      border: 1px solid rgba(223, 177, 91, 0.15);
+      padding: 30px;
+      box-shadow: inset 0 0 15px rgba(13, 30, 19, 0.02);
+    }
+    
+    .paragraph-text {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      text-align: justify;
+      color: var(--text-charcoal);
+      margin-bottom: 20px;
+    }
+    
+    .page-footer {
+      border-top: 1px solid #f0f0f0;
+      padding-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1rem;
+      color: #999;
+      margin-top: 40px;
+    }
+    
+    @media (max-width: 768px) {
+      .page-content-row {
+        flex-direction: column;
+      }
+      .illustration-column {
+        min-height: 200px;
+        order: -1;
+      }
+    }
+    
+    @media print {
+      body {
+        background: white;
+      }
+      .no-print {
+        display: none;
+      }
+      .book-container {
+        margin: 0;
+        max-width: 100%;
+        padding: 0;
+      }
+      .page {
+        border: none;
+        box-shadow: none;
+        margin: 0;
+        padding: 40px;
+        page-break-after: always;
+        min-height: 100vh;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="no-print">
+    <button onclick="window.print()">🖨️ طباعة أو حفظ كملف PDF</button>
+  </div>
+
+  <div class="book-container">
+    
+    <!-- Cover Page -->
+    <div class="page cover-page">
+      <div class="cover-title">تجاوز العدمية وإرادة القوة: فلسفة الإنسان المتفوق عند نيتشه</div>
+      <div class="cover-subtitle">حب القدر وصناعة القيمة وتجاوز الذات الفردية</div>
+      <div style="margin: 30px 0;">
+        
+  <svg viewBox="0 0 100 100" width="100%" height="240">
+    <circle cx="50" cy="50" r="25" fill="var(--accent-gold)"/>
+    <path d="M 50,10 C 50,10 55,25 50,35 C 45,45 55,60 50,75 C 45,60 38,45 42,35 C 46,25 50,10 50,10 Z" fill="var(--dark-green)" opacity="0.8"/>
+    <path d="M 50,20 C 50,20 53,32 50,40 C 47,48 53,60 50,70 C 47,60 41,48 44,40 C 47,32 50,20 50,20 Z" fill="var(--accent-gold)"/>
+  </svg>
+
+      </div>
+      <div class="cover-footer">HIKMA & NOUR | الحكمة • الفلسفة • علم النفس</div>
+    </div>
+    
+    <!-- Reading Page -->
+    <div class="page">
+      <div>
+        <div class="cover-title" style="font-size: 2.2rem; text-align: center;">تجاوز العدمية وإرادة القوة: فلسفة الإنسان المتفوق عند نيتشه</div>
+        <div class="cover-subtitle" style="font-size: 1.4rem; text-align: center; margin: 10px auto 30px; width: 60%;">حب القدر وصناعة القيمة وتجاوز الذات الفردية</div>
+        
+        <div class="page-content-row">
+          <!-- Text side -->
+          <div class="text-column">
+            <p class="paragraph-text">لقد أحدثت فلسفة فريدريك نيتشه زلزالاً فكرياً هائلاً غير معالم الفلسفة الحديثة، خاصة في تحليله لأزمة 'العدمية' (Nihilism) التي توقع أن تجتاح العالم الغربي بعد تراجع القيم الدينية والتقليدية. ويرى نيتشه أن زوال اليقين القديم يترك فراغاً خطيراً قد يؤدي بالإنسان إلى الكآبة والضياع وفقدان المعنى. ولم يكن نيتشه يبشر بالعدمية، بل كان يبحث شجاعاً عن كيفية تجاوزها وإعادة تقييم كل القيم لبناء ثقافة إنسانية جديدة وأقوى.</p><p class="paragraph-text">المفهوم الأساسي الذي يطرحه نيتشه كبديل للعدمية هو 'إرادة القوة' (Will to Power). وإرادة القوة ليست رغبة سياسية في السيطرة على الآخرين أو إيذائهم، بل هي الدوافع الحيوية والغرائزية الكامنة في كل كائن حي للنمو، التجاوز، والابتكار الخلاق. إنها السعي الدائم للتغلب على الذات وتطوير الإمكانات البشرية إلى أقصى حدودها. عندما نبدع فكراً، أو نصنع فناً، أو نتغلب على آلامنا الشخصية ونحولها إلى حكمة، نحن نمارس أرقى صور إرادة القوة والتحكم بالذات.</p>
+          </div>
+          
+          <!-- Illustration side -->
+          <div class="illustration-column">
+            
+  <svg viewBox="0 0 100 100" width="100%" height="240">
+    <circle cx="50" cy="50" r="25" fill="var(--accent-gold)"/>
+    <path d="M 50,10 C 50,10 55,25 50,35 C 45,45 55,60 50,75 C 45,60 38,45 42,35 C 46,25 50,10 50,10 Z" fill="var(--dark-green)" opacity="0.8"/>
+    <path d="M 50,20 C 50,20 53,32 50,40 C 47,48 53,60 50,70 C 47,60 41,48 44,40 C 47,32 50,20 50,20 Z" fill="var(--accent-gold)"/>
+  </svg>
+
+          </div>
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>فلسفة القوة والتحرر لفريدريك نيتشه</span>
+        <span>1</span>
+      </div>
+    </div>
+
+    <!-- Reading Page 2 -->
+    <div class="page">
+      <div>
+        <div class="cover-title" style="font-size: 2.2rem; text-align: center;">تجاوز العدمية وإرادة القوة: فلسفة الإنسان المتفوق عند نيتشه</div>
+        <div class="cover-subtitle" style="font-size: 1.4rem; text-align: center; margin: 10px auto 30px; width: 60%;">حب القدر وصناعة القيمة وتجاوز الذات الفردية</div>
+        
+        <div class="page-content-row">
+          <!-- Text side -->
+          <div class="text-column">
+            <p class="paragraph-text">ومن هذا المفهوم، يشتق نيتشه فكرته الشهيرة حول 'الإنسان المتفوق' (Übermensch). والإنسان المتفوق ليس جنساً بيولوجياً خاصاً، بل هو نموذج روحي للفرد المستقل والمبدع الذي يمتلك شجاعة التخلص من 'أخلاق القطيع' السائدة وصنع قيمه وأهدافه الخاصة بحرية مطلقة. إنه الشخص الذي يتحمل مسؤولية خياراته الأخلاقية كاملة ويصوغ حياته كعمل فني فريد ومميز. الإنسان المتفوق يقابل تحديات الحياة بالقبول والشجاعة الفائقة.</p><p class="paragraph-text">ولتحقيق هذا المستوى من التكامل الروحي، يطرح نيتشه فلسفته الأجمل: 'حب القدر' (Amor Fati). وهي دعوة شجاعة لقبول الحياة بكل ما فيها من آلام، وعقبات، وإخفاقات، ومسرات بشكل كامل ودون شروط أو ندم. لا يجب أن نتمنى تغيير ماضينا، بل يجب أن نحب كل لحظة عشناها لأنها أسهمت في بناء ذاتنا الحالية. حب القدر هو إثبات كامل للحياة ودليل صلب على الصحة النفسية والقوة الروحية للفرد المتجاوز للعدمية.</p>
+          </div>
+          
+          <!-- Illustration side -->
+          <div class="illustration-column">
+            
+  <svg viewBox="0 0 100 100" width="100%" height="240">
+    <circle cx="50" cy="50" r="25" fill="var(--accent-gold)"/>
+    <path d="M 50,10 C 50,10 55,25 50,35 C 45,45 55,60 50,75 C 45,60 38,45 42,35 C 46,25 50,10 50,10 Z" fill="var(--dark-green)" opacity="0.8"/>
+    <path d="M 50,20 C 50,20 53,32 50,40 C 47,48 53,60 50,70 C 47,60 41,48 44,40 C 47,32 50,20 50,20 Z" fill="var(--accent-gold)"/>
+  </svg>
+
+          </div>
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>فلسفة القوة والتحرر لفريدريك نيتشه</span>
+        <span>2</span>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

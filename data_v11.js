@@ -494,6 +494,82 @@ const TIKTOK_DATA = {
       articles: [
         {
           category: "philosophy",
+          file: "existentialisme-sens-sartre.html",
+          image: "thinkers/images/nietzsche.jpg",
+          featured: false,
+          title: "L'Existentialisme et la recherche de sens chez Sartre",
+          readTime: "8 min read",
+          desc: "Un examen de la liberté radicale, de la mauvaise foi et de la responsabilité individuelle selon Jean-Paul Sartre.",
+          body: [
+          "La philosophie existentialiste, telle que développée par Jean-Paul Sartre, soutient que 'l'existence précède l'essence'. Cela signifie que l'être humain existe d'abord, surgit dans le monde, et se définit ensuite par ses choix.",
+          "Cette liberté radicale impose une lourde responsabilité : l'homme est condamné à être libre. Il ne peut rejeter la faute sur les circonstances ou le déterminisme.",
+          "Sartre critique la 'mauvaise foi', ce mensonge à soi-même où l'on prétend ne pas être libre pour fuir l'angoisse du choix et du jugement.",
+          "Vivre de manière authentique exige de choisir ses propres valeurs avec courage et engagement dans un monde sans dessein préétabli."
+        ]
+        },
+        {
+          category: "philosophy",
+          file: "absurde-camus.html",
+          image: "thinkers/images/camus.jpg",
+          featured: false,
+          title: "Albert Camus : Le Mythe de l'Absurde et la Révolte",
+          readTime: "9 min read",
+          desc: "Découvrez comment Camus aborde le silence du monde et propose la révolte créatrice comme réponse à l'absurdité de l'existence.",
+          body: [
+          "Pour Albert Camus, l'absurde naît de la confrontation entre le besoin humain de sens et le silence déraisonnable du monde.",
+          "Le mythe de Sisyphos est l'allégorie de cette condition : pousser éternellement un rocher vers un sommet pour le voir redescendre aussitôt.",
+          "Face à l'absurde, Camus rejette le suicide physique ou philosophique, et prône le maintien d'une révolte lucide, de la liberté et de la passion.",
+          "C'est dans cette acceptation et ce combat quotidien que l'homme trouve sa véritable dignité et sa joie d'exister."
+        ]
+        },
+        {
+          category: "philosophy",
+          file: "nihilisme-surhomme-nietzsche.html",
+          image: "thinkers/images/nietzsche.jpg",
+          featured: false,
+          title: "Nietzsche : Volonté de puissance et Surhomme",
+          readTime: "10 min read",
+          desc: "Explorez le concept d'affirmation de soi, le dépassement du nihilisme et l'idéal de l'Übermensch créateur de valeurs.",
+          body: [
+          "Friedrich Nietzsche analyse le déclin des valeurs traditionnelles comme l'avènement du nihilisme, et cherche un moyen de le surmonter.",
+          "La volonté de puissance représente l'élan vital de dépassement de soi et de création, plutôt qu'une domination matérielle sur autrui.",
+          "Le Surhomme (Übermensch) incarne l'idéal de l'individu affranchi qui crée ses propres valeurs et affirme pleinement sa liberté.",
+          "L'Amor Fati, aimer son destin inconditionnellement, est l'expression ultime de cette force spirituelle et de l'affirmation de la vie."
+        ]
+        },
+        {
+          category: "philosophy",
+          file: "epicurisme-bonheur.html",
+          image: "thinkers/images/epictete.jpg",
+          featured: false,
+          title: "Épicure : La recherche du bonheur rationnel",
+          readTime: "7 min read",
+          desc: "Comprendre l'art de l'ataraxie (la tranquillité de l'âme) à travers la modération des désirs et la libération des peurs.",
+          body: [
+          "L'épicurisme est une philosophie pratique visant à éliminer la souffrance physique et les troubles de l'âme pour atteindre la paix mentale.",
+          "Épicure distingue les désirs naturels et nécessaires des désirs artificiels et illimités qui sont sources d'anxiété.",
+          "L'ataraxie s'atteint en se libérant de la peur de la mort par la raison, car la mort n'est rien pour nous tant que nous existons.",
+          "La simplicité volontaire, l'amitié et la réflexion philosophique sont les véritables piliers d'une vie heureuse et sereine."
+        ]
+        },
+        {
+          category: "psychology",
+          file: "intelligence-emotionnelle-stoicisme.html",
+          image: "stoicisme-modern.jpg",
+          featured: false,
+          title: "Intelligence émotionnelle et Stoïcisme moderne",
+          readTime: "9 min read",
+          desc: "Comment allier la psychologie cognitive moderne et les leçons de Marc Aurèle pour maîtriser son anxiété quotidienne.",
+          body: [
+          "Les thérapies cognitives modernes et le stoïcisme s'accordent sur le fait que ce ne sont pas les faits mais nos représentations qui nous troublent.",
+          "L'intelligence émotionnelle commence par l'observation calme de nos réactions pour suspendre les jugements automatiques.",
+          "La dichotomie du contrôle permet de focaliser notre attention uniquement sur nos actions et d'accepter sereinement le reste.",
+          "S'exercer au quotidien à la réflexion stoïcienne renforce notre résilience émotionnelle face aux aléas de la vie moderne."
+        ]
+        },
+
+        {
+          category: "philosophy",
           file: "stoicisme-force-calme.html",
           image: "stoicisme-roof.jpg",
           featured: true,
@@ -840,6 +916,82 @@ const TIKTOK_DATA = {
       articles: [
         {
           category: "philosophy",
+          file: "existentialisme-sens-sartre.html",
+          image: "thinkers/images/nietzsche.jpg",
+          featured: false,
+          title: "Existentialism and the Search for Meaning in Sartre",
+          readTime: "8 min read",
+          desc: "An examination of radical freedom, bad faith, and individual responsibility according to Jean-Paul Sartre.",
+          body: [
+          "Existentialist philosophy, as developed by Jean-Paul Sartre, argues that 'existence precedes essence'. This means that human beings exist first, encounter themselves in the world, and define themselves only afterward through their free choices.",
+          "This radical freedom imposes a heavy burden: man is condemned to be free. He cannot blame circumstances or determinism for what he chooses to become.",
+          "Sartre critiques 'bad faith' (Mauvaise foi), a self-deception where one pretends not to be free in order to escape the anxiety of choice and judgment.",
+          "Living authentically requires choosing one's own values with courage and commitment in a world without pre-established purpose."
+        ]
+        },
+        {
+          category: "philosophy",
+          file: "absurde-camus.html",
+          image: "thinkers/images/camus.jpg",
+          featured: false,
+          title: "Albert Camus: The Myth of the Absurd and Revolt",
+          readTime: "9 min read",
+          desc: "Discover how Camus addresses the silence of the world and proposes creative revolt as a response to the absurdity of existence.",
+          body: [
+          "For Albert Camus, the absurd arises from the clash between the human desire for meaning and the cold, silent, and unreasonable universe.",
+          "The myth of Sisyphus is the ultimate allegory of this condition: eternally pushing a heavy boulder up a mountain, only to watch it roll back down immediately.",
+          "Faced with the absurd, Camus rejects physical or philosophical suicide, advocating instead for a lucid revolt, freedom, and passion.",
+          "It is in this acceptance and daily struggle that human beings find their true dignity and joy of existence."
+        ]
+        },
+        {
+          category: "philosophy",
+          file: "nihilisme-surhomme-nietzsche.html",
+          image: "thinkers/images/nietzsche.jpg",
+          featured: false,
+          title: "Nietzsche: Will to Power and the Overman",
+          readTime: "10 min read",
+          desc: "Explore the concept of self-affirmation, overcoming nihilism, and the ideal of the Übermensch as a creator of values.",
+          body: [
+          "Friedrich Nietzsche analyzes the decline of traditional values as the rise of nihilism, and searches for a way to overcome it.",
+          "The will to power represents the vital drive of self-overcoming and creativity, rather than political or material domination over others.",
+          "The Overman (Übermensch) embodies the ideal of the independent individual who casts off herd mentality to create their own values.",
+          "Amor Fati, loving one's destiny unconditionally, is the ultimate expression of this spiritual strength and affirmation of life."
+        ]
+        },
+        {
+          category: "philosophy",
+          file: "epicurisme-bonheur.html",
+          image: "thinkers/images/epictete.jpg",
+          featured: false,
+          title: "Epicurus: The Pursuit of Rational Happiness",
+          readTime: "7 min read",
+          desc: "Understand the art of ataraxia (tranquility of the soul) through moderation of desires and freeing oneself from fears.",
+          body: [
+          "Epicureanism is a practical philosophy aimed at eliminating physical pain and mental distress to achieve tranquility of the soul.",
+          "Epicurus divides human desires into natural/necessary ones, and artificial/unlimited ones which only bring anxiety.",
+          "Ataraxia is achieved by freeing ourselves from the fear of death through reason, for death is nothing to us while we exist.",
+          "Simple living, friendship, and philosophical reflection are the true pillars of a happy and serene life."
+        ]
+        },
+        {
+          category: "psychology",
+          file: "intelligence-emotionnelle-stoicisme.html",
+          image: "stoicisme-modern.jpg",
+          featured: false,
+          title: "Emotional Intelligence and Modern Stoicism",
+          readTime: "9 min read",
+          desc: "How to combine modern cognitive behavioral psychology and the lessons of Marcus Aurelius to master daily anxiety.",
+          body: [
+          "Modern cognitive therapies and Stoicism agree that it is not events themselves but our representations that trouble us.",
+          "Emotional intelligence begins with the calm observation of our reactions to suspend automatic judgments.",
+          "The dichotomy of control allows us to focus our attention solely on our actions and accept the rest calmly.",
+          "Practicing Stoic reflection daily builds our emotional resilience to face the challenges of modern life."
+        ]
+        },
+
+        {
+          category: "philosophy",
           file: "stoicisme-force-calme.html",
           image: "stoicisme-roof.jpg",
           featured: true,
@@ -1184,6 +1336,82 @@ const TIKTOK_DATA = {
         }
       ],
       articles: [
+        {
+          category: "philosophy",
+          file: "existentialisme-sens-sartre.html",
+          image: "thinkers/images/nietzsche.jpg",
+          featured: false,
+          title: "الوجودية والبحث عن المعنى: فلسفة جان بول سارتر",
+          readTime: "8 min read",
+          desc: "دراسة في الحرية المطلقة وسوء النية والمسؤولية الفردية الأخلاقية عند جان بول سارتر.",
+          body: [
+          "تعد الفلسفة الوجودية، كما بلورها المفكر الفرنسي جان بول سارتر، واحدة من أكثر التيارات الفكرية جرأة في تفسير طبيعة الوجود البشري. تنطلق هذه الفلسفة من مقولة سارتر الشهيرة: 'الوجود يسبق الجوهر'. ومعناها البسيط أن الإنسان يوجد أولاً في هذا العالم، يقابل نفسه، يثور ويسلك، ثم بعد ذلك يعرف نفسه ويصنع جوهره وهويته الخاصة من خلال خياراته الحرة الفردية.",
+          "هذه الحرية المطلقة التي يتمتع بها الإنسان ليست ترفاً أو مصدراً للبهجة المستمرة، بل هي عبء ثقيل ومسؤولية كبرى. يصف سارتر هذه الحالة بقوله: 'الإنسان محكوم عليه بأن يكون حراً'. فنحن لم نختر أن نولد، ولكن بمجرد أن نُلقى في الوجود، نصبح مسؤولين مسؤولية تامة عن كل فعل نسلكه وعن الشخص الذي نكونه.",
+          "وفي مقابل هذه الحرية، يعيش الإنسان صراعاً دائماً مع ما يسمى 'سوء النية' (Mauvaise foi). وهو الخداع الذاتي الذي يمارسه المرء عندما يتظاهر بأنه غير حر، أو أنه مجبر على اتباع نمط حياة معين أو دور اجتماعي يفرضه عليه المجتمع كقناع يخفي وراءه خوفه من اتخاذ القرار وتحمل العواقب.",
+          "إن مواجهة القلق الوجودي الناتج عن إدراك الحرية تتطلب شجاعة فائقة للعيش بأصالة (Authenticité). الأصالة تعني أن نختار خياراتنا بوعي كامل وتوافق تام مع قيمنا الخاصة، دون الرضوخ الأعمى للقطيع أو توقعات الآخرين. الحياة الوجودية هي رحلة مستمرة لابتكار المعنى في عالم صامت."
+        ]
+        },
+        {
+          category: "philosophy",
+          file: "absurde-camus.html",
+          image: "thinkers/images/camus.jpg",
+          featured: false,
+          title: "فلسفة العبث والمواجهة: العيش بوعي عند ألبير كامو",
+          readTime: "9 min read",
+          desc: "تعرف على كيفية تعامل كامو مع صمت العالم اللامبالي واقتراح التمرد الإيجابي كحل لعبثية الحياة.",
+          body: [
+          "في قلب التجربة الإنسانية، يبرز صراع فلسفي عميق صاغه ألبير كامو في نظريته الشهيرة حول 'العبث' (The Absurd). والعبث عند كامو ليس مجرد حالة من الفوضى أو غياب المنطق، بل هو نتاج تصادم حتمي بين رغبتين متناقضتين: رغبة الإنسان الملحة في العثور على معنى وغاية ووضوح في الحياة، وصمت العالم البارد واللامبالي تجاه هذا السعي.",
+          "لتوضيح هذه الحالة الفلسفية، يستعين كامو بالأسطورة اليونانية القديمة 'أسطورة سيزيف'. عوقب سيزيف من قبل الآلهة بأن يدحرج صخرة ضخمة إلى قمة الجبل، وما إن تصل الصخرة إلى القمة حتى تتدحرج ثانية إلى الأسفل بفعل وزنها، ليضطر سيزيف للنزول مجدداً وإعادة المحاولة إلى ما لا نهاية. ولكن في لحظة نزوله يصبح سيزيف حراً بوعيه.",
+          "يطرح كامو ثلاثة خيارات لمواجهة عبثية الوجود البشري: الانتحار المادي، الانتحار الفلسفي أو 'القفزة الإيمانية'، والقبول الشجاع للعبث والعيش في قلبه بشغف وتمرّد. التمرد يعني مواصلة العيش ودحرجة الصخرة بوعي وتحدٍ، دون الأمل في ثواب مسبق أو غاية نهائية.",
+          "يختتم كامو كتابه 'أسطورة سيزيف' بمقولة خالدة: 'يجب أن نتخيل سيزيف سعيداً'. فالسعادة والعبث ابنان لأرض واحدة؛ تنبع السعادة من امتلاك الإنسان لمصيره الخاص ووعيه التام بنضاله ومواجهته المستمرة للواقع."
+        ]
+        },
+        {
+          category: "philosophy",
+          file: "nihilisme-surhomme-nietzsche.html",
+          image: "thinkers/images/nietzsche.jpg",
+          featured: false,
+          title: "تجاوز العدمية وإرادة القوة: فلسفة الإنسان المتفوق عند نيتشه",
+          readTime: "10 min read",
+          desc: "استكشف مفهوم إثبات الذات وتجاوز العدمية والوصول إلى رتبة الإنسان المتفوق صانع القيم.",
+          body: [
+          "لقد أحدثت فلسفة فريدريك نيتشه زلزالاً فكرياً هائلاً غير معالم الفلسفة الحديثة، خاصة في تحليله لأزمة 'العدمية' (Nihilism) التي توقع أن تجتاح العالم الغربي بعد تراجع القيم التقليدية. ويرى نيتشه أن زوال اليقين القديم يترك فراغاً خطيراً، وكان يبحث عن كيفية تجاوزها وإعادة تقييم كل القيم لبناء ثقافة إنسانية جديدة وأقوى.",
+          "المفهوم الأساسي الذي يطرحه نيتشه كبديل للعدمية هو 'إرادة القوة' (Will to Power). وإرادة القوة ليست رغبة سياسية في السيطرة على الآخرين، بل هي الدوافع الحيوية والغرائزية الكامنة في كل كائن حي للنمو، التجاوز، والابتكار الخلاق. إنها السعي الدائم للتغلب على الذات وتطوير الإمكانات البشرية.",
+          "ومن هذا المفهوم، يشتق نيتشه فكرته الشهيرة حول 'الإنسان المتفوق' (Übermensch). وهو نموذج روحي للفرد المستقل والمبدع الذي يمتلك شجاعة التخلص من 'أخلاق القطيع' السائدة وصنع قيمته الخاصة بحرية مطلقة. إنه الشخص الذي يتحمل مسؤولية خياراته كاملة وصنع حياته كعمل فني فريد.",
+          "ولتحقيق هذا المستوى من التكامل الروحي، يطرح نيتشه فلسفته الأجمل: 'حب القدر' (Amor Fati). وهي دعوة شجاعة لقبول الحياة بكل ما فيها من آلام، وعقبات، وإخفاقات، ومسرات بشكل كامل ودون شروط أو ندم. حب القدر هو إثبات كامل للحياة ودليل صلب على القوة الروحية."
+        ]
+        },
+        {
+          category: "philosophy",
+          file: "epicurisme-bonheur.html",
+          image: "thinkers/images/epictete.jpg",
+          featured: false,
+          title: "البحث عن السعادة الحقيقية: فلسفة اللذة العقلانية عند أبيقور",
+          readTime: "7 min read",
+          desc: "فهم فن الوصول إلى الأتاراكسيا (طمأنينة الروح) عبر ترويض الرغبات والتحرر من الخوف.",
+          body: [
+          "في خضم الاضطرابات السياسية والاجتماعية التي شهدها العالم اليوناني القديم، أسس الفيلسوف أبيقور مدرسة فكرية رائدة في حديقته بأثينا، ركزت بالكامل على السؤال الأكثر أهمية للإنسان: كيف نعيش حياة سعيدة وهادئة؟ وفلسفة أبيقور الحقيقية هي فلسفة زهد عقلاني وتصفية للذهن، ترمي للوصول إلى السلام الداخلي.",
+          "يقسم أبيقور الرغبات البشرية إلى ثلاثة أنواع دقيقة. أولاً: رغبات طبيعية وضرورية، مثل الأكل البسيط، الشرب، الأمان، والصداقة الحقيقية. ثانياً: رغبات طبيعية ولكن غير ضرورية، مثل الأطعمة الفاخرة. ثالثاً: رغبات غير طبيعية وغير ضرورية (مصطنعة)، مثل السعي وراء الشهرة، النفوذ السياسي، والثروة الفاحشة.",
+          "الهدف النهائي للفلسفة الأبيقورية هو الوصول إلى حالة 'الأتاراكسيا' (Ataraxia) — وتعني الطمأنينة التامة وخلو الروح من المخاوف والقلق — وحالة 'الأبونيا' (Aponia) — وتعني خلو الجسد من الألم العضوي. وقد فكك أبيقور الخوف من الموت بحجة عقلانية بسيطة: 'الموت لا يعنينا؛ فحين نكون نحن لا يكون الموت'.",
+          "في حديقة أبيقور، كانت الصداقة والحديث الفلسفي الهادئ والعيش البسيط هي المكونات السحرية للسعادة الحقيقية. السعادة ليست في القصور الفارهة، بل في قدرة الإنسان على ترويض رغباته، والاستمتاع الحقيقي بالقليل الذي يملك، والتحرر من هاجس المستقبل."
+        ]
+        },
+        {
+          category: "psychology",
+          file: "intelligence-emotionnelle-stoicisme.html",
+          image: "stoicisme-modern.jpg",
+          featured: false,
+          title: "الذكاء العاطفي والرواقية الحديثة: كيف تدير مشاعرك بحكمة",
+          readTime: "9 min read",
+          desc: "كيف تدمج علم النفس المعرفي السلوكي الحديث مع تعاليم ماركوس أوريليوس للسيطرة على القلق اليومي.",
+          body: [
+          "تشهد الساحة النفسية المعاصرة تقاطعاً مذهلاً بين مبادئ الفلسفة الرواقية القديمة ونظريات 'الذكاء العاطفي' (Emotional Intelligence) الحديثة وعلم النفس المعرفي السلوكي (CBT). فكلاهما ينطلق من فكرة رائدة مفادها أن مشاعرنا وانفعالاتنا ليست نتاجاً مباشراً للأحداث الخارجية ذاتها، بل هي نتاج الطريقة التي ندرك بها هذه الأحداث ونفسرها في عقولنا.",
+          "الذكاء العاطفي يتطلب أولاً وعياً ذاتياً دقيقاً بالانفعالات وتسميتها بمسمياتها الصحيحة لحظة حدوثها. وتقدم الرواقية في هذا الصدد تمريناً يسمى 'تأجيل الانطباعات الأولى'. عندما تواجه موقفاً يثير غضبك أو قلقك، لا تستسلم لرد الفعل التلقائي السريع. خذ مسافة ذهنية قصيرة وقل لانطباعك الأول: 'أنت مجرد فكرة ولست الحقيقة بعد'.",
+          "المكون الثاني المشترك هو 'إعادة التقييم المعرفي'. ويتجلى هذا بوضوح في تطبيق 'ثنائية التحكم' الرواقية. عندما ينشأ القلق يوجهنا الذكاء العاطفي والرواقية لتوجيه الانتباه فقط نحو الأمور التي نملك القدرة على تغييرها (مثل استجابتنا وقراراتنا)، وقبول الأمور الخارجة عن سيطرتنا (مثل تصرفات الآخرين أو الماضي).",
+          "إن دمج الحكمة الرواقية القديمة مع مهارات الذكاء العاطفي يبني درعاً نفسياً صلباً لمواجهة ضغوط العصر الرقمي الحديث. يعلمنا هذا المزيج أن نكون فاعلين وليس مجرد منفعلين، وأن نحافظ على ثباتنا وسط الأزمات وعواصف الحياة من خلال التدريب اليومي ومراقبة الأفكار."
+        ]
+        },
+
         {
           category: "philosophy",
           file: "stoicisme-force-calme.html",
