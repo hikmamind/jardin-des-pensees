@@ -558,8 +558,8 @@ const TIKTOK_DATA = {
           bio: "Fondateur de la psychanalyse, explorateur de l'inconscient, des rêves et du refoulement.",
           body: [
           "Sigmund Freud (1856 - 1939) était un médecin neurologue autrichien, fondateur de la psychanalyse. Ses théories révolutionnaires sur la structure du psychisme humain ont profondément transformé notre compréhension de la psychologie, de la culture et de la nature humaine.",
-          "Freud a popularisé le concept d'inconscient, affirment qu'une grande partie de nos comportements, peurs et désirs est régie par des pulsions refoulées et des souvenirs d'enfance cachés. Il a modélisé l'esprit en trois instances en conflit permanent : le Ça (les pulsions), le Surmoi (les interdits moraux) et le Moi (la conscience négociatrice).",
-          "À travers des méthodes comme l'association libre et l'interprétation des rêves, Freud a jeté les bases de la thérapie par la parole. Bien que certaines de ses théories soient débattues, son concept de mécanismes de défense reste un jalon de la psychologie clinique."
+          "Freud a popularisé le concept d'inconscient, affirmant qu'une grande partie de nos comportements, peurs et désirs est régie par des pulsions refoulées et des souvenirs d'enfance cachés. Il a modélisé l'esprit en trois instances en conflit permanent : le Ça (les pulsions), le Surmoi (les interdits moraux) et le Moi (la conscience négociatrice).",
+          "À travers des méthodes comme l'association libre et l'interprétation des rêves, Freud a jeté les bases de la thérapie par la parole. Bien que certaines de ses théories soient débattues, son concept de mécanismes de défense (comme le refoulement ou la projection) reste un jalon de la psychologie clinique."
         ],
           keyConcept: "Inconscient, Psychanalyse, Pulsions",
           keyWorks: "L'Interprétation du rêve"
@@ -575,7 +575,7 @@ const TIKTOK_DATA = {
           body: [
           "Alfred Adler (1870 - 1937) était un médecin et psychothérapeute autrichien, fondateur de la psychologie individuelle. Initialement collaborateur de Freud à Vienne, il s'en sépara pour développer une vision plus humaniste, sociale et optimiste de la personnalité humaine.",
           "Adler est célèbre pour avoir théorisé le sentiment d'infériorité. Selon lui, chaque être humain naît dans une position de vulnérabilité et développe un désir de compensation et de dépassement de soi. C'est l'effort pour surmonter cette infériorité perçue qui façonne notre 'style de vie' et notre motivation.",
-          "Contrairement à Freud centré sur les pulsions inconscientes, Adler valorise l'intérêt social (l'empathie et la coopération) et le libre arbitre de l'individu pour redéfinir ses buts de vie. Sa psychologie pratique et axée sur l'encouragement est un fondement du développement personnel et des thérapies cognitives modernes."
+          "Contrairement à Freud centré sur les pulsions inconscientes, Adler valorise l'intérêt social (l'empathie et la coopération) et le libre arbitre de l'individu pour redéfinis ses buts de vie. Sa psychologie pratique et axée sur l'encouragement est un fondement du développement personnel et des thérapies cognitives modernes."
         ],
           keyConcept: "Sentiment d'infériorité, Intérêt social",
           keyWorks: "Le Sens de la vie"
@@ -622,7 +622,7 @@ const TIKTOK_DATA = {
           bio: "Philosophe sceptique majeur, théoricien de l'association des idées et de la causalité.",
           body: [
           "David Hume (1711 - 1776) était un philosophe, historien et essayiste écossais, figure de proue des Lumières écossaises et l'un des plus grands sceptiques de l'histoire. Sa pensée lucide a radicalement bousculé le rationalisme dogmatique et a réveillé Emmanuel Kant de son sommeil dogmatique.",
-          "Dans son Traité de la nature humaine, Hume soutient que toutes nos connaissances dérivent de nos impressions sensibles. Il critique le concept de causalité, affirmant que nous ne percevons jamais la cause elle-même, mais seulement la succession régulière d'événements : notre croyance en la cause est le produit de l'habitude.",
+          "Dans son Traité de la nature humaine, Hume soutient que toutes nos connaissances dérivent de nos impressions sensibles. Il critique le concept de causalité, affermant que nous ne percevons jamais la cause elle-même, mais seulement la succession régulière d'événements : notre croyance en la cause est le produit de l'habitude.",
           "Hume a également remis en question la notion d'identité personnelle (le 'Moi'), la qualifiant de simple collection de perceptions changeantes en flux constant. Sa philosophie morale, axée sur les sentiments de sympathie plutôt que sur la pure raison, a ouvert la voie à l'utilitarisme."
         ],
           keyConcept: "Scepticisme, Empirisme, Causalité",
@@ -659,6 +659,176 @@ const TIKTOK_DATA = {
         ],
           keyConcept: "Féminisme, Condition, Liberté",
           keyWorks: "Le Deuxième Sexe"
+        },
+        {
+          id: "marcaurele",
+          featured: true,
+          name: "Marc Aurèle",
+          era: "121 - 180 ap. J.-C.",
+          school: "Stoïcisme",
+          image: "thinkers/images/marcaurele.jpg",
+          bio: "Empereur romain et philosophe, auteur des 'Pensées pour moi-même', guide intemporel de résilience et de discipline intérieure.",
+          body: [
+          "Marc Aurèle (121 - 180 ap. J.-C.) fut le dernier des 'cinq bons empereurs' de l'Empire romain et l'une des figures les plus marquantes du stoïcisme tardif. Surnommé le 'roi-philosophe', il dut faire face tout au long de son règne à des crises majeures : la peste antonine qui décima la population, des rébellions internes, et des guerres incessantes sur les frontières nord contre les peuples germaniques.",
+          "C'est précisément dans le tumulte des campagnes militaires, sous sa tente militaire au bord du Danube, qu'il rédigea son journal intime. Jamais destiné à la publication, ce recueil de notes quotidiennes est aujourd'hui universellement connu sous le nom de 'Pensées pour moi-même' (ou Meditations). Ce livre constitue un exercice spirituel d'auto-examen et de renforcement psychologique permanent face aux responsabilités écrasantes du pouvoir.",
+          "La philosophie de Marc Aurèle repose sur l'idée de l''Esprit comme Citadelle Intérieure'. Il soutient que si nous ne pouvons pas contrôler les événements extérieurs (la maladie, les trahisons, les guerres), nous demeurons maîtres absolus de nos jugements, de nos valeurs et de nos réactions. Pour lui, la colère est une faiblesse irrationnelle et l'indifférence aux choses extérieures est la clé de la liberté de l'âme.",
+          "Son éthique exigeante insiste également sur le devoir social et le service à la communauté (le concept stoïcien de cosmopolitisme). Il se rappelait constamment qu'en tant qu'être humain, il était né pour coopérer avec les autres, et non pour s'en plaindre. Son œuvre reste à ce jour l'un des guides de développement personnel et de leadership éthique les plus lus à travers le monde."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
+        },
+        {
+          id: "seneque",
+          featured: true,
+          name: "Sénèque",
+          era: "4 av. J.-C. - 65 ap. J.-C.",
+          school: "Stoïcisme",
+          image: "thinkers/images/seneque.jpg",
+          bio: "Philosophe stoïcien, dramaturge et homme d'État romain, célèbre pour ses lettres sur la brièveté de la vie, la maîtrise des passions et la mort.",
+          body: [
+          "Lucius Annaeus Seneca, né à Cordoue en 4 av. J.-C. et mort à Rome en 65 ap. J.-C., est l'un des plus brillants penseurs du stoïcisme impérial. Intellectuel brillant, orateur hors pair et auteur de tragédies poignantes, he devint le précepteur puis le conseiller principal du jeune empereur Néron, tentant de guider l'Empire avec sagesse et modération au milieu des intrigues politiques de la cour romaine.",
+          "Sénèque a vécu une vie pleine de contrastes : exilé en Corse par l'empereur Claude, il fut rappelé pour accumuler une fortune colossale qui suscita les critiques de ses contemporains. Pourtant, dans ses écrits, il défend constamment une attitude stoïcienne de détachement vis-vis des richesses matérielles, affirmant que l'homme sage doit savoir posséder la fortune sans se laisser posséder par elle.",
+          "Son œuvre philosophique majeure, en particulier les 'Lettres à Lucilius' et les traités 'De la brièveté de la vie' ou 'De la tranquillité de l'âme', offre une sagesse profondément pratique. Sénèque y aborde le temps comme notre ressource la plus précieuse et dénonce la dispersion mentale qui nous fait gaspiller notre existence. Il y donne des conseils concrets pour surmonter l'anxiété, gérer la colère et apprivoiser la peur du futur.",
+          "Accusé à tort de complicité dans un complot contre Néron, il reçut l'ordre de mettre fin à ses jours. Sa mort calme et digne, entouré de ses amis et de sa femme Paulina à qui il dicta ses dernières paroles philosophiques, est restée dans l'histoire comme l'application pratique ultime de sa philosophie stoïcienne face à la fatalité et à l'injustice politique."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
+        },
+        {
+          id: "epictete",
+          featured: false,
+          name: "Épictète",
+          era: "50 - 135 ap. J.-C.",
+          school: "Stoïcisme",
+          image: "thinkers/images/epictete.jpg",
+          bio: "Esclave affranchi devenu l'un des plus grands maîtres du stoïcisme romain, célèbre pour sa dichotomie du contrôle.",
+          body: [
+          "Épictète (environ 50 - 135 ap. J.-C.) naquit esclave à Hiérapolis, en Phrygie. Son maître Epaphrodite, secrétaire de l'empereur Néron, l'autorisa à étudier la philosophie auprès du stoïcien Musonius Rufus. Devenu libre après la mort de Néron, il commença à enseigner à Rome avant d'être banni par l'empereur Domitien avec les autres philosophes. Il s'établit alors à Nicopolis, en Grèce, où il fonda une école stoïcienne célèbre.",
+          "N'ayant lui-même rien écrit, sa doctrine a été recueillie par son élève Arrien de Nicopolis, qui prit des notes détaillées de ses cours et de ses conversations. Ces notes formèrent les 'Entretiens' (Discourses) et le célèbre 'Manuel d'Épictète' (Enchiridion). Ce dernier synthétise les règles fondamentales de la pratique stoïcienne sous la forme d'un guide spirituel portatif de poche.",
+          "Le coeur de la pensée d'Épictète est la distinction entre ce qui dépend de nous (nos représentations, désirs, choix) et ce qui n'en dépend pas (le corps, la richesse, la réputation, la mort). Il soutient que la liberté et le bonheur consistent uniquement à accorder notre volonté avec l'ordre rationnel de la nature et à accepter les événements extérieurs avec sérénité.",
+          "Sa philosophie exigeante, basée sur la discipline personnelle et l'autonomie morale, a influencé les plus grands esprits de l'Antiquité, notamment l'empereur Marc Aurèle, ainsi que les pères de la théologie chrétienne et de la psychologie cognitive moderne (comme Albert Ellis et la thérapie rationnelle-émotive)."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
+        },
+        {
+          id: "socrate",
+          featured: false,
+          name: "Socrate",
+          era: "470 - 399 av. J.-C.",
+          school: "Philosophie Antique",
+          image: "thinkers/images/socrate.jpg",
+          bio: "Père fondateur de la philosophie occidentale, célèbre pour sa méthode d'accouchement des esprits (maïeutique) et son procès.",
+          body: [
+          "Socrate (470 - 399 av. J.-C.), né à Athènes, est considéré comme le père fondateur de la philosophie morale occidentale. Issu d'un milieu modeste, fils d'un sculpteur et d'une sage-femme, il vécut dans la pauvreté, consacrant sa vie à arpenter les rues d'Athènes pour interroger ses concitoyens sur leurs croyances, la vertu, la justice et le courage.",
+          "Socrate n'a laissé aucun écrit. Nous connaissons sa pensée principalement à travers les écrits de ses disciples, en premier lieu Platon et Xénophon. Platon le met en scène comme le personnage principal de ses célèbres dialogues philosophiques, où Socrate utilise la méthode dialectique pour guider ses interlocuteurs vers la vérité.",
+          "Sa méthode philosophique repose sur la 'maïeutique', ou l'art d'accoucher les esprits. Par le dialogue, l'ironie et le questionnement constant, il amenait ses interlocuteurs à prendre conscience de leur propre ignorance. Sa formule célèbre 'Je sais que je ne sais rien' résume sa quête insatiable de sagesse par l'examen de soi et la recherche de vérités universelles.",
+          "Son esprit critique et son influence sur la jeunesse athénienne lui valurent l'hostilité des autorités politiques de la cité. Accusé d'impiété et de corruption de la jeunesse, il fut condamné à mort à l'issue d'un procès historique. Refusant de s'évader par respect pour les lois de sa patrie, il mourut en buvant la ciguë avec dignité, entouré de ses disciples en larmes."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
+        },
+        {
+          id: "camus",
+          featured: true,
+          name: "Albert Camus",
+          era: "1913 - 1960",
+          school: "Absurdisme",
+          image: "thinkers/images/camus.jpg",
+          bio: "Écrivain, dramaturge et philosophe français, lauréat du prix Nobel de littérature, théoricien de l'Absurde et de la Révolte humaniste.",
+          body: [
+          "Albert Camus (1913 - 1960), né en Algérie dans un milieu très modeste et orphelin de père, a développé une philosophie lumineuse ancrée dans la condition humaine et la recherche de justice. Romancier et dramaturge de génie, journaliste engagé dans la Résistance française pendant la Seconde Guerre mondiale, il a reçu le prix Nobel de littérature en 1957 à seulement 44 ans pour l'ensemble de son œuvre.",
+          "Camus est le créateur de la 'philosophie de l'Absurde'. Il définit l'absurde non comme une simple négation, mais comme la confrontation inévitable entre la quête éperdue de sens de l'être humain et le silence irrationnel et infini du monde. Dans son essai fondateur 'Le Mythe de Sisyphe', il utilise le héros mythologique condamné à rouler éternellement son rocher pour illustrer cette condition humaine : il faut imaginer Sisyphe heureux car il choisit d'accomplir son devoir et de mépriser son châtiment par sa conscience.",
+          "Pour Camus, la prise de conscience de l'absurde ne doit pas mener au suicide ou au désespoir, mais à la révolte, à la liberté et à la passion de vivre. C'est le concept de 'l'homme révolté' : se révolter contre l'injustice du monde et la mort donne un sens immédiat et solidaire à notre existence. 'Je me révolte, donc nous sommes', écrit-il, posant les bases d'un humanisme sans concession.",
+          "Sa rupture amicale et philosophique avec Jean-Paul Sartre, en raison de son refus d'accepter la violence politique au nom de l'idéologie révolutionnaire, témoigne de son intégrité morale. Ses œuvres majeures, comme 'L'Étranger', 'La Peste' et 'La Chute', continuent de résonner aujourd'hui comme des appels vibrants à la lucidité, à la liberté et à la solidarité humaine."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
+        },
+        {
+          id: "nietzsche",
+          featured: false,
+          name: "Friedrich Nietzsche",
+          era: "1844 - 1900",
+          school: "Existentialisme / Vitalisme",
+          image: "thinkers/images/nietzsche.jpg",
+          bio: "Philosophe allemand majeur, célèbre pour son rejet de la morale traditionnelle, son concept de Surhomme, la volonté de puissance et l'éternel retour.",
+          body: [
+          "Friedrich Nietzsche (1844 - 1900) est l'un des penseurs les plus dérangeants et révolutionnaires de l'histoire moderne. Nommé professeur de philologie classique à l'université de Bâle à seulement 24 ans, il dut rapidement démissionner en raison de graves problèmes de santé physiques chroniques. Il passa le reste de sa vie à errer dans les Alpes suisses (notamment à Sils-Maria) et en Italie, écrivant une œuvre philosophique incisive et poétique.",
+          "Nietzsche a mené une critique radicale de la métaphysique occidentale, de la religion chrétienne et de la morale traditionnelle qu'il qualifie de 'morale d'esclaves' ou de ressentiment. En déclarant que 'Dieu est mort', il annonçait la crise du nihilisme moderne (la perte des valeurs absolues) et appelait l'humanité à surmonter ce vide en créant ses propres valeurs vitales.",
+          "Au cœur de sa philosophie se trouvent les concepts de 'volonté de puissance' (non pas une domination tyrannique, mais une pulsion créatrice d'expansion de soi), de 'Surhomme' (l'individu accompli qui transcende les dogmes et affirme sa vie créative) et de l''Amor Fati' (l'amour inconditionnel de son propre destin avec ses joies et ses plus profondes souffrances).",
+          "Son œuvre poétique majeure, 'Ainsi parlait Zarathustra', et ses écrits critiques comme 'Par-delà le bien et le mal' et 'La Généalogie de la morale' ont exercé une influence colossale sur l'existentialisme, la psychanalyse freudienne, la littérature du XXe siècle et la philosophie postmoderne, incitant l'homme à se libérer des illusions conformistes pour s'accomplir pleinement."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
+        },
+        {
+          id: "jung",
+          featured: false,
+          name: "Carl Jung",
+          era: "1875 - 1961",
+          school: "Psychologie Analytique",
+          image: "thinkers/images/jung.jpg",
+          bio: "Psychiatre suisse, fondateur de la psychologie analytique, théoricien de l'inconscient collectif, des archétypes et de l'Ombre.",
+          body: [
+          "Carl Gustav Jung (1875 - 1961) était un psychiatre et psychologue suisse dont les travaux révolutionnaires ont redéfini notre compréhension de l'esprit humain. D'abord proche collaborateur et successeur désigné de Sigmund Freud, il s'en sépara en raison de divergences théoriques sur la nature de la libido et du psychisme, fondant alors sa propre école de pensée : la psychologie analytique.",
+          "Jung a introduit des concepts majeurs qui imprègnent aujourd'hui la psychologie moderne et la culture populaire. Il a postulé l'existence de l'inconscient collectif, une structure de la psyché partagée par l'ensemble de l'humanité, peuplée de symboles universels et de mythes appelés 'archétypes' (le Sage, le Héros, l'Anima).",
+          "Il est également le créateur des notions de 'Persona' (le masque social) et de 'l'Ombre' (les aspects refoulés de soi). Pour Jung, le but ultime de la vie psychologique est le processus d'individuation, par lequel un individu unifie ses dimensions consciente et inconsciente pour réaliser son être complet, le Soi.",
+          "Esprit encyclopédique, Jung s'est passionné pour l'alchimie, les sagesses orientales, les religions comparées et la physique quantique (collaborant avec Wolfgang Pauli). Son influence s'étend bien au-delà de la thérapie clinique, irriguant l'art, la littérature, la mythologie comparée et le développement personnel moderne."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
+        },
+        {
+          id: "schopenhauer",
+          featured: false,
+          name: "Arthur Schopenhauer",
+          era: "1788 - 1860",
+          school: "Pessimisme",
+          image: "thinkers/images/schopenhauer.jpg",
+          bio: "Philosophe allemand célèbre pour sa théorie de la Volonté comme essence métaphysique du monde et son pessimisme existentiel influencé par la sagesse orientale.",
+          body: [
+          "Arthur Schopenhauer (1788 - 1860) est un philosophe allemand majeur dont la pensée originale a fait le pont entre le rationalisme occidental et les philosophies orientales (notamment le bouddhisme et l'hindouisme des Upanishads). Ayant vécu une grande partie de sa vie dans l'isolement à Francfort et dans l'ombre académique de son grand rival Hegel, il n'a connu une gloire tardive qu'à la fin de sa vie.",
+          "Son œuvre maîtresse, 'Le Monde comme volonté et comme représentation', avance l'idée que le monde physique que nous percevons n'est qu'une illusion (la représentation) derrière laquelle se cache une force métaphysique brute, aveugle et irrationnelle : la 'Volonté de vivre'. Cette volonté pousse incessamment tous les êtres vivants à désirer sans jamais être satisfaits, ce qui engendre une souffrance perpétuelle et inhérente à l'existence.",
+          "Face à cette tragédie de la vie, Schopenhauer propose trois voies de libération ou d'apaisement temporaire. La première est l'expérience esthétique (la contemplation de l'art et surtout de la musique, qui nous détachent du vouloir-vivre). La seconde est la compassion et l'éthique de la pitié (reconnaître la souffrance commune de tous les êtres). La troisième est l'ascétisme et le renoncement aux désirs matériels (proche du Nirvana bouddhique).",
+          "Son style littéraire limpide et percutant, ainsi que son analyse psychologique des désirs et de l'inconscient, ont profondément marqué des génies comme Friedrich Nietzsche, Sigmund Freud (qui a trouvé chez Schopenhauer les prémices de sa théorie des pulsions), Richard Wagner, Albert Einstein et de nombreux écrivains comme Marcel Proust et Léon Tolstoï."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
+        },
+        {
+          id: "kant",
+          featured: false,
+          name: "Emmanuel Kant",
+          era: "1724 - 1804",
+          school: "Idéalisme Allemand",
+          image: "thinkers/images/kant.jpg",
+          bio: "Penseur majeur des Lumières, théoricien de la connaissance critique et de l'éthique du devoir universel.",
+          body: [
+          "Emmanuel Kant (1724 - 1804), né et mort à Königsberg en Prusse-Orientale (aujourd'hui Kaliningrad), est l'une des figures les plus monumentales de la philosophie occidentale. Homme d'une régularité légendaire et d'une discipline de fer, il a enseigné à l'université de sa ville natale tout en opérant ce qu'il a appelé une 'révolution copernicienne' dans l'histoire de la pensée humaine.",
+          "Dans sa célèbre 'Critique de la raison pure' (1781), Kant cherche à dépasser le conflit entre le rationalisme et l'empirisme. Il soutient que notre esprit ne se contente pas de recevoir passivement les données du monde extérieur, mais qu'il les organise activement à travers les structures a priori de notre sensibilité (l'espace et le temps) et de notre entendement (les catégories). Nous ne pouvons ainsi connaître que les 'phénomènes' (les choses telles qu'elles nous apparaissent) et non les 'noumènes' (la chose en soi).",
+          "Dans le domaine éthique, exposé dans la 'Critique de la raison pratique', Kant formule l'éthique déontologique du devoir. La moralité d'une action dépend de l'intention pure et de sa conformité à l'impératif catégorique : 'Agis uniquement d'après la maxime grâce à laquelle tu peux vouloir en même temps qu'elle devienne une loi universelle.' Il a posé la dignité absolue de la personne humaine comme un principe sacré, affirment qu'un être humain doit toujours être traité comme une fin en soi, et jamais simplement comme un moyen.",
+          "Son projet philosophique pour une 'Paix perpétuelle' préfigurait déjà la création des institutions internationales modernes comme l'ONU. La rigueur logique et l'élévation morale de l'œuvre de Kant continuent d'irriguer la philosophie du droit, la théorie politique moderne et les débats contemporains sur la justice et les droits de l'homme."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
+        },
+        {
+          id: "hegel",
+          featured: false,
+          name: "G. W. F. Hegel",
+          era: "1770 - 1831",
+          school: "Idéalisme Allemand",
+          image: "thinkers/images/hegel.jpg",
+          bio: "Créateur d'un système philosophique dialectique grandiose expliquant l'évolution de l'Esprit à travers l'Histoire et le temps.",
+          body: [
+          "Georg Wilhelm Friedrich Hegel (1770 - 1831) est le géant de l'idéalisme allemand et l'un des penseurs les plus influents et complexes du XIXe siècle. Professeur d'université de premier plan, il a développé un système philosophique complet et encyclopédique visant à unifier la logique, la nature, l'art, la religion et l'histoire au sein d'une seule pensée dynamique.",
+          "Le noyau de la philosophie hégélienne réside dans la 'dialectique'. Pour Hegel, la réalité et la pensée ne sont pas statiques mais progressent à travers des contradictions internes qui se résolvent pour atteindre une vérité supérieure (le processus de thèse, antithèse et synthèse, connu sous le concept d'Aufhebung). L'Histoire humaine n'est pas une suite d'accidents aléatoires, mais la marche de l'Esprit (Geist) vers la pleine conscience de sa propre liberté.",
+          "Dans sa célèbre phénoménologie de l'esprit, il introduit la figure de la 'dialectique du maître et de l'esclave', qui montre comment la conscience de soi naît d'une lutte à mort pour la reconnaissance mutuelle. Ce concept a révolutionné l'analyse psychologique de la domination et de la dépendance humaine.",
+          "L'impact de Hegel sur la pensée ultérieure est colossal : sa philosophie de l'histoire a été réinterprétée de manière matérialiste par Karl Marx pour donner naissance au marxisme, et sa méthode dialectique a inspiré l'existentialisme de Sartre, la phénoménologie moderne, la psychanalyse lacanienne et la théorie critique. Comprendre Hegel reste indispensable pour décrypter l'évolution des mouvements politiques et sociaux modernes."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
         }
       ],
       articles: [
@@ -939,7 +1109,14 @@ const TIKTOK_DATA = {
           era: "427 - 347 BC",
           school: "Platonism",
           image: "thinkers/images/platon.jpg",
-          bio: "Student of Socrates and founder of the Academy, explorer of the world of Forms and ideal justice."
+          bio: "Student of Socrates and founder of the Academy, explorer of the world of Forms and ideal justice.",
+          body: [
+          "Plato (427 - 347 BC) was an ancient Greek philosopher, disciple of Socrates and teacher of Aristotle. Born into an aristocratic Athenian family, Socrates' execution became the founding event of his philosophical career, driving him to seek the principles of a just city ruled by wisdom.",
+          "He founded the Academy in Athens, the first institution of higher learning in the Western world. His philosophy revolves around the Theory of Forms (or Ideas), stating that the physical world we perceive is but a changing shadow of a perfect, eternal, and intelligible reality of concepts.",
+          "Through his famous Dialogues (such as The Republic, Symposium, and Phaedo), Plato uses the character of Socrates to lead minds toward truth. His Allegory of the Cave remains one of the most famous metaphors showing how humanity must rise above sensory illusions to contemplate light and truth."
+        ],
+          keyConcept: "Theory of Forms, Ideal justice",
+          keyWorks: "The Republic, Symposium"
         },
         {
           id: "aristote",
@@ -948,7 +1125,14 @@ const TIKTOK_DATA = {
           era: "384 - 322 BC",
           school: "Aristotelianism",
           image: "thinkers/images/platon.jpg",
-          bio: "Father of logic and biology, theorist of virtue ethics and the golden mean."
+          bio: "Father of logic and biology, theorist of virtue ethics and the golden mean.",
+          body: [
+          "Aristotle (384 - 322 BC) was one of the most influential thinkers in history, laying the groundwork for Western science, logic, and philosophy. Born in Stagira, he joined Plato's Academy in Athens for twenty years, before tutoring Alexander the Great and founding his own school, the Lyceum.",
+          "Unlike Plato who prioritized abstract Forms, Aristotle favored an empirical and realistic approach, observing nature to deduce universal laws. He is considered the father of formal logic (the syllogism) and biological taxonomy, exploring causality and substance.",
+          "In Nicomachean Ethics, Aristotle defines happiness as the ultimate goal of human life, achieved by practicing virtue. Virtue is a golden mean between two extremes of excess and deficiency (e.g., courage is the mean between cowardice and rashness), a disciplined lifestyle of human excellence."
+        ],
+          keyConcept: "Formal logic, Virtue ethics",
+          keyWorks: "Nicomachean Ethics"
         },
         {
           id: "descartes",
@@ -957,7 +1141,14 @@ const TIKTOK_DATA = {
           era: "1596 - 1650",
           school: "Rationalism",
           image: "thinkers/images/descartes.jpg",
-          bio: "Father of modern philosophy, famous for his 'Cogito, ergo sum' and methodical doubt."
+          bio: "Father of modern philosophy, famous for his 'Cogito, ergo sum' and methodical doubt.",
+          body: [
+          "René Descartes (1596 - 1650) was a French philosopher, mathematician, and physicist, widely considered the founder of modern philosophy. During a period of scientific transition, he sought to rebuild human knowledge on absolutely certain and indubitable foundations.",
+          "To achieve this, he implemented methodical doubt, rejecting everything that was not perfectly clear and distinct. From this clean slate arose his first unshakable certainty: the very act of doubting proves he thinks, and thus exists, formulated as 'Cogito, ergo sum' (I think, therefore I am).",
+          "Descartes is also the father of modern rationalism and Cartesian dualism, distinguishing the thinking substance (mind) from the extended substance (body). His major works, including Discourse on Method and Meditations on First Philosophy, redefined the thinking subject."
+        ],
+          keyConcept: "Methodical doubt, Cogito",
+          keyWorks: "Discourse on Method"
         },
         {
           id: "spinoza",
@@ -966,7 +1157,14 @@ const TIKTOK_DATA = {
           era: "1632 - 1677",
           school: "Rationalism",
           image: "thinkers/images/descartes.jpg",
-          bio: "Philosopher of freedom through knowledge, identifying God with Nature and advocating rational joy."
+          bio: "Philosopher of freedom through knowledge, identifying God with Nature and advocating rational joy.",
+          body: [
+          "Baruch Spinoza (1632 - 1677) was a Dutch philosopher of Portuguese-Jewish origin, whose revolutionary work saw him excommunicated for heresy. Living a simple life grinding optical lenses, he declined prestigious academic posts to protect his absolute freedom of thought.",
+          "His philosophy, detailed in his masterpiece Ethics, presents a radical pantheistic view identifying God with Nature ('Deus sive Natura'). In this system, all existing things are modes or expressions of this single divine substance. He rejects free will as an illusion.",
+          "Spinoza argues that human freedom is attained by understanding the causes of our actions, converting passive passions into active, rational emotions. Joy is the transition to a higher perfection of being, and supreme happiness lies in the intellectual love of Nature/God."
+        ],
+          keyConcept: "Pantheism, Rational joy",
+          keyWorks: "Ethics"
         },
         {
           id: "rousseau",
@@ -974,8 +1172,15 @@ const TIKTOK_DATA = {
           name: "Rousseau",
           era: "1712 - 1778",
           school: "Enlightenment",
-          image: "avatar.jpg",
-          bio: "Theorist of the social contract and the natural goodness of man corrupted by society."
+          image: "thinkers/images/rousseau.jpg",
+          bio: "Theorist of the social contract and the natural goodness of man corrupted by society.",
+          body: [
+          "Jean-Jacques Rousseau (1712 - 1778) was a Geneva-born writer and philosopher, one of the most unique figures of the Enlightenment. A rebellious and solitary mind, his critical thinking inspired the French Revolution and the rise of Romanticism.",
+          "Rousseau is famous for his thesis that human beings are naturally good, but have been corrupted and enslaved by civilization and private property. In The Social Contract, he seeks to outline a just political association where citizens obey the 'general will' while remaining free.",
+          "His work Emile, or On Education suggests a revolutionary pedagogy focused on the natural development of children away from societal corruption. Through his Confessions, he pioneered modern autobiography, exploring the depths of his sensitive soul with unprecedented sincerity."
+        ],
+          keyConcept: "Natural goodness, General will",
+          keyWorks: "The Social Contract"
         },
         {
           id: "voltaire",
@@ -983,17 +1188,31 @@ const TIKTOK_DATA = {
           name: "Voltaire",
           era: "1694 - 1778",
           school: "Enlightenment",
-          image: "avatar.jpg",
-          bio: "Champion of free expression and religious tolerance against fanaticism."
+          image: "thinkers/images/rousseau.jpg",
+          bio: "Champion of free expression and religious tolerance against fanaticism.",
+          body: [
+          "Voltaire (François-Marie Arouet, 1694 - 1778) was a French writer and philosopher, the ultimate symbol of the Enlightenment. A brilliant satirist and prolific letter writer, he used his sharp pen to fight religious fanaticism, judicial injustice, and intolerance.",
+          "Famous for his philosophical tales (such as Candide and Zadig) and his Treatise on Tolerance, he tirelessly denounced the abuses of the Church and absolute monarchy. Voltaire championed rational deism and regarded mutual tolerance as humanity's primary natural right.",
+          "Engaged in landmark legal defense cases (like the Calas affair), he became the prototype of the public intellectual defending victims of state tyranny. His legacy remains a cornerstone of free speech, secularism, and human rights."
+        ],
+          keyConcept: "Tolerance, Freedom of speech",
+          keyWorks: "Candide, Treatise on Tolerance"
         },
         {
           id: "pascal",
           featured: false,
           name: "Pascal",
           era: "1623 - 1662",
-          school: "Christian Existentialism",
+          school: "Existentialism",
           image: "thinkers/images/descartes.jpg",
-          bio: "Mathematician and philosopher, famous for his wager on God's existence and human misery."
+          bio: "Mathematician and philosopher, famous for his wager on God's existence and human misery.",
+          body: [
+          "Blaise Pascal (1623 - 1662) was a French child prodigy, leading mathematician, physicist, inventor of the mechanical calculator, and Christian mystic philosopher. His fragile health and profound spiritual conversion marked his writings with dramatic intensity.",
+          "In his Pensees (Thoughts), an unfinished collection published posthumously, Pascal explores the human condition as an abyss of misery and grandeur. He outlines his famous 'wager': since reason cannot prove God's existence, one should wager that He exists, as the gain is infinite.",
+          "Pascal distinguishes the 'heart' from 'reason' ('The heart has its reasons which reason knows nothing of') and critiques diversion as a tragic escape from mortality. His analysis of spiritual emptiness makes him a precursor to modern existentialism."
+        ],
+          keyConcept: "Pascal's wager, Human misery",
+          keyWorks: "Thoughts"
         },
         {
           id: "montaigne",
@@ -1001,8 +1220,15 @@ const TIKTOK_DATA = {
           name: "Montaigne",
           era: "1533 - 1592",
           school: "Humanism",
-          image: "avatar.jpg",
-          bio: "Creator of the Essays, famous for his question 'What do I know?' and personal wisdom."
+          image: "thinkers/images/rousseau.jpg",
+          bio: "Creator of the Essays, famous for his question 'What do I know?' and personal wisdom.",
+          body: [
+          "Michel de Montaigne (1533 - 1592) was a French Renaissance writer, philosopher, and statesman. Retiring to his castle tower library during the French Wars of Religion, he launched a unique literary project: studying himself to understand the human condition.",
+          "His singular work, the Essays, established a personal, open-ended style of philosophizing. Montaigne wrote freely and skeptically on diverse subjects (friendship, death, custom, education), guided by his famous motto 'What do I know?' ('Que sais-je ?').",
+          "A true humanist, Montaigne sought a peaceful art of living, accepting human limitations and physical weaknesses with humor and grace. His portrayal of ideal friendship and invitation to cultivate one's own inner garden remain timeless guides."
+        ],
+          keyConcept: "Skepticism, Humanism",
+          keyWorks: "Essays"
         },
         {
           id: "sartre",
@@ -1010,8 +1236,15 @@ const TIKTOK_DATA = {
           name: "Sartre",
           era: "1905 - 1980",
           school: "Existentialism",
-          image: "avatar.jpg",
-          bio: "Theorist of radical freedom, claiming that existence precedes essence."
+          image: "thinkers/images/sartre.jpg",
+          bio: "Theorist of radical freedom, claiming that existence precedes essence.",
+          body: [
+          "Jean-Paul Sartre (1905 - 1980) was the leading voice of French existentialism, a novelist, playwright, and public intellectual. Declining the Nobel Prize in Literature in 1964 to maintain his independence, he championed human emancipation on the global stage.",
+          "His core thesis, 'existence precedes essence', claims that humans are born without preset definitions and shape their identity entirely through actions. Man is condemned to be free, carrying absolute responsibility for his life without excuses.",
+          "In Being and Nothingness, Sartre analyzes 'bad faith' (mauvaise foi) — the self-deception of pretending to be helpless to escape the anxiety of choice. His philosophy is an urgent call for political engagement, sincerity, and authentic action."
+        ],
+          keyConcept: "Existentialism, Radical freedom",
+          keyWorks: "Being and Nothingness"
         },
         {
           id: "machiavel",
@@ -1019,8 +1252,15 @@ const TIKTOK_DATA = {
           name: "Machiavelli",
           era: "1469 - 1527",
           school: "Political Realism",
-          image: "avatar.jpg",
-          bio: "Realistic political thinker, author of 'The Prince', exploring power and statecraft."
+          image: "thinkers/images/rousseau.jpg",
+          bio: "Realistic political thinker, author of 'The Prince', exploring power and statecraft.",
+          body: [
+          "Niccolò Machiavelli (1469 - 1527) was a Florentine statesman, diplomat, and writer of the Renaissance. Witnessing the internal divisions and foreign invasions of Italy, he sought to analyze politics not as abstract morality, but as concrete power dynamics.",
+          "In his most famous work, The Prince, he describes the methods to acquire and maintain political power. He argues that to preserve the state, a ruler must know how to use both force and cunning (the lion and the fox), mastering fortune (luck) through virtù (willpower/skill).",
+          "Often caricature-labeled as 'machiavellian' (the end justifies the means), Machiavelli is actually the founder of modern political science. His work explores the inevitable tension between individual morality and political survival."
+        ],
+          keyConcept: "Political Realism, Statecraft",
+          keyWorks: "The Prince"
         },
         {
           id: "laotseu",
@@ -1028,8 +1268,15 @@ const TIKTOK_DATA = {
           name: "Lao Tzu",
           era: "6th century BC",
           school: "Taoism",
-          image: "avatar.jpg",
-          bio: "Founding father of Taoism, author of Tao Te Ching, advocating non-action and harmony."
+          image: "thinkers/images/laotseu.jpg",
+          bio: "Founding father of Taoism, author of Tao Te Ching, advocating non-action and harmony.",
+          body: [
+          "Lao Tzu was a legendary sage of ancient China, founder of Taoism and author of the Tao Te Ching (The Book of the Way and Its Virtue). His writings form one of the most translated and influential pillars of global philosophical wisdom.",
+          "His system centers on the 'Tao' (the Way), the ineffable cosmic flow that governs nature and existence. Lao Tzu teaches the art of 'Wu Wei' (non-action), which is not lazy passivity but fluid, effortless action in harmony with the natural state of things.",
+          "Lao Tzu's teachings value simplicity, flexibility (like water yielding to everything yet wearing down rock), and returning to a quiet center. This philosophy of detachment provides a powerful antidote to modern stress and anxiety."
+        ],
+          keyConcept: "The Tao, Wu Wei (Non-action)",
+          keyWorks: "Tao Te Ching"
         },
         {
           id: "confucius",
@@ -1037,8 +1284,15 @@ const TIKTOK_DATA = {
           name: "Confucius",
           era: "551 - 479 BC",
           school: "Confucianism",
-          image: "avatar.jpg",
-          bio: "Chinese sage whose teachings established family, social, and political ethics."
+          image: "thinkers/images/laotseu.jpg",
+          bio: "Chinese sage whose teachings established family, social, and political ethics.",
+          body: [
+          "Confucius (551 - 479 BC) was a Chinese teacher, philosopher, and politician whose ideas shaped East Asian civilization for millennia. Living in a time of social collapse and warfare, he sought to restore social harmony through education and virtue.",
+          "His teachings, compiled in the Analects, emphasize benevolence ('Ren'), ritual propriety ('Li'), filial piety, and the Golden Rule: 'Do not do to others what you do not want done to yourself.' A stable state begins with the moral self-cultivation of the individual.",
+          "Unlike the nature-focused Taoism, Confucianism is a socially oriented humanist philosophy. It prioritizes scholarship, self-discipline, and mutual social duties to build a harmonious, stable, and just society."
+        ],
+          keyConcept: "Benevolence (Ren), Propriety (Li)",
+          keyWorks: "Analects"
         },
         {
           id: "kierkegaard",
@@ -1046,8 +1300,15 @@ const TIKTOK_DATA = {
           name: "Kierkegaard",
           era: "1813 - 1855",
           school: "Existentialism",
-          image: "avatar.jpg",
-          bio: "Father of existentialism, exploring individual anxiety and the leap of faith."
+          image: "thinkers/images/rousseau.jpg",
+          bio: "Father of existentialism, exploring individual anxiety and the leap of faith.",
+          body: [
+          "Søren Kierkegaard (1813 - 1855) was a Danish philosopher and theologian, widely recognized as the father of existentialism. Writing under various pseudonyms to present differing life paths, he fiercely critiqued the Danish state church and abstract Hegelian philosophy.",
+          "His work focuses on the subjective experience of the individual. He defines anxiety not as a disease, but as the vertigo of freedom and ethical choice. Kierkegaard describes three stages of life: the aesthetic (pleasure), the ethical (duty), and the religious (faith).",
+          "For Kierkegaard, truth is subjective and personal. Reaching the religious stage requires a passionate, irrational 'leap of faith' beyond the limits of objective reason, choosing belief in the face of the absurd."
+        ],
+          keyConcept: "Subjectivity, Leap of faith",
+          keyWorks: "Fear and Trembling"
         },
         {
           id: "freud",
@@ -1055,8 +1316,15 @@ const TIKTOK_DATA = {
           name: "Freud",
           era: "1856 - 1939",
           school: "Psychoanalysis",
-          image: "avatar.jpg",
-          bio: "Founder of psychoanalysis, explorer of the unconscious, dreams, and repression."
+          image: "thinkers/images/freud.jpg",
+          bio: "Founder of psychoanalysis, explorer of the unconscious, dreams, and repression.",
+          body: [
+          "Sigmund Freud (1856 - 1939) was an Austrian neurologist and founder of psychoanalysis. His revolutionary theories on the human psyche completely transformed our understanding of psychology, literature, culture, and human behavior.",
+          "Freud popularized the concept of the unconscious mind, asserting that our actions, fears, and desires are driven by repressed childhood memories and impulses. He modeled the mind into three conflicting agencies: the Id (impulses), the Superego (morality), and the Ego (consciousness).",
+          "Through techniques like free association and dream analysis, Freud pioneered talk therapy. While some of his biological views are debated, his concepts of defense mechanisms (like repression and projection) remain clinical milestones."
+        ],
+          keyConcept: "Unconscious, Psychoanalysis",
+          keyWorks: "The Interpretation of Dreams"
         },
         {
           id: "adler",
@@ -1064,8 +1332,15 @@ const TIKTOK_DATA = {
           name: "Adler",
           era: "1870 - 1937",
           school: "Individual Psychology",
-          image: "avatar.jpg",
-          bio: "Theorist of the inferiority complex and the pursuit of self-overcoming."
+          image: "thinkers/images/freud.jpg",
+          bio: "Theorist of the inferiority complex and the pursuit of self-overcoming.",
+          body: [
+          "Alfred Adler (1870 - 1937) was an Austrian medical doctor and psychotherapist, founder of individual psychology. Initially a collaborator of Freud, he broke away to develop a more holistic, social, and optimistic view of the human personality.",
+          "Adler is famous for developing the concept of the inferiority complex. He argued that all humans begin life in a state of vulnerability and develop a drive for compensation and self-overcoming, shaping their unique 'style of life' and motivations.",
+          "Unlike Freud's focus on unconscious sexual drives, Adler emphasized social interest (cooperation and empathy) and free will to redefine personal goals. His practical psychology is a cornerstone of modern cognitive therapy and self-improvement."
+        ],
+          keyConcept: "Inferiority complex, Social interest",
+          keyWorks: "The Pattern of Life"
         },
         {
           id: "marx",
@@ -1073,8 +1348,15 @@ const TIKTOK_DATA = {
           name: "Marx",
           era: "1818 - 1883",
           school: "Marxism",
-          image: "avatar.jpg",
-          bio: "Theorist of historical materialism and class struggle as the engine of history."
+          image: "thinkers/images/marx.jpg",
+          bio: "Theorist of historical materialism and class struggle as the engine of history.",
+          body: [
+          "Karl Marx (1818 - 1883) was a German philosopher, economist, historian, and political theorist whose ideas altered the course of history. Witnessing the industrial revolution in Europe, he analyzed the class exploitation inherent in the emerging capitalist system.",
+          "His theory of historical materialism argues that the material and economic conditions of society shape its social relations and ideas. He famously defined class struggle between the bourgeoisie and the proletariat as the engine of historical change.",
+          "In Das Kapital and The Communist Manifesto (co-authored with Friedrich Engels), Marx critiqued labor alienation under capitalism and championed classless collective emancipation, inspiring global political movements throughout the 20th century."
+        ],
+          keyConcept: "Class struggle, Historical materialism",
+          keyWorks: "Das Kapital"
         },
         {
           id: "locke",
@@ -1082,17 +1364,31 @@ const TIKTOK_DATA = {
           name: "Locke",
           era: "1632 - 1704",
           school: "Empiricism",
-          image: "avatar.jpg",
-          bio: "Father of political liberalism and empiricism, describing the mind as a tabula rasa."
+          image: "thinkers/images/marx.jpg",
+          bio: "Father of political liberalism and empiricism, describing the mind as a tabula rasa.",
+          body: [
+          "John Locke (1632 - 1704) was an English philosopher, one of the most influential figures of the Enlightenment, and the father of modern empiricism and political liberalism. His writings directly inspired the US Constitution and the Declaration of Human Rights.",
+          "In An Essay Concerning Human Understanding, Locke argued that the mind is born as a blank slate (tabula rasa), void of innate ideas. All our knowledge and concepts are engraved on this slate through sensory experience and reflection.",
+          "Politically, in Two Treatises of Government, Locke theorized the natural rights of individuals (life, liberty, and property). He defined government as a social contract based on the consent of the governed, defending the right to rebel against tyranny."
+        ],
+          keyConcept: "Tabula rasa, Natural rights",
+          keyWorks: "Two Treatises of Government"
         },
         {
           id: "hume",
           featured: false,
           name: "Hume",
           era: "1711 - 1776",
-          school: "Empiricism / Skepticism",
-          image: "avatar.jpg",
-          bio: "Major skeptical philosopher, theorist of the association of ideas and causality."
+          school: "Empiricism",
+          image: "thinkers/images/marx.jpg",
+          bio: "Major skeptical philosopher, theorist of the association of ideas and causality.",
+          body: [
+          "David Hume (1711 - 1776) was a Scottish philosopher, historian, and essayist, a central figure of the Scottish Enlightenment. His radical skepticism shook dogmatic rationalism, famously 'awakening Immanuel Kant from his dogmatic slumber'.",
+          "In A Treatise of Human Nature, Hume argues that all knowledge derives from sensory impressions. He famously analyzed causality, stating that we never perceive a 'cause' itself, only the constant conjunction of events; our belief in cause and effect is born of habit.",
+          "Hume also critiqued the concept of a permanent self, describing the mind as a bundle of constantly changing perceptions. His moral philosophy prioritized sympathy and emotion over cold reason in determining moral judgments."
+        ],
+          keyConcept: "Empirism, Skepticism, Causality",
+          keyWorks: "A Treatise of Human Nature"
         },
         {
           id: "hobbes",
@@ -1100,8 +1396,15 @@ const TIKTOK_DATA = {
           name: "Hobbes",
           era: "1588 - 1679",
           school: "Political Philosophy",
-          image: "avatar.jpg",
-          bio: "Author of Leviathan, describing the state of nature as a war of all against all."
+          image: "thinkers/images/marx.jpg",
+          bio: "Author of Leviathan, describing the state of nature as a war of all against all.",
+          body: [
+          "Thomas Hobbes (1588 - 1679) was a major English philosopher who revolutionized political philosophy. Having witnessed the horrors of the English Civil War, he sought to design a political framework capable of guaranteeing peace and civil security.",
+          "In Leviathan, Hobbes describes the 'state of nature' (human life without government or laws) as a state of war of all against all, where life is 'solitary, poor, nasty, brutish, and short.' To escape this constant fear of violent death, humans enter a social contract.",
+          "This contract transfers individual sovereignty to a strong central power, the 'Leviathan,' in exchange for safety. Hobbes was one of the first to ground political authority on a rational contract between individuals rather than divine right."
+        ],
+          keyConcept: "State of nature, Leviathan state",
+          keyWorks: "Leviathan"
         },
         {
           id: "beauvoir",
@@ -1109,10 +1412,16 @@ const TIKTOK_DATA = {
           name: "Beauvoir",
           era: "1908 - 1986",
           school: "Feminism",
-          image: "avatar.jpg",
-          bio: "Philosopher and writer, famous for her quote 'One is not born, but rather becomes, a woman'."
+          image: "thinkers/images/sartre.jpg",
+          bio: "Philosopher and writer, famous for her quote 'One is not born, but rather becomes, a woman'.",
+          body: [
+          "Simone de Beauvoir (1908 - 1986) was a French existentialist philosopher, novelist, and major public figure of global feminism. Life-partner of Jean-Paul Sartre, she developed a unique philosophical system centered on freedom, situations, and ethics.",
+          "Her landmark 1949 work, The Second Sex, established modern feminist philosophy with her famous declaration: 'One is not born, but rather becomes, a woman.' She analyzed how society historically constructs gender roles to enforce female subordination.",
+          "Applying existentialism to gender, Beauvoir argued that biological situations do not dictate a fixed destiny. Her ethics of ambiguity calls on individuals to reject passive, traditional roles and actively engage in choosing their own authentic lives."
+        ],
+          keyConcept: "Feminism, Existentialism",
+          keyWorks: "The Second Sex"
         },
-
         {
           id: "marcaurele",
           featured: true,
@@ -1122,11 +1431,13 @@ const TIKTOK_DATA = {
           image: "thinkers/images/marcaurele.jpg",
           bio: "Roman Emperor and philosopher, author of 'Meditations', a blueprint for resilience and self-discipline.",
           body: [
-            "Marcus Aurelius (121 - 180 AD) was the last of the 'Five Good Emperors' who governed the Roman Empire. Often referred to as the 'Philosopher-King', his reign was far from peaceful, marked by devastating military challenges, borders incursions, the Antonine Plague, and domestic revolts.",
-            "During his arduous military campaigns in Pannonia, he wrote his private notes, which were later collected and published under the title 'Meditations'. Intended solely as a personal diary for self-guidance and self-correction, these writings have become one of the greatest guides to Stoic philosophy ever written.",
-            "His philosophy teaches that while we cannot govern external circumstances, we are the absolute masters of our own minds and reactions—a concept he referred to as the 'Inner Citadel'. He asserted that anger is a sign of weakness, and that we must learn to master our impulses.",
-            "Marcus Aurelius also emphasized duty, social responsibility, and human cooperation. His writings remain an essential resource for modern leadership, self-discipline, and psychological resilience under pressure."
-          ]
+          "Marcus Aurelius (121 - 180 AD) was the last of the 'Five Good Emperors' who governed the Roman Empire. Often referred to as the 'Philosopher-King', his reign was far from peaceful, marked by devastating military challenges, borders incursions, the Antonine Plague, and domestic revolts.",
+          "During his arduous military campaigns in Pannonia, he wrote his private notes, which were later collected and published under the title 'Meditations'. Intended solely as a personal diary for self-guidance and self-correction, these writings have become one of the greatest guides to Stoic philosophy ever written.",
+          "His philosophy teaches that while we cannot govern external circumstances, we are the absolute masters of our own minds and reactions—a concept he referred to as the 'Inner Citadel'. He asserted that anger is a sign of weakness, and that we must learn to master our impulses.",
+          "Marcus Aurelius also emphasized duty, social responsibility, and human cooperation. His writings remain an essential resource for modern leadership, self-discipline, and psychological resilience under pressure."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
         },
         {
           id: "seneque",
@@ -1137,11 +1448,13 @@ const TIKTOK_DATA = {
           image: "thinkers/images/seneque.jpg",
           bio: "Imperial advisor, dramatist, and Stoic philosopher, famous for his essays on the shortness of life, death, and passions.",
           body: [
-            "Seneca the Younger (4 BC - 65 AD) was a Roman Stoic philosopher, statesman, and dramatist. Serving as advisor to Emperor Nero, he was one of the wealthiest and most influential figures in the Roman Empire.",
-            "His famous 'Letters to Lucilius' offer practical Stoic advice on dealing with grief, anger, anxiety, and the shortness of life. He championed philosophy not as an abstract theory, but as an essential daily practice.",
-            "Sentenced to death by Nero, Seneca's calm, deliberate suicide became a legendary symbol of Stoic composure and virtue in the face of death.",
-            "Seneca's legacy is defined by his deep understanding of time as our most valuable resource. His writings continue to inspire readers worldwide to live with intention, self-possession, and wisdom."
-          ]
+          "Seneca the Younger (4 BC - 65 AD) was a Roman Stoic philosopher, statesman, and dramatist. Serving as advisor to Emperor Nero, he was one of the wealthiest and most influential figures in the Roman Empire.",
+          "His famous 'Letters to Lucilius' offer practical Stoic advice on dealing with grief, anger, anxiety, and the shortness of life. He championed philosophy not as an abstract theory, but as an essential daily practice.",
+          "Sentenced to death by Nero, Seneca's calm, deliberate suicide became a legendary symbol of Stoic composure and virtue in the face of death.",
+          "Seneca's legacy is defined by his deep understanding of time as our most valuable resource. His writings continue to inspire readers worldwide to live with intention, self-possession, and wisdom."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
         },
         {
           id: "epictete",
@@ -1152,11 +1465,13 @@ const TIKTOK_DATA = {
           image: "thinkers/images/epictete.jpg",
           bio: "A freed slave who became one of the most prominent Roman Stoic teachers, famous for his dichotomy of control.",
           body: [
-            "Epictetus (c. 50 – 135 AD) was born a slave in Hierapolis, Phrygia. His owner Epaphroditus, secretary to Emperor Nero, permitted him to study philosophy under Musonius Rufus. After gaining his freedom, Epictetus began teaching in Rome until Emperor Domitian banished all philosophers. He moved to Nicopolis, Greece, where he established a famous Stoic school.",
-            "Epictetus wrote nothing himself. His teachings were transcribed by his pupil Arrian, who recorded detailed lectures and conversations. These became the 'Discourses' and the 'Enchiridion' (Handbook)—a concise guide summarizing the core practical rules of Stoicism.",
-            "The heart of Epictetus's thought is the dichotomy of control: distinguishing what is within our power (our beliefs, impulses, desires) from what is not (our bodies, wealth, reputation, death). True freedom and happiness come from aligning our will with nature and accepting external events.",
-            "His rigorous philosophy centered on personal discipline and moral autonomy influenced Marcus Aurelius, early Christian writers, and modern cognitive psychology, including Rational Emotive Behavior Therapy."
-          ]
+          "Epictetus (c. 50 – 135 AD) was born a slave in Hierapolis, Phrygia. His owner Epaphroditus, secretary to Emperor Nero, permitted him to study philosophy under Musonius Rufus. After gaining his freedom, Epictetus began teaching in Rome until Emperor Domitian banished all philosophers. He moved to Nicopolis, Greece, where he established a famous Stoic school.",
+          "Epictetus wrote nothing himself. His teachings were transcribed by his pupil Arrian, who recorded detailed lectures and conversations. These became the 'Discourses' and the 'Enchiridion' (Handbook)—a concise guide summarizing the core practical rules of Stoicism.",
+          "The heart of Epictetus's thought is the dichotomy of control: distinguishing what is within our power (our beliefs, impulses, desires) from what is not (our bodies, wealth, reputation, death). True freedom and happiness come from aligning our will with nature and accepting external events.",
+          "His rigorous philosophy centered on personal discipline and moral autonomy influenced Marcus Aurelius, early Christian writers, and modern cognitive psychology, including Rational Emotive Behavior Therapy."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
         },
         {
           id: "socrate",
@@ -1167,11 +1482,13 @@ const TIKTOK_DATA = {
           image: "thinkers/images/socrate.jpg",
           bio: "The father of Western philosophy, famous for his method of questioning (maieutics) and his tragic execution.",
           body: [
-            "Socrates (470 – 399 BC), born in Athens, is regarded as the father of Western moral philosophy. He spent his life wandering the public spaces of Athens, questioning fellow citizens on virtue, justice, and courage, preferring dialogical examination over dogmatic lectures.",
-            "He wrote nothing down. His thoughts are known primarily through the dialogues of his student Plato. Plato used Socrates as the primary voice to demonstrate the dialectic method, challenging assumptions to uncover deeper truths.",
-            "Socrates' method, 'maieutics' (midwifery of mind), was an interactive technique of cooperative dialogue. By asking questions, he helped interlocutors birth their own insights. His famous phrase 'I know that I know nothing' encapsulates his relentless search for truth.",
-            "His critical questioning embarrassed powerful political figures in Athens. Accused of impiety and corrupting the youth, he was sentenced to death. Refusing exile out of respect for Athenian laws, he died calmly by drinking hemlock among weeping friends."
-          ]
+          "Socrates (470 – 399 BC), born in Athens, is regarded as the father of Western moral philosophy. He spent his life wandering the public spaces of Athens, questioning fellow citizens on virtue, justice, and courage, preferring dialogical examination over dogmatic lectures.",
+          "He wrote nothing down. His thoughts are known primarily through the dialogues of his student Plato. Plato used Socrates as the primary voice to demonstrate the dialectic method, challenging assumptions to uncover deeper truths.",
+          "Socrates' method, 'maieutics' (midwifery of mind), was an interactive technique of cooperative dialogue. By asking questions, he helped interlocutors birth their own insights. His famous phrase 'I know that I know nothing' encapsulates his relentless search for truth.",
+          "His critical questioning embarrassed powerful political figures in Athens. Accused of impiety and corrupting the youth, he was sentenced to death. Refusing exile out of respect for Athenian laws, he died calmly by drinking hemlock among weeping friends."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
         },
         {
           id: "camus",
@@ -1182,11 +1499,13 @@ const TIKTOK_DATA = {
           image: "thinkers/images/camus.jpg",
           bio: "French writer and philosopher, Nobel laureate, author of 'The Stranger' and 'The Myth of Sisyphus'.",
           body: [
-            "Born in Algeria in 1913 and dying in 1960, Albert Camus was a French Nobel Prize-winning author and philosopher. He is renowned as the primary architect of the philosophy of the Absurd.",
-            "Camus explored the conflict between the human drive to find meaning and the cold, silent indifference of the universe. In 'The Myth of Sisyphus', he argued that rather than resigning to despair, one must embrace the Absurd and live with rebellious joy.",
-            "His humanitarian stances against violence and ideological dogmatism separated him from contemporaries like Sartre. His books stand as a timeless testament to human solidarity, liberty, and moral clarity.",
-            "By asserting that 'I rebel, therefore we exist', Camus laid the foundation for an active, humanistic response to absurdity, offering hope and meaning without relying on absolute dogmas."
-          ]
+          "Born in Algeria in 1913 and dying in 1960, Albert Camus was a French Nobel Prize-winning author and philosopher. He is renowned as the primary architect of the philosophy of the Absurd.",
+          "Camus explored the conflict between the human drive to find meaning and the cold, silent indifference of the universe. In 'The Myth of Sisyphus', he argued that rather than resigning to despair, one must embrace the Absurd and live with rebellious joy.",
+          "His humanitarian stances against violence and ideological dogmatism separated him from contemporaries like Sartre. His books stand as a timeless testament to human solidarity, liberty, and moral clarity.",
+          "By asserting that 'I rebel, therefore we exist', Camus laid the foundation for an active, humanistic response to absurdity, offering hope and meaning without relying on absolute dogmas."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
         },
         {
           id: "nietzsche",
@@ -1197,11 +1516,13 @@ const TIKTOK_DATA = {
           image: "thinkers/images/nietzsche.jpg",
           bio: "Famous for his critique of traditional morality, the Overman, the will to power, and eternal recurrence.",
           body: [
-            "Friedrich Nietzsche (1844 - 1900) was a radical German philosopher, cultural critic, and poet. He is famous for his sharp critiques of traditional morality, religion, and Western rationalism.",
-            "Nietzsche introduced foundational ideas such as the 'will to power,' the concept of the 'Overman' (Übermensch) who creates his own values, and 'Amor Fati'—the unconditional love of one's fate, regardless of suffering.",
-            "His work paved the way for existentialism and modern psychology. Nietzsche remains a powerful voice encouraging intellectual courage, self-overcoming, and the creative affirmation of life.",
-            "Through his poetic style, Nietzsche challenged readers to question the origins of their values and build a life of genuine individuality, far from herd conformity."
-          ]
+          "Friedrich Nietzsche (1844 - 1900) was a radical German philosopher, cultural critic, and poet. He is famous for his sharp critiques of traditional morality, religion, and Western rationalism.",
+          "Nietzsche introduced foundational ideas such as the 'will to power,' the concept of the 'Overman' (Übermensch) who creates his own values, and 'Amor Fati'—the unconditional love of one's fate, regardless of suffering.",
+          "His work paved the way for existentialism and modern psychology. Nietzsche remains a powerful voice encouraging intellectual courage, self-overcoming, and the creative affirmation of life.",
+          "Through his poetic style, Nietzsche challenged readers to question the origins of their values and build a life of genuine individuality, far from herd conformity."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
         },
         {
           id: "jung",
@@ -1212,11 +1533,13 @@ const TIKTOK_DATA = {
           image: "thinkers/images/jung.jpg",
           bio: "Swiss psychiatrist, founder of analytical psychology, pioneer of the collective unconscious, archetypes, and the Shadow.",
           body: [
-            "Carl Gustav Jung (1875 – 1961) was a Swiss psychiatrist and psychoanalyst who founded analytical psychology. Once a close collaborator of Freud, Jung parted ways due to theoretical differences on the nature of the psyche.",
-            "Jung introduced major psychological concepts including the collective unconscious—a structural layer of the psyche shared by all humans, containing universal symbols called 'archetypes' (the Self, Shadow, Anima, and Persona).",
-            "He pioneered the integration of the shadow self, arguing that psychological wholeness (individuation) requires acknowledging repressed instincts and traits to transform them into conscious creative energy.",
-            "His study of Eastern philosophies, mythology, alchemy, and quantum mechanics (with Wolfgang Pauli) extended his influence far beyond psychology, deeply impacting art, religion, and modern personal development."
-          ]
+          "Carl Gustav Jung (1875 – 1961) was a Swiss psychiatrist and psychoanalyst who founded analytical psychology. Once a close collaborator of Freud, Jung parted ways due to theoretical differences on the nature of the psyche.",
+          "Jung introduced major psychological concepts including the collective unconscious—a structural layer of the psyche shared by all humans, containing universal symbols called 'archetypes' (the Self, Shadow, Anima, and Persona).",
+          "He pioneered the integration of the shadow self, arguing that psychological wholeness (individuation) requires acknowledging repressed instincts and traits to transform them into conscious creative energy.",
+          "His study of Eastern philosophies, mythology, alchemy, and quantum mechanics (with Wolfgang Pauli) extended his influence far beyond psychology, deeply impacting art, religion, and modern personal development."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
         },
         {
           id: "schopenhauer",
@@ -1227,11 +1550,13 @@ const TIKTOK_DATA = {
           image: "thinkers/images/schopenhauer.jpg",
           bio: "German philosopher best known for his theory of the will-to-live as the metaphysical essence of the world.",
           body: [
-            "Born in 1788 and passing in 1860, Arthur Schopenhauer was a pivotal German philosopher best known for his masterwork 'The World as Will and Representation'. He stands as a towering figure of philosophical pessimism.",
-            "Schopenhauer argued that the fundamental reality of the universe is a blind, irrational driving force he termed the 'Will to live'. This endless striving causes perpetual dissatisfaction and suffering. He proposed aesthetic contemplation of art and music, alongside ascetic self-denial, as ways to escape this cycle.",
-            "His thoughts left a profound mark on thinkers like Friedrich Nietzsche, Sigmund Freud, and Richard Wagner, offering a pragmatic approach to living by tempering expectations and desires.",
-            "Schopenhauer's incorporation of Eastern philosophies introduced a unique perspective to Western philosophy, emphasizing empathy and mindfulness as crucial paths to reducing suffering."
-          ]
+          "Born in 1788 and passing in 1860, Arthur Schopenhauer was a pivotal German philosopher best known for his masterwork 'The World as Will and Representation'. He stands as a towering figure of philosophical pessimism.",
+          "Schopenhauer argued that the fundamental reality of the universe is a blind, irrational driving force he termed the 'Will to live'. This endless striving causes perpetual dissatisfaction and suffering. He proposed aesthetic contemplation of art and music, alongside ascetic self-denial, as ways to escape this cycle.",
+          "His thoughts left a profound mark on thinkers like Friedrich Nietzsche, Sigmund Freud, and Richard Wagner, offering a pragmatic approach to living by tempering expectations and desires.",
+          "Schopenhauer's incorporation of Eastern philosophies introduced a unique perspective to Western philosophy, emphasizing empathy and mindfulness as crucial paths to reducing suffering."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
         },
         {
           id: "kant",
@@ -1242,11 +1567,13 @@ const TIKTOK_DATA = {
           image: "thinkers/images/kant.jpg",
           bio: "One of the greatest Enlightenment thinkers, known for critiques of reason and deontological ethics.",
           body: [
-            "Immanuel Kant (1724 - 1804) was a German philosopher and one of the central figures of the Enlightenment. His critical philosophy revolutionized epistemology, ethics, and aesthetics.",
-            "Kant established deontological ethics, centered around the 'Categorical Imperative'—the moral law that one should act only according to rules that could be willed as universal laws. He believed human dignity rests on moral autonomy.",
-            "Famous for his incredibly disciplined and routined life in Königsberg, Kant's critiques of pure and practical reason laid the groundwork for almost all subsequent modern philosophy.",
-            "His concept of treat people as 'ends in themselves' rather than mere means remains a foundation of modern human rights, ethics, and global political philosophy."
-          ]
+          "Immanuel Kant (1724 - 1804) was a German philosopher and one of the central figures of the Enlightenment. His critical philosophy revolutionized epistemology, ethics, and aesthetics.",
+          "Kant established deontological ethics, centered around the 'Categorical Imperative'—the moral law that one should act only according to rules that could be willed as universal laws. He believed human dignity rests on moral autonomy.",
+          "Famous for his incredibly disciplined and routined life in Königsberg, Kant's critiques of pure and practical reason laid the groundwork for almost all subsequent modern philosophy.",
+          "His concept of treat people as 'ends in themselves' rather than mere means remains a foundation of modern human rights, ethics, and global political philosophy."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
         },
         {
           id: "hegel",
@@ -1257,11 +1584,13 @@ const TIKTOK_DATA = {
           image: "thinkers/images/hegel.jpg",
           bio: "Creator of a comprehensive dialectical philosophy explaining the progression of History and Spirit.",
           body: [
-            "Georg Wilhelm Friedrich Hegel (1770 - 1831) was a towering German philosopher and the founder of Absolute Idealism. He created a vast system explaining the development of Spirit (Geist) through history.",
-            "Hegel is best known for his dialectical method (often structured as Thesis, Antithesis, Synthesis) and the 'Master-Slave dialectic', illustrating how self-awareness develops through struggle and mutual recognition.",
-            "His monumental philosophy exerted an immense influence on Karl Marx, phenomenology, and existentialism, shaping the course of modern political thought and the philosophy of history.",
-            "Hegel's insistence that truth is historical and develops through ongoing resolution of contradictions remains one of the most powerful paradigms of modern sociological and political thought."
-          ]
+          "Georg Wilhelm Friedrich Hegel (1770 - 1831) was a towering German philosopher and the founder of Absolute Idealism. He created a vast system explaining the development of Spirit (Geist) through history.",
+          "Hegel is best known for his dialectical method (often structured as Thesis, Antithesis, Synthesis) and the 'Master-Slave dialectic', illustrating how self-awareness develops through struggle and mutual recognition.",
+          "His monumental philosophy exerted an immense influence on Karl Marx, phenomenology, and existentialism, shaping the course of modern political thought and the philosophy of history.",
+          "Hegel's insistence that truth is historical and develops through ongoing resolution of contradictions remains one of the most powerful paradigms of modern sociological and political thought."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
         }
       ],
       articles: [
@@ -1542,7 +1871,14 @@ const TIKTOK_DATA = {
           era: "427 - 347 ق.م",
           school: "الأفلاطونية",
           image: "thinkers/images/platon.jpg",
-          bio: "تلميذ سقراط ومؤسس الأكاديمية، مستكشف عالم المثل والعدالة المثالية الفاضلة."
+          bio: "تلميذ سقراط ومؤسس الأكاديمية، مستكشف عالم المثل والعدالة المثالية الفاضلة.",
+          body: [
+          "أفلاطون (427 - 347 ق.م) كان فيلسوفاً يونانياً قديماً، تلميذاً لسقراط ومعلماً لأرسطو. ولد في عائلة أثينية عريقة، وكان إعدام معلمه سقراط الحدث الحاسم الذي وجهه نحو الفلسفة، مما دفعه للبحث عن أسس المدينة الفاضلة العادلة التي يحكمها الحكماء.",
+          "أسس الأكاديمية في أثينا، وهي أول معهد للتعليم العالي في العالم الغربي. ترتكز فلسفته على نظرية المُثُل (أو الأفكار)، والتي تنص على أن العالم المادي الذي ندركه بحواسنا ليس سوى ظلال مشوهة ومتغيرة لعالم حقيقي أبدي وثابت من المفاهيم المطلقة.",
+          "من خلال محاوراته الشهيرة (مثل الجمهورية، المأدبة، وفيدون)، استخدم أفلاطون شخصية سقراط لقيادة العقول نحو الحقيقة. وتظل أسطورة الكهف واحدة من أشهر الاستعارات التي توضح كيف يجب على البشرية التحرر من الأوهام الحسية لمشاهدة نور الحقيقة."
+        ],
+          keyConcept: "نظرية المُثُل، العدالة المثالية الفاضلة",
+          keyWorks: "الجمهورية، المأدبة"
         },
         {
           id: "aristote",
@@ -1551,7 +1887,14 @@ const TIKTOK_DATA = {
           era: "384 - 322 ق.م",
           school: "الأرسطية",
           image: "thinkers/images/platon.jpg",
-          bio: "أبو المنطق وعلم الأحياء، ومؤسس الأخلاق الفضيلة ومبدأ الوسطية والاعتدال."
+          bio: "أبو المنطق وعلم الأحياء، ومؤسس الأخلاق الفضيلة ومبدأ الوسطية والاعتدال.",
+          body: [
+          "أرسطو (384 - 322 ق.م) كان أحد أكثر المفكرين تأثيراً في التاريخ، حيث وضع أسس العلوم الطبيعية والمنطق والفلسفة الغربية. ولد في ستاغيرا، وانضم إلى أكاديمية أفلاطون في أثينا لعشرين عاماً، قبل أن يصبح معلماً للإسكندر الأكبر ويؤسس مدرسته الخاصة، اللوقيون.",
+          "على عكس أفلاطون الذي أعطى الأولوية للمثل المجردة، اعتمد أرسطو منهجاً تجريبياً واقعياً، حيث راقب الطبيعة لاستخلاص القوانين العامة. ويعتبر أبو المنطق الصوري (القياس المنطقي) والتصنيف البيولوجي، ومكتشف مفاهيم المادة والصورة والعلل الأربع.",
+          "في كتابه الأخلاق النيقوماخية، يعرف أرسطو السعادة بأنها الغاية القصوى للوجود البشري، والتي تتحقق بممارسة الفضيلة. والفضيلة عنده هي الوسط الذهبي بين رذيلتين (مثل الشجاعة هي الوسط بين الجبن والتهور)، وهي أسلوب حياة يهدف إلى التميز الإنساني."
+        ],
+          keyConcept: "المنطق الصوري، أخلاق الفضيلة والوسطية",
+          keyWorks: "الأخلاق النيقوماخية"
         },
         {
           id: "descartes",
@@ -1560,7 +1903,14 @@ const TIKTOK_DATA = {
           era: "1596 - 1650",
           school: "العقلانية",
           image: "thinkers/images/descartes.jpg",
-          bio: "أبو الفلسفة الحديثة، وصاحب الكوجيتو الشهير 'أنا أفكر إذن أنا موجود' والشك المنهجي."
+          bio: "أبو الفلسفة الحديثة، وصاحب الكوجيتو الشهير 'أنا أفكر إذن أنا موجود' والشك المنهجي.",
+          body: [
+          "رينيه ديكارت (1596 - 1650) كان فيلسوفاً ورياضياً وفيزيائياً فرنسياً، ويعتبر على نطاق واسع مؤسس الفلسفة الحديثة. في فترة تحول علمي مليئة بالشكوك، سعى إلى إعادة بناء المعرفة البشرية على أسس يقينية مطلقة لا يمكن الشك فيها.",
+          "لتحقيق ذلك، استخدم الشك المنهجي، رافضاً كل ما ليس واضحاً ومتميزاً لعقله. ومن هذا الهدم ظهر يقينه الأول الراسخ: فعل الشك نفسه يثبت أنه يفكر، وبالتالي فهو موجود، وصاغ ذلك في جملته الشهيرة 'أنا أفكر، إذن أنا موجود' (Cogito, ergo sum).",
+          "ديكارت هو أيضاً أبو العقلانية الحديثة والثنائية الديكارتية، حيث تميز بين الجوهر المفكر (العقل) والجوهر الممتد (الجسد). وقد أعادت أعماله الكبرى، مثل مقال عن المنهج والتأملات في الفلسفة الأولى، تعريف الذات المفكرة والمنهج العلمي."
+        ],
+          keyConcept: "الشك المنهجي، الكوجيتو، الثنائية",
+          keyWorks: "مقال عن المنهج، التأملات"
         },
         {
           id: "spinoza",
@@ -1569,7 +1919,14 @@ const TIKTOK_DATA = {
           era: "1632 - 1677",
           school: "العقلانية",
           image: "thinkers/images/descartes.jpg",
-          bio: "فيلسوف الحرية العقلية والبهجة، الذي وحد بين الإله والطبيعة وسعى للسلام الداخلي."
+          bio: "فيلسوف الحرية العقلية والبهجة، الذي وحد بين الإله والطبيعة وسعى للسلام الداخلي.",
+          body: [
+          "باروخ سبينوزا (1632 - 1677) كان فيلسوفاً هولندياً من أصل يهودي برتغالي، واجه الطرد والحرمان من طائفته بسبب آرائه الثورية. عاش حياة بسيطة في صقل العدسات البصرية، ورفض المناصب الأكاديمية المرموقة ليحمي حريته الكاملة في التفكير.",
+          "تقدم فلسفته، المفصلة في كتابه العمدة الأخلاق، رؤية وحدة الوجود الثورية حيث الخالق والطبيعة جوهر واحد ('الله أو الطبيعة'). في هذا النظام، كل الأشياء الموجودة هي تجليات أو تعديلات لهذا الجوهر الإلهي الفريد، نافياً الإرادة الحرة المطلقة.",
+          "يجادل سبينوزا بأن حرية الإنسان تتحقق بفهم الأسباب الحقيقية لأفعالنا، وتحويل الانفعالات السلبية إلى عواطف عقلانية نشطة. البهجة هي الانتقال إلى كمال أكبر، والسعادة القصوى تكمن في الحب العقلي للطبيعة أو الخالق."
+        ],
+          keyConcept: "وحدة الوجود، البهجة العقلانية والحرية",
+          keyWorks: "الأخلاق"
         },
         {
           id: "rousseau",
@@ -1577,8 +1934,15 @@ const TIKTOK_DATA = {
           name: "جان جاك روسو",
           era: "1712 - 1778",
           school: "عصر التنوير",
-          image: "avatar.jpg",
-          bio: "منظر العقد الاجتماعي والحرية، وصاحب رؤية الخير الفطري للإنسان الذي أفسدته مدنية المجتمع."
+          image: "thinkers/images/rousseau.jpg",
+          bio: "منظر العقد الاجتماعي والحرية، وصاحب رؤية الخير الفطري للإنسان الذي أفسدته مدنية assessment.",
+          body: [
+          "جان جاك روسو (1712 - 1778) كان كاتباً وفيلسوفاً ولد في جنيف، ويعد من أكثر الشخصيات تميزاً وتأثيراً في عصر التنوير. بفضل فكره الحر والمنعزل، ألهمت كتاباته الثورة الفرنسية وحركة الرومانسية الأدبية والفنية.",
+          "اشتهر روسو بأطروحته القائلة بأن الإنسان طيب بفطرته، لكن المجتمع وظهور الملكية الخاصة أفسداه وقيداه. وفي كتابه العقد الاجتماعي، يبحث عن صيغة سياسية عادلة يطيع فيها المواطنون 'الإرادة العامة' مع بقائهم أحراراً كما كانوا.",
+          "يقدم كتابه إيميل أو في التربية منهجاً تربوياً ثورياً يركز على التطوير الطبيعي للطفل بعيداً عن مفاسد المجتمع. ومن خلال كتابه الاعترافات، أسس أدب السيرة الذاتية الحديثة، مستكشفاً خبايا روحه الحساسة بصدق غير مسبوق."
+        ],
+          keyConcept: "الخير الفطري للإنسان، الإرادة العامة",
+          keyWorks: "العقد الاجتماعي، إيميل"
         },
         {
           id: "voltaire",
@@ -1586,8 +1950,15 @@ const TIKTOK_DATA = {
           name: "فولتير",
           era: "1694 - 1778",
           school: "عصر التنوير",
-          image: "avatar.jpg",
-          bio: "مدافع شرس عن حرية التعبير، والتسامح الفكري، والعدالة الاجتماعية ضد التعصب والجهل."
+          image: "thinkers/images/rousseau.jpg",
+          bio: "مدافع شرس عن حرية التعبير، والتسامح الفكري، والعدالة الاجتماعية ضد التعصب والجهل.",
+          body: [
+          "فولتير (فرانسوا ماري أرويه، 1694 - 1778) كان كاتباً وفيلسوفاً fransian، ورمزاً حقيقياً لعصر التنوير. استخدم قلمه الساخر والبارع كسلاح لمحاربة التعصب الديني، والظلم القضائي، والجهل الفكري في زمانه.",
+          "اشتهر برواياته الفلسفية (مثل كانديد وزاديغ) وكتابه رسالة في التسامح، حيث ندد بلا كلل بتجاوزات الكنيسة والسلطة المطلقة. ودعا إلى إيمان عقلاني واعتبر التسامح المتبادل الحق الطبيعي الأول للبشرية.",
+          "ومن خلال دفاعه عن ضحايا القضاء الفاسد (مثل قضية كالاس)، أصبح نموذجاً للمثقف الملتزم بالدفاع عن المظلومين. وتظل فلسفته ركيزة أساسية لحرية التعبير، والعلمانية، وحقوق الإنسان."
+        ],
+          keyConcept: "التسامح الفكري وحرية التعبير ضد التعصب",
+          keyWorks: "كانديد، رسالة في التسامح"
         },
         {
           id: "pascal",
@@ -1596,7 +1967,14 @@ const TIKTOK_DATA = {
           era: "1623 - 1662",
           school: "الوجودية المسيحية",
           image: "thinkers/images/descartes.jpg",
-          bio: "عالم فيزياء وفيلسوف، صاحب الرهان الشهير على وجود الخالق ووصفه لبؤس الإنسان بدون هداية."
+          bio: "عالم فيزياء وفيلسوف، صاحب الرهان الشهير على وجود الخالق ووصفه لبؤس الإنسان بدون هداية.",
+          body: [
+          "بليز باسكال (1623 - 1662) كان نابغة فرنسياً مبكراً، جمع بين كونه عالم رياضيات وفيزياء ومخترعاً لأول آلة حاسبة ميكانيكية، وفيلسوفاً صوفياً مسيحياً. طبعت صحته العليلة وتجربته الروحية العميقة كتاباته بمسحة درامية وجدانية فريدة.",
+          "في كتابه الخواطر، وهو مجموعة ملاحظات غير مكتملة نشرت بعد وفاته، يستكشف باسكال شروط الوجود البشري واصفاً إياه بـ 'بؤس الإنسان وعظمته'. وقدم فيه رهانه الشهير: بما أن العقل لا يستطيع إثبات وجود الخالق، فمن مصلحة الإنسان الرهان على وجوده لأن الربح لا نهائي.",
+          "يميز باسكال بين 'القلب' و'العقل' ('للقلب أسباب لا يعرفها العقل')، وينتقد الترفيه والهروب المستمر كوسيلة لتفادي مواجهة حقيقة الموت. ويعد تحليله للفراغ الروحي والقلق البشري إرهاصاً حقيقياً للوجودية الحديثة."
+        ],
+          keyConcept: "بؤس الإنسان بدون إله، رهان باسكال",
+          keyWorks: "الخواطر"
         },
         {
           id: "montaigne",
@@ -1604,8 +1982,15 @@ const TIKTOK_DATA = {
           name: "ميشيل دي مونتين",
           era: "1533 - 1592",
           school: "الإنسانية والشك",
-          image: "avatar.jpg",
-          bio: "مبتكر المقالات الفلسفية الذاتية، ومطلق التساؤل المنهجي 'ماذا أعرف؟' لترويض النفس."
+          image: "thinkers/images/rousseau.jpg",
+          bio: "مبتكر المقالات الفلسفية الذاتية، ومطلق التساؤل المنهجي 'ماذا أعرف؟' لترويض النفس.",
+          body: [
+          "ميشيل دي مونتين (1533 - 1592) كان كاتباً وفيلسوفاً وقاضياً فرنسياً من عصر النهضة. اعتزل العمل السياسي في برج مكتبته بقلعته وسط الحروب الدينية، ليبدأ مشروعاً أدبياً غير مسبوق: دراسة ذاته لفهم الطبيعة البشرية.",
+          "أسس عمله الفريد المقالات نمطاً جديداً من الكتابة الذاتية المسترسلة. كتب مونتين بحرية وتشكيك حول موضوعات شتى (الصداقة، الموت، العادات، التربية), مسترشداً بشعاره الشهير: 'ماذا أعرف؟' (Que sais-je؟).",
+          "سعى مونتين كإنساني أصيل إلى صياغة فن عيش متزن ولطيف، متقبلاً حدود العقل البشري والضعف الجسدي بالفكاهة والرضا. ويظل وصفه للصداقة المثالية ودعوته لتربية الذات دليلاً حياً لكل باحث عن الحكمة."
+        ],
+          keyConcept: "الشكوكية الإنسانية، سيرة الذات والقبول",
+          keyWorks: "المقالات"
         },
         {
           id: "sartre",
@@ -1613,8 +1998,15 @@ const TIKTOK_DATA = {
           name: "جان بول سارتر",
           era: "1905 - 1980",
           school: "الوجودية",
-          image: "avatar.jpg",
-          bio: "أبرز فلاسفة الوجودية الفرنسية، ومؤكد أن الحرية قدر الإنسانية والوجود يسبق الجوهر."
+          image: "thinkers/images/sartre.jpg",
+          bio: "أبرز فلاسفة الوجودية الفرنسية، ومؤكد أن الحرية قدر الإنسانية والوجود يسبق الجوهر.",
+          body: [
+          "جان بول سارتر (1905 - 1980) كان رائد الوجودية الفرنسية، روائياً ومسرحياً ومثقفاً ملتزماً في القرن العشرين. رفض جائزة نوبل في الأدب عام 1964 ليحافظ على استقلاليته الفكرية، وترك بصمة عميقة في الفلسفة العالمية بدفاعه عن التحرر الإنساني.",
+          "تنص أطروحته المركزية 'الوجود يسبق الجوهر' على أن الإنسان يولد أولاً بلا هوية محددة سلفاً، ثم يصنع نفسه وهويته بالكامل من خلال أفعاله وخياراته. الإنسان محكوم عليه بالحرية، ويتحمل مسؤولية حياته ومصيره بلا أعذار.",
+          "في كتابه الوجود والعدم، يحلل سارتر مفهوم 'سوء النية' (الخداع الذاتي)، حيث يتظاهر الفرد بالعجز هرباً من قلق الاختيار والحرية. وتعد فلسفته دعوة مستمرة للالتزام الأخلاقي والسياسي، والصدق مع الذات، والعمل الحقيقي."
+        ],
+          keyConcept: "الحرية الوجودية المطلقة، سوء النية",
+          keyWorks: "الوجود والعدم"
         },
         {
           id: "machiavel",
@@ -1622,8 +2014,15 @@ const TIKTOK_DATA = {
           name: "نيكولو ماكيافيلي",
           era: "1469 - 1527",
           school: "الواقعية السياسية",
-          image: "avatar.jpg",
-          bio: "مؤلف كتاب 'الأمير' الشهير، ومحلل آليات القوة والحفاظ على استقرار الدول ببراغماتية."
+          image: "thinkers/images/rousseau.jpg",
+          bio: "مؤلف كتاب 'الأمير' الشهير، ومحلل آليات القوة والحفاظ على استقرار الدول ببراغماتية.",
+          body: [
+          "نيكولو ماكيافيلي (1469 - 1527) كان دبلوماسياً ورجل دولة ومفكراً فلورنتينياً من عصر النهضة. عاصر الحروب والاضطرابات التي مزقت إيطاليا، فأراد تحليل السياسة ليس وفق أخلاق مثالية مجردة، بل وفق واقعها الملموس وآلياتها العملية الفعالة.",
+          "في كتابه الشهير الأمير، يصف تقنيات كسب السلطة والمحافظة عليها، مؤكداً أنه لحفظ الدولة وحمايتها يجب على الحاكم تعلم استخدام القوة والدهاء (الأسد والثعلب)، ومواجهة التقلبات والفرص بـ 'المهارة والصلابة' (Virtù).",
+          "على الرغم من تشويه فكره تاريخياً تحت مسمى 'الماكيافيلية' (الغاية تبرر الوسيلة)، فإن ماكيافيلي يعتبر مؤسس العلوم السياسية والواقعية المعاصرة. ويستكشف عمله التوتر الدائم بين الأخلاق الفردية وضرورات البقاء السياسي وحفظ الأمن."
+        ],
+          keyConcept: "الواقعية السياسية، آليات القوة والحفاظ على الدولة",
+          keyWorks: "الأمير"
         },
         {
           id: "laotseu",
@@ -1631,8 +2030,15 @@ const TIKTOK_DATA = {
           name: "لاوتسو",
           era: "القرن السادس ق.م",
           school: "الطاوية",
-          image: "avatar.jpg",
-          bio: "الحكيم الصيني ومؤسس الفلسفة الطاوية، صاحب فلسفة عدم التدخل والانسجام الكلي مع الطبيعة."
+          image: "thinkers/images/laotseu.jpg",
+          bio: "الحكيم الصيني ومؤسس الفلسفة الطاوية، صاحب فلسفة عدم التدخل والانسجام الكلي مع الطبيعة.",
+          body: [
+          "لاوتسو هو حكيم أسطوري في الصين القديمة، يُعتبر مؤسس الفلسفة الطاوية ومؤلف الكتاب الخالد تاو تي تشينغ (كتاب الطريق والفضيلة). تشكل كتاباته أحد أهم أعمدة الحكمة الإنسانية والروحية في التاريخ.",
+          "تتمحور فلسفته حول 'التاو' (الطريق)، وهو المبدأ الكوني الأبدي الذي يحكم الطبيعة وحركة الكون. ويعلم لاوتسو فن الـ 'وو وي' (اللا فعل أو عدم التدخل)، وهو ليس سلبية كسولة بل استجابة مرنة وانسجام كامل مع التدفق الطبيعي للأشياء.",
+          "تثمن تعاليم لاوتسو البساطة، والتواضع، والمرونة الفائقة (كالماء الذي ينسجم مع كل وعاء لكنه يفتت أقسى الصخور)، والعودة إلى الهدوء الداخلي. وتقدم هذه الحكمة دليلاً فعالاً للتحرر من القلق والسعي المحموم للسيطرة في العالم المعاصر."
+        ],
+          keyConcept: "طريق الطاو، اللا فعل (وو وي)، البساطة",
+          keyWorks: "تاو تي تشينغ"
         },
         {
           id: "confucius",
@@ -1640,8 +2046,15 @@ const TIKTOK_DATA = {
           name: "كونفوشيوس",
           era: "551 - 479 ق.م",
           school: "الكونفوشيوسية",
-          image: "avatar.jpg",
-          bio: "المعلم والحكيم الصيني الذي صاغ قواعد السلوك الاجتماعي، والأخلاق الأسرية، والحكم الرشيد."
+          image: "thinkers/images/laotseu.jpg",
+          bio: "المعلم والحكيم الصيني الذي صاغ قواعد السلوك الاجتماعي، والأخلاق الأسرية، والحكم الرشيد.",
+          body: [
+          "كونفوشيوس (551 - 479 ق.م) كان معلماً وفيلسوفاً ورجل دولة صينياً، صاغت أفكاره الأخلاقية والاجتماعية حضارات شرق آسيا لأكثر من ألفي عام. عاش في حقبة من التفكك والحروب، فسعى لاستعادة الوئام الاجتماعي بالتربية والفضيلة.",
+          "ترتكز عقيدته، التي جمعها تلاميذه في كتاب المختارات، على المحبة المتبادلة ('رين')، واحترام الطقوس والآداب ('لي')، وبر الوالدين، والقاعدة الذهبية: 'لا تفعل بالآخرين ما لا تحب أن يفعلوه بك'. ويرى أن استقرار الدولة يبدأ من إصلاح الفرد لنفسه.",
+          "على خلاف الطاوية المهتمة بالطبيعة البرية، فإن الكونفوشيوسية فلسفة إنسانية اجتماعية تركز على الواجبات المتبادلة والتعليم وبناء الشخصية الأخلاقية المتكاملة لضمان مجتمع مستقر وعادل."
+        ],
+          keyConcept: "الأخلاق الأسرية، احترام النظام الاجتماعي والفضيلة",
+          keyWorks: "المختارات"
         },
         {
           id: "kierkegaard",
@@ -1649,8 +2062,15 @@ const TIKTOK_DATA = {
           name: "سورين كيركغارد",
           era: "1813 - 1855",
           school: "الوجودية",
-          image: "avatar.jpg",
-          bio: "مؤسس الفلسفة الوجودية الفردية، ومحلل القلق الإنساني والقفزة الوجدانية نحو الإيمان الذاتي."
+          image: "thinkers/images/rousseau.jpg",
+          bio: "مؤسس الفلسفة الوجودية الفردية، ومحلل القلق الإنساني والقفزة الوجدانية نحو الإيمان الذاتي.",
+          body: [
+          "سورين كيركغارد (1813 - 1855) كان فيلسوفاً ولاهوتياً دنماركياً، ويُعتبر على نطاق واسع مؤسس الفلسفة الوجودية. كتب تحت أسماء مستعارة متعددة ليعرض أنماطاً مختلفة للحياة، ووجه نقدًا لاذعًا للكنيسة الرسمية وفلسفة هيجل التجريدية.",
+          "ركز فكره بالكامل على التجربة الذاتية للفرد المعزول أمام خياراته. وحلل القلق ليس كمرض بل كـ 'دوار الحرية' ومسؤولية الاختيار الأخلاقي والروحي. وقسم مسار الحياة إلى ثلاثة أطوار: الجمالي (اللذة)، والأخلاقي (الواجب)، والديني (الإيمان).",
+          "بالنسبة لكيركغارد، الحقيقة ذاتية وشخصية. والوصول إلى الطور الروحي الديني يتطلب 'قفزة إيمانية' وجدانية وشجاعة تتجاوز حدود العقل والمنطق الجاف، مقبلاً التصديق والتسليم المطلق."
+        ],
+          keyConcept: "القفزة الإيمانية الذاتية، القلق الوجودي",
+          keyWorks: "الخوف والرعدة"
         },
         {
           id: "freud",
@@ -1658,8 +2078,15 @@ const TIKTOK_DATA = {
           name: "سيغموند فرويد",
           era: "1856 - 1939",
           school: "التحليل النفسي",
-          image: "avatar.jpg",
-          bio: "مؤسس مدرسة التحليل النفسي ومكتشف اللاوعي ورموز الأحلام وآليات الدفاع النفسي."
+          image: "thinkers/images/freud.jpg",
+          bio: "مؤسس مدرسة التحليل النفسي ومكتشف اللاوعي ورموز الأحلام وآليات الدفاع النفسي.",
+          body: [
+          "سيغموند فرويد (1856 - 1939) كان طبيب أعصاب نمساوياً، ومؤسس علم التحليل النفسي. غيرت نظرياته الجريئة حول بنية العقل البشري فهمنا الكلاسيكي للنفس، والآداب، والثقافة، والدوافع الإنسانية بشكل جذري.",
+          "اشتهر فرويد باكتشافه لـ 'اللاوعي' (اللاشعور)، مؤكداً أن سلوكياتنا ومخاوفنا تحركها دوافع مكبوتة وذكريات طفولية مخفية. وقسم النفس إلى ثلاث قوى متصارعة: الهو (الغرائز)، والأنا العليا (الضوابط الأخلاقية والمجتمعية)، والأنا (الوعي المفاوض).",
+          "أسس فرويد العلاج بالكلام (التفريغ النفسي) من خلال آليات التداعي الحر وتحليل الأحلام. ورغم الجدل العلمي حول بعض أفكاره، تظل مفاهيمه حول 'آليات الدفاع النفسي' (مثل الكبت والإسقاط والتبرير) معالم أساسية لعلم النفس الإكلينيكي."
+        ],
+          keyConcept: "اللاوعي، الهو والأنا والأنا العليا",
+          keyWorks: "تفسير الأحلام"
         },
         {
           id: "adler",
@@ -1667,8 +2094,15 @@ const TIKTOK_DATA = {
           name: "ألفرد أدلر",
           era: "1870 - 1937",
           school: "علم النفس الفردي",
-          image: "avatar.jpg",
-          bio: "مؤسس مدرسة علم النفس الفردي، ومبتكر مفهوم عقدة النقص والسعي للتفوق والتعويض النفسي."
+          image: "thinkers/images/freud.jpg",
+          bio: "مؤسس مدرسة علم النفس الفردي، ومبتكر مفهوم عقدة النقص والسعي للتفوق والتعويض النفسي.",
+          body: [
+          "ألفرد أدلر (1870 - 1937) كان طبيباً ومعالجاً نفسياً نمساوياً، ومؤسس علم النفس الفردي. كان في البداية زميلاً لفرويد في فيينا، لكنه انفصل عنه ليصوغ رؤية أكثر إنسانية واجتماعية وتفاؤلاً للشخصية البشرية.",
+          "اشتهر أدلر بصياغة نظرية 'عقدة النقص'. ويرى أن كل إنسان يولد في حالة ضعف وعجز طبيعي، وينشأ لديه دافع أصيل للتعويض والتجاوز لتخطي هذا الشعور بالنقص. هذا السعي للتفوق الذاتي هو ما يحدد 'أسلوب حياة' الفرد ودوافعه.",
+          "على خلاف فرويد المرتكز على الغرائز الجنسية، ركز أدلر على 'الاهتمام الاجتماعي' (التعاون والتعاطف) والإرادة الحرة لإعادة صياغة الأهداف الشخصية. وتعد طريقته أساساً للتنمية الذاتية المعاصرة والعلاج المعرفي السلوكي."
+        ],
+          keyConcept: "عقدة النقص، علم النفس الفردي، التعويض النفسي",
+          keyWorks: "معنى الحياة"
         },
         {
           id: "marx",
@@ -1676,8 +2110,15 @@ const TIKTOK_DATA = {
           name: "كارل ماركس",
           era: "1818 - 1883",
           school: "الماركسية",
-          image: "avatar.jpg",
-          bio: "فيلسوف واقتصادي كبير، صاغ نظرية المادية التاريخية ورأى في صراع الطبقات محرك التاريخ."
+          image: "thinkers/images/marx.jpg",
+          bio: "فيلسوف واقتصادي كبير، صاغ نظرية المادية التاريخية ورأى في صراع الطبقات محرك التاريخ.",
+          body: [
+          "كارل ماركس (1818 - 1883) كان فيلسوفاً واقتصادياً ومؤرخاً ومنظراً سياسياً ألمانياً، غيرت أفكاره مجرى التاريخ الحديث. عاصر الثورة الصناعية في أوروبا، وحلل نقدياً آليات الاستغلال الطبقي الكامنة في النظام الرأسمالي الناشئ.",
+          "ترتكز فلسفته على المادية التاريخية، ومفادها أن الظروف الاقتصادية وأدوات الإنتاج المادية هي التي تحدد البناء الفوقي للمجتمع (القوانين، الأفكار، والثقافة). وعرف صراع الطبقات (بين البرجوازية والبروليتاريا) بمحرك التاريخ الأساسي.",
+          "في كتابه رأس المال و بيان الحزب الشيوعي (بالاشتراك مع فريدريك إنجلز)، انتقد ماركس اغتراب العامل تحت وطأة الإنتاج الرأسمالي، ودعا إلى تحرر جماعي لبناء مجتمع بلا طبقات، ملزماً أجيالاً من الحركات السياسية والعمالية في العالم."
+        ],
+          keyConcept: "المادية التاريخية، صراع الطبقات والتحرر",
+          keyWorks: "رأس المال"
         },
         {
           id: "locke",
@@ -1685,8 +2126,15 @@ const TIKTOK_DATA = {
           name: "جون لوك",
           era: "1632 - 1704",
           school: "التجريبية",
-          image: "avatar.jpg",
-          bio: "أبو الليبرالية وفيلسوف المعرفة التجريبية، واصفاً عقل الإنسان بصفحة بيضاء تنقشها التجربة."
+          image: "thinkers/images/marx.jpg",
+          bio: "أبو الليبرالية وفيلسوف المعرفة التجريبية، واصفاً عقل الإنسان بصفحة بيضاء تنقشها التجربة.",
+          body: [
+          "جون لوك (1632 - 1704) كان فيلسوفاً إنجليزياً، وأحد كبار مفكري عصر التنوير، ويُعتبر مؤسس الفلسفة التجريبية الحديثة والآب الروحي لليبرالية السياسية. ألهمت كتاباته إعلان الاستقلال الأمريكي ودساتير الحقوق الحديثة.",
+          "في كتابه مقال في الفهم البشري، دحض لوك نظرية الأفكار الفطرية، مؤكداً أن عقل الإنسان يولد كصفحة بيضاء (Tabula Rasa)، وأن كل المعارف والأفكار تنقشها الحواس من خلال التجربة والملاحظة والتأمل.",
+          "سياسياً، في كتابيه رسالتان في الحكم المدني، نظر لوك للحقوق الطبيعية غير القابلة للتصرف (الحياة، الحرية، والملكية). وعرّف الحكومة كعقد اجتماعي قائم على رضا المحكومين، مجيزاً حق الشعوب في مقاومة الاستبداد وعزل الطغاة."
+        ],
+          keyConcept: "العقل صفحة بيضاء، الحقوق الطبيعية، الليبرالية",
+          keyWorks: "رسالتان في الحكم المدني"
         },
         {
           id: "hume",
@@ -1694,8 +2142,15 @@ const TIKTOK_DATA = {
           name: "ديفيد هيوم",
           era: "1711 - 1776",
           school: "التجريبية والشك",
-          image: "avatar.jpg",
-          bio: "أحد أقطاب الفلسفة التجريبية والشك، ومحلل السببية والارتباط الذهني التلقائي."
+          image: "thinkers/images/marx.jpg",
+          bio: "أحد أقطاب الفلسفة التجريبية والشك، ومحلل السببية والارتباط الذهني التلقائي.",
+          body: [
+          "ديفيد هيوم (1711 - 1776) كان فيلسوفاً ومؤرخاً واسكتلندياً، ويعد من أبرز وجوه التنوير الاسكتلندي وأعظم الفلاسفة التشكيكيين. هزت فلسفته الصارمة أسس العقلانية الدوغمائية، وهي التي 'أيقظت إيمانويل كانط من سباته العقائدي'.",
+          "في كتابه رسالة في الطبيعة البشرية، جادل هيوم بأن كل الأفكار مشتقة من الانطباعات الحسية. وهاجم مفهوم السببية التقليدي، مؤكداً أننا لا ندرك 'العلة' بل نرى تتابع الأحداث فقط، وأن إيماننا بالسببية نتاج العادة والتوقع النفسي.",
+          "كما شكك في مفهوم 'الذات' الثابتة، واصفاً العقل بحزمة من الإدراكات المتغيرة باستمرار. وأسس فلسفة أخلاقية ترتكز على المشاعر والتعاطف الإنساني المتبادل بدلاً من الأحكام العقلية الباردة والجافة."
+        ],
+          keyConcept: "الشكوكية التجريبية، السببية كعادة ذهنية",
+          keyWorks: "رسالة في الطبيعة البشرية"
         },
         {
           id: "hobbes",
@@ -1703,8 +2158,15 @@ const TIKTOK_DATA = {
           name: "توماس هوبز",
           era: "1588 - 1679",
           school: "الفلسفة السياسية",
-          image: "avatar.jpg",
-          bio: "صاحب كتاب 'اللوياثان'، واصفاً حالة الطبيعة الأولى بالصراع والأنانية لتبرير العقد الاجتماعي."
+          image: "thinkers/images/marx.jpg",
+          bio: "صاحب كتاب 'اللوياثان'، واصفاً حالة الطبيعة الأولى بالصراع والأنانية لتبرير العقد الاجتماعي.",
+          body: [
+          "توماس هوبز (1588 - 1679) كان فيلسوفاً إنجليزياً كبيراً، أحدثت نظرياته السياسية ثورة في الفكر الحديث. عاصر ويلات الحرب الأهلية الإنجليزية, مما دفعه للبحث عن نموذج سياسي متين يضمن الأمن والسلم الأهلي بشكل دائم.",
+          "في كتابه الشهير الطاغوت (اللوياثان)، يصف حالة الطبيعة الأولى (حياة البشر بلا قانون أو سلطة) بأنها حالة حرب الجميع ضد الجميع، حيث حياة الإنسان 'منعزلة، فقيرة، مقززة، وحشية وقصيرة'. ولهرب البشر من خوف الموت يتفقون على عقد اجتماعي.",
+          "يقضي هذا العقد بالتنازل عن السيادة الفردية لصالح حاكم مطلق قوي (اللوياثان) يؤمن حمايتهم وينهي الفوضى. ويعد هوبز من أوائل من أسسوا الشرعية السياسية على تعاقد عقلاني بشري بدلاً من الحق الإلهي المقدس الحاكم."
+        ],
+          keyConcept: "حالة الطبيعة الأولى، اللوياثان والعقد الاجتماعي",
+          keyWorks: "اللوياثان"
         },
         {
           id: "beauvoir",
@@ -1712,10 +2174,16 @@ const TIKTOK_DATA = {
           name: "سيمون دي بوفوار",
           era: "1908 - 1986",
           school: "الوجودية النسوية",
-          image: "avatar.jpg",
-          bio: "كاتبة وفيلسوفة وجودية، صاحبة كتاب 'الجنس الآخر' ومقولة 'المرأة لا تولد امرأة بل تصبح كذلك'."
+          image: "thinkers/images/sartre.jpg",
+          bio: "كاتبة وفيلسوفة وجودية، صاحبة كتاب 'الجنس الآخر' ومقولة 'المرأة لا تولد امرأة بل تصبح كذلك'.",
+          body: [
+          "سيمون دي بوفوار (1908 - 1986) كانت فيلسوفة وجودية وروائية وناشطة فرنسية، وتعتبر رائدة الحركة النسوية الحديثة في العالم. شكلت مع شريكها الفكري جان بول سارتر ثنائياً فلسفياً فريداً، وأسست فكراً يتمحور حول الحرية والمواقف.",
+          "كتابها الأشهر الجنس الآخر، المنشور عام 1949، أرسى القواعد الفكرية للنسوية بمقولتها الشهيرة: 'المرأة لا تولد امرأة، بل تصبح كذلك'. وحللت فيه كيف يصنع المجتمع الثقافي دور المرأة ويفرض عليها التبعية عبر التاريخ.",
+          "بتطبيق الوجودية على الجندر، جادلت بوفوار بأن المحددات البيولوجية لا ترسم مصيراً ثابتاً للمرأة. وتدعو فلسفتها 'أخلاق الغموض' الأفراد للتخلص من الأدوار التقليدية الجاهزة وصياغة مصائرهم الأصيلة بحرية تامة ومسؤولية."
+        ],
+          keyConcept: "الوجودية النسوية، الجندر كبناء اجتماعي",
+          keyWorks: "الجنس الآخر"
         },
-
         {
           id: "marcaurele",
           featured: true,
@@ -1725,11 +2193,13 @@ const TIKTOK_DATA = {
           image: "thinkers/images/marcaurele.jpg",
           bio: "إمبراطور روماني وفيلسوف رواقي، كاتب 'التأملات' التي تمثل دليلاً خالداً لبناء المرونة والصلابة النفسية.",
           body: [
-            "يعتبر الإمبراطور ماركوس أوريليوس (121 - 180 م) آخر الأباطرة الخمسة الصالحين الذين قادوا الإمبراطورية الرومانية في أوج قوتها، وأحد أهم رموز الفلسفة الرواقية المتأخرة. لُقب بـ 'الفيلسوف الملك' لأنه نجح في تجسيد المفهوم الأفلاطوني للحاكم العادل. واجه طوال فترة حكمه سلسلة من الكوارث القاسية: بدءاً من وباء أنطونين المدمر الذي فتك بالبلاد، مروراً بالتمردات الداخلية، ووصولاً إلى الحروب الطاحنة ضد القبائل الجرمانية على طول الحدود الشمالية.",
-            "في خضم تلك الحروب الصعبة وتحت سقف خيمته العسكرية المظلمة على جبهة نهر الدانوب، اعتاد ماركوس أوريليوس كتابة مذكراته وتأملاته الشخصية. لم تكن هذه النصوص مكتوبة للنشر أو موجهة للعامة، بل كانت بمثابة 'تمارين روحية' وصيغ انضباط ذاتي يذكر بها نفسه بواجباته الأخلاقية وكيفية الثبات والصلابة أمام إغراءات السلطة ومخاوف الموت.",
-            "تتمحور فلسفة ماركوس أوريليوس حول مفهوم 'العقل كقلعة داخلية'. كان يؤمن إيماناً مطلقاً بأنه على الرغم من عجزنا عن التحكم في الأحداث الخارجية (كالمرض والحروب والموت والتآمر)، فإننا نملك دائماً السيادة الكاملة على عقولنا وتأويلاتنا وردود أفعالنا. يرى أن الألم لا يؤذي الروح ما دام العقل يرفض اعتباره شراً، وأن الغضب ليس سوى ضعف واعتراف بالهزيمة الداخلية.",
-            "كما شدد في كتاباته على أهمية الواجب الاجتماعي والعمل من أجل الصالح العام للبشرية، انطلاقاً من المفهوم الرواقي لـ 'المواطنة العالمية'. كان يذكر نفسه يومياً بأن البشر خلقوا ليتعاونوا مثل الأعضاء في جسد واحد، وأن الإحسان للآخرين هو المكافأة الحقيقية للنفس. تظل 'التأملات' حتى يومنا هذا من أكثر الكتب مبيعاً وتأثيراً في مجالات التنمية الذاتية والقيادة الأخلاقية والصلابة النفسية."
-          ]
+          "يعتبر الإمبراطور ماركوس أوريليوس (121 - 180 م) آخر الأباطرة الخمسة الصالحين الذين قادوا الإمبراطورية الرومانية في أوج قوتها، وأحد أهم رموز الفلسفة الرواقية المتأخرة. لُقب بـ 'الفيلسوف الملك' لأنه نجح في تجسيد المفهوم الأفلاطوني للحاكم العادل. واجه طوال فترة حكمه سلسلة من الكوارث القاسية: بدءاً من وباء أنطونين المدمر الذي فتك بالبلاد، مروراً بالتمردات الداخلية، ووصولاً إلى الحروب الطاحنة ضد القبائل الجرمانية على طول الحدود الشمالية.",
+          "في خضم تلك الحروب الصعبة وتحت سقف خيمته العسكرية المظلمة على جبهة نهر الدانوب، اعتاد ماركوس أوريليوس كتابة مذكراته وتأملاته الشخصية. لم تكن هذه النصوص مكتوبة للنشر أو موجهة للعامة، بل كانت بمثابة 'تمارين روحية' وصيغ انضباط ذاتي يذكر بها نفسه بواجباته الأخلاقية وكيفية الثبات والصلابة أمام إغراءات السلطة ومخاوف الموت.",
+          "تتمحور فلسفة ماركوس أوريليوس حول مفهوم 'العقل كقلعة داخلية'. كان يؤمن إيماناً مطلقاً بأنه على الرغم من عجزنا عن التحكم في الأحداث الخارجية (كالمرض والحروب والموت والتآمر)، فإننا نملك دائماً السيادة الكاملة على عقولنا وتأويلاتنا وردود أفعالنا. يرى أن الألم لا يؤذي الروح ما دام العقل يرفض اعتباره شراً، وأن الغضب ليس سوى ضعف واعتراف بالهزيمة الداخلية.",
+          "كما شدد في كتاباته على أهمية الواجب الاجتماعي والعمل من أجل الصالح العام للبشرية، انطلاقاً من المفهوم الرواقي لـ 'المواطنة العالمية'. كان يذكر نفسه يومياً بأن البشر خلقوا ليتعاونوا مثل الأعضاء في جسد واحد، وأن الإحسان للآخرين هو المكافأة الحقيقية للنفس. تظل 'التأملات' حتى يومنا هذا من أكثر الكتب مبيعاً وتأثيراً في مجالات التنمية الذاتية والقيادة الأخلاقية والصلابة النفسية."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
         },
         {
           id: "seneque",
@@ -1740,11 +2210,13 @@ const TIKTOK_DATA = {
           image: "thinkers/images/seneque.jpg",
           bio: "فيلسوف وكاتب ورجل دولة روماني شهير، صاحب الرسائل الفلسفية الملهمة في قصر الحياة وإدارة الغضب ومواجهة الموت.",
           body: [
-            "لوسيوس أنيوس سينيكا (4 ق.م - 65 م) هو فيلسوف رواقي، كاتب مسرحي، ورجل دولة روماني مرموق. ولد في قرطبة بإسبانيا، ونشأ في روما حيث برع في الخطابة والفلسفة. قادته نباهته ليكون معلماً ثم مستشاراً أول للإمبراطور الشاب نيرون، محاولاً توجيه شؤون الدولة بحكمة واعتدال وسط بيئة سياسية مليئة بالمؤامرات والاضطرابات في البلاط الروماني.",
-            "عاش سينيكا حياة حافلة بالتناقضات المثيرة؛ فقد تم نفيه إلى جزيرة كورسيكا لسنوات بأمر من الإمبراطور كلوديوس، ثم عاد ليصبح واحداً من أثرى وأقوى الرجال في روما. ورغم ثرائه الفاحش الذي انتقده عليه خصومه، دافع في رسائله عن موقف رواقي واضح يتمثل في الزهد والتحرر الداخلي من عبودية المادة، مؤكداً أن الحكيم هو من يملك المال دون أن يسمح للمال بامتلاك روحه.",
-            "تتميز أعماله الفلسفية الكبرى، وخاصة 'رسائل إلى لوسيليوس' ومقالاته مثل 'عن قصر الحياة' و'عن طمأنينة النفس'، بأسلوب عملي ومباشر. يطرح سينيكا 'الوقت' باعتباره أثمن ما يملكه الإنسان، وينتقد بشدة تبديد الحياة in التوافه. يقدم حلولاً عملية لمواجهة القلق اليومي، التغلب على الخوف من المستقبل، وإدراك حتمية الموت كبوابة للحرية النفسية.",
-            "اتُهم سينيكا زوراً بالتآمر ضد نيرون، فتلقى أمراً إمبراطورياً بإنهاء حياته. واجه الموت بهدوء رواقي أسطوري، حيث قام بقطع شرايينه وتناول السم محاطاً بأشخاص يحبهم، مقدماً بذلك تطبيقاً عملياً خالداً لفلسفته في مواجهة المصير بكل شجاعة."
-          ]
+          "لوسيوس أنيوس سينيكا (4 ق.م - 65 م) هو فيلسوف رواقي، كاتب مسرحي، ورجل دولة روماني مرموق. ولد في قرطبة بإسبانيا، ونشأ في روما حيث برع في الخطابة والفلسفة. قادته نباهته ليكون معلماً ثم مستشاراً أول للإمبراطور الشاب نيرون، محاولاً توجيه شؤون الدولة بحكمة واعتدال وسط بيئة سياسية مليئة بالمؤامرات والاضطرابات في البلاط الروماني.",
+          "عاش سينيكا حياة حافلة بالتناقضات المثيرة؛ فقد تم نفيه إلى جزيرة كورسيكا لسنوات بأمر من الإمبراطور كلوديوس، ثم عاد ليصبح واحداً من أثرى وأقوى الرجال في روما. ورغم ثرائه الفاحش الذي انتقده عليه خصومه، دافع في رسائله عن موقف رواقي واضح يتمثل في الزهد والتحرر الداخلي من عبودية المادة، مؤكداً أن الحكيم هو من يملك المال دون أن يسمح للمال بامتلاك روحه.",
+          "تتميز أعماله الفلسفية الكبرى، وخاصة 'رسائل إلى لوسيليوس' ومقالاته مثل 'عن قصر الحياة' و'عن طمأنينة النفس'، بأسلوب عملي ومباشر. يطرح سينيكا 'الوقت' باعتباره أثمن ما يملكه الإنسان، وينتقد بشدة تبديد الحياة in التوافه. يقدم حلولاً عملية لمواجهة القلق اليومي، التغلب على الخوف من المستقبل، وإدراك حتمية الموت كبوابة للحرية النفسية.",
+          "اتُهم سينيكا زوراً بالتآمر ضد نيرون، فتلقى أمراً إمبراطورياً بإنهاء حياته. واجه الموت بهدوء رواقي أسطوري، حيث قام بقطع شرايينه وتناول السم محاطاً بأشخاص يحبهم، مقدماً بذلك تطبيقاً عملياً خالداً لفلسفته في مواجهة المصير بكل شجاعة."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
         },
         {
           id: "epictete",
@@ -1755,11 +2227,13 @@ const TIKTOK_DATA = {
           image: "thinkers/images/epictete.jpg",
           bio: "عبد محرر أصبح أحد كبار معلمي المدرسة الرواقية في روما، اشتهر بوضعه مبدأ ثنائية التحكم.",
           body: [
-            "ولد إبيكتيتوس (حوالي 50 - 135 م) كعبد في هيرابوليس، فريجيا. سمح له سيده إبافروديتوس، الذي كان سكرتيراً للإمبراطور نيرون، بدراسة الفلسفة على يد روفوس الرواقي. بعد حصوله على حريته، بدأ إبيكتيتوس التدريس في روما حتى نفي الإمبراطور دوميتيان جميع الفلاسفة. انتقل بعدها إلى نيكوبوليس في اليونان حيث أسس مدرسة رواقية شهيرة.",
-            "لم يكتب إبيكتيتوس أي كتاب بنفسه. وقد دون تلميذه آريان تعاليمه ومحاضراته بالتفصيل في كتابي 'المحاورات' و'المختصر' (Enchiridion) — وهو دليل عملي موجز يلخص القواعد الأساسية لتطبيق الرواقية في الحياة اليومية.",
-            "يتمحور فكر إبيكتيتوس حول 'ثنائية التحكم': التمييز بين ما يقع تحت إرادتنا وسيطرتنا (مثل معتقداتنا، رغباتنا، ردود أفعالنا) وما لا يقع تحتها (مثل صحتنا، ثروتنا، سمعتنا، وموتنا). الحرية والسعادة الحقيقيتان تكمنان في قبول الواقع وتوجيه الإرادة فقط نحو ما نتحكم به.",
-            "تركت فلسفته الأخلاقية الصارمة التي تركز على الانضباط الشخصي والاستقلال الأخلاقي تأثيراً كبيراً على الإمبراطور الروماني ماركوس أوريليوس، والمفكرين المسيحيين الأوائل، وعلم النفس المعاصري وخاصة العلاج السلوكي المعرفي."
-          ]
+          "ولد إبيكتيتوس (حوالي 50 - 135 م) كعبد في هيرابوليس، فريجيا. سمح له سيده إبافروديتوس، الذي كان سكرتيراً للإمبراطور نيرون، بدراسة الفلسفة على يد روفوس الرواقي. بعد حصوله على حريته، بدأ إبيكتيتوس التدريس في روما حتى نفي الإمبراطور دوميتيان جميع الفلاسفة. انتقل بعدها إلى نيكوبوليس في اليونان حيث أسس مدرسة رواقية شهيرة.",
+          "لم يكتب إبيكتيتوس أي كتاب بنفسه. وقد دون تلميذه آريان تعاليمه ومحاضراته بالتفصيل في كتابي 'المحاورات' و'المختصر' (Enchiridion) — وهو دليل عملي موجز يلخص القواعد الأساسية لتطبيق الرواقية في الحياة اليومية.",
+          "يتمحور فكر إبيكتيتوس حول 'ثنائية التحكم': التمييز بين ما يقع تحت إرادتنا وسيطرتنا (مثل معتقداتنا، رغباتنا، ردود أفعالنا) وما لا يقع تحتها (مثل صحتنا، ثروتنا، سمعتنا، وموتنا). الحرية والسعادة الحقيقيتان تكمنان في قبول الواقع وتوجيه الإرادة فقط نحو ما نتحكم به.",
+          "تركت فلسفته الأخلاقية الصارمة التي تركز على الانضباط الشخصي والاستقلال الأخلاقي تأثيراً كبيراً على الإمبراطور الروماني ماركوس أوريليوس، والمفكرين المسيحيين الأوائل، وعلم النفس المعاصري وخاصة العلاج السلوكي المعرفي."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
         },
         {
           id: "socrate",
@@ -1770,11 +2244,13 @@ const TIKTOK_DATA = {
           image: "thinkers/images/socrate.jpg",
           bio: "أبو الفلسفة الغربية، اشتهر بمنهجه في توليد الأفكار (التوليد) ومحاكمته الشهيرة التي انتهت بإعدامه.",
           body: [
-            "ولد سقراط (470 - 399 ق.م) في أثينا ويعتبر المؤسس الحقيقي للفلسفة الأخلاقية الغربية. عاش حياة متواضعة في فقر اختياري، مكرساً وقته للتجوال في شوارع أثينا ومناقشة المواطنين في شؤون الفضيلة، العدالة، والشجاعة، مفضلاً الحوار التوليدي على الإلقاء التلقيني.",
-            "لم يكتب سقراط أي مؤلفات. وتعرف أفكاره بشكل أساسي من خلال حوارات تلميذه أفلاطون، الذي وظفه كشخصية محورية في نصوصه لإيضاح المنهج الجدلي وتحدي المعتقدات السائدة للوصول إلى الحقيقة.",
-            "يرتكز منهجه الفلسفي على 'التوليد' (توليد الأفكار)، وهو أسلوب حواري تفاعلي يقود فيه المحاور بالأسئلة المتتالية لإدراك جهله أولاً. وتلخص مقولته الشهيرة 'كل ما أعرفه هو أنني لا أعرف شيئاً' بحثه المستمر عن الحكمة الفردية.",
-            "تسبب منهجه النقدي الجريء في إزعاج القيادات السياسية في أثينا. اتُهم بالهرطقة وإفساد عقول الشباب وحكم عليه بالإعدام. ورفض الفرار من السجن احتراماً لقوانين أثينا، وتناول السم (الشوكران) بهدوء تام محاطاً بتلاميذه الباكين."
-          ]
+          "ولد سقراط (470 - 399 ق.م) في أثينا ويعتبر المؤسس الحقيقي للفلسفة الأخلاقية الغربية. عاش حياة متواضعة في فقر اختياري، مكرساً وقته للتجوال في شوارع أثينا ومناقشة المواطنين في شؤون الفضيلة، العدالة، والشجاعة، مفضلاً الحوار التوليدي على الإلقاء التلقيني.",
+          "لم يكتب سقراط أي مؤلفات. وتعرف أفكاره بشكل أساسي من خلال حوارات تلميذه أفلاطون، الذي وظفه كشخصية محورية في نصوصه لإيضاح المنهج الجدلي وتحدي المعتقدات السائدة للوصول إلى الحقيقة.",
+          "يرتكز منهجه الفلسفي على 'التوليد' (توليد الأفكار)، وهو أسلوب حواري تفاعلي يقود فيه المحاور بالأسئلة المتتالية لإدراك جهله أولاً. وتلخص مقولته الشهيرة 'كل ما أعرفه هو أنني لا أعرف شيئاً' بحثه المستمر عن الحكمة الفردية.",
+          "تسبب منهجه النقدي الجريء في إزعاج القيادات السياسية في أثينا. اتُهم بالهرطقة وإفساد عقول الشباب وحكم عليه بالإعدام. ورفض الفرار من السجن احتراماً لقوانين أثينا، وتناول السم (الشوكران) بهدوء تام محاطاً بتلاميذه الباكين."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
         },
         {
           id: "camus",
@@ -1785,11 +2261,13 @@ const TIKTOK_DATA = {
           image: "thinkers/images/camus.jpg",
           bio: "كاتب وفيلسوف وصحفي فرنسي، حائز على جائزة نوبل في الأدب، وصاحب فلسفة العبث والتمرد الإنساني ضد الظلم.",
           body: [
-            "ولد ألبير كامو عام 1913 في الجزائر لعائلة فقيرة جداً، ونشأ يتيماً بعد وفاة والده في الحرب العالمية الأولى. استطاع بفضل عبقريته وشغفه بالقراءة والتعليم بناء مسار أدبي وفلسفي استثنائي. عمل صحفياً ومناضلاً في صفوف المقاومة الفرنسية ضد النازية خلال الحرب العالمية الثانية، وحصل على جائزة نوبل في الأدب عام 1957 وهو في الرابعة والأربعين من عمره، ليكون أحد أصغر الحاصلين عليها تاريخياً.",
-            "اشتهر كامو بتأسيس وصياغة 'فلسفة العبث'. ويعرف العبث بأنه الصدام الحتمي بين رغبة الإنسان العميقة في البحث عن المعنى والعدالة وبين صمت الكون اللامتناهي وغير العقلاني. في كتابه الشهير 'أسطورة سيزيف'، استخدم كامو شخصية البطل الأسطوري المحكوم عليه برفع صخرة إلى قمة الجبل للأبد ليمثل الحالة الإنسانية، مؤكداً أنه 'يجب أن نتخيل سيزيف سعيداً' لأنه يختار الاستمرار والتمرد بمجرد وعيه بعقابه.",
-            "يرى كامو أن إدراك عبثية الحياة لا يجب أن يقود إلى اليأس أو الانتحار، بل إلى التمرد والحرية المطلقة وعيش اللحظة بشغف. في كتابه 'الإنسان المتمرد'، يوضح أن مواجهة غياب المعنى والوقوف ضد الظلم هما ما يمنحان قيمة حقيقية لحياتنا. صاغ مقولته الشهيرة: 'أنا أتمرد، إذن نحن موجودون'، واضعاً أسس نزعة إنسانية ترفض الاستسلام.",
-            "أدى موقفه الرافض للعنف الثوري الشمولي إلى قطيعة فكرية وشخصية مع معاصره جان بول سارتر، مما عكس استقامته الأخلاقية. وتظل رواياته الكبرى مثل 'الغريب'، 'الطاعون'، و'السقوط' مرجعاً إنسانياً خالداً يدعو للوعي بالذات والتضامن البشري ومواجهة الواقع بشجاعة ولطف."
-          ]
+          "ولد ألبير كامو عام 1913 في الجزائر لعائلة فقيرة جداً، ونشأ يتيماً بعد وفاة والده في الحرب العالمية الأولى. استطاع بفضل عبقريته وشغفه بالقراءة والتعليم بناء مسار أدبي وفلسفي استثنائي. عمل صحفياً ومناضلاً في صفوف المقاومة الفرنسية ضد النازية خلال الحرب العالمية الثانية، وحصل على جائزة نوبل في الأدب عام 1957 وهو في الرابعة والأربعين من عمره، ليكون أحد أصغر الحاصلين عليها تاريخياً.",
+          "اشتهر كامو بتأسيس وصياغة 'فلسفة العبث'. ويعرف العبث بأنه الصدام الحتمي بين رغبة الإنسان العميقة في البحث عن المعنى والعدالة وبين صمت الكون اللامتناهي وغير العقلاني. في كتابه الشهير 'أسطورة سيزيف'، استخدم كامو شخصية البطل الأسطوري المحكوم عليه برفع صخرة إلى قمة الجبل للأبد ليمثل الحالة الإنسانية، مؤكداً أنه 'يجب أن نتخيل سيزيف سعيداً' لأنه يختار الاستمرار والتمرد بمجرد وعيه بعقابه.",
+          "يرى كامو أن إدراك عبثية الحياة لا يجب أن يقود إلى اليأس أو الانتحار، بل إلى التمرد والحرية المطلقة وعيش اللحظة بشغف. في كتابه 'الإنسان المتمرد'، يوضح أن مواجهة غياب المعنى والوقوف ضد الظلم هما ما يمنحان قيمة حقيقية لحياتنا. صاغ مقولته الشهيرة: 'أنا أتمرد، إذن نحن موجودون'، واضعاً أسس نزعة إنسانية ترفض الاستسلام.",
+          "أدى موقفه الرافض للعنف الثوري الشمولي إلى قطيعة فكرية وشخصية مع معاصره جان بول سارتر، مما عكس استقامته الأخلاقية. وتظل رواياته الكبرى مثل 'الغريب'، 'الطاعون'، و'السقوط' مرجعاً إنسانياً خالداً يدعو للوعي بالذات والتضامن البشري ومواجهة الواقع بشجاعة ولطف."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
         },
         {
           id: "nietzsche",
@@ -1800,11 +2278,13 @@ const TIKTOK_DATA = {
           image: "thinkers/images/nietzsche.jpg",
           bio: "فيلسوف ألماني ثوري، ناقد الأخلاق التقليدية والميتافيزيقيا، وصاحب نظرية الإنسان المتفوق وإرادة القوة وحب القدر.",
           body: [
-            "يعتبر فريدريك نيتشه (1844 - 1900) أحد أكثر الفلاسفة تأثيراً وإثارة للجدل في العصر الحديث. عُين أستاذاً لعلم الفيلولوجيا الكلاسيكية في جامعة بازل وهو في الرابعة والعشرين فقط، لكنه اضطر للاستقالة mbكراً بسبب تدهور حالته الصحية المزمنة. قضى بقية حياته متنقلاً بين جبال الألب السويسرية (خاصة في سيلس ماريا) وإيطاليا، مؤلفاً أعمالاً فلسفية عميقة بأسلوب شاعري فريد.",
-            "شن نيتشه نقداً هادماً للميتافيزيقيا الغربية والأخلاق التقليدية، معتبراً إياها 'أخلاق عبيد' تقوم على الكبت والندم وإضعاف طاقة الحياة. بإعلانه الشهير 'موت الإله'، حذر نيتشه من أزمة العدمية القادمة (فقدان المعايير المطلقة) ودعا البشرية لتجاوز هذا فالتاريخ البشري ليس مجرد حوادث عشوائية، بل هو المسار العقلاني والمنظم لتطور 'الروح المطلقة' نحو إدراك حريتها التامة.",
-            "ترتكز فلسفته على مفاهيم 'إرادة القوة' (والتي تعني إرادة التجاوز والنمو والابتكار الإبداعي)، و'الإنسان المتفوق' (Übermensch - الفرد المبدع الذي يصنع قيمته الخاصة بحرية بعيداً عن القطيع)، ومبدأ 'حب القدر' (Amor Fati - القبول الكامل والشجاع للحياة بكل ما فيها من آلام وأفراح دون ندم).",
-            "تركت أعماله الخالدة مثل 'هكذا تكلم زرادشت'، 'ما وراء الخير والشر'، و'جنيالوجيا الأخلاق' بصمة هائلة على الفلسفة الوجودية وعلم النفس الحديث والتحليل النفسي الفرويدي والأدب العالمي، محفزة الإنسان على السعي الدائم نحو التطور والأصالة الذاتية."
-          ]
+          "يعتبر فريدريك نيتشه (1844 - 1900) أحد أكثر الفلاسفة تأثيراً وإثارة للجدل في العصر الحديث. عُين أستاذاً لعلم الفيلولوجيا الكلاسيكية في جامعة بازل وهو في الرابعة والعشرين فقط، لكنه اضطر للاستقالة mbكراً بسبب تدهور حالته الصحية المزمنة. قضى بقية حياته متنقلاً بين جبال الألب السويسرية (خاصة في سيلس ماريا) وإيطاليا، مؤلفاً أعمالاً فلسفية عميقة بأسلوب شاعري فريد.",
+          "شن نيتشه نقداً هادماً للميتافيزيقيا الغربية والأخلاق التقليدية، معتبراً إياها 'أخلاق عبيد' تقوم على الكبت والندم وإضعاف طاقة الحياة. بإعلانه الشهير 'موت الإله'، حذر نيتشه من أزمة العدمية القادمة (فقدان المعايير المطلقة) ودعا البشرية لتجاوز هذا فالتاريخ البشري ليس مجرد حوادث عشوائية، بل هو المسار العقلاني والمنظم لتطور 'الروح المطلقة' نحو إدراك حريتها التامة.",
+          "ترتكز فلسفته على مفاهيم 'إرادة القوة' (والتي تعني إرادة التجاوز والنمو والابتكار الإبداعي)، و'الإنسان المتفوق' (Übermensch - الفرد المبدع الذي يصنع قيمته الخاصة بحرية بعيداً عن القطيع)، ومبدأ 'حب القدر' (Amor Fati - القبول الكامل والشجاع للحياة بكل ما فيها من آلام وأفراح دون ندم).",
+          "تركت أعماله الخالدة مثل 'هكذا تكلم زرادشت'، 'ما وراء الخير والشر'، و'جنيالوجيا الأخلاق' بصمة هائلة على الفلسفة الوجودية وعلم النفس الحديث والتحليل النفسي الفرويدي والأدب العالمي، محفزة الإنسان على السعي الدائم نحو التطور والأصالة الذاتية."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
         },
         {
           id: "jung",
@@ -1815,11 +2295,13 @@ const TIKTOK_DATA = {
           image: "thinkers/images/jung.jpg",
           bio: "طبيب نفسي سويسري ومؤسس علم النفس التحليلي، واضع مفاهيم اللاشعور الجمعي، الأنماط البدئية، والظل النفسي.",
           body: [
-            "كان كارل غوستاف يونغ (1875 - 1961) طبيباً نفسياً وعالماً سويسرياً أعادت أعماله صياغة فهمنا لأعماق النفس البشرية. كان مقرباً جداً من فرويد وخلفه المنتظر، ولكنه انشق عنه بسبب خلافات فكرية حول طبيعة الطاقة النفسية واللاشعور، ليؤسس مدرسته الخاصة: علم النفس التحليلي.",
-            "طرح يونغ مفاهيم رائدة تعد اليوم ركيزة في الثقافة المعاصرة، مثل اللاشعور الجمعي — وهو طبقة عميقة من النفس يشترك فيها البشر جميعاً وتحتوي على رموز وصور عالمية تسمى 'الأنماط البدئية' (مثل الحكيم، البطل، الأنيموس، والظل).",
-            "نادى بضرورة دمج وتصالح الإنسان مع 'الظل النفسي' (الجانب الخفي والمكبوت من شخصيتنا)، مؤكداً أن التكامل النفسي (تفرد الذات) يتطلب مواجهة جوانب ضعفنا ومخاوفنا وتحويل طاقة اللاوعي المكبوتة إلى طاقة إبداع ووعي.",
-            "أبدى يونغ اهتماماً واسعاً بالخيمياء، والفلسفات الشرقية، ومقارنة الأديان، وفيزياء الكم (بالتعاون مع الفيزيائي فولفغانغ باولي)، ليمتد تأثيره الفكري خارج علم النفس السريري ويشمل الفنون والآداب ومجالات التنمية الذاتية المعاصرة."
-          ]
+          "كان كارل غوستاف يونغ (1875 - 1961) طبيباً نفسياً وعالماً سويسرياً أعادت أعماله صياغة فهمنا لأعماق النفس البشرية. كان مقرباً جداً من فرويد وخلفه المنتظر، ولكنه انشق عنه بسبب خلافات فكرية حول طبيعة الطاقة النفسية واللاشعور، ليؤسس مدرسته الخاصة: علم النفس التحليلي.",
+          "طرح يونغ مفاهيم رائدة تعد اليوم ركيزة في الثقافة المعاصرة، مثل اللاشعور الجمعي — وهو طبقة عميقة من النفس يشترك فيها البشر جميعاً وتحتوي على رموز وصور عالمية تسمى 'الأنماط البدئية' (مثل الحكيم، البطل، الأنيموس، والظل).",
+          "نادى بضرورة دمج وتصالح الإنسان مع 'الظل النفسي' (الجانب الخفي والمكبوت من شخصيتنا)، مؤكداً أن التكامل النفسي (تفرد الذات) يتطلب مواجهة جوانب ضعفنا ومخاوفنا وتحويل طاقة اللاوعي المكبوتة إلى طاقة إبداع ووعي.",
+          "أبدى يونغ اهتماماً واسعاً بالخيمياء، والفلسفات الشرقية، ومقارنة الأديان، وفيزياء الكم (بالتعاون مع الفيزيائي فولفغانغ باولي)، ليمتد تأثيره الفكري خارج علم النفس السريري ويشمل الفنون والآداب ومجالات التنمية الذاتية المعاصرة."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
         },
         {
           id: "schopenhauer",
@@ -1830,11 +2312,13 @@ const TIKTOK_DATA = {
           image: "thinkers/images/schopenhauer.jpg",
           bio: "فيلسوف ألماني مشهور بنظريته حول 'الإرادة' كجوهر مطلق للعالم وموقفه التشاؤمي المتأثر بحكمة الشرق.",
           body: [
-            "أرتور شوبنهاور (1788 - 1860) فيلسوف ألماني كبير، تميزت فلسفته بربطها الفريد بين العقلانية الغربية والحكمة الشرقية الهندية (خاصة البوذية والأوبانيشاد). عاش معظم حياته معزولاً في فرانكفورت بعيداً عن الأضواء الأكاديمية التي هيمن عليها منافسه هيغل، ولم يعرف الشهرة والتقدير الواسع إلا في السنوات الأخيرة من عمره.",
-            "أطروحته الأساسية في كتابه العمدة 'العالم كإرادة وتمثّل' تقوم على أن العالم المادي الذي نراه ليس سوى وهم (التمثل)، بينما تكمن وراءه حقيقة ميتافيزيقية عمياء وغير عقلانية هي 'إرادة الحياة'. هذه الإرادة تدفع جميع الكائنات الحية نحو الرغبة المستمرة دون إمكانية للوصول للشبع الكامل، مما يجعل المعاناة والألم جوهراً ثابتاً للوجود البشري.",
-            "للخلاص من هذا العذاب الوجودي، يطرح شوبنهاور ثلاثة مسارات للتحرر المؤقت: أولاً، التأمل الجمالي من خلال الفن والموسيقى (التي تفصلنا عن الإرادة وتمنحنا سكينة مؤقتة). ثانياً، أخلاق التعاطف والشفقة (الإدراك الروحي بأننا جميعاً نتشارك نفس المعاناة). ثالثاً، الزهد التام والتحرر من الشهوات المادية (وهو ما يشابه النيروانا البوذية).",
-            "أثر أسلوبه الأدبي السلس والواضح وتحليله العميق للرغبات واللاوعي على كبار المفكرين والعلماء، مثل فريدريك نيتشه، وسيجموند فرويد (الذي بنى نظريته في الغرائز واللاشعور على أسس شوبنهاورية)، والموسيقار ريتشارد فاغنر، وألبرت أينشتاين، والكاتب الروسي ليو تولستوي."
-          ]
+          "أرتور شوبنهاور (1788 - 1860) فيلسوف ألماني كبير، تميزت فلسفته بربطها الفريد بين العقلانية الغربية والحكمة الشرقية الهندية (خاصة البوذية والأوبانيشاد). عاش معظم حياته معزولاً في فرانكفورت بعيداً عن الأضواء الأكاديمية التي هيمن عليها منافسه هيغل، ولم يعرف الشهرة والتقدير الواسع إلا في السنوات الأخيرة من عمره.",
+          "أطروحته الأساسية في كتابه العمدة 'العالم كإرادة وتمثّل' تقوم على أن العالم المادي الذي نراه ليس سوى وهم (التمثل)، بينما تكمن وراءه حقيقة ميتافيزيقية عمياء وغير عقلانية هي 'إرادة الحياة'. هذه الإرادة تدفع جميع الكائنات الحية نحو الرغبة المستمرة دون إمكانية للوصول للشبع الكامل، مما يجعل المعاناة والألم جوهراً ثابتاً للوجود البشري.",
+          "للخلاص من هذا العذاب الوجودي، يطرح شوبنهاور ثلاثة مسارات للتحرر المؤقت: أولاً، التأمل الجمالي من خلال الفن والموسيقى (التي تفصلنا عن الإرادة وتمنحنا سكينة مؤقتة). ثانياً، أخلاق التعاطف والشفقة (الإدراك الروحي بأننا جميعاً نتشارك نفس المعاناة). ثالثاً، الزهد التام والتحرر من الشهوات المادية (وهو ما يشابه النيروانا البوذية).",
+          "أثر أسلوبه الأدبي السلس والواضح وتحليله العميق للرغبات واللاوعي على كبار المفكرين والعلماء، مثل فريدريك نيتشه، وسيجموند فرويد (الذي بنى نظريته في الغرائز واللاشعور على أسس شوبنهاورية)، والموسيقار ريتشارد فاغنر، وألبرت أينشتاين، والكاتب الروسي ليو تولستوي."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
         },
         {
           id: "kant",
@@ -1845,11 +2329,13 @@ const TIKTOK_DATA = {
           image: "thinkers/images/kant.jpg",
           bio: "فيلسوف التنوير الألماني العظيم، واضع المنهج النقدي في نظرية المعرفة وفلسفة الواجب والأخلاق الكونية.",
           body: [
-            "إيمانويل كانط (1724 - 1804) هو أحد أبرز أعمدة الفلسفة الغربية عبر العصور. ولد وتوفي في مدينة كونيغسبرغ ببروسيا الشرقية (كالينينغراد الحالية). تميز بحياته المنظمة بشكل صارق ودقيق للغاية، وكرس حياته للتدريس والبحث والـتأليف، حيث أحدث ما أطلق عليه 'ثورة كوبيرنيكية' في طريقة فهم العقل والمعرفة البشرية.",
-            "في كتابه الشهير 'نقد العقل المحض' (1781)، سعى كانط لحل الصراع الطويل بين المذهبين العقلاني والتجريبي. وأكد أن عقولنا لا تستقبل البيانات الخارجية بسلبية، بل تقوم بتنظيمها بنشاط عبر قوالب سابقة للتجربة هي الزمان والمكان ومفاهيم الفهم. وبذلك، نحن لا نعرف سوى 'الظواهر' (الأشياء كما تبدو لنا)، بينما تظل 'الأشياء في ذاتها' (النومين) غامضة وخارج حدود إدراكنا.",
-            "وفي الفلسفة الأخلاقية، صاغ في كتابه 'نقد العقل العملي' فلسفة الواجب الأخلاقي المطلق. ويرى أن القيمة الأخلاقية لأي فعل تعتمد على النية الصافية والامتثال لـ 'الأمر المطلق': 'تصرف فقط وفقاً للمبدأ الذي يجعلك تريد له أن يصبح قانوناً عاماً للبشرية'. وشدد على احترام كرامة الإنسان كقيمة مقدسة، مؤكداً أنه يجب معاملة البشر دائماً كغايات في حد ذاتهم وليس كأدوات أو وسائل.",
-            "صاغ كانط أيضاً رؤية سياسية متقدمة في كتيبه 'نحو السلام الدائم' والذي تنبأ فيه بتأسيس هيئة دولية للأمم المتحدة لمنع الحروب وحفظ السلم العالمي. يظل فكر كانط حجر الأساس للقوانين الديمقراطية الحديثة وحقوق الإنسان والنظريات السياسية المعاصرة."
-          ]
+          "إيمانويل كانط (1724 - 1804) هو أحد أبرز أعمدة الفلسفة الغربية عبر العصور. ولد وتوفي في مدينة كونيغسبرغ ببروسيا الشرقية (كالينينغراد الحالية). تميز بحياته المنظمة بشكل صارق ودقيق للغاية، وكرس حياته للتدريس والبحث والـتأليف، حيث أحدث ما أطلق عليه 'ثورة كوبيرنيكية' في طريقة فهم العقل والمعرفة البشرية.",
+          "في كتابه الشهير 'نقد العقل المحض' (1781)، سعى كانط لحل الصراع الطويل بين المذهبين العقلاني والتجريبي. وأكد أن عقولنا لا تستقبل البيانات الخارجية بسلبية، بل تقوم بتنظيمها بنشاط عبر قوالب سابقة للتجربة هي الزمان والمكان ومفاهيم الفهم. وبذلك، نحن لا نعرف سوى 'الظواهر' (الأشياء كما تبدو لنا)، بينما تظل 'الأشياء في ذاتها' (النومين) غامضة وخارج حدود إدراكنا.",
+          "وفي الفلسفة الأخلاقية، صاغ في كتابه 'نقد العقل العملي' فلسفة الواجب الأخلاقي المطلق. ويرى أن القيمة الأخلاقية لأي فعل تعتمد على النية الصافية والامتثال لـ 'الأمر المطلق': 'تصرف فقط وفقاً للمبدأ الذي يجعلك تريد له أن يصبح قانوناً عاماً للبشرية'. وشدد على احترام كرامة الإنسان كقيمة مقدسة، مؤكداً أنه يجب معاملة البشر دائماً كغايات في حد ذاتهم وليس كأدوات أو وسائل.",
+          "صاغ كانط أيضاً رؤية سياسية متقدمة في كتيبه 'نحو السلام الدائم' والذي تنبأ فيه بتأسيس هيئة دولية للأمم المتحدة لمنع الحروب وحفظ السلم العالمي. يظل فكر كانط حجر الأساس للقوانين الديمقراطية الحديثة وحقوق الإنسان والنظريات السياسية المعاصرة."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
         },
         {
           id: "hegel",
@@ -1860,11 +2346,13 @@ const TIKTOK_DATA = {
           image: "thinkers/images/hegel.jpg",
           bio: "مؤسس المثالية المطلقة والنظام الجدلي (الديالكتيكي) الشامل لتفسير حركة التاريخ والوعي البشري عبر الزمن.",
           body: [
-            "يعتبر جورج فيلهلم فريدريش هيغل (1770 - 1831) قمة المثالية الألمانية وأحد أكثر الفلاسفة تعقيداً وتأثيراً في التاريخ الحديث. صاغ نظاماً فلسفياً شاملاً يطمح إلى تفسير الطبيعة والتاريخ والفن والدين كجزء من حركة وعي واحدة ومتطورة.",
-            "الجدل (الديالكتيك) هو جوهر الفلسفة الهيغلية. يرى هيغل أن الفكر والواقع يتطوران باستمرار من خلال التناقض الداخلي والصراع الذي ينتهي بالارتقاء والتركيب (عملية الأطروحة ونقيضها والتركيب). فالتاريخ البشري ليس مجرد حوادث عشوائية، بل هو المسار العقلاني والمنظم لتطور 'الروح المطلقة' نحو إدراك حريتها التامة.",
-            "في كتابه الشهير 'ظواهرية الروح'، طرح هيغل 'جدلية السيد والعبد' والتي توضح كيف يتشكل الوعي بالذات من خلال صراع متبادل من أجل الاعتراف والحرية. كان هذا التحليل حجر الأساس لفهم علاقات القوة والاعتماد المتبادل بين البشر.",
-            "كان لفلسفة هيغل تأثير عميق ومباشر على الفكر العالمي؛ فقد أعاد كارل ماركس صياغة الجدل لصالح المادية الجدلية التي قامت عليها الماركسية، كما ألهمت طريقته فلاسفة الوجودية كـ سارتر، والظواهرية الحديثة، والتحليل النفسي اللاكاني. يظل استيعاب فلسفة هيغل ضرورياً لفهم جذور النظريات السياسية والاجتماعية المعاصرة."
-          ]
+          "يعتبر جورج فيلهلم فريدريش هيغل (1770 - 1831) قمة المثالية الألمانية وأحد أكثر الفلاسفة تعقيداً وتأثيراً في التاريخ الحديث. صاغ نظاماً فلسفياً شاملاً يطمح إلى تفسير الطبيعة والتاريخ والفن والدين كجزء من حركة وعي واحدة ومتطورة.",
+          "الجدل (الديالكتيك) هو جوهر الفلسفة الهيغلية. يرى هيغل أن الفكر والواقع يتطوران باستمرار من خلال التناقض الداخلي والصراع الذي ينتهي بالارتقاء والتركيب (عملية الأطروحة ونقيضها والتركيب). فالتاريخ البشري ليس مجرد حوادث عشوائية، بل هو المسار العقلاني والمنظم لتطور 'الروح المطلقة' نحو إدراك حريتها التامة.",
+          "في كتابه الشهير 'ظواهرية الروح'، طرح هيغل 'جدلية السيد والعبد' والتي توضح كيف يتشكل الوعي بالذات من خلال صراع متبادل من أجل الاعتراف والحرية. كان هذا التحليل حجر الأساس لفهم علاقات القوة والاعتماد المتبادل بين البشر.",
+          "كان لفلسفة هيغل تأثير عميق ومباشر على الفكر العالمي؛ فقد أعاد كارل ماركس صياغة الجدل لصالح المادية الجدلية التي قامت عليها الماركسية، كما ألهمت طريقته فلاسفة الوجودية كـ سارتر، والظواهرية الحديثة، والتحليل النفسي اللاكاني. يظل استيعاب فلسفة هيغل ضرورياً لفهم جذور النظريات السياسية والاجتماعية المعاصرة."
+        ],
+          keyConcept: "-",
+          keyWorks: "-"
         }
       ],
       articles: [
