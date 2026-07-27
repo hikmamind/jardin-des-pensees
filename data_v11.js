@@ -347,7 +347,12 @@ const TIKTOK_DATA = {
           era: "427 - 347 av. J.-C.",
           school: "Platonisme",
           image: "thinkers/images/platon.jpg",
-          bio: "Élève de Socrate et fondateur de l'Académie, explorateur du monde des Idées et de la justice idéale."
+          bio: "Élève de Socrate et fondateur de l'Académie, explorateur du monde des Idées et de la justice idéale.",
+          body: [
+          "Platon (427 - 347 av. J.-C.) fut un philosophe grec de l'Antiquité, disciple de Socrate et maître d'Aristote. Issu d'une famille aristocratique d'Athènes, la condamnation à mort de son maître Socrate fut l'événement fondateur de sa vocation philosophique, le poussant à chercher les fondements d'une cité juste dirigée par les plus sages.",
+          "Il fonda l'Académie à Athènes, la première grande école philosophique d'Occident. Sa pensée repose sur la célèbre Théorie des Idées (ou des Formes), selon laquelle le monde sensible dans lequel nous vivons n'est qu'une copie imparfaite et changeante d'un monde intelligible supérieur, immuable et éternel, où résident les véritables essences des choses (le Beau, le Vrai, le Bien).",
+          "À travers ses nombreux Dialogues (comme La République, Le Banquet ou Phédon), Platon utilise la figure de Socrate pour guider l'esprit vers la vérité. Son allégorie de la Caverne reste l'une des métaphores les plus célèbres de l'émancipation intellectuelle par la philosophie, montrant comment l'homme doit se libérer des illusions sensibles pour contempler la lumière de la vérité."
+        ]
         },
         {
           id: "aristote",
@@ -356,7 +361,12 @@ const TIKTOK_DATA = {
           era: "384 - 322 av. J.-C.",
           school: "Aristotélisme",
           image: "thinkers/images/platon.jpg",
-          bio: "Père de la logique et de la biologie, théoricien de l'éthique de la vertu et du juste milieu."
+          bio: "Père de la logique et de la biologie, théoricien de l'éthique de la vertu et du juste milieu.",
+          body: [
+          "Aristote (384 - 322 av. J.-C.) fut l'un des penseurs les plus influents de l'histoire, dont l'œuvre a posé les bases de la science, de la logique et de la philosophie occidentale. Né à Stagire, il rejoignit l'Académie de Platon à Athènes et y étudia pendant vingt ans, avant de devenir le précepteur d'Alexandre le Grand et de fonder sa propre école, le Lycée.",
+          "Contrairement à Platon qui privilégiait le monde des Idées abstraites, Aristote adopta une approche empirique et réaliste, observant la nature pour en tirer des lois. Il est considéré comme le père de la logique formelle (le syllogisme) et de la classification biologique. Sa philosophie explore la causalité (les quatre causes) et le concept de substance.",
+          "Dans son ouvrage Éthique à Nicomaque, Aristote définit le bonheur comme la fin ultime de l'existence humaine, accessible par la pratique de la vertu. La vertu stoïcienne et aristotélicienne est un juste milieu entre deux extrêmes (par exemple, le courage est le juste milieu entre la lâcheté et la témérité), une discipline de vie visant à cultiver l'excellence humaine."
+        ]
         },
         {
           id: "descartes",
@@ -365,7 +375,12 @@ const TIKTOK_DATA = {
           era: "1596 - 1650",
           school: "Rationalisme",
           image: "thinkers/images/descartes.jpg",
-          bio: "Père de la philosophie moderne, célèbre pour son 'Cogito, ergo sum' et son doute méthodique."
+          bio: "Père de la philosophie moderne, célèbre pour son 'Cogito, ergo sum' et son doute méthodique.",
+          body: [
+          "René Descartes (1596 - 1650) était un philosophe, mathématicien et physicien français, largement considéré comme le fondateur de la philosophie moderne. À une époque de transition scientifique marquée par le doute, il voulut rebâtir le savoir humain sur des fondations absolument certaines et indubitables.",
+          "Pour y parvenir, il mit en œuvre le doute méthodique, rejetant tout ce qui n'est pas parfaitement clair et distinct. De cette table rase surgit une première certitude inébranlable : le fait même de douter prouve qu'il pense, et donc qu'il existe, formulé dans son célèbre 'Cogito, ergo sum' (Je pense, donc je suis).",
+          "Descartes est également le père du rationalisme moderne et du dualisme cartésien, distinguant la substance pensante (l'esprit) de la substance étendue (le corps). Ses ouvrages majeurs, comme le Discours de la méthode et les Méditations métaphysiques, ont redéfini le rôle du sujet pensant et de la méthode scientifique dans la recherche de la vérité."
+        ]
         },
         {
           id: "spinoza",
@@ -374,7 +389,12 @@ const TIKTOK_DATA = {
           era: "1632 - 1677",
           school: "Rationalisme",
           image: "thinkers/images/descartes.jpg",
-          bio: "Philosophe de la liberté par la connaissance, identifiant Dieu à la Nature et prônant la joie rationnelle."
+          bio: "Philosophe de la liberté par la connaissance, identifiant Dieu à la Nature et prônant la joie rationnelle.",
+          body: [
+          "Baruch Spinoza (1632 - 1677) était un philosophe néerlandais d'origine juive portugaise, dont l'œuvre novatrice fut exclue de sa communauté religieuse pour hérésie. Menant une vie modeste de polisseur de lentilles optiques, il refusa les honneurs académiques pour préserver sa totale liberté de penser.",
+          "Sa philosophie, exposée dans son chef-d'œuvre l'Éthique, propose une vision révolutionnaire où Dieu et la Nature ne font qu'un ('Deus sive Natura'). Dans ce panthéisme rationnel, tout ce qui existe est une expression ou une modification de cette unique substance divine. Il rejette le libre arbitre illusoire et le dualisme.",
+          "Spinoza soutient que le salut et la liberté humaine s'acquièrent en comprenant les causes de nos actions et en transformant nos passions passives en émotions actives et rationnelles. La joie est la transition vers une plus grande perfection de l'être, et la béatitude suprême réside dans l'amour intellectuel de Dieu/la Nature."
+        ]
         },
         {
           id: "rousseau",
@@ -382,8 +402,13 @@ const TIKTOK_DATA = {
           name: "Rousseau",
           era: "1712 - 1778",
           school: "Lumières",
-          image: "avatar.jpg",
-          bio: "Théoricien du contrat social et de la bonté naturelle de l'homme corrompu par la société."
+          image: "thinkers/images/rousseau.jpg",
+          bio: "Théoricien du contrat social et de la bonté naturelle de l'homme corrompu par la société.",
+          body: [
+          "Jean-Jacques Rousseau (1712 - 1778) était un écrivain et philosophe genevois de langue française, l'une des figures les plus influentes et singulières du siècle des Lumières. Esprit rebelle et solitaire, sa pensée critique a inspiré la Révolution française et le romantisme.",
+          "Rousseau est célèbre pour sa thèse selon laquelle l'homme est naturellement bon, mais que la société et l'apparition de la propriété privée l'ont corrompu et enchaîné. Dans Du contrat social, il cherche à concevoir une forme d'association politique juste où chaque citoyen obéit à la 'volonté générale' tout en restant aussi libre qu'auparavant.",
+          "Son ouvrage Émile ou De l'éducation propose une pédagogie révolutionnaire centrée sur le développement naturel de l'enfant à l'abri des influences corruptrices. À travers ses Confessions, il inaugure également le genre de l'autobiographie moderne, explorant la complexité de son âme sensible avec une sincérité inédite."
+        ]
         },
         {
           id: "voltaire",
@@ -391,17 +416,27 @@ const TIKTOK_DATA = {
           name: "Voltaire",
           era: "1694 - 1778",
           school: "Lumières",
-          image: "avatar.jpg",
-          bio: "Défenseur de la liberté d'expression et de la tolérance religieuse contre le fanatisme."
+          image: "thinkers/images/rousseau.jpg",
+          bio: "Défenseur de la liberté d'expression et de la tolérance religieuse contre le fanatisme.",
+          body: [
+          "Voltaire (François-Marie Arouet, 1694 - 1778) était un écrivain et philosophe français, symbole par excellence de l'esprit des Lumières. Brillant satiriste et épistolier prolifique, il utilisa sa plume acérée comme une arme pour combattre le fanatisme religieux, l'injustice judiciaire et l'intolérance.",
+          "Célèbre pour ses contes philosophiques (comme Candide ou Zadig) et son Traité sur la tolérance, il dénonça inlassablement les abus de l'Église et du pouvoir absolu. Voltaire prônait un déisme rationnel et considérait la tolérance mutuelle comme le premier droit naturel de l'humanité.",
+          "Engagé dans de grandes causes judiciaires (comme l'affaire Calas), il devint le prototype de l'intellectuel engagé protégeant les victimes de l'arbitraire. Son héritage intellectuel reste un pilier de la liberté d'expression, de la laïcité et de la défense des droits de l'homme face au dogmatisme."
+        ]
         },
         {
           id: "pascal",
           featured: false,
           name: "Pascal",
           era: "1623 - 1662",
-          school: "Existentialisme chrétien",
+          school: "Existentialisme",
           image: "thinkers/images/descartes.jpg",
-          bio: "Mathématicien et philosophe, célèbre pour son pari sur l'existence de Dieu et la misère de l'homme."
+          bio: "Mathématicien et philosophe, célèbre pour son pari sur l'existence de Dieu et la misère de l'homme.",
+          body: [
+          "Blaise Pascal (1623 - 1662) était un génie précoce français, à la fois mathématicien de premier plan, physicien, inventeur de la calculatrice mécanique, et philosophe mystique chrétien. Sa santé fragile et sa conversion religieuse profonde marquèrent sa pensée d'une rare intensité dramatique.",
+          "Dans ses Pensées, recueil inachevé publié après sa mort, Pascal explore la condition humaine qu'il décrit comme un abîme de misère et de grandeur. Il y expose son célèbre 'pari' : puisque la raison ne peut trancher sur l'existence de Dieu, l'homme a tout intérêt à parier qu'il existe, car le gain est infini tandis que la perte est nulle.",
+          "Pascal distingue le 'cœur' de la 'raison' ('Le cœur a ses raisons que la raison ne connaît point') et dénonce le divertissement comme une fuite tragique face à la réalité de notre mortalité. Son analyse du vide spirituel et de l'angoisse humaine fait de lui un précurseur de l'existentialisme moderne."
+        ]
         },
         {
           id: "montaigne",
@@ -409,8 +444,13 @@ const TIKTOK_DATA = {
           name: "Montaigne",
           era: "1533 - 1592",
           school: "Humanisme",
-          image: "avatar.jpg",
-          bio: "Créateur des Essais, célèbre pour sa question 'Que sais-je ?' et sa quête de sagesse personnelle."
+          image: "thinkers/images/rousseau.jpg",
+          bio: "Créateur des Essais, célèbre pour sa question 'Que sais-je ?' et sa quête de sagesse personnelle.",
+          body: [
+          "Michel de Montaigne (1533 - 1592) était un écrivain, philosophe et magistrat français de la Renaissance. Retiré dans la bibliothèque de son château au milieu des guerres de religion qui déchiraient la France, il entreprit un projet littéraire inédit : s'étudier lui-même pour comprendre la condition humaine.",
+          "Son œuvre unique, les Essais, inaugure une forme de philosophie personnelle et fluide. Montaigne y aborde avec liberté et scepticisme des sujets variés (l'amitié, la mort, l'éducation, les coutumes), guidé par sa célèbre devise sceptique : 'Que sais-je ?'. Il refuse tout dogmatisme et prône la tolérance.",
+          "Grand humaniste, Montaigne cherche un art de vivre serein et bienveillant, acceptant les limites de l'esprit humain et les faiblesses physiques avec humour et sagesse. Sa description d'une amitié idéale (avec Étienne de La Boétie) et son invitation à cultiver son propre jardin intérieur restent d'une brûlante actualité."
+        ]
         },
         {
           id: "sartre",
@@ -418,17 +458,27 @@ const TIKTOK_DATA = {
           name: "Sartre",
           era: "1905 - 1980",
           school: "Existentialisme",
-          image: "avatar.jpg",
-          bio: "Théoricien de la liberté radicale, affirmant que l'existence précède l'essence."
+          image: "thinkers/images/sartre.jpg",
+          bio: "Théoricien de la liberté radicale, affirmant que l'existence précède l'essence.",
+          body: [
+          "Jean-Paul Sartre (1905 - 1980) fut le chef de file de l'existentialisme français, romancier, dramaturge et intellectuel engagé du XXe siècle. Refusant le prix Nobel de littérature en 1964 pour préserver son indépendance, il marqua la scène philosophique mondiale par sa défense de l'émancipation humaine.",
+          "Sa thèse centrale, 'l'existence précède l'essence', affirme que l'homme naît vierge de toute définition et qu'il crée son identité par ses actes et ses choix. L'homme est condamné à être libre, ce qui signifie qu'il porte l'entière responsabilité de son destin et ne peut s'abriter derrière aucune excuse.",
+          "Dans L'Être et le Néant, Sartre théorise la 'mauvaise foi', c'est-à-dire le mensonge que l'on se fait à soi-même pour fuir l'angoisse de la liberté en prétendant subir sa vie. Sa philosophie est un appel constant à l'engagement politique et éthique, à la sincérité et à l'action authentique."
+        ]
         },
         {
           id: "machiavel",
           featured: false,
           name: "Machiavel",
           era: "1469 - 1527",
-          school: "Réalisme politique",
-          image: "avatar.jpg",
-          bio: "Penseur politique réaliste, auteur de 'Le Prince', explorant le pouvoir et l'efficacité."
+          school: "Réalisme",
+          image: "thinkers/images/rousseau.jpg",
+          bio: "Penseur politique réaliste, auteur de 'Le Prince', explorant le pouvoir et l'efficacité.",
+          body: [
+          "Nicolas Machiavel (1469 - 1527) était un homme d'État, diplomate et écrivain florentin de la Renaissance. Témoin des divisions et des invasions qui ravageaient l'Italie, il voulut analyser la politique non selon des préceptes moraux ou religieux abstraits, mais selon sa réalité concrète et efficace.",
+          "Dans son ouvrage le plus célèbre, Le Prince, il décrit les techniques permettant d'acquérir et de conserver le pouvoir. Il y affirme que pour préserver l'État, un dirigeant doit savoir utiliser la force et la ruse (la figure du lion et du renard), la fortune (la chance) devant être domptée par la 'virtù' (l'énergie et l'adresse).",
+          "Souvent caricaturé sous le terme de 'machiavélisme' (la fin justifie les moyens), Machiavel est en réalité le fondateur de la science politique moderne et du réalisme. Son œuvre explore la tension inévitable entre la morale individuelle et l'obligation d'efficacité politique pour maintenir la paix civile."
+        ]
         },
         {
           id: "laotseu",
@@ -436,8 +486,13 @@ const TIKTOK_DATA = {
           name: "Lao Tzu",
           era: "VIe siècle av. J.-C.",
           school: "Taoïsme",
-          image: "avatar.jpg",
-          bio: "Père fondateur du taoïsme, auteur du Tao Tö King, prônant le non-agir et l'harmonie avec la nature."
+          image: "thinkers/images/laotseu.jpg",
+          bio: "Père fondateur du taoïsme, auteur du Tao Tö King, prônant le non-agir et l'harmonie avec la nature.",
+          body: [
+          "Lao Tzu (Lao-Tseu) est un sage légendaire de la Chine ancienne, contemporain ou prédécesseur de Confucius, et considéré comme le père fondateur du taoïsme. On lui attribue la rédaction du Tao Tö King (Le Livre de la Voie et de la Vertu), l'un des textes les plus traduits et commentés de la sagesse universelle.",
+          "Sa philosophie repose sur le concept de 'Tao' (la Voie), le principe éternel et ineffable qui régit l'univers et le mouvement de la nature. Lao Tzu enseigne l'art du 'Wu Wei' (le non-agir), qui ne consiste pas en une passivité paresseuse, mais en une action fluide et sans effort, en harmonie avec le flux naturel des choses.",
+          "L'enseignement de Lao Tzu valorise la simplicité, la flexibilité (l'eau qui épouse toutes les formes tout en usant la roche) et le retour à l'état originel. Cette philosophie de la modération et du détachement offre une voie précieuse pour calmer le mental et se libérer des obsessions de contrôle caractéristiques du monde moderne."
+        ]
         },
         {
           id: "confucius",
@@ -445,8 +500,13 @@ const TIKTOK_DATA = {
           name: "Confucius",
           era: "551 - 479 av. J.-C.",
           school: "Confucianisme",
-          image: "avatar.jpg",
-          bio: "Sage chinois dont les enseignements fondent l'éthique familiale, sociale et politique."
+          image: "thinkers/images/laotseu.jpg",
+          bio: "Sage chinois dont les enseignements fondent l'éthique familiale, sociale et politique.",
+          body: [
+          "Confucius (Kong Fuzi, 551 - 479 av. J.-C.) fut un éducateur, philosophe et homme d'État chinois dont la pensée a profondément façonné la civilisation d'Asie de l'Est pendant plus de deux millénaires. Vivant à une époque de chaos et de guerre, il chercha à restaurer l'harmonie sociale par l'éducation et la vertu.",
+          "Sa doctrine, consignée par ses disciples dans les Entretiens de Confucius, repose sur la bienveillance (le 'Ren'), le respect des rites (le 'Li'), la piété filiale et l'éthique de la réciprocité ('Ne fais pas à autrui ce que tu ne voudrais pas qu'on te fasse'). La stabilité de l'État dépend de l'intégrité morale de chaque individu.",
+          "Contrairement au taoïsme axé sur la nature sauvage, le confucianisme est une philosophie humaniste sociale, axée sur le perfectionnement de soi au sein de la communauté. Il valorise l'érudition, la discipline personnelle et le sens des devoirs mutuels pour construire une société stable, harmonieuse et juste."
+        ]
         },
         {
           id: "kierkegaard",
@@ -454,8 +514,13 @@ const TIKTOK_DATA = {
           name: "Kierkegaard",
           era: "1813 - 1855",
           school: "Existentialisme",
-          image: "avatar.jpg",
-          bio: "Père de l'existentialisme, explorant l'angoisse individuelle et le saut de la foi."
+          image: "thinkers/images/rousseau.jpg",
+          bio: "Père de l'existentialisme, explorant l'angoisse individuelle et le saut de la foi.",
+          body: [
+          "Søren Kierkegaard (1813 - 1855) était un philosophe et théologien danois, largement considéré comme le père de l'existentialisme. Écrivant souvent sous divers pseudonymes pour présenter différents points de vue, il mena une critique féroce de l'Église d'État danoise et de la philosophie abstraite de Hegel.",
+          "Sa pensée se focalise sur l'expérience vécue de l'individu singulier face à son existence. Il analyse l'angoisse non comme une maladie, mais comme le vertige de la liberté et du choix éthique. Kierkegaard distingue trois stades sur le chemin de la vie : le stade esthétique (le plaisir), le stade éthique (le devoir), et le stade religieux (la foi).",
+          "Pour Kierkegaard, la vérité est subjective et personnelle. Atteindre le stade religieux exige un 'saut de la foi' irrationnel et passionné au-delà des certitudes de la raison. Son exploration de la solitude humaine, du doute et de la subjectivité a profondément influencé la théologie et la philosophie du XXe siècle."
+        ]
         },
         {
           id: "freud",
@@ -463,17 +528,27 @@ const TIKTOK_DATA = {
           name: "Freud",
           era: "1856 - 1939",
           school: "Psychanalyse",
-          image: "avatar.jpg",
-          bio: "Fondateur de la psychanalyse, explorateur de l'inconscient, des rêves et du refoulement."
+          image: "thinkers/images/freud.jpg",
+          bio: "Fondateur de la psychanalyse, explorateur de l'inconscient, des rêves et du refoulement.",
+          body: [
+          "Sigmund Freud (1856 - 1939) était un médecin neurologue autrichien, fondateur de la psychanalyse. Ses théories révolutionnaires sur la structure du psychisme humain ont profondément transformé notre compréhension de la psychologie, de la culture et de la nature humaine.",
+          "Freud a popularisé le concept d'inconscient, affirment qu'une grande partie de nos comportements, peurs et désirs est régie par des pulsions refoulées et des souvenirs d'enfance cachés. Il a modélisé l'esprit en trois instances en conflit permanent : le Ça (les pulsions), le Surmoi (les interdits moraux) et le Moi (la conscience négociatrice).",
+          "À travers des méthodes comme l'association libre et l'interprétation des rêves, Freud a jeté les bases de la thérapie par la parole. Bien que certaines de ses théories soient débattues, son concept de mécanismes de défense reste un jalon de la psychologie clinique."
+        ]
         },
         {
           id: "adler",
           featured: false,
           name: "Adler",
           era: "1870 - 1937",
-          school: "Psychologie individuelle",
-          image: "avatar.jpg",
-          bio: "Théoricien du sentiment d'infériorité et de la quête de dépassement personnel."
+          school: "Psychologie",
+          image: "thinkers/images/freud.jpg",
+          bio: "Théoricien du sentiment d'infériorité et de la quête de dépassement personnel.",
+          body: [
+          "Alfred Adler (1870 - 1937) était un médecin et psychothérapeute autrichien, fondateur de la psychologie individuelle. Initialement collaborateur de Freud à Vienne, il s'en sépara pour développer une vision plus humaniste, sociale et optimiste de la personnalité humaine.",
+          "Adler est célèbre pour avoir théorisé le sentiment d'infériorité. Selon lui, chaque être humain naît dans une position de vulnérabilité et développe un désir de compensation et de dépassement de soi. C'est l'effort pour surmonter cette infériorité perçue qui façonne notre 'style de vie' et notre motivation.",
+          "Contrairement à Freud centré sur les pulsions inconscientes, Adler valorise l'intérêt social (l'empathie et la coopération) et le libre arbitre de l'individu pour redéfinir ses buts de vie. Sa psychologie pratique et axée sur l'encouragement est un fondement du développement personnel et des thérapies cognitives modernes."
+        ]
         },
         {
           id: "marx",
@@ -481,8 +556,13 @@ const TIKTOK_DATA = {
           name: "Marx",
           era: "1818 - 1883",
           school: "Marxisme",
-          image: "avatar.jpg",
-          bio: "Théoricien du matérialisme historique et de la lutte des classes comme moteur de l'histoire."
+          image: "thinkers/images/marx.jpg",
+          bio: "Théoricien du matérialisme historique et de la lutte des classes comme moteur de l'histoire.",
+          body: [
+          "Karl Marx (1818 - 1883) était un philosophe, économiste, historien et théoricien politique allemand, dont la pensée a bouleversé l'histoire mondiale. Vivant la révolution industrielle en Europe, il analysa de manière critique le système économique naissant et l'exploitation de la classe ouvrière.",
+          "Sa pensée repose sur le matérialisme historique, selon lequel ce sont les conditions matérielles et économiques (les modes de production) qui déterminent les structures sociales et les idées d'une époque. Il définit la lutte des classes comme le moteur principal de l'évolution historique.",
+          "Dans Le Capital et le Manifeste du parti communiste (coécrit avec Friedrich Engels), Marx critique l'aliénation du travailleur sous le capitalisme et prône l'émancipation collective vers une société sans classes. Ses théories ont inspiré des mouvements politiques majeurs à travers le globe au XXe siècle."
+        ]
         },
         {
           id: "locke",
@@ -490,17 +570,27 @@ const TIKTOK_DATA = {
           name: "Locke",
           era: "1632 - 1704",
           school: "Empirisme",
-          image: "avatar.jpg",
-          bio: "Père du libéralisme politique et de l'empirisme, décrivant l'esprit comme une table rase."
+          image: "thinkers/images/marx.jpg",
+          bio: "Père du libéralisme politique et de l'empirisme, décrivant l'esprit comme une table rase.",
+          body: [
+          "John Locke (1632 - 1704) était un philosophe anglais, l'un des penseurs les plus influents du siècle des Lumières, considéré comme le père de l'empirisme moderne et du libéralisme politique. Sa philosophie a directement inspiré la Constitution des États-Unis et la Déclaration des droits de l'homme.",
+          "Dans son Essai sur l'entendement humain, Locke soutient que l'esprit humain naît comme une table rase (tabula rasa), dénuée d'idées innées. C'est l'expérience sensible et la réflexion sur nos sensations qui gravent l'ensemble de nos connaissances et de nos idées dans notre cerveau.",
+          "Sur le plan politique, dans ses Deux traités du gouvernement civil, Locke théorise les droits naturels inaliénables de l'individu (la vie, la liberté et la propriété). Il définit le gouvernement comme un contrat social fondé sur le consentement des gouvernés, justifiant le droit de résistance à la tyrannie."
+        ]
         },
         {
           id: "hume",
           featured: false,
           name: "Hume",
           era: "1711 - 1776",
-          school: "Empirisme / Scepticisme",
-          image: "avatar.jpg",
-          bio: "Philosophe sceptique majeur, théoricien de l'association des idées et de la causalité."
+          school: "Empirisme",
+          image: "thinkers/images/marx.jpg",
+          bio: "Philosophe sceptique majeur, théoricien de l'association des idées et de la causalité.",
+          body: [
+          "David Hume (1711 - 1776) était un philosophe, historien et essayiste écossais, figure de proue des Lumières écossaises et l'un des plus grands sceptiques de l'histoire. Sa pensée lucide a radicalement bousculé le rationalisme dogmatique et a réveillé Emmanuel Kant de son sommeil dogmatique.",
+          "Dans son Traité de la nature humaine, Hume soutient que toutes nos connaissances dérivent de nos impressions sensibles. Il critique le concept de causalité, affirmant que nous ne percevons jamais la cause elle-même, mais seulement la succession régulière d'événements : notre croyance en la cause est le produit de l'habitude.",
+          "Hume a également remis en question la notion d'identité personnelle (le 'Moi'), la qualifiant de simple collection de perceptions changeantes en flux constant. Sa philosophie morale, axée sur les sentiments de sympathie plutôt que sur la pure raison, a ouvert la voie à l'utilitarisme."
+        ]
         },
         {
           id: "hobbes",
@@ -508,8 +598,13 @@ const TIKTOK_DATA = {
           name: "Hobbes",
           era: "1588 - 1679",
           school: "Philosophie politique",
-          image: "avatar.jpg",
-          bio: "Auteur du Léviathan, décrivant l'état de nature comme une guerre de tous contre tous."
+          image: "thinkers/images/marx.jpg",
+          bio: "Auteur du Léviathan, décrivant l'état de nature comme une guerre de tous contre tous.",
+          body: [
+          "Thomas Hobbes (1588 - 1679) était un philosophe anglais majeur de la modernité, dont l'œuvre a révolutionné la philosophie politique. Ayant vécu les traumatismes de la guerre civile anglaise, il chercha à concevoir un modèle de société capable de garantir la paix.",
+          "Dans son chef-d'œuvre le Léviathan, Hobbes décrit l'état de nature comme un état de guerre permanente de tous contre tous, où la vie est 'solitaire, misérable, pénible, quasi animale et brève'. Pour échapper à cette peur, les hommes s'unissent par un contrat social.",
+          "Ce contrat transfère leur souveraineté individuelle à un pouvoir central fort, le 'Léviathan', chargé d'assurer la paix civile. Hobbes est l'un des premiers à fonder l'autorité politique sur un contrat rationnel passé entre les individus, plutôt que sur un droit divin."
+        ]
         },
         {
           id: "beauvoir",
@@ -517,159 +612,13 @@ const TIKTOK_DATA = {
           name: "Beauvoir",
           era: "1908 - 1986",
           school: "Féminisme",
-          image: "avatar.jpg",
-          bio: "Philosophe et écrivaine, célèbre pour sa formule 'On ne naît pas femme, on le devient'."
-        },
-
-        {
-          id: "marcaurele",
-          featured: true,
-          name: "Marc Aurèle",
-          era: "121 - 180 ap. J.-C.",
-          school: "Stoïcisme",
-          image: "thinkers/images/marcaurele.jpg",
-          bio: "Empereur romain et philosophe, auteur des 'Pensées pour moi-même', guide intemporel de résilience et de discipline intérieure.",
+          image: "thinkers/images/sartre.jpg",
+          bio: "Philosophe et écrivaine, célèbre pour sa formule 'On ne naît pas femme, on le devient'.",
           body: [
-            "Marc Aurèle (121 - 180 ap. J.-C.) fut le dernier des 'cinq bons empereurs' de l'Empire romain et l'une des figures les plus marquantes du stoïcisme tardif. Surnommé le 'roi-philosophe', il dut faire face tout au long de son règne à des crises majeures : la peste antonine qui décima la population, des rébellions internes, et des guerres incessantes sur les frontières nord contre les peuples germaniques.",
-            "C'est précisément dans le tumulte des campagnes militaires, sous sa tente militaire au bord du Danube, qu'il rédigea son journal intime. Jamais destiné à la publication, ce recueil de notes quotidiennes est aujourd'hui universellement connu sous le nom de 'Pensées pour moi-même' (ou Meditations). Ce livre constitue un exercice spirituel d'auto-examen et de renforcement psychologique permanent face aux responsabilités écrasantes du pouvoir.",
-            "La philosophie de Marc Aurèle repose sur l'idée de l''Esprit comme Citadelle Intérieure'. Il soutient que si nous ne pouvons pas contrôler les événements extérieurs (la maladie, les trahisons, les guerres), nous demeurons maîtres absolus de nos jugements, de nos valeurs et de nos réactions. Pour lui, la colère est une faiblesse irrationnelle et l'indifférence aux choses extérieures est la clé de la liberté de l'âme.",
-            "Son éthique exigeante insiste également sur le devoir social et le service à la communauté (le concept stoïcien de cosmopolitisme). Il se rappelait constamment qu'en tant qu'être humain, il était né pour coopérer avec les autres, et non pour s'en plaindre. Son œuvre reste à ce jour l'un des guides de développement personnel et de leadership éthique les plus lus à travers le monde."
-          ]
-        },
-        {
-          id: "seneque",
-          featured: true,
-          name: "Sénèque",
-          era: "4 av. J.-C. - 65 ap. J.-C.",
-          school: "Stoïcisme",
-          image: "thinkers/images/seneque.jpg",
-          bio: "Philosophe stoïcien, dramaturge et homme d'État romain, célèbre pour ses lettres sur la brièveté de la vie, la maîtrise des passions et la mort.",
-          body: [
-            "Lucius Annaeus Seneca, né à Cordoue en 4 av. J.-C. et mort à Rome en 65 ap. J.-C., est l'un des plus brillants penseurs du stoïcisme impérial. Intellectuel brillant, orateur hors pair et auteur de tragédies poignantes, he devint le précepteur puis le conseiller principal du jeune empereur Néron, tentant de guider l'Empire avec sagesse et modération au milieu des intrigues politiques de la cour romaine.",
-            "Sénèque a vécu une vie pleine de contrastes : exilé en Corse par l'empereur Claude, il fut rappelé pour accumuler une fortune colossale qui suscita les critiques de ses contemporains. Pourtant, dans ses écrits, il défend constamment une attitude stoïcienne de détachement vis-vis des richesses matérielles, affirmant que l'homme sage doit savoir posséder la fortune sans se laisser posséder par elle.",
-            "Son œuvre philosophique majeure, en particulier les 'Lettres à Lucilius' et les traités 'De la brièveté de la vie' ou 'De la tranquillité de l'âme', offre une sagesse profondément pratique. Sénèque y aborde le temps comme notre ressource la plus précieuse et dénonce la dispersion mentale qui nous fait gaspiller notre existence. Il y donne des conseils concrets pour surmonter l'anxiété, gérer la colère et apprivoiser la peur du futur.",
-            "Accusé à tort de complicité dans un complot contre Néron, il reçut l'ordre de mettre fin à ses jours. Sa mort calme et digne, entouré de ses amis et de sa femme Paulina à qui il dicta ses dernières paroles philosophiques, est restée dans l'histoire comme l'application pratique ultime de sa philosophie stoïcienne face à la fatalité et à l'injustice politique."
-          ]
-        },
-        {
-          id: "epictete",
-          featured: false,
-          name: "Épictète",
-          era: "50 - 135 ap. J.-C.",
-          school: "Stoïcisme",
-          image: "thinkers/images/epictete.jpg",
-          bio: "Esclave affranchi devenu l'un des plus grands maîtres du stoïcisme romain, célèbre pour sa dichotomie du contrôle.",
-          body: [
-            "Épictète (environ 50 - 135 ap. J.-C.) naquit esclave à Hiérapolis, en Phrygie. Son maître Epaphrodite, secrétaire de l'empereur Néron, l'autorisa à étudier la philosophie auprès du stoïcien Musonius Rufus. Devenu libre après la mort de Néron, il commença à enseigner à Rome avant d'être banni par l'empereur Domitien avec les autres philosophes. Il s'établit alors à Nicopolis, en Grèce, où il fonda une école stoïcienne célèbre.",
-            "N'ayant lui-même rien écrit, sa doctrine a été recueillie par son élève Arrien de Nicopolis, qui prit des notes détaillées de ses cours et de ses conversations. Ces notes formèrent les 'Entretiens' (Discourses) et le célèbre 'Manuel d'Épictète' (Enchiridion). Ce dernier synthétise les règles fondamentales de la pratique stoïcienne sous la forme d'un guide spirituel portatif de poche.",
-            "Le coeur de la pensée d'Épictète est la distinction entre ce qui dépend de nous (nos représentations, désirs, choix) et ce qui n'en dépend pas (le corps, la richesse, la réputation, la mort). Il soutient que la liberté et le bonheur consistent uniquement à accorder notre volonté avec l'ordre rationnel de la nature et à accepter les événements extérieurs avec sérénité.",
-            "Sa philosophie exigeante, basée sur la discipline personnelle et l'autonomie morale, a influencé les plus grands esprits de l'Antiquité, notamment l'empereur Marc Aurèle, ainsi que les pères de la théologie chrétienne et de la psychologie cognitive moderne (comme Albert Ellis et la thérapie rationnelle-émotive)."
-          ]
-        },
-        {
-          id: "socrate",
-          featured: false,
-          name: "Socrate",
-          era: "470 - 399 av. J.-C.",
-          school: "Philosophie Antique",
-          image: "thinkers/images/socrate.jpg",
-          bio: "Père fondateur de la philosophie occidentale, célèbre pour sa méthode d'accouchement des esprits (maïeutique) et son procès.",
-          body: [
-            "Socrate (470 - 399 av. J.-C.), né à Athènes, est considéré comme le père fondateur de la philosophie morale occidentale. Issu d'un milieu modeste, fils d'un sculpteur et d'une sage-femme, il vécut dans la pauvreté, consacrant sa vie à arpenter les rues d'Athènes pour interroger ses concitoyens sur leurs croyances, la vertu, la justice et le courage.",
-            "Socrate n'a laissé aucun écrit. Nous connaissons sa pensée principalement à travers les écrits de ses disciples, en premier lieu Platon et Xénophon. Platon le met en scène comme le personnage principal de ses célèbres dialogues philosophiques, où Socrate utilise la méthode dialectique pour guider ses interlocuteurs vers la vérité.",
-            "Sa méthode philosophique repose sur la 'maïeutique', ou l'art d'accoucher les esprits. Par le dialogue, l'ironie et le questionnement constant, il amenait ses interlocuteurs à prendre conscience de leur propre ignorance. Sa formule célèbre 'Je sais que je ne sais rien' résume sa quête insatiable de sagesse par l'examen de soi et la recherche de vérités universelles.",
-            "Son esprit critique et son influence sur la jeunesse athénienne lui valurent l'hostilité des autorités politiques de la cité. Accusé d'impiété et de corruption de la jeunesse, il fut condamné à mort à l'issue d'un procès historique. Refusant de s'évader par respect pour les lois de sa patrie, il mourut en buvant la ciguë avec dignité, entouré de ses disciples en larmes."
-          ]
-        },
-        {
-          id: "camus",
-          featured: true,
-          name: "Albert Camus",
-          era: "1913 - 1960",
-          school: "Absurdisme",
-          image: "thinkers/images/camus.jpg",
-          bio: "Écrivain, dramaturge et philosophe français, lauréat du prix Nobel de littérature, théoricien de l'Absurde et de la Révolte humaniste.",
-          body: [
-            "Albert Camus (1913 - 1960), né en Algérie dans un milieu très modeste et orphelin de père, a développé une philosophie lumineuse ancrée dans la condition humaine et la recherche de justice. Romancier et dramaturge de génie, journaliste engagé dans la Résistance française pendant la Seconde Guerre mondiale, il a reçu le prix Nobel de littérature en 1957 à seulement 44 ans pour l'ensemble de son œuvre.",
-            "Camus est le créateur de la 'philosophie de l'Absurde'. Il définit l'absurde non comme une simple négation, mais comme la confrontation inévitable entre la quête éperdue de sens de l'être humain et le silence irrationnel et infini du monde. Dans son essai fondateur 'Le Mythe de Sisyphe', il utilise le héros mythologique condamné à rouler éternellement son rocher pour illustrer cette condition humaine : il faut imaginer Sisyphe heureux car il choisit d'accomplir son devoir et de mépriser son châtiment par sa conscience.",
-            "Pour Camus, la prise de conscience de l'absurde ne doit pas mener au suicide ou au désespoir, mais à la révolte, à la liberté et à la passion de vivre. C'est le concept de 'l'homme révolté' : se révolter contre l'injustice du monde et la mort donne un sens immédiat et solidaire à notre existence. 'Je me révolte, donc nous sommes', écrit-il, posant les bases d'un humanisme sans concession.",
-            "Sa rupture amicale et philosophique avec Jean-Paul Sartre, en raison de son refus d'accepter la violence politique au nom de l'idéologie révolutionnaire, témoigne de son intégrité morale. Ses œuvres majeures, comme 'L'Étranger', 'La Peste' et 'La Chute', continuent de résonner aujourd'hui comme des appels vibrants à la lucidité, à la liberté et à la solidarité humaine."
-          ]
-        },
-        {
-          id: "nietzsche",
-          featured: false,
-          name: "Friedrich Nietzsche",
-          era: "1844 - 1900",
-          school: "Existentialisme / Vitalisme",
-          image: "thinkers/images/nietzsche.jpg",
-          bio: "Philosophe allemand majeur, célèbre pour son rejet de la morale traditionnelle, son concept de Surhomme, la volonté de puissance et l'éternel retour.",
-          body: [
-            "Friedrich Nietzsche (1844 - 1900) est l'un des penseurs les plus dérangeants et révolutionnaires de l'histoire moderne. Nommé professeur de philologie classique à l'université de Bâle à seulement 24 ans, il dut rapidement démissionner en raison de graves problèmes de santé physiques chroniques. Il passa le reste de sa vie à errer dans les Alpes suisses (notamment à Sils-Maria) et en Italie, écrivant une œuvre philosophique incisive et poétique.",
-            "Nietzsche a mené une critique radicale de la métaphysique occidentale, de la religion chrétienne et de la morale traditionnelle qu'il qualifie de 'morale d'esclaves' ou de ressentiment. En déclarant que 'Dieu est mort', il annonçait la crise du nihilisme moderne (la perte des valeurs absolues) et appelait l'humanité à surmonter ce vide en créant ses propres valeurs vitales.",
-            "Au cœur de sa philosophie se trouvent les concepts de 'volonté de puissance' (non pas une domination tyrannique, mais une pulsion créatrice d'expansion de soi), de 'Surhomme' (l'individu accompli qui transcende les dogmes et affirme sa vie créative) et de l''Amor Fati' (l'amour inconditionnel de son propre destin avec ses joies et ses plus profondes souffrances).",
-            "Son œuvre poétique majeure, 'Ainsi parlait Zarathustra', et ses écrits critiques comme 'Par-delà le bien et le mal' et 'La Généalogie de la morale' ont exercé une influence colossale sur l'existentialisme, la psychanalyse freudienne, la littérature du XXe siècle et la philosophie postmoderne, incitant l'homme à se libérer des illusions conformistes pour s'accomplir pleinement."
-          ]
-        },
-        {
-          id: "jung",
-          featured: false,
-          name: "Carl Jung",
-          era: "1875 - 1961",
-          school: "Psychologie Analytique",
-          image: "thinkers/images/jung.jpg",
-          bio: "Psychiatre suisse, fondateur de la psychologie analytique, théoricien de l'inconscient collectif, des archétypes et de l'Ombre.",
-          body: [
-            "Carl Gustav Jung (1875 - 1961) était un psychiatre et psychologue suisse dont les travaux révolutionnaires ont redéfini notre compréhension de l'esprit humain. D'abord proche collaborateur et successeur désigné de Sigmund Freud, il s'en sépara en raison de divergences théoriques sur la nature de la libido et du psychisme, fondant alors sa propre école de pensée : la psychologie analytique.",
-            "Jung a introduit des concepts majeurs qui imprègnent aujourd'hui la psychologie moderne et la culture populaire. Il a postulé l'existence de l'inconscient collectif, une structure de la psyché partagée par l'ensemble de l'humanité, peuplée de symboles universels et de mythes appelés 'archétypes' (le Sage, le Héros, l'Anima).",
-            "Il est également le créateur des notions de 'Persona' (le masque social) et de 'l'Ombre' (les aspects refoulés de soi). Pour Jung, le but ultime de la vie psychologique est le processus d'individuation, par lequel un individu unifie ses dimensions consciente et inconsciente pour réaliser son être complet, le Soi.",
-            "Esprit encyclopédique, Jung s'est passionné pour l'alchimie, les sagesses orientales, les religions comparées et la physique quantique (collaborant avec Wolfgang Pauli). Son influence s'étend bien au-delà de la thérapie clinique, irriguant l'art, la littérature, la mythologie comparée et le développement personnel moderne."
-          ]
-        },
-        {
-          id: "schopenhauer",
-          featured: false,
-          name: "Arthur Schopenhauer",
-          era: "1788 - 1860",
-          school: "Pessimisme",
-          image: "thinkers/images/schopenhauer.jpg",
-          bio: "Philosophe allemand célèbre pour sa théorie de la Volonté comme essence métaphysique du monde et son pessimisme existentiel influencé par la sagesse orientale.",
-          body: [
-            "Arthur Schopenhauer (1788 - 1860) est un philosophe allemand majeur dont la pensée originale a fait le pont entre le rationalisme occidental et les philosophies orientales (notamment le bouddhisme et l'hindouisme des Upanishads). Ayant vécu une grande partie de sa vie dans l'isolement à Francfort et dans l'ombre académique de son grand rival Hegel, il n'a connu une gloire tardive qu'à la fin de sa vie.",
-            "Son œuvre maîtresse, 'Le Monde comme volonté et comme représentation', avance l'idée que le monde physique que nous percevons n'est qu'une illusion (la représentation) derrière laquelle se cache une force métaphysique brute, aveugle et irrationnelle : la 'Volonté de vivre'. Cette volonté pousse incessamment tous les êtres vivants à désirer sans jamais être satisfaits, ce qui engendre une souffrance perpétuelle et inhérente à l'existence.",
-            "Face à cette tragédie de la vie, Schopenhauer propose trois voies de libération ou d'apaisement temporaire. La première est l'expérience esthétique (la contemplation de l'art et surtout de la musique, qui nous détachent du vouloir-vivre). La seconde est la compassion et l'éthique de la pitié (reconnaître la souffrance commune de tous les êtres). La troisième est l'ascétisme et le renoncement aux désirs matériels (proche du Nirvana bouddhique).",
-            "Son style littéraire limpide et percutant, ainsi que son analyse psychologique des désirs et de l'inconscient, ont profondément marqué des génies comme Friedrich Nietzsche, Sigmund Freud (qui a trouvé chez Schopenhauer les prémices de sa théorie des pulsions), Richard Wagner, Albert Einstein et de nombreux écrivains comme Marcel Proust et Léon Tolstoï."
-          ]
-        },
-        {
-          id: "kant",
-          featured: false,
-          name: "Emmanuel Kant",
-          era: "1724 - 1804",
-          school: "Idéalisme Allemand",
-          image: "thinkers/images/kant.jpg",
-          bio: "Penseur majeur des Lumières, théoricien de la connaissance critique et de l'éthique du devoir universel.",
-          body: [
-            "Emmanuel Kant (1724 - 1804), né et mort à Königsberg en Prusse-Orientale (aujourd'hui Kaliningrad), est l'une des figures les plus monumentales de la philosophie occidentale. Homme d'une régularité légendaire et d'une discipline de fer, il a enseigné à l'université de sa ville natale tout en opérant ce qu'il a appelé une 'révolution copernicienne' dans l'histoire de la pensée humaine.",
-            "Dans sa célèbre 'Critique de la raison pure' (1781), Kant cherche à dépasser le conflit entre le rationalisme et l'empirisme. Il soutient que notre esprit ne se contente pas de recevoir passivement les données du monde extérieur, mais qu'il les organise activement à travers les structures a priori de notre sensibilité (l'espace et le temps) et de notre entendement (les catégories). Nous ne pouvons ainsi connaître que les 'phénomènes' (les choses telles qu'elles nous apparaissent) et non les 'noumènes' (la chose en soi).",
-            "Dans le domaine éthique, exposé dans la 'Critique de la raison pratique', Kant formule l'éthique déontologique du devoir. La moralité d'une action dépend de l'intention pure et de sa conformité à l'impératif catégorique : 'Agis uniquement d'après la maxime grâce à laquelle tu peux vouloir en même temps qu'elle devienne une loi universelle.' Il a posé la dignité absolue de la personne humaine comme un principe sacré, affirment qu'un être humain doit toujours être traité comme une fin en soi, et jamais simplement comme un moyen.",
-            "Son projet philosophique pour une 'Paix perpétuelle' préfigurait déjà la création des institutions internationales modernes comme l'ONU. La rigueur logique et l'élévation morale de l'œuvre de Kant continuent d'irriguer la philosophie du droit, la théorie politique moderne et les débats contemporains sur la justice et les droits de l'homme."
-          ]
-        },
-        {
-          id: "hegel",
-          featured: false,
-          name: "G. W. F. Hegel",
-          era: "1770 - 1831",
-          school: "Idéalisme Allemand",
-          image: "thinkers/images/hegel.jpg",
-          bio: "Créateur d'un système philosophique dialectique grandiose expliquant l'évolution de l'Esprit à travers l'Histoire et le temps.",
-          body: [
-            "Georg Wilhelm Friedrich Hegel (1770 - 1831) est le géant de l'idéalisme allemand et l'un des penseurs les plus influents et complexes du XIXe siècle. Professeur d'université de premier plan, il a développé un système philosophique complet et encyclopédique visant à unifier la logique, la nature, l'art, la religion et l'histoire au sein d'une seule pensée dynamique.",
-            "Le noyau de la philosophie hégélienne réside dans la 'dialectique'. Pour Hegel, la réalité et la pensée ne sont pas statiques mais progressent à travers des contradictions internes qui se résolvent pour atteindre une vérité supérieure (le processus de thèse, antithèse et synthèse, connu sous le concept d'Aufhebung). L'Histoire humaine n'est pas une suite d'accidents aléatoires, mais la marche de l'Esprit (Geist) vers la pleine conscience de sa propre liberté.",
-            "Dans sa célèbre phénoménologie de l'esprit, il introduit la figure de la 'dialectique du maître et de l'esclave', qui montre comment la conscience de soi naît d'une lutte à mort pour la reconnaissance mutuelle. Ce concept a révolutionné l'analyse psychologique de la domination et de la dépendance humaine.",
-            "L'impact de Hegel sur la pensée ultérieure est colossal : sa philosophie de l'histoire a été réinterprétée de manière matérialiste par Karl Marx pour donner naissance au marxisme, et sa méthode dialectique a inspiré l'existentialisme de Sartre, la phénoménologie moderne, la psychanalyse lacanienne et la théorie critique. Comprendre Hegel reste indispensable pour décrypter l'évolution des mouvements politiques et sociaux modernes."
-          ]
+          "Simone de Beauvoir (1908 - 1986) était une philosophe existentialiste, romancière et figure majeure du féminisme mondial. Compagne intellectuelle de Jean-Paul Sartre, elle construisit une œuvre philosophique personnelle axée sur la liberté et la responsabilité.",
+          "Son ouvrage le plus célèbre, Le Deuxième Sexe, publié en 1949, jette les bases du féminisme moderne à travers sa formule restée mythique : 'On ne naît pas femme, on le devient'. Elle y démontre comment la société construit culturellement le rôle de la femme au fil des siècles.",
+          "Appliquant l'existentialisme au genre, Beauvoir soutient que la situation biologique de la femme ne dicte pas son destin. Sa philosophie invite chaque être humain à s'affranchir des rôles imposés par la tradition pour s'engager librement dans la création de son propre destin."
+        ]
         }
       ],
       articles: [
