@@ -352,7 +352,9 @@ const TIKTOK_DATA = {
           "Platon (427 - 347 av. J.-C.) fut un philosophe grec de l'Antiquité, disciple de Socrate et maître d'Aristote. Issu d'une famille aristocratique d'Athènes, la condamnation à mort de son maître Socrate fut l'événement fondateur de sa vocation philosophique, le poussant à chercher les fondements d'une cité juste dirigée par les plus sages.",
           "Il fonda l'Académie à Athènes, la première grande école philosophique d'Occident. Sa pensée repose sur la célèbre Théorie des Idées (ou des Formes), selon laquelle le monde sensible dans lequel nous vivons n'est qu'une copie imparfaite et changeante d'un monde intelligible supérieur, immuable et éternel, où résident les véritables essences des choses (le Beau, le Vrai, le Bien).",
           "À travers ses nombreux Dialogues (comme La République, Le Banquet ou Phédon), Platon utilise la figure de Socrate pour guider l'esprit vers la vérité. Son allégorie de la Caverne reste l'une des métaphores les plus célèbres de l'émancipation intellectuelle par la philosophie, montrant comment l'homme doit se libérer des illusions sensibles pour contempler la lumière de la vérité."
-        ]
+        ],
+          keyConcept: "Théorie des Idées, Justice idéale",
+          keyWorks: "La République, Le Banquet"
         },
         {
           id: "aristote",
@@ -366,7 +368,9 @@ const TIKTOK_DATA = {
           "Aristote (384 - 322 av. J.-C.) fut l'un des penseurs les plus influents de l'histoire, dont l'œuvre a posé les bases de la science, de la logique et de la philosophie occidentale. Né à Stagire, il rejoignit l'Académie de Platon à Athènes et y étudia pendant vingt ans, avant de devenir le précepteur d'Alexandre le Grand et de fonder sa propre école, le Lycée.",
           "Contrairement à Platon qui privilégiait le monde des Idées abstraites, Aristote adopta une approche empirique et réaliste, observant la nature pour en tirer des lois. Il est considéré comme le père de la logique formelle (le syllogisme) et de la classification biologique. Sa philosophie explore la causalité (les quatre causes) et le concept de substance.",
           "Dans son ouvrage Éthique à Nicomaque, Aristote définit le bonheur comme la fin ultime de l'existence humaine, accessible par la pratique de la vertu. La vertu stoïcienne et aristotélicienne est un juste milieu entre deux extrêmes (par exemple, le courage est le juste milieu entre la lâcheté et la témérité), une discipline de vie visant à cultiver l'excellence humaine."
-        ]
+        ],
+          keyConcept: "Logique, Juste milieu, Téléologie",
+          keyWorks: "Éthique à Nicomaque"
         },
         {
           id: "descartes",
@@ -380,7 +384,9 @@ const TIKTOK_DATA = {
           "René Descartes (1596 - 1650) était un philosophe, mathématicien et physicien français, largement considéré comme le fondateur de la philosophie moderne. À une époque de transition scientifique marquée par le doute, il voulut rebâtir le savoir humain sur des fondations absolument certaines et indubitables.",
           "Pour y parvenir, il mit en œuvre le doute méthodique, rejetant tout ce qui n'est pas parfaitement clair et distinct. De cette table rase surgit une première certitude inébranlable : le fait même de douter prouve qu'il pense, et donc qu'il existe, formulé dans son célèbre 'Cogito, ergo sum' (Je pense, donc je suis).",
           "Descartes est également le père du rationalisme moderne et du dualisme cartésien, distinguant la substance pensante (l'esprit) de la substance étendue (le corps). Ses ouvrages majeurs, comme le Discours de la méthode et les Méditations métaphysiques, ont redéfini le rôle du sujet pensant et de la méthode scientifique dans la recherche de la vérité."
-        ]
+        ],
+          keyConcept: "Doute méthodique, Dualisme",
+          keyWorks: "Discours de la méthode"
         },
         {
           id: "spinoza",
@@ -394,7 +400,9 @@ const TIKTOK_DATA = {
           "Baruch Spinoza (1632 - 1677) était un philosophe néerlandais d'origine juive portugaise, dont l'œuvre novatrice fut exclue de sa communauté religieuse pour hérésie. Menant une vie modeste de polisseur de lentilles optiques, il refusa les honneurs académiques pour préserver sa totale liberté de penser.",
           "Sa philosophie, exposée dans son chef-d'œuvre l'Éthique, propose une vision révolutionnaire où Dieu et la Nature ne font qu'un ('Deus sive Natura'). Dans ce panthéisme rationnel, tout ce qui existe est une expression ou une modification de cette unique substance divine. Il rejette le libre arbitre illusoire et le dualisme.",
           "Spinoza soutient que le salut et la liberté humaine s'acquièrent en comprenant les causes de nos actions et en transformant nos passions passives en émotions actives et rationnelles. La joie est la transition vers une plus grande perfection de l'être, et la béatitude suprême réside dans l'amour intellectuel de Dieu/la Nature."
-        ]
+        ],
+          keyConcept: "Panthéisme, Joie rationnelle",
+          keyWorks: "L'Éthique"
         },
         {
           id: "rousseau",
@@ -408,7 +416,9 @@ const TIKTOK_DATA = {
           "Jean-Jacques Rousseau (1712 - 1778) était un écrivain et philosophe genevois de langue française, l'une des figures les plus influentes et singulières du siècle des Lumières. Esprit rebelle et solitaire, sa pensée critique a inspiré la Révolution française et le romantisme.",
           "Rousseau est célèbre pour sa thèse selon laquelle l'homme est naturellement bon, mais que la société et l'apparition de la propriété privée l'ont corrompu et enchaîné. Dans Du contrat social, il cherche à concevoir une forme d'association politique juste où chaque citoyen obéit à la 'volonté générale' tout en restant aussi libre qu'auparavant.",
           "Son ouvrage Émile ou De l'éducation propose une pédagogie révolutionnaire centrée sur le développement naturel de l'enfant à l'abri des influences corruptrices. À travers ses Confessions, il inaugure également le genre de l'autobiographie moderne, explorant la complexité de son âme sensible avec une sincérité inédite."
-        ]
+        ],
+          keyConcept: "Bonté naturelle, Volonté générale",
+          keyWorks: "Du contrat social, Émile"
         },
         {
           id: "voltaire",
@@ -422,7 +432,9 @@ const TIKTOK_DATA = {
           "Voltaire (François-Marie Arouet, 1694 - 1778) était un écrivain et philosophe français, symbole par excellence de l'esprit des Lumières. Brillant satiriste et épistolier prolifique, il utilisa sa plume acérée comme une arme pour combattre le fanatisme religieux, l'injustice judiciaire et l'intolérance.",
           "Célèbre pour ses contes philosophiques (comme Candide ou Zadig) et son Traité sur la tolérance, il dénonça inlassablement les abus de l'Église et du pouvoir absolu. Voltaire prônait un déisme rationnel et considérait la tolérance mutuelle comme le premier droit naturel de l'humanité.",
           "Engagé dans de grandes causes judiciaires (comme l'affaire Calas), il devint le prototype de l'intellectuel engagé protégeant les victimes de l'arbitraire. Son héritage intellectuel reste un pilier de la liberté d'expression, de la laïcité et de la défense des droits de l'homme face au dogmatisme."
-        ]
+        ],
+          keyConcept: "Tolérance, Liberté de pensée",
+          keyWorks: "Candide, Traité sur la tolérance"
         },
         {
           id: "pascal",
@@ -436,7 +448,9 @@ const TIKTOK_DATA = {
           "Blaise Pascal (1623 - 1662) était un génie précoce français, à la fois mathématicien de premier plan, physicien, inventeur de la calculatrice mécanique, et philosophe mystique chrétien. Sa santé fragile et sa conversion religieuse profonde marquèrent sa pensée d'une rare intensité dramatique.",
           "Dans ses Pensées, recueil inachevé publié après sa mort, Pascal explore la condition humaine qu'il décrit comme un abîme de misère et de grandeur. Il y expose son célèbre 'pari' : puisque la raison ne peut trancher sur l'existence de Dieu, l'homme a tout intérêt à parier qu'il existe, car le gain est infini tandis que la perte est nulle.",
           "Pascal distingue le 'cœur' de la 'raison' ('Le cœur a ses raisons que la raison ne connaît point') et dénonce le divertissement comme une fuite tragique face à la réalité de notre mortalité. Son analyse du vide spirituel et de l'angoisse humaine fait de lui un précurseur de l'existentialisme moderne."
-        ]
+        ],
+          keyConcept: "Pari, Angoisse de la condition humaine",
+          keyWorks: "Pensées"
         },
         {
           id: "montaigne",
@@ -450,7 +464,9 @@ const TIKTOK_DATA = {
           "Michel de Montaigne (1533 - 1592) était un écrivain, philosophe et magistrat français de la Renaissance. Retiré dans la bibliothèque de son château au milieu des guerres de religion qui déchiraient la France, il entreprit un projet littéraire inédit : s'étudier lui-même pour comprendre la condition humaine.",
           "Son œuvre unique, les Essais, inaugure une forme de philosophie personnelle et fluide. Montaigne y aborde avec liberté et scepticisme des sujets variés (l'amitié, la mort, l'éducation, les coutumes), guidé par sa célèbre devise sceptique : 'Que sais-je ?'. Il refuse tout dogmatisme et prône la tolérance.",
           "Grand humaniste, Montaigne cherche un art de vivre serein et bienveillant, acceptant les limites de l'esprit humain et les faiblesses physiques avec humour et sagesse. Sa description d'une amitié idéale (avec Étienne de La Boétie) et son invitation à cultiver son propre jardin intérieur restent d'une brûlante actualité."
-        ]
+        ],
+          keyConcept: "Scepticisme, Humanisme, Soi-même",
+          keyWorks: "Essais"
         },
         {
           id: "sartre",
@@ -464,7 +480,9 @@ const TIKTOK_DATA = {
           "Jean-Paul Sartre (1905 - 1980) fut le chef de file de l'existentialisme français, romancier, dramaturge et intellectuel engagé du XXe siècle. Refusant le prix Nobel de littérature en 1964 pour préserver son indépendance, il marqua la scène philosophique mondiale par sa défense de l'émancipation humaine.",
           "Sa thèse centrale, 'l'existence précède l'essence', affirme que l'homme naît vierge de toute définition et qu'il crée son identité par ses actes et ses choix. L'homme est condamné à être libre, ce qui signifie qu'il porte l'entière responsabilité de son destin et ne peut s'abriter derrière aucune excuse.",
           "Dans L'Être et le Néant, Sartre théorise la 'mauvaise foi', c'est-à-dire le mensonge que l'on se fait à soi-même pour fuir l'angoisse de la liberté en prétendant subir sa vie. Sa philosophie est un appel constant à l'engagement politique et éthique, à la sincérité et à l'action authentique."
-        ]
+        ],
+          keyConcept: "Existentialisme, Liberté radicale",
+          keyWorks: "L'Être et le Néant"
         },
         {
           id: "machiavel",
@@ -478,7 +496,9 @@ const TIKTOK_DATA = {
           "Nicolas Machiavel (1469 - 1527) était un homme d'État, diplomate et écrivain florentin de la Renaissance. Témoin des divisions et des invasions qui ravageaient l'Italie, il voulut analyser la politique non selon des préceptes moraux ou religieux abstraits, mais selon sa réalité concrète et efficace.",
           "Dans son ouvrage le plus célèbre, Le Prince, il décrit les techniques permettant d'acquérir et de conserver le pouvoir. Il y affirme que pour préserver l'État, un dirigeant doit savoir utiliser la force et la ruse (la figure du lion et du renard), la fortune (la chance) devant être domptée par la 'virtù' (l'énergie et l'adresse).",
           "Souvent caricaturé sous le terme de 'machiavélisme' (la fin justifie les moyens), Machiavel est en réalité le fondateur de la science politique moderne et du réalisme. Son œuvre explore la tension inévitable entre la morale individuelle et l'obligation d'efficacité politique pour maintenir la paix civile."
-        ]
+        ],
+          keyConcept: "Réalisme politique, Pouvoir",
+          keyWorks: "Le Prince"
         },
         {
           id: "laotseu",
@@ -492,7 +512,9 @@ const TIKTOK_DATA = {
           "Lao Tzu (Lao-Tseu) est un sage légendaire de la Chine ancienne, contemporain ou prédécesseur de Confucius, et considéré comme le père fondateur du taoïsme. On lui attribue la rédaction du Tao Tö King (Le Livre de la Voie et de la Vertu), l'un des textes les plus traduits et commentés de la sagesse universelle.",
           "Sa philosophie repose sur le concept de 'Tao' (la Voie), le principe éternel et ineffable qui régit l'univers et le mouvement de la nature. Lao Tzu enseigne l'art du 'Wu Wei' (le non-agir), qui ne consiste pas en une passivité paresseuse, mais en une action fluide et sans effort, en harmonie avec le flux naturel des choses.",
           "L'enseignement de Lao Tzu valorise la simplicité, la flexibilité (l'eau qui épouse toutes les formes tout en usant la roche) et le retour à l'état originel. Cette philosophie de la modération et du détachement offre une voie précieuse pour calmer le mental et se libérer des obsessions de contrôle caractéristiques du monde moderne."
-        ]
+        ],
+          keyConcept: "Tao, Non-agir (Wu Wei), Simplicité",
+          keyWorks: "Tao Tö King"
         },
         {
           id: "confucius",
@@ -506,7 +528,9 @@ const TIKTOK_DATA = {
           "Confucius (Kong Fuzi, 551 - 479 av. J.-C.) fut un éducateur, philosophe et homme d'État chinois dont la pensée a profondément façonné la civilisation d'Asie de l'Est pendant plus de deux millénaires. Vivant à une époque de chaos et de guerre, il chercha à restaurer l'harmonie sociale par l'éducation et la vertu.",
           "Sa doctrine, consignée par ses disciples dans les Entretiens de Confucius, repose sur la bienveillance (le 'Ren'), le respect des rites (le 'Li'), la piété filiale et l'éthique de la réciprocité ('Ne fais pas à autrui ce que tu ne voudrais pas qu'on te fasse'). La stabilité de l'État dépend de l'intégrité morale de chaque individu.",
           "Contrairement au taoïsme axé sur la nature sauvage, le confucianisme est une philosophie humaniste sociale, axée sur le perfectionnement de soi au sein de la communauté. Il valorise l'érudition, la discipline personnelle et le sens des devoirs mutuels pour construire une société stable, harmonieuse et juste."
-        ]
+        ],
+          keyConcept: "Ren (Bienveillance), Rites, Devoirs",
+          keyWorks: "Entretiens"
         },
         {
           id: "kierkegaard",
@@ -520,7 +544,9 @@ const TIKTOK_DATA = {
           "Søren Kierkegaard (1813 - 1855) était un philosophe et théologien danois, largement considéré comme le père de l'existentialisme. Écrivant souvent sous divers pseudonymes pour présenter différents points de vue, il mena une critique féroce de l'Église d'État danoise et de la philosophie abstraite de Hegel.",
           "Sa pensée se focalise sur l'expérience vécue de l'individu singulier face à son existence. Il analyse l'angoisse non comme une maladie, mais comme le vertige de la liberté et du choix éthique. Kierkegaard distingue trois stades sur le chemin de la vie : le stade esthétique (le plaisir), le stade éthique (le devoir), et le stade religieux (la foi).",
           "Pour Kierkegaard, la vérité est subjective et personnelle. Atteindre le stade religieux exige un 'saut de la foi' irrationnel et passionné au-delà des certitudes de la raison. Son exploration de la solitude humaine, du doute et de la subjectivité a profondément influencé la théologie et la philosophie du XXe siècle."
-        ]
+        ],
+          keyConcept: "Subjectivité, Saut de la foi",
+          keyWorks: "Crainte et Tremblement"
         },
         {
           id: "freud",
@@ -534,7 +560,9 @@ const TIKTOK_DATA = {
           "Sigmund Freud (1856 - 1939) était un médecin neurologue autrichien, fondateur de la psychanalyse. Ses théories révolutionnaires sur la structure du psychisme humain ont profondément transformé notre compréhension de la psychologie, de la culture et de la nature humaine.",
           "Freud a popularisé le concept d'inconscient, affirment qu'une grande partie de nos comportements, peurs et désirs est régie par des pulsions refoulées et des souvenirs d'enfance cachés. Il a modélisé l'esprit en trois instances en conflit permanent : le Ça (les pulsions), le Surmoi (les interdits moraux) et le Moi (la conscience négociatrice).",
           "À travers des méthodes comme l'association libre et l'interprétation des rêves, Freud a jeté les bases de la thérapie par la parole. Bien que certaines de ses théories soient débattues, son concept de mécanismes de défense reste un jalon de la psychologie clinique."
-        ]
+        ],
+          keyConcept: "Inconscient, Psychanalyse, Pulsions",
+          keyWorks: "L'Interprétation du rêve"
         },
         {
           id: "adler",
@@ -548,7 +576,9 @@ const TIKTOK_DATA = {
           "Alfred Adler (1870 - 1937) était un médecin et psychothérapeute autrichien, fondateur de la psychologie individuelle. Initialement collaborateur de Freud à Vienne, il s'en sépara pour développer une vision plus humaniste, sociale et optimiste de la personnalité humaine.",
           "Adler est célèbre pour avoir théorisé le sentiment d'infériorité. Selon lui, chaque être humain naît dans une position de vulnérabilité et développe un désir de compensation et de dépassement de soi. C'est l'effort pour surmonter cette infériorité perçue qui façonne notre 'style de vie' et notre motivation.",
           "Contrairement à Freud centré sur les pulsions inconscientes, Adler valorise l'intérêt social (l'empathie et la coopération) et le libre arbitre de l'individu pour redéfinir ses buts de vie. Sa psychologie pratique et axée sur l'encouragement est un fondement du développement personnel et des thérapies cognitives modernes."
-        ]
+        ],
+          keyConcept: "Sentiment d'infériorité, Intérêt social",
+          keyWorks: "Le Sens de la vie"
         },
         {
           id: "marx",
@@ -562,7 +592,9 @@ const TIKTOK_DATA = {
           "Karl Marx (1818 - 1883) était un philosophe, économiste, historien et théoricien politique allemand, dont la pensée a bouleversé l'histoire mondiale. Vivant la révolution industrielle en Europe, il analysa de manière critique le système économique naissant et l'exploitation de la classe ouvrière.",
           "Sa pensée repose sur le matérialisme historique, selon lequel ce sont les conditions matérielles et économiques (les modes de production) qui déterminent les structures sociales et les idées d'une époque. Il définit la lutte des classes comme le moteur principal de l'évolution historique.",
           "Dans Le Capital et le Manifeste du parti communiste (coécrit avec Friedrich Engels), Marx critique l'aliénation du travailleur sous le capitalisme et prône l'émancipation collective vers une société sans classes. Ses théories ont inspiré des mouvements politiques majeurs à travers le globe au XXe siècle."
-        ]
+        ],
+          keyConcept: "Lutte des classes, Matérialisme historique",
+          keyWorks: "Le Capital"
         },
         {
           id: "locke",
@@ -576,7 +608,9 @@ const TIKTOK_DATA = {
           "John Locke (1632 - 1704) était un philosophe anglais, l'un des penseurs les plus influents du siècle des Lumières, considéré comme le père de l'empirisme moderne et du libéralisme politique. Sa philosophie a directement inspiré la Constitution des États-Unis et la Déclaration des droits de l'homme.",
           "Dans son Essai sur l'entendement humain, Locke soutient que l'esprit humain naît comme une table rase (tabula rasa), dénuée d'idées innées. C'est l'expérience sensible et la réflexion sur nos sensations qui gravent l'ensemble de nos connaissances et de nos idées dans notre cerveau.",
           "Sur le plan politique, dans ses Deux traités du gouvernement civil, Locke théorise les droits naturels inaliénables de l'individu (la vie, la liberté et la propriété). Il définit le gouvernement comme un contrat social fondé sur le consentement des gouvernés, justifiant le droit de résistance à la tyrannie."
-        ]
+        ],
+          keyConcept: "Table rase, Droits naturels, Libéralisme",
+          keyWorks: "Deux traités du gouvernement civil"
         },
         {
           id: "hume",
@@ -590,7 +624,9 @@ const TIKTOK_DATA = {
           "David Hume (1711 - 1776) était un philosophe, historien et essayiste écossais, figure de proue des Lumières écossaises et l'un des plus grands sceptiques de l'histoire. Sa pensée lucide a radicalement bousculé le rationalisme dogmatique et a réveillé Emmanuel Kant de son sommeil dogmatique.",
           "Dans son Traité de la nature humaine, Hume soutient que toutes nos connaissances dérivent de nos impressions sensibles. Il critique le concept de causalité, affirmant que nous ne percevons jamais la cause elle-même, mais seulement la succession régulière d'événements : notre croyance en la cause est le produit de l'habitude.",
           "Hume a également remis en question la notion d'identité personnelle (le 'Moi'), la qualifiant de simple collection de perceptions changeantes en flux constant. Sa philosophie morale, axée sur les sentiments de sympathie plutôt que sur la pure raison, a ouvert la voie à l'utilitarisme."
-        ]
+        ],
+          keyConcept: "Scepticisme, Empirisme, Causalité",
+          keyWorks: "Traité de la nature humaine"
         },
         {
           id: "hobbes",
@@ -604,7 +640,9 @@ const TIKTOK_DATA = {
           "Thomas Hobbes (1588 - 1679) était un philosophe anglais majeur de la modernité, dont l'œuvre a révolutionné la philosophie politique. Ayant vécu les traumatismes de la guerre civile anglaise, il chercha à concevoir un modèle de société capable de garantir la paix.",
           "Dans son chef-d'œuvre le Léviathan, Hobbes décrit l'état de nature comme un état de guerre permanente de tous contre tous, où la vie est 'solitaire, misérable, pénible, quasi animale et brève'. Pour échapper à cette peur, les hommes s'unissent par un contrat social.",
           "Ce contrat transfère leur souveraineté individuelle à un pouvoir central fort, le 'Léviathan', chargé d'assurer la paix civile. Hobbes est l'un des premiers à fonder l'autorité politique sur un contrat rationnel passé entre les individus, plutôt que sur un droit divin."
-        ]
+        ],
+          keyConcept: "État de nature, Contrat social, Absolutisme",
+          keyWorks: "L'Éthique, Léviathan"
         },
         {
           id: "beauvoir",
@@ -618,7 +656,9 @@ const TIKTOK_DATA = {
           "Simone de Beauvoir (1908 - 1986) était une philosophe existentialiste, romancière et figure majeure du féminisme mondial. Compagne intellectuelle de Jean-Paul Sartre, elle construisit une œuvre philosophique personnelle axée sur la liberté et la responsabilité.",
           "Son ouvrage le plus célèbre, Le Deuxième Sexe, publié en 1949, jette les bases du féminisme moderne à travers sa formule restée mythique : 'On ne naît pas femme, on le devient'. Elle y démontre comment la société construit culturellement le rôle de la femme au fil des siècles.",
           "Appliquant l'existentialisme au genre, Beauvoir soutient que la situation biologique de la femme ne dicte pas son destin. Sa philosophie invite chaque être humain à s'affranchir des rôles imposés par la tradition pour s'engager librement dans la création de son propre destin."
-        ]
+        ],
+          keyConcept: "Féminisme, Condition, Liberté",
+          keyWorks: "Le Deuxième Sexe"
         }
       ],
       articles: [

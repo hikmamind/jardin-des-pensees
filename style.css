@@ -3208,4 +3208,201 @@ textarea.form-control {
 }
 
 
+/* --- Britannica-style Thinker Modal --- */
+.thinker-modal-content {
+  background: rgba(10, 22, 14, 0.98);
+  border: 1px solid var(--accent-gold);
+  box-shadow: 0 0 35px rgba(223, 177, 91, 0.25);
+  width: 95%;
+  max-width: 1100px;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  transform: scale(0.9);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal.active .thinker-modal-content {
+  transform: scale(1);
+}
+
+.thinker-modal-layout {
+  display: flex;
+  gap: 30px;
+  padding: 40px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Left Sidebar */
+.thinker-modal-sidebar {
+  width: 200px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.sidebar-title {
+  font-size: 1.4rem;
+  font-family: 'Playfair Display', 'Amiri', serif;
+  color: var(--text-primary);
+  margin: 0;
+  border-bottom: 2px solid var(--accent-gold);
+  padding-bottom: 10px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-menu a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+  color: var(--accent-gold);
+  background: rgba(223, 177, 91, 0.08);
+}
+
+.sidebar-image-box {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.sidebar-image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* Central Content */
+.thinker-modal-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-left: 20px;
+  border-left: 1px solid rgba(223, 177, 91, 0.1);
+  border-right: 1px solid rgba(223, 177, 91, 0.1);
+  padding-right: 20px;
+}
+
+.thinker-sec-title {
+  font-size: 1.25rem;
+  color: var(--accent-gold);
+  margin: 0 0 10px 0;
+  font-family: 'Playfair Display', 'Amiri', serif;
+}
+
+.thinker-sec-text {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  text-align: justify;
+  margin: 0;
+}
+
+/* Right Fact Card */
+.thinker-modal-fact {
+  width: 260px;
+  flex-shrink: 0;
+  background: rgba(223, 177, 91, 0.03);
+  border: 1px solid rgba(223, 177, 91, 0.15);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: fit-content;
+  box-shadow: 0 8px 24px var(--shadow-color);
+}
+
+.fact-title {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  margin: 0;
+  border-bottom: 1px solid rgba(223, 177, 91, 0.2);
+  padding-bottom: 8px;
+  font-family: 'Playfair Display', 'Amiri', serif;
+}
+
+.fact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.fact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9rem;
+}
+
+.fact-label {
+  color: var(--accent-gold);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.fact-value {
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* RTL layout adjustments */
+[dir="rtl"] .thinker-modal-main {
+  border-left: 1px solid rgba(223, 177, 91, 0.1);
+  border-right: 1px solid rgba(223, 177, 91, 0.1);
+}
+
+/* Responsive modal layout */
+@media (max-width: 900px) {
+  .thinker-modal-layout {
+    flex-direction: column;
+    max-height: 85vh;
+  }
+  .thinker-modal-sidebar,
+  .thinker-modal-fact {
+    width: 100%;
+  }
+  .thinker-modal-main {
+    border: none;
+    padding: 0;
+  }
+  .sidebar-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .sidebar-image-box {
+    display: none;
+  }
+}
+
+
 

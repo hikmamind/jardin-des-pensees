@@ -303,24 +303,66 @@
   <!-- Thinker Biography Modal -->
   <div class="modal" id="thinkerModal" role="dialog" aria-modal="true" aria-label="Biographie du Penseur">
     <button class="modal-close" id="thinkerModalCloseBtn" aria-label="Fermer la biographie">&times;</button>
-    <div class="modal-content" style="max-width: 800px; padding: 40px; border-radius: 24px; background: rgba(13, 30, 19, 0.98); border: 1px solid var(--card-border); backdrop-filter: blur(30px);">
-      <!-- Header of Thinker Modal -->
-      <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 20px; border-bottom: 1px solid var(--card-border); padding-bottom: 20px; flex-wrap: wrap;">
-        <div id="modalThinkerImgContainer" style="width: 80px; height: 80px; border-radius: 50%; overflow: hidden; border: 2px solid var(--accent-gold); flex-shrink: 0;">
-          <img src="" id="modalThinkerImg" style="width: 100%; height: 100%; object-fit: cover;">
-        </div>
-        <div>
-          <h2 class="serif-title" id="modalThinkerName" style="font-size: 1.8rem; margin: 0; color: var(--text-primary);"></h2>
-          <div style="display: flex; gap: 10px; font-size: 0.85rem; color: var(--accent-gold); font-weight: 600; margin-top: 5px; flex-wrap: wrap;">
-            <span id="modalThinkerEra"></span>
-            <span style="color: var(--card-border);">&bull;</span>
-            <span id="modalThinkerSchool"></span>
+    <div class="thinker-modal-content">
+      <div class="thinker-modal-layout">
+        
+        <!-- Left Sidebar -->
+        <aside class="thinker-modal-sidebar">
+          <h3 class="sidebar-title" id="modalSidebarName"></h3>
+          <ul class="sidebar-menu">
+            <li><a href="#sec-intro" class="sidebar-link active" id="menu-intro">مقدمة</a></li>
+            <li><a href="#sec-life" class="sidebar-link" id="menu-life">مسيرته وحياته</a></li>
+            <li><a href="#sec-philosophy" class="sidebar-link" id="menu-philosophy">أفكاره وفلسفته</a></li>
+            <li><a href="#sec-legacy" class="sidebar-link" id="menu-legacy">أثره وإرثه</a></li>
+          </ul>
+          <div class="sidebar-image-box">
+            <img src="" id="modalThinkerImg" alt="Portrait">
           </div>
-        </div>
-      </div>
-      <!-- Detailed text content -->
-      <div class="article-body-text" id="modalThinkerBody" style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; max-height: 50vh; overflow-y: auto; padding-right: 15px; text-align: justify; margin-bottom: 5px;">
-        <!-- Full biography paragraphs will go here -->
+        </aside>
+
+        <!-- Central Main Content -->
+        <section class="thinker-modal-main">
+          <div id="sec-intro">
+            <h4 class="thinker-sec-title" id="title-intro">مقدمة / Introduction</h4>
+            <p class="thinker-sec-text" id="para-intro"></p>
+          </div>
+          <div id="sec-life">
+            <h4 class="thinker-sec-title" id="title-life">مسيرته وحياته / Biography</h4>
+            <p class="thinker-sec-text" id="para-life"></p>
+          </div>
+          <div id="sec-philosophy">
+            <h4 class="thinker-sec-title" id="title-philosophy">أفكاره وفلسفته / Philosophy</h4>
+            <p class="thinker-sec-text" id="para-philosophy"></p>
+          </div>
+          <div id="sec-legacy">
+            <h4 class="thinker-sec-title" id="title-legacy">أثره وإرثه / Legacy</h4>
+            <p class="thinker-sec-text" id="para-legacy"></p>
+          </div>
+        </section>
+
+        <!-- Right Fact Card -->
+        <aside class="thinker-modal-fact">
+          <h3 class="fact-title" id="factHeading">Meet</h3>
+          <ul class="fact-list">
+            <li class="fact-item">
+              <span class="fact-label" data-i18n="eraLabel">الحقبة / Era</span>
+              <span class="fact-value" id="factEra"></span>
+            </li>
+            <li class="fact-item">
+              <span class="fact-label" data-i18n="schoolLabel">المدرسة الفكرية / School</span>
+              <span class="fact-value" id="factSchool"></span>
+            </li>
+            <li class="fact-item">
+              <span class="fact-label" data-i18n="conceptLabel">أهم المفاهيم / Key Concept</span>
+              <span class="fact-value" id="factConcept"></span>
+            </li>
+            <li class="fact-item">
+              <span class="fact-label" data-i18n="worksLabel">أشهر المؤلفات / Key Works</span>
+              <span class="fact-value" id="factWorks"></span>
+            </li>
+          </ul>
+        </aside>
+
       </div>
     </div>
   </div>

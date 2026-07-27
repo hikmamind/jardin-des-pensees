@@ -348,22 +348,73 @@ function setupThinkerModal(thinkers) {
   
   const cards = document.querySelectorAll('.thinker-card');
   
-  if (!modal || !closeBtn || !imgEl || !nameEl || !eraEl || !schoolEl || !bodyEl) return;
+  if (!modal || !closeBtn) return;
+  
+  // Set up sidebar active class toggles on click
+  const sidebarLinks = modal.querySelectorAll('.sidebar-link');
+  sidebarLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      sidebarLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
   
   function openThinkerModal(index) {
     const thinker = thinkers[index];
     if (thinker) {
-      imgEl.src = `../${thinker.image}`;
-      nameEl.textContent = thinker.name;
-      eraEl.textContent = thinker.era;
-      schoolEl.textContent = thinker.school;
+      document.getElementById('modalSidebarName').textContent = thinker.name;
+      document.getElementById('modalThinkerImg').src = `../${thinker.image}`;
+      document.getElementById('factHeading').textContent = `Meet ${thinker.name}`;
+      document.getElementById('factEra').textContent = thinker.era;
+      document.getElementById('factSchool').textContent = thinker.school;
       
-      // Generate paragraphs
-      if (thinker.body && Array.isArray(thinker.body)) {
-        bodyEl.innerHTML = thinker.body.map(para => `<p style="margin-bottom: 15px;">${para}</p>`).join('');
-      } else {
-        bodyEl.innerHTML = `<p>${thinker.bio}</p>`;
+      // Concept & Works
+      document.getElementById('factConcept').textContent = thinker.keyConcept || "-";
+      document.getElementById('factWorks').textContent = thinker.keyWorks || "-";
+      
+      const body = thinker.body || [thinker.bio];
+      
+      // Reset displays
+      document.getElementById('sec-intro').style.display = 'block';
+      document.getElementById('sec-life').style.display = 'block';
+      document.getElementById('sec-philosophy').style.display = 'block';
+      document.getElementById('sec-legacy').style.display = 'block';
+      
+      document.getElementById('menu-intro').style.display = 'block';
+      document.getElementById('menu-life').style.display = 'block';
+      document.getElementById('menu-philosophy').style.display = 'block';
+      document.getElementById('menu-legacy').style.display = 'block';
+
+      if (body.length === 1) {
+        document.getElementById('para-intro').textContent = body[0];
+        document.getElementById('sec-life').style.display = 'none';
+        document.getElementById('sec-philosophy').style.display = 'none';
+        document.getElementById('sec-legacy').style.display = 'none';
+        
+        document.getElementById('menu-life').style.display = 'none';
+        document.getElementById('menu-philosophy').style.display = 'none';
+        document.getElementById('menu-legacy').style.display = 'none';
+      } else if (body.length === 3) {
+        document.getElementById('para-intro').textContent = body[0];
+        document.getElementById('para-life').textContent = body[1];
+        document.getElementById('para-philosophy').textContent = body[2];
+        document.getElementById('sec-legacy').style.display = 'none';
+        document.getElementById('menu-legacy').style.display = 'none';
+      } else if (body.length >= 4) {
+        document.getElementById('para-intro').textContent = body[0];
+        document.getElementById('para-life').textContent = body[1];
+        document.getElementById('para-philosophy').textContent = body[2];
+        document.getElementById('para-legacy').textContent = body[3];
       }
+      
+      // Scroll main content to top
+      const mainContent = modal.querySelector('.thinker-modal-main');
+      if (mainContent) mainContent.scrollTop = 0;
+      
+      // Default to first sidebar link active
+      sidebarLinks.forEach(l => l.classList.remove('active'));
+      const defaultLink = document.getElementById('menu-intro');
+      if (defaultLink) defaultLink.classList.add('active');
       
       modal.classList.add('active');
       document.body.style.overflow = 'hidden';
