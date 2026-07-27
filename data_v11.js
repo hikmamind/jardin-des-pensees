@@ -341,6 +341,187 @@ const TIKTOK_DATA = {
       ],
       thinkers: [
         {
+          id: "platon",
+          featured: false,
+          name: "Platon",
+          era: "427 - 347 av. J.-C.",
+          school: "Platonisme",
+          image: "thinkers/images/platon.jpg",
+          bio: "Élève de Socrate et fondateur de l'Académie, explorateur du monde des Idées et de la justice idéale."
+        },
+        {
+          id: "aristote",
+          featured: false,
+          name: "Aristote",
+          era: "384 - 322 av. J.-C.",
+          school: "Aristotélisme",
+          image: "thinkers/images/platon.jpg",
+          bio: "Père de la logique et de la biologie, théoricien de l'éthique de la vertu et du juste milieu."
+        },
+        {
+          id: "descartes",
+          featured: false,
+          name: "Descartes",
+          era: "1596 - 1650",
+          school: "Rationalisme",
+          image: "thinkers/images/descartes.jpg",
+          bio: "Père de la philosophie moderne, célèbre pour son 'Cogito, ergo sum' et son doute méthodique."
+        },
+        {
+          id: "spinoza",
+          featured: false,
+          name: "Spinoza",
+          era: "1632 - 1677",
+          school: "Rationalisme",
+          image: "thinkers/images/descartes.jpg",
+          bio: "Philosophe de la liberté par la connaissance, identifiant Dieu à la Nature et prônant la joie rationnelle."
+        },
+        {
+          id: "rousseau",
+          featured: false,
+          name: "Rousseau",
+          era: "1712 - 1778",
+          school: "Lumières",
+          image: "avatar.jpg",
+          bio: "Théoricien du contrat social et de la bonté naturelle de l'homme corrompu par la société."
+        },
+        {
+          id: "voltaire",
+          featured: false,
+          name: "Voltaire",
+          era: "1694 - 1778",
+          school: "Lumières",
+          image: "avatar.jpg",
+          bio: "Défenseur de la liberté d'expression et de la tolérance religieuse contre le fanatisme."
+        },
+        {
+          id: "pascal",
+          featured: false,
+          name: "Pascal",
+          era: "1623 - 1662",
+          school: "Existentialisme chrétien",
+          image: "thinkers/images/descartes.jpg",
+          bio: "Mathématicien et philosophe, célèbre pour son pari sur l'existence de Dieu et la misère de l'homme."
+        },
+        {
+          id: "montaigne",
+          featured: false,
+          name: "Montaigne",
+          era: "1533 - 1592",
+          school: "Humanisme",
+          image: "avatar.jpg",
+          bio: "Créateur des Essais, célèbre pour sa question 'Que sais-je ?' et sa quête de sagesse personnelle."
+        },
+        {
+          id: "sartre",
+          featured: false,
+          name: "Sartre",
+          era: "1905 - 1980",
+          school: "Existentialisme",
+          image: "avatar.jpg",
+          bio: "Théoricien de la liberté radicale, affirmant que l'existence précède l'essence."
+        },
+        {
+          id: "machiavel",
+          featured: false,
+          name: "Machiavel",
+          era: "1469 - 1527",
+          school: "Réalisme politique",
+          image: "avatar.jpg",
+          bio: "Penseur politique réaliste, auteur de 'Le Prince', explorant le pouvoir et l'efficacité."
+        },
+        {
+          id: "laotseu",
+          featured: false,
+          name: "Lao Tzu",
+          era: "VIe siècle av. J.-C.",
+          school: "Taoïsme",
+          image: "avatar.jpg",
+          bio: "Père fondateur du taoïsme, auteur du Tao Tö King, prônant le non-agir et l'harmonie avec la nature."
+        },
+        {
+          id: "confucius",
+          featured: false,
+          name: "Confucius",
+          era: "551 - 479 av. J.-C.",
+          school: "Confucianisme",
+          image: "avatar.jpg",
+          bio: "Sage chinois dont les enseignements fondent l'éthique familiale, sociale et politique."
+        },
+        {
+          id: "kierkegaard",
+          featured: false,
+          name: "Kierkegaard",
+          era: "1813 - 1855",
+          school: "Existentialisme",
+          image: "avatar.jpg",
+          bio: "Père de l'existentialisme, explorant l'angoisse individuelle et le saut de la foi."
+        },
+        {
+          id: "freud",
+          featured: false,
+          name: "Freud",
+          era: "1856 - 1939",
+          school: "Psychanalyse",
+          image: "avatar.jpg",
+          bio: "Fondateur de la psychanalyse, explorateur de l'inconscient, des rêves et du refoulement."
+        },
+        {
+          id: "adler",
+          featured: false,
+          name: "Adler",
+          era: "1870 - 1937",
+          school: "Psychologie individuelle",
+          image: "avatar.jpg",
+          bio: "Théoricien du sentiment d'infériorité et de la quête de dépassement personnel."
+        },
+        {
+          id: "marx",
+          featured: false,
+          name: "Marx",
+          era: "1818 - 1883",
+          school: "Marxisme",
+          image: "avatar.jpg",
+          bio: "Théoricien du matérialisme historique et de la lutte des classes comme moteur de l'histoire."
+        },
+        {
+          id: "locke",
+          featured: false,
+          name: "Locke",
+          era: "1632 - 1704",
+          school: "Empirisme",
+          image: "avatar.jpg",
+          bio: "Père du libéralisme politique et de l'empirisme, décrivant l'esprit comme une table rase."
+        },
+        {
+          id: "hume",
+          featured: false,
+          name: "Hume",
+          era: "1711 - 1776",
+          school: "Empirisme / Scepticisme",
+          image: "avatar.jpg",
+          bio: "Philosophe sceptique majeur, théoricien de l'association des idées et de la causalité."
+        },
+        {
+          id: "hobbes",
+          featured: false,
+          name: "Hobbes",
+          era: "1588 - 1679",
+          school: "Philosophie politique",
+          image: "avatar.jpg",
+          bio: "Auteur du Léviathan, décrivant l'état de nature comme une guerre de tous contre tous."
+        },
+        {
+          id: "beauvoir",
+          featured: false,
+          name: "Beauvoir",
+          era: "1908 - 1986",
+          school: "Féminisme",
+          image: "avatar.jpg",
+          bio: "Philosophe et écrivaine, célèbre pour sa formule 'On ne naît pas femme, on le devient'."
+        },
+
+        {
           id: "marcaurele",
           featured: true,
           name: "Marc Aurèle",
@@ -763,6 +944,187 @@ const TIKTOK_DATA = {
       ],
       thinkers: [
         {
+          id: "platon",
+          featured: false,
+          name: "Plato",
+          era: "427 - 347 BC",
+          school: "Platonism",
+          image: "thinkers/images/platon.jpg",
+          bio: "Student of Socrates and founder of the Academy, explorer of the world of Forms and ideal justice."
+        },
+        {
+          id: "aristote",
+          featured: false,
+          name: "Aristotle",
+          era: "384 - 322 BC",
+          school: "Aristotelianism",
+          image: "thinkers/images/platon.jpg",
+          bio: "Father of logic and biology, theorist of virtue ethics and the golden mean."
+        },
+        {
+          id: "descartes",
+          featured: false,
+          name: "Descartes",
+          era: "1596 - 1650",
+          school: "Rationalism",
+          image: "thinkers/images/descartes.jpg",
+          bio: "Father of modern philosophy, famous for his 'Cogito, ergo sum' and methodical doubt."
+        },
+        {
+          id: "spinoza",
+          featured: false,
+          name: "Spinoza",
+          era: "1632 - 1677",
+          school: "Rationalism",
+          image: "thinkers/images/descartes.jpg",
+          bio: "Philosopher of freedom through knowledge, identifying God with Nature and advocating rational joy."
+        },
+        {
+          id: "rousseau",
+          featured: false,
+          name: "Rousseau",
+          era: "1712 - 1778",
+          school: "Enlightenment",
+          image: "avatar.jpg",
+          bio: "Theorist of the social contract and the natural goodness of man corrupted by society."
+        },
+        {
+          id: "voltaire",
+          featured: false,
+          name: "Voltaire",
+          era: "1694 - 1778",
+          school: "Enlightenment",
+          image: "avatar.jpg",
+          bio: "Champion of free expression and religious tolerance against fanaticism."
+        },
+        {
+          id: "pascal",
+          featured: false,
+          name: "Pascal",
+          era: "1623 - 1662",
+          school: "Christian Existentialism",
+          image: "thinkers/images/descartes.jpg",
+          bio: "Mathematician and philosopher, famous for his wager on God's existence and human misery."
+        },
+        {
+          id: "montaigne",
+          featured: false,
+          name: "Montaigne",
+          era: "1533 - 1592",
+          school: "Humanism",
+          image: "avatar.jpg",
+          bio: "Creator of the Essays, famous for his question 'What do I know?' and personal wisdom."
+        },
+        {
+          id: "sartre",
+          featured: false,
+          name: "Sartre",
+          era: "1905 - 1980",
+          school: "Existentialism",
+          image: "avatar.jpg",
+          bio: "Theorist of radical freedom, claiming that existence precedes essence."
+        },
+        {
+          id: "machiavel",
+          featured: false,
+          name: "Machiavelli",
+          era: "1469 - 1527",
+          school: "Political Realism",
+          image: "avatar.jpg",
+          bio: "Realistic political thinker, author of 'The Prince', exploring power and statecraft."
+        },
+        {
+          id: "laotseu",
+          featured: false,
+          name: "Lao Tzu",
+          era: "6th century BC",
+          school: "Taoism",
+          image: "avatar.jpg",
+          bio: "Founding father of Taoism, author of Tao Te Ching, advocating non-action and harmony."
+        },
+        {
+          id: "confucius",
+          featured: false,
+          name: "Confucius",
+          era: "551 - 479 BC",
+          school: "Confucianism",
+          image: "avatar.jpg",
+          bio: "Chinese sage whose teachings established family, social, and political ethics."
+        },
+        {
+          id: "kierkegaard",
+          featured: false,
+          name: "Kierkegaard",
+          era: "1813 - 1855",
+          school: "Existentialism",
+          image: "avatar.jpg",
+          bio: "Father of existentialism, exploring individual anxiety and the leap of faith."
+        },
+        {
+          id: "freud",
+          featured: false,
+          name: "Freud",
+          era: "1856 - 1939",
+          school: "Psychoanalysis",
+          image: "avatar.jpg",
+          bio: "Founder of psychoanalysis, explorer of the unconscious, dreams, and repression."
+        },
+        {
+          id: "adler",
+          featured: false,
+          name: "Adler",
+          era: "1870 - 1937",
+          school: "Individual Psychology",
+          image: "avatar.jpg",
+          bio: "Theorist of the inferiority complex and the pursuit of self-overcoming."
+        },
+        {
+          id: "marx",
+          featured: false,
+          name: "Marx",
+          era: "1818 - 1883",
+          school: "Marxism",
+          image: "avatar.jpg",
+          bio: "Theorist of historical materialism and class struggle as the engine of history."
+        },
+        {
+          id: "locke",
+          featured: false,
+          name: "Locke",
+          era: "1632 - 1704",
+          school: "Empiricism",
+          image: "avatar.jpg",
+          bio: "Father of political liberalism and empiricism, describing the mind as a tabula rasa."
+        },
+        {
+          id: "hume",
+          featured: false,
+          name: "Hume",
+          era: "1711 - 1776",
+          school: "Empiricism / Skepticism",
+          image: "avatar.jpg",
+          bio: "Major skeptical philosopher, theorist of the association of ideas and causality."
+        },
+        {
+          id: "hobbes",
+          featured: false,
+          name: "Hobbes",
+          era: "1588 - 1679",
+          school: "Political Philosophy",
+          image: "avatar.jpg",
+          bio: "Author of Leviathan, describing the state of nature as a war of all against all."
+        },
+        {
+          id: "beauvoir",
+          featured: false,
+          name: "Beauvoir",
+          era: "1908 - 1986",
+          school: "Feminism",
+          image: "avatar.jpg",
+          bio: "Philosopher and writer, famous for her quote 'One is not born, but rather becomes, a woman'."
+        },
+
+        {
           id: "marcaurele",
           featured: true,
           name: "Marcus Aurelius",
@@ -1184,6 +1546,187 @@ const TIKTOK_DATA = {
         { category: "تنمية ذاتية", title: "التأثير التراكمي للعادات", icon: "trending-up", desc: "التحسن بنسبة 1% يومياً يعطي نتائج أفضل بـ 37 مرة بعد عام. الاستمرارية تهزم الكثافة المؤقتة.", thinker: "جيمس كلير" }
       ],
       thinkers: [
+        {
+          id: "platon",
+          featured: false,
+          name: "أفلاطون",
+          era: "427 - 347 ق.م",
+          school: "الأفلاطونية",
+          image: "thinkers/images/platon.jpg",
+          bio: "تلميذ سقراط ومؤسس الأكاديمية، مستكشف عالم المثل والعدالة المثالية الفاضلة."
+        },
+        {
+          id: "aristote",
+          featured: false,
+          name: "أرسطو",
+          era: "384 - 322 ق.م",
+          school: "الأرسطية",
+          image: "thinkers/images/platon.jpg",
+          bio: "أبو المنطق وعلم الأحياء، ومؤسس الأخلاق الفضيلة ومبدأ الوسطية والاعتدال."
+        },
+        {
+          id: "descartes",
+          featured: false,
+          name: "رينيه ديكارت",
+          era: "1596 - 1650",
+          school: "العقلانية",
+          image: "thinkers/images/descartes.jpg",
+          bio: "أبو الفلسفة الحديثة، وصاحب الكوجيتو الشهير 'أنا أفكر إذن أنا موجود' والشك المنهجي."
+        },
+        {
+          id: "spinoza",
+          featured: false,
+          name: "باروخ سبينوزا",
+          era: "1632 - 1677",
+          school: "العقلانية",
+          image: "thinkers/images/descartes.jpg",
+          bio: "فيلسوف الحرية العقلية والبهجة، الذي وحد بين الإله والطبيعة وسعى للسلام الداخلي."
+        },
+        {
+          id: "rousseau",
+          featured: false,
+          name: "جان جاك روسو",
+          era: "1712 - 1778",
+          school: "عصر التنوير",
+          image: "avatar.jpg",
+          bio: "منظر العقد الاجتماعي والحرية، وصاحب رؤية الخير الفطري للإنسان الذي أفسدته مدنية المجتمع."
+        },
+        {
+          id: "voltaire",
+          featured: false,
+          name: "فولتير",
+          era: "1694 - 1778",
+          school: "عصر التنوير",
+          image: "avatar.jpg",
+          bio: "مدافع شرس عن حرية التعبير، والتسامح الفكري، والعدالة الاجتماعية ضد التعصب والجهل."
+        },
+        {
+          id: "pascal",
+          featured: false,
+          name: "بليز باسكال",
+          era: "1623 - 1662",
+          school: "الوجودية المسيحية",
+          image: "thinkers/images/descartes.jpg",
+          bio: "عالم فيزياء وفيلسوف، صاحب الرهان الشهير على وجود الخالق ووصفه لبؤس الإنسان بدون هداية."
+        },
+        {
+          id: "montaigne",
+          featured: false,
+          name: "ميشيل دي مونتين",
+          era: "1533 - 1592",
+          school: "الإنسانية والشك",
+          image: "avatar.jpg",
+          bio: "مبتكر المقالات الفلسفية الذاتية، ومطلق التساؤل المنهجي 'ماذا أعرف؟' لترويض النفس."
+        },
+        {
+          id: "sartre",
+          featured: false,
+          name: "جان بول سارتر",
+          era: "1905 - 1980",
+          school: "الوجودية",
+          image: "avatar.jpg",
+          bio: "أبرز فلاسفة الوجودية الفرنسية، ومؤكد أن الحرية قدر الإنسانية والوجود يسبق الجوهر."
+        },
+        {
+          id: "machiavel",
+          featured: false,
+          name: "نيكولو ماكيافيلي",
+          era: "1469 - 1527",
+          school: "الواقعية السياسية",
+          image: "avatar.jpg",
+          bio: "مؤلف كتاب 'الأمير' الشهير، ومحلل آليات القوة والحفاظ على استقرار الدول ببراغماتية."
+        },
+        {
+          id: "laotseu",
+          featured: false,
+          name: "لاوتسو",
+          era: "القرن السادس ق.م",
+          school: "الطاوية",
+          image: "avatar.jpg",
+          bio: "الحكيم الصيني ومؤسس الفلسفة الطاوية، صاحب فلسفة عدم التدخل والانسجام الكلي مع الطبيعة."
+        },
+        {
+          id: "confucius",
+          featured: false,
+          name: "كونفوشيوس",
+          era: "551 - 479 ق.م",
+          school: "الكونفوشيوسية",
+          image: "avatar.jpg",
+          bio: "المعلم والحكيم الصيني الذي صاغ قواعد السلوك الاجتماعي، والأخلاق الأسرية، والحكم الرشيد."
+        },
+        {
+          id: "kierkegaard",
+          featured: false,
+          name: "سورين كيركغارد",
+          era: "1813 - 1855",
+          school: "الوجودية",
+          image: "avatar.jpg",
+          bio: "مؤسس الفلسفة الوجودية الفردية، ومحلل القلق الإنساني والقفزة الوجدانية نحو الإيمان الذاتي."
+        },
+        {
+          id: "freud",
+          featured: false,
+          name: "سيغموند فرويد",
+          era: "1856 - 1939",
+          school: "التحليل النفسي",
+          image: "avatar.jpg",
+          bio: "مؤسس مدرسة التحليل النفسي ومكتشف اللاوعي ورموز الأحلام وآليات الدفاع النفسي."
+        },
+        {
+          id: "adler",
+          featured: false,
+          name: "ألفرد أدلر",
+          era: "1870 - 1937",
+          school: "علم النفس الفردي",
+          image: "avatar.jpg",
+          bio: "مؤسس مدرسة علم النفس الفردي، ومبتكر مفهوم عقدة النقص والسعي للتفوق والتعويض النفسي."
+        },
+        {
+          id: "marx",
+          featured: false,
+          name: "كارل ماركس",
+          era: "1818 - 1883",
+          school: "الماركسية",
+          image: "avatar.jpg",
+          bio: "فيلسوف واقتصادي كبير، صاغ نظرية المادية التاريخية ورأى في صراع الطبقات محرك التاريخ."
+        },
+        {
+          id: "locke",
+          featured: false,
+          name: "جون لوك",
+          era: "1632 - 1704",
+          school: "التجريبية",
+          image: "avatar.jpg",
+          bio: "أبو الليبرالية وفيلسوف المعرفة التجريبية، واصفاً عقل الإنسان بصفحة بيضاء تنقشها التجربة."
+        },
+        {
+          id: "hume",
+          featured: false,
+          name: "ديفيد هيوم",
+          era: "1711 - 1776",
+          school: "التجريبية والشك",
+          image: "avatar.jpg",
+          bio: "أحد أقطاب الفلسفة التجريبية والشك، ومحلل السببية والارتباط الذهني التلقائي."
+        },
+        {
+          id: "hobbes",
+          featured: false,
+          name: "توماس هوبز",
+          era: "1588 - 1679",
+          school: "الفلسفة السياسية",
+          image: "avatar.jpg",
+          bio: "صاحب كتاب 'اللوياثان'، واصفاً حالة الطبيعة الأولى بالصراع والأنانية لتبرير العقد الاجتماعي."
+        },
+        {
+          id: "beauvoir",
+          featured: false,
+          name: "سيمون دي بوفوار",
+          era: "1908 - 1986",
+          school: "الوجودية النسوية",
+          image: "avatar.jpg",
+          bio: "كاتبة وفيلسوفة وجودية، صاحبة كتاب 'الجنس الآخر' ومقولة 'المرأة لا تولد امرأة بل تصبح كذلك'."
+        },
+
         {
           id: "marcaurele",
           featured: true,
