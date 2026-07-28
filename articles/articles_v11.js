@@ -382,12 +382,189 @@ function setupArticleModal(articles) {
         modalImgContainer.style.display = 'none';
       }
       
-      // Generate paragraphs
-      if (art.body && Array.isArray(art.body)) {
-        bodyEl.innerHTML = art.body.map(para => `<p style="margin-bottom: 15px;">${para}</p>`).join('');
-      } else {
-        bodyEl.innerHTML = `<p>${art.desc}</p>`;
+      // --- Localized layout labels for the Modern Article Structure ---
+      const LOCALIZED_LAYOUT_LABELS = {
+        fr: {
+          problemTitle: "📍 1. Le Constat / Le Problème",
+          solutionTitle: "📍 2. La Solution (Étape par étape)",
+          tipsTitle: "📍 3. Astuces Pros & Erreurs à Éviter",
+          conclusionTitle: "📍 4. Conclusion & Passage à l'Acte",
+          beforeLabel: "Avant / Sans Sagesse",
+          afterLabel: "Après / Avec Philosophie",
+          beforeDesc: "Réaction instinctive, stress, rumination et surmenage mental.",
+          afterDesc: "Calme intérieur, dichotomie du contrôle et paix d'esprit.",
+          premiumAccess: "✨ Accès Premium Word & PDF",
+          bannerTitle: "Pack Premium E-Book & Planner Notion",
+          bannerDesc: "Téléchargez la version complète de nos écrits sous forme de guide éditable au format Microsoft Word (.docx).",
+          downloadBtnText: "Télécharger le Guide complet",
+          visualInfo: "INFOGRAPHIE",
+          visualMockup: "MOCKUP APPAREIL",
+          visualMemo: "FICHE MÉMO"
+        },
+        en: {
+          problemTitle: "📍 1. The Observation / The Problem",
+          solutionTitle: "📍 2. The Solution (Step by Step)",
+          tipsTitle: "📍 3. Pro Tips & Mistakes to Avoid",
+          conclusionTitle: "📍 4. Conclusion & Action Call",
+          beforeLabel: "Before / Without Wisdom",
+          afterLabel: "After / With Philosophy",
+          beforeDesc: "Instinctive reaction, stress, overthinking and mental fatigue.",
+          afterDesc: "Inner peace, dichotomy of control and serenity of mind.",
+          premiumAccess: "✨ Premium Word & PDF Access",
+          bannerTitle: "Premium E-Book & Notion Planner Pack",
+          bannerDesc: "Download the complete version of our writings as an editable guide in Microsoft Word (.docx) format.",
+          downloadBtnText: "Download Complete Guide",
+          visualInfo: "INFOGRAPHIC",
+          visualMockup: "DEVICE MOCKUP",
+          visualMemo: "MEMO CARD"
+        },
+        ar: {
+          problemTitle: "١. تشخيص المشكلة والواقع الحالي",
+          solutionTitle: "٢. الحل الفلسفي (خطوة بخطوة)",
+          tipsTitle: "٣. نصائح الخبراء وتنبيهات الأخطاء",
+          conclusionTitle: "٤. الخلاصة والتطبيق العملي",
+          beforeLabel: "قبل / بدون الحكمة",
+          afterLabel: "بعد / مع الفلسفة والتأمل",
+          beforeDesc: "انفعال تلقائي، تفكير مفرط، قلق، وتشتت ذهني مستمر.",
+          afterDesc: "سكينة داخلية، تركيز على ما تملك، طمأنينة وراحة بال.",
+          premiumAccess: "✨ مستندات وورد و PDF جاهزة للتحميل",
+          bannerTitle: "الحزمة المتميزة: دليل العمل ومنظم الملاحظات",
+          bannerDesc: "قم بتحميل النسخة الكاملة لجميع مقالاتنا بصيغة ملف مايكروسوفت وورد (.docx) قابل للتعديل والطباعة.",
+          downloadBtnText: "تحميل المستند الكامل",
+          visualInfo: "رسم بياني مقارن",
+          visualMockup: "تطبيق الهاتف",
+          visualMemo: "بطاقة تلخيصية"
+        }
+      };
+
+      const labels = LOCALIZED_LAYOUT_LABELS[currentLang] || LOCALIZED_LAYOUT_LABELS.fr;
+      
+      const p1 = art.body[0] || "";
+      const p2 = art.body[1] || "";
+      const p3 = art.body[2] || "";
+      const p4 = art.body[3] || "";
+      const p5 = art.body[4] || art.desc || "";
+      const p6 = art.body[5] || "";
+
+      // Format Section 2 (p3) into list items with bold words
+      let solutionHtml = "";
+      if (p3) {
+        const sentences = p3.split(/[.!?؛]/).map(s => s.trim()).filter(s => s.length > 0);
+        if (sentences.length > 0) {
+          solutionHtml = `<ul class="article-bullet-list" style="margin-bottom: 20px; padding-left: 20px; list-style-type: square; color: var(--text-secondary); line-height: 1.6;">`;
+          sentences.forEach(s => {
+            const words = s.split(' ');
+            const boldCount = Math.min(3, words.length);
+            const boldPart = words.slice(0, boldCount).join(' ');
+            const restPart = words.slice(boldCount).join(' ');
+            solutionHtml += `<li style="margin-bottom: 12px;"><strong>${boldPart}</strong> ${restPart}.</li>`;
+          });
+          solutionHtml += `</ul>`;
+        } else {
+          solutionHtml = `<p style="margin-bottom: 15px;">${p3}</p>`;
+        }
       }
+
+      // Format Section 3 (p4) with callout quote box
+      let tipsHtml = `<p style="margin-bottom: 15px;">${p4}</p>`;
+      if (p4) {
+        tipsHtml += `
+          <div class="article-callout-box" style="margin: 20px 0; padding: 20px; border-left: 3px solid var(--accent-gold); background: rgba(223, 177, 91, 0.02); border-radius: 0 12px 12px 0; font-style: italic; color: var(--text-primary);">
+            "${p4.split('.')[0] || p4}"
+          </div>
+        `;
+      }
+      
+      const modalBodyHtml = `
+        <!-- Lead Chapeau -->
+        <p class="article-chapeau-lead" style="font-size: 1.25rem; font-weight: 500; color: var(--text-primary); line-height: 1.6; margin-bottom: 25px; border-bottom: 1px solid rgba(223, 177, 91, 0.1); padding-bottom: 20px; text-align: justify;">
+          ${art.desc}
+        </p>
+        
+        <!-- Section 1 : Problème -->
+        <div class="article-section-block">
+          <h3 class="article-section-title" style="font-size: 1.35rem; color: var(--accent-gold); margin: 25px 0 15px; font-family: 'Playfair Display', 'Amiri', serif;">${labels.problemTitle}</h3>
+          <p style="margin-bottom: 15px;">${p1}</p>
+          ${p2 ? `<p style="margin-bottom: 15px;">${p2}</p>` : ""}
+          
+          <!-- Visuel #2 : Infographie -->
+          <div class="article-visual-container visual-infography">
+            <div class="visual-badge">${labels.visualInfo}</div>
+            <div class="infography-grid">
+              <div class="infography-col col-before">
+                <span class="col-icon">❌</span>
+                <h4>${labels.beforeLabel}</h4>
+                <p>${labels.beforeDesc}</p>
+              </div>
+              <div class="infography-col col-after">
+                <span class="col-icon">🌿</span>
+                <h4>${labels.afterLabel}</h4>
+                <p>${labels.afterDesc}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2 : Solution -->
+        <div class="article-section-block">
+          <h3 class="article-section-title" style="font-size: 1.35rem; color: var(--accent-gold); margin: 30px 0 15px; font-family: 'Playfair Display', 'Amiri', serif;">${labels.solutionTitle}</h3>
+          ${solutionHtml}
+          
+          <!-- Visuel #3 : Mockup -->
+          <div class="article-visual-container visual-mockup">
+            <div class="visual-badge">${labels.visualMockup}</div>
+            <div class="mockup-phone">
+              <div class="phone-screen">
+                <div class="phone-app-header">🌿 حكمة ونور</div>
+                <div class="phone-app-content">
+                  <h5>${art.title}</h5>
+                  <p>${art.desc.slice(0, 75)}...</p>
+                  <div class="phone-button">READ</div>
+                </div>
+              </div>
+              <div class="mockup-annotation">
+                <span>${labels.premiumAccess}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3 : Astuces -->
+        <div class="article-section-block">
+          <h3 class="article-section-title" style="font-size: 1.35rem; color: var(--accent-gold); margin: 30px 0 15px; font-family: 'Playfair Display', 'Amiri', serif;">${labels.tipsTitle}</h3>
+          ${tipsHtml}
+          
+          <!-- Visuel #4 : Fiche Mémo -->
+          <div class="article-visual-container visual-memo">
+            <div class="visual-badge">${labels.visualMemo}</div>
+            <div class="memo-content">
+              <span class="quote-symbol">“</span>
+              <p class="memo-quote-text">${p1.split('.')[0] || p1}</p>
+              <span class="memo-author">🌿 Le Jardin des Pensées</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Conclusion & CTA -->
+        <div class="article-section-block">
+          <h3 class="article-section-title" style="font-size: 1.35rem; color: var(--accent-gold); margin: 30px 0 15px; font-family: 'Playfair Display', 'Amiri', serif;">${labels.conclusionTitle}</h3>
+          <p style="margin-bottom: 20px;">${p5}</p>
+          ${p6 ? `<p style="margin-bottom: 20px;">${p6}</p>` : ""}
+          
+          <!-- Visuel #5 : Bannière Promotionnelle -->
+          <div class="article-visual-container visual-banner">
+            <div class="banner-content">
+              <h4>${labels.bannerTitle}</h4>
+              <p>${labels.bannerDesc}</p>
+              <a href="../files/${art.file}" download target="_blank" class="banner-cta-btn" style="text-decoration: none;">
+                <span>${labels.downloadBtnText}</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      `;
+      bodyEl.innerHTML = modalBodyHtml;
       
       // Setup download button link
       downloadBtn.href = `../files/${art.file}`;
