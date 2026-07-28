@@ -458,7 +458,7 @@ const TIKTOK_DATA = {
           "name": "Aristote",
           "era": "384 - 322 av. J.-C.",
           "school": "Aristotélisme",
-          "image": "thinkers/images/platon.jpg",
+          "image": "thinkers/images/aristote.jpg",
           "bio": "Père de la logique et de la biologie, théoricien de l'éthique de la vertu et du juste milieu.",
           "body": [
             "Aristote (384 - 322 av. J.-C.) fut l'un des penseurs les plus influents de l'histoire, dont l'œuvre a posé les bases de la science, de la logique et de la philosophie occidentale. Né à Stagire, il rejoignit l'Académie de Platon à Athènes et y étudia pendant vingt ans, avant de devenir le précepteur d'Alexandre le Grand et de fonder sa propre école, le Lycée.",
@@ -490,7 +490,7 @@ const TIKTOK_DATA = {
           "name": "Spinoza",
           "era": "1632 - 1677",
           "school": "Rationalisme",
-          "image": "thinkers/images/descartes.jpg",
+          "image": "thinkers/images/spinoza.jpg",
           "bio": "Philosophe de la liberté par la connaissance, identifiant Dieu à la Nature et prônant la joie rationnelle.",
           "body": [
             "Baruch Spinoza (1632 - 1677) était un philosophe néerlandais d'origine juive portugaise, dont l'œuvre novatrice fut exclue de sa communauté religieuse pour hérésie. Menant une vie modeste de polisseur de lentilles optiques, il refusa les honneurs académiques pour préserver sa totale liberté de penser.",
@@ -522,7 +522,7 @@ const TIKTOK_DATA = {
           "name": "Voltaire",
           "era": "1694 - 1778",
           "school": "Lumières",
-          "image": "thinkers/images/rousseau.jpg",
+          "image": "thinkers/images/voltaire.jpg",
           "bio": "Défenseur de la liberté d'expression et de la tolérance religieuse contre le fanatisme.",
           "body": [
             "Voltaire (François-Marie Arouet, 1694 - 1778) était un écrivain et philosophe français, symbole par excellence de l'esprit des Lumières. Brillant satiriste et épistolier prolifique, il utilisa sa plume acérée comme une arme pour combattre le fanatisme religieux, l'injustice judiciaire et l'intolérance.",
@@ -538,7 +538,7 @@ const TIKTOK_DATA = {
           "name": "Pascal",
           "era": "1623 - 1662",
           "school": "Existentialisme",
-          "image": "thinkers/images/descartes.jpg",
+          "image": "thinkers/images/pascal.jpg",
           "bio": "Mathématicien et philosophe, célèbre pour son pari sur l'existence de Dieu et la misère de l'homme.",
           "body": [
             "Blaise Pascal (1623 - 1662) était un génie précoce français, à la fois mathématicien de premier plan, physicien, inventeur de la calculatrice mécanique, et philosophe mystique chrétien. Sa santé fragile et sa conversion religieuse profonde marquèrent sa pensée d'une rare intensité dramatique.",
@@ -554,7 +554,7 @@ const TIKTOK_DATA = {
           "name": "Montaigne",
           "era": "1533 - 1592",
           "school": "Humanisme",
-          "image": "thinkers/images/rousseau.jpg",
+          "image": "thinkers/images/montaigne.jpg",
           "bio": "Créateur des Essais, célèbre pour sa question 'Que sais-je ?' et sa quête de sagesse personnelle.",
           "body": [
             "Michel de Montaigne (1533 - 1592) était un écrivain, philosophe et magistrat français de la Renaissance. Retiré dans la bibliothèque de son château au milieu des guerres de religion qui déchiraient la France, il entreprit un projet littéraire inédit : s'étudier lui-même pour comprendre la condition humaine.",
@@ -586,7 +586,7 @@ const TIKTOK_DATA = {
           "name": "Machiavel",
           "era": "1469 - 1527",
           "school": "Réalisme",
-          "image": "thinkers/images/rousseau.jpg",
+          "image": "thinkers/images/machiavel.jpg",
           "bio": "Penseur politique réaliste, auteur de 'Le Prince', explorant le pouvoir et l'efficacité.",
           "body": [
             "Nicolas Machiavel (1469 - 1527) était un homme d'État, diplomate et écrivain florentin de la Renaissance. Témoin des divisions et des invasions qui ravageaient l'Italie, il voulut analyser la politique non selon des préceptes moraux ou religieux abstraits, mais selon sa réalité concrète et efficace.",
@@ -618,7 +618,7 @@ const TIKTOK_DATA = {
           "name": "Confucius",
           "era": "551 - 479 av. J.-C.",
           "school": "Confucianisme",
-          "image": "thinkers/images/laotseu.jpg",
+          "image": "thinkers/images/confucius.jpg",
           "bio": "Sage chinois dont les enseignements fondent l'éthique familiale, sociale et politique.",
           "body": [
             "Confucius (Kong Fuzi, 551 - 479 av. J.-C.) fut un éducateur, philosophe et homme d'État chinois dont la pensée a profondément façonné la civilisation d'Asie de l'Est pendant plus de deux millénaires. Vivant à une époque de chaos et de guerre, il chercha à restaurer l'harmonie sociale par l'éducation et la vertu.",
@@ -634,7 +634,7 @@ const TIKTOK_DATA = {
           "name": "Kierkegaard",
           "era": "1813 - 1855",
           "school": "Existentialisme",
-          "image": "thinkers/images/rousseau.jpg",
+          "image": "thinkers/images/kierkegaard.jpg",
           "bio": "Père de l'existentialisme, explorant l'angoisse individuelle et le saut de la foi.",
           "body": [
             "Søren Kierkegaard (1813 - 1855) était un philosophe et théologien danois, largement considéré comme le père de l'existentialisme. Écrivant souvent sous divers pseudonymes pour présenter différents points de vue, il mena une critique féroce de l'Église d'État danoise et de la philosophie abstraite de Hegel.",
@@ -666,7 +666,7 @@ const TIKTOK_DATA = {
           "name": "Adler",
           "era": "1870 - 1937",
           "school": "Psychologie",
-          "image": "thinkers/images/freud.jpg",
+          "image": "thinkers/images/adler.jpg",
           "bio": "Théoricien du sentiment d'infériorité et de la quête de dépassement personnel.",
           "body": [
             "Alfred Adler (1870 - 1937) était un médecin et psychothérapeute autrichien, fondateur de la psychologie individuelle. Initialement collaborateur de Freud à Vienne, il s'en sépara pour développer une vision plus humaniste, sociale et optimiste de la personnalité humaine.",
@@ -698,7 +698,7 @@ const TIKTOK_DATA = {
           "name": "Locke",
           "era": "1632 - 1704",
           "school": "Empirisme",
-          "image": "thinkers/images/marx.jpg",
+          "image": "thinkers/images/locke.jpg",
           "bio": "Père du libéralisme politique et de l'empirisme, décrivant l'esprit comme une table rase.",
           "body": [
             "John Locke (1632 - 1704) était un philosophe anglais, l'un des penseurs les plus influents du siècle des Lumières, considéré comme le père de l'empirisme moderne et du libéralisme politique. Sa philosophie a directement inspiré la Constitution des États-Unis et la Déclaration des droits de l'homme.",
@@ -714,7 +714,7 @@ const TIKTOK_DATA = {
           "name": "Hume",
           "era": "1711 - 1776",
           "school": "Empirisme",
-          "image": "thinkers/images/marx.jpg",
+          "image": "thinkers/images/hume.jpg",
           "bio": "Philosophe sceptique majeur, théoricien de l'association des idées et de la causalité.",
           "body": [
             "David Hume (1711 - 1776) était un philosophe, historien et essayiste écossais, figure de proue des Lumières écossaises et l'un des plus grands sceptiques de l'histoire. Sa pensée lucide a radicalement bousculé le rationalisme dogmatique et a réveillé Emmanuel Kant de son sommeil dogmatique.",
@@ -730,7 +730,7 @@ const TIKTOK_DATA = {
           "name": "Hobbes",
           "era": "1588 - 1679",
           "school": "Philosophie politique",
-          "image": "thinkers/images/marx.jpg",
+          "image": "thinkers/images/hobbes.jpg",
           "bio": "Auteur du Léviathan, décrivant l'état de nature comme une guerre de tous contre tous.",
           "body": [
             "Thomas Hobbes (1588 - 1679) était un philosophe anglais majeur de la modernité, dont l'œuvre a révolutionné la philosophie politique. Ayant vécu les traumatismes de la guerre civile anglaise, il chercha à concevoir un modèle de société capable de garantir la paix.",
@@ -746,7 +746,7 @@ const TIKTOK_DATA = {
           "name": "Beauvoir",
           "era": "1908 - 1986",
           "school": "Féminisme",
-          "image": "thinkers/images/sartre.jpg",
+          "image": "thinkers/images/beauvoir.jpg",
           "bio": "Philosophe et écrivaine, célèbre pour sa formule 'On ne naît pas femme, on le devient'.",
           "body": [
             "Simone de Beauvoir (1908 - 1986) était une philosophe existentialiste, romancière et figure majeure du féminisme mondial. Compagne intellectuelle de Jean-Paul Sartre, elle construisit une œuvre philosophique personnelle axée sur la liberté et la responsabilité.",
@@ -1759,7 +1759,7 @@ const TIKTOK_DATA = {
           "name": "Aristotle",
           "era": "384 - 322 BC",
           "school": "Aristotelianism",
-          "image": "thinkers/images/platon.jpg",
+          "image": "thinkers/images/aristote.jpg",
           "bio": "Father of logic and biology, theorist of virtue ethics and the golden mean.",
           "body": [
             "Aristotle (384 - 322 BC) was one of the most influential thinkers in history, laying the groundwork for Western science, logic, and philosophy. Born in Stagira, he joined Plato's Academy in Athens for twenty years, before tutoring Alexander the Great and founding his own school, the Lyceum.",
@@ -1791,7 +1791,7 @@ const TIKTOK_DATA = {
           "name": "Spinoza",
           "era": "1632 - 1677",
           "school": "Rationalism",
-          "image": "thinkers/images/descartes.jpg",
+          "image": "thinkers/images/spinoza.jpg",
           "bio": "Philosopher of freedom through knowledge, identifying God with Nature and advocating rational joy.",
           "body": [
             "Baruch Spinoza (1632 - 1677) was a Dutch philosopher of Portuguese-Jewish origin, whose revolutionary work saw him excommunicated for heresy. Living a simple life grinding optical lenses, he declined prestigious academic posts to protect his absolute freedom of thought.",
@@ -1823,7 +1823,7 @@ const TIKTOK_DATA = {
           "name": "Voltaire",
           "era": "1694 - 1778",
           "school": "Enlightenment",
-          "image": "thinkers/images/rousseau.jpg",
+          "image": "thinkers/images/voltaire.jpg",
           "bio": "Champion of free expression and religious tolerance against fanaticism.",
           "body": [
             "Voltaire (François-Marie Arouet, 1694 - 1778) was a French writer and philosopher, the ultimate symbol of the Enlightenment. A brilliant satirist and prolific letter writer, he used his sharp pen to fight religious fanaticism, judicial injustice, and intolerance.",
@@ -1839,7 +1839,7 @@ const TIKTOK_DATA = {
           "name": "Pascal",
           "era": "1623 - 1662",
           "school": "Existentialism",
-          "image": "thinkers/images/descartes.jpg",
+          "image": "thinkers/images/pascal.jpg",
           "bio": "Mathematician and philosopher, famous for his wager on God's existence and human misery.",
           "body": [
             "Blaise Pascal (1623 - 1662) was a French child prodigy, leading mathematician, physicist, inventor of the mechanical calculator, and Christian mystic philosopher. His fragile health and profound spiritual conversion marked his writings with dramatic intensity.",
@@ -1855,7 +1855,7 @@ const TIKTOK_DATA = {
           "name": "Montaigne",
           "era": "1533 - 1592",
           "school": "Humanism",
-          "image": "thinkers/images/rousseau.jpg",
+          "image": "thinkers/images/montaigne.jpg",
           "bio": "Creator of the Essays, famous for his question 'What do I know?' and personal wisdom.",
           "body": [
             "Michel de Montaigne (1533 - 1592) was a French Renaissance writer, philosopher, and statesman. Retiring to his castle tower library during the French Wars of Religion, he launched a unique literary project: studying himself to understand the human condition.",
@@ -1887,7 +1887,7 @@ const TIKTOK_DATA = {
           "name": "Machiavelli",
           "era": "1469 - 1527",
           "school": "Political Realism",
-          "image": "thinkers/images/rousseau.jpg",
+          "image": "thinkers/images/machiavel.jpg",
           "bio": "Realistic political thinker, author of 'The Prince', exploring power and statecraft.",
           "body": [
             "Niccolò Machiavelli (1469 - 1527) was a Florentine statesman, diplomat, and writer of the Renaissance. Witnessing the internal divisions and foreign invasions of Italy, he sought to analyze politics not as abstract morality, but as concrete power dynamics.",
@@ -1919,7 +1919,7 @@ const TIKTOK_DATA = {
           "name": "Confucius",
           "era": "551 - 479 BC",
           "school": "Confucianism",
-          "image": "thinkers/images/laotseu.jpg",
+          "image": "thinkers/images/confucius.jpg",
           "bio": "Chinese sage whose teachings established family, social, and political ethics.",
           "body": [
             "Confucius (551 - 479 BC) was a Chinese teacher, philosopher, and politician whose ideas shaped East Asian civilization for millennia. Living in a time of social collapse and warfare, he sought to restore social harmony through education and virtue.",
@@ -1935,7 +1935,7 @@ const TIKTOK_DATA = {
           "name": "Kierkegaard",
           "era": "1813 - 1855",
           "school": "Existentialism",
-          "image": "thinkers/images/rousseau.jpg",
+          "image": "thinkers/images/kierkegaard.jpg",
           "bio": "Father of existentialism, exploring individual anxiety and the leap of faith.",
           "body": [
             "Søren Kierkegaard (1813 - 1855) was a Danish philosopher and theologian, widely recognized as the father of existentialism. Writing under various pseudonyms to present differing life paths, he fiercely critiqued the Danish state church and abstract Hegelian philosophy.",
@@ -1967,7 +1967,7 @@ const TIKTOK_DATA = {
           "name": "Adler",
           "era": "1870 - 1937",
           "school": "Individual Psychology",
-          "image": "thinkers/images/freud.jpg",
+          "image": "thinkers/images/adler.jpg",
           "bio": "Theorist of the inferiority complex and the pursuit of self-overcoming.",
           "body": [
             "Alfred Adler (1870 - 1937) was an Austrian medical doctor and psychotherapist, founder of individual psychology. Initially a collaborator of Freud, he broke away to develop a more holistic, social, and optimistic view of the human personality.",
@@ -1999,7 +1999,7 @@ const TIKTOK_DATA = {
           "name": "Locke",
           "era": "1632 - 1704",
           "school": "Empiricism",
-          "image": "thinkers/images/marx.jpg",
+          "image": "thinkers/images/locke.jpg",
           "bio": "Father of political liberalism and empiricism, describing the mind as a tabula rasa.",
           "body": [
             "John Locke (1632 - 1704) was an English philosopher, one of the most influential figures of the Enlightenment, and the father of modern empiricism and political liberalism. His writings directly inspired the US Constitution and the Declaration of Human Rights.",
@@ -2015,7 +2015,7 @@ const TIKTOK_DATA = {
           "name": "Hume",
           "era": "1711 - 1776",
           "school": "Empiricism",
-          "image": "thinkers/images/marx.jpg",
+          "image": "thinkers/images/hume.jpg",
           "bio": "Major skeptical philosopher, theorist of the association of ideas and causality.",
           "body": [
             "David Hume (1711 - 1776) was a Scottish philosopher, historian, and essayist, a central figure of the Scottish Enlightenment. His radical skepticism shook dogmatic rationalism, famously 'awakening Immanuel Kant from his dogmatic slumber'.",
@@ -2031,7 +2031,7 @@ const TIKTOK_DATA = {
           "name": "Hobbes",
           "era": "1588 - 1679",
           "school": "Political Philosophy",
-          "image": "thinkers/images/marx.jpg",
+          "image": "thinkers/images/hobbes.jpg",
           "bio": "Author of Leviathan, describing the state of nature as a war of all against all.",
           "body": [
             "Thomas Hobbes (1588 - 1679) was a major English philosopher who revolutionized political philosophy. Having witnessed the horrors of the English Civil War, he sought to design a political framework capable of guaranteeing peace and civil security.",
@@ -2047,7 +2047,7 @@ const TIKTOK_DATA = {
           "name": "Beauvoir",
           "era": "1908 - 1986",
           "school": "Feminism",
-          "image": "thinkers/images/sartre.jpg",
+          "image": "thinkers/images/beauvoir.jpg",
           "bio": "Philosopher and writer, famous for her quote 'One is not born, but rather becomes, a woman'.",
           "body": [
             "Simone de Beauvoir (1908 - 1986) was a French existentialist philosopher, novelist, and major public figure of global feminism. Life-partner of Jean-Paul Sartre, she developed a unique philosophical system centered on freedom, situations, and ethics.",
@@ -3060,7 +3060,7 @@ const TIKTOK_DATA = {
           "name": "أرسطو",
           "era": "384 - 322 ق.م",
           "school": "الأرسطية",
-          "image": "thinkers/images/platon.jpg",
+          "image": "thinkers/images/aristote.jpg",
           "bio": "أبو المنطق وعلم الأحياء، ومؤسس الأخلاق الفضيلة ومبدأ الوسطية والاعتدال.",
           "body": [
             "أرسطو (384 - 322 ق.م) كان أحد أكثر المفكرين تأثيراً في التاريخ، حيث وضع أسس العلوم الطبيعية والمنطق والفلسفة الغربية. ولد في ستاغيرا، وانضم إلى أكاديمية أفلاطون في أثينا لعشرين عاماً، قبل أن يصبح معلماً للإسكندر الأكبر ويؤسس مدرسته الخاصة، اللوقيون.",
@@ -3092,7 +3092,7 @@ const TIKTOK_DATA = {
           "name": "باروخ سبينوزا",
           "era": "1632 - 1677",
           "school": "العقلانية",
-          "image": "thinkers/images/descartes.jpg",
+          "image": "thinkers/images/spinoza.jpg",
           "bio": "فيلسوف الحرية العقلية والبهجة، الذي وحد بين الإله والطبيعة وسعى للسلام الداخلي.",
           "body": [
             "باروخ سبينوزا (1632 - 1677) كان فيلسوفاً هولندياً من أصل يهودي برتغالي، واجه الطرد والحرمان من طائفته بسبب آرائه الثورية. عاش حياة بسيطة في صقل العدسات البصرية، ورفض المناصب الأكاديمية المرموقة ليحمي حريته الكاملة في التفكير.",
@@ -3124,7 +3124,7 @@ const TIKTOK_DATA = {
           "name": "فولتير",
           "era": "1694 - 1778",
           "school": "عصر التنوير",
-          "image": "thinkers/images/rousseau.jpg",
+          "image": "thinkers/images/voltaire.jpg",
           "bio": "مدافع شرس عن حرية التعبير، والتسامح الفكري، والعدالة الاجتماعية ضد التعصب والجهل.",
           "body": [
             "فولتير (فرانسوا ماري أرويه، 1694 - 1778) كان كاتباً وفيلسوفاً fransian، ورمزاً حقيقياً لعصر التنوير. استخدم قلمه الساخر والبارع كسلاح لمحاربة التعصب الديني، والظلم القضائي، والجهل الفكري في زمانه.",
@@ -3140,7 +3140,7 @@ const TIKTOK_DATA = {
           "name": "بليز باسكال",
           "era": "1623 - 1662",
           "school": "الوجودية المسيحية",
-          "image": "thinkers/images/descartes.jpg",
+          "image": "thinkers/images/pascal.jpg",
           "bio": "عالم فيزياء وفيلسوف، صاحب الرهان الشهير على وجود الخالق ووصفه لبؤس الإنسان بدون هداية.",
           "body": [
             "بليز باسكال (1623 - 1662) كان نابغة فرنسياً مبكراً، جمع بين كونه عالم رياضيات وفيزياء ومخترعاً لأول آلة حاسبة ميكانيكية، وفيلسوفاً صوفياً مسيحياً. طبعت صحته العليلة وتجربته الروحية العميقة كتاباته بمسحة درامية وجدانية فريدة.",
@@ -3156,7 +3156,7 @@ const TIKTOK_DATA = {
           "name": "ميشيل دي مونتين",
           "era": "1533 - 1592",
           "school": "الإنسانية والشك",
-          "image": "thinkers/images/rousseau.jpg",
+          "image": "thinkers/images/montaigne.jpg",
           "bio": "مبتكر المقالات الفلسفية الذاتية، ومطلق التساؤل المنهجي 'ماذا أعرف؟' لترويض النفس.",
           "body": [
             "ميشيل دي مونتين (1533 - 1592) كان كاتباً وفيلسوفاً وقاضياً فرنسياً من عصر النهضة. اعتزل العمل السياسي في برج مكتبته بقلعته وسط الحروب الدينية، ليبدأ مشروعاً أدبياً غير مسبوق: دراسة ذاته لفهم الطبيعة البشرية.",
@@ -3188,7 +3188,7 @@ const TIKTOK_DATA = {
           "name": "نيكولو ماكيافيلي",
           "era": "1469 - 1527",
           "school": "الواقعية السياسية",
-          "image": "thinkers/images/rousseau.jpg",
+          "image": "thinkers/images/machiavel.jpg",
           "bio": "مؤلف كتاب 'الأمير' الشهير، ومحلل آليات القوة والحفاظ على استقرار الدول ببراغماتية.",
           "body": [
             "نيكولو ماكيافيلي (1469 - 1527) كان دبلوماسياً ورجل دولة ومفكراً فلورنتينياً من عصر النهضة. عاصر الحروب والاضطرابات التي مزقت إيطاليا، فأراد تحليل السياسة ليس وفق أخلاق مثالية مجردة، بل وفق واقعها الملموس وآلياتها العملية الفعالة.",
@@ -3220,7 +3220,7 @@ const TIKTOK_DATA = {
           "name": "كونفوشيوس",
           "era": "551 - 479 ق.م",
           "school": "الكونفوشيوسية",
-          "image": "thinkers/images/laotseu.jpg",
+          "image": "thinkers/images/confucius.jpg",
           "bio": "المعلم والحكيم الصيني الذي صاغ قواعد السلوك الاجتماعي، والأخلاق الأسرية، والحكم الرشيد.",
           "body": [
             "كونفوشيوس (551 - 479 ق.م) كان معلماً وفيلسوفاً ورجل دولة صينياً، صاغت أفكاره الأخلاقية والاجتماعية حضارات شرق آسيا لأكثر من ألفي عام. عاش في حقبة من التفكك والحروب، فسعى لاستعادة الوئام الاجتماعي بالتربية والفضيلة.",
@@ -3236,7 +3236,7 @@ const TIKTOK_DATA = {
           "name": "سورين كيركغارد",
           "era": "1813 - 1855",
           "school": "الوجودية",
-          "image": "thinkers/images/rousseau.jpg",
+          "image": "thinkers/images/kierkegaard.jpg",
           "bio": "مؤسس الفلسفة الوجودية الفردية، ومحلل القلق الإنساني والقفزة الوجدانية نحو الإيمان الذاتي.",
           "body": [
             "سورين كيركغارد (1813 - 1855) كان فيلسوفاً ولاهوتياً دنماركياً، ويُعتبر على نطاق واسع مؤسس الفلسفة الوجودية. كتب تحت أسماء مستعارة متعددة ليعرض أنماطاً مختلفة للحياة، ووجه نقدًا لاذعًا للكنيسة الرسمية وفلسفة هيجل التجريدية.",
@@ -3268,7 +3268,7 @@ const TIKTOK_DATA = {
           "name": "ألفرد أدلر",
           "era": "1870 - 1937",
           "school": "علم النفس الفردي",
-          "image": "thinkers/images/freud.jpg",
+          "image": "thinkers/images/adler.jpg",
           "bio": "مؤسس مدرسة علم النفس الفردي، ومبتكر مفهوم عقدة النقص والسعي للتفوق والتعويض النفسي.",
           "body": [
             "ألفرد أدلر (1870 - 1937) كان طبيباً ومعالجاً نفسياً نمساوياً، ومؤسس علم النفس الفردي. كان في البداية زميلاً لفرويد في فيينا، لكنه انفصل عنه ليصوغ رؤية أكثر إنسانية واجتماعية وتفاؤلاً للشخصية البشرية.",
@@ -3300,7 +3300,7 @@ const TIKTOK_DATA = {
           "name": "جون لوك",
           "era": "1632 - 1704",
           "school": "التجريبية",
-          "image": "thinkers/images/marx.jpg",
+          "image": "thinkers/images/locke.jpg",
           "bio": "أبو الليبرالية وفيلسوف المعرفة التجريبية، واصفاً عقل الإنسان بصفحة بيضاء تنقشها التجربة.",
           "body": [
             "جون لوك (1632 - 1704) كان فيلسوفاً إنجليزياً، وأحد كبار مفكري عصر التنوير، ويُعتبر مؤسس الفلسفة التجريبية الحديثة والآب الروحي لليبرالية السياسية. ألهمت كتاباته إعلان الاستقلال الأمريكي ودساتير الحقوق الحديثة.",
@@ -3316,7 +3316,7 @@ const TIKTOK_DATA = {
           "name": "ديفيد هيوم",
           "era": "1711 - 1776",
           "school": "التجريبية والشك",
-          "image": "thinkers/images/marx.jpg",
+          "image": "thinkers/images/hume.jpg",
           "bio": "أحد أقطاب الفلسفة التجريبية والشك، ومحلل السببية والارتباط الذهني التلقائي.",
           "body": [
             "ديفيد هيوم (1711 - 1776) كان فيلسوفاً ومؤرخاً واسكتلندياً، ويعد من أبرز وجوه التنوير الاسكتلندي وأعظم الفلاسفة التشكيكيين. هزت فلسفته الصارمة أسس العقلانية الدوغمائية، وهي التي 'أيقظت إيمانويل كانط من سباته العقائدي'.",
@@ -3332,7 +3332,7 @@ const TIKTOK_DATA = {
           "name": "توماس هوبز",
           "era": "1588 - 1679",
           "school": "الفلسفة السياسية",
-          "image": "thinkers/images/marx.jpg",
+          "image": "thinkers/images/hobbes.jpg",
           "bio": "صاحب كتاب 'اللوياثان'، واصفاً حالة الطبيعة الأولى بالصراع والأنانية لتبرير العقد الاجتماعي.",
           "body": [
             "توماس هوبز (1588 - 1679) كان فيلسوفاً إنجليزياً كبيراً، أحدثت نظرياته السياسية ثورة في الفكر الحديث. عاصر ويلات الحرب الأهلية الإنجليزية, مما دفعه للبحث عن نموذج سياسي متين يضمن الأمن والسلم الأهلي بشكل دائم.",
@@ -3348,7 +3348,7 @@ const TIKTOK_DATA = {
           "name": "سيمون دي بوفوار",
           "era": "1908 - 1986",
           "school": "الوجودية النسوية",
-          "image": "thinkers/images/sartre.jpg",
+          "image": "thinkers/images/beauvoir.jpg",
           "bio": "كاتبة وفيلسوفة وجودية، صاحبة كتاب 'الجنس الآخر' ومقولة 'المرأة لا تولد امرأة بل تصبح كذلك'.",
           "body": [
             "سيمون دي بوفوار (1908 - 1986) كانت فيلسوفة وجودية وروائية وناشطة فرنسية، وتعتبر رائدة الحركة النسوية الحديثة في العالم. شكلت مع شريكها الفكري جان بول سارتر ثنائياً فلسفياً فريداً، وأسست فكراً يتمحور حول الحرية والمواقف.",
