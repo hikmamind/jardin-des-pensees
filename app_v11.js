@@ -859,12 +859,17 @@ function setupContactForm() {
 
 // --- Philosophy Quiz Engine ---
 let quizState = {
-  currentScreen: 'start', // 'start', 'question', 'results'
+  selectedQuizId: null,   // ID of the chosen quiz
+  currentScreen: 'list',  // 'list', 'start', 'question', 'results'
   currentQuestionIndex: 0,
-  answers: [] // Array of profiles corresponding to selected answers
+  answers: []
 };
 
 function initQuiz() {
+  quizState.selectedQuizId = null;
+  quizState.currentScreen = 'list';
+  quizState.currentQuestionIndex = 0;
+  quizState.answers = [];
   renderQuizScreen();
 }
 
@@ -873,220 +878,274 @@ function renderQuizScreen() {
   const progressBar = document.getElementById('quizProgressBar');
   if (!container) return;
 
-  const data = TIKTOK_DATA.content[currentLang].quiz;
   const ui = TIKTOK_DATA.ui[currentLang];
   
-  if (quizState.currentScreen === 'start') {
+  if (quizState.currentScreen === 'list') {
     if (progressBar) progressBar.style.width = '0%';
-    container.innerHTML = `
-      <div class="quiz-screen">
-        <h3 class="quiz-title">${ui.quizTitle}</h3>
-        <p class="quiz-subtitle">${ui.quizSubtitle}</p>
-        <button class="quiz-btn" id="startQuizBtn">
-          <span>${ui.quizStartBtn}</span>
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </button>
-      </div>
-    `;
+    const quizzes = TIKTOK_DATA.content[currentLang].quizzes;
     
-    document.getElementById('startQuizBtn').addEventListener('click', () => {
-      transitionQuizScreen('question', 0);
-    });
-  } else if (quizState.currentScreen === 'question') {
-    const qIndex = quizState.currentQuestionIndex;
-    const question = data.questions[qIndex];
-    const progressPercent = ((qIndex) / data.questions.length) * 100;
-    if (progressBar) progressBar.style.width = `${progressPercent}%`;
-
-    const optionsHtml = question.options.map((opt, oIdx) => {
-      const letter = String.fromCharCode(65 + oIdx); // A, B, C
-      const isSelected = quizState.answers[qIndex] === opt.profile ? 'selected' : '';
+    const listHtml = quizzes.map(q => {
       return `
-        <button class="quiz-option ${isSelected}" data-profile="${opt.profile}">
-          <span class="quiz-option-letter">${letter}</span>
-          <span class="quiz-option-text">${opt.text}</span>
-        </button>
+        <div class="quiz-list-item">
+          <h4 class="quiz-list-title">${q.title}</h4>
+          <p class="quiz-list-subtitle">${q.subtitle}</p>
+          <button class="quiz-btn select-quiz-btn" data-quiz-id="${q.id}">
+            <span>${ui.quizChooseBtn || "Choisir ce test"}</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
       `;
     }).join('');
 
     container.innerHTML = `
       <div class="quiz-screen">
-        <div class="quiz-question-number">${currentLang === 'ar' ? 'السؤال' : 'Question'} ${qIndex + 1} / ${data.questions.length}</div>
-        <h3 class="quiz-question-text">${question.question}</h3>
-        <div class="quiz-options-container">
-          ${optionsHtml}
+        <h3 class="quiz-title">${ui.quizzesTitle || "Tests & Quiz Philosophiques"}</h3>
+        <p class="quiz-subtitle">${ui.quizSubtitle || "Découvrez nos tests d'introspection."}</p>
+        <div class="quizzes-list-container">
+          ${listHtml}
         </div>
-        <button class="quiz-btn" id="nextQuizBtn" disabled>
-          <span>${ui.quizNextBtn}</span>
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </button>
       </div>
     `;
-
-    // Bind option click
-    const options = container.querySelectorAll('.quiz-option');
-    let selectedProfile = quizState.answers[qIndex] || null;
-    const nextBtn = document.getElementById('nextQuizBtn');
     
-    if (selectedProfile && nextBtn) {
-      nextBtn.disabled = false;
-    }
-
-    options.forEach(opt => {
-      opt.addEventListener('click', () => {
-        options.forEach(o => o.classList.remove('selected'));
-        opt.classList.add('selected');
-        selectedProfile = opt.getAttribute('data-profile');
-        if (nextBtn) nextBtn.disabled = false;
+    // Bind buttons
+    const selectButtons = container.querySelectorAll('.select-quiz-btn');
+    selectButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const quizId = btn.getAttribute('data-quiz-id');
+        quizState.selectedQuizId = quizId;
+        quizState.currentScreen = 'start';
+        quizState.currentQuestionIndex = 0;
+        quizState.answers = [];
+        renderQuizScreen();
       });
     });
+  } else {
+    // If a quiz is selected
+    const quizzes = TIKTOK_DATA.content[currentLang].quizzes;
+    const data = quizzes.find(q => q.id === quizState.selectedQuizId);
+    if (!data) return;
 
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
-        quizState.answers[qIndex] = selectedProfile;
-        if (qIndex + 1 < data.questions.length) {
-          transitionQuizScreen('question', qIndex + 1);
-        } else {
-          transitionQuizScreen('results');
+    if (quizState.currentScreen === 'start') {
+      if (progressBar) progressBar.style.width = '0%';
+      container.innerHTML = `
+        <div class="quiz-screen">
+          <button class="quiz-back-list-btn" id="quizBackListBtn" style="background: transparent; border: none; color: var(--accent-gold); cursor: pointer; display: flex; align-items: center; gap: 8px; margin-bottom: 20px; font-size: 0.9rem; padding: 0;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>${ui.quizBackBtn || "Retour aux tests"}</span>
+          </button>
+          <h3 class="quiz-title">${data.title}</h3>
+          <p class="quiz-subtitle">${data.subtitle}</p>
+          <button class="quiz-btn" id="startQuizBtn">
+            <span>${ui.quizStartBtn}</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+      `;
+      
+      document.getElementById('quizBackListBtn').addEventListener('click', () => {
+        quizState.selectedQuizId = null;
+        quizState.currentScreen = 'list';
+        renderQuizScreen();
+      });
+
+      document.getElementById('startQuizBtn').addEventListener('click', () => {
+        transitionQuizScreen('question', 0);
+      });
+    } else if (quizState.currentScreen === 'question') {
+      const qIndex = quizState.currentQuestionIndex;
+      const question = data.questions[qIndex];
+      const progressPercent = ((qIndex) / data.questions.length) * 100;
+      if (progressBar) progressBar.style.width = `${progressPercent}%`;
+
+      const optionsHtml = question.options.map((opt, oIdx) => {
+        const letter = String.fromCharCode(65 + oIdx); // A, B, C
+        const isSelected = quizState.answers[qIndex] === opt.profile ? 'selected' : '';
+        return `
+          <button class="quiz-option ${isSelected}" data-profile="${opt.profile}">
+            <span class="quiz-option-letter">${letter}</span>
+            <span class="quiz-option-text">${opt.text}</span>
+          </button>
+        `;
+      }).join('');
+
+      container.innerHTML = `
+        <div class="quiz-screen">
+          <div class="quiz-question-number">${currentLang === 'ar' ? 'السؤال' : 'Question'} ${qIndex + 1} / ${data.questions.length}</div>
+          <h3 class="quiz-question-text">${question.question}</h3>
+          <div class="quiz-options-container">
+            ${optionsHtml}
+          </div>
+          <button class="quiz-btn" id="nextQuizBtn" disabled>
+            <span>${ui.quizNextBtn}</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+      `;
+
+      // Bind option click
+      const options = container.querySelectorAll('.quiz-option');
+      let selectedProfile = quizState.answers[qIndex] || null;
+      const nextBtn = document.getElementById('nextQuizBtn');
+      
+      if (selectedProfile && nextBtn) {
+        nextBtn.disabled = false;
+      }
+
+      options.forEach(opt => {
+        opt.addEventListener('click', () => {
+          options.forEach(o => o.classList.remove('selected'));
+          opt.classList.add('selected');
+          selectedProfile = opt.getAttribute('data-profile');
+          if (nextBtn) nextBtn.disabled = false;
+        });
+      });
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          quizState.answers[qIndex] = selectedProfile;
+          if (qIndex + 1 < data.questions.length) {
+            transitionQuizScreen('question', qIndex + 1);
+          } else {
+            transitionQuizScreen('results');
+          }
+        });
+      }
+    } else if (quizState.currentScreen === 'results') {
+      if (progressBar) progressBar.style.width = '100%';
+      
+      // Calculate profile percentages
+      const counts = {};
+      data.questions.forEach(q => {
+        q.options.forEach(opt => {
+          counts[opt.profile] = 0;
+        });
+      });
+      
+      quizState.answers.forEach(p => {
+        if (counts[p] !== undefined) counts[p]++;
+      });
+      
+      const total = quizState.answers.length;
+      
+      // Determine dominant profile
+      let dominant = Object.keys(counts)[0];
+      let maxVal = counts[dominant];
+      Object.keys(counts).forEach(p => {
+        if (counts[p] > maxVal) {
+          dominant = p;
+          maxVal = counts[p];
         }
       });
-    }
-  } else if (quizState.currentScreen === 'results') {
-    if (progressBar) progressBar.style.width = '100%';
-    
-    // Calculate profile percentages
-    const counts = { stoic: 0, absurd: 0, existential: 0 };
-    quizState.answers.forEach(p => {
-      if (counts[p] !== undefined) counts[p]++;
-    });
-    
-    const total = quizState.answers.length;
-    const pStoic = Math.round((counts.stoic / total) * 100);
-    const pAbsurd = Math.round((counts.absurd / total) * 100);
-    const pExistential = Math.round((counts.existential / total) * 100);
-    
-    // Determine dominant profile
-    let dominant = 'stoic';
-    let maxVal = counts.stoic;
-    if (counts.absurd > maxVal) {
-      dominant = 'absurd';
-      maxVal = counts.absurd;
-    }
-    if (counts.existential > maxVal) {
-      dominant = 'existential';
-    }
 
-    const dominantProfile = data.profiles[dominant];
-    
-    // Generate recommended items
-    const recomThinkers = dominantProfile.recomThinkers.map(tId => {
-      const thinker = TIKTOK_DATA.content[currentLang].thinkers.find(t => t.id === tId);
-      if (!thinker) return '';
-      return `
-        <a href="./thinkers/?thinker=${thinker.id}" class="quiz-recom-item">
-          <span class="quiz-recom-type">${currentLang === 'ar' ? 'فيلسوف' : currentLang === 'en' ? 'Philosopher' : 'Philosophe'}</span>
-          <h4 class="quiz-recom-name">${thinker.name}</h4>
-          <p class="quiz-recom-desc">${thinker.bio}</p>
-          <span class="quiz-recom-link">
-            <span>${ui.readBio}</span>
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </span>
-        </a>
-      `;
-    }).join('');
-
-    const articles = TIKTOK_DATA.content[currentLang].articles.filter(a => a.category === dominantProfile.recomCategory);
-    const recomArticles = articles.map(art => {
-      return `
-        <a href="./articles/?category=${art.category}" class="quiz-recom-item">
-          <span class="quiz-recom-type">${currentLang === 'ar' ? 'مقال' : currentLang === 'en' ? 'Article' : 'Article'}</span>
-          <h4 class="quiz-recom-name">${art.title}</h4>
-          <p class="quiz-recom-desc">${art.desc}</p>
-          <span class="quiz-recom-link">
-            <span>${ui.readArticle}</span>
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </span>
-        </a>
-      `;
-    }).join('');
-
-    container.innerHTML = `
-      <div class="quiz-screen quiz-results-container">
-        <h3 class="quiz-result-title">${ui.quizResultTitle}</h3>
-        <div class="quiz-result-profile-name">${dominantProfile.title}</div>
-        <p class="quiz-result-description">${dominantProfile.desc}</p>
-        
-        <!-- Scores grid -->
-        <div class="quiz-results-scores">
+      const dominantProfile = data.profiles[dominant];
+      
+      // Generate scores HTML
+      const scoreRowsHtml = Object.keys(counts).map(pKey => {
+        const pPercent = Math.round((counts[pKey] / total) * 100);
+        const pProfile = data.profiles[pKey];
+        const pName = pProfile ? pProfile.title : pKey;
+        return `
           <div class="quiz-score-row">
             <div class="quiz-score-info">
-              <span>${ui.stoicName}</span>
-              <span>${pStoic}%</span>
+              <span>${pName}</span>
+              <span>${pPercent}%</span>
             </div>
             <div class="quiz-score-track">
-              <div class="quiz-score-fill stoic" style="width: 0%;"></div>
+              <div class="quiz-score-fill" data-percent="${pPercent}" style="width: 0%;"></div>
             </div>
           </div>
-          <div class="quiz-score-row">
-            <div class="quiz-score-info">
-              <span>${ui.absurdName}</span>
-              <span>${pAbsurd}%</span>
-            </div>
-            <div class="quiz-score-track">
-              <div class="quiz-score-fill absurd" style="width: 0%;"></div>
+        `;
+      }).join('');
+
+      // Generate recommended items
+      const recomThinkers = (dominantProfile.recomThinkers || []).map(tId => {
+        const thinker = TIKTOK_DATA.content[currentLang].thinkers.find(t => t.id === tId);
+        if (!thinker) return '';
+        return `
+          <a href="./thinkers/?thinker=${thinker.id}" class="quiz-recom-item">
+            <span class="quiz-recom-type">${currentLang === 'ar' ? 'فيلسوف' : currentLang === 'en' ? 'Philosopher' : 'Philosophe'}</span>
+            <h4 class="quiz-recom-name">${thinker.name}</h4>
+            <p class="quiz-recom-desc">${thinker.bio}</p>
+            <span class="quiz-recom-link">
+              <span>${ui.readBio}</span>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </span>
+          </a>
+        `;
+      }).join('');
+
+      const articles = TIKTOK_DATA.content[currentLang].articles.filter(a => a.category === dominantProfile.recomCategory);
+      const recomArticles = articles.map(art => {
+        return `
+          <a href="./articles/?category=${art.category}" class="quiz-recom-item">
+            <span class="quiz-recom-type">${currentLang === 'ar' ? 'مقال' : currentLang === 'en' ? 'Article' : 'Article'}</span>
+            <h4 class="quiz-recom-name">${art.title}</h4>
+            <p class="quiz-recom-desc">${art.desc}</p>
+            <span class="quiz-recom-link">
+              <span>${ui.readArticle || "Lire l'article"}</span>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </span>
+          </a>
+        `;
+      }).join('');
+
+      container.innerHTML = `
+        <div class="quiz-screen quiz-results-container">
+          <h3 class="quiz-result-title">${ui.quizScoreTitle || "Votre Score / Profil Dominant"}</h3>
+          <div class="quiz-result-profile-name">${dominantProfile.title}</div>
+          <p class="quiz-result-description">${dominantProfile.desc}</p>
+          
+          <!-- Scores grid -->
+          <div class="quiz-results-scores">
+            ${scoreRowsHtml}
+          </div>
+
+          <!-- Recommendations -->
+          <div class="quiz-recommendations">
+            <h3 class="quiz-recom-title">${ui.quizRecomTitle}</h3>
+            <div class="quiz-recom-grid">
+              ${recomThinkers}
+              ${recomArticles}
             </div>
           </div>
-          <div class="quiz-score-row">
-            <div class="quiz-score-info">
-              <span>${ui.existentialName}</span>
-              <span>${pExistential}%</span>
-            </div>
-            <div class="quiz-score-track">
-              <div class="quiz-score-fill existential" style="width: 0%;"></div>
-            </div>
-          </div>
+
+          <button class="quiz-btn" id="restartQuizBtn">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+            </svg>
+            <span>${ui.quizBackBtn || "Retour aux tests"}</span>
+          </button>
         </div>
+      `;
 
-        <!-- Recommendations -->
-        <div class="quiz-recommendations">
-          <h3 class="quiz-recom-title">${ui.quizRecomTitle}</h3>
-          <div class="quiz-recom-grid">
-            ${recomThinkers}
-            ${recomArticles}
-          </div>
-        </div>
+      // Animate score bars fill
+      setTimeout(() => {
+        const fills = container.querySelectorAll('.quiz-score-fill');
+        fills.forEach(fill => {
+          const targetPercent = fill.getAttribute('data-percent');
+          fill.style.width = `${targetPercent}%`;
+        });
+      }, 100);
 
-        <button class="quiz-btn" id="restartQuizBtn">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
-            <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
-          </svg>
-          <span>${ui.quizRestartBtn}</span>
-        </button>
-      </div>
-    `;
-
-    // Animate score bars fill
-    setTimeout(() => {
-      const fills = container.querySelectorAll('.quiz-score-fill');
-      if (fills[0]) fills[0].style.width = `${pStoic}%`;
-      if (fills[1]) fills[1].style.width = `${pAbsurd}%`;
-      if (fills[2]) fills[2].style.width = `${pExistential}%`;
-    }, 100);
-
-    document.getElementById('restartQuizBtn').addEventListener('click', () => {
-      quizState = {
-        currentScreen: 'start',
-        currentQuestionIndex: 0,
-        answers: []
-      };
-      transitionQuizScreen('start');
-    });
+      document.getElementById('restartQuizBtn').addEventListener('click', () => {
+        quizState = {
+          selectedQuizId: null,
+          currentScreen: 'list',
+          currentQuestionIndex: 0,
+          answers: []
+        };
+        transitionQuizScreen('list');
+      });
+    }
   }
 }
 
