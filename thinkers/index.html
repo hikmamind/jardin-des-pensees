@@ -322,6 +322,11 @@
 
         <!-- Central Main Content -->
         <section class="thinker-modal-main">
+          <!-- Mobile Portrait -->
+          <div class="mobile-portrait-wrapper">
+            <img src="" id="modalThinkerImgMobile" alt="Portrait">
+          </div>
+          
           <div id="sec-intro">
             <h4 class="thinker-sec-title" id="title-intro">مقدمة / Introduction</h4>
             <p class="thinker-sec-text" id="para-intro"></p>
@@ -340,28 +345,33 @@
           </div>
         </section>
 
-        <!-- Right Fact Card -->
-        <aside class="thinker-modal-fact">
-          <h3 class="fact-title" id="factHeading">Meet</h3>
-          <ul class="fact-list">
-            <li class="fact-item">
-              <span class="fact-label" data-i18n="eraLabel">الحقبة / Era</span>
-              <span class="fact-value" id="factEra"></span>
-            </li>
-            <li class="fact-item">
-              <span class="fact-label" data-i18n="schoolLabel">المدرسة الفكرية / School</span>
-              <span class="fact-value" id="factSchool"></span>
-            </li>
-            <li class="fact-item">
-              <span class="fact-label" data-i18n="conceptLabel">أهم المفاهيم / Key Concept</span>
-              <span class="fact-value" id="factConcept"></span>
-            </li>
-            <li class="fact-item">
-              <span class="fact-label" data-i18n="worksLabel">أشهر المؤلفات / Key Works</span>
-              <span class="fact-value" id="factWorks"></span>
-            </li>
-          </ul>
-        </aside>
+        <!-- Right Fact Card (Collapsible details/summary on mobile) -->
+        <details class="thinker-modal-fact" id="thinkerFactCard" open>
+          <summary class="fact-summary">
+            <h3 class="fact-title" id="factHeading">Meet</h3>
+            <span class="fact-toggle-icon">▾</span>
+          </summary>
+          <div class="fact-content">
+            <ul class="fact-list">
+              <li class="fact-item">
+                <span class="fact-label" data-i18n="eraLabel">الحقبة / Era</span>
+                <span class="fact-value" id="factEra"></span>
+              </li>
+              <li class="fact-item">
+                <span class="fact-label" data-i18n="schoolLabel">المدرسة الفكرية / School</span>
+                <span class="fact-value" id="factSchool"></span>
+              </li>
+              <li class="fact-item">
+                <span class="fact-label" data-i18n="conceptLabel">أهم المفاهيم / Key Concept</span>
+                <span class="fact-value" id="factConcept"></span>
+              </li>
+              <li class="fact-item">
+                <span class="fact-label" data-i18n="worksLabel">أشهر المؤلفات / Key Works</span>
+                <span class="fact-value" id="factWorks"></span>
+              </li>
+            </ul>
+          </div>
+        </details>
 
       </div>
     </div>

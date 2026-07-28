@@ -364,6 +364,7 @@ function setupThinkerModal(thinkers) {
     if (thinker) {
       document.getElementById('modalSidebarName').textContent = thinker.name;
       document.getElementById('modalThinkerImg').src = `../${thinker.image}`;
+      document.getElementById('modalThinkerImgMobile').src = `../${thinker.image}`;
       document.getElementById('factHeading').textContent = `Meet ${thinker.name}`;
       document.getElementById('factEra').textContent = thinker.era;
       document.getElementById('factSchool').textContent = thinker.school;
@@ -371,6 +372,16 @@ function setupThinkerModal(thinkers) {
       // Concept & Works
       document.getElementById('factConcept').textContent = thinker.keyConcept || "-";
       document.getElementById('factWorks').textContent = thinker.keyWorks || "-";
+      
+      // Collapse fact card by default on mobile, keep open on desktop
+      const factCard = document.getElementById('thinkerFactCard');
+      if (factCard) {
+        if (window.innerWidth <= 900) {
+          factCard.open = false;
+        } else {
+          factCard.open = true;
+        }
+      }
       
       const body = thinker.body || [thinker.bio];
       
