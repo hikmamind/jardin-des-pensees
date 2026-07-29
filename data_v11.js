@@ -573,6 +573,386 @@ const TIKTOK_DATA = {
             "text": "Le bonheur ne réside pas dans les choses, mais dans l'esprit.",
             "author": "Schopenhauer"
           }
+        },
+        {
+          "text": "Au milieu de l'hiver, j'apprenais enfin qu'il y avait en moi un été invincible.",
+          "author": "Albert Camus (Absurde / Existentialisme)",
+          "image": "thinkers/images/camus.jpg",
+          "meaning": "Peu importe la rigueur des difficultés extérieures, l'être humain possède une force intérieure et une résilience capables de surmonter les crises.",
+          "philosophy": "Pour Camus, faire face à l'absurdité du monde ne doit pas mener au désespoir, mais à la révolte créatrice et à la découverte de notre force invincible.",
+          "lessons": [
+            "Vous possédez une résilience innée.",
+            "Les épreuves révèlent votre vraie force.",
+            "L'espoir est une décision intérieure.",
+            "Cherchez toujours votre été intérieur."
+          ],
+          "application": "Lorsque vous vous sentez découragé, écrivez 3 expériences difficiles passées dont vous êtes sorti vainqueur.",
+          "reflection": "Quelle a été l'épreuve la plus dure de votre vie qui a révélé en vous une force insoupçonnée ?",
+          "similarQuote": {
+            "text": "L'obstacle est le chemin.",
+            "author": "Marc Aurèle"
+          }
+        },
+        {
+          "text": "Je pense, donc je suis.",
+          "author": "René Descartes (Rationalisme)",
+          "image": "thinkers/images/descartes.jpg",
+          "meaning": "La capacité de douter, de réfléchir et de questionner est la preuve indubitable de notre existence en tant qu'êtres conscients.",
+          "philosophy": "Descartes fonde sa philosophie sur le doute méthodique : tout peut être mis en doute, sauf le fait même que je doute (et donc pense) en cet instant.",
+          "lessons": [
+            "Ne gobez pas les idées reçues.",
+            "Votre esprit est le fondement de votre identité.",
+            "Le doute méthodique mène à la vérité.",
+            "Penser est votre plus grand pouvoir."
+          ],
+          "application": "Aujourd'hui, ne prenez pas une idée virale pour argent comptant ; analysez les arguments sous-jacents de manière rationnelle.",
+          "reflection": "Vivez-vous selon vos propres pensées, ou adoptez-vous inconsciemment les opinions des autres sans filtre ?",
+          "similarQuote": {
+            "text": "Le dialogue intérieur façonne notre réalité.",
+            "author": "Marc Aurèle"
+          }
+        },
+        {
+          "text": "L'existence précède l'essence.",
+          "author": "Jean-Paul Sartre (Existentialisme)",
+          "image": "thinkers/images/sartre.jpg",
+          "meaning": "L'homme naît d'abord sans définition préalable ; il façonne son identité, ses valeurs et le sens de sa vie par ses choix et actions.",
+          "philosophy": "Sartre récuse tout déterminisme : nous sommes condamnés à être libres et entièrement responsables de ce que nous faisons de notre vie.",
+          "lessons": [
+            "Vous n'êtes pas enfermé dans un moule.",
+            "Vos actes définissent qui vous êtes.",
+            "La liberté implique une responsabilité totale.",
+            "Créez vous-même le sens de votre vie."
+          ],
+          "application": "Prenez aujourd'hui une décision importante qui reflète vos aspirations profondes, et non les attentes d'autrui.",
+          "reflection": "Si vous deviez définir votre essence aujourd'hui, quels mots choisiriez-vous au vu de vos actions concrètes ?",
+          "similarQuote": {
+            "text": "Je suis ce que je choisis de devenir.",
+            "author": "Carl Jung"
+          }
+        },
+        {
+          "text": "Le cœur a ses raisons que la raison ne connaît point.",
+          "author": "Blaise Pascal (Philosophie Chrétienne)",
+          "image": "thinkers/images/pascal.jpg",
+          "meaning": "Il y a des aspects de l'expérience humaine, des sentiments et de l'intuition que la logique pure est incapable d'expliquer ou de mesurer.",
+          "philosophy": "Pascal soutient que la raison a des limites et que les vérités du cœur et de l'intuition sont des modes de connaissance légitimes.",
+          "lessons": [
+            "Faites confiance à votre intuition.",
+            "La logique n'est pas le seul outil de compréhension.",
+            "Les émotions sincères ont leur propre cohérence.",
+            "Respectez votre dimension intuitive."
+          ],
+          "application": "Écoutez votre intuition lors d'une décision simple aujourd'hui et observez la différence avec une analyse purement logique.",
+          "reflection": "Quand votre intuition vous a-t-elle mené à une excellente décision que votre raison ne parvenait pas à justifier au départ ?",
+          "similarQuote": {
+            "text": "Les sentiments sincères sont un guide infaillible.",
+            "author": "Rousseau"
+          }
+        },
+        {
+          "text": "Un voyage de mille lieues commence par un pas.",
+          "author": "Lao Tseu (Taoïsme)",
+          "image": "thinkers/images/laotseu.jpg",
+          "meaning": "Toutes les grandes réalisations et tous les objectifs de vie se concrétisent en commençant par de petites actions quotidiennes constantes.",
+          "philosophy": "Le Tao met l'accent sur le flux naturel, les petits pas sans hâte et le principe du non-agir (agir sans effort violent).",
+          "lessons": [
+            "Ne sous-estimez pas les petites actions.",
+            "Commencer représente la moitié du chemin.",
+            "La régularité importe plus que la vitesse.",
+            "Concentrez-vous sur le pas présent."
+          ],
+          "application": "Identifiez un grand projet et faites le plus petit pas possible aujourd'hui (comme lire une page ou écrire une ligne).",
+          "reflection": "Quel objectif repoussez-vous parce qu'il vous semble trop vaste ? Comment le découper pour démarrer aujourd'hui ?",
+          "similarQuote": {
+            "text": "L'excellence est une habitude façonnée au quotidien.",
+            "author": "Aristote"
+          }
+        },
+        {
+          "text": "L'homme sage n'attend rien des autres, il n'attend tout que de lui-même.",
+          "author": "Confucius (Fils de la Sagesse)",
+          "image": "thinkers/images/confucius.jpg",
+          "meaning": "L'indépendance et la responsabilité personnelle sont le fondement de la sagesse et évitent les déceptions répétées.",
+          "philosophy": "Confucius insiste sur le perfectionnement de soi et le devoir individuel comme voies d'harmonie sociale et de paix intérieure.",
+          "lessons": [
+            "Assumez la pleine responsabilité de votre vie.",
+            "Réduisez vos attentes envers autrui.",
+            "Croyez en votre pouvoir de changer.",
+            "L'autonomie est une grande force."
+          ],
+          "application": "Cessez aujourd'hui de blâmer les circonstances et demandez-vous : que puis-je faire pour améliorer la situation ?",
+          "reflection": "Dans quel domaine de votre vie attendez-vous encore passivement que quelqu'un d'autre vienne vous sauver ?",
+          "similarQuote": {
+            "text": "Votre esprit est votre citadelle et votre ultime refuge.",
+            "author": "Marc Aurèle"
+          }
+        },
+        {
+          "text": "Tout ce que je sais, c'est que je ne sais rien.",
+          "author": "Socrate (Philosophie Classique)",
+          "image": "thinkers/images/socrate.jpg",
+          "meaning": "Reconnaître ses propres limites et admettre son ignorance est le véritable point de départ pour acquérir une vraie sagesse.",
+          "philosophy": "La maïeutique socratique repose sur le questionnement permanent et la remise en cause des certitudes dogmatiques.",
+          "lessons": [
+            "Faites preuve d'humilité intellectuelle.",
+            "Apprendre est un processus permanent.",
+            "Évitez l'arrogance des certitudes.",
+            "Les questions comptent plus que les réponses."
+          ],
+          "application": "Écoutez aujourd'hui quelqu'un qui a un avis opposé au vôtre avec la simple curiosité de comprendre, sans chercher à débattre.",
+          "reflection": "Quelle croyance défendez-vous farouchement, sur laquelle vous oseriez dire aujourd'hui : 'je me trompe peut-être' ?",
+          "similarQuote": {
+            "text": "Le premier pas vers la sagesse est d'avouer son ignorance.",
+            "author": "Platon"
+          }
+        },
+        {
+          "text": "La victoire sur soi-même est la plus grande des victoires.",
+          "author": "Platon (Idéalisme)",
+          "image": "thinkers/images/platon.jpg",
+          "meaning": "Dompter nos désirs impulsifs, nos peurs et nos colères est le seul triomphe qui confère la liberté et la maîtrise de soi.",
+          "philosophy": "Platon enseigne que l'âme doit être gouvernée par la raison, et que la maturité réside dans l'harmonie des désirs sous la tutelle de l'esprit.",
+          "lessons": [
+            "L'autodiscipline est la clé de la liberté.",
+            "Maîtrisez vos réactions impulsives.",
+            "La vraie souveraineté est mentale.",
+            "Le combat intérieur façonne la grandeur."
+          ],
+          "application": "Prenez 10 secondes de réflexion avant de répondre à un message ou à une remarque irritante aujourd'hui.",
+          "reflection": "Quelle habitude ou quel penchant impulsif trouvez-vous difficile à contrôler ? Comment l'évaluer rationnellement ?",
+          "similarQuote": {
+            "text": "Le succès est le fruit de la discipline maintenue au fil des ans.",
+            "author": "Marc Aurèle"
+          }
+        },
+        {
+          "text": "Nous sommes ce que nous répétons chaque jour. L'excellence n'est pas un acte, mais une habitude.",
+          "author": "Aristote (Empirisme)",
+          "image": "thinkers/images/aristote.jpg",
+          "meaning": "Notre identité et nos succès découlent de nos actions quotidiennes répétées, et non de coups d'éclat sporadiques.",
+          "philosophy": "Pour Aristote, la vertu et l'excellence sont des dispositions que l'on acquiert par la pratique constante jusqu'à ce qu'elles deviennent naturelles.",
+          "lessons": [
+            "Vos habitudes quotidiennes dessinent votre avenir.",
+            "La régularité mène à la maîtrise.",
+            "L'excellence demande un engagement constant.",
+            "Bâtissez de petites habitudes saines."
+          ],
+          "application": "Choisissez une mini-habitude positive (marcher 10 min, boire de l'eau) et appliquez-la chaque jour de cette semaine.",
+          "reflection": "Si vos habitudes des cinq derniers jours déterminaient votre avenir, quel chemin seriez-vous en train de tracer ?",
+          "similarQuote": {
+            "text": "La discipline est le pont entre les objectifs et leur réalisation.",
+            "author": "Schopenhauer"
+          }
+        },
+        {
+          "text": "Le bonheur appartient à ceux qui se suffisent à eux-mêmes.",
+          "author": "Arthur Schopenhauer (Pessimisme)",
+          "image": "thinkers/images/schopenhauer.jpg",
+          "meaning": "Le bonheur durable provient de la richesse intérieure et de l'indépendance d'esprit, et non de dépendances extérieures instables.",
+          "philosophy": "Schopenhauer soutient que désirer le monde extérieur engendre frustration et souffrance ; l'autonomie mentale est la seule planche de salut.",
+          "lessons": [
+            "Ne cherchez pas le bonheur à l'extérieur.",
+            "L'indépendance vous libère des déceptions.",
+            "Cultivez votre paix intérieure.",
+            "Le monde externe est changeant."
+          ],
+          "application": "Passez une heure seul aujourd'hui, sans téléphone ni distractions, pour apprécier le calme de vos propres pensées.",
+          "reflection": "Êtes-vous à l'aise avec la solitude et vos pensées, ou cherchez-vous constamment à fuir dans le bruit ?",
+          "similarQuote": {
+            "text": "Le bonheur de votre vie dépend de la qualité de vos pensées.",
+            "author": "Marc Aurèle"
+          }
+        },
+        {
+          "text": "Ne pas rire, ne pas déplorer, ne pas détester, mais comprendre.",
+          "author": "Baruch Spinoza (Rationalisme)",
+          "image": "thinkers/images/spinoza.jpg",
+          "meaning": "La meilleure réaction face aux événements et aux comportements humains n'est pas l'émotivité, mais l'analyse objective des causes.",
+          "philosophy": "Spinoza estime que comprendre les nécessités de la nature et de la psychologie humaine nous libère de la tyrannie des passions négatives.",
+          "lessons": [
+            "La rationalité vous préserve de la colère.",
+            "Comprendre apporte compassion et paix.",
+            "Évitez les jugements hâtifs.",
+            "Observez la vie en spectateur neutre."
+          ],
+          "application": "Face à une attitude agaçante aujourd'hui, demandez-vous objectivement quelles causes ont pu amener cette personne à agir ainsi.",
+          "reflection": "Comment vos relations changeraient-elles si vous remplaciez la colère par le désir calme de comprendre le pourquoi des choses ?",
+          "similarQuote": {
+            "text": "Comprendre est le premier pas vers la libération psychologique.",
+            "author": "Carl Jung"
+          }
+        },
+        {
+          "text": "L'homme est né libre, et partout il est dans les fers.",
+          "author": "Jean-Jacques Rousseau (Philosophie Politique)",
+          "image": "thinkers/images/rousseau.jpg",
+          "meaning": "L'homme possède une liberté originelle, mais la vie sociale et les conventions forgent des chaînes qui limitent son indépendance.",
+          "philosophy": "Rousseau explore la tension entre liberté naturelle et contrainte sociale, plaidant pour des lois justes qui préservent notre autonomie.",
+          "lessons": [
+            "La liberté est un droit fondamental.",
+            "Méfiez-vous des chaînes sociales invisibles.",
+            "Préservez votre liberté d'esprit.",
+            "Recherchez l'équité dans vos engagements."
+          ],
+          "application": "Identifiez une règle ou une habitude que vous suivez uniquement pour plaire au regard des autres, et osez vous en détacher.",
+          "reflection": "Quelles contraintes vous imposez-vous par peur du jugement d'autrui, et valent-elles le sacrifice de votre authenticité ?",
+          "similarQuote": {
+            "text": "Je ne suis pas ce qui m'est arrivé, je suis ce que je choisis d'être.",
+            "author": "Carl Jung"
+          }
+        },
+        {
+          "text": "Sapere aude ! Aie le courage de te servir de ton propre entendement !",
+          "author": "Immanuel Kant (Idéalisme Transcendantal)",
+          "image": "thinkers/images/kant.jpg",
+          "meaning": "S'émanciper intellectuellement exige le courage de penser par soi-même et de ne pas s'en remettre aveuglément aux autorités.",
+          "philosophy": "Kant définit les Lumières comme la sortie de l'homme de sa minorité intellectuelle dont il est lui-même responsable par manque de courage.",
+          "lessons": [
+            "Pensez de manière indépendante.",
+            "Refusez le conformisme de pensée.",
+            "Faites de votre raison votre guide.",
+            "S'informer demande de l'audace."
+          ],
+          "application": "Aujourd'hui, lisez un article de fond sur un sujet complexe au lieu de vous contenter des résumés simplistes des réseaux sociaux.",
+          "reflection": "Avez-vous le courage de soutenir une opinion rationnelle même si elle contredit le consensus de votre entourage ?",
+          "similarQuote": {
+            "text": "Une vie sans examen ne vaut pas la peine d'être vécue.",
+            "author": "Socrate"
+          }
+        },
+        {
+          "text": "La vie ne peut être comprise qu'en regardant en arrière, mais elle doit être vécue en regardant en avant.",
+          "author": "Søren Kierkegaard (Existentialisme)",
+          "image": "thinkers/images/kierkegaard.jpg",
+          "meaning": "La sagesse s'acquiert en tirant les leçons du passé, mais avancer et construire sa vie exige de regarder résolument vers l'avenir.",
+          "philosophy": "Kierkegaard souligne le paradoxe existentiel : nous analysons le passé statique mais nous devons agir dans le futur incertain par la foi.",
+          "lessons": [
+            "Tirez les leçons du passé, mais n'y habitez pas.",
+            "L'avenir requiert des choix courageux.",
+            "Comprendre demande du recul.",
+            "Gardez votre regard vers l'avant."
+          ],
+          "application": "Notez une leçon apprise de votre plus grand échec passé, puis décidez de clore définitivement ce chapitre aujourd'hui.",
+          "reflection": "Passez-vous plus de temps à regretter le passé ou à poser des actions courageuses pour bâtir votre futur ?",
+          "similarQuote": {
+            "text": "Je ne suis pas le produit de mon passé, je suis le projet de mon futur.",
+            "author": "Carl Jung"
+          }
+        },
+        {
+          "text": "Un jour, en regardant en arrière, les années de lutte vous apparaîtront comme les plus belles.",
+          "author": "Sigmund Freud (Psychanalyse)",
+          "image": "thinkers/images/freud.jpg",
+          "meaning": "Les épreuves et les efforts pour surmonter les obstacles sont ce qui forge notre résilience et donne un sens profond à notre parcours.",
+          "philosophy": "Pour Freud, le développement de la personnalité s'opère dans la résolution des conflits et le dépassement des frustrations.",
+          "lessons": [
+            "L'effort façonne le sens de la vie.",
+            "Les moments de lutte révèlent votre valeur.",
+            "Appréciez les périodes d'engagement.",
+            "La croissance naît de la difficulté."
+          ],
+          "application": "Face à une difficulté aujourd'hui, dites-vous : 'C'est ce défi qui fera ma fierté et ma force de demain.'",
+          "reflection": "En regardant votre passé, sont-ce les périodes de confort absolu ou celles de lutte qui vous ont le plus fait grandir ?",
+          "similarQuote": {
+            "text": "Celui qui a un pourquoi peut supporter tous les comment.",
+            "author": "Nietzsche"
+          }
+        },
+        {
+          "text": "La meilleure vengeance est de ne pas ressembler à celui qui t'a causé l'offense.",
+          "author": "Marc Aurèle (Stoïcisme)",
+          "image": "thinkers/images/marcaurele.jpg",
+          "meaning": "La plus noble réponse à l'injustice est de rester fidèle à ses principes moraux et de ne pas imiter la bassesse de son offenseur.",
+          "philosophy": "L'empereur stoïcien enseigne que l'intégrité de notre âme est supérieure au désir de vengeance, qui ne fait que propager le mal.",
+          "lessons": [
+            "Ne répondez pas au mal par le mal.",
+            "Préservez votre noblesse d'âme.",
+            "La rancœur épuise votre énergie.",
+            "Prendre de la hauteur est la vraie victoire."
+          ],
+          "application": "Si quelqu'un se montre impoli ou agressif envers vous aujourd'hui, répondez avec calme et courtoisie, sans entrer dans son jeu.",
+          "reflection": "Ressentez-vous une plus grande paix en vous vengeant ou en restant maître de vos émotions et fidèle à vos valeurs ?",
+          "similarQuote": {
+            "text": "Ce qui trouble les hommes, ce ne sont pas les choses mais leurs jugements.",
+            "author": "Épictète"
+          }
+        },
+        {
+          "text": "Tant que tu vis, continue d'apprendre comment vivre.",
+          "author": "Sénèque (Stoïcisme)",
+          "image": "thinkers/images/seneque.jpg",
+          "meaning": "Apprendre à mener une vie sage, sereine et digne n'est pas un acquis définitif, mais l'effort d'une vie entière.",
+          "philosophy": "Sénèque rappelle que le temps est notre bien le plus précieux et qu'il faut l'employer à perfectionner notre esprit et notre philosophie.",
+          "lessons": [
+            "L'apprentissage de la vie dure toute l'existence.",
+            "La sagesse demande une pratique quotidienne.",
+            "Ne gaspillez pas votre temps dans les futilités.",
+            "Se perfectionner est un devoir."
+          ],
+          "application": "Prenez 15 minutes par jour pour lire ou méditer sur un sujet philosophique qui enrichit votre perception du monde.",
+          "reflection": "Employez-vous votre temps à apprendre comment vivre en paix, ou laissez-vous les jours s'écouler dans l'inconscience ?",
+          "similarQuote": {
+            "text": "La conscience de soi est le début de la sagesse.",
+            "author": "Socrate"
+          }
+        },
+        {
+          "text": "La plus grande chose du monde, c'est de savoir être à soi.",
+          "author": "Michel de Montaigne (Scepticisme)",
+          "image": "thinkers/images/montaigne.jpg",
+          "meaning": "Le plus haut degré de liberté et de sagesse est de savoir préserver son indépendance intérieure face aux influences du monde.",
+          "philosophy": "Montaigne invite à explorer sa propre nature avec lucidité et tolérance, affirmant que le bonheur débute par la réconciliation avec soi.",
+          "lessons": [
+            "Préservez votre indépendance d'esprit.",
+            "L'acceptation de soi est le socle de la paix.",
+            "Évitez la dépendance excessive aux autres.",
+            "Soyez votre meilleur allié."
+          ],
+          "application": "Faites une activité que vous adorez seul aujourd'hui, en savourant pleinement votre propre compagnie.",
+          "reflection": "Avez-vous besoin du regard des autres pour valider votre valeur, ou possédez-vous cette paix qui vient de l'indépendance d'esprit ?",
+          "similarQuote": {
+            "text": "Le bonheur appartient à ceux qui se suffisent à eux-mêmes.",
+            "author": "Schopenhauer"
+          }
+        },
+        {
+          "text": "J'ai décidé d'être heureux parce que c'est bon pour la santé.",
+          "author": "Voltaire (Les Lumières)",
+          "image": "thinkers/images/voltaire.jpg",
+          "meaning": "Le bonheur et l'optimisme sont des choix volontaires que nous faisons pour notre équilibre psychologique et physique.",
+          "philosophy": "Voltaire prône un optimisme combatif et pratique : face à l'imperfection du monde, l'action joyeuse et le travail sont nos meilleurs recours.",
+          "lessons": [
+            "Le bonheur est une décision quotidienne.",
+            "Votre état d'esprit influence votre corps.",
+            "Faites face aux difficultés avec ironie.",
+            "L'optimisme actif est une force."
+          ],
+          "application": "Aujourd'hui, choisissez de sourire aux petits tracas de la vie et concentrez-vous sur ce qui va bien.",
+          "reflection": "Voyez-vous le bonheur comme un événement extérieur attendu, ou comme une posture intérieure à adopter chaque matin ?",
+          "similarQuote": {
+            "text": "Le bonheur de votre vie dépend de la qualité de vos pensées.",
+            "author": "Marc Aurèle"
+          }
+        },
+        {
+          "text": "Ce qui ne me tue pas me rend plus fort.",
+          "author": "Friedrich Nietzsche (Existentialisme / Volonté de puissance)",
+          "image": "thinkers/images/nietzsche.jpg",
+          "meaning": "Les crises et les épreuves surmontées sans nous briser deviennent des sources de puissance, de résilience et de métamorphose.",
+          "philosophy": "Nietzsche développe le concept de croissance par la souffrance : les obstacles sont indispensables pour forger l'esprit supérieur.",
+          "lessons": [
+            "La souffrance peut être un outil de sculpture de soi.",
+            "Vous avez une immense force de récupération.",
+            "Les crises forgent le caractère.",
+            "Utilisez la douleur comme levier."
+          ],
+          "application": "Face à une situation épuisante aujourd'hui, répétez-vous : 'Je vais surmonter cela et en sortir grandi.'",
+          "reflection": "Pensez à une grande épreuve passée. Comment a-t-elle contribué à forger la force et la maturité que vous avez aujourd'hui ?",
+          "similarQuote": {
+            "text": "Au milieu de l'hiver, j'apprenais qu'il y avait en moi un été invincible.",
+            "author": "Albert Camus"
+          }
         }
       ],
       "advices": [
@@ -1992,6 +2372,386 @@ const TIKTOK_DATA = {
             "text": "Happiness lies not in things, but in the mind.",
             "author": "Schopenhauer"
           }
+        },
+        {
+          "text": "In the depth of winter, I finally learned that within me there lay an invincible summer.",
+          "author": "Albert Camus (Absurdism / Existentialism)",
+          "image": "thinkers/images/camus.jpg",
+          "meaning": "No matter how harsh external circumstances become, human beings have an inner resilience capable of overcoming crisis and blooming again.",
+          "philosophy": "For Camus, facing the absurdity and coldness of the world should not lead to despair, but to rebellion and finding our inner invincible warmth.",
+          "lessons": [
+            "You possess innate psychological resilience.",
+            "Difficulties reveal your true strength.",
+            "Hope is an inner choice, not circumstances.",
+            "Always search for your inner summer."
+          ],
+          "application": "When you feel discouraged by a situation, write down 3 past difficult times you successfully went through.",
+          "reflection": "What was the hardest experience in your life that revealed a strength you did not know you had?",
+          "similarQuote": {
+            "text": "The obstacle is the way.",
+            "author": "Marcus Aurelius"
+          }
+        },
+        {
+          "text": "I think, therefore I am.",
+          "author": "René Descartes (Rationalism)",
+          "image": "thinkers/images/descartes.jpg",
+          "meaning": "The ability to doubt, think, and question is the ultimate proof of our existence as conscious, independent beings.",
+          "philosophy": "Descartes founded his philosophy on methodical doubt: everything can be doubted except the fact that I am doubting (and thinking) right now.",
+          "lessons": [
+            "Do not accept thoughts without examination.",
+            "Your mind is the base of your identity.",
+            "Methodical doubt leads to certainty.",
+            "Your capacity to think is your greatest power."
+          ],
+          "application": "Aujourd'hui, do not take a viral social media idea for granted; search for the logical arguments behind it.",
+          "reflection": "Do you live according to your own thoughts, or do you unconsciously adopt others' opinions without filters?",
+          "similarQuote": {
+            "text": "Self-talk shapes our reality.",
+            "author": "Marcus Aurelius"
+          }
+        },
+        {
+          "text": "Existence precedes essence.",
+          "author": "Jean-Paul Sartre (Existentialism)",
+          "image": "thinkers/images/sartre.jpg",
+          "meaning": "Human beings are born first without pre-defined identity; they build their values and life meaning through their choices and actions.",
+          "philosophy": "Sartre rejects pre-determined destiny, claiming we are completely free and responsible for shaping our identity and life path.",
+          "lessons": [
+            "You are not locked into a pre-made mould.",
+            "Your actions define who you are.",
+            "Freedom implies total responsibility.",
+            "Create your own meaning in life."
+          ],
+          "application": "Make a small choice today that reflects your true desires rather than what others expect from you.",
+          "reflection": "If you had to write down your core essence in words, what would it be based on your actual actions?",
+          "similarQuote": {
+            "text": "I am what I choose to become.",
+            "author": "Carl Jung"
+          }
+        },
+        {
+          "text": "The heart has its reasons which reason knows nothing of.",
+          "author": "Blaise Pascal (Christian Philosophy)",
+          "image": "thinkers/images/pascal.jpg",
+          "meaning": "There are aspects of human experience, emotions, and faith that logical reason alone cannot measure or understand.",
+          "philosophy": "Pascal argues that reason has boundaries, and deep feelings and intuition are valid ways of knowing that complete dry logic.",
+          "lessons": [
+            "Trust your intuition and feelings.",
+            "Reason is not the only tool for understanding.",
+            "Sincere emotions have their own logic.",
+            "Respect your spiritual and intuitive dimensions."
+          ],
+          "application": "Listen to your intuition in a simple decision today, and compare its advice with logical analysis.",
+          "reflection": "When did your heart or intuition lead you to a great decision that logic could not initially justify?",
+          "similarQuote": {
+            "text": "Sincere feelings are an infallible guide.",
+            "author": "Rousseau"
+          }
+        },
+        {
+          "text": "A journey of a thousand miles begins with a single step.",
+          "author": "Lao Tzu (Taoist Philosophy)",
+          "image": "thinkers/images/laotseu.jpg",
+          "meaning": "All great achievements and life goals are realized by starting with small, simple steps and maintaining consistency.",
+          "philosophy": "The Tao focuses on natural flow, small steady steps, and avoiding violent effort (wu wei).",
+          "lessons": [
+            "Do not underestimate small steps.",
+            "Starting is half the battle.",
+            "Consistency matters more than speed.",
+            "Focus on the step in front of you."
+          ],
+          "application": "Pick a big goal and take the smallest possible step towards it today (read 1 page, write 1 sentence).",
+          "reflection": "What project are you postponing because it seems too large? How can you break it into tiny steps to start today?",
+          "similarQuote": {
+            "text": "Excellence is a habit shaped by daily repetition.",
+            "author": "Aristotle"
+          }
+        },
+        {
+          "text": "The wise man expects nothing from others; he expects everything from himself.",
+          "author": "Confucius (Moral Philosophy)",
+          "image": "thinkers/images/confucius.jpg",
+          "meaning": "Self-reliance and personal responsibility are the foundation of wisdom and prevent repeated disappointments.",
+          "philosophy": "Confucius emphasizes personal virtue, individual duty, and self-cultivation as the path to social harmony and peace.",
+          "lessons": [
+            "Take full responsibility for your life.",
+            "Lower your expectations of others.",
+            "Believe in your power to change.",
+            "Self-reliance is a great power."
+          ],
+          "application": "Stop blaming circumstances or others today, and ask: what can I do right now to improve this?",
+          "reflection": "In what area of your life are you still passively waiting for someone else to rescue you or change things?",
+          "similarQuote": {
+            "text": "Your mind is your citadel and ultimate refuge.",
+            "author": "Marcus Aurelius"
+          }
+        },
+        {
+          "text": "All I know is that I know nothing.",
+          "author": "Socrates (Classical Philosophy)",
+          "image": "thinkers/images/socrate.jpg",
+          "meaning": "Admitting ignorance and intellectual humility are the true doorways to learning and acquiring deep wisdom.",
+          "philosophy": "The Socratic method relies on constant questioning and challenging assumptions to arrive at deeper truths.",
+          "lessons": [
+            "Show intellectual humility.",
+            "Learning is a lifelong process.",
+            "Avoid the trap of certainty.",
+            "Questions are often more important than answers."
+          ],
+          "application": "Listen to someone with an opposite view today with the sole curiosity to understand, not to debate.",
+          "reflection": "What belief do you defend fiercely, on which you would dare to say today: 'I might be wrong'?",
+          "similarQuote": {
+            "text": "The first step to wisdom is admitting ignorance.",
+            "author": "Plato"
+          }
+        },
+        {
+          "text": "The first and greatest victory is to conquer yourself.",
+          "author": "Plato (Idealist Philosophy)",
+          "image": "thinkers/images/platon.jpg",
+          "meaning": "Controlling our impulsive desires, fears, and anger is the only true triumph that gives us freedom and self-mastery.",
+          "philosophy": "Platon teaches that the soul should be ruled by reason, and maturity lies in harmony under the guidance of the mind.",
+          "lessons": [
+            "Self-discipline is the foundation of freedom.",
+            "Control your impulsive reactions.",
+            "True sovereignty is mental.",
+            "The inner battle shapes greatness."
+          ],
+          "application": "Take 10 seconds to reflect before responding to an annoying message or comment today.",
+          "reflection": "What bad habit or impulse do you find hardest to control? How can you submit it to reason?",
+          "similarQuote": {
+            "text": "Success is the result of discipline maintained over years.",
+            "author": "Marcus Aurelius"
+          }
+        },
+        {
+          "text": "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
+          "author": "Aristotle (Realist Philosophy)",
+          "image": "thinkers/images/aristote.jpg",
+          "meaning": "Our identity and achievements are shaped by our repeated daily actions and routine, not by sporadic events.",
+          "philosophy": "Aristotle argues that virtue and excellence are skills we acquire through training and daily practice until they become natural.",
+          "lessons": [
+            "Daily habits shape your future.",
+            "Small consistencies lead to mastery.",
+            "Excellence requires ongoing commitment.",
+            "Build small healthy habits."
+          ],
+          "application": "Pick one tiny positive habit (walk 10 min, drink water) and commit to doing it daily this week.",
+          "reflection": "If your habits over the last five days determined your future, what path would you be tracing?",
+          "similarQuote": {
+            "text": "Discipline is the bridge between goals and accomplishment.",
+            "author": "Schopenhauer"
+          }
+        },
+        {
+          "text": "Happiness belongs to those who are sufficient unto themselves.",
+          "author": "Arthur Schopenhauer (Pessimism)",
+          "image": "thinkers/images/schopenhauer.jpg",
+          "meaning": "True and sustainable happiness comes from inner richness and self-sufficiency, not from unstable external dependencies.",
+          "philosophy": "Schopenhauer believes that desiring the external world brings pain and endless chase; mental autonomy is the only refuge.",
+          "lessons": [
+            "Do not seek happiness outside.",
+            "Self-sufficiency saves you from disappointment.",
+            "Find peace within yourself.",
+            "The external world is changing."
+          ],
+          "application": "Spend one hour alone today, without phone or distractions, enjoying the quiet of your thoughts.",
+          "reflection": "Are you comfortable with solitude and your thoughts, or do you constantly run to distractions?",
+          "similarQuote": {
+            "text": "Happiness depends on the quality of your thoughts.",
+            "author": "Marcus Aurelius"
+          }
+        },
+        {
+          "text": "Not to laugh, not to lament, not to detest, but to understand.",
+          "author": "Baruch Spinoza (Rationalist Philosophy)",
+          "image": "thinkers/images/spinoza.jpg",
+          "meaning": "The best way to face life events and human behavior is not emotional reaction, but searching for the causes behind them.",
+          "philosophy": "Spinoza believes that understanding natural laws and human psychology frees us from negative passions and leads to mental peace.",
+          "lessons": [
+            "Rationality protects you from anger.",
+            "Understanding brings compassion and peace.",
+            "Avoid hasty judgments.",
+            "Observe events as a neutral viewer."
+          ],
+          "application": "When someone annoys you today, pause and ask with curiosity: what causes made them act this way?",
+          "reflection": "How would your life change if you replaced anger with a calm desire to understand why things happen?",
+          "similarQuote": {
+            "text": "Understanding is the first step to psychological freedom.",
+            "author": "Carl Jung"
+          }
+        },
+        {
+          "text": "Man is born free, and everywhere he is in chains.",
+          "author": "Jean-Jacques Rousseau (Social Contract Philosophy)",
+          "image": "thinkers/images/rousseau.jpg",
+          "meaning": "Humans have natural birth freedom, but society, contracts, and conventions build chains that limit this independence.",
+          "philosophy": "Rousseau analyzes the relation between individual freedom and social power, urging for just laws that protect autonomy.",
+          "lessons": [
+            "Freedom is a natural right.",
+            "Beware of invisible social chains.",
+            "Seek mental and spiritual freedom.",
+            "Just laws support liberty."
+          ],
+          "application": "Identify one rule or expectation you follow only to please others, and dare to let it go.",
+          "reflection": "What chains did you place on yourself out of fear of judgment, and are they worth your authenticity?",
+          "similarQuote": {
+            "text": "I am not what happened to me, I am what I choose to become.",
+            "author": "Carl Jung"
+          }
+        },
+        {
+          "text": "Sapere aude! Dare to know! Have courage to use your own reason!",
+          "author": "Immanuel Kant (Enlightenment Philosophy)",
+          "image": "thinkers/images/kant.jpg",
+          "meaning": "Emancipating yourself intellectually requires the courage to think independently and use your own mind instead of relying blindly on others.",
+          "philosophy": "Kant defines Enlightenment as mankind's exit from self-incurred tutelage, and considers reason as the ultimate tool of liberation.",
+          "lessons": [
+            "Think independently and boldly.",
+            "Avoid conformism and imitation.",
+            "Use your reason as your compass.",
+            "Knowledge requires courage."
+          ],
+          "application": "Research a controversial topic independently today instead of relying on simple social media summaries.",
+          "reflection": "Do you have the courage to support a rational view even if it goes against the consensus of those around you?",
+          "similarQuote": {
+            "text": "The unexamined life is not worth living.",
+            "author": "Socrates"
+          }
+        },
+        {
+          "text": "Life can only be understood backwards; but it must be lived forwards.",
+          "author": "Søren Kierkegaard (Existentialism)",
+          "image": "thinkers/images/kierkegaard.jpg",
+          "meaning": "Wisdom and understanding come from reflecting on past experiences, but moving on and building the future requires looking ahead.",
+          "philosophy": "Kierkegaard highlights the existential tension: we analyze a static past but must act in an uncertain future with faith and bold steps.",
+          "lessons": [
+            "Learn from your past but do not live in it.",
+            "The future requires courageous choices.",
+            "Understanding requires distance.",
+            "Keep your direction forward."
+          ],
+          "application": "Write down one lesson from your biggest past failure, then decide to close that chapter permanently today.",
+          "reflection": "Do you spend more time regretting the past or courageously acting to build your future?",
+          "similarQuote": {
+            "text": "I am not what happened to me, I am what I choose to become.",
+            "author": "Carl Jung"
+          }
+        },
+        {
+          "text": "One day, in retrospect, the years of struggle will strike you as the most beautiful.",
+          "author": "Sigmund Freud (Psychoanalysis)",
+          "image": "thinkers/images/freud.jpg",
+          "meaning": "The struggles and obstacles we fight to overcome shape our resilience and give our life meaning, depth, and beauty.",
+          "philosophy": "Freud believes personality is forged through conflict and overcoming frustrations, and growth happens in crisis.",
+          "lessons": [
+            "Struggle creates meaning and strength.",
+            "Difficult times shape who you are.",
+            "Value times of effort.",
+            "Growth happens in difficulty."
+          ],
+          "application": "When facing a challenge today, remind yourself: 'This struggle is what I will look back on with pride.'",
+          "reflection": "Looking at your past, was it comfort or struggle that made you a stronger and better person?",
+          "similarQuote": {
+            "text": "He who has a why to live can bear almost any how.",
+            "author": "Nietzsche"
+          }
+        },
+        {
+          "text": "The best revenge is to be unlike him who performed the injury.",
+          "author": "Marcus Aurelius (Stoicism)",
+          "image": "thinkers/images/marcaurele.jpg",
+          "meaning": "The ultimate response to injustice is keeping your moral integrity and not descending to the level of the person who hurt you.",
+          "philosophy": "The Stoic Emperor believes keeping our virtue is more important than discharging anger, and injury reflects the wrongdoer's ignorance.",
+          "lessons": [
+            "Do not return evil for evil.",
+            "Keep your moral nobility.",
+            "Anger and revenge drain your energy.",
+            "Taking the high road is the true victory."
+          ],
+          "application": "If someone is rude or mean to you today, stay calm and polite, without entering their conflict.",
+          "reflection": "Do you feel victory when returning injury, or when keeping calm and acting according to your values?",
+          "similarQuote": {
+            "text": "Men are disturbed not by things, but by the views they take of them.",
+            "author": "Epictetus"
+          }
+        },
+        {
+          "text": "As long as you live, keep learning how to live.",
+          "author": "Seneca (Stoicism)",
+          "image": "thinkers/images/seneque.jpg",
+          "meaning": "Learning to live with wisdom and peace is not a one-time class, but a continuous practice that accompanies us through life.",
+          "philosophy": "Seneca warns that life is short and we should not waste it, and ongoing self-cultivation is the path to value.",
+          "lessons": [
+            "Learning is a lifelong process.",
+            "Self-discipline requires daily effort.",
+            "Do not waste time on trifles.",
+            "Wisdom is an ongoing practice."
+          ],
+          "application": "Spend 15 minutes daily reading a philosophical or meditative book that improves your outlook.",
+          "reflection": "Do you use your days to learn how to live in peace, or do you let days pass without self-awareness?",
+          "similarQuote": {
+            "text": "Self-awareness is the first step to wisdom and virtue.",
+            "author": "Socrates"
+          }
+        },
+        {
+          "text": "The greatest thing in the world is to know how to belong to oneself.",
+          "author": "Michel de Montaigne (Skepticism)",
+          "image": "thinkers/images/montaigne.jpg",
+          "meaning": "The highest wisdom and mental freedom is keeping an inner independence, avoiding emotional or mental dependency on others.",
+          "philosophy": "Montaigne focuses on studying the self and accepting human nature, believing peace begins from self-reconciliation.",
+          "lessons": [
+            "Keep your inner independence.",
+            "Self-reconciliation is the base of peace.",
+            "Avoid excessive dependency on others.",
+            "Be your own best friend."
+          ],
+          "application": "Do an activity you love alone today, enjoying self-sufficiency and harmony with yourself.",
+          "reflection": "Do you need constant approval from others to feel your value, or do you have peace from belonging to yourself?",
+          "similarQuote": {
+            "text": "Happiness belongs to those who are sufficient unto themselves.",
+            "author": "Schopenhauer"
+          }
+        },
+        {
+          "text": "I have decided to be happy because it is good for my health.",
+          "author": "Voltaire (Enlightenment)",
+          "image": "thinkers/images/voltaire.jpg",
+          "meaning": "Happiness and optimism are decisions we commit to consciously, as they have direct positive effects on our health.",
+          "philosophy": "Voltaire argues that active optimism and facing difficulties with positive humor are the best ways to live in an imperfect world.",
+          "lessons": [
+            "Happiness is a daily choice.",
+            "Mental state affects physical health.",
+            "Face problems with a positive outlook.",
+            "Active optimism is a tool."
+          ],
+          "application": "Decide consciously to smile at minor annoyances today, focusing only on the bright side.",
+          "reflection": "Do you look at happiness as an external event you wait for, or as a decision you make daily?",
+          "similarQuote": {
+            "text": "The happiness of your life depends upon the quality of your thoughts.",
+            "author": "Marcus Aurelius"
+          }
+        },
+        {
+          "text": "What does not kill me makes me stronger.",
+          "author": "Friedrich Nietzsche (Existentialism / Will to Power)",
+          "image": "thinkers/images/nietzsche.jpg",
+          "meaning": "Major crises and shocks we survive without being crushed become sources of strength, resilience, and mental growth.",
+          "philosophy": "Nietzsche argues for post-traumatic growth, seeing suffering as necessary to sculpt and elevate the individual.",
+          "lessons": [
+            "Suffering can sculpt your character.",
+            "You have immense capacity to recover.",
+            "Crises create resilience.",
+            "Use pain as fuel for growth."
+          ],
+          "application": "When feeling exhausted by a challenge today, repeat to yourself: 'I will survive this and emerge stronger.'",
+          "reflection": "Think about a major crisis you overcame. How did it shape your current strength and maturity?",
+          "similarQuote": {
+            "text": "In the depth of winter, I found an invincible summer.",
+            "author": "Albert Camus"
+          }
         }
       ],
       "advices": [
@@ -3410,6 +4170,386 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "السعادة ليست في الظروف، بل في طريقة التفكير.",
             "author": "شوبنهاور"
+          }
+        },
+        {
+          "text": "في وسط الشتاء، علمت أخيراً أن هناك في داخلي صيفاً لا يقهر.",
+          "author": "ألبير كامو (العبثية / الوجودية)",
+          "image": "thinkers/images/camus.jpg",
+          "meaning": "مهما كانت الصعوبات والظروف الخارجية قاسية، فإن لدى الإنسان قوة داخلية ومرونة نفسية كافية لتجاوزها والازدهار مجدداً.",
+          "philosophy": "يرى كامو أن مواجهة عبثية الحياة وقسوتها لا يجب أن تؤدي إلى اليأس، بل إلى اكتشاف الشغف والحرية والقوة الكامنة داخل الذات.",
+          "lessons": [
+            "لديك مرونة نفسية فطرية.",
+            "الصعوبات تكشف قوتك الحقيقية.",
+            "الأمل قرار داخلي وليس ظروفاً.",
+            "ابحث عن صيفك الداخلي دائماً."
+          ],
+          "application": "عندما تشعر باليأس من موقف ما، اكتب 3 تجارب صعبة مررت بها سابقاً وتجاوزتها بنجاح لتذكير نفسك بقوتك الكامنة.",
+          "reflection": "ما هي التجربة الأكثر قسوة في حياتك التي كشفت لك عن قوة لم تكن تعلم أنك تملكها؟",
+          "similarQuote": {
+            "text": "العقبة هي الطريق.",
+            "author": "ماركوس أوريليوس"
+          }
+        },
+        {
+          "text": "أنا أفكر، إذن أنا موجود.",
+          "author": "رينيه ديكارت (العقلانية)",
+          "image": "thinkers/images/descartes.jpg",
+          "meaning": "القدرة على التفكير والتساؤل والشك هي الدليل القاطع على وجودنا ككائنات واعية ومستقلة.",
+          "philosophy": "أسس ديكارت فلسفته على الشك المنهجي، حيث اعتبر أن كل شيء قابل للشك إلا حقيقة أننا نشك (ونفكر) في هذه اللحظة.",
+          "lessons": [
+            "لا تقبل الأفكار دون فحص.",
+            "عقلك هو هويتك الأساسية.",
+            "الشك المنهجي يقود لليقين.",
+            "قدرتك على التفكير هي قوتك الكبرى."
+          ],
+          "application": "تدرب اليوم على ألا تأخذ فكرة شائعة على وسائل التواصل كأمر مسلم به، وابحث عن الحجج العقلية خلفها.",
+          "reflection": "هل تعيش وفقاً لأفكارك الخاصة، أم أنك تتبنى أفكار الآخرين دون وعي أو فحص؟",
+          "similarQuote": {
+            "text": "الحديث الداخلي هو صانع الواقع.",
+            "author": "ماركوس أوريليوس"
+          }
+        },
+        {
+          "text": "الوجود يسبق الجوهر.",
+          "author": "جان بول سارتر (الوجودية)",
+          "image": "thinkers/images/sartre.jpg",
+          "meaning": "يولد الإنسان أولاً كوجود خاوٍ، ثم يصنع هويته وقيمه ومعنى حياته من خلال اختياراته وتصرفاته الشخصية.",
+          "philosophy": "يرفض سارتر فكرة القدر المحدد مسبقاً، ويؤكد أننا أحرار بالكامل ومسؤولون عن تشكيل هويتنا ورسم مسار حياتنا.",
+          "lessons": [
+            "أنت لست مقيداً بقالب جاهز.",
+            "أفعالك هي التي تحدد هويتك.",
+            "الحرية تعني المسؤولية الكاملة.",
+            "اصنع معنى حياتك بنفسك."
+          ],
+          "application": "اتخذ اليوم قراراً صغيراً يعبر عن رغبتك الحقيقية بدلاً من فعل ما يتوقعه الآخرون منك كالعادة.",
+          "reflection": "إذا طُلب منك كتابة جوهرك وقيمك الأساسية في كلمات، فماذا ستكون بناءً على أفعالك الحالية؟",
+          "similarQuote": {
+            "text": "أنت ما تختار أن تكونه الآن.",
+            "author": "كارل يونغ"
+          }
+        },
+        {
+          "text": "للقلب أسباب لا يعرفها العقل.",
+          "author": "بليز باسكال (الفلسفة الإيمانية)",
+          "image": "thinkers/images/pascal.jpg",
+          "meaning": "هناك جوانب في التجربة الإنسانية والمشاعر والإيمان لا يمكن قياسها أو فهمها بالمنطق والعقل وحده.",
+          "philosophy": "يجادل باسكال بأن العقل له حدود، وأن المشاعر العميقة والحدس والإيمان هي طرق معرفية مشروعة تكمل المنطق الجاف.",
+          "lessons": [
+            "ثق بحدسك ومشاعرك العميقة.",
+            "العقل ليس الأداة الوحيدة للفهم.",
+            "العواطف الصادقة لها منطقها الخاص.",
+            "احترم أبعادك الروحية والقلبية."
+          ],
+          "application": "استمع لحدسك اليوم في قرار بسيط تواجهه، وقارن ما يخبرك به قلبك مع ما يحلله عقلك منطقياً.",
+          "reflection": "متى قادك قلبك أو حدسك لقرار ناجح عجز عقلك عن تفسيره أو دعمه منطقياً في البداية؟",
+          "similarQuote": {
+            "text": "المشاعر الصادقة مرشد لا يخطئ.",
+            "author": "روسو"
+          }
+        },
+        {
+          "text": "رحلة الألف ميل تبدأ بخطوة واحدة.",
+          "author": "لاو تسو (الفلسفة الطاوية)",
+          "image": "thinkers/images/laotseu.jpg",
+          "meaning": "كل الإنجازات والأهداف العظيمة في الحياة تتحقق بالبدء بالخطوات الصغيرة البسيطة والمداومة عليها.",
+          "philosophy": "يركز الطاو على مفهوم التدفق والخطوات الطبيعية الصغيرة وتجنب استعجال النتائج والعمل المتوازن الخالي من الجهد العنيف.",
+          "lessons": [
+            "لا تستصغر الخطوات الصغيرة.",
+            "البدء هو نصف الإنجاز.",
+            "الاستمرارية أهم من السرعة.",
+            "ركز على يومك وخطوتك الحالية."
+          ],
+          "application": "حدد هدفاً كبيراً تسعى إليه، وقم بأصغر خطوة ممكنة تجاهه اليوم (مثل قراءة صفحة واحدة أو كتابة سطر واحد).",
+          "reflection": "ما هو المشروع أو الهدف الذي تؤجله بسبب ضخامته؟ وكيف يمكنك تفتيته إلى خطوات مجهرية لتبدأ اليوم؟",
+          "similarQuote": {
+            "text": "التميز عادة تتشكل بالتكرار اليومي.",
+            "author": "أرسطو"
+          }
+        },
+        {
+          "text": "الرجل الحكيم لا ينتظر شيئاً من الآخرين، بل ينتظر كل شيء من نفسه.",
+          "author": "كونفوشيوس (الفلسفة الأخلاقية)",
+          "image": "thinkers/images/confucius.jpg",
+          "meaning": "الاعتماد على النفس وتحمل المسؤولية الذاتية هما أساس الحكمة والنجاح وتفادي خيبات الأمل المتكررة.",
+          "philosophy": "يركز كونفوشيوس على الفضيلة الشخصية والواجب الفردي وتطوير الذات كطريق وحيد لإصلاح المجتمع وتحقيق السلام الداخلي.",
+          "lessons": [
+            "تحمل مسؤولية حياتك بالكامل.",
+            "قلل من توقعاتك تجاه الآخرين.",
+            "ثق بقدرتك على التغيير.",
+            "الاعتماد على الذات قوة عظمى."
+          ],
+          "application": "توقف اليوم عن لوم الظروف أو الآخرين على أي مشكلة تواجهها، واسأل نفسك: ما الذي يمكنني فعله الآن لحلها؟",
+          "reflection": "في أي جانب من حياتك لا تزال تنتظر من شخص آخر أن ينقذك أو يغير واقعك؟",
+          "similarQuote": {
+            "text": "أنت قلعتك الحصينة وملاذك الأخير.",
+            "author": "ماركوس أوريليوس"
+          }
+        },
+        {
+          "text": "كل ما أعرفه هو أنني لا أعرف شيئاً.",
+          "author": "سقراط (الفلسفة الكلاسيكية)",
+          "image": "thinkers/images/socrate.jpg",
+          "meaning": "الاعتراف بالجهل والتواضع الفكري هما البوابة الحقيقية لتعلم المعرفة والوصول للحكمة العميقة.",
+          "philosophy": "يقوم المنهج السقراطي على التساؤل والشك بالمعارف المسبقة للوصول إلى حقائق أعمق وتجنب الغرور الفكري.",
+          "lessons": [
+            "كن متواضعاً فكرياً.",
+            "التعلم عملية مستمرة لا تنتهي.",
+            "تجنب الغرور والادعاء.",
+            "الأسئلة أحياناً أهم من الإجابات."
+          ],
+          "application": "استمع اليوم لشخص يملك رأياً مخالفاً تماماً لرأيك بدافع الفهم والفضول المعرفي، وليس بدافع الرد أو الجدال.",
+          "reflection": "ما هي الفكرة أو القناعة التي تدافع عنها بشدة، وتجرؤ اليوم على القول: قد أكون مخطئاً تماماً بشأنها؟",
+          "similarQuote": {
+            "text": "أول خطوة في الحكمة هي الاعتراف بالجهل.",
+            "author": "أفلاطون"
+          }
+        },
+        {
+          "text": "الانتصار على النفس هو أعظم الانتصارات.",
+          "author": "أفلاطون (الفلسفة المثالية)",
+          "image": "thinkers/images/platon.jpg",
+          "meaning": "السيطرة على رغباتنا ومخاوفنا وانفعالاتنا الداخلية هي النصر الحقيقي الذي يمنحنا الحرية والسيادة الذاتية.",
+          "philosophy": "يرى أفلاطون أن النفس البشرية يجب أن تحكم بالمنطق والعقل، وأن نضج الإنسان يكمن في كبح جماح رغباته العشوائية.",
+          "lessons": [
+            "الانضباط الذاتي هو أساس الحرية.",
+            "تحكم في انفعالاتك وغرائزك.",
+            "السيادة الحقيقية هي سيادة العقل.",
+            "الجهاد الداخلي يصنع العظماء."
+          ],
+          "application": "امنح نفسك مهلة 10 ثوانٍ قبل الرد بغضب أو انفعال على أي رسالة أو موقف يزعجك اليوم.",
+          "reflection": "ما هي الرغبة أو العادة السيئة التي تشعر أنها لا تزال تسيطر عليك؟ وكيف يمكنك إخضاعها لعقلك؟",
+          "similarQuote": {
+            "text": "النجاح يصنعه الانضباط الذي يستمر لسنوات.",
+            "author": "ماركوس أوريليوس"
+          }
+        },
+        {
+          "text": "نحن ما نكرره كل يوم. التميز ليس عملاً بل عادة.",
+          "author": "أرسطو (الفلسفة الواقعية)",
+          "image": "thinkers/images/aristote.jpg",
+          "meaning": "هويتنا وإنجازاتنا تتشكل بفعل أفعالنا اليومية المتكررة وروتيننا الصغير، وليس بفعل تصرفات عشوائية متباعدة.",
+          "philosophy": "يرى أرسطو أن الفضيلة والتميز هما مهارتان نكتسبهما بالتدريب والممارسة اليومية حتى تصبحا جزءاً طبيعياً من شخصيتنا.",
+          "lessons": [
+            "عاداتك اليومية تصنع مستقبلك.",
+            "المداومة البسيطة تقود للتميز.",
+            "التميز يتطلب الالتزام المستمر.",
+            "ابدأ ببناء عادات إيجابية."
+          ],
+          "application": "اختر عادة إيجابية صغيرة جداً (كالمشي 10 دقائق أو شرب الماء) والتزم بممارستها يومياً طوال هذا الأسبوع.",
+          "reflection": "إذا نظرت إلى عاداتك المتكررة في الأيام الخمسة الماضية، فما هو المستقبل الذي ترسمه لك؟",
+          "similarQuote": {
+            "text": "الانضباط هو الجسر بين الأهداف والإنجاز.",
+            "author": "شوبنهاور"
+          }
+        },
+        {
+          "text": "السعادة ملك لأولئك الذين يكتفون بأنفسهم.",
+          "author": "آرثر شوبنهاور (الفلسفة التشاؤمية)",
+          "image": "thinkers/images/schopenhauer.jpg",
+          "meaning": "السعادة الحقيقية والمستدامة تنبع من الاكتفاء الذاتي والسلام الداخلي وعدم الاعتماد على عوامل خارجية أو أشخاص آخرين.",
+          "philosophy": "يرى شوبنهاور أن رغبات الإنسان لا تنتهي، وأن الاعتماد على العالم الخارجي يورث الألم والمطاردة اللانهائية، والاكتفاء هو الملاذ.",
+          "lessons": [
+            "لا تعلق سعادتك بالخارج.",
+            "الاكتفاء الذاتي يمنحك القوة والحرية.",
+            "ابحث عن السلام داخل ذاتك.",
+            "العالم الخارجي متقلب وغير مضمون."
+          ],
+          "application": "خصص ساعة واحدة اليوم بمفردك تماماً دون إنترنت أو مشتتات، واستمتع بهدوء أفكارك وصحبة نفسك.",
+          "reflection": "هل تشعر بالراحة والأمان عندما تكون وحيداً مع أفكارك، أم تسعى دائماً للهروب بالهاتف والآخرين؟",
+          "similarQuote": {
+            "text": "السعادة تعتمد على جودة أفكارك وحديثك الداخلي.",
+            "author": "ماركوس أوريليوس"
+          }
+        },
+        {
+          "text": "لا تضحك، لا تبكِ، لا تكره، بل افهم.",
+          "author": "باروخ سبينوزا (الفلسفة العقلانية)",
+          "image": "thinkers/images/spinoza.jpg",
+          "meaning": "السبيل الأمثل لمواجهة تقلبات الحياة وتصرفات الناس ليس الانفعال العاطفي، بل السعي لفهم الأسباب والدوافع العميقة خلفها.",
+          "philosophy": "يرى سبينوزا أن فهم قوانين الطبيعة والنفس البشرية يحررنا من سيطرة الانفعالات السلبية ويقودنا إلى الطمأنينة العقلية.",
+          "lessons": [
+            "العقلانية تحميك من الغضب.",
+            "الفهم يورث التسامح والسلام.",
+            "تجنب الأحكام السريعة المنفعلة.",
+            "راقب الأحداث كمشاهد محايد."
+          ],
+          "application": "عندما يزعجك تصرف شخص ما اليوم، توقف واسأل نفسك بفضول: ما هي الظروف والدوافع التي جعلته يتصرف هكذا؟",
+          "reflection": "كيف ستتغير حياتك وعلاقاتك إذا استبدلت انفعالاتك وغضبك بالسعي الهادئ لفهم حقيقة ما يحدث؟",
+          "similarQuote": {
+            "text": "الفهم هو أول خطوة نحو التحرر النفسي.",
+            "author": "كارل يونغ"
+          }
+        },
+        {
+          "text": "يولد الإنسان حراً، ولكنه في كل مكان يرسخ في القيود.",
+          "author": "جان جاك روسو (فلسفة العقد الاجتماعي)",
+          "image": "thinkers/images/rousseau.jpg",
+          "meaning": "يملك الإنسان حرية فطرية بطبيعته، لكن المجتمع والمواثيق والتقاليد تصنع قيوداً واشتراطات تحد من هذه الحرية.",
+          "philosophy": "يحلل روسو العلاقة بين حرية الفرد وسلطة المجتمع، ويؤكد على أهمية القوانين العادلة التي تحمي الحرية بدلاً من سحقها.",
+          "lessons": [
+            "الحرية حق فطري وإنساني.",
+            "احذر من القيود الاجتماعية الوهمية.",
+            "ابحث عن حريتك العقلية والروحية.",
+            "القوانين العادلة تدعم الحرية."
+          ],
+          "application": "حدد قيداً أو فكرة تتبعها فقط لإرضاء نظرة المجتمع وقرر التخلص منها لتستعيد جزءاً من حريتك الذاتية.",
+          "reflection": "ما هي القيود التي فرضتها على نفسك خوفاً من حكم الآخرين، وهل تستحق التضحية بحريتك لأجلها؟",
+          "similarQuote": {
+            "text": "أنت لست ما حدث لك بل ما تختار أن تكونه.",
+            "author": "كارل يونغ"
+          }
+        },
+        {
+          "text": "تجرأ على المعرفة! كن شجاعاً لاستخدام عقلك الخاص!",
+          "author": "إيمانويل كانت (فلسفة التنوير)",
+          "image": "thinkers/images/kant.jpg",
+          "meaning": "الخروج من الوصاية الفكرية يتطلب الشجاعة للتفكير بشكل مستقل واستخدام العقل الخاص دون الاعتماد الأعمى على الآخرين.",
+          "philosophy": "يعرف كانت التنوير بأنه خروج الإنسان من حالة القصور الفكري والتبعية المعرفية، ويعتبر العقل الأداة العليا للتحرر الفردي.",
+          "lessons": [
+            "فكر بشكل مستقل وجريء.",
+            "تجنب التبعية الفكرية والتقليد.",
+            "استخدم عقلك كبوصلة أساسية.",
+            "المعرفة تتطلب شجاعة وإرادة."
+          ],
+          "application": "ابحث اليوم بشكل مستقل في موضوع مثير للجدل بدلاً من الاكتفاء بالآراء الجاهزة التي يعرضها إعلامك المعتاد.",
+          "reflection": "هل تملك الشجاعة الكافية للدفاع عن رأي تؤمن به عقلياً حتى لو كان مخالفاً لرأي الأغلبية من حولك؟",
+          "similarQuote": {
+            "text": "الحياة غير المفحوصة لا تستحق العيش.",
+            "author": "سقراط"
+          }
+        },
+        {
+          "text": "لا يمكن فهم الحياة إلا بالنظر إلى الوراء، ولكن يجب أن نعيشها بالنظر إلى الأمام.",
+          "author": "سورين كيركغور (الوجودية المسيحية)",
+          "image": "thinkers/images/kierkegaard.jpg",
+          "meaning": "الحكمة والفهم يأتيان من تأمل تجارب الماضي واستيعاب دروسها، لكن الاستمرار في العيش وبناء المستقبل يتطلب التطلع للأمام.",
+          "philosophy": "يؤكد كيركغور على التوتر الوجودي بين تأمل الماضي والالتزام بالخيارات الحرة للمستقبل والخطوات الشجاعة نحو المجهول.",
+          "lessons": [
+            "تعلم من ماضيك ولا تعش فيه.",
+            "المستقبل يتطلب خطوات شجاعة.",
+            "الفهم يتطلب التأمل والهدوء.",
+            "وجه بوصلتك للأمام دائماً."
+          ],
+          "application": "اكتب اليوم درساً واحداً قيماً تعلمته من أصعب تجربة مررت بها في الماضي، ثم قرر إغلاق تلك الصفحة نهائياً.",
+          "reflection": "هل تقضي معظم وقتك في الندم على الماضي وتأمله، أم في التخطيط الشجاع والمضي قدماً نحو مستقبلك؟",
+          "similarQuote": {
+            "text": "أنا لست ما حدث لي، بل ما اخترت أن أكونه.",
+            "author": "كارل يونغ"
+          }
+        },
+        {
+          "text": "يومًا ما، عندما تنظر إلى الوراء، ستظهر لك سنوات الكفاح كأجمل السنوات.",
+          "author": "سيغموند فرويد (مؤسس التحليل النفسي)",
+          "image": "thinkers/images/freud.jpg",
+          "meaning": "الصعاب والتحديات التي نكافح لتجاوزها هي التي تصنع قوتنا وتمنح حياتنا المعنى الحقيقي والعمق والجمال في نهاية المطاف.",
+          "philosophy": "يرى فرويد أن الشخصية الإنسانية تصقلها الصراعات ومواجهة العقبات، وأن تحقيق الذات يكمن في تجاوز الأزمات النفسية.",
+          "lessons": [
+            "الكفاح يصنع المعنى والقوة.",
+            "اللحظات الصعبة هي التي تصقلك.",
+            "قدر فترات السعي والجهد.",
+            "النمو النفسي يحدث وسط الأزمات."
+          ],
+          "application": "عندما تواجه صعوبة اليوم، ذكر نفسك قائلاً: هذا التحدي هو الذي سأنظر إليه بفخر وامتنان في المستقبل.",
+          "reflection": "انظر إلى ماضيك، هل كانت فترات الراحة التامة أم فترات الكفاح والتحدي هي التي جعلتك شخصاً أفضل وأقوى؟",
+          "similarQuote": {
+            "text": "من لديه لماذا يعيش يمكنه تحمل أي كيف.",
+            "author": "نيتشه"
+          }
+        },
+        {
+          "text": "أفضل انتقام هو ألا تكون مثل من آذاك.",
+          "author": "ماركوس أوريليوس (الرواقية)",
+          "image": "thinkers/images/marcaurele.jpg",
+          "meaning": "الرد الحقيقي على الإساءة والظلم ليس المعاملة بالمثل، بل التمسك بأخلاقك وفضيلتك وعدم الانحدار لمستوى من آذاك.",
+          "philosophy": "يعتقد الإمبراطور الرواقي أن حماية سلامنا الداخلي وفضيلتنا أهم من تفريغ الغضب، وأن الإساءة تعبر عن جهل فاعلها ولا يجب أن تلوثنا.",
+          "lessons": [
+            "لا تقابل الإساءة بمثلها.",
+            "حافظ على نقاء أخلاقك وفضيلتك.",
+            "الغضب والانتقام يستنزفان روحك.",
+            "الترفع عن الصغائر هو النصر الحقيقي."
+          ],
+          "application": "إذا واجهت معاملة سيئة أو وقاحة من شخص ما اليوم، ترفع عنها وابتسم وتمنى له الهداية دون الدخول في صراع.",
+          "reflection": "هل تشعر بالراحة والنصر عندما ترد الإساءة بمثلها، أم عندما تترفع عنها وتحافظ على هدوئك الداخلي وأخلاقك؟",
+          "similarQuote": {
+            "text": "ما يقلق الناس ليس الأشياء بل الأحكام التي يطلقونها عليها.",
+            "author": "إبيكتيتوس"
+          }
+        },
+        {
+          "text": "طالما أنك تعيش، فاستمر في تعلم كيف تعيش.",
+          "author": "سينيكا (الرواقية)",
+          "image": "thinkers/images/seneque.jpg",
+          "meaning": "تعلم العيش بحكمة وسلام ليس علماً نكتسبه مرة واحدة، بل ممارسة وتطوير مستمر يرافقنا طوال مسيرة حياتنا.",
+          "philosophy": "يرى سينيكا أن الحياة قصيرة ويجب ألا نهدرها في التوافه، وأن الاستمرار في تهذيب النفس والتعلم هو السبيل لحياة ذات قيمة.",
+          "lessons": [
+            "التعلم عملية ترافقك مدى الحياة.",
+            "تهذيب النفس يتطلب جهداً يومياً.",
+            "احذر من هدر الوقت في التوافه.",
+            "الحكمة ممارسة عملية مستمرة."
+          ],
+          "application": "خصص 15 دقيقة يومياً لقراءة كتاب فلسفي أو تأملي يطور طريقة تفكيرك ونظرتك للحياة.",
+          "reflection": "هل تستغل أيامك لتعلم كيف تعيش بسلام وحكمة، أم أنك تترك الأيام تمر دون وعي أو سعي للتطور؟",
+          "similarQuote": {
+            "text": "الوعي بالذات هو أول خطوة للحكمة والفضيلة.",
+            "author": "سقراط"
+          }
+        },
+        {
+          "text": "أعظم شيء في العالم هو أن تعرف كيف تنتمي لنفسك.",
+          "author": "ميشيل دي مونتين (الفلسفة السمعية/الشكية)",
+          "image": "thinkers/images/montaigne.jpg",
+          "meaning": "أعلى مراتب الحكمة والحرية النفسية هي القدرة على العيش باستقلال داخلي، وتجنب التبعية العاطفية أو العقلية للآخرين.",
+          "philosophy": "يركز مونتين في مقالاته على دراسة الذات والقبول المتواضع للطبيعة البشرية، ويرى أن السلام يبدأ من التصالح التام مع النفس.",
+          "lessons": [
+            "حافظ على استقلالك الداخلي.",
+            "التصالح مع الذات أساس السلام.",
+            "لا ترتبط عاطفياً بالتبعية للآخرين.",
+            "أنت الصديق الأول لنفسك."
+          ],
+          "application": "قم بنشاط تحبه بمفردك اليوم (كالمشي أو الجلوس في مقهى) واشعر بالاكتفاء التام والانسجام مع ذاتك.",
+          "reflection": "هل تشعر بالحاجة المستمرة للآخرين لتأكيد قيمتك، أم أنك تملك سلاماً داخلياً نابعاً من انتمائك لنفسك؟",
+          "similarQuote": {
+            "text": "السعادة ملك لأولئك الذين يكتفون بأنفسهم.",
+            "author": "شوبنهاور"
+          }
+        },
+        {
+          "text": "لقد قررت أن أكون سعيداً لأن ذلك مفيد لصحتي.",
+          "author": "فولتير (فلسفة التنوير)",
+          "image": "thinkers/images/voltaire.jpg",
+          "meaning": "السعادة والتفاؤل هما قرار وإرادة نلتزم بهما بوعي، لما لهما من أثر مباشر وإيجابي على صحتنا النفسية والجسدية.",
+          "philosophy": "يجادل فولتير بأن التفاؤل النشط ومواجهة الصعاب بالسخرية الإيجابية والعمل هما أفضل وسيلة للعيش في عالم غير مثالي.",
+          "lessons": [
+            "السعادة قرار واختيار يومي.",
+            "صحتك النفسية تؤثر على جسدك.",
+            "واجه المشاكل بنظرة إيجابية.",
+            "التفاؤل النشط سلاح فعال."
+          ],
+          "application": "قرر اليوم بوعي أن تبتسم في وجه المواقف المزعجة البسيطة، وركز فقط على الجوانب المضيئة والمضحكة فيها.",
+          "reflection": "هل تنظر إلى السعادة كشيء تنتظر حدوثه من الخارج، أم كقرار تتخذه يومياً لحماية سلامك وصحتك؟",
+          "similarQuote": {
+            "text": "السعادة في حياتك تعتمد على جودة أفكارك.",
+            "author": "ماركوس أوريليوس"
+          }
+        },
+        {
+          "text": "ما لا يقتلني يجعلني أقوى.",
+          "author": "فريدريش نيتشه (الوجودية / إرادة القوة)",
+          "image": "thinkers/images/nietzsche.jpg",
+          "meaning": "الأزمات والصدمات الكبرى التي ننجح في تجاوزها دون أن تسحقنا تصبح مصدراً هائلاً لبناء القوة والمرونة والارتقاء النفسي.",
+          "philosophy": "يؤكد نيتشه على مفهوم النمو بعد الصدمة (Post-traumatic growth)، حيث يعتبر الألم وسيلة ضرورية لصقل الفرد المتميز والارتقاء به.",
+          "lessons": [
+            "المعاناة أداة لصقل شخصيتك.",
+            "لديك قدرة هائلة على التعافي.",
+            "الأزمات تصنع الصلابة النفسية.",
+            "استغل الألم كوقود للارتقاء."
+          ],
+          "application": "عندما تشعر بالإنهاك من تحدٍ يواجهك اليوم، كرر لنفسك: سأتجاوز هذا وأخرج منه أكثر قوة وحكمة وصلابة.",
+          "reflection": "فكر في أزمة كبرى تجاوزتها سابقاً، كيف ساهمت تلك الأزمة في تشكيل قوتك الحالية ونضجك النفسي؟",
+          "similarQuote": {
+            "text": "في وسط الشتاء علمت أن في داخلي صيفاً لا يقهر.",
+            "author": "ألبير كامو"
           }
         }
       ],
