@@ -200,75 +200,6 @@ function animateCounter(elementId, targetStr) {
   requestAnimationFrame(update);
 }
 
-// --- Wisdom Generator Logic ---
-function displayNewWisdom(isInitial = false) {
-  const textEl = document.getElementById('wisdomText');
-  const transEl = document.getElementById('wisdomTranslation');
-  const authorEl = document.getElementById('wisdomAuthor');
-  const avatarContainer = document.getElementById('wisdomAvatarContainer');
-  const avatarImg = document.getElementById('wisdomAvatar');
-
-  const quotesList = TIKTOK_DATA.content[currentLang].quotes;
-  if (!textEl || !transEl || !authorEl || !quotesList || !quotesList.length) return;
-
-  let nextIndex;
-  do {
-    nextIndex = Math.floor(Math.random() * quotesList.length);
-  } while (nextIndex === currentQuoteIndex && quotesList.length > 1);
-
-  currentQuoteIndex = nextIndex;
-  const quote = quotesList[currentQuoteIndex];
-
-  let primaryText = `"${quote.text}"`;
-  let secondaryText = "";
-
-  if (currentLang === 'ar') {
-    const frenchQuote = TIKTOK_DATA.content.fr.quotes.find(q => q.author === quote.author || q.author.includes(quote.author));
-    secondaryText = frenchQuote ? `"${frenchQuote.text}"` : "";
-  } else {
-    const arQuote = TIKTOK_DATA.content.ar.quotes.find(q => q.author === quote.author || quote.author.includes(q.author));
-    secondaryText = arQuote ? `"${arQuote.text}"` : "";
-  }
-
-  if (isInitial) {
-    textEl.textContent = primaryText;
-    transEl.textContent = secondaryText;
-    authorEl.textContent = quote.author;
-    
-    if (quote.image && avatarImg && avatarContainer) {
-      avatarImg.src = quote.image;
-      avatarImg.alt = quote.author;
-      avatarContainer.style.display = 'block';
-    } else if (avatarContainer) {
-      avatarContainer.style.display = 'none';
-    }
-  } else {
-    textEl.classList.add('fade-out');
-    transEl.classList.add('fade-out');
-    authorEl.classList.add('fade-out');
-    if (avatarContainer) avatarContainer.classList.add('fade-out');
-
-    setTimeout(() => {
-      textEl.textContent = primaryText;
-      transEl.textContent = secondaryText;
-      authorEl.textContent = quote.author;
-      
-      if (quote.image && avatarImg && avatarContainer) {
-        avatarImg.src = quote.image;
-        avatarImg.alt = quote.author;
-        avatarContainer.style.display = 'block';
-      } else if (avatarContainer) {
-        avatarContainer.style.display = 'none';
-      }
-
-      textEl.classList.remove('fade-out');
-      transEl.classList.remove('fade-out');
-      authorEl.classList.remove('fade-out');
-      if (avatarContainer) avatarContainer.classList.remove('fade-out');
-    }, 400);
-  }
-}
-
 // --- Dynamic Rendering of Sections ---
 function populateProfile() {
   const content = TIKTOK_DATA.content[currentLang];
@@ -867,8 +798,5 @@ document.addEventListener('DOMContentLoaded', () => {
   setupCryptoCopy();
   setupDonationModal();
 
-  const nextWisdomBtn = document.getElementById('nextWisdomBtn');
-  if (nextWisdomBtn) {
-    nextWisdomBtn.addEventListener('click', () => displayNewWisdom(false));
-  }
+
 });

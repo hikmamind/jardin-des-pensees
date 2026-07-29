@@ -84,7 +84,7 @@
           </div>
         </div>
         <a href="./quizzes/" class="nav-link" data-i18n="quiz">Quiz</a>
-        <a href="#wisdomSection" class="nav-link" data-i18n="quotes">Citations</a>
+        <a href="./quotes/" class="nav-link" data-i18n="quotes">Citations</a>
         <a href="#advicesSection" class="nav-link" data-i18n="psychology">Psychologie</a>
         <a href="shop/" class="nav-link" data-i18n="shop">Boutique</a>
         <a href="#helpSection" class="nav-link" data-i18n="helpTitle">Aide & FAQ</a>
@@ -374,29 +374,21 @@
 
 
 
-      <!-- Daily Wisdom Section -->
+      <!-- Daily Wisdom Section link CTA -->
       <section id="wisdomSection" class="scroll-section" aria-labelledby="wisdom-heading">
-        <h2 id="wisdom-heading" class="section-title">
-          <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2z"></path><path d="M12 6l-6 12h12l-6-12z"></path></svg>
-          <span class="serif-title" data-i18n="wisdomTitle">La Pensée du Jour</span>
-        </h2>
-        <div class="wisdom-card">
-          <div class="wisdom-avatar-container" id="wisdomAvatarContainer" style="display: none;">
-            <img src="" alt="" class="wisdom-avatar" id="wisdomAvatar">
+        <div class="quiz-promo-banner" style="background: linear-gradient(135deg, rgba(184, 142, 60, 0.1) 0%, rgba(6, 6, 6, 0.4) 100%); border: 1px solid var(--card-border); padding: 50px 40px; border-radius: 24px; text-align: center; box-shadow: 0 10px 30px var(--shadow-color); display: flex; flex-direction: column; align-items: center; gap: 20px; position: relative; overflow: hidden;">
+          <div class="glowing-orbs" aria-hidden="true" style="position: absolute; top:0; left:0; width:100%; height:100%; pointer-events: none;">
+            <div class="orb orb-1" style="width: 150px; height: 150px; background: var(--accent-gold-glow); top: -20px; left: -20px; filter: blur(50px); opacity: 0.15;"></div>
           </div>
-          <div class="wisdom-text" id="wisdomText">
-            "La paix intérieure commence au moment où vous choisissez de ne pas laisser une autre personne ou un événement contrôler vos émotions."
-          </div>
-          <div class="wisdom-translation" id="wisdomTranslation">
-            "تبدأ الطمأنينة الداخلية عندما تختار ألا تسمح لشخص آخر أو لحدث ما بالتحكم في مشاعرك."
-          </div>
-          <div class="wisdom-author" id="wisdomAuthor">
-            Sagesse Contemporaine
-          </div>
-          <button id="nextWisdomBtn" class="wisdom-btn">
-            <span data-i18n="generateBtn">Générer une pensée</span>
-            <svg viewBox="0 0 24 24"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>
-          </button>
+          <span style="font-size: 2rem;">❝</span>
+          <h2 id="wisdom-heading" class="serif-title" data-i18n="wisdomTitle" style="font-size: 2rem; color: var(--text-primary); margin: 0;">حكمة اليوم</h2>
+          <p data-i18n="heroSubtitle" style="max-width: 600px; color: var(--text-secondary); line-height: 1.6; margin: 0; font-size: 1.05rem;">أقوال وحكم خالدة من أعظم العقول في التاريخ، لتلهمك وتساعدك على فهم الحياة بعمق أكبر.</p>
+          <a href="./quotes/" class="quiz-btn" style="text-decoration: none; padding: 12px 30px; display: inline-flex; align-items: center; gap: 8px; margin-top: 10px;">
+            <span data-i18n="generateBtn">توليد حكمة أخرى</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+            </svg>
+          </a>
         </div>
       </section>
 

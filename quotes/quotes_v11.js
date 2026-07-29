@@ -1,0 +1,256 @@
+import TIKTOK_DATA from '../data_v11.js';
+
+let currentLang = localStorage.getItem('preferredLang') || 'ar';
+let activeTheme = localStorage.getItem('theme') || 'dark';
+
+let currentQuoteIndex = -1;
+
+// Initialize Theme
+function initTheme() {
+  document.documentElement.setAttribute('data-theme', activeTheme);
+  const sunIcon = document.querySelector('.sun-icon');
+  const moonIcon = document.querySelector('.moon-icon');
+  
+  if (activeTheme === 'light') {
+    if (sunIcon) sunIcon.style.display = 'block';
+    if (moonIcon) moonIcon.style.display = 'none';
+  } else {
+    if (sunIcon) sunIcon.style.display = 'none';
+    if (moonIcon) moonIcon.style.display = 'block';
+  }
+}
+
+// Setup theme toggle listener
+function setupThemeToggle() {
+  const toggleBtn = document.getElementById('themeToggleBtn');
+  if (!toggleBtn) return;
+  
+  toggleBtn.addEventListener('click', () => {
+    activeTheme = activeTheme === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('theme', activeTheme);
+    initTheme();
+  });
+}
+
+// Setup Hamburger Menu
+function setupHamburger() {
+  const hamburger = document.getElementById('navHamburger');
+  const navMenu = document.getElementById('navMenu');
+  if (!hamburger || !navMenu) return;
+  
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+}
+
+// Initialize Languages & translations
+function initLanguageSelector() {
+  const activeLangName = document.getElementById('activeLangName');
+  const langDropdown = document.getElementById('langDropdown');
+  const langBtn = document.getElementById('langBtn');
+  
+  if (activeLangName) activeLangName.textContent = currentLang.toUpperCase();
+  
+  if (langBtn && langDropdown) {
+    langBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      langDropdown.classList.toggle('active');
+    });
+    
+    document.addEventListener('click', () => {
+      langDropdown.classList.remove('active');
+    });
+    
+    const langOpts = langDropdown.querySelectorAll('.lang-opt');
+    langOpts.forEach(opt => {
+      opt.addEventListener('click', () => {
+        const selectedLang = opt.getAttribute('data-lang');
+        if (selectedLang !== currentLang) {
+          currentLang = selectedLang;
+          localStorage.setItem('preferredLang', currentLang);
+          activeLangName.textContent = currentLang.toUpperCase();
+          
+          // Apply document direction
+          if (currentLang === 'ar') {
+            document.documentElement.setAttribute('dir', 'rtl');
+            document.documentElement.setAttribute('lang', 'ar');
+          } else {
+            document.documentElement.setAttribute('dir', 'ltr');
+            document.documentElement.setAttribute('lang', currentLang);
+          }
+          
+          translatePage();
+          displayNewWisdom(true);
+          renderAllQuotes();
+        }
+      });
+    });
+  }
+  
+  // Set initial direction
+  if (currentLang === 'ar') {
+    document.documentElement.setAttribute('dir', 'rtl');
+    document.documentElement.setAttribute('lang', 'ar');
+  } else {
+    document.documentElement.setAttribute('dir', 'ltr');
+    document.documentElement.setAttribute('lang', currentLang);
+  }
+  
+  translatePage();
+}
+
+function translatePage() {
+  const ui = TIKTOK_DATA.ui[currentLang];
+  
+  const translatables = document.querySelectorAll('[data-i18n]');
+  translatables.forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (ui[key]) {
+      el.textContent = ui[key];
+    }
+  });
+
+  const breadcrumbHome = document.getElementById('breadcrumbHome');
+  if (breadcrumbHome) {
+    breadcrumbHome.textContent = currentLang === 'ar' ? 'الرئيسية' : currentLang === 'en' ? 'Home' : 'Accueil';
+  }
+}
+
+// --- Dynamic Wisdom generator ---
+function displayNewWisdom(immediate = false) {
+  const textEl = document.getElementById('wisdomText');
+  const authorEl = document.getElementById('wisdomAuthor');
+  if (!textEl || !authorEl) return;
+
+  const quotes = TIKTOK_DATA.content[currentLang].quotes;
+  if (!quotes || quotes.length === 0) return;
+
+  let nextIndex;
+  do {
+    nextIndex = Math.floor(Math.random() * quotes.length);
+  } while (nextIndex === currentQuoteIndex && quotes.length > 1);
+
+  currentQuoteIndex = nextIndex;
+  const quote = quotes[currentQuoteIndex];
+
+  if (immediate) {
+    textEl.textContent = `"${quote.text}"`;
+    authorEl.textContent = `— ${quote.author}`;
+  } else {
+    textEl.style.opacity = '0';
+    authorEl.style.opacity = '0';
+    setTimeout(() => {
+      textEl.textContent = `"${quote.text}"`;
+      authorEl.textContent = `— ${quote.author}`;
+      textEl.style.opacity = '1';
+      authorEl.style.opacity = '1';
+    }, 300);
+  }
+}
+
+// --- Render All Quotes ---
+function renderAllQuotes() {
+  const container = document.getElementById('quotesGridContainer');
+  if (!container) return;
+
+  const quotes = TIKTOK_DATA.content[currentLang].quotes;
+  if (!quotes || quotes.length === 0) return;
+
+  const html = quotes.map((q, index) => {
+    const authorImg = `../${q.image}` || '../thinkers/images/nietzsche.jpg';
+    return `
+      <div class="quote-item-card">
+        <span class="quote-card-ornament">❝</span>
+        <p class="quote-item-text">"${q.text}"</p>
+        <div class="quote-item-footer">
+          <div class="quote-author-info">
+            <img src="${authorImg}" class="quote-author-img" alt="${q.author}">
+            <span class="quote-author-name">${q.author}</span>
+          </div>
+          <div class="quote-actions">
+            <button class="quote-action-btn copy-btn" data-index="${index}" title="${currentLang === 'ar' ? 'نسخ الاقتباس' : 'Copier la citation'}">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+            <button class="quote-action-btn share-btn" data-index="${index}" title="${currentLang === 'ar' ? 'مشاركة الاقتباس' : 'Partager la citation'}">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="18" cy="5" r="3"></circle>
+                <circle cx="6" cy="12" r="3"></circle>
+                <circle cx="18" cy="19" r="3"></circle>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  container.innerHTML = html;
+
+  // Bind Actions
+  const copyButtons = container.querySelectorAll('.copy-btn');
+  copyButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const idx = parseInt(btn.getAttribute('data-index'), 10);
+      const q = quotes[idx];
+      const textToCopy = `"${q.text}" — ${q.author}`;
+      
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        showToast(currentLang === 'ar' ? 'تم النسخ إلى الحافظة !' : currentLang === 'en' ? 'Copied to clipboard!' : 'Copié dans le presse-papiers !');
+      }).catch(err => {
+        console.error("Clipboard copy failed: ", err);
+      });
+    });
+  });
+
+  const shareButtons = container.querySelectorAll('.share-btn');
+  shareButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const idx = parseInt(btn.getAttribute('data-index'), 10);
+      const q = quotes[idx];
+      const shareText = `"${q.text}" — ${q.author}`;
+      
+      if (navigator.share) {
+        navigator.share({
+          title: q.author,
+          text: shareText,
+          url: window.location.href
+        }).catch(err => console.log(err));
+      } else {
+        alert(shareText);
+      }
+    });
+  });
+}
+
+function showToast(message) {
+  const toast = document.getElementById('toastNotification');
+  if (!toast) return;
+
+  toast.textContent = message;
+  toast.classList.add('active');
+
+  setTimeout(() => {
+    toast.classList.remove('active');
+  }, 2500);
+}
+
+// --- Initialize Page ---
+document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
+  setupThemeToggle();
+  setupHamburger();
+  initLanguageSelector();
+  displayNewWisdom(true);
+  renderAllQuotes();
+
+  const nextWisdomBtn = document.getElementById('nextWisdomBtn');
+  if (nextWisdomBtn) {
+    nextWisdomBtn.addEventListener('click', () => displayNewWisdom(false));
+  }
+});
