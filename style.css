@@ -2,46 +2,46 @@
 
 /* --- System variables & Themes --- */
 :root {
-  /* Dark Theme (Default) - Highly refined forest emerald & gold */
-  --bg-color: #040906;
-  --bg-gradient: radial-gradient(circle at 50% 0%, #0e2215 0%, #040906 100%);
-  --card-bg: rgba(13, 26, 18, 0.65);
-  --card-border: rgba(167, 243, 208, 0.07);
+  /* Dark Theme (Default) - Noir Doré (Black and Gold) */
+  --bg-color: #060606;
+  --bg-gradient: radial-gradient(circle at 50% 0%, #1a160d 0%, #060606 100%);
+  --card-bg: rgba(15, 15, 15, 0.75);
+  --card-border: rgba(223, 177, 91, 0.08);
   --card-border-hover: rgba(223, 177, 91, 0.45);
-  --text-primary: #f5fbf8;
-  --text-secondary: #a4bea3;
+  --text-primary: #fcfbfa;
+  --text-secondary: #aaaaaa;
   --accent-gold: #dfb15b;
-  --accent-gold-glow: rgba(223, 177, 91, 0.35);
-  --accent-green: #34d399;
-  --accent-green-glow: rgba(52, 211, 153, 0.25);
-  --shadow-color: rgba(0, 0, 0, 0.6);
+  --accent-gold-glow: rgba(223, 177, 91, 0.25);
+  --accent-green: #dfb15b; /* Enforce gold palette */
+  --accent-green-glow: rgba(223, 177, 91, 0.15);
+  --shadow-color: rgba(0, 0, 0, 0.8);
   --glass-blur: blur(20px);
   --transition-speed: 0.3s;
   
   /* Curated Rich Gradients */
-  --gradient-gold-green: linear-gradient(135deg, #dfb15b 0%, #34d399 100%);
+  --gradient-gold-green: linear-gradient(135deg, #dfb15b 0%, #c59b4e 100%);
   --gradient-gold-soft: linear-gradient(135deg, #f2d184 0%, #dfb15b 100%);
-  --gradient-card-hover: linear-gradient(135deg, rgba(223, 177, 91, 0.05) 0%, rgba(52, 211, 153, 0.03) 100%);
+  --gradient-card-hover: linear-gradient(135deg, rgba(223, 177, 91, 0.04) 0%, rgba(223, 177, 91, 0.01) 100%);
 }
 
 [data-theme="light"] {
-  /* Light Theme - Soft mint tea & warm sand */
-  --bg-color: #f3f8f5;
-  --bg-gradient: radial-gradient(circle at 50% 0%, #e3ede7 0%, #f3f8f5 100%);
-  --card-bg: rgba(255, 255, 255, 0.8);
-  --card-border: rgba(13, 26, 18, 0.07);
+  /* Light Theme - Blanc Doré (White and Gold) */
+  --bg-color: #fbfbfa;
+  --bg-gradient: radial-gradient(circle at 50% 0%, #f4efe4 0%, #fbfbfa 100%);
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-border: rgba(223, 177, 91, 0.12);
   --card-border-hover: rgba(223, 177, 91, 0.65);
-  --text-primary: #0f2016;
-  --text-secondary: #476352;
-  --accent-gold: #c2953a;
-  --accent-gold-glow: rgba(194, 149, 58, 0.3);
-  --accent-green: #059669;
-  --accent-green-glow: rgba(5, 150, 105, 0.2);
-  --shadow-color: rgba(13, 26, 18, 0.08);
+  --text-primary: #181715;
+  --text-secondary: #65635f;
+  --accent-gold: #b88e3c;
+  --accent-gold-glow: rgba(184, 142, 60, 0.25);
+  --accent-green: #b88e3c; /* Enforce gold palette */
+  --accent-green-glow: rgba(184, 142, 60, 0.15);
+  --shadow-color: rgba(184, 142, 60, 0.06);
   
-  --gradient-gold-green: linear-gradient(135deg, #c2953a 0%, #059669 100%);
-  --gradient-gold-soft: linear-gradient(135deg, #dfb15b 0%, #c2953a 100%);
-  --gradient-card-hover: linear-gradient(135deg, rgba(194, 149, 58, 0.03) 0%, rgba(5, 150, 105, 0.02) 100%);
+  --gradient-gold-green: linear-gradient(135deg, #b88e3c 0%, #94712e 100%);
+  --gradient-gold-soft: linear-gradient(135deg, #dfb15b 0%, #b88e3c 100%);
+  --gradient-card-hover: linear-gradient(135deg, rgba(184, 142, 60, 0.03) 0%, rgba(184, 142, 60, 0.01) 100%);
 }
 
 /* Custom Styled Scrollbar */
