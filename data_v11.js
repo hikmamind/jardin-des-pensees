@@ -1007,6 +1007,23 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "category": "development",
+          "file": "self-discipline.html",
+          "image": "self_discipline.jpg",
+          "featured": true,
+          "title": "Comment cultiver l'autodiscipline ?",
+          "readTime": "9 min read",
+          "desc": "L'habitude qui change votre vie plus que le talent. Découvrez un guide pratique pour rester engagé et constant.",
+          "body": [
+            "Tout le monde rêve de réaliser de grands objectifs, mais peu y parviennent. La raison n'est pas un manque d'intelligence ou de talent, mais l'absence d'autodiscipline. La motivation peut vous donner un bon départ, mais elle est fluctuante et dépend de votre humeur. L'autodiscipline, quant à elle, est la décision qui vous pousse à continuer, même quand vous n'en avez pas envie.",
+            "Les personnes que nous considérons comme des réussites ne possèdent pas toujours des super-pouvoirs, mais elles partagent une habitude simple : faire ce qui doit être fait au bon moment, même lorsque c'est difficile. Dans cet article, nous découvrirons ce qu'est l'autodiscipline, pourquoi elle constitue le fondement du succès, et comment vous pouvez la bâtir étape par étape.",
+            "L'autodiscipline est la capacité de s'en tenir à ce qui sert vos objectifs, même quand la motivation fait défaut. C'est un choix conscient entre le confort immédiat et les résultats à long terme. C'est pourquoi l'autodiscipline ne dépend pas de l'humeur, mais repose sur des habitudes quotidiennes solidement ancrées.",
+            "Quelle est la différence entre la motivation et l'autodiscipline ? La motivation est comme l'étincelle qui allume le feu, mais elle ne suffit pas à le maintenir. L'autodiscipline est le bois qui permet au feu de continuer à brûler. Si vous ne comptez que sur la motivation, vous commencerez de nombreux projets sans jamais les terminer. Avec l'autodiscipline, vous progressez régulièrement, même dans les jours les plus difficiles.",
+            "Pour bâtir cette discipline, adoptez cinq habitudes : commencez par de petites étapes faciles à maintenir, déterminez des heures fixes pour vos activités clés, concevez un environnement qui favorise votre réussite en éliminant les distractions, pardonnez-vous en cas de faux pas sans abandonner, et privilégiez la régularité sur le long terme.",
+            "L'autodiscipline n'est pas un don inné, mais une compétence qui se développe avec la pratique et la patience. Commencez dès aujourd'hui par une petite action constructive, répétez-la demain, et vous découvrirez dans quelques mois que votre vie a changé parce que vous vous êtes engagé, sans attendre que l'inspiration vienne à vous."
+          ]
+        },
+        {
           "category": "psychology",
           "file": "stop-overthinking.html",
           "image": "overthinking_calm.jpg",
@@ -2325,6 +2342,23 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "category": "development",
+          "file": "self-discipline.html",
+          "image": "self_discipline.jpg",
+          "featured": true,
+          "title": "How to Build Self-Discipline?",
+          "readTime": "9 min read",
+          "desc": "The habit that changes your life more than talent. A practical guide to remaining committed and consistent.",
+          "body": [
+            "Everyone dreams of achieving big goals, but only a few reach them. The reason is not a lack of intelligence or talent, but the absence of self-discipline. Motivation might give you a strong start, but it is a temporary feeling that changes with circumstances and mood. Discipline, however, is the decision that drives you to keep going even when you don't feel like working.",
+            "People we consider successful do not always have superpowers, but they possess a simple habit: doing what needs to be done at the right time, even when it is hard. In this article, we will look at what self-discipline means, why it is the foundation of success, and how you can build it step by step.",
+            "Self-discipline is the ability to commit to what serves your goals, even when you don't feel like doing it. It is a conscious choice between temporary comfort and long-term results. For this reason, discipline does not rely on your emotional state, but on daily habits.",
+            "Motivation vs. Discipline: Motivation is like the spark that starts the fire, but it is not enough to keep it going. Discipline is the wood that keeps the fire burning. If you rely only on motivation, you will start many projects and finish none. But if you rely on discipline, you will make steady progress even on hard days.",
+            "To build self-discipline, practice five habits: start with small steps you can maintain daily, set fixed times for key activities, design your environment to help you succeed by removing distractions, forgive yourself when you stumble, and focus on consistency over intensity.",
+            "Discipline is not a talent some people are born with, but a skill that anyone can develop through practice and patience. Start today with a small step, repeat it tomorrow, and in a few months you will find that your life has changed because you committed, rather than waiting for inspiration."
+          ]
+        },
+        {
           "category": "psychology",
           "file": "stop-overthinking.html",
           "image": "overthinking_calm.jpg",
@@ -3642,6 +3676,23 @@ const TIKTOK_DATA = {
         }
       ],
       "articles": [
+        {
+          "category": "development",
+          "file": "self-discipline.html",
+          "image": "self_discipline.jpg",
+          "featured": true,
+          "title": "كيف تبني الانضباط الذاتي؟",
+          "readTime": "9 دقائق قراءة",
+          "desc": "العادة التي تغير حياتك أكثر من الموهبة ودليل عملي للالتزام والاستمرار.",
+          "body": [
+            "يحلم الجميع بتحقيق أهداف كبيرة، لكن القليل فقط يصل إليها. والسبب ليس نقص الذكاء أو الموهبة، بل غياب الانضباط الذاتي. فالتحفيز قد يمنحك بداية قوية، لكنه شعور مؤقت يتغير مع الظروف والمزاج. أما الانضباط فهو القرار الذي يدفعك للاستمرار حتى عندما لا تشعر بالرغبة في العمل.",
+            "إن الأشخاص الذين نعتبرهم ناجحين لا يملكون دائمًا قدرات خارقة، لكنهم يمتلكون عادة بسيطة: يفعلون ما يجب فعله في الوقت المناسب، حتى عندما يكون الأمر صعبًا. في هذا المقال سنتعرف على معنى الانضباط الذاتي، ولماذا يعد أساس النجاح، وكيف يمكنك بناؤه خطوة بخطوة.",
+            "الانضباط الذاتي هو القدرة على الالتزام بما يخدم أهدافك، حتى عندما لا تشعر بالرغبة في القيام به. إنه اختيار واعٍ بين الراحة المؤقتة والنتائج طويلة المدى. ولهذا السبب، لا يعتمد الانضباط على الحالة المزاجية، بل على العادات اليومية.",
+            "الحماس يشبه الشرارة التي تشعل النار، لكنه لا يكفي للحفاظ عليها. أما الانضباط، فهو الحطب الذي يجعلها تستمر في الاشتعال. إذا اعتمدت على الحماس فقط، ستبدأ مشاريع كثيرة ولن تكملها. أما إذا اعتمدت على الانضباط، فستحقق تقدمًا ثابتًا حتى في الأيام الصعبة.",
+            "لبناء الانضباط الذاتي، ننصح بخمس عادات أساسية: ابدأ بخطوات صغيرة وعادات بسيطة، حدد وقتًا ثابتًا للأنشطة المختلفة، اجعل بيئتك تساعدك بوضع المحفزات وإبعاد المشتتات، سامح نفسك عند التعثر والعودة سريعًا، وركز بشكل كامل على الاستمرارية اليومية.",
+            "الانضباط ليس موهبة يولد بها البعض، بل مهارة يمكن لأي شخص أن يطورها بالممارسة والصبر. ابدأ اليوم بخطوة صغيرة، وكررها غدًا، وبعد أشهر ستكتشف أن حياتك تغيرت لأنك التزمت، لا لأنك انتظرت الدافع والحماس."
+          ]
+        },
         {
           "category": "psychology",
           "file": "stop-overthinking.html",

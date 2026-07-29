@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>كيف تبني الانضباط الذاتي؟ - دليل عملي</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+    
+    :root {
+      --bg-cream: #FAF6F0;
+      --dark-green: #060606;
+      --accent-gold: #b88e3c;
+      --text-charcoal: #181715;
+    }
+    
+    body {
+      background-color: var(--bg-cream);
+      color: var(--text-charcoal);
+      font-family: 'Amiri', serif;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+    
+    .no-print {
+      background: var(--dark-green);
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      border-bottom: 2px solid var(--accent-gold);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .no-print button {
+      background: var(--accent-gold);
+      color: #fff;
+      border: none;
+      padding: 10px 25px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      font-family: 'Amiri', serif;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    
+    .no-print button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(184, 142, 60, 0.4);
+    }
+
+    .book-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    
+    .page {
+      background: white;
+      border: 3px double var(--accent-gold);
+      border-radius: 12px;
+      padding: 50px 60px;
+      margin-bottom: 50px;
+      box-shadow: 0 10px 30px rgba(13, 30, 19, 0.03);
+      position: relative;
+      min-height: 850px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+    }
+    
+    .cover-page {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 850px;
+    }
+    
+    .cover-title {
+      font-size: 3.5rem;
+      color: var(--dark-green);
+      margin: 20px 0;
+      font-weight: bold;
+      line-height: 1.3;
+    }
+    
+    .cover-subtitle {
+      font-size: 1.8rem;
+      color: var(--accent-gold);
+      margin-bottom: 40px;
+      border-bottom: 2px solid var(--accent-gold);
+      padding-bottom: 20px;
+      width: 80%;
+    }
+    
+    .cover-desc {
+      font-size: 1.3rem;
+      color: var(--text-charcoal);
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .ornament {
+      font-size: 2rem;
+      color: var(--accent-gold);
+      margin: 20px 0;
+    }
+    
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(184, 142, 60, 0.2);
+      padding-bottom: 10px;
+      font-size: 0.9rem;
+      color: var(--accent-gold);
+    }
+    
+    .page-body {
+      flex-grow: 1;
+      margin-top: 30px;
+      font-size: 1.25rem;
+      line-height: 1.8;
+      text-align: justify;
+    }
+    
+    .page-footer {
+      border-top: 1px solid rgba(184, 142, 60, 0.2);
+      padding-top: 10px;
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: var(--accent-gold);
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    h2 {
+      font-size: 1.8rem;
+      color: var(--dark-green);
+      border-right: 4px solid var(--accent-gold);
+      padding-right: 15px;
+      margin-top: 0;
+    }
+
+    .quote-box {
+      background: rgba(184, 142, 60, 0.05);
+      border-right: 4px solid var(--accent-gold);
+      padding: 20px;
+      font-style: italic;
+      margin: 25px 0;
+      border-radius: 4px;
+    }
+
+    .bullet-list {
+      margin: 20px 0;
+      padding-right: 25px;
+    }
+
+    .bullet-list li {
+      margin-bottom: 12px;
+      list-style-type: square;
+    }
+
+    .bullet-list strong {
+      color: var(--accent-gold);
+    }
+
+    @media print {
+      .no-print {
+        display: none;
+      }
+      body {
+        background-color: white;
+      }
+      .book-container {
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+      }
+      .page {
+        box-shadow: none;
+        border: 3px double var(--accent-gold);
+        page-break-after: always;
+        min-height: 100%;
+        height: 100vh;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="no-print">
+    <button onclick="window.print()">طباعة الدليل وتحميله كـ PDF</button>
+  </div>
+
+  <div class="book-container">
+    
+    <!-- Cover Page -->
+    <div class="page cover-page">
+      <div class="ornament">🌿</div>
+      <h1 class="cover-title">كيف تبني الانضباط الذاتي؟</h1>
+      <p class="cover-subtitle">العادة التي تغيّر حياتك أكثر من الموهبة</p>
+      <p class="cover-desc">تحت إشراف حكمة ونور. هذا الدليل العملي مصمم خصيصاً لمساعدتك على الانتقال من فخ الحماس المؤقت إلى قوة الالتزام والاستمرار لبناء حياة عظيمة خطوة بخطوة.</p>
+      <div class="ornament">✨ 🏛️ ✨</div>
+    </div>
+
+    <!-- Page 1 -->
+    <div class="page">
+      <div class="page-header">
+        <span>كيف تبني الانضباط الذاتي؟</span>
+        <span>القسم الأول: الفهم والتشخيص</span>
+      </div>
+      
+      <div class="page-body">
+        <div class="quote-box">
+          "النجاح لا يصنعه الحماس الذي يدوم أيامًا، بل الانضباط الذي يستمر سنوات."
+        </div>
+
+        <h2>مقدمة الدليل</h2>
+        <p>يحلم الجميع بتحقيق أهداف كبيرة، لكن القليل فقط يصل إليها. والسبب ليس نقص الذكاء أو الموهبة، بل غياب الانضباط الذاتي.</p>
+        <p>فالتحفيز قد يمنحك بداية قوية، لكنه شعور مؤقت يتغير مع الظروف والمزاج. أما الانضباط فهو القرار الذي يدفعك للاستمرار حتى عندما لا تشعر بالرغبة في العمل.</p>
+        <p>إن الأشخاص الذين نعتبرهم ناجحين لا يملكون دائمًا قدرات خارقة، لكنهم يمتلكون عادة بسيطة: يفعلون ما يجب فعله في الوقت المناسب، حتى عندما يكون الأمر صعبًا.</p>
+        <p>في هذا المقال سنتعرف على معنى الانضباط الذاتي، ولماذا يعد أساس النجاح، وكيف يمكنك بناؤه خطوة بخطوة.</p>
+        
+        <div class="quote-box" style="background: rgba(6, 6, 6, 0.02); border-color: var(--dark-green);">
+          <strong>ملخص سريع:</strong> ستتعرف في هذا المقال على مفهوم الانضباط الذاتي، والفرق الجوهري بين الحماس والانضباط، ولماذا نفشل في الالتزام، مع 5 عادات عملية ومجربة لتبنيه والمحافظة عليه.
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>حكمة ونور</span>
+        <span>صفحة ١</span>
+      </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="page">
+      <div class="page-header">
+        <span>كيف تبني الانضباط الذاتي؟</span>
+        <span>القسم الثاني: المفهوم والمقارنة</span>
+      </div>
+      
+      <div class="page-body">
+        <h2>1. ما هو الانضباط الذاتي؟</h2>
+        <p>الانضباط الذاتي هو القدرة على الالتزام بما يخدم أهدافك، حتى عندما لا تشعر بالرغبة في القيام به.</p>
+        <p>إنه اختيار واعٍ بين الراحة المؤقتة والنتائج طويلة المدى. ولهذا السبب، لا يعتمد الانضباط على الحالة المزاجية، بل على العادات اليومية المتراكمة.</p>
+
+        <div class="quote-box">
+          "كل قرار صغير تتخذه اليوم، يرسم شكل حياتك غدًا."
+        </div>
+
+        <h2>2. الحماس أم الانضباط؟</h2>
+        <p>الحماس يشبه الشرارة التي تشعل النار، لكنه لا يكفي للحفاظ عليها. أما الانضباط، فهو الحطب الذي يجعلها تستمر في الاشتعال.</p>
+        <p>إذا اعتمدت على الحماس فقط، ستبدأ مشاريع كثيرة ولن تكملها. أما إذا اعتمدت على الانضباط، فستحقق تقدمًا ثابتًا حتى في الأيام الصعبة.</p>
+
+        <h2>علامات ضعف الانضباط:</h2>
+        <ul class="bullet-list">
+          <li>تأجيل المهام باستمرار (التسويف).</li>
+          <li>البدء في مشاريع كثيرة دون إكمالها.</li>
+          <li>الاعتماد على المزاج والحالة النفسية.</li>
+          <li>الاستسلام عند أول عقبة أو تعب.</li>
+          <li>الانشغال بأمور غير مهمة لتفادي العمل الحقيقي.</li>
+        </ul>
+      </div>
+      
+      <div class="page-footer">
+        <span>حكمة ونور</span>
+        <span>صفحة ٢</span>
+      </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="page">
+      <div class="page-header">
+        <span>كيف تبني الانضباط الذاتي؟</span>
+        <span>القسم الثالث: العادات الخمس للبناء</span>
+      </div>
+      
+      <div class="page-body">
+        <h2>3. خمس عادات لبناء الانضباط الذاتي</h2>
+        <ul class="bullet-list" style="list-style-type: decimal;">
+          <li><strong>ابدأ بخطوات صغيرة:</strong> لا تحاول تغيير حياتك في يوم واحد. ابدأ بعادة بسيطة تستطيع الحفاظ عليها يوميًا كقراءة صفحتين أو المشي 10 دقائق.</li>
+          <li><strong>حدد وقتًا ثابتًا:</strong> العادات تنجح وتترسخ عندما ترتبط بوقت أو سياق محدد ومقدس يومياً.</li>
+          <li><strong>اجعل بيئتك تساعدك:</strong> إذا أردت القراءة، ضع الكتاب على مكتبك. إذا أردت التركيز، أبعد الهاتف في غرفة أخرى. البيئة تصنع العادات أسرع من قوة الإرادة.</li>
+          <li><strong>سامح نفسك عند التعثر:</strong> التوقف ليوم واحد لا يعني الفشل. المهم أن تعود للمسار بسرعة ولا تدع التعثر يصبح عادة ثانية.</li>
+          <li><strong>ركز على الاستمرارية:</strong> التقدم البسيط المستمر كل يوم أفضل بكثير من إنجاز ضخم يتوقف بعد أسبوع.</li>
+        </ul>
+
+        <h2>4. أخطاء تمنعك من الالتزام:</h2>
+        <ul class="bullet-list">
+          <li><strong>انتظار الوقت المثالي:</strong> لن يأتي أبداً؛ ابدأ بالظروف المتاحة الآن.</li>
+          <li><strong>مقارنة نفسك بالآخرين:</strong> قارن نفسك بنفسك في الأمس فقط.</li>
+          <li><strong>وضع أهداف غير واقعية:</strong> تدرج في بناء المهام حتى لا تصاب بالإرهاق.</li>
+          <li><strong>محاولة تغيير كل شيء دفعة واحدة.</strong></li>
+          <li><strong>تجاهل أهمية الراحة الكافية والنوم الجيد.</strong></li>
+        </ul>
+      </div>
+      
+      <div class="page-footer">
+        <span>حكمة ونور</span>
+        <span>صفحة ٣</span>
+      </div>
+    </div>
+
+    <!-- Page 4 -->
+    <div class="page">
+      <div class="page-header">
+        <span>كيف تبني الانضباط الذاتي؟</span>
+        <span>القسم الرابع: الخلاصة والتطبيق</span>
+      </div>
+      
+      <div class="page-body">
+        <h2>5. كيف تحافظ على الانضباط؟</h2>
+        <p>اجعل النجاح عادة يومية متكررة، وليس حدثاً عابراً. احتفل بكل تقدم تحققه مهما كان بسيطاً، وقم بتسجيل إنجازاتك اليومية في دفتر خاص.</p>
+        <p>وتذكر دائماً أن الشخص والتصرفات التي تكررها كل يوم هي التي ترسم الشخصية والواقع الذي ستصبحه في المستقبل القريب.</p>
+
+        <h2>الخلاصة</h2>
+        <p>الانضباط ليس موهبة يولد بها البعض، بل مهارة يمكن لأي شخص أن يطورها بالممارسة والصبر والتكرار الواعي.</p>
+        <p>ابدأ اليوم بخطوة صغيرة، وكررها غدًا، وبعد أشهر ستكتشف أن حياتك تغيرت بالكامل لأنك التزمت، لا لأنك انتظرت الدافع والتحفيز.</p>
+
+        <div class="quote-box">
+          <strong>اقتباس اليوم:</strong> "الحرية الحقيقية ليست أن تفعل ما تشاء، بل أن تستطيع فعل ما يجب فعله."
+        </div>
+
+        <h2>سؤال للتأمل الذاتي</h2>
+        <p style="font-size: 1.35rem; color: var(--accent-gold); font-weight: bold;">
+          ما هي العادة الصغيرة التي يمكنك البدء بها اليوم، والتي لو حافظت عليها لمدة عام، ستغير حياتك بالكامل؟
+        </p>
+      </div>
+      
+      <div class="page-footer">
+        <span>حكمة ونور</span>
+        <span>صفحة ٤</span>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
