@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ar" data-theme="dark" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Tests & Quiz Philosophiques - Le Jardin des Pensées</title>
+  <meta name="description" content="Découvrez nos tests de personnalité philosophique et quiz psychologiques avec illustrations. Explorez votre esprit.">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  
+  <!-- Main Stylesheet (Shared) -->
+  <link rel="stylesheet" href="../style.css">
+  
+  <!-- Quizzes Page Specific Styles -->
+  <style>
+    .quizzes-hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .quizzes-hero h1 {
+      font-size: 2.4rem;
+      margin-bottom: 12px;
+      font-family: 'Playfair Display', 'Amiri', serif;
+    }
+    
+    .quizzes-hero p {
+      color: var(--text-secondary);
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    /* Premium Quizzes Grid */
+    .quizzes-premium-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+      width: 100%;
+    }
+
+    .quiz-card-premium {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 30px var(--shadow-color);
+      transition: all var(--transition-speed) ease;
+    }
+
+    .quiz-card-premium:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-gold);
+      box-shadow: 0 15px 35px var(--shadow-color);
+    }
+
+    .quiz-card-img-wrapper {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      border-bottom: 1px solid var(--card-border);
+      position: relative;
+    }
+
+    .quiz-card-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .quiz-card-premium:hover .quiz-card-img-wrapper img {
+      transform: scale(1.05);
+    }
+
+    .quiz-card-body {
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      gap: 12px;
+    }
+
+    .quiz-card-badge {
+      align-self: flex-start;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      background: rgba(184, 142, 60, 0.08);
+      border: 1px solid rgba(184, 142, 60, 0.2);
+      padding: 4px 10px;
+      border-radius: 12px;
+      text-transform: uppercase;
+    }
+
+    .quiz-card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0;
+      line-height: 1.4;
+      font-family: 'Playfair Display', 'Amiri', serif;
+    }
+
+    .quiz-card-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin: 0;
+      flex-grow: 1;
+    }
+
+    /* Embedded quiz board layout modifications */
+    .quiz-board-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 15px 40px var(--shadow-color);
+    }
+
+    @media (max-width: 600px) {
+      .quiz-board-container {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Decorative Glowing Orbs -->
+  <div class="glowing-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <div class="page-container">
+    <!-- Header Sticky Navigation Bar -->
+    <header class="navbar-header">
+      <nav class="navbar" aria-label="Navigation principale">
+        <a href="../" class="nav-brand" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+          <svg class="brand-logo" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 28px; height: 28px;">
+            <path d="M12 22v-8M9 22h6M12 14c-1.5-1-2.5-2-2.5-4 0-1.5 1-2.5 2.5-3.5 1.5 1 2.5 2 2.5 3.5 0 2-1 3-2.5 4z"></path>
+            <path d="M12 7c-2-2-1-5 2-5s4 3 2 5M12 7c2-2 1-5-2-5s-4 3-2 5M12 10c-3-1.5-4-4-2-6s4 2 2 6M12 10c3-1.5 4-4 2-6s-4 2-2 6"></path>
+          </svg>
+          <div style="display: flex; flex-direction: column; line-height: 1.1; text-align: left;">
+            <span class="brand-name" id="navBrandName" style="font-size: 1.15rem; font-weight: 800; tracking: 1px; font-family: 'Playfair Display', serif; color: var(--text-primary);">HIKMA & NOUR</span>
+            <span style="font-size: 0.6rem; font-weight: 600; color: var(--text-secondary); letter-spacing: 0.5px;">الحكمة • الفلسفة • علم النفس</span>
+          </div>
+        </a>
+        
+        <!-- Hamburger Menu for Mobile -->
+        <button class="nav-hamburger" id="navHamburger" aria-label="Ouvrir le menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <!-- Navigation Menu -->
+        <div class="nav-menu" id="navMenu">
+          <a href="../#homeSection" class="nav-link" data-i18n="home">Accueil</a>
+          <div class="nav-dropdown-item" id="thinkersDropdownContainer">
+            <a href="../thinkers/" class="nav-link" id="thinkersNavLink" data-i18n="thinkers">Penseurs</a>
+            <div class="nav-sub-menu" id="thinkersSubMenu">
+              <a href="../thinkers/?thinker=schopenhauer" class="sub-link" data-thinker="schopenhauer" data-i18n="schopenhauerName">Schopenhauer</a>
+              <a href="../thinkers/?thinker=nietzsche" class="sub-link" data-thinker="nietzsche" data-i18n="nietzscheName">Nietzsche</a>
+              <a href="../thinkers/?thinker=camus" class="sub-link" data-thinker="camus" data-i18n="camusName">Camus</a>
+              <a href="../thinkers/?thinker=marcaurele" class="sub-link" data-thinker="marcaurele" data-i18n="marcaureleName">Marc Aurèle</a>
+              <a href="../thinkers/?thinker=seneque" class="sub-link" data-thinker="seneque" data-i18n="senequeName">Sénèque</a>
+              <a href="../thinkers/?thinker=kant" class="sub-link" data-thinker="kant" data-i18n="kantName">Kant</a>
+              <a href="../thinkers/?thinker=hegel" class="sub-link" data-thinker="hegel" data-i18n="hegelName">Hegel</a>
+              <a href="../thinkers/?thinker=all" class="sub-link see-all" data-thinker="all" data-i18n="seeAllThinkers">Tous les penseurs →</a>
+            </div>
+          </div>
+          
+          <div class="nav-dropdown-item" id="articlesDropdownContainer">
+            <a href="../articles/" class="nav-link" id="articlesNavLink" data-i18n="articles">Articles</a>
+            <div class="nav-sub-menu" id="articlesSubMenu">
+              <a href="../articles/?category=philosophy" class="sub-link" data-category="philosophy" data-i18n="philosophy">Philosophie</a>
+              <a href="../articles/?category=psychology" class="sub-link" data-category="psychology" data-i18n="psychologySub">Psychologie</a>
+              <a href="../articles/?category=development" class="sub-link" data-category="development" data-i18n="development">Développement personnel</a>
+              <a href="../articles/?category=history" class="sub-link" data-category="history" data-i18n="history">Histoire des idées</a>
+              <a href="../articles/?category=all" class="sub-link see-all" data-category="all" data-i18n="seeAll">Voir tous →</a>
+            </div>
+          </div>
+          
+          <a href="#" class="nav-link active" data-i18n="quiz">Quiz</a>
+          <a href="../#wisdomSection" class="nav-link" data-i18n="quotes">Citations</a>
+          <a href="../#advicesSection" class="nav-link" data-i18n="psychology">Psychologie</a>
+          <a href="../shop/" class="nav-link" data-i18n="shop">Boutique</a>
+          <a href="../#helpSection" class="nav-link" data-i18n="helpTitle">Aide & FAQ</a>
+          <a href="../#contactSection" class="nav-link" data-i18n="about">À propos</a>
+          
+          <div class="nav-actions">
+            <!-- Language Selector -->
+            <div class="lang-selector">
+              <button class="lang-btn" id="langBtn" aria-label="Changer de langue">
+                <svg class="globe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px; height:16px;">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+                <span id="activeLangName">AR</span>
+              </button>
+              <div class="lang-dropdown" id="langDropdown">
+                <button class="lang-opt" data-lang="fr" aria-label="Français">Français</button>
+                <button class="lang-opt" data-lang="en" aria-label="English">English</button>
+                <button class="lang-opt" data-lang="ar" aria-label="العربية">العربية</button>
+              </div>
+            </div>
+            
+            <!-- Dark/Light Theme Button Toggle -->
+            <button class="theme-toggle" id="themeToggleBtn" aria-label="Changer de thème">
+              <!-- Moon Icon (Dark Mode - Default) -->
+              <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <!-- Sun Icon (Light Mode) -->
+              <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      
+      <!-- Breadcrumbs -->
+      <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 20px; font-weight: 500;">
+        <a href="../" style="text-decoration: none; color: inherit; transition: color 0.3s;" id="breadcrumbHome">الرئيسية</a> &rsaquo; 
+        <span style="color: var(--accent-gold);" data-i18n="quizzesTitle">الاختبارات والأسئلة الفلسفية</span>
+      </div>
+
+      <!-- Hero Header -->
+      <section class="quizzes-hero">
+        <h1 data-i18n="quizzesTitle">الاختبارات والأسئلة الفلسفية</h1>
+        <p data-i18n="quizSubtitle">أجب عن مواقف حياتية يومية بسيطة لتكتشف المدارس الفكرية والأنماط الفلسفية والذكاء العاطفي الأكثر توافقاً مع جوهرك الداخلي.</p>
+      </section>
+
+      <!-- Interactive Quiz Container (Card & Progress bar) -->
+      <div class="quiz-card" style="max-width: 900px; margin: 0 auto 50px;">
+        <!-- Progress Bar -->
+        <div class="quiz-progress-container">
+          <div class="quiz-progress-bar" id="quizProgressBar"></div>
+        </div>
+        
+        <!-- Target Screen Wrapper -->
+        <div id="quizScreenContainer" style="padding: 20px 10px;">
+          <!-- Content dynamically rendered by quizzes_v11.js -->
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2026 حكمة ونور | Le Jardin des Pensées. <span data-i18n="credits">Conçu avec sagesse, calme et sérénité. ✨🌿</span></p>
+    </footer>
+  </div>
+
+  <!-- Script Modules -->
+  <script type="module" src="quizzes_v11.js"></script>
+</body>
+</html>

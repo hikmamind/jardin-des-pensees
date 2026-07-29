@@ -83,7 +83,7 @@
             <a href="articles/?category=all" class="sub-link see-all" data-category="all" data-i18n="seeAll">Voir tous →</a>
           </div>
         </div>
-        <a href="#quizSection" class="nav-link" data-i18n="quiz">Quiz</a>
+        <a href="./quizzes/" class="nav-link" data-i18n="quiz">Quiz</a>
         <a href="#wisdomSection" class="nav-link" data-i18n="quotes">Citations</a>
         <a href="#advicesSection" class="nav-link" data-i18n="psychology">Psychologie</a>
         <a href="shop/" class="nav-link" data-i18n="shop">Boutique</a>
@@ -400,27 +400,22 @@
         </div>
       </section>
 
-      <!-- Philosophy Personality Quiz Section -->
+      <!-- Philosophy Personality Quiz Section Link CTA -->
       <section id="quizSection" class="scroll-section" aria-labelledby="quiz-heading">
-        <h2 id="quiz-heading" class="section-title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-            <line x1="12" y1="17" x2="12.01" y2="17"></line>
-          </svg>
-          <span class="serif-title" data-i18n="quizTitle">Test de Personnalité Philosophique</span>
-        </h2>
-        
-        <div class="quiz-card">
-          <!-- Progress Bar -->
-          <div class="quiz-progress-container">
-            <div class="quiz-progress-bar" id="quizProgressBar"></div>
+        <div class="quiz-promo-banner" style="background: linear-gradient(135deg, rgba(184, 142, 60, 0.1) 0%, rgba(6, 6, 6, 0.4) 100%); border: 1px solid var(--card-border); padding: 50px 40px; border-radius: 24px; text-align: center; box-shadow: 0 10px 30px var(--shadow-color); display: flex; flex-direction: column; align-items: center; gap: 20px; position: relative; overflow: hidden;">
+          <div class="glowing-orbs" aria-hidden="true" style="position: absolute; top:0; left:0; width:100%; height:100%; pointer-events: none;">
+            <div class="orb orb-1" style="width: 150px; height: 150px; background: var(--accent-gold-glow); top: -20px; right: -20px; filter: blur(50px); opacity: 0.15;"></div>
           </div>
-          
-          <!-- Screens Container -->
-          <div id="quizScreenContainer">
-            <!-- Dynamically populated quiz screens -->
-          </div>
+          <span style="font-size: 2rem;">🧠</span>
+          <h2 id="quiz-heading" class="serif-title" data-i18n="quizzesTitle" style="font-size: 2rem; color: var(--text-primary); margin: 0;">الاختبارات والأسئلة الفلسفية</h2>
+          <p data-i18n="quizSubtitle" style="max-width: 600px; color: var(--text-secondary); line-height: 1.6; margin: 0; font-size: 1.05rem;">أجب عن مواقف حياتية يومية بسيطة لتكتشف المدارس الفكرية والأنماط الفلسفية والذكاء العاطفي الأكثر توافقاً مع جوهرك الداخلي.</p>
+          <a href="./quizzes/" class="quiz-btn" style="text-decoration: none; padding: 12px 30px; display: inline-flex; align-items: center; gap: 8px; margin-top: 10px;">
+            <span data-i18n="quizStartBtn">ابدأ الاختبار الآن</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
         </div>
       </section>
 
