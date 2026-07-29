@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>كيف تتوقف عن التفكير الزائد؟ - دليل عملي</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+    
+    :root {
+      --bg-cream: #FAF6F0;
+      --dark-green: #060606;
+      --accent-gold: #b88e3c;
+      --text-charcoal: #181715;
+    }
+    
+    body {
+      background-color: var(--bg-cream);
+      color: var(--text-charcoal);
+      font-family: 'Amiri', serif;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+    
+    .no-print {
+      background: var(--dark-green);
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      border-bottom: 2px solid var(--accent-gold);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .no-print button {
+      background: var(--accent-gold);
+      color: #fff;
+      border: none;
+      padding: 10px 25px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      font-family: 'Amiri', serif;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    
+    .no-print button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(184, 142, 60, 0.4);
+    }
+
+    .book-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    
+    .page {
+      background: white;
+      border: 3px double var(--accent-gold);
+      border-radius: 12px;
+      padding: 50px 60px;
+      margin-bottom: 50px;
+      box-shadow: 0 10px 30px rgba(13, 30, 19, 0.03);
+      position: relative;
+      min-height: 850px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+    }
+    
+    .cover-page {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 850px;
+    }
+    
+    .cover-title {
+      font-size: 3.5rem;
+      color: var(--dark-green);
+      margin: 20px 0;
+      font-weight: bold;
+      line-height: 1.3;
+    }
+    
+    .cover-subtitle {
+      font-size: 1.8rem;
+      color: var(--accent-gold);
+      margin-bottom: 40px;
+      border-bottom: 2px solid var(--accent-gold);
+      padding-bottom: 20px;
+      width: 80%;
+    }
+    
+    .cover-desc {
+      font-size: 1.3rem;
+      color: var(--text-charcoal);
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .ornament {
+      font-size: 2rem;
+      color: var(--accent-gold);
+      margin: 20px 0;
+    }
+    
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(184, 142, 60, 0.2);
+      padding-bottom: 10px;
+      font-size: 0.9rem;
+      color: var(--accent-gold);
+    }
+    
+    .page-body {
+      flex-grow: 1;
+      margin-top: 30px;
+      font-size: 1.25rem;
+      line-height: 1.8;
+      text-align: justify;
+    }
+    
+    .page-footer {
+      border-top: 1px solid rgba(184, 142, 60, 0.2);
+      padding-top: 10px;
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: var(--accent-gold);
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    h2 {
+      font-size: 1.8rem;
+      color: var(--dark-green);
+      border-right: 4px solid var(--accent-gold);
+      padding-right: 15px;
+      margin-top: 0;
+    }
+
+    .quote-box {
+      background: rgba(184, 142, 60, 0.05);
+      border-right: 4px solid var(--accent-gold);
+      padding: 20px;
+      font-style: italic;
+      margin: 25px 0;
+      border-radius: 4px;
+    }
+
+    .bullet-list {
+      margin: 20px 0;
+      padding-right: 25px;
+    }
+
+    .bullet-list li {
+      margin-bottom: 12px;
+      list-style-type: square;
+    }
+
+    .bullet-list strong {
+      color: var(--accent-gold);
+    }
+
+    @media print {
+      .no-print {
+        display: none;
+      }
+      body {
+        background-color: white;
+      }
+      .book-container {
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+      }
+      .page {
+        box-shadow: none;
+        border: 3px double var(--accent-gold);
+        page-break-after: always;
+        min-height: 100%;
+        height: 100vh;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="no-print">
+    <button onclick="window.print()">طباعة الدليل وتحميله كـ PDF</button>
+  </div>
+
+  <div class="book-container">
+    
+    <!-- Cover Page -->
+    <div class="page cover-page">
+      <div class="ornament">🌿</div>
+      <h1 class="cover-title">كيف تتوقف عن التفكير الزائد؟</h1>
+      <p class="cover-subtitle">دليل عملي لاستعادة هدوء العقل والسيطرة على أفكارك</p>
+      <p class="cover-desc">تحت إشراف حكمة ونور. هذا الدليل تم إعداده ليساعدك على تفكيك عادة التفكير الدائري المجهد، واسترداد السيطرة على طاقتك الفكرية اليومية.</p>
+      <div class="ornament">✨ 🏛️ ✨</div>
+    </div>
+
+    <!-- Page 1 -->
+    <div class="page">
+      <div class="page-header">
+        <span>كيف تتوقف عن التفكير الزائد؟</span>
+        <span>القسم الأول: الفهم والتشخيص</span>
+      </div>
+      
+      <div class="page-body">
+        <div class="quote-box">
+          "ليس ما يحدث لك هو ما يستنزفك... بل الطريقة التي تفكر بها فيما يحدث."
+        </div>
+
+        <h2>مقدمة الدليل</h2>
+        <p>هل سبق أن استيقظت في منتصف الليل لأن عقلك لم يتوقف عن التفكير؟</p>
+        <p>ربما راجعت نفس الموقف عشرات المرات، أو تخيلت مئات السيناريوهات التي قد لا تحدث أبدًا. هذه الحالة تُعرف باسم التفكير الزائد (Overthinking)، وهي من أكثر المشكلات النفسية انتشارًا في عصرنا.</p>
+        <p>قد يبدو التفكير شيئًا إيجابيًا، لكنه يتحول إلى عبء عندما يصبح دائريًا، فيستهلك طاقتك دون أن يقودك إلى أي حل. الخبر الجيد هو أن التفكير الزائد ليس جزءًا من شخصيتك، بل عادة ذهنية يمكن تدريب العقل على التخلص منها.</p>
+        <p>في هذا الدليل، ستتعرف على أسباب التفكير الزائد، وكيف يؤثر على حياتك، وأفضل الطرق العملية لاستعادة هدوء ذهنك.</p>
+        
+        <div class="quote-box" style="background: rgba(6, 6, 6, 0.02); border-color: var(--dark-green);">
+          <strong>ملخص سريع:</strong> ستتعلم في هذا المقال تشخيص أسباب التفكير الزائد، وتأثيراته النفسية والجسدية، والحصول على سبع خطوات عملية وقوية للتخلص منه فورًا وعيش اللحظة الحالية.
+        </div>
+      </div>
+      
+      <div class="page-footer">
+        <span>حكمة ونور</span>
+        <span>صفحة ١</span>
+      </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="page">
+      <div class="page-header">
+        <span>كيف تتوقف عن التفكير الزائد؟</span>
+        <span>القسم الثاني: الأسباب والتحليل</span>
+      </div>
+      
+      <div class="page-body">
+        <h2>1. ما هو التفكير الزائد؟</h2>
+        <p>التفكير الزائد هو تكرار تحليل المشكلة نفسها مرات عديدة دون الوصول إلى قرار أو نتيجة. بدلًا من أن يساعدك التفكير على حل المشكلة، يجعلك عالقًا داخلها.</p>
+        <p>غالبًا ما يدور حول:</p>
+        <ul class="bullet-list">
+          <li><strong>أخطاء الماضي:</strong> لوم الذات والندم على ما فات.</li>
+          <li><strong>الخوف من المستقبل:</strong> القلق من المجهول والتوقعات السلبية.</li>
+          <li><strong>آراء الآخرين:</strong> الهوس بكيفية رؤية الناس لتصرفاتنا.</li>
+          <li><strong>القرارات الصعبة:</strong> التردد المستمر وتضخيم الخيارات.</li>
+        </ul>
+
+        <div class="quote-box">
+          "العقل أداة رائعة عندما يقودك... لكنه يصبح سجنًا عندما يقودك الخوف."
+        </div>
+
+        <h2>2. لماذا نفكر أكثر من اللازم؟</h2>
+        <ul class="bullet-list">
+          <li><strong>الخوف من الفشل:</strong> يخشى الإنسان اتخاذ القرار فيؤجل كل شيء خوفًا من النتائج.</li>
+          <li><strong>السعي إلى الكمال:</strong> الرغبة المستمرة في جعل كل شيء مثاليًا ومطابقًا للتوقعات.</li>
+          <li><strong>التجارب السابقة:</strong> الخبرات المؤلمة تجعل العقل يحاول توقع كل الاحتمالات لحمايتك.</li>
+          <li><strong>المقارنة المستمرة:</strong> شبكات التواصل تجعلنا نظن أن الجميع يعيش حياة أفضل منا.</li>
+        </ul>
+      </div>
+      
+      <div class="page-footer">
+        <span>حكمة ونور</span>
+        <span>صفحة ٢</span>
+      </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="page">
+      <div class="page-header">
+        <span>كيف تتوقف عن التفكير الزائد؟</span>
+        <span>القسم الثالث: التأثير والحلول العملية</span>
+      </div>
+      
+      <div class="page-body">
+        <h2>3. كيف يؤثر التفكير الزائد على حياتك؟</h2>
+        <p>عندما يستمر التفكير الزائد لفترة طويلة، يبدأ تأثيره في الظهور على جميع جوانب الحياة:</p>
+        <ul class="bullet-list">
+          <li><strong>نفسيًا:</strong> زيادة القلق، انخفاض الثقة بالنفس، وفقدان متعة اللحظة الحالية.</li>
+          <li><strong>جسديًا:</strong> الأرق، الصداع المستمر، التوتر العضلي، والتعب والإرهاق الدائم.</li>
+          <li><strong>اجتماعيًا:</strong> الانعزال عن الآخرين، سوء التواصل، والتردد الشديد في العلاقات الشخصية.</li>
+        </ul>
+
+        <h2>4. سبع خطوات للتخلص من التفكير الزائد</h2>
+        <ul class="bullet-list" style="list-style-type: decimal;">
+          <li><strong>اسأل نفسك:</strong> هل هذه الفكرة حقيقة مؤكدة... أم مجرد احتمال وتوقع؟</li>
+          <li><strong>اكتب أفكارك:</strong> تدوين الأفكار على الورق يفرغ الفوضى الذهنية ويرتب الأولويات.</li>
+          <li><strong>حدّد وقتًا للتفكير:</strong> خصص 15 دقيقة فقط في اليوم للتفكير في المشاكل ثم أغلق الملف.</li>
+          <li><strong>ركز على ما تستطيع التحكم فيه:</strong> لا تهدر طاقتك على أشخاص أو أمور لا يمكنك تغييرها.</li>
+          <li><strong>تحرك وافعل شيئًا:</strong> ممارسة الرياضة أو المشي أو تغيير المكان يساعد على تهدئة العقل.</li>
+          <li><strong>قلل استخدام الهاتف:</strong> التقليل من تصفح الشبكات الاجتماعية يخفف المقارنة والقلق.</li>
+          <li><strong>عش اللحظة الحالية:</strong> ممارسة التنفس العميق والامتنان يعيدان عقلك للحاضر.</li>
+        </ul>
+      </div>
+      
+      <div class="page-footer">
+        <span>حكمة ونور</span>
+        <span>صفحة ٣</span>
+      </div>
+    </div>
+
+    <!-- Page 4 -->
+    <div class="page">
+      <div class="page-header">
+        <span>كيف تتوقف عن التفكير الزائد؟</span>
+        <span>القسم الرابع: الخلاصة والتأمل</span>
+      </div>
+      
+      <div class="page-body">
+        <h2>متى يجب طلب المساعدة؟</h2>
+        <p>إذا أصبح التفكير الزائد يمنعك من النوم لأيام متتالية، أو يؤثر بشكل مباشر في عملك، دراستك، أو جودة علاقاتك الشخصية، أو استمر لفترة طويلة مصحوبًا بضيق نفسي شديد، فمن الأفضل استشارة مختص أو طبيب نفسي لمساعدتك بخطط علاجية سلوكية.</p>
+
+        <h2>الخلاصة</h2>
+        <p>التفكير الزائد لا يعني أنك شخص ضعيف أو كثير القلق بطبيعتك، بل يعني أن عقلك يحاول حمايتك بطريقة غير فعّالة أو مفرطة الحذر.</p>
+        <p>في كل مرة تختار فيها العودة إلى اللحظة الحالية، وتفرق بين ما تستطيع تغييره وما لا تستطيع، فإنك تستعيد جزءًا كبيرًا من هدوئك الداخلي وسلامك الفكري.</p>
+
+        <div class="quote-box">
+          <strong>اقتباس اليوم:</strong> "راحة العقل لا تأتي من السيطرة على كل شيء... بل من قبول أن بعض الأمور ستظل خارج سيطرتنا."
+        </div>
+
+        <h2>سؤال للتأمل الذاتي</h2>
+        <p style="font-size: 1.35rem; color: var(--accent-gold); font-weight: bold;">
+          ما الفكرة التي تكررها في ذهنك منذ أيام... وهل قرّبتك من الحل أم أبعدتك عنه؟
+        </p>
+      </div>
+      
+      <div class="page-footer">
+        <span>حكمة ونور</span>
+        <span>صفحة ٤</span>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

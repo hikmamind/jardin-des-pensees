@@ -1007,6 +1007,23 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "category": "psychology",
+          "file": "stop-overthinking.html",
+          "image": "overthinking_calm.jpg",
+          "featured": true,
+          "title": "Comment arrêter de trop penser ?",
+          "readTime": "10 min read",
+          "desc": "Un guide pratique pour retrouver le calme mental, maîtriser vos pensées et vous libérer de l'anxiété.",
+          "body": [
+            "Vous est-il déjà arrivé de vous réveiller en pleine nuit parce que votre esprit refusait de s'arrêter ? Vous avez peut-être rejoué la même situation des dizaines de fois, ou imaginé des centaines de scénarios qui ne se réaliseront jamais. Cet état est connu sous le nom de surchauffe mentale (Overthinking), et c'est l'un des problèmes psychologiques les plus courants de notre époque.",
+            "Penser peut sembler positif, mais cela devient un fardeau lorsque cela tourne en boucle, consommant votre énergie sans jamais vous mener à une solution. La bonne nouvelle est que le surmenage mental n'est pas un trait de votre personnalité, mais une habitude mentale dont vous pouvez débarrasser votre esprit par l'entraînement. Dans ce guide, vous découvrirez les causes de la surchauffe, ses effets, et comment retrouver votre calme.",
+            "Qu'est-ce que le surmenage mental ? C'est le fait d'analyser sans fin le même problème sans jamais prendre de décision ou de direction concrète. Au lieu de vous aider, votre pensée vous emprisonne. Elle tourne souvent autour des erreurs du passé, de la peur de l'avenir, de l'opinion des autres et des décisions difficiles.",
+            "Pourquoi pensons-nous trop ? Plusieurs causes l'expliquent : la peur de l'échec qui nous pousse à procrastiner, le perfectionnisme où tout doit être irréprochable, les expériences passées douloureuses qui poussent le cerveau à anticiper tous les risques, et la comparaison constante via les réseaux sociaux.",
+            "Pour vous en libérer, voici sept étapes simples : demandez-vous si cette pensée est une réalité ou une simple hypothèse, couchez vos idées sur papier pour libérer de l'espace, dédiez un temps de réflexion limité (15 minutes max) par jour, concentrez-vous uniquement sur ce que vous pouvez contrôler, bougez pour apaiser votre esprit, limitez l'usage du téléphone, et pratiquez la pleine conscience en vivant le moment présent.",
+            "Si le surmenage mental vous empêche de dormir ou impacte négativement votre travail, vos études ou vos relations de manière prolongée, n'hésitez pas à consulter un professionnel de la santé mentale. Retrouver le calme ne consiste pas à tout contrôler, mais à accepter ce qui échappe à notre contrôle."
+          ]
+        },
+        {
           "category": "philosophy",
           "file": "existentialisme-sens-sartre.html",
           "image": "thinkers/images/nietzsche.jpg",
@@ -2308,6 +2325,23 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "category": "psychology",
+          "file": "stop-overthinking.html",
+          "image": "overthinking_calm.jpg",
+          "featured": true,
+          "title": "How to Stop Overthinking?",
+          "readTime": "10 min read",
+          "desc": "A practical guide to restore mental calm, regain control of your thoughts, and quiet anxiety.",
+          "body": [
+            "Have you ever woken up in the middle of the night because your mind just wouldn't stop racing? You might have replayed the same situation dozens of times, or imagined hundreds of scenarios that will never happen. This state is known as overthinking, and it is one of the most common psychological issues of our modern era.",
+            "Thinking might seem like a positive thing, but it becomes a burden when it turns circular, consuming your energy without ever leading to a solution. The good news is that overthinking is not part of your personality, but rather a mental habit that your brain can be trained to overcome. In this guide, you will learn the causes of overthinking, how it impacts you, and ways to quiet your mind.",
+            "What is overthinking? It is the repetitive analysis of the same problem without ever reaching a decision or outcome. Instead of helping you solve the problem, it leaves you stuck inside it. It usually revolves around past mistakes, fear of the future, others' opinions, or difficult decisions.",
+            "Why do we overthink? There are several key reasons: the fear of failure which leads to procrastination, perfectionism where we want everything to be flawless, painful past experiences that make the brain anticipate every possibility, and constant comparison on social media.",
+            "To break free, practice seven practical steps: ask yourself if a thought is a fact or just a possibility, write down your thoughts to declutter your mind, set a dedicated thinking time (15 minutes only) per day, focus only on what you can control, move your body to quiet your mind, reduce phone usage, and live in the present moment.",
+            "If overthinking prevents you from sleeping or negatively impacts your work, studies, or relationships over a long period, it is best to consult a mental health professional. Peace of mind doesn't come from controlling everything, but from accepting what is outside our control."
+          ]
+        },
+        {
           "category": "philosophy",
           "file": "existentialisme-sens-sartre.html",
           "image": "thinkers/images/nietzsche.jpg",
@@ -3608,6 +3642,23 @@ const TIKTOK_DATA = {
         }
       ],
       "articles": [
+        {
+          "category": "psychology",
+          "file": "stop-overthinking.html",
+          "image": "overthinking_calm.jpg",
+          "featured": true,
+          "title": "كيف تتوقف عن التفكير الزائد؟",
+          "readTime": "10 دقائق قراءة",
+          "desc": "دليل عملي لاستعادة هدوء العقل والسيطرة على أفكارك والتخلص من القلق المستمر.",
+          "body": [
+            "هل سبق أن استيقظت في منتصف الليل لأن عقلك لم يتوقف عن التفكير؟ ربما راجعت نفس الموقف عشرات المرات، أو تخيلت مئات السيناريوهات التي قد لا تحدث أبدًا. هذه الحالة تُعرف باسم التفكير الزائد (Overthinking)، وهي من أكثر المشكلات النفسية انتشارًا في عصرنا.",
+            "قد يبدو التفكير شيئًا إيجابيًا، لكنه يتحول إلى عبء عندما يصبح دائريًا، فيستهلك طاقتك دون أن يقودك إلى أي حل. الخبر الجيد هو أن التفكير الزائد ليس جزءًا من شخصيتك، بل عادة ذهنية يمكن تدريب العقل على التخلص منها. في هذا الدليل، ستتعرف على أسباب التفكير الزائد، وكيف يؤثر على حياتك، وأفضل الطرق العملية لاستعادة هدوء ذهنك.",
+            "التفكير الزائد هو تكرار تحليل المشكلة نفسها مرات عديدة دون الوصول إلى قرار أو نتيجة. بدلًا من أن يساعدك التفكير على حل المشكلة، يجعلك عالقًا داخلها. غالبًا ما يدور حول أخطاء الماضي، الخوف من المستقبل، آراء الآخرين، والقرارات الصعبة.",
+            "هناك عدة أسباب للتفكير الزائد: الخوف من الفشل الذي يجعل الإنسان يخشى اتخاذ القرار فيؤجل كل شيء، السعي إلى الكمال حيث يريد أن يكون كل شيء مثاليًا، التجارب السابقة المؤلمة التي تجعل العقل يحاول توقع كل الاحتمالات، والمقارنة المستمرة التي تجعلنا نظن أن الجميع يعيش حياة أفضل.",
+            "للتخلص من التفكير الزائد، اتبع سبع خطوات عملية: اسأل نفسك هل هذه الفكرة حقيقة أم مجرد احتمال، اكتب أفكارك لتقليل الفوضى الذهنية، حدّد وقتًا للتفكير (15 دقيقة فقط)، ركز على ما تستطيع التحكم فيه، تحرك لممارسة الرياضة والمشي، قلل استخدام الهاتف والمقارنة، وعش اللحظة الحالية بالتنفس العميق.",
+            "إذا أصبح التفكير الزائد يمنعك من النوم، أو يؤثر في عملك أو دراستك أو علاقاتك بشكل مستمر مع ضيق شديد، فمن الأفضل استشارة مختص في الصحة النفسية. راحة العقل لا تأتي من السيطرة على كل شيء، بل من قبول أن بعض الأمور ستظل خارج سيطرتنا."
+          ]
+        },
         {
           "category": "philosophy",
           "file": "existentialisme-sens-sartre.html",
