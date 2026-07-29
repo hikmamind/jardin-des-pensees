@@ -356,227 +356,293 @@ document.addEventListener('DOMContentLoaded', () => {
 function setupArticleModal(articles) {
   const modal = document.getElementById('articleModal');
   const closeBtn = document.getElementById('articleModalCloseBtn');
-  const metaEl = document.getElementById('modalArticleMeta');
   const titleEl = document.getElementById('modalArticleTitle');
+  const descEl = document.getElementById('modalArticleDesc');
+  const badgeEl = document.getElementById('modalArticleCategoryBadge');
+  const breadcrumbCatEl = document.getElementById('modalArticleCategoryBreadcrumb');
+  const breadcrumbTitleEl = document.getElementById('modalArticleTitleBreadcrumb');
+  const dateEl = document.getElementById('modalArticleDate');
+  const readTimeEl = document.getElementById('modalArticleReadTime');
+  const imgEl = document.getElementById('modalArticleImage');
+  
+  const quoteEl = document.getElementById('modalSidebarQuote');
+  const quoteAuthorEl = document.getElementById('modalSidebarQuoteAuthor');
   const bodyEl = document.getElementById('modalArticleBody');
   const downloadBtn = document.getElementById('modalDownloadBtn');
   
-  const modalImgContainer = document.getElementById('modalArticleImageContainer');
-  const modalImg = document.getElementById('modalArticleImage');
-  
   const cards = document.querySelectorAll('.article-card');
   
-  if (!modal || !closeBtn || !metaEl || !titleEl || !bodyEl || !downloadBtn) return;
+  if (!modal || !closeBtn || !titleEl || !bodyEl || !downloadBtn) return;
   
   function openArticleModal(index) {
     const art = articles[index];
-    if (art) {
-      metaEl.textContent = art.readTime;
-      titleEl.textContent = art.title;
-      
-      // Setup image in modal if present
-      if (art.image && modalImg && modalImgContainer) {
-        modalImg.src = `../${art.image}`;
-        modalImgContainer.style.display = 'block';
-      } else if (modalImgContainer) {
-        modalImgContainer.style.display = 'none';
+    if (!art) return;
+    
+    // Localized labels
+    const LOCALIZED_READER_LABELS = {
+      fr: {
+        home: "Accueil",
+        psychology: "Psychologie",
+        philosophy: "Philosophie",
+        development: "Développement personnel",
+        toc: "Dans cet article",
+        toc1: "1. Concept de base",
+        toc2: "2. Pourquoi cela arrive ?",
+        toc3: "3. Types & Variantes",
+        toc4: "4. Guide pratique",
+        intro: "Introduction",
+        quickSummary: "Résumé rapide",
+        readMore: "Lire plus dans l'article",
+        saveLater: "Enregistrer",
+        share: "Partager",
+        dontMiss: "Ne manquez pas nos prochains articles",
+        emailPlaceholder: "Votre adresse email...",
+        subscribe: "S'abonner",
+        privacyText: "Nous respectons votre vie privée.",
+        authorName: "Hikma & Nour",
+        cause1: "Témoignages",
+        cause2: "Comparaison",
+        cause3: "Attentes",
+        cause4: "Futur",
+        cause5: "Pressions",
+        type1: "Performance",
+        type2: "Futur",
+        type3: "Santé",
+        type4: "Généralisé",
+        type5: "Social"
+      },
+      en: {
+        home: "Home",
+        psychology: "Psychology",
+        philosophy: "Philosophy",
+        development: "Self-Development",
+        toc: "In this article",
+        toc1: "1. Core Concept",
+        toc2: "2. Why does it happen?",
+        toc3: "3. Types & Forms",
+        toc4: "4. Practical Guide",
+        intro: "Introduction",
+        quickSummary: "Quick Summary",
+        readMore: "Read more in the article",
+        saveLater: "Save",
+        share: "Share",
+        dontMiss: "Don't miss our next articles",
+        emailPlaceholder: "Your email address...",
+        subscribe: "Subscribe",
+        privacyText: "We respect your privacy.",
+        authorName: "Hikma & Nour",
+        cause1: "Experiences",
+        cause2: "Comparison",
+        cause3: "Expectations",
+        cause4: "Future Fear",
+        cause5: "Pressures",
+        type1: "Performance",
+        type2: "Anticipatory",
+        type3: "Health & Body",
+        type4: "Generalized",
+        type5: "Social Relation"
+      },
+      ar: {
+        home: "الرئيسية",
+        psychology: "علم النفس",
+        philosophy: "فلسفة",
+        development: "تطوير الذات",
+        toc: "في هذا المقال",
+        toc1: "١. المفهوم الأساسي",
+        toc2: "٢. لماذا يحدث ذلك؟",
+        toc3: "٣. الأنواع والأشكال",
+        toc4: "٤. خطوات عملية",
+        intro: "مقدمة",
+        quickSummary: "ملخص سريع",
+        readMore: "اقرأ المزيد في المقال",
+        saveLater: "حفظ للمطالعة لاحقاً",
+        share: "مشاركة المقال",
+        dontMiss: "لا تفوت مقالاتنا القادمة",
+        emailPlaceholder: "أدخل بريدك الإلكتروني",
+        subscribe: "اشترك الآن",
+        privacyText: "نحن نحترم خصوصيتك ولن نشارك بياناتك مع أي أحد.",
+        authorName: "Hikma & Nour",
+        cause1: "تجارب سابقة",
+        cause2: "المقارنة مع الآخرين",
+        cause3: "توقع الكمال",
+        cause4: "الخوف من المستقبل",
+        cause5: "ضغوط العمل",
+        type1: "قلق الأداء",
+        type2: "قلق مستقبلي",
+        type3: "قلق صحي",
+        type4: "قلق عام",
+        type5: "قلق اجتماعي"
       }
-      
-      // --- Localized layout labels for the Modern Article Structure ---
-      const LOCALIZED_LAYOUT_LABELS = {
-        fr: {
-          problemTitle: "📍 1. Le Constat / Le Problème",
-          solutionTitle: "📍 2. La Solution (Étape par étape)",
-          tipsTitle: "📍 3. Astuces Pros & Erreurs à Éviter",
-          conclusionTitle: "📍 4. Conclusion & Passage à l'Acte",
-          beforeLabel: "Avant / Sans Sagesse",
-          afterLabel: "Après / Avec Philosophie",
-          beforeDesc: "Réaction instinctive, stress, rumination et surmenage mental.",
-          afterDesc: "Calme intérieur, dichotomie du contrôle et paix d'esprit.",
-          premiumAccess: "✨ Accès Premium Word & PDF",
-          bannerTitle: "Pack Premium E-Book & Planner Notion",
-          bannerDesc: "Téléchargez la version complète de nos écrits sous forme de guide éditable au format Microsoft Word (.docx).",
-          downloadBtnText: "Télécharger le Guide complet",
-          visualInfo: "INFOGRAPHIE",
-          visualMockup: "MOCKUP APPAREIL",
-          visualMemo: "FICHE MÉMO"
-        },
-        en: {
-          problemTitle: "📍 1. The Observation / The Problem",
-          solutionTitle: "📍 2. The Solution (Step by Step)",
-          tipsTitle: "📍 3. Pro Tips & Mistakes to Avoid",
-          conclusionTitle: "📍 4. Conclusion & Action Call",
-          beforeLabel: "Before / Without Wisdom",
-          afterLabel: "After / With Philosophy",
-          beforeDesc: "Instinctive reaction, stress, overthinking and mental fatigue.",
-          afterDesc: "Inner peace, dichotomy of control and serenity of mind.",
-          premiumAccess: "✨ Premium Word & PDF Access",
-          bannerTitle: "Premium E-Book & Notion Planner Pack",
-          bannerDesc: "Download the complete version of our writings as an editable guide in Microsoft Word (.docx) format.",
-          downloadBtnText: "Download Complete Guide",
-          visualInfo: "INFOGRAPHIC",
-          visualMockup: "DEVICE MOCKUP",
-          visualMemo: "MEMO CARD"
-        },
-        ar: {
-          problemTitle: "١. تشخيص المشكلة والواقع الحالي",
-          solutionTitle: "٢. الحل الفلسفي (خطوة بخطوة)",
-          tipsTitle: "٣. نصائح الخبراء وتنبيهات الأخطاء",
-          conclusionTitle: "٤. الخلاصة والتطبيق العملي",
-          beforeLabel: "قبل / بدون الحكمة",
-          afterLabel: "بعد / مع الفلسفة والتأمل",
-          beforeDesc: "انفعال تلقائي، تفكير مفرط، قلق، وتشتت ذهني مستمر.",
-          afterDesc: "سكينة داخلية، تركيز على ما تملك، طمأنينة وراحة بال.",
-          premiumAccess: "✨ مستندات وورد و PDF جاهزة للتحميل",
-          bannerTitle: "الحزمة المتميزة: دليل العمل ومنظم الملاحظات",
-          bannerDesc: "قم بتحميل النسخة الكاملة لجميع مقالاتنا بصيغة ملف مايكروسوفت وورد (.docx) قابل للتعديل والطباعة.",
-          downloadBtnText: "تحميل المستند الكامل",
-          visualInfo: "رسم بياني مقارن",
-          visualMockup: "تطبيق الهاتف",
-          visualMemo: "بطاقة تلخيصية"
-        }
-      };
+    };
 
-      const labels = LOCALIZED_LAYOUT_LABELS[currentLang] || LOCALIZED_LAYOUT_LABELS.fr;
-      
-      const p1 = art.body[0] || "";
-      const p2 = art.body[1] || "";
-      const p3 = art.body[2] || "";
-      const p4 = art.body[3] || "";
-      const p5 = art.body[4] || art.desc || "";
-      const p6 = art.body[5] || "";
+    const labels = LOCALIZED_READER_LABELS[currentLang] || LOCALIZED_READER_LABELS.fr;
+    const categoryLabel = TIKTOK_DATA.ui[currentLang][art.category] || labels.psychology;
+    
+    if (titleEl) titleEl.textContent = art.title;
+    if (descEl) descEl.textContent = art.desc;
+    if (badgeEl) {
+      badgeEl.textContent = categoryLabel;
+      badgeEl.className = `reader-hero-badge category-${art.category}`;
+    }
+    if (breadcrumbCatEl) breadcrumbCatEl.textContent = categoryLabel;
+    if (breadcrumbTitleEl) breadcrumbTitleEl.textContent = art.title.slice(0, 32) + "...";
+    if (dateEl) dateEl.textContent = art.date || "20 mai 2024";
+    if (readTimeEl) readTimeEl.textContent = art.readTime;
+    if (imgEl && art.image) imgEl.src = `../${art.image}`;
 
-      // Format Section 2 (p3) into list items with bold words
-      let solutionHtml = "";
-      if (p3) {
-        const sentences = p3.split(/[.!?؛]/).map(s => s.trim()).filter(s => s.length > 0);
-        if (sentences.length > 0) {
-          solutionHtml = `<ul class="article-bullet-list" style="margin-bottom: 20px; padding-left: 20px; list-style-type: square; color: var(--text-secondary); line-height: 1.6;">`;
-          sentences.forEach(s => {
-            const words = s.split(' ');
-            const boldCount = Math.min(3, words.length);
-            const boldPart = words.slice(0, boldCount).join(' ');
-            const restPart = words.slice(boldCount).join(' ');
-            solutionHtml += `<li style="margin-bottom: 12px;"><strong>${boldPart}</strong> ${restPart}.</li>`;
-          });
-          solutionHtml += `</ul>`;
-        } else {
-          solutionHtml = `<p style="margin-bottom: 15px;">${p3}</p>`;
-        }
-      }
+    const p1 = art.body[0] || "";
+    const p2 = art.body[1] || "";
+    const p3 = art.body[2] || "";
+    const p4 = art.body[3] || "";
+    const p5 = art.body[4] || "";
+    const p6 = art.body[5] || "";
 
-      // Format Section 3 (p4) with callout quote box
-      let tipsHtml = `<p style="margin-bottom: 15px;">${p4}</p>`;
-      if (p4) {
-        tipsHtml += `
-          <div class="article-callout-box" style="margin: 20px 0; padding: 20px; border-left: 3px solid var(--accent-gold); background: rgba(223, 177, 91, 0.02); border-radius: 0 12px 12px 0; font-style: italic; color: var(--text-primary);">
-            "${p4.split('.')[0] || p4}"
+    if (quoteEl) quoteEl.textContent = p4 ? `${p4.split('.')[0]}...` : `${art.desc}`;
+    if (quoteAuthorEl) {
+      quoteAuthorEl.textContent = "— " + (art.title.includes('Sartre') ? 'Jean-Paul Sartre' : art.title.includes('Camus') ? 'Albert Camus' : art.title.includes('Nietzsche') ? 'Friedrich Nietzsche' : 'Hikma & Nour');
+    }
+
+    const mainHtml = `
+      <!-- Introduction Box (Split) -->
+      <section id="sec-intro" class="reader-content-section section-intro-box">
+        <div class="intro-box-grid">
+          <div class="intro-box-left">
+            <h3 class="section-part-title">
+              <span class="part-title-icon">🌿</span>
+              ${labels.intro}
+            </h3>
+            <p>${p1}</p>
           </div>
-        `;
-      }
-      
-      const modalBodyHtml = `
-        <!-- Lead Chapeau -->
-        <p class="article-chapeau-lead" style="font-size: 1.25rem; font-weight: 500; color: var(--text-primary); line-height: 1.6; margin-bottom: 25px; border-bottom: 1px solid rgba(223, 177, 91, 0.1); padding-bottom: 20px; text-align: justify;">
-          ${art.desc}
-        </p>
+          <div class="intro-box-right">
+            <h3 class="section-part-title">
+              <span class="part-title-icon">💡</span>
+              ${labels.quickSummary}
+            </h3>
+            <div class="quick-summary-card">
+              <p>${art.desc}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 1 : Concept de base -->
+      <section id="sec-1" class="reader-content-section">
+        <h3 class="section-part-title">
+          <span class="part-title-circle">🧠</span>
+          ${labels.toc1}
+        </h3>
+        <p>${p2 || p1}</p>
         
-        <!-- Section 1 : Problème -->
-        <div class="article-section-block">
-          <h3 class="article-section-title" style="font-size: 1.35rem; color: var(--accent-gold); margin: 25px 0 15px; font-family: 'Playfair Display', 'Amiri', serif;">${labels.problemTitle}</h3>
-          <p style="margin-bottom: 15px;">${p1}</p>
-          ${p2 ? `<p style="margin-bottom: 15px;">${p2}</p>` : ""}
-          
-          <!-- Visuel #2 : Infographie -->
-          <div class="article-visual-container visual-infography">
-            <div class="visual-badge">${labels.visualInfo}</div>
-            <div class="infography-grid">
-              <div class="infography-col col-before">
-                <span class="col-icon">❌</span>
-                <h4>${labels.beforeLabel}</h4>
-                <p>${labels.beforeDesc}</p>
-              </div>
-              <div class="infography-col col-after">
-                <span class="col-icon">🌿</span>
-                <h4>${labels.afterLabel}</h4>
-                <p>${labels.afterDesc}</p>
-              </div>
-            </div>
+        <!-- Highlight Quote Box -->
+        <div class="content-highlight-box">
+          <span class="highlight-icon">🌿</span>
+          <p class="highlight-text">"${p2 ? p2.split('.')[0] : art.desc}"</p>
+        </div>
+      </section>
+
+      <!-- Section 2 : Pourquoi cela arrive ? -->
+      <section id="sec-2" class="reader-content-section">
+        <h3 class="section-part-title">
+          <span class="part-title-circle">👤</span>
+          ${labels.toc2}
+        </h3>
+        <p>${p3 || p2}</p>
+        
+        <!-- Causes Grid (5 Columns) -->
+        <div class="causes-flex-row">
+          <div class="cause-grid-item">
+            <span class="cause-icon">🌧️</span>
+            <span class="cause-name">${labels.cause1}</span>
+          </div>
+          <div class="cause-grid-item">
+            <span class="cause-icon">👥</span>
+            <span class="cause-name">${labels.cause2}</span>
+          </div>
+          <div class="cause-grid-item">
+            <span class="cause-icon">🎯</span>
+            <span class="cause-name">${labels.cause3}</span>
+          </div>
+          <div class="cause-grid-item">
+            <span class="cause-icon">⏳</span>
+            <span class="cause-name">${labels.cause4}</span>
+          </div>
+          <div class="cause-grid-item">
+            <span class="cause-icon">💼</span>
+            <span class="cause-name">${labels.cause5}</span>
           </div>
         </div>
 
-        <!-- Section 2 : Solution -->
-        <div class="article-section-block">
-          <h3 class="article-section-title" style="font-size: 1.35rem; color: var(--accent-gold); margin: 30px 0 15px; font-family: 'Playfair Display', 'Amiri', serif;">${labels.solutionTitle}</h3>
-          ${solutionHtml}
-          
-          <!-- Visuel #3 : Mockup -->
-          <div class="article-visual-container visual-mockup">
-            <div class="visual-badge">${labels.visualMockup}</div>
-            <div class="mockup-phone">
-              <div class="phone-screen">
-                <div class="phone-app-header">🌿 حكمة ونور</div>
-                <div class="phone-app-content">
-                  <h5>${art.title}</h5>
-                  <p>${art.desc.slice(0, 75)}...</p>
-                  <div class="phone-button">READ</div>
-                </div>
-              </div>
-              <div class="mockup-annotation">
-                <span>${labels.premiumAccess}</span>
-              </div>
-            </div>
-          </div>
+        <!-- Read more button below grid -->
+        <div style="text-align: center; margin: 25px 0 10px;">
+          <button class="btn-read-more-grid" onclick="document.getElementById('sec-3').scrollIntoView({behavior:'smooth'});">
+            <span class="btn-grid-icon">▼</span>
+            <span>${labels.readMore}</span>
+          </button>
         </div>
+      </section>
 
-        <!-- Section 3 : Astuces -->
-        <div class="article-section-block">
-          <h3 class="article-section-title" style="font-size: 1.35rem; color: var(--accent-gold); margin: 30px 0 15px; font-family: 'Playfair Display', 'Amiri', serif;">${labels.tipsTitle}</h3>
-          ${tipsHtml}
-          
-          <!-- Visuel #4 : Fiche Mémo -->
-          <div class="article-visual-container visual-memo">
-            <div class="visual-badge">${labels.visualMemo}</div>
-            <div class="memo-content">
-              <span class="quote-symbol">“</span>
-              <p class="memo-quote-text">${p1.split('.')[0] || p1}</p>
-              <span class="memo-author">🌿 Le Jardin des Pensées</span>
-            </div>
+      <!-- Section 3 : Types et formes -->
+      <section id="sec-3" class="reader-content-section">
+        <h3 class="section-part-title">
+          <span class="part-title-circle">🌾</span>
+          ${labels.toc3}
+        </h3>
+        <p>${p4 || p3}</p>
+        
+        <!-- Types Grid (5 Cards) -->
+        <div class="types-cards-row">
+          <div class="type-card-item">
+            <span class="type-card-icon">📈</span>
+            <h4 class="type-card-heading">${labels.type1}</h4>
+          </div>
+          <div class="type-card-item">
+            <span class="type-card-icon">🔭</span>
+            <h4 class="type-card-heading">${labels.type2}</h4>
+          </div>
+          <div class="type-card-item">
+            <span class="type-card-icon">💖</span>
+            <h4 class="type-card-heading">${labels.type3}</h4>
+          </div>
+          <div class="type-card-item">
+            <span class="type-card-icon">🧠</span>
+            <h4 class="type-card-heading">${labels.type4}</h4>
+          </div>
+          <div class="type-card-item">
+            <span class="type-card-icon">👥</span>
+            <h4 class="type-card-heading">${labels.type5}</h4>
           </div>
         </div>
+      </section>
 
-        <!-- Conclusion & CTA -->
-        <div class="article-section-block">
-          <h3 class="article-section-title" style="font-size: 1.35rem; color: var(--accent-gold); margin: 30px 0 15px; font-family: 'Playfair Display', 'Amiri', serif;">${labels.conclusionTitle}</h3>
-          <p style="margin-bottom: 20px;">${p5}</p>
-          ${p6 ? `<p style="margin-bottom: 20px;">${p6}</p>` : ""}
-          
-          <!-- Visuel #5 : Bannière Promotionnelle -->
-          <div class="article-visual-container visual-banner">
-            <div class="banner-content">
-              <h4>${labels.bannerTitle}</h4>
-              <p>${labels.bannerDesc}</p>
-              <a href="../files/${art.file}" download target="_blank" class="banner-cta-btn" style="text-decoration: none;">
-                <span>${labels.downloadBtnText}</span>
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      `;
-      bodyEl.innerHTML = modalBodyHtml;
-      
-      // Setup download button link
+      <!-- Section 4 : Guide pratique -->
+      <section id="sec-4" class="reader-content-section">
+        <h3 class="section-part-title">
+          <span class="part-title-circle">📝</span>
+          ${labels.toc4}
+        </h3>
+        <p>${p5 || p3}</p>
+        ${p6 ? `<p>${p6}</p>` : ""}
+      </section>
+    `;
+
+    if (bodyEl) bodyEl.innerHTML = mainHtml;
+
+    if (downloadBtn) {
       downloadBtn.href = `../files/${art.file}`;
       downloadBtn.target = "_blank";
-      
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
+    }
+
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    
+    // Auto-scroll modal to top
+    const scrollContainer = modal.querySelector('.reader-scroll-container');
+    if (scrollContainer) {
+      scrollContainer.scrollTop = 0;
     }
   }
-  
+
   cards.forEach(card => {
-    // clicking anywhere that is data-index targets the modal
     const clickables = card.querySelectorAll('[data-index]');
     clickables.forEach(c => {
       c.addEventListener('click', (e) => {
@@ -586,7 +652,6 @@ function setupArticleModal(articles) {
         openArticleModal(index);
       });
     });
-    // Fallback: clicking card body anywhere opens modal
     card.addEventListener('click', (e) => {
       if (e.target.closest('.article-download-link')) return;
       const readBtn = card.querySelector('.card-action-link');
@@ -596,15 +661,15 @@ function setupArticleModal(articles) {
       }
     });
   });
-  
+
   function closeModal() {
     modal.classList.remove('active');
     document.body.style.overflow = '';
   }
-  
+
   closeBtn.addEventListener('click', closeModal);
-  
-  // Close on backdrop click
+
+  // Close on backdrop click (if clicking outside main content)
   modal.addEventListener('click', (e) => {
     if (e.target === modal) {
       closeModal();
