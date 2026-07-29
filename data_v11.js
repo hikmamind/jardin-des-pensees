@@ -461,34 +461,118 @@ const TIKTOK_DATA = {
       ],
       "quotes": [
         {
-          "text": "Ce qui trouble les hommes, ce ne sont pas les choses, mais les jugements qu'ils portent sur les choses.",
+          "text": "Ce qui trouble les hommes, ce ne sont pas les choses, mais les jugements qu'ils portent sur elles.",
           "author": "Épictète (Stoïcisme)",
-          "image": "thinkers/images/epictete.jpg"
+          "image": "thinkers/images/epictete.jpg",
+          "meaning": "L'anxiété et le stress ne proviennent pas des événements extérieurs, mais de la manière dont nous les interprétons.",
+          "philosophy": "Épictète enseigne que la clé de la liberté mentale est de distinguer ce qui dépend de nous (nos jugements) de ce qui n'en dépend pas.",
+          "lessons": [
+            "Assumez la responsabilité de vos émotions.",
+            "Changez votre jugement pour changer votre vie.",
+            "Concentrez-vous sur vos réactions.",
+            "La peur est une création de l'esprit."
+          ],
+          "application": "La prochaine fois que vous ressentez de la colère, faites une pause et demandez-vous : est-ce l'événement ou mon interprétation qui me blesse ?",
+          "reflection": "Quel événement récent vous a stressé ? Était-ce dû à l'événement lui-même ou à vos attentes ?",
+          "similarQuote": {
+            "text": "Le bonheur ne s'achète pas, il se façonne à l'intérieur de l'esprit.",
+            "author": "Socrate"
+          }
         },
         {
           "text": "Une vie sans examen ne vaut pas la peine d'être vécue.",
-          "author": "Socrate (Philosophie)",
-          "image": "thinkers/images/socrate.jpg"
+          "author": "Socrate (Philosophie Classique)",
+          "image": "thinkers/images/socrate.jpg",
+          "meaning": "Vivre sans réfléchir à nos choix ou valeurs rend notre vie vide de sens et de véritable conscience.",
+          "philosophy": "Socrate pensait que l'auto-examen est le seul chemin vers la vertu, la vraie connaissance et le bonheur durable.",
+          "lessons": [
+            "Évitez le conformisme aveugle.",
+            "Révisez régulièrement vos objectifs.",
+            "La conscience de soi est le début de la sagesse.",
+            "Cherchez toujours la vérité."
+          ],
+          "application": "Prenez 10 minutes ce soir pour réfléchir à vos actions du jour et vous demander : correspondent-elles à mes valeurs ?",
+          "reflection": "À quand remonte la dernière fois où vous avez remis en question une croyance ancienne pour la rejeter ?",
+          "similarQuote": {
+            "text": "Connais-toi toi-même, c'est là que commence la sagesse.",
+            "author": "Platon"
+          }
         },
         {
-          "text": "La vie est comme une pièce de théâtre : ce qui importe, ce n'est pas qu'elle dure longtemps, mais qu'elle soit bien jouée.",
-          "author": "Sénèque (Philosophie)",
-          "image": "thinkers/images/seneque.jpg"
+          "text": "Nous souffrons plus souvent dans l'imagination que dans la réalité.",
+          "author": "Sénèque (Stoïcisme)",
+          "image": "thinkers/images/seneque.jpg",
+          "meaning": "La plupart de nos douleurs sont des scénarios fictifs créés par notre esprit pour l'avenir, la réalité étant souvent plus douce.",
+          "philosophy": "Sénèque insiste sur le fait que s'inquiéter de l'avenir et anticiper les malheurs épuise notre paix intérieure sans intérêt.",
+          "lessons": [
+            "La peur amplifie les problèmes.",
+            "Vivez dans les limites du jour présent.",
+            "N'anticipez pas les malheurs.",
+            "L'esprit est sévère s'il est gouverné par la peur."
+          ],
+          "application": "Lorsque vous vous inquiétez pour le futur, écrivez le pire scénario et acceptez-le ; vous verrez la peur s'évaporer.",
+          "reflection": "Pensez à une inquiétude de la semaine dernière. Ce que vous craigniez s'est-il réellement produit ?",
+          "similarQuote": {
+            "text": "Celui qui craint de souffrir souffre déjà de sa crainte.",
+            "author": "Épictète"
+          }
         },
         {
-          "text": "Celui qui a un pourquoi dans la vie peut supporter presque n'importe quel comment.",
-          "author": "Friedrich Nietzsche",
-          "image": "thinkers/images/nietzsche.jpg"
+          "text": "Celui qui a un \"pourquoi\" qui lui tient lieu de vie peut supporter presque tous les \"comment\".",
+          "author": "Friedrich Nietzsche (Existentialisme)",
+          "image": "thinkers/images/nietzsche.jpg",
+          "meaning": "Lorsque vous avez un but noble et une raison d'exister, vous pouvez surmonter toutes les difficultés sur votre chemin.",
+          "philosophy": "Nietzsche voit la souffrance comme inévitable, mais un but personnel transforme la douleur en opportunité de croissance.",
+          "lessons": [
+            "Définissez votre mission de vie.",
+            "La souffrance forge la force.",
+            "Ne cherchez pas le confort, cherchez le sens.",
+            "Vous êtes responsable de votre but."
+          ],
+          "application": "Écrivez votre but ultime en une phrase et placez-la là où vous la verrez chaque jour pour vous rappeler pourquoi vous luttez.",
+          "reflection": "Quel objectif vous rend prêt à endurer les difficultés et à sacrifier votre confort ?",
+          "similarQuote": {
+            "text": "La fin est ce qui donne sa forme et sa force à la vie.",
+            "author": "Aristote"
+          }
         },
         {
           "text": "Je ne suis pas ce qui m'est arrivé, je suis ce que je choisis de devenir.",
-          "author": "Carl Jung (Psychologie)",
-          "image": "thinkers/images/jung.jpg"
+          "author": "Carl Jung (Psychologie Analytique)",
+          "image": "thinkers/images/jung.jpg",
+          "meaning": "Vos expériences passées ne définissent pas votre identité ou votre futur ; ce sont vos décisions actuelles qui vous façonnent.",
+          "philosophy": "Jung met l'accent sur l'individualisation et le libre choix : l'homme peut transcender les traumatismes et se réinventer.",
+          "lessons": [
+            "Vous n'êtes pas la victime de votre passé.",
+            "La conscience vous libère des vieux schémas.",
+            "Choisissez consciemment votre futur.",
+            "Prenez la responsabilité du changement."
+          ],
+          "application": "Identifiez un comportement répétitif lié à votre passé et décidez consciemment de changer votre réaction aujourd'hui.",
+          "reflection": "Y a-t-il un souvenir douloureux qui influence encore vos choix ? Comment le surmonter ?",
+          "similarQuote": {
+            "text": "La liberté est ce que vous faites de ce qu'on vous a fait.",
+            "author": "Jean-Paul Sartre"
+          }
         },
         {
           "text": "Le bonheur de votre vie dépend de la qualité de vos pensées.",
           "author": "Marc Aurèle (Stoïcisme)",
-          "image": "thinkers/images/marcaurele.jpg"
+          "image": "thinkers/images/marcaurele.jpg",
+          "meaning": "Votre paix intérieure et la qualité de votre vie sont le reflet direct des pensées et du dialogue intérieur qui nourrissent votre esprit.",
+          "philosophy": "L'empereur-philosophe croit que le contrôle de l'esprit et l'élimination de la négativité sont le chemin le plus court vers la paix.",
+          "lessons": [
+            "Surveillez votre dialogue intérieur.",
+            "Chassez immédiatement les pensées toxiques.",
+            "Le contentement apporte le bonheur.",
+            "Votre esprit est votre forteresse."
+          ],
+          "application": "Commencez votre journée en écrivant 3 pensées positives et interdisez-vous de vous plaindre aujourd'hui.",
+          "reflection": "Si vos pensées se matérialisaient en un lieu physique, serait-il agréable d'y vivre ou chaotique ?",
+          "similarQuote": {
+            "text": "Le bonheur ne réside pas dans les choses, mais dans l'esprit.",
+            "author": "Schopenhauer"
+          }
         }
       ],
       "advices": [
@@ -1796,34 +1880,118 @@ const TIKTOK_DATA = {
       ],
       "quotes": [
         {
-          "text": "Men are disturbed not by things, but by the views which they take of things.",
+          "text": "Men are disturbed not by things, but by the view which they take of them.",
           "author": "Epictetus (Stoicism)",
-          "image": "thinkers/images/epictete.jpg"
+          "image": "thinkers/images/epictete.jpg",
+          "meaning": "Anxiety and stress do not come from external events, but from how we interpret and judge them.",
+          "philosophy": "Epictetus teaches that the key to mental freedom is separating what is in our control (our judgments) from what is not.",
+          "lessons": [
+            "Take responsibility for your emotions.",
+            "Change your perspective to change your life.",
+            "Focus on your responses.",
+            "Fear is created by your thoughts."
+          ],
+          "application": "Next time you feel angry, pause and ask yourself: is the event itself causing this, or is it my interpretation?",
+          "reflection": "What recent event caused you stress? Was it the event itself or your expectations?",
+          "similarQuote": {
+            "text": "Happiness is not bought, it is crafted within the mind.",
+            "author": "Socrates"
+          }
         },
         {
           "text": "The unexamined life is not worth living.",
-          "author": "Socrates (Philosophy)",
-          "image": "thinkers/images/socrate.jpg"
+          "author": "Socrates (Classical Philosophy)",
+          "image": "thinkers/images/socrate.jpg",
+          "meaning": "Living without examining our choices or values makes our life empty of meaning and true consciousness.",
+          "philosophy": "Socrates believed that self-examination is the only path to virtue, true knowledge, and sustainable happiness.",
+          "lessons": [
+            "Avoid blind conformity.",
+            "Regularly review your goals.",
+            "Self-awareness is the first step to wisdom.",
+            "Always seek the truth."
+          ],
+          "application": "Take 10 minutes tonight to reflect on your daily choices and ask: do my actions express my true beliefs?",
+          "reflection": "When was the last time you reviewed an old belief and realized it no longer served you?",
+          "similarQuote": {
+            "text": "Know yourself, for that is where wisdom begins.",
+            "author": "Plato"
+          }
         },
         {
-          "text": "Life is like a play: what matters is not how long it lasts, but how well it is acted.",
-          "author": "Seneca (Philosophy)",
-          "image": "thinkers/images/seneque.jpg"
+          "text": "We suffer more often in imagination than in reality.",
+          "author": "Seneca (Stoicism)",
+          "image": "thinkers/images/seneque.jpg",
+          "meaning": "Most of our pains are fictional scenarios created by our mind for the future, while reality is usually softer.",
+          "philosophy": "Seneca focuses on how worrying about the future and anticipating misfortunes drains our inner peace with no benefit.",
+          "lessons": [
+            "Fear magnifies problems.",
+            "Live within the limits of the present day.",
+            "Do not anticipate negative events.",
+            "The mind is a harsh judge if left to fear."
+          ],
+          "application": "When you worry about a future issue, write down the worst-case scenario and accept it; fear will vanish.",
+          "reflection": "Think about a worry you had last week. Did what you feared actually happen to the same degree?",
+          "similarQuote": {
+            "text": "He who worries before it is necessary, worries more than is necessary.",
+            "author": "Epictetus"
+          }
         },
         {
           "text": "He who has a why to live can bear almost any how.",
-          "author": "Friedrich Nietzsche",
-          "image": "thinkers/images/nietzsche.jpg"
+          "author": "Friedrich Nietzsche (Existentialism)",
+          "image": "thinkers/images/nietzsche.jpg",
+          "meaning": "When you have a noble purpose and goal for your life, you can overcome any difficulties or pain on your way.",
+          "philosophy": "Nietzsche views suffering as inevitable, but a clear personal purpose transforms pain into fuel for growth and height.",
+          "lessons": [
+            "Define your life mission.",
+            "Suffering creates strength.",
+            "Do not seek comfort, seek meaning.",
+            "You are responsible for your purpose."
+          ],
+          "application": "Write your ultimate purpose in one line and place it where you see it daily to remember why you struggle.",
+          "reflection": "What goal makes you willing to endure hardships and sacrifice your comfort?",
+          "similarQuote": {
+            "text": "The end is what gives shape and strength to life.",
+            "author": "Aristotle"
+          }
         },
         {
           "text": "I am not what happened to me, I am what I choose to become.",
-          "author": "Carl Jung (Psychology)",
-          "image": "thinkers/images/jung.jpg"
+          "author": "Carl Jung (Analytical Psychology)",
+          "image": "thinkers/images/jung.jpg",
+          "meaning": "Your past experiences do not define your identity or your future; your current choices and decisions shape you.",
+          "philosophy": "Jung emphasizes individualization and free choice: man is capable of transcending trauma and reinventing himself.",
+          "lessons": [
+            "You are not a victim of your past.",
+            "Awareness frees you from old programming.",
+            "Consciously choose your future.",
+            "Take responsibility for change."
+          ],
+          "application": "Write down one repetitive behavior from your past, and consciously decide to change your reaction today.",
+          "reflection": "Is there a painful memory that still dictates your current choices? How can you transcend it?",
+          "similarQuote": {
+            "text": "Freedom is what you do with what was done to you.",
+            "author": "Jean-Paul Sartre"
+          }
         },
         {
           "text": "The happiness of your life depends upon the quality of your thoughts.",
           "author": "Marcus Aurelius (Stoicism)",
-          "image": "thinkers/images/marcaurele.jpg"
+          "image": "thinkers/images/marcaurele.jpg",
+          "meaning": "Your inner peace and life quality are a direct reflection of the thoughts and self-talk you feed your mind daily.",
+          "philosophy": "The Emperor-philosopher believes that controlling the mind and cleansing it of negativity is the shortest path to peace.",
+          "lessons": [
+            "Monitor your self-talk.",
+            "Immediately dismiss toxic thoughts.",
+            "Contentment brings happiness.",
+            "Your mind is your citadel."
+          ],
+          "application": "Start your day by writing 3 positive thoughts and forbid yourself from complaining today.",
+          "reflection": "If your thoughts materialized into a physical place, would it be a comfortable environment to live in?",
+          "similarQuote": {
+            "text": "Happiness lies not in things, but in the mind.",
+            "author": "Schopenhauer"
+          }
         }
       ],
       "advices": [
@@ -3133,32 +3301,116 @@ const TIKTOK_DATA = {
         {
           "text": "ما يقلق الناس ليس الأشياء في حد ذاتها، بل الأحكام التي يطلقونها عليها.",
           "author": "إبيكتيتوس (الرواقية)",
-          "image": "thinkers/images/epictete.jpg"
+          "image": "thinkers/images/epictete.jpg",
+          "meaning": "القلق والتوتر لا ينبعان من الأحداث الخارجية، بل من كيفية تفسيرنا لها ونظرتنا إليها.",
+          "philosophy": "يرى إبيكتيتوس أن مفتاح الحرية النفسية هو التمييز بين ما نتحكم فيه (أفكارنا وأحكامنا) وما لا نتحكم فيه (الظروف الخارجية).",
+          "lessons": [
+            "تحمل مسؤولية مشاعرك.",
+            "غير طريقة تفكيرك لتتغير حياتك.",
+            "ركز على ردود أفعالك.",
+            "الخوف وهم من صنع أفكارك."
+          ],
+          "application": "في المرة القادمة التي تشعر فيها بالغضب، توقف لثوانٍ واسأل نفسك: هل المشكلة في الحدث نفسه، أم في تفسيري له؟",
+          "reflection": "ما هو الحدث الأخير الذي تسبب في توترك؟ وهل كان التوتر بسبب الحدث أم بسبب توقعاتك؟",
+          "similarQuote": {
+            "text": "السعادة لا تباع في الأسواق، بل تصنع داخل عقلك.",
+            "author": "سقراط"
+          }
         },
         {
           "text": "الحياة غير المفحوصة لا تستحق العيش.",
-          "author": "سقراط (الفلسفة)",
-          "image": "thinkers/images/socrate.jpg"
+          "author": "سقراط (الفلسفة الكلاسيكية)",
+          "image": "thinkers/images/socrate.jpg",
+          "meaning": "العيش دون تفكير أو مراجعة لقراراتنا وقيمنا يجعل حياتنا خالية من المعنى والوعي الحقيقي.",
+          "philosophy": "يعتقد سقراط أن الفحص الذاتي والتساؤل المستمر هما الطريق الوحيد للفضيلة والمعرفة الحقيقية والسعادة المستدامة.",
+          "lessons": [
+            "تجنب التقليد الأعمى.",
+            "راجع أهدافك وقيمك بانتظام.",
+            "الوعي بالذات هو أول خطوة للحكمة.",
+            "ابحث دائماً عن الحقيقة."
+          ],
+          "application": "خصص 10 دقائق هذا المساء لمراجعة قراراتك اليومية واسأل نفسك: هل تعبر تصرفاتي اليوم عن قناعاتي الحقيقية؟",
+          "reflection": "متى كانت آخر مرة راجعت فيها معتقدًا قديمًا واكتشفت أنه لم يعد يخدمك أو يعبر عنك؟",
+          "similarQuote": {
+            "text": "اعرف نفسك بنفسك، فمن هناك تبدأ الحكمة.",
+            "author": "أفلاطون"
+          }
         },
         {
-          "text": "الحياة مثل المسرحية: لا يهم طولها بل كيف تم تأديتها.",
-          "author": "سينيكا (الفلسفة)",
-          "image": "thinkers/images/seneque.jpg"
+          "text": "نحن نعاني في الغالب في الخيال أكثر مما نعاني في الواقع.",
+          "author": "سينيكا (الرواقية)",
+          "image": "thinkers/images/seneque.jpg",
+          "meaning": "معظم آلامنا ومخاوفنا هي سيناريوهات وهمية يصنعها عقلنا للمستقبل، بينما الواقع غالباً ما يكون أقل قسوة.",
+          "philosophy": "يركز سينيكا على أن القلق من المستقبل والتوقع المستمر للمصائب يستنزف سلامنا الداخلي دون فائدة حقيقية.",
+          "lessons": [
+            "الخوف يضخم المشكلات.",
+            "عش في حدود يومك الحالي.",
+            "لا تسبق الأحداث السلبية.",
+            "العقل قاضٍ قاسي إذا ترك للخوف."
+          ],
+          "application": "عندما تبدأ في القلق من مشكلة مستقبلية، اكتب أسوأ احتمال وتدرب على قبول حدوثه، ستجد أن الخوف تبخر.",
+          "reflection": "فكر في قلق تملكك الأسبوع الماضي، هل حدث ما كنت تخشاه فعلياً بنفس الدرجة؟",
+          "similarQuote": {
+            "text": "من يقلق قبل أن يحين الوقت، يقلق أكثر مما ينبغي.",
+            "author": "إبيكتيتوس"
+          }
         },
         {
-          "text": "من يملك 'لماذا' يعيش من أجلها، يمكنه تحمل أي 'كيف' تقريباً.",
-          "author": "فريدريك نيتشه",
-          "image": "thinkers/images/nietzsche.jpg"
+          "text": "من لديه \"لماذا\" يعيش من أجلها يمكنه تحمل أي \"كيف\" تقريبًا.",
+          "author": "فريدريش نيتشه (الوجودية)",
+          "image": "thinkers/images/nietzsche.jpg",
+          "meaning": "عندما تملك غاية وهدفاً عظيماً لحياتك، ستتمكن من تجاوز أي صعوبات أو آلام تواجهها في طريقك.",
+          "philosophy": "يرى نيتشه أن المعاناة جزء حتمي من الوجود، لكن وجود غاية شخصية واضحة يحول الألم إلى وقود للنمو والارتقاء.",
+          "lessons": [
+            "حدد رسالتك وغايتك الشخصية.",
+            "المعاناة تصنع القوة.",
+            "لا تبحث عن الراحة بل عن المعنى.",
+            "أنت المسؤول عن صنع غايتك."
+          ],
+          "application": "اكتب غايتك الكبرى في الحياة في سطر واحد وضعه في مكان تراه يومياً لتتذكر سبب كفاحك واستمرارك.",
+          "reflection": "ما هو الشيء أو الهدف الذي يجعلك مستعداً لتحمل الصعاب والتضحية براحتك من أجله؟",
+          "similarQuote": {
+            "text": "الغاية هي التي تمنح الحياة شكلها وقوتها.",
+            "author": "أرسطو"
+          }
         },
         {
-          "text": "أنا لست ما حدث لي، أنا ما أختار أن أكونه.",
-          "author": "كارل يونغ (علم النفس)",
-          "image": "thinkers/images/jung.jpg"
+          "text": "أنا لست ما حدث لي، أنا ما اخترت أن أكون.",
+          "author": "كارل يونغ (علم النفس التحليلي)",
+          "image": "thinkers/images/jung.jpg",
+          "meaning": "تجاربك السابقة وماضيك لا يحددان هويتك أو مستقبلك، بل قراراتك واختياراتك الحالية هي ما تصنعك.",
+          "philosophy": "يؤكد يونغ على الفردية وحرية الاختيار، فالإنسان قادر على تجاوز الصدمات وصنع شخصية جديدة واعية.",
+          "lessons": [
+            "أنت لست ضحية لماضيك.",
+            "الوعي يحررك من البرمجة القديمة.",
+            "اختر مستقبلك بوعي الآن.",
+            "تحمل مسؤولية التغيير."
+          ],
+          "application": "اكتب تصرفاً واحداً تكرره بسبب ماضيك، وقرر بوعي تغيير رد فعلك تجاهه ابتداءً من اليوم.",
+          "reflection": "هل هناك ذكرى أو تجربة مؤلمة لا تزال تسمح لها بتحديد خياراتك الحالية؟ كيف تتجاوزها؟",
+          "similarQuote": {
+            "text": "الحرية هي ما تفعله بما فُعل بك.",
+            "author": "جان بول سارتر"
+          }
         },
         {
-          "text": "سعادة حياتك تعتمد على جودة أفكارك.",
+          "text": "السعادة في حياتك تعتمد على جودة أفكارك.",
           "author": "ماركوس أوريليوس (الرواقية)",
-          "image": "thinkers/images/marcaurele.jpg"
+          "image": "thinkers/images/marcaurele.jpg",
+          "meaning": "جودة حياتك وسلامك الداخلي هما انعكاس مباشر للأفكار والحديث الداخلي الذي تغذي به عقلك يومياً.",
+          "philosophy": "يعتقد الإمبراطور الفيلسوف أن التحكم في العقل وتطهيره من الأفكار السلبية والشكوى هما أقصر الطرق للسلام.",
+          "lessons": [
+            "راقب حديثك الداخلي.",
+            "اطرد الأفكار السامة فوراً.",
+            "الرضا والقناعة يصنعان السعادة.",
+            "عقلك هو قلعتك الحصينة."
+          ],
+          "application": "ابدأ يومك بكتابة 3 أفكار إيجابية تدعم تركيزك وهدوءك، وامنع نفسك من الشكوى طوال اليوم.",
+          "reflection": "إذا تجسدت أفكارك الحالية في واقع ملموس، فهل ستكون بيئة مريحة للعيش فيها أم مكاناً فوضوياً؟",
+          "similarQuote": {
+            "text": "السعادة ليست في الظروف، بل في طريقة التفكير.",
+            "author": "شوبنهاور"
+          }
         }
       ],
       "advices": [

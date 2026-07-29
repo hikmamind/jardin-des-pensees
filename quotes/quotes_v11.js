@@ -150,6 +150,7 @@ function displayNewWisdom(immediate = false) {
 }
 
 // --- Render All Quotes ---
+
 function renderAllQuotes() {
   const container = document.getElementById('quotesGridContainer');
   if (!container) return;
@@ -160,7 +161,7 @@ function renderAllQuotes() {
   const html = quotes.map((q, index) => {
     const authorImg = `../${q.image}` || '../thinkers/images/nietzsche.jpg';
     return `
-      <div class="quote-item-card">
+      <div class="quote-item-card" data-quote-index="${index}" style="cursor: pointer;">
         <span class="quote-card-ornament">❝</span>
         <p class="quote-item-text">"${q.text}"</p>
         <div class="quote-item-footer">
@@ -192,10 +193,23 @@ function renderAllQuotes() {
 
   container.innerHTML = html;
 
-  // Bind Actions
+  // Bind Card Click to open reader modal
+  const cards = container.querySelectorAll('.quote-item-card');
+  cards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('.copy-btn') || e.target.closest('.share-btn')) {
+        return;
+      }
+      const idx = parseInt(card.getAttribute('data-quote-index'), 10);
+      openQuoteModal(idx);
+    });
+  });
+
+  // Bind Copy Actions
   const copyButtons = container.querySelectorAll('.copy-btn');
   copyButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
       const idx = parseInt(btn.getAttribute('data-index'), 10);
       const q = quotes[idx];
       const textToCopy = `"${q.text}" — ${q.author}`;
@@ -208,9 +222,11 @@ function renderAllQuotes() {
     });
   });
 
+  // Bind Share Actions
   const shareButtons = container.querySelectorAll('.share-btn');
   shareButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
       const idx = parseInt(btn.getAttribute('data-index'), 10);
       const q = quotes[idx];
       const shareText = `"${q.text}" — ${q.author}`;
@@ -228,16 +244,84 @@ function renderAllQuotes() {
   });
 }
 
-function showToast(message) {
-  const toast = document.getElementById('toastNotification');
-  if (!toast) return;
+// --- Quote Detail Modal Logic ---
+function openQuoteModal(idx) {
+  const modal = document.getElementById('quoteModal');
+  if (!modal) return;
 
-  toast.textContent = message;
-  toast.classList.add('active');
+  const quotes = TIKTOK_DATA.content[currentLang].quotes;
+  const quote = quotes[idx];
+  if (!quote) return;
 
-  setTimeout(() => {
-    toast.classList.remove('active');
-  }, 2500);
+  // Fill in content
+  document.getElementById('modalQuoteAuthorBreadcrumb').textContent = quote.author;
+  document.getElementById('modalQuoteAuthorImage').src = `../${quote.image}`;
+  document.getElementById('modalQuoteAuthorImage').alt = quote.author;
+  document.getElementById('modalQuoteText').textContent = quote.text;
+  document.getElementById('modalQuoteAuthor').textContent = `— ${quote.author}`;
+  document.getElementById('modalQuoteMeaning').textContent = quote.meaning;
+  document.getElementById('modalQuotePhilosophy').textContent = quote.philosophy;
+
+  // Lessons list mapping
+  const lessonsContainer = document.getElementById('modalQuoteLessons');
+  lessonsContainer.innerHTML = (quote.lessons || []).map(lesson => `
+    <li class="quote-detail-list-item">${lesson}</li>
+  `).join('');
+
+  document.getElementById('modalQuoteApplication').textContent = quote.application;
+  document.getElementById('modalQuoteReflection').textContent = quote.reflection;
+
+  // Similar quote
+  document.getElementById('modalQuoteSimilarText').textContent = `"${quote.similarQuote.text}"`;
+  document.getElementById('modalQuoteSimilarAuthor').textContent = `— ${quote.similarQuote.author}`;
+
+  // Localized headers translations
+  document.getElementById('meaningTitle').textContent = currentLang === 'ar' ? 'معنى الاقتباس' : currentLang === 'en' ? 'Meaning of the Quote' : 'Signification de la citation';
+  document.getElementById('philosophyTitle').textContent = currentLang === 'ar' ? 'التفسير الفلسفي' : currentLang === 'en' ? 'Philosophical Interpretation' : 'Interprétation philosophique';
+  document.getElementById('lessonsTitle').textContent = currentLang === 'ar' ? 'ماذا نتعلم؟' : currentLang === 'en' ? 'What do we learn?' : 'Que découvrons-nous ?';
+  document.getElementById('applicationTitle').textContent = currentLang === 'ar' ? 'تطبيق عملي' : currentLang === 'en' ? 'Practical Application' : 'Application pratique';
+  document.getElementById('reflectionTitle').textContent = currentLang === 'ar' ? 'سؤال للتأمل' : currentLang === 'en' ? 'Question for Reflection' : 'Question pour méditer';
+  document.getElementById('readAlsoTitle').textContent = currentLang === 'ar' ? 'اقرأ أيضاً' : currentLang === 'en' ? 'Read Also' : 'À lire aussi';
+  document.getElementById('similarQuoteTitle').textContent = currentLang === 'ar' ? 'اقتباس مشابه' : currentLang === 'en' ? 'Similar Quote' : 'Citation similaire';
+  document.getElementById('reflectionBtn').textContent = currentLang === 'ar' ? 'شارك إجابتك في التعليقات' : currentLang === 'en' ? 'Share your response in comments' : 'Partagez votre avis en commentaires';
+
+  // Read also articles (3 items)
+  const readAlsoContainer = document.getElementById('modalQuoteReadAlso');
+  const articles = TIKTOK_DATA.content[currentLang].articles.slice(0, 3);
+  readAlsoContainer.innerHTML = articles.map(art => {
+    const artImg = `../${art.image}` || '../tree_sunset_field.jpg';
+    return `
+      <a href="../articles/?category=${art.category}" class="read-also-item">
+        <div class="read-also-thumb">
+          <img src="${artImg}" alt="${art.title}">
+        </div>
+        <div class="read-also-info">
+          <h5 class="read-also-item-title">${art.title}</h5>
+          <span class="read-also-item-link">${currentLang === 'ar' ? 'قراءة المقال ←' : currentLang === 'en' ? 'Read Article ←' : 'Lire l\'article ←'}</span>
+        </div>
+      </a>
+    `;
+  }).join('');
+
+  // Show Modal & Disable Background Scroll
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+
+  // Close actions
+  const closeBtn = document.getElementById('quoteModalCloseBtn');
+  const closeModal = () => {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+  
+  closeBtn.onclick = closeModal;
+  
+  // Close on outer click
+  modal.onclick = (e) => {
+    if (e.target === modal || e.target.classList.contains('reader-scroll-container')) {
+      closeModal();
+    }
+  };
 }
 
 // --- Initialize Page ---
