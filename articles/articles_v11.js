@@ -467,6 +467,72 @@ function setupArticleModal(articles) {
     const labels = LOCALIZED_READER_LABELS[currentLang] || LOCALIZED_READER_LABELS.fr;
     const categoryLabel = TIKTOK_DATA.ui[currentLang][art.category] || labels.psychology;
     
+    // Dynamic Category-Specific TOC Section Titles
+    const CATEGORY_TOC_TITLES = {
+      fr: {
+        psychology: {
+          toc1: "1. Diagnostic du problème",
+          toc2: "2. Pourquoi cela arrive ?",
+          toc3: "3. Types & formes",
+          toc4: "4. Guide pratique"
+        },
+        development: {
+          toc1: "1. Concept de discipline",
+          toc2: "2. Motivation vs Discipline",
+          toc3: "3. Habitudes clés",
+          toc4: "4. Erreurs à éviter"
+        },
+        philosophy: {
+          toc1: "1. Approche philosophique",
+          toc2: "2. Analyse critique",
+          toc3: "3. Concepts clés",
+          toc4: "4. Sagesse pratique"
+        }
+      },
+      en: {
+        psychology: {
+          toc1: "1. Core Concept",
+          toc2: "2. Why does it happen?",
+          toc3: "3. Types & Forms",
+          toc4: "4. Practical Guide"
+        },
+        development: {
+          toc1: "1. Discipline Concept",
+          toc2: "2. Motivation vs Discipline",
+          toc3: "3. Key Habits",
+          toc4: "4. Common Mistakes"
+        },
+        philosophy: {
+          toc1: "1. Philosophical Approach",
+          toc2: "2. Critical Analysis",
+          toc3: "3. Key Concepts",
+          toc4: "4. Practical Wisdom"
+        }
+      },
+      ar: {
+        psychology: {
+          toc1: "١. تشخيص المشكلة",
+          toc2: "٢. لماذا يحدث ذلك؟",
+          toc3: "٣. الأنواع والأشكال",
+          toc4: "٤. خطوات عملية"
+        },
+        development: {
+          toc1: "١. مفهوم الانضباط",
+          toc2: "٢. الحماس أم الانضباط؟",
+          toc3: "٣. عادات بناء الانضباط",
+          toc4: "٤. أخطاء شائعة"
+        },
+        philosophy: {
+          toc1: "١. المنهج الفلسفي",
+          toc2: "٢. التحليل الفلسفي",
+          toc3: "٣. الأفكار الأساسية",
+          toc4: "٤. التطبيق العملي"
+        }
+      }
+    };
+
+    const categoryToc = (CATEGORY_TOC_TITLES[currentLang] || CATEGORY_TOC_TITLES.fr)[art.category] || (CATEGORY_TOC_TITLES[currentLang] || CATEGORY_TOC_TITLES.fr).psychology;
+
     if (titleEl) titleEl.textContent = art.title;
     if (descEl) descEl.textContent = art.desc;
     if (badgeEl) {
@@ -490,6 +556,20 @@ function setupArticleModal(articles) {
     if (quoteAuthorEl) {
       quoteAuthorEl.textContent = "— " + (art.title.includes('Sartre') ? 'Jean-Paul Sartre' : art.title.includes('Camus') ? 'Albert Camus' : art.title.includes('Nietzsche') ? 'Friedrich Nietzsche' : 'Hikma & Nour');
     }
+
+    // Dynamic Binding to Sidebar TOC elements
+    const tocIntro = document.querySelector('.toc-list a[href="#sec-intro"]');
+    const toc1 = document.querySelector('.toc-list a[href="#sec-1"]');
+    const toc2 = document.querySelector('.toc-list a[href="#sec-2"]');
+    const toc3 = document.querySelector('.toc-list a[href="#sec-3"]');
+    const toc4 = document.querySelector('.toc-list a[href="#sec-4"]');
+
+    if (tocIntro) tocIntro.textContent = labels.intro;
+    if (toc1) toc1.textContent = categoryToc.toc1;
+    if (toc2) toc2.textContent = categoryToc.toc2;
+    if (toc3) toc3.textContent = categoryToc.toc3;
+    if (toc4) toc4.textContent = categoryToc.toc4;
+
 
     const mainHtml = `
       <!-- Introduction Box (Split) -->
@@ -518,7 +598,7 @@ function setupArticleModal(articles) {
       <section id="sec-1" class="reader-content-section">
         <h3 class="section-part-title">
           <span class="part-title-circle">🧠</span>
-          ${labels.toc1}
+          ${categoryToc.toc1}
         </h3>
         <p>${p2 || p1}</p>
         
@@ -533,7 +613,7 @@ function setupArticleModal(articles) {
       <section id="sec-2" class="reader-content-section">
         <h3 class="section-part-title">
           <span class="part-title-circle">👤</span>
-          ${labels.toc2}
+          ${categoryToc.toc2}
         </h3>
         <p>${p3 || p2}</p>
         
@@ -574,7 +654,7 @@ function setupArticleModal(articles) {
       <section id="sec-3" class="reader-content-section">
         <h3 class="section-part-title">
           <span class="part-title-circle">🌾</span>
-          ${labels.toc3}
+          ${categoryToc.toc3}
         </h3>
         <p>${p4 || p3}</p>
         
@@ -607,7 +687,7 @@ function setupArticleModal(articles) {
       <section id="sec-4" class="reader-content-section">
         <h3 class="section-part-title">
           <span class="part-title-circle">📝</span>
-          ${labels.toc4}
+          ${categoryToc.toc4}
         </h3>
         <p>${p5 || p3}</p>
         ${p6 ? `<p>${p6}</p>` : ""}
