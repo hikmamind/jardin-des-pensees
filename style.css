@@ -5266,3 +5266,144 @@ textarea.form-control {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(223, 177, 91, 0.3);
 }
+
+/* ==========================================================================
+   PREMIUM NAVBAR STYLING REFINEMENTS
+   ========================================================================== */
+
+/* Change mobile menu trigger to 1024px to prevent overlapping on medium screens */
+@media (max-width: 1024px) {
+  .nav-hamburger {
+    display: flex !important;
+  }
+  
+  .nav-menu {
+    position: fixed !important;
+    top: 0 !important;
+    right: -100% !important;
+    width: 280px !important;
+    height: 100vh !important;
+    background: rgba(7, 14, 10, 0.96) !important;
+    backdrop-filter: blur(30px) !important;
+    -webkit-backdrop-filter: blur(30px) !important;
+    border-left: 1px solid var(--card-border) !important;
+    flex-direction: column !important;
+    padding: 100px 30px 40px !important;
+    align-items: flex-start !important;
+    gap: 20px !important;
+    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    z-index: 55 !important;
+    display: flex !important;
+  }
+  
+  [dir="rtl"] .nav-menu {
+    right: auto !important;
+    left: -100% !important;
+    border-left: none !important;
+    border-right: 1px solid var(--card-border) !important;
+  }
+  
+  [dir="rtl"] .nav-menu.active {
+    left: 0 !important;
+    right: auto !important;
+  }
+  
+  [data-theme="light"] .nav-menu {
+    background: rgba(242, 247, 244, 0.96) !important;
+  }
+  
+  .nav-menu.active {
+    right: 0 !important;
+  }
+  
+  .nav-link {
+    font-size: 1.1rem !important;
+    width: 100% !important;
+    padding: 12px 20px !important;
+    border-radius: 12px !important;
+  }
+  
+  .nav-link::after {
+    display: none !important;
+  }
+  
+  .nav-actions {
+    margin-left: 0 !important;
+    margin-top: 15px !important;
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+  
+  .nav-dropdown-item {
+    width: 100% !important;
+  }
+  
+  .nav-sub-menu {
+    position: static !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 10px 0 0 15px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  
+  [dir="rtl"] .nav-sub-menu {
+    padding-left: 0 !important;
+    padding-right: 15px !important;
+  }
+}
+
+/* Desktop navbar link padding and font sizing adjustments for sleek look */
+@media (min-width: 1025px) {
+  .nav-menu {
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    flex-wrap: nowrap !important;
+  }
+  
+  .nav-link {
+    font-size: 0.8rem !important;
+    padding: 6px 12px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.2px !important;
+    transition: all 0.25s ease !important;
+  }
+
+  .nav-brand {
+    font-size: 1.2rem !important;
+  }
+
+  /* Luxurious hover & active animations */
+  .nav-link.active {
+    color: var(--accent-gold) !important;
+    background: rgba(184, 142, 60, 0.08) !important;
+    border-color: rgba(184, 142, 60, 0.2) !important;
+    box-shadow: inset 0 0 8px rgba(184, 142, 60, 0.05) !important;
+  }
+
+  .nav-link::after {
+    height: 2px !important;
+    background: var(--accent-gold) !important;
+    bottom: 2px !important;
+  }
+  
+  .nav-link:hover::after, .nav-link.active::after {
+    width: 30% !important;
+  }
+}
+
+/* Brand logo rotation speed and polish */
+.brand-logo {
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+
+/* Light mode link corrections */
+[data-theme="light"] .nav-link.active {
+  background: rgba(184, 142, 60, 0.08) !important;
+  border-color: rgba(184, 142, 60, 0.2) !important;
+}
