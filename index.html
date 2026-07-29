@@ -35,11 +35,17 @@
   <!-- Header Sticky Navigation Bar -->
   <header class="navbar-header">
     <nav class="navbar" aria-label="Navigation principale">
-      <div class="nav-brand">
-        <svg class="brand-logo" viewBox="0 0 24 24">
-          <path d="M12 2c0 0-4 6-4 9s2 5 4 5 4-2 4-5-4-9-4-9z" fill="none" stroke="currentColor" stroke-width="2"></path>
+      <div class="nav-brand" style="display: flex; align-items: center; gap: 10px;">
+        <svg class="brand-logo" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 28px; height: 28px;">
+          <!-- Trunk -->
+          <path d="M12 22v-8M9 22h6M12 14c-1.5-1-2.5-2-2.5-4 0-1.5 1-2.5 2.5-3.5 1.5 1 2.5 2 2.5 3.5 0 2-1 3-2.5 4z"></path>
+          <!-- Branches and Leaves -->
+          <path d="M12 7c-2-2-1-5 2-5s4 3 2 5M12 7c2-2 1-5-2-5s-4 3-2 5M12 10c-3-1.5-4-4-2-6s4 2 2 6M12 10c3-1.5 4-4 2-6s-4 2-2 6"></path>
         </svg>
-        <span class="brand-name" id="navBrandName">حكمة ونور</span>
+        <div style="display: flex; flex-direction: column; line-height: 1.1;">
+          <span class="brand-name" id="navBrandName" style="font-size: 1.15rem; font-weight: 800; tracking: 1px; font-family: 'Playfair Display', serif; color: var(--text-primary);">HIKMA & NOUR</span>
+          <span style="font-size: 0.6rem; font-weight: 600; color: var(--text-secondary); letter-spacing: 0.5px;">الحكمة • الفلسفة • علم النفس</span>
+        </div>
       </div>
       
       <!-- Hamburger Menu for Mobile -->
@@ -127,38 +133,221 @@
   <div class="container">
     <main>
 
-      <!-- Home / Profile Section -->
-      <section id="homeSection" class="scroll-section">
-        <div class="profile-card" id="profileCard">
-          <div class="avatar-wrapper">
-            <div class="avatar-glow"></div>
-            <img src="avatar.jpg" alt="Photo de profil" class="avatar-image" id="avatarImage">
+      <!-- Home Hero Section -->
+      <section id="homeSection" class="scroll-section hero-layout-section">
+        <div class="hero-columns-container">
+          <div class="hero-left-column">
+            <h1 class="hero-title" data-i18n="heroTitle">أفكار خالدة لحياة أفضل</h1>
+            <p class="hero-subtitle" data-i18n="heroSubtitle">أقوال وحكم خالدة من أعظم العقول في التاريخ، لتلهمك وتساعدك على فهم الحياة بعمق أكبر.</p>
+            <div class="hero-divider-container">
+              <span class="hero-divider-icon">🌿</span>
+            </div>
+            <a href="articles/" class="hero-cta-btn" data-i18n="exploreArticles">استكشف المقالات</a>
+          </div>
+          <div class="hero-right-column">
+            <div class="hero-image-wrapper">
+              <img src="hero_sunset_book.jpg" alt="Sagesse & Lumière" class="hero-display-image">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Category Pills bar -->
+      <div class="category-pills-section">
+        <div class="category-pills-container">
+          <a href="articles/?category=all" class="category-pill-item">
+            <div class="category-pill-icon">🌸</div>
+            <span class="category-pill-label" data-i18n="balancedLife">حياة متوازنة</span>
+          </a>
+          <a href="shop/" class="category-pill-item">
+            <div class="category-pill-icon">📖</div>
+            <span class="category-pill-label" data-i18n="inspiringBooks">كتب ملهمة</span>
+          </a>
+          <a href="articles/?category=development" class="category-pill-item">
+            <div class="category-pill-icon">🧗</div>
+            <span class="category-pill-label" data-i18n="selfDev">تطوير الذات</span>
+          </a>
+          <a href="articles/?category=psychology" class="category-pill-item">
+            <div class="category-pill-icon">🧠</div>
+            <span class="category-pill-label" data-i18n="psychologySub">علم النفس</span>
+          </a>
+          <a href="articles/?category=philosophy" class="category-pill-item">
+            <div class="category-pill-icon">🏛️</div>
+            <span class="category-pill-label" data-i18n="philosophy">فلسفة</span>
+          </a>
+          <a href="#wisdomSection" class="category-pill-item">
+            <div class="category-pill-icon">❝</div>
+            <span class="category-pill-label" data-i18n="quotes">اقتباسات</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Featured & Latest Articles Split Section -->
+      <section id="latestArticlesSection" class="scroll-section split-articles-section" aria-labelledby="latest-articles-heading">
+        <div class="split-articles-grid">
+          
+          <!-- Left: Featured Card -->
+          <div class="split-col-featured">
+            <h3 class="split-header-title" data-i18n="featuredArticle">مقال مميز</h3>
+            <div class="featured-article-card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.85)), url('featured_philosopher.jpg'); cursor: pointer;" onclick="window.location.href='./articles/?category=philosophy';">
+              <div class="featured-badge" data-i18n="philosophy">فلسفة</div>
+              <div class="featured-card-content">
+                <h4 class="featured-card-quote" data-i18n="featuredQuote">لا تبحث عن حياة مثالية... بل عن عقلٍ متوازن</h4>
+                <p class="featured-card-desc" data-i18n="featuredQuoteDesc">الحكمة ليست في أن نملك كل الإجابات، بل في أن نفهم الأسئلة بشكل أفضل.</p>
+                <div class="featured-card-footer">
+                  <span class="featured-read-btn" data-i18n="readArticle">اقرأ المقal</span>
+                  <span class="featured-read-time">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <span data-i18n="readTime">5 دقائق قراءة</span>
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
           
-          <div class="profile-info">
-            <h1 class="profile-name" id="displayName">حكمة ونور | Sagesse & Lumière</h1>
-            <a href="https://www.tiktok.com/@lejardindespensees" target="_blank" class="profile-handle" id="username">@lejardindespensees</a>
-            
-            <p class="profile-bio" id="bio">
-              Philosophie Stoïcienne, Sagesse des grands penseurs et Conseils Psychologiques. 🏛️🌿✨
-            </p>
-          </div>
+          <!-- Right: Latest Articles List -->
+          <div class="split-col-latest">
+            <h3 class="split-header-title" data-i18n="latestArticles">أحدث المقالات</h3>
+            <div class="latest-articles-list">
+              
+              <!-- Item 1 -->
+              <a href="./articles/?category=psychology" class="latest-list-item">
+                <div class="latest-item-img-wrapper">
+                  <img src="tree_sunset_field.jpg" alt="Anxiety">
+                </div>
+                <div class="latest-item-info">
+                  <h4 class="latest-item-title" data-i18n="latestTitle1">كيف تتعامل مع القلق في عالم مليء بالضغوط؟</h4>
+                  <div class="latest-item-meta">
+                    <span class="latest-item-badge badge-psychology" data-i18n="psychologySub">علم النفس</span>
+                    <span class="latest-item-time">
+                      <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                      <span>6 min read</span>
+                    </span>
+                  </div>
+                </div>
+              </a>
 
-          <!-- Statistics Grid -->
-          <div class="stats-grid">
-            <div class="stat-item">
-              <span class="stat-valueCount stat-value" id="followersCount">0</span>
-              <span class="stat-label" data-i18n="followers">Abonnés</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-valueCount stat-value" id="likesCount">0</span>
-              <span class="stat-label" data-i18n="likes">J'aime</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-valueCount stat-value" id="viewsCount">0</span>
-              <span class="stat-label" data-i18n="views">Vues</span>
+              <!-- Item 2 -->
+              <a href="./articles/?category=philosophy" class="latest-list-item">
+                <div class="latest-item-img-wrapper">
+                  <img src="thinkers/images/nietzsche.jpg" alt="Nietzsche">
+                </div>
+                <div class="latest-item-info">
+                  <h4 class="latest-item-title" data-i18n="latestTitle2">اقتباسات نيتشه التي ستغير نظرتك للحياة</h4>
+                  <div class="latest-item-meta">
+                    <span class="latest-item-badge badge-quotes" data-i18n="quotes">اقتباسات</span>
+                    <span class="latest-item-time">
+                      <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                      <span>4 min read</span>
+                    </span>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Item 3 -->
+              <a href="./articles/?category=development" class="latest-list-item">
+                <div class="latest-item-img-wrapper">
+                  <img src="reading_under_tree.jpg" alt="Discipline">
+                </div>
+                <div class="latest-item-info">
+                  <h4 class="latest-item-title" data-i18n="latestTitle3">الانضباط هو الجسر بين الأهداف والإنجاز</h4>
+                  <div class="latest-item-meta">
+                    <span class="latest-item-badge badge-development" data-i18n="selfDev">تطوير الذات</span>
+                    <span class="latest-item-time">
+                      <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                      <span>5 min read</span>
+                    </span>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Item 4 -->
+              <a href="./articles/?category=philosophy" class="latest-list-item">
+                <div class="latest-item-img-wrapper">
+                  <img src="thinkers/images/schopenhauer.jpg" alt="Schopenhauer">
+                </div>
+                <div class="latest-item-info">
+                  <h4 class="latest-item-title" data-i18n="latestTitle4">ماذا يقول شوبنهاور عن السعادة الحقيقية؟</h4>
+                  <div class="latest-item-meta">
+                    <span class="latest-item-badge badge-philosophy" data-i18n="philosophy">فلسفة</span>
+                    <span class="latest-item-time">
+                      <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                      <span>7 min read</span>
+                    </span>
+                  </div>
+                </div>
+              </a>
+              
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- Selected Articles Row -->
+      <section id="selectedArticlesSection" class="scroll-section selected-articles-section">
+        <h3 class="split-header-title" data-i18n="selectedArticles">مقالات مختارة</h3>
+        <div class="selected-articles-grid">
+          
+          <!-- Card 1 -->
+          <a href="./articles/?category=development" class="selected-article-card">
+            <div class="selected-card-img-wrapper">
+              <img src="reading_under_tree.jpg" alt="Habits">
+            </div>
+            <div class="selected-card-content">
+              <div class="selected-card-badge" data-i18n="selfDev">تطوير الذات</div>
+              <h4 class="selected-card-title" data-i18n="cardTitle1">عادات بسيطة تصنع فارقاً كبيراً في حياتك</h4>
+              <div class="selected-card-footer">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>5 min read</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 2 -->
+          <a href="./articles/?category=philosophy" class="selected-article-card">
+            <div class="selected-card-img-wrapper">
+              <img src="desk_coffee_book.jpg" alt="Life reality">
+            </div>
+            <div class="selected-card-content">
+              <div class="selected-card-badge" data-i18n="philosophy">فلسفة</div>
+              <h4 class="selected-card-title" data-i18n="cardTitle2">الحياة ليست مشكلة لحلها بل واقع لتجربه</h4>
+              <div class="selected-card-footer">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>6 min read</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 3 -->
+          <a href="./articles/?category=psychology" class="selected-article-card">
+            <div class="selected-card-img-wrapper">
+              <img src="tree_sunset_field.jpg" alt="Self confidence">
+            </div>
+            <div class="selected-card-content">
+              <div class="selected-card-badge" data-i18n="psychologySub">علم النفس</div>
+              <h4 class="selected-card-title" data-i18n="cardTitle3">كيف تبني ثقة حقيقية بنفسك من الداخل؟</h4>
+              <div class="selected-card-footer">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>5 min read</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 4 -->
+          <a href="./articles/?category=philosophy" class="selected-article-card">
+            <div class="selected-card-img-wrapper">
+              <img src="bookshelves_candle.jpg" alt="Wisdom quotes">
+            </div>
+            <div class="selected-card-content">
+              <div class="selected-card-badge" data-i18n="quotes">اقتباسات</div>
+              <h4 class="selected-card-title" data-i18n="cardTitle4">حكم وأقوال خالدة من عظماء الفكر</h4>
+              <div class="selected-card-footer">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>4 min read</span>
+              </div>
+            </div>
+          </a>
+
         </div>
       </section>
 
@@ -178,23 +367,6 @@
         </div>
         <div style="text-align: center; margin-top: 30px; margin-bottom: 50px;">
           <a href="thinkers/" class="btn-primary-outline" data-i18n="seeAllThinkers">Tous les penseurs →</a>
-        </div>
-      </section>
-
-      <!-- Latest Articles Section -->
-      <section id="latestArticlesSection" class="scroll-section" aria-labelledby="latest-articles-heading">
-        <h2 id="latest-articles-heading" class="section-title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px; height:20px; color:var(--accent-gold);">
-            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-          </svg>
-          <span class="serif-title" data-i18n="articles">Derniers Articles</span>
-        </h2>
-        <div class="articles-grid" id="articlesList">
-          <!-- Dynamically populated articles -->
-        </div>
-        <div style="text-align: center; margin-top: 30px; margin-bottom: 50px;">
-          <a href="articles/" class="btn-primary-outline" data-i18n="seeAll">Voir tous les articles →</a>
         </div>
       </section>
 
@@ -400,6 +572,44 @@
                   <span class="copy-tooltip">Copié !</span>
                 </button>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter Section -->
+      <section id="newsletterSection" class="scroll-section newsletter-layout-section">
+        <div class="newsletter-banner-container">
+          <!-- Left: Illustration -->
+          <div class="newsletter-left-col">
+            <img src="newsletter_lantern.jpg" alt="Lantern & Books" class="newsletter-display-image">
+          </div>
+          <!-- Center: Input and Form -->
+          <div class="newsletter-center-col">
+            <h3 class="newsletter-title" data-i18n="joinJourney">كن جزءاً من رحلتنا الفكرية</h3>
+            <p class="newsletter-desc" data-i18n="subscribeDesc">اشترك في نشرتنا البريدية لتصلك أفضل المقالات والاقتباسات الملهمة مباشرة إلى بريدك.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+              <input type="email" class="newsletter-input" placeholder="Ex: email@example.com" required style="direction: ltr;">
+              <button type="submit" class="newsletter-submit-btn" data-i18n="subscribeBtn">اشترك الآن</button>
+            </form>
+          </div>
+          <!-- Right: Features list -->
+          <div class="newsletter-right-col">
+            <div class="newsletter-benefit-item">
+              <span class="benefit-icon">🔔</span>
+              <span class="benefit-text" data-i18n="featuresNewsletter1">تحديثات دورية</span>
+            </div>
+            <div class="newsletter-benefit-item">
+              <span class="benefit-icon">📖</span>
+              <span class="benefit-text" data-i18n="featuresNewsletter2">ملخصات كتب</span>
+            </div>
+            <div class="newsletter-benefit-item">
+              <span class="benefit-icon">❝</span>
+              <span class="benefit-text" data-i18n="featuresNewsletter3">اقتباسات يومية</span>
+            </div>
+            <div class="newsletter-benefit-item">
+              <span class="benefit-icon">📝</span>
+              <span class="benefit-text" data-i18n="featuresNewsletter4">مقالات حصرية</span>
             </div>
           </div>
         </div>
