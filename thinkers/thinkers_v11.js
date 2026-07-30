@@ -337,101 +337,245 @@ function initPageLogic() {
 }
 
 // --- Thinker Biography Modal Logic ---
+
 function setupThinkerModal(thinkers) {
   const modal = document.getElementById('thinkerModal');
   const closeBtn = document.getElementById('thinkerModalCloseBtn');
-  const imgEl = document.getElementById('modalThinkerImg');
-  const nameEl = document.getElementById('modalThinkerName');
-  const eraEl = document.getElementById('modalThinkerEra');
-  const schoolEl = document.getElementById('modalThinkerSchool');
-  const bodyEl = document.getElementById('modalThinkerBody');
-  
   const cards = document.querySelectorAll('.thinker-card');
   
   if (!modal || !closeBtn) return;
   
-  // Set up sidebar active class toggles on click
-  const sidebarLinks = modal.querySelectorAll('.sidebar-link');
-  sidebarLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      sidebarLinks.forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
-    });
-  });
-  
   function openThinkerModal(index) {
     const thinker = thinkers[index];
-    if (thinker) {
-      document.getElementById('modalSidebarName').textContent = thinker.name;
-      document.getElementById('modalThinkerImg').src = `../${thinker.image}`;
-      document.getElementById('modalThinkerImgMobile').src = `../${thinker.image}`;
-      document.getElementById('factHeading').textContent = `Meet ${thinker.name}`;
-      document.getElementById('factEra').textContent = thinker.era;
-      document.getElementById('factSchool').textContent = thinker.school;
-      
-      // Concept & Works
-      document.getElementById('factConcept').textContent = thinker.keyConcept || "-";
-      document.getElementById('factWorks').textContent = thinker.keyWorks || "-";
-      
-      // Collapse fact card by default on mobile, keep open on desktop
-      const factCard = document.getElementById('thinkerFactCard');
-      if (factCard) {
-        if (window.innerWidth <= 900) {
-          factCard.open = false;
-        } else {
-          factCard.open = true;
-        }
-      }
-      
-      const body = thinker.body || [thinker.bio];
-      
-      // Reset displays
-      document.getElementById('sec-intro').style.display = 'block';
-      document.getElementById('sec-life').style.display = 'block';
-      document.getElementById('sec-philosophy').style.display = 'block';
-      document.getElementById('sec-legacy').style.display = 'block';
-      
-      document.getElementById('menu-intro').style.display = 'block';
-      document.getElementById('menu-life').style.display = 'block';
-      document.getElementById('menu-philosophy').style.display = 'block';
-      document.getElementById('menu-legacy').style.display = 'block';
+    if (!thinker) return;
 
-      if (body.length === 1) {
-        document.getElementById('para-intro').textContent = body[0];
-        document.getElementById('sec-life').style.display = 'none';
-        document.getElementById('sec-philosophy').style.display = 'none';
-        document.getElementById('sec-legacy').style.display = 'none';
-        
-        document.getElementById('menu-life').style.display = 'none';
-        document.getElementById('menu-philosophy').style.display = 'none';
-        document.getElementById('menu-legacy').style.display = 'none';
-      } else if (body.length === 3) {
-        document.getElementById('para-intro').textContent = body[0];
-        document.getElementById('para-life').textContent = body[1];
-        document.getElementById('para-philosophy').textContent = body[2];
-        document.getElementById('sec-legacy').style.display = 'none';
-        document.getElementById('menu-legacy').style.display = 'none';
-      } else if (body.length >= 4) {
-        document.getElementById('para-intro').textContent = body[0];
-        document.getElementById('para-life').textContent = body[1];
-        document.getElementById('para-philosophy').textContent = body[2];
-        document.getElementById('para-legacy').textContent = body[3];
+    // Localize simple static text headers based on language
+    document.getElementById('overviewTitle').textContent = currentLang === 'ar' ? 'نبذة سريعة' : currentLang === 'en' ? 'Quick Overview' : 'Aperçu rapide';
+    document.getElementById('biographyTitle').textContent = currentLang === 'ar' ? 'السيرة الذاتية' : currentLang === 'en' ? 'Biography' : 'Biographie';
+    document.getElementById('upbringingTitle').textContent = currentLang === 'ar' ? 'النشأة' : currentLang === 'en' ? 'Upbringing' : 'Origines';
+    document.getElementById('studiesTitle').textContent = currentLang === 'ar' ? 'الدراسة' : currentLang === 'en' ? 'Studies' : 'Études';
+    document.getElementById('lifeTitle').textContent = currentLang === 'ar' ? 'حياته' : currentLang === 'en' ? 'His Life' : 'Sa Vie';
+    document.getElementById('ideasTitle').textContent = currentLang === 'ar' ? 'أفكاره الرئيسية' : currentLang === 'en' ? 'Main Ideas' : 'Idées principales';
+    document.getElementById('worksTitle').textContent = currentLang === 'ar' ? 'أشهر مؤلفاته' : currentLang === 'en' ? 'Famous Works' : 'Œuvres majeures';
+    document.getElementById('influenceTitle').textContent = currentLang === 'ar' ? 'تأثيره وإرثه' : currentLang === 'en' ? 'Influence & Legacy' : 'Influence & Héritage';
+    document.getElementById('famousQuoteBannerTitle').textContent = currentLang === 'ar' ? 'أشهر اقتباس' : currentLang === 'en' ? 'Famous Quote' : 'Citation célèbre';
+    document.getElementById('didYouKnowTitle').textContent = currentLang === 'ar' ? 'هل تعلم؟' : currentLang === 'en' ? 'Did You Know?' : 'Le saviez-vous ?';
+    document.getElementById('reflectHeading').textContent = currentLang === 'ar' ? 'سؤال للتأمل' : currentLang === 'en' ? 'Question for Reflection' : 'Question pour méditer';
+    document.getElementById('modalThinkerReflectionBtn').textContent = currentLang === 'ar' ? 'شارك إجابتك في التعليقات' : currentLang === 'en' ? 'Share your response in comments' : 'Partagez votre avis en commentaires';
+    document.getElementById('learnTitle').textContent = currentLang === 'ar' ? 'ماذا يمكن أن نتعلم منه؟' : currentLang === 'en' ? 'What can we learn from him?' : 'Que pouvons-nous apprendre de lui ?';
+    document.getElementById('timelineTitle').textContent = currentLang === 'ar' ? 'الجدول الزمني لحياته' : currentLang === 'en' ? 'Life Timeline' : 'Chronologie de sa vie';
+
+    // Breadcrumb name
+    document.getElementById('modalThinkerNameBreadcrumb').textContent = thinker.name;
+
+    // Hero section values
+    document.getElementById('modalThinkerImg').src = `../${thinker.image}`;
+    document.getElementById('modalThinkerImg').alt = thinker.name;
+    document.getElementById('modalThinkerName').textContent = thinker.name;
+    
+    // SubName
+    document.getElementById('modalThinkerSubtitle').textContent = thinker.subName || (currentLang === 'ar' ? `فيلسوف من المدرسة ${thinker.school}` : `${thinker.school} Philosopher`);
+
+    // Flag & Country
+    document.getElementById('modalThinkerFlag').textContent = thinker.flag || "🌍";
+    document.getElementById('modalThinkerCountry').textContent = thinker.country || (currentLang === 'ar' ? "العالم القديم" : "Ancient World");
+
+    document.getElementById('modalThinkerEra').textContent = thinker.era;
+    document.getElementById('modalThinkerSchool').textContent = thinker.school;
+
+    // Find a quote from the database by this thinker for the hero quote card, or fallback
+    let heroQuoteText = thinker.heroQuote;
+    if (!heroQuoteText) {
+      const allQuotes = TIKTOK_DATA.content[currentLang].quotes || [];
+      const matchingQuote = allQuotes.find(q => q.author.includes(thinker.name) || q.author.includes(thinker.id));
+      if (matchingQuote) {
+        heroQuoteText = `"${matchingQuote.text}"`;
+      } else {
+        heroQuoteText = `"${thinker.bio}"`;
       }
-      
-      // Scroll main content to top
-      const mainContent = modal.querySelector('.thinker-modal-main');
-      if (mainContent) mainContent.scrollTop = 0;
-      
-      // Default to first sidebar link active
-      sidebarLinks.forEach(l => l.classList.remove('active'));
-      const defaultLink = document.getElementById('menu-intro');
-      if (defaultLink) defaultLink.classList.add('active');
-      
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
     }
+    document.getElementById('modalThinkerHeroQuote').textContent = heroQuoteText;
+
+    // Column 1: Quick Overview
+    document.getElementById('modalThinkerQuickOverview').textContent = thinker.quickOverview || thinker.bio;
+
+    // Column 2: Biography Details
+    const bodyParag = thinker.body || [thinker.bio];
+    document.getElementById('modalThinkerUpbringing').textContent = (thinker.bioDetails && thinker.bioDetails.upbringing) || bodyParag[0] || "...";
+    document.getElementById('modalThinkerStudies').textContent = (thinker.bioDetails && thinker.bioDetails.studies) || bodyParag[1] || (currentLang === 'ar' ? "تابع دراساته وأبحاثه الفلسفية بتعمق." : "Pursued deep philosophical studies.");
+    document.getElementById('modalThinkerLife').textContent = (thinker.bioDetails && thinker.bioDetails.life) || bodyParag[2] || (currentLang === 'ar' ? "عاش حياة مكرسة للبحث الفلسفي ونشر المعرفة." : "Lived a life dedicated to research and sharing knowledge.");
+
+    // Column 3: Main Ideas
+    const ideasContainer = document.getElementById('modalThinkerIdeas');
+    let ideasList = thinker.mainIdeas;
+    if (!ideasList) {
+      ideasList = (thinker.keyConcept || "").split(',').map(c => c.trim()).filter(Boolean).map(c => {
+        return currentLang === 'ar' ? `${c}: مفهوم فلسفي أساسي في فكره.` : `${c}: Key philosophical concept.`;
+      });
+    }
+    if (ideasList.length === 0) {
+      ideasList = [currentLang === 'ar' ? "البحث عن الحقيقة والمعنى في الحياة." : "Seeking truth and meaning in life."];
+    }
+    ideasContainer.innerHTML = ideasList.map(idea => `
+      <li class="thinker-ideas-item">${idea}</li>
+    `).join('');
+
+    // Works Grid
+    const worksContainer = document.getElementById('modalThinkerWorks');
+    let worksList = thinker.works;
+    if (!worksList) {
+      const parsedWorks = (thinker.keyWorks || "").split(',').map(w => w.trim()).filter(Boolean);
+      worksList = parsedWorks.map(w => {
+        return {
+          title: w,
+          desc: currentLang === 'ar' ? `من أشهر مؤلفات الفيلسوف وأكثرها انتشاراً.` : `One of the most famous and widely read works of the philosopher.`
+        };
+      });
+    }
+    if (worksList.length === 0) {
+      worksList = [{
+        title: currentLang === 'ar' ? "مؤلفات ضائعة أو مقالات متفرقة" : "Lost works or scattered essays",
+        desc: currentLang === 'ar' ? "كتابات ورسائل فلسفية تعبر عن فكره." : "Philosophical letters and writings."
+      }];
+    }
+    worksContainer.innerHTML = worksList.slice(0, 4).map(w => `
+      <div class="thinker-work-card">
+        <div class="thinker-work-icon-box">📘</div>
+        <h5 class="thinker-work-title">${w.title}</h5>
+        <p class="thinker-work-desc">${w.desc}</p>
+      </div>
+    `).join('');
+
+    // Influence Avatars Card
+    const influenceAvatarsContainer = document.getElementById('modalThinkerInfluenceAvatars');
+    let influenceData = thinker.influence;
+    if (!influenceData) {
+      influenceData = {
+        names: currentLang === 'ar' ? ["سقراط", "أفلاطون", "أرسطو", "نيتشه", "سارتر", "كامو"] : ["Socrates", "Plato", "Aristotle", "Nietzsche", "Sartre", "Camus"],
+        summary: currentLang === 'ar' ? "أثر بشكل كبير على مسار الفلسفة والفكر الإنساني." : "Greatly influenced the course of human philosophy and thought."
+      };
+    }
+    
+    const availableAvatars = {
+      "نيتشه": "../thinkers/images/nietzsche.jpg",
+      "Nietzsche": "../thinkers/images/nietzsche.jpg",
+      "سقراط": "../thinkers/images/socrate.jpg",
+      "Socrates": "../thinkers/images/socrate.jpg",
+      "أفلاطون": "../thinkers/images/platon.jpg",
+      "Plato": "../thinkers/images/platon.jpg",
+      "أرسطو": "../thinkers/images/aristote.jpg",
+      "Aristotle": "../thinkers/images/aristote.jpg",
+      "فرويد": "../thinkers/images/freud.jpg",
+      "Freud": "../thinkers/images/freud.jpg",
+      "شوبنهاور": "../thinkers/images/schopenhauer.jpg",
+      "Schopenhauer": "../thinkers/images/schopenhauer.jpg"
+    };
+
+    influenceAvatarsContainer.innerHTML = influenceData.names.map(name => {
+      let avatarImgSrc = "../featured_philosopher.jpg";
+      const matchingT = TIKTOK_DATA.content[currentLang].thinkers.find(t => t.name.includes(name) || name.includes(t.name));
+      if (matchingT) {
+        avatarImgSrc = `../${matchingT.image}`;
+      } else if (availableAvatars[name]) {
+        avatarImgSrc = availableAvatars[name];
+      }
+      return `
+        <div class="influence-avatar-item">
+          <img src="${avatarImgSrc}" class="influence-avatar-img" alt="${name}">
+          <span class="influence-avatar-name">${name}</span>
+        </div>
+      `;
+    }).join('');
+
+    document.getElementById('modalThinkerInfluenceSummary').textContent = influenceData.summary;
+
+    // Famous Quote Banner
+    let famousQuoteText = thinker.famousQuote;
+    if (!famousQuoteText) {
+      famousQuoteText = heroQuoteText;
+    }
+    document.getElementById('modalThinkerFamousQuote').textContent = famousQuoteText;
+
+    // Bottom Grid: Did You Know, Reflection, Lessons
+    document.getElementById('modalThinkerDidYouKnow').textContent = thinker.didYouKnow || (currentLang === 'ar' ? `كان الفيلسوف يكرس حياته اليومية للتفكير والتأمل والكتابة دفاعاً عن قناعاته الفكرية العميقة.` : `The philosopher dedicated his life to deep thinking, meditation, and writing in defense of his core convictions.`);
+    document.getElementById('modalThinkerReflection').textContent = thinker.reflectionQuestion || (currentLang === 'ar' ? `كيف يمكننا تطبيق أفكار هذا الفيلسوف في حياتنا المعاصرة لتجاوز الضغوط والقلق؟` : `How can we apply this philosopher's insights to our modern lives to overcome daily anxiety?`);
+
+    // Lessons checklist
+    const lessonsContainer = document.getElementById('modalThinkerLessons');
+    let lessonsList = thinker.lessons;
+    if (!lessonsList) {
+      lessonsList = [
+        currentLang === 'ar' ? "الانضباط الذاتي والتحكم في رغباتك." : "Self-discipline and mastery of desires.",
+        currentLang === 'ar' ? "التأمل الهادئ والبحث عن السلام الداخلي." : "Calm meditation and inner peace search.",
+        currentLang === 'ar' ? "فحص أفكارك ومعتقداتك باستمرار." : "Constant examination of your thoughts.",
+        currentLang === 'ar' ? "التواضع المعرفي ومواصلة التعلم." : "Intellectual humility and lifelong learning."
+      ];
+    }
+    lessonsContainer.innerHTML = lessonsList.map(lesson => `
+      <li class="quote-detail-list-item">${lesson}</li>
+    `).join('');
+
+    // Timeline Axis
+    const timelineContainer = document.getElementById('modalThinkerTimeline');
+    let timelineList = thinker.timeline;
+    if (!timelineList) {
+      const birthYear = thinker.era.split('-')[0].trim();
+      const deathYear = thinker.era.split('-')[1]?.trim() || "???";
+      timelineList = [
+        { year: birthYear, desc: currentLang === 'ar' ? "الميلاد وبداية النشأة." : "Birth and early life." },
+        { year: "...", desc: currentLang === 'ar' ? "بداية الإنتاج المعرفي والفلسفي." : "Early studies and writing." },
+        { year: "...", desc: currentLang === 'ar' ? "نشر أهم مؤلفاته وتأثيره." : "Publishing major works." },
+        { year: deathYear, desc: currentLang === 'ar' ? "الوفاة وإرثه الخالد." : "Death and legacy." }
+      ];
+    }
+    timelineContainer.innerHTML = timelineList.map(node => `
+      <div class="thinker-timeline-node">
+        <div class="timeline-dot"></div>
+        <span class="timeline-year">${node.year}</span>
+        <p class="timeline-desc">${node.desc}</p>
+      </div>
+    `).join('');
+
+    // Read Also Articles (3 items)
+    const readAlsoContainer = document.getElementById('modalThinkerReadAlso');
+    const articles = TIKTOK_DATA.content[currentLang].articles.slice(0, 3);
+    readAlsoContainer.innerHTML = articles.map(art => {
+      const artImg = `../${art.image}` || '../tree_sunset_field.jpg';
+      return `
+        <a href="../articles/?category=${art.category}" class="read-also-item">
+          <div class="read-also-thumb">
+            <img src="${artImg}" alt="${art.title}">
+          </div>
+          <div class="read-also-info">
+            <h5 class="read-also-item-title">${art.title}</h5>
+            <span class="read-also-item-link">${currentLang === 'ar' ? 'قراءة المقال ←' : currentLang === 'en' ? 'Read Article ←' : 'Lire l\'article ←'}</span>
+          </div>
+        </a>
+      `;
+    }).join('');
+
+    // Show Modal & Disable Background Scroll
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    // Close actions
+    const closeBtn = document.getElementById('thinkerModalCloseBtn');
+    const closeModal = () => {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    };
+    
+    closeBtn.onclick = closeModal;
+    
+    // Close on outer click
+    modal.onclick = (e) => {
+      if (e.target === modal || e.target.classList.contains('reader-scroll-container')) {
+        closeModal();
+      }
+    };
   }
-  
+
+  // Bind Card Click to open reader modal
   cards.forEach(card => {
     const clickables = card.querySelectorAll('[data-index]');
     clickables.forEach(c => {
@@ -450,19 +594,6 @@ function setupThinkerModal(thinkers) {
         openThinkerModal(index);
       }
     });
-  });
-  
-  function closeModal() {
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-  
-  closeBtn.addEventListener('click', closeModal);
-  
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      closeModal();
-    }
   });
 }
 

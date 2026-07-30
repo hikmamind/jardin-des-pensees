@@ -1433,7 +1433,87 @@ const TIKTOK_DATA = {
             "Son style littéraire limpide et percutant, ainsi que son analyse psychologique des désirs et de l'inconscient, ont profondément marqué des génies comme Friedrich Nietzsche, Sigmund Freud (qui a trouvé chez Schopenhauer les prémices de sa théorie des pulsions), Richard Wagner, Albert Einstein et de nombreux écrivains comme Marcel Proust et Léon Tolstoï."
           ],
           "keyConcept": "-",
-          "keyWorks": "-"
+          "keyWorks": "-",
+          "subName": "Le philosophe qui a révélé l'autre visage de la vie",
+          "country": "Allemagne",
+          "flag": "🇩🇪",
+          "heroQuote": "Schopenhauer ne cherchait pas à rendre l'homme heureux... mais à comprendre sa souffrance.",
+          "quickOverview": "Philosophe allemand, considéré comme l'un des plus grands penseurs du pessimisme moderne. Il a traité de la volonté, de la souffrance, de l'art et du bonheur. Son influence s'étend à la littérature, la psychologie et la musique.",
+          "bioDetails": {
+            "upbringing": "Arthur Schopenhauer est né à Dantzig en 1788 dans une riche famille de commerçants.",
+            "studies": "Il étudie d'abord la médecine avant de se tourner vers la philosophie, marqué par Kant et Platon.",
+            "life": "Il mène une vie discrète loin des honneurs, mais ses écrits finissent par conquérir une renommée mondiale tardive."
+          },
+          "mainIdeas": [
+            "La Volonté : Force aveugle et irrationnelle qui meut tous les êtres.",
+            "La Souffrance : La vie oscille entre désir et ennui, générant la douleur.",
+            "Le Salut : L'apaisement des désirs mène à une paix intérieure durable.",
+            "L'Art : Offre une libération temporaire des tourments du vouloir-vivre."
+          ],
+          "works": [
+            {
+              "title": "Le Monde comme volonté et comme représentation",
+              "desc": "Son chef-d'œuvre exposant l'idée de la Volonté comme essence du réel."
+            },
+            {
+              "title": "Aphorismes sur la sagesse dans la vie",
+              "desc": "Conseils pratiques pour mener une existence équilibrée et heureuse."
+            },
+            {
+              "title": "L'Art d'avoir toujours raison",
+              "desc": "Traité sur la controverse et l'art d'utiliser les sophismes logiques."
+            },
+            {
+              "title": "Parerga et Paralipomena",
+              "desc": "Recueil d'essais sur la vie, la morale, la religion et l'art."
+            }
+          ],
+          "influence": {
+            "names": [
+              "Nietzsche",
+              "Freud",
+              "Tolstoï",
+              "Dostoïevski",
+              "Wagner",
+              "Thomas Mann"
+            ],
+            "summary": "Son influence demeure vivante en philosophie, littérature, musique et psychologie."
+          },
+          "famousQuote": "Le bonheur n'est rien d'autre que l'absence de douleur.",
+          "didYouKnow": "Schopenhauer était un lecteur quotidien passionné. Il estimait que la lecture des grands classiques élargit l'esprit plus que les nouvelles du jour.",
+          "reflectionQuestion": "Si vous rencontriez Schopenhauer aujourd'hui, quelle question lui poseriez-vous ?",
+          "lessons": [
+            "Ne laissez pas vos désirs contrôler votre vie.",
+            "Acceptez que la douleur fait partie de l'expérience humaine.",
+            "Recherchez la paix intérieure plutôt que la perfection.",
+            "La sagesse commence par le questionnement."
+          ],
+          "timeline": [
+            {
+              "year": "1788",
+              "desc": "Naissance à Dantzig"
+            },
+            {
+              "year": "1809",
+              "desc": "Début des études universitaires"
+            },
+            {
+              "year": "1818",
+              "desc": "Publication du Monde comme volonté"
+            },
+            {
+              "year": "1831",
+              "desc": "Installation à Francfort"
+            },
+            {
+              "year": "1851",
+              "desc": "Publication de Parerga (succès public)"
+            },
+            {
+              "year": "1860",
+              "desc": "Décès"
+            }
+          ]
         },
         {
           "id": "kant",
@@ -3232,7 +3312,87 @@ const TIKTOK_DATA = {
             "Schopenhauer's incorporation of Eastern philosophies introduced a unique perspective to Western philosophy, emphasizing empathy and mindfulness as crucial paths to reducing suffering."
           ],
           "keyConcept": "-",
-          "keyWorks": "-"
+          "keyWorks": "-",
+          "subName": "The philosopher who revealed the other side of life",
+          "country": "Germany",
+          "flag": "🇩🇪",
+          "heroQuote": "Schopenhauer did not seek to make mankind happy... but to understand their suffering.",
+          "quickOverview": "German philosopher, widely considered the premier modern pessimist thinker. He explored the Will, suffering, happiness, ethics, and aesthetics. His influence shaped literature, psychology, and music.",
+          "bioDetails": {
+            "upbringing": "Arthur Schopenhauer was born in Danzig in 1788 to a wealthy merchant family.",
+            "studies": "He initially studied medicine before turning to philosophy, deeply influenced by Kant and Plato.",
+            "life": "He lived a quiet life away from initial fame, but his ideas eventually spread worldwide."
+          },
+          "mainIdeas": [
+            "The Will: The blind, irrational force driving all living beings.",
+            "Suffering: Life is an endless chain of desires, and desires generate pain.",
+            "Serenity: Emancipation from desires leads to inner peace.",
+            "Aesthetics: Art offers temporary liberation from life's pressure."
+          ],
+          "works": [
+            {
+              "title": "The World as Will and Representation",
+              "desc": "His major work, introducing the Will as the inner essence of reality."
+            },
+            {
+              "title": "Aphorisms on the Wisdom of Life",
+              "desc": "A practical guide offering advice on lifestyle, relationships, and happiness."
+            },
+            {
+              "title": "The Art of Being Right",
+              "desc": "A handbook on debate and persuasion, detailing logic fallacies."
+            },
+            {
+              "title": "Essays and Aphorisms",
+              "desc": "A collection of short texts discussing human nature, ethics, and art."
+            }
+          ],
+          "influence": {
+            "names": [
+              "Nietzsche",
+              "Freud",
+              "Tolstoy",
+              "Dostoevsky",
+              "Wagner",
+              "Thomas Mann"
+            ],
+            "summary": "His influence remains present in philosophy, literature, music, and psychology."
+          },
+          "famousQuote": "Happiness is but the absence of pain.",
+          "didYouKnow": "Schopenhauer was a passionate daily reader. He believed that reading great books expands the mind more than following daily news.",
+          "reflectionQuestion": "If you met Schopenhauer today, what question would you ask him?",
+          "lessons": [
+            "Do not let your desires control your life.",
+            "Accept that pain is part of the human experience.",
+            "Search for inner peace rather than perfection.",
+            "Knowledge starts by asking questions."
+          ],
+          "timeline": [
+            {
+              "year": "1788",
+              "desc": "Born in Danzig"
+            },
+            {
+              "year": "1809",
+              "desc": "Began university studies"
+            },
+            {
+              "year": "1818",
+              "desc": "Published major work"
+            },
+            {
+              "year": "1831",
+              "desc": "Moved to Frankfurt"
+            },
+            {
+              "year": "1851",
+              "desc": "Published Parerga (bringing fame)"
+            },
+            {
+              "year": "1860",
+              "desc": "Died"
+            }
+          ]
         },
         {
           "id": "kant",
@@ -5031,7 +5191,87 @@ const TIKTOK_DATA = {
             "أثر أسلوبه الأدبي السلس والواضح وتحليله العميق للرغبات واللاوعي على كبار المفكرين والعلماء، مثل فريدريك نيتشه، وسيجموند فرويد (الذي بنى نظريته في الغرائز واللاشعور على أسس شوبنهاورية)، والموسيقار ريتشارد فاغنر، وألبرت أينشتاين، والكاتب الروسي ليو تولستوي."
           ],
           "keyConcept": "-",
-          "keyWorks": "-"
+          "keyWorks": "-",
+          "subName": "الفيلسوف الذي كشف الوجه الآخر للحياة",
+          "country": "ألمانيا",
+          "flag": "🇩🇪",
+          "heroQuote": "لم يكن شوبنهاور يبحث عن إسعاد الإنسان... بل عن فهم معاناته.",
+          "quickOverview": "فيلسوف ألماني، يُعد من أبرز فلاسفة التشاؤم في العصر الحديث. تناول في فلسفته موضوعات الإرادة، المعاناة، السعادة، الأخلاق، والفن. تأثرت به مجالات عديدة مثل الأدب وعلم النفس والموسيقى.",
+          "bioDetails": {
+            "upbringing": "ولد آرثر شوبنهاور في مدينة دانتسيغ سنة 1788 في أسرة ثرية تعمل في التجارة.",
+            "studies": "درس الطب في البداية ثم اتجه إلى الفلسفة. تأثر بفلسفة كانت وأفلاطون بشكل كبير.",
+            "life": "عاش حياة هادئة بعيدة عن الشهرة في البداية، لكن أفكاره انتشرت على نطاق واسع لاحقاً."
+          },
+          "mainIdeas": [
+            "الإرادة: القوة العمياء التي تحرك جميع الكائنات.",
+            "المعاناة: الحياة سلسلة من الرغبات، والرغبات تولد المعاناة.",
+            "السكينة: التحرر من الرغبات يقود إلى سلام داخلي.",
+            "الفن: يمنح الإنسان لحظات من التحرر من ضغوط الحياة."
+          ],
+          "works": [
+            {
+              "title": "العالم إرادة وتمثل",
+              "desc": "أشهر كتبه، يعرض فيه فكرته الأساسية حول الإرادة بوصفها جوهر الواقع."
+            },
+            {
+              "title": "عن الحكمة في الحياة",
+              "desc": "كتاب عملي يقدم نصائح حول أسلوب الحياة والعلاقات والسعادة."
+            },
+            {
+              "title": "فن أن تكون على صواب",
+              "desc": "كتاب يناقش الجدل والإقناع ويعرض أشهر المغالطات المنطقية."
+            },
+            {
+              "title": "مقالات وأمثال",
+              "desc": "مجموعة من النصوص التي تتناول الإنسان، والأخلاق، والفن، والدين."
+            }
+          ],
+          "influence": {
+            "names": [
+              "نيتشه",
+              "فرويد",
+              "تولستوي",
+              "ديستوفسكي",
+              "فاغنر",
+              "توماس مان"
+            ],
+            "summary": "ولا يزال تأثيره حاضراً في الفلسفة والأدب والموسيقى وعلم النفس."
+          },
+          "famousQuote": "السعادة ليست إلا غياب الألم.",
+          "didYouKnow": "كان شوبنهاور يعشق القراءة اليومية، وكان يرى أن قراءة الكتب العظيمة توسع أفق الإنسان أكثر من متابعة الأخبار اليومية.",
+          "reflectionQuestion": "لو قابلت شوبنهاور اليوم، فما السؤال الذي ستطرحه عليه؟",
+          "lessons": [
+            "لا تجعل رغباتك تتحكم في حياتك.",
+            "تقبل أن الألم جزء من التجربة الإنسانية.",
+            "ابحث عن السلام الداخلي بدلاً من الكمال.",
+            "المعرفة تبدأ من طرح الأسئلة."
+          ],
+          "timeline": [
+            {
+              "year": "1788",
+              "desc": "الميلاد في دانتسيغ"
+            },
+            {
+              "year": "1809",
+              "desc": "بداية الدراسة الجامعية"
+            },
+            {
+              "year": "1818",
+              "desc": "نشر كتاب العالم إرادة وتمثل"
+            },
+            {
+              "year": "1831",
+              "desc": "الانتقال إلى فرانكفورت"
+            },
+            {
+              "year": "1851",
+              "desc": "نشر Parerga وجلب له الشهرة"
+            },
+            {
+              "year": "1860",
+              "desc": "الوفاة"
+            }
+          ]
         },
         {
           "id": "kant",
