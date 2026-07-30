@@ -1791,7 +1791,8 @@ const TIKTOK_DATA = {
           "image": "quiz_philosopher_hero.jpg",
           "questionsCount": "15 questions",
           "time": "3 min",
-          "desc": "Découvrez quel grand penseur reflète votre façon de penser en répondant à 15 questions."
+          "desc": "Découvrez quel grand penseur reflète votre façon de penser en répondant à 15 questions.",
+          "id": "which-philosopher-are-you"
         },
         {
           "id": "personality",
@@ -3707,7 +3708,8 @@ const TIKTOK_DATA = {
           "image": "quiz_philosopher_hero.jpg",
           "questionsCount": "15 questions",
           "time": "3 min",
-          "desc": "Discover which classic thinker reflects your mindset by answering 15 simple questions."
+          "desc": "Discover which classic thinker reflects your mindset by answering 15 simple questions.",
+          "id": "which-philosopher-are-you"
         },
         {
           "id": "personality",
@@ -5722,7 +5724,8 @@ const TIKTOK_DATA = {
           "image": "quiz_philosopher_hero.jpg",
           "questionsCount": "15 سؤالًا",
           "time": "3 دقائق",
-          "desc": "اكتشف أي مفكر يعكس طريقة تفكيرك من خلال الإجابة عن 15 سؤالًا فقط مع تحليل كامل لشخصيتك."
+          "desc": "اكتشف أي مفكر يعكس طريقة تفكيرك من خلال الإجابة عن 15 سؤالًا فقط مع تحليل كامل لشخصيتك.",
+          "id": "which-philosopher-are-you"
         },
         {
           "id": "personality",

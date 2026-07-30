@@ -145,7 +145,13 @@ function renderQuizScreen() {
     const quizzes = TIKTOK_DATA.content[currentLang].quizzes;
     
     const listHtml = quizzes.map(q => {
-      const coverImage = QUIZ_COVERS[q.id] || '../featured_philosopher.jpg';
+      let coverImage = '../quiz_philosopher_hero.jpg';
+      if (q.image) {
+        coverImage = q.image.startsWith('../') ? q.image : '../' + q.image;
+      } else if (q.id && QUIZ_COVERS[q.id]) {
+        coverImage = QUIZ_COVERS[q.id];
+      }
+      const subtitleText = q.desc || q.subtitle || '';
       return `
         <div class="quiz-card-premium">
           <div class="quiz-card-img-wrapper">
@@ -154,9 +160,9 @@ function renderQuizScreen() {
           <div class="quiz-card-body">
             <span class="quiz-card-badge">${ui.quiz || "Quiz"}</span>
             <h4 class="quiz-card-title">${q.title}</h4>
-            <p class="quiz-card-subtitle">${q.subtitle}</p>
-            <button class="quiz-btn select-quiz-btn" data-quiz-id="${q.id}" style="width: 100%; margin-top: 10px;">
-              <span>${ui.quizChooseBtn || "Choisir ce test"}</span>
+            <p class="quiz-card-subtitle">${subtitleText}</p>
+            <button class="quiz-btn select-quiz-btn" data-quiz-id="${q.id || ''}" data-quiz-file="${q.file || ''}" style="width: 100%; margin-top: 10px;">
+              <span>${ui.quizChooseBtn || (currentLang === 'ar' ? 'ابدأ الاختبار' : 'Choisir ce test')}</span>
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
@@ -179,6 +185,11 @@ function renderQuizScreen() {
     const selectButtons = container.querySelectorAll('.select-quiz-btn');
     selectButtons.forEach(btn => {
       btn.addEventListener('click', () => {
+        const quizFile = btn.getAttribute('data-quiz-file');
+        if (quizFile && quizFile.length > 0) {
+          window.location.href = quizFile;
+          return;
+        }
         const quizId = btn.getAttribute('data-quiz-id');
         quizState.selectedQuizId = quizId;
         quizState.currentScreen = 'start';
