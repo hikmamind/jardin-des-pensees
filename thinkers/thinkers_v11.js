@@ -542,7 +542,7 @@ function setupThinkerModal(thinkers) {
     readAlsoContainer.innerHTML = articles.map(art => {
       const artImg = `../${art.image}` || '../tree_sunset_field.jpg';
       return `
-        <a href="../articles/?category=${art.category}" class="read-also-item">
+        <a href="../articles/${art.file || ('?category=' + art.category)}" class="read-also-item" target="_blank" rel="noopener">
           <div class="read-also-thumb">
             <img src="${artImg}" alt="${art.title}">
           </div>
