@@ -1552,6 +1552,21 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "category": "philosophy",
+          "file": "hikma-citations-philosophiques.html",
+          "image": "quotes_article_hero.jpg",
+          "featured": true,
+          "title": "Sagesses et Citations Immortelles des Grands Penseurs",
+          "readTime": "8 min de lecture",
+          "desc": "20 citations qui ont changé la vision de millions de personnes — Schopenhauer, Socrate, Marc Aurèle, Nietzsche et bien d'autres.",
+          "body": [
+            "Depuis les débuts des civilisations, les sages et philosophes ont laissé des mots qui ont transcendé les frontières du temps. L'homme peut partir, mais l'idée sincère reste vivante.",
+            "Une citation n'est pas qu'une belle formule, c'est une expérience humaine résumée en peu de mots. Une seule phrase peut changer votre façon de penser.",
+            "Parce qu'elles résument des années d'expérience en quelques lignes. Elles sont nées de la douleur, de la méditation, du succès ou de l'échec.",
+            "Les grandes paroles vivent plus longtemps que leurs auteurs."
+          ]
+        },
+        {
           "category": "development",
           "file": "self-discipline.html",
           "image": "self_discipline.jpg",
@@ -3431,6 +3446,21 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "category": "philosophy",
+          "file": "hikma-citations-philosophiques.html",
+          "image": "quotes_article_hero.jpg",
+          "featured": true,
+          "title": "Timeless Wisdom & Quotes from the Greatest Thinkers",
+          "readTime": "8 min read",
+          "desc": "20 quotes that changed the perspective of millions — Schopenhauer, Socrates, Marcus Aurelius, Nietzsche and many more.",
+          "body": [
+            "Since the dawn of civilizations, sages and philosophers have left behind words that transcended the boundaries of time. A person may pass, but a sincere idea lives on.",
+            "A quote is not just a beautiful phrase — it is a human experience distilled into a few words. A single sentence can change the way you think or the decision that changes your life.",
+            "Because they compress years of experience into a few lines. They were born from pain, reflection, success, or failure. That's why they reach the heart so quickly.",
+            "Great words live longer than their authors."
+          ]
+        },
+        {
           "category": "development",
           "file": "self-discipline.html",
           "image": "self_discipline.jpg",
@@ -5309,6 +5339,21 @@ const TIKTOK_DATA = {
         }
       ],
       "articles": [
+        {
+          "category": "philosophy",
+          "file": "hikma-citations-philosophiques.html",
+          "image": "quotes_article_hero.jpg",
+          "featured": true,
+          "title": "حكم وأقوال خالدة من عظماء الفكر",
+          "readTime": "8 دقائق قراءة",
+          "desc": "20 اقتباسًا غيّرت نظرة ملايين الأشخاص إلى الحياة — شوبنهاور، سقراط، ماركوس أوريليوس، نيتشه وكثيرون.",
+          "body": [
+            "منذ بداية الحضارات، ترك الحكماء والفلاسفة كلمات تجاوزت حدود الزمن. قد يرحل الإنسان، لكن الفكرة الصادقة تبقى حيّة، تنتقل من جيل إلى آخر، وتلهم الملايين.",
+            "فالاقتباس ليس مجرد عبارة جميلة، بل تجربة إنسانية اختُصرت في كلمات قليلة. وربما تكون جملة واحدة سببًا في تغيير طريقة تفكيرك، أو في اتخاذ قرار يغيّر حياتك.",
+            "لأنها تختصر سنوات من التجربة في بضعة أسطر. هي كلمات ولدت من الألم، أو التأمل، أو النجاح، أو الفشل. ولهذا تصل إلى القلب بسرعة.",
+            "الكلمات العظيمة تعيش أكثر من أصحابها."
+          ]
+        },
         {
           "category": "development",
           "file": "self-discipline.html",
