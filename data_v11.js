@@ -1786,6 +1786,14 @@ const TIKTOK_DATA = {
       ],
       "quizzes": [
         {
+          "title": "Quel philosophe correspond à votre personnalité ?",
+          "file": "which-philosopher-are-you.html",
+          "image": "quiz_philosopher_hero.jpg",
+          "questionsCount": "15 questions",
+          "time": "3 min",
+          "desc": "Découvrez quel grand penseur reflète votre façon de penser en répondant à 15 questions."
+        },
+        {
           "id": "personality",
           "title": "Test de Personnalité Philosophique",
           "subtitle": "Découvrez de quelle école de pensée (Stoïcisme, Absurdisme, Existentialisme) vous êtes le plus proche.",
@@ -3693,6 +3701,14 @@ const TIKTOK_DATA = {
         }
       ],
       "quizzes": [
+        {
+          "title": "Which Philosopher Matches Your Personality?",
+          "file": "which-philosopher-are-you.html",
+          "image": "quiz_philosopher_hero.jpg",
+          "questionsCount": "15 questions",
+          "time": "3 min",
+          "desc": "Discover which classic thinker reflects your mindset by answering 15 simple questions."
+        },
         {
           "id": "personality",
           "title": "Philosophy Personality Test",
@@ -5700,6 +5716,14 @@ const TIKTOK_DATA = {
         }
       ],
       "quizzes": [
+        {
+          "title": "أي فيلسوف يشبه شخصيتك؟",
+          "file": "which-philosopher-are-you.html",
+          "image": "quiz_philosopher_hero.jpg",
+          "questionsCount": "15 سؤالًا",
+          "time": "3 دقائق",
+          "desc": "اكتشف أي مفكر يعكس طريقة تفكيرك من خلال الإجابة عن 15 سؤالًا فقط مع تحليل كامل لشخصيتك."
+        },
         {
           "id": "personality",
           "title": "اختبار الشخصية الفلسفية",

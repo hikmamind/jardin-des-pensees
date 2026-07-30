@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="ar" data-theme="dark" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أي فيلسوف يشبه شخصيتك؟ - HIKMA & NOUR</title>
+  <meta name="description" content="اكتشف أي مفكر يعكس طريقة تفكيرك من خلال الإجابة عن 15 سؤالًا فقط. تحليل شامل لشخصيتك الفلسفية.">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    /* ─── Quiz Custom Aesthetics (Hikma & Nour Theme) ─── */
+    :root {
+      --parchment-bg: #F5EFE6;
+      --card-parchment: #EFE6D8;
+      --card-inner: #FAF6EF;
+      --text-brown: #2E241C;
+      --text-brown-muted: #5C4A3E;
+      --accent-gold: #B38A3C;
+      --accent-gold-light: #D4A853;
+      --border-gold: rgba(179, 138, 60, 0.25);
+    }
+
+    [data-theme="dark"] {
+      --parchment-bg: #121A15;
+      --card-parchment: #1A241E;
+      --card-inner: #151E18;
+      --text-brown: #EAE3D2;
+      --text-brown-muted: #B8AFA0;
+      --accent-gold: #DFB15B;
+      --accent-gold-light: #F0C775;
+      --border-gold: rgba(223, 177, 91, 0.2);
+    }
+
+    body {
+      background-color: var(--parchment-bg);
+      color: var(--text-brown);
+      font-family: 'Amiri', 'Noto Serif Arabic', Georgia, serif;
+      line-height: 1.8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .quiz-container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 20px 20px 80px;
+    }
+
+    /* Top Navigation Bar */
+    .quiz-top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--border-gold);
+    }
+
+    .quiz-top-nav a {
+      color: var(--accent-gold);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Hero Start Screen */
+    .quiz-hero-card {
+      background: var(--card-parchment);
+      border: 1px solid var(--border-gold);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 35px;
+    }
+
+    .quiz-hero-img-box {
+      width: 100%;
+      height: 320px;
+      position: relative;
+    }
+
+    .quiz-hero-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .quiz-hero-content {
+      padding: 35px;
+      text-align: center;
+    }
+
+    .quiz-badge {
+      display: inline-block;
+      background: rgba(179, 138, 60, 0.15);
+      border: 1px solid var(--accent-gold);
+      color: var(--accent-gold);
+      padding: 5px 18px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .quiz-title {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 900;
+      color: var(--text-brown);
+      margin: 0 0 12px;
+      font-family: 'Playfair Display', 'Amiri', serif;
+    }
+
+    .quiz-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-brown-muted);
+      margin: 0 0 25px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .quiz-stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .quiz-stat-pill {
+      background: var(--card-inner);
+      border: 1px solid var(--border-gold);
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-brown);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .quiz-intro-box {
+      background: var(--card-inner);
+      border: 1px solid var(--border-gold);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 30px;
+      text-align: right;
+      font-size: 0.95rem;
+      color: var(--text-brown);
+      line-height: 1.9;
+    }
+
+    /* Giant Gold Start Button */
+    .btn-gold-start {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-light) 100%);
+      color: #1A0F00;
+      font-size: 1.25rem;
+      font-weight: 900;
+      padding: 16px 45px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(179, 138, 60, 0.4);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      font-family: inherit;
+    }
+
+    .btn-gold-start:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(179, 138, 60, 0.6);
+    }
+
+    /* ─── Question Screen ─── */
+    .quiz-card-box {
+      background: var(--card-parchment);
+      border: 1px solid var(--border-gold);
+      border-radius: 24px;
+      padding: 35px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      display: none;
+    }
+
+    .quiz-card-box.active {
+      display: block;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .progress-bar-container {
+      width: 100%;
+      height: 8px;
+      background: var(--card-inner);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 25px;
+      border: 1px solid var(--border-gold);
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(to right, var(--accent-gold), var(--accent-gold-light));
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    .question-step-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--accent-gold);
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .question-title-text {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-brown);
+      margin: 0 0 25px;
+      line-height: 1.5;
+    }
+
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .option-btn {
+      background: var(--card-inner);
+      border: 1.5px solid var(--border-gold);
+      border-radius: 16px;
+      padding: 16px 20px;
+      text-align: right;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-brown);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-family: inherit;
+    }
+
+    .option-btn:hover {
+      border-color: var(--accent-gold);
+      background: rgba(179, 138, 60, 0.12);
+      transform: translateX(-4px);
+    }
+
+    [dir="ltr"] .option-btn:hover {
+      transform: translateX(4px);
+    }
+
+    .option-radio-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid var(--accent-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .option-radio-dot::after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent-gold);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .option-btn.selected .option-radio-dot::after {
+      opacity: 1;
+    }
+
+    /* ─── Result Screen ─── */
+    .result-screen-card {
+      display: none;
+      background: var(--card-parchment);
+      border: 1px solid var(--border-gold);
+      border-radius: 24px;
+      padding: 40px 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .result-screen-card.active {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .result-header-badge {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .result-philosopher-title {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--accent-gold);
+      margin: 10px 0 5px;
+      text-align: center;
+      font-family: 'Playfair Display', 'Amiri', serif;
+    }
+
+    .result-archetype-subtitle {
+      font-size: 1.15rem;
+      color: var(--text-brown-muted);
+      text-align: center;
+      margin: 0 0 25px;
+    }
+
+    /* Match percentage circle / box */
+    .match-percent-box {
+      background: linear-gradient(135deg, rgba(179,138,60,0.15), rgba(0,0,0,0));
+      border: 1px solid var(--border-gold);
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .match-number {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--accent-gold);
+      line-height: 1;
+    }
+
+    .match-label {
+      font-size: 0.85rem;
+      color: var(--text-brown-muted);
+      margin-top: 4px;
+    }
+
+    .result-section-box {
+      background: var(--card-inner);
+      border: 1px solid var(--border-gold);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 25px;
+    }
+
+    .result-section-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--accent-gold);
+      margin: 0 0 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .result-body-text {
+      font-size: 0.95rem;
+      line-height: 1.9;
+      color: var(--text-brown);
+      margin: 0;
+    }
+
+    .result-quote-banner {
+      background: rgba(179, 138, 60, 0.08);
+      border-right: 4px solid var(--accent-gold);
+      border-radius: 0 12px 12px 0;
+      padding: 18px 22px;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--text-brown);
+      font-family: 'Playfair Display', 'Amiri', serif;
+      margin-bottom: 25px;
+    }
+
+    [dir="rtl"] .result-quote-banner {
+      border-right: none;
+      border-left: 4px solid var(--accent-gold);
+      border-radius: 12px 0 0 12px;
+    }
+
+    .result-links-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .result-links-list li a {
+      font-size: 0.9rem;
+      color: var(--text-brown);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      transition: color 0.2s;
+    }
+
+    .result-links-list li a:hover {
+      color: var(--accent-gold);
+    }
+
+    .result-actions-flex {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 35px;
+      flex-wrap: wrap;
+    }
+
+    .btn-retake {
+      background: var(--card-inner);
+      border: 1.5px solid var(--accent-gold);
+      color: var(--accent-gold);
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.25s;
+    }
+
+    .btn-retake:hover {
+      background: var(--accent-gold);
+      color: #1A0F00;
+    }
+
+    .share-result-block {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-gold);
+    }
+
+    .share-btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .share-btn-item {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(179, 138, 60, 0.1);
+      border: 1px solid var(--border-gold);
+      color: var(--accent-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: all 0.25s;
+    }
+
+    .share-btn-item:hover {
+      background: var(--accent-gold);
+      color: #FFF;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="quiz-container">
+
+    <!-- Top Nav -->
+    <div class="quiz-top-nav">
+      <a href="../">← الرئيسية</a>
+      <span style="font-weight:800; color:var(--accent-gold);">🏛️ HIKMA & NOUR QUIZ</span>
+    </div>
+
+    <!-- ─── START SCREEN ─── -->
+    <div id="startScreen" class="quiz-hero-card">
+      <div class="quiz-hero-img-box">
+        <img src="../quiz_philosopher_hero.jpg" alt="مكتبة الفلاسفة العظماء">
+      </div>
+      <div class="quiz-hero-content">
+        <span class="quiz-badge">اختبار الشخصية الفلسفية</span>
+        <h1 class="quiz-title">أي فيلسوف يشبه شخصيتك؟</h1>
+        <p class="quiz-subtitle">اكتشف أي مفكر يعكس طريقة تفكيرك من خلال الإجابة عن 15 سؤالًا فقط.</p>
+
+        <div class="quiz-stats-row">
+          <div class="quiz-stat-pill">⏱️ الوقت: 3 دقائق</div>
+          <div class="quiz-stat-pill">🎯 عدد الأسئلة: 15</div>
+          <div class="quiz-stat-pill">📊 النتيجة: تحليل كامل لشخصيتك</div>
+        </div>
+
+        <div class="quiz-intro-box">
+          <p style="margin:0 0 8px; font-weight:800; color:var(--accent-gold);">مقدمة الاختبار:</p>
+          لكل إنسان طريقته الخاصة في التفكير... فالبعض يبحث عن الحقيقة، والبعض يبحث عن السعادة، والبعض يريد فهم النفس، بينما يسعى آخرون إلى القوة أو الحكمة.<br>
+          هذا الاختبار لا يقيس الذكاء، بل يحاول اكتشاف الفيلسوف الأقرب إلى شخصيتك من خلال اختياراتك.
+        </div>
+
+        <button id="startQuizBtn" class="btn-gold-start">
+          <span>ابدأ الاختبار</span>
+          <span>←</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ─── QUESTION SCREEN ─── -->
+    <div id="questionScreen" class="quiz-card-box">
+      <div class="progress-bar-container">
+        <div id="progressBarFill" class="progress-bar-fill"></div>
+      </div>
+
+      <div class="question-step-header">
+        <span id="questionStepLabel">سؤال 1 من 15</span>
+        <span>🏛️ HIKMA QUIZ</span>
+      </div>
+
+      <h2 id="questionText" class="question-title-text">عنوان السؤال</h2>
+
+      <div id="optionsContainer" class="options-list">
+        <!-- Options generated dynamically -->
+      </div>
+    </div>
+
+    <!-- ─── RESULT SCREEN ─── -->
+    <div id="resultScreen" class="result-screen-card">
+      <div class="result-header-badge">
+        <span class="quiz-badge">تحليل الشخصية الفلسفية</span>
+        <h2 id="resPhilosopherName" class="result-philosopher-title">اسم الفيلسوف</h2>
+        <p id="resArchetypeTitle" class="result-archetype-subtitle">لقب الفيلسوف</p>
+      </div>
+
+      <!-- Match percent -->
+      <div class="match-percent-box">
+        <div id="resMatchScore" class="match-number">91%</div>
+        <div class="match-label">نسبة التطابق مع شخصيتك الفلسفية</div>
+      </div>
+
+      <!-- Personality Analysis -->
+      <div class="result-section-box">
+        <div class="result-section-title">🧠 تحليل الشخصية</div>
+        <p id="resAnalysisText" class="result-body-text">نص التحليل الكامل للشخصية...</p>
+      </div>
+
+      <!-- Famous Quote Banner -->
+      <div id="resQuoteText" class="result-quote-banner">
+        "اعرف نفسك."
+      </div>
+
+      <!-- Recommended Books -->
+      <div class="result-section-box">
+        <div class="result-section-title">📚 أهم الكتب الموصى بها</div>
+        <ul id="resBooksList" class="result-links-list">
+          <!-- Books inserted dynamically -->
+        </ul>
+      </div>
+
+      <!-- Thinker Biography Link -->
+      <div class="result-section-box">
+        <div class="result-section-title">👤 السيرة الذاتية للفيلسوف</div>
+        <p id="resBioSnippet" class="result-body-text">نبذة عن حياة الفيلسوف وأفكاره الرئيسية...</p>
+      </div>
+
+      <!-- Related Articles -->
+      <div class="result-section-box">
+        <div class="result-section-title">📰 مقالات ذات صلة</div>
+        <ul id="resArticlesList" class="result-links-list">
+          <li><a href="../articles/?article=self-discipline.html">📖 كيف تبني الانضباط الذاتي؟</a></li>
+          <li><a href="../articles/?article=stop-overthinking.html">📖 لماذا نفكر أكثر من اللازم؟</a></li>
+          <li><a href="../articles/?article=hikma-citations-philosophiques.html">📖 حكم وأقوال خالدة من عظماء الفكر</a></li>
+        </ul>
+      </div>
+
+      <!-- Action buttons -->
+      <div class="result-actions-flex">
+        <button id="retakeBtn" class="btn-retake">🔄 أعد الاختبار</button>
+      </div>
+
+      <!-- Social Share -->
+      <div class="share-result-block">
+        <span style="font-weight:800; font-size:0.9rem; color:var(--text-brown);">📤 شارك نتيجتك مع أصدقائك</span>
+        <div class="share-btn-group">
+          <a href="#" class="share-btn-item" title="واتساب">💬</a>
+          <a href="#" class="share-btn-item" title="فيسبوك">f</a>
+          <a href="#" class="share-btn-item" title="X / تويتر">🐤</a>
+          <a href="#" class="share-btn-item" title="تليجرام">✈️</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // ─── Quiz Data Engine ───
+    const questions = [
+      {
+        q: "عندما تواجه مشكلة كبيرة...",
+        options: [
+          { text: "أحللها بهدوء.", key: "aurelius" },
+          { text: "أبحث عن معناها.", key: "schopenhauer" },
+          { text: "أواجهها مباشرة.", key: "nietzsche" },
+          { text: "أطلب نصيحة الآخرين.", key: "confucius" },
+          { text: "أترك الوقت يحلها.", key: "socrates" }
+        ]
+      },
+      {
+        q: "ما الذي يحرك الإنسان أكثر؟",
+        options: [
+          { text: "العقل.", key: "socrates" },
+          { text: "المشاعر.", key: "schopenhauer" },
+          { text: "الإرادة.", key: "nietzsche" },
+          { text: "الطموح.", key: "aurelius" },
+          { text: "الأخلاق.", key: "confucius" }
+        ]
+      },
+      {
+        q: "لو ربحت مليون دولار...",
+        options: [
+          { text: "أستثمره.", key: "nietzsche" },
+          { text: "أسافر.", key: "socrates" },
+          { text: "أقرأ وأتعلم.", key: "schopenhauer" },
+          { text: "أساعد الآخرين.", key: "confucius" },
+          { text: "أعيش بهدوء.", key: "aurelius" }
+        ]
+      },
+      {
+        q: "أي جملة تعجبك أكثر؟",
+        options: [
+          { text: "الحقيقة أهم من الراحة.", key: "socrates" },
+          { text: "الإنسان أقوى مما يظن.", key: "nietzsche" },
+          { text: "السعادة تبدأ من الداخل.", key: "aurelius" },
+          { text: "المعرفة قوة.", key: "schopenhauer" },
+          { text: "كل شيء يتغير.", key: "confucius" }
+        ]
+      },
+      {
+        q: "كيف تتعامل مع الفشل؟",
+        options: [
+          { text: "أتعلم منه.", key: "socrates" },
+          { text: "ألوم نفسي.", key: "schopenhauer" },
+          { text: "أبدأ من جديد.", key: "nietzsche" },
+          { text: "أتقبله.", key: "aurelius" },
+          { text: "أبحث عن سببه.", key: "confucius" }
+        ]
+      },
+      {
+        q: "ما أكثر شيء تخشاه؟",
+        options: [
+          { text: "الفشل.", key: "nietzsche" },
+          { text: "الوحدة.", key: "confucius" },
+          { text: "الجهل.", key: "socrates" },
+          { text: "فقدان الحرية.", key: "aurelius" },
+          { text: "فقدان المعنى.", key: "schopenhauer" }
+        ]
+      },
+      {
+        q: "كيف تقضي وقت فراغك؟",
+        options: [
+          { text: "القراءة.", key: "socrates" },
+          { text: "المشي.", key: "schopenhauer" },
+          { text: "الرياضة.", key: "nietzsche" },
+          { text: "التأمل.", key: "aurelius" },
+          { text: "مع الأصدقاء.", key: "confucius" }
+        ]
+      },
+      {
+        q: "أي صفة تفضل؟",
+        options: [
+          { text: "الحكمة.", key: "socrates" },
+          { text: "الشجاعة.", key: "nietzsche" },
+          { text: "الصبر.", key: "aurelius" },
+          { text: "الإبداع.", key: "schopenhauer" },
+          { text: "الانضباط.", key: "confucius" }
+        ]
+      },
+      {
+        q: "أي مكان تفضله؟",
+        options: [
+          { text: "مكتبة.", key: "socrates" },
+          { text: "جبل.", key: "nietzsche" },
+          { text: "بحر.", key: "schopenhauer" },
+          { text: "مدينة.", key: "confucius" },
+          { text: "غابة.", key: "aurelius" }
+        ]
+      },
+      {
+        q: "كيف تتخذ قراراتك؟",
+        options: [
+          { text: "بالعقل.", key: "socrates" },
+          { text: "بالقلب.", key: "confucius" },
+          { text: "بعد دراسة طويلة.", key: "schopenhauer" },
+          { text: "بسرعة.", key: "nietzsche" },
+          { text: "حسب الظروف.", key: "aurelius" }
+        ]
+      },
+      {
+        q: "ما هدف الحياة؟",
+        options: [
+          { text: "المعرفة.", key: "socrates" },
+          { text: "السعادة.", key: "schopenhauer" },
+          { text: "الحرية.", key: "nietzsche" },
+          { text: "النجاح.", key: "confucius" },
+          { text: "السلام الداخلي.", key: "aurelius" }
+        ]
+      },
+      {
+        q: "أي كتاب تختار؟",
+        options: [
+          { text: "فلسفة.", key: "socrates" },
+          { text: "علم نفس.", key: "schopenhauer" },
+          { text: "رواية.", key: "confucius" },
+          { text: "تاريخ.", key: "aurelius" },
+          { text: "تطوير الذات.", key: "nietzsche" }
+        ]
+      },
+      {
+        q: "لو أصبحت مشهورًا...",
+        options: [
+          { text: "سأبقى كما أنا.", key: "aurelius" },
+          { text: "سأساعد الآخرين.", key: "confucius" },
+          { text: "سأكتب كتابًا.", key: "socrates" },
+          { text: "سأعيش بعيدًا عن الأضواء.", key: "schopenhauer" },
+          { text: "سأواصل التعلم.", key: "nietzsche" }
+        ]
+      },
+      {
+        q: "أي كلمة تصفك؟",
+        options: [
+          { text: "مفكر.", key: "socrates" },
+          { text: "قائد.", key: "nietzsche" },
+          { text: "هادئ.", key: "aurelius" },
+          { text: "طموح.", key: "confucius" },
+          { text: "فضولي.", key: "socrates" }
+        ]
+      },
+      {
+        q: "أي اقتباس يعجبك؟",
+        options: [
+          { text: "اعرف نفسك.", key: "socrates" },
+          { text: "السعادة ليست إلا غياب الألم.", key: "schopenhauer" },
+          { text: "حياتك هي ما تصنعه أفكارك.", key: "aurelius" },
+          { text: "من يملك سببًا يعيش من أجله...", key: "nietzsche" },
+          { text: "كن التغيير الذي تريد أن تراه.", key: "confucius" }
+        ]
+      }
+    ];
+
+    const resultsData = {
+      socrates: {
+        name: "🏛️ سقراط",
+        archetype: "المعلم الذي لا يتوقف عن طرح الأسئلة",
+        analysis: "أنت شخص فضولي، تحب التفكير العميق، وتؤمن أن الحكمة تبدأ بمعرفة النفس. تميل إلى الحوار أكثر من إصدار الأحكام، وترى أن التعلم رحلة لا تنتهي.",
+        quote: "«العلّة الوحيدة للجهل هي الاعتقاد بامتلاك المعرفة.» — سقراط",
+        books: [
+          { title: "محاورات أفلاطون (دفاع سقراط)", url: "../thinkers/?thinker=socrate" },
+          { title: "تاريخ الفلسفة اليونانية", url: "../thinkers/?thinker=platon" },
+          { title: "الأخلاق لنكوماخوس — أرسطو", url: "../thinkers/?thinker=aristote" }
+        ],
+        bio: "سقراط (470-399 ق.م) فيلسوف أثينا الكلاسيكي وأحد مؤسسي الفلسفة الغربية. اشتهر بالمنهج السقراطي في السؤال والجواب للوصول إلى الحقيقة.",
+        matchBase: 92
+      },
+      aurelius: {
+        name: "🌿 ماركوس أوريليوس",
+        archetype: "الحكيم الرواقي",
+        analysis: "تتميز بالهدوء وضبط النفس، وتركز على ما يمكنك التحكم فيه. لا تسمح للظروف بأن تتحكم في سلامك الداخلي، وتعيش بقيم راسخة من الثبات والحكمة.",
+        quote: "«حياتك هي ما تصنعه أفكارك.» — ماركوس أوريليوس",
+        books: [
+          { title: "التأملات — ماركوس أوريليوس", url: "../thinkers/?thinker=marcaurele" },
+          { title: "رسائل من رواقي — سينيكا", url: "../thinkers/?thinker=seneque" },
+          { title: "المختصر — إبكتيتوس", url: "../thinkers/?thinker=epictete" }
+        ],
+        bio: "ماركوس أوريليوس (121-180 م) إمبراطور روماني وفيلسوف رواقي. كتب "التأملات" كدليل شخصي لإدارة الذات والحفاظ على الهدوء في أوقات الأزمات.",
+        matchBase: 95
+      },
+      schopenhauer: {
+        name: "📚 آرثر شوبنهاور",
+        archetype: "المتأمل في أعماق النفس",
+        analysis: "تحب العزلة والتأمل، وتبحث عن الحقيقة حتى لو كانت مؤلمة. تميل إلى التفكير الفلسفي العميق وترى أن فهم النفس والتحرر من الرغبات أهم من المظاهر.",
+        quote: "«السعادة ليست إلا غياب الألم.» — آرثر شوبنهاور",
+        books: [
+          { title: "العالم إرادة وتمثل — شوبنهاور", url: "../thinkers/?thinker=schopenhauer" },
+          { title: "عن الحكمة في الحياة — شوبنهاور", url: "../thinkers/?thinker=schopenhauer" },
+          { title: "الإنسان وبحثه عن المعنى — فيكتور فرانكل", url: "../articles/?article=stop-overthinking.html" }
+        ],
+        bio: "آرثر شوبنهاور (1788-1860) فيلسوف ألماني عُرِف ببحثه العميق في طبيعة الإرادة الإنسانية وطرق تحقيق السلام الداخلي من خلال الفن والتأمل.",
+        matchBase: 89
+      },
+      nietzsche: {
+        name: "⚡ فريدريك نيتشه",
+        archetype: "الباحث عن القوة وتجاوز الذات",
+        analysis: "تحب التحديات، وتؤمن أن الإنسان قادر على إعادة تشكيل نفسه باستمرار. لا تخاف من كسر القواعد القديمة عندما ترى أنها تمنعك من التقدم والنمو.",
+        quote: "«من يملك سببًا يعيش من أجله، يستطيع تحمل أي شيء تقريبًا.» — فريدريك نيتشه",
+        books: [
+          { title: "هكذا تكلم زرادشت — نيتشه", url: "../thinkers/?thinker=nietzsche" },
+          { title: "ما وراء الخير والشر — نيتشه", url: "../thinkers/?thinker=nietzsche" },
+          { title: "إرادة القوة — نيتشه", url: "../thinkers/?thinker=nietzsche" }
+        ],
+        bio: "فريدريك نيتشه (1844-1900) فيلسوف ألماني أحدث ثورة في الفكر الحديث بنقده للقيم التقليدية ودعوته للشجاعة وتطوير الذات.",
+        matchBase: 94
+      },
+      confucius: {
+        name: "☯️ كونفوشيوس",
+        archetype: "صانع التوازن والحكمة الأخلاقية",
+        analysis: "تقدر الأخلاق، والاحترام، والعلاقات الإنسانية. تؤمن أن المجتمع القوي يبدأ بالفرد المسؤول وأن الحكمة الحقيقية تجسدها الأفعال وليس المظاهر.",
+        quote: "«الرجل العظيم يطالب نفسه، والرجل الصغير يطالب الآخرين.» — كونفوشيوس",
+        books: [
+          { title: "المختارات (الأناليكتس) — كونفوشيوس", url: "../thinkers/?thinker=confucius" },
+          { title: "الفلسفة الصينية الكلاسيكية", url: "../thinkers/?thinker=laotseu" },
+          { title: "طريق التاو (تاو تي تشينغ) — لاوتسو", url: "../thinkers/?thinker=laotseu" }
+        ],
+        bio: "كونفوشيوس (551-479 ق.م) حكيم وفيلسوف صيني أسس الفلسفة الكونفوشيوسية التي ركزت على الأخلاق الشخصية والحكم الصالح والانسجام الاجتماعي.",
+        matchBase: 91
+      }
+    };
+
+    let currentIndex = 0;
+    const scores = { socrates: 0, aurelius: 0, schopenhauer: 0, nietzsche: 0, confucius: 0 };
+
+    const startScreen = document.getElementById('startScreen');
+    const questionScreen = document.getElementById('questionScreen');
+    const resultScreen = document.getElementById('resultScreen');
+
+    document.getElementById('startQuizBtn').addEventListener('click', () => {
+      startScreen.style.display = 'none';
+      questionScreen.classList.add('active');
+      renderQuestion();
+    });
+
+    function renderQuestion() {
+      const qData = questions[currentIndex];
+      document.getElementById('questionStepLabel').textContent = `سؤال ${currentIndex + 1} من ${questions.length}`;
+      document.getElementById('questionText').textContent = qData.q;
+      
+      const pct = ((currentIndex + 1) / questions.length) * 100;
+      document.getElementById('progressBarFill').style.width = pct + '%';
+
+      const container = document.getElementById('optionsContainer');
+      container.innerHTML = '';
+
+      qData.options.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.className = 'option-btn';
+        btn.innerHTML = `
+          <div class="option-radio-dot"></div>
+          <span>${opt.text}</span>
+        `;
+        btn.addEventListener('click', () => {
+          scores[opt.key] = (scores[opt.key] || 0) + 1;
+          currentIndex++;
+          if (currentIndex < questions.length) {
+            renderQuestion();
+          } else {
+            showResult();
+          }
+        });
+        container.appendChild(btn);
+      });
+    }
+
+    function showResult() {
+      questionScreen.style.display = 'none';
+      resultScreen.classList.add('active');
+
+      let topKey = 'socrates';
+      let maxScore = -1;
+      for (const k in scores) {
+        if (scores[k] > maxScore) {
+          maxScore = scores[k];
+          topKey = k;
+        }
+      }
+
+      const res = resultsData[topKey];
+      document.getElementById('resPhilosopherName').textContent = res.name;
+      document.getElementById('resArchetypeTitle').textContent = res.archetype;
+      
+      // Calculate realistic dynamic match % between 86% and 98%
+      const matchCalc = Math.min(98, Math.max(86, res.matchBase + (maxScore * 2)));
+      document.getElementById('resMatchScore').textContent = matchCalc + '%';
+
+      document.getElementById('resAnalysisText').textContent = res.analysis;
+      document.getElementById('resQuoteText').textContent = res.quote;
+      document.getElementById('resBioSnippet').textContent = res.bio;
+
+      const booksList = document.getElementById('resBooksList');
+      booksList.innerHTML = '';
+      res.books.forEach(b => {
+        const li = document.createElement('li');
+        li.innerHTML = `<a href="${b.url}">📖 ${b.title}</a>`;
+        booksList.appendChild(li);
+      });
+    }
+
+    document.getElementById('retakeBtn').addEventListener('click', () => {
+      currentIndex = 0;
+      for (const k in scores) scores[k] = 0;
+      resultScreen.style.display = 'none';
+      startScreen.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
