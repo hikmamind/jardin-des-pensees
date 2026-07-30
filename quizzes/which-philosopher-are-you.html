@@ -193,7 +193,7 @@
     }
 
     .quiz-card-box.active {
-      display: block;
+      display: block !important;
       animation: fadeIn 0.4s ease;
     }
 
@@ -258,6 +258,7 @@
       align-items: center;
       gap: 14px;
       font-family: inherit;
+      width: 100%;
     }
 
     .option-btn:hover {
@@ -306,7 +307,7 @@
     }
 
     .result-screen-card.active {
-      display: block;
+      display: block !important;
       animation: fadeIn 0.5s ease;
     }
 
@@ -610,7 +611,7 @@
 
   <script>
     // ─── Quiz Data Engine ───
-    const questions = [
+    var questions = [
       {
         q: "عندما تواجه مشكلة كبيرة...",
         options: [
@@ -763,7 +764,7 @@
       }
     ];
 
-    const resultsData = {
+    var resultsData = {
       socrates: {
         name: "🏛️ سقراط",
         archetype: "المعلم الذي لا يتوقف عن طرح الأسئلة",
@@ -787,7 +788,7 @@
           { title: "رسائل من رواقي — سينيكا", url: "../thinkers/?thinker=seneque" },
           { title: "المختصر — إبكتيتوس", url: "../thinkers/?thinker=epictete" }
         ],
-        bio: "ماركوس أوريليوس (121-180 م) إمبراطور روماني وفيلسوف رواقي. كتب "التأملات" كدليل شخصي لإدارة الذات والحفاظ على الهدوء في أوقات الأزمات.",
+        bio: "ماركوس أوريليوس (121-180 م) إمبراطور روماني وفيلسوف رواقي. كتب «التأملات» كدليل شخصي لإدارة الذات والحفاظ على الهدوء في أوقات الأزمات.",
         matchBase: 95
       },
       schopenhauer: {
@@ -831,89 +832,97 @@
       }
     };
 
-    let currentIndex = 0;
-    const scores = { socrates: 0, aurelius: 0, schopenhauer: 0, nietzsche: 0, confucius: 0 };
+    var currentIndex = 0;
+    var scores = { socrates: 0, aurelius: 0, schopenhauer: 0, nietzsche: 0, confucius: 0 };
 
-    const startScreen = document.getElementById('startScreen');
-    const questionScreen = document.getElementById('questionScreen');
-    const resultScreen = document.getElementById('resultScreen');
+    document.addEventListener('DOMContentLoaded', function() {
+      var startScreen = document.getElementById('startScreen');
+      var questionScreen = document.getElementById('questionScreen');
+      var resultScreen = document.getElementById('resultScreen');
+      var startBtn = document.getElementById('startQuizBtn');
 
-    document.getElementById('startQuizBtn').addEventListener('click', () => {
-      startScreen.style.display = 'none';
-      questionScreen.classList.add('active');
-      renderQuestion();
-    });
-
-    function renderQuestion() {
-      const qData = questions[currentIndex];
-      document.getElementById('questionStepLabel').textContent = `سؤال ${currentIndex + 1} من ${questions.length}`;
-      document.getElementById('questionText').textContent = qData.q;
-      
-      const pct = ((currentIndex + 1) / questions.length) * 100;
-      document.getElementById('progressBarFill').style.width = pct + '%';
-
-      const container = document.getElementById('optionsContainer');
-      container.innerHTML = '';
-
-      qData.options.forEach(opt => {
-        const btn = document.createElement('button');
-        btn.className = 'option-btn';
-        btn.innerHTML = `
-          <div class="option-radio-dot"></div>
-          <span>${opt.text}</span>
-        `;
-        btn.addEventListener('click', () => {
-          scores[opt.key] = (scores[opt.key] || 0) + 1;
-          currentIndex++;
-          if (currentIndex < questions.length) {
-            renderQuestion();
-          } else {
-            showResult();
-          }
+      if (startBtn) {
+        startBtn.addEventListener('click', function() {
+          startScreen.style.display = 'none';
+          questionScreen.style.display = 'block';
+          questionScreen.classList.add('active');
+          renderQuestion();
         });
-        container.appendChild(btn);
-      });
-    }
-
-    function showResult() {
-      questionScreen.style.display = 'none';
-      resultScreen.classList.add('active');
-
-      let topKey = 'socrates';
-      let maxScore = -1;
-      for (const k in scores) {
-        if (scores[k] > maxScore) {
-          maxScore = scores[k];
-          topKey = k;
-        }
       }
 
-      const res = resultsData[topKey];
-      document.getElementById('resPhilosopherName').textContent = res.name;
-      document.getElementById('resArchetypeTitle').textContent = res.archetype;
-      
-      // Calculate realistic dynamic match % between 86% and 98%
-      const matchCalc = Math.min(98, Math.max(86, res.matchBase + (maxScore * 2)));
-      document.getElementById('resMatchScore').textContent = matchCalc + '%';
+      function renderQuestion() {
+        var qData = questions[currentIndex];
+        document.getElementById('questionStepLabel').textContent = 'سؤال ' + (currentIndex + 1) + ' من ' + questions.length;
+        document.getElementById('questionText').textContent = qData.q;
+        
+        var pct = ((currentIndex + 1) / questions.length) * 100;
+        document.getElementById('progressBarFill').style.width = pct + '%';
 
-      document.getElementById('resAnalysisText').textContent = res.analysis;
-      document.getElementById('resQuoteText').textContent = res.quote;
-      document.getElementById('resBioSnippet').textContent = res.bio;
+        var container = document.getElementById('optionsContainer');
+        container.innerHTML = '';
 
-      const booksList = document.getElementById('resBooksList');
-      booksList.innerHTML = '';
-      res.books.forEach(b => {
-        const li = document.createElement('li');
-        li.innerHTML = `<a href="${b.url}">📖 ${b.title}</a>`;
-        booksList.appendChild(li);
-      });
-    }
+        qData.options.forEach(function(opt) {
+          var btn = document.createElement('button');
+          btn.className = 'option-btn';
+          btn.type = 'button';
+          btn.innerHTML = '<div class="option-radio-dot"></div><span>' + opt.text + '</span>';
+          btn.addEventListener('click', function() {
+            scores[opt.key] = (scores[opt.key] || 0) + 1;
+            currentIndex++;
+            if (currentIndex < questions.length) {
+              renderQuestion();
+            } else {
+              showResult();
+            }
+          });
+          container.appendChild(btn);
+        });
+      }
 
-    document.getElementById('retakeBtn').addEventListener('click', () => {
-      currentIndex = 0;
-      for (const k in scores) scores[k] = 0;
-      resultScreen.style.display = 'none';
-      startScreen.style.display = 'block';
+      function showResult() {
+        questionScreen.style.display = 'none';
+        resultScreen.style.display = 'block';
+        resultScreen.classList.add('active');
+
+        var topKey = 'socrates';
+        var maxScore = -1;
+        for (var k in scores) {
+          if (scores[k] > maxScore) {
+            maxScore = scores[k];
+            topKey = k;
+          }
+        }
+
+        var res = resultsData[topKey];
+        document.getElementById('resPhilosopherName').textContent = res.name;
+        document.getElementById('resArchetypeTitle').textContent = res.archetype;
+        
+        var matchCalc = Math.min(98, Math.max(86, res.matchBase + (maxScore * 2)));
+        document.getElementById('resMatchScore').textContent = matchCalc + '%';
+
+        document.getElementById('resAnalysisText').textContent = res.analysis;
+        document.getElementById('resQuoteText').textContent = res.quote;
+        document.getElementById('resBioSnippet').textContent = res.bio;
+
+        var booksList = document.getElementById('resBooksList');
+        booksList.innerHTML = '';
+        res.books.forEach(function(b) {
+          var li = document.createElement('li');
+          li.innerHTML = '<a href="' + b.url + '">📖 ' + b.title + '</a>';
+          booksList.appendChild(li);
+        });
+      }
+
+      var retakeBtn = document.getElementById('retakeBtn');
+      if (retakeBtn) {
+        retakeBtn.addEventListener('click', function() {
+          currentIndex = 0;
+          for (var k in scores) scores[k] = 0;
+          resultScreen.style.display = 'none';
+          questionScreen.style.display = 'none';
+          startScreen.style.display = 'block';
+        });
+      }
     });
   </script>
 </body>
