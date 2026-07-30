@@ -332,6 +332,24 @@ function initPageLogic() {
   const initialCategory = urlParams.get('category') || 'all';
   currentCategory = initialCategory;
   updateActiveTag(initialCategory);
+
+  // 5. Auto-open specific article from URL param (?article=filename.html)
+  const articleParam = urlParams.get('article');
+  if (articleParam) {
+    // Wait for articles to be rendered, then find and open the matching one
+    setTimeout(() => {
+      const allArticles = TIKTOK_DATA.content[currentLang].articles;
+      const matchIdx = allArticles.findIndex(a => a.file === articleParam);
+      if (matchIdx !== -1) {
+        // Trigger click on the matching card, or directly call setupArticleModal + open
+        const cards = document.querySelectorAll('.article-card');
+        if (cards[matchIdx]) {
+          const readBtn = cards[matchIdx].querySelector('.card-action-link');
+          if (readBtn) readBtn.click();
+        }
+      }
+    }, 300);
+  }
 }
 
 // --- DOM Loaded ---
