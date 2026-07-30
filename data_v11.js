@@ -1552,6 +1552,20 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "category": "psychology",
+          "file": "true-confidence-inside.html",
+          "image": "person_window_sunrise.jpg",
+          "featured": true,
+          "title": "Comment construire une vraie confiance en soi de l'intérieur ?",
+          "readTime": "5 min de lecture",
+          "desc": "Un guide pratique pour développer votre confiance pas à pas et transformer votre vie.",
+          "body": [
+            "La vraie confiance ne consiste pas à paraître fort devant les autres, mais à se sentir serein même quand personne ne vous regarde.",
+            "Elle commence de l'intérieur, par la façon dont vous vous percevez et par le dialogue interne que vous entretenez chaque jour.",
+            "Arrêtez de vous comparer aux autres, acceptez vos erreurs comme des leçons, et célébrez chaque petit progrès."
+          ]
+        },
+        {
           "category": "philosophy",
           "file": "hikma-citations-philosophiques.html",
           "image": "quotes_article_hero.jpg",
@@ -3446,6 +3460,20 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "category": "psychology",
+          "file": "true-confidence-inside.html",
+          "image": "person_window_sunrise.jpg",
+          "featured": true,
+          "title": "How to Build True Inner Self-Confidence?",
+          "readTime": "5 min read",
+          "desc": "A practical step-by-step guide to building lasting self-confidence from within.",
+          "body": [
+            "True self-confidence isn't about appearing strong to others, but feeling peaceful even when no one is watching.",
+            "It starts from within, in the way you see yourself and the daily conversation happening in your mind.",
+            "Stop comparing yourself to others, accept your mistakes as lessons, and celebrate every small victory."
+          ]
+        },
+        {
           "category": "philosophy",
           "file": "hikma-citations-philosophiques.html",
           "image": "quotes_article_hero.jpg",
@@ -5339,6 +5367,20 @@ const TIKTOK_DATA = {
         }
       ],
       "articles": [
+        {
+          "category": "psychology",
+          "file": "true-confidence-inside.html",
+          "image": "person_window_sunrise.jpg",
+          "featured": true,
+          "title": "كيف تبني ثقة حقيقية من الداخل؟",
+          "readTime": "5 دقائق قراءة",
+          "desc": "دليل عملي لبناء الثقة بالنفس خطوة بخطوة وتحويل حياتك نحو الأفضل.",
+          "body": [
+            "الثقة بالنفس ليست أن تبدو قوياً أمام الآخرين، بل أن تشعر بالطمأنينة حتى عندما لا يراك أحد. يعتقد كثير من الناس أن الثقة تأتي من النجاح، أو المال، أو المظهر الخارجي، لكن الحقيقة مختلفة تماماً.",
+            "فالثقة الحقيقية تبدأ من الداخل، من الطريقة التي تنظر بها إلى نفسك، ومن الحوار الذي يدور في عقلك كل يوم. قد يمر الإنسان بلحظات شك، أو خوف، أو فشل، لكن هذه التجارب لا تحدد قيمته.",
+            "توقف عن مقارنة نفسك بالآخرين، تقبل أخطاءك وتعلم منها، احتفل بالإنجازات الصغيرة، واستخدم لغة إيجابية مع نفسك دائماً."
+          ]
+        },
         {
           "category": "philosophy",
           "file": "hikma-citations-philosophiques.html",
