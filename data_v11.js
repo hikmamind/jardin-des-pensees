@@ -1552,6 +1552,17 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "id": "solitude-blessing-or-curse",
+          "file": "solitude-blessing-or-curse.html",
+          "title": "La solitude est-elle une bénédiction ou une punition ? La voie vers la découverte de soi selon les philosophes",
+          "category": "philosophy",
+          "categoryName": "Philosophie & Sérénité",
+          "readTime": "8 min",
+          "date": "31 juillet 2026",
+          "desc": "Découvrez comment Schopenhauer et Nietzsche percevaient la solitude positive comme une clé vers la liberté intérieure.",
+          "image": "solitude_blessing_curse_hero.jpg"
+        },
+        {
           "id": "7-errors-mind-growth",
           "file": "7-errors-mind-growth.html",
           "title": "7 erreurs qui empêchent votre esprit de grandir : leçons de Socrate, Nietzsche et Marc Aurèle",
@@ -3345,6 +3356,17 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "id": "solitude-blessing-or-curse",
+          "file": "solitude-blessing-or-curse.html",
+          "title": "Is Solitude a Blessing or a Curse? How Philosophers See Solitude as a Path to Self-Discovery",
+          "category": "philosophy",
+          "categoryName": "Philosophy & Mind",
+          "readTime": "8 min",
+          "date": "31 July 2026",
+          "desc": "Explore how Schopenhauer and Nietzsche viewed solitude as an essential gateway to inner peace and self-discovery.",
+          "image": "solitude_blessing_curse_hero.jpg"
+        },
+        {
           "id": "7-errors-mind-growth",
           "file": "7-errors-mind-growth.html",
           "title": "7 Mistakes Preventing You from Developing Your Mind: Lessons from Socrates, Nietzsche, and Marcus Aurelius",
@@ -5137,6 +5159,17 @@ const TIKTOK_DATA = {
         }
       ],
       "articles": [
+        {
+          "id": "solitude-blessing-or-curse",
+          "file": "solitude-blessing-or-curse.html",
+          "title": "هل العزلة نعمة أم عقاب؟ كيف يرى الفلاسفة أن الوحدة طريق لاكتشاف الذات",
+          "category": "philosophy",
+          "categoryName": "الفلسفة والنفس",
+          "readTime": "8 دقائق قراءة",
+          "date": "31 يوليو 2026",
+          "desc": "كيف يرى الفلاسفة (شوبنهاور، نيتشه) أن الوحدة طريق لاكتشاف الذات وبناء السلام الداخلي في عالم مليء بالضوضاء.",
+          "image": "solitude_blessing_curse_hero.jpg"
+        },
         {
           "id": "7-errors-mind-growth",
           "file": "7-errors-mind-growth.html",
