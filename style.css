@@ -5571,3 +5571,98 @@ textarea.form-control {
     margin-right: 10px !important;
   }
 }
+
+
+/* ==========================================================================
+   LUXURIOUS THEMATIC HERO SPLIT BANNERS FOR SECTIONS
+   ========================================================================== */
+
+.section-hero-split {
+  background: var(--card-bg, #1A241E);
+  border: 1px solid var(--card-border, rgba(179, 138, 60, 0.25));
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 35px;
+  box-shadow: 0 12px 35px var(--shadow-color, rgba(0,0,0,0.15));
+  display: flex;
+  flex-direction: column;
+}
+
+[data-theme="light"] .section-hero-split {
+  background: #EFE6D8;
+}
+
+@media (min-width: 768px) {
+  .section-hero-split {
+    flex-direction: row;
+    align-items: stretch;
+    min-height: 280px;
+  }
+
+  .section-hero-split .hero-content-box {
+    flex: 1.1;
+    padding: 45px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .section-hero-split .hero-image-box {
+    flex: 0.9;
+    position: relative;
+    overflow: hidden;
+    min-height: 280px;
+  }
+}
+
+.section-hero-split .hero-content-box {
+  padding: 30px 24px;
+}
+
+.section-hero-split .hero-image-box {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-hero-split .hero-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.section-hero-split:hover .hero-image-box img {
+  transform: scale(1.04);
+}
+
+.hero-pill-badge {
+  display: inline-block;
+  background: rgba(179, 138, 60, 0.15);
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold);
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  width: fit-content;
+}
+
+.section-hero-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 900;
+  color: var(--text-primary);
+  margin: 0 0 12px;
+  font-family: 'Playfair Display', 'Amiri', serif;
+  line-height: 1.3;
+}
+
+.section-hero-desc {
+  font-size: 1.02rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin: 0;
+}
