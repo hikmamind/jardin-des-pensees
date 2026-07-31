@@ -1552,6 +1552,17 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "id": "7-errors-mind-growth",
+          "file": "7-errors-mind-growth.html",
+          "title": "7 erreurs qui empêchent votre esprit de grandir : leçons de Socrate, Nietzsche et Marc Aurèle",
+          "category": "philosophy",
+          "categoryName": "Philosophie & Esprit",
+          "readTime": "8 min",
+          "date": "31 juillet 2026",
+          "desc": "Découvrez les 7 pièges mentaux à éviter pour aiguiser votre pensée et développer votre sagesse selon les grands philosophes.",
+          "image": "mind_growth_errors_hero.jpg"
+        },
+        {
           "id": "happiness-in-wrong-place",
           "file": "happiness-in-wrong-place.html",
           "title": "Pourquoi cherchons-nous le bonheur au mauvais endroit ? Voyage entre Schopenhauer, les Stoïciens et Épicure",
@@ -3334,6 +3345,17 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "id": "7-errors-mind-growth",
+          "file": "7-errors-mind-growth.html",
+          "title": "7 Mistakes Preventing You from Developing Your Mind: Lessons from Socrates, Nietzsche, and Marcus Aurelius",
+          "category": "philosophy",
+          "categoryName": "Philosophy & Mind",
+          "readTime": "8 min",
+          "date": "31 July 2026",
+          "desc": "Uncover the 7 mental traps blocking your cognitive growth and wisdom based on timeless philosophical lessons.",
+          "image": "mind_growth_errors_hero.jpg"
+        },
+        {
           "id": "happiness-in-wrong-place",
           "file": "happiness-in-wrong-place.html",
           "title": "Why Do We Search for Happiness in the Wrong Place? A Journey with Schopenhauer, Stoics, and Epicurus",
@@ -5115,6 +5137,17 @@ const TIKTOK_DATA = {
         }
       ],
       "articles": [
+        {
+          "id": "7-errors-mind-growth",
+          "file": "7-errors-mind-growth.html",
+          "title": "٧ أخطاء تمنعك من تنمية عقلك: دروس من سقراط ونيتشه وماركوس أوريليوس",
+          "category": "philosophy",
+          "categoryName": "الفلسفة وتطوير الذات",
+          "readTime": "8 دقائق قراءة",
+          "date": "31 يوليو 2026",
+          "desc": "دروس من سقراط ونيتشه وماركوس أوريليوس للتخلص من الأخطاء السبعة التي تمنع العقل من النمو وتطوير الحكمة.",
+          "image": "mind_growth_errors_hero.jpg"
+        },
         {
           "id": "happiness-in-wrong-place",
           "file": "happiness-in-wrong-place.html",
