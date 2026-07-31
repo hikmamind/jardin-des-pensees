@@ -790,6 +790,7 @@ function setupContactForm() {
 
 // --- Initialize Page ---
 document.addEventListener('DOMContentLoaded', () => {
+  setupMobileNavOverlay();
   initTheme();
   initLanguageSelector(); // sets and translates page elements
   initNavigation();
@@ -800,3 +801,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
+
+function setupMobileNavOverlay() {
+  const hamburger = document.getElementById('navHamburger');
+  const menu = document.getElementById('navMenu');
+  let overlay = document.getElementById('navOverlay');
+
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'navOverlay';
+    overlay.className = 'nav-overlay';
+    document.body.appendChild(overlay);
+  }
+
+  if (hamburger && menu) {
+    function closeMobileMenu() {
+      hamburger.classList.remove('active');
+      menu.classList.remove('active');
+      if (overlay) overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    hamburger.onclick = function(e) {
+      e.stopPropagation();
+      const isActive = menu.classList.contains('active');
+      if (isActive) {
+        closeMobileMenu();
+      } else {
+        hamburger.classList.add('active');
+        menu.classList.add('active');
+        if (overlay) overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    };
+
+    if (overlay) {
+      overlay.onclick = closeMobileMenu;
+    }
+
+    const allMenuLinks = menu.querySelectorAll('a');
+    allMenuLinks.forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+  }
+}
+

@@ -36,11 +36,48 @@ function setupThemeToggle() {
 function setupHamburger() {
   const hamburger = document.getElementById('navHamburger');
   const navMenu = document.getElementById('navMenu');
+  let navOverlay = document.getElementById('navOverlay');
+
+  if (!navOverlay) {
+    navOverlay = document.createElement('div');
+    navOverlay.id = 'navOverlay';
+    navOverlay.className = 'nav-overlay';
+    document.body.appendChild(navOverlay);
+  }
+
   if (!hamburger || !navMenu) return;
-  
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
+
+  function closeMenu() {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+    if (navOverlay) navOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function toggleMenu() {
+    const isActive = navMenu.classList.contains('active');
+    if (isActive) {
+      closeMenu();
+    } else {
+      hamburger.classList.add('active');
+      navMenu.classList.add('active');
+      if (navOverlay) navOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  hamburger.onclick = function(e) {
+    e.stopPropagation();
+    toggleMenu();
+  };
+
+  if (navOverlay) {
+    navOverlay.onclick = closeMenu;
+  }
+
+  const links = navMenu.querySelectorAll('a');
+  links.forEach(link => {
+    link.addEventListener('click', closeMenu);
   });
 }
 
@@ -326,6 +363,7 @@ function openQuoteModal(idx) {
 
 // --- Initialize Page ---
 document.addEventListener('DOMContentLoaded', () => {
+  setupMobileNavOverlay();
   initTheme();
   setupThemeToggle();
   setupHamburger();
@@ -338,3 +376,49 @@ document.addEventListener('DOMContentLoaded', () => {
     nextWisdomBtn.addEventListener('click', () => displayNewWisdom(false));
   }
 });
+
+
+function setupMobileNavOverlay() {
+  const hamburger = document.getElementById('navHamburger');
+  const menu = document.getElementById('navMenu');
+  let overlay = document.getElementById('navOverlay');
+
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'navOverlay';
+    overlay.className = 'nav-overlay';
+    document.body.appendChild(overlay);
+  }
+
+  if (hamburger && menu) {
+    function closeMobileMenu() {
+      hamburger.classList.remove('active');
+      menu.classList.remove('active');
+      if (overlay) overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    hamburger.onclick = function(e) {
+      e.stopPropagation();
+      const isActive = menu.classList.contains('active');
+      if (isActive) {
+        closeMobileMenu();
+      } else {
+        hamburger.classList.add('active');
+        menu.classList.add('active');
+        if (overlay) overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    };
+
+    if (overlay) {
+      overlay.onclick = closeMobileMenu;
+    }
+
+    const allMenuLinks = menu.querySelectorAll('a');
+    allMenuLinks.forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+  }
+}
+
