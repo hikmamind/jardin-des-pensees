@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ar" data-theme="dark" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سياسة الخصوصية | Privacy Policy - HIKMA & NOUR</title>
+  <meta name="description" content="سياسة الخصوصية الخاصة بموقع HIKMA & NOUR (Le Jardin des Pensées) المتوافقة مع معايير Google AdSense وحماية البيانات الشخصية.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css?v=16">
+
+  <style>
+    .privacy-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 120px 24px 80px;
+    }
+
+    .privacy-card {
+      background: var(--card-bg, #1A241E);
+      border: 1px solid var(--border-gold, rgba(179, 138, 60, 0.3));
+      border-radius: 24px;
+      padding: 40px 35px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    [data-theme="light"] .privacy-card {
+      background: #FAF6EF;
+      border-color: rgba(179, 138, 60, 0.3);
+    }
+
+    .privacy-title {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 900;
+      color: var(--accent-gold, #DFB15B);
+      margin: 0 0 10px;
+      font-family: 'Playfair Display', 'Amiri', serif;
+    }
+
+    .privacy-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-secondary, #B8AFA0);
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-gold, rgba(179, 138, 60, 0.2));
+    }
+
+    .privacy-section {
+      margin-bottom: 30px;
+    }
+
+    .privacy-section-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--accent-gold, #DFB15B);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .privacy-text {
+      font-size: 0.98rem;
+      line-height: 1.9;
+      color: var(--text-primary, #EAE3D2);
+      margin-bottom: 12px;
+    }
+
+    [data-theme="light"] .privacy-text {
+      color: #2E241C;
+    }
+
+    .privacy-list {
+      padding-right: 20px;
+      margin: 10px 0 15px;
+    }
+
+    [dir="ltr"] .privacy-list {
+      padding-right: 0;
+      padding-left: 20px;
+    }
+
+    .privacy-list li {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--text-primary);
+    }
+
+    .adsense-notice-box {
+      background: rgba(179, 138, 60, 0.1);
+      border-right: 4px solid var(--accent-gold, #DFB15B);
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+
+    [dir="ltr"] .adsense-notice-box {
+      border-right: none;
+      border-left: 4px solid var(--accent-gold, #DFB15B);
+      border-radius: 12px 0 0 12px;
+    }
+
+    .lang-switcher-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .lang-btn-tab {
+      background: rgba(179, 138, 60, 0.1);
+      border: 1px solid var(--border-gold);
+      color: var(--accent-gold);
+      padding: 6px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.88rem;
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn-tab.active {
+      background: var(--accent-gold);
+      color: #1A0F00;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar-header">
+    <nav class="navbar" aria-label="Navigation principale">
+      <a href="./" class="nav-brand">
+        <svg class="brand-logo" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 28px; height: 28px;">
+          <path d="M12 22v-8M9 22h6M12 14c-1.5-1-2.5-2-2.5-4 0-1.5 1-2.5 2.5-3.5 1.5 1 2.5 2 2.5 3.5 0 2-1 3-2.5 4z"></path>
+          <path d="M12 7c-2-2-1-5 2-5s4 3 2 5M12 7c2-2 1-5-2-5s-4 3-2 5M12 10c-3-1.5-4-4-2-6s4 2 2 6M12 10c3-1.5 4-4 2-6s-4 2-2 6"></path>
+        </svg>
+        <div style="display: flex; flex-direction: column; line-height: 1.1;">
+          <span class="brand-name" style="font-size: 1.15rem; font-weight: 800; font-family: 'Playfair Display', serif; color: var(--text-primary);">HIKMA & NOUR</span>
+          <span style="font-size: 0.6rem; font-weight: 600; color: var(--text-secondary);">الحكمة • الفلسفة • التنمية</span>
+        </div>
+      </a>
+      
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <a href="./" class="nav-link">الرئيسية</a>
+        <a href="thinkers/" class="nav-link">الفلاسفة</a>
+        <a href="articles/" class="nav-link">المقالات</a>
+        <a href="quizzes/" class="nav-link">الاختبارات</a>
+        <a href="quotes/" class="nav-link">اقتباسات</a>
+        <a href="shop/" class="nav-link">المتجر</a>
+
+        <div class="nav-actions">
+          <button id="themeToggleBtn" class="theme-btn-nav" aria-label="Changer de thème">
+            <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg class="moon-icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Container -->
+  <div class="privacy-container">
+    <div class="privacy-card">
+      
+      <!-- Language tabs -->
+      <div class="lang-switcher-bar">
+        <button class="lang-btn-tab active" id="tabAr">العربية</button>
+        <button class="lang-btn-tab" id="tabFr">Français</button>
+      </div>
+
+      <!-- ARABIC CONTENT -->
+      <div id="contentAr">
+        <h1 class="privacy-title">سياسة الخصوصية</h1>
+        <div class="privacy-subtitle">آخر تحديث: 31 يوليو 2026 | متوافقة مع متطلبات Google AdSense وقوانين حماية البيانات</div>
+
+        <div class="privacy-section">
+          <div class="privacy-section-title">🔒 1. مقدمة واستخدام الموقع</div>
+          <p class="privacy-text">
+            نحن في موقع <strong>HIKMA & NOUR (Le Jardin des Pensées)</strong> نولي أهمية قصوى لخصوصية زوارنا الكرام. توضح هذه الوثيقة أنواع البيانات الشخصية التي نجمعها وكيفية استخدامها وحمايتها وفقًا لأعلى معايير الأمان وقوانين حماية البيانات العامة.
+          </p>
+        </div>
+
+        <div class="privacy-section">
+          <div class="privacy-section-title">📢 2. الإعلانات وشبكة Google AdSense والملفات الكوكيز (Cookies)</div>
+          <p class="privacy-text">
+            يستخدم موقعنا خدمة <strong>Google AdSense</strong> لعرض الإعلانات المخصصة. يرجى العلم بالنقاط التالية المتعلقة بسياسة إعلانات Google:
+          </p>
+          <div class="adsense-notice-box">
+            <ul class="privacy-list" style="margin: 0;">
+              <li>تستخدم شركة Google ومزودو الخدمات الخارجيون ملفات كوكيز (Cookies) لعرض الإعلانات بناءً على زياراتك السابقة لموقعنا أو لمواقع أخرى على شبكة الإنترنت.</li>
+              <li>يساعد استخدام كوكيز الإعلانات المخصصة (مثل DART cookie) شركة Google وشركائها على عرض الإعلانات المناسبة للمستخدمين بناءً على تصفحهم.</li>
+              <li>يمكن للمستخدمين إلغاء اختيار الإعلانات المخصصة عبر زيارة <a href="https://adssettings.google.com" target="_blank" rel="noopener" style="color: var(--accent-gold); font-weight: bold;">إعدادات الإعلانات في Google</a> أو عبر الموقع <a href="http://www.aboutads.info" target="_blank" rel="noopener" style="color: var(--accent-gold); font-weight: bold;">www.aboutads.info</a>.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="privacy-section">
+          <div class="privacy-section-title">📊 3. البيانات وسجلات التشغيل (Log Files)</div>
+          <p class="privacy-text">
+            مثل معظم المواقع الإلكترونية، يجمع موقع HIKMA & NOUR معلومات تشغيلية غير شخصية في ملفات السجل. تشمل هذه المعلومات: عنوان بروتوكول الإنترنت (IP address)، نوع المتصفح، مزود خدمة الإنترنت (ISP)، تاريخ ووقت الزيارة، والصفحات التي يتم التصفح إليها، وذلك لتحليل الاتجاهات وتحسين تجربة المستخدم.
+          </p>
+        </div>
+
+        <div class="privacy-section">
+          <div class="privacy-section-title">🛡️ 4. حقوق المستخدم وحماية البيانات (GDPR & CCPA)</div>
+          <p class="privacy-text">
+            يحق لكل زائر للموقع التمتع بالحقوق التالية:
+          </p>
+          <ul class="privacy-list">
+            <li>الحق في الوصول إلى بياناته الشخصية وطلب تعديلها أو حذفها.</li>
+            <li>الحق في رفض استخدام ملفات الكوكيز غير الضرورية من خلال إعدادات المتصفح.</li>
+            <li>عدم بيع أو مشاركة أي بيانات شخصية مع أي أطراف خارجية لأغراض تجارية.</li>
+          </ul>
+        </div>
+
+        <div class="privacy-section">
+          <div class="privacy-section-title">✉️ 5. التواصل والتحديثات</div>
+          <p class="privacy-text">
+            إذا كانت لديك أي استفسارات حول سياسة الخصوصية الخاصة بنا، يمكنك التواصل معنا عبر صفحة <a href="./#contactSection" style="color: var(--accent-gold); font-weight: bold;">اتصل بنا</a>.
+          </p>
+        </div>
+      </div>
+
+      <!-- FRENCH CONTENT -->
+      <div id="contentFr" style="display: none;" dir="ltr">
+        <h1 class="privacy-title">Politique de Confidentialité</h1>
+        <div class="privacy-subtitle">Dernière mise à jour : 31 juillet 2026 | Conforme aux exigences Google AdSense & RGPD</div>
+
+        <div class="privacy-section">
+          <div class="privacy-section-title">🔒 1. Introduction</div>
+          <p class="privacy-text">
+            Sur le site <strong>HIKMA & NOUR (Le Jardin des Pensées)</strong>, la confidentialité de nos visiteurs est une priorité absolue. Ce document détaille les types d'informations collectées et la manière dont nous les protégeons conformément aux lois sur la protection des données (RGPD).
+          </p>
+        </div>
+
+        <div class="privacy-section">
+          <div class="privacy-section-title">📢 2. Google AdSense & Cookies Publicitaires</div>
+          <p class="privacy-text">
+            Notre site utilise le programme publicitaire <strong>Google AdSense</strong>. Voici les informations légales requises par Google :
+          </p>
+          <div class="adsense-notice-box">
+            <ul class="privacy-list" style="margin: 0;">
+              <li>Des tiers, y compris Google, utilisent des cookies pour diffuser des annonces basées sur les visites antérieures des utilisateurs sur notre site ou sur d'autres sites web.</li>
+              <li>Grâce aux cookies publicitaires, Google et ses partenaires peuvent diffuser des annonces adaptées à vos centres d'intérêt.</li>
+              <li>Les utilisateurs peuvent désactiver la publicité personnalisée dans les <a href="https://adssettings.google.com" target="_blank" rel="noopener" style="color: var(--accent-gold); font-weight: bold;">Paramètres des annonces Google</a> ou sur <a href="http://www.aboutads.info" target="_blank" rel="noopener" style="color: var(--accent-gold); font-weight: bold;">www.aboutads.info</a>.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="privacy-section">
+          <div class="privacy-section-title">📊 3. Fichiers Journaux (Log Files)</div>
+          <p class="privacy-text">
+            Comme la plupart des sites web, nous collectons automatiquement des données non personnelles telles que l'adresse IP, le type de navigateur, le fournisseur d'accès Internet (FAI), l'horodatage et les pages consultées afin d'optimiser l'expérience utilisateur.
+          </p>
+        </div>
+
+        <div class="privacy-section">
+          <div class="privacy-section-title">✉️ 4. Contact</div>
+          <p class="privacy-text">
+            Pour toute question concernant notre politique de confidentialité, vous pouvez nous contacter via notre page <a href="./#contactSection" style="color: var(--accent-gold); font-weight: bold;">À propos & Contact</a>.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p style="margin-bottom: 10px;">&copy; 2026 حكمة ونور | Le Jardin des Pensées. <span>Conçu avec sagesse, calme et sérénité. ✨🌿</span></p>
+    <p><a href="privacy-policy.html" style="color: var(--accent-gold); text-decoration: none; font-weight: 700;">سياسة الخصوصية | Politique de Confidentialité</a></p>
+  </footer>
+
+  <script>
+    // Tab language switcher
+    const tabAr = document.getElementById('tabAr');
+    const tabFr = document.getElementById('tabFr');
+    const contentAr = document.getElementById('contentAr');
+    const contentFr = document.getElementById('contentFr');
+
+    tabAr.addEventListener('click', () => {
+      tabAr.classList.add('active');
+      tabFr.classList.remove('active');
+      contentAr.style.display = 'block';
+      contentFr.style.display = 'none';
+      document.documentElement.setAttribute('dir', 'rtl');
+    });
+
+    tabFr.addEventListener('click', () => {
+      tabFr.classList.add('active');
+      tabAr.classList.remove('active');
+      contentFr.style.display = 'block';
+      contentAr.style.display = 'none';
+      document.documentElement.setAttribute('dir', 'ltr');
+    });
+
+    // Theme Toggle
+    const themeBtn = document.getElementById('themeToggleBtn');
+    themeBtn.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+
+    // Mobile nav
+    const hamburger = document.getElementById('navHamburger');
+    const menu = document.getElementById('navMenu');
+    if (hamburger && menu) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        menu.classList.toggle('active');
+      });
+    }
+  </script>
+</body>
+</html>
