@@ -1552,6 +1552,17 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "id": "happiness-in-wrong-place",
+          "file": "happiness-in-wrong-place.html",
+          "title": "Pourquoi cherchons-nous le bonheur au mauvais endroit ? Voyage entre Schopenhauer, les Stoïciens et Épicure",
+          "category": "philosophy",
+          "categoryName": "Philosophie & Vie",
+          "readTime": "7 min",
+          "date": "31 juillet 2026",
+          "desc": "Un voyage philosophique captivant pour redéfinir la sérénité et le vrai bonheur au-delà des illusions matérielles.",
+          "image": "happiness_wrong_place_hero.jpg"
+        },
+        {
           "category": "psychology",
           "file": "true-confidence-inside.html",
           "image": "person_window_sunrise.jpg",
@@ -3323,6 +3334,17 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "id": "happiness-in-wrong-place",
+          "file": "happiness-in-wrong-place.html",
+          "title": "Why Do We Search for Happiness in the Wrong Place? A Journey with Schopenhauer, Stoics, and Epicurus",
+          "category": "philosophy",
+          "categoryName": "Philosophy & Life",
+          "readTime": "7 min",
+          "date": "31 July 2026",
+          "desc": "A profound philosophical exploration redefining inner peace and happiness beyond material illusions.",
+          "image": "happiness_wrong_place_hero.jpg"
+        },
+        {
           "category": "psychology",
           "file": "true-confidence-inside.html",
           "image": "person_window_sunrise.jpg",
@@ -5093,6 +5115,17 @@ const TIKTOK_DATA = {
         }
       ],
       "articles": [
+        {
+          "id": "happiness-in-wrong-place",
+          "file": "happiness-in-wrong-place.html",
+          "title": "لماذا نبحث عن السعادة في المكان الخطأ؟ رحلة فلسفية بين شوبنهاور والرواقيين وإبيقور",
+          "category": "philosophy",
+          "categoryName": "الفلسفة والحياة",
+          "readTime": "7 دقائق قراءة",
+          "date": "31 يوليو 2026",
+          "desc": "رحلة فلسفية بين شوبنهاور والرواقيين وإبيقور لفهم المعنى الحقيقي للسعادة والتوقف عن البحث عنها في المكان الخطأ.",
+          "image": "happiness_wrong_place_hero.jpg"
+        },
         {
           "category": "psychology",
           "file": "true-confidence-inside.html",
