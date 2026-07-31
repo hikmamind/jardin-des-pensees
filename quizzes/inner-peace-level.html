@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="ar" data-theme="dark" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اختبار ما مستوى سلامك الداخلي؟ - HIKMA & NOUR</title>
+  <meta name="description" content="اكتشف مدى هدوئك النفسي وقدرتك على مواجهة الصعوبات من خلال الإجابة عن 15 سؤالاً. تقييم شامل ونصح عملية.">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    /* ─── Inner Peace Quiz Styling ─── */
+    :root {
+      --parchment-bg: #F5EFE6;
+      --card-parchment: #EFE6D8;
+      --card-inner: #FAF6EF;
+      --text-brown: #2E241C;
+      --text-brown-muted: #5C4A3E;
+      --accent-gold: #B38A3C;
+      --accent-gold-light: #D4A853;
+      --border-gold: rgba(179, 138, 60, 0.25);
+    }
+
+    [data-theme="dark"] {
+      --parchment-bg: #121A15;
+      --card-parchment: #1A241E;
+      --card-inner: #151E18;
+      --text-brown: #EAE3D2;
+      --text-brown-muted: #B8AFA0;
+      --accent-gold: #DFB15B;
+      --accent-gold-light: #F0C775;
+      --border-gold: rgba(223, 177, 91, 0.2);
+    }
+
+    body {
+      background-color: var(--parchment-bg);
+      color: var(--text-brown);
+      font-family: 'Amiri', 'Noto Serif Arabic', Georgia, serif;
+      line-height: 1.8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .quiz-container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 20px 20px 80px;
+    }
+
+    /* Top Nav */
+    .quiz-top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--border-gold);
+    }
+
+    .quiz-top-nav a {
+      color: var(--accent-gold);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Hero Start Screen */
+    .quiz-hero-card {
+      background: var(--card-parchment);
+      border: 1px solid var(--border-gold);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 35px;
+    }
+
+    .quiz-hero-img-box {
+      width: 100%;
+      height: 320px;
+      position: relative;
+    }
+
+    .quiz-hero-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .quiz-hero-content {
+      padding: 35px;
+      text-align: center;
+    }
+
+    .quiz-badge {
+      display: inline-block;
+      background: rgba(179, 138, 60, 0.15);
+      border: 1px solid var(--accent-gold);
+      color: var(--accent-gold);
+      padding: 5px 18px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .quiz-title {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 900;
+      color: var(--text-brown);
+      margin: 0 0 12px;
+      font-family: 'Playfair Display', 'Amiri', serif;
+    }
+
+    .quiz-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-brown-muted);
+      margin: 0 0 25px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .quiz-stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .quiz-stat-pill {
+      background: var(--card-inner);
+      border: 1px solid var(--border-gold);
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-brown);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .quiz-intro-box {
+      background: var(--card-inner);
+      border: 1px solid var(--border-gold);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 30px;
+      text-align: right;
+      font-size: 0.95rem;
+      color: var(--text-brown);
+      line-height: 1.9;
+    }
+
+    /* Giant Gold Start Button */
+    .btn-gold-start {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-light) 100%);
+      color: #1A0F00;
+      font-size: 1.25rem;
+      font-weight: 900;
+      padding: 16px 45px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(179, 138, 60, 0.4);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      font-family: inherit;
+    }
+
+    .btn-gold-start:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(179, 138, 60, 0.6);
+    }
+
+    /* ─── Question Screen ─── */
+    .quiz-card-box {
+      background: var(--card-parchment);
+      border: 1px solid var(--border-gold);
+      border-radius: 24px;
+      padding: 35px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      display: none;
+    }
+
+    .quiz-card-box.active {
+      display: block !important;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .progress-bar-container {
+      width: 100%;
+      height: 8px;
+      background: var(--card-inner);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 25px;
+      border: 1px solid var(--border-gold);
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(to right, var(--accent-gold), var(--accent-gold-light));
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    .question-step-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--accent-gold);
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .question-title-text {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-brown);
+      margin: 0 0 25px;
+      line-height: 1.5;
+    }
+
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .option-btn {
+      background: var(--card-inner);
+      border: 1.5px solid var(--border-gold);
+      border-radius: 16px;
+      padding: 16px 20px;
+      text-align: right;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-brown);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-family: inherit;
+      width: 100%;
+    }
+
+    .option-btn:hover {
+      border-color: var(--accent-gold);
+      background: rgba(179, 138, 60, 0.12);
+      transform: translateX(-4px);
+    }
+
+    [dir="ltr"] .option-btn:hover {
+      transform: translateX(4px);
+    }
+
+    .option-radio-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid var(--accent-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .option-radio-dot::after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent-gold);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .option-btn.selected .option-radio-dot::after {
+      opacity: 1;
+    }
+
+    /* ─── Result Screen ─── */
+    .result-screen-card {
+      display: none;
+      background: var(--card-parchment);
+      border: 1px solid var(--border-gold);
+      border-radius: 24px;
+      padding: 40px 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .result-screen-card.active {
+      display: block !important;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .result-header-badge {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .result-level-title {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--accent-gold);
+      margin: 10px 0 5px;
+      text-align: center;
+      font-family: 'Playfair Display', 'Amiri', serif;
+    }
+
+    /* Score Box */
+    .match-percent-box {
+      background: linear-gradient(135deg, rgba(179,138,60,0.15), rgba(0,0,0,0));
+      border: 1px solid var(--border-gold);
+      border-radius: 20px;
+      padding: 22px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .match-number {
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: var(--accent-gold);
+      line-height: 1;
+    }
+
+    .match-label {
+      font-size: 0.88rem;
+      color: var(--text-brown-muted);
+      margin-top: 6px;
+    }
+
+    .result-section-box {
+      background: var(--card-inner);
+      border: 1px solid var(--border-gold);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 25px;
+    }
+
+    .result-section-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--accent-gold);
+      margin: 0 0 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .result-body-text {
+      font-size: 0.95rem;
+      line-height: 1.9;
+      color: var(--text-brown);
+      margin: 0;
+    }
+
+    .tips-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .tips-list li {
+      font-size: 0.9rem;
+      color: var(--text-brown);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tips-list li::before {
+      content: '✔';
+      color: var(--accent-gold);
+      font-weight: bold;
+    }
+
+    .result-quote-banner {
+      background: rgba(179, 138, 60, 0.08);
+      border-right: 4px solid var(--accent-gold);
+      border-radius: 0 12px 12px 0;
+      padding: 18px 22px;
+      font-size: 1.08rem;
+      font-style: italic;
+      color: var(--text-brown);
+      font-family: 'Playfair Display', 'Amiri', serif;
+      margin-bottom: 25px;
+    }
+
+    [dir="rtl"] .result-quote-banner {
+      border-right: none;
+      border-left: 4px solid var(--accent-gold);
+      border-radius: 12px 0 0 12px;
+    }
+
+    /* 7 Day Challenge Card */
+    .challenge-box-card {
+      background: linear-gradient(135deg, rgba(179, 138, 60, 0.1), rgba(0, 0, 0, 0.02));
+      border: 1.5px solid var(--border-gold);
+      border-radius: 18px;
+      padding: 25px;
+      margin-bottom: 25px;
+    }
+
+    .challenge-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--accent-gold);
+      margin: 0 0 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .challenge-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .challenge-list li {
+      font-size: 0.88rem;
+      color: var(--text-brown);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .challenge-list li::before {
+      content: '🎯';
+      font-size: 0.85rem;
+    }
+
+    .result-links-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .result-links-list li a {
+      font-size: 0.9rem;
+      color: var(--text-brown);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      transition: color 0.2s;
+    }
+
+    .result-links-list li a:hover {
+      color: var(--accent-gold);
+    }
+
+    .result-actions-flex {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .btn-retake {
+      background: var(--card-inner);
+      border: 1.5px solid var(--accent-gold);
+      color: var(--accent-gold);
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.25s;
+    }
+
+    .btn-retake:hover {
+      background: var(--accent-gold);
+      color: #1A0F00;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="quiz-container">
+
+    <!-- Top Nav -->
+    <div class="quiz-top-nav">
+      <a href="../">← الرئيسية</a>
+      <span style="font-weight:800; color:var(--accent-gold);">🧘 HIKMA & NOUR QUIZ</span>
+    </div>
+
+    <!-- ─── START SCREEN ─── -->
+    <div id="startScreen" class="quiz-hero-card">
+      <div class="quiz-hero-img-box">
+        <img src="../quiz_inner_peace_hero.jpg" alt="السلام الداخلي والتأمل">
+      </div>
+      <div class="quiz-hero-content">
+        <span class="quiz-badge">اختبار الهدوء النفسي</span>
+        <h1 class="quiz-title">ما مستوى سلامك الداخلي؟</h1>
+        <p class="quiz-subtitle">اكتشف مدى هدوئك النفسي وقدرتك على مواجهة الصعوبات من خلال الإجابة عن 15 سؤالًا.</p>
+
+        <div class="quiz-stats-row">
+          <div class="quiz-stat-pill">⏱ مدة الاختبار: 3 دقائق</div>
+          <div class="quiz-stat-pill">🎯 عدد الأسئلة: 15</div>
+          <div class="quiz-stat-pill">📊 النتيجة: تحليل شخصي + نصائح عملية</div>
+        </div>
+
+        <div class="quiz-intro-box">
+          <p style="margin:0 0 8px; font-weight:800; color:var(--accent-gold);">مقدمة الاختبار:</p>
+          السلام الداخلي لا يعني أن حياتك خالية من المشكلات، بل يعني أنك تستطيع مواجهة الصعوبات دون أن تفقد توازنك.<br>
+          أجب عن الأسئلة التالية بصدق، وستحصل على تقييم لمستوى سلامك الداخلي مع نصائح تساعدك على تطويره.
+        </div>
+
+        <button id="startQuizBtn" class="btn-gold-start">
+          <span>ابدأ الاختبار</span>
+          <span>←</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ─── QUESTION SCREEN ─── -->
+    <div id="questionScreen" class="quiz-card-box">
+      <div class="progress-bar-container">
+        <div id="progressBarFill" class="progress-bar-fill"></div>
+      </div>
+
+      <div class="question-step-header">
+        <span id="questionStepLabel">سؤال 1 من 15</span>
+        <span>🧘 HIKMA QUIZ</span>
+      </div>
+
+      <h2 id="questionText" class="question-title-text">عنوان السؤال</h2>
+
+      <div id="optionsContainer" class="options-list">
+        <!-- Options generated dynamically -->
+      </div>
+    </div>
+
+    <!-- ─── RESULT SCREEN ─── -->
+    <div id="resultScreen" class="result-screen-card">
+      <div class="result-header-badge">
+        <span class="quiz-badge">نتيجة اختبار السلام الداخلي</span>
+        <h2 id="resLevelTitle" class="result-level-title">عنوان النتيجة</h2>
+      </div>
+
+      <!-- Score Box -->
+      <div class="match-percent-box">
+        <div id="resScoreNum" class="match-number">75/100</div>
+        <div class="match-label">مستوى سلامك الداخلي (من 100 نقطة)</div>
+      </div>
+
+      <!-- Description -->
+      <div class="result-section-box">
+        <div class="result-section-title">🧘 التحليل النفسي</div>
+        <p id="resDescText" class="result-body-text">نص التحليل...</p>
+      </div>
+
+      <!-- Tips List -->
+      <div class="result-section-box">
+        <div class="result-section-title">💡 نصائح عمليّة لتطوير سلامك الداخلي</div>
+        <ul id="resTipsList" class="tips-list">
+          <!-- Tips inserted dynamically -->
+        </ul>
+      </div>
+
+      <!-- Quote -->
+      <div class="result-quote-banner">
+        "السلام الداخلي لا يأتي عندما تختفي العواصف، بل عندما تتعلم كيف تمشي بثبات تحت المطر."
+      </div>
+
+      <!-- 7 Day Challenge -->
+      <div class="challenge-box-card">
+        <div class="challenge-title">🎯 تحدي 7 أيام للسلام الداخلي</div>
+        <p style="font-size: 0.88rem; color: var(--text-brown-muted); margin: 0 0 10px;">لمدة أسبوع كامل، مارس الخطوات التالية يومياً:</p>
+        <ul class="challenge-list">
+          <li>اقرأ 10 دقائق يوميًا.</li>
+          <li>امشِ 20 دقيقة في الهواء الطلق.</li>
+          <li>اكتب 3 أشياء تشعر بالامتنان لها.</li>
+          <li>ابتعد عن الهاتف ساعة كاملة قبل النوم.</li>
+        </ul>
+        <p style="font-size: 0.85rem; color: var(--accent-gold); font-weight: 700; margin: 0;">
+          في نهاية الأسبوع، أعد الاختبار وقارن نتيجتك لتلاحظ مدى تقدمك النفسي!
+        </p>
+      </div>
+
+      <!-- Recommended Articles -->
+      <div class="result-section-box">
+        <div class="result-section-title">📚 مقالات مقترحة لتعزيز هدوئك</div>
+        <ul class="result-links-list">
+          <li><a href="../articles/?article=stop-overthinking.html">📖 كيف تتوقف عن التفكير الزائد؟</a></li>
+          <li><a href="../articles/?article=self-discipline.html">📖 قوة التأمل والانضباط في الحياة اليومية</a></li>
+          <li><a href="../articles/?article=true-confidence-inside.html">📖 كيف تبني ثقة حقيقية من الداخل؟</a></li>
+          <li><a href="../articles/?article=introduction-stoicisme.html">📖 مبادئ الفلسفة الرواقية للسلام الداخلي</a></li>
+        </ul>
+      </div>
+
+      <!-- Actions -->
+      <div class="result-actions-flex">
+        <button id="retakeBtn" class="btn-retake">🔄 أعد الاختبار</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    var questions = [
+      {
+        q: "عندما يحدث أمر مزعج بشكل مفاجئ...",
+        options: [
+          { text: "أفقد أعصابي بسرعة.", pts: 0 },
+          { text: "أشعر بالانزعاج لكن أهدأ بعد قليل.", pts: 1 },
+          { text: "أحاول فهم الموقف قبل الرد.", pts: 2 },
+          { text: "أبقى هادئًا وأبحث عن الحل.", pts: 3 }
+        ]
+      },
+      {
+        q: "كم مرة تشعر بالقلق بشأن المستقبل؟",
+        options: [
+          { text: "دائمًا", pts: 0 },
+          { text: "غالبًا", pts: 1 },
+          { text: "أحيانًا", pts: 2 },
+          { text: "نادرًا", pts: 3 }
+        ]
+      },
+      {
+        q: "هل تستطيع الاستمتاع باللحظة الحالية؟",
+        options: [
+          { text: "أبدًا", pts: 0 },
+          { text: "قليلًا", pts: 1 },
+          { text: "غالبًا", pts: 2 },
+          { text: "دائمًا", pts: 3 }
+        ]
+      },
+      {
+        q: "عندما يخطئ شخص في حقك...",
+        options: [
+          { text: "لا أسامحه.", pts: 0 },
+          { text: "أحتاج وقتًا طويلًا.", pts: 1 },
+          { text: "أحاول أن أتفهمه.", pts: 2 },
+          { text: "أسامح إذا كان يستحق فرصة.", pts: 3 }
+        ]
+      },
+      {
+        q: "كم مرة تقارن نفسك بالآخرين؟",
+        options: [
+          { text: "طوال الوقت", pts: 0 },
+          { text: "كثيرًا", pts: 1 },
+          { text: "أحيانًا", pts: 2 },
+          { text: "نادرًا", pts: 3 }
+        ]
+      },
+      {
+        q: "كيف تنام ليلًا؟",
+        options: [
+          { text: "بصعوبة.", pts: 0 },
+          { text: "نوم متقطع.", pts: 1 },
+          { text: "نوم جيد.", pts: 2 },
+          { text: "أنام بهدوء.", pts: 3 }
+        ]
+      },
+      {
+        q: "هل تخصص وقتًا لنفسك؟",
+        options: [
+          { text: "أبدًا", pts: 0 },
+          { text: "نادرًا", pts: 1 },
+          { text: "أحيانًا", pts: 2 },
+          { text: "كل يوم", pts: 3 }
+        ]
+      },
+      {
+        q: "ما الذي يزعجك أكثر؟",
+        options: [
+          { text: "رأي الناس.", pts: 0 },
+          { text: "الفشل.", pts: 1 },
+          { text: "المستقبل.", pts: 2 },
+          { text: "لا شيء لفترة طويلة.", pts: 3 }
+        ]
+      },
+      {
+        q: "عندما تواجه مشكلة...",
+        options: [
+          { text: "أستسلم.", pts: 0 },
+          { text: "أقلق كثيرًا.", pts: 1 },
+          { text: "أبحث عن حل.", pts: 2 },
+          { text: "أتعامل معها بهدوء.", pts: 3 }
+        ]
+      },
+      {
+        q: "هل تشعر بالامتنان لما تملكه؟",
+        options: [
+          { text: "نادرًا.", pts: 0 },
+          { text: "أحيانًا.", pts: 1 },
+          { text: "غالبًا.", pts: 2 },
+          { text: "دائمًا.", pts: 3 }
+        ]
+      },
+      {
+        q: "كم ساعة تستخدم الهاتف يوميًا؟",
+        options: [
+          { text: "أكثر من 8 ساعات", pts: 0 },
+          { text: "5–8 ساعات", pts: 1 },
+          { text: "3–5 ساعات", pts: 2 },
+          { text: "أقل من 3 ساعات", pts: 3 }
+        ]
+      },
+      {
+        q: "هل تستمتع بالجلوس وحدك؟",
+        options: [
+          { text: "لا", pts: 0 },
+          { text: "قليلًا", pts: 1 },
+          { text: "نعم", pts: 2 },
+          { text: "كثيرًا", pts: 3 }
+        ]
+      },
+      {
+        q: "كيف تتعامل مع النقد؟",
+        options: [
+          { text: "أغضب.", pts: 0 },
+          { text: "أنزعج.", pts: 1 },
+          { text: "أستفيد منه.", pts: 2 },
+          { text: "أرحب به إذا كان بنّاءً.", pts: 3 }
+        ]
+      },
+      {
+        q: "هل تمارس التأمل أو المشي أو القراءة؟",
+        options: [
+          { text: "أبدًا", pts: 0 },
+          { text: "أحيانًا", pts: 1 },
+          { text: "أسبوعيًا", pts: 2 },
+          { text: "يوميًا", pts: 3 }
+        ]
+      },
+      {
+        q: "كيف تصف حالتك النفسية اليوم؟",
+        options: [
+          { text: "مرهق جدًا.", pts: 0 },
+          { text: "متوتر.", pts: 1 },
+          { text: "متوازن.", pts: 2 },
+          { text: "هادئ.", pts: 3 }
+        ]
+      }
+    ];
+
+    var resultsTiers = [
+      {
+        min: 0,
+        max: 25,
+        title: "🔴 0–25 نقطة: تحتاج إلى استعادة هدوئك",
+        desc: "تشعر بضغط نفسي كبير، وقد تؤثر الضغوط اليومية في طريقة تفكيرك وقراراتك.",
+        tips: ["نم جيدًا.", "قلل استخدام الهاتف.", "مارس المشي في الهواء الطلق.", "تحدث مع شخص تثق به."]
+      },
+      {
+        min: 26,
+        max: 50,
+        title: "🟠 26–50 نقطة: أنت في مرحلة البحث عن التوازن",
+        desc: "لديك لحظات من الهدوء، لكنها تختفي سريعًا عند مواجهة الضغوط الصعبة.",
+        tips: ["خصص وقتًا يوميًا لنفسك.", "اكتب ما تشعر به لتفريغ التوتر.", "مارس الامتنان للأشياء البسيطة."]
+      },
+      {
+        min: 51,
+        max: 75,
+        title: "🟡 51–75 نقطة: سلام داخلي جيد",
+        desc: "تعرف كيف تتعامل مع معظم المواقف، لكن لا يزال بإمكانك تطوير قدرتك على التحكم في التوتر والوصول إلى ثبات أعمق.",
+        tips: ["استمر في القراءة الملهمة.", "مارس التأمل بشكل منتظم.", "حافظ على عاداتك الصحية والرياضية."]
+      },
+      {
+        min: 76,
+        max: 100,
+        title: "🟢 76–100 نقطة: تتمتع بسلام داخلي مميز",
+        desc: "أنت شخص متزن، وتعرف كيف تواجه الحياة بهدوء وصبر. لا يعني ذلك أن حياتك خالية من المشكلات، بل أنك تعلمت كيف لا تسمح لها بأن تسلبك راحة عقلك.",
+        tips: ["حافظ على هذا الاتزان الرائع.", "انشر الهدوء والطاقة الإيجابية من حولك.", "استمر في تحدي التطور الشخصي."]
+      }
+    ];
+
+    var currentIndex = 0;
+    var totalPoints = 0;
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var startScreen = document.getElementById('startScreen');
+      var questionScreen = document.getElementById('questionScreen');
+      var resultScreen = document.getElementById('resultScreen');
+      var startBtn = document.getElementById('startQuizBtn');
+
+      if (startBtn) {
+        startBtn.addEventListener('click', function() {
+          startScreen.style.display = 'none';
+          questionScreen.style.display = 'block';
+          questionScreen.classList.add('active');
+          renderQuestion();
+        });
+      }
+
+      function renderQuestion() {
+        var qData = questions[currentIndex];
+        document.getElementById('questionStepLabel').textContent = 'سؤال ' + (currentIndex + 1) + ' من ' + questions.length;
+        document.getElementById('questionText').textContent = qData.q;
+        
+        var pct = ((currentIndex + 1) / questions.length) * 100;
+        document.getElementById('progressBarFill').style.width = pct + '%';
+
+        var container = document.getElementById('optionsContainer');
+        container.innerHTML = '';
+
+        qData.options.forEach(function(opt) {
+          var btn = document.createElement('button');
+          btn.className = 'option-btn';
+          btn.type = 'button';
+          btn.innerHTML = '<div class="option-radio-dot"></div><span>' + opt.text + '</span>';
+          btn.addEventListener('click', function() {
+            totalPoints += opt.pts;
+            currentIndex++;
+            if (currentIndex < questions.length) {
+              renderQuestion();
+            } else {
+              showResult();
+            }
+          });
+          container.appendChild(btn);
+        });
+      }
+
+      function showResult() {
+        questionScreen.style.display = 'none';
+        resultScreen.style.display = 'block';
+        resultScreen.classList.add('active');
+
+        // Scale points to percentage (max points = 45)
+        var finalScore = Math.round((totalPoints / 45) * 100);
+        document.getElementById('resScoreNum').textContent = finalScore + '/100';
+
+        var tier = resultsTiers.find(function(t) {
+          return finalScore >= t.min && finalScore <= t.max;
+        }) || resultsTiers[0];
+
+        document.getElementById('resLevelTitle').textContent = tier.title;
+        document.getElementById('resDescText').textContent = tier.desc;
+
+        var tipsContainer = document.getElementById('resTipsList');
+        tipsContainer.innerHTML = '';
+        tier.tips.forEach(function(tip) {
+          var li = document.createElement('li');
+          li.textContent = tip;
+          tipsContainer.appendChild(li);
+        });
+      }
+
+      var retakeBtn = document.getElementById('retakeBtn');
+      if (retakeBtn) {
+        retakeBtn.addEventListener('click', function() {
+          currentIndex = 0;
+          totalPoints = 0;
+          resultScreen.style.display = 'none';
+          questionScreen.style.display = 'none';
+          startScreen.style.display = 'block';
+        });
+      }
+    });
+  </script>
+</body>
+</html>

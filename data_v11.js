@@ -1786,6 +1786,15 @@ const TIKTOK_DATA = {
       ],
       "quizzes": [
         {
+          "id": "inner-peace-level",
+          "file": "inner-peace-level.html",
+          "title": "Quel est votre niveau de paix intérieure ?",
+          "image": "quiz_inner_peace_hero.jpg",
+          "questionsCount": "15 questions",
+          "time": "3 min",
+          "desc": "Découvrez votre niveau de sérénité et votre capacité à faire face aux difficultés."
+        },
+        {
           "title": "Quel philosophe correspond à votre personnalité ?",
           "file": "which-philosopher-are-you.html",
           "image": "quiz_philosopher_hero.jpg",
@@ -3702,6 +3711,15 @@ const TIKTOK_DATA = {
         }
       ],
       "quizzes": [
+        {
+          "id": "inner-peace-level",
+          "file": "inner-peace-level.html",
+          "title": "What is Your Level of Inner Peace?",
+          "image": "quiz_inner_peace_hero.jpg",
+          "questionsCount": "15 questions",
+          "time": "3 min",
+          "desc": "Discover your emotional calmness and ability to handle life challenges in 15 questions."
+        },
         {
           "title": "Which Philosopher Matches Your Personality?",
           "file": "which-philosopher-are-you.html",
@@ -5718,6 +5736,15 @@ const TIKTOK_DATA = {
         }
       ],
       "quizzes": [
+        {
+          "id": "inner-peace-level",
+          "file": "inner-peace-level.html",
+          "title": "ما مستوى سلامك الداخلي؟",
+          "image": "quiz_inner_peace_hero.jpg",
+          "questionsCount": "15 سؤالًا",
+          "time": "3 دقائق",
+          "desc": "اكتشف مدى هدوئك النفسي وقدرتك على مواجهة الصعوبات من خلال الإجابة عن 15 سؤالًا."
+        },
         {
           "title": "أي فيلسوف يشبه شخصيتك؟",
           "file": "which-philosopher-are-you.html",
