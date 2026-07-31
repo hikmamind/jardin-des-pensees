@@ -5666,3 +5666,100 @@ textarea.form-control {
   line-height: 1.8;
   margin: 0;
 }
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM CARD & TAG DESIGN ENHANCEMENTS
+   ========================================================================== */
+
+/* Enhanced Tag Filter Buttons */
+.search-filter-container {
+  margin-bottom: 35px !important;
+}
+
+.tags-container {
+  display: flex !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+  margin-top: 15px !important;
+}
+
+.tag-btn {
+  background: var(--card-bg, rgba(26, 36, 30, 0.7)) !important;
+  border: 1px solid var(--border-gold, rgba(179, 138, 60, 0.3)) !important;
+  color: var(--text-secondary, #B8AFA0) !important;
+  padding: 8px 20px !important;
+  border-radius: 25px !important;
+  font-size: 0.88rem !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1) !important;
+}
+
+[data-theme="light"] .tag-btn {
+  background: #EFE6D8 !important;
+  color: #5C4A3E !important;
+}
+
+.tag-btn:hover {
+  background: rgba(179, 138, 60, 0.18) !important;
+  border-color: var(--accent-gold, #DFB15B) !important;
+  color: var(--accent-gold, #DFB15B) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(179, 138, 60, 0.2) !important;
+}
+
+.tag-btn.active {
+  background: linear-gradient(135deg, var(--accent-gold, #B38A3C), var(--accent-gold-light, #D4A853)) !important;
+  color: #1A0F00 !important;
+  border-color: var(--accent-gold, #B38A3C) !important;
+  box-shadow: 0 4px 18px rgba(179, 138, 60, 0.4) !important;
+}
+
+/* Enhanced Article, Thinker & Quiz Cards */
+.article-card, .thinker-card, .quiz-card-premium, .product-card {
+  background: var(--card-bg, #1A241E) !important;
+  border: 1px solid var(--border-gold, rgba(179, 138, 60, 0.25)) !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+[data-theme="light"] .article-card,
+[data-theme="light"] .thinker-card,
+[data-theme="light"] .quiz-card-premium,
+[data-theme="light"] .product-card {
+  background: #FAF6EF !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06) !important;
+}
+
+.article-card:hover, .thinker-card:hover, .quiz-card-premium:hover, .product-card:hover {
+  transform: translateY(-6px) !important;
+  border-color: var(--accent-gold, #DFB15B) !important;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25), 0 0 15px rgba(179, 138, 60, 0.2) !important;
+}
+
+.article-image-container img, .thinker-image-container img, .quiz-card-img-wrapper img, .product-image-container img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.article-card:hover .article-image-container img,
+.thinker-card:hover .thinker-image-container img,
+.quiz-card-premium:hover .quiz-card-img-wrapper img,
+.product-card:hover .product-image-container img {
+  transform: scale(1.06) !important;
+}
+
+/* Enhanced AdSense Container */
+.adsense-mock-container {
+  background: var(--card-bg, rgba(26, 36, 30, 0.5)) !important;
+  border: 1px dashed var(--border-gold, rgba(179, 138, 60, 0.3)) !important;
+  border-radius: 16px !important;
+  padding: 16px 20px !important;
+  margin-bottom: 30px !important;
+}
