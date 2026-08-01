@@ -215,30 +215,34 @@ function populateArticles(category = 'all', keyword = '') {
       `;
       
       return `
-        <div class="article-card" style="cursor: pointer;">
-          <div class="article-image-container" data-index="${index}">
-            ${badgeHtml}
-            ${imageHtml}
-          </div>
-          <div class="card-meta-row" data-index="${index}">
-            <span style="color: var(--accent-green); font-weight: 600; text-transform: uppercase;">${categoryLabel}</span>
-            <span class="card-meta-dot">•</span>
-            <span style="display: inline-flex; align-items: center; gap: 4px;">
-              <svg class="card-meta-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              ${art.readTime}
-            </span>
-          </div>
-          <h3 class="article-title" data-index="${index}">${art.title}</h3>
-          <p class="article-desc" data-index="${index}">${art.desc}</p>
-          <div class="article-actions" style="margin-top: auto; display: flex; gap: 15px; align-items: center;">
-            <a class="card-action-link" data-index="${index}" style="margin-top: 0;">
-              <span>${readLabel}</span>
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-          </div>
+        const targetUrl = art.file ? art.file : `../files/${art.file || 'stop-overthinking.html'}`;
+      return `
+        <div class="article-card" style="cursor: pointer;" data-file="${targetUrl}">
+          <a href="${targetUrl}" style="text-decoration:none; color:inherit; display:block; height:100%;">
+            <div class="article-image-container">
+              ${badgeHtml}
+              ${imageHtml}
+            </div>
+            <div class="card-meta-row">
+              <span style="color: var(--accent-green); font-weight: 600; text-transform: uppercase;">${categoryLabel}</span>
+              <span class="card-meta-dot">•</span>
+              <span style="display: inline-flex; align-items: center; gap: 4px;">
+                <svg class="card-meta-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                ${art.readTime}
+              </span>
+            </div>
+            <h3 class="article-title" style="margin-top: 10px;">${art.title}</h3>
+            <p class="article-desc">${art.desc}</p>
+            <div class="article-actions" style="margin-top: auto; padding-top: 15px; display: flex; gap: 15px; align-items: center;">
+              <span class="card-action-link" style="margin-top: 0; color: var(--accent-gold); font-weight:700; display:inline-flex; align-items:center; gap:6px;">
+                <span>${readLabel}</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </span>
+            </div>
+          </a>
         </div>
       `;
     }).join('');
@@ -728,14 +732,13 @@ function setupArticleModal(articles) {
   }
 
   cards.forEach(card => {
-    const clickables = card.querySelectorAll('[data-index]');
-    clickables.forEach(c => {
-      c.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        const index = parseInt(c.getAttribute('data-index'), 10);
-        openArticleModal(index);
-      });
+    card.addEventListener('click', (e) => {
+      const targetFile = card.getAttribute('data-file');
+      if (targetFile) {
+        window.location.href = targetFile;
+      }
+    });
+  });
     });
     card.addEventListener('click', (e) => {
       if (e.target.closest('.article-download-link')) return;
