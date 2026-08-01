@@ -199,7 +199,7 @@ function populateArticles(category = 'all', keyword = '') {
 
     const downloadLabel = TIKTOK_DATA.ui[currentLang].downloadWord || "Word";
     container.innerHTML = articles.map((art, index) => {
-      const filePath = `../files/${art.file}`;
+      const targetUrl = art.file ? art.file : `../files/${art.file || 'stop-overthinking.html'}`;
       const badgeHtml = art.featured ? `<span class="card-featured-badge">${featuredLabel}</span>` : "";
       const categoryLabel = TIKTOK_DATA.ui[currentLang][art.category] || art.category;
       
@@ -215,10 +215,8 @@ function populateArticles(category = 'all', keyword = '') {
       `;
       
       return `
-        const targetUrl = art.file ? art.file : `../files/${art.file || 'stop-overthinking.html'}`;
-      return `
-        <div class="article-card" style="cursor: pointer;" data-file="${targetUrl}">
-          <a href="${targetUrl}" style="text-decoration:none; color:inherit; display:block; height:100%;">
+        <div class="article-card" style="cursor: pointer;" data-target="${targetUrl}">
+          <a href="${targetUrl}" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
             <div class="article-image-container">
               ${badgeHtml}
               ${imageHtml}
@@ -390,338 +388,12 @@ function setupArticleModal(articles) {
     const art = articles[index];
     if (!art) return;
     
-    // Localized labels
-    const LOCALIZED_READER_LABELS = {
-      fr: {
-        home: "Accueil",
-        psychology: "Psychologie",
-        philosophy: "Philosophie",
-        development: "Développement personnel",
-        toc: "Dans cet article",
-        toc1: "1. Concept de base",
-        toc2: "2. Pourquoi cela arrive ?",
-        toc3: "3. Types & Variantes",
-        toc4: "4. Guide pratique",
-        intro: "Introduction",
-        quickSummary: "Résumé rapide",
-        readMore: "Lire plus dans l'article",
-        saveLater: "Enregistrer",
-        share: "Partager",
-        dontMiss: "Ne manquez pas nos prochains articles",
-        emailPlaceholder: "Votre adresse email...",
-        subscribe: "S'abonner",
-        privacyText: "Nous respectons votre vie privée.",
-        authorName: "Hikma & Nour",
-        cause1: "Témoignages",
-        cause2: "Comparaison",
-        cause3: "Attentes",
-        cause4: "Futur",
-        cause5: "Pressions",
-        type1: "Performance",
-        type2: "Futur",
-        type3: "Santé",
-        type4: "Généralisé",
-        type5: "Social"
-      },
-      en: {
-        home: "Home",
-        psychology: "Psychology",
-        philosophy: "Philosophy",
-        development: "Self-Development",
-        toc: "In this article",
-        toc1: "1. Core Concept",
-        toc2: "2. Why does it happen?",
-        toc3: "3. Types & Forms",
-        toc4: "4. Practical Guide",
-        intro: "Introduction",
-        quickSummary: "Quick Summary",
-        readMore: "Read more in the article",
-        saveLater: "Save",
-        share: "Share",
-        dontMiss: "Don't miss our next articles",
-        emailPlaceholder: "Your email address...",
-        subscribe: "Subscribe",
-        privacyText: "We respect your privacy.",
-        authorName: "Hikma & Nour",
-        cause1: "Experiences",
-        cause2: "Comparison",
-        cause3: "Expectations",
-        cause4: "Future Fear",
-        cause5: "Pressures",
-        type1: "Performance",
-        type2: "Anticipatory",
-        type3: "Health & Body",
-        type4: "Generalized",
-        type5: "Social Relation"
-      },
-      ar: {
-        home: "الرئيسية",
-        psychology: "علم النفس",
-        philosophy: "فلسفة",
-        development: "تطوير الذات",
-        toc: "في هذا المقال",
-        toc1: "١. المفهوم الأساسي",
-        toc2: "٢. لماذا يحدث ذلك؟",
-        toc3: "٣. الأنواع والأشكال",
-        toc4: "٤. خطوات عملية",
-        intro: "مقدمة",
-        quickSummary: "ملخص سريع",
-        readMore: "اقرأ المزيد في المقال",
-        saveLater: "حفظ للمطالعة لاحقاً",
-        share: "مشاركة المقال",
-        dontMiss: "لا تفوت مقالاتنا القادمة",
-        emailPlaceholder: "أدخل بريدك الإلكتروني",
-        subscribe: "اشترك الآن",
-        privacyText: "نحن نحترم خصوصيتك ولن نشارك بياناتك مع أي أحد.",
-        authorName: "Hikma & Nour",
-        cause1: "تجارب سابقة",
-        cause2: "المقارنة مع الآخرين",
-        cause3: "توقع الكمال",
-        cause4: "الخوف من المستقبل",
-        cause5: "ضغوط العمل",
-        type1: "قلق الأداء",
-        type2: "قلق مستقبلي",
-        type3: "قلق صحي",
-        type4: "قلق عام",
-        type5: "قلق اجتماعي"
-      }
-    };
-
-    const labels = LOCALIZED_READER_LABELS[currentLang] || LOCALIZED_READER_LABELS.fr;
-    const categoryLabel = TIKTOK_DATA.ui[currentLang][art.category] || labels.psychology;
-    
-    // Dynamic Category-Specific TOC Section Titles
-    const CATEGORY_TOC_TITLES = {
-      fr: {
-        psychology: {
-          toc1: "1. Diagnostic du problème",
-          toc2: "2. Pourquoi cela arrive ?",
-          toc3: "3. Types & formes",
-          toc4: "4. Guide pratique"
-        },
-        development: {
-          toc1: "1. Concept de discipline",
-          toc2: "2. Motivation vs Discipline",
-          toc3: "3. Habitudes clés",
-          toc4: "4. Erreurs à éviter"
-        },
-        philosophy: {
-          toc1: "1. Approche philosophique",
-          toc2: "2. Analyse critique",
-          toc3: "3. Concepts clés",
-          toc4: "4. Sagesse pratique"
-        }
-      },
-      en: {
-        psychology: {
-          toc1: "1. Core Concept",
-          toc2: "2. Why does it happen?",
-          toc3: "3. Types & Forms",
-          toc4: "4. Practical Guide"
-        },
-        development: {
-          toc1: "1. Discipline Concept",
-          toc2: "2. Motivation vs Discipline",
-          toc3: "3. Key Habits",
-          toc4: "4. Common Mistakes"
-        },
-        philosophy: {
-          toc1: "1. Philosophical Approach",
-          toc2: "2. Critical Analysis",
-          toc3: "3. Key Concepts",
-          toc4: "4. Practical Wisdom"
-        }
-      },
-      ar: {
-        psychology: {
-          toc1: "١. تشخيص المشكلة",
-          toc2: "٢. لماذا يحدث ذلك؟",
-          toc3: "٣. الأنواع والأشكال",
-          toc4: "٤. خطوات عملية"
-        },
-        development: {
-          toc1: "١. مفهوم الانضباط",
-          toc2: "٢. الحماس أم الانضباط؟",
-          toc3: "٣. عادات بناء الانضباط",
-          toc4: "٤. أخطاء شائعة"
-        },
-        philosophy: {
-          toc1: "١. المنهج الفلسفي",
-          toc2: "٢. التحليل الفلسفي",
-          toc3: "٣. الأفكار الأساسية",
-          toc4: "٤. التطبيق العملي"
-        }
-      }
-    };
-
-    const categoryToc = (CATEGORY_TOC_TITLES[currentLang] || CATEGORY_TOC_TITLES.fr)[art.category] || (CATEGORY_TOC_TITLES[currentLang] || CATEGORY_TOC_TITLES.fr).psychology;
-
-    if (titleEl) titleEl.textContent = art.title;
-    if (descEl) descEl.textContent = art.desc;
-    if (badgeEl) {
-      badgeEl.textContent = categoryLabel;
-      badgeEl.className = `reader-hero-badge category-${art.category}`;
+    // Direct navigation to article standalone page
+    const targetUrl = art.file ? art.file : `../files/${art.file || ''}`;
+    if (targetUrl) {
+      window.location.href = targetUrl;
+      return;
     }
-    if (breadcrumbCatEl) breadcrumbCatEl.textContent = categoryLabel;
-    if (breadcrumbTitleEl) breadcrumbTitleEl.textContent = art.title.slice(0, 32) + "...";
-    if (dateEl) dateEl.textContent = art.date || "20 mai 2024";
-    if (readTimeEl) readTimeEl.textContent = art.readTime;
-    if (imgEl && art.image) imgEl.src = `../${art.image}`;
-
-    const p1 = art.body[0] || "";
-    const p2 = art.body[1] || "";
-    const p3 = art.body[2] || "";
-    const p4 = art.body[3] || "";
-    const p5 = art.body[4] || "";
-    const p6 = art.body[5] || "";
-
-    if (quoteEl) quoteEl.textContent = p4 ? `${p4.split('.')[0]}...` : `${art.desc}`;
-    if (quoteAuthorEl) {
-      quoteAuthorEl.textContent = "— " + (art.title.includes('Sartre') ? 'Jean-Paul Sartre' : art.title.includes('Camus') ? 'Albert Camus' : art.title.includes('Nietzsche') ? 'Friedrich Nietzsche' : 'Hikma & Nour');
-    }
-
-    // Dynamic Binding to Sidebar TOC elements
-    const tocIntro = document.querySelector('.toc-list a[href="#sec-intro"]');
-    const toc1 = document.querySelector('.toc-list a[href="#sec-1"]');
-    const toc2 = document.querySelector('.toc-list a[href="#sec-2"]');
-    const toc3 = document.querySelector('.toc-list a[href="#sec-3"]');
-    const toc4 = document.querySelector('.toc-list a[href="#sec-4"]');
-
-    if (tocIntro) tocIntro.textContent = labels.intro;
-    if (toc1) toc1.textContent = categoryToc.toc1;
-    if (toc2) toc2.textContent = categoryToc.toc2;
-    if (toc3) toc3.textContent = categoryToc.toc3;
-    if (toc4) toc4.textContent = categoryToc.toc4;
-
-
-    const mainHtml = `
-      <!-- Introduction Box (Split) -->
-      <section id="sec-intro" class="reader-content-section section-intro-box">
-        <div class="intro-box-grid">
-          <div class="intro-box-left">
-            <h3 class="section-part-title">
-              <span class="part-title-icon">🌿</span>
-              ${labels.intro}
-            </h3>
-            <p>${p1}</p>
-          </div>
-          <div class="intro-box-right">
-            <h3 class="section-part-title">
-              <span class="part-title-icon">💡</span>
-              ${labels.quickSummary}
-            </h3>
-            <div class="quick-summary-card">
-              <p>${art.desc}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 1 : Concept de base -->
-      <section id="sec-1" class="reader-content-section">
-        <h3 class="section-part-title">
-          <span class="part-title-circle">🧠</span>
-          ${categoryToc.toc1}
-        </h3>
-        <p>${p2 || p1}</p>
-        
-        <!-- Highlight Quote Box -->
-        <div class="content-highlight-box">
-          <span class="highlight-icon">🌿</span>
-          <p class="highlight-text">"${p2 ? p2.split('.')[0] : art.desc}"</p>
-        </div>
-      </section>
-
-      <!-- Section 2 : Pourquoi cela arrive ? -->
-      <section id="sec-2" class="reader-content-section">
-        <h3 class="section-part-title">
-          <span class="part-title-circle">👤</span>
-          ${categoryToc.toc2}
-        </h3>
-        <p>${p3 || p2}</p>
-        
-        <!-- Causes Grid (5 Columns) -->
-        <div class="causes-flex-row">
-          <div class="cause-grid-item">
-            <span class="cause-icon">🌧️</span>
-            <span class="cause-name">${labels.cause1}</span>
-          </div>
-          <div class="cause-grid-item">
-            <span class="cause-icon">👥</span>
-            <span class="cause-name">${labels.cause2}</span>
-          </div>
-          <div class="cause-grid-item">
-            <span class="cause-icon">🎯</span>
-            <span class="cause-name">${labels.cause3}</span>
-          </div>
-          <div class="cause-grid-item">
-            <span class="cause-icon">⏳</span>
-            <span class="cause-name">${labels.cause4}</span>
-          </div>
-          <div class="cause-grid-item">
-            <span class="cause-icon">💼</span>
-            <span class="cause-name">${labels.cause5}</span>
-          </div>
-        </div>
-
-        <!-- Read more button below grid -->
-        <div style="text-align: center; margin: 25px 0 10px;">
-          <button class="btn-read-more-grid" onclick="document.getElementById('sec-3').scrollIntoView({behavior:'smooth'});">
-            <span class="btn-grid-icon">▼</span>
-            <span>${labels.readMore}</span>
-          </button>
-        </div>
-      </section>
-
-      <!-- Section 3 : Types et formes -->
-      <section id="sec-3" class="reader-content-section">
-        <h3 class="section-part-title">
-          <span class="part-title-circle">🌾</span>
-          ${categoryToc.toc3}
-        </h3>
-        <p>${p4 || p3}</p>
-        
-        <!-- Types Grid (5 Cards) -->
-        <div class="types-cards-row">
-          <div class="type-card-item">
-            <span class="type-card-icon">📈</span>
-            <h4 class="type-card-heading">${labels.type1}</h4>
-          </div>
-          <div class="type-card-item">
-            <span class="type-card-icon">🔭</span>
-            <h4 class="type-card-heading">${labels.type2}</h4>
-          </div>
-          <div class="type-card-item">
-            <span class="type-card-icon">💖</span>
-            <h4 class="type-card-heading">${labels.type3}</h4>
-          </div>
-          <div class="type-card-item">
-            <span class="type-card-icon">🧠</span>
-            <h4 class="type-card-heading">${labels.type4}</h4>
-          </div>
-          <div class="type-card-item">
-            <span class="type-card-icon">👥</span>
-            <h4 class="type-card-heading">${labels.type5}</h4>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 4 : Guide pratique -->
-      <section id="sec-4" class="reader-content-section">
-        <h3 class="section-part-title">
-          <span class="part-title-circle">📝</span>
-          ${categoryToc.toc4}
-        </h3>
-        <p>${p5 || p3}</p>
-        ${p6 ? `<p>${p6}</p>` : ""}
-      </section>
-    `;
-
-    if (bodyEl) bodyEl.innerHTML = mainHtml;
-
-
-
-    modal.classList.add('active');
     document.body.style.overflow = 'hidden';
     
     // Auto-scroll modal to top
@@ -732,13 +404,14 @@ function setupArticleModal(articles) {
   }
 
   cards.forEach(card => {
-    card.addEventListener('click', (e) => {
-      const targetFile = card.getAttribute('data-file');
-      if (targetFile) {
-        window.location.href = targetFile;
-      }
-    });
-  });
+    const clickables = card.querySelectorAll('[data-index]');
+    clickables.forEach(c => {
+      c.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const index = parseInt(c.getAttribute('data-index'), 10);
+        openArticleModal(index);
+      });
     });
     card.addEventListener('click', (e) => {
       if (e.target.closest('.article-download-link')) return;
