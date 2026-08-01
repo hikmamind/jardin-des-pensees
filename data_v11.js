@@ -1552,6 +1552,17 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "id": "nietzsche-psychological-strength",
+          "file": "nietzsche-psychological-strength.html",
+          "title": "Que pouvez-vous apprendre de Nietzsche pour devenir psychologiquement plus fort ?",
+          "category": "philosophy",
+          "categoryName": "Philosophie & Psychologie",
+          "readTime": "8 min",
+          "date": "1 août 2026",
+          "desc": "Les leçons fondamentales de Friedrich Nietzsche pour développer la résilience mentale et transformer la douleur en force.",
+          "image": "nietzsche_psychological_strength_hero.jpg"
+        },
+        {
           "id": "schopenhauer-happiness-illusion",
           "file": "schopenhauer-happiness-illusion.html",
           "title": "Pourquoi Schopenhauer considérait-il le bonheur comme une simple illusion ?",
@@ -3366,6 +3377,17 @@ const TIKTOK_DATA = {
         }
       ],
       "articles": [
+        {
+          "id": "nietzsche-psychological-strength",
+          "file": "nietzsche-psychological-strength.html",
+          "title": "What Can You Learn from Nietzsche to Become Psychologically Stronger?",
+          "category": "philosophy",
+          "categoryName": "Philosophy & Mind",
+          "readTime": "8 min",
+          "date": "1 August 2026",
+          "desc": "Core psychological lessons from Friedrich Nietzsche to build mental resilience and transform suffering into strength.",
+          "image": "nietzsche_psychological_strength_hero.jpg"
+        },
         {
           "id": "schopenhauer-happiness-illusion",
           "file": "schopenhauer-happiness-illusion.html",
@@ -5328,6 +5350,17 @@ const TIKTOK_DATA = {
         }
       ],
       "articles": [
+        {
+          "id": "nietzsche-psychological-strength",
+          "file": "nietzsche-psychological-strength.html",
+          "title": "ماذا يمكن أن تتعلم من نيتشه لتصبح أقوى نفسيًا؟",
+          "category": "philosophy",
+          "categoryName": "الفلسفة وعلم النفس",
+          "readTime": "8 دقائق قراءة",
+          "date": "1 أغسطس 2026",
+          "desc": "دروس من الفيلسوف فريدريش نيتشه لبناء صلابة نفسية، مواجهة الألم، وتحويل الصعوبات إلى مصدر قوة حقيقية.",
+          "image": "nietzsche_psychological_strength_hero.jpg"
+        },
         {
           "id": "schopenhauer-happiness-illusion",
           "file": "schopenhauer-happiness-illusion.html",
