@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="ar" data-theme="dark" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>حكمة ونور | Hikma & Nour - Link in Bio</title>
+  <meta name="description" content="حكمة ونور | منصة الفلسفة وتطوير الذات - أفكار عميقة لإيقاظ العقل وإشراق الروح. روابط الموقع، الكتب، النشرة البريدية، ومواقع التواصل الاجتماعي.">
+  <meta name="keywords" content="حكمة ونور, فلسفة, تطوير الذات, كتب مجانية, اقتباسات, الرواقية, شوبنهاور, نيتشه">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="حكمة ونور | Hikma & Nour - Link in Bio">
+  <meta property="og:description" content="أفكار عميقة لإيقاظ العقل وإشراق الروح. مقالات، كتب، واقتباسات خالدة.">
+  <meta property="og:image" content="hikma_nour_logo_badge.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+  <!-- Fonts: Cairo & Amiri -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,800;1,400&display=swap" rel="stylesheet">
+
+  <!-- Google AdSense Publisher -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6066939925984540" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --bg-overlay-dark: rgba(13, 19, 15, 0.72);
+      --card-glass-bg: rgba(255, 248, 238, 0.78);
+      --card-glass-border: rgba(223, 177, 91, 0.45);
+      --card-inner-bg: rgba(255, 255, 255, 0.65);
+      --text-main: #1C150C;
+      --text-muted: #5C4A3E;
+      --accent-gold: #B38A3C;
+      --accent-gold-bright: #DFB15B;
+      --accent-gold-glow: rgba(223, 177, 91, 0.35);
+      --shadow-lux: 0 12px 32px rgba(0, 0, 0, 0.18), 0 2px 6px rgba(179, 138, 60, 0.15);
+      --radius-card: 22px;
+      --radius-btn: 18px;
+    }
+
+    [data-theme="dark"] {
+      --bg-overlay-dark: rgba(10, 16, 12, 0.82);
+      --card-glass-bg: rgba(22, 32, 25, 0.78);
+      --card-glass-border: rgba(223, 177, 91, 0.35);
+      --card-inner-bg: rgba(16, 24, 18, 0.65);
+      --text-main: #F4EFE6;
+      --text-muted: #C2B8A3;
+      --accent-gold: #DFB15B;
+      --accent-gold-bright: #F5D38A;
+      --accent-gold-glow: rgba(223, 177, 91, 0.3);
+      --shadow-lux: 0 14px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(223, 177, 91, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100vh;
+      font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+      background-color: #0A100C;
+      color: var(--text-main);
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* Fixed Background Image with Overlay */
+    .bg-fixed-landscape {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      background-image: url('bio_background_mountain_lake.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      transform: scale(1.02);
+      transition: transform 10s ease-out;
+    }
+
+    .bg-fixed-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: radial-gradient(circle at 50% 20%, rgba(223, 177, 91, 0.15) 0%, transparent 60%),
+                  linear-gradient(180deg, rgba(10, 16, 12, 0.5) 0%, var(--bg-overlay-dark) 45%, #0A100C 100%);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    /* Apple-inspired Dynamic Island Header Bar */
+    .dynamic-island-header {
+      position: fixed;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 999;
+      width: min(92%, 460px);
+      height: 48px;
+      background: rgba(18, 26, 21, 0.85);
+      border: 1px solid rgba(223, 177, 91, 0.4);
+      border-radius: 30px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35), 0 0 15px rgba(223, 177, 91, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .dynamic-island-header.expanded {
+      height: 100px;
+      border-radius: 26px;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .island-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--accent-gold-bright);
+    }
+
+    .island-pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #4EFE88;
+      box-shadow: 0 0 10px #4EFE88;
+      animation: pulseDot 2s infinite;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    .island-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .island-btn {
+      background: rgba(223, 177, 91, 0.12);
+      border: 1px solid rgba(223, 177, 91, 0.3);
+      color: var(--accent-gold-bright);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: all 0.25s ease;
+    }
+
+    .island-btn:hover {
+      background: var(--accent-gold-bright);
+      color: #0A100C;
+      transform: scale(1.1);
+    }
+
+    /* Live Search Bar */
+    .search-bar-wrapper {
+      width: 100%;
+      display: none;
+    }
+
+    .search-bar-wrapper.active {
+      display: block;
+    }
+
+    .search-input-field {
+      width: 100%;
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 1px solid var(--accent-gold);
+      background: rgba(10, 16, 12, 0.9);
+      color: #FFF;
+      font-family: inherit;
+      font-size: 0.85rem;
+      outline: none;
+      text-align: right;
+    }
+
+    /* Page Wrapper */
+    .bio-container {
+      width: min(92%, 520px);
+      margin: 0 auto;
+      padding-top: 85px;
+      padding-bottom: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* Brand Header Section */
+    .brand-header-box {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 8px;
+      animation: fadeInDown 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .brand-logo-frame {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      padding: 3px;
+      background: linear-gradient(135deg, var(--accent-gold-bright), rgba(179, 138, 60, 0.3), var(--accent-gold));
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 25px rgba(223, 177, 91, 0.3);
+      margin-bottom: 14px;
+      position: relative;
+      transition: transform 0.4s ease;
+    }
+
+    .brand-logo-frame:hover {
+      transform: scale(1.05) rotate(2deg);
+    }
+
+    .brand-logo-frame img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .brand-title-ar {
+      font-family: 'Amiri', 'Playfair Display', serif;
+      font-size: 2.3rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+      letter-spacing: -0.5px;
+      text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .brand-ornament-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin: 4px 0 8px;
+      color: var(--accent-gold-bright);
+    }
+
+    .brand-ornament-line span {
+      width: 30px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent-gold-bright), transparent);
+    }
+
+    .brand-subtitle {
+      font-size: 0.96rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      max-width: 320px;
+      line-height: 1.5;
+    }
+
+    /* Stats Counter Bar */
+    .stats-bar-container {
+      width: 100%;
+      background: var(--card-glass-bg);
+      border: 1px solid var(--card-glass-border);
+      border-radius: 18px;
+      padding: 12px 18px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      box-shadow: var(--shadow-lux);
+      margin-bottom: 6px;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: var(--accent-gold-bright);
+      font-family: 'Cairo', sans-serif;
+    }
+
+    .stat-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    /* Links Container & Cards */
+    .links-list-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .link-card {
+      width: 100%;
+      background: var(--card-glass-bg);
+      border: 1px solid var(--card-glass-border);
+      border-radius: var(--radius-card);
+      padding: 16px 20px;
+      text-decoration: none;
+      color: var(--text-main);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: var(--shadow-lux);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    /* Glass shimmer effect on card hover */
+    .link-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.15) 50%,
+        transparent 70%
+      );
+      transform: rotate(30deg) translateY(-100%);
+      transition: transform 0.8s ease;
+    }
+
+    .link-card:hover::before {
+      transform: rotate(30deg) translateY(100%);
+    }
+
+    .link-card:hover {
+      transform: translateY(-4px) scale(1.015);
+      border-color: var(--accent-gold-bright);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3), 0 0 25px var(--accent-gold-glow);
+    }
+
+    .link-card-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .link-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: rgba(179, 138, 60, 0.14);
+      border: 1px solid rgba(223, 177, 91, 0.4);
+      color: var(--accent-gold-bright);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .link-card:hover .link-icon-box {
+      transform: scale(1.12) rotate(-5deg);
+      background: var(--accent-gold-bright);
+      color: #0A100C;
+    }
+
+    .link-text-box {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+    }
+
+    .link-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.3;
+    }
+
+    .link-subtitle {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .link-arrow-box {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(179, 138, 60, 0.1);
+      color: var(--accent-gold-bright);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .link-card:hover .link-arrow-box {
+      transform: translateX(-4px);
+      background: var(--accent-gold-bright);
+      color: #0A100C;
+    }
+
+    /* 4 Grid Social Section */
+    .social-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      width: 100%;
+      margin: 4px 0;
+    }
+
+    .social-grid-card {
+      background: var(--card-glass-bg);
+      border: 1px solid var(--card-glass-border);
+      border-radius: 18px;
+      padding: 14px 8px;
+      text-decoration: none;
+      color: var(--text-main);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: var(--shadow-lux);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-align: center;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .social-grid-card:hover {
+      transform: translateY(-4px) scale(1.04);
+      border-color: var(--accent-gold-bright);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .social-icon-circle {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      color: #FFF;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .social-icon-circle.telegram { background: #0088cc; }
+    .social-icon-circle.youtube { background: #FF0000; }
+    .social-icon-circle.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+    .social-icon-circle.tiktok { background: #000000; border: 1px solid #333; }
+
+    .social-card-title {
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .social-card-sub {
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    /* Quote Card Section */
+    .quote-card-container {
+      width: 100%;
+      background: var(--card-glass-bg);
+      border: 1px solid var(--card-glass-border);
+      border-radius: var(--radius-card);
+      padding: 26px 22px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: var(--shadow-lux);
+      text-align: center;
+      position: relative;
+      margin: 8px 0;
+    }
+
+    .quote-mark-icon {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      color: var(--accent-gold-bright);
+      opacity: 0.35;
+      line-height: 0.5;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    .quote-card-text {
+      font-family: 'Amiri', 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      line-height: 1.6;
+      color: var(--text-main);
+      margin-bottom: 14px;
+    }
+
+    .quote-card-actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .quote-act-btn {
+      background: rgba(179, 138, 60, 0.12);
+      border: 1px solid rgba(223, 177, 91, 0.3);
+      color: var(--accent-gold-bright);
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .quote-act-btn:hover {
+      background: var(--accent-gold-bright);
+      color: #0A100C;
+    }
+
+    /* Footer Actions Row */
+    .action-row-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin: 10px 0;
+    }
+
+    .bottom-action-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+      color: var(--text-muted);
+      transition: transform 0.25s ease;
+    }
+
+    .bottom-action-item:hover {
+      transform: translateY(-3px);
+      color: var(--accent-gold-bright);
+    }
+
+    .bottom-action-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--card-glass-bg);
+      border: 1px solid var(--card-glass-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    .bottom-action-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    /* Modals */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card-box {
+      width: min(90%, 420px);
+      background: #121A15;
+      border: 1px solid var(--accent-gold-bright);
+      border-radius: 24px;
+      padding: 30px 24px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+      position: relative;
+      transform: scale(0.9);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .modal-overlay.active .modal-card-box {
+      transform: scale(1);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: rgba(255,255,255,0.1);
+      border: none;
+      color: #FFF;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    .modal-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--accent-gold-bright);
+      margin-bottom: 8px;
+    }
+
+    .modal-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .modal-input {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 14px;
+      border: 1px solid var(--accent-gold);
+      background: rgba(0,0,0,0.4);
+      color: #FFF;
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+      outline: none;
+      text-align: right;
+    }
+
+    .modal-submit-btn {
+      width: 100%;
+      padding: 14px;
+      border-radius: 14px;
+      border: none;
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-bright));
+      color: #101812;
+      font-weight: 800;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .modal-submit-btn:hover {
+      transform: scale(1.02);
+    }
+
+    /* Keyframes */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fixed Background -->
+  <div class="bg-fixed-landscape"></div>
+  <div class="bg-fixed-overlay"></div>
+
+  <!-- Dynamic Island Header -->
+  <div class="dynamic-island-header" id="dynamicIsland">
+    <div class="island-badge">
+      <div class="island-pulse-dot"></div>
+      <span>حكمة ونور مباشر</span>
+    </div>
+
+    <div class="search-bar-wrapper" id="searchBarWrapper">
+      <input type="text" id="searchInput" class="search-input-field" placeholder="ابحث عن روابط، كتب، أو مقالات...">
+    </div>
+
+    <div class="island-controls">
+      <button class="island-btn" id="searchToggleBtn" title="بحث">🔍</button>
+      <button class="island-btn" id="themeToggleBtn" title="تغيير الثيم">🌙</button>
+    </div>
+  </div>
+
+  <!-- Main Container -->
+  <div class="bio-container">
+    
+    <!-- Brand Header -->
+    <header class="brand-header-box">
+      <div class="brand-logo-frame">
+        <img src="hikma_nour_logo_badge.jpg" alt="شعار حكمة ونور">
+      </div>
+      <h1 class="brand-title-ar">حكمة ونور</h1>
+      <div class="brand-ornament-line">
+        <span></span>
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg>
+        <span></span>
+      </div>
+      <p class="brand-subtitle">أفكار عميقة لإيقاظ العقل وإشراق الروح</p>
+    </header>
+
+    <!-- Stats Counter Bar -->
+    <div class="stats-bar-container">
+      <div class="stat-item">
+        <div class="stat-number">+100</div>
+        <div class="stat-label">مقال وفكر</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">+500</div>
+        <div class="stat-label">اقتباس خالد</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">+50K</div>
+        <div class="stat-label">متابع شغوف</div>
+      </div>
+    </div>
+
+    <!-- Main Clickable Links -->
+    <div class="links-list-wrapper" id="linksContainer">
+      
+      <!-- 1. Visit Website -->
+      <a href="../" class="link-card" data-title="زيارة الموقع">
+        <div class="link-card-left">
+          <div class="link-icon-box">🌐</div>
+          <div class="link-text-box">
+            <span class="link-title">زيارة الموقع</span>
+            <span class="link-subtitle">مقالات، اقتباسات وسير المفكرين</span>
+          </div>
+        </div>
+        <div class="link-arrow-box">❮</div>
+      </a>
+
+      <!-- 2. Read Blog -->
+      <a href="../articles/" class="link-card" data-title="قراءة المدونة">
+        <div class="link-card-left">
+          <div class="link-icon-box">📖</div>
+          <div class="link-text-box">
+            <span class="link-title">قراءة المدونة</span>
+            <span class="link-subtitle">اكتشف أحدث المقالات والفكرات</span>
+          </div>
+        </div>
+        <div class="link-arrow-box">❮</div>
+      </a>
+
+      <!-- 3. Download Free Ebook -->
+      <div class="link-card" id="btnDownloadBook" data-title="تحميل الكتاب المجاني">
+        <div class="link-card-left">
+          <div class="link-icon-box">🎁</div>
+          <div class="link-text-box">
+            <span class="link-title">تحميل الكتاب الإلكتروني المجاني</span>
+            <span class="link-subtitle">20 درساً من أهم دروس الحياة</span>
+          </div>
+        </div>
+        <div class="link-arrow-box">❮</div>
+      </div>
+
+      <!-- 4. Buy Book -->
+      <a href="../shop/" class="link-card" data-title="شراء الكتاب">
+        <div class="link-card-left">
+          <div class="link-icon-box">🛒</div>
+          <div class="link-text-box">
+            <span class="link-title">شراء الكتاب</span>
+            <span class="link-subtitle">التطوير الشخصي وفقاً لأفكار أعظم المفكرين</span>
+          </div>
+        </div>
+        <div class="link-arrow-box">❮</div>
+      </a>
+
+      <!-- 5. 4 Grid Social Cards -->
+      <div class="social-grid-4">
+        
+        <a href="https://t.me/hikmamind" target="_blank" rel="noopener" class="social-grid-card">
+          <div class="social-icon-circle telegram">✈️</div>
+          <span class="social-card-title">تيليجرام</span>
+          <span class="social-card-sub">انضم للقناة</span>
+        </a>
+
+        <a href="https://youtube.com/@hikmamind" target="_blank" rel="noopener" class="social-grid-card">
+          <div class="social-icon-circle youtube">▶️</div>
+          <span class="social-card-title">يوتيوب</span>
+          <span class="social-card-sub">فيديوهات طويلة</span>
+        </a>
+
+        <a href="https://instagram.com/hikmamind" target="_blank" rel="noopener" class="social-grid-card">
+          <div class="social-icon-circle instagram">📸</div>
+          <span class="social-card-title">إنستغرام</span>
+          <span class="social-card-sub">اقتباسات وإلهام</span>
+        </a>
+
+        <a href="https://tiktok.com/@hikmamind" target="_blank" rel="noopener" class="social-grid-card">
+          <div class="social-icon-circle tiktok">🎵</div>
+          <span class="social-card-title">تيك توك</span>
+          <span class="social-card-sub">مقاطع يومية</span>
+        </a>
+
+      </div>
+
+      <!-- 6. Newsletter Subscription -->
+      <div class="link-card" id="btnNewsletter" data-title="النشرة البريدية">
+        <div class="link-card-left">
+          <div class="link-icon-box">✉️</div>
+          <div class="link-text-box">
+            <span class="link-title">النشرة البريدية</span>
+            <span class="link-subtitle">استلم اقتباسة ملهمة كل صباح</span>
+          </div>
+        </div>
+        <div class="link-arrow-box">❮</div>
+      </div>
+
+      <!-- 7. Join Community -->
+      <div class="link-card" id="btnCommunity" data-title="انضم إلى مجتمع الحكمة">
+        <div class="link-card-left">
+          <div class="link-icon-box">👥</div>
+          <div class="link-text-box">
+            <span class="link-title">انضم إلى مجتمع الحكمة</span>
+            <span class="link-subtitle">تبادل الأفكار وتطور مع الآخرين</span>
+          </div>
+        </div>
+        <div class="link-arrow-box">❮</div>
+      </div>
+
+    </div>
+
+    <!-- Quote Card -->
+    <div class="quote-card-container">
+      <span class="quote-mark-icon">“</span>
+      <p class="quote-card-text" id="quoteDisplay">
+        دقيقة واحدة من القراءة<br>قد تغيّر حياة كاملة.
+      </p>
+      <div class="quote-card-actions">
+        <button class="quote-act-btn" id="btnNewQuote">🔄 اقتباس جديد</button>
+        <button class="quote-act-btn" id="btnCopyQuote">📋 نسخ</button>
+      </div>
+    </div>
+
+    <!-- Action Buttons Bar -->
+    <div class="action-row-buttons">
+      <div class="bottom-action-item" id="actShare">
+        <div class="bottom-action-icon">🚀</div>
+        <span class="bottom-action-label">أرسل</span>
+      </div>
+      <div class="bottom-action-item" id="actContact">
+        <div class="bottom-action-icon">💬</div>
+        <span class="bottom-action-label">علق</span>
+      </div>
+      <div class="bottom-action-item" id="actBookmark">
+        <div class="bottom-action-icon">🔖</div>
+        <span class="bottom-action-label">احفظ</span>
+      </div>
+      <div class="bottom-action-item" id="actLike">
+        <div class="bottom-action-icon" id="likeIcon">❤️</div>
+        <span class="bottom-action-label" id="likeCount">1.2k</span>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="margin-top: 15px; text-align: center; font-size: 0.78rem; color: var(--text-muted);">
+      <p>حكمة حكمة ونور - جميع الحقوق محفوظة © 2026</p>
+      <p style="margin-top: 6px;"><a href="../privacy-policy.html" style="color: var(--accent-gold-bright); text-decoration: none;">سياسة الخصوصية | Privacy Policy</a></p>
+    </footer>
+
+  </div>
+
+  <!-- Modal for Free Book Download -->
+  <div class="modal-overlay" id="modalBook">
+    <div class="modal-card-box">
+      <button class="modal-close-btn" class="closeModal">&times;</button>
+      <div style="font-size: 2.5rem; margin-bottom: 10px;">🎁</div>
+      <h3 class="modal-title">تحميل الكتاب الإلكتروني المجاني</h3>
+      <p class="modal-desc">أدخل بريدك الإلكتروني للحصول على النسخة الكاملة من كتاب "أفضل 20 درساً في الحياة" بصيغة PDF فوراً.</p>
+      <input type="email" id="bookEmail" class="modal-input" placeholder="بريدك الإلكتروني (e.g. name@domain.com)">
+      <button class="modal-submit-btn" id="submitBookDownload">تحميل الكتاب الآن ✨</button>
+    </div>
+  </div>
+
+  <!-- Modal for Newsletter -->
+  <div class="modal-overlay" id="modalNews">
+    <div class="modal-card-box">
+      <button class="modal-close-btn" class="closeModal">&times;</button>
+      <div style="font-size: 2.5rem; margin-bottom: 10px;">✉️</div>
+      <h3 class="modal-title">اشترك في النشرة الصباحية</h3>
+      <p class="modal-desc">انضم لأكثر من 50,000 قارئ واستلم كل صباح اقتباسة فلسفية ملهمة ومقالًا قصيرًا لبداية يوم مليء بالحكمة.</p>
+      <input type="email" id="newsEmail" class="modal-input" placeholder="ادخل بريدك الإلكتروني">
+      <button class="modal-submit-btn" id="submitNewsSub">اشتراك مجاني 🌿</button>
+    </div>
+  </div>
+
+  <!-- JS Logic -->
+  <script>
+    // Theme Switcher
+    const themeBtn = document.getElementById('themeToggleBtn');
+    themeBtn.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      themeBtn.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+      localStorage.setItem('bio_theme', newTheme);
+    });
+
+    // Dynamic Island Search Toggle
+    const searchToggleBtn = document.getElementById('searchToggleBtn');
+    const searchBarWrapper = document.getElementById('searchBarWrapper');
+    const dynamicIsland = document.getElementById('dynamicIsland');
+    const searchInput = document.getElementById('searchInput');
+
+    searchToggleBtn.addEventListener('click', () => {
+      searchBarWrapper.classList.toggle('active');
+      dynamicIsland.classList.toggle('expanded');
+      if (searchBarWrapper.classList.contains('active')) {
+        searchInput.focus();
+      }
+    });
+
+    // Live Card Filtering
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.trim().toLowerCase();
+      const cards = document.querySelectorAll('.link-card');
+      cards.forEach(card => {
+        const title = card.getAttribute('data-title') || card.textContent;
+        if (title.toLowerCase().includes(query)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+
+    // Quotes Generator
+    const quotes = [
+      "دقيقة واحدة من القراءة\nقد تغيّر حياة كاملة.",
+      "من لا يحب العزلة،\nلا يحب الحرية.\n— آرثر شوبنهاور",
+      "الحياة التي لا تُفحص\nلا تستحق أن تُعاش.\n— سقراط",
+      "ما لا يقتلني يجعلني أقوى.\n— فريدريك نيتشه",
+      "ليس الغني من يملك الكثير،\nبل من يكتفي بما لديه.\n— إبيقور",
+      "العقل ليس وعاءً نملؤه،\nبل نارًا نوقدها.\n— بلوتارخ"
+    ];
+    let quoteIdx = 0;
+    const quoteDisplay = document.getElementById('quoteDisplay');
+    const btnNewQuote = document.getElementById('btnNewQuote');
+    const btnCopyQuote = document.getElementById('btnCopyQuote');
+
+    btnNewQuote.addEventListener('click', () => {
+      quoteIdx = (quoteIdx + 1) % quotes.length;
+      quoteDisplay.innerHTML = quotes[quoteIdx].replace('\n', '<br>');
+    });
+
+    btnCopyQuote.addEventListener('click', () => {
+      const textToCopy = quoteDisplay.innerText;
+      navigator.clipboard.writeText(textToCopy);
+      btnCopyQuote.textContent = '✓ تم النسخ';
+      setTimeout(() => { btnCopyQuote.textContent = '📋 نسخ'; }, 2000);
+    });
+
+    // Modals Handling
+    const modalBook = document.getElementById('modalBook');
+    const modalNews = document.getElementById('modalNews');
+    const btnDownloadBook = document.getElementById('btnDownloadBook');
+    const btnNewsletter = document.getElementById('btnNewsletter');
+    const btnCommunity = document.getElementById('btnCommunity');
+
+    btnDownloadBook.addEventListener('click', () => modalBook.classList.add('active'));
+    btnNewsletter.addEventListener('click', () => modalNews.classList.add('active'));
+    btnCommunity.addEventListener('click', () => modalNews.classList.add('active'));
+
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay || e.target.classList.contains('modal-close-btn')) {
+          overlay.classList.remove('active');
+        }
+      });
+    });
+
+    document.getElementById('submitBookDownload').addEventListener('click', () => {
+      const email = document.getElementById('bookEmail').value;
+      if (email) {
+        alert('تم إرسال رابط تحميل الكتاب الإلكتروني المجاني إلى بريدك الإلكتروني بنجاح! 🎁');
+        modalBook.classList.remove('active');
+      } else {
+        alert('يرجى إدخال البريد الإلكتروني بشكل صحيح.');
+      }
+    });
+
+    document.getElementById('submitNewsSub').addEventListener('click', () => {
+      const email = document.getElementById('newsEmail').value;
+      if (email) {
+        alert('شكراً لانضمامك إلى نشرة حكمة ونور الصباحية! 🌿');
+        modalNews.classList.remove('active');
+      } else {
+        alert('يرجى إدخال البريد الإلكتروني بشكل صحيح.');
+      }
+    });
+
+    // Bottom Action Bar Logic
+    const actShare = document.getElementById('actShare');
+    const actContact = document.getElementById('actContact');
+    const actBookmark = document.getElementById('actBookmark');
+    const actLike = document.getElementById('actLike');
+    const likeCount = document.getElementById('likeCount');
+    let likes = 1240;
+
+    actShare.addEventListener('click', () => {
+      if (navigator.share) {
+        navigator.share({
+          title: 'حكمة ونور | Hikma & Nour',
+          url: window.location.href
+        });
+      } else {
+        navigator.clipboard.writeText(window.location.href);
+        alert('تم نسخ رابط الصفحة بنجاح! 🚀');
+      }
+    });
+
+    actContact.addEventListener('click', () => {
+      window.location.href = '../#contactSection';
+    });
+
+    actBookmark.addEventListener('click', () => {
+      alert('اضغط Ctrl + D لإضافة صفحة حكمة ونور إلى المفضلة لديك! 🔖');
+    });
+
+    actLike.addEventListener('click', () => {
+      likes++;
+      likeCount.textContent = (likes / 1000).toFixed(1) + 'k';
+      document.getElementById('likeIcon').style.transform = 'scale(1.4)';
+      setTimeout(() => document.getElementById('likeIcon').style.transform = 'scale(1)', 300);
+    });
+  </script>
+</body>
+</html>
