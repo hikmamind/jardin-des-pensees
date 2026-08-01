@@ -1552,6 +1552,17 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "id": "schopenhauer-happiness-illusion",
+          "file": "schopenhauer-happiness-illusion.html",
+          "title": "Pourquoi Schopenhauer considérait-il le bonheur comme une simple illusion ?",
+          "category": "philosophy",
+          "categoryName": "Philosophie & Psychologie",
+          "readTime": "8-10 min",
+          "date": "1 août 2026",
+          "desc": "Une analyse philosophique profonde de la pensée de Schopenhauer : le cycle des désirs, l'illusion du bonheur et la sérénité.",
+          "image": "schopenhauer_happiness_illusion_hero.jpg"
+        },
+        {
           "id": "solitude-blessing-or-curse",
           "file": "solitude-blessing-or-curse.html",
           "title": "La solitude est-elle une bénédiction ou une punition ? La voie vers la découverte de soi selon les philosophes",
@@ -3355,6 +3366,17 @@ const TIKTOK_DATA = {
         }
       ],
       "articles": [
+        {
+          "id": "schopenhauer-happiness-illusion",
+          "file": "schopenhauer-happiness-illusion.html",
+          "title": "Why Did Schopenhauer Consider Happiness to Be a Mere Illusion?",
+          "category": "philosophy",
+          "categoryName": "Philosophy & Mind",
+          "readTime": "8-10 min",
+          "date": "1 August 2026",
+          "desc": "A deep philosophical study into Schopenhauer's thought: the cycle of desires, happiness as a mirage, and inner peace.",
+          "image": "schopenhauer_happiness_illusion_hero.jpg"
+        },
         {
           "id": "solitude-blessing-or-curse",
           "file": "solitude-blessing-or-curse.html",
@@ -5306,6 +5328,17 @@ const TIKTOK_DATA = {
         }
       ],
       "articles": [
+        {
+          "id": "schopenhauer-happiness-illusion",
+          "file": "schopenhauer-happiness-illusion.html",
+          "title": "لماذا اعتبر شوبنهاور أن السعادة مجرد وهم؟",
+          "category": "philosophy",
+          "categoryName": "الفلسفة • علم النفس • تطوير الذات",
+          "readTime": "8 إلى 10 دقائق",
+          "date": "1 أغسطس 2026",
+          "desc": "دراسة فلسفية ونفسية عميقة في فلسفة آرثر شوبنهاور: دورة الرغبات، وهم الامتلاك، وكيفية الوصول إلى السلام الداخلي.",
+          "image": "schopenhauer_happiness_illusion_hero.jpg"
+        },
         {
           "id": "solitude-blessing-or-curse",
           "file": "solitude-blessing-or-curse.html",
