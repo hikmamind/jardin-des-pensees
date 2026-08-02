@@ -1552,6 +1552,17 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "id": "why-people-respect-silent-person",
+          "file": "why-people-respect-silent-person.html",
+          "title": "Pourquoi les gens respectent-ils plus une personne silencieuse qu'une personne bavarde ?",
+          "category": "psychology",
+          "categoryName": "Psychologie & Philosophie",
+          "readTime": "7-9 min",
+          "date": "2 août 2026",
+          "desc": "Une analyse psychologique profonde sur la puissance du silence, du charisme et de l'écoute active.",
+          "image": "silence_respect_hero.jpg"
+        },
+        {
           "id": "nietzsche-psychological-strength",
           "file": "nietzsche-psychological-strength.html",
           "title": "Que pouvez-vous apprendre de Nietzsche pour devenir psychologiquement plus fort ?",
@@ -3377,6 +3388,17 @@ const TIKTOK_DATA = {
         }
       ],
       "articles": [
+        {
+          "id": "why-people-respect-silent-person",
+          "file": "why-people-respect-silent-person.html",
+          "title": "Why Do People Respect a Silent Person More Than a Talkative One?",
+          "category": "psychology",
+          "categoryName": "Psychology & Mind",
+          "readTime": "7-9 min",
+          "date": "2 August 2026",
+          "desc": "A deep psychological analysis of how silence commands respect, inner confidence, and emotional intelligence.",
+          "image": "silence_respect_hero.jpg"
+        },
         {
           "id": "nietzsche-psychological-strength",
           "file": "nietzsche-psychological-strength.html",
@@ -5350,6 +5372,17 @@ const TIKTOK_DATA = {
         }
       ],
       "articles": [
+        {
+          "id": "why-people-respect-silent-person",
+          "file": "why-people-respect-silent-person.html",
+          "title": "لماذا يحترم الناس الشخص الصامت أكثر من كثير الكلام؟",
+          "category": "psychology",
+          "categoryName": "علم النفس • الفلسفة",
+          "readTime": "7 إلى 9 دقائق قراءة",
+          "date": "2 أغسطس 2026",
+          "desc": "تحليل نفسي وفلسفي عميق: كيف يمنحك الصمت الهيبة والثقة بالنفس، ولماذا يُعتبر الإنصات الذكي أكثر قوة من كثرة الحديث.",
+          "image": "silence_respect_hero.jpg"
+        },
         {
           "id": "nietzsche-psychological-strength",
           "file": "nietzsche-psychological-strength.html",
