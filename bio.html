@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" data-theme="light" dir="rtl">
+<html lang="ar" data-theme="dark" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
@@ -7,7 +7,7 @@
   <meta name="description" content="الصفحة الرسمية لحكمة ونور (Hikma & Nour) - أفكار عميقة لإيقاظ العقل وإشراق الروح. المقالات، الاقتباسات، الكتب المجانية ومواقع التواصل الاجتماعي.">
   <meta name="keywords" content="حكمة ونور, فلسفة, رواقية, تطوير الذات, اقتباسات, كتب مجانية, كتب فلسفة">
   
-  <!-- Open Graph / Meta -->
+  <!-- Open Graph -->
   <meta property="og:title" content="حكمة ونور | Hikma & Nour">
   <meta property="og:description" content="أفكار عميقة لإيقاظ العقل وإشراق الروح">
   <meta property="og:image" content="../hero_sunset_book.jpg">
@@ -16,58 +16,59 @@
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="../favicon.ico">
 
-  <!-- Fonts: Cairo & Noto Naskh Arabic & Playfair Display -->
+  <!-- Fonts: Cairo, Noto Naskh Arabic & Playfair Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Noto+Naskh+Arabic:wght@500;700&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================================
-       DESIGN SYSTEM & CSS VARIABLES (LIGHT & DARK GLASSMORPHISM)
+       LUXURY GLASSMORPHISM & GOLDEN PALETTE DESIGN SYSTEM
        ========================================================================== */
     :root {
-      --bg-overlay-light: rgba(245, 237, 224, 0.65);
-      --bg-blur-light: blur(25px) saturate(180%);
+      --bg-overlay-light: rgba(245, 237, 224, 0.72);
+      --bg-blur-light: blur(30px) saturate(190%);
       
-      --glass-card-bg: rgba(255, 253, 248, 0.78);
-      --glass-card-hover: rgba(255, 255, 255, 0.92);
-      --glass-border: rgba(179, 138, 60, 0.28);
-      --glass-border-hover: rgba(223, 177, 91, 0.6);
-      --glass-shadow: 0 10px 30px -5px rgba(90, 60, 20, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03);
-      --glass-shadow-hover: 0 16px 40px -5px rgba(179, 138, 60, 0.22), 0 0 20px rgba(223, 177, 91, 0.15);
+      --glass-card-bg: rgba(255, 253, 248, 0.82);
+      --glass-card-hover: rgba(255, 255, 255, 0.95);
+      --glass-border: rgba(179, 138, 60, 0.32);
+      --glass-border-hover: rgba(223, 177, 91, 0.75);
+      --glass-shadow: 0 12px 32px -5px rgba(90, 60, 20, 0.1), 0 4px 14px rgba(0, 0, 0, 0.04);
+      --glass-shadow-hover: 0 20px 45px -5px rgba(179, 138, 60, 0.3), 0 0 25px rgba(223, 177, 91, 0.25);
 
-      --text-main: #2A1F17;
-      --text-sub: #6E5A47;
-      --text-muted: #9E8873;
+      --text-main: #231912;
+      --text-sub: #5C4A3E;
+      --text-muted: #8E7B6A;
       --accent-gold: #B38A3C;
       --accent-gold-bright: #DFB15B;
-      --accent-gold-gradient: linear-gradient(135deg, #B38A3C 0%, #D4A853 50%, #F0C775 100%);
-      --accent-gold-soft: rgba(179, 138, 60, 0.12);
+      --accent-gold-gradient: linear-gradient(135deg, #B38A3C 0%, #D4A853 45%, #F0C775 80%, #DFB15B 100%);
+      --accent-gold-soft: rgba(179, 138, 60, 0.14);
 
-      --radius-lg: 24px;
-      --radius-md: 18px;
+      --radius-lg: 26px;
+      --radius-md: 20px;
       --radius-pill: 50px;
     }
 
     [data-theme="dark"] {
-      --bg-overlay-light: rgba(15, 20, 17, 0.78);
+      --bg-overlay-light: rgba(12, 18, 14, 0.82);
+      --bg-blur-light: blur(30px) saturate(200%);
       
-      --glass-card-bg: rgba(24, 33, 27, 0.75);
-      --glass-card-hover: rgba(32, 44, 36, 0.90);
-      --glass-border: rgba(223, 177, 91, 0.22);
-      --glass-border-hover: rgba(223, 177, 91, 0.55);
-      --glass-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
-      --glass-shadow-hover: 0 18px 45px rgba(223, 177, 91, 0.18);
+      --glass-card-bg: rgba(22, 31, 25, 0.80);
+      --glass-card-hover: rgba(30, 42, 34, 0.94);
+      --glass-border: rgba(223, 177, 91, 0.28);
+      --glass-border-hover: rgba(240, 199, 117, 0.65);
+      --glass-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+      --glass-shadow-hover: 0 22px 55px rgba(223, 177, 91, 0.25), 0 0 30px rgba(223, 177, 91, 0.2);
 
-      --text-main: #F3EBDD;
-      --text-sub: #C8BCAC;
-      --text-muted: #8E8272;
+      --text-main: #F7F1E5;
+      --text-sub: #D1C5B4;
+      --text-muted: #998D7D;
       --accent-gold: #DFB15B;
       --accent-gold-bright: #F0C775;
-      --accent-gold-soft: rgba(223, 177, 91, 0.15);
+      --accent-gold-soft: rgba(223, 177, 91, 0.16);
     }
 
-    /* Reset & Base Styles */
+    /* Reset & Base */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -88,10 +89,10 @@
       align-items: center;
       position: relative;
       overflow-x: hidden;
-      background: #121A15;
+      background: #0D1410;
     }
 
-    /* Fullscreen Background Image with Blur & Warm Overlay */
+    /* Animated Fullscreen Sunset Background */
     .bg-fixed-layer {
       position: fixed;
       top: 0;
@@ -103,9 +104,14 @@
       background-size: cover;
       background-position: center 30%;
       background-repeat: no-repeat;
-      transform: scale(1.05);
-      filter: blur(3px);
-      transition: filter 0.5s ease;
+      transform: scale(1.06);
+      filter: blur(4px);
+      animation: bgPulse 12s ease-in-out infinite alternate;
+    }
+
+    @keyframes bgPulse {
+      0% { transform: scale(1.05); filter: blur(4px) contrast(100%); }
+      100% { transform: scale(1.1); filter: blur(3px) contrast(108%); }
     }
 
     .bg-overlay-layer {
@@ -120,24 +126,43 @@
       transition: background 0.4s ease;
     }
 
-    /* Main Bio Container */
+    /* Ambient Floating Stardust Glow Effect */
+    .glow-aura-sphere {
+      position: absolute;
+      top: 90px;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(223, 177, 91, 0.22) 0%, rgba(179, 138, 60, 0.05) 50%, transparent 75%);
+      border-radius: 50%;
+      filter: blur(50px);
+      z-index: -1;
+      pointer-events: none;
+      animation: floatAura 6s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatAura {
+      0% { transform: translateY(0) scale(0.9); opacity: 0.7; }
+      100% { transform: translateY(-20px) scale(1.1); opacity: 1; }
+    }
+
+    /* Main Container */
     .bio-container {
       width: 100%;
-      max-width: 520px;
+      max-width: 530px;
       padding: 100px 20px 60px;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 16px;
-      animation: fadeIn 0.8s ease-out forwards;
+      animation: fadeInBio 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
+    @keyframes fadeInBio {
+      from { opacity: 0; transform: translateY(25px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Dynamic Island Top Bar (Apple Inspired Floating Nav) */
+    /* Dynamic Island Top Navigation (Apple Floating Pill) */
     .dynamic-island-bar {
       position: fixed;
       top: 16px;
@@ -147,37 +172,38 @@
       justify-content: space-between;
       gap: 12px;
       width: calc(100% - 32px);
-      max-width: 480px;
-      padding: 8px 16px;
+      max-width: 490px;
+      padding: 8px 18px;
       background: var(--glass-card-bg);
-      border: 1px solid var(--glass-border);
-      backdrop-filter: blur(20px) saturate(180%);
+      border: 1.5px solid var(--glass-border);
+      backdrop-filter: blur(24px) saturate(200%);
       border-radius: var(--radius-pill);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .dynamic-island-brand {
       display: flex;
       align-items: center;
-      gap: 8px;
-      font-size: 0.82rem;
-      font-weight: 700;
+      gap: 9px;
+      font-size: 0.84rem;
+      font-weight: 800;
       color: var(--accent-gold);
+      letter-spacing: 0.2px;
     }
 
-    .status-dot {
-      width: 8px;
-      height: 8px;
+    .status-dot-pulse {
+      width: 9px;
+      height: 9px;
       background-color: #2ECC71;
       border-radius: 50%;
-      box-shadow: 0 0 8px #2ECC71;
-      animation: pulseDot 2s infinite;
+      box-shadow: 0 0 10px #2ECC71;
+      animation: pulseLiveDot 2.2s infinite;
     }
 
-    @keyframes pulseDot {
+    @keyframes pulseLiveDot {
       0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(1.3); }
+      50% { opacity: 0.4; transform: scale(1.35); }
     }
 
     .dynamic-actions {
@@ -190,8 +216,8 @@
       background: var(--accent-gold-soft);
       border: 1px solid var(--glass-border);
       color: var(--text-main);
-      width: 34px;
-      height: 34px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -203,23 +229,26 @@
     .icon-btn-pill:hover {
       background: var(--accent-gold);
       color: #1A0F00;
-      transform: scale(1.1);
+      transform: scale(1.12);
+      box-shadow: 0 0 15px rgba(223, 177, 91, 0.4);
     }
 
-    /* Live Stats Counter Banner */
+    /* Live Stats Counter Pills Banner */
     .stats-pill-banner {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 14px;
-      background: var(--accent-gold-soft);
-      border: 1px solid var(--glass-border);
-      padding: 6px 18px;
+      gap: 12px;
+      background: var(--glass-card-bg);
+      border: 1.5px solid var(--glass-border);
+      padding: 7px 20px;
       border-radius: var(--radius-pill);
-      font-size: 0.8rem;
-      font-weight: 700;
+      font-size: 0.82rem;
+      font-weight: 800;
       color: var(--accent-gold);
-      margin-bottom: 8px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+      margin-bottom: 12px;
+      backdrop-filter: blur(10px);
     }
 
     /* Header Profile Logo & Branding */
@@ -228,23 +257,29 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .profile-logo-wrapper {
       position: relative;
-      width: 110px;
-      height: 110px;
+      width: 114px;
+      height: 114px;
       border-radius: 50%;
       padding: 4px;
       background: var(--accent-gold-gradient);
-      box-shadow: 0 12px 30px rgba(179, 138, 60, 0.35);
+      box-shadow: 0 14px 35px rgba(179, 138, 60, 0.4);
       margin-bottom: 16px;
-      transition: transform 0.4s ease;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      animation: floatBadge 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatBadge {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-6px); }
     }
 
     .profile-logo-wrapper:hover {
-      transform: scale(1.05) rotate(3deg);
+      transform: scale(1.06) rotate(4deg);
     }
 
     .profile-logo-img {
@@ -253,43 +288,52 @@
       border-radius: 50%;
       object-fit: cover;
       background: #1A241E;
-      border: 3px solid var(--glass-card-bg);
+      border: 3.5px solid var(--glass-card-bg);
     }
 
-    .brand-title {
-      font-size: 2.2rem;
-      font-weight: 900;
-      color: var(--text-main);
-      margin-bottom: 6px;
-      font-family: 'Playfair Display', 'Cairo', serif;
-      letter-spacing: -0.5px;
+    .brand-title-box {
       display: flex;
       align-items: center;
       gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .brand-title {
+      font-size: 2.3rem;
+      font-weight: 900;
+      color: var(--text-main);
+      font-family: 'Playfair Display', 'Cairo', serif;
+      letter-spacing: -0.5px;
+    }
+
+    .verified-badge {
+      color: #3897F0;
+      font-size: 1.15rem;
+      display: inline-flex;
     }
 
     .brand-subtitle {
-      font-size: 0.96rem;
+      font-size: 0.98rem;
       font-weight: 600;
       color: var(--text-sub);
-      max-width: 360px;
+      max-width: 370px;
       line-height: 1.6;
     }
 
-    /* Search Bar Drawer (Expandable) */
+    /* Expandable Search Drawer */
     .search-drawer {
       width: 100%;
       margin-bottom: 10px;
       display: none;
-      animation: slideDown 0.3s ease forwards;
+      animation: slideDownSearch 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
     .search-drawer.active {
       display: block;
     }
 
-    @keyframes slideDown {
-      from { opacity: 0; transform: translateY(-10px); }
+    @keyframes slideDownSearch {
+      from { opacity: 0; transform: translateY(-12px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
@@ -300,20 +344,20 @@
 
     .search-input-field {
       width: 100%;
-      padding: 12px 42px 12px 16px;
+      padding: 13px 44px 13px 18px;
       background: var(--glass-card-bg);
       border: 1.5px solid var(--glass-border);
       border-radius: var(--radius-md);
       color: var(--text-main);
       font-family: inherit;
-      font-size: 0.92rem;
+      font-size: 0.94rem;
       outline: none;
       transition: all 0.3s ease;
     }
 
     .search-input-field:focus {
-      border-color: var(--accent-gold);
-      box-shadow: 0 0 15px rgba(179, 138, 60, 0.25);
+      border-color: var(--accent-gold-bright);
+      box-shadow: 0 0 20px rgba(223, 177, 91, 0.3);
     }
 
     .search-icon-inside {
@@ -325,7 +369,7 @@
       pointer-events: none;
     }
 
-    /* Main Links Stack (Cards matching attached mockup) */
+    /* Links Stack */
     .links-stack {
       width: 100%;
       display: flex;
@@ -339,37 +383,37 @@
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      padding: 16px 20px;
+      padding: 17px 22px;
       background: var(--glass-card-bg);
       border: 1.5px solid var(--glass-border);
       border-radius: var(--radius-lg);
-      backdrop-filter: blur(15px);
+      backdrop-filter: blur(18px);
       box-shadow: var(--glass-shadow);
       text-decoration: none;
       color: var(--text-main);
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.38s cubic-bezier(0.16, 1, 0.3, 1);
       overflow: hidden;
     }
 
-    /* Glass reflection shine effect */
+    /* Reflection Shine Effect */
     .link-card::before {
       content: '';
       position: absolute;
       top: 0;
       left: -100%;
-      width: 50%;
+      width: 55%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
       transform: skewX(-25deg);
-      transition: left 0.75s ease;
+      transition: left 0.85s ease;
     }
 
     .link-card:hover::before {
-      left: 150%;
+      left: 160%;
     }
 
     .link-card:hover {
-      transform: translateY(-4px) scale(1.015);
+      transform: translateY(-5px) scale(1.018);
       background: var(--glass-card-hover);
       border-color: var(--glass-border-hover);
       box-shadow: var(--glass-shadow-hover);
@@ -383,24 +427,25 @@
     }
 
     .link-icon-box {
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
       background: var(--accent-gold-soft);
-      border: 1px solid var(--glass-border);
+      border: 1.5px solid var(--glass-border);
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--accent-gold);
-      font-size: 1.35rem;
+      font-size: 1.4rem;
       flex-shrink: 0;
-      transition: transform 0.3s ease;
+      transition: all 0.35s ease;
     }
 
     .link-card:hover .link-icon-box {
-      transform: scale(1.1) rotate(-5deg);
+      transform: scale(1.12) rotate(-6deg);
       background: var(--accent-gold);
       color: #1A0F00;
+      box-shadow: 0 0 15px rgba(223, 177, 91, 0.4);
     }
 
     .link-text-details {
@@ -410,31 +455,31 @@
     }
 
     .link-title {
-      font-size: 1.05rem;
+      font-size: 1.08rem;
       font-weight: 800;
       color: var(--text-main);
       line-height: 1.3;
     }
 
     .link-subtitle {
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       font-weight: 600;
       color: var(--text-sub);
-      margin-top: 2px;
+      margin-top: 3px;
     }
 
     .link-arrow {
       color: var(--accent-gold);
-      font-size: 1.1rem;
-      transition: transform 0.3s ease;
+      font-size: 1.15rem;
+      transition: transform 0.35s ease;
       flex-shrink: 0;
     }
 
     .link-card:hover .link-arrow {
-      transform: translateX(-6px);
+      transform: translateX(-7px);
     }
 
-    /* Social Grid (4 Icon Buttons in 1 Row - Telegram, YouTube, Instagram, TikTok) */
+    /* Social Grid 4 Columns */
     .social-grid-row {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -447,102 +492,109 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 14px 8px;
+      padding: 15px 8px;
       background: var(--glass-card-bg);
       border: 1.5px solid var(--glass-border);
       border-radius: var(--radius-md);
       box-shadow: var(--glass-shadow);
       text-decoration: none;
       color: var(--text-main);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .social-card-item:hover {
-      transform: translateY(-4px);
+      transform: translateY(-5px);
       background: var(--glass-card-hover);
-      border-color: var(--accent-gold);
+      border-color: var(--accent-gold-bright);
       box-shadow: var(--glass-shadow-hover);
     }
 
     .social-icon-img {
-      width: 28px;
-      height: 28px;
+      width: 30px;
+      height: 30px;
       margin-bottom: 6px;
-      transition: transform 0.3s ease;
+      transition: transform 0.35s ease;
     }
 
     .social-card-item:hover .social-icon-img {
-      transform: scale(1.15);
+      transform: scale(1.18);
     }
 
     .social-title-name {
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       font-weight: 800;
       color: var(--text-main);
     }
 
     .social-subtitle-tag {
-      font-size: 0.65rem;
+      font-size: 0.66rem;
       font-weight: 600;
       color: var(--text-sub);
       margin-top: 2px;
       text-align: center;
     }
 
-    /* Dedicated Quote Card (Matching Mockup) */
+    /* Dedicated Quote Card (Matching Reference Mockup) */
     .quote-display-card {
       position: relative;
       width: 100%;
-      padding: 28px 24px;
+      padding: 30px 26px;
       background: var(--glass-card-bg);
       border: 1.5px solid var(--glass-border);
       border-radius: var(--radius-lg);
-      backdrop-filter: blur(20px);
+      backdrop-filter: blur(24px);
       box-shadow: var(--glass-shadow);
       text-align: center;
       overflow: hidden;
       margin-top: 6px;
+      transition: all 0.35s ease;
+    }
+
+    .quote-display-card:hover {
+      border-color: var(--glass-border-hover);
+      box-shadow: var(--glass-shadow-hover);
     }
 
     .quote-mark-icon {
-      font-size: 3.5rem;
+      font-size: 3.8rem;
       line-height: 1;
       color: var(--accent-gold);
-      opacity: 0.6;
+      opacity: 0.65;
       font-family: 'Playfair Display', serif;
-      margin-bottom: -10px;
+      margin-bottom: -12px;
       display: block;
     }
 
     .quote-text-main {
-      font-size: 1.22rem;
+      font-size: 1.25rem;
       font-weight: 700;
-      line-height: 1.65;
+      line-height: 1.68;
       color: var(--text-main);
       font-family: 'Noto Naskh Arabic', 'Cairo', serif;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
+      transition: all 0.3s ease;
     }
 
     .quote-ornament-line {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      margin-top: 8px;
+      gap: 12px;
+      margin-top: 10px;
     }
 
     .ornament-line {
       height: 1px;
-      width: 60px;
+      width: 65px;
       background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
     }
 
-    /* Floating Action / Share Footer Buttons */
+    /* Action Buttons Row */
     .action-buttons-row {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 16px;
+      gap: 18px;
       margin-top: 10px;
     }
 
@@ -550,7 +602,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 4px;
+      gap: 5px;
       text-decoration: none;
       color: var(--text-sub);
       background: none;
@@ -560,8 +612,8 @@
     }
 
     .action-circle-icon {
-      width: 44px;
-      height: 44px;
+      width: 46px;
+      height: 46px;
       border-radius: 50%;
       background: var(--glass-card-bg);
       border: 1.5px solid var(--glass-border);
@@ -569,31 +621,32 @@
       align-items: center;
       justify-content: center;
       color: var(--accent-gold);
-      font-size: 1.1rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      transition: all 0.25s ease;
+      font-size: 1.15rem;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+      transition: all 0.3s ease;
     }
 
     .action-circle-btn:hover .action-circle-icon {
       background: var(--accent-gold);
       color: #1A0F00;
-      transform: translateY(-3px);
+      transform: translateY(-4px);
+      box-shadow: 0 0 15px rgba(223, 177, 91, 0.4);
     }
 
     .action-label-text {
-      font-size: 0.72rem;
+      font-size: 0.74rem;
       font-weight: 700;
       color: var(--text-sub);
     }
 
     /* Footer Copyright */
     .bio-footer-copyright {
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       font-weight: 600;
       color: var(--text-sub);
-      margin-top: 16px;
+      margin-top: 18px;
       text-align: center;
-      opacity: 0.85;
+      opacity: 0.9;
     }
 
     .bio-footer-copyright a {
@@ -602,20 +655,20 @@
       font-weight: 700;
     }
 
-    /* Toast Notification for Copy/Share Actions */
+    /* Toast Notification Msg */
     .toast-msg {
       position: fixed;
-      bottom: 24px;
+      bottom: 26px;
       left: 50%;
       transform: translateX(-50%) translateY(100px);
-      background: #1A241E;
+      background: #151E18;
       color: var(--accent-gold-bright);
       border: 1px solid var(--accent-gold);
-      padding: 10px 24px;
+      padding: 11px 26px;
       border-radius: 30px;
-      font-size: 0.88rem;
+      font-size: 0.9rem;
       font-weight: 700;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
       z-index: 200;
       opacity: 0;
       transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -630,14 +683,15 @@
 </head>
 <body>
 
-  <!-- Fullscreen Blurred Background Layer -->
-  <div class="bg-fixed-layer" id="bgLayer"></div>
+  <!-- Background Layers with Aura Glow -->
+  <div class="bg-fixed-layer"></div>
   <div class="bg-overlay-layer"></div>
+  <div class="glow-aura-sphere"></div>
 
   <!-- Dynamic Island Top Nav Bar -->
   <header class="dynamic-island-bar">
     <div class="dynamic-island-brand">
-      <span class="status-dot"></span>
+      <span class="status-dot-pulse"></span>
       <span>حكمة ونور • مباشر</span>
     </div>
     
@@ -677,29 +731,36 @@
       
       <!-- Stats Counter Banner -->
       <div class="stats-pill-banner">
-        <span>+120 اقتباس</span>
+        <span>✨ +120 اقتباس</span>
         <span>•</span>
-        <span>+50 مقال وحكمة</span>
+        <span>📖 +50 مقال وحكمة</span>
         <span>•</span>
-        <span>100k+ قارئ</span>
+        <span>👥 100k+ قارئ</span>
       </div>
 
       <!-- Circular Gold Logo Badge -->
       <div class="profile-logo-wrapper">
         <svg viewBox="0 0 100 100" class="profile-logo-img">
-          <circle cx="50" cy="50" r="46" fill="#151E18" stroke="#B38A3C" stroke-width="2" />
+          <circle cx="50" cy="50" r="46" fill="#131B15" stroke="#B38A3C" stroke-width="2.5" />
           <!-- Open Book & Olive Branch Icon -->
-          <path d="M30 62 C 40 54, 48 56, 50 60 C 52 56, 60 54, 70 62 L 70 40 C 60 34, 52 36, 50 40 C 48 36, 40 34, 30 40 Z" fill="none" stroke="#DFB15B" stroke-width="2.5" stroke-linejoin="round" />
+          <path d="M30 62 C 40 54, 48 56, 50 60 C 52 56, 60 54, 70 62 L 70 40 C 60 34, 52 36, 50 40 C 48 36, 40 34, 30 40 Z" fill="none" stroke="#DFB15B" stroke-width="2.6" stroke-linejoin="round" />
           <path d="M50 40 L 50 60" stroke="#DFB15B" stroke-width="2" />
           <!-- Leaves -->
           <path d="M50 34 C 45 26, 40 25, 38 28 C 36 31, 42 34, 50 34 Z" fill="#DFB15B" />
           <path d="M50 34 C 55 26, 60 25, 62 28 C 64 31, 58 34, 50 34 Z" fill="#DFB15B" />
-          <text x="50" y="78" font-family="'Amiri', 'Cairo', serif" font-size="9" font-weight="bold" fill="#DFB15B" text-anchor="middle">حكمة ونور</text>
+          <text x="50" y="78" font-family="'Amiri', 'Cairo', serif" font-size="9.5" font-weight="bold" fill="#DFB15B" text-anchor="middle">حكمة ونور</text>
           <text x="50" y="87" font-family="sans-serif" font-size="4.5" fill="#B8AFA0" letter-spacing="1" text-anchor="middle">HIKMA & NOUR</text>
         </svg>
       </div>
 
-      <h1 class="brand-title">حكمة ونور</h1>
+      <div class="brand-title-box">
+        <h1 class="brand-title">حكمة ونور</h1>
+        <span class="verified-badge" title="حساب موثق">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="#3897F0">
+            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1.7 14.3l-3.6-3.6 1.4-1.4 2.2 2.2 5.3-5.3 1.4 1.4-6.7 6.7z"/>
+          </svg>
+        </span>
+      </div>
       <p class="brand-subtitle">أفكار عميقة لإيقاظ العقل وإشراق الروح</p>
     </header>
 
@@ -714,7 +775,7 @@
       </div>
     </div>
 
-    <!-- Bio Links Stack (Matching Attached Design) -->
+    <!-- Bio Links Stack (Matching Reference Design) -->
     <section class="links-stack" id="linksContainer">
 
       <!-- Link 1: Website -->
@@ -836,12 +897,12 @@
       <p class="quote-text-main" id="quoteText">دقيقة واحدة من القراءة قد تغيّر حياة كاملة.</p>
       <div class="quote-ornament-line">
         <span class="ornament-line"></span>
-        <span style="color: var(--accent-gold); font-size: 0.9rem;">🌿</span>
+        <span style="color: var(--accent-gold); font-size: 0.95rem;">🌿</span>
         <span class="ornament-line"></span>
       </div>
     </div>
 
-    <!-- Action Buttons Row (Share, Comment, Bookmark, Send) -->
+    <!-- Action Buttons Row -->
     <div class="action-buttons-row">
       <!-- Send / Share -->
       <button class="action-circle-btn" id="shareBtn">
@@ -899,33 +960,32 @@
   <!-- Toast Notification Message -->
   <div class="toast-msg" id="toastMsg">تم نسخ الرابط بنجاح! ✨</div>
 
-  <!-- JavaScript Modules -->
+  <!-- JavaScript Engine -->
   <script>
-    // 1. Dynamic Quotes Array
     const quotesList = [
-  "دقيقة واحدة من القراءة قد تغيّر حياة كاملة.",
-  "الحياة التي لا تُفحص لا تستحق أن تُعاش. — سقراط",
-  "من لا يحب العزلة، لا يحب الحرية. — شوبنهاور",
-  "العوائق في الطريق تصبح هي الطريق بنفسه. — ماركوس أوريليوس",
-  "السعادة ليست إلا غيابًا مؤقتًا للألم. — شوبنهاور",
-  "نحن نعاني في مخيلتنا أكثر بكثير مما نعاني في الواقع. — سينيكا",
-  "العقل ليس وعاءً نملؤه، بل نارًا نوقدها. — بلوتارخ",
-  "ما لا يقتلني يجعلني أقوى. — نيتشه",
-  "من يعرف الآخرين أريب، ومن يعرف نفسه حكيم. — لاوتسو",
-  "ليس الغني من يملك الكثير، بل من يكتفي بما لديه. — إبيقور",
-  "في قلب كل شتاء، تعلمت أن في داخلي صيفًا لا يُقهر. — ألبير كامو",
-  "أعظم انتصار هو الانتصار على الذات. — أفلاطون",
-  "الجهل أصل كل شر، وفضيلة العقل هي المعرفة. — أرسطو",
-  "السلام الداخلي لا يعتمد على ما يحدث لنا، بل على كيف نفسره. — ماركوس أوريليوس",
-  "امتلاك النفس عند الغضب هو الاختبار الحقيقي للقوة. — كونفوشيوس",
-  "كلما ازدادت معرفتك، زاد إدراكك لما تجهله. — إيمانويل كانت",
-  "الهدوء الداخلي هو الحصن المنيع ضد عواصف الحياة. — إبيكتيتوس",
-  "الرضا بالقليل هو الثروة الحقيقية، لأن الطبيعة لا تطلب الكثير. — إبيقور",
-  "الصمت هو الإجابة الأكثر بلاغة في كثير من الأحيان. — باروخ سبينوزا",
-  "تذكر دائمًا أنك تملك السلطة على عقلك وليس على الأحداث الخارجية. — ماركوس أوريليوس",
-  "من يتملك الحاضر، يتملك حياته بالكامل. — آرثر شوبنهاور",
-  "السعادة تُصنع في الداخل، ولا تُشترى من الخارج. — حكمة رصينة"
-];
+      "دقيقة واحدة من القراءة قد تغيّر حياة كاملة.",
+      "الحياة التي لا تُفحص لا تستحق أن تُعاش. — سقراط",
+      "من لا يحب العزلة، لا يحب الحرية. — شوبنهاور",
+      "العوائق في الطريق تصبح هي الطريق بنفسه. — ماركوس أوريليوس",
+      "السعادة ليست إلا غيابًا مؤقتًا للألم. — شوبنهاور",
+      "نحن نعاني في مخيلتنا أكثر بكثير مما نعاني في الواقع. — سينيكا",
+      "العقل ليس وعاءً نملؤه، بل نارًا نوقدها. — بلوتارخ",
+      "ما لا يقتلني يجعلني أقوى. — نيتشه",
+      "من يعرف الآخرين أريب، ومن يعرف نفسه حكيم. — لاوتسو",
+      "ليس الغني من يملك الكثير، بل من يكتفي بما لديه. — إبيقور",
+      "في قلب كل شتاء، تعلمت أن في داخلي صيفًا لا يُقهر. — ألبير كامو",
+      "أعظم انتصار هو الانتصار على الذات. — أفلاطون",
+      "الجهل أصل كل شر، وفضيلة العقل هي المعرفة. — أرسطو",
+      "السلام الداخلي لا يعتمد على ما يحدث لنا، بل على كيف نفسره. — ماركوس أوريليوس",
+      "امتلاك النفس عند الغضب هو الاختبار الحقيقي للقوة. — كونفوشيوس",
+      "كلما ازدادت معرفتك، زاد إدراكك لما تجهله. — إيمانويل كانت",
+      "الهدوء الداخلي هو الحصن المنيع ضد عواصف الحياة. — إبيكتيتوس",
+      "الرضا بالقليل هو الثروة الحقيقية، لأن الطبيعة لا تطلب الكثير. — إبيقور",
+      "الصمت هو الإجابة الأكثر بلاغة في كثير من الأحيان. — باروخ سبينوزا",
+      "تذكر دائمًا أنك تملك السلطة على عقلك وليس على الأحداث الخارجية. — ماركوس أوريليوس",
+      "من يتملك الحاضر، يتملك حياته بالكامل. — آرثر شوبنهاور",
+      "السعادة تُصنع في الداخل، ولا تُشترى من الخارج. — حكمة رصينة"
+    ];
 
     let currentQuoteIdx = 0;
     const quoteTextEl = document.getElementById('quoteText');
@@ -934,32 +994,31 @@
     quoteRefreshBtn.addEventListener('click', () => {
       currentQuoteIdx = (currentQuoteIdx + 1) % quotesList.length;
       quoteTextEl.style.opacity = '0';
-      quoteTextEl.style.transform = 'translateY(6px)';
+      quoteTextEl.style.transform = 'translateY(8px)';
       setTimeout(() => {
         quoteTextEl.textContent = quotesList[currentQuoteIdx];
         quoteTextEl.style.opacity = '1';
         quoteTextEl.style.transform = 'translateY(0)';
-      }, 200);
-      showToast('تم حديث الاقتباس اليومي 🌿');
+      }, 220);
+      showToast('تم تحديث الاقتباس اليومي 🌿');
     });
 
-    // 2. Light / Dark Theme Toggle
+    // Theme Toggle
     const themeBtn = document.getElementById('themeBtn');
     themeBtn.addEventListener('click', () => {
-      const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
-      showToast(newTheme === 'dark' ? 'تم تفعيل الوضع الليلي 🌙' : 'تم تفعيل الوضع النهار ☀️');
+      showToast(newTheme === 'dark' ? 'تم تفعيل الوضع الليلي 🌙' : 'تم تفعيل الوضع النهاري ☀️');
     });
 
-    // Restore Saved Theme
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       document.documentElement.setAttribute('data-theme', savedTheme);
     }
 
-    // 3. Search Bar Filter Drawer
+    // Search Drawer Filter
     const searchToggleBtn = document.getElementById('searchToggleBtn');
     const searchDrawer = document.getElementById('searchDrawer');
     const searchInput = document.getElementById('searchInput');
@@ -984,7 +1043,7 @@
       });
     });
 
-    // 4. Web Share & Copy Action Handlers
+    // Toast Actions
     const toastMsg = document.getElementById('toastMsg');
 
     function showToast(msgText) {
