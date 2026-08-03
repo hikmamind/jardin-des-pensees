@@ -14,7 +14,7 @@
   <meta property="og:type" content="website">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="brand_logo_official.png">
+  <link rel="icon" type="image/png" href="../brand_logo_official.png">
 
   <!-- Fonts: Cairo, Noto Naskh Arabic & Playfair Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,18 +23,18 @@
 
   <style>
     /* ==========================================================================
-       LUXURY GLASSMORPHISM & GOLDEN PALETTE DESIGN SYSTEM
+       PIXEL-PERFECT GLASSMORPHISM & CLEAN LAYOUT DESIGN SYSTEM
        ========================================================================== */
     :root {
-      --bg-overlay-light: rgba(245, 237, 224, 0.72);
-      --bg-blur-light: blur(30px) saturate(190%);
+      --bg-overlay-light: rgba(245, 237, 224, 0.75);
+      --bg-blur-light: blur(25px) saturate(180%);
       
-      --glass-card-bg: rgba(255, 253, 248, 0.82);
-      --glass-card-hover: rgba(255, 255, 255, 0.95);
+      --glass-card-bg: rgba(255, 253, 248, 0.85);
+      --glass-card-hover: rgba(255, 255, 255, 0.96);
       --glass-border: rgba(179, 138, 60, 0.32);
       --glass-border-hover: rgba(223, 177, 91, 0.75);
-      --glass-shadow: 0 12px 32px -5px rgba(90, 60, 20, 0.1), 0 4px 14px rgba(0, 0, 0, 0.04);
-      --glass-shadow-hover: 0 20px 45px -5px rgba(179, 138, 60, 0.3), 0 0 25px rgba(223, 177, 91, 0.25);
+      --glass-shadow: 0 10px 30px -5px rgba(90, 60, 20, 0.1);
+      --glass-shadow-hover: 0 18px 42px -5px rgba(179, 138, 60, 0.28);
 
       --text-main: #231912;
       --text-sub: #5C4A3E;
@@ -44,21 +44,21 @@
       --accent-gold-gradient: linear-gradient(135deg, #B38A3C 0%, #D4A853 45%, #F0C775 80%, #DFB15B 100%);
       --accent-gold-soft: rgba(179, 138, 60, 0.14);
 
-      --radius-lg: 26px;
-      --radius-md: 20px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
       --radius-pill: 50px;
     }
 
     [data-theme="dark"] {
-      --bg-overlay-light: rgba(12, 18, 14, 0.82);
-      --bg-blur-light: blur(30px) saturate(200%);
+      --bg-overlay-light: rgba(12, 18, 14, 0.84);
+      --bg-blur-light: blur(25px) saturate(190%);
       
-      --glass-card-bg: rgba(22, 31, 25, 0.80);
-      --glass-card-hover: rgba(30, 42, 34, 0.94);
+      --glass-card-bg: rgba(22, 31, 25, 0.82);
+      --glass-card-hover: rgba(30, 42, 34, 0.95);
       --glass-border: rgba(223, 177, 91, 0.28);
       --glass-border-hover: rgba(240, 199, 117, 0.65);
-      --glass-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
-      --glass-shadow-hover: 0 22px 55px rgba(223, 177, 91, 0.25), 0 0 30px rgba(223, 177, 91, 0.2);
+      --glass-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+      --glass-shadow-hover: 0 20px 48px rgba(223, 177, 91, 0.25);
 
       --text-main: #F7F1E5;
       --text-sub: #D1C5B4;
@@ -92,7 +92,7 @@
       background: #0D1410;
     }
 
-    /* Animated Fullscreen Sunset Background */
+    /* Fullscreen Background Layer */
     .bg-fixed-layer {
       position: fixed;
       top: 0;
@@ -104,14 +104,8 @@
       background-size: cover;
       background-position: center 30%;
       background-repeat: no-repeat;
-      transform: scale(1.06);
-      filter: blur(4px);
-      animation: bgPulse 12s ease-in-out infinite alternate;
-    }
-
-    @keyframes bgPulse {
-      0% { transform: scale(1.05); filter: blur(4px) contrast(100%); }
-      100% { transform: scale(1.1); filter: blur(3px) contrast(108%); }
+      filter: blur(4px) contrast(105%);
+      transform: scale(1.05);
     }
 
     .bg-overlay-layer {
@@ -126,84 +120,49 @@
       transition: background 0.4s ease;
     }
 
-    /* Ambient Floating Stardust Glow Effect */
-    .glow-aura-sphere {
-      position: absolute;
-      top: 90px;
-      width: 180px;
-      height: 180px;
-      background: radial-gradient(circle, rgba(223, 177, 91, 0.22) 0%, rgba(179, 138, 60, 0.05) 50%, transparent 75%);
-      border-radius: 50%;
-      filter: blur(50px);
-      z-index: -1;
-      pointer-events: none;
-      animation: floatAura 6s ease-in-out infinite alternate;
-    }
-
-    @keyframes floatAura {
-      0% { transform: translateY(0) scale(0.9); opacity: 0.7; }
-      100% { transform: translateY(-20px) scale(1.1); opacity: 1; }
-    }
-
-    /* Main Container */
-    .bio-container {
-      width: 100%;
-      max-width: 180px;
-      padding: 100px 20px 60px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
-      animation: fadeInBio 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    }
-
-    @keyframes fadeInBio {
-      from { opacity: 0; transform: translateY(25px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Dynamic Island Top Navigation (Apple Floating Pill) */
+    /* Dynamic Island Fixed Top Bar (Clean & Compact) */
     .dynamic-island-bar {
       position: fixed;
-      top: 16px;
-      z-index: 100;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
-      width: calc(100% - 32px);
-      max-width: 180px;
-      padding: 8px 18px;
+      width: calc(100% - 28px);
+      max-width: 480px;
+      height: 52px;
+      padding: 0 16px;
       background: var(--glass-card-bg);
       border: 1.5px solid var(--glass-border);
       backdrop-filter: blur(24px) saturate(200%);
       border-radius: var(--radius-pill);
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     }
 
     .dynamic-island-brand {
       display: flex;
       align-items: center;
-      gap: 9px;
-      font-size: 0.84rem;
+      gap: 8px;
+      font-size: 0.85rem;
       font-weight: 800;
       color: var(--accent-gold);
-      letter-spacing: 0.2px;
     }
 
     .status-dot-pulse {
-      width: 180px;
-      height: 180px;
+      width: 9px;
+      height: 9px;
       background-color: #2ECC71;
       border-radius: 50%;
       box-shadow: 0 0 10px #2ECC71;
-      animation: pulseLiveDot 2.2s infinite;
+      animation: pulseLiveDot 2s infinite;
+      flex-shrink: 0;
     }
 
     @keyframes pulseLiveDot {
       0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(1.35); }
+      50% { opacity: 0.4; transform: scale(1.3); }
     }
 
     .dynamic-actions {
@@ -216,39 +175,38 @@
       background: var(--accent-gold-soft);
       border: 1px solid var(--glass-border);
       color: var(--text-main);
-      width: 180px;
-      height: 180px;
+      width: 34px;
+      height: 34px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       transition: all 0.25s ease;
+      flex-shrink: 0;
     }
 
     .icon-btn-pill:hover {
       background: var(--accent-gold);
       color: #1A0F00;
-      transform: scale(1.12);
-      box-shadow: 0 0 15px rgba(223, 177, 91, 0.4);
+      transform: scale(1.1);
     }
 
-    /* Live Stats Counter Pills Banner */
-    .stats-pill-banner {
+    /* Main Container (Padding-top: 86px so top bar NEVER overlaps) */
+    .bio-container {
+      width: 100%;
+      max-width: 490px;
+      padding: 86px 18px 60px;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: 12px;
-      background: var(--glass-card-bg);
-      border: 1.5px solid var(--glass-border);
-      padding: 7px 20px;
-      border-radius: var(--radius-pill);
-      font-size: 0.82rem;
-      font-weight: 800;
-      color: var(--accent-gold);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-      margin-bottom: 12px;
-      backdrop-filter: blur(10px);
+      gap: 16px;
+      animation: fadeInBio 0.7s ease-out forwards;
+    }
+
+    @keyframes fadeInBio {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     /* Header Profile Logo & Branding */
@@ -257,49 +215,64 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      margin-bottom: 8px;
+      width: 100%;
+      margin-bottom: 6px;
     }
 
+    /* Live Stats Counter Pills Banner */
+    .stats-pill-banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--glass-card-bg);
+      border: 1.5px solid var(--glass-border);
+      padding: 6px 18px;
+      border-radius: var(--radius-pill);
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--accent-gold);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      margin-bottom: 14px;
+    }
+
+    /* Circular Logo Badge (Fixed 135px x 135px, Clean Ivory Fill) */
     .profile-logo-wrapper {
       position: relative;
-      width: 180px;
-      height: 180px;
+      width: 135px;
+      height: 135px;
       border-radius: 50%;
       padding: 4px;
-      background: var(--accent-gold-gradient);
-      box-shadow: 0 14px 35px rgba(179, 138, 60, 0.4);
-      margin-bottom: 16px;
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      animation: floatBadge 4s ease-in-out infinite alternate;
-    }
-
-    @keyframes floatBadge {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-6px); }
+      background: linear-gradient(135deg, #B38A3C 0%, #F0C775 50%, #DFB15B 100%);
+      box-shadow: 0 12px 35px rgba(179, 138, 60, 0.45);
+      margin-bottom: 14px;
+      transition: transform 0.35s ease;
     }
 
     .profile-logo-wrapper:hover {
-      transform: scale(1.06) rotate(4deg);
+      transform: scale(1.05) rotate(3deg);
     }
 
     .profile-logo-img {
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      object-fit: cover;
-      background: #1A241E;
-      border: 3.5px solid var(--glass-card-bg);
+      object-fit: contain;
+      background: #FAF6EF;
+      padding: 6px;
+      border: 2.5px solid #121A15;
     }
 
     .brand-title-box {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .brand-title {
-      font-size: 2.3rem;
+      font-size: 2.1rem;
       font-weight: 900;
       color: var(--text-main);
       font-family: 'Playfair Display', 'Cairo', serif;
@@ -308,24 +281,24 @@
 
     .verified-badge {
       color: #3897F0;
-      font-size: 1.15rem;
       display: inline-flex;
+      align-items: center;
     }
 
     .brand-subtitle {
-      font-size: 0.98rem;
+      font-size: 0.94rem;
       font-weight: 600;
       color: var(--text-sub);
-      max-width: 180px;
-      line-height: 1.6;
+      max-width: 360px;
+      line-height: 1.55;
     }
 
     /* Expandable Search Drawer */
     .search-drawer {
       width: 100%;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       display: none;
-      animation: slideDownSearch 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      animation: slideDownSearch 0.3s ease forwards;
     }
 
     .search-drawer.active {
@@ -333,7 +306,7 @@
     }
 
     @keyframes slideDownSearch {
-      from { opacity: 0; transform: translateY(-12px); }
+      from { opacity: 0; transform: translateY(-10px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
@@ -344,20 +317,20 @@
 
     .search-input-field {
       width: 100%;
-      padding: 13px 44px 13px 18px;
+      padding: 12px 42px 12px 16px;
       background: var(--glass-card-bg);
       border: 1.5px solid var(--glass-border);
       border-radius: var(--radius-md);
       color: var(--text-main);
       font-family: inherit;
-      font-size: 0.94rem;
+      font-size: 0.92rem;
       outline: none;
       transition: all 0.3s ease;
     }
 
     .search-input-field:focus {
       border-color: var(--accent-gold-bright);
-      box-shadow: 0 0 20px rgba(223, 177, 91, 0.3);
+      box-shadow: 0 0 18px rgba(223, 177, 91, 0.3);
     }
 
     .search-icon-inside {
@@ -374,7 +347,7 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 13px;
     }
 
     .link-card {
@@ -383,37 +356,20 @@
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      padding: 17px 22px;
+      padding: 16px 20px;
       background: var(--glass-card-bg);
       border: 1.5px solid var(--glass-border);
       border-radius: var(--radius-lg);
-      backdrop-filter: blur(18px);
+      backdrop-filter: blur(16px);
       box-shadow: var(--glass-shadow);
       text-decoration: none;
       color: var(--text-main);
-      transition: all 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
       overflow: hidden;
     }
 
-    /* Reflection Shine Effect */
-    .link-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 55%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
-      transform: skewX(-25deg);
-      transition: left 0.85s ease;
-    }
-
-    .link-card:hover::before {
-      left: 160%;
-    }
-
     .link-card:hover {
-      transform: translateY(-5px) scale(1.018);
+      transform: translateY(-4px) scale(1.015);
       background: var(--glass-card-hover);
       border-color: var(--glass-border-hover);
       box-shadow: var(--glass-shadow-hover);
@@ -422,30 +378,29 @@
     .link-card-content {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 15px;
       flex: 1;
     }
 
     .link-icon-box {
-      width: 180px;
-      height: 180px;
-      border-radius: 16px;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
       background: var(--accent-gold-soft);
       border: 1.5px solid var(--glass-border);
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--accent-gold);
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       flex-shrink: 0;
-      transition: all 0.35s ease;
+      transition: all 0.3s ease;
     }
 
     .link-card:hover .link-icon-box {
-      transform: scale(1.12) rotate(-6deg);
+      transform: scale(1.1) rotate(-5deg);
       background: var(--accent-gold);
       color: #1A0F00;
-      box-shadow: 0 0 15px rgba(223, 177, 91, 0.4);
     }
 
     .link-text-details {
@@ -455,137 +410,129 @@
     }
 
     .link-title {
-      font-size: 1.08rem;
+      font-size: 1.05rem;
       font-weight: 800;
       color: var(--text-main);
       line-height: 1.3;
     }
 
     .link-subtitle {
-      font-size: 0.84rem;
+      font-size: 0.82rem;
       font-weight: 600;
       color: var(--text-sub);
-      margin-top: 3px;
+      margin-top: 2px;
     }
 
     .link-arrow {
       color: var(--accent-gold);
-      font-size: 1.15rem;
-      transition: transform 0.35s ease;
+      font-size: 1.1rem;
+      transition: transform 0.3s ease;
       flex-shrink: 0;
     }
 
     .link-card:hover .link-arrow {
-      transform: translateX(-7px);
+      transform: translateX(-6px);
     }
 
-    /* Social Grid 4 Columns */
+    /* Social Grid 2 Columns (YouTube & TikTok) */
     .social-grid-row {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
+      gap: 12px;
       width: 100%;
     }
 
     .social-card-item {
       display: flex;
-      flex-direction: column;
+      flex-direction: flex-row;
       align-items: center;
       justify-content: center;
-      padding: 15px 8px;
+      gap: 10px;
+      padding: 14px 16px;
       background: var(--glass-card-bg);
       border: 1.5px solid var(--glass-border);
       border-radius: var(--radius-md);
       box-shadow: var(--glass-shadow);
       text-decoration: none;
       color: var(--text-main);
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .social-card-item:hover {
-      transform: translateY(-5px);
+      transform: translateY(-4px);
       background: var(--glass-card-hover);
       border-color: var(--accent-gold-bright);
       box-shadow: var(--glass-shadow-hover);
     }
 
     .social-icon-img {
-      width: 180px;
-      height: 180px;
-      margin-bottom: 6px;
-      transition: transform 0.35s ease;
+      width: 26px;
+      height: 26px;
+      flex-shrink: 0;
     }
 
-    .social-card-item:hover .social-icon-img {
-      transform: scale(1.18);
+    .social-text-box {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
     }
 
     .social-title-name {
-      font-size: 0.84rem;
+      font-size: 0.9rem;
       font-weight: 800;
       color: var(--text-main);
     }
 
     .social-subtitle-tag {
-      font-size: 0.66rem;
+      font-size: 0.7rem;
       font-weight: 600;
       color: var(--text-sub);
-      margin-top: 2px;
-      text-align: center;
     }
 
-    /* Dedicated Quote Card (Matching Reference Mockup) */
+    /* Dedicated Quote Card */
     .quote-display-card {
       position: relative;
       width: 100%;
-      padding: 30px 26px;
+      padding: 26px 22px;
       background: var(--glass-card-bg);
       border: 1.5px solid var(--glass-border);
       border-radius: var(--radius-lg);
-      backdrop-filter: blur(24px);
+      backdrop-filter: blur(20px);
       box-shadow: var(--glass-shadow);
       text-align: center;
       overflow: hidden;
-      margin-top: 6px;
-      transition: all 0.35s ease;
-    }
-
-    .quote-display-card:hover {
-      border-color: var(--glass-border-hover);
-      box-shadow: var(--glass-shadow-hover);
+      margin-top: 4px;
     }
 
     .quote-mark-icon {
-      font-size: 3.8rem;
+      font-size: 3.5rem;
       line-height: 1;
       color: var(--accent-gold);
-      opacity: 0.65;
+      opacity: 0.6;
       font-family: 'Playfair Display', serif;
-      margin-bottom: -12px;
+      margin-bottom: -10px;
       display: block;
     }
 
     .quote-text-main {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       font-weight: 700;
-      line-height: 1.68;
+      line-height: 1.65;
       color: var(--text-main);
       font-family: 'Noto Naskh Arabic', 'Cairo', serif;
-      margin-bottom: 14px;
-      transition: all 0.3s ease;
+      margin-bottom: 12px;
     }
 
     .quote-ornament-line {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
-      margin-top: 10px;
+      gap: 10px;
     }
 
     .ornament-line {
-      height: 180px;
-      width: 180px;
+      height: 1px;
+      width: 60px;
       background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
     }
 
@@ -595,14 +542,14 @@
       align-items: center;
       justify-content: center;
       gap: 18px;
-      margin-top: 10px;
+      margin-top: 8px;
     }
 
     .action-circle-btn {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 5px;
+      gap: 4px;
       text-decoration: none;
       color: var(--text-sub);
       background: none;
@@ -612,8 +559,8 @@
     }
 
     .action-circle-icon {
-      width: 180px;
-      height: 180px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       background: var(--glass-card-bg);
       border: 1.5px solid var(--glass-border);
@@ -621,30 +568,29 @@
       align-items: center;
       justify-content: center;
       color: var(--accent-gold);
-      font-size: 1.15rem;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-      transition: all 0.3s ease;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: all 0.28s ease;
     }
 
     .action-circle-btn:hover .action-circle-icon {
       background: var(--accent-gold);
       color: #1A0F00;
-      transform: translateY(-4px);
-      box-shadow: 0 0 15px rgba(223, 177, 91, 0.4);
+      transform: translateY(-3px);
     }
 
     .action-label-text {
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       font-weight: 700;
       color: var(--text-sub);
     }
 
     /* Footer Copyright */
     .bio-footer-copyright {
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       font-weight: 600;
       color: var(--text-sub);
-      margin-top: 18px;
+      margin-top: 16px;
       text-align: center;
       opacity: 0.9;
     }
@@ -658,18 +604,18 @@
     /* Toast Notification Msg */
     .toast-msg {
       position: fixed;
-      bottom: 26px;
+      bottom: 24px;
       left: 50%;
       transform: translateX(-50%) translateY(100px);
       background: #151E18;
       color: var(--accent-gold-bright);
       border: 1px solid var(--accent-gold);
-      padding: 11px 26px;
+      padding: 10px 24px;
       border-radius: 30px;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 700;
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
-      z-index: 200;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      z-index: 2000;
       opacity: 0;
       transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       pointer-events: none;
@@ -683,12 +629,11 @@
 </head>
 <body>
 
-  <!-- Background Layers with Aura Glow -->
+  <!-- Background Layers -->
   <div class="bg-fixed-layer"></div>
   <div class="bg-overlay-layer"></div>
-  <div class="glow-aura-sphere"></div>
 
-  <!-- Dynamic Island Top Nav Bar -->
+  <!-- Fixed Top Navigation Bar (Fixed 52px height, NO OVERLAP) -->
   <header class="dynamic-island-bar">
     <div class="dynamic-island-brand">
       <span class="status-dot-pulse"></span>
@@ -733,20 +678,20 @@
       <div class="stats-pill-banner">
         <span>✨ +120 اقتباس</span>
         <span>•</span>
-        <span>📖 +50 مقال وحكمة</span>
+        <span>📖 +50 مقال</span>
         <span>•</span>
         <span>👥 100k+ قارئ</span>
       </div>
 
-      <!-- Circular Gold Logo Badge -->
-      <div class="profile-logo-wrapper" style="width: 180px; height: 180px; padding: 6px; background: linear-gradient(135deg, #B38A3C 0%, #F0C775 50%, #DFB15B 100%); border-radius: 50%; box-shadow: 0 20px 55px rgba(223, 177, 91, 0.55), 0 0 30px rgba(240, 199, 117, 0.4);">
-        <img src="brand_logo_official.png" alt="حكمة ونور" class="brand-logo-img" style="width: 54px; height: 54px; object-fit: contain; border-radius: 50%; background: #FAF6EF; border: 2.5px solid #DFB15B; box-shadow: 0 0 16px rgba(223, 177, 91, 0.6); padding: 3px;">
+      <!-- Circular Gold Logo Badge (Clean 135px x 135px) -->
+      <div class="profile-logo-wrapper">
+        <img src="../brand_logo_official.png" alt="حكمة ونور | Hikma & Nour" class="profile-logo-img">
       </div>
 
       <div class="brand-title-box">
         <h1 class="brand-title">حكمة ونور</h1>
         <span class="verified-badge" title="حساب موثق">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="#3897F0">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="#3897F0">
             <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1.7 14.3l-3.6-3.6 1.4-1.4 2.2 2.2 5.3-5.3 1.4 1.4-6.7 6.7z"/>
           </svg>
         </span>
@@ -765,7 +710,7 @@
       </div>
     </div>
 
-    <!-- Bio Links Stack (Matching Reference Design) -->
+    <!-- Bio Links Stack -->
     <section class="links-stack" id="linksContainer">
 
       <!-- Link 1: Website -->
@@ -816,28 +761,28 @@
         <span class="link-arrow">❮</span>
       </a>
 
-      <!-- 4-Column Social Grid (Telegram, YouTube, Instagram, TikTok) -->
+      <!-- 2-Column Social Grid (YouTube & TikTok) -->
       <div class="social-grid-row">
-        
-
         <!-- YouTube -->
         <a href="https://www.youtube.com/@LibrePensseurs" target="_blank" rel="noopener" class="social-card-item" data-title="يوتيوب فيديوهات طويلة">
           <svg class="social-icon-img" viewBox="0 0 24 24" fill="#FF0000">
             <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
           </svg>
-          <span class="social-title-name">يوتيوب</span>
-          <span class="social-subtitle-tag">فيديوهات طويلة</span>
+          <div class="social-text-box">
+            <span class="social-title-name">يوتيوب</span>
+            <span class="social-subtitle-tag">فيديوهات طويلة</span>
+          </div>
         </a>
-
-        
 
         <!-- TikTok -->
         <a href="https://www.tiktok.com/@lejardindespensees" target="_blank" rel="noopener" class="social-card-item" data-title="تيك توك مقاطع يومية ملهمة">
-          <svg class="social-icon-img" viewBox="0 0 24 24" fill="#000000">
+          <svg class="social-icon-img" viewBox="0 0 24 24" fill="var(--text-main)">
             <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.29-2.61.74-5.23 2.68-7.01 1.54-1.43 3.65-2.22 5.76-2.18.15 0 .3 0 .45.01v4.06c-.95-.08-1.92.14-2.73.65-.96.59-1.62 1.6-1.78 2.71-.24 1.44.3 2.94 1.38 3.86 1.08.92 2.61 1.25 3.98.81 1.45-.44 2.58-1.69 2.82-3.19.08-.47.1-.96.1-1.44V.02z"/>
           </svg>
-          <span class="social-title-name">تيك توك</span>
-          <span class="social-subtitle-tag">مقاطع ملهمة</span>
+          <div class="social-text-box">
+            <span class="social-title-name">تيك توك</span>
+            <span class="social-subtitle-tag">مقاطع ملهمة</span>
+          </div>
         </a>
       </div>
 
@@ -867,7 +812,7 @@
 
     </section>
 
-    <!-- Dedicated Quote Card (Matching Reference Mockup) -->
+    <!-- Dedicated Quote Card -->
     <div class="quote-display-card" id="quoteCard">
       <span class="quote-mark-icon">“</span>
       <p class="quote-text-main" id="quoteText">دقيقة واحدة من القراءة قد تغيّر حياة كاملة.</p>
@@ -970,12 +915,12 @@
     quoteRefreshBtn.addEventListener('click', () => {
       currentQuoteIdx = (currentQuoteIdx + 1) % quotesList.length;
       quoteTextEl.style.opacity = '0';
-      quoteTextEl.style.transform = 'translateY(8px)';
+      quoteTextEl.style.transform = 'translateY(6px)';
       setTimeout(() => {
         quoteTextEl.textContent = quotesList[currentQuoteIdx];
         quoteTextEl.style.opacity = '1';
         quoteTextEl.style.transform = 'translateY(0)';
-      }, 220);
+      }, 200);
       showToast('تم تحديث الاقتباس اليومي 🌿');
     });
 
