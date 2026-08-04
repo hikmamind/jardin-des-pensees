@@ -1551,6 +1551,18 @@ const TIKTOK_DATA = {
         }
       ],
       "articles": [
+      {
+      "id": "why-people-distance-when-you-succeed",
+      "title": "لماذا يبتعد الناس عندما تبدأ بالنجاح؟",
+      "category": "الفلسفة • علم النفس • تطوير الذات",
+      "readTime": "8-10 دقائق",
+      "author": "حكمة ونور | Hikma & Nour",
+      "image": "why_people_distance_success_hero.jpg",
+      "file": "why-people-distance-when-you-succeed.html",
+      "excerpt": "النجاح لا يغير حياتك فقط، بل يكشف حقيقة من حولك. اكتشف الأسباب النفسية للغيرة وكيف تحافظ على سلامك الداخلي.",
+      "date": "2026-08-04"
+},
+
       
         {
           "id": "why-people-respect-silent-person",
