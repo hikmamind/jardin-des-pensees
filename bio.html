@@ -32,52 +32,29 @@
 
   <style>
     /* ==========================================================================
-       LUXURY COVER BANNER & FIXED CONTAINER DESIGN SYSTEM
+       EXACT MATCH LUXURY GOLDEN SUNSET DESIGN SYSTEM
        ========================================================================== */
     :root {
-      --bg-overlay-light: rgba(245, 237, 224, 0.75);
-      --bg-blur-light: blur(25px) saturate(180%);
-      
-      --glass-card-bg: rgba(255, 253, 248, 0.85);
-      --glass-card-hover: rgba(255, 255, 255, 0.96);
-      --glass-border: rgba(179, 138, 60, 0.32);
-      --glass-border-hover: rgba(223, 177, 91, 0.75);
-      --glass-shadow: 0 10px 30px -5px rgba(90, 60, 20, 0.1);
-      --glass-shadow-hover: 0 18px 42px -5px rgba(179, 138, 60, 0.28);
+      --bg-dark: #0A0D0B;
+      --card-bg: rgba(18, 24, 20, 0.78);
+      --card-bg-hover: rgba(26, 35, 29, 0.92);
+      --card-border: rgba(179, 138, 60, 0.35);
+      --card-border-hover: rgba(240, 199, 117, 0.8);
+      --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+      --card-shadow-hover: 0 16px 40px rgba(223, 177, 91, 0.3);
 
-      --text-main: #231912;
-      --text-sub: #5C4A3E;
+      --text-main: #F7F1E5;
+      --text-sub: #C8BCAC;
       --text-muted: #8E7B6A;
-      --accent-gold: #B38A3C;
-      --accent-gold-bright: #DFB15B;
-      --accent-gold-gradient: linear-gradient(135deg, #B38A3C 0%, #D4A853 45%, #F0C775 80%, #DFB15B 100%);
-      --accent-gold-soft: rgba(179, 138, 60, 0.14);
+      --accent-gold: #DFB15B;
+      --accent-gold-dark: #B38A3C;
+      --accent-gold-bright: #F0C775;
+      --accent-gold-soft: rgba(223, 177, 91, 0.15);
 
-      --radius-lg: 24px;
-      --radius-md: 18px;
+      --radius-card: 16px;
       --radius-pill: 50px;
     }
 
-    [data-theme="dark"] {
-      --bg-overlay-light: rgba(12, 18, 14, 0.84);
-      --bg-blur-light: blur(25px) saturate(190%);
-      
-      --glass-card-bg: rgba(22, 31, 25, 0.82);
-      --glass-card-hover: rgba(30, 42, 34, 0.95);
-      --glass-border: rgba(223, 177, 91, 0.28);
-      --glass-border-hover: rgba(240, 199, 117, 0.65);
-      --glass-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
-      --glass-shadow-hover: 0 20px 48px rgba(223, 177, 91, 0.25);
-
-      --text-main: #F7F1E5;
-      --text-sub: #D1C5B4;
-      --text-muted: #998D7D;
-      --accent-gold: #DFB15B;
-      --accent-gold-bright: #F0C775;
-      --accent-gold-soft: rgba(223, 177, 91, 0.16);
-    }
-
-    /* Reset & Base */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -98,10 +75,10 @@
       align-items: center;
       position: relative;
       overflow-x: hidden;
-      background: #0D1410;
+      background: var(--bg-dark);
     }
 
-    /* Fullscreen Background Layer */
+    /* Sunset Background Image Layer */
     .bg-fixed-layer {
       position: fixed;
       top: 0;
@@ -109,12 +86,11 @@
       width: 100vw;
       height: 100vh;
       z-index: -2;
-      background-image: url('../bio_modern_cover.jpg');
+      background-image: url('../bio_background_mountain_lake.jpg');
       background-size: cover;
-      background-position: center 30%;
+      background-position: center top;
       background-repeat: no-repeat;
-      filter: blur(4px) contrast(105%);
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
 
     .bg-overlay-layer {
@@ -124,543 +100,504 @@
       width: 100vw;
       height: 100vh;
       z-index: -1;
-      background: var(--bg-overlay-light);
-      backdrop-filter: var(--bg-blur-light);
-      transition: background 0.4s ease;
+      background: linear-gradient(180deg, rgba(10, 13, 11, 0.45) 0%, rgba(10, 13, 11, 0.85) 40%, rgba(10, 13, 11, 0.96) 100%);
+      backdrop-filter: blur(8px);
     }
 
-    /* Dynamic Island Fixed Top Bar (Compact & Fixed) */
-    .dynamic-island-bar {
-      position: fixed;
-      top: 12px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1000;
+    /* Page Wrapper Container */
+    .page-wrapper {
+      width: 100%;
+      max-width: 680px;
+      padding: 30px 20px 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* Top Left Menu Button ( ☰ ) */
+    .top-bar-row {
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: calc(100% - 24px);
-      max-width: 480px;
-      height: 50px;
-      padding: 0 16px;
-      background: var(--glass-card-bg);
-      border: 1.5px solid var(--glass-border);
-      backdrop-filter: blur(24px) saturate(200%);
-      border-radius: var(--radius-pill);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      margin-bottom: -10px;
     }
 
-    .dynamic-island-brand {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.85rem;
-      font-weight: 800;
+    .menu-circle-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
       color: var(--accent-gold);
-    }
-
-    .status-dot-pulse {
-      width: 9px;
-      height: 9px;
-      background-color: #2ECC71;
-      border-radius: 50%;
-      box-shadow: 0 0 10px #2ECC71;
-      animation: pulseLiveDot 2s infinite;
-      flex-shrink: 0;
-    }
-
-    @keyframes pulseLiveDot {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(1.3); }
-    }
-
-    .dynamic-actions {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .icon-btn-pill {
-      background: var(--accent-gold-soft);
-      border: 1px solid var(--glass-border);
-      color: var(--text-main);
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      transition: all 0.25s ease;
-      flex-shrink: 0;
+      backdrop-filter: blur(12px);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
 
-    .icon-btn-pill:hover {
+    .menu-circle-btn:hover {
       background: var(--accent-gold);
-      color: #1A0F00;
-      transform: scale(1.1);
+      color: #101512;
+      transform: scale(1.08);
     }
 
-    /* Main Container */
-    .bio-container {
-      width: 100%;
-      max-width: 480px;
-      padding: 72px 16px 60px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 14px;
-      animation: fadeInBio 0.7s ease-out forwards;
-    }
-
-    @keyframes fadeInBio {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Header Cover Photo Banner Section */
-    .bio-header-card {
-      width: 100%;
-      background: var(--glass-card-bg);
-      border: 1.5px solid var(--glass-border);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--glass-shadow);
+    /* Header Branding & Circular Logo Badge */
+    .header-section {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding-bottom: 22px;
+      margin-top: -10px;
     }
 
-    .cover-banner-image {
-      position: relative;
-      width: 100%;
-      height: 200px;
-      background-image: url('../bio_modern_cover.jpg');
-      background-size: cover;
-      background-position: center 40%;
-      border-bottom: 1.5px solid var(--glass-border);
-    }
-
-    .cover-banner-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(180deg, rgba(13,20,16,0.15) 0%, rgba(13,20,16,0.85) 100%);
-    }
-
-    /* Centered Overlapping Circular Emblem Badge (Strict 120px x 120px) */
     .profile-logo-wrapper {
-      position: relative;
-      width: 120px !important;
-      height: 120px !important;
-      max-width: 120px !important;
-      max-height: 120px !important;
-      border-radius: 50% !important;
-      margin-top: -60px !important;
-      z-index: 5;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
       padding: 4px;
       background: linear-gradient(135deg, #B38A3C 0%, #F0C775 50%, #DFB15B 100%);
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
-      flex-shrink: 0 !important;
-      overflow: hidden !important;
-    }
-
-    .profile-logo-img {
-      width: 100% !important;
-      height: 100% !important;
-      max-width: 100% !important;
-      max-height: 100% !important;
-      border-radius: 50% !important;
-      object-fit: contain !important;
-      background: #FAF6EF !important;
-      padding: 4px !important;
-      border: 2.5px solid #121A15 !important;
-      display: block !important;
-      clip-path: circle(44% at 50% 48%) !important;
-    }
-
-    /* Stats Pill Banner */
-    .stats-pill-banner {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      background: var(--accent-gold-soft);
-      border: 1px solid var(--glass-border);
-      padding: 5px 16px;
-      border-radius: var(--radius-pill);
-      font-size: 0.78rem;
-      font-weight: 800;
-      color: var(--accent-gold-bright);
-      margin: 12px 0 8px;
-    }
-
-    .brand-title-box {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin-bottom: 4px;
-    }
-
-    .brand-title {
-      font-size: 2.1rem;
-      font-weight: 900;
-      color: var(--text-main);
-      font-family: 'Playfair Display', 'Cairo', serif;
-      letter-spacing: -0.5px;
-    }
-
-    .verified-badge {
-      color: #3897F0;
-      display: inline-flex;
-      align-items: center;
-    }
-
-    .brand-subtitle {
-      font-size: 0.92rem;
-      font-weight: 600;
-      color: var(--text-sub);
-      max-width: 350px;
-      line-height: 1.5;
-      padding: 0 16px;
-    }
-
-    /* Expandable Search Drawer */
-    .search-drawer {
-      width: 100%;
-      margin-bottom: 6px;
-      display: none;
-      animation: slideDownSearch 0.3s ease forwards;
-    }
-
-    .search-drawer.active {
-      display: block;
-    }
-
-    @keyframes slideDownSearch {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .search-input-wrapper {
-      position: relative;
-      width: 100%;
-    }
-
-    .search-input-field {
-      width: 100%;
-      padding: 12px 42px 12px 16px;
-      background: var(--glass-card-bg);
-      border: 1.5px solid var(--glass-border);
-      border-radius: var(--radius-md);
-      color: var(--text-main);
-      font-family: inherit;
-      font-size: 0.92rem;
-      outline: none;
-      transition: all 0.3s ease;
-    }
-
-    .search-input-field:focus {
-      border-color: var(--accent-gold-bright);
-      box-shadow: 0 0 18px rgba(223, 177, 91, 0.3);
-    }
-
-    .search-icon-inside {
-      position: absolute;
-      right: 14px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--accent-gold);
-      pointer-events: none;
-    }
-
-    /* Links Stack */
-    .links-stack {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .link-card {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      padding: 16px 20px;
-      background: var(--glass-card-bg);
-      border: 1.5px solid var(--glass-border);
-      border-radius: var(--radius-lg);
-      backdrop-filter: blur(16px);
-      box-shadow: var(--glass-shadow);
-      text-decoration: none;
-      color: var(--text-main);
-      transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 12px 35px rgba(179, 138, 60, 0.45);
+      margin-bottom: 14px;
       overflow: hidden;
     }
 
-    .link-card:hover {
-      transform: translateY(-4px) scale(1.015);
-      background: var(--glass-card-hover);
-      border-color: var(--glass-border-hover);
-      box-shadow: var(--glass-shadow-hover);
+    .profile-logo-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: contain;
+      background: #FAF6EF;
+      padding: 5px;
+      border: 2px solid #121A15;
+      display: block;
+      clip-path: circle(44% at 50% 48%);
     }
 
-    .link-card-content {
+    .brand-title {
+      font-size: 3.2rem;
+      font-weight: 900;
+      color: var(--text-main);
+      font-family: 'Noto Naskh Arabic', 'Playfair Display', serif;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin-bottom: 6px;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .brand-subtitle {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-sub);
+      max-width: 420px;
+      line-height: 1.6;
+    }
+
+    /* Opening Quote Box Card */
+    .opening-quote-card {
+      width: 100%;
+      padding: 14px 24px;
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius-card);
+      backdrop-filter: blur(16px);
+      box-shadow: var(--card-shadow);
+      text-align: center;
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--accent-gold-bright);
+      font-family: 'Noto Naskh Arabic', serif;
       display: flex;
       align-items: center;
-      gap: 15px;
-      flex: 1;
+      justify-content: center;
+      gap: 10px;
     }
 
-    .link-icon-box {
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
+    .opening-quote-card span.quote-mark {
+      font-size: 1.4rem;
+      color: var(--accent-gold);
+    }
+
+    /* 4-Column Action Grid (Row 1: Buy, Download, Blog, Website) */
+    .action-grid-4col {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      width: 100%;
+    }
+
+    .action-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 12px 18px;
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius-card);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--card-shadow);
+      text-decoration: none;
+      color: var(--text-main);
+      text-align: center;
+      min-height: 190px;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    .action-card:hover {
+      transform: translateY(-5px) scale(1.02);
+      background: var(--card-bg-hover);
+      border-color: var(--card-border-hover);
+      box-shadow: var(--card-shadow-hover);
+    }
+
+    .action-card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
       background: var(--accent-gold-soft);
-      border: 1.5px solid var(--glass-border);
+      border: 1.5px solid var(--card-border);
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--accent-gold);
-      font-size: 1.35rem;
-      flex-shrink: 0;
+      font-size: 1.5rem;
+      margin-bottom: 12px;
       transition: all 0.3s ease;
     }
 
-    .link-card:hover .link-icon-box {
-      transform: scale(1.1) rotate(-5deg);
+    .action-card:hover .action-card-icon {
       background: var(--accent-gold);
-      color: #1A0F00;
+      color: #101512;
+      transform: scale(1.1);
     }
 
-    .link-text-details {
-      display: flex;
-      flex-direction: column;
-      text-align: right;
-    }
-
-    .link-title {
+    .action-card-title {
       font-size: 1.05rem;
       font-weight: 800;
       color: var(--text-main);
+      margin-bottom: 6px;
       line-height: 1.3;
     }
 
-    .link-subtitle {
-      font-size: 0.82rem;
+    .action-card-desc {
+      font-size: 0.78rem;
       font-weight: 600;
+      color: var(--text-sub);
+      line-height: 1.45;
+      margin-bottom: 12px;
+    }
+
+    .action-card-arrow {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid var(--card-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-gold);
+      font-size: 0.85rem;
+      transition: all 0.3s ease;
+      margin-top: auto;
+    }
+
+    .action-card:hover .action-card-arrow {
+      background: var(--accent-gold);
+      color: #101512;
+      transform: scale(1.15);
+    }
+
+    /* Wide Card 1: Newsletter (النشرة البريدية) */
+    .wide-newsletter-card {
+      width: 100%;
+      padding: 18px 24px;
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius-card);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--card-shadow);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .newsletter-info {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex: 1;
+    }
+
+    .newsletter-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      background: var(--accent-gold-soft);
+      border: 1.5px solid var(--card-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-gold);
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .newsletter-text h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .newsletter-text p {
+      font-size: 0.82rem;
       color: var(--text-sub);
       margin-top: 2px;
     }
 
-    .link-arrow {
-      color: var(--accent-gold);
-      font-size: 1.1rem;
-      transition: transform 0.3s ease;
-      flex-shrink: 0;
-    }
-
-    .link-card:hover .link-arrow {
-      transform: translateX(-6px);
-    }
-
-    /* Social Grid 2 Columns (YouTube & TikTok) */
-    .social-grid-row {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      width: 100%;
-    }
-
-    .social-card-item {
+    .newsletter-form {
       display: flex;
-      flex-direction: flex-row;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .newsletter-input {
+      padding: 10px 16px;
+      background: rgba(10, 13, 11, 0.6);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius-md);
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 0.88rem;
+      outline: none;
+      width: 210px;
+    }
+
+    .newsletter-btn {
+      padding: 10px 20px;
+      background: var(--accent-gold-dark);
+      border: none;
+      border-radius: var(--radius-md);
+      color: #101512;
+      font-weight: 800;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      font-family: inherit;
+    }
+
+    .newsletter-btn:hover {
+      background: var(--accent-gold-bright);
+      transform: scale(1.04);
+    }
+
+    /* Wide Card 2: Community (انضم إلى مجتمع الحكمة) */
+    .wide-community-card {
+      width: 100%;
+      padding: 18px 24px;
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius-card);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--card-shadow);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .community-info {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex: 1;
+    }
+
+    .community-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      background: var(--accent-gold-soft);
+      border: 1.5px solid var(--card-border);
+      display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      padding: 14px 16px;
-      background: var(--glass-card-bg);
-      border: 1.5px solid var(--glass-border);
-      border-radius: var(--radius-md);
-      box-shadow: var(--glass-shadow);
-      text-decoration: none;
-      color: var(--text-main);
-      transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .social-card-item:hover {
-      transform: translateY(-4px);
-      background: var(--glass-card-hover);
-      border-color: var(--accent-gold-bright);
-      box-shadow: var(--glass-shadow-hover);
-    }
-
-    .social-icon-img {
-      width: 26px;
-      height: 26px;
+      color: var(--accent-gold);
+      font-size: 1.4rem;
       flex-shrink: 0;
     }
 
-    .social-text-box {
-      display: flex;
-      flex-direction: column;
-      text-align: right;
-    }
-
-    .social-title-name {
-      font-size: 0.9rem;
+    .community-text h3 {
+      font-size: 1.1rem;
       font-weight: 800;
       color: var(--text-main);
     }
 
-    .social-subtitle-tag {
-      font-size: 0.7rem;
-      font-weight: 600;
+    .community-text p {
+      font-size: 0.82rem;
       color: var(--text-sub);
+      margin-top: 2px;
     }
 
-    /* Dedicated Quote Card */
-    .quote-display-card {
-      position: relative;
+    .community-btn {
+      padding: 10px 24px;
+      background: transparent;
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius-md);
+      color: var(--accent-gold-bright);
+      font-weight: 800;
+      font-size: 0.88rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .community-btn:hover {
+      background: var(--accent-gold);
+      color: #101512;
+    }
+
+    /* Dedicated Feature Banner Card (Lantern & Antique Books Artwork Quote) */
+    .feature-quote-banner {
       width: 100%;
-      padding: 24px 20px;
-      background: var(--glass-card-bg);
-      border: 1.5px solid var(--glass-border);
-      border-radius: var(--radius-lg);
-      backdrop-filter: blur(20px);
-      box-shadow: var(--glass-shadow);
-      text-align: center;
+      padding: 30px 26px;
+      background: linear-gradient(135deg, rgba(16, 21, 18, 0.92) 0%, rgba(24, 32, 27, 0.95) 100%);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius-card);
+      box-shadow: var(--card-shadow);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      position: relative;
       overflow: hidden;
-      margin-top: 4px;
     }
 
-    .quote-mark-icon {
-      font-size: 3.2rem;
-      line-height: 1;
-      color: var(--accent-gold);
-      opacity: 0.6;
-      font-family: 'Playfair Display', serif;
-      margin-bottom: -10px;
-      display: block;
+    .banner-side-art {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 12px;
+      flex-shrink: 0;
+      border: 1px solid var(--card-border);
     }
 
-    .quote-text-main {
-      font-size: 1.18rem;
-      font-weight: 700;
-      line-height: 1.65;
+    .banner-quote-content {
+      flex: 1;
+      text-align: center;
+    }
+
+    .banner-quote-text {
+      font-size: 1.35rem;
+      font-weight: 800;
       color: var(--text-main);
-      font-family: 'Noto Naskh Arabic', 'Cairo', serif;
+      font-family: 'Noto Naskh Arabic', serif;
+      line-height: 1.6;
       margin-bottom: 10px;
     }
 
-    .quote-ornament-line {
+    .banner-leaf-ornament {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
     }
 
-    .ornament-line {
+    .banner-leaf-line {
       height: 1px;
-      width: 55px;
+      width: 50px;
       background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
     }
 
-    /* Action Buttons Row */
-    .action-buttons-row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 18px;
-      margin-top: 6px;
-    }
-
-    .action-circle-btn {
+    /* Footer Section */
+    .footer-section {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 4px;
-      text-decoration: none;
-      color: var(--text-sub);
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-family: inherit;
+      text-align: center;
+      gap: 12px;
+      margin-top: 10px;
+      width: 100%;
     }
 
-    .action-circle-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: var(--glass-card-bg);
-      border: 1.5px solid var(--glass-border);
+    .footer-brand-title {
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: var(--accent-gold);
+      font-family: 'Playfair Display', 'Cairo', serif;
+    }
+
+    .footer-actions-row {
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--accent-gold);
-      font-size: 1.05rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      transition: all 0.28s ease;
+      gap: 16px;
     }
 
-    .action-circle-btn:hover .action-circle-icon {
+    .footer-action-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      color: var(--accent-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+    }
+
+    .footer-action-btn:hover {
       background: var(--accent-gold);
-      color: #1A0F00;
-      transform: translateY(-3px);
+      color: #101512;
+      transform: scale(1.1);
     }
 
-    .action-label-text {
-      font-size: 0.72rem;
-      font-weight: 700;
+    .footer-copyright-text {
+      font-size: 0.82rem;
       color: var(--text-sub);
-    }
-
-    /* Footer Copyright */
-    .bio-footer-copyright {
-      font-size: 0.8rem;
       font-weight: 600;
-      color: var(--text-sub);
-      margin-top: 14px;
-      text-align: center;
-      opacity: 0.9;
     }
 
-    .bio-footer-copyright a {
-      color: var(--accent-gold);
-      text-decoration: none;
-      font-weight: 700;
-    }
+    /* Responsive Adjustments */
+    @media (max-width: 640px) {
+      .action-grid-4col {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-    /* Toast Notification Msg */
-    .toast-msg {
-      position: fixed;
-      bottom: 24px;
-      left: 50%;
-      transform: translateX(-50%) translateY(100px);
-      background: #151E18;
-      color: var(--accent-gold-bright);
-      border: 1px solid var(--accent-gold);
-      padding: 10px 24px;
-      border-radius: 30px;
-      font-size: 0.88rem;
-      font-weight: 700;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-      z-index: 2000;
-      opacity: 0;
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      pointer-events: none;
-    }
+      .wide-newsletter-card, .wide-community-card {
+        flex-direction: column;
+        align-items: stretch;
+      }
 
-    .toast-msg.show {
-      transform: translateX(-50%) translateY(0);
-      opacity: 1;
+      .newsletter-form {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .newsletter-input {
+        width: 100%;
+      }
+
+      .feature-quote-banner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .banner-side-art {
+        width: 80px;
+        height: 80px;
+      }
     }
   </style>
 </head>
@@ -670,270 +607,186 @@
   <div class="bg-fixed-layer"></div>
   <div class="bg-overlay-layer"></div>
 
-  <!-- Fixed Top Navigation Bar -->
-  <header class="dynamic-island-bar">
-    <div class="dynamic-island-brand">
-      <span class="status-dot-pulse"></span>
-      <span>حكمة ونور • مباشر</span>
-    </div>
+  <!-- Page Wrapper Container -->
+  <main class="page-wrapper">
     
-    <div class="dynamic-actions">
-      <!-- Search Toggle -->
-      <button class="icon-btn-pill" id="searchToggleBtn" aria-label="البحث">
-        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="8"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    <!-- Top Left Menu Circle Button ( ☰ ) -->
+    <div class="top-bar-row">
+      <a href="../" class="menu-circle-btn" title="القائمة الرئيسية" aria-label="القائمة">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="17" x2="20" y2="17"></line>
         </svg>
-      </button>
-
-      <!-- Refresh Quote -->
-      <button class="icon-btn-pill" id="quoteRefreshBtn" title="تغيير الاقتباس اليومي" aria-label="تحديث الاقتباس">
-        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="23 4 23 10 17 10"></polyline>
-          <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
-        </svg>
-      </button>
-
-      <!-- Theme Toggle -->
-      <button class="icon-btn-pill" id="themeBtn" aria-label="تغيير المظهر">
-        <svg class="sun-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2">
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-        </svg>
-      </button>
+      </a>
     </div>
-  </header>
 
-  <!-- Main Content Container -->
-  <main class="bio-container">
-    
-    <!-- Profile Header Card with Themed Cover Photo Banner -->
-    <header class="bio-header-card">
-      
-      <!-- Themed Cover Photo Banner -->
-      <div class="cover-banner-image">
-        <div class="cover-banner-overlay"></div>
-      </div>
-
-      <!-- Centered Overlapping Circular Emblem Badge -->
+    <!-- Header Section -->
+    <header class="header-section">
+      <!-- Circular Gold Logo Emblem Badge -->
       <div class="profile-logo-wrapper">
         <img src="../brand_logo_official.png" alt="حكمة ونور | Hikma & Nour" class="profile-logo-img">
       </div>
 
-      <!-- Stats Counter Banner -->
-      <div class="stats-pill-banner">
-        <span>✨ +120 اقتباس</span>
-        <span>•</span>
-        <span>📖 +50 مقال</span>
-        <span>•</span>
-        <span>👥 100k+ قارئ</span>
-      </div>
-
-      <div class="brand-title-box">
-        <h1 class="brand-title">حكمة ونور</h1>
-        <span class="verified-badge" title="حساب موثق">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="#3897F0">
-            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1.7 14.3l-3.6-3.6 1.4-1.4 2.2 2.2 5.3-5.3 1.4 1.4-6.7 6.7z"/>
-          </svg>
-        </span>
-      </div>
+      <h1 class="brand-title">حكمة ونور</h1>
       <p class="brand-subtitle">أفكار عميقة لإيقاظ العقل وإشراق الروح</p>
     </header>
 
-    <!-- Expandable Search Bar Drawer -->
-    <div class="search-drawer" id="searchDrawer">
-      <div class="search-input-wrapper">
-        <input type="text" class="search-input-field" id="searchInput" placeholder="ابحث عن رابط، مقال، أو كتاب...">
-        <svg class="search-icon-inside" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="11" cy="11" r="8"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-      </div>
+    <!-- Opening Quote Card -->
+    <div class="opening-quote-card">
+      <span class="quote-mark">“</span>
+      <span>كل فكرة نبرة.. تَقْرُبُك من ذاتك ومن الحقيقة</span>
+      <span class="quote-mark">”</span>
     </div>
 
-    <!-- Bio Links Stack -->
-    <section class="links-stack" id="linksContainer">
-
-      <!-- PWA Install Application Card -->
-      <button onclick="triggerPwaInstall()" class="link-card" id="pwaInstallCard" style="background: linear-gradient(135deg, rgba(179, 138, 60, 0.25) 0%, rgba(223, 177, 91, 0.4) 100%); border-color: var(--accent-gold); cursor: pointer; font-family: inherit;">
-        <div class="link-card-content">
-          <div class="link-icon-box" style="background: var(--accent-gold); color: #121A15;">📱</div>
-          <div class="link-text-details">
-            <span class="link-title" style="color: var(--accent-gold-bright);">تثبيت تطبيق حكمة ونور</span>
-            <span class="link-subtitle">أضف التطبيق لشاشة هاتفك بدون متجر</span>
-          </div>
-        </div>
-        <span class="link-arrow">⬇️</span>
-      </button>
-
-      <!-- Link 1: Website -->
-      <a href="../" class="link-card" data-title="زيارة الموقع مقالات اقتباسات سير المفكرين">
-        <div class="link-card-content">
-          <div class="link-icon-box">🌐</div>
-          <div class="link-text-details">
-            <span class="link-title">زيارة الموقع</span>
-            <span class="link-subtitle">مقالات، اقتباسات وسير المفكرين</span>
-          </div>
-        </div>
-        <span class="link-arrow">❮</span>
+    <!-- 4-Column Action Grid (Row 1: Buy Book, Download E-book, Blog, Website) -->
+    <section class="action-grid-4col">
+      
+      <!-- 1. Buy Book -->
+      <a href="../shop/" class="action-card" data-title="شراء الكتاب التطوير الشخصي وفقاً لأفكار أعظم المفكرين">
+        <div class="action-card-icon">🛒</div>
+        <h3 class="action-card-title">شراء الكتاب</h3>
+        <p class="action-card-desc">التطوير الشخصي وفقًا لأفكار أعظم المفكرين</p>
+        <div class="action-card-arrow">➔</div>
       </a>
 
-      <!-- Link 2: Blog Articles -->
-      <a href="../articles/" class="link-card" data-title="قراءة المدونة اكتشف أحدث المقالات والفكرات">
-        <div class="link-card-content">
-          <div class="link-icon-box">📖</div>
-          <div class="link-text-details">
-            <span class="link-title">قراءة المدونة</span>
-            <span class="link-subtitle">اكتشف أحدث المقالات والفكرات</span>
-          </div>
-        </div>
-        <span class="link-arrow">❮</span>
+      <!-- 2. Download Free E-book -->
+      <a href="../shop/" class="action-card" data-title="تحميل الكتاب المجاني 20 درساً من أهم دروس الحياة">
+        <div class="action-card-icon">📖</div>
+        <h3 class="action-card-title">تحميل الكتاب المجاني</h3>
+        <p class="action-card-desc">20 درساً من أهم دروس الحياة</p>
+        <div class="action-card-arrow">➔</div>
       </a>
 
-      <!-- Link 3: Free E-book Download -->
-      <a href="../shop/" class="link-card" data-title="تحميل الكتاب الإلكتروني المجاني 20 درساً من أهم دروس الحياة">
-        <div class="link-card-content">
-          <div class="link-icon-box">🎁</div>
-          <div class="link-text-details">
-            <span class="link-title">تحميل الكتاب الإلكتروني المجاني</span>
-            <span class="link-subtitle">20 درساً من أهم دروس الحياة</span>
-          </div>
-        </div>
-        <span class="link-arrow">❮</span>
+      <!-- 3. Read Blog Articles -->
+      <a href="../articles/" class="action-card" data-title="قراءة مدونة اكتشف أحدث المقالات والفكرات">
+        <div class="action-card-icon">📑</div>
+        <h3 class="action-card-title">قراءة مدونة</h3>
+        <p class="action-card-desc">اكتشف أحدث المقالات والفكرات</p>
+        <div class="action-card-arrow">➔</div>
       </a>
 
-      <!-- Link 4: Buy Book -->
-      <a href="../shop/" class="link-card" data-title="شراء الكتاب التطوير الشخصي وفقاً لأفكار أعظم المفكرين">
-        <div class="link-card-content">
-          <div class="link-icon-box">🛒</div>
-          <div class="link-text-details">
-            <span class="link-title">شراء الكتاب</span>
-            <span class="link-subtitle">التطوير الشخصي وفقاً لأفكار أعظم المفكرين</span>
-          </div>
-        </div>
-        <span class="link-arrow">❮</span>
-      </a>
-
-      <!-- 2-Column Social Grid (YouTube & TikTok) -->
-      <div class="social-grid-row">
-        <!-- YouTube -->
-        <a href="https://www.youtube.com/@LibrePensseurs" target="_blank" rel="noopener" class="social-card-item" data-title="يوتيوب فيديوهات طويلة">
-          <svg class="social-icon-img" viewBox="0 0 24 24" fill="#FF0000">
-            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-          </svg>
-          <div class="social-text-box">
-            <span class="social-title-name">يوتيوب</span>
-            <span class="social-subtitle-tag">فيديوهات طويلة</span>
-          </div>
-        </a>
-
-        <!-- TikTok -->
-        <a href="https://www.tiktok.com/@lejardindespensees" target="_blank" rel="noopener" class="social-card-item" data-title="تيك توك مقاطع يومية ملهمة">
-          <svg class="social-icon-img" viewBox="0 0 24 24" fill="var(--text-main)">
-            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.29-2.61.74-5.23 2.68-7.01 1.54-1.43 3.65-2.22 5.76-2.18.15 0 .3 0 .45.01v4.06c-.95-.08-1.92.14-2.73.65-.96.59-1.62 1.6-1.78 2.71-.24 1.44.3 2.94 1.38 3.86 1.08.92 2.61 1.25 3.98.81 1.45-.44 2.58-1.69 2.82-3.19.08-.47.1-.96.1-1.44V.02z"/>
-          </svg>
-          <div class="social-text-box">
-            <span class="social-title-name">تيك توك</span>
-            <span class="social-subtitle-tag">مقاطع ملهمة</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- Link 5: Newsletter -->
-      <a href="../#newsletterSection" class="link-card" data-title="النشرة البريدية استلم اقتباسة ملهمة كل صباح">
-        <div class="link-card-content">
-          <div class="link-icon-box">✉️</div>
-          <div class="link-text-details">
-            <span class="link-title">النشرة البريدية</span>
-            <span class="link-subtitle">استلم اقتباسة ملهمة كل صباح</span>
-          </div>
-        </div>
-        <span class="link-arrow">❮</span>
-      </a>
-
-      <!-- Link 6: Community -->
-      <a href="../#contactSection" class="link-card" data-title="انضم إلى مجتمع الحكمة تبادل الأفكار وتطور مع الآخرين">
-        <div class="link-card-content">
-          <div class="link-icon-box">👥</div>
-          <div class="link-text-details">
-            <span class="link-title">انضم إلى مجتمع الحكمة</span>
-            <span class="link-subtitle">تبادل الأفكار وتطور مع الآخرين</span>
-          </div>
-        </div>
-        <span class="link-arrow">❮</span>
+      <!-- 4. Visit Main Website -->
+      <a href="../" class="action-card" data-title="زيارة الموقع مقالات اقتباسات وسير المفكرين">
+        <div class="action-card-icon">🌐</div>
+        <h3 class="action-card-title">زيارة الموقع</h3>
+        <p class="action-card-desc">مقالات، اقتباسات وسير المفكرين</p>
+        <div class="action-card-arrow">➔</div>
       </a>
 
     </section>
 
-    <!-- Dedicated Quote Card -->
-    <div class="quote-display-card" id="quoteCard">
-      <span class="quote-mark-icon">“</span>
-      <p class="quote-text-main" id="quoteText">دقيقة واحدة من القراءة قد تغيّر حياة كاملة.</p>
-      <div class="quote-ornament-line">
-        <span class="ornament-line"></span>
-        <span style="color: var(--accent-gold); font-size: 0.95rem;">🌿</span>
-        <span class="ornament-line"></span>
-      </div>
-    </div>
+    <!-- 4-Column Social Grid (Row 2: Telegram, YouTube, Instagram, TikTok) -->
+    <section class="action-grid-4col">
 
-    <!-- Action Buttons Row -->
-    <div class="action-buttons-row">
-      <!-- Send / Share -->
-      <button class="action-circle-btn" id="shareBtn">
-        <div class="action-circle-icon">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="22" y1="2" x2="11" y2="13"></line>
-            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+      <!-- 1. Telegram -->
+      <a href="https://t.me/" target="_blank" rel="noopener" class="action-card" data-title="تليجرام انضم إلى القناة لتصلك كل جديد">
+        <div class="action-card-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.16l-2.02 9.52c-.15.68-.56.84-1.13.53l-3.1-2.28-1.5 1.44c-.16.16-.3.3-.61.3l.22-3.17 5.77-5.21c.25-.22-.05-.34-.39-.12l-7.13 4.49-3.08-.96c-.67-.21-.68-.67.14-.99l12.04-4.64c.56-.21 1.05.13.89.89z"/>
           </svg>
         </div>
-        <span class="action-label-text">أرسل</span>
-      </button>
-
-      <!-- Comment -->
-      <a href="../#contactSection" class="action-circle-btn">
-        <div class="action-circle-icon">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-          </svg>
-        </div>
-        <span class="action-label-text">علّق</span>
+        <h3 class="action-card-title">تليجرام</h3>
+        <p class="action-card-desc">انضم إلى القناة لتصلك كل جديد</p>
+        <div class="action-card-arrow">➔</div>
       </a>
 
-      <!-- Save / Bookmark -->
-      <button class="action-circle-btn" id="bookmarkBtn">
-        <div class="action-circle-icon">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+      <!-- 2. YouTube -->
+      <a href="https://www.youtube.com/@LibrePensseurs" target="_blank" rel="noopener" class="action-card" data-title="يوتيوب فيديوهات طويلة وقيمة">
+        <div class="action-card-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
           </svg>
         </div>
-        <span class="action-label-text">احفظ</span>
-      </button>
+        <h3 class="action-card-title">يوتيوب</h3>
+        <p class="action-card-desc">فيديوهات طويلة وقيمة</p>
+        <div class="action-card-arrow">➔</div>
+      </a>
 
-      <!-- Share Link -->
-      <button class="action-circle-btn" id="copyLinkBtn">
-        <div class="action-circle-icon">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="18" cy="5" r="3"></circle>
-            <circle cx="6" cy="12" r="3"></circle>
-            <circle cx="18" cy="19" r="3"></circle>
-            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+      <!-- 3. Instagram -->
+      <a href="https://instagram.com/" target="_blank" rel="noopener" class="action-card" data-title="إنستغرام اقتباسات وإلهام">
+        <div class="action-card-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
           </svg>
         </div>
-        <span class="action-label-text">شارك</span>
-      </button>
+        <h3 class="action-card-title">إنستغرام</h3>
+        <p class="action-card-desc">اقتباسات وإلهام</p>
+        <div class="action-card-arrow">➔</div>
+      </a>
+
+      <!-- 4. TikTok -->
+      <a href="https://www.tiktok.com/@lejardindespensees" target="_blank" rel="noopener" class="action-card" data-title="تيك توك مقاطع يومية ملهمة">
+        <div class="action-card-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.29-2.61.74-5.23 2.68-7.01 1.54-1.43 3.65-2.22 5.76-2.18.15 0 .3 0 .45.01v4.06c-.95-.08-1.92.14-2.73.65-.96.59-1.62 1.6-1.78 2.71-.24 1.44.3 2.94 1.38 3.86 1.08.92 2.61 1.25 3.98.81 1.45-.44 2.58-1.69 2.82-3.19.08-.47.1-.96.1-1.44V.02z"/>
+          </svg>
+        </div>
+        <h3 class="action-card-title">تيك توك</h3>
+        <p class="action-card-desc">مقاطع يومية ملهمة</p>
+        <div class="action-card-arrow">➔</div>
+      </a>
+
+    </section>
+
+    <!-- Wide Card 1: Newsletter (النشرة البريدية) -->
+    <div class="wide-newsletter-card">
+      <div class="newsletter-info">
+        <div class="newsletter-icon">✉️</div>
+        <div class="newsletter-text">
+          <h3>النشرة البريدية</h3>
+          <p>استلم اقتباسة ملهمة كل صباح</p>
+        </div>
+      </div>
+      <form class="newsletter-form" onsubmit="event.preventDefault(); alert('تم الاشتراك بنجاح! ✨');">
+        <input type="email" class="newsletter-input" placeholder="أدخل بريدك الإلكتروني..." required>
+        <button type="submit" class="newsletter-btn">اشترك الآن</button>
+      </form>
     </div>
 
-    <!-- Footer Copyright -->
-    <footer class="bio-footer-copyright">
-      <p>حقوق النشر &copy; <a href="../">حكمة ونور</a> - جميع الحقوق محفوظة</p>
+    <!-- Wide Card 2: Community (انضم إلى مجتمع الحكمة) -->
+    <div class="wide-community-card">
+      <div class="community-info">
+        <div class="community-icon">👥</div>
+        <div class="community-text">
+          <h3>انضم إلى مجتمع الحكمة</h3>
+          <p>تبادل الأفكار وتطور مع الآخرين</p>
+        </div>
+      </div>
+      <a href="../#contactSection" class="community-btn">انضم الآن</a>
+    </div>
+
+    <!-- Feature Banner Card (Lantern & Books Quote Artwork) -->
+    <div class="feature-quote-banner">
+      <img src="../newsletter_lantern.jpg" alt="فانوس الحكمة" class="banner-side-art">
+      <div class="banner-quote-content">
+        <p class="banner-quote-text">“ دقيقة واحدة من القراءة قد تغيّر حياة كاملة. ”</p>
+        <div class="banner-leaf-ornament">
+          <span class="banner-leaf-line"></span>
+          <span style="color: var(--accent-gold); font-size: 0.9rem;">🌿</span>
+          <span class="banner-leaf-line"></span>
+        </div>
+      </div>
+      <img src="../desk_coffee_book.jpg" alt="كتب رصينة" class="banner-side-art">
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+      <div class="footer-brand-title">حكمة ونور</div>
+      <div class="footer-actions-row">
+        <!-- Send -->
+        <button class="footer-action-btn" onclick="navigator.clipboard.writeText(window.location.href); alert('تم نسخ الرابط! ✨');" title="مشاركة">✈️</button>
+        <!-- Comment -->
+        <a href="../#contactSection" class="footer-action-btn" title="تعليق">💬</a>
+        <!-- Bookmark -->
+        <button class="footer-action-btn" onclick="alert('اضغط Ctrl+D لحفظ الصفحة 📌');" title="حفظ">📌</button>
+        <!-- Like -->
+        <button class="footer-action-btn" onclick="alert('شكراً لإعجابك! ❤️');" title="إعجاب">❤️</button>
+      </div>
+      <p class="footer-copyright-text">حكمة ونور - جميع الحقوق محفوظة 2026 &copy;</p>
     </footer>
 
   </main>
-
-  <!-- Toast Notification Message -->
-  <div class="toast-msg" id="toastMsg">تم نسخ الرابط بنجاح! ✨</div>
 
   <!-- Service Worker PWA Registration -->
   <script>
@@ -942,153 +795,6 @@
         navigator.serviceWorker.register('../sw.js')
           .then(reg => console.log('[PWA] Service Worker registered:', reg.scope))
           .catch(err => console.log('[PWA] Service Worker registration failed:', err));
-      });
-    }
-
-    // PWA Install Prompt Handler
-    let deferredPrompt;
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      const installBtn = document.getElementById('pwaInstallCard');
-      if (installBtn) {
-        installBtn.style.display = 'flex';
-      }
-    });
-
-    function triggerPwaInstall() {
-      if (deferredPrompt) {
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') {
-            console.log('[PWA] User accepted the install prompt');
-          }
-          deferredPrompt = null;
-        });
-      } else {
-        alert('لتثبيت التطبيق على هاتفك:\n1. اضغط على خيارات المتصفح (⋮ أو 📤)\n2. اختر "إضافة إلى الشاشة الرئيسية" (Add to Home Screen)');
-      }
-    }
-
-    const quotesList = [
-      "دقيقة واحدة من القراءة قد تغيّر حياة كاملة.",
-      "الحياة التي لا تُفحص لا تستحق أن تُعاش. — سقراط",
-      "من لا يحب العزلة، لا يحب الحرية. — شوبنهاور",
-      "العوائق في الطريق تصبح هي الطريق بنفسه. — ماركوس أوريليوس",
-      "السعادة ليست إلا غيابًا مؤقتًا للألم. — شوبنهاور",
-      "نحن نعاني في مخيلتنا أكثر بكثير مما نعاني في الواقع. — سينيكا",
-      "العقل ليس وعاءً نملؤه، بل نارًا نوقدها. — بلوتارخ",
-      "ما لا يقتلني يجعلني أقوى. — نيتشه",
-      "من يعرف الآخرين أريب، ومن يعرف نفسه حكيم. — لاوتسو",
-      "ليس الغني من يملك الكثير، بل من يكتفي بما لديه. — إبيقور",
-      "في قلب كل شتاء، تعلمت أن في داخلي صيفًا لا يُقهر. — ألبير كامو",
-      "أعظم انتصار هو الانتصار على الذات. — أفلاطون",
-      "الجهل أصل كل شر، وفضيلة العقل هي المعرفة. — أرسطو",
-      "السلام الداخلي لا يعتمد على ما يحدث لنا، بل على كيف نفسره. — ماركوس أوريليوس",
-      "امتلاك النفس عند الغضب هو الاختبار الحقيقي للقوة. — كونفوشيوس",
-      "كلما ازدادت معرفتك، زاد إدراكك لما تجهله. — إيمانويل كانت",
-      "الهدوء الداخلي هو الحصن المنيع ضد عواصف الحياة. — إبيكتيتوس",
-      "الرضا بالقليل هو الثروة الحقيقية، لأن الطبيعة لا تطلب الكثير. — إبيقور",
-      "الصمت هو الإجابة الأكثر بلاغة في كثير من الأحيان. — باروخ سبينوزا",
-      "تذكر دائمًا أنك تملك السلطة على عقلك وليس على الأحداث الخارجية. — ماركوس أوريليوس",
-      "من يتملك الحاضر، يتملك حياته بالكامل. — آرثر شوبنهاور",
-      "السعادة تُصنع في الداخل، ولا تُشترى من الخارج. — حكمة رصينة"
-    ];
-
-    let currentQuoteIdx = 0;
-    const quoteTextEl = document.getElementById('quoteText');
-    const quoteRefreshBtn = document.getElementById('quoteRefreshBtn');
-
-    quoteRefreshBtn.addEventListener('click', () => {
-      currentQuoteIdx = (currentQuoteIdx + 1) % quotesList.length;
-      quoteTextEl.style.opacity = '0';
-      quoteTextEl.style.transform = 'translateY(6px)';
-      setTimeout(() => {
-        quoteTextEl.textContent = quotesList[currentQuoteIdx];
-        quoteTextEl.style.opacity = '1';
-        quoteTextEl.style.transform = 'translateY(0)';
-      }, 200);
-      showToast('تم تحديث الاقتباس اليومي 🌿');
-    });
-
-    // Theme Toggle
-    const themeBtn = document.getElementById('themeBtn');
-    themeBtn.addEventListener('click', () => {
-      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      showToast(newTheme === 'dark' ? 'تم تفعيل الوضع الليلي 🌙' : 'تم تفعيل الوضع النهاري ☀️');
-    });
-
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      document.documentElement.setAttribute('data-theme', savedTheme);
-    }
-
-    // Search Drawer Filter
-    const searchToggleBtn = document.getElementById('searchToggleBtn');
-    const searchDrawer = document.getElementById('searchDrawer');
-    const searchInput = document.getElementById('searchInput');
-    const linkCards = document.querySelectorAll('.link-card, .social-card-item');
-
-    searchToggleBtn.addEventListener('click', () => {
-      searchDrawer.classList.toggle('active');
-      if (searchDrawer.classList.contains('active')) {
-        searchInput.focus();
-      }
-    });
-
-    searchInput.addEventListener('input', (e) => {
-      const term = e.target.value.trim().toLowerCase();
-      linkCards.forEach(card => {
-        const textData = card.getAttribute('data-title') || '';
-        if (textData.toLowerCase().includes(term)) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-
-    // Toast Actions
-    const toastMsg = document.getElementById('toastMsg');
-
-    function showToast(msgText) {
-      toastMsg.textContent = msgText;
-      toastMsg.classList.add('show');
-      setTimeout(() => {
-        toastMsg.classList.remove('show');
-      }, 2600);
-    }
-
-    document.getElementById('shareBtn').addEventListener('click', async () => {
-      if (navigator.share) {
-        try {
-          await navigator.share({
-            title: 'حكمة ونور - Hikma & Nour',
-            text: 'أفكار عميقة لإيقاظ العقل وإشراق الروح',
-            url: window.location.href
-          });
-        } catch (err) {}
-      } else {
-        copyToClipboard(window.location.href);
-      }
-    });
-
-    document.getElementById('copyLinkBtn').addEventListener('click', () => {
-      copyToClipboard(window.location.href);
-    });
-
-    document.getElementById('bookmarkBtn').addEventListener('click', () => {
-      showToast('اضغط Ctrl+D لحفظ الصفحة في المفضلة 📌');
-    });
-
-    function copyToClipboard(text) {
-      navigator.clipboard.writeText(text).then(() => {
-        showToast('تم نسخ الرابط بنجاح! ✨');
-      }).catch(() => {
-        showToast('تم النسخ إلى الحافظة!');
       });
     }
   </script>
