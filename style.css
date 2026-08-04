@@ -5765,16 +5765,33 @@ textarea.form-control {
 }
 
 
+/* ==========================================================================
+   HARMONIOUS BRAND EMBLEM LOGO DESIGN
+   ========================================================================== */
 .brand-logo-img {
-  width: 54px !important;
-  height: 54px !important;
+  width: 44px !important;
+  height: 44px !important;
   object-fit: contain !important;
   border-radius: 50% !important;
   background: #FAF6EF !important;
-  border: 2.5px solid #DFB15B !important;
-  box-shadow: 0 0 16px rgba(223, 177, 91, 0.6), 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+  border: 1.5px solid rgba(223, 177, 91, 0.55) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25), 0 0 12px rgba(223, 177, 91, 0.25) !important;
   padding: 3px !important;
-  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  flex-shrink: 0 !important;
+}
+
+.brand-logo-img:hover {
+  transform: scale(1.08) rotate(3deg) !important;
+  border-color: rgba(240, 199, 117, 0.9) !important;
+  box-shadow: 0 6px 20px rgba(223, 177, 91, 0.45) !important;
+}
+
+.nav-brand {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  text-decoration: none !important;
 }
 
 .brand-logo-img:hover {
