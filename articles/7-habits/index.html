@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>٧ عادات تدمر إمكانياتك دون أن تشعر | حكمة ونور</title>
+  <meta name="description" content="سبع عادات تمنعك من تحقيق إمكانياتك الحقيقية، مع حلول عملية مستوحاة من حكم كبار المفكرين.">
+  <link rel="icon" type="image/png" href="../../brand_logo_official.png">
+  <link rel="manifest" href="../../manifest.json">
+  <meta name="theme-color" content="#0D1410">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Noto+Naskh+Arabic:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-dark: #0A0E0B;
+      --bg-card: rgba(18, 26, 21, 0.85);
+      --gold: #DFB15B;
+      --gold-light: #F5D98A;
+      --ivory: #FAF6EF;
+      --text-main: #EDE8DF;
+      --text-muted: #A8A08E;
+      --accent-green: #2A3D2E;
+    }
+
+    body {
+      font-family: 'Cairo', 'Noto Naskh Arabic', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 2;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url('../../habits_library_hero.jpg') center/cover no-repeat;
+      filter: brightness(0.35);
+      z-index: 0;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(10,14,11,0.3) 0%, rgba(10,14,11,0.95) 100%);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      max-width: 800px;
+      padding: 60px 24px;
+    }
+    .hero-badge {
+      display: inline-block;
+      padding: 6px 28px;
+      border: 1px solid var(--gold);
+      border-radius: 30px;
+      color: var(--gold);
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      margin-bottom: 28px;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      color: var(--ivory);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+    .hero h1 span {
+      color: var(--gold);
+    }
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 32px;
+      line-height: 1.9;
+    }
+    .hero-quote {
+      background: var(--bg-card);
+      border-right: 4px solid var(--gold);
+      border-radius: 12px;
+      padding: 24px 32px;
+      font-size: 1.15rem;
+      color: var(--gold-light);
+      font-style: italic;
+      max-width: 600px;
+      margin: 0 auto;
+      backdrop-filter: blur(12px);
+    }
+
+    /* ===== ARTICLE CONTAINER ===== */
+    .article-body {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    /* ===== INTRO ===== */
+    .intro-text {
+      font-size: 1.08rem;
+      color: var(--text-main);
+      line-height: 2.2;
+      margin-bottom: 48px;
+      text-align: justify;
+    }
+    .intro-text p { margin-bottom: 18px; }
+
+    /* ===== HABIT SECTION ===== */
+    .habit-section {
+      margin-bottom: 56px;
+      padding: 36px 32px;
+      background: var(--bg-card);
+      border-radius: 20px;
+      border: 1px solid rgba(223,177,91,0.15);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .habit-section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(223,177,91,0.12);
+    }
+
+    .habit-number {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .habit-number .num {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), #B38A3C);
+      color: var(--bg-dark);
+      font-size: 1.3rem;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .habit-number .label {
+      font-size: 0.85rem;
+      color: var(--gold);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .habit-section h2 {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--ivory);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(223,177,91,0.2);
+    }
+
+    .habit-section p {
+      font-size: 1.02rem;
+      color: var(--text-main);
+      line-height: 2.1;
+      margin-bottom: 14px;
+    }
+
+    .habit-quote {
+      background: rgba(223,177,91,0.08);
+      border-right: 3px solid var(--gold);
+      border-radius: 10px;
+      padding: 18px 24px;
+      margin: 20px 0;
+      font-size: 1.08rem;
+      color: var(--gold-light);
+      font-style: italic;
+      line-height: 1.9;
+    }
+
+    .habit-question {
+      background: rgba(42,61,46,0.4);
+      border-radius: 12px;
+      padding: 18px 24px;
+      margin: 20px 0;
+      text-align: center;
+      font-size: 1.05rem;
+      color: var(--gold-light);
+      font-weight: 600;
+    }
+
+    .habit-lesson {
+      background: linear-gradient(135deg, rgba(223,177,91,0.12), rgba(42,61,46,0.3));
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-top: 20px;
+    }
+    .habit-lesson h3 {
+      color: var(--gold);
+      font-size: 1rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    .habit-lesson ul {
+      list-style: none;
+      padding: 0;
+    }
+    .habit-lesson ul li {
+      padding: 4px 0;
+      color: var(--text-main);
+      font-size: 0.98rem;
+    }
+    .habit-lesson ul li::before {
+      content: '✦ ';
+      color: var(--gold);
+    }
+
+    /* ===== PAGE DIVIDER ===== */
+    .page-divider {
+      text-align: center;
+      margin: 64px 0;
+      position: relative;
+    }
+    .page-divider::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+    }
+    .page-divider span {
+      position: relative;
+      background: var(--bg-dark);
+      padding: 0 24px;
+      color: var(--gold);
+      font-size: 1.2rem;
+    }
+
+    /* ===== FINALE IMAGE ===== */
+    .finale-image {
+      width: 100%;
+      border-radius: 20px;
+      margin: 48px 0;
+      box-shadow: 0 12px 48px rgba(0,0,0,0.6);
+      border: 1px solid rgba(223,177,91,0.2);
+    }
+
+    /* ===== CONCLUSION ===== */
+    .conclusion {
+      text-align: center;
+      padding: 48px 32px;
+      background: linear-gradient(135deg, rgba(223,177,91,0.08), rgba(42,61,46,0.2));
+      border-radius: 24px;
+      border: 1px solid rgba(223,177,91,0.2);
+      margin-top: 48px;
+    }
+    .conclusion h2 {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 1.8rem;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+    .conclusion p {
+      font-size: 1.05rem;
+      color: var(--text-main);
+      line-height: 2;
+      margin-bottom: 14px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .conclusion .final-quote {
+      font-size: 1.2rem;
+      color: var(--gold-light);
+      font-style: italic;
+      margin-top: 24px;
+      padding: 20px;
+      border: 1px solid rgba(223,177,91,0.3);
+      border-radius: 14px;
+      background: rgba(0,0,0,0.3);
+    }
+
+    /* ===== CTA DOWNLOAD ===== */
+    .cta-download {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 36px;
+      padding: 16px 36px;
+      background: linear-gradient(135deg, var(--gold), #B38A3C);
+      color: var(--bg-dark);
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      max-width: 360px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-download:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 32px rgba(223,177,91,0.4);
+    }
+
+    /* ===== FOOTER ===== */
+    .article-footer {
+      text-align: center;
+      padding: 40px 24px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(223,177,91,0.1);
+      margin-top: 60px;
+    }
+    .article-footer a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    /* ===== BACK BUTTON ===== */
+    .back-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 100;
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 1px solid rgba(223,177,91,0.3);
+      color: var(--gold);
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      backdrop-filter: blur(12px);
+      transition: all 0.3s ease;
+    }
+    .back-btn:hover {
+      background: var(--gold);
+      color: var(--bg-dark);
+    }
+
+    /* ===== PRINT STYLES ===== */
+    @media print {
+      body { background: white; color: #1a1a1a; }
+      .back-btn, .cta-download { display: none; }
+      .hero::before, .hero::after { display: none; }
+      .hero { min-height: auto; background: #f5f0e5; }
+      .habit-section { break-inside: avoid; border: 1px solid #ddd; background: #fafafa; }
+      .hero h1 { color: #1a1a1a; }
+      .hero h1 span { color: #B38A3C; }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.8rem; }
+      .habit-section { padding: 24px 18px; }
+      .article-body { padding: 40px 16px 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back Button -->
+  <a href="../../" class="back-btn" title="الرئيسية">←</a>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">مقال حصري — مجاني</div>
+      <h1>٧ عادات تدمر <span>إمكانياتك</span> دون أن تشعر</h1>
+      <p class="hero-subtitle">وكيف تتجاوزها وفقاً لحكمة أعظم المفكرين</p>
+      <div class="hero-quote">
+        ❝ ليست الظروف هي التي تصنع مستقبلك، بل العادات التي تكررها كل يوم. ❞
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ARTICLE BODY ===== -->
+  <main class="article-body">
+
+    <!-- INTRO -->
+    <div class="intro-text">
+      <p>كل إنسان يحمل داخله قدرات عظيمة، لكن هذه القدرات قد تبقى نائمة إذا استسلم لعادات صغيرة تتكرر يومًا بعد يوم. فالعادات لا تغيّر حياتنا في يوم واحد، لكنها تبني مستقبلنا بصمت. وما نفعله اليوم سيصبح شخصيتنا غدًا.</p>
+      <p>لقد أدرك الفلاسفة والمفكرون منذ آلاف السنين أن السيطرة على النفس أهم من السيطرة على العالم. فالنصر الحقيقي يبدأ من الداخل، ومن القدرة على تهذيب الفكر وتوجيه السلوك.</p>
+      <p>في هذا المقال سنستعرض سبع عادات تمنع الكثير من الناس من تحقيق إمكانياتهم الحقيقية، مع حلول عملية مستوحاة من حكم كبار المفكرين.</p>
+    </div>
+
+    <!-- ===== HABIT 1 ===== -->
+    <article class="habit-section">
+      <div class="habit-number">
+        <div class="num">١</div>
+        <div class="label">العادة الأولى</div>
+      </div>
+      <h2>انتظار الوقت المناسب</h2>
+      <p>يؤجل كثير من الناس أحلامهم بحجة أن الظروف ليست مناسبة بعد.</p>
+      <div class="habit-quote">
+        ❝ من ينتظر الرياح المثالية لن يبحر أبداً. ❞
+      </div>
+      <p>الحقيقة أن الوقت المثالي لا يأتي، بل نصنعه نحن بالخطوة الأولى.</p>
+      <p>قد تبدأ بإمكانيات بسيطة، لكن الاستمرار يحول البدايات الصغيرة إلى إنجازات كبيرة.</p>
+      <div class="habit-question">هل أنت تنتظر النجاح... أم تعمل من أجله؟</div>
+      <div class="habit-lesson">
+        <h3>الدرس</h3>
+        <ul>
+          <li>ابدأ بما تملك.</li>
+          <li>تعلم أثناء الطريق.</li>
+          <li>فالخبرة تأتي من التجربة، لا من الانتظار.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- ===== HABIT 2 ===== -->
+    <article class="habit-section">
+      <div class="habit-number">
+        <div class="num">٢</div>
+        <div class="label">العادة الثانية</div>
+      </div>
+      <h2>مقارنة نفسك بالآخرين</h2>
+      <p>في عصر وسائل التواصل الاجتماعي أصبح من السهل أن نرى نجاح الآخرين، لكننا لا نرى تعبهم ولا سنوات المحاولة التي سبقت هذا النجاح.</p>
+      <p>المقارنة المستمرة تجعل الإنسان يشعر بالنقص حتى وإن كان يتقدم.</p>
+      <div class="habit-quote">
+        ❝ كان الفيلسوف شوبنهاور يرى أن السعادة لا تعتمد على ما نملك، بل على الطريقة التي ننظر بها إلى حياتنا. ❞
+      </div>
+      <p>بدلاً من مقارنة نفسك بالآخرين، قارن نفسك بالشخص الذي كنت عليه بالأمس.</p>
+      <p>إذا أصبحت أفضل بنسبة ١٪ كل يوم، فإنك بعد عام ستكون شخصًا مختلفًا تمامًا.</p>
+    </article>
+
+    <!-- ===== HABIT 3 ===== -->
+    <article class="habit-section">
+      <div class="habit-number">
+        <div class="num">٣</div>
+        <div class="label">العادة الثالثة</div>
+      </div>
+      <h2>البحث عن رضا الجميع</h2>
+      <p>لا يمكنك إرضاء جميع الناس.</p>
+      <p>وكلما حاولت ذلك، خسرت جزءًا من شخصيتك.</p>
+      <p>أعظم المفكرين تعرضوا للنقد والسخرية، لكنهم لم يتخلوا عن أفكارهم.</p>
+      <p>اجعل قيمك هي البوصلة، لا آراء الناس.</p>
+      <div class="habit-question">هل أفعل هذا لأنني مقتنع به... أم لأنني أخشى كلام الآخرين؟</div>
+    </article>
+
+    <!-- ===== PAGE DIVIDER ===== -->
+    <div class="page-divider"><span>✦ ✦ ✦</span></div>
+
+    <!-- ===== HABIT 4 ===== -->
+    <article class="habit-section">
+      <div class="habit-number">
+        <div class="num">٤</div>
+        <div class="label">العادة الرابعة</div>
+      </div>
+      <h2>إدمان المشتتات</h2>
+      <p>أصبح العقل اليوم محاطًا بالمشتتات من كل جانب.</p>
+      <p>إشعارات الهاتف. الفيديوهات القصيرة. الأخبار. الرسائل.</p>
+      <p>كل دقيقة تقاطع تركيزك، وكل مقاطعة تسرق جزءًا من طاقتك الذهنية.</p>
+      <div class="habit-quote">
+        ❝ العقول العظيمة كانت تمنح نفسها وقتًا للتأمل والصمت. ❞
+      </div>
+      <p>خصص ثلاثين دقيقة يوميًا بعيدًا عن الهاتف. ستندهش من كمية الأفكار الجديدة التي ستولد في عقلك.</p>
+    </article>
+
+    <!-- ===== HABIT 5 ===== -->
+    <article class="habit-section">
+      <div class="habit-number">
+        <div class="num">٥</div>
+        <div class="label">العادة الخامسة</div>
+      </div>
+      <h2>الخوف من الفشل</h2>
+      <p>الفشل ليس نهاية الطريق. بل هو معلم لا يجامل أحدًا.</p>
+      <p>كل تجربة فاشلة تمنحك درسًا جديدًا. أما الشخص الذي لا يجرّب خوفًا من الفشل، فهو يحكم على نفسه بالبقاء في مكانه.</p>
+      <div class="habit-quote">
+        ❝ تذكر أن الطفل يتعلم المشي بعد عشرات السقوطات. ولو استسلم من أول محاولة، لما مشى أبدًا. ❞
+      </div>
+    </article>
+
+    <!-- ===== HABIT 6 ===== -->
+    <article class="habit-section">
+      <div class="habit-number">
+        <div class="num">٦</div>
+        <div class="label">العادة السادسة</div>
+      </div>
+      <h2>إهمال القراءة</h2>
+      <p>القراءة ليست هواية فقط. إنها استثمار طويل الأمد في العقل.</p>
+      <p>كل كتاب تقرؤه يمنحك سنوات من الخبرة عاشها مؤلفه. قد تغير فكرة واحدة حياتك بالكامل.</p>
+      <div class="habit-lesson">
+        <h3>نصيحة</h3>
+        <ul>
+          <li>اجعل القراءة عادة يومية، ولو لعشر دقائق فقط.</li>
+          <li>فالعقول الكبيرة تُبنى صفحةً بعد صفحة.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- ===== HABIT 7 ===== -->
+    <article class="habit-section">
+      <div class="habit-number">
+        <div class="num">٧</div>
+        <div class="label">العادة السابعة</div>
+      </div>
+      <h2>عدم محاسبة النفس</h2>
+      <p>قبل النوم بدقائق، اجلس مع نفسك. اسألها:</p>
+      <div class="habit-question">
+        ماذا تعلمت اليوم؟<br>
+        ما الخطأ الذي ارتكبته؟<br>
+        كيف أصبح أفضل غدًا؟
+      </div>
+      <p>هذه الدقائق القليلة تصنع فرقًا هائلًا مع مرور الوقت. فالإنسان الذي يراجع نفسه باستمرار، يتطور باستمرار.</p>
+    </article>
+
+    <!-- ===== FINALE IMAGE ===== -->
+    <img src="../../habits_path_finale.jpg" alt="طريق الحكمة نحو النور" class="finale-image" loading="lazy">
+
+    <!-- ===== CONCLUSION ===== -->
+    <div class="conclusion">
+      <h2>الخاتمة</h2>
+      <p>الحياة لا تتغير بقرار واحد، بل بعادة واحدة تتكرر كل يوم.</p>
+      <p>وكل خطوة صغيرة نحو الأفضل هي استثمار في مستقبلك.</p>
+      <p>لا تنتظر أن تصبح الحياة أسهل. بل كن أنت أقوى، وأكثر حكمة، وأكثر صبرًا.</p>
+      <div class="final-quote">
+        ❝ النجاح الحقيقي ليس أن تتفوق على الآخرين، بل أن تتفوق على نفسك كل يوم. ❞
+      </div>
+      <a href="javascript:window.print()" class="cta-download" onclick="window.print(); return false;">
+        📥 تحميل المقال PDF مجاناً
+      </a>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="article-footer">
+      <p>© حكمة ونور — <a href="../../links/">تابعنا على وسائل التواصل</a></p>
+      <p>Le Jardin des Pensées — Hikma & Nour</p>
+    </footer>
+
+  </main>
+
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('../../sw.js');
+    }
+  </script>
+
+</body>
+</html>
