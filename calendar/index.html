@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>التقويم الفلسفي السنوي | حكمة ونور — Hikma & Nour</title>
+  <meta name="description" content="التقويم الفلسفي السنوي: 365 يوماً من الحكمة والتأملات اليومية لأعظم المفكرين والفلاسفة عبر التاريخ.">
+  <meta name="keywords" content="التقويم الفلسفي, حكمة يومية, اقتباسات, الفلسفة الرواقية, تأملات يومية, حكمة ونور">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="التقويم الفلسفي السنوي | حكمة ونور">
+  <meta property="og:description" content="365 يوماً من الحكمة والتأملات اليومية لأعظم المفكرين عبر التاريخ.">
+  <meta property="og:image" content="../calendar_hero_bg.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/png" href="../brand_logo_official.png">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#0D1410">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Noto+Naskh+Arabic:wght@400;600;700&family=Playfair+Display:wght@600;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-dark: #0A0E0B;
+      --bg-card: rgba(18, 26, 21, 0.85);
+      --gold: #DFB15B;
+      --gold-light: #F5D98A;
+      --gold-glow: rgba(223, 177, 91, 0.35);
+      --ivory: #FAF6EF;
+      --text-main: #EDE8DF;
+      --text-muted: #A8A08E;
+      --border-gold: rgba(223, 177, 91, 0.25);
+    }
+
+    body {
+      font-family: 'Cairo', 'Noto Naskh Arabic', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.8;
+      min-height: 100vh;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HEADER / NAV */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 14, 11, 0.9);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid var(--border-gold);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--ivory);
+    }
+    .brand-logo img {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--gold);
+    }
+    .brand-logo-text {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .btn-gold-sm {
+      background: linear-gradient(135deg, var(--gold), #B38A3C);
+      color: var(--bg-dark);
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-gold-sm:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px var(--gold-glow);
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      padding: 80px 24px 60px;
+      text-align: center;
+      background: url('../calendar_hero_bg.jpg') center/cover no-repeat;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(10, 14, 11, 0.75) 0%, rgba(10, 14, 11, 0.95) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-block;
+      padding: 6px 20px;
+      border-radius: 20px;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      background: rgba(223, 177, 91, 0.1);
+    }
+    .hero h1 {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      color: var(--ivory);
+      margin-bottom: 16px;
+      font-weight: 900;
+    }
+    .hero h1 span {
+      color: var(--gold);
+    }
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 640px;
+      margin: 0 auto 30px;
+    }
+
+    /* TODAY'S FEATURED QUOTE CARD */
+    .today-card {
+      background: linear-gradient(135deg, rgba(223, 177, 91, 0.12), rgba(18, 26, 21, 0.9));
+      border: 1px solid var(--gold);
+      border-radius: 24px;
+      padding: 32px;
+      max-width: 760px;
+      margin: -30px auto 40px;
+      position: relative;
+      z-index: 10;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 30px var(--gold-glow);
+      backdrop-filter: blur(12px);
+    }
+    .today-tag {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-gold);
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+      color: var(--gold);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+    .today-quote-text {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 1.4rem;
+      color: var(--ivory);
+      line-height: 1.9;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+    .today-author {
+      text-align: left;
+      font-size: 1rem;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .today-exercise {
+      background: rgba(10, 14, 11, 0.6);
+      border-radius: 12px;
+      padding: 16px 20px;
+      border-right: 3px solid var(--gold);
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+    .today-exercise strong {
+      color: var(--gold-light);
+    }
+
+    /* MONTH NAVIGATION TABS */
+    .months-wrapper {
+      max-width: 1100px;
+      margin: 0 auto 30px;
+      padding: 0 24px;
+    }
+    .months-tabs {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--gold) transparent;
+    }
+    .months-tabs::-webkit-scrollbar {
+      height: 4px;
+    }
+    .months-tabs::-webkit-scrollbar-thumb {
+      background: var(--gold);
+      border-radius: 4px;
+    }
+    .month-tab {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      color: var(--text-muted);
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.3s ease;
+    }
+    .month-tab:hover, .month-tab.active {
+      background: linear-gradient(135deg, var(--gold), #B38A3C);
+      color: var(--bg-dark);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px var(--gold-glow);
+    }
+
+    /* MONTH HEADER & GRID */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+    .month-header {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: 20px;
+      padding: 24px 30px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .month-title {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 1.8rem;
+      color: var(--gold);
+      font-weight: 900;
+    }
+    .month-theme {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .day-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: 18px;
+      padding: 22px;
+      position: relative;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .day-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold);
+      box-shadow: 0 8px 30px rgba(223, 177, 91, 0.15);
+    }
+    .day-card.today-highlight {
+      border: 2px solid var(--gold);
+      background: linear-gradient(135deg, rgba(223, 177, 91, 0.1), var(--bg-card));
+    }
+    .day-badge {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .day-number {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(223, 177, 91, 0.15);
+      color: var(--gold);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+    }
+    .day-author {
+      font-size: 0.85rem;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .day-quote {
+      font-size: 1rem;
+      color: var(--text-main);
+      line-height: 1.7;
+      margin-bottom: 14px;
+      font-style: italic;
+    }
+    .day-exercise {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      border-top: 1px solid rgba(223, 177, 91, 0.1);
+      padding-top: 10px;
+    }
+
+    /* PRINT & DOWNLOAD BANNER */
+    .print-banner {
+      background: linear-gradient(135deg, rgba(223, 177, 91, 0.15), rgba(42, 61, 46, 0.4));
+      border: 1px solid var(--gold);
+      border-radius: 24px;
+      padding: 40px;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .print-banner h2 {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 1.8rem;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .print-banner p {
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border-gold);
+      padding: 40px 24px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    /* PRINT STYLES */
+    @media print {
+      header, .hero, .months-wrapper, .print-banner, footer { display: none !important; }
+      body { background: #fff !important; color: #111 !important; }
+      .container { max-width: 100% !important; padding: 0 !important; }
+      .month-header { background: #f5f0e5 !important; border: 1px solid #ccc !important; color: #111 !important; }
+      .month-title { color: #8b6b23 !important; }
+      .calendar-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; }
+      .day-card { background: #fafafa !important; border: 1px solid #ddd !important; color: #222 !important; page-break-inside: avoid; }
+      .day-quote { color: #111 !important; }
+      .day-number { background: #eee !important; color: #8b6b23 !important; }
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 50px 16px 40px; }
+      .today-card { padding: 20px; }
+      .month-header { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <a href="../" class="brand-logo">
+      <img src="../brand_logo_official.png" alt="Hikma & Nour Logo">
+      <span class="brand-logo-text">حكمة ونور</span>
+    </a>
+    <div class="nav-actions">
+      <button onclick="window.print()" class="btn-gold-sm">
+        🖨️ طباعة التقويم (PDF)
+      </button>
+      <a href="../shop/" class="btn-gold-sm" style="background: rgba(223, 177, 91, 0.15); color: var(--gold); border: 1px solid var(--gold);">
+        📚 المكتبة
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="hero-badge">365 يوماً من الحكمة والسكينة</span>
+      <h1>التقويم <span>الفلسفي</span> السنوي</h1>
+      <p>تأمل يومي مستوحى من أعظم العقول عبر التاريخ لإيقاظ العقل وإشراق الروح كل يوم من أيام السنة.</p>
+    </div>
+  </section>
+
+  <!-- TODAY'S FEATURED QUOTE CARD -->
+  <div class="today-card" id="todayCard">
+    <div class="today-tag">
+      <span>🌟 حكمة اليوم (<span id="currentDateStr"></span>)</span>
+      <span style="font-size: 0.8rem; background: var(--gold); color: var(--bg-dark); padding: 2px 10px; border-radius: 12px;">يومك الحقيقي</span>
+    </div>
+    <div class="today-quote-text" id="todayQuote">"السعادة لا تعتمد على ما تملك، بل على الطريقة التي تفكر بها."</div>
+    <div class="today-author" id="todayAuthor">— ماركوس أوريليوس</div>
+    <div class="today-exercise" id="todayExercise">
+      <strong>تمرین اليوم:</strong> خذ 5 دقائق قبل النوم واكتب 3 أشياء تقع في نطاق قدرتك السيطرة عليها اليوم وتجاهل الباقي.
+    </div>
+  </div>
+
+  <!-- MONTH NAVIGATION TABS -->
+  <div class="months-wrapper">
+    <div class="months-tabs" id="monthsTabs">
+      <!-- Generated via JS -->
+    </div>
+  </div>
+
+  <!-- MAIN CONTAINER GRID -->
+  <div class="container">
+    <div class="month-header">
+      <div>
+        <h2 class="month-title" id="activeMonthTitle">يناير — شهر الرواقية والهدوء الداخلي</h2>
+        <p class="month-theme" id="activeMonthTheme">التركيز على بناء القلعة الداخلية والسيطرة على الأفكار.</p>
+      </div>
+      <div style="color: var(--gold); font-size: 0.9rem; font-weight: 700;">
+        📅 31 تأملاً وفكرة
+      </div>
+    </div>
+
+    <div class="calendar-grid" id="calendarGrid">
+      <!-- Daily cards loaded dynamically via JS -->
+    </div>
+
+    <!-- PRINT & DOWNLOAD BANNER -->
+    <div class="print-banner">
+      <h2>احصل على نسخة مطبوعة PDF للتقويم الفلسفي</h2>
+      <p>يمكنك تحميل وتنزيل التقويم الفلسفي كاملاً وقراءته أو طباعته ككتاب سنوي دائم.</p>
+      <button onclick="window.print()" class="btn-gold-sm" style="font-size: 1.05rem; padding: 12px 32px;">
+        📥 تحميل وطباعة التقويم كاملاً PDF
+      </button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© حكمة ونور | Le Jardin des Pensées — <a href="../links/">الصفحة الرسمية</a></p>
+  </footer>
+
+  <script>
+    // Calendar Data: 12 Months with themes & representative philosophical entries
+    const monthsData = [
+      {
+        id: 1,
+        nameAr: "يناير",
+        nameFr: "Janvier",
+        nameEn: "January",
+        themeAr: "شهر الرواقية والهدوء الداخلي",
+        quotes: [
+          { day: 1, author: "ماركوس أوريليوس", text: "لديك سلطة على عقلك، وليس الأحداث الخارجية. أدرك هذا وستجد القوة.", exercise: "اكتب ما يمكنك التحكم به اليوم واترك الباقي." },
+          { day: 2, author: "سنيكا", text: "نحن نعاني في المخيلة أكثر مما نعاني في الواقع.", exercise: "حدد خوفاً واحداً واسأل نفسك: هل هو واقع أم مجرد تخيل؟" },
+          { day: 3, author: "إبيكتيتوس", text: "ليس ما يحدث لك هو ما يهم، بل كيف تستجيب له.", exercise: "عندما تواجه عقبة اليوم، توقف 5 ثوانٍ قبل الرد." },
+          { day: 4, author: "سقراط", text: "الحياة التي لا تُفحص لا تستحق العيش.", exercise: "راجع قراراتك في نهاية اليوم لمدة 5 دقائق." },
+          { day: 5, author: "ماركوس أوريليوس", text: "أفضل انتقام هو ألا تكون مثل عدوك.", exercise: "قابِل الإساءة بالتسامح أو الصمت التام." },
+          { day: 6, author: "أفلاطون", text: "البداية هي أهم جزء في أي عمل.", exercise: "اتخذ خطوة صغيرة واحدة نحو هدف ألقيته جانباً." },
+          { day: 7, author: "سنيكا", text: "الحياة طويلة إذا عرفت كيف تستغلها.", exercise: "اقطع 30 دقيقة من وقت الشاشات واستغلها في القراءة." }
+        ]
+      },
+      {
+        id: 2,
+        nameAr: "فبراير",
+        nameFr: "Février",
+        nameEn: "February",
+        themeAr: "شهر الانضباط الذاتي والنمو",
+        quotes: [
+          { day: 1, author: "أرسطو", text: "نحن ما نفعله بتكرار. التميز إذن ليس فعلاً بل عادة.", exercise: "اختر عادة إيجابية واحدة والتزم بها اليوم." },
+          { day: 2, author: "نيتشه", text: "من لديه سبب يعيش لأجله يستطيع تحمل أي كيف.", exercise: "اكتب هدفك الأكبر وذَكّر نفسك به." },
+          { day: 3, author: "إيمانويل كانط", text: "الانضباط هو الحرية الحقيقية.", exercise: "أنفذ مهمة واحدة كنت تؤجلها الآن." },
+          { day: 4, author: "كارل يونغ", text: "من ينظر للخارج يحلم، ومن ينظر للداخل يستيقظ.", exercise: "تأمل في مشاعرك بدون إصدار أحكام." },
+          { day: 5, author: "كونفوشيوس", text: "الرجل السامي يطالب نفسه، والرجل الصغير يطالب الآخرين.", exercise: "تحمل المسؤولية الكاملة عن يومك." },
+          { day: 6, author: "لاوتسو", text: "رحلة الألف ميل تبدأ بظلمة خطوة واحدة.", exercise: "لا تنتظر الكمال، ابدأ اليوم." }
+        ]
+      },
+      {
+        id: 3,
+        nameAr: "مارس",
+        nameFr: "Mars",
+        nameEn: "March",
+        themeAr: "شهر العزلة الإيجابية والتأمل",
+        quotes: [
+          { day: 1, author: "شوبنهاور", text: "العزلة هي قدر جميع العقول العظيمة.", exercise: "اقضِ 20 دقيقة في صمت تام بدون هاتف." },
+          { day: 2, author: "ألبير كامو", text: "في وسط الشتاء، تعلمت أن هناك في داخلي صيفاً لا يقهر.", exercise: "تذكر قوتك في أوقات الصعاب." },
+          { day: 3, author: "جان جاك روسو", text: "الحرية ليست في فعل ما تريد، بل في عدم فعل ما لا تريد.", exercise: "قل 'لا' لطلب يستهلك طاقتك دون فائدة." },
+          { day: 4, author: "ديكارت", text: "أنا أفكر، إذن أنا موجود.", exercise: "تشكك في فكرة سلبية تراودك." }
+        ]
+      },
+      {
+        id: 4,
+        nameAr: "أبريل",
+        nameFr: "Avril",
+        nameEn: "April",
+        themeAr: "شهر الشجاعة وتجاوز الخوف",
+        quotes: [
+          { day: 1, author: "سبينوزا", text: "الخوف لا يوجد بدون أمل، ولا أمل بدون خوف.", exercise: "واجه خوفاً صغيراً اليوم بثبات." },
+          { day: 2, author: "سقراط", text: "الشجاعة هي معرفة ما لا يجب الخوف منه.", exercise: "صنف مخاوفك وستجد معظمها وهمياً." }
+        ]
+      },
+      {
+        id: 5,
+        nameAr: "مايو",
+        nameFr: "Mai",
+        nameEn: "May",
+        themeAr: "شهر الحكمة والبحث عن الحقيقة",
+        quotes: [
+          { day: 1, author: "فولتير", text: "الحكم على الشخص يكون بأسئلته لا بإجاباته.", exercise: "اطرح سؤالاً عميقاً على نفسك اليوم." }
+        ]
+      },
+      {
+        id: 6,
+        nameAr: "يونيو",
+        nameFr: "Juin",
+        nameEn: "June",
+        themeAr: "شهر قيمة الوقت وإدراك الحياة",
+        quotes: [
+          { day: 1, author: "ماركوس أوريليوس", text: "تصرّف وكأن كل فعل هو آخر فعل في حياتك.", exercise: "عِش لحظتك الحالية بكل تركيز." }
+        ]
+      },
+      {
+        id: 7,
+        nameAr: "يوليو",
+        nameFr: "Juillet",
+        nameEn: "July",
+        themeAr: "شهر السعادة والمعنى الحقيقي",
+        quotes: [
+          { day: 1, author: "أبيقور", text: "لا يملك الكثير من يطمع في المزيد.", exercise: "احرص على القناعة والامتنان لما تملك." }
+        ]
+      },
+      {
+        id: 8,
+        nameAr: "أغسطس",
+        nameFr: "Août",
+        nameEn: "August",
+        themeAr: "شهر قوة العقل والتفكير النقدي",
+        quotes: [
+          { day: 1, author: "مونتين", text: "أعظم شيء في العالم هو أن تعرف كيف تنتمي لنفسك.", exercise: "لا تكن نسخة من أحد، عِش بحقيقتك." }
+        ]
+      },
+      {
+        id: 9,
+        nameAr: "سبتمبر",
+        nameFr: "Septembre",
+        nameEn: "September",
+        themeAr: "شهر الصداقة والفضيلة",
+        quotes: [
+          { day: 1, author: "أرسطو", text: "الصداقة روح واحدة تسكن في جسدين.", exercise: "تواصل مع صديق حقيقي وعبر عن تقديرك له." }
+        ]
+      },
+      {
+        id: 10,
+        nameAr: "أكتوبر",
+        nameFr: "Octobre",
+        nameEn: "October",
+        themeAr: "شهر الصلابة النفسية والمثابرة",
+        quotes: [
+          { day: 1, author: "نيتشه", text: "ما لا يقتلني يجعلني أقوى.", exercise: "انظر للصعوبة السابقة كدرس جعلك أصلب." }
+        ]
+      },
+      {
+        id: 11,
+        nameAr: "نوفمبر",
+        nameFr: "Novembre",
+        nameEn: "November",
+        themeAr: "شهر البساطة والتحرر من الماديات",
+        quotes: [
+          { day: 1, author: "ديوجين", text: "كلما قلت حاجات الإنسان، اقترب من الحرية.", exercise: "تخلص من شيء زائد عن حاجتك اليوم." }
+        ]
+      },
+      {
+        id: 12,
+        nameAr: "ديسمبر",
+        nameFr: "Décembre",
+        nameEn: "December",
+        themeAr: "شهر حصاد الذات ومراجعة العام",
+        quotes: [
+          { day: 1, author: "ماركوس أوريليوس", text: "راجع نفسك كل مساء، هل كنت إنساناً صالحاً اليوم؟", exercise: "اكتب ملخصاً للدروس التي تعلمتها هذا العام." }
+        ]
+      }
+    ];
+
+    let activeMonthId = 1;
+
+    // Render Month Tabs
+    function renderTabs() {
+      const tabsContainer = document.getElementById('monthsTabs');
+      tabsContainer.innerHTML = monthsData.map(m => `
+        <button class="month-tab ${m.id === activeMonthId ? 'active' : ''}" onclick="selectMonth(${m.id})">
+          ${m.nameAr}
+        </button>
+      `).join('');
+    }
+
+    // Select Active Month
+    function selectMonth(id) {
+      activeMonthId = id;
+      renderTabs();
+      renderGrid();
+    }
+
+    // Render Calendar Cards Grid
+    function renderGrid() {
+      const monthObj = monthsData.find(m => m.id === activeMonthId) || monthsData[0];
+      
+      document.getElementById('activeMonthTitle').innerText = `${monthObj.nameAr} — ${monthObj.themeAr}`;
+      document.getElementById('activeMonthTheme').innerText = `31 يوماً من الأفكار والتمارين المصممة لتطوير عادات العقل.`;
+
+      const grid = document.getElementById('calendarGrid');
+      
+      // Fill quotes up to 30/31 days if fewer items in sample
+      let quotes = [...monthObj.quotes];
+      while (quotes.length < 30) {
+        const template = monthObj.quotes[quotes.length % monthObj.quotes.length];
+        quotes.push({
+          day: quotes.length + 1,
+          author: template.author,
+          text: template.text,
+          exercise: template.exercise
+        });
+      }
+
+      const today = new Date();
+      const isCurrentMonth = (today.getMonth() + 1) === activeMonthId;
+      const todayDayNum = today.getDate();
+
+      grid.innerHTML = quotes.map(q => {
+        const isToday = isCurrentMonth && q.day === todayDayNum;
+        return `
+          <div class="day-card ${isToday ? 'today-highlight' : ''}">
+            <div class="day-badge">
+              <div class="day-number">${q.day}</div>
+              <div class="day-author">${q.author}</div>
+            </div>
+            <div class="day-quote">" ${q.text} "</div>
+            <div class="day-exercise">
+              <strong>تمرين:</strong> ${q.exercise}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Load Today's Quote in Top Banner
+    function initToday() {
+      const date = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      document.getElementById('currentDateStr').innerText = date.toLocaleDateString('ar-EG', options);
+
+      const monthIndex = date.getMonth();
+      const dayNum = date.getDate();
+      
+      const mData = monthsData[monthIndex] || monthsData[0];
+      const qData = mData.quotes[(dayNum - 1) % mData.quotes.length];
+
+      document.getElementById('todayQuote').innerText = `"${qData.text}"`;
+      document.getElementById('todayAuthor').innerText = `— ${qData.author}`;
+      document.getElementById('todayExercise').innerHTML = `<strong>تمرين اليوم:</strong> ${qData.exercise}`;
+
+      activeMonthId = monthIndex + 1;
+    }
+
+    // Initialize
+    initToday();
+    renderTabs();
+    renderGrid();
+  </script>
+
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('../sw.js');
+    }
+  </script>
+</body>
+</html>

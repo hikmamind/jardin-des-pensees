@@ -130,6 +130,7 @@ function populateNavbarDropdown() {
 // --- Products Data Setup ---
 function getProducts() {
   return [
+    { id: 'prod_calendar', type: 'digital', price: 0.00, icon: 'book-open', image: '../calendar_hero_bg.jpg', titleFr: 'Calendrier Philosophique Annuel (365 Jours)', titleEn: 'Annual Philosophical Calendar (365 Days)', titleAr: 'التقويم الفلسفي السنوي (365 حكمة وتأمل)', descFr: '365 méditations et exercices quotidiens pour illuminer votre esprit chaque jour de l\'année. Format interactif et PDF imprimable.', descEn: '365 daily meditations and exercises to illuminate your mind every day of the year. Interactive format & printable PDF.', descAr: '365 تأملاً وتثقيفاً يومياً لأعظم المفكرين عبر التاريخ. تصميم تفاعلي ونسخة جاهزة للطباعة PDF.' },
     { id: 'prod_7_habits', type: 'digital', price: 0.00, icon: 'book-open', image: '../habits_library_hero.jpg', titleFr: '7 Habitudes qui Détruisent votre Potentiel', titleEn: '7 Habits That Destroy Your Potential', titleAr: '٧ عادات تدمر إمكانياتك دون أن تشعر', descFr: 'Comment dépasser vos mauvaises habitudes selon la sagesse des plus grands penseurs. Article illustré gratuit.', descEn: 'How to overcome bad habits according to the wisdom of the greatest thinkers. Free illustrated article.', descAr: 'كيف تتجاوز عاداتك السيئة وفقاً لحكمة أعظم المفكرين. مقال مجاني مصوّر بجودة عالية.' },
     { id: 'prod_marc_aurele_pdf', type: 'digital', price: 0.00, icon: 'book-open', image: '../marc_aurelius_writing.jpg', titleFr: 'E-book Marc Aurèle (PDF)', titleEn: 'Marcus Aurelius E-book (PDF)', titleAr: 'كتاب ماركوس أوريليوس (PDF)', descFr: 'Le livre PDF complet de Marc Aurèle avec le guide stoïcien et les exercices pratiques.', descEn: 'The complete PDF book of Marcus Aurelius with the Stoic guide and practical exercises.', descAr: 'كتاب إلكتروني كامل بصيغة PDF يحتوي على دليل الرواقية الكامل والتمارين التطبيقية لماركوس أوريليوس.' },
     { id: 'prod_schopenhauer', type: 'digital', price: 0.00, icon: 'book-open', image: '../thinkers/images/schopenhauer.jpg', titleFr: '20 Citations de Schopenhauer', titleEn: '20 Quotes of Schopenhauer', titleAr: '20 اقتباساً لآرثر شوبنهاور', descFr: 'E-book contenant 20 citations phares avec explications détaillées, leçons et questions de réflexion.', descEn: 'Ebook containing 20 key quotes with detailed explanations, lessons, and reflection questions.', descAr: 'كتاب إلكتروني يحتوي على 20 اقتباساً مختارة مع الشرح والدروس وأسئلة التأمل.' },
@@ -166,6 +167,7 @@ function populateProducts(category = 'all') {
 
     // File mapping
     const fileMap = {
+      'prod_calendar': '../calendar/index.html',
       'prod_7_habits': '../articles/7-habits/index.html',
       'prod_marc_aurele_pdf': 'e-book-marc-aurele.pdf',
       'prod_schopenhauer': '20-citations-schopenhauer.html',
@@ -455,6 +457,7 @@ function setupCheckoutSimulator() {
     });
 
     const fileMap = {
+      'prod_calendar': { name: '../calendar/index.html', labelFr: 'Ouvrir le Calendrier Philosophique', labelAr: 'فتح التقويم الفلسفي', labelEn: 'Open Philosophical Calendar' },
       'prod_7_habits': { name: '../articles/7-habits/index.html', labelFr: 'Lire l\'article 7 Habitudes', labelAr: 'قراءة مقال ٧ عادات', labelEn: 'Read 7 Habits Article' },
       'prod_marc_aurele_pdf': { name: 'e-book-marc-aurele.pdf', labelFr: 'Télécharger E-book Marc Aurèle (PDF)', labelAr: 'تحميل كتاب ماركوس أوريليوس (PDF)', labelEn: 'Download Marcus Aurelius Ebook (PDF)' },
       'prod_schopenhauer': { name: '20-citations-schopenhauer.html', labelFr: 'Lire l\'E-book Schopenhauer', labelAr: 'قراءة كتاب شوبنهاور', labelEn: 'Read Schopenhauer Ebook' },
