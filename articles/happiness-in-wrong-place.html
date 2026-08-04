@@ -179,6 +179,16 @@
       display: block;
     }
   </style>
+
+  <!-- PWA & Mobile Web App Meta -->
+  <link rel="manifest" href="../manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="حكمة ونور">
+  <link rel="apple-touch-icon" href="../icon-192.png">
+  <meta name="theme-color" content="#0D1410">
+
 </head>
 <body>
 
@@ -393,5 +403,42 @@
       });
     }
   </script>
+
+  <!-- Service Worker PWA Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('../sw.js')
+          .then(reg => console.log('[PWA] Service Worker registered:', reg.scope))
+          .catch(err => console.log('[PWA] Service Worker registration failed:', err));
+      });
+    }
+
+    // PWA Install Prompt Handler
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      const installBtn = document.getElementById('pwaInstallBtn');
+      if (installBtn) {
+        installBtn.style.display = 'inline-flex';
+      }
+    });
+
+    function triggerPwaInstall() {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('[PWA] User accepted the install prompt');
+          }
+          deferredPrompt = null;
+        });
+      } else {
+        alert('لتثبيت التطبيق على هاتفك:\n1. اضغط على خيارات المتصفح (⋮ أو 📤)\n2. اختر "إضافة إلى الشاشة الرئيسية" (Add to Home Screen)');
+      }
+    }
+  </script>
+
 </body>
 </html>
