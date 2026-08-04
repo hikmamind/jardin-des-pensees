@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>حكمة ونور | Hikma & Nour - الروابط الرسمية</title>
+  <title>حكمة ونور | Hikma & Nour - الصفحة الرسمية</title>
   <meta name="description" content="الصفحة الرسمية لحكمة ونور (Hikma & Nour) - أفكار عميقة لإيقاظ العقل وإشراق الروح. المقالات، الاقتباسات، الكتب المجانية ومواقع التواصل الاجتماعي.">
   <meta name="keywords" content="حكمة ونور, فلسفة, رواقية, تطوير الذات, اقتباسات, كتب مجانية, كتب فلسفة">
   
@@ -25,33 +25,32 @@
   <link rel="apple-touch-icon" href="../icon-192.png">
   <meta name="theme-color" content="#0D1410">
 
-  <!-- Fonts: Cairo, Noto Naskh Arabic & Playfair Display -->
+  <!-- Fonts: Cairo & Noto Naskh Arabic -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Noto+Naskh+Arabic:wght@500;700&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================================
-       EXACT MATCH LUXURY GOLDEN SUNSET DESIGN SYSTEM
+       EXACT MATCH REFERENCE DESIGN SYSTEM (GOLDEN SUNSET MOUNTAIN LAKE)
        ========================================================================== */
     :root {
-      --bg-dark: #0A0D0B;
-      --card-bg: rgba(18, 24, 20, 0.78);
-      --card-bg-hover: rgba(26, 35, 29, 0.92);
-      --card-border: rgba(179, 138, 60, 0.35);
-      --card-border-hover: rgba(240, 199, 117, 0.8);
-      --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
-      --card-shadow-hover: 0 16px 40px rgba(223, 177, 91, 0.3);
+      --bg-dark: #070907;
+      --card-bg: rgba(22, 28, 24, 0.72);
+      --card-bg-hover: rgba(30, 40, 33, 0.9);
+      --card-border: rgba(212, 168, 83, 0.32);
+      --card-border-hover: rgba(240, 199, 117, 0.85);
+      --card-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
 
       --text-main: #F7F1E5;
-      --text-sub: #C8BCAC;
-      --text-muted: #8E7B6A;
+      --text-sub: #D1C5B4;
+      --text-muted: #998D7D;
       --accent-gold: #DFB15B;
       --accent-gold-dark: #B38A3C;
       --accent-gold-bright: #F0C775;
-      --accent-gold-soft: rgba(223, 177, 91, 0.15);
+      --accent-gold-soft: rgba(223, 177, 91, 0.16);
 
-      --radius-card: 16px;
+      --radius-card: 14px;
       --radius-pill: 50px;
     }
 
@@ -78,7 +77,7 @@
       background: var(--bg-dark);
     }
 
-    /* Sunset Background Image Layer */
+    /* Fixed Sunset Background Layer */
     .bg-fixed-layer {
       position: fixed;
       top: 0;
@@ -90,7 +89,7 @@
       background-size: cover;
       background-position: center top;
       background-repeat: no-repeat;
-      transform: scale(1.03);
+      transform: scale(1.02);
     }
 
     .bg-overlay-layer {
@@ -100,28 +99,28 @@
       width: 100vw;
       height: 100vh;
       z-index: -1;
-      background: linear-gradient(180deg, rgba(10, 13, 11, 0.45) 0%, rgba(10, 13, 11, 0.85) 40%, rgba(10, 13, 11, 0.96) 100%);
-      backdrop-filter: blur(8px);
+      background: radial-gradient(circle at 50% 20%, rgba(13, 18, 14, 0.45) 0%, rgba(7, 9, 7, 0.88) 75%, rgba(7, 9, 7, 0.98) 100%);
+      backdrop-filter: blur(5px);
     }
 
     /* Page Wrapper Container */
     .page-wrapper {
       width: 100%;
-      max-width: 680px;
-      padding: 30px 20px 60px;
+      max-width: 860px;
+      padding: 24px 20px 60px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 16px;
     }
 
-    /* Top Left Menu Button ( ☰ ) */
+    /* Top Left Menu Circle Button ( ☰ ) */
     .top-bar-row {
       width: 100%;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      margin-bottom: -10px;
+      justify-content: flex-start;
+      margin-bottom: -5px;
     }
 
     .menu-circle-btn {
@@ -137,7 +136,7 @@
       cursor: pointer;
       backdrop-filter: blur(12px);
       transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     }
 
     .menu-circle-btn:hover {
@@ -146,7 +145,7 @@
       transform: scale(1.08);
     }
 
-    /* Header Branding & Circular Logo Badge */
+    /* Header Section: Centered Logo Emblem Badge & Title */
     .header-section {
       display: flex;
       flex-direction: column;
@@ -156,13 +155,13 @@
     }
 
     .profile-logo-wrapper {
-      width: 130px;
-      height: 130px;
+      width: 135px;
+      height: 135px;
       border-radius: 50%;
       padding: 4px;
       background: linear-gradient(135deg, #B38A3C 0%, #F0C775 50%, #DFB15B 100%);
       box-shadow: 0 12px 35px rgba(179, 138, 60, 0.45);
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       overflow: hidden;
     }
 
@@ -172,28 +171,28 @@
       border-radius: 50%;
       object-fit: contain;
       background: #FAF6EF;
-      padding: 5px;
+      padding: 4px;
       border: 2px solid #121A15;
       display: block;
       clip-path: circle(44% at 50% 48%);
     }
 
     .brand-title {
-      font-size: 3.2rem;
+      font-size: 3.5rem;
       font-weight: 900;
       color: var(--text-main);
-      font-family: 'Noto Naskh Arabic', 'Playfair Display', serif;
+      font-family: 'Noto Naskh Arabic', serif;
       letter-spacing: -0.5px;
       line-height: 1.2;
-      margin-bottom: 6px;
-      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+      margin-bottom: 4px;
+      text-shadow: 0 4px 25px rgba(0, 0, 0, 0.7);
     }
 
     .brand-subtitle {
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       font-weight: 600;
       color: var(--text-sub);
-      max-width: 420px;
+      max-width: 440px;
       line-height: 1.6;
     }
 
@@ -207,22 +206,22 @@
       backdrop-filter: blur(16px);
       box-shadow: var(--card-shadow);
       text-align: center;
-      font-size: 1.08rem;
+      font-size: 1.15rem;
       font-weight: 700;
       color: var(--accent-gold-bright);
       font-family: 'Noto Naskh Arabic', serif;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 12px;
     }
 
     .opening-quote-card span.quote-mark {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       color: var(--accent-gold);
     }
 
-    /* 4-Column Action Grid (Row 1: Buy, Download, Blog, Website) */
+    /* 4-Column Action Grid (Row 1 & Row 2) */
     .action-grid-4col {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -235,7 +234,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      padding: 22px 12px 18px;
+      padding: 22px 14px 18px;
       background: var(--card-bg);
       border: 1.5px solid var(--card-border);
       border-radius: var(--radius-card);
@@ -244,8 +243,8 @@
       text-decoration: none;
       color: var(--text-main);
       text-align: center;
-      min-height: 190px;
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      min-height: 200px;
+      transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
       position: relative;
     }
 
@@ -253,32 +252,27 @@
       transform: translateY(-5px) scale(1.02);
       background: var(--card-bg-hover);
       border-color: var(--card-border-hover);
-      box-shadow: var(--card-shadow-hover);
+      box-shadow: 0 16px 40px rgba(223, 177, 91, 0.28);
     }
 
-    .action-card-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: var(--accent-gold-soft);
-      border: 1.5px solid var(--card-border);
+    .action-card-icon-svg {
+      width: 48px;
+      height: 48px;
+      color: var(--accent-gold);
+      margin-bottom: 12px;
+      transition: all 0.3s ease;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--accent-gold);
-      font-size: 1.5rem;
-      margin-bottom: 12px;
-      transition: all 0.3s ease;
     }
 
-    .action-card:hover .action-card-icon {
-      background: var(--accent-gold);
-      color: #101512;
-      transform: scale(1.1);
+    .action-card:hover .action-card-icon-svg {
+      transform: scale(1.12);
+      color: var(--accent-gold-bright);
     }
 
     .action-card-title {
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       font-weight: 800;
       color: var(--text-main);
       margin-bottom: 6px;
@@ -286,7 +280,7 @@
     }
 
     .action-card-desc {
-      font-size: 0.78rem;
+      font-size: 0.82rem;
       font-weight: 600;
       color: var(--text-sub);
       line-height: 1.45;
@@ -294,15 +288,15 @@
     }
 
     .action-card-arrow {
-      width: 28px;
-      height: 28px;
+      width: 30px;
+      height: 30px;
       border-radius: 50%;
       border: 1px solid var(--card-border);
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--accent-gold);
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       transition: all 0.3s ease;
       margin-top: auto;
     }
@@ -332,31 +326,28 @@
       display: flex;
       align-items: center;
       gap: 14px;
-      flex: 1;
     }
 
-    .newsletter-icon {
-      width: 46px;
-      height: 46px;
-      border-radius: 14px;
-      background: var(--accent-gold-soft);
+    .newsletter-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
       border: 1.5px solid var(--card-border);
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--accent-gold);
-      font-size: 1.4rem;
       flex-shrink: 0;
     }
 
     .newsletter-text h3 {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 800;
       color: var(--text-main);
     }
 
     .newsletter-text p {
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       color: var(--text-sub);
       margin-top: 2px;
     }
@@ -369,21 +360,22 @@
 
     .newsletter-input {
       padding: 10px 16px;
-      background: rgba(10, 13, 11, 0.6);
+      background: rgba(10, 13, 11, 0.65);
       border: 1.5px solid var(--card-border);
-      border-radius: var(--radius-md);
+      border-radius: 10px;
       color: var(--text-main);
       font-family: inherit;
       font-size: 0.88rem;
       outline: none;
-      width: 210px;
+      width: 230px;
+      text-align: right;
     }
 
     .newsletter-btn {
-      padding: 10px 20px;
+      padding: 10px 22px;
       background: var(--accent-gold-dark);
       border: none;
-      border-radius: var(--radius-md);
+      border-radius: 10px;
       color: #101512;
       font-weight: 800;
       font-size: 0.88rem;
@@ -417,40 +409,37 @@
       display: flex;
       align-items: center;
       gap: 14px;
-      flex: 1;
     }
 
-    .community-icon {
-      width: 46px;
-      height: 46px;
-      border-radius: 14px;
-      background: var(--accent-gold-soft);
+    .community-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
       border: 1.5px solid var(--card-border);
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--accent-gold);
-      font-size: 1.4rem;
       flex-shrink: 0;
     }
 
     .community-text h3 {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 800;
       color: var(--text-main);
     }
 
     .community-text p {
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       color: var(--text-sub);
       margin-top: 2px;
     }
 
     .community-btn {
-      padding: 10px 24px;
+      padding: 10px 26px;
       background: transparent;
       border: 1.5px solid var(--card-border);
-      border-radius: var(--radius-md);
+      border-radius: 10px;
       color: var(--accent-gold-bright);
       font-weight: 800;
       font-size: 0.88rem;
@@ -465,11 +454,11 @@
       color: #101512;
     }
 
-    /* Dedicated Feature Banner Card (Lantern & Antique Books Artwork Quote) */
+    /* Dedicated Feature Quote Banner (Lantern & Antique Books Artwork) */
     .feature-quote-banner {
       width: 100%;
-      padding: 30px 26px;
-      background: linear-gradient(135deg, rgba(16, 21, 18, 0.92) 0%, rgba(24, 32, 27, 0.95) 100%);
+      padding: 28px 24px;
+      background: linear-gradient(135deg, rgba(16, 21, 18, 0.9) 0%, rgba(24, 32, 27, 0.94) 100%);
       border: 1.5px solid var(--card-border);
       border-radius: var(--radius-card);
       box-shadow: var(--card-shadow);
@@ -482,8 +471,8 @@
     }
 
     .banner-side-art {
-      width: 100px;
-      height: 100px;
+      width: 110px;
+      height: 110px;
       object-fit: cover;
       border-radius: 12px;
       flex-shrink: 0;
@@ -496,12 +485,12 @@
     }
 
     .banner-quote-text {
-      font-size: 1.35rem;
+      font-size: 1.45rem;
       font-weight: 800;
       color: var(--text-main);
       font-family: 'Noto Naskh Arabic', serif;
       line-height: 1.6;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .banner-leaf-ornament {
@@ -513,7 +502,7 @@
 
     .banner-leaf-line {
       height: 1px;
-      width: 50px;
+      width: 60px;
       background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
     }
 
@@ -529,17 +518,17 @@
     }
 
     .footer-brand-title {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       font-weight: 900;
       color: var(--accent-gold);
-      font-family: 'Playfair Display', 'Cairo', serif;
+      font-family: 'Noto Naskh Arabic', 'Playfair Display', serif;
     }
 
     .footer-actions-row {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 16px;
+      gap: 14px;
     }
 
     .footer-action-btn {
@@ -564,13 +553,13 @@
     }
 
     .footer-copyright-text {
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       color: var(--text-sub);
       font-weight: 600;
     }
 
-    /* Responsive Adjustments */
-    @media (max-width: 640px) {
+    /* Responsive Adjustments for Mobile Viewports */
+    @media (max-width: 720px) {
       .action-grid-4col {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -595,15 +584,15 @@
       }
 
       .banner-side-art {
-        width: 80px;
-        height: 80px;
+        width: 90px;
+        height: 90px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Background Layers -->
+  <!-- Sunset Background Layers -->
   <div class="bg-fixed-layer"></div>
   <div class="bg-overlay-layer"></div>
 
@@ -642,33 +631,56 @@
     <!-- 4-Column Action Grid (Row 1: Buy Book, Download E-book, Blog, Website) -->
     <section class="action-grid-4col">
       
-      <!-- 1. Buy Book -->
+      <!-- 1. Buy Book (شراء الكتاب) -->
       <a href="../shop/" class="action-card" data-title="شراء الكتاب التطوير الشخصي وفقاً لأفكار أعظم المفكرين">
-        <div class="action-card-icon">🛒</div>
+        <div class="action-card-icon-svg">
+          <svg viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+        </div>
         <h3 class="action-card-title">شراء الكتاب</h3>
         <p class="action-card-desc">التطوير الشخصي وفقًا لأفكار أعظم المفكرين</p>
         <div class="action-card-arrow">➔</div>
       </a>
 
-      <!-- 2. Download Free E-book -->
+      <!-- 2. Download Free E-book (تحميل الكتاب المجاني) -->
       <a href="../shop/" class="action-card" data-title="تحميل الكتاب المجاني 20 درساً من أهم دروس الحياة">
-        <div class="action-card-icon">📖</div>
+        <div class="action-card-icon-svg">
+          <svg viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            <polyline points="12 8 12 14 15 11"></polyline>
+          </svg>
+        </div>
         <h3 class="action-card-title">تحميل الكتاب المجاني</h3>
         <p class="action-card-desc">20 درساً من أهم دروس الحياة</p>
         <div class="action-card-arrow">➔</div>
       </a>
 
-      <!-- 3. Read Blog Articles -->
+      <!-- 3. Read Blog Articles (قراءة مدونة) -->
       <a href="../articles/" class="action-card" data-title="قراءة مدونة اكتشف أحدث المقالات والفكرات">
-        <div class="action-card-icon">📑</div>
+        <div class="action-card-icon-svg">
+          <svg viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+          </svg>
+        </div>
         <h3 class="action-card-title">قراءة مدونة</h3>
         <p class="action-card-desc">اكتشف أحدث المقالات والفكرات</p>
         <div class="action-card-arrow">➔</div>
       </a>
 
-      <!-- 4. Visit Main Website -->
+      <!-- 4. Visit Main Website (زيارة الموقع) -->
       <a href="../" class="action-card" data-title="زيارة الموقع مقالات اقتباسات وسير المفكرين">
-        <div class="action-card-icon">🌐</div>
+        <div class="action-card-icon-svg">
+          <svg viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+        </div>
         <h3 class="action-card-title">زيارة الموقع</h3>
         <p class="action-card-desc">مقالات، اقتباسات وسير المفكرين</p>
         <div class="action-card-arrow">➔</div>
@@ -679,10 +691,10 @@
     <!-- 4-Column Social Grid (Row 2: Telegram, YouTube, Instagram, TikTok) -->
     <section class="action-grid-4col">
 
-      <!-- 1. Telegram -->
+      <!-- 1. Telegram (تليجرام) -->
       <a href="https://t.me/" target="_blank" rel="noopener" class="action-card" data-title="تليجرام انضم إلى القناة لتصلك كل جديد">
-        <div class="action-card-icon">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+        <div class="action-card-icon-svg">
+          <svg viewBox="0 0 24 24" width="38" height="38" fill="currentColor">
             <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.16l-2.02 9.52c-.15.68-.56.84-1.13.53l-3.1-2.28-1.5 1.44c-.16.16-.3.3-.61.3l.22-3.17 5.77-5.21c.25-.22-.05-.34-.39-.12l-7.13 4.49-3.08-.96c-.67-.21-.68-.67.14-.99l12.04-4.64c.56-.21 1.05.13.89.89z"/>
           </svg>
         </div>
@@ -691,10 +703,10 @@
         <div class="action-card-arrow">➔</div>
       </a>
 
-      <!-- 2. YouTube -->
+      <!-- 2. YouTube (يوتيوب) -->
       <a href="https://www.youtube.com/@LibrePensseurs" target="_blank" rel="noopener" class="action-card" data-title="يوتيوب فيديوهات طويلة وقيمة">
-        <div class="action-card-icon">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+        <div class="action-card-icon-svg">
+          <svg viewBox="0 0 24 24" width="38" height="38" fill="currentColor">
             <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
           </svg>
         </div>
@@ -703,10 +715,10 @@
         <div class="action-card-arrow">➔</div>
       </a>
 
-      <!-- 3. Instagram -->
+      <!-- 3. Instagram (إنستغرام) -->
       <a href="https://instagram.com/" target="_blank" rel="noopener" class="action-card" data-title="إنستغرام اقتباسات وإلهام">
-        <div class="action-card-icon">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+        <div class="action-card-icon-svg">
+          <svg viewBox="0 0 24 24" width="38" height="38" fill="currentColor">
             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
           </svg>
         </div>
@@ -715,10 +727,10 @@
         <div class="action-card-arrow">➔</div>
       </a>
 
-      <!-- 4. TikTok -->
+      <!-- 4. TikTok (تيك توك) -->
       <a href="https://www.tiktok.com/@lejardindespensees" target="_blank" rel="noopener" class="action-card" data-title="تيك توك مقاطع يومية ملهمة">
-        <div class="action-card-icon">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+        <div class="action-card-icon-svg">
+          <svg viewBox="0 0 24 24" width="38" height="38" fill="currentColor">
             <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.29-2.61.74-5.23 2.68-7.01 1.54-1.43 3.65-2.22 5.76-2.18.15 0 .3 0 .45.01v4.06c-.95-.08-1.92.14-2.73.65-.96.59-1.62 1.6-1.78 2.71-.24 1.44.3 2.94 1.38 3.86 1.08.92 2.61 1.25 3.98.81 1.45-.44 2.58-1.69 2.82-3.19.08-.47.1-.96.1-1.44V.02z"/>
           </svg>
         </div>
@@ -732,7 +744,12 @@
     <!-- Wide Card 1: Newsletter (النشرة البريدية) -->
     <div class="wide-newsletter-card">
       <div class="newsletter-info">
-        <div class="newsletter-icon">✉️</div>
+        <div class="newsletter-icon-box">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </div>
         <div class="newsletter-text">
           <h3>النشرة البريدية</h3>
           <p>استلم اقتباسة ملهمة كل صباح</p>
@@ -747,7 +764,14 @@
     <!-- Wide Card 2: Community (انضم إلى مجتمع الحكمة) -->
     <div class="wide-community-card">
       <div class="community-info">
-        <div class="community-icon">👥</div>
+        <div class="community-icon-box">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
         <div class="community-text">
           <h3>انضم إلى مجتمع الحكمة</h3>
           <p>تبادل الأفكار وتطور مع الآخرين</p>
@@ -756,14 +780,14 @@
       <a href="../#contactSection" class="community-btn">انضم الآن</a>
     </div>
 
-    <!-- Feature Banner Card (Lantern & Books Quote Artwork) -->
+    <!-- Feature Banner Card (Lantern & Antique Books Artwork Quote) -->
     <div class="feature-quote-banner">
       <img src="../newsletter_lantern.jpg" alt="فانوس الحكمة" class="banner-side-art">
       <div class="banner-quote-content">
         <p class="banner-quote-text">“ دقيقة واحدة من القراءة قد تغيّر حياة كاملة. ”</p>
         <div class="banner-leaf-ornament">
           <span class="banner-leaf-line"></span>
-          <span style="color: var(--accent-gold); font-size: 0.9rem;">🌿</span>
+          <span style="color: var(--accent-gold); font-size: 0.95rem;">🍃</span>
           <span class="banner-leaf-line"></span>
         </div>
       </div>
