@@ -16,6 +16,15 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="../brand_logo_official.png">
 
+  <!-- PWA & Mobile Web App Meta -->
+  <link rel="manifest" href="../manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="حكمة ونور">
+  <link rel="apple-touch-icon" href="../icon-192.png">
+  <meta name="theme-color" content="#0D1410">
+
   <!-- Fonts: Cairo, Noto Naskh Arabic & Playfair Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +32,7 @@
 
   <style>
     /* ==========================================================================
-       PIXEL-PERFECT GLASSMORPHISM & CLEAN LAYOUT DESIGN SYSTEM
+       LUXURY COVER BANNER & FIXED CONTAINER DESIGN SYSTEM
        ========================================================================== */
     :root {
       --bg-overlay-light: rgba(245, 237, 224, 0.75);
@@ -120,19 +129,19 @@
       transition: background 0.4s ease;
     }
 
-    /* Dynamic Island Fixed Top Bar (Clean & Compact) */
+    /* Dynamic Island Fixed Top Bar (Compact & Fixed) */
     .dynamic-island-bar {
       position: fixed;
-      top: 14px;
+      top: 12px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 1000;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: calc(100% - 28px);
+      width: calc(100% - 24px);
       max-width: 480px;
-      height: 52px;
+      height: 50px;
       padding: 0 16px;
       background: var(--glass-card-bg);
       border: 1.5px solid var(--glass-border);
@@ -175,8 +184,8 @@
       background: var(--accent-gold-soft);
       border: 1px solid var(--glass-border);
       color: var(--text-main);
-      width: 34px;
-      height: 34px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -192,15 +201,15 @@
       transform: scale(1.1);
     }
 
-    /* Main Container (Padding-top: 86px so top bar NEVER overlaps) */
+    /* Main Container */
     .bio-container {
       width: 100%;
-      max-width: 490px;
-      padding: 86px 18px 60px;
+      max-width: 480px;
+      padding: 72px 16px 60px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 16px;
+      gap: 14px;
       animation: fadeInBio 0.7s ease-out forwards;
     }
 
@@ -209,58 +218,85 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Header Profile Logo & Branding */
-    .bio-header {
+    /* Header Cover Photo Banner Section */
+    .bio-header-card {
+      width: 100%;
+      background: var(--glass-card-bg);
+      border: 1.5px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--glass-shadow);
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
+      padding-bottom: 22px;
+    }
+
+    .cover-banner-image {
+      position: relative;
       width: 100%;
-      margin-bottom: 6px;
+      height: 170px;
+      background-image: url('../hero_sunset_book.jpg');
+      background-size: cover;
+      background-position: center 40%;
+      border-bottom: 1.5px solid var(--glass-border);
     }
 
-    /* Live Stats Counter Pills Banner */
-    .stats-pill-banner {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      background: var(--glass-card-bg);
-      border: 1.5px solid var(--glass-border);
-      padding: 6px 18px;
-      border-radius: var(--radius-pill);
-      font-size: 0.8rem;
-      font-weight: 800;
-      color: var(--accent-gold);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-      margin-bottom: 14px;
+    .cover-banner-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(13,20,16,0.15) 0%, rgba(13,20,16,0.85) 100%);
     }
 
-    /* Circular Logo Badge (Fixed 135px x 135px, Clean Ivory Fill) */
+    /* Centered Overlapping Circular Emblem Badge (Strict 120px x 120px) */
     .profile-logo-wrapper {
       position: relative;
-      width: 135px;
-      height: 135px;
-      border-radius: 50%;
+      width: 120px !important;
+      height: 120px !important;
+      max-width: 120px !important;
+      max-height: 120px !important;
+      border-radius: 50% !important;
+      margin-top: -60px !important;
+      z-index: 5;
       padding: 4px;
       background: linear-gradient(135deg, #B38A3C 0%, #F0C775 50%, #DFB15B 100%);
-      box-shadow: 0 12px 35px rgba(179, 138, 60, 0.45);
-      margin-bottom: 14px;
-      transition: transform 0.35s ease;
-    }
-
-    .profile-logo-wrapper:hover {
-      transform: scale(1.05) rotate(3deg);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+      flex-shrink: 0 !important;
+      overflow: hidden !important;
     }
 
     .profile-logo-img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: contain;
-      background: #FAF6EF;
-      padding: 6px;
-      border: 2.5px solid #121A15;
+      width: 100% !important;
+      height: 100% !important;
+      max-width: 100% !important;
+      max-height: 100% !important;
+      border-radius: 50% !important;
+      object-fit: contain !important;
+      background: #FAF6EF !important;
+      padding: 4px !important;
+      border: 2.5px solid #121A15 !important;
+      display: block !important;
+      clip-path: circle(44% at 50% 48%) !important;
+    }
+
+    /* Stats Pill Banner */
+    .stats-pill-banner {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--accent-gold-soft);
+      border: 1px solid var(--glass-border);
+      padding: 5px 16px;
+      border-radius: var(--radius-pill);
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--accent-gold-bright);
+      margin: 12px 0 8px;
     }
 
     .brand-title-box {
@@ -286,17 +322,18 @@
     }
 
     .brand-subtitle {
-      font-size: 0.94rem;
+      font-size: 0.92rem;
       font-weight: 600;
       color: var(--text-sub);
-      max-width: 360px;
-      line-height: 1.55;
+      max-width: 350px;
+      line-height: 1.5;
+      padding: 0 16px;
     }
 
     /* Expandable Search Drawer */
     .search-drawer {
       width: 100%;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       display: none;
       animation: slideDownSearch 0.3s ease forwards;
     }
@@ -347,7 +384,7 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      gap: 13px;
+      gap: 12px;
     }
 
     .link-card {
@@ -493,7 +530,7 @@
     .quote-display-card {
       position: relative;
       width: 100%;
-      padding: 26px 22px;
+      padding: 24px 20px;
       background: var(--glass-card-bg);
       border: 1.5px solid var(--glass-border);
       border-radius: var(--radius-lg);
@@ -505,7 +542,7 @@
     }
 
     .quote-mark-icon {
-      font-size: 3.5rem;
+      font-size: 3.2rem;
       line-height: 1;
       color: var(--accent-gold);
       opacity: 0.6;
@@ -515,12 +552,12 @@
     }
 
     .quote-text-main {
-      font-size: 1.2rem;
+      font-size: 1.18rem;
       font-weight: 700;
       line-height: 1.65;
       color: var(--text-main);
       font-family: 'Noto Naskh Arabic', 'Cairo', serif;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .quote-ornament-line {
@@ -532,7 +569,7 @@
 
     .ornament-line {
       height: 1px;
-      width: 60px;
+      width: 55px;
       background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
     }
 
@@ -542,7 +579,7 @@
       align-items: center;
       justify-content: center;
       gap: 18px;
-      margin-top: 8px;
+      margin-top: 6px;
     }
 
     .action-circle-btn {
@@ -559,8 +596,8 @@
     }
 
     .action-circle-icon {
-      width: 44px;
-      height: 44px;
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
       background: var(--glass-card-bg);
       border: 1.5px solid var(--glass-border);
@@ -568,7 +605,7 @@
       align-items: center;
       justify-content: center;
       color: var(--accent-gold);
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       transition: all 0.28s ease;
     }
@@ -590,7 +627,7 @@
       font-size: 0.8rem;
       font-weight: 600;
       color: var(--text-sub);
-      margin-top: 16px;
+      margin-top: 14px;
       text-align: center;
       opacity: 0.9;
     }
@@ -626,16 +663,6 @@
       opacity: 1;
     }
   </style>
-
-  <!-- PWA & Mobile Web App Meta -->
-  <link rel="manifest" href="./manifest.json">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="حكمة ونور">
-  <link rel="apple-touch-icon" href="./icon-192.png">
-  <meta name="theme-color" content="#0D1410">
-
 </head>
 <body>
 
@@ -643,7 +670,7 @@
   <div class="bg-fixed-layer"></div>
   <div class="bg-overlay-layer"></div>
 
-  <!-- Fixed Top Navigation Bar (Fixed 52px height, NO OVERLAP) -->
+  <!-- Fixed Top Navigation Bar -->
   <header class="dynamic-island-bar">
     <div class="dynamic-island-brand">
       <span class="status-dot-pulse"></span>
@@ -653,7 +680,7 @@
     <div class="dynamic-actions">
       <!-- Search Toggle -->
       <button class="icon-btn-pill" id="searchToggleBtn" aria-label="البحث">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="11" cy="11" r="8"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
@@ -661,7 +688,7 @@
 
       <!-- Refresh Quote -->
       <button class="icon-btn-pill" id="quoteRefreshBtn" title="تغيير الاقتباس اليومي" aria-label="تحديث الاقتباس">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="23 4 23 10 17 10"></polyline>
           <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
         </svg>
@@ -669,7 +696,7 @@
 
       <!-- Theme Toggle -->
       <button class="icon-btn-pill" id="themeBtn" aria-label="تغيير المظهر">
-        <svg class="sun-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2">
+        <svg class="sun-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2">
           <circle cx="12" cy="12" r="5"></circle>
           <line x1="12" y1="1" x2="12" y2="3"></line>
           <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -681,9 +708,19 @@
   <!-- Main Content Container -->
   <main class="bio-container">
     
-    <!-- Profile & Header Section -->
-    <header class="bio-header">
+    <!-- Profile Header Card with Themed Cover Photo Banner -->
+    <header class="bio-header-card">
       
+      <!-- Themed Cover Photo Banner -->
+      <div class="cover-banner-image">
+        <div class="cover-banner-overlay"></div>
+      </div>
+
+      <!-- Centered Overlapping Circular Emblem Badge -->
+      <div class="profile-logo-wrapper">
+        <img src="../brand_logo_official.png" alt="حكمة ونور | Hikma & Nour" class="profile-logo-img">
+      </div>
+
       <!-- Stats Counter Banner -->
       <div class="stats-pill-banner">
         <span>✨ +120 اقتباس</span>
@@ -691,11 +728,6 @@
         <span>📖 +50 مقال</span>
         <span>•</span>
         <span>👥 100k+ قارئ</span>
-      </div>
-
-      <!-- Circular Gold Logo Badge (Clean 135px x 135px) -->
-      <div class="profile-logo-wrapper" style="width: 125px; height: 125px; padding: 4px; background: linear-gradient(135deg, rgba(179, 138, 60, 0.6) 0%, rgba(240, 199, 117, 0.9) 50%, rgba(223, 177, 91, 0.7) 100%); border-radius: 50%; box-shadow: 0 10px 30px rgba(179, 138, 60, 0.35); transition: transform 0.35s ease;">
-        <img src="brand_logo_official.png" alt="حكمة ونور" class="brand-logo-img">
       </div>
 
       <div class="brand-title-box">
@@ -721,10 +753,19 @@
     </div>
 
     <!-- Bio Links Stack -->
-    
-    
-
     <section class="links-stack" id="linksContainer">
+
+      <!-- PWA Install Application Card -->
+      <button onclick="triggerPwaInstall()" class="link-card" id="pwaInstallCard" style="background: linear-gradient(135deg, rgba(179, 138, 60, 0.25) 0%, rgba(223, 177, 91, 0.4) 100%); border-color: var(--accent-gold); cursor: pointer; font-family: inherit;">
+        <div class="link-card-content">
+          <div class="link-icon-box" style="background: var(--accent-gold); color: #121A15;">📱</div>
+          <div class="link-text-details">
+            <span class="link-title" style="color: var(--accent-gold-bright);">تثبيت تطبيق حكمة ونور</span>
+            <span class="link-subtitle">أضف التطبيق لشاشة هاتفك بدون متجر</span>
+          </div>
+        </div>
+        <span class="link-arrow">⬇️</span>
+      </button>
 
       <!-- Link 1: Website -->
       <a href="../" class="link-card" data-title="زيارة الموقع مقالات اقتباسات سير المفكرين">
@@ -894,8 +935,41 @@
   <!-- Toast Notification Message -->
   <div class="toast-msg" id="toastMsg">تم نسخ الرابط بنجاح! ✨</div>
 
-  <!-- JavaScript Engine -->
+  <!-- Service Worker PWA Registration -->
   <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('../sw.js')
+          .then(reg => console.log('[PWA] Service Worker registered:', reg.scope))
+          .catch(err => console.log('[PWA] Service Worker registration failed:', err));
+      });
+    }
+
+    // PWA Install Prompt Handler
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      const installBtn = document.getElementById('pwaInstallCard');
+      if (installBtn) {
+        installBtn.style.display = 'flex';
+      }
+    });
+
+    function triggerPwaInstall() {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('[PWA] User accepted the install prompt');
+          }
+          deferredPrompt = null;
+        });
+      } else {
+        alert('لتثبيت التطبيق على هاتفك:\n1. اضغط على خيارات المتصفح (⋮ أو 📤)\n2. اختر "إضافة إلى الشاشة الرئيسية" (Add to Home Screen)');
+      }
+    }
+
     const quotesList = [
       "دقيقة واحدة من القراءة قد تغيّر حياة كاملة.",
       "الحياة التي لا تُفحص لا تستحق أن تُعاش. — سقراط",
@@ -1018,42 +1092,5 @@
       });
     }
   </script>
-
-  <!-- Service Worker PWA Registration -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js')
-          .then(reg => console.log('[PWA] Service Worker registered:', reg.scope))
-          .catch(err => console.log('[PWA] Service Worker registration failed:', err));
-      });
-    }
-
-    // PWA Install Prompt Handler
-    let deferredPrompt;
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      const installBtn = document.getElementById('pwaInstallBtn');
-      if (installBtn) {
-        installBtn.style.display = 'inline-flex';
-      }
-    });
-
-    function triggerPwaInstall() {
-      if (deferredPrompt) {
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') {
-            console.log('[PWA] User accepted the install prompt');
-          }
-          deferredPrompt = null;
-        });
-      } else {
-        alert('لتثبيت التطبيق على هاتفك:\n1. اضغط على خيارات المتصفح (⋮ أو 📤)\n2. اختر "إضافة إلى الشاشة الرئيسية" (Add to Home Screen)');
-      }
-    }
-  </script>
-
 </body>
 </html>
