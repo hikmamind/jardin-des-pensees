@@ -966,11 +966,11 @@
           utterance.voice = maleVoice;
           utterance.lang = maleVoice.lang;
         } else {
-          utterance.lang = 'ar-SA';
+          utterance.lang = 'ar-IQ';
         }
 
-        utterance.rate = 0.65;  // Slow, wise, unhurried pace (80-90 wpm)
-        utterance.pitch = 0.35; // Deep, grave, warm baritone timbre (65-75 yrs philosopher)
+        utterance.rate = 0.72;  // Calm, deliberate storytelling pace (80-90 wpm)
+        utterance.pitch = 0.85; // Natural warm pitch for Basel (ar-IQ)
 
         utterance.onend = function() {
           if (isPlaying) {
@@ -993,9 +993,18 @@
         return voices[select.value];
       }
 
+      // Priority 1: Basel / ar-IQ (Microsoft Basel - Arabic Iraq)
+      let baselVoice = voices.find(v => 
+        v.name.toLowerCase().includes('basel') || 
+        v.lang.toLowerCase() === 'ar-iq' || 
+        v.lang.toLowerCase().includes('iq')
+      );
+      if (baselVoice) return baselVoice;
+
+      // Priority 2: Male Arabic fallback
       const arVoices = voices.filter(v => v.lang.startsWith('ar'));
-      const maleKeywords = ['male', 'tariq', 'naayf', 'maged', 'mehdi', 'shakir', 'tarik', 'george', 'nizar', 'faris', 'arman'];
-      const femaleKeywords = ['female', 'hoda', 'zeina', 'salma', 'laila', 'zariyah', 'maryam', 'zora', 'samantha', 'zira'];
+      const maleKeywords = ['basel', 'tariq', 'naayf', 'maged', 'mehdi', 'shakir', 'tarik', 'george', 'nizar', 'faris', 'male'];
+      const femaleKeywords = ['hoda', 'zeina', 'salma', 'laila', 'zariyah', 'maryam', 'zora', 'samantha', 'zira', 'female'];
 
       let selected = arVoices.find(v => {
         const name = v.name.toLowerCase();
@@ -1003,16 +1012,7 @@
       });
 
       if (!selected) {
-        // Find any non-female Arabic voice
         selected = arVoices.find(v => !femaleKeywords.some(fk => v.name.toLowerCase().includes(fk)));
-      }
-
-      if (!selected) {
-        // Search any male voice on system
-        selected = voices.find(v => {
-          const name = v.name.toLowerCase();
-          return maleKeywords.some(mk => name.includes(mk)) && !femaleKeywords.some(fk => name.includes(fk));
-        });
       }
 
       return selected || arVoices[0] || voices[0];
@@ -1024,18 +1024,20 @@
       if (!select) return;
 
       const voices = window.speechSynthesis.getVoices();
-      select.innerHTML = '<option value="">👨 الراوي المطلوب: صوت رجالي عميق ودافئ (تلقائي)</option>';
+      select.innerHTML = '';
 
-      const femaleKeywords = ['female', 'hoda', 'zeina', 'salma', 'laila', 'zariyah', 'maryam', 'zora', 'samantha', 'zira'];
-      const maleKeywords = ['male', 'tariq', 'naayf', 'maged', 'mehdi', 'shakir', 'tarik', 'george', 'david', 'mark'];
+      const femaleKeywords = ['hoda', 'zeina', 'salma', 'laila', 'zariyah', 'maryam', 'zora', 'samantha', 'zira', 'female'];
 
       voices.forEach((v, index) => {
+        const isBasel = v.name.toLowerCase().includes('basel') || v.lang.toLowerCase().includes('iq');
         const isFemale = femaleKeywords.some(fk => v.name.toLowerCase().includes(fk));
-        const isMale = maleKeywords.some(mk => v.name.toLowerCase().includes(mk));
+        
         const option = document.createElement('option');
         option.value = index;
-        option.textContent = `${isFemale ? '👩' : '👨'} ${v.name} (${v.lang})`;
-        if (isMale && (v.lang.startsWith('ar') || v.lang.startsWith('en'))) {
+        option.textContent = `${isBasel ? '⭐ 👨 باسل (العراق ar-IQ)' : isFemale ? '👩' : '👨'} ${v.name} (${v.lang})`;
+        
+        if (isBasel) {
+          option.selected = true;
           option.style.fontWeight = 'bold';
           option.style.color = '#DFB15B';
         }
