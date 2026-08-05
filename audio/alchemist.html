@@ -931,12 +931,6 @@
       }
     }
 
-    let speechAudioEl = null;
-
-    function playStep(idx) {
-      if (!isPlaying || idx >= alchemistScript.length) {
-        if (idx >= alchemistScript.length) {
-          isPlaying = false;
     let cachedSystemVoices = [];
     function initSystemVoices() {
       if ('speechSynthesis' in window) {
@@ -949,10 +943,10 @@
       initSystemVoices();
     }
 
-    function getBaselVoice() {
+    function getSeniorMaleVoice() {
       const voices = cachedSystemVoices.length > 0 ? cachedSystemVoices : ('speechSynthesis' in window ? window.speechSynthesis.getVoices() : []);
 
-      // 1. Absolute Priority 1: Basel / ar-IQ (Microsoft Basel - Arabic Iraq)
+      // 1. Priority 1: Basel / ar-IQ (Microsoft Basel - Arabic Iraq)
       let basel = voices.find(v => 
         v.name.toLowerCase().includes('basel') || 
         v.lang.toLowerCase() === 'ar-iq' || 
@@ -999,8 +993,6 @@
       const text = alchemistScript[idx];
 
       if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-
         const utterance = new SpeechSynthesisUtterance(text);
         const baselVoice = getSeniorMaleVoice();
 
@@ -1045,41 +1037,7 @@
       }
     }
 
-    function getSeniorMaleVoice() {
-      const voices = cachedSystemVoices.length > 0 ? cachedSystemVoices : window.speechSynthesis.getVoices();
-
-      // Priority 1: Microsoft Basel - Arabic (Iraq) / ar-IQ
-      let baselVoice = voices.find(v => 
-        v.name.toLowerCase().includes('basel') || 
-        v.lang.toLowerCase() === 'ar-iq' || 
-        v.lang.toLowerCase().includes('iq') ||
-        v.name.includes('باصل') ||
-        v.name.includes('باسل')
-      );
-      if (baselVoice) return baselVoice;
-
-      // Priority 2: Male Arabic fallback
-      const arVoices = voices.filter(v => v.lang.toLowerCase().startsWith('ar'));
-      const maleKeywords = ['basel', 'tariq', 'naayf', 'maged', 'mehdi', 'shakir', 'tarik', 'george', 'nizar', 'faris', 'male'];
-      const femaleKeywords = ['hoda', 'zeina', 'salma', 'laila', 'zariyah', 'maryam', 'zora', 'samantha', 'zira', 'female'];
-
-      let selected = arVoices.find(v => {
-        const name = v.name.toLowerCase();
-        return maleKeywords.some(mk => name.includes(mk)) && !femaleKeywords.some(fk => name.includes(fk));
-      });
-
-      if (!selected) {
-        selected = arVoices.find(v => !femaleKeywords.some(fk => v.name.toLowerCase().includes(fk)));
-      }
-
-      return selected || arVoices[0] || voices[0];
-    }
-
     function stopSpeech() {
-      if (speechAudioEl) {
-        speechAudioEl.pause();
-        speechAudioEl = null;
-      }
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
       }
