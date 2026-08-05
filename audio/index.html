@@ -383,6 +383,17 @@
           ✨ صوت رجالي وقور ودافئ (70-75 سنة)، إلقاء بطيء وتأملي مع pauses طبيعية
         </span>
       </div>
+
+      <!-- Custom MP3 File Uploader -->
+      <div style="margin-top: 20px; padding-top: 20px; border-top: 1px dashed rgba(223, 177, 91, 0.3); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;">
+        <label for="customAudioFile" style="background: rgba(223, 177, 91, 0.15); border: 1px dashed var(--gold); padding: 10px 20px; border-radius: 20px; color: var(--gold-light); cursor: pointer; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s ease;">
+          📁 تحميل ملف MP3 الخاص بك من ElevenLabs
+          <input type="file" id="customAudioFile" accept="audio/*" onchange="loadCustomMp3(this)" style="display: none;">
+        </label>
+        <span id="customFileName" style="font-size: 0.85rem; color: var(--text-muted);">
+          (يمكنك اختيار الملف الصوت المباشر الذي قم بتنزيله من ElevenLabs)
+        </span>
+      </div>
     </div>
 
     <!-- Master Controls Bar -->
@@ -746,6 +757,45 @@
       }
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
+      }
+    }
+
+    function loadCustomMp3(input) {
+      if (input.files && input.files[0]) {
+        const file = input.files[0];
+        const fileUrl = URL.createObjectURL(file);
+
+        if (wiseAudioEl) {
+          wiseAudioEl.pause();
+        }
+        wiseAudioEl = new Audio(fileUrl);
+        wiseAudioEl.playbackRate = 1.0;
+
+        wiseAudioEl.onended = function() {
+          isVowelledPlaying = false;
+          const btnIcon = document.getElementById('vowelledIcon');
+          const btnText = document.getElementById('vowelledText');
+          if (btnIcon) btnIcon.textContent = "▶";
+          if (btnText) btnText.textContent = "إعادة الاستماع للملف الصوت";
+        };
+
+        const customNameEl = document.getElementById('customFileName');
+        if (customNameEl) customNameEl.textContent = `🎵 تم التنسيق والحفظ: ${file.name}`;
+
+        const textEl = document.getElementById('vowelledText');
+        if (textEl) textEl.textContent = `إيقاف ${file.name}`;
+
+        isVowelledPlaying = true;
+        const btnIcon = document.getElementById('vowelledIcon');
+        if (btnIcon) btnIcon.textContent = "⏸";
+
+        // Auto start ambient soundscape
+        if (!sounds['fire'].active) toggleSound('fire');
+        if (!sounds['wind'].active) toggleSound('wind');
+
+        wiseAudioEl.play().catch(function(e) {
+          console.log('Audio playback error:', e);
+        });
       }
     }
 
