@@ -1001,40 +1001,47 @@
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
 
-        setTimeout(function() {
-          const utterance = new SpeechSynthesisUtterance(text);
-          const baselVoice = getBaselVoice();
+        const utterance = new SpeechSynthesisUtterance(text);
+        const baselVoice = getSeniorMaleVoice();
 
-          if (baselVoice) {
-            utterance.voice = baselVoice;
-            utterance.lang = baselVoice.lang;
-          } else {
-            utterance.lang = 'ar-IQ';
+        if (baselVoice) {
+          utterance.voice = baselVoice;
+          utterance.lang = baselVoice.lang;
+        } else {
+          utterance.lang = 'ar-IQ';
+        }
+
+        const voiceName = baselVoice ? baselVoice.name.toLowerCase() : '';
+        const isMaleConfirmed = voiceName.includes('basel') || voiceName.includes('naayf') || voiceName.includes('tariq') || voiceName.includes('maged') || voiceName.includes('male');
+
+        utterance.rate = 0.72; // Calm, deliberate storytelling pace (80-90 wpm)
+
+        if (isMaleConfirmed) {
+          utterance.pitch = 0.85; // Natural warm pitch for Basel (ar-IQ)
+        } else {
+          utterance.pitch = 0.30; // Deep male baritone pitch transformation
+        }
+
+        utterance.onend = function() {
+          if (isPlaying) {
+            playPageTurnSfx();
+            setTimeout(() => {
+              currentStep++;
+              playStep(currentStep);
+            }, 2000); // Wise natural silences between thoughts
           }
+        };
 
-          const voiceName = baselVoice ? baselVoice.name.toLowerCase() : '';
-          const isMaleConfirmed = voiceName.includes('basel') || voiceName.includes('naayf') || voiceName.includes('tariq') || voiceName.includes('maged') || voiceName.includes('male');
-
-          utterance.rate = 0.72; // Calm, deliberate storytelling pace (80-90 wpm)
-
-          if (isMaleConfirmed) {
-            utterance.pitch = 0.85; // Natural warm pitch for Basel (ar-IQ)
-          } else {
-            utterance.pitch = 0.18; // Force deep male baritone shift if system default is female
+        utterance.onerror = function() {
+          if (isPlaying) {
+            setTimeout(() => {
+              currentStep++;
+              playStep(currentStep);
+            }, 1500);
           }
+        };
 
-          utterance.onend = function() {
-            if (isPlaying) {
-              playPageTurnSfx();
-              setTimeout(() => {
-                currentStep++;
-                playStep(currentStep);
-              }, 2000); // Wise natural silences between thoughts
-            }
-          };
-
-          window.speechSynthesis.speak(utterance);
-        }, 50);
+        window.speechSynthesis.speak(utterance);
       }
     }
 
