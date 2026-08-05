@@ -263,10 +263,12 @@
     </button>
 
     <div class="sound-effects-toggle">
-      <span>مؤثرات الأجواء:</span>
+      <span>صوت الراوي:</span>
+      <select id="voiceSelect" class="sfx-btn" style="outline:none; cursor:pointer; font-family:inherit; max-width:200px; text-overflow:ellipsis; overflow:hidden;"></select>
+      <span>المؤثرات:</span>
       <button class="sfx-btn active" id="btnWind" onclick="toggleSfx('wind')">🌬️ رياح الصحراء</button>
       <button class="sfx-btn active" id="btnFire" onclick="toggleSfx('fire')">🕯️ خشب النار</button>
-      <button class="sfx-btn active" id="btnPage" onclick="playPageTurn()">📖 تقليب صفحة</button>
+      <button class="sfx-btn active" id="btnPage" onclick="playPageTurn()">📖 صفحة</button>
     </div>
   </div>
 
@@ -410,9 +412,19 @@
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
         const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = 'ar-SA';
-        utterance.rate = 0.85; // Senior grave slow pace (80-90 wpm)
-        utterance.pitch = 0.85; // Deep voice pitch
+        
+        // Select senior deep male voice
+        const maleVoice = getSeniorMaleArabicVoice();
+        if (maleVoice) {
+          utterance.voice = maleVoice;
+          utterance.lang = maleVoice.lang;
+        } else {
+          utterance.lang = 'ar-SA';
+        }
+
+        // Voice parameters for senior deep male tone (65-75 yrs, grave & warm)
+        utterance.rate = 0.75;  // Slow deliberate pacing (80-90 wpm)
+        utterance.pitch = 0.55; // Lowered pitch for deep, grave, resonant male timbre
 
         utterance.onend = function() {
           if (isPlaying) {
@@ -420,12 +432,56 @@
             setTimeout(() => {
               currentPIndex++;
               speakParagraph(currentPIndex);
-            }, 1200);
+            }, 1400); // Natural pause between paragraphs
           }
         };
 
         window.speechSynthesis.speak(utterance);
       }
+    }
+
+    function getSeniorMaleArabicVoice() {
+      const selectedIndex = document.getElementById('voiceSelect')?.value;
+      const voices = window.speechSynthesis.getVoices();
+      if (selectedIndex !== undefined && selectedIndex !== "" && voices[selectedIndex]) {
+        return voices[selectedIndex];
+      }
+
+      const arVoices = voices.filter(v => v.lang.startsWith('ar'));
+      const maleKeywords = ['male', 'tariq', 'naayf', 'maged', 'mehdi', 'shakir', 'tarik', 'george'];
+      const femaleKeywords = ['female', 'hoda', 'zeina', 'salma', 'laila', 'zariyah', 'maryam', 'zora'];
+
+      let selected = arVoices.find(v => {
+        const name = v.name.toLowerCase();
+        return maleKeywords.some(mk => name.includes(mk)) && !femaleKeywords.some(fk => name.includes(fk));
+      });
+
+      if (!selected) {
+        selected = arVoices.find(v => !femaleKeywords.some(fk => v.name.toLowerCase().includes(fk)));
+      }
+      return selected || arVoices[0] || voices[0];
+    }
+
+    function populateVoices() {
+      if (!('speechSynthesis' in window)) return;
+      const voiceSelect = document.getElementById('voiceSelect');
+      if (!voiceSelect) return;
+
+      const voices = window.speechSynthesis.getVoices();
+      voiceSelect.innerHTML = '<option value="">الراوي المطلوب: صوت رجالي عميق ودافئ (تلقائي)</option>';
+
+      voices.forEach((voice, index) => {
+        if (voice.lang.startsWith('ar')) {
+          const option = document.createElement('option');
+          option.value = index;
+          option.textContent = `${voice.name} (${voice.lang})`;
+          voiceSelect.appendChild(option);
+        }
+      });
+    }
+
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.onvoiceschanged = populateVoices;
     }
 
     function stopSpeech() {

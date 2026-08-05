@@ -669,8 +669,30 @@
       const text = document.getElementById('readerText').textContent;
       if ('speechSynthesis' in window) {
         const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = 'ar-SA';
-        utterance.rate = 0.9;
+        const voices = window.speechSynthesis.getVoices();
+        const arVoices = voices.filter(v => v.lang.startsWith('ar'));
+        const maleKeywords = ['male', 'tariq', 'naayf', 'maged', 'mehdi', 'shakir', 'tarik'];
+        const femaleKeywords = ['female', 'hoda', 'zeina', 'salma', 'laila', 'zariyah', 'maryam'];
+
+        let selected = arVoices.find(v => {
+          const name = v.name.toLowerCase();
+          return maleKeywords.some(mk => name.includes(mk)) && !femaleKeywords.some(fk => name.includes(fk));
+        });
+
+        if (!selected) {
+          selected = arVoices.find(v => !femaleKeywords.some(fk => v.name.toLowerCase().includes(fk)));
+        }
+
+        if (selected) {
+          utterance.voice = selected;
+          utterance.lang = selected.lang;
+        } else {
+          utterance.lang = 'ar-SA';
+        }
+
+        utterance.rate = 0.75;  // Slow deliberate pacing (vieux philosophe)
+        utterance.pitch = 0.55; // Deep, grave, warm male tone
+
         window.speechSynthesis.speak(utterance);
       } else {
         alert("متصفحك لا يدعم قراءة النصوص صوتياً.");
