@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ar" data-theme="dark" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>رواية الخيميائي — تجربة صوتية سينمائية | حكمة ونور</title>
+  <meta name="description" content="رحلة صوتية سينمائية في عمق رواية الخيميائي للكاتب باولو كويلو. بصوت دافئ وعميق مع مؤثرات الرياح والصفحات والموسيقى السيمفونية الهادئة.">
+  <meta name="keywords" content="الخيميائي, باولو كويلو, كتاب صوتي, حكمة ونور, رواية, رحلة الذات, الشغف">
+
+  <link rel="icon" type="image/png" href="../brand_logo_official.png">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#0D1410">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #0A0E0B;
+      --bg-card: rgba(18, 26, 21, 0.85);
+      --gold: #DFB15B;
+      --gold-light: #F5D98A;
+      --ivory: #FAF6EF;
+      --text-main: #EDE8DF;
+      --text-muted: #A8A08E;
+      --accent-green: #2A3D2E;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Cairo', 'Noto Naskh Arabic', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 2;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Back Button */
+    .back-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 100;
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: rgba(18, 26, 21, 0.85);
+      border: 1px solid rgba(223,177,91,0.3);
+      color: var(--gold);
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      backdrop-filter: blur(12px);
+      transition: all 0.3s ease;
+    }
+    .back-btn:hover {
+      background: var(--gold);
+      color: var(--bg-dark);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      padding: 100px 24px 60px;
+      text-align: center;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(223, 177, 91, 0.2);
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url('../alchemist_audio_cover.jpg') center/cover no-repeat;
+      filter: brightness(0.25);
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-block;
+      padding: 6px 24px;
+      border: 1px solid var(--gold);
+      border-radius: 30px;
+      color: var(--gold);
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+      background: rgba(223, 177, 91, 0.1);
+    }
+    .hero h1 {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 900;
+      color: var(--ivory);
+      margin-bottom: 12px;
+    }
+    .hero h1 span { color: var(--gold); }
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+    }
+
+    /* Audio Player Sticky Control Bar */
+    .player-control-bar {
+      position: sticky;
+      top: 20px;
+      z-index: 90;
+      max-width: 850px;
+      margin: -35px auto 40px;
+      background: linear-gradient(135deg, rgba(223, 177, 91, 0.18), rgba(18, 26, 21, 0.95));
+      border: 1px solid var(--gold);
+      border-radius: 30px;
+      padding: 18px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .play-btn-main {
+      background: linear-gradient(135deg, var(--gold), #B38A3C);
+      color: var(--bg-dark);
+      border: none;
+      padding: 12px 32px;
+      border-radius: 30px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+    }
+    .play-btn-main:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(223, 177, 91, 0.4);
+    }
+
+    .sound-effects-toggle {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    .sfx-btn {
+      background: rgba(223,177,91,0.1);
+      border: 1px solid rgba(223,177,91,0.3);
+      color: var(--gold);
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: all 0.3s ease;
+    }
+    .sfx-btn.active {
+      background: var(--gold);
+      color: var(--bg-dark);
+      font-weight: 700;
+    }
+
+    /* Main Article Container */
+    .narrative-container {
+      max-width: 800px;
+      margin: 0 auto 80px;
+      padding: 0 24px;
+    }
+
+    .narrative-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(223, 177, 91, 0.18);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
+    }
+
+    .paragraph-block {
+      margin-bottom: 24px;
+      padding: 16px 20px;
+      border-radius: 14px;
+      transition: all 0.4s ease;
+      font-size: 1.15rem;
+      color: var(--text-main);
+      border-right: 3px solid transparent;
+    }
+    .paragraph-block.highlight {
+      background: rgba(223, 177, 91, 0.12);
+      border-right-color: var(--gold);
+      color: var(--gold-light);
+      transform: translateX(-4px);
+    }
+    .paragraph-block.quote-highlight {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 1.35rem;
+      color: var(--gold-light);
+      background: rgba(223, 177, 91, 0.08);
+      border-right: 4px solid var(--gold);
+      text-align: center;
+      margin: 32px 0;
+      padding: 24px;
+      font-style: italic;
+    }
+
+    /* Audio Equalizer Animation */
+    .eq-bars {
+      display: inline-flex;
+      align-items: flex-end;
+      gap: 3px;
+      height: 16px;
+      margin-right: 6px;
+    }
+    .eq-b {
+      width: 3px; background: var(--bg-dark); height: 4px; border-radius: 2px;
+    }
+    .playing .eq-b:nth-child(1) { animation: eqAnim 0.7s infinite; }
+    .playing .eq-b:nth-child(2) { animation: eqAnim 1.0s infinite 0.2s; }
+    .playing .eq-b:nth-child(3) { animation: eqAnim 0.8s infinite 0.4s; }
+    @keyframes eqAnim { 0%,100%{height:4px;} 50%{height:14px;} }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 40px 24px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(223, 177, 91, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Back Button -->
+  <a href="./" class="back-btn" title="الاستوديو الصوتي">←</a>
+
+  <!-- Hero Header -->
+  <header class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">رواية صوتية سينمائية — باولو كويلو</div>
+      <h1>رواية <span>الخيميائي</span></h1>
+      <p class="hero-subtitle">ما الذي يجعل هذا الكتاب مميزاً؟ بصوت عميق، دافئ ومؤثرات سينمائية ملهمة</p>
+    </div>
+  </header>
+
+  <!-- Sticky Player Control Bar -->
+  <div class="player-control-bar">
+    <button class="play-btn-main" id="playBtn" onclick="toggleAudiobook()">
+      <div class="eq-bars" id="eqBars"><div class="eq-b"></div><div class="eq-b"></div><div class="eq-b"></div></div>
+      <span id="playIcon">▶</span> <span id="playText">استماع للرواية الصوتية</span>
+    </button>
+
+    <div class="sound-effects-toggle">
+      <span>مؤثرات الأجواء:</span>
+      <button class="sfx-btn active" id="btnWind" onclick="toggleSfx('wind')">🌬️ رياح الصحراء</button>
+      <button class="sfx-btn active" id="btnFire" onclick="toggleSfx('fire')">🕯️ خشب النار</button>
+      <button class="sfx-btn active" id="btnPage" onclick="playPageTurn()">📖 تقليب صفحة</button>
+    </div>
+  </div>
+
+  <!-- Main Narrative Body Container -->
+  <main class="narrative-container">
+    <div class="narrative-card" id="narrativeCard">
+
+      <div class="paragraph-block quote-highlight" id="p0">
+        "ليست كل الكتب تُقرأ من أجل المتعة... فبعضها يأتي ليوقظ شيئًا كان نائمًا في أعماقنا."
+      </div>
+
+      <div class="paragraph-block" id="p1">
+        اليوم، نصحبكم في رحلة إلى عالم رواية "الخيميائي"، إحدى أشهر الروايات للكاتب البرازيلي باولو كويلو، وهي قصة ألهمت ملايين القراء حول العالم، لأنها لا تتحدث فقط عن مغامرة في الصحراء، بل عن رحلة الإنسان في البحث عن ذاته، وعن المعنى الحقيقي للحياة.
+      </div>
+
+      <div class="paragraph-block" id="p2">
+        تبدأ الحكاية بشاب راعٍ يعيش حياة هادئة وبسيطة. وبينما كان يتنقل بقطيعه من مكان إلى آخر، بدأ يتكرر لديه حلم غريب يدعوه إلى السفر بحثًا عن كنز بعيد. في البداية بدا الأمر مجرد حلم، لكن شيئًا في داخله أخبره أن عليه أن يتبعه.
+      </div>
+
+      <div class="paragraph-block" id="p3">
+        وهكذا يبدأ رحلته، تاركًا خلفه كل ما يعرفه، ليواجه طريقًا مليئًا بالمفاجآت، والتحديات، واللقاءات التي ستغير نظرته إلى العالم.
+      </div>
+
+      <div class="paragraph-block" id="p4">
+        في كل محطة من رحلته، يلتقي بأشخاص يضيفون إلى حياته درسًا جديدًا. بعضهم يعلمه الصبر، وآخرون يعلمونه الشجاعة، بينما يذكره آخرون بأن الخوف هو العدو الأكبر للأحلام.
+      </div>
+
+      <div class="paragraph-block" id="p5">
+        ومع مرور الوقت، يكتشف أن الطريق نفسه هو المعلم الحقيقي، وأن كل عقبة لم تكن عائقًا، بل كانت فرصة للنمو واكتشاف قدراته الكامنة.
+      </div>
+
+      <div class="paragraph-block" id="p6">
+        تطرح الرواية فكرة عميقة، وهي أن الإنسان يمتلك حلمًا خاصًا به، لكن كثيرين يتخلون عنه لأنهم يخشون الفشل، أو لأنهم يعتقدون أن الوقت قد فات، أو لأنهم انشغلوا بإرضاء الآخرين.
+      </div>
+
+      <div class="paragraph-block" id="p7">
+        ومن خلال أسلوب بسيط ورموز مليئة بالمعاني، يدعونا باولو كويلو إلى الإصغاء لصوت القلب، والثقة بالحدس، والإيمان بأن لكل إنسان طريقًا فريدًا لا يشبه طريق أحد آخر.
+      </div>
+
+      <div class="paragraph-block" id="p8">
+        لكن الرواية لا تقول إن تحقيق الأحلام سهل، بل تؤكد أن الطريق مليء بالتجارب التي تصقل الشخصية. فكل خسارة تحمل درسًا، وكل نجاح يحمل مسؤولية، وكل خطوة تقرب الإنسان من فهم نفسه بشكل أعمق.
+      </div>
+
+      <div class="paragraph-block quote-highlight" id="p9">
+        وهنا يكمن جوهر الرواية... فالكنز الحقيقي ليس دائمًا شيئًا ماديًا، بل قد يكون الحكمة التي نكتسبها، والشخص الذي نصبح عليه أثناء رحلتنا.
+      </div>
+
+      <div class="paragraph-block" id="p10">
+        إن "الخيميائي" يذكرنا بأن الحياة ليست سباقًا للوصول، بل رحلة نتعلم فيها، ونتغير، وننضج مع كل تجربة.
+      </div>
+
+      <div class="paragraph-block" id="p11">
+        وقبل أن نغادر هذه الرحلة، اسأل نفسك سؤالًا بسيطًا...<br>
+        <strong>ما هو الحلم الذي تؤجله منذ سنوات؟ وما أول خطوة صغيرة يمكنك أن تبدأ بها اليوم لتقترب منه؟</strong>
+      </div>
+
+      <div class="paragraph-block quote-highlight" id="p12">
+        "ربما لا يكون الطريق سهلًا... لكن كل رحلة عظيمة بدأت بخطوة واحدة، وبقرار شجاع أن تمضي إلى الأمام."
+      </div>
+
+      <div class="paragraph-block" style="text-align: center; color: var(--gold); font-weight: 700; margin-top: 40px; border-top: 1px solid rgba(223,177,91,0.2); padding-top: 24px;">
+        « كانت هذه رحلةً جديدة في عالم الحكمة... إلى لقاءٍ قريب مع كتابٍ آخر، وفكرةٍ قد تغيّر نظرتك إلى الحياة. »
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© ٢٠٢٦ حكمة ونور | Le Jardin des Pensées — رواية الخيميائي الصوتية</p>
+  </footer>
+
+  <!-- Web Audio Synthesizer Engine & Speech Engine -->
+  <script>
+    let isPlaying = false;
+    let audioCtx = null;
+    let windGain = null;
+    let fireGain = null;
+    let isWindActive = true;
+    let isFireActive = true;
+    let currentPIndex = 0;
+    const totalParagraphs = 13;
+
+    function initAudio() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        startAmbientAtmosphere();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+    }
+
+    function toggleAudiobook() {
+      initAudio();
+      isPlaying = !isPlaying;
+
+      const playBtn = document.getElementById('playBtn');
+      const playIcon = document.getElementById('playIcon');
+      const playText = document.getElementById('playText');
+      const eqBars = document.getElementById('eqBars');
+
+      if (isPlaying) {
+        playIcon.textContent = "⏸";
+        playText.textContent = "إيقاف القراءة الصوتيّة";
+        eqBars.classList.add('playing');
+        playPageTurn();
+        speakParagraph(currentPIndex);
+      } else {
+        playIcon.textContent = "▶";
+        playText.textContent = "استماع للرواية الصوتية";
+        eqBars.classList.remove('playing');
+        stopSpeech();
+      }
+    }
+
+    function speakParagraph(idx) {
+      if (!isPlaying || idx >= totalParagraphs) {
+        if (idx >= totalParagraphs) {
+          isPlaying = false;
+          document.getElementById('playIcon').textContent = "▶";
+          document.getElementById('playText').textContent = "إعادة الاستماع للرواية";
+          document.getElementById('eqBars').classList.remove('playing');
+        }
+        return;
+      }
+
+      // Highlight current paragraph
+      for (let i = 0; i < totalParagraphs; i++) {
+        const el = document.getElementById(`p${i}`);
+        if (el) el.classList.remove('highlight');
+      }
+      const activeEl = document.getElementById(`p${idx}`);
+      if (activeEl) {
+        activeEl.classList.add('highlight');
+        activeEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+
+      // Speech synthesis
+      const text = activeEl.innerText;
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'ar-SA';
+        utterance.rate = 0.85; // Senior grave slow pace (80-90 wpm)
+        utterance.pitch = 0.85; // Deep voice pitch
+
+        utterance.onend = function() {
+          if (isPlaying) {
+            playPageTurn();
+            setTimeout(() => {
+              currentPIndex++;
+              speakParagraph(currentPIndex);
+            }, 1200);
+          }
+        };
+
+        window.speechSynthesis.speak(utterance);
+      }
+    }
+
+    function stopSpeech() {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+    }
+
+    function toggleSfx(type) {
+      initAudio();
+      if (type === 'wind') {
+        isWindActive = !isWindActive;
+        document.getElementById('btnWind').classList.toggle('active', isWindActive);
+        if (windGain) windGain.gain.setValueAtTime(isWindActive ? 0.3 : 0, audioCtx.currentTime);
+      } else if (type === 'fire') {
+        isFireActive = !isFireActive;
+        document.getElementById('btnFire').classList.toggle('active', isFireActive);
+        if (fireGain) fireGain.gain.setValueAtTime(isFireActive ? 0.25 : 0, audioCtx.currentTime);
+      }
+    }
+
+    function playPageTurn() {
+      initAudio();
+      // Synthesize soft page turn sound effect
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(300, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(80, audioCtx.currentTime + 0.25);
+      gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.25);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.25);
+    }
+
+    /* Ambient Desert Wind & Fire Synthesizer */
+    function startAmbientAtmosphere() {
+      // Wind generator
+      const bufferSize = audioCtx.sampleRate * 2;
+      const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+      const data = buffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        data[i] = (Math.random() * 2 - 1) * 0.04;
+      }
+      const noise = audioCtx.createBufferSource();
+      noise.buffer = buffer;
+      noise.loop = true;
+
+      const filter = audioCtx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.value = 350;
+
+      windGain = audioCtx.createGain();
+      windGain.gain.value = 0.3;
+
+      noise.connect(filter);
+      filter.connect(windGain);
+      windGain.connect(audioCtx.destination);
+      noise.start();
+
+      // Fire Crackle generator
+      const fireBuffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+      const fireData = fireBuffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        fireData[i] = (Math.random() * 2 - 1) * 0.02;
+        if (Math.random() > 0.998) fireData[i] += (Math.random() > 0.5 ? 0.4 : -0.4);
+      }
+      const fireNoise = audioCtx.createBufferSource();
+      fireNoise.buffer = fireBuffer;
+      fireNoise.loop = true;
+
+      const fireFilter = audioCtx.createBiquadFilter();
+      fireFilter.type = 'bandpass';
+      fireFilter.frequency.value = 750;
+
+      fireGain = audioCtx.createGain();
+      fireGain.gain.value = 0.25;
+
+      fireNoise.connect(fireFilter);
+      fireFilter.connect(fireGain);
+      fireGain.connect(audioCtx.destination);
+      fireNoise.start();
+    }
+  </script>
+
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('../sw.js');
+    }
+  </script>
+</body>
+</html>

@@ -130,6 +130,7 @@ function populateNavbarDropdown() {
 // --- Products Data Setup ---
 function getProducts() {
   return [
+    { id: 'prod_alchemist_audio', type: 'digital', price: 0.00, icon: 'book-open', image: '../alchemist_audio_cover.jpg', titleFr: 'Livre Audio : L\'Alchimiste (Paulo Coelho)', titleEn: 'Audiobook: The Alchemist (Paulo Coelho)', titleAr: 'رواية الخيميائي الصوتية (باولو كويلو)', descFr: 'Une narration immersive avec voix grave, sons de vent du désert, crépitement de feu et musique de film. Gratuit.', descEn: 'Immersive audiobook narration with deep voice, desert wind sound, fire crackle and orchestral music. Free.', descAr: 'تجربة صوتية سينمائية بصوت عميق ودافئ، مؤثرات الرياح وخشب النار وتقليب الصفحات. مجاني.' },
     { id: 'prod_audio', type: 'digital', price: 0.00, icon: 'book-open', image: '../audio_sanctuary_hero.jpg', titleFr: 'Studio Audio & Citadelle Intérieure', titleEn: 'Audio Studio & Inner Citadel', titleAr: 'الاستوديو الصوتي والقلعة الداخلية', descFr: 'Mixeur d\'ambiances stoïciennes (Pluie, Feu, 432Hz) et lecteur de sagesses philosophiques. Gratuit.', descEn: 'Stoic ambient soundscape mixer (Rain, Fire, 432Hz) and philosophical wisdom narrator. Free.', descAr: 'خافق الأجواء الرواقية (أصوات الأمطار، النار، 432Hz) وقارئ الحكمة الصوتي للتركيز والتأمل. مجاني.' },
     { id: 'prod_calendar', type: 'digital', price: 0.00, icon: 'book-open', image: '../philosophical_calendar_hero.jpg', titleFr: 'Calendrier Philosophique (365 Jours)', titleEn: 'Philosophical Calendar (365 Days)', titleAr: 'التقويم الفلسفي اليومي (٣٦٥ يوماً)', descFr: '365 jours de sagesse stoïcienne et de pensées quotidiennes pour faire grandir votre esprit. Gratuit et imprimable.', descEn: '365 days of stoic wisdom and daily thoughts to elevate your mind. Free & printable.', descAr: '٣٦٥ يوماً من الحكمة والرواقية لتأمل وتطوير الذات يومياً. مجاني وقابل للطباعة PDF.' },
     { id: 'prod_7_habits', type: 'digital', price: 0.00, icon: 'book-open', image: '../habits_library_hero.jpg', titleFr: '7 Habitudes qui Détruisent votre Potentiel', titleEn: '7 Habits That Destroy Your Potential', titleAr: '٧ عادات تدمر إمكانياتك دون أن تشعر', descFr: 'Comment dépasser vos mauvaises habitudes selon la sagesse des plus grands penseurs. Article illustré gratuit.', descEn: 'How to overcome bad habits according to the wisdom of the greatest thinkers. Free illustrated article.', descAr: 'كيف تتجاوز عاداتك السيئة وفقاً لحكمة أعظم المفكرين. مقال مجاني مصوّر بجودة عالية.' },
@@ -168,6 +169,7 @@ function populateProducts(category = 'all') {
 
     // File mapping
     const fileMap = {
+      'prod_alchemist_audio': '../audio/alchemist.html',
       'prod_audio': '../audio/index.html',
       'prod_calendar': '../calendar/index.html',
       'prod_7_habits': '../articles/7-habits/index.html',
@@ -459,6 +461,7 @@ function setupCheckoutSimulator() {
     });
 
     const fileMap = {
+      'prod_alchemist_audio': { name: '../audio/alchemist.html', labelFr: 'Écouter L\'Alchimiste (Audiobook)', labelAr: 'الاستماع لرواية الخيميائي الصوتية', labelEn: 'Listen to The Alchemist (Audiobook)' },
       'prod_audio': { name: '../audio/index.html', labelFr: 'Ouvrir le Studio Audio', labelAr: 'دخول الاستوديو الصوتي', labelEn: 'Open Audio Studio' },
       'prod_calendar': { name: '../calendar/index.html', labelFr: 'Ouvrir le Calendrier Philosophique', labelAr: 'فتح التقويم الفلسفي', labelEn: 'Open Philosophical Calendar' },
       'prod_7_habits': { name: '../articles/7-habits/index.html', labelFr: 'Lire l\'article 7 Habitudes', labelAr: 'قراءة مقال ٧ عادات', labelEn: 'Read 7 Habits Article' },
