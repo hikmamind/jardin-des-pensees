@@ -993,26 +993,31 @@
       const text = alchemistScript[idx];
 
       if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+
         const utterance = new SpeechSynthesisUtterance(text);
-        const baselVoice = getSeniorMaleVoice();
+        const voices = window.speechSynthesis.getVoices();
+        
+        // Search for Basel (ar-IQ) or male Arabic voices
+        const baselVoice = voices.find(v => 
+          v.name.toLowerCase().includes('basel') || 
+          v.name.toLowerCase().includes('naayf') || 
+          v.name.toLowerCase().includes('tariq') || 
+          v.name.toLowerCase().includes('maged') || 
+          v.name.toLowerCase().includes('male') ||
+          v.lang.toLowerCase() === 'ar-iq'
+        );
 
         if (baselVoice) {
           utterance.voice = baselVoice;
           utterance.lang = baselVoice.lang;
+          utterance.pitch = 0.85; // Basel natural pitch
         } else {
-          utterance.lang = 'ar-IQ';
+          utterance.lang = 'ar-SA';
+          utterance.pitch = 0.15; // Force deep male baritone frequency transformation (65-75 yrs)
         }
 
-        const voiceName = baselVoice ? baselVoice.name.toLowerCase() : '';
-        const isMaleConfirmed = voiceName.includes('basel') || voiceName.includes('naayf') || voiceName.includes('tariq') || voiceName.includes('maged') || voiceName.includes('male');
-
-        utterance.rate = 0.72; // Calm, deliberate storytelling pace (80-90 wpm)
-
-        if (isMaleConfirmed) {
-          utterance.pitch = 0.85; // Natural warm pitch for Basel (ar-IQ)
-        } else {
-          utterance.pitch = 0.30; // Deep male baritone pitch transformation
-        }
+        utterance.rate = 0.65; // Slow, wise, unhurried storyteller pace (80-90 wpm)
 
         utterance.onend = function() {
           if (isPlaying) {
@@ -1020,7 +1025,7 @@
             setTimeout(() => {
               currentStep++;
               playStep(currentStep);
-            }, 2000); // Wise natural silences between thoughts
+            }, 1800);
           }
         };
 
@@ -1029,7 +1034,7 @@
             setTimeout(() => {
               currentStep++;
               playStep(currentStep);
-            }, 1500);
+            }, 1000);
           }
         };
 
