@@ -130,6 +130,7 @@ function populateNavbarDropdown() {
 // --- Products Data Setup ---
 function getProducts() {
   return [
+    { id: 'prod_audio', type: 'digital', price: 0.00, icon: 'book-open', image: '../audio_sanctuary_hero.jpg', titleFr: 'Studio Audio & Citadelle Intérieure', titleEn: 'Audio Studio & Inner Citadel', titleAr: 'الاستوديو الصوتي والقلعة الداخلية', descFr: 'Mixeur d\'ambiances stoïciennes (Pluie, Feu, 432Hz) et lecteur de sagesses philosophiques. Gratuit.', descEn: 'Stoic ambient soundscape mixer (Rain, Fire, 432Hz) and philosophical wisdom narrator. Free.', descAr: 'خافق الأجواء الرواقية (أصوات الأمطار، النار، 432Hz) وقارئ الحكمة الصوتي للتركيز والتأمل. مجاني.' },
     { id: 'prod_calendar', type: 'digital', price: 0.00, icon: 'book-open', image: '../philosophical_calendar_hero.jpg', titleFr: 'Calendrier Philosophique (365 Jours)', titleEn: 'Philosophical Calendar (365 Days)', titleAr: 'التقويم الفلسفي اليومي (٣٦٥ يوماً)', descFr: '365 jours de sagesse stoïcienne et de pensées quotidiennes pour faire grandir votre esprit. Gratuit et imprimable.', descEn: '365 days of stoic wisdom and daily thoughts to elevate your mind. Free & printable.', descAr: '٣٦٥ يوماً من الحكمة والرواقية لتأمل وتطوير الذات يومياً. مجاني وقابل للطباعة PDF.' },
     { id: 'prod_7_habits', type: 'digital', price: 0.00, icon: 'book-open', image: '../habits_library_hero.jpg', titleFr: '7 Habitudes qui Détruisent votre Potentiel', titleEn: '7 Habits That Destroy Your Potential', titleAr: '٧ عادات تدمر إمكانياتك دون أن تشعر', descFr: 'Comment dépasser vos mauvaises habitudes selon la sagesse des plus grands penseurs. Article illustré gratuit.', descEn: 'How to overcome bad habits according to the wisdom of the greatest thinkers. Free illustrated article.', descAr: 'كيف تتجاوز عاداتك السيئة وفقاً لحكمة أعظم المفكرين. مقال مجاني مصوّر بجودة عالية.' },
     { id: 'prod_marc_aurele_pdf', type: 'digital', price: 0.00, icon: 'book-open', image: '../marc_aurelius_writing.jpg', titleFr: 'E-book Marc Aurèle (PDF)', titleEn: 'Marcus Aurelius E-book (PDF)', titleAr: 'كتاب ماركوس أوريليوس (PDF)', descFr: 'Le livre PDF complet de Marc Aurèle avec le guide stoïcien et les exercices pratiques.', descEn: 'The complete PDF book of Marcus Aurelius with the Stoic guide and practical exercises.', descAr: 'كتاب إلكتروني كامل بصيغة PDF يحتوي على دليل الرواقية الكامل والتمارين التطبيقية لماركوس أوريليوس.' },
@@ -167,6 +168,7 @@ function populateProducts(category = 'all') {
 
     // File mapping
     const fileMap = {
+      'prod_audio': '../audio/index.html',
       'prod_calendar': '../calendar/index.html',
       'prod_7_habits': '../articles/7-habits/index.html',
       'prod_marc_aurele_pdf': 'e-book-marc-aurele.pdf',
@@ -457,6 +459,7 @@ function setupCheckoutSimulator() {
     });
 
     const fileMap = {
+      'prod_audio': { name: '../audio/index.html', labelFr: 'Ouvrir le Studio Audio', labelAr: 'دخول الاستوديو الصوتي', labelEn: 'Open Audio Studio' },
       'prod_calendar': { name: '../calendar/index.html', labelFr: 'Ouvrir le Calendrier Philosophique', labelAr: 'فتح التقويم الفلسفي', labelEn: 'Open Philosophical Calendar' },
       'prod_7_habits': { name: '../articles/7-habits/index.html', labelFr: 'Lire l\'article 7 Habitudes', labelAr: 'قراءة مقال ٧ عادات', labelEn: 'Read 7 Habits Article' },
       'prod_marc_aurele_pdf': { name: 'e-book-marc-aurele.pdf', labelFr: 'Télécharger E-book Marc Aurèle (PDF)', labelAr: 'تحميل كتاب ماركوس أوريليوس (PDF)', labelEn: 'Download Marcus Aurelius Ebook (PDF)' },
