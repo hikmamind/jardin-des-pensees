@@ -974,19 +974,33 @@
       }
     }
 
-    function getSeniorMaleVoice() {
-      const voices = window.speechSynthesis.getVoices();
+    let cachedSystemVoices = [];
+    function initSystemVoices() {
+      if ('speechSynthesis' in window) {
+        cachedSystemVoices = window.speechSynthesis.getVoices();
+      }
+    }
 
-      // Lock strictly to Basel / ar-IQ (Microsoft Basel - Arabic Iraq male voice)
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.onvoiceschanged = initSystemVoices;
+      initSystemVoices();
+    }
+
+    function getSeniorMaleVoice() {
+      const voices = cachedSystemVoices.length > 0 ? cachedSystemVoices : window.speechSynthesis.getVoices();
+
+      // Priority 1: Microsoft Basel - Arabic (Iraq) / ar-IQ
       let baselVoice = voices.find(v => 
         v.name.toLowerCase().includes('basel') || 
         v.lang.toLowerCase() === 'ar-iq' || 
-        v.lang.toLowerCase().includes('iq')
+        v.lang.toLowerCase().includes('iq') ||
+        v.name.includes('باصل') ||
+        v.name.includes('باسل')
       );
       if (baselVoice) return baselVoice;
 
-      // Fallback to any male Arabic voice
-      const arVoices = voices.filter(v => v.lang.startsWith('ar'));
+      // Priority 2: Male Arabic fallback
+      const arVoices = voices.filter(v => v.lang.toLowerCase().startsWith('ar'));
       const maleKeywords = ['basel', 'tariq', 'naayf', 'maged', 'mehdi', 'shakir', 'tarik', 'george', 'nizar', 'faris', 'male'];
       const femaleKeywords = ['hoda', 'zeina', 'salma', 'laila', 'zariyah', 'maryam', 'zora', 'samantha', 'zira', 'female'];
 
