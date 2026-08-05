@@ -732,18 +732,6 @@
         </div>
 
       </div>
-
-      <!-- Voice Selector Toolbar -->
-      <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(223,177,91,0.15); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.88rem; color: var(--text-muted);">
-        <div style="display: flex; align-items: center; gap: 10px;">
-          <span>🎙️ اختيار صوت الراوي:</span>
-          <select id="voiceSelectDropdown" onchange="if(isPlaying){stopSpeech(); playStep(currentStep);}" style="background: rgba(10,14,11,0.9); border: 1px solid var(--gold); color: var(--gold); padding: 6px 14px; border-radius: 20px; outline: none; cursor: pointer; font-family: inherit; font-size: 0.85rem; max-width: 340px;">
-          </select>
-        </div>
-        <div style="display: flex; align-items: center; gap: 10px;">
-          <span>✨ النبرة: صوت رجالي عميق، حكيم ودافئ (65–75 سنة)</span>
-        </div>
-      </div>
     </section>
 
     <!-- CONTENT GRID (LEFT 70% / RIGHT 30%) -->
@@ -956,98 +944,15 @@
       const pct = Math.round(((idx + 1) / alchemistScript.length) * 100);
       document.getElementById('progressFill').style.width = `${pct}%`;
 
-      const text = alchemistScript[idx];
-      if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-        const utterance = new SpeechSynthesisUtterance(text);
-        
-        const maleVoice = getSeniorMaleVoice();
-        if (maleVoice) {
-          utterance.voice = maleVoice;
-          utterance.lang = maleVoice.lang;
-        } else {
-          utterance.lang = 'ar-IQ';
-        }
-
-        utterance.rate = 0.72;  // Calm, deliberate storytelling pace (80-90 wpm)
-        utterance.pitch = 0.85; // Natural warm pitch for Basel (ar-IQ)
-
-        utterance.onend = function() {
+      if (isPlaying) {
+        playPageTurnSfx();
+        setTimeout(() => {
           if (isPlaying) {
-            playPageTurnSfx();
-            setTimeout(() => {
-              currentStep++;
-              playStep(currentStep);
-            }, 2000); // Wise natural silences between thoughts
+            currentStep++;
+            playStep(currentStep);
           }
-        };
-
-        window.speechSynthesis.speak(utterance);
+        }, 5000);
       }
-    }
-
-    function getSeniorMaleVoice() {
-      const voices = window.speechSynthesis.getVoices();
-      const select = document.getElementById('voiceSelectDropdown');
-      if (select && select.value !== '' && voices[select.value]) {
-        return voices[select.value];
-      }
-
-      // Priority 1: Basel / ar-IQ (Microsoft Basel - Arabic Iraq)
-      let baselVoice = voices.find(v => 
-        v.name.toLowerCase().includes('basel') || 
-        v.lang.toLowerCase() === 'ar-iq' || 
-        v.lang.toLowerCase().includes('iq')
-      );
-      if (baselVoice) return baselVoice;
-
-      // Priority 2: Male Arabic fallback
-      const arVoices = voices.filter(v => v.lang.startsWith('ar'));
-      const maleKeywords = ['basel', 'tariq', 'naayf', 'maged', 'mehdi', 'shakir', 'tarik', 'george', 'nizar', 'faris', 'male'];
-      const femaleKeywords = ['hoda', 'zeina', 'salma', 'laila', 'zariyah', 'maryam', 'zora', 'samantha', 'zira', 'female'];
-
-      let selected = arVoices.find(v => {
-        const name = v.name.toLowerCase();
-        return maleKeywords.some(mk => name.includes(mk)) && !femaleKeywords.some(fk => name.includes(fk));
-      });
-
-      if (!selected) {
-        selected = arVoices.find(v => !femaleKeywords.some(fk => v.name.toLowerCase().includes(fk)));
-      }
-
-      return selected || arVoices[0] || voices[0];
-    }
-
-    function populateVoices() {
-      if (!('speechSynthesis' in window)) return;
-      const select = document.getElementById('voiceSelectDropdown');
-      if (!select) return;
-
-      const voices = window.speechSynthesis.getVoices();
-      select.innerHTML = '';
-
-      const femaleKeywords = ['hoda', 'zeina', 'salma', 'laila', 'zariyah', 'maryam', 'zora', 'samantha', 'zira', 'female'];
-
-      voices.forEach((v, index) => {
-        const isBasel = v.name.toLowerCase().includes('basel') || v.lang.toLowerCase().includes('iq');
-        const isFemale = femaleKeywords.some(fk => v.name.toLowerCase().includes(fk));
-        
-        const option = document.createElement('option');
-        option.value = index;
-        option.textContent = `${isBasel ? '⭐ 👨 باسل (العراق ar-IQ)' : isFemale ? '👩' : '👨'} ${v.name} (${v.lang})`;
-        
-        if (isBasel) {
-          option.selected = true;
-          option.style.fontWeight = 'bold';
-          option.style.color = '#DFB15B';
-        }
-        select.appendChild(option);
-      });
-    }
-
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.onvoiceschanged = populateVoices;
-      populateVoices();
     }
 
     function stopSpeech() {
