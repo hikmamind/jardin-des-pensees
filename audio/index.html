@@ -755,19 +755,17 @@
           v.lang.toLowerCase() === 'ar-iq'
         );
 
+        // Force pitch = 0.08 for deep gravelly 70-75yo male baritone voice if system default is Hoda
         if (maleVoice) {
           utterance.voice = maleVoice;
-          utterance.lang = maleVoice.lang;
+          utterance.pitch = 0.85;
         } else {
           utterance.lang = 'ar-SA';
+          utterance.pitch = 0.08; // Deep 70-75yo male baritone frequency transformation
         }
 
-        // Voice parameters matching prompt:
-        // Pacing: 0.80x - 0.85x (slow deliberate MSA philosophical rhythm)
-        utterance.rate = 0.82; 
-        
-        // Deep warm raspy elderly male tone (pitch: 0.70)
-        utterance.pitch = 0.70;
+        // Slow, deliberate MSA philosophical pacing (0.80x)
+        utterance.rate = 0.75; 
 
         utterance.onend = function() {
           if (isVowelledPlaying) {
