@@ -693,16 +693,9 @@
       }
     }
 
-    /* Featured Vowelled Wise Narrator Speech Engine */
+    /* Featured Wise Narrator Audio Engine (ElevenLabs MP3 Player) */
     let isVowelledPlaying = false;
-    let vPIndex = 0;
-
-    const vowelledParagraphs = [
-      "أَهْلاً بِكَ... خُذْ لَحْظَةً لِتَجْلِسَ، وَلْتَدَعْ ضَجِيجَ الْعَالَمِ يَتَلَاشَى.",
-      "أَنْتَ تَدْلُفُ الْآنَ إِلَى بُسْتَانٍ مِنَ الْأَصْدَاءِ وَالْأَفْكارِ. هَذِهِ الْكَلِمَاتُ الَّتِي سَتَسْمَعُهَا عَبَرَتْ قُرُوناً... إِنَّهَا تَأَمُّلَاتُ مَنْ بَحَثُوا فِي أَعْمَاقِ النَّفْسِ الْبَشَرِيَّةِ، فِي حَيْرَتِنَا، وَعَظَمَتِنَا، وَظِلَالِنَا.",
-      "إِسْتَمِعْ بِتَأَنٍّ وَدُونَ عَجَلَةٍ... لَا تَبْحَثْ فَقَطْ عَنْ إِجَابَاتٍ، بَلْ تَعَلَّمْ كَيْفَ تُحِبُّ الْأَسْئِلَةَ.",
-      "رِحْلَةً مُوَفَّقَةً... فِي أَعْمَاقِ الْفِكْرِ."
-    ];
+    let wiseAudioEl = null;
 
     function toggleVowelledNarration() {
       initAudioContext();
@@ -719,80 +712,45 @@
         if (!sounds['fire'].active) toggleSound('fire');
         if (!sounds['wind'].active) toggleSound('wind');
 
-        speakVowelledParagraph(vPIndex);
+        playWiseAudioNarration();
       } else {
         if (btnIcon) btnIcon.textContent = "▶";
         if (btnText) btnText.textContent = "استماع للإلقاء الصوتي الحكيم";
-        stopSpeaking();
+        stopWiseAudioNarration();
       }
     }
 
-    function speakVowelledParagraph(idx) {
-      if (!isVowelledPlaying || idx >= vowelledParagraphs.length) {
-        if (idx >= vowelledParagraphs.length) {
+    function playWiseAudioNarration() {
+      if (!wiseAudioEl) {
+        wiseAudioEl = new Audio('wise_narrator_intro.mp3');
+        wiseAudioEl.playbackRate = 0.82; // 0.80x-0.85x slow deliberate MSA pacing
+
+        wiseAudioEl.onended = function() {
           isVowelledPlaying = false;
-          document.getElementById('vowelledIcon').textContent = "▶";
-          document.getElementById('vowelledText').textContent = "إعادة الاستماع للإلقاء الصوتي";
-          vPIndex = 0;
-        }
-        return;
+          const btnIcon = document.getElementById('vowelledIcon');
+          const btnText = document.getElementById('vowelledText');
+          if (btnIcon) btnIcon.textContent = "▶";
+          if (btnText) btnText.textContent = "إعادة الاستماع للإلقاء الصوتي";
+        };
       }
 
-      const text = vowelledParagraphs[idx];
+      wiseAudioEl.currentTime = 0;
+      wiseAudioEl.play().catch(function(e) {
+        console.log('Audio playback error:', e);
+      });
+    }
+
+    function stopWiseAudioNarration() {
+      if (wiseAudioEl) {
+        wiseAudioEl.pause();
+      }
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
-
-        const utterance = new SpeechSynthesisUtterance(text);
-        const voices = window.speechSynthesis.getVoices();
-        
-        // Target senior male Arabic voice (Basel, Naayf, Tariq, Maged, Mehdi)
-        const maleVoice = voices.find(v => 
-          v.name.toLowerCase().includes('basel') || 
-          v.name.toLowerCase().includes('naayf') || 
-          v.name.toLowerCase().includes('tariq') || 
-          v.name.toLowerCase().includes('maged') || 
-          v.name.toLowerCase().includes('male') ||
-          v.lang.toLowerCase() === 'ar-iq'
-        );
-
-        // Force pitch = 0.08 for deep gravelly 70-75yo male baritone voice if system default is Hoda
-        if (maleVoice) {
-          utterance.voice = maleVoice;
-          utterance.pitch = 0.85;
-        } else {
-          utterance.lang = 'ar-SA';
-          utterance.pitch = 0.08; // Deep 70-75yo male baritone frequency transformation
-        }
-
-        // Slow, deliberate MSA philosophical pacing (0.80x)
-        utterance.rate = 0.75; 
-
-        utterance.onend = function() {
-          if (isVowelledPlaying) {
-            setTimeout(() => {
-              vPIndex++;
-              speakVowelledParagraph(vPIndex);
-            }, 1800); // Poetic calm pauses between sentences
-          }
-        };
-
-        utterance.onerror = function() {
-          if (isVowelledPlaying) {
-            setTimeout(() => {
-              vPIndex++;
-              speakVowelledParagraph(vPIndex);
-            }, 1200);
-          }
-        };
-
-        window.speechSynthesis.speak(utterance);
       }
     }
 
     function stopSpeaking() {
-      if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-      }
+      stopWiseAudioNarration();
     }
   </script>
 
