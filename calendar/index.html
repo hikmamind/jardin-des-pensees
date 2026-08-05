@@ -193,7 +193,7 @@
       gap: 10px;
       overflow-x: auto;
       padding-bottom: 15px;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
       scrollbar-width: thin;
     }
     .month-tab {
@@ -213,6 +213,47 @@
       color: var(--bg-dark);
       font-weight: 700;
       border-color: var(--gold);
+    }
+
+    /* Month Artwork Banner */
+    .month-artwork-banner {
+      position: relative;
+      height: 220px;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      border: 1px solid rgba(223, 177, 91, 0.3);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: flex-end;
+    }
+    .month-artwork-banner img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+      filter: brightness(0.65);
+    }
+    .month-artwork-banner:hover img {
+      transform: scale(1.03);
+    }
+    .month-artwork-overlay {
+      position: relative; z-index: 2;
+      padding: 24px 30px;
+      background: linear-gradient(to top, rgba(10, 14, 11, 0.95) 0%, rgba(10, 14, 11, 0.3) 70%, transparent 100%);
+      width: 100%;
+    }
+    .month-artwork-title {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--gold-light);
+      margin-bottom: 4px;
+    }
+    .month-artwork-subtitle {
+      font-size: 1rem;
+      color: var(--ivory);
+      opacity: 0.9;
     }
 
     /* Calendar Grid */
@@ -375,6 +416,15 @@
       <!-- Generated dynamically -->
     </nav>
 
+    <!-- Month Artwork Banner -->
+    <div class="month-artwork-banner" id="monthBanner">
+      <img id="monthImage" src="images/month_01.jpg" alt="شهر يناير">
+      <div class="month-artwork-overlay">
+        <h2 id="monthTitle" class="month-artwork-title">شهر يناير — ٣١ حكمة وتأمل</h2>
+        <p id="monthSubtitle" class="month-artwork-subtitle">استقبل السنة بتأملات العزيمة والصمود الرواقي</p>
+      </div>
+    </div>
+
     <!-- Calendar Grid -->
     <section class="calendar-grid" id="calendarGrid">
       <!-- Generated dynamically -->
@@ -395,18 +445,18 @@
 
   <script>
     const months = [
-      { name: "يناير", days: 31 },
-      { name: "فبراير", days: 28 },
-      { name: "مارس", days: 31 },
-      { name: "أبريل", days: 30 },
-      { name: "مايو", days: 31 },
-      { name: "يونيو", days: 30 },
-      { name: "يوليو", days: 31 },
-      { name: "أغسطس", days: 31 },
-      { name: "سبتمبر", days: 30 },
-      { name: "أكتوبر", days: 31 },
-      { name: "نوفمبر", days: 30 },
-      { name: "ديسمبر", days: 31 }
+      { name: "يناير", days: 31, img: "images/month_01.jpg", theme: "العزيمة والصمود الرواقي", sub: "استقبل السنة بتأملات العزيمة والصمود الرواقي وتهذيب النفس." },
+      { name: "فبراير", days: 28, img: "images/month_02.jpg", theme: "التأمل العميق وتصفية الذهن", sub: "رحلة في غياهب الفكر الهادئ لضبط البوصلة وتصفية الذهن من المشتتات." },
+      { name: "مارس", days: 31, img: "images/month_03.jpg", theme: "التجدد والنمو الفكري", sub: "تفتُّح الأفكار الكبيرة والوعي بالقدرات الإنسانية الكامنة." },
+      { name: "أبريل", days: 30, img: "images/month_04.jpg", theme: "بناء قلعة العقل الداخلية", sub: "كيف تحمي سلامك الداخلي من تقلبات العالم والظروف الخارجية." },
+      { name: "مايو", days: 31, img: "images/month_05.jpg", theme: "الإشراق وحكمة الطبيعة", sub: "العيش بالتوافق مع قوانين الطبيعة وفهم الانسجام الإنساني." },
+      { name: "يونيو", days: 30, img: "images/month_06.jpg", theme: "قمة التركيز والسيطرة على الذات", sub: "التغلب على الشهوات والمشتتات لتحقيق الإنجازات العظيمة." },
+      { name: "يوليو", days: 31, img: "images/month_07.jpg", theme: "السكينة والهدوء النفسي", sub: "تأملات ساحلية في طمأنينة الروح والتصالح مع الذات." },
+      { name: "أغسطس", days: 31, img: "images/month_08.jpg", theme: "الوضوح والتغلب على الوهم", sub: "الرؤية النافذة لما هو حقيقي وما هو مجرد مخاوف وهمية." },
+      { name: "سبتمبر", days: 30, img: "images/month_09.jpg", theme: "التعمق في المعرفة والحكمة", sub: "القراءة الواعية والغوص في كتب وثمار عقول كبار المفكرين." },
+      { name: "أكتوبر", days: 31, img: "images/month_10.jpg", theme: "التوازن ومواجهة المشتتات", sub: "استعادة السيطرة على الانتباه والتركيز في الأهداف الجوهرية." },
+      { name: "نوفمبر", days: 30, img: "images/month_11.jpg", theme: "الخلوة الفكرية وتهذيب النفس", sub: "لحظات الهدوء الدافئة أمام ذاتك للتقييم والتعديل." },
+      { name: "ديسمبر", days: 31, img: "images/month_12.jpg", theme: "حصاد السنة والحكمة الخالدة", sub: "مراجعة عاداتك وإنجازاتك استعداداً لبداية أكثر حكمة وصبر." }
     ];
 
     const quotesDatabase = [
@@ -428,6 +478,7 @@
 
     function initCalendar() {
       renderMonthTabs();
+      renderMonthBanner(activeMonthIndex);
       renderGrid(activeMonthIndex);
       setTodayHighlight();
     }
@@ -444,7 +495,15 @@
     function selectMonth(idx) {
       activeMonthIndex = idx;
       renderMonthTabs();
+      renderMonthBanner(idx);
       renderGrid(idx);
+    }
+
+    function renderMonthBanner(idx) {
+      const month = months[idx];
+      document.getElementById('monthImage').src = month.img;
+      document.getElementById('monthTitle').textContent = `شهر ${month.name} — ${month.theme}`;
+      document.getElementById('monthSubtitle').textContent = month.sub;
     }
 
     function renderGrid(monthIdx) {
