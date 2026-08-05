@@ -957,8 +957,8 @@
           utterance.lang = 'ar-SA';
         }
 
-        utterance.rate = 0.75;  // Senior male slow pace (vieux philosophe)
-        utterance.pitch = 0.55; // Deep, grave, resonant male voice timbre
+        utterance.rate = 0.68;  // Slow, wise, unhurried pace (80-90 wpm)
+        utterance.pitch = 0.45; // Deep, grave, warm baritone timbre (65-75 yrs philosopher)
 
         utterance.onend = function() {
           if (isPlaying) {
@@ -966,7 +966,7 @@
             setTimeout(() => {
               currentStep++;
               playStep(currentStep);
-            }, 1400);
+            }, 2000); // Wise natural silences between thoughts
           }
         };
 
@@ -977,8 +977,8 @@
     function getSeniorMaleVoice() {
       const voices = window.speechSynthesis.getVoices();
       const arVoices = voices.filter(v => v.lang.startsWith('ar'));
-      const maleKeywords = ['male', 'tariq', 'naayf', 'maged', 'mehdi', 'shakir', 'tarik'];
-      const femaleKeywords = ['female', 'hoda', 'zeina', 'salma', 'laila', 'zariyah', 'maryam'];
+      const maleKeywords = ['male', 'tariq', 'naayf', 'maged', 'mehdi', 'shakir', 'tarik', 'george', 'nizar'];
+      const femaleKeywords = ['female', 'hoda', 'zeina', 'salma', 'laila', 'zariyah', 'maryam', 'zora', 'samantha'];
 
       let selected = arVoices.find(v => {
         const name = v.name.toLowerCase();
