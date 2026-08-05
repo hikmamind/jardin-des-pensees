@@ -957,8 +957,17 @@
           utterance.lang = 'ar-IQ';
         }
 
-        utterance.rate = 0.72;  // Calm, deliberate storytelling pace (80-90 wpm)
-        utterance.pitch = 0.85; // Natural warm pitch for Basel (ar-IQ)
+        // Check if voice is confirmed male (Basel, Naayf, Tariq, etc.)
+        const voiceName = maleVoice ? maleVoice.name.toLowerCase() : '';
+        const isMaleVoiceConfirmed = voiceName.includes('basel') || voiceName.includes('naayf') || voiceName.includes('tariq') || voiceName.includes('maged') || voiceName.includes('male');
+
+        utterance.rate = 0.65;  // Slow, wise, unhurried pace (80-90 wpm)
+
+        if (isMaleVoiceConfirmed) {
+          utterance.pitch = 0.85; // Basel natural warm male pitch
+        } else {
+          utterance.pitch = 0.20; // Deep male baritone transformation (65-75 yrs philosopher)
+        }
 
         utterance.onend = function() {
           if (isPlaying) {
