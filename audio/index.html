@@ -944,15 +944,62 @@
       const pct = Math.round(((idx + 1) / alchemistScript.length) * 100);
       document.getElementById('progressFill').style.width = `${pct}%`;
 
-      if (isPlaying) {
-        playPageTurnSfx();
-        setTimeout(() => {
+      const text = alchemistScript[idx];
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        
+        const maleVoice = getSeniorMaleVoice();
+        if (maleVoice) {
+          utterance.voice = maleVoice;
+          utterance.lang = maleVoice.lang;
+        } else {
+          utterance.lang = 'ar-IQ';
+        }
+
+        utterance.rate = 0.72;  // Calm, deliberate storytelling pace (80-90 wpm)
+        utterance.pitch = 0.85; // Natural warm pitch for Basel (ar-IQ)
+
+        utterance.onend = function() {
           if (isPlaying) {
-            currentStep++;
-            playStep(currentStep);
+            playPageTurnSfx();
+            setTimeout(() => {
+              currentStep++;
+              playStep(currentStep);
+            }, 2000); // Wise natural silences between thoughts
           }
-        }, 5000);
+        };
+
+        window.speechSynthesis.speak(utterance);
       }
+    }
+
+    function getSeniorMaleVoice() {
+      const voices = window.speechSynthesis.getVoices();
+
+      // Lock strictly to Basel / ar-IQ (Microsoft Basel - Arabic Iraq male voice)
+      let baselVoice = voices.find(v => 
+        v.name.toLowerCase().includes('basel') || 
+        v.lang.toLowerCase() === 'ar-iq' || 
+        v.lang.toLowerCase().includes('iq')
+      );
+      if (baselVoice) return baselVoice;
+
+      // Fallback to any male Arabic voice
+      const arVoices = voices.filter(v => v.lang.startsWith('ar'));
+      const maleKeywords = ['basel', 'tariq', 'naayf', 'maged', 'mehdi', 'shakir', 'tarik', 'george', 'nizar', 'faris', 'male'];
+      const femaleKeywords = ['hoda', 'zeina', 'salma', 'laila', 'zariyah', 'maryam', 'zora', 'samantha', 'zira', 'female'];
+
+      let selected = arVoices.find(v => {
+        const name = v.name.toLowerCase();
+        return maleKeywords.some(mk => name.includes(mk)) && !femaleKeywords.some(fk => name.includes(fk));
+      });
+
+      if (!selected) {
+        selected = arVoices.find(v => !femaleKeywords.some(fk => v.name.toLowerCase().includes(fk)));
+      }
+
+      return selected || arVoices[0] || voices[0];
     }
 
     function stopSpeech() {
