@@ -11,6 +11,8 @@ const TIKTOK_DATA = {
       "thinkers": "Philosophes",
       "articles": "Articles",
       "quotes": "Citations",
+      "calendar": "Calendrier",
+      "audio": "Studio Audio",
       "psychology": "Catégories",
       "shop": "Boutique",
       "about": "À propos",
@@ -135,6 +137,8 @@ const TIKTOK_DATA = {
       "thinkers": "Philosophers",
       "articles": "Articles",
       "quotes": "Quotes",
+      "calendar": "Calendar",
+      "audio": "Audio Studio",
       "psychology": "Categories",
       "shop": "Shop",
       "about": "About",
@@ -376,7 +380,9 @@ const TIKTOK_DATA = {
       "latestTitle2": "اقتباسات نيتشه التي ستغير نظرتك للحياة",
       "latestTitle3": "الانضباط هو الجسر بين الأهداف والإنجاز",
       "latestTitle4": "ماذا يقول شوبنهاور عن السعادة الحقيقية؟",
-      "quotes": "اقتباسات"
+      "quotes": "اقتباسات",
+      "calendar": "التقويم",
+      "audio": "الصوتيات"
     }
   },
   "content": {
