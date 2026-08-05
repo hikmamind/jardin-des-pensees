@@ -356,6 +356,35 @@
   <!-- Main Content Area -->
   <main class="main-container">
 
+    <!-- Featured Wise Narrator Section (الإنشاد الفلسفي والافتتاحية) -->
+    <div class="narrator-featured-card" style="background: linear-gradient(135deg, rgba(223, 177, 91, 0.15), rgba(18, 26, 21, 0.95)); border: 1px solid var(--gold); border-radius: 24px; padding: 36px; margin-bottom: 40px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);">
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
+        <h2 style="font-family: 'Noto Naskh Arabic', serif; font-size: 1.6rem; color: var(--gold-light); display: flex; align-items: center; gap: 10px; margin: 0;">
+          🎙️ الإلقاء الفلسفي (صوت الراوي الحكيم — 70–75 سنة)
+        </h2>
+        <span style="font-size: 0.85rem; color: var(--gold); border: 1px solid rgba(223, 177, 91, 0.3); padding: 4px 14px; border-radius: 20px; background: rgba(10, 14, 11, 0.6);">
+          الفصحى المشكولة (0.80x - 0.85x)
+        </span>
+      </div>
+
+      <!-- Fully Vowelled Text Box -->
+      <div id="vowelledScriptBox" style="font-family: 'Noto Naskh Arabic', serif; font-size: 1.45rem; color: var(--ivory); line-height: 2.3; background: rgba(10, 14, 11, 0.85); border-radius: 20px; padding: 30px; margin-bottom: 24px; border-right: 5px solid var(--gold); box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);">
+        « أَهْلاً بِكَ... خُذْ لَحْظَةً لِتَجْلِسَ، وَلْتَدَعْ ضَجِيجَ الْعَالَمِ يَتَلَاشَى.<br><br>
+        أَنْتَ تَدْلُفُ الْآنَ إِلَى بُسْتَانٍ مِنَ الْأَصْدَاءِ وَالْأَفْكارِ. هَذِهِ الْكَلِمَاتُ الَّتِي سَتَسْمَعُهَا عَبَرَتْ قُرُوناً... إِنَّهَا تَأَمُّلَاتُ مَنْ بَحَثُوا فِي أَعْمَاقِ النَّفْسِ الْبَشَرِيَّةِ، فِي حَيْرَتِنَا، وَعَظَمَتِنَا، وَظِلَالِنَا.<br><br>
+        إِسْتَمِعْ بِتَأَنٍّ وَدُونَ عَجَلَةٍ... لَا تَبْحَثْ فَقَطْ عَنْ إِجَابَاتٍ، بَلْ تَعَلَّمْ كَيْفَ تُحِبُّ الْأَسْئِلَةَ.<br><br>
+        رِحْلَةً مُوَفَّقَةً... فِي أَعْمَاقِ الْفِكْرِ. »
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+        <button class="master-btn" id="btnPlayVowelled" onclick="toggleVowelledNarration()">
+          <span id="vowelledIcon">▶</span> <span id="vowelledText">استماع للإلقاء الصوتي الحكيم</span>
+        </button>
+        <span style="font-size: 0.9rem; color: var(--text-muted);">
+          ✨ صوت رجالي وقور ودافئ (70-75 سنة)، إلقاء بطيء وتأملي مع pauses طبيعية
+        </span>
+      </div>
+    </div>
+
     <!-- Master Controls Bar -->
     <div class="master-bar">
       <div>
@@ -661,6 +690,104 @@
         window.speechSynthesis.speak(utterance);
       } else {
         alert("متصفحك لا يدعم قراءة النصوص صوتياً.");
+      }
+    }
+
+    /* Featured Vowelled Wise Narrator Speech Engine */
+    let isVowelledPlaying = false;
+    let vPIndex = 0;
+
+    const vowelledParagraphs = [
+      "أَهْلاً بِكَ... خُذْ لَحْظَةً لِتَجْلِسَ، وَلْتَدَعْ ضَجِيجَ الْعَالَمِ يَتَلَاشَى.",
+      "أَنْتَ تَدْلُفُ الْآنَ إِلَى بُسْتَانٍ مِنَ الْأَصْدَاءِ وَالْأَفْكارِ. هَذِهِ الْكَلِمَاتُ الَّتِي سَتَسْمَعُهَا عَبَرَتْ قُرُوناً... إِنَّهَا تَأَمُّلَاتُ مَنْ بَحَثُوا فِي أَعْمَاقِ النَّفْسِ الْبَشَرِيَّةِ، فِي حَيْرَتِنَا، وَعَظَمَتِنَا، وَظِلَالِنَا.",
+      "إِسْتَمِعْ بِتَأَنٍّ وَدُونَ عَجَلَةٍ... لَا تَبْحَثْ فَقَطْ عَنْ إِجَابَاتٍ، بَلْ تَعَلَّمْ كَيْفَ تُحِبُّ الْأَسْئِلَةَ.",
+      "رِحْلَةً مُوَفَّقَةً... فِي أَعْمَاقِ الْفِكْرِ."
+    ];
+
+    function toggleVowelledNarration() {
+      initAudio();
+      isVowelledPlaying = !isVowelledPlaying;
+      
+      const btnIcon = document.getElementById('vowelledIcon');
+      const btnText = document.getElementById('vowelledText');
+
+      if (isVowelledPlaying) {
+        if (btnIcon) btnIcon.textContent = "⏸";
+        if (btnText) btnText.textContent = "إيقاف الإلقاء الصوتي";
+
+        // Auto start ambient fire & wind soundscape
+        if (!sounds['fire'].active) toggleSound('fire');
+        if (!sounds['wind'].active) toggleSound('wind');
+
+        speakVowelledParagraph(vPIndex);
+      } else {
+        if (btnIcon) btnIcon.textContent = "▶";
+        if (btnText) btnText.textContent = "استماع للإلقاء الصوتي الحكيم";
+        stopSpeaking();
+      }
+    }
+
+    function speakVowelledParagraph(idx) {
+      if (!isVowelledPlaying || idx >= vowelledParagraphs.length) {
+        if (idx >= vowelledParagraphs.length) {
+          isVowelledPlaying = false;
+          document.getElementById('vowelledIcon').textContent = "▶";
+          document.getElementById('vowelledText').textContent = "إعادة الاستماع للإلقاء الصوتي";
+          vPIndex = 0;
+        }
+        return;
+      }
+
+      const text = vowelledParagraphs[idx];
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+
+        const utterance = new SpeechSynthesisUtterance(text);
+        const voices = window.speechSynthesis.getVoices();
+        
+        // Target senior male Arabic voice (Basel, Naayf, Tariq, Maged, Mehdi)
+        const maleVoice = voices.find(v => 
+          v.name.toLowerCase().includes('basel') || 
+          v.name.toLowerCase().includes('naayf') || 
+          v.name.toLowerCase().includes('tariq') || 
+          v.name.toLowerCase().includes('maged') || 
+          v.name.toLowerCase().includes('male') ||
+          v.lang.toLowerCase() === 'ar-iq'
+        );
+
+        if (maleVoice) {
+          utterance.voice = maleVoice;
+          utterance.lang = maleVoice.lang;
+        } else {
+          utterance.lang = 'ar-SA';
+        }
+
+        // Voice parameters matching prompt:
+        // Pacing: 0.80x - 0.85x (slow deliberate MSA philosophical rhythm)
+        utterance.rate = 0.82; 
+        
+        // Deep warm raspy elderly male tone (pitch: 0.70)
+        utterance.pitch = 0.70;
+
+        utterance.onend = function() {
+          if (isVowelledPlaying) {
+            setTimeout(() => {
+              vPIndex++;
+              speakVowelledParagraph(vPIndex);
+            }, 1800); // Poetic calm pauses between sentences
+          }
+        };
+
+        utterance.onerror = function() {
+          if (isVowelledPlaying) {
+            setTimeout(() => {
+              vPIndex++;
+              speakVowelledParagraph(vPIndex);
+            }, 1200);
+          }
+        };
+
+        window.speechSynthesis.speak(utterance);
       }
     }
 
