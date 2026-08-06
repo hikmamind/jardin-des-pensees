@@ -5766,35 +5766,214 @@ textarea.form-control {
 
 
 /* ==========================================================================
-   HARMONIOUS BRAND EMBLEM LOGO DESIGN
+   ULTRA-PREMIUM BRAND EMBLEM & NAVBAR DESIGN
    ========================================================================== */
-.brand-logo-img {
-  width: 44px !important;
-  height: 44px !important;
-  object-fit: contain !important;
-  border-radius: 50% !important;
-  background: #FAF6EF !important;
-  border: 1.5px solid rgba(223, 177, 91, 0.55) !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25), 0 0 12px rgba(223, 177, 91, 0.25) !important;
-  padding: 3px !important;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  flex-shrink: 0 !important;
+
+/* ── Top Header Glassmorphic Container ── */
+.navbar-header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 100000 !important;
+  background: rgba(7, 11, 8, 0.78) !important;
+  backdrop-filter: blur(24px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) !important;
+  border-bottom: 1px solid rgba(223, 177, 91, 0.22) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5) !important;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  padding: 8px 0 !important;
 }
 
-.brand-logo-img:hover {
-  transform: scale(1.08) rotate(3deg) !important;
-  border-color: rgba(240, 199, 117, 0.9) !important;
-  box-shadow: 0 6px 20px rgba(223, 177, 91, 0.45) !important;
+.navbar-header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(245, 217, 138, 0.9) 30%, rgba(223, 177, 91, 0.95) 50%, rgba(245, 217, 138, 0.9) 70%, transparent 100%);
+  pointer-events: none;
+  z-index: 2;
 }
 
+.navbar-header.scrolled {
+  background: rgba(5, 8, 6, 0.94) !important;
+  border-bottom: 1px solid rgba(223, 177, 91, 0.35) !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.85), 0 0 20px rgba(223, 177, 91, 0.12) !important;
+  padding: 4px 0 !important;
+}
+
+[data-theme="light"] .navbar-header {
+  background: rgba(250, 246, 239, 0.85) !important;
+  border-bottom: 1px solid rgba(184, 142, 60, 0.2) !important;
+}
+
+[data-theme="light"] .navbar-header.scrolled {
+  background: rgba(245, 240, 230, 0.96) !important;
+  border-bottom: 1px solid rgba(184, 142, 60, 0.35) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ── Navbar Container ── */
+.navbar {
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+  padding: 6px 28px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+/* ── Brand Emblem Logo & Title ── */
 .nav-brand {
   display: flex !important;
   align-items: center !important;
   gap: 12px !important;
   text-decoration: none !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.3s ease !important;
 }
 
-.brand-logo-img:hover {
-  transform: scale(1.1) rotate(3deg) !important;
-  box-shadow: 0 0 25px rgba(240, 199, 117, 0.8), 0 6px 15px rgba(0, 0, 0, 0.4) !important;
+.brand-logo-img {
+  width: 48px !important;
+  height: 48px !important;
+  object-fit: contain !important;
+  border-radius: 50% !important;
+  background: radial-gradient(circle at 35% 35%, #FFFFFF 0%, #FAF6EF 70%, #E5D5B3 100%) !important;
+  border: 2px solid var(--accent-gold, #DFB15B) !important;
+  box-shadow: 0 0 18px rgba(223, 177, 91, 0.45), 0 4px 14px rgba(0, 0, 0, 0.4) !important;
+  padding: 3px !important;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  flex-shrink: 0 !important;
+}
+
+.nav-brand:hover .brand-logo-img {
+  transform: scale(1.12) rotate(4deg) !important;
+  border-color: #F5D98A !important;
+  box-shadow: 0 0 30px rgba(245, 217, 138, 0.8), 0 6px 20px rgba(0, 0, 0, 0.6) !important;
+}
+
+.brand-name {
+  font-size: 1.25rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.8px !important;
+  font-family: 'Outfit', 'Playfair Display', serif !important;
+  background: linear-gradient(135deg, #FFFDF8 0%, #F5D98A 45%, #DFB15B 80%, #B38A3C 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)) !important;
+  transition: filter 0.3s ease !important;
+}
+
+.nav-brand:hover .brand-name {
+  filter: drop-shadow(0 0 10px rgba(245, 217, 138, 0.6)) !important;
+}
+
+.brand-tagline-ar {
+  font-family: 'Noto Naskh Arabic', 'Cairo', serif !important;
+  font-size: 0.68rem !important;
+  font-weight: 700 !important;
+  color: var(--accent-gold, #DFB15B) !important;
+  opacity: 0.9 !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* ── Navigation Links (Pill Style) ── */
+@media (min-width: 1025px) {
+  .nav-menu {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .nav-link {
+    font-size: 0.88rem !important;
+    font-weight: 700 !important;
+    padding: 8px 16px !important;
+    border-radius: 24px !important;
+    white-space: nowrap !important;
+    color: rgba(250, 246, 239, 0.82) !important;
+    text-decoration: none !important;
+    transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    border: 1px solid transparent !important;
+    position: relative !important;
+  }
+
+  .nav-link:hover {
+    color: #F5D98A !important;
+    background: rgba(223, 177, 91, 0.12) !important;
+    border-color: rgba(223, 177, 91, 0.35) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 15px rgba(223, 177, 91, 0.15) !important;
+  }
+
+  .nav-link.active {
+    color: #070A08 !important;
+    background: linear-gradient(135deg, #F5D98A 0%, #DFB15B 100%) !important;
+    border-color: #DFB15B !important;
+    font-weight: 800 !important;
+    box-shadow: 0 4px 18px rgba(223, 177, 91, 0.45) !important;
+  }
+
+  [data-theme="light"] .nav-link {
+    color: rgba(24, 23, 21, 0.85) !important;
+  }
+
+  [data-theme="light"] .nav-link:hover {
+    color: #B88E3C !important;
+    background: rgba(184, 142, 60, 0.1) !important;
+    border-color: rgba(184, 142, 60, 0.3) !important;
+  }
+
+  [data-theme="light"] .nav-link.active {
+    color: #FFFFFF !important;
+    background: linear-gradient(135deg, #DFB15B 0%, #B88E3C 100%) !important;
+  }
+}
+
+/* ── Dropdown Menus ── */
+.nav-sub-menu, .lang-dropdown {
+  background: rgba(8, 14, 10, 0.96) !important;
+  border: 1px solid rgba(223, 177, 91, 0.35) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85), 0 0 20px rgba(223, 177, 91, 0.15) !important;
+  padding: 8px !important;
+}
+
+.sub-link, .lang-opt {
+  border-radius: 10px !important;
+  padding: 10px 18px !important;
+  color: rgba(250, 246, 239, 0.85) !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+.sub-link:hover, .lang-opt:hover {
+  background: rgba(223, 177, 91, 0.15) !important;
+  color: #F5D98A !important;
+  transform: translateX(-3px) !important;
+}
+
+[dir="ltr"] .sub-link:hover {
+  transform: translateX(3px) !important;
+}
+
+/* ── Nav Action Buttons (Lang & Theme) ── */
+.lang-btn, .theme-btn-nav {
+  background: rgba(223, 177, 91, 0.08) !important;
+  border: 1px solid rgba(223, 177, 91, 0.3) !important;
+  color: #F5D98A !important;
+  border-radius: 24px !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.lang-btn:hover, .theme-btn-nav:hover {
+  background: rgba(223, 177, 91, 0.2) !important;
+  border-color: #F5D98A !important;
+  color: #FFFDF8 !important;
+  box-shadow: 0 0 16px rgba(223, 177, 91, 0.35) !important;
+  transform: scale(1.06) !important;
 }
