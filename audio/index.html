@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>الاستوديو الصوتي والقلعة الداخلية | حكمة ونور</title>
-  <meta name="description" content="مساحة صوتية رواقية للتأمل والتركيز العميق. أصوات المكتبة والأمطار، التأمل الترددي 432Hz وقارئ الحكمة الصوتي.">
-  <meta name="keywords" content="صوتيات رواقية, تأمل, أصوات أمطار, تركيز عميق, قارئ صوتی, حكمة ونور">
+  <title>رواية الخيميائي - الفصل الأول كامل (كتاب صوتي) | حكمة ونور</title>
+  <meta name="description" content="استمع لرواية الخيميائي (باولو كويلو) - الفصل الأول كاملاً بصوت دافئ ومحفز مع مؤثرات الرياح والنار والموسيقى السينمائية.">
+  <meta name="keywords" content="الخيميائي صوتي, كتاب صوتي, باولو كويلو, Alchemist audiobook, حكمة ونور">
 
   <link rel="icon" type="image/png" href="../brand_logo_official.png">
   <link rel="manifest" href="../manifest.json">
@@ -78,12 +78,12 @@
       content: '';
       position: absolute; inset: 0;
       background: url('../audio_sanctuary_hero.jpg') center/cover no-repeat;
-      filter: brightness(0.28);
+      filter: brightness(0.25);
       z-index: 0;
     }
     .hero-content {
       position: relative; z-index: 2;
-      max-width: 800px;
+      max-width: 850px;
       margin: 0 auto;
     }
     .hero-badge {
@@ -92,30 +92,23 @@
       border: 1px solid var(--gold);
       border-radius: 30px;
       color: var(--gold);
-      font-size: 0.85rem;
-      letter-spacing: 2px;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
       margin-bottom: 18px;
-      background: rgba(223, 177, 91, 0.1);
+      background: rgba(223, 177, 91, 0.12);
     }
     .hero h1 {
       font-family: 'Noto Naskh Arabic', serif;
-      font-size: clamp(2rem, 4vw, 3rem);
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
       font-weight: 900;
       color: var(--ivory);
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
     .hero h1 span { color: var(--gold); }
     .hero-subtitle {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       color: var(--text-muted);
       margin-bottom: 24px;
-    }
-
-    /* Main Container */
-    .main-container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
     }
 
     /* Equalizer Visualizer */
@@ -124,8 +117,8 @@
       justify-content: center;
       align-items: flex-end;
       gap: 6px;
-      height: 40px;
-      margin: 20px 0 30px;
+      height: 38px;
+      margin: 20px 0 10px;
     }
     .eq-bar {
       width: 6px;
@@ -144,57 +137,167 @@
       50% { height: 36px; }
     }
 
-    /* Master Controls Bar */
-    .master-bar {
-      background: linear-gradient(135deg, rgba(223, 177, 91, 0.15), rgba(18, 26, 21, 0.95));
+    /* Main Container */
+    .main-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    /* Audiobook Main Player Card */
+    .audiobook-card {
+      background: linear-gradient(135deg, rgba(223, 177, 91, 0.12), rgba(18, 26, 21, 0.95));
       border: 1px solid var(--gold);
-      border-radius: 24px;
-      padding: 24px 30px;
+      border-radius: 28px;
+      padding: 36px;
+      margin-bottom: 40px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    }
+
+    .player-header {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+
+    .book-cover {
+      width: 140px;
+      height: 180px;
+      border-radius: 16px;
+      object-fit: cover;
+      border: 2px solid var(--gold);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+      flex-shrink: 0;
+    }
+
+    .book-meta h2 {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 1.8rem;
+      color: var(--gold-light);
+      margin-bottom: 8px;
+    }
+
+    .book-author {
+      font-size: 1.05rem;
+      color: var(--ivory);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .book-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* Progress & Controls Bar */
+    .progress-container {
+      margin-bottom: 24px;
+    }
+
+    .progress-bar-bg {
+      width: 100%;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      border-radius: 4px;
+      transition: width 0.1s linear;
+    }
+
+    .time-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Player Button Bar */
+    .player-controls {
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 20px;
-      margin-bottom: 40px;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+      padding-top: 10px;
     }
-    .master-btn {
+
+    .main-play-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .btn-circle {
+      width: 60px; height: 60px;
+      border-radius: 50%;
       background: linear-gradient(135deg, var(--gold), #B38A3C);
       color: var(--bg-dark);
       border: none;
-      padding: 14px 36px;
-      border-radius: 30px;
-      font-size: 1.1rem;
-      font-weight: 700;
+      font-size: 1.5rem;
+      display: flex; align-items: center; justify-content: center;
       cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
+      box-shadow: 0 8px 25px rgba(223, 177, 91, 0.4);
       transition: all 0.3s ease;
     }
-    .master-btn:hover {
-      transform: scale(1.04);
-      box-shadow: 0 8px 25px rgba(223, 177, 91, 0.4);
+    .btn-circle:hover {
+      transform: scale(1.08);
+      box-shadow: 0 12px 30px rgba(223, 177, 91, 0.6);
     }
 
-    .volume-group {
+    .btn-seek {
+      background: rgba(223, 177, 91, 0.15);
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+    .btn-seek:hover {
+      background: var(--gold);
+      color: var(--bg-dark);
+    }
+
+    .extra-controls {
       display: flex;
       align-items: center;
-      gap: 12px;
-      color: var(--text-main);
+      gap: 16px;
     }
-    .volume-slider {
-      accent-color: var(--gold);
+
+    .speed-select {
+      background: rgba(10, 14, 11, 0.8);
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      outline: none;
       cursor: pointer;
-      width: 130px;
     }
 
     /* Soundscapes Mixer Grid */
     .section-title {
       font-family: 'Noto Naskh Arabic', serif;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       color: var(--gold-light);
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -204,14 +307,14 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
     }
 
     .sound-card {
       background: var(--bg-card);
       border: 1px solid rgba(223, 177, 91, 0.2);
       border-radius: 20px;
-      padding: 24px;
+      padding: 20px;
       transition: all 0.3s ease;
       display: flex;
       flex-direction: column;
@@ -227,29 +330,17 @@
       background: linear-gradient(135deg, rgba(223, 177, 91, 0.12), rgba(18, 26, 21, 0.95));
     }
 
-    .sound-icon {
-      font-size: 2.8rem;
-      margin-bottom: 12px;
-    }
-    .sound-name {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--ivory);
-      margin-bottom: 6px;
-    }
-    .sound-desc {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-bottom: 16px;
-    }
+    .sound-icon { font-size: 2.4rem; margin-bottom: 8px; }
+    .sound-name { font-size: 1.05rem; font-weight: 700; color: var(--ivory); margin-bottom: 4px; }
+    .sound-desc { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 14px; }
 
     .sound-toggle {
       background: rgba(223, 177, 91, 0.15);
       border: 1px solid var(--gold);
       color: var(--gold);
-      padding: 8px 20px;
+      padding: 6px 18px;
       border-radius: 20px;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 700;
       cursor: pointer;
       transition: all 0.3s ease;
@@ -262,62 +353,8 @@
 
     .sound-volume {
       width: 100%;
-      margin-top: 14px;
+      margin-top: 12px;
       accent-color: var(--gold);
-    }
-
-    /* Text to Speech Wisdom Reader */
-    .reader-card {
-      background: var(--bg-card);
-      border: 1px solid rgba(223, 177, 91, 0.2);
-      border-radius: 24px;
-      padding: 35px;
-      margin-bottom: 50px;
-    }
-    .reader-select {
-      width: 100%;
-      background: #0A0E0B;
-      border: 1px solid var(--gold);
-      color: var(--ivory);
-      padding: 12px 16px;
-      border-radius: 12px;
-      font-family: inherit;
-      font-size: 1rem;
-      margin-bottom: 20px;
-      outline: none;
-    }
-    .reader-text-box {
-      font-family: 'Noto Naskh Arabic', serif;
-      font-size: 1.3rem;
-      color: var(--gold-light);
-      line-height: 1.9;
-      background: rgba(10, 14, 11, 0.6);
-      border-radius: 16px;
-      padding: 24px;
-      margin-bottom: 24px;
-      border-right: 4px solid var(--gold);
-    }
-
-    .reader-controls {
-      display: flex;
-      gap: 14px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .reader-btn {
-      background: var(--gold);
-      color: var(--bg-dark);
-      border: none;
-      padding: 10px 24px;
-      border-radius: 25px;
-      font-weight: 700;
-      cursor: pointer;
-      font-size: 0.95rem;
-      transition: all 0.3s ease;
-    }
-    .reader-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(223, 177, 91, 0.3);
     }
 
     /* Footer */
@@ -338,9 +375,9 @@
   <!-- Hero Header -->
   <header class="hero">
     <div class="hero-content">
-      <div class="hero-badge">مساحة التأمل والسكينة</div>
-      <h1>الاستوديو الصوتي <span>والقلعة الداخلية</span></h1>
-      <p class="hero-subtitle">أصوات أجواء المكتبة، الأمطار، الترددات الذهنية وقارئ الحكمة لمساعدتك على التركيز والسلام الداخلي</p>
+      <div class="hero-badge">🎧 الكتاب الصوتي كامل</div>
+      <h1>رواية <span>الخيميائي</span> — الفصل الأول</h1>
+      <p class="hero-subtitle">تحفة باولو كويلو الخالدة بصوت الراوي الحكيم مع مؤثرات الرياح والنار والتأمل السينمائي</p>
       
       <!-- Equalizer Animated Bar -->
       <div class="eq-visualizer" id="eqVisualizer">
@@ -356,149 +393,115 @@
   <!-- Main Content Area -->
   <main class="main-container">
 
-    <!-- Featured Wise Narrator Section (الإنشاد الفلسفي والافتتاحية) -->
-    <div class="narrator-featured-card" style="background: linear-gradient(135deg, rgba(223, 177, 91, 0.15), rgba(18, 26, 21, 0.95)); border: 1px solid var(--gold); border-radius: 24px; padding: 36px; margin-bottom: 40px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);">
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
-        <h2 style="font-family: 'Noto Naskh Arabic', serif; font-size: 1.6rem; color: var(--gold-light); display: flex; align-items: center; gap: 10px; margin: 0;">
-          🎙️ الإلقاء الفلسفي (صوت الراوي الحكيم — 70–75 سنة)
-        </h2>
-        <span style="font-size: 0.85rem; color: var(--gold); border: 1px solid rgba(223, 177, 91, 0.3); padding: 4px 14px; border-radius: 20px; background: rgba(10, 14, 11, 0.6);">
-          الفصحى المشكولة (0.80x - 0.85x)
-        </span>
+    <!-- Audiobook Main Player Card -->
+    <div class="audiobook-card">
+      <div class="player-header">
+        <img src="../desk_coffee_book.jpg" alt="الخيميائي" class="book-cover">
+        <div class="book-meta">
+          <h2>رواية الخيميائي (Paulo Coelho)</h2>
+          <div class="book-author">✍️ الكاتب: باولو كويلو | 🎙️ الإلقاء: بصوت الراوي الحكيم</div>
+          <p class="book-desc">
+            «عندما ترغب في شيء ما، فإن الكون بأكمله يتآمر ليساعدك على تحقيقه.»<br>
+            رحلة الراعي سنتياغو من غابات الأندلس نحو أهرامات مصر بحثاً عن الكنز والأسطورة الشخصية.
+          </p>
+        </div>
       </div>
 
-      <!-- Fully Vowelled Text Box -->
-      <div id="vowelledScriptBox" style="font-family: 'Noto Naskh Arabic', serif; font-size: 1.45rem; color: var(--ivory); line-height: 2.3; background: rgba(10, 14, 11, 0.85); border-radius: 20px; padding: 30px; margin-bottom: 24px; border-right: 5px solid var(--gold); box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);">
-        « أَهْلاً بِكَ... خُذْ لَحْظَةً لِتَجْلِسَ، وَلْتَدَعْ ضَجِيجَ الْعَالَمِ يَتَلَاشَى.<br><br>
-        أَنْتَ تَدْلُفُ الْآنَ إِلَى بُسْتَانٍ مِنَ الْأَصْدَاءِ وَالْأَفْكارِ. هَذِهِ الْكَلِمَاتُ الَّتِي سَتَسْمَعُهَا عَبَرَتْ قُرُوناً... إِنَّهَا تَأَمُّلَاتُ مَنْ بَحَثُوا فِي أَعْمَاقِ النَّفْسِ الْبَشَرِيَّةِ، فِي حَيْرَتِنَا، وَعَظَمَتِنَا، وَظِلَالِنَا.<br><br>
-        إِسْتَمِعْ بِتَأَنٍّ وَدُونَ عَجَلَةٍ... لَا تَبْحَثْ فَقَطْ عَنْ إِجَابَاتٍ، بَلْ تَعَلَّمْ كَيْفَ تُحِبُّ الْأَسْئِلَةَ.<br><br>
-        رِحْلَةً مُوَفَّقَةً... فِي أَعْمَاقِ الْفِكْرِ. »
+      <!-- Progress Bar -->
+      <div class="progress-container">
+        <div class="progress-bar-bg" id="progressBarBg" onclick="seekAudio(event)">
+          <div class="progress-bar-fill" id="progressFill"></div>
+        </div>
+        <div class="time-labels">
+          <span id="currentTimeLabel">00:00</span>
+          <span id="totalTimeLabel">--:--</span>
+        </div>
       </div>
 
-      <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
-        <button class="master-btn" id="btnPlayVowelled" onclick="toggleVowelledNarration()">
-          <span id="vowelledIcon">▶</span> <span id="vowelledText">استماع للإلقاء الصوتي الحكيم</span>
-        </button>
-        <span style="font-size: 0.9rem; color: var(--text-muted);">
-          ✨ صوت رجالي وقور ودافئ (70-75 سنة)، إلقاء بطيء وتأملي مع pauses طبيعية
-        </span>
+      <!-- Controls -->
+      <div class="player-controls">
+        <div class="main-play-group">
+          <button class="btn-seek" onclick="rewind10()" title="تراجع 10 ثوانٍ">↺ 10s</button>
+          <button class="btn-circle" id="mainPlayBtn" onclick="toggleAudiobook()">
+            <span id="playIcon">▶</span>
+          </button>
+          <button class="btn-seek" onclick="forward10()" title="تقديم 10 ثوانٍ">↻ 10s</button>
+        </div>
+
+        <div class="extra-controls">
+          <span style="font-size: 0.9rem; color: var(--text-muted);">السرعة:</span>
+          <select class="speed-select" onchange="changeSpeed(this.value)">
+            <option value="0.8">0.8x (بطيء وهادئ)</option>
+            <option value="1.0" selected>1.0x (طبيعي)</option>
+            <option value="1.25">1.25x (سريع)</option>
+          </select>
+        </div>
       </div>
 
-      <!-- Custom MP3 File Uploader -->
-      <div style="margin-top: 20px; padding-top: 20px; border-top: 1px dashed rgba(223, 177, 91, 0.3); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;">
-        <label for="customAudioFile" style="background: rgba(223, 177, 91, 0.15); border: 1px dashed var(--gold); padding: 10px 20px; border-radius: 20px; color: var(--gold-light); cursor: pointer; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s ease;">
-          📁 تحميل ملف MP3 الخاص بك من ElevenLabs
+      <!-- Upload Custom ElevenLabs MP3 -->
+      <div style="margin-top: 24px; padding-top: 20px; border-top: 1px dashed rgba(223, 177, 91, 0.3); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;">
+        <label for="customAudioFile" style="background: rgba(223, 177, 91, 0.15); border: 1px dashed var(--gold); padding: 10px 22px; border-radius: 20px; color: var(--gold-light); cursor: pointer; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s ease;">
+          📁 اختيار ملف MP3 آخر من جهازك (ElevenLabs / Audio)
           <input type="file" id="customAudioFile" accept="audio/*" onchange="loadCustomMp3(this)" style="display: none;">
         </label>
         <span id="customFileName" style="font-size: 0.85rem; color: var(--text-muted);">
-          (يمكنك اختيار الملف الصوت المباشر الذي قم بتنزيله من ElevenLabs)
+          🎵 تم تحميل: alchimiste_chapitre1_complet.mp3
         </span>
-      </div>
-    </div>
-
-    <!-- Master Controls Bar -->
-    <div class="master-bar">
-      <div>
-        <button class="master-btn" id="masterPlayBtn" onclick="toggleMasterAudio()">
-          <span id="masterIcon">▶</span> <span id="masterText">تشغيل جميع الأجواء</span>
-        </button>
-      </div>
-
-      <div class="volume-group">
-        <span>🔊 مستوى الصوت العام:</span>
-        <input type="range" class="volume-slider" id="masterVolume" min="0" max="1" step="0.05" value="0.7" oninput="changeMasterVolume(this.value)">
       </div>
     </div>
 
     <!-- Soundscapes Mixer Grid -->
-    <h2 class="section-title">🎧 خافق الأجواء الرواقية (Soundscape Mixer)</h2>
+    <h2 class="section-title">🕯️ خافق الأجواء المصاحبة (المطر، النار والرياح)</h2>
     <div class="mixer-grid">
 
       <!-- Sound 1: Rain -->
       <div class="sound-card" id="card-rain">
         <div class="sound-icon">🌧️</div>
         <div class="sound-name">أمطار المكتبة</div>
-        <div class="sound-desc">صوت قطرات المطر الخفيفة على نافذة المكتبة الأثرية</div>
+        <div class="sound-desc">صوت قطرات المطر الخفيفة على النافذة</div>
         <button class="sound-toggle" onclick="toggleSound('rain')">تشغيل ✦</button>
-        <input type="range" class="sound-volume" id="vol-rain" min="0" max="1" step="0.05" value="0.6" oninput="updateSoundVol('rain', this.value)">
+        <input type="range" class="sound-volume" id="vol-rain" min="0" max="1" step="0.05" value="0.5" oninput="updateSoundVol('rain', this.value)">
       </div>
 
       <!-- Sound 2: Fire Crackle -->
       <div class="sound-card" id="card-fire">
         <div class="sound-icon">🕯️</div>
         <div class="sound-name">دفء النار والشموع</div>
-        <div class="sound-desc">طقطقة الشموع وخشب النار الدافئ للتأمل</div>
+        <div class="sound-desc">طقطقة الشموع وخشب النار الدافئ</div>
         <button class="sound-toggle" onclick="toggleSound('fire')">تشغيل ✦</button>
-        <input type="range" class="sound-volume" id="vol-fire" min="0" max="1" step="0.05" value="0.5" oninput="updateSoundVol('fire', this.value)">
+        <input type="range" class="sound-volume" id="vol-fire" min="0" max="1" step="0.05" value="0.4" oninput="updateSoundVol('fire', this.value)">
       </div>
 
-      <!-- Sound 3: 432Hz Zen Drone -->
-      <div class="sound-card" id="card-zen">
-        <div class="sound-icon">🌌</div>
-        <div class="sound-name">تردد 432Hz الرواقي</div>
-        <div class="sound-desc">نغمة ترددية مريحة للأعصاب وتنشيط الصفاء الذهني</div>
-        <button class="sound-toggle" onclick="toggleSound('zen')">تشغيل ✦</button>
-        <input type="range" class="sound-volume" id="vol-zen" min="0" max="1" step="0.05" value="0.4" oninput="updateSoundVol('zen', this.value)">
-      </div>
-
-      <!-- Sound 4: Wind Sanctuary -->
+      <!-- Sound 3: Wind -->
       <div class="sound-card" id="card-wind">
-        <div class="sound-icon">🍃</div>
-        <div class="sound-name">نسيم القلعة الداخلية</div>
-        <div class="sound-desc">رياح خفيفة تهب بين أشجار الزيتون في المعبد</div>
+        <div class="sound-icon">🌬️</div>
+        <div class="sound-name">رياح الصحراء والأندلس</div>
+        <div class="sound-desc">نسيم الرياح للتأمل والاستغراق</div>
         <button class="sound-toggle" onclick="toggleSound('wind')">تشغيل ✦</button>
         <input type="range" class="sound-volume" id="vol-wind" min="0" max="1" step="0.05" value="0.5" oninput="updateSoundVol('wind', this.value)">
       </div>
 
     </div>
 
-    <!-- Text to Speech Wisdom Reader Section -->
-    <h2 class="section-title">🎙️ قارئ الحكمة الصوتي (Wisdom Reader)</h2>
-    <div class="reader-card">
-      <select class="reader-select" id="quoteSelect" onchange="loadSelectedQuote()">
-        <option value="0">ماركوس أوريليوس — السيطرة على العقل والأفكار</option>
-        <option value="1">آرثر شوبنهاور — السكينة والسلام الداخلي</option>
-        <option value="2">فريدريك نيتشه — قوة الإرادة وتجاوز الصعاب</option>
-        <option value="3">إبيكتيتوس — التمييز بين ما تملكه وما لا تملكه</option>
-        <option value="4">سينيكا — أثمن ما ينفقه الإنسان هو الوقت</option>
-      </select>
-
-      <div class="reader-text-box" id="readerText">
-        "لا يمكنك التحكم في الأحداث الخارجية، ولكن يمكنك دائماً التحكم في عقلك ردًا عليها. تذكّر أن سلامك الداخلي يبدأ عندما تتوقف عن طلب الاستحسان من العالم وتكتفي ببناء ذاتك."
-      </div>
-
-      <div class="reader-controls">
-        <button class="reader-btn" onclick="speakWisdom()">▶ قراءة النص صوتياً</button>
-        <button class="reader-btn" style="background: rgba(223,177,91,0.2); color: var(--gold);" onclick="stopSpeaking()">⏸ إيقاف القراءة</button>
-      </div>
-    </div>
-
   </main>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>© ٢٠٢٦ حكمة ونور | Le Jardin des Pensées — مساحة الصوت والتأمل الرواقي</p>
+    <p>حكمة ونور © 2026 — مكتبة الحكمة والرواقية اليومية</p>
   </footer>
 
-  <!-- Web Audio Synthesizer Engine & Speech Engine -->
+  <!-- Audio Processing Engine Script -->
   <script>
+    let isPlaying = false;
+    let audioEl = null;
     let audioCtx = null;
     let masterGain = null;
-    let isMasterPlaying = false;
 
-    const sounds = {
-      rain: { active: false, gainNode: null, sourceNode: null, vol: 0.6 },
-      fire: { active: false, gainNode: null, sourceNode: null, vol: 0.5 },
-      zen:  { active: false, gainNode: null, oscNode: null,    vol: 0.4 },
-      wind: { active: false, gainNode: null, sourceNode: null, vol: 0.5 }
-    };
-
-    const quotesList = [
-      "لا يمكنك التحكم في الأحداث الخارجية، ولكن يمكنك دائماً التحكم في عقلك ردًا عليها. تذكّر أن سلامك الداخلي يبدأ عندما تتوقف عن طلب الاستحسان من العالم وتكتفي ببناء ذاتك.",
-      "الهدوء والسكينة هما أعلى درجات القوة الذهنية. لا تجعل استجابات الآخرين تحرك بوصلتك، بل كن كالصخرة الرصينة التي تتكسر عليها الأمواج.",
-      "من لديه لماذا يعيش لأجلها يمكنه تحمل أي كيف. قوة الإرادة لا تأتي من القدرة الجسدية، بل من عزيمة لا تقهر لتجاوز الذات كل يوم.",
-      "نحن نعاني في المخيلة أكثر بكثير مما نعاني في الحقيقة. ميّز دائماً بين ما يقع تحت سلطتك وما هو خارج عنها، وسترى كيف يختفي الخوف.",
-      "الوقت هو أثمن ما ينفقه الإنسان. لا تضيّع ساعات يومك في صراعات لا قيمة لها، بل اجعل كل لحظة استثماراً في عقلك وروحك."
+    // Audio sources priority list
+    const audioSources = [
+      'alchimiste_chapitre1_complet.mp3',
+      'alchemist_chapitre1_complet.mp3',
+      'wise_narrator_intro.mp3'
     ];
 
     function initAudioContext() {
@@ -513,91 +516,154 @@
       }
     }
 
-    function toggleMasterAudio() {
-      initAudioContext();
-      isMasterPlaying = !isMasterPlaying;
+    function initAudiobookPlayer() {
+      if (!audioEl) {
+        audioEl = new Audio();
+        audioEl.src = audioSources[0];
+        
+        audioEl.ontimeupdate = function() {
+          if (audioEl.duration) {
+            const pct = (audioEl.currentTime / audioEl.duration) * 100;
+            document.getElementById('progressFill').style.width = `${pct}%`;
+            document.getElementById('currentTimeLabel').textContent = formatTime(audioEl.currentTime);
+            document.getElementById('totalTimeLabel').textContent = formatTime(audioEl.duration);
+          }
+        };
 
-      const btnText = document.getElementById('masterText');
-      const btnIcon = document.getElementById('masterIcon');
+        audioEl.onended = function() {
+          isPlaying = false;
+          document.getElementById('playIcon').textContent = "▶";
+          document.getElementById('eqVisualizer').classList.remove('playing');
+        };
+
+        audioEl.onerror = function() {
+          // Try next audio source fallback
+          const curIndex = audioSources.indexOf(audioEl.src.split('/').pop());
+          if (curIndex < audioSources.length - 1) {
+            audioEl.src = audioSources[curIndex + 1];
+            audioEl.play().catch(e => console.log(e));
+          }
+        };
+      }
+    }
+
+    function formatTime(seconds) {
+      if (isNaN(seconds)) return "00:00";
+      const mins = Math.floor(seconds / 60);
+      const secs = Math.floor(seconds % 60);
+      return `${mins < 10 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
+    }
+
+    function toggleAudiobook() {
+      initAudioContext();
+      initAudiobookPlayer();
+
+      isPlaying = !isPlaying;
+      const playIcon = document.getElementById('playIcon');
       const eqVis = document.getElementById('eqVisualizer');
 
-      if (isMasterPlaying) {
-        btnText.textContent = "إيقاف جميع الأجواء";
-        btnIcon.textContent = "⏸";
+      if (isPlaying) {
+        playIcon.textContent = "⏸";
         eqVis.classList.add('playing');
 
-        // Turn on default rain & zen if none active
-        if (!sounds.rain.active && !sounds.fire.active && !sounds.zen.active && !sounds.wind.active) {
-          toggleSound('rain');
-          toggleSound('zen');
-        }
-      } else {
-        btnText.textContent = "تشغيل جميع الأجواء";
-        btnIcon.textContent = "▶";
-        eqVis.classList.remove('playing');
+        // Auto start background fire sound
+        if (!sounds['fire'].active) toggleSound('fire');
 
-        // Pause all active sounds
-        Object.keys(sounds).forEach(key => {
-          if (sounds[key].active) toggleSound(key);
+        audioEl.play().catch(function(e) {
+          console.log('Playback error:', e);
         });
+      } else {
+        playIcon.textContent = "▶";
+        eqVis.classList.remove('playing');
+        if (audioEl) audioEl.pause();
       }
     }
 
-    function changeMasterVolume(val) {
-      if (masterGain) {
-        masterGain.gain.setValueAtTime(parseFloat(val), audioCtx.currentTime);
+    function rewind10() {
+      if (audioEl) audioEl.currentTime = Math.max(0, audioEl.currentTime - 10);
+    }
+
+    function forward10() {
+      if (audioEl) audioEl.currentTime = Math.min(audioEl.duration || 0, audioEl.currentTime + 10);
+    }
+
+    function changeSpeed(val) {
+      if (audioEl) audioEl.playbackRate = parseFloat(val);
+    }
+
+    function seekAudio(e) {
+      if (audioEl && audioEl.duration) {
+        const rect = e.currentTarget.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const pct = clickX / rect.width;
+        audioEl.currentTime = pct * audioEl.duration;
       }
     }
+
+    function loadCustomMp3(input) {
+      if (input.files && input.files[0]) {
+        const file = input.files[0];
+        const fileUrl = URL.createObjectURL(file);
+
+        initAudiobookPlayer();
+        if (audioEl) {
+          audioEl.pause();
+          audioEl.src = fileUrl;
+        }
+
+        document.getElementById('customFileName').textContent = `🎵 تم تحميل: ${file.name}`;
+        
+        isPlaying = true;
+        document.getElementById('playIcon').textContent = "⏸";
+        document.getElementById('eqVisualizer').classList.add('playing');
+
+        if (!sounds['fire'].active) toggleSound('fire');
+        audioEl.play().catch(e => console.log(e));
+      }
+    }
+
+    /* Ambient Soundscape Synthesizer */
+    const sounds = {
+      rain: { active: false, gainNode: null, sourceNode: null, vol: 0.5 },
+      fire: { active: false, gainNode: null, sourceNode: null, vol: 0.4 },
+      wind: { active: false, gainNode: null, sourceNode: null, vol: 0.5 }
+    };
 
     function toggleSound(type) {
       initAudioContext();
       const card = document.getElementById(`card-${type}`);
 
       if (sounds[type].active) {
-        // Stop Sound
         sounds[type].active = false;
         card.classList.remove('active');
         stopSynthesizedSound(type);
       } else {
-        // Start Sound
         sounds[type].active = true;
         card.classList.add('active');
         startSynthesizedSound(type);
-        document.getElementById('eqVisualizer').classList.add('playing');
       }
     }
 
     function updateSoundVol(type, val) {
       sounds[type].vol = parseFloat(val);
       if (sounds[type].gainNode && audioCtx) {
-        sounds[type].gainNode.gain.setValueAtTime(parseFloat(val), audioCtx.currentTime);
+        sounds[type].gainNode.gain.setValueAtTime(sounds[type].vol, audioCtx.currentTime);
       }
     }
 
-    /* Web Audio Procedural Sound Synthesis (Pink Noise & Oscillators) */
     function startSynthesizedSound(type) {
+      if (!audioCtx) return;
       const g = audioCtx.createGain();
       g.gain.value = sounds[type].vol;
       g.connect(masterGain);
       sounds[type].gainNode = g;
 
       if (type === 'rain') {
-        // Pink noise generator for rain
         const bufferSize = audioCtx.sampleRate * 2;
         const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
         const data = buffer.getChannelData(0);
-        let b0=0, b1=0, b2=0, b3=0, b4=0, b5=0, b6=0;
         for (let i = 0; i < bufferSize; i++) {
-          let white = Math.random() * 2 - 1;
-          b0 = 0.99886 * b0 + white * 0.0555179;
-          b1 = 0.99332 * b1 + white * 0.0750759;
-          b2 = 0.96900 * b2 + white * 0.1538520;
-          b3 = 0.86650 * b3 + white * 0.3104856;
-          b4 = 0.55000 * b4 + white * 0.5329522;
-          b5 = -0.7616 * b5 - white * 0.0168980;
-          data[i] = b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362;
-          data[i] *= 0.11;
-          b6 = white * 0.115926;
+          data[i] = (Math.random() * 2 - 1) * 0.12;
         }
         const noise = audioCtx.createBufferSource();
         noise.buffer = buffer;
@@ -611,36 +677,14 @@
         filter.connect(g);
         noise.start();
         sounds[type].sourceNode = noise;
-      } 
-      else if (type === 'zen') {
-        // 432Hz Harmonic Solfeggio Sine Wave Drone
-        const osc = audioCtx.createOscillator();
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(108, audioCtx.currentTime); // Sub-octave of 432Hz
-
-        const osc2 = audioCtx.createOscillator();
-        osc2.type = 'sine';
-        osc2.frequency.setValueAtTime(216, audioCtx.currentTime); // Octave
-
-        const oscGain = audioCtx.createGain();
-        oscGain.gain.value = 0.15;
-
-        osc.connect(oscGain);
-        osc2.connect(oscGain);
-        oscGain.connect(g);
-
-        osc.start();
-        osc2.start();
-        sounds[type].sourceNode = osc;
       }
       else if (type === 'fire') {
-        // Fire crackle simulation (filtered noise with pops)
         const bufferSize = audioCtx.sampleRate * 2;
         const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
         const data = buffer.getChannelData(0);
         for (let i = 0; i < bufferSize; i++) {
           data[i] = (Math.random() * 2 - 1) * 0.08;
-          if (Math.random() > 0.997) data[i] += (Math.random() > 0.5 ? 0.6 : -0.6); // Crackle pops
+          if (Math.random() > 0.997) data[i] += (Math.random() > 0.5 ? 0.6 : -0.6);
         }
         const noise = audioCtx.createBufferSource();
         noise.buffer = buffer;
@@ -656,7 +700,6 @@
         sounds[type].sourceNode = noise;
       }
       else if (type === 'wind') {
-        // Soft wind howling simulation
         const bufferSize = audioCtx.sampleRate * 2;
         const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
         const data = buffer.getChannelData(0);
@@ -683,124 +726,6 @@
         try { sounds[type].sourceNode.stop(); } catch(e){}
         sounds[type].sourceNode = null;
       }
-    }
-
-    /* Speech Synthesis Narrator */
-    function loadSelectedQuote() {
-      const idx = document.getElementById('quoteSelect').value;
-      document.getElementById('readerText').textContent = `"${quotesList[idx]}"`;
-    }
-
-    function speakWisdom() {
-      stopSpeaking();
-      const text = document.getElementById('readerText').textContent;
-      if ('speechSynthesis' in window) {
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = 'ar-SA';
-        utterance.rate = 0.9;
-        window.speechSynthesis.speak(utterance);
-      } else {
-        alert("متصفحك لا يدعم قراءة النصوص صوتياً.");
-      }
-    }
-
-    /* Featured Wise Narrator Audio Engine (ElevenLabs MP3 Player) */
-    let isVowelledPlaying = false;
-    let wiseAudioEl = null;
-
-    function toggleVowelledNarration() {
-      initAudioContext();
-      isVowelledPlaying = !isVowelledPlaying;
-      
-      const btnIcon = document.getElementById('vowelledIcon');
-      const btnText = document.getElementById('vowelledText');
-
-      if (isVowelledPlaying) {
-        if (btnIcon) btnIcon.textContent = "⏸";
-        if (btnText) btnText.textContent = "إيقاف الإلقاء الصوتي";
-
-        // Auto start ambient fire & wind soundscape
-        if (!sounds['fire'].active) toggleSound('fire');
-        if (!sounds['wind'].active) toggleSound('wind');
-
-        playWiseAudioNarration();
-      } else {
-        if (btnIcon) btnIcon.textContent = "▶";
-        if (btnText) btnText.textContent = "استماع للإلقاء الصوتي الحكيم";
-        stopWiseAudioNarration();
-      }
-    }
-
-    function playWiseAudioNarration() {
-      if (!wiseAudioEl) {
-        wiseAudioEl = new Audio('wise_narrator_intro.mp3');
-        wiseAudioEl.playbackRate = 0.82; // 0.80x-0.85x slow deliberate MSA pacing
-
-        wiseAudioEl.onended = function() {
-          isVowelledPlaying = false;
-          const btnIcon = document.getElementById('vowelledIcon');
-          const btnText = document.getElementById('vowelledText');
-          if (btnIcon) btnIcon.textContent = "▶";
-          if (btnText) btnText.textContent = "إعادة الاستماع للإلقاء الصوتي";
-        };
-      }
-
-      wiseAudioEl.currentTime = 0;
-      wiseAudioEl.play().catch(function(e) {
-        console.log('Audio playback error:', e);
-      });
-    }
-
-    function stopWiseAudioNarration() {
-      if (wiseAudioEl) {
-        wiseAudioEl.pause();
-      }
-      if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-      }
-    }
-
-    function loadCustomMp3(input) {
-      if (input.files && input.files[0]) {
-        const file = input.files[0];
-        const fileUrl = URL.createObjectURL(file);
-
-        if (wiseAudioEl) {
-          wiseAudioEl.pause();
-        }
-        wiseAudioEl = new Audio(fileUrl);
-        wiseAudioEl.playbackRate = 1.0;
-
-        wiseAudioEl.onended = function() {
-          isVowelledPlaying = false;
-          const btnIcon = document.getElementById('vowelledIcon');
-          const btnText = document.getElementById('vowelledText');
-          if (btnIcon) btnIcon.textContent = "▶";
-          if (btnText) btnText.textContent = "إعادة الاستماع للملف الصوت";
-        };
-
-        const customNameEl = document.getElementById('customFileName');
-        if (customNameEl) customNameEl.textContent = `🎵 تم التنسيق والحفظ: ${file.name}`;
-
-        const textEl = document.getElementById('vowelledText');
-        if (textEl) textEl.textContent = `إيقاف ${file.name}`;
-
-        isVowelledPlaying = true;
-        const btnIcon = document.getElementById('vowelledIcon');
-        if (btnIcon) btnIcon.textContent = "⏸";
-
-        // Auto start ambient soundscape
-        if (!sounds['fire'].active) toggleSound('fire');
-        if (!sounds['wind'].active) toggleSound('wind');
-
-        wiseAudioEl.play().catch(function(e) {
-          console.log('Audio playback error:', e);
-        });
-      }
-    }
-
-    function stopSpeaking() {
-      stopWiseAudioNarration();
     }
   </script>
 
