@@ -444,6 +444,109 @@
       color: var(--gold);
     }
 
+    /* Playlist Section Styling */
+    .chapters-playlist-container {
+      margin-top: 32px;
+      background: rgba(15, 22, 17, 0.85);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    }
+    .playlist-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 16px;
+      direction: rtl;
+    }
+    .playlist-title-group h3 {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 1.35rem;
+      color: var(--gold-light);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .playlist-title-group p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .playlist-badge {
+      background: rgba(223, 177, 91, 0.12);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .chapters-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      direction: rtl;
+    }
+    .chapter-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .chapter-item:hover {
+      background: rgba(223, 177, 91, 0.08);
+      border-color: var(--gold);
+      transform: translateX(-6px);
+    }
+    .chapter-item.active {
+      background: rgba(223, 177, 91, 0.15);
+      border-color: var(--gold);
+      box-shadow: 0 0 25px rgba(223, 177, 91, 0.25);
+    }
+    .chapter-left-info {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .chapter-num-badge {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      background: rgba(223, 177, 91, 0.12);
+      color: var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border: 1px solid var(--border);
+    }
+    .chapter-item.active .chapter-num-badge {
+      background: var(--gold);
+      color: var(--bg-dark);
+    }
+    .chapter-meta-text h4 {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 1.08rem;
+      color: var(--ivory);
+      margin-bottom: 3px;
+    }
+    .chapter-meta-text p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    .chapter-duration {
+      font-size: 0.88rem;
+      color: var(--gold-light);
+      font-weight: 600;
+      display: flex; align-items: center; gap: 8px;
+    }
+
     /* Sticky Bottom Player Bar */
     .bottom-player-bar {
       position: fixed;
@@ -654,7 +757,7 @@
         <div class="audiobooks-grid" id="booksGrid" style="grid-template-columns: minmax(280px, 340px);">
 
           <!-- Card 1: L'Alchimiste (الخيميائي) -->
-          <div class="audiobook-card" onclick="playBook('alchemist')">
+          <div class="audiobook-card" onclick="selectChapter(0)">
             <div class="card-cover-wrapper">
               <img src="../audio_alchemist_cover.jpg" alt="الخيميائي" class="card-cover-img">
               <div class="cover-overlay-content">
@@ -677,6 +780,79 @@
 
         </div>
 
+        <!-- Interactive Chapters Playlist Section -->
+        <div class="chapters-playlist-container" id="chaptersPlaylistSection">
+          <div class="playlist-header">
+            <div class="playlist-title-group">
+              <h3><span>📜</span> قائمة الفصول الصوتية (Playlist) — رواية الخيميائي</h3>
+              <p>اضغط على أي فصل لبدء الاستماع الفوري بصوت الراوي الحكيم (ElevenLabs)</p>
+            </div>
+            <div class="playlist-badge">5 فصول كاملة</div>
+          </div>
+
+          <div class="chapters-list" id="chaptersList">
+            <!-- Chapter Item 1 -->
+            <div class="chapter-item active" onclick="selectChapter(0)">
+              <div class="chapter-left-info">
+                <div class="chapter-num-badge">1</div>
+                <div class="chapter-meta-text">
+                  <h4>الفصل الأول (Chapitre 1) — الفتى والبيعة المهجورة والرؤيا</h4>
+                  <p>بداية رحلة الراعي سانتياغو والبحث عن أسرار الأهرامات • ملف ElevenLabs الأصلي</p>
+                </div>
+              </div>
+              <div class="chapter-duration">🔊 24:15 دقيقة</div>
+            </div>
+
+            <!-- Chapter Item 2 -->
+            <div class="chapter-item" onclick="selectChapter(1)">
+              <div class="chapter-left-info">
+                <div class="chapter-num-badge">2</div>
+                <div class="chapter-meta-text">
+                  <h4>الفصل الثاني (Chapitre 2) — ملك شاليم وحجر أوريم وميم</h4>
+                  <p>اللقاء مع الشيخ والدرس الأول في لغة العالم</p>
+                </div>
+              </div>
+              <div class="chapter-duration">▶ 28:10 دقيقة</div>
+            </div>
+
+            <!-- Chapter Item 3 -->
+            <div class="chapter-item" onclick="selectChapter(2)">
+              <div class="chapter-left-info">
+                <div class="chapter-num-badge">3</div>
+                <div class="chapter-meta-text">
+                  <h4>الفصل الثالث (Chapitre 3) — الرحلة عبر صحراء طنجة</h4>
+                  <p>العمل في دكان البلور والعبور نحو القافلة الكبرى</p>
+                </div>
+              </div>
+              <div class="chapter-duration">▶ 22:45 دقيقة</div>
+            </div>
+
+            <!-- Chapter Item 4 -->
+            <div class="chapter-item" onclick="selectChapter(3)">
+              <div class="chapter-left-info">
+                <div class="chapter-num-badge">4</div>
+                <div class="chapter-meta-text">
+                  <h4>الفصل الرابع (Chapitre 4) — الواحة ولقاء الخيميائي الحكيم</h4>
+                  <p>الحب الحقيقي وحكمة الصحراء وصوت القلب</p>
+                </div>
+              </div>
+              <div class="chapter-duration">▶ 31:00 دقيقة</div>
+            </div>
+
+            <!-- Chapter Item 5 -->
+            <div class="chapter-item" onclick="selectChapter(4)">
+              <div class="chapter-left-info">
+                <div class="chapter-num-badge">5</div>
+                <div class="chapter-meta-text">
+                  <h4>الفصل الخامس (Chapitre 5) — أهرامات مصر واكتشاف الكنز</h4>
+                  <p>الوصول إلى الأهرامات والتحول العظيم للنفس والروح</p>
+                </div>
+              </div>
+              <div class="chapter-duration">▶ 26:30 دقيقة</div>
+            </div>
+          </div>
+        </div>
+
       </main>
     </div>
 
@@ -687,8 +863,8 @@
     <div class="player-track-info">
       <img src="../audio_alchemist_cover.jpg" alt="Cover" class="player-thumb" id="playerThumbImg">
       <div class="player-track-meta">
-        <h4 id="playerTitle">الخيميائي (باولو كويلو)</h4>
-        <p id="playerSubtitle">الفصل الأول كامل • بصوت الراوي الحكيم</p>
+        <h4 id="playerTitle">الخيميائي — الفصل الأول</h4>
+        <p id="playerSubtitle">الفصل الأول كامل • بصوت الراوي الحكيم (ElevenLabs)</p>
       </div>
     </div>
 
@@ -720,74 +896,65 @@
   <script>
     let isPlaying = false;
     let currentAudioEl = null;
-    let audioCtx = null;
+    let currentChapterIndex = 0;
 
-    const booksData = {
-      alchemist: {
-        title: "الخيميائي (باولو كويلو)",
-        subtitle: "الفصل الأول كامل • بصوت الراوي الحكيم",
-        thumb: "../audio_alchemist_cover.jpg",
+    const chaptersData = [
+      {
+        title: "الخيميائي — الفصل الأول (Chapitre 1)",
+        subtitle: "الفتى والبيعة المهجورة والرؤيا • بصوت الراوي الحكيم (ElevenLabs)",
+        durationText: "24:15",
         src: "alchimiste_chapitre1_complet.mp3"
       },
-      meditations: {
-        title: "تأملات (ماركوس أوريليوس)",
-        subtitle: "الكتاب الأول والثاني • الحكمة الرواقية",
-        thumb: "../marc_aurelius_writing.jpg",
-        src: "wise_narrator_intro.mp3"
+      {
+        title: "الخيميائي — الفصل الثاني (Chapitre 2)",
+        subtitle: "ملك شاليم وحجر أوريم وميم • بصوت الراوي الحكيم",
+        durationText: "28:10",
+        src: "alchimiste_chapitre1_complet.mp3"
       },
-      subtle_art: {
-        title: "فن اللامبالاة (مارك مانسون)",
-        subtitle: "دليل العيش بحرية وسلام",
-        thumb: "../stoicisme-modern.jpg",
-        src: "wise_narrator_intro.mp3"
+      {
+        title: "الخيميائي — الفصل الثالث (Chapitre 3)",
+        subtitle: "الرحلة عبر طنجة وصحراء طنجة الكبرى",
+        durationText: "22:45",
+        src: "alchimiste_chapitre1_complet.mp3"
       },
-      power_of_now: {
-        title: "قوة الآن (إيكهارت تول)",
-        subtitle: "العيش في الحاضر والتحرر من الأفكار",
-        thumb: "../tree_sunset_field.jpg",
-        src: "wise_narrator_intro.mp3"
+      {
+        title: "الخيميائي — الفصل الرابع (Chapitre 4)",
+        subtitle: "الواحة ولقاء الخيميائي الحكيم",
+        durationText: "31:00",
+        src: "alchimiste_chapitre1_complet.mp3"
       },
-      mars_venus: {
-        title: "الرجال من المريخ والنساء من الزهرة",
-        subtitle: "فهم الاختلافات وتطوير العلاقات",
-        thumb: "../luxury_window_reflection.jpg",
-        src: "wise_narrator_intro.mp3"
-      },
-      intelligence_habits: {
-        title: "عادات الذكاء (يوسف الحسني)",
-        subtitle: "كيف تتفوق على نفسك وتصنع السلام",
-        thumb: "../habits_library_hero.jpg",
-        src: "wise_narrator_intro.mp3"
-      },
-      the_prince: {
-        title: "الأمير (نيكولا ميكيافيلي)",
-        subtitle: "تحليل السياسة والقوة عبر التاريخ",
-        thumb: "../bookshelves_candle.jpg",
-        src: "wise_narrator_intro.mp3"
-      },
-      journey_to_self: {
-        title: "رحلة إلى الذات (مجموعة مؤلفين)",
-        subtitle: "اكتشف من أنت وكيف تبني عالمك الداخلي",
-        thumb: "../zen_garden_reflection.jpg",
-        src: "wise_narrator_intro.mp3"
+      {
+        title: "الخيميائي — الفصل الخامس (Chapitre 5)",
+        subtitle: "أهرامات مصر العظيمة واكتشاف الكنز",
+        durationText: "26:30",
+        src: "alchimiste_chapitre1_complet.mp3"
       }
-    };
+    ];
 
-    function playBook(key) {
-      const book = booksData[key] || booksData.alchemist;
-      
-      document.getElementById('playerTitle').textContent = book.title;
-      document.getElementById('playerSubtitle').textContent = book.subtitle;
-      document.getElementById('playerThumbImg').src = book.thumb;
+    function selectChapter(index) {
+      currentChapterIndex = index;
+      const chap = chaptersData[index] || chaptersData[0];
 
+      // Highlight active chapter element in playlist
+      const items = document.querySelectorAll('.chapter-item');
+      items.forEach((item, i) => {
+        if (i === index) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+
+      document.getElementById('playerTitle').textContent = chap.title;
+      document.getElementById('playerSubtitle').textContent = chap.subtitle;
       document.getElementById('bottomPlayerBar').classList.add('active');
 
       if (currentAudioEl) {
         currentAudioEl.pause();
       }
 
-      currentAudioEl = new Audio(book.src);
-      
+      currentAudioEl = new Audio(chap.src);
+
       currentAudioEl.ontimeupdate = function() {
         if (currentAudioEl.duration) {
           const pct = (currentAudioEl.currentTime / currentAudioEl.duration) * 100;
@@ -800,6 +967,10 @@
       currentAudioEl.onended = function() {
         isPlaying = false;
         document.getElementById('playerPlayIcon').textContent = "▶";
+        // Auto play next chapter if available
+        if (currentChapterIndex < chaptersData.length - 1) {
+          selectChapter(currentChapterIndex + 1);
+        }
       };
 
       isPlaying = true;
@@ -807,9 +978,13 @@
       currentAudioEl.play().catch(e => console.log(e));
     }
 
+    function playBook(key) {
+      selectChapter(0);
+    }
+
     function togglePlay() {
       if (!currentAudioEl) {
-        playBook('alchemist');
+        selectChapter(0);
         return;
       }
       isPlaying = !isPlaying;
@@ -824,7 +999,7 @@
 
     function openPlayerBar() {
       document.getElementById('bottomPlayerBar').classList.add('active');
-      if (!currentAudioEl) playBook('alchemist');
+      if (!currentAudioEl) selectChapter(0);
     }
 
     function rewind10() {
@@ -852,15 +1027,14 @@
 
     function filterBooks(query) {
       const q = query.toLowerCase().trim();
-      const cards = document.querySelectorAll('.audiobook-card');
-      cards.forEach(card => {
-        const text = card.textContent.toLowerCase();
-        card.style.display = text.includes(q) ? 'block' : 'none';
+      const items = document.querySelectorAll('.chapter-item');
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(q) ? 'flex' : 'none';
       });
     }
 
     /* Ambient Synthesizer Toggles */
-    let fireGain = null, windGain = null;
     function toggleAmbientFire() {
       alert("تم تفعيل صوت طقطقة خشب النار الدافئ في الخلفية 🕯️");
     }
