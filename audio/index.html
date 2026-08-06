@@ -631,7 +631,7 @@
           <div class="page-title-row">
             <div class="page-title-group">
               <h1>📚 المكتبة الصوتية</h1>
-              <div class="page-subtitle">4 كتب صوتية (الروايات الصوتية الرئيسية)</div>
+              <div class="page-subtitle">5 كتب صوتية (الروايات الصوتية الرئيسية)</div>
             </div>
 
             <div class="view-controls">
@@ -721,6 +721,26 @@
                 <div class="info-text-group">
                   <span class="card-arabic-title">الأمير الصغير</span>
                   <span class="card-arabic-author">أنطوان دي سانت إكزوبيري</span>
+                </div>
+                <button class="card-dots-btn">⋮</button>
+              </div>
+            </div>
+
+            <!-- Book 5: La Métamorphose (التحول / المسخ - فرانز كافكا) -->
+            <div class="audiobook-card" onclick="openBookDetail('kafka')">
+              <div class="card-cover-wrapper">
+                <img src="./audio_kafka_cover.jpg" alt="التحول (المسخ)" class="card-cover-img">
+                <div class="cover-overlay-content">
+                  <div class="cover-main-title">التحول (المسخ)</div>
+                  <div class="cover-sub-title">فرانز كافكا</div>
+                </div>
+                <div class="duration-badge">12m 05s</div>
+                <div class="play-overlay-btn"><div class="play-icon-circle">▶</div></div>
+              </div>
+              <div class="card-info">
+                <div class="info-text-group">
+                  <span class="card-arabic-title">التحول (المسخ)</span>
+                  <span class="card-arabic-author">فرانز كافكا</span>
                 </div>
                 <button class="card-dots-btn">⋮</button>
               </div>
@@ -1061,6 +1081,37 @@
           { num: 3, name: "الفصل الثالث", desc: "كوكب الأمير الصغير والخروف الصغير", duration: "02:29", src: "petit_prince_chapitre3.mp3" },
           { num: 4, name: "الفصل الرابع", desc: "الكويكب B-612 والوردة الكبرياء", duration: "02:22", src: "petit_prince_chapitre4.mp3" },
           { num: 5, name: "الفصل الخامس", desc: "رحلة الكواكب واللقاء مع الثعلب والحكمة الكبرى", duration: "02:45", src: "petit_prince_chapitre5.mp3" }
+        ]
+      },
+      kafka: {
+        title: "التحول (المسخ)",
+        author: "فرانز كافكا",
+        cover: "./audio_kafka_cover.jpg",
+        totalDuration: "12 دقيقة 05 ثواني",
+        desc: "شاهكار فرانز كافكا الفلسفية عن الاغتراب الإنساني والتحول المروع لغريغور سامسا إلى حشرة ضخمة.",
+        aboutText: `
+<h2 style="color:var(--gold-light);margin-bottom:6px;font-size:1.3rem;">📚 التحول / المسخ (La Métamorphose) — ملخص الرواية الكاملة</h2>
+<p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:20px;">فرانز كافكا · 1915 · شاهكار الألغاز والأدب الكافكاوي</p>
+
+<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">🪲 الجزء الأول — الصدمة الأولى والتحول المروع</h3>
+<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">يستيقظ <strong>غريغور سامسا</strong>، البائع المتجول الكادح الذي يعيل أسرته، صباح أحد الأيام من أحلام مضطربة ليجد نفسه قد تحول على سريره إلى <em>«حشرة ضخمة مروعة»</em>. لا يقلق غريغور في البداية بشأن جسده الغريب، بل ينهمك في التفكير بكيفية اللحاق بالقطار خوفاً من فقدان وظائفه وتأخر دفع ديون والده. عندما يطرق مدير عمله وعائلته باب الغرفة المغلقة، يخرج غريغور بصعوبة فيصاب الجميع بالذهول والرعب الشديد، ويقوم والده بغضبه بطرده وإغلاق الباب عليه قسراً.</p>
+
+<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">🍂 الجزء الثاني — العزلة وتغير المعاملة العائلية</h3>
+<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">تتحول حياة غريغور إلى عزلة تامة داخل غرفته المظلمة. تبدأ أخته <strong>غريت</strong> في البداية بالاعتناء به وإحضار الطعام الفاسد الذي بات يفضله، غير أن التعاطف الأسري يقل تدريجياً مع مرور الوقت. يصبح الأب والأم والأخت مجبرين على العمل لكسب عيشهم، فتتحول الحشرة في نظرهم من ابن وأخ معيل إلى عبء ثقيل ومقزز. في إحدى اللحظات، يرمي الأب غريغور بتفاحة تغرس في ظهره وتتسبب له بإصابة خطيرة وتلوث مؤلم يستمر لأسابيع.</p>
+
+<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">🕯️ الجزء الثالث — الموت والتحرر الشاحب</h3>
+<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">تسوء الأحوال المالية للعائلة فيستأجرون غرفة في المنزل لثلاثة مستأجرين غرباء. في إحدى الليالي، تضرب أخته غريت على الكمان، فينجذب غريغور لشغف الموسيقى ويخرج من الغرفة، مما يرعب المستأجرين ويرفضون دفع الأجرة. حينها تعلن الأخت بحزم أنه <em>«يجب التخلص من هذا الشيء»</em>. يتألم غريغور نفساً وجسداً، وينكفئ في غرفته ليموت بسكون في الصباح الباكر. تشعر العائلة براحة كبيرة وتخرج في رحلة إلى الريف للتخطيط لمستقبل جديد.</p>
+
+<div style="background:rgba(212,175,55,0.1);border-right:3px solid var(--gold-light);padding:14px 16px;border-radius:6px;margin-top:14px;">
+  <p style="color:var(--gold-light);font-weight:600;margin-bottom:6px;">💡 المغزى والرمزية الفلسفية (الكافكاوية)</p>
+  <p style="line-height:1.75;color:var(--text-primary);margin:0;">ترمز الرواية إلى الاغتراب الإنساني والقسوة الاجتماعية؛ فغريغور كان محبوباً ومقبولاً فقط طالما كان آلة لإنتاج المال، وحين فقد قدرته الإنتاجية وتحول إلى حشرة، تخلت عنه أقرب الناس إليه.</p>
+</div>`,
+        chapters: [
+          { num: 1, name: "الفصل الأول", desc: "الاستيقاظ المروع بغريغور سامسا كحشرة ضخمة", duration: "02:42", src: "metamorphose_chapitre1.mp3" },
+          { num: 2, name: "الفصل الثاني", desc: "ذعر العائلة ورئيس العمل في الغرفة المغلقة", duration: "02:28", src: "metamorphose_chapitre2.mp3" },
+          { num: 3, name: "الفصل الثالث", desc: "الأخت غريت والعناية الفاترة بالطعام الفاسد", duration: "02:24", src: "metamorphose_chapitre3.mp3" },
+          { num: 4, name: "الفصل الرابع", desc: "إصابة غريغور بالتفاحة وعزلة السرير المظلم", duration: "02:08", src: "metamorphose_chapitre4.mp3" },
+          { num: 5, name: "الفصل الخامس", desc: "موت غريغور الهادئ وتحرر العائلة نحو المستقبلي", duration: "02:23", src: "metamorphose_chapitre5.mp3" }
         ]
       },
       meditations: {
