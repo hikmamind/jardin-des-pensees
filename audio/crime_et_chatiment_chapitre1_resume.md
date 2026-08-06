@@ -1,0 +1,3 @@
+# Résumé du premier chapitre de *Crime et Châtiment*
+
+Dans ce premier chapitre, le protagoniste **Raskolnikov**, un étudiant fauché, erre dans les rues de Saint-Pétersbourg, consumé par la pauvreté et le désespoir. Il réfléchit à la théorie qui justifie le meurtre d’une personne « inutile » pour le bien de la société. Cette pensée le tourmente alors qu’il lutte contre son propre moralité, se sentant à la fois suppliant et détaché du monde qui l’entoure. Le chapitre pose les bases psychologiques de son conflit interne, introduisant les thèmes de la culpabilité, de la moralité et de la rédemption qui dominent le roman.
