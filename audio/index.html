@@ -610,9 +610,9 @@
 
       <!-- Top Header -->
       <header class="top-header">
-        <div class="search-box">
+        <div class="search-box" onclick="openGlobalSearchModal()" style="cursor: pointer;">
           <span class="search-icon">🔍</span>
-          <input type="text" class="search-input" placeholder="ابحث عن كتاب أو مؤلف..." onkeyup="filterBooks(this.value)">
+          <input type="text" class="search-input" placeholder="ابحث عن كتاب، مقال، أو مؤلف... (Ctrl+K)" readonly onclick="openGlobalSearchModal()">
         </div>
 
         <div class="top-actions">
@@ -1387,6 +1387,9 @@
          (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
   </div>
+
+  <!-- Global Interactive Search Engine -->
+  <script src="../search.js?v=1"></script>
 
 </body>
 </html>

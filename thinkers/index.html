@@ -827,6 +827,16 @@
         <a href="../#contactSection" class="nav-link" data-i18n="about">À propos</a>
         
         <div class="nav-actions">
+          <!-- Global Search Button -->
+          <button id="globalSearchBtn" class="global-search-btn-nav" aria-label="بحث شامل" onclick="openGlobalSearchModal()">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span class="search-btn-text">بحث...</span>
+            <kbd class="search-btn-kbd">Ctrl K</kbd>
+          </button>
+
           <!-- Language Selector -->
           <div class="lang-selector">
             <button class="lang-btn" id="langBtn" aria-label="Changer de langue">
@@ -1194,6 +1204,9 @@
       }
     }
   </script>
+
+  <!-- Global Interactive Search Engine -->
+  <script src="../search.js?v=1"></script>
 
 </body>
 </html>
