@@ -636,21 +636,20 @@
         <div class="page-title-row">
           <div class="page-title-group">
             <h1>📚 Bibliothèque</h1>
-            <div class="page-subtitle">128 livres audio</div>
+            <div class="page-subtitle">1 livre audio (الرواية الصوتية الرئيسية)</div>
           </div>
 
           <div class="view-controls">
             <select class="sort-select">
               <option>Les plus récents</option>
               <option>Les plus populaires</option>
-              <option>Ordre alphabétique</option>
             </select>
             <button class="grid-view-btn" title="Affichage grille">🌁</button>
           </div>
         </div>
 
-        <!-- 8 Audiobook Grid (Exact Match to User Reference Screenshot) -->
-        <div class="audiobooks-grid" id="booksGrid">
+        <!-- Single Featured Audiobook: L'Alchimiste -->
+        <div class="audiobooks-grid" id="booksGrid" style="grid-template-columns: minmax(280px, 340px);">
 
           <!-- Card 1: L'Alchimiste (الخيميائي) -->
           <div class="audiobook-card" onclick="playBook('alchemist')">
@@ -669,160 +668,6 @@
               <div class="info-text-group">
                 <span class="card-arabic-title">الخيميائي</span>
                 <span class="card-arabic-author">باولو كويلو</span>
-              </div>
-              <button class="card-dots-btn">⋮</button>
-            </div>
-          </div>
-
-          <!-- Card 2: Pensées pour moi-même (تأملات - ماركوس أوريليوس) -->
-          <div class="audiobook-card" onclick="playBook('meditations')">
-            <div class="card-cover-wrapper">
-              <img src="../marc_aurelius_writing.jpg" alt="تأملات" class="card-cover-img">
-              <div class="cover-overlay-content">
-                <div class="cover-main-title">تأملات</div>
-                <div class="cover-sub-title">ماركوس أوريليوس</div>
-              </div>
-              <div class="duration-badge">2h 15m</div>
-              <div class="play-overlay-btn">
-                <div class="play-icon-circle">▶</div>
-              </div>
-            </div>
-            <div class="card-info">
-              <div class="info-text-group">
-                <span class="card-arabic-title">تأملات</span>
-                <span class="card-arabic-author">ماركوس أوريليوس</span>
-              </div>
-              <button class="card-dots-btn">⋮</button>
-            </div>
-          </div>
-
-          <!-- Card 3: L'Art subtil de s'en foutre (فن اللامبالاة - مارك مانسون) -->
-          <div class="audiobook-card" onclick="playBook('subtle_art')">
-            <div class="card-cover-wrapper">
-              <img src="../stoicisme-modern.jpg" alt="فن اللامبالاة" class="card-cover-img">
-              <div class="cover-overlay-content">
-                <div class="cover-main-title">فن اللامبالاة</div>
-                <div class="cover-sub-title">مارك مانسون</div>
-              </div>
-              <div class="duration-badge">4h 07m</div>
-              <div class="play-overlay-btn">
-                <div class="play-icon-circle">▶</div>
-              </div>
-            </div>
-            <div class="card-info">
-              <div class="info-text-group">
-                <span class="card-arabic-title">فن اللامبالاة</span>
-                <span class="card-arabic-author">مارك مانسون</span>
-              </div>
-              <button class="card-dots-btn">⋮</button>
-            </div>
-          </div>
-
-          <!-- Card 4: Le Pouvoir du moment présent (قوة الآن - إيكهارت تول) -->
-          <div class="audiobook-card" onclick="playBook('power_of_now')">
-            <div class="card-cover-wrapper">
-              <img src="../tree_sunset_field.jpg" alt="قوة الآن" class="card-cover-img">
-              <div class="cover-overlay-content">
-                <div class="cover-main-title">قوة الآن</div>
-                <div class="cover-sub-title">إيكهارت تول</div>
-              </div>
-              <div class="duration-badge">3h 21m</div>
-              <div class="play-overlay-btn">
-                <div class="play-icon-circle">▶</div>
-              </div>
-            </div>
-            <div class="card-info">
-              <div class="info-text-group">
-                <span class="card-arabic-title">قوة الآن</span>
-                <span class="card-arabic-author">إيكهارت تول</span>
-              </div>
-              <button class="card-dots-btn">⋮</button>
-            </div>
-          </div>
-
-          <!-- Card 5: Les hommes viennent de Mars (الرجال من المريخ والنساء من الزهرة) -->
-          <div class="audiobook-card" onclick="playBook('mars_venus')">
-            <div class="card-cover-wrapper">
-              <img src="../luxury_window_reflection.jpg" alt="الرجال من المريخ" class="card-cover-img">
-              <div class="cover-overlay-content">
-                <div class="cover-main-title" style="font-size: 1.25rem;">الرجال من المريخ<br>والنساء من الزهرة</div>
-                <div class="cover-sub-title">جون غراي</div>
-              </div>
-              <div class="duration-badge">5h 11m</div>
-              <div class="play-overlay-btn">
-                <div class="play-icon-circle">▶</div>
-              </div>
-            </div>
-            <div class="card-info">
-              <div class="info-text-group">
-                <span class="card-arabic-title">الرجال من المريخ والنساء من الزهرة</span>
-                <span class="card-arabic-author">جون غراي</span>
-              </div>
-              <button class="card-dots-btn">⋮</button>
-            </div>
-          </div>
-
-          <!-- Card 6: Habitudes d'intelligence (عادات الذكاء - يوسف الحسني) -->
-          <div class="audiobook-card" onclick="playBook('intelligence_habits')">
-            <div class="card-cover-wrapper">
-              <img src="../habits_library_hero.jpg" alt="عادات الذكاء" class="card-cover-img">
-              <div class="cover-overlay-content">
-                <div class="cover-main-title">عادات الذكاء</div>
-                <div class="cover-sub-title">كيف تتفوق على نفسك — يوسف الحسني</div>
-              </div>
-              <div class="duration-badge">2h 58m</div>
-              <div class="play-overlay-btn">
-                <div class="play-icon-circle">▶</div>
-              </div>
-            </div>
-            <div class="card-info">
-              <div class="info-text-group">
-                <span class="card-arabic-title">عادات الذكاء</span>
-                <span class="card-arabic-author">يوسف الحسني</span>
-              </div>
-              <button class="card-dots-btn">⋮</button>
-            </div>
-          </div>
-
-          <!-- Card 7: Le Prince (الأمير - نيكولا ميكيافيلي) -->
-          <div class="audiobook-card" onclick="playBook('the_prince')">
-            <div class="card-cover-wrapper">
-              <img src="../bookshelves_candle.jpg" alt="الأمير" class="card-cover-img">
-              <div class="cover-overlay-content">
-                <div class="cover-main-title">الأمير</div>
-                <div class="cover-sub-title">نيكولا ميكيافيلي</div>
-              </div>
-              <div class="duration-badge">2h 55m</div>
-              <div class="play-overlay-btn">
-                <div class="play-icon-circle">▶</div>
-              </div>
-            </div>
-            <div class="card-info">
-              <div class="info-text-group">
-                <span class="card-arabic-title">الأمير</span>
-                <span class="card-arabic-author">نيكولا ميكيافيلي</span>
-              </div>
-              <button class="card-dots-btn">⋮</button>
-            </div>
-          </div>
-
-          <!-- Card 8: Voyage vers Soi (رحلة إلى الذات - اكتشف من أنت) -->
-          <div class="audiobook-card" onclick="playBook('journey_to_self')">
-            <div class="card-cover-wrapper">
-              <img src="../zen_garden_reflection.jpg" alt="رحلة إلى الذات" class="card-cover-img">
-              <div class="cover-overlay-content">
-                <div class="cover-main-title">رحلة إلى الذات</div>
-                <div class="cover-sub-title">اكتشف من أنت — مجموعة مؤلفين</div>
-              </div>
-              <div class="duration-badge">3h 33m</div>
-              <div class="play-overlay-btn">
-                <div class="play-icon-circle">▶</div>
-              </div>
-            </div>
-            <div class="card-info">
-              <div class="info-text-group">
-                <span class="card-arabic-title">رحلة إلى الذات</span>
-                <span class="card-arabic-author">مجموعة مؤلفين</span>
               </div>
               <button class="card-dots-btn">⋮</button>
             </div>
