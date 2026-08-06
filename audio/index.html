@@ -565,7 +565,7 @@
           <div class="page-title-row">
             <div class="page-title-group">
               <h1>📚 المكتبة الصوتية</h1>
-              <div class="page-subtitle">1 كتاب صوتي (الرواية الصوتية الرئيسية)</div>
+              <div class="page-subtitle">2 كتب صوتية (الروايات الصوتية الرئيسية)</div>
             </div>
 
             <div class="view-controls">
@@ -577,8 +577,8 @@
             </div>
           </div>
 
-          <!-- Featured Audiobook Card: L'Alchimiste -->
-          <div class="audiobooks-grid" id="booksGrid" style="grid-template-columns: minmax(280px, 340px);">
+          <!-- Featured Audiobooks Grid -->
+          <div class="audiobooks-grid" id="booksGrid">
 
             <!-- Book 1: L'Alchimiste -->
             <div class="audiobook-card" onclick="openBookDetail('alchemist')">
@@ -595,6 +595,26 @@
                 <div class="info-text-group">
                   <span class="card-arabic-title">الخيميائي</span>
                   <span class="card-arabic-author">باولو كويلو</span>
+                </div>
+                <button class="card-dots-btn">⋮</button>
+              </div>
+            </div>
+
+            <!-- Book 2: Crime et Châtiment (الجريمة والعقاب) -->
+            <div class="audiobook-card" onclick="openBookDetail('crime_punishment')">
+              <div class="card-cover-wrapper">
+                <img src="../audio_crime_punishment_cover.jpg" alt="الجريمة والعقاب" class="card-cover-img">
+                <div class="cover-overlay-content">
+                  <div class="cover-main-title">الجريمة والعقاب</div>
+                  <div class="cover-sub-title">فيودور دوستويفسكي</div>
+                </div>
+                <div class="duration-badge">4h 15m</div>
+                <div class="play-overlay-btn"><div class="play-icon-circle">▶</div></div>
+              </div>
+              <div class="card-info">
+                <div class="info-text-group">
+                  <span class="card-arabic-title">الجريمة والعقاب</span>
+                  <span class="card-arabic-author">فيودور دوستويفسكي</span>
                 </div>
                 <button class="card-dots-btn">⋮</button>
               </div>
@@ -778,6 +798,20 @@
           { num: 10, name: "الفصل العاشر", desc: "الكنز الحقيقي", duration: "17:40", src: "alchimiste_chapitre1_complet.mp3" },
           { num: 11, name: "الفصل الحادي عشر", desc: "العودة إلى حيث بدأت", duration: "16:21", src: "alchimiste_chapitre1_complet.mp3" },
           { num: 12, name: "الفصل الثاني عشر", desc: "الحكمة التي تبقى", duration: "15:33", src: "alchimiste_chapitre1_complet.mp3" }
+        ]
+      },
+      crime_punishment: {
+        title: "الجريمة والعقاب",
+        author: "فيودور دوستويفسكي",
+        cover: "../audio_crime_punishment_cover.jpg",
+        totalDuration: "4 ساعة 15 دقيقة",
+        desc: "شاهكار دوستويفسكي الخالدة عن النفس البشرية والصراع بين الخير والشر ومفهوم العدالة والضمير.",
+        chapters: [
+          { num: 1, name: "الفصل الأول (الملخص الصوتي)", desc: "راسكونيكوف والشقة الضيقة وبداية الفكرة • بصوت ElevenLabs الأصلي", duration: "19:30", src: "crime_et_chatiment_chapitre1.mp3" },
+          { num: 2, name: "الفصل الثاني", desc: "اللقاء مع مارميلادوف والحانة", duration: "22:15", src: "crime_et_chatiment_chapitre1.mp3" },
+          { num: 3, name: "الفصل الثالث", desc: "رسالة الأم والصراع النفسي", duration: "25:40", src: "crime_et_chatiment_chapitre1.mp3" },
+          { num: 4, name: "الفصل الرابع", desc: "الحلم بالفرس المسكينة والخطة", duration: "20:10", src: "crime_et_chatiment_chapitre1.mp3" },
+          { num: 5, name: "الفصل الخامس", desc: "لحظة الحسم والضمير المعذب", duration: "24:00", src: "crime_et_chatiment_chapitre1.mp3" }
         ]
       },
       meditations: {
