@@ -631,7 +631,7 @@
           <div class="page-title-row">
             <div class="page-title-group">
               <h1>📚 المكتبة الصوتية</h1>
-              <div class="page-subtitle">5 كتب صوتية (الروايات الصوتية الرئيسية)</div>
+              <div class="page-subtitle">6 كتب صوتية (الروايات الصوتية الرئيسية)</div>
             </div>
 
             <div class="view-controls">
@@ -741,6 +741,26 @@
                 <div class="info-text-group">
                   <span class="card-arabic-title">التحول (المسخ)</span>
                   <span class="card-arabic-author">فرانز كافكا</span>
+                </div>
+                <button class="card-dots-btn">⋮</button>
+              </div>
+            </div>
+
+            <!-- Book 6: Le Vieil Homme et la Mer (الشيخ والبحر - ارنست همنغواي) -->
+            <div class="audiobook-card" onclick="openBookDetail('vieux')">
+              <div class="card-cover-wrapper">
+                <img src="./audio_vieux_cover.jpg" alt="الشيخ والبحر" class="card-cover-img">
+                <div class="cover-overlay-content">
+                  <div class="cover-main-title">الشيخ والبحر</div>
+                  <div class="cover-sub-title">ارنست همنغواي</div>
+                </div>
+                <div class="duration-badge">12m 56s</div>
+                <div class="play-overlay-btn"><div class="play-icon-circle">▶</div></div>
+              </div>
+              <div class="card-info">
+                <div class="info-text-group">
+                  <span class="card-arabic-title">الشيخ والبحر</span>
+                  <span class="card-arabic-author">ارنست همنغواي</span>
                 </div>
                 <button class="card-dots-btn">⋮</button>
               </div>
@@ -1112,6 +1132,37 @@
           { num: 3, name: "الفصل الثالث", desc: "الأخت غريت والعناية الفاترة بالطعام الفاسد", duration: "02:24", src: "metamorphose_chapitre3.mp3" },
           { num: 4, name: "الفصل الرابع", desc: "إصابة غريغور بالتفاحة وعزلة السرير المظلم", duration: "02:08", src: "metamorphose_chapitre4.mp3" },
           { num: 5, name: "الفصل الخامس", desc: "موت غريغور الهادئ وتحرر العائلة نحو المستقبلي", duration: "02:23", src: "metamorphose_chapitre5.mp3" }
+        ]
+      },
+      vieux: {
+        title: "الشيخ والبحر",
+        author: "ارنست همنغواي",
+        cover: "./audio_vieux_cover.jpg",
+        totalDuration: "12 دقيقة 56 ثواني",
+        desc: "تحفة ارنست همنغواي الحائزة على جائزة نوبل؛ صراع الصياد العجوز سانتياغو ضد البحر والسمكة والمصير.",
+        aboutText: `
+<h2 style="color:var(--gold-light);margin-bottom:6px;font-size:1.3rem;">📚 الشيخ والبحر (The Old Man and the Sea) — ملخص الرواية الكاملة</h2>
+<p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:20px;">ارنست همنغواي · 1952 · تحفة الأدب العالمي الحائزة على جائزة نوبل في الأدب</p>
+
+<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">⛵ الجزء الأول — سوء الحظ والعزلة في البحر</h3>
+<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">تبدأ الرواية في قريّة صيادين كوبية، حيث يعاني الصياد العجوز <strong>«سانتياغو»</strong> من سوء حظ عاثر بعد أن مضى 84 يوماً متواصلة دون أن يظفر بسمكة واحدة. أُرغم الصبي الشاب <strong>مانولين</strong>، المخلص للعجوز، على ترك قاربه بأمر من والديه، لكنه يظل يخدم سانتياغو بحب ويجهز له طعامه وطعمه. في اليوم الخامس والثمانين، يقرر سانتياغو الإبحار بمفرده بعيداً جداً في مياه الخليج الدافئة العميقة بثقة وعزيمة لا تتزعزع.</p>
+
+<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">🎣 الجزء الثاني — الملحمة الكبرى وصراع سمكة المارلين</h3>
+<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">تعلّق بخيط صيد العجوز سمكة ضخمة جداً من نوع <strong>«المارلين»</strong> (Marline)، تفوق قارب سانتياغو حجماً وقوة. يرفض العجوز الاستسلام، ويبدأ صراع أسطوري ملحمي يدوم ثلاثة أيام وليلتين تحت شمس البحر الحارقة والظلام الدامس. يعاني سانتياغو من جروح يديه، وتقلصات عضلاته، والجوع والعطش والإرهاق الشديد، غير أنه ينظر إلى السمكة باحترام وحب كبيرين كخصم نصر وعظمة. في اليوم الثالث، ينجح سانتياغو بجهد خرافي في طعن السمكة برُمحه وثقب قلبها ويربطها بجانب قاربه.</p>
+
+<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">🦈 الجزء الثالث — هجوم أسماك القرش والمجد الخالد</h3>
+<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">أثناء طريق العودة، تجذب رائحة دماء السمكة أسراباً متتالية من <strong>أسماك القرش المفترسة</strong>. يقاتل سانتياغو بشراسة نادرة دفاعاً عن صيده، مستخدماً رمحه، ثم حزم سكينه على مجداف، وأخيراً هراوة القارب، حتى تكسرت أسلحته تماماً. تلتهم أسماك القرش كل لحم السمكة، ولا يتبقى منها سوى الهيكل العظمي العظيم والرأس. يصل العجوز منهكاً ومحطماً إلى الميناء في ظلام الليل، وينهض إلى كوخه لينام بحلم الأراقم والأشبال، في حين يقف الصيادون والسيّاح مذهولين أمام ضخامة الهيكل العظمي، ويبكي الصبي مانولين متعهداً بالصيد معه دائماً.</p>
+
+<div style="background:rgba(212,175,55,0.1);border-right:3px solid var(--gold-light);padding:14px 16px;border-radius:6px;margin-top:14px;">
+  <p style="color:var(--gold-light);font-weight:600;margin-bottom:6px;">💡 المغزى والأمثولة الفلسفية الخالدة</p>
+  <p style="line-height:1.75;color:var(--text-primary);margin:0;">«الإنسان لا يُهزم؛ قد يُدمر الإنسان لكنه لا يُهزم أبداً.» تجسد الرواية الإرادة الإنسانية والكرامة في مواجهة قوى الطبيعة والمصير المحتوم، وأن النصر الحقيقي يكمن في الإصرار والمحاولة والنزاهة، لا في الغنيمة المادية فقط.</p>
+</div>`,
+        chapters: [
+          { num: 1, name: "الفصل الأول", desc: "الصياد العجوز سانتياغو والصبي مانولين في القرية", duration: "02:21", src: "old_man_sea_chapitre1.mp3" },
+          { num: 2, name: "الفصل الثاني", desc: "الإبحار إلى المياه العميقة وعلوق سمكة المارلين", duration: "02:28", src: "old_man_sea_chapitre2.mp3" },
+          { num: 3, name: "الفصل الثالث", desc: "الصراع الأسطوري والصمود تحت الشمس والليل", duration: "02:51", src: "old_man_sea_chapitre3.mp3" },
+          { num: 4, name: "الفصل الرابع", desc: "الانتصار على المارلين وهجوم أسماك القرش الأول", duration: "02:36", src: "old_man_sea_chapitre4.mp3" },
+          { num: 5, name: "الفصل الخامس", desc: "معركة العودة الأخيرة والهيكل العظمي والمجد الخالد", duration: "02:40", src: "old_man_sea_chapitre5.mp3" }
         ]
       },
       meditations: {

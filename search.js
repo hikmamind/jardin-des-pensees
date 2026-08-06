@@ -56,6 +56,16 @@
       desc: "قصة غريغور سامسا والتحول المروع إلى حشرة ضخمة والاغتراب الكافكاوي.",
       keywords: ["التحول", "المسخ", "كافكا", "kafka", "metamorphosis", "حشرة", "صوتي"]
     },
+    {
+      title: "الشيخ والبحر (Le Vieil Homme et la Mer)",
+      author: "ارنست همنغواي",
+      type: "audio",
+      typeName: "كتاب صوتي",
+      url: "./audio/?book=vieux",
+      img: "./audio_vieux_cover.jpg",
+      desc: "صراع الصياد العجوز سانتياغو الملحمي مع البحر وسمكة المارلين الحائز على نوبل.",
+      keywords: ["الشيخ والبحر", "همنغواي", "ارنست همنغواي", "hemingway", "vieux", "old man sea", "مارلين", "صوتي"]
+    },
 
     // ✍️ Articles
     {
