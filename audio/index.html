@@ -631,7 +631,7 @@
           <div class="page-title-row">
             <div class="page-title-group">
               <h1>📚 المكتبة الصوتية</h1>
-              <div class="page-subtitle">2 كتب صوتية (الروايات الصوتية الرئيسية)</div>
+              <div class="page-subtitle">3 كتب صوتية (الروايات الصوتية الرئيسية)</div>
             </div>
 
             <div class="view-controls">
@@ -681,6 +681,26 @@
                 <div class="info-text-group">
                   <span class="card-arabic-title">الجريمة والعقاب</span>
                   <span class="card-arabic-author">فيودور دوستويفسكي</span>
+                </div>
+                <button class="card-dots-btn">⋮</button>
+              </div>
+            </div>
+
+            <!-- Book 3: L'Étranger (الغريب - ألبير كامو) -->
+            <div class="audiobook-card" onclick="openBookDetail('etranger')">
+              <div class="card-cover-wrapper">
+                <img src="./audio_etranger_cover.jpg" alt="الغريب" class="card-cover-img">
+                <div class="cover-overlay-content">
+                  <div class="cover-main-title">الغريب</div>
+                  <div class="cover-sub-title">ألبير كامو</div>
+                </div>
+                <div class="duration-badge">16m 05s</div>
+                <div class="play-overlay-btn"><div class="play-icon-circle">▶</div></div>
+              </div>
+              <div class="card-info">
+                <div class="info-text-group">
+                  <span class="card-arabic-title">الغريب</span>
+                  <span class="card-arabic-author">ألبير كامو</span>
                 </div>
                 <button class="card-dots-btn">⋮</button>
               </div>
@@ -946,6 +966,40 @@
           { num: 9, name: "الجزء الثالث — الفصل الخامس", desc: "المواجهة الأولى مع المحقق بورفيري", duration: "00:46", src: "crime_partie3_chapitre5.mp3" },
           { num: 10, name: "الجزء الخامس — الفصل الرابع", desc: "الاعتراف لسونيا — قصة لعازر وبعثه", duration: "00:44", src: "crime_partie5_chapitre4.mp3" },
           { num: 11, name: "الجزء السادس — الفصل الثامن", desc: "الاعتراف للشرطة — الطريق إلى سيبيريا والفداء", duration: "00:42", src: "crime_partie6_chapitre8.mp3" }
+        ]
+      },
+      etranger: {
+        title: "الغريب",
+        author: "ألبير كامو",
+        cover: "./audio_etranger_cover.jpg",
+        totalDuration: "16 دقيقة 05 ثواني",
+        desc: "تحفة ألبير كامو الفلسفية الخالدة عن العبثية واللامبالاة ولامبالاة الكون تجاه مصير الإنسان.",
+        aboutText: `
+<h2 style="color:var(--gold-light);margin-bottom:6px;font-size:1.3rem;">📚 الغريب (L'Étranger) — ملخص الرواية الكاملة</h2>
+<p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:20px;">ألبير كامو · 1942 · رواية العبثية والوجودية</p>
+
+<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">☀️ الجزء الأول — اللامبالاة والشمس الحارقة</h3>
+<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">يبدأ بطل الرواية <strong>ميرسو</strong> (Meursault)، موظف مكاتب بسيط في الجزائر العاصمة، بجملته الشهيرة: <em>«يوم ماتت أمي، أو ربما الأمس، لا أعرف»</em>. يحضر جنازة والدته في دار العجزة دون أن يذرف دمعة واحدة أو يظهر حزناً ظاهرياً. في اليوم التالي، يذهب للسباحة ويلتقي بزميلته القديمة <strong>ماري كاردونا</strong> ويبدأ معها علاقة عاطفية، ويتصادق مع جاره <strong>ريمون سينتيس</strong> الذي ينخرط في خلافات مع عصابة عربية. في يوم صيفي خانق تحت أشعة الشمس الحارقة على الشاطئ، يتواجه ميرسو مع شقيق صديقة ريمون. وتحت تأثير حرارة الشمس والضوء المبهر، يستلّ ميرسو مسدساً ويطلق النار على الرجل العربي فيقتله، ثم يطلق أربع رصاصات أخرى على الجثة المحتضرة دون سبب مفهوم.</p>
+
+<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">⚖️ الجزء الثاني — المحاكمة والمواجهة مع العبث</h3>
+<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">يُسجن ميرسو وتُجرى محاكمته. غير أن النيابة والقضاة لا يحاكمونه على الجريمة نفسها بقدر ما يحاكمونه على <strong>«عدم بكائه في جنازة والدته»</strong> وصعوبة فهم مشاعره الإنسانية، معتبرين أنه شخص بلا قلب ولا يملك روحاً. يُحكم عليه بالسجن والإعدام. في زنزانته الأخيرة، يرفض ميرسو زيارة القسيس ويرفض التظاهر بالإيمان أو الندم الزائف. في لحظة غضب وتفرغ روحي، يستوعب ميرسو <em>«اللامبالاة اللطيفة للكون»</em> ويجد سلامه الداخلي، متقبلاً مصيره الحتمي بروح حرّة ومستقلة.</p>
+
+<div style="background:rgba(212,175,55,0.1);border-right:3px solid var(--gold-light);padding:14px 16px;border-radius:6px;margin-top:14px;">
+  <p style="color:var(--gold-light);font-weight:600;margin-bottom:6px;">💡 الفلسفة الكبرى للرواية (فلسفة العبث)</p>
+  <p style="line-height:1.75;color:var(--text-primary);margin:0;">يرفض ميرسو الكذب وتصنع المشاعر المشروطة مجتمعياً. هو "غريب" لأنه يرفض لعب اللعبة الاجتماعية، ويواجه حقيقة العبث بعيون مفتوحة وبدون أوهام.</p>
+</div>`,
+        chapters: [
+          { num: 1, name: "الجزء الأول — الفصل الأول", desc: "وفاة الأم والجنازة في ماريينغو", duration: "01:39", src: "letranger_p1_ch1.mp3" },
+          { num: 2, name: "الجزء الأول — الفصل الثاني", desc: "العودة إلى أورليان واللقاء مع ماري", duration: "01:26", src: "letranger_p1_ch2.mp3" },
+          { num: 3, name: "الجزء الأول — الفصل الثالث", desc: "ريمون سينتيس والجارة المزعجة", duration: "01:24", src: "letranger_p1_ch3.mp3" },
+          { num: 4, name: "الجزء الأول — الفصل الرابع", desc: "الأحد على الشاطئ ومواجهة العرب", duration: "01:26", src: "letranger_p1_ch4.mp3" },
+          { num: 5, name: "الجزء الأول — الفصل الخامس", desc: "عرض الترقية ورغبة ماري بالزواج", duration: "01:22", src: "letranger_p1_ch5.mp3" },
+          { num: 6, name: "الجزء الأول — الفصل السادس", desc: "الشمس الحارقة والجريمة على الشاطئ", duration: "01:33", src: "letranger_p1_ch6.mp3" },
+          { num: 7, name: "الجزء الثاني — الفصل الأول", desc: "التحقيق الأول والقاضي والصليب", duration: "01:17", src: "letranger_p2_ch1.mp3" },
+          { num: 8, name: "الجزء الثاني — الفصل الثاني", desc: "السجن وزيارة ماري الأولى والأخيرة", duration: "01:14", src: "letranger_p2_ch2.mp3" },
+          { num: 9, name: "الجزء الثاني — الفصل الثالث", desc: "المحاكمة شهادات الشهود", duration: "01:14", src: "letranger_p2_ch3.mp3" },
+          { num: 10, name: "الجزء الثاني — الفصل الرابع", desc: "مرافعة المدعي العام وحكم الإعدام", duration: "01:12", src: "letranger_p2_ch4.mp3" },
+          { num: 11, name: "الجزء الثاني — الفصل الخامس", desc: "المواجهة مع القسيس والسلام النفسي الأخير", duration: "01:19", src: "letranger_p2_ch5.mp3" }
         ]
       },
       meditations: {
