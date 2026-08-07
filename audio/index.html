@@ -747,12 +747,6 @@
         <li class="category-item"><a href="#"><span>Ψ</span> علم النفس</a></li>
         <li class="category-item"><a href="#"><span>🪷</span> دين وروحانيات</a></li>
       </ul>
-
-      <div class="premium-card">
-        <div class="premium-title"><span>👑</span> ترقية إلى البريميوم</div>
-        <div class="premium-desc">استمتع بمزايا حصرية وتحميل غير محدود</div>
-        <button class="premium-btn">ترقية الآن</button>
-      </div>
     </aside>
 
     <!-- Main Container Area -->
@@ -1045,19 +1039,21 @@
               <div class="widget-box">
                 <div class="widget-title">قد يعجبك أيضاً</div>
 
-                <div class="rec-item" onclick="openBookDetail('meditations')">
-                  <img src="../marc_aurelius_writing.jpg" class="rec-thumb">
-                  <div class="rec-info">
-                    <h5>مدخرات (تأملات)</h5>
-                    <p>ماركوس أوريليوس</p>
+                <div id="recommendationsContainer">
+                  <div class="rec-item" onclick="openBookDetail('crime_punishment')" style="cursor:pointer;">
+                    <img src="./audio_crime_cover.jpg" class="rec-thumb" style="width:48px;height:48px;border-radius:8px;object-fit:cover;">
+                    <div class="rec-info">
+                      <h5 style="font-size:0.92rem;font-weight:700;color:var(--ivory);margin-bottom:2px;">الجريمة والعقاب</h5>
+                      <p style="font-size:0.78rem;color:var(--text-muted);margin:0;">فيودور دوستويفسكي</p>
+                    </div>
                   </div>
-                </div>
 
-                <div class="rec-item" onclick="openBookDetail('power_of_now')">
-                  <img src="../tree_sunset_field.jpg" class="rec-thumb">
-                  <div class="rec-info">
-                    <h5>قوة الآن</h5>
-                    <p>إيكهارت تول</p>
+                  <div class="rec-item" onclick="openBookDetail('milena')" style="cursor:pointer;">
+                    <img src="./audio_milena_cover.jpg" class="rec-thumb" style="width:48px;height:48px;border-radius:8px;object-fit:cover;">
+                    <div class="rec-info">
+                      <h5 style="font-size:0.92rem;font-weight:700;color:var(--ivory);margin-bottom:2px;">رسائل إلى ميلينا</h5>
+                      <p style="font-size:0.78rem;color:var(--text-muted);margin:0;">فرانز كافكا</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1465,9 +1461,38 @@
         container.appendChild(item);
       });
 
+      // Render dynamic recommendations from the 7 main books
+      renderRecommendations(bookKey);
+
       document.getElementById('libraryGridView').style.display = 'none';
       document.getElementById('bookDetailView').style.display = 'block';
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function renderRecommendations(currentBookKey) {
+      const recContainer = document.getElementById('recommendationsContainer');
+      if (!recContainer) return;
+      const mainBooksKeys = ['alchemist', 'crime_punishment', 'etranger', 'petit_prince', 'kafka', 'vieux', 'milena'];
+      const otherKeys = mainBooksKeys.filter(k => k !== currentBookKey);
+      const recKeys = [otherKeys[0], otherKeys[1]];
+      
+      recContainer.innerHTML = '';
+      recKeys.forEach(k => {
+        const b = booksFullDatabase[k];
+        if (!b) return;
+        const div = document.createElement('div');
+        div.className = 'rec-item';
+        div.onclick = function() { openBookDetail(k); };
+        div.style.cursor = 'pointer';
+        div.innerHTML = `
+          <img src="${b.cover}" class="rec-thumb" style="width:48px;height:48px;border-radius:8px;object-fit:cover;">
+          <div class="rec-info">
+            <h5 style="font-size:0.92rem;font-weight:700;color:var(--ivory);margin-bottom:2px;">${b.title}</h5>
+            <p style="font-size:0.78rem;color:var(--text-muted);margin:0;">${b.author}</p>
+          </div>
+        `;
+        recContainer.appendChild(div);
+      });
     }
 
     function playCurrentChapter(chapterIndex) {
