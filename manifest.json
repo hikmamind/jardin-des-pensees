@@ -1,13 +1,22 @@
 {
-  "name": "حكمة ونور | Hikma & Nour",
+  "id": "com.hikmamind.jardindespensees",
+  "name": "حكمة ونور — Le Jardin des Pensées",
   "short_name": "حكمة ونور",
-  "description": "أفكار عميقة لإيقاظ العقل وإشراق الروح - المقالات، الاقتباسات، والكتب الفلسفية.",
+  "description": "منصة الحكمة، الفلسفة، علم النفس، والروايات الصوتية الكلاسيكية الخالدة.",
+  "lang": "ar",
+  "dir": "rtl",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0D1410",
   "theme_color": "#0D1410",
   "orientation": "portrait-primary",
   "scope": "./",
+  "categories": [
+    "books_and_reference",
+    "education",
+    "lifestyle"
+  ],
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "./icon-192.png",
@@ -20,6 +29,28 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    },
+    {
+      "src": "./brand_logo_official.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "المكتبة الصوتية",
+      "short_name": "كتب صوتية",
+      "description": "استمع إلى الروايات الصوتية الفلسفية الكاملة",
+      "url": "./audio/",
+      "icons": [{ "src": "./icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "المقالات والتحليلات",
+      "short_name": "المقالات",
+      "description": "اقرأ مقالات الرواقية وعلم النفس",
+      "url": "./articles/",
+      "icons": [{ "src": "./icon-192.png", "sizes": "192x192" }]
     }
   ]
 }

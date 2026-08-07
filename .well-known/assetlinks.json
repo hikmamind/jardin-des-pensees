@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.hikmamind.jardindespensees",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7D:0F:52:AB:6C:5E:7B:64:DF:2B:25:3F:8A:28:C2:59:E7:6B:EB:97:54:62:3C:99:99:99:99:99:99"
+      ]
+    }
+  }
+]
