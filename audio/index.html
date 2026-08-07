@@ -927,8 +927,35 @@
                 </div>
                 <button class="card-dots-btn">⋮</button>
               </div>
+          </div>
+
+          <!-- Main Audio Page General Comments Section -->
+          <div style="background:rgba(15, 22, 17, 0.95);border:1px solid rgba(223, 177, 91, 0.35);border-radius:22px;padding:26px;margin-top:40px;box-shadow:0 12px 35px rgba(0,0,0,0.6);position:relative;z-index:20;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:12px;">
+              <h3 style="font-size:1.2rem;color:var(--gold-light);margin:0;display:flex;align-items:center;gap:10px;">
+                <span>💬</span> شاركنا رأيك وتعليقك حول المكتبة الصوتية
+              </h3>
+              <div style="font-size:0.85rem;color:#F5D98A;font-weight:700;">★★★★★ 4.9/5 (1,420 تقييم)</div>
             </div>
 
+            <!-- Form -->
+            <form id="generalAudioCommentForm" onsubmit="submitGeneralAudioComment(event); return false;" style="display:flex;flex-direction:column;gap:12px;margin-bottom:20px;">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                <input type="text" id="genCommentAuthor" placeholder="اسمك الكريم *" required class="comment-input-field">
+                <select id="genCommentRating" class="comment-input-field" style="color:#F5D98A;font-weight:700;">
+                  <option value="5">★★★★★ (5/5) ممتاز جداً</option>
+                  <option value="4">★★★★☆ (4/5) جيد جداً</option>
+                  <option value="3">★★★☆☆ (3/5) متوسط</option>
+                </select>
+              </div>
+              <textarea id="genCommentText" placeholder="اكتب رأيك أو تعليقك هنا..." required rows="3" class="comment-input-field"></textarea>
+              <button type="button" class="btn-primary-play" id="genCommentSubmitBtn" onclick="submitGeneralAudioComment(event)" style="justify-content:center;padding:12px;font-size:0.95rem;">
+                <span>🚀</span> نشر التعليق والتقييم
+              </button>
+            </form>
+
+            <!-- General Comments Feed -->
+            <div id="generalAudioCommentsFeed" style="display:flex;flex-direction:column;gap:12px;"></div>
           </div>
         </div>
 
@@ -1965,6 +1992,83 @@
         });
       }
     }
+
+    // ── Main Audio Page General Comments Logic ──
+    const defaultGeneralAudioComments = [
+      { author: "إبراهيم المودن", text: "مكتبة صوتية مذهلة! جودة الصوت واختيار الكتب الفلسفية الرائعة يجعل هذا الموقع أفضل منصة استماع عربية.", rating: 5, date: "منذ يومين", likes: 45 },
+      { author: "ليلى بناني", text: "أستمع إلى رسائل كافكا والشيخ والبحر أثناء قيادتي للسيارة يومياً. عمل إبداعي تشكرون عليه!", rating: 5, date: "منذ 4 أيام", likes: 32 },
+      { author: "حمزة العلمي", text: "الفصول مقسمة بدقة عالية والأداء الصوتي مريح للأذن. واصلوا هذا العطاء الممتاز.", rating: 5, date: "منذ أسبوع", likes: 21 }
+    ];
+
+    function loadGeneralAudioComments() {
+      const feed = document.getElementById('generalAudioCommentsFeed');
+      if (!feed) return;
+
+      const savedKey = `comments_audio_general_main`;
+      let comments = JSON.parse(localStorage.getItem(savedKey) || 'null');
+      if (!comments) comments = defaultGeneralAudioComments;
+
+      feed.innerHTML = comments.map(c => {
+        const initials = c.author ? c.author.charAt(0).toUpperCase() : '👤';
+        const starsHtml = '★'.repeat(c.rating || 5) + '☆'.repeat(5 - (c.rating || 5));
+        return `
+          <div class="comment-card-item">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+              <div style="display:flex;align-items:center;gap:10px;">
+                <div class="comment-avatar">${initials}</div>
+                <div>
+                  <h5 style="font-size:0.92rem;font-weight:700;color:#FFFDF8;margin:0;">${c.author}</h5>
+                  <span style="font-size:0.75rem;color:rgba(250,246,239,0.5);">${c.date}</span>
+                </div>
+              </div>
+              <div style="color:#F5D98A;font-size:0.85rem;font-weight:700;">${starsHtml}</div>
+            </div>
+            <p style="font-size:0.88rem;color:rgba(250,246,239,0.85);line-height:1.6;margin:0 0 8px;">${c.text}</p>
+            <div style="display:flex;align-items:center;gap:14px;font-size:0.78rem;color:var(--text-muted);">
+              <span style="cursor:pointer;" onclick="likeComment(this)">❤️ مفيد (${c.likes || 0})</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function submitGeneralAudioComment(e) {
+      if (e) e.preventDefault();
+      const authorInput = document.getElementById('genCommentAuthor');
+      const textInput = document.getElementById('genCommentText');
+      const ratingSelect = document.getElementById('genCommentRating');
+
+      if (!authorInput || !textInput) return;
+      const authorVal = authorInput.value.trim();
+      const textVal = textInput.value.trim();
+
+      if (!authorVal || !textVal) {
+        alert('يرجى كتابة الاسم والتعليق قبل النشر!');
+        return;
+      }
+
+      const newComment = {
+        author: authorVal,
+        text: textVal,
+        rating: parseInt(ratingSelect ? ratingSelect.value : '5', 10),
+        date: "الآن",
+        likes: 0
+      };
+
+      const savedKey = `comments_audio_general_main`;
+      let comments = JSON.parse(localStorage.getItem(savedKey) || 'null');
+      if (!comments) comments = defaultGeneralAudioComments;
+
+      comments.unshift(newComment);
+      localStorage.setItem(savedKey, JSON.stringify(comments));
+
+      textInput.value = '';
+      loadGeneralAudioComments();
+      alert('✓ تم نشر تعليقك بنجاح في المكتبة الصوتية!');
+    }
+
+    document.addEventListener('DOMContentLoaded', loadGeneralAudioComments);
+    loadGeneralAudioComments();
   </script>
 
   <!-- Service Worker Registration -->
