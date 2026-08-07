@@ -593,6 +593,62 @@
       }
       .content-body { padding: 16px 12px 100px !important; }
       .books-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important; gap: 14px !important; }
+
+      /* Book Detail View Mobile Layout Fix */
+      .book-hero-banner {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 24px 16px !important;
+        gap: 20px !important;
+        grid-template-columns: 1fr !important;
+      }
+      .detail-cover-img {
+        width: 200px !important;
+        height: 200px !important;
+        margin: 0 auto !important;
+        border-radius: 20px !important;
+      }
+      .detail-meta-box {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+      }
+      .detail-title {
+        font-size: 1.6rem !important;
+        text-align: center !important;
+        margin-bottom: 6px !important;
+      }
+      .detail-author {
+        font-size: 1.05rem !important;
+        text-align: center !important;
+        margin-bottom: 14px !important;
+      }
+      .detail-badges-row {
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        margin-bottom: 16px !important;
+      }
+      .detail-desc {
+        max-width: 100% !important;
+        text-align: center !important;
+        font-size: 0.9rem !important;
+        line-height: 1.65 !important;
+        margin-bottom: 20px !important;
+      }
+      .detail-actions-row {
+        width: 100% !important;
+        justify-content: center !important;
+      }
+      .btn-primary-play {
+        width: 100% !important;
+        max-width: 320px !important;
+        justify-content: center !important;
+      }
     }
 
     @media (min-width: 901px) {
@@ -600,26 +656,62 @@
     }
 
     @media (max-width: 640px) {
-      .bottom-audio-bar { padding: 8px 12px !important; gap: 8px !important; }
-      .player-track-info { gap: 8px !important; max-width: 140px !important; }
-      .player-track-thumb { width: 38px !important; height: 38px !important; }
-      .player-track-meta h4 { font-size: 0.82rem !important; max-width: 90px !important; }
-      .player-track-meta p { font-size: 0.68rem !important; }
-      .player-controls-center { gap: 4px !important; }
-      .player-btn-main { width: 40px !important; height: 40px !important; font-size: 1rem !important; }
-      .player-btn-sec { font-size: 0.85rem !important; padding: 4px 6px !important; }
-      .player-right-controls { gap: 6px !important; min-width: auto !important; }
-      .vol-slider { width: 45px !important; }
-      .detail-hero-banner { padding: 24px 16px !important; flex-direction: column !important; align-items: center !important; text-align: center !important; }
-      .detail-cover-wrapper { width: 140px !important; height: 140px !important; margin: 0 auto !important; }
-      .detail-title { font-size: 1.35rem !important; }
-      .detail-actions-row { justify-content: center !important; }
+      /* Bottom Player Bar Mobile Responsive Fix */
+      .bottom-player-bar {
+        height: 76px !important;
+        padding: 8px 12px !important;
+        gap: 8px !important;
+        justify-content: space-between !important;
+      }
+      .player-track-info {
+        gap: 10px !important;
+        min-width: 0 !important;
+        max-width: 160px !important;
+        flex: 1 !important;
+      }
+      .player-thumb {
+        width: 44px !important;
+        height: 44px !important;
+        border-radius: 8px !important;
+      }
+      .player-track-meta h4 {
+        font-size: 0.82rem !important;
+        max-width: 110px !important;
+      }
+      .player-track-meta p {
+        font-size: 0.7rem !important;
+      }
+      .player-controls-center {
+        gap: 4px !important;
+        flex: none !important;
+      }
+      .player-buttons {
+        gap: 10px !important;
+      }
+      .player-btn-main {
+        width: 42px !important;
+        height: 42px !important;
+        font-size: 1.05rem !important;
+      }
+      .player-btn-sec {
+        font-size: 0.85rem !important;
+        padding: 5px 8px !important;
+      }
+      .bar-progress-container {
+        font-size: 0.68rem !important;
+        gap: 6px !important;
+      }
+      .player-right-controls {
+        display: none !important;
+      }
     }
 
     @media (max-width: 420px) {
       .player-vol-wrap { display: none !important; }
       .speed-btn { font-size: 0.75rem !important; min-width: 32px !important; }
       .books-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
+      .player-track-info { max-width: 130px !important; }
+      .player-track-meta h4 { max-width: 85px !important; }
     }
   </style>
 </head>
