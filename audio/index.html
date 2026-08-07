@@ -691,7 +691,7 @@
           <div class="page-title-row">
             <div class="page-title-group">
               <h1>📚 المكتبة الصوتية</h1>
-              <div class="page-subtitle">6 كتب صوتية (الروايات الصوتية الرئيسية)</div>
+              <div class="page-subtitle">7 كتب صوتية (الروايات الصوتية الرئيسية)</div>
             </div>
 
             <div class="view-controls">
@@ -821,6 +821,26 @@
                 <div class="info-text-group">
                   <span class="card-arabic-title">الشيخ والبحر</span>
                   <span class="card-arabic-author">ارنست همنغواي</span>
+                </div>
+                <button class="card-dots-btn">⋮</button>
+              </div>
+            </div>
+
+            <!-- Book 7: Lettres à Milena (رسائل إلى ميلينا - فرانز كافكا) -->
+            <div class="audiobook-card" onclick="openBookDetail('milena')">
+              <div class="card-cover-wrapper">
+                <img src="./audio_milena_cover.jpg" alt="رسائل إلى ميلينا" class="card-cover-img">
+                <div class="cover-overlay-content">
+                  <div class="cover-main-title">رسائل إلى ميلينا</div>
+                  <div class="cover-sub-title">فرانز كافكا</div>
+                </div>
+                <div class="duration-badge">09m 45s</div>
+                <div class="play-overlay-btn"><div class="play-icon-circle">▶</div></div>
+              </div>
+              <div class="card-info">
+                <div class="info-text-group">
+                  <span class="card-arabic-title">رسائل إلى ميلينا</span>
+                  <span class="card-arabic-author">فرانز كافكا</span>
                 </div>
                 <button class="card-dots-btn">⋮</button>
               </div>
@@ -1223,6 +1243,36 @@
           { num: 3, name: "الفصل الثالث", desc: "الصراع الأسطوري والصمود تحت الشمس والليل", duration: "02:51", src: "old_man_sea_chapitre3.mp3" },
           { num: 4, name: "الفصل الرابع", desc: "الانتصار على المارلين وهجوم أسماك القرش الأول", duration: "02:36", src: "old_man_sea_chapitre4.mp3" },
           { num: 5, name: "الفصل الخامس", desc: "معركة العودة الأخيرة والهيكل العظمي والمجد الخالد", duration: "02:40", src: "old_man_sea_chapitre5.mp3" }
+        ]
+      },
+      milena: {
+        title: "رسائل إلى ميلينا",
+        author: "فرانز كافكا",
+        cover: "./audio_milena_cover.jpg",
+        totalDuration: "09 دقيقة 45 ثواني",
+        desc: "رسائل العشق والشغف والخوف الإنساني العميق التي كتبها فرانز كافكا إلى الصحفية ميلينا ييسينسكا.",
+        aboutText: `
+<h2 style="color:var(--gold-light);margin-bottom:6px;font-size:1.3rem;">📚 رسائل إلى ميلينا (Briefe an Milena) — ملخص الكتاب الكامل</h2>
+<p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:20px;">فرانز كافكا · 1920-1923 · واحدة من أعمق رسائل الحب والحيرة في الأدب العالمي</p>
+
+<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">💌 الجزء الأول — بداية المراسلة والتعلق الروحي</h3>
+<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">بدأت المراسلات عام 1920 عندما تواصلت الصحفية والمترجمة التشيكية <strong>«ميلينا ييسينسكا»</strong> مع كافكا لرغبتها في ترجمة قصصه إلى التشيكية. سرعان ما تحولت الرسائل الرسمية إلى تدفق وجداني وشغف روحي استثنائي. يعبر كافكا في رسائله الأولى عن دهشته من فهم ميلينا لخيالاته ونصوصه الغامضة، ليجد فيها مرآة لنفسه المعذبة وملجأً من عزلة براغ وتخبط المرض.</p>
+
+<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">🕯️ الجزء الثاني — الشغف والخوف من اللقاء</h3>
+<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">تتطور الرسائل لتكشف عن التناقض الصارخ في شخصية كافكا؛ بين رغبته العارمة في القرب من ميلينا وخوفه الفطري الشديد من التواجد الفعلي والالتزام. كانت ميلينا امرأة متزوجة تعيش في فيينا، بينما كان كافكا يعاني من مرض السل في مصحة بوهيمية. يكتب كافكا بصدق مؤلم: <em>«الكتابة هي تجريد للنفس أمام الشياطين»</em>، محذراً ميلينا من طبيعته السوداوية وهشاشة صحته ونفسه المتطلبة.</p>
+
+<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">🕊️ الجزء الثالث — الفراق الهادئ والنهاية التراجيدية</h3>
+<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">رغم اللقاءات القليلة القصيرة التي جمعتهما في فيينا وبراغ، تتزايد الصعوبات بين الالتزامات العائلية لميلينا وعجز كافكا عن العيش السوي. يتوصل الاثنان تدريجياً إلى ضرورة إنهاء الرسائل لحماية أرواحهما من الاحتراق. تتوقف الرسائل عام 1923 قبل أشهر قليلة من وفاة كافكا، لتبقى هذه الرسائل وثيقة إنسانية ونفسية فريدة تظهر كافكا الإنساني، الضعيف، المحب، والممزق بين الرغبة في الحب والهروب منه.</p>
+
+<div style="background:rgba(212,175,55,0.1);border-right:3px solid var(--gold-light);padding:14px 16px;border-radius:6px;margin-top:14px;">
+  <p style="color:var(--gold-light);font-weight:600;margin-bottom:6px;">💡 المغزى والأمثولة الفلسفية</p>
+  <p style="line-height:1.75;color:var(--text-primary);margin:0;">«الحب هو أن تكون السكين التي أفتش بها في داخلي.» تبرز الرسائل أن الحب الصادق ليس مجرد سعادة سهلة، بل هو مواجهة عارية للذات بكل مخاوفها وعيوبها وهشاشتها أمام الآخر.</p>
+</div>`,
+        chapters: [
+          { num: 1, name: "الفصل الأول", desc: "بداية المراسلة بين براغ وفيينا والتعلق الروحي", duration: "02:38", src: "kafka_milena_chapitre1.mp3" },
+          { num: 2, name: "الفصل الثاني", desc: "الشغف المشتعل والتصريح بالحب المستحيل", duration: "02:17", src: "kafka_milena_chapitre2.mp3" },
+          { num: 3, name: "الفصل الثالث", desc: "الخوف الكافكاوي من المواجهة وقسوة المرض", duration: "02:17", src: "kafka_milena_chapitre3.mp3" },
+          { num: 4, name: "الفصل الرابع", desc: "الوداع الاخير والسلام النفسي التراجيدي", duration: "02:33", src: "kafka_milena_chapitre4.mp3" }
         ]
       },
       meditations: {
