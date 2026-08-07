@@ -741,11 +741,12 @@
 
       <div class="nav-section-title">التصنيفات الشائعة</div>
       <ul class="nav-menu" id="categories">
-        <li class="category-item active"><a href="#"><span>🧠</span> فلسفة</a></li>
-        <li class="category-item"><a href="#"><span>🌿</span> تنمية ذاتية</a></li>
-        <li class="category-item"><a href="#"><span>🏰</span> تاريخ</a></li>
-        <li class="category-item"><a href="#"><span>Ψ</span> علم النفس</a></li>
-        <li class="category-item"><a href="#"><span>🪷</span> دين وروحانيات</a></li>
+        <li class="category-item active"><a href="#" onclick="filterAudioCategory('all', this); return false;"><span>✨</span> الكل</a></li>
+        <li class="category-item"><a href="#" onclick="filterAudioCategory('فلسفة', this); return false;"><span>🧠</span> فلسفة</a></li>
+        <li class="category-item"><a href="#" onclick="filterAudioCategory('تنمية ذاتية', this); return false;"><span>🌿</span> تنمية ذاتية</a></li>
+        <li class="category-item"><a href="#" onclick="filterAudioCategory('تاريخ', this); return false;"><span>🏰</span> تاريخ</a></li>
+        <li class="category-item"><a href="#" onclick="filterAudioCategory('علم النفس', this); return false;"><span>Ψ</span> علم النفس</a></li>
+        <li class="category-item"><a href="#" onclick="filterAudioCategory('دين وروحانيات', this); return false;"><span>🪷</span> دين وروحانيات</a></li>
       </ul>
     </aside>
 
@@ -761,10 +762,7 @@
           <input type="text" class="search-input" placeholder="ابحث عن كتاب، مقال، أو مؤلف... (Ctrl+K)" readonly onclick="openGlobalSearchModal()">
         </div>
 
-        <div class="top-actions">
-          <button class="top-btn" title="الإشعارات">🔔</button>
-          <button class="top-btn" title="الملف الشخصي">👤</button>
-        </div>
+        <div class="top-actions"></div>
       </header>
 
       <!-- Scrollable Body -->
@@ -781,11 +779,10 @@
             </div>
 
             <div class="view-controls">
-              <select class="sort-select">
-                <option>الأحدث</option>
-                <option>الأكثر استماعاً</option>
+              <select class="sort-select" onchange="filterBooksBySort(this.value)">
+                <option value="default">الأحدث</option>
+                <option value="popular">الأكثر استماعاً</option>
               </select>
-              <button class="grid-view-btn" title="عرض الشبكة">🌁</button>
             </div>
           </div>
 
@@ -793,7 +790,7 @@
           <div class="audiobooks-grid" id="booksGrid">
 
             <!-- Book 1: L'Alchimiste -->
-            <div class="audiobook-card" onclick="openBookDetail('alchemist')">
+            <div class="audiobook-card" data-category="فلسفة تنمية ذاتية" onclick="openBookDetail('alchemist')">
               <div class="card-cover-wrapper">
                 <img src="../audio_alchemist_cover.jpg" alt="الخيميائي" class="card-cover-img">
                 <div class="cover-overlay-content">
@@ -813,7 +810,7 @@
             </div>
 
             <!-- Book 2: Crime et Châtiment (الجريمة والعقاب) -->
-            <div class="audiobook-card" onclick="openBookDetail('crime_punishment')">
+            <div class="audiobook-card" data-category="فلسفة علم النفس" onclick="openBookDetail('crime_punishment')">
               <div class="card-cover-wrapper">
                 <img src="../audio_crime_punishment_cover.jpg" alt="الجريمة والعقاب" class="card-cover-img">
                 <div class="cover-overlay-content">
@@ -833,7 +830,7 @@
             </div>
 
             <!-- Book 3: L'Étranger (الغريب - ألبير كامو) -->
-            <div class="audiobook-card" onclick="openBookDetail('etranger')">
+            <div class="audiobook-card" data-category="فلسفة" onclick="openBookDetail('etranger')">
               <div class="card-cover-wrapper">
                 <img src="./audio_etranger_cover.jpg" alt="الغريب" class="card-cover-img">
                 <div class="cover-overlay-content">
@@ -853,7 +850,7 @@
             </div>
 
             <!-- Book 4: Le Petit Prince (الأمير الصغير - أنطوان دي سانت إكزوبيري) -->
-            <div class="audiobook-card" onclick="openBookDetail('petit_prince')">
+            <div class="audiobook-card" data-category="فلسفة تنمية ذاتية" onclick="openBookDetail('petit_prince')">
               <div class="card-cover-wrapper">
                 <img src="./audio_petit_prince_cover.jpg" alt="الأمير الصغير" class="card-cover-img">
                 <div class="cover-overlay-content">
@@ -873,7 +870,7 @@
             </div>
 
             <!-- Book 5: La Métamorphose (التحول / المسخ - فرانز كافكا) -->
-            <div class="audiobook-card" onclick="openBookDetail('kafka')">
+            <div class="audiobook-card" data-category="فلسفة علم النفس" onclick="openBookDetail('kafka')">
               <div class="card-cover-wrapper">
                 <img src="./audio_kafka_cover.jpg" alt="التحول (المسخ)" class="card-cover-img">
                 <div class="cover-overlay-content">
@@ -893,7 +890,7 @@
             </div>
 
             <!-- Book 6: Le Vieil Homme et la Mer (الشيخ والبحر - ارنست همنغواي) -->
-            <div class="audiobook-card" onclick="openBookDetail('vieux')">
+            <div class="audiobook-card" data-category="فلسفة تاريخ" onclick="openBookDetail('vieux')">
               <div class="card-cover-wrapper">
                 <img src="./audio_vieux_cover.jpg" alt="الشيخ والبحر" class="card-cover-img">
                 <div class="cover-overlay-content">
@@ -913,7 +910,7 @@
             </div>
 
             <!-- Book 7: Lettres à Milena (رسائل إلى ميلينا - فرانز كافكا) -->
-            <div class="audiobook-card" onclick="openBookDetail('milena')">
+            <div class="audiobook-card" data-category="فلسفة دين وروحانيات" onclick="openBookDetail('milena')">
               <div class="card-cover-wrapper">
                 <img src="./audio_milena_cover.jpg" alt="رسائل إلى ميلينا" class="card-cover-img">
                 <div class="cover-overlay-content">
@@ -1493,6 +1490,35 @@
         `;
         recContainer.appendChild(div);
       });
+    }
+
+    function filterAudioCategory(category, el) {
+      showLibraryGrid();
+
+      document.querySelectorAll('#categories .category-item').forEach(item => item.classList.remove('active'));
+      if (el) {
+        const parentLi = el.closest('.category-item');
+        if (parentLi) parentLi.classList.add('active');
+      }
+
+      const cards = document.querySelectorAll('.audiobook-card');
+      let count = 0;
+      cards.forEach(card => {
+        const cardCats = card.getAttribute('data-category') || '';
+        if (category === 'all' || cardCats.includes(category)) {
+          card.style.display = 'block';
+          count++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      const subtitle = document.querySelector('.page-subtitle');
+      if (subtitle) {
+        subtitle.textContent = category === 'all' 
+          ? `7 كتب صوتية (الروايات الصوتية الرئيسية)` 
+          : `${count} كتب صوتية في تصنيف ${category}`;
+      }
     }
 
     function playCurrentChapter(chapterIndex) {
