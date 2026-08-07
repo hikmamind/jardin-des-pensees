@@ -563,6 +563,64 @@
       -webkit-appearance: none; width: 13px; height: 13px;
       border-radius: 50%; background: var(--gold); cursor: pointer;
     }
+
+    /* Mobile Responsiveness for Studio Audio Page */
+    @media (max-width: 900px) {
+      .app-layout { flex-direction: column !important; min-height: 100vh !important; }
+      .sidebar {
+        position: fixed !important; top: 0 !important; right: 0 !important; bottom: 0 !important;
+        width: 280px !important; max-width: 85vw !important;
+        z-index: 100000 !important;
+        transform: translateX(100%) !important;
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        box-shadow: -10px 0 40px rgba(0,0,0,0.95) !important;
+      }
+      .sidebar.active { transform: translateX(0) !important; }
+      .audio-sidebar-overlay {
+        position: fixed !important; inset: 0 !important; background: rgba(0,0,0,0.75) !important;
+        z-index: 99990 !important; opacity: 0 !important; visibility: hidden !important;
+        transition: opacity 0.25s ease, visibility 0.25s ease !important;
+      }
+      .audio-sidebar-overlay.active { opacity: 1 !important; visibility: visible !important; }
+
+      .top-header { padding: 0 14px !important; gap: 10px !important; }
+      .search-box { flex: 1 !important; width: 100% !important; max-width: none !important; }
+      .audio-mobile-menu-btn {
+        display: flex !important; align-items: center !important; justify-content: center !important;
+        width: 40px !important; height: 40px !important; border-radius: 50% !important;
+        background: rgba(223, 177, 91, 0.15) !important; border: 1.5px solid var(--gold) !important;
+        color: var(--gold) !important; font-size: 1.2rem !important; cursor: pointer !important; flex-shrink: 0 !important;
+      }
+      .content-body { padding: 16px 12px 100px !important; }
+      .books-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important; gap: 14px !important; }
+    }
+
+    @media (min-width: 901px) {
+      .audio-mobile-menu-btn { display: none !important; }
+    }
+
+    @media (max-width: 640px) {
+      .bottom-audio-bar { padding: 8px 12px !important; gap: 8px !important; }
+      .player-track-info { gap: 8px !important; max-width: 140px !important; }
+      .player-track-thumb { width: 38px !important; height: 38px !important; }
+      .player-track-meta h4 { font-size: 0.82rem !important; max-width: 90px !important; }
+      .player-track-meta p { font-size: 0.68rem !important; }
+      .player-controls-center { gap: 4px !important; }
+      .player-btn-main { width: 40px !important; height: 40px !important; font-size: 1rem !important; }
+      .player-btn-sec { font-size: 0.85rem !important; padding: 4px 6px !important; }
+      .player-right-controls { gap: 6px !important; min-width: auto !important; }
+      .vol-slider { width: 45px !important; }
+      .detail-hero-banner { padding: 24px 16px !important; flex-direction: column !important; align-items: center !important; text-align: center !important; }
+      .detail-cover-wrapper { width: 140px !important; height: 140px !important; margin: 0 auto !important; }
+      .detail-title { font-size: 1.35rem !important; }
+      .detail-actions-row { justify-content: center !important; }
+    }
+
+    @media (max-width: 420px) {
+      .player-vol-wrap { display: none !important; }
+      .speed-btn { font-size: 0.75rem !important; min-width: 32px !important; }
+      .books-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
+    }
   </style>
 </head>
 <body>
@@ -610,6 +668,8 @@
 
       <!-- Top Header -->
       <header class="top-header">
+        <button class="audio-mobile-menu-btn" onclick="toggleAudioSidebar()" aria-label="فتح القائمة">☰</button>
+
         <div class="search-box" onclick="openGlobalSearchModal()" style="cursor: pointer;">
           <span class="search-icon">🔍</span>
           <input type="text" class="search-input" placeholder="ابحث عن كتاب، مقال، أو مؤلف... (Ctrl+K)" readonly onclick="openGlobalSearchModal()">
@@ -1374,6 +1434,29 @@
         const text = card.textContent.toLowerCase();
         card.style.display = text.includes(q) ? 'block' : 'none';
       });
+    }
+
+    // ── Mobile Sidebar Toggle ──
+    function toggleAudioSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      let overlay = document.getElementById('audioSidebarOverlay');
+      if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.id = 'audioSidebarOverlay';
+        overlay.className = 'audio-sidebar-overlay';
+        overlay.onclick = toggleAudioSidebar;
+        document.body.appendChild(overlay);
+      }
+      const isActive = sidebar.classList.contains('active');
+      if (isActive) {
+        sidebar.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      } else {
+        sidebar.classList.add('active');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
     }
 
     // ── Prev / Next Chapter ──

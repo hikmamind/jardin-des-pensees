@@ -6215,3 +6215,86 @@ textarea.form-control {
 }
 
 .search-empty-icon { font-size: 2.2rem !important; margin-bottom: 8px !important; display: block !important; }
+
+/* ==========================================================================
+   GLOBAL MOBILE UX POLISH & BUG FIXES (< 768px & < 500px)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+
+  /* Prevent hero text & title clipping on small phones */
+  .hero-quote {
+    font-size: 1.5rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .serif-title, .section-title {
+    font-size: 1.4rem !important;
+  }
+
+  /* Split articles & selected grid responsive stacking */
+  .split-articles-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .selected-articles-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  .thinkers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)) !important;
+    gap: 12px !important;
+  }
+
+  /* Mobile search modal overlay padding adjustment */
+  .global-search-overlay {
+    padding: 50px 10px 10px !important;
+  }
+
+  .global-search-modal {
+    border-radius: 18px !important;
+    max-height: 88vh !important;
+  }
+
+  .search-modal-header {
+    padding: 14px 16px !important;
+  }
+
+  .search-modal-tags {
+    padding: 10px 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .selected-articles-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .brand-name {
+    font-size: 1.05rem !important;
+  }
+
+  .brand-logo-img {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  .category-pill-item {
+    padding: 10px 14px !important;
+    font-size: 0.8rem !important;
+  }
+
+  /* Ensure footer links don't wrap awkwardly */
+  .footer {
+    padding: 30px 16px !important;
+    text-align: center !important;
+  }
+}
+
