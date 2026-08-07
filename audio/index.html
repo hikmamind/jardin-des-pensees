@@ -1037,14 +1037,14 @@
                 </div>
 
                 <!-- Add Comment Form -->
-                <div style="background:rgba(20, 29, 23, 0.9);border:1px solid rgba(223,177,91,0.3);border-radius:18px;padding:20px;margin-bottom:24px;">
+                <div style="background:rgba(20, 29, 23, 0.9);border:1px solid rgba(223,177,91,0.3);border-radius:18px;padding:20px;margin-bottom:24px;position:relative;z-index:20;">
                   <h4 style="color:var(--gold-light);font-size:1rem;margin-bottom:14px;display:flex;align-items:center;gap:8px;">
                     <span>💬</span> أضف تعليقك وانطباعك حول هذا العمل الصوتي
                   </h4>
-                  <form id="audioCommentForm" onsubmit="submitAudioComment(event)">
+                  <form id="audioCommentForm" onsubmit="submitAudioComment(event); return false;">
                     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
-                      <input type="text" id="commentAuthorInput" placeholder="اسمك الكريم *" required style="width:100%;background:rgba(0,0,0,0.5);border:1px solid var(--border-light);color:#fff;padding:10px 14px;border-radius:10px;font-size:0.88rem;outline:none;">
-                      <select id="commentRatingSelect" style="width:100%;background:rgba(0,0,0,0.5);border:1px solid var(--border-light);color:#F5D98A;padding:10px 14px;border-radius:10px;font-weight:700;font-size:0.88rem;outline:none;">
+                      <input type="text" id="commentAuthorInput" placeholder="اسمك الكريم *" required class="comment-input-field">
+                      <select id="commentRatingSelect" class="comment-input-field" style="color:#F5D98A;font-weight:700;">
                         <option value="5">★★★★★ (5/5) ممتاز جداً</option>
                         <option value="4">★★★★☆ (4/5) جيد جداً</option>
                         <option value="3">★★★☆☆ (3/5) متوسط</option>
@@ -1052,8 +1052,8 @@
                         <option value="1">★☆☆☆☆ (1/5) سيء</option>
                       </select>
                     </div>
-                    <textarea id="commentTextInput" placeholder="اكتب تعليقك أو انطباعك عن الصوت والقصة..." required rows="3" style="width:100%;background:rgba(0,0,0,0.5);border:1px solid var(--border-light);color:#fff;padding:12px 14px;border-radius:10px;margin-bottom:12px;font-family:inherit;resize:vertical;font-size:0.9rem;outline:none;"></textarea>
-                    <button type="submit" class="btn-primary-play" style="width:100%;justify-content:center;padding:12px;font-size:0.95rem;">
+                    <textarea id="commentTextInput" placeholder="اكتب تعليقك أو انطباعك عن الصوت والقصة..." required rows="3" class="comment-input-field"></textarea>
+                    <button type="button" class="btn-primary-play" id="submitAudioCommentBtn" onclick="submitAudioComment(event)" style="width:100%;justify-content:center;padding:12px;font-size:0.95rem;">
                       <span>🚀</span> نشر التعليق والتقييم
                     </button>
                   </form>
@@ -1880,17 +1880,24 @@
     }
 
     function submitAudioComment(e) {
-      e.preventDefault();
+      if (e) e.preventDefault();
       const authorInput = document.getElementById('commentAuthorInput');
       const textInput = document.getElementById('commentTextInput');
       const ratingSelect = document.getElementById('commentRatingSelect');
 
-      if (!authorInput.value.trim() || !textInput.value.trim()) return;
+      if (!authorInput || !textInput) return;
+      const authorVal = authorInput.value.trim();
+      const textVal = textInput.value.trim();
+
+      if (!authorVal || !textVal) {
+        alert('يرجى كتابة الاسم والتعليق قبل النشر!');
+        return;
+      }
 
       const newComment = {
-        author: authorInput.value.trim(),
-        text: textInput.value.trim(),
-        rating: parseInt(ratingSelect.value, 10),
+        author: authorVal,
+        text: textVal,
+        rating: parseInt(ratingSelect ? ratingSelect.value : '5', 10),
         date: "الآن",
         likes: 0
       };

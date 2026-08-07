@@ -16,48 +16,52 @@
   const style = document.createElement('style');
   style.textContent = `
     .article-social-card {
-      background: rgba(15, 22, 17, 0.95);
-      border: 1px solid rgba(223, 177, 91, 0.35);
-      border-radius: 20px;
-      padding: 24px;
-      margin: 35px auto;
-      max-width: 900px;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.6);
-      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-      direction: rtl;
-      text-align: right;
+      background: rgba(15, 22, 17, 0.96) !important;
+      border: 1px solid rgba(223, 177, 91, 0.4) !important;
+      border-radius: 20px !important;
+      padding: 24px !important;
+      margin: 35px auto !important;
+      max-width: 900px !important;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.7) !important;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif !important;
+      direction: rtl !important;
+      text-align: right !important;
+      position: relative !important;
+      z-index: 100 !important;
+      pointer-events: auto !important;
     }
 
     .social-actions-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 14px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      margin-bottom: 24px;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      flex-wrap: wrap !important;
+      gap: 14px !important;
+      padding-bottom: 20px !important;
+      border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+      margin-bottom: 24px !important;
     }
 
     .social-btn {
-      background: rgba(223, 177, 91, 0.08);
-      border: 1px solid rgba(223, 177, 91, 0.3);
-      color: #F5D98A;
-      padding: 10px 18px;
-      border-radius: 14px;
-      font-size: 0.9rem;
-      font-weight: 700;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.25s ease;
+      background: rgba(223, 177, 91, 0.08) !important;
+      border: 1px solid rgba(223, 177, 91, 0.3) !important;
+      color: #F5D98A !important;
+      padding: 10px 18px !important;
+      border-radius: 14px !important;
+      font-size: 0.9rem !important;
+      font-weight: 700 !important;
+      cursor: pointer !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      transition: all 0.25s ease !important;
+      pointer-events: auto !important;
     }
 
     .social-btn:hover {
-      background: rgba(223, 177, 91, 0.2);
-      border-color: #DFB15B;
-      transform: translateY(-2px);
+      background: rgba(223, 177, 91, 0.2) !important;
+      border-color: #DFB15B !important;
+      transform: translateY(-2px) !important;
     }
 
     .social-btn.liked {
@@ -67,31 +71,53 @@
     }
 
     .article-star-rating span {
-      font-size: 1.4rem;
-      color: #F5D98A;
-      cursor: pointer;
-      transition: transform 0.15s;
-      display: inline-block;
-      letter-spacing: 2px;
+      font-size: 1.4rem !important;
+      color: #F5D98A !important;
+      cursor: pointer !important;
+      transition: transform 0.15s !important;
+      display: inline-block !important;
+      letter-spacing: 2px !important;
     }
     .article-star-rating span:hover {
-      transform: scale(1.25);
+      transform: scale(1.25) !important;
+    }
+
+    .art-input-field {
+      width: 100% !important;
+      background: rgba(8, 14, 10, 0.95) !important;
+      border: 1px solid rgba(223, 177, 91, 0.4) !important;
+      color: #FFFDF8 !important;
+      padding: 12px 14px !important;
+      border-radius: 10px !important;
+      font-size: 0.9rem !important;
+      outline: none !important;
+      font-family: inherit !important;
+      pointer-events: auto !important;
+      user-select: text !important;
+      -webkit-user-select: text !important;
+      position: relative !important;
+      z-index: 10 !important;
+    }
+
+    .art-input-field:focus {
+      border-color: #F5D98A !important;
+      box-shadow: 0 0 12px rgba(223, 177, 91, 0.35) !important;
     }
 
     .article-comment-item {
-      background: rgba(22, 32, 25, 0.9);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 14px;
-      padding: 14px 18px;
-      margin-bottom: 12px;
+      background: rgba(22, 32, 25, 0.9) !important;
+      border: 1px solid rgba(255,255,255,0.08) !important;
+      border-radius: 14px !important;
+      padding: 14px 18px !important;
+      margin-bottom: 12px !important;
     }
 
     .article-comment-avatar {
-      width: 38px; height: 38px; border-radius: 50%;
-      background: linear-gradient(135deg, #DFB15B, #B88E3C);
-      color: #000; font-weight: 800; font-size: 0.9rem;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
+      width: 38px !important; height: 38px !important; border-radius: 50% !important;
+      background: linear-gradient(135deg, #DFB15B, #B88E3C) !important;
+      color: #000 !important; font-weight: 800 !important; font-size: 0.9rem !important;
+      display: flex !important; align-items: center !important; justify-content: center !important;
+      flex-shrink: 0 !important;
     }
   `;
   document.head.appendChild(style);
@@ -102,75 +128,7 @@
     { author: "كمال التازي", text: "الفكرة واضحة والتطبيقات العملية ممتازة لمواجهة تحديات الحياة اليومية.", rating: 5, date: "منذ 4 أيام", likes: 8 }
   ];
 
-  // Render Component Container
-  function renderSocialComponent() {
-    const container = document.createElement('div');
-    container.className = 'article-social-card no-print';
-
-    const savedLike = localStorage.getItem(`like_art_${articleKey}`) === 'true';
-    let savedCount = parseInt(localStorage.getItem(`count_art_${articleKey}`) || '284', 10);
-
-    container.innerHTML = `
-      <!-- Social Actions Bar -->
-      <div class="social-actions-bar">
-        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
-          <button class="social-btn ${savedLike ? 'liked' : ''}" id="artLikeBtn" onclick="window.toggleArtLike()">
-            <span>❤️</span> <span id="artLikeText">${savedLike ? 'تم الإعجاب' : 'إعجاب'}</span> (<span id="artLikeCount">${savedCount}</span>)
-          </button>
-
-          <button class="social-btn" onclick="window.openArtShareModal()">
-            <span>🔗</span> مشاركة المقال
-          </button>
-        </div>
-
-        <!-- Rating Stars Box -->
-        <div style="display:flex;align-items:center;gap:10px;">
-          <span style="font-size:0.85rem;color:#C8BFB0;font-weight:700;">تقييم المقال:</span>
-          <div class="article-star-rating" id="artStarSelector">
-            <span onclick="window.setArtRating(1)">★</span>
-            <span onclick="window.setArtRating(2)">★</span>
-            <span onclick="window.setArtRating(3)">★</span>
-            <span onclick="window.setArtRating(4)">★</span>
-            <span onclick="window.setArtRating(5)">★</span>
-          </div>
-          <span style="font-size:0.85rem;color:#DFB15B;font-weight:800;" id="artRatingScore">4.9/5</span>
-        </div>
-      </div>
-
-      <!-- Add Comment Form -->
-      <div style="margin-bottom:20px;">
-        <h4 style="color:#DFB15B;font-size:1.05rem;margin-bottom:12px;display:flex;align-items:center;gap:8px;">
-          <span>💬</span> التعليقات والانطباعات (<span id="artCommentsCount">2</span>)
-        </h4>
-        
-        <form onsubmit="window.submitArtComment(event)" style="display:flex;flex-direction:column;gap:10px;">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-            <input type="text" id="artAuthorInput" placeholder="اسمك الكريم *" required style="background:rgba(0,0,0,0.5);border:1px solid rgba(223,177,91,0.3);color:#fff;padding:10px 14px;border-radius:10px;font-size:0.88rem;outline:none;">
-            <select id="artRatingSelect" style="background:rgba(0,0,0,0.5);border:1px solid rgba(223,177,91,0.3);color:#F5D98A;padding:10px 14px;border-radius:10px;font-weight:700;font-size:0.88rem;outline:none;">
-              <option value="5">★★★★★ (5/5) ممتاز جداً</option>
-              <option value="4">★★★★☆ (4/5) جيد جداً</option>
-              <option value="3">★★★☆☆ (3/5) متوسط</option>
-            </select>
-          </div>
-          <textarea id="artTextInput" placeholder="اكتب رأيك أو تعليقك على هذا المقال..." required rows="3" style="background:rgba(0,0,0,0.5);border:1px solid rgba(223,177,91,0.3);color:#fff;padding:10px 14px;border-radius:10px;font-family:inherit;font-size:0.88rem;outline:none;resize:vertical;"></textarea>
-          <button type="submit" class="social-btn" style="justify-content:center;background:#DFB15B;color:#000;font-weight:800;border:none;">
-            <span>🚀</span> إرسال التعليق
-          </button>
-        </form>
-      </div>
-
-      <!-- Comments Feed -->
-      <div id="artCommentsFeed"></div>
-    `;
-
-    // Append to document
-    const target = document.querySelector('.book-container') || document.querySelector('.reader-main-content') || document.body;
-    target.appendChild(container);
-
-    window.loadArtComments();
-  }
-
-  // Window Handlers
+  // Window Handlers defined FIRST
   window.toggleArtLike = function() {
     const btn = document.getElementById('artLikeBtn');
     const countEl = document.getElementById('artLikeCount');
@@ -199,6 +157,8 @@
   window.setArtRating = function(rating) {
     const scoreEl = document.getElementById('artRatingScore');
     if (scoreEl) scoreEl.textContent = `${rating}.0/5`;
+    const selectEl = document.getElementById('artRatingSelect');
+    if (selectEl) selectEl.value = rating;
     const stars = document.querySelectorAll('#artStarSelector span');
     stars.forEach((s, idx) => {
       s.style.opacity = idx < rating ? '1' : '0.4';
@@ -241,17 +201,24 @@
   };
 
   window.submitArtComment = function(e) {
-    e.preventDefault();
+    if (e) e.preventDefault();
     const authorInput = document.getElementById('artAuthorInput');
     const textInput = document.getElementById('artTextInput');
     const ratingSelect = document.getElementById('artRatingSelect');
 
-    if (!authorInput.value.trim() || !textInput.value.trim()) return;
+    if (!authorInput || !textInput) return;
+    const authorVal = authorInput.value.trim();
+    const textVal = textInput.value.trim();
+
+    if (!authorVal || !textVal) {
+      alert('يرجى ملء جميع الحقول لكتابة التعليق!');
+      return;
+    }
 
     const newComment = {
-      author: authorInput.value.trim(),
-      text: textInput.value.trim(),
-      rating: parseInt(ratingSelect.value, 10),
+      author: authorVal,
+      text: textVal,
+      rating: parseInt(ratingSelect ? ratingSelect.value : '5', 10),
       date: "الآن",
       likes: 0
     };
@@ -273,6 +240,89 @@
     const title = encodeURIComponent(document.title);
     window.open(`https://api.whatsapp.com/send?text=${title}%20${url}`, '_blank');
   };
+
+  // Render Component Container
+  function renderSocialComponent() {
+    const container = document.createElement('div');
+    container.className = 'article-social-card no-print';
+
+    const savedLike = localStorage.getItem(`like_art_${articleKey}`) === 'true';
+    let savedCount = parseInt(localStorage.getItem(`count_art_${articleKey}`) || '284', 10);
+
+    container.innerHTML = `
+      <!-- Social Actions Bar -->
+      <div class="social-actions-bar">
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+          <button class="social-btn ${savedLike ? 'liked' : ''}" id="artLikeBtn" onclick="window.toggleArtLike()">
+            <span>❤️</span> <span id="artLikeText">${savedLike ? 'تم الإعجاب' : 'إعجاب'}</span> (<span id="artLikeCount">${savedCount}</span>)
+          </button>
+
+          <button class="social-btn" onclick="window.openArtShareModal()">
+            <span>🔗</span> مشاركة المقال
+          </button>
+        </div>
+
+        <!-- Rating Stars Box -->
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span style="font-size:0.85rem;color:#C8BFB0;font-weight:700;">تقييم المقال:</span>
+          <div class="article-star-rating" id="artStarSelector">
+            <span onclick="window.setArtRating(1)">★</span>
+            <span onclick="window.setArtRating(2)">★</span>
+            <span onclick="window.setArtRating(3)">★</span>
+            <span onclick="window.setArtRating(4)">★</span>
+            <span onclick="window.setArtRating(5)">★</span>
+          </div>
+          <span style="font-size:0.85rem;color:#DFB15B;font-weight:800;" id="artRatingScore">4.9/5</span>
+        </div>
+      </div>
+
+      <!-- Add Comment Form -->
+      <div style="margin-bottom:20px;">
+        <h4 style="color:#DFB15B;font-size:1.05rem;margin-bottom:12px;display:flex;align-items:center;gap:8px;">
+          <span>💬</span> التعليقات والانطباعات (<span id="artCommentsCount">2</span>)
+        </h4>
+        
+        <form id="artCommentFormMain" style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <input type="text" id="artAuthorInput" placeholder="اسمك الكريم *" required class="art-input-field">
+            <select id="artRatingSelect" class="art-input-field" style="color:#F5D98A;font-weight:700;">
+              <option value="5">★★★★★ (5/5) ممتاز جداً</option>
+              <option value="4">★★★★☆ (4/5) جيد جداً</option>
+              <option value="3">★★★☆☆ (3/5) متوسط</option>
+            </select>
+          </div>
+          <textarea id="artTextInput" placeholder="اكتب رأيك أو تعليقك على هذا المقال..." required rows="3" class="art-input-field"></textarea>
+          <button type="button" class="social-btn" id="artSubmitBtn" style="justify-content:center;background:#DFB15B;color:#000;font-weight:800;border:none;">
+            <span>🚀</span> إرسال التعليق
+          </button>
+        </form>
+      </div>
+
+      <!-- Comments Feed -->
+      <div id="artCommentsFeed"></div>
+    `;
+
+    // Append to document
+    const target = document.querySelector('.book-container') || document.querySelector('.reader-main-content') || document.body;
+    target.appendChild(container);
+
+    // Bind click listener explicitly to avoid inline form submission issues
+    const submitBtn = document.getElementById('artSubmitBtn');
+    if (submitBtn) {
+      submitBtn.onclick = function(e) {
+        window.submitArtComment(e);
+      };
+    }
+    const form = document.getElementById('artCommentFormMain');
+    if (form) {
+      form.onsubmit = function(e) {
+        e.preventDefault();
+        window.submitArtComment(e);
+      };
+    }
+
+    window.loadArtComments();
+  }
 
   // Run on load
   if (document.readyState === 'loading') {
