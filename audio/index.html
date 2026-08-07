@@ -969,8 +969,15 @@
                 <button class="btn-primary-play" onclick="playCurrentChapter(0)">
                   <span>▶</span> متابعة الاستماع
                 </button>
-                <button class="btn-sec-action">🤍 إضافة للمفضلة</button>
-                <button class="btn-sec-action">📥 تحميل</button>
+                <button class="btn-sec-action" id="audioLikeBtn" onclick="toggleAudioLike()">
+                  <span id="audioLikeIcon">❤️</span> <span id="audioLikeText">إعجاب</span> (<span id="audioLikeCount">1,248</span>)
+                </button>
+                <button class="btn-sec-action" onclick="openShareModal('audio')">
+                  <span>🔗</span> مشاركة
+                </button>
+                <button class="btn-sec-action" onclick="switchTab('comments', document.querySelectorAll('#tabsBar .tab-btn')[3])">
+                  <span>💬</span> التعليقات
+                </button>
               </div>
             </div>
           </div>
@@ -984,6 +991,7 @@
                 <button class="tab-btn active" onclick="switchTab('chapters', this)">الفصول</button>
                 <button class="tab-btn" onclick="switchTab('about', this)">عن الكتاب</button>
                 <button class="tab-btn" onclick="switchTab('quotes', this)">إقتباسات</button>
+                <button class="tab-btn" onclick="switchTab('comments', this)">💬 التعليقات والتقييمات (<span id="tabCommentsCount">4</span>)</button>
               </div>
 
               <!-- TAB: Chapters -->
@@ -1004,6 +1012,57 @@
               <div id="tabQuotes" style="display:none;">
                 <div class="quote-box" style="margin-top:16px;font-size:1.1rem;">«لا يوجد شيء أصعب من الصدق، ولا شيء أسهل من الأكاذيب.»</div>
                 <div class="quote-box" style="margin-top:12px;">«الألم والمعاناة ضروريان دائماً للوعي الكبير والقلب الرفيع.»</div>
+              </div>
+
+              <!-- TAB: Comments & Ratings -->
+              <div id="tabComments" style="display:none;">
+                <!-- Rating Overview Card -->
+                <div style="background:rgba(15, 22, 17, 0.85);border:1px solid var(--border-light);border-radius:18px;padding:22px;margin-bottom:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px;">
+                  <div style="display:flex;align-items:center;gap:16px;">
+                    <div style="font-size:2.8rem;font-weight:900;color:var(--gold-light);line-height:1;" id="avgRatingScore">4.9</div>
+                    <div>
+                      <div class="interactive-star-rating" id="userStarSelector" style="font-size:1.5rem;color:#F5D98A;cursor:pointer;letter-spacing:3px;">
+                        <span data-star="1" onclick="setUserAudioRating(1)">★</span>
+                        <span data-star="2" onclick="setUserAudioRating(2)">★</span>
+                        <span data-star="3" onclick="setUserAudioRating(3)">★</span>
+                        <span data-star="4" onclick="setUserAudioRating(4)">★</span>
+                        <span data-star="5" onclick="setUserAudioRating(5)">★</span>
+                      </div>
+                      <div style="font-size:0.82rem;color:var(--text-muted);margin-top:4px;" id="ratingCountText">مبني على 1,248 تقييم</div>
+                    </div>
+                  </div>
+                  <button class="btn-primary-play" style="padding:10px 18px;font-size:0.85rem;" onclick="document.getElementById('commentAuthorInput').focus()">
+                    ✍️ أضف تقييمك وتعليقك
+                  </button>
+                </div>
+
+                <!-- Add Comment Form -->
+                <div style="background:rgba(20, 29, 23, 0.9);border:1px solid rgba(223,177,91,0.3);border-radius:18px;padding:20px;margin-bottom:24px;">
+                  <h4 style="color:var(--gold-light);font-size:1rem;margin-bottom:14px;display:flex;align-items:center;gap:8px;">
+                    <span>💬</span> أضف تعليقك وانطباعك حول هذا العمل الصوتي
+                  </h4>
+                  <form id="audioCommentForm" onsubmit="submitAudioComment(event)">
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
+                      <input type="text" id="commentAuthorInput" placeholder="اسمك الكريم *" required style="width:100%;background:rgba(0,0,0,0.5);border:1px solid var(--border-light);color:#fff;padding:10px 14px;border-radius:10px;font-size:0.88rem;outline:none;">
+                      <select id="commentRatingSelect" style="width:100%;background:rgba(0,0,0,0.5);border:1px solid var(--border-light);color:#F5D98A;padding:10px 14px;border-radius:10px;font-weight:700;font-size:0.88rem;outline:none;">
+                        <option value="5">★★★★★ (5/5) ممتاز جداً</option>
+                        <option value="4">★★★★☆ (4/5) جيد جداً</option>
+                        <option value="3">★★★☆☆ (3/5) متوسط</option>
+                        <option value="2">★★☆☆☆ (2/5) مقبول</option>
+                        <option value="1">★☆☆☆☆ (1/5) سيء</option>
+                      </select>
+                    </div>
+                    <textarea id="commentTextInput" placeholder="اكتب تعليقك أو انطباعك عن الصوت والقصة..." required rows="3" style="width:100%;background:rgba(0,0,0,0.5);border:1px solid var(--border-light);color:#fff;padding:12px 14px;border-radius:10px;margin-bottom:12px;font-family:inherit;resize:vertical;font-size:0.9rem;outline:none;"></textarea>
+                    <button type="submit" class="btn-primary-play" style="width:100%;justify-content:center;padding:12px;font-size:0.95rem;">
+                      <span>🚀</span> نشر التعليق والتقييم
+                    </button>
+                  </form>
+                </div>
+
+                <!-- Comments Feed List -->
+                <div id="audioCommentsList" style="display:flex;flex-direction:column;gap:12px;">
+                  <!-- Dynamic comments -->
+                </div>
               </div>
             </div>
 
@@ -1116,6 +1175,27 @@
       </div>
     </div>
 
+  </div>
+
+  <!-- Universal Share Modal -->
+  <div class="modal" id="shareModal" role="dialog" aria-modal="true" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:200000;align-items:center;justify-content:center;backdrop-filter:blur(10px);">
+    <div style="max-width:440px;width:90%;padding:28px;border-radius:24px;background:#0F1611;border:1px solid var(--gold);text-align:center;position:relative;box-shadow:0 20px 50px rgba(0,0,0,0.9);">
+      <button onclick="closeShareModal()" style="position:absolute;top:14px;left:18px;background:transparent;border:none;color:#fff;font-size:1.5rem;cursor:pointer;">&times;</button>
+      <h3 style="color:var(--gold-light);font-size:1.3rem;margin-bottom:8px;">🔗 مشاركة المحتوى</h3>
+      <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:20px;" id="shareModalSubtitle">شارِك هذا العمل الإنساني الرائع مع أصدقائك عبر المنصات التالية</p>
+      
+      <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:10px;margin-bottom:20px;">
+        <a id="shareWhatsapp" target="_blank" style="background:#25D366;color:#fff;padding:10px;border-radius:12px;text-decoration:none;font-weight:700;font-size:0.82rem;display:flex;flex-direction:column;align-items:center;gap:4px;"><span>🟢</span> واتساب</a>
+        <a id="shareTelegram" target="_blank" style="background:#0088cc;color:#fff;padding:10px;border-radius:12px;text-decoration:none;font-weight:700;font-size:0.82rem;display:flex;flex-direction:column;align-items:center;gap:4px;"><span>✈️</span> تلغرام</a>
+        <a id="shareTwitter" target="_blank" style="background:#1DA1F2;color:#fff;padding:10px;border-radius:12px;text-decoration:none;font-weight:700;font-size:0.82rem;display:flex;flex-direction:column;align-items:center;gap:4px;"><span>🐦</span> تويتر / X</a>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:8px;background:rgba(0,0,0,0.5);border:1px solid var(--border-light);padding:8px 12px;border-radius:12px;">
+        <input type="text" id="shareUrlInput" readonly style="flex:1;background:transparent;border:none;color:#fff;font-size:0.8rem;outline:none;">
+        <button onclick="copyShareUrl()" style="background:var(--gold);color:#000;border:none;padding:6px 14px;border-radius:8px;font-weight:800;font-size:0.8rem;cursor:pointer;">نسخ</button>
+      </div>
+      <div id="copyToast" style="display:none;color:#34D399;font-size:0.82rem;font-weight:700;margin-top:10px;">✓ تم نسخ الرابط بنجاح إلى الحافظة!</div>
+    </div>
   </div>
 
   <!-- Audio Engine & View Switching Logic -->
@@ -1460,6 +1540,7 @@
 
       // Render dynamic recommendations from the 7 main books
       renderRecommendations(bookKey);
+      loadAudioComments();
 
       document.getElementById('libraryGridView').style.display = 'none';
       document.getElementById('bookDetailView').style.display = 'block';
@@ -1691,6 +1772,190 @@
         if (currentAudioEl) currentAudioEl.volume = lastVol || 1;
         slider.value = lastVol || 1;
         document.querySelector('.vol-icon').textContent = '🔊';
+      }
+    }
+
+    // ── Interactive Likes System ──
+    function toggleAudioLike() {
+      const btn = document.getElementById('audioLikeBtn');
+      const countEl = document.getElementById('audioLikeCount');
+      const textEl = document.getElementById('audioLikeText');
+      const key = `like_audio_${activeBookKey}`;
+      let isLiked = localStorage.getItem(key) === 'true';
+      let currentCount = parseInt(localStorage.getItem(`count_audio_${activeBookKey}`) || '1248', 10);
+
+      isLiked = !isLiked;
+      localStorage.setItem(key, isLiked ? 'true' : 'false');
+      currentCount = isLiked ? currentCount + 1 : currentCount - 1;
+      localStorage.setItem(`count_audio_${activeBookKey}`, currentCount);
+
+      if (btn) {
+        if (isLiked) {
+          btn.classList.add('liked');
+          if (textEl) textEl.textContent = 'تم الإعجاب';
+        } else {
+          btn.classList.remove('liked');
+          if (textEl) textEl.textContent = 'إعجاب';
+        }
+      }
+      if (countEl) countEl.textContent = currentCount.toLocaleString();
+    }
+
+    // ── Interactive Rating Stars System ──
+    let userAudioRating = 5;
+    function setUserAudioRating(rating) {
+      userAudioRating = rating;
+      const stars = document.querySelectorAll('#userStarSelector span');
+      stars.forEach((star, idx) => {
+        if (idx < rating) {
+          star.style.color = '#F5D98A';
+          star.style.opacity = '1';
+        } else {
+          star.style.color = '#555';
+          star.style.opacity = '0.5';
+        }
+      });
+      const select = document.getElementById('commentRatingSelect');
+      if (select) select.value = rating;
+    }
+
+    // ── Comments Engine for Audiobooks ──
+    const defaultCommentsMap = {
+      alchemist: [
+        { author: "ياسين الإدريسي", text: "رواية استثنائية تؤكد أن الشغف هو محرك الروح. الإلقاء الصوتي خيالي!", rating: 5, date: "منذ يومين", likes: 24 },
+        { author: "مريم العلمي", text: "الفصل الخامس مع الثعلب أعاد تشكيل نظرتي للترويض والعلاقات الإنسانية.", rating: 5, date: "منذ 4 أيام", likes: 18 },
+        { author: "أحمد بناني", text: "جودة الصوت والتعليق الصوتي رائعة جداً، أشكر القائمين على هذا الموقع الراقي.", rating: 5, date: "منذ أسبوع", likes: 12 }
+      ],
+      crime_punishment: [
+        { author: "عمر الفاروق", text: "تحليل نفسي رهيب لشخصية راسكولنيكوف. الصوت ينقل التوتر بدقة عالية!", rating: 5, date: "منذ يوم", likes: 31 },
+        { author: "سارة الكردي", text: "دوستويفسكي يغوص في أعماق الضمير الإنساني. إنتاج صوتي مبهر.", rating: 5, date: "منذ 3 أيام", likes: 19 }
+      ],
+      etranger: [
+        { author: "كريم المنصوري", text: "كامو والعبثية بصوت هادئ وعميق. تجربة استماع ممتعة للغاية.", rating: 5, date: "منذ 5 أيام", likes: 15 }
+      ],
+      milena: [
+        { author: "فاطمة الزهراء", text: "رسائل كافكا لميلينا تجسد أصدق صور العشق والخوف الإنساني. روعة هائلة!", rating: 5, date: "منذ 6 ساعات", likes: 42 },
+        { author: "هشام التازي", text: "«الحب هو أن تكون السكين...» إلقاء ممتاز يلامس الوجدان.", rating: 5, date: "منذ يوم", likes: 28 }
+      ]
+    };
+
+    function loadAudioComments() {
+      const listEl = document.getElementById('audioCommentsList');
+      const countEl = document.getElementById('tabCommentsCount');
+      if (!listEl) return;
+
+      const savedKey = `comments_audio_${activeBookKey}`;
+      let comments = JSON.parse(localStorage.getItem(savedKey) || 'null');
+      if (!comments) {
+        comments = defaultCommentsMap[activeBookKey] || [
+          { author: "مستمع شغوف", text: "عمل صوتي راقٍ وأداء رائع جداً ننصح بالاستماع إليه!", rating: 5, date: "منذ أسبوع", likes: 9 }
+        ];
+      }
+
+      if (countEl) countEl.textContent = comments.length;
+
+      listEl.innerHTML = comments.map(c => {
+        const initials = c.author ? c.author.charAt(0).toUpperCase() : '👤';
+        const starsHtml = '★'.repeat(c.rating || 5) + '☆'.repeat(5 - (c.rating || 5));
+        return `
+          <div class="comment-card-item">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+              <div style="display:flex;align-items:center;gap:10px;">
+                <div class="comment-avatar">${initials}</div>
+                <div>
+                  <h5 style="font-size:0.92rem;font-weight:700;color:#FFFDF8;margin:0;">${c.author}</h5>
+                  <span style="font-size:0.75rem;color:rgba(250,246,239,0.5);">${c.date}</span>
+                </div>
+              </div>
+              <div style="color:#F5D98A;font-size:0.85rem;font-weight:700;">${starsHtml}</div>
+            </div>
+            <p style="font-size:0.88rem;color:rgba(250,246,239,0.85);line-height:1.6;margin:0 0 10px;">${c.text}</p>
+            <div style="display:flex;align-items:center;gap:14px;font-size:0.78rem;color:var(--text-muted);">
+              <span style="cursor:pointer;" onclick="likeComment(this)">❤️ مفيد (${c.likes || 0})</span>
+              <span style="cursor:pointer;" onclick="this.textContent='تم الإبلاغ'">🚩 إبلاغ</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function submitAudioComment(e) {
+      e.preventDefault();
+      const authorInput = document.getElementById('commentAuthorInput');
+      const textInput = document.getElementById('commentTextInput');
+      const ratingSelect = document.getElementById('commentRatingSelect');
+
+      if (!authorInput.value.trim() || !textInput.value.trim()) return;
+
+      const newComment = {
+        author: authorInput.value.trim(),
+        text: textInput.value.trim(),
+        rating: parseInt(ratingSelect.value, 10),
+        date: "الآن",
+        likes: 0
+      };
+
+      const savedKey = `comments_audio_${activeBookKey}`;
+      let comments = JSON.parse(localStorage.getItem(savedKey) || 'null');
+      if (!comments) comments = defaultCommentsMap[activeBookKey] || [];
+
+      comments.unshift(newComment);
+      localStorage.setItem(savedKey, JSON.stringify(comments));
+
+      textInput.value = '';
+      loadAudioComments();
+      alert('✓ تم نشر تعليقك وتقييمك بنجاح!');
+    }
+
+    function likeComment(btn) {
+      btn.style.color = '#EF4444';
+      btn.textContent = '❤️ شكراً لك!';
+    }
+
+    // ── Universal Share Modal Engine ──
+    function openShareModal(type) {
+      const modal = document.getElementById('shareModal');
+      const urlInput = document.getElementById('shareUrlInput');
+      const subtitle = document.getElementById('shareModalSubtitle');
+      const pageUrl = window.location.href;
+
+      if (urlInput) urlInput.value = pageUrl;
+      const shareTitle = type === 'audio' ? `كتاب صوتي: ${document.getElementById('detailBookTitle').textContent}` : 'مقالة من حكمة ونور';
+      
+      if (subtitle) subtitle.textContent = `شارِك "${shareTitle}" مع أصدقائك عبر المنصات التالية`;
+
+      const encodedUrl = encodeURIComponent(pageUrl);
+      const encodedText = encodeURIComponent(`استمع إلى ${shareTitle} عبر منصة حكمة ونور ✨:`);
+
+      document.getElementById('shareWhatsapp').href = `https://api.whatsapp.com/send?text=${encodedText}%20${encodedUrl}`;
+      document.getElementById('shareTelegram').href = `https://t.me/share/url?url=${encodedUrl}&text=${encodedText}`;
+      document.getElementById('shareTwitter').href = `https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`;
+
+      if (modal) {
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeShareModal() {
+      const modal = document.getElementById('shareModal');
+      if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+    }
+
+    function copyShareUrl() {
+      const input = document.getElementById('shareUrlInput');
+      const toast = document.getElementById('copyToast');
+      if (input) {
+        input.select();
+        navigator.clipboard.writeText(input.value).then(() => {
+          if (toast) {
+            toast.style.display = 'block';
+            setTimeout(() => { toast.style.display = 'none'; }, 2000);
+          }
+        });
       }
     }
   </script>
