@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aide & FAQ | Le Jardin des Pensées</title>
+  <meta name="description" content="Foire aux questions et assistance : trouvez des réponses rapides sur nos articles, guides stoïciens, livres audio et notre boutique.">
+  <link rel="icon" type="image/png" href="brand_logo_official.png">
+  
+  <link rel="stylesheet" href="style.css?v=14">
+  <style>
+    body {
+      background: linear-gradient(180deg, rgba(7, 10, 8, 0.88) 0%, rgba(7, 10, 8, 0.96) 100%), url('main_home_hd_bg.jpg') center/cover no-repeat fixed !important;
+    }
+    .faq-hero-box {
+      text-align: center;
+      padding: 50px 20px 30px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Glowing background orbs -->
+  <div class="glowing-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Header Sticky Navigation Bar -->
+  <header class="navbar-header">
+    <nav class="navbar" aria-label="Navigation principale">
+      <a href="./" class="nav-brand">
+        <img src="brand_logo_official.png" alt="Le Jardin des Pensées" class="brand-logo-img">
+        <div style="display: flex; flex-direction: column; line-height: 1.15;">
+          <span class="brand-name" id="navBrandName">HIKMA & NOUR</span>
+          <span class="brand-tagline-ar" style="font-size: 0.72rem; color: var(--text-secondary);">Sagesse • Philosophie • Sérénité</span>
+        </div>
+      </a>
+      
+      <!-- Hamburger Menu for Mobile -->
+      <button class="nav-hamburger" id="navHamburger" aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <!-- Navigation Menu -->
+      <div class="nav-menu" id="navMenu">
+        <a href="./" class="nav-link" data-i18n="home">Accueil</a>
+        
+        <div class="nav-dropdown-item" id="articlesDropdownContainer">
+          <a href="articles/" class="nav-link" id="articlesNavLink" data-i18n="articles">Articles</a>
+          <div class="nav-sub-menu" id="articlesSubMenu">
+            <a href="articles/?category=philosophy" class="sub-link" data-category="philosophy" data-i18n="philosophy">Philosophie</a>
+            <a href="articles/?category=psychology" class="sub-link" data-category="psychology" data-i18n="psychologySub">Psychologie</a>
+            <a href="articles/?category=development" class="sub-link" data-category="development" data-i18n="development">Développement personnel</a>
+            <a href="articles/?category=history" class="sub-link" data-category="history" data-i18n="history">Histoire des idées</a>
+            <a href="articles/?category=all" class="sub-link see-all" data-category="all" data-i18n="seeAll">Voir tous les articles →</a>
+          </div>
+        </div>
+
+        <a href="thinkers/" class="nav-link" data-i18n="thinkers">Penseurs</a>
+        <a href="./quotes/" class="nav-link" data-i18n="quotes">Citations</a>
+        <a href="./audio/" class="nav-link" data-i18n="audio">Audio</a>
+        <a href="bio.html" class="nav-link" data-i18n="about">À propos</a>
+        <a href="contact.html" class="nav-link" data-i18n="contactNav">Contact</a>
+      </div>
+        
+      <div class="nav-actions">
+        <!-- Global Search Button -->
+        <button id="globalSearchBtn" class="global-search-btn-nav" aria-label="Rechercher" onclick="openGlobalSearchModal()">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="search-btn-text" data-i18n="search">Rechercher...</span>
+          <kbd class="search-btn-kbd">Ctrl K</kbd>
+        </button>
+
+        <!-- Language Selector -->
+        <div class="lang-selector">
+          <button class="lang-btn" id="langBtn" aria-label="Changer de langue">
+            <svg class="globe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px; height:16px;">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="activeLangName">FR</span>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-opt" data-lang="fr" aria-label="Français">Français</button>
+            <button class="lang-opt" data-lang="ar" aria-label="العربية">العربية</button>
+          </div>
+        </div>
+        
+        <!-- Theme Toggle -->
+        <button id="themeToggleBtn" class="theme-btn-nav" aria-label="Changer de thème">
+          <svg class="sun-icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container" style="max-width: 900px; margin: 0 auto; padding: 20px;">
+    <main>
+      <div class="faq-hero-box">
+        <span style="background: rgba(223, 177, 91, 0.15); border: 1px solid rgba(223, 177, 91, 0.4); color: #F5D98A; font-weight: 800; font-size: 0.85rem; padding: 4px 16px; border-radius: 20px; display: inline-block; margin-bottom: 14px;">
+          ❓ CENTRE D'AIDE & SUPPORT
+        </span>
+        <h1 class="serif-title" style="font-size: 2.3rem; color: #FFFDF8; margin-bottom: 12px;" data-i18n="helpTitle">Aide & FAQ</h1>
+        <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.6;" data-i18n="helpSubtitle">
+          Trouvez des réponses claires et rapides à vos questions sur nos guides, articles, livres audio et notre boutique.
+        </p>
+      </div>
+
+      <!-- FAQ Accordion Container -->
+      <section style="margin: 30px 0 60px;">
+        <div class="faq-container" id="faqList">
+          <!-- Populated dynamically via JS -->
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px; padding: 30px; background: rgba(18, 28, 22, 0.7); border: 1px solid var(--card-border); border-radius: 20px;">
+          <h3 style="color: #FFFDF8; font-size: 1.2rem; margin-bottom: 8px;">Vous ne trouvez pas réponse à votre question ?</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 18px;">Notre équipe est disponible pour vous assister et échanger avec vous.</p>
+          <a href="contact.html" class="quiz-btn" style="text-decoration: none; padding: 10px 26px; font-weight: 700; border-radius: 12px; display: inline-flex; align-items: center; gap: 8px;">
+            <span>Nous contacter</span>
+            <span>→</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" style="padding: 40px 24px 30px; border-top: 1px solid var(--card-border); margin-top: 60px; background: rgba(10, 15, 12, 0.95);">
+      <div style="max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; text-align: inherit;">
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+            <img src="brand_logo_official.png" alt="Hikma & Nour" style="width: 38px; height: 38px; object-fit: contain;">
+            <span style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 800; color: var(--accent-gold);">HIKMA & NOUR</span>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.7;">
+            Sagesse • Philosophie • Sérénité<br>
+            Un espace de réflexion calme pour cultiver la paix intérieure et la force de l'esprit.
+          </p>
+        </div>
+        <div>
+          <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700;" data-i18n="footerExplorer">🧭 Explorer</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
+            <li><a href="./" style="color: var(--text-secondary); text-decoration: none;" data-i18n="home">Accueil</a></li>
+            <li><a href="articles/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="articles">Articles</a></li>
+            <li><a href="thinkers/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="thinkers">Penseurs</a></li>
+            <li><a href="./quotes/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="quotes">Citations</a></li>
+            <li><a href="./audio/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="audio">Audio</a></li>
+            <li><a href="bio.html" style="color: var(--text-secondary); text-decoration: none;" data-i18n="about">À propos</a></li>
+            <li><a href="contact.html" style="color: var(--text-secondary); text-decoration: none;" data-i18n="contactNav">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700;" data-i18n="footerDiscover">✨ Découvrir</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
+            <li><a href="./quizzes/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="quiz">Quiz Philosophiques</a></li>
+            <li><a href="faq.html" style="color: var(--accent-gold); text-decoration: none; font-weight: 700;" data-i18n="helpTitle">Aide & FAQ</a></li>
+            <li><a href="./shop/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="shop">Boutique</a></li>
+            <li><a href="./calendar/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="calendar">Calendrier 365</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700;" data-i18n="footerLegal">🔒 Légal</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
+            <li><a href="privacy-policy.html" style="color: var(--accent-gold); text-decoration: none; font-weight: 600;" data-i18n="privacyPolicy">Politique de confidentialité</a></li>
+            <li><a href="terms-of-service.html" style="color: var(--text-secondary); text-decoration: none;" data-i18n="termsOfService">Conditions d'utilisation</a></li>
+            <li><a href="cookie-policy.html" style="color: var(--text-secondary); text-decoration: none;" data-i18n="cookiePolicy">Politique des cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center;">
+        <p style="color: var(--text-secondary); font-size: 0.82rem; margin: 0;">&copy; 2026 Le Jardin des Pensées (حكمة ونور). <span data-i18n="credits">Conçu avec sagesse, calme et sérénité. ✨🌿</span></p>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="app_v11.js?v=14"></script>
+  <script src="search.js?v=1"></script>
+</body>
+</html>

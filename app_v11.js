@@ -225,10 +225,17 @@ function populateThinkers() {
   const readBioLabel = TIKTOK_DATA.ui[currentLang].readBio || "Lire la biographie";
   const featuredLabel = TIKTOK_DATA.ui[currentLang].featured || "En vedette";
 
-  // Limit display to first 3 thinkers on home page
-  const homeThinkers = thinkers.slice(0, 3);
+  // Display exactly the 4 requested major thinkers: Nietzsche, Marc Aurèle, Sénèque, Camus
+  const targetIds = ['nietzsche', 'marcaurele', 'seneque', 'camus'];
+  const homeThinkers = [];
+  targetIds.forEach(id => {
+    const found = thinkers.find(t => t.id === id);
+    if (found) homeThinkers.push(found);
+  });
 
-  container.innerHTML = homeThinkers.map(thinker => {
+  const displayThinkers = homeThinkers.length === 4 ? homeThinkers : thinkers.slice(0, 4);
+
+  container.innerHTML = displayThinkers.map(thinker => {
     const badgeHtml = thinker.featured ? `<span class="card-featured-badge">${featuredLabel}</span>` : "";
     return `
       <div class="thinker-card" data-thinker-id="${thinker.id}" style="cursor: pointer;">

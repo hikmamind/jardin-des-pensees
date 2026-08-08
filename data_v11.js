@@ -176,7 +176,13 @@ const TIKTOK_DATA = {
       "psyCard2Title": "Pourquoi les gens s'éloignent quand vous réussissez ?",
       "psyCard2Desc": "Comprendre les dynamiques de l'envie, la projection psychologique et comment préserver sa paix intérieure.",
       "psyCard3Title": "Comment bâtir une confiance en soi authentique ?",
-      "psyCard3Desc": "Se libérer du besoin de validation externe et forger une sécurité psychologique ancrée de l'intérieur."
+      "psyCard3Desc": "Se libérer du besoin de validation externe et forger une sécurité psychologique ancrée de l'intérieur.",
+      "exploreMoreTitle": "Explorez davantage",
+      "supportCompactTitle": "Soutenir le Jardin des Pensées",
+      "supportCompactDesc": "Votre contribution libre et sécurisée aide à maintenir ce projet indépendant et accessible à tous.",
+      "contactCtaTitle": "Une question ou une idée ?",
+      "contactCtaDesc": "Contactez-nous pour toute proposition de projet, échange intellectuel ou suggestion éditoriale.",
+      "contactCtaBtn": "Nous contacter →"
     },
     "en": {
       "home": "Home",
@@ -468,7 +474,13 @@ const TIKTOK_DATA = {
       "psyCard2Title": "لماذا يبتعد الناس عنك عندما تنجح؟",
       "psyCard2Desc": "التحليل النفسي لسلوك المحيطين عند تحقيق النجاح وكيف تحافظ على سلامك النفسي.",
       "psyCard3Title": "كيف تبني ثقة حقيقية بنفسك من الداخل؟",
-      "psyCard3Desc": "التحرر من الرغبة في إرضاء الآخرين وصياغة تقدير ذاتي راسخ لا تهزه الآراء."
+      "psyCard3Desc": "التحرر من الرغبة في إرضاء الآخرين وصياغة تقدير ذاتي راسخ لا تهزه الآراء.",
+      "exploreMoreTitle": "استكشف المزيد من الأقسام",
+      "supportCompactTitle": "دعم مشروع حكمة ونور",
+      "supportCompactDesc": "مساهمتك الحرة والآمنة تساهم في إبقاء هذا المحتوى الفلسفي مجانياً ومتاحاً للجميع.",
+      "contactCtaTitle": "هل لديك سؤال أو فكرة ملهمة؟",
+      "contactCtaDesc": "تواصل معنا لأي استفسار، اقتراح للتعاون أو تبادل للأفكار الفلسفية.",
+      "contactCtaBtn": "تواصل معنا الآن ←"
     }
   },
   "content": {

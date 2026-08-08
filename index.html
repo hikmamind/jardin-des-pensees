@@ -80,7 +80,7 @@
         <a href="./quotes/" class="nav-link" data-i18n="quotes">Citations</a>
         <a href="./audio/" class="nav-link" data-i18n="audio">Audio</a>
         <a href="bio.html" class="nav-link" data-i18n="about">À propos</a>
-        <a href="#contactSection" class="nav-link" data-i18n="contactNav">Contact</a>
+        <a href="contact.html" class="nav-link" data-i18n="contactNav">Contact</a>
       </div>
         
         <div class="nav-actions">
@@ -500,11 +500,11 @@
         </div>
       </section>
 
-      <!-- ✨ Section 7: RESSOURCES & LIENS UTILES (4 Compact Functional Cards) -->
+      <!-- ✨ Section: EXPLOREZ DAVANTAGE (4 Compact Functional Cards) -->
       <section id="linksSection" class="scroll-section" aria-labelledby="links-heading" style="margin: 40px auto;">
         <h2 id="links-heading" class="section-title">
           <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-          <span class="serif-title" data-i18n="resourcesTitle">Ressources & Liens utiles</span>
+          <span class="serif-title" data-i18n="exploreMoreTitle">Explorez davantage</span>
         </h2>
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 20px;">
@@ -542,8 +542,8 @@
             </div>
           </a>
 
-          <!-- Card 4: FAQ -->
-          <a href="#helpSection" class="link-card" style="display: flex; align-items: center; gap: 14px; padding: 18px; background: rgba(18, 28, 22, 0.8); border: 1px solid var(--card-border); border-radius: 16px; text-decoration: none; color: inherit; transition: transform 0.2s, border-color 0.2s;">
+          <!-- Card 4: FAQ (Points directly to dedicated faq.html) -->
+          <a href="faq.html" class="link-card" style="display: flex; align-items: center; gap: 14px; padding: 18px; background: rgba(18, 28, 22, 0.8); border: 1px solid var(--card-border); border-radius: 16px; text-decoration: none; color: inherit; transition: transform 0.2s, border-color 0.2s;">
             <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(223, 177, 91, 0.15); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;">
               ❓
             </div>
@@ -556,53 +556,22 @@
         </div>
       </section>
 
-      <!-- Help & Donations Section -->
-      <section id="helpSection" class="scroll-section" aria-labelledby="help-heading">
-        <h2 id="help-heading" class="section-title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-            <line x1="12" y1="17" x2="12.01" y2="17"></line>
-          </svg>
-          <span class="serif-title" data-i18n="helpTitle">Aide & FAQ</span>
-        </h2>
-        <p class="section-subtitle" style="text-align: center; color: var(--text-secondary); max-width: 600px; margin: -10px auto 30px;" data-i18n="helpSubtitle">
-          Trouvez des réponses rapides à vos questions sur les guides et notre boutique.
-        </p>
-
-        <!-- FAQ Accordion Container -->
-        <div class="faq-container" id="faqList">
-          <!-- Dynamically populated questions and answers -->
-        </div>
-
-        <h2 class="section-title" style="margin-top: 50px;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-          </svg>
-          <span class="serif-title" data-i18n="donationTitle">Soutenir le Projet</span>
-        </h2>
-        <p class="section-subtitle" style="text-align: center; color: var(--text-secondary); max-width: 600px; margin: -10px auto 25px;" data-i18n="donationSubtitle">
-          Votre générosité nous aide à continuer de partager la sagesse et à maintenir ce site libre et accessible à tous.
-        </p>
-
-        <!-- Single Clean Functional PayPal Support Card -->
-        <div style="max-width: 540px; margin: 0 auto;">
-          <div class="donation-card" style="text-align: center; padding: 32px 24px;">
-            <div class="donation-icon" style="margin: 0 auto 16px;">
-              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                <line x1="2" y1="10" x2="22" y2="10"></line>
-                <path d="M12 22v-5"></path>
-                <path d="M17 22H7"></path>
-              </svg>
+      <!-- 🌿 Compact PayPal Support Section -->
+      <section id="supportSection" class="scroll-section" style="margin: 35px auto 25px;">
+        <div style="background: linear-gradient(135deg, rgba(18, 28, 22, 0.9) 0%, rgba(10, 16, 12, 0.92) 100%); border: 1px solid var(--card-border); border-radius: 20px; padding: 24px 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; box-shadow: 0 10px 30px var(--shadow-color);">
+          <div style="display: flex; align-items: center; gap: 16px;">
+            <div style="width: 48px; height: 48px; border-radius: 14px; background: rgba(223, 177, 91, 0.15); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+              🌿
             </div>
-            <h3 class="donation-title" data-i18n="donatePaypal" style="font-size: 1.2rem; margin-bottom: 8px;">Don sécurisé via PayPal</h3>
-            <p class="donation-desc" data-i18n="donatePaypalDesc" style="margin-bottom: 20px;">Soutenez nos publications d'articles et livres audio via un don libre et sécurisé.</p>
-            <a href="https://paypal.me/lejardindespensees" target="_blank" rel="noopener" class="donation-action-btn" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; max-width: 260px; margin: 0 auto;">
-              <span data-i18n="donateBtn">Soutenir le projet</span>
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            </a>
+            <div>
+              <h3 class="serif-title" style="font-size: 1.15rem; color: #FFFDF8; margin: 0 0 4px;" data-i18n="supportCompactTitle">Soutenir le Jardin des Pensées</h3>
+              <p style="color: var(--text-secondary); font-size: 0.86rem; margin: 0; max-width: 500px;" data-i18n="supportCompactDesc">Votre contribution libre et sécurisée aide à maintenir ce projet indépendant et accessible à tous.</p>
+            </div>
           </div>
+          <a href="https://paypal.me/lejardindespensees" target="_blank" rel="noopener" class="quiz-btn" style="text-decoration: none; padding: 10px 22px; font-weight: 700; font-size: 0.88rem; border-radius: 12px; display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0;">
+            <span data-i18n="donateBtn">Faire un don PayPal</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
         </div>
       </section>
 
@@ -645,36 +614,17 @@
         </div>
       </section>
 
-      <!-- Contact Form Section -->
-      <section id="contactSection" class="scroll-section" aria-labelledby="contact-heading">
-        <h2 id="contact-heading" class="section-title">
-          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          <span class="serif-title" data-i18n="contactTitle">Collaborations & Contact</span>
-        </h2>
-        <div class="contact-card">
-          <form id="contactForm" novalidate>
-            <div class="form-group">
-              <label for="contactName" class="form-label" data-i18n="contactName">Votre nom / Entreprise</label>
-              <input type="text" id="contactName" class="form-control" placeholder="" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="contactEmail" class="form-label" data-i18n="contactEmail">Adresse Email</label>
-              <input type="email" id="contactEmail" class="form-control" placeholder="" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="contactMessage" class="form-label" data-i18n="contactMessage">Votre Message</label>
-              <textarea id="contactMessage" class="form-control" placeholder="" required></textarea>
-            </div>
-            
-            <button type="submit" id="submitBtn" class="submit-btn">
-              <span data-i18n="submitBtn">Envoyer le Message</span>
-              <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-            </button>
-            
-            <div id="formFeedback" class="form-feedback" role="alert"></div>
-          </form>
+      <!-- ✉️ Compact Collaborations & Contact CTA Section -->
+      <section id="contactSection" class="scroll-section" aria-labelledby="contact-heading" style="margin: 35px auto 45px;">
+        <div style="background: linear-gradient(135deg, rgba(18, 28, 22, 0.9) 0%, rgba(26, 38, 30, 0.85) 100%); border: 1.5px solid rgba(223, 177, 91, 0.35); border-radius: 22px; padding: 36px 30px; text-align: center; box-shadow: 0 12px 35px rgba(0,0,0,0.5);">
+          <span style="font-size: 2rem; display: block; margin-bottom: 8px;">✉️</span>
+          <h2 id="contact-heading" class="serif-title" style="font-size: 1.6rem; color: #FFFDF8; margin: 0 0 8px;" data-i18n="contactCtaTitle">Une question ou une idée ?</h2>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0 auto 22px; max-width: 540px;" data-i18n="contactCtaDesc">
+            Contactez-nous pour toute proposition de projet, échange intellectuel ou suggestion éditoriale.
+          </p>
+          <a href="contact.html" class="quiz-btn" style="text-decoration: none; padding: 12px 28px; display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.92rem; border-radius: 12px;">
+            <span data-i18n="contactCtaBtn">Nous contacter →</span>
+          </a>
         </div>
       </section>
 
@@ -706,7 +656,7 @@
             <li><a href="./quotes/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="quotes">Citations</a></li>
             <li><a href="./audio/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="audio">Audio</a></li>
             <li><a href="bio.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="about">À propos</a></li>
-            <li><a href="#contactSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="contactNav">Contact</a></li>
+            <li><a href="contact.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="contactNav">Contact</a></li>
           </ul>
         </div>
 
@@ -715,7 +665,7 @@
           <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;" data-i18n="footerDiscover">✨ Découvrir</h4>
           <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
             <li><a href="./quizzes/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="quiz">Quiz Philosophiques</a></li>
-            <li><a href="#helpSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="helpTitle">Aide & FAQ</a></li>
+            <li><a href="faq.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="helpTitle">Aide & FAQ</a></li>
             <li><a href="./shop/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="shop">Boutique</a></li>
             <li><a href="./calendar/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="calendar">Calendrier 365</a></li>
             <li><a href="articles/?category=philosophy" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="philosophy">Philosophie</a></li>
@@ -739,9 +689,9 @@
         <div style="display: flex; justify-content: center; gap: 14px 20px; flex-wrap: wrap; font-size: 0.88rem; margin-bottom: 14px; font-weight: 600;">
           <a href="bio.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="about">À propos</a>
           <span style="color: rgba(255,255,255,0.2);">•</span>
-          <a href="#contactSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="contactNav">Contact</a>
+          <a href="contact.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="contactNav">Contact</a>
           <span style="color: rgba(255,255,255,0.2);">•</span>
-          <a href="#helpSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="helpTitle">FAQ</a>
+          <a href="faq.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="helpTitle">FAQ</a>
           <span style="color: rgba(255,255,255,0.2);">•</span>
           <a href="shop/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="shop">Boutique</a>
           <span style="color: rgba(255,255,255,0.2);">•</span>
