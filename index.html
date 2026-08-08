@@ -666,7 +666,7 @@
         </p>
 
         <!-- Donation cards grid -->
-        <div class="donation-grid">
+        <div class="donation-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
           <!-- PayPal Card -->
           <div class="donation-card">
             <div class="donation-icon">
@@ -679,24 +679,9 @@
             </div>
             <h3 class="donation-title" data-i18n="donatePaypal">Don via PayPal</h3>
             <p class="donation-desc" data-i18n="donatePaypalDesc">Soutenez-nous facilement via votre compte PayPal sécurisé en quelques clics.</p>
-            <a href="https://paypal.me/lejardindespensees" target="_blank" class="donation-action-btn" style="text-decoration: none;">
+            <a href="https://paypal.me/lejardindespensees" target="_blank" rel="noopener" class="donation-action-btn" style="text-decoration: none;">
               <span data-i18n="donateBtn">Faire un don</span>
             </a>
-          </div>
-
-          <!-- Visa/Card Card -->
-          <div class="donation-card">
-            <div class="donation-icon">
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
-                <line x1="1" y1="10" x2="23" y2="10"></line>
-              </svg>
-            </div>
-            <h3 class="donation-title" data-i18n="donateVisa">Carte Bancaire (Visa)</h3>
-            <p class="donation-desc" data-i18n="donateVisaDesc">Faites un don unique et sécurisé par carte bancaire avec notre simulateur intégré.</p>
-            <button class="donation-action-btn" id="donateVisaBtn">
-              <span data-i18n="donateBtn">Faire un don</span>
-            </button>
           </div>
 
           <!-- Cryptocurrencies Card -->
@@ -901,53 +886,7 @@
     </div>
   </div>
 
-  <!-- Donation Simulation Modal -->
-  <div class="modal" id="donationModal" role="dialog" aria-modal="true" aria-label="Faire un don">
-    <button class="modal-close" id="donationModalCloseBtn" aria-label="Fermer la fenêtre">&times;</button>
-    <div class="modal-content" style="max-width: 500px; padding: 40px; border-radius: 24px; background: rgba(13, 30, 19, 0.98); border: 1px solid var(--card-border); backdrop-filter: blur(30px);">
-      <h2 class="serif-title" id="donationModalTitle" style="font-size: 1.6rem; margin-bottom: 20px; color: var(--text-primary);" data-i18n="donationTitle">Soutenir le Projet</h2>
-      
-      <!-- Interactive credit card preview -->
-      <div class="mock-credit-card">
-        <div class="card-chip"></div>
-        <div class="card-number-display" id="donationCardNumDisplay">•••• •••• •••• ••••</div>
-        <div class="card-holder-display" id="donationCardHolderDisplay">NOM DU TITULAIRE</div>
-      </div>
-      
-      <!-- Fake Donation Form -->
-      <form id="donationForm" style="display: flex; flex-direction: column; gap: 15px;">
-        <!-- Donation Amount Selection -->
-        <div class="donation-amount-grid">
-          <button type="button" class="amount-btn active" data-amount="5">5 €</button>
-          <button type="button" class="amount-btn" data-amount="10">10 €</button>
-          <button type="button" class="amount-btn" data-amount="20">20 €</button>
-          <button type="button" class="amount-btn" data-amount="custom" data-i18n="donateCustom">Autre</button>
-        </div>
-        
-        <!-- Custom amount input (initially hidden) -->
-        <div class="custom-amount-wrapper" id="customAmountWrapper" style="display: none;">
-          <span class="custom-amount-symbol">€</span>
-          <input type="number" id="customAmountInput" class="contact-input custom-amount-input" min="1" placeholder="Ex: 50">
-        </div>
 
-        <div class="form-group">
-          <label style="display: block; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 5px;" data-i18n="checkoutName">Nom du titulaire</label>
-          <input type="text" id="donationHolderInput" required class="contact-input" placeholder="Ex: Jean Dupont" style="width: 100%;">
-        </div>
-        <div class="form-group">
-          <label style="display: block; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 5px;" data-i18n="checkoutCard">Numéro de carte (Factice)</label>
-          <input type="text" id="donationNumberInput" required maxlength="19" class="contact-input" placeholder="1234 5678 1234 5678" style="width: 100%;">
-        </div>
-        
-        <div id="donationFeedback" class="form-feedback" style="display: none; margin-top: 10px;"></div>
-        
-        <button type="submit" class="submit-btn" id="donationSubmitBtn" style="margin-top: 15px; width: 100%;">
-          <span data-i18n="donateSubmit">Envoyer le don</span>
-          <svg viewBox="0 0 24 24" style="width: 16px; height: 16px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-        </button>
-      </form>
-    </div>
-  </div>
 
   <!-- Script Modules -->
   <script type="module" src="app_v11.js?v=13"></script>

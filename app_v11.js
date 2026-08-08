@@ -533,136 +533,7 @@ function setupCryptoCopy() {
   });
 }
 
-// --- Visa Donation Modal simulator ---
-function setupDonationModal() {
-  const modal = document.getElementById('donationModal');
-  const openBtn = document.getElementById('donateVisaBtn');
-  const closeBtn = document.getElementById('donationModalCloseBtn');
-  const form = document.getElementById('donationForm');
-  const feedback = document.getElementById('donationFeedback');
-  const submitBtn = document.getElementById('donationSubmitBtn');
-  
-  const amountBtns = document.querySelectorAll('.amount-btn');
-  const customWrapper = document.getElementById('customAmountWrapper');
-  const customInput = document.getElementById('customAmountInput');
-  
-  const cardNumDisplay = document.getElementById('donationCardNumDisplay');
-  const cardHolderDisplay = document.getElementById('donationCardHolderDisplay');
-  const cardHolderInput = document.getElementById('donationHolderInput');
-  const cardNumberInput = document.getElementById('donationNumberInput');
-  
-  let selectedAmount = '5';
-  
-  if (!modal || !openBtn || !closeBtn || !form || !feedback || !submitBtn) return;
-  
-  openBtn.addEventListener('click', () => {
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-    cardNumDisplay.textContent = '•••• •••• •••• ••••';
-    cardHolderDisplay.textContent = currentLang === 'ar' ? 'اسم حامل البطاقة' : 'NOM DU TITULAIRE';
-    feedback.style.display = 'none';
-    form.reset();
-    amountBtns.forEach(b => b.classList.remove('active'));
-    amountBtns[0].classList.add('active');
-    customWrapper.style.display = 'none';
-    selectedAmount = '5';
-  });
-  
-  function closeModal() {
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-  
-  closeBtn.addEventListener('click', closeModal);
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
-  });
-  
-  amountBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      amountBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      
-      const amount = btn.getAttribute('data-amount');
-      selectedAmount = amount;
-      
-      if (amount === 'custom') {
-        customWrapper.style.display = 'block';
-        customInput.required = true;
-        customInput.focus();
-      } else {
-        customWrapper.style.display = 'none';
-        customInput.required = false;
-      }
-    });
-  });
-  
-  // Card preview live sync
-  if (cardHolderInput) {
-    cardHolderInput.addEventListener('input', (e) => {
-      const val = e.target.value.trim().toUpperCase();
-      cardHolderDisplay.textContent = val || (currentLang === 'ar' ? 'اسم حامل البطاقة' : 'NOM DU TITULAIRE');
-    });
-  }
-  
-  if (cardNumberInput) {
-    cardNumberInput.addEventListener('input', (e) => {
-      let val = e.target.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
-      let matches = val.match(/\d{4,16}/g);
-      let match = (matches && matches[0]) || '';
-      let parts = [];
-      
-      for (let i = 0, len = match.length; i < len; i += 4) {
-        parts.push(match.substring(i, i + 4));
-      }
-      
-      if (parts.length > 0) {
-        cardNumberInput.value = parts.join(' ');
-        cardNumDisplay.textContent = parts.join(' ');
-      } else {
-        cardNumberInput.value = val;
-        cardNumDisplay.textContent = val || '•••• •••• •••• ••••';
-      }
-    });
-  }
-  
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    feedback.className = 'form-feedback';
-    feedback.style.display = 'none';
-    
-    const name = cardHolderInput.value.trim();
-    const cardNum = cardNumberInput.value.replace(/\s+/g, '');
-    let amount = selectedAmount;
-    
-    if (selectedAmount === 'custom') {
-      amount = customInput.value.trim();
-    }
-    
-    if (!name || cardNum.length < 16 || !amount || parseFloat(amount) <= 0) {
-      feedback.textContent = currentLang === 'ar' ? 'يرجى التحقق من صحة البيانات المدخلة.' : 'Veuillez vérifier les informations saisies.';
-      feedback.classList.add('error');
-      feedback.style.display = 'block';
-      return;
-    }
-    
-    submitBtn.disabled = true;
-    const origText = submitBtn.innerHTML;
-    submitBtn.textContent = currentLang === 'ar' ? 'جاري معالجة التبرع...' : 'Traitement du don...';
-    
-    setTimeout(() => {
-      feedback.textContent = TIKTOK_DATA.ui[currentLang].donationSuccess || "Merci infiniment pour votre généreuse contribution ! 🌿✨";
-      feedback.classList.add('success');
-      feedback.style.display = 'block';
-      
-      setTimeout(() => {
-        closeModal();
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = origText;
-      }, 2500);
-    }, 2000);
-  });
-}
+
 
 // --- Navigation scrollspy and mobile menu toggler ---
 function initNavigation() {
@@ -797,9 +668,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbarScroll();
   setupContactForm();
   setupCryptoCopy();
-  setupDonationModal();
-
-
 });
 
 
