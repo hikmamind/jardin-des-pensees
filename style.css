@@ -6207,3 +6207,24 @@ textarea.form-control {
   }
 }
 
+@media (max-width: 768px) {
+  .thinker-spotlight-layout {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    text-align: center !important;
+  }
+  .thinker-spotlight-layout ul {
+    text-align: left !important;
+  }
+  [dir="rtl"] .thinker-spotlight-layout ul {
+    text-align: right !important;
+  }
+  .featured-headline-card {
+    padding: 24px 20px !important;
+  }
+  .featured-headline-card h2 {
+    font-size: 1.4rem !important;
+  }
+}
+
+

@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="ar" data-theme="dark" dir="rtl">
+<html lang="fr" data-theme="dark" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO Meta Tags -->
-  <title>حكمة ونور | Sagesse & Lumière - @lejardindespensees</title>
-  <meta name="description" content="Bienvenue sur le site officiel de @lejardindespensees (حكمة ونور). Découvrez nos citations de sagesse, nos fiches de penseurs stoïciens, nos conseils psychologiques et développement personnel.">
+  <title>Le Jardin des Pensées | Sagesse, Philosophie & Sérénité</title>
+  <meta name="description" content="Bienvenue sur le site officiel de Le Jardin des Pensées (حكمة ونور). Découvrez nos citations de sagesse, nos fiches de grands penseurs stoïciens, nos conseils psychologiques et de développement personnel.">
   <meta name="keywords" content="sagesse, philosophie, citation, paix interieure, stoicisme, marc aurele, seneque, socrate, jung, developpement personnel, psychologie, lejardindespensees">
   <link rel="icon" type="image/png" href="brand_logo_official.png">
   
   <!-- OpenGraph Metadata -->
-  <meta property="og:title" content="حكمة ونور | Sagesse & Lumière">
-  <meta property="og:description" content="Cultivez votre jardin intérieur avec @lejardindespensees. Sagesse des grands penseurs et conseils psychologiques.">
+  <meta property="og:title" content="Le Jardin des Pensées | Sagesse & Sérénité">
+  <meta property="og:description" content="Cultivez votre jardin intérieur avec Le Jardin des Pensées. Sagesse des grands penseurs et réflexions philosophiques.">
   <meta property="og:image" content="avatar.jpg">
-  <meta property="og:url" content="https://lejardindespensees.com">
+  <meta property="og:url" content="https://jardin-des-pensees.onrender.com">
   <meta property="og:type" content="website">
 
   <!-- Main Stylesheet -->
@@ -25,7 +25,7 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="حكمة ونور">
+  <meta name="apple-mobile-web-app-title" content="Jardin des Pensées">
   <link rel="apple-touch-icon" href="./icon-192.png">
   <style>
     body {
@@ -46,10 +46,10 @@
   <header class="navbar-header">
     <nav class="navbar" aria-label="Navigation principale">
       <a href="./" class="nav-brand">
-        <img src="brand_logo_official.png" alt="حكمة ونور" class="brand-logo-img">
+        <img src="brand_logo_official.png" alt="Le Jardin des Pensées" class="brand-logo-img">
         <div style="display: flex; flex-direction: column; line-height: 1.15;">
           <span class="brand-name" id="navBrandName">HIKMA & NOUR</span>
-          <span class="brand-tagline-ar">الحكمة • الفلسفة • علم النفس</span>
+          <span class="brand-tagline-ar" style="font-size: 0.72rem; color: var(--text-secondary);">Sagesse • Philosophie • Sérénité</span>
         </div>
       </a>
       
@@ -60,7 +60,7 @@
         <span></span>
       </button>
       
-      <!-- Navigation Menu -->
+      <!-- Navigation Menu (Exact 7 Primary Links) -->
       <div class="nav-menu" id="navMenu">
         <a href="#homeSection" class="nav-link active" data-i18n="home">Accueil</a>
         
@@ -85,16 +85,16 @@
         
         <div class="nav-actions">
           <!-- Global Search Button -->
-          <button id="globalSearchBtn" class="global-search-btn-nav" aria-label="بحث شامل" onclick="openGlobalSearchModal()">
+          <button id="globalSearchBtn" class="global-search-btn-nav" aria-label="Rechercher" onclick="openGlobalSearchModal()">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
-            <span class="search-btn-text">بحث...</span>
+            <span class="search-btn-text" data-i18n="search">Rechercher...</span>
             <kbd class="search-btn-kbd">Ctrl K</kbd>
           </button>
 
-          <!-- Language Selector -->
+          <!-- Language Selector (FR & AR for V1) -->
           <div class="lang-selector">
             <button class="lang-btn" id="langBtn" aria-label="Changer de langue">
               <svg class="globe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px; height:16px;">
@@ -102,11 +102,10 @@
                 <line x1="2" y1="12" x2="22" y2="12"></line>
                 <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
               </svg>
-              <span id="activeLangName">AR</span>
+              <span id="activeLangName">FR</span>
             </button>
             <div class="lang-dropdown" id="langDropdown">
               <button class="lang-opt" data-lang="fr" aria-label="Français">Français</button>
-              <button class="lang-opt" data-lang="en" aria-label="English">English</button>
               <button class="lang-opt" data-lang="ar" aria-label="العربية">العربية</button>
             </div>
           </div>
@@ -140,12 +139,12 @@
       <section id="homeSection" class="scroll-section hero-layout-section">
         <div class="hero-columns-container">
           <div class="hero-left-column">
-            <h1 class="hero-title" data-i18n="heroTitle">أفكار خالدة لحياة أفضل</h1>
-            <p class="hero-subtitle" data-i18n="heroSubtitle">أقوال وحكم خالدة من أعظم العقول في التاريخ، لتلهمك وتساعدك على فهم الحياة بعمق أكبر.</p>
+            <h1 class="hero-title" data-i18n="heroTitle">Des idées immortelles pour une vie meilleure</h1>
+            <p class="hero-subtitle" data-i18n="heroSubtitle">Des pensées et sagesses intemporelles issues des plus grands esprits de l'histoire, pour vous inspirer et vous aider à comprendre la vie plus profondément.</p>
             <div class="hero-divider-container">
               <span class="hero-divider-icon">🌿</span>
             </div>
-            <a href="articles/" class="hero-cta-btn" data-i18n="exploreArticles">استكشف المقالات</a>
+            <a href="articles/" class="hero-cta-btn" data-i18n="exploreArticles">Explorer les articles</a>
           </div>
           <div class="hero-right-column">
             <div class="hero-image-wrapper">
@@ -160,197 +159,228 @@
         <div class="category-pills-container">
           <a href="articles/?category=all" class="category-pill-item">
             <div class="category-pill-icon">🌸</div>
-            <span class="category-pill-label" data-i18n="balancedLife">حياة متوازنة</span>
+            <span class="category-pill-label" data-i18n="balancedLife">Vie équilibrée</span>
           </a>
           <a href="shop/" class="category-pill-item">
             <div class="category-pill-icon">📖</div>
-            <span class="category-pill-label" data-i18n="inspiringBooks">كتب ملهمة</span>
+            <span class="category-pill-label" data-i18n="inspiringBooks">Livres inspirants</span>
           </a>
           <a href="articles/?category=development" class="category-pill-item">
             <div class="category-pill-icon">🧗</div>
-            <span class="category-pill-label" data-i18n="selfDev">تطوير الذات</span>
+            <span class="category-pill-label" data-i18n="selfDev">Développement personnel</span>
           </a>
           <a href="articles/?category=psychology" class="category-pill-item">
             <div class="category-pill-icon">🧠</div>
-            <span class="category-pill-label" data-i18n="psychologySub">علم النفس</span>
+            <span class="category-pill-label" data-i18n="psychologySub">Psychologie</span>
           </a>
           <a href="articles/?category=philosophy" class="category-pill-item">
             <div class="category-pill-icon">🏛️</div>
-            <span class="category-pill-label" data-i18n="philosophy">فلسفة</span>
+            <span class="category-pill-label" data-i18n="philosophy">Philosophie</span>
           </a>
           <a href="#wisdomSection" class="category-pill-item">
             <div class="category-pill-icon">❝</div>
-            <span class="category-pill-label" data-i18n="quotes">اقتباسات</span>
+            <span class="category-pill-label" data-i18n="quotes">Citations</span>
           </a>
         </div>
       </div>
 
-      <!-- Featured & Latest Articles Split Section -->
-      <section id="latestArticlesSection" class="scroll-section split-articles-section" aria-labelledby="latest-articles-heading">
-        <div class="split-articles-grid">
+      <!-- 🌿 Section 1: À LA UNE (Single Unified Featured Article) -->
+      <section id="featuredSection" class="scroll-section" style="margin: 30px auto 25px;">
+        <div class="featured-headline-card" style="background: linear-gradient(135deg, rgba(15, 26, 19, 0.95) 0%, rgba(26, 38, 30, 0.85) 100%); border: 1.5px solid rgba(223, 177, 91, 0.4); border-radius: 26px; padding: 36px; box-shadow: 0 16px 45px rgba(0,0,0,0.6), 0 0 25px rgba(223, 177, 91, 0.12); position: relative; overflow: hidden; backdrop-filter: blur(16px);">
+          <div style="position: absolute; top: -30px; left: -30px; width: 140px; height: 140px; background: rgba(223, 177, 91, 0.15); filter: blur(40px); border-radius: 50%; pointer-events: none;"></div>
           
-          <!-- Left: Featured Card -->
-          <div class="split-col-featured">
-            <h3 class="split-header-title" data-i18n="featuredArticle">مقال مميز</h3>
-            <div class="featured-article-card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.85)), url('schopenhauer_happiness_illusion_hero.jpg'); cursor: pointer;" onclick="window.location.href='./articles/schopenhauer-happiness-illusion.html';">
-              <div class="featured-badge" data-i18n="philosophy">فلسفة</div>
-              <div class="featured-card-content">
-                <h4 class="featured-card-quote">وهم السعادة عند شوبنهاور: كيف تعيش بسلام دون أوهام؟</h4>
-                <p class="featured-card-desc">السعادة ليست في الجري وراء الملذات العابرة، بل في تجنب المعاناة والوصول إلى الطمأنينة والهدوء النفسي.</p>
-                <div class="featured-card-footer">
-                  <span class="featured-read-btn" data-i18n="readArticle">اقرأ المقال</span>
-                  <span class="featured-read-time">
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                    <span>7 دقائق قراءة</span>
-                  </span>
-                </div>
-              </div>
-            </div>
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span style="background: rgba(223, 177, 91, 0.18); border: 1px solid rgba(223, 177, 91, 0.45); color: #F5D98A; font-weight: 800; font-size: 0.82rem; padding: 4px 14px; border-radius: 20px; display: inline-flex; align-items: center; gap: 6px;" data-i18n="featuredTag">
+              🌿 À LA UNE
+            </span>
+            <span style="color: rgba(250, 246, 239, 0.6); font-size: 0.85rem;" data-i18n="featuredSubtag">Réflexion philosophique majeure</span>
           </div>
-          
-          <!-- Right: Latest Articles List -->
-          <div class="split-col-latest">
-            <h3 class="split-header-title" data-i18n="latestArticles">أحدث المقالات</h3>
-            <div class="latest-articles-list">
-              
-              <!-- Item 1 -->
-              <a href="./articles/why-people-respect-silent-person.html" class="latest-list-item">
-                <div class="latest-item-img-wrapper">
-                  <img src="silence_respect_hero.jpg" alt="لماذا يحترم الناس الشخص الصامت؟">
-                </div>
-                <div class="latest-item-info">
-                  <h4 class="latest-item-title">لماذا يحترم الناس الشخص الصامت؟ قوة الصمت والهدوء</h4>
-                  <div class="latest-item-meta">
-                    <span class="latest-item-badge badge-psychology" data-i18n="psychologySub">علم النفس</span>
-                    <span class="latest-item-time">
-                      <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                      <span>5 دقائق قراءة</span>
-                    </span>
-                  </div>
-                </div>
-              </a>
 
-              <!-- Item 2 -->
-              <a href="./articles/nietzsche-psychological-strength.html" class="latest-list-item">
-                <div class="latest-item-img-wrapper">
-                  <img src="nietzsche_psychological_strength_hero.jpg" alt="قوة القوة النفسية عند نيتشه">
-                </div>
-                <div class="latest-item-info">
-                  <h4 class="latest-item-title">قوة القوة النفسية عند نيتشه: كيف تتغلب على الصعاب؟</h4>
-                  <div class="latest-item-meta">
-                    <span class="latest-item-badge badge-philosophy" data-i18n="philosophy">فلسفة</span>
-                    <span class="latest-item-time">
-                      <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                      <span>6 دقائق قراءة</span>
-                    </span>
-                  </div>
-                </div>
-              </a>
+          <h2 class="serif-title" style="font-size: 2rem; color: #FFFDF8; line-height: 1.4; margin: 0 0 16px; font-weight: 800;" data-i18n="featuredHeadlineTitle">
+            Les grandes idées qui ont changé notre manière de comprendre la vie.
+          </h2>
+          <p style="font-size: 1.02rem; color: rgba(250, 246, 239, 0.85); line-height: 1.8; max-width: 780px; margin: 0 0 24px;" data-i18n="featuredHeadlineDesc">
+            Des idées et des perspectives majeures qui ont transformé notre compréhension de l'être humain et de l'existence. Un voyage au cœur du stoïcisme, de l'existentialisme et de la psychologie moderne pour surmonter l'anxiété et bâtir une résilience sereine face aux aléas du monde.
+          </p>
 
-              <!-- Item 3 -->
-              <a href="./articles/solitude-blessing-or-curse.html" class="latest-list-item">
-                <div class="latest-item-img-wrapper">
-                  <img src="solitude_blessing_curse_hero.jpg" alt="العزلة: هل هي نعمة أم نقمة؟">
-                </div>
-                <div class="latest-item-info">
-                  <h4 class="latest-item-title">العزلة: هل هي نعمة أم نقمة؟ كيف تحول عزلتك إلى قوة؟</h4>
-                  <div class="latest-item-meta">
-                    <span class="latest-item-badge badge-development" data-i18n="selfDev">تطوير الذات</span>
-                    <span class="latest-item-time">
-                      <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                      <span>5 دقائق قراءة</span>
-                    </span>
-                  </div>
-                </div>
-              </a>
-
-              <!-- Item 4 -->
-              <a href="./articles/why-people-distance-when-you-succeed.html" class="latest-list-item">
-                <div class="latest-item-img-wrapper">
-                  <img src="why_people_distance_hero_ai.jpg" alt="لماذا يبتعد الناس عنك عندما تنجح؟">
-                </div>
-                <div class="latest-item-info">
-                  <h4 class="latest-item-title">لماذا يبتعد الناس عنك عندما تنجح؟ التفسير النفسي</h4>
-                  <div class="latest-item-meta">
-                    <span class="latest-item-badge badge-psychology" data-i18n="psychologySub">علم النفس</span>
-                    <span class="latest-item-time">
-                      <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                      <span>6 دقائق قراءة</span>
-                    </span>
-                  </div>
-                </div>
-              </a>
-              
-            </div>
-          </div>
+          <a href="./articles/" class="quiz-btn" style="text-decoration: none; padding: 12px 28px; display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-size: 0.95rem; border-radius: 14px;">
+            <span data-i18n="discoverArticles">Découvrir les articles</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
         </div>
       </section>
 
-      <!-- Selected Articles Row -->
-      <section id="selectedArticlesSection" class="scroll-section selected-articles-section">
-        <h3 class="split-header-title" data-i18n="selectedArticles">مقالات مختارة</h3>
-        <div class="selected-articles-grid">
+      <!-- 📚 Section 2: ARTICLES RÉCENTS (Single Unified Recent Articles Grid) -->
+      <section id="recentArticlesSection" class="scroll-section" style="margin: 35px auto;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 12px;">
+          <div>
+            <h2 class="section-title" style="margin: 0; display: flex; align-items: center; gap: 10px;">
+              <span>📚</span> <span class="serif-title" data-i18n="recentArticlesTitle">Articles Récents</span>
+            </h2>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 6px 0 0;" data-i18n="recentArticlesSubtitle">
+              Études et analyses approfondies en sagesse, philosophie de l'esprit et psychologie.
+            </p>
+          </div>
+          <a href="./articles/" style="color: var(--accent-gold); text-decoration: none; font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 6px;">
+            <span id="allArticlesCountLabel">Voir tous les articles (<span id="totalArticlesCount">11</span>)</span> <span>→</span>
+          </a>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
           
-          <!-- Card 1 -->
-          <a href="./articles/7-habits/" class="selected-article-card">
-            <div class="selected-card-img-wrapper">
-              <img src="habits_library_hero.jpg" alt="7 عادات">
-            </div>
-            <div class="selected-card-content">
-              <div class="selected-card-badge" data-i18n="selfDev">تطوير الذات</div>
-              <h4 class="selected-card-title">7 عادات تجعلك إنساناً أقوى وأكثر حكمة</h4>
-              <div class="selected-card-footer">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                <span>7 دقائق قراءة</span>
+          <!-- Article 1 -->
+          <div class="article-card" style="background: rgba(18, 28, 22, 0.85); border: 1px solid rgba(223, 177, 91, 0.25); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.25s, border-color 0.25s;">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span style="background: rgba(52, 211, 153, 0.15); color: #34D399; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 12px;" data-i18n="stoicismTag">Stoïcisme</span>
+                <span style="color: var(--text-muted); font-size: 0.8rem;">⏱️ 6 min</span>
               </div>
+              <h3 style="font-size: 1.15rem; color: #FFFDF8; margin: 0 0 10px; font-weight: 700; line-height: 1.4;">Le Stoïcisme : Philosophie de la Force et du Calme</h3>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin: 0 0 18px;">Un guide pratique pour appliquer la dichotomie du contrôle, l'amor fati et bâtir une forteresse intérieure solide.</p>
             </div>
-          </a>
+            <a href="./files/stoicisme-force-calme.html" class="social-btn" style="text-decoration: none; justify-content: center; width: 100%; padding: 10px;">
+              <span data-i18n="readArticle">Lire l'article</span>
+            </a>
+          </div>
 
-          <!-- Card 2 -->
-          <a href="./articles/happiness-in-wrong-place.html" class="selected-article-card">
-            <div class="selected-card-img-wrapper">
-              <img src="happiness_wrong_place_hero.jpg" alt="البحث عن السعادة">
-            </div>
-            <div class="selected-card-content">
-              <div class="selected-card-badge" data-i18n="selfDev">تطوير الذات</div>
-              <h4 class="selected-card-title">البحث عن السعادة في المكان الخاطئ: أخطاء نمارسها يومياً</h4>
-              <div class="selected-card-footer">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                <span>6 دقائق قراءة</span>
+          <!-- Article 2 -->
+          <div class="article-card" style="background: rgba(18, 28, 22, 0.85); border: 1px solid rgba(223, 177, 91, 0.25); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.25s, border-color 0.25s;">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span style="background: rgba(96, 165, 250, 0.15); color: #60A5FA; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 12px;" data-i18n="psychologySub">Psychologie</span>
+                <span style="color: var(--text-muted); font-size: 0.8rem;">⏱️ 5 min</span>
               </div>
+              <h3 style="font-size: 1.15rem; color: #FFFDF8; margin: 0 0 10px; font-weight: 700; line-height: 1.4;">Comment Stopper les Pensées Obsédantes et l'Anxiété ?</h3>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin: 0 0 18px;">Des méthodes éprouvées pour briser le cycle des ruminations mentales et retrouver la sérénité du moment présent.</p>
             </div>
-          </a>
+            <a href="./files/stop-overthinking.html" class="social-btn" style="text-decoration: none; justify-content: center; width: 100%; padding: 10px;">
+              <span data-i18n="readArticle">Lire l'article</span>
+            </a>
+          </div>
 
-          <!-- Card 3 -->
-          <a href="./articles/true-confidence-inside.html" class="selected-article-card">
-            <div class="selected-card-img-wrapper">
-              <img src="overthinking_calm.jpg" alt="الثقة الحقيقية">
-            </div>
-            <div class="selected-card-content">
-              <div class="selected-card-badge" data-i18n="psychologySub">علم النفس</div>
-              <h4 class="selected-card-title">كيف تبني ثقة حقيقية بنفسك من الداخل؟</h4>
-              <div class="selected-card-footer">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                <span>5 دقائق قراءة</span>
+          <!-- Article 3 -->
+          <div class="article-card" style="background: rgba(18, 28, 22, 0.85); border: 1px solid rgba(223, 177, 91, 0.25); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.25s, border-color 0.25s;">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span style="background: rgba(251, 191, 36, 0.15); color: #FBBF24; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 12px;" data-i18n="development">Développement</span>
+                <span style="color: var(--text-muted); font-size: 0.8rem;">⏱️ 7 min</span>
               </div>
+              <h3 style="font-size: 1.15rem; color: #FFFDF8; margin: 0 0 10px; font-weight: 700; line-height: 1.4;">L'Autodiscipline et la Volonté selon les Anciens</h3>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin: 0 0 18px;">Les enseignements de Marc Aurèle et Sénèque pour dominer ses pulsions et maîtriser ses habitudes quotidiennes.</p>
             </div>
-          </a>
+            <a href="./files/self-discipline.html" class="social-btn" style="text-decoration: none; justify-content: center; width: 100%; padding: 10px;">
+              <span data-i18n="readArticle">Lire l'article</span>
+            </a>
+          </div>
 
-          <!-- Card 4 -->
-          <a href="./articles/hikma-citations-philosophiques.html" class="selected-article-card">
-            <div class="selected-card-img-wrapper">
-              <img src="quotes_article_hero.jpg" alt="اقتباسات فلسفية">
-            </div>
-            <div class="selected-card-content">
-              <div class="selected-card-badge" data-i18n="quotes">اقتباسات</div>
-              <h4 class="selected-card-title">20 اقتباسة فلسفية عميقة من عظماء الفكر والحكمة</h4>
-              <div class="selected-card-footer">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                <span>4 دقائق قراءة</span>
+          <!-- Article 4 -->
+          <div class="article-card" style="background: rgba(18, 28, 22, 0.85); border: 1px solid rgba(223, 177, 91, 0.25); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.25s, border-color 0.25s;">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span style="background: rgba(244, 114, 182, 0.15); color: #F472B6; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 12px;" data-i18n="philosophy">Philosophie</span>
+                <span style="color: var(--text-muted); font-size: 0.8rem;">⏱️ 8 min</span>
               </div>
+              <h3 style="font-size: 1.15rem; color: #FFFDF8; margin: 0 0 10px; font-weight: 700; line-height: 1.4;">L'Illusion du Bonheur selon Schopenhauer</h3>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin: 0 0 18px;">La lucidité de Schopenhauer : le bonheur réside dans l'absence de souffrance et la préservation de la paix de l'âme.</p>
             </div>
-          </a>
+            <a href="./articles/schopenhauer-happiness-illusion.html" class="social-btn" style="text-decoration: none; justify-content: center; width: 100%; padding: 10px;">
+              <span data-i18n="readArticle">Lire l'article</span>
+            </a>
+          </div>
 
+          <!-- Article 5 -->
+          <div class="article-card" style="background: rgba(18, 28, 22, 0.85); border: 1px solid rgba(223, 177, 91, 0.25); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.25s, border-color 0.25s;">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span style="background: rgba(167, 139, 250, 0.15); color: #A78BFA; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 12px;" data-i18n="existentialismTag">Existentialisme</span>
+                <span style="color: var(--text-muted); font-size: 0.8rem;">⏱️ 6 min</span>
+              </div>
+              <h3 style="font-size: 1.15rem; color: #FFFDF8; margin: 0 0 10px; font-weight: 700; line-height: 1.4;">L'Absurde et la Liberté chez Albert Camus</h3>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin: 0 0 18px;">Comment forger du sens et une révolte lucide dans un monde silencieux ? La philosophie vivifiante de Camus.</p>
+            </div>
+            <a href="./files/absurde-camus.html" class="social-btn" style="text-decoration: none; justify-content: center; width: 100%; padding: 10px;">
+              <span data-i18n="readArticle">Lire l'article</span>
+            </a>
+          </div>
+
+          <!-- Article 6 -->
+          <div class="article-card" style="background: rgba(18, 28, 22, 0.85); border: 1px solid rgba(223, 177, 91, 0.25); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.25s, border-color 0.25s;">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span style="background: rgba(52, 211, 153, 0.15); color: #34D399; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 12px;" data-i18n="emotionalIntelTag">Intelligence Émotionnelle</span>
+                <span style="color: var(--text-muted); font-size: 0.8rem;">⏱️ 6 min</span>
+              </div>
+              <h3 style="font-size: 1.15rem; color: #FFFDF8; margin: 0 0 10px; font-weight: 700; line-height: 1.4;">L'Intelligence Émotionnelle et la Résilience</h3>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin: 0 0 18px;">Stratégies psychologiques et stoïciennes pour canaliser ses émotions et s'adapter avec clarté face au stress.</p>
+            </div>
+            <a href="./files/intelligence-emotionnelle-stoicisme.html" class="social-btn" style="text-decoration: none; justify-content: center; width: 100%; padding: 10px;">
+              <span data-i18n="readArticle">Lire l'article</span>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 🧠 Section 3: UN PENSEUR À DÉCOUVRIR (Arthur Schopenhauer) -->
+      <section class="scroll-section" style="margin: 40px auto 45px;">
+        <div style="background: linear-gradient(135deg, rgba(16, 24, 18, 0.95) 0%, rgba(24, 34, 26, 0.9) 100%); border: 1.5px solid rgba(223, 177, 91, 0.45); border-radius: 26px; padding: 36px; box-shadow: 0 16px 45px rgba(0,0,0,0.7); backdrop-filter: blur(20px);">
+          
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+            <span style="background: rgba(223, 177, 91, 0.15); border: 1px solid rgba(223, 177, 91, 0.4); color: #F5D98A; font-weight: 800; font-size: 0.82rem; padding: 4px 14px; border-radius: 20px;" data-i18n="thinkerSpotlightBadge">
+              🧠 UN PENSEUR À DÉCOUVRIR
+            </span>
+            <span style="color: rgba(250, 246, 239, 0.5); font-size: 0.85rem;">1788 – 1860 · Allemagne</span>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 220px 1fr; gap: 30px; align-items: center;" class="thinker-spotlight-layout">
+            <div style="text-align: center;">
+              <img src="schopenhauer_portrait_1784746785139.jpg" alt="Arthur Schopenhauer" style="width: 100%; max-width: 200px; height: 240px; object-fit: cover; border-radius: 20px; border: 2px solid rgba(223, 177, 91, 0.5); box-shadow: 0 10px 30px rgba(0,0,0,0.6);">
+              <h3 style="color: #FFFDF8; font-size: 1.25rem; margin: 12px 0 2px; font-weight: 800;">Arthur Schopenhauer</h3>
+              <p style="color: #DFB15B; font-size: 0.85rem; margin: 0; font-weight: 600;">Philosophe de la Volonté et de la Lucidité</p>
+            </div>
+
+            <div>
+              <!-- Biographie -->
+              <div style="margin-bottom: 14px;">
+                <h4 style="color: #F5D98A; font-size: 1rem; margin: 0 0 6px; display: flex; align-items: center; gap: 6px;">
+                  <span>👤</span> <span data-i18n="bioHeading">Biographie</span>
+                </h4>
+                <p style="color: rgba(250, 246, 239, 0.85); font-size: 0.92rem; line-height: 1.7; margin: 0;" data-i18n="schopenhauerBioText">
+                  Né à Dantzig en 1788, Schopenhauer est l'un des plus grands penseurs du XIXe siècle et le précurseur de l'exploration des profondeurs de la psyché humaine. Il s'est distingué par sa clarté littéraire et son analyse intransigeante de la volonté et des désirs.
+                </p>
+              </div>
+
+              <!-- Pensée -->
+              <div style="margin-bottom: 14px;">
+                <h4 style="color: #F5D98A; font-size: 1rem; margin: 0 0 6px; display: flex; align-items: center; gap: 6px;">
+                  <span>💡</span> <span data-i18n="thoughtHeading">Pensée</span>
+                </h4>
+                <ul style="color: rgba(250, 246, 239, 0.85); font-size: 0.9rem; line-height: 1.7; margin: 0; padding-left: 20px;" data-i18n="schopenhauerThoughtList">
+                  <li><strong>La Volonté de vivre :</strong> La force universelle qui anime les êtres et engendre désirs et tensions.</li>
+                  <li><strong>L'illusion du bonheur :</strong> Le vrai bonheur est négatif (l'absence de douleur), et la sérénité réside dans le détachement.</li>
+                  <li><strong>L'art et la compassion :</strong> Deux voies souveraines pour transcender l'égoïsme et apaiser l'esprit.</li>
+                </ul>
+              </div>
+
+              <!-- Œuvres principales -->
+              <div style="margin-bottom: 20px;">
+                <h4 style="color: #F5D98A; font-size: 1rem; margin: 0 0 6px; display: flex; align-items: center; gap: 6px;">
+                  <span>📚</span> <span data-i18n="worksHeading">Œuvres principales</span>
+                </h4>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                  <span style="background: rgba(0,0,0,0.4); border: 1px solid rgba(223, 177, 91, 0.3); color: #FFFDF8; font-size: 0.8rem; padding: 4px 10px; border-radius: 10px;">Le Monde comme volonté et comme représentation (1819)</span>
+                  <span style="background: rgba(0,0,0,0.4); border: 1px solid rgba(223, 177, 91, 0.3); color: #FFFDF8; font-size: 0.8rem; padding: 4px 10px; border-radius: 10px;">Aphorismes sur la sagesse dans la vie (1851)</span>
+                  <span style="background: rgba(0,0,0,0.4); border: 1px solid rgba(223, 177, 91, 0.3); color: #FFFDF8; font-size: 0.8rem; padding: 4px 10px; border-radius: 10px;">L'Art d'avoir toujours raison</span>
+                </div>
+              </div>
+
+              <!-- Action CTA -->
+              <a href="./articles/schopenhauer-happiness-illusion.html" class="quiz-btn" style="text-decoration: none; padding: 10px 24px; display: inline-flex; align-items: center; gap: 8px; font-weight: 800; font-size: 0.9rem; border-radius: 12px;">
+                <span data-i18n="discoverPhilosophy">Découvrir sa philosophie</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -363,32 +393,25 @@
             <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
             <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
           </svg>
-          <span class="serif-title" data-i18n="thinkers">Grands Penseurs</span>
+          <span class="serif-title" data-i18n="thinkersTitle">Grands Penseurs</span>
         </h2>
         <div class="thinkers-grid" id="thinkersList">
           <!-- Dynamically populated thinkers -->
         </div>
-        <div style="text-align: center; margin-top: 30px; margin-bottom: 50px;">
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 45px;">
           <a href="thinkers/" class="btn-primary-outline" data-i18n="seeAllThinkers">Tous les penseurs →</a>
         </div>
       </section>
 
-
-
-
-
       <!-- Daily Wisdom Section link CTA -->
       <section id="wisdomSection" class="scroll-section" aria-labelledby="wisdom-heading">
-        <div class="quiz-promo-banner" style="background: linear-gradient(135deg, rgba(184, 142, 60, 0.1) 0%, rgba(6, 6, 6, 0.4) 100%); border: 1px solid var(--card-border); padding: 50px 40px; border-radius: 24px; text-align: center; box-shadow: 0 10px 30px var(--shadow-color); display: flex; flex-direction: column; align-items: center; gap: 20px; position: relative; overflow: hidden;">
-          <div class="glowing-orbs" aria-hidden="true" style="position: absolute; top:0; left:0; width:100%; height:100%; pointer-events: none;">
-            <div class="orb orb-1" style="width: 150px; height: 150px; background: var(--accent-gold-glow); top: -20px; left: -20px; filter: blur(50px); opacity: 0.15;"></div>
-          </div>
+        <div class="quiz-promo-banner" style="background: linear-gradient(135deg, rgba(184, 142, 60, 0.1) 0%, rgba(6, 6, 6, 0.4) 100%); border: 1px solid var(--card-border); padding: 45px 36px; border-radius: 24px; text-align: center; box-shadow: 0 10px 30px var(--shadow-color); display: flex; flex-direction: column; align-items: center; gap: 16px; position: relative; overflow: hidden;">
           <span style="font-size: 2rem;">❝</span>
-          <h2 id="wisdom-heading" class="serif-title" data-i18n="wisdomTitle" style="font-size: 2rem; color: var(--text-primary); margin: 0;">حكمة اليوم</h2>
-          <p data-i18n="heroSubtitle" style="max-width: 600px; color: var(--text-secondary); line-height: 1.6; margin: 0; font-size: 1.05rem;">أقوال وحكم خالدة من أعظم العقول في التاريخ، لتلهمك وتساعدك على فهم الحياة بعمق أكبر.</p>
-          <a href="./quotes/" class="quiz-btn" style="text-decoration: none; padding: 12px 30px; display: inline-flex; align-items: center; gap: 8px; margin-top: 10px;">
-            <span data-i18n="generateBtn">توليد حكمة أخرى</span>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);">
+          <h2 id="wisdom-heading" class="serif-title" data-i18n="wisdomTitle" style="font-size: 1.9rem; color: var(--text-primary); margin: 0;">La Pensée du Jour</h2>
+          <p data-i18n="heroSubtitle" style="max-width: 600px; color: var(--text-secondary); line-height: 1.6; margin: 0; font-size: 1.02rem;">Des pensées et sagesses intemporelles issues des plus grands esprits de l'histoire pour éclairer votre quotidien.</p>
+          <a href="./quotes/" class="quiz-btn" style="text-decoration: none; padding: 12px 30px; display: inline-flex; align-items: center; gap: 8px; margin-top: 8px;">
+            <span data-i18n="generateBtn">Générer une pensée</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
             </svg>
           </a>
@@ -396,16 +419,13 @@
       </section>
 
       <!-- Philosophy Personality Quiz Section Link CTA -->
-      <section id="quizSection" class="scroll-section" aria-labelledby="quiz-heading">
-        <div class="quiz-promo-banner" style="background: linear-gradient(135deg, rgba(184, 142, 60, 0.1) 0%, rgba(6, 6, 6, 0.4) 100%); border: 1px solid var(--card-border); padding: 50px 40px; border-radius: 24px; text-align: center; box-shadow: 0 10px 30px var(--shadow-color); display: flex; flex-direction: column; align-items: center; gap: 20px; position: relative; overflow: hidden;">
-          <div class="glowing-orbs" aria-hidden="true" style="position: absolute; top:0; left:0; width:100%; height:100%; pointer-events: none;">
-            <div class="orb orb-1" style="width: 150px; height: 150px; background: var(--accent-gold-glow); top: -20px; right: -20px; filter: blur(50px); opacity: 0.15;"></div>
-          </div>
+      <section id="quizSection" class="scroll-section" aria-labelledby="quiz-heading" style="margin: 35px auto;">
+        <div class="quiz-promo-banner" style="background: linear-gradient(135deg, rgba(184, 142, 60, 0.1) 0%, rgba(6, 6, 6, 0.4) 100%); border: 1px solid var(--card-border); padding: 45px 36px; border-radius: 24px; text-align: center; box-shadow: 0 10px 30px var(--shadow-color); display: flex; flex-direction: column; align-items: center; gap: 16px; position: relative; overflow: hidden;">
           <span style="font-size: 2rem;">🧠</span>
-          <h2 id="quiz-heading" class="serif-title" data-i18n="quizzesTitle" style="font-size: 2rem; color: var(--text-primary); margin: 0;">الاختبارات والأسئلة الفلسفية</h2>
-          <p data-i18n="quizSubtitle" style="max-width: 600px; color: var(--text-secondary); line-height: 1.6; margin: 0; font-size: 1.05rem;">أجب عن مواقف حياتية يومية بسيطة لتكتشف المدارس الفكرية والأنماط الفلسفية والذكاء العاطفي الأكثر توافقاً مع جوهرك الداخلي.</p>
-          <a href="./quizzes/" class="quiz-btn" style="text-decoration: none; padding: 12px 30px; display: inline-flex; align-items: center; gap: 8px; margin-top: 10px;">
-            <span data-i18n="quizStartBtn">ابدأ الاختبار الآن</span>
+          <h2 id="quiz-heading" class="serif-title" data-i18n="quizzesTitle" style="font-size: 1.9rem; color: var(--text-primary); margin: 0;">Tests & Quiz Philosophiques</h2>
+          <p data-i18n="quizSubtitle" style="max-width: 600px; color: var(--text-secondary); line-height: 1.6; margin: 0; font-size: 1.02rem;">Répondez à des situations simples du quotidien pour découvrir l'école de pensée et le profil philosophique le plus proche de votre esprit.</p>
+          <a href="./quizzes/" class="quiz-btn" style="text-decoration: none; padding: 12px 30px; display: inline-flex; align-items: center; gap: 8px; margin-top: 8px;">
+            <span data-i18n="quizStartBtn">Commencer le test</span>
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
@@ -414,225 +434,59 @@
         </div>
       </section>
 
-      <!-- 🌿 Section 1: À LA UNE / في الواجهة -->
-      <section class="scroll-section" style="margin: 40px auto 30px;">
-        <div class="featured-headline-card" style="background: linear-gradient(135deg, rgba(15, 26, 19, 0.95) 0%, rgba(26, 38, 30, 0.85) 100%); border: 1.5px solid rgba(223, 177, 91, 0.4); border-radius: 26px; padding: 40px 36px; box-shadow: 0 16px 45px rgba(0,0,0,0.6), 0 0 25px rgba(223, 177, 91, 0.12); position: relative; overflow: hidden; backdrop-filter: blur(16px);">
-          <div style="position: absolute; top: -30px; left: -30px; width: 140px; height: 140px; background: rgba(223, 177, 91, 0.15); filter: blur(40px); border-radius: 50%; pointer-events: none;"></div>
-          
-          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
-            <span style="background: rgba(223, 177, 91, 0.18); border: 1px solid rgba(223, 177, 91, 0.45); color: #F5D98A; font-weight: 800; font-size: 0.82rem; padding: 4px 14px; border-radius: 20px; display: inline-flex; align-items: center; gap: 6px;">
-              🌿 في الواجهة · À LA UNE
-            </span>
-            <span style="color: rgba(250, 246, 239, 0.5); font-size: 0.85rem;">رؤية فلسفية ملهمة</span>
-          </div>
-
-          <h2 class="serif-title" style="font-size: 2.1rem; color: #FFFDF8; line-height: 1.4; margin: 0 0 16px; font-weight: 800;">
-            Les grandes idées qui ont changé notre manière de comprendre la vie.
-          </h2>
-          <p style="font-size: 1.05rem; color: rgba(250, 246, 239, 0.85); line-height: 1.8; max-width: 780px; margin: 0 0 24px;">
-            أفكار ورؤى كبرى غيّرت فهمنا للإنسان والوجود. رحلة عقلية ثرية في عمق الرواقية، والوجودية، وعلم النفس الحديث للتحرر من القلق وصياغة مرونة نفسية صلبة في مواجهة تقلبات الحياة.
-          </p>
-
-          <a href="./articles/" class="quiz-btn" style="text-decoration: none; padding: 12px 28px; display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-size: 0.95rem; border-radius: 14px;">
-            <span>📖 Découvrir les articles / استكشف المقالات</span>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-        </div>
-      </section>
-
-      <!-- 📚 Section 2: ARTICLES RÉCENTS / مقالات حديثة ومختارة -->
-      <section class="scroll-section" style="margin: 40px auto;">
-        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 12px;">
-          <div>
-            <h2 class="section-title" style="margin: 0; display: flex; align-items: center; gap: 10px;">
-              <span>📚</span> <span class="serif-title">Articles Récents / مقالات حديثة</span>
-            </h2>
-            <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 6px 0 0;">
-              دراسات وتحليلات معمقة في الحكمة، فلسفة العقل، وتطوير الذات
-            </p>
-          </div>
-          <a href="./articles/" style="color: var(--accent-gold); text-decoration: none; font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 6px;">
-            <span>عرض كافة المقالات (10)</span> <span>←</span>
-          </a>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
-          
-          <!-- Article 1 -->
-          <div class="article-card" style="background: rgba(18, 28, 22, 0.85); border: 1px solid rgba(223, 177, 91, 0.25); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.25s, border-color 0.25s;">
-            <div>
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                <span style="background: rgba(52, 211, 153, 0.15); color: #34D399; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 12px;">رواقية</span>
-                <span style="color: var(--text-muted); font-size: 0.8rem;">⏱️ 6 دقائق</span>
-              </div>
-              <h3 style="font-size: 1.15rem; color: #FFFDF8; margin: 0 0 10px; font-weight: 700; line-height: 1.4;">الرواقية: فلسفة القوة والهدوء في مواجهة الحياة</h3>
-              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin: 0 0 18px;">دليل عملي لتطبيق ثنائية التحكم وحب القدر وبناء حصن عقلي متين ضد التوتر والقلق.</p>
-            </div>
-            <a href="./files/stoicisme-force-calme.html" class="social-btn" style="text-decoration: none; justify-content: center; width: 100%; padding: 10px;">
-              <span>📖 Lire l'article / قراءة المقال</span>
-            </a>
-          </div>
-
-          <!-- Article 2 -->
-          <div class="article-card" style="background: rgba(18, 28, 22, 0.85); border: 1px solid rgba(223, 177, 91, 0.25); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.25s, border-color 0.25s;">
-            <div>
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                <span style="background: rgba(96, 165, 250, 0.15); color: #60A5FA; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 12px;">علم النفس</span>
-                <span style="color: var(--text-muted); font-size: 0.8rem;">⏱️ 5 دقائق</span>
-              </div>
-              <h3 style="font-size: 1.15rem; color: #FFFDF8; margin: 0 0 10px; font-weight: 700; line-height: 1.4;">كيف تتوقف عن التفكير الزائد والقلق المستمر؟</h3>
-              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin: 0 0 18px;">طرق مثبتة نفسياً لكسر حلقة الاجترار الذهني واستعادة سكينة العقل والتركيز على الحاضر.</p>
-            </div>
-            <a href="./files/stop-overthinking.html" class="social-btn" style="text-decoration: none; justify-content: center; width: 100%; padding: 10px;">
-              <span>📖 Lire l'article / قراءة المقال</span>
-            </a>
-          </div>
-
-          <!-- Article 3 -->
-          <div class="article-card" style="background: rgba(18, 28, 22, 0.85); border: 1px solid rgba(223, 177, 91, 0.25); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.25s, border-color 0.25s;">
-            <div>
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                <span style="background: rgba(251, 191, 36, 0.15); color: #FBBF24; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 12px;">تطوير الذات</span>
-                <span style="color: var(--text-muted); font-size: 0.8rem;">⏱️ 7 دقائق</span>
-              </div>
-              <h3 style="font-size: 1.15rem; color: #FFFDF8; margin: 0 0 10px; font-weight: 700; line-height: 1.4;">الانضباط الذاتي وقوة الإرادة وفق الفلسفة الكلاسيكية</h3>
-              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin: 0 0 18px;">دروس الإمبراطور ماركوس أوريليوس وسينيكا في السيطرة على النفس وإتقان العادات اليومية.</p>
-            </div>
-            <a href="./files/self-discipline.html" class="social-btn" style="text-decoration: none; justify-content: center; width: 100%; padding: 10px;">
-              <span>📖 Lire l'article / قراءة المقال</span>
-            </a>
-          </div>
-
-          <!-- Article 4 -->
-          <div class="article-card" style="background: rgba(18, 28, 22, 0.85); border: 1px solid rgba(223, 177, 91, 0.25); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.25s, border-color 0.25s;">
-            <div>
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                <span style="background: rgba(244, 114, 182, 0.15); color: #F472B6; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 12px;">فلسفة الحياة</span>
-                <span style="color: var(--text-muted); font-size: 0.8rem;">⏱️ 8 دقائق</span>
-              </div>
-              <h3 style="font-size: 1.15rem; color: #FFFDF8; margin: 0 0 10px; font-weight: 700; line-height: 1.4;">وهم السعادة عند شوبنهاور: كيف تعيش بسلام دون أوهام؟</h3>
-              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin: 0 0 18px;">رؤية شوبنهاور الثاقبة: السعادة ليست ملاحقة اللذة، بل تجنب المعاناة وصون طمأنينة الروح.</p>
-            </div>
-            <a href="./articles/schopenhauer-happiness-illusion.html" class="social-btn" style="text-decoration: none; justify-content: center; width: 100%; padding: 10px;">
-              <span>📖 Lire l'article / قراءة المقال</span>
-            </a>
-          </div>
-
-          <!-- Article 5 -->
-          <div class="article-card" style="background: rgba(18, 28, 22, 0.85); border: 1px solid rgba(223, 177, 91, 0.25); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.25s, border-color 0.25s;">
-            <div>
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                <span style="background: rgba(167, 139, 250, 0.15); color: #A78BFA; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 12px;">وجودية</span>
-                <span style="color: var(--text-muted); font-size: 0.8rem;">⏱️ 6 دقائق</span>
-              </div>
-              <h3 style="font-size: 1.15rem; color: #FFFDF8; margin: 0 0 10px; font-weight: 700; line-height: 1.4;">العبثية والحرية عند ألبير كامو: أسطورة سيزيف</h3>
-              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin: 0 0 18px;">كيف نصنع المعنى والتمرد النبيل في عالم صامت؟ فلسفة كامو في مواجهة التحديات.</p>
-            </div>
-            <a href="./files/absurde-camus.html" class="social-btn" style="text-decoration: none; justify-content: center; width: 100%; padding: 10px;">
-              <span>📖 Lire l'article / قراءة المقال</span>
-            </a>
-          </div>
-
-          <!-- Article 6 -->
-          <div class="article-card" style="background: rgba(18, 28, 22, 0.85); border: 1px solid rgba(223, 177, 91, 0.25); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.25s, border-color 0.25s;">
-            <div>
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                <span style="background: rgba(52, 211, 153, 0.15); color: #34D399; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 12px;">ذكاء عاطفي</span>
-                <span style="color: var(--text-muted); font-size: 0.8rem;">⏱️ 6 دقائق</span>
-              </div>
-              <h3 style="font-size: 1.15rem; color: #FFFDF8; margin: 0 0 10px; font-weight: 700; line-height: 1.4;">الذكاء العاطفي والمرونة النفسية في زمن الضغوط</h3>
-              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin: 0 0 18px;">استراتيجيات نفسية للتعامل مع المشاعر المعقدة والتكيف الإيجابي مع بيئات العمل والحياة.</p>
-            </div>
-            <a href="./files/intelligence-emotionnelle-stoicisme.html" class="social-btn" style="text-decoration: none; justify-content: center; width: 100%; padding: 10px;">
-              <span>📖 Lire l'article / قراءة المقال</span>
-            </a>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- Psychological Advice Section -->
-      <section id="advicesSection" class="scroll-section" aria-labelledby="advices-heading">
-        <h2 id="advices-heading" class="section-title">
-          <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-          <span class="serif-title" data-i18n="psychology">Psychologie & Conseils</span>
-        </h2>
-        <div class="advices-container" id="advicesList">
-          <!-- Dynamically populated advices -->
-        </div>
-      </section>
-
-      <!-- 🧠 Section 3: UN PENSEUR À DÉCOUVRIR / مفكر يستحق الاكتشاف -->
-      <section class="scroll-section" style="margin: 40px auto 50px;">
-        <div style="background: linear-gradient(135deg, rgba(16, 24, 18, 0.95) 0%, rgba(24, 34, 26, 0.9) 100%); border: 1.5px solid rgba(223, 177, 91, 0.45); border-radius: 26px; padding: 36px; box-shadow: 0 16px 45px rgba(0,0,0,0.7); backdrop-filter: blur(20px);">
-          
-          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
-            <span style="background: rgba(223, 177, 91, 0.15); border: 1px solid rgba(223, 177, 91, 0.4); color: #F5D98A; font-weight: 800; font-size: 0.82rem; padding: 4px 14px; border-radius: 20px;">
-              🧠 مفكر يستحق الاكتشاف · UN PENSEUR À DÉCOUVRIR
-            </span>
-            <span style="color: rgba(250, 246, 239, 0.5); font-size: 0.85rem;">1788 – 1860 · ألمانيا</span>
-          </div>
-
-          <div style="display: grid; grid-template-columns: 220px 1fr; gap: 30px; align-items: center;" class="thinker-spotlight-layout">
-            <div style="text-align: center;">
-              <img src="schopenhauer_portrait_1784746785139.jpg" alt="Arthur Schopenhauer" style="width: 100%; max-width: 200px; height: 240px; object-fit: cover; border-radius: 20px; border: 2px solid rgba(223, 177, 91, 0.5); box-shadow: 0 10px 30px rgba(0,0,0,0.6);">
-              <h3 style="color: #FFFDF8; font-size: 1.25rem; margin: 12px 0 2px; font-weight: 800;">Arthur Schopenhauer</h3>
-              <p style="color: #DFB15B; font-size: 0.85rem; margin: 0; font-weight: 600;">آرثر شوبنهاور</p>
-            </div>
-
-            <div>
-              <!-- Biographie -->
-              <div style="margin-bottom: 14px;">
-                <h4 style="color: #F5D98A; font-size: 1rem; margin: 0 0 6px; display: flex; align-items: center; gap: 6px;">
-                  <span>👤</span> Biographie / السيرة والمسار
-                </h4>
-                <p style="color: rgba(250, 246, 239, 0.85); font-size: 0.92rem; line-height: 1.7; margin: 0;">
-                  ولد في دانتزيغ عام 1788، ويعد من أعظم فلاسفة القرن التاسع عشر ورائد سبر أغوار النفس البشرية قبل فرويد ونيتشه. تميز بأسلوبه الأدبي الساحر وصراحته المتناهية في تشريح رغبات الإنسان ومصادر معاناته.
-                </p>
-              </div>
-
-              <!-- Pensée -->
-              <div style="margin-bottom: 14px;">
-                <h4 style="color: #F5D98A; font-size: 1rem; margin: 0 0 6px; display: flex; align-items: center; gap: 6px;">
-                  <span>💡</span> Pensée / جوهر فلسفته
-                </h4>
-                <ul style="color: rgba(250, 246, 239, 0.85); font-size: 0.9rem; line-height: 1.7; margin: 0; padding-right: 20px;">
-                  <li><strong>إرادة الحياة (La Volonté) :</strong> القوة الكونية الدافعة لكل الكائنات والتي تولد الرغبة والصراع المستمر.</li>
-                  <li><strong>وهم السعادة :</strong> السعادة الحقيقية سلبية (غياب الألم)، والهدوء النفسي يكمن في الاكتفاء والسكينة.</li>
-                  <li><strong>الشفقة والفن (L'Art & La Compassion) :</strong> هما الملاذ الإنساني للتحرر من قيود الأنانية والألم.</li>
-                </ul>
-              </div>
-
-              <!-- Œuvres principales -->
-              <div style="margin-bottom: 20px;">
-                <h4 style="color: #F5D98A; font-size: 1rem; margin: 0 0 6px; display: flex; align-items: center; gap: 6px;">
-                  <span>📚</span> Œuvres principales / أهم مؤلفاته
-                </h4>
-                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                  <span style="background: rgba(0,0,0,0.4); border: 1px solid rgba(223, 177, 91, 0.3); color: #FFFDF8; font-size: 0.8rem; padding: 4px 10px; border-radius: 10px;">العالم كإرادة وفكرة (1819)</span>
-                  <span style="background: rgba(0,0,0,0.4); border: 1px solid rgba(223, 177, 91, 0.3); color: #FFFDF8; font-size: 0.8rem; padding: 4px 10px; border-radius: 10px;">حكم وأمثال في حكمة الحياة (1851)</span>
-                  <span style="background: rgba(0,0,0,0.4); border: 1px solid rgba(223, 177, 91, 0.3); color: #FFFDF8; font-size: 0.8rem; padding: 4px 10px; border-radius: 10px;">فن أن تكون دائماً على صواب</span>
-                </div>
-              </div>
-
-              <!-- Action CTA -->
-              <a href="./articles/schopenhauer-happiness-illusion.html" class="quiz-btn" style="text-decoration: none; padding: 10px 24px; display: inline-flex; align-items: center; gap: 8px; font-weight: 800; font-size: 0.9rem; border-radius: 12px;">
-                <span>Découvrir sa philosophie / اكتشف فكره الكامل</span>
-                <span>←</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Link Hub Section -->
-      <section id="linksSection" class="scroll-section" aria-labelledby="links-heading">
+      <!-- ✨ Section 7: RESSOURCES & LIENS UTILES (4 Compact Functional Cards) -->
+      <section id="linksSection" class="scroll-section" aria-labelledby="links-heading" style="margin: 40px auto;">
         <h2 id="links-heading" class="section-title">
           <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span class="serif-title" data-i18n="resourcesTitle">Ressources & Liens utiles</span>
         </h2>
-        <div class="links-list" id="linksList">
-          <!-- Dynamically populated links -->
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 20px;">
+          
+          <!-- Card 1: Audio Studio -->
+          <a href="./audio/" class="link-card" style="display: flex; align-items: center; gap: 14px; padding: 18px; background: rgba(18, 28, 22, 0.8); border: 1px solid var(--card-border); border-radius: 16px; text-decoration: none; color: inherit; transition: transform 0.2s, border-color 0.2s;">
+            <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(223, 177, 91, 0.15); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;">
+              🎧
+            </div>
+            <div>
+              <h4 style="color: #FFFDF8; font-size: 0.95rem; margin: 0 0 4px; font-weight: 700;" data-i18n="audioStudioTitle">Studio Audio</h4>
+              <p style="color: var(--text-secondary); font-size: 0.8rem; margin: 0;" data-i18n="audioStudioDesc">Méditations & Livres audio</p>
+            </div>
+          </a>
+
+          <!-- Card 2: Boutique & Ebooks -->
+          <a href="./shop/" class="link-card" style="display: flex; align-items: center; gap: 14px; padding: 18px; background: rgba(18, 28, 22, 0.8); border: 1px solid var(--card-border); border-radius: 16px; text-decoration: none; color: inherit; transition: transform 0.2s, border-color 0.2s;">
+            <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(223, 177, 91, 0.15); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;">
+              🛍️
+            </div>
+            <div>
+              <h4 style="color: #FFFDF8; font-size: 0.95rem; margin: 0 0 4px; font-weight: 700;" data-i18n="shopTitle">Boutique & E-books</h4>
+              <p style="color: var(--text-secondary); font-size: 0.8rem; margin: 0;" data-i18n="shopShortDesc">Guides stoïciens & lectures</p>
+            </div>
+          </a>
+
+          <!-- Card 3: Quiz -->
+          <a href="./quizzes/" class="link-card" style="display: flex; align-items: center; gap: 14px; padding: 18px; background: rgba(18, 28, 22, 0.8); border: 1px solid var(--card-border); border-radius: 16px; text-decoration: none; color: inherit; transition: transform 0.2s, border-color 0.2s;">
+            <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(223, 177, 91, 0.15); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;">
+              🧠
+            </div>
+            <div>
+              <h4 style="color: #FFFDF8; font-size: 0.95rem; margin: 0 0 4px; font-weight: 700;" data-i18n="quizzesTitle">Quiz & Tests</h4>
+              <p style="color: var(--text-secondary); font-size: 0.8rem; margin: 0;" data-i18n="quizShortDesc">Profils & Écoles de pensée</p>
+            </div>
+          </a>
+
+          <!-- Card 4: FAQ -->
+          <a href="#helpSection" class="link-card" style="display: flex; align-items: center; gap: 14px; padding: 18px; background: rgba(18, 28, 22, 0.8); border: 1px solid var(--card-border); border-radius: 16px; text-decoration: none; color: inherit; transition: transform 0.2s, border-color 0.2s;">
+            <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(223, 177, 91, 0.15); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;">
+              ❓
+            </div>
+            <div>
+              <h4 style="color: #FFFDF8; font-size: 0.95rem; margin: 0 0 4px; font-weight: 700;" data-i18n="helpTitle">Aide & FAQ</h4>
+              <p style="color: var(--text-secondary); font-size: 0.8rem; margin: 0;" data-i18n="faqShortDesc">Questions fréquentes & support</p>
+            </div>
+          </a>
+
         </div>
       </section>
 
@@ -661,62 +515,27 @@
           </svg>
           <span class="serif-title" data-i18n="donationTitle">Soutenir le Projet</span>
         </h2>
-        <p class="section-subtitle" style="text-align: center; color: var(--text-secondary); max-width: 600px; margin: -10px auto 30px;" data-i18n="donationSubtitle">
-          Votre générosité nous aide à continuer de partager la sagesse et à maintenir ce site vivant.
+        <p class="section-subtitle" style="text-align: center; color: var(--text-secondary); max-width: 600px; margin: -10px auto 25px;" data-i18n="donationSubtitle">
+          Votre générosité nous aide à continuer de partager la sagesse et à maintenir ce site libre et accessible à tous.
         </p>
 
-        <!-- Donation cards grid -->
-        <div class="donation-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-          <!-- PayPal Card -->
-          <div class="donation-card">
-            <div class="donation-icon">
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Single Clean Functional PayPal Support Card -->
+        <div style="max-width: 540px; margin: 0 auto;">
+          <div class="donation-card" style="text-align: center; padding: 32px 24px;">
+            <div class="donation-icon" style="margin: 0 auto 16px;">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                 <line x1="2" y1="10" x2="22" y2="10"></line>
                 <path d="M12 22v-5"></path>
                 <path d="M17 22H7"></path>
               </svg>
             </div>
-            <h3 class="donation-title" data-i18n="donatePaypal">Don via PayPal</h3>
-            <p class="donation-desc" data-i18n="donatePaypalDesc">Soutenez-nous facilement via votre compte PayPal sécurisé en quelques clics.</p>
-            <a href="https://paypal.me/lejardindespensees" target="_blank" rel="noopener" class="donation-action-btn" style="text-decoration: none;">
-              <span data-i18n="donateBtn">Faire un don</span>
+            <h3 class="donation-title" data-i18n="donatePaypal" style="font-size: 1.2rem; margin-bottom: 8px;">Don sécurisé via PayPal</h3>
+            <p class="donation-desc" data-i18n="donatePaypalDesc" style="margin-bottom: 20px;">Soutenez nos publications d'articles et livres audio via un don libre et sécurisé.</p>
+            <a href="https://paypal.me/lejardindespensees" target="_blank" rel="noopener" class="donation-action-btn" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; max-width: 260px; margin: 0 auto;">
+              <span data-i18n="donateBtn">Soutenir le projet</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
             </a>
-          </div>
-
-          <!-- Cryptocurrencies Card -->
-          <div class="donation-card">
-            <div class="donation-icon">
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="12" y1="1" x2="12" y2="23"></line>
-                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-              </svg>
-            </div>
-            <h3 class="donation-title" data-i18n="donateCrypto">Cryptomonnaies</h3>
-            <p class="donation-desc" style="margin-bottom: 10px;" data-i18n="donateCryptoDesc">Copiez l'une de nos adresses de portefeuille pour envoyer un don en cryptomonnaies.</p>
-            
-            <div class="crypto-list">
-              <div class="crypto-row">
-                <div class="crypto-details">
-                  <span class="crypto-name">Bitcoin (BTC)</span>
-                  <span class="crypto-address" id="btcAddress">bc1qxy2kg3ut5g4...</span>
-                </div>
-                <button class="copy-btn" data-clipboard-target="#btcAddress" data-full-address="bc1qxy2kg3ut5g4h2adg934sjlkwj92jkh293j2k" aria-label="Copier l'adresse Bitcoin">
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                  <span class="copy-tooltip">Copié !</span>
-                </button>
-              </div>
-              <div class="crypto-row">
-                <div class="crypto-details">
-                  <span class="crypto-name">Ethereum (ETH)</span>
-                  <span class="crypto-address" id="ethAddress">0x71C7656EC7ab8...</span>
-                </div>
-                <button class="copy-btn" data-clipboard-target="#ethAddress" data-full-address="0x71C7656EC7ab88db09531d6512f8a5a41be08c7e" aria-label="Copier l'adresse Ethereum">
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                  <span class="copy-tooltip">Copié !</span>
-                </button>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -730,30 +549,30 @@
           </div>
           <!-- Center: Input and Form -->
           <div class="newsletter-center-col">
-            <h3 class="newsletter-title" data-i18n="joinJourney">كن جزءاً من رحلتنا الفكرية</h3>
-            <p class="newsletter-desc" data-i18n="subscribeDesc">اشترك في نشرتنا البريدية لتصلك أفضل المقالات والاقتباسات الملهمة مباشرة إلى بريدك.</p>
-            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+            <h3 class="newsletter-title" data-i18n="joinJourney">Rejoignez notre voyage philosophique</h3>
+            <p class="newsletter-desc" data-i18n="subscribeDesc">Recevez chaque semaine nos meilleures réflexions, citations inspirantes et synthèses de livres directement dans votre boîte mail.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Merci pour votre inscription !');">
               <input type="email" class="newsletter-input" placeholder="Ex: email@example.com" required style="direction: ltr;">
-              <button type="submit" class="newsletter-submit-btn" data-i18n="subscribeBtn">اشترك الآن</button>
+              <button type="submit" class="newsletter-submit-btn" data-i18n="subscribeBtn">S'inscrire</button>
             </form>
           </div>
           <!-- Right: Features list -->
           <div class="newsletter-right-col">
             <div class="newsletter-benefit-item">
               <span class="benefit-icon">🔔</span>
-              <span class="benefit-text" data-i18n="featuresNewsletter1">تحديثات دورية</span>
+              <span class="benefit-text" data-i18n="featuresNewsletter1">Mises à jour régulières</span>
             </div>
             <div class="newsletter-benefit-item">
               <span class="benefit-icon">📖</span>
-              <span class="benefit-text" data-i18n="featuresNewsletter2">ملخصات كتب</span>
+              <span class="benefit-text" data-i18n="featuresNewsletter2">Synthèses de livres</span>
             </div>
             <div class="newsletter-benefit-item">
               <span class="benefit-icon">❝</span>
-              <span class="benefit-text" data-i18n="featuresNewsletter3">اقتباسات يومية</span>
+              <span class="benefit-text" data-i18n="featuresNewsletter3">Pensées quotidiennes</span>
             </div>
             <div class="newsletter-benefit-item">
               <span class="benefit-icon">📝</span>
-              <span class="benefit-text" data-i18n="featuresNewsletter4">مقالات حصرية</span>
+              <span class="benefit-text" data-i18n="featuresNewsletter4">Articles exclusifs</span>
             </div>
           </div>
         </div>
@@ -792,89 +611,84 @@
         </div>
       </section>
 
-    
-    
-  
-  </main>
+    </main>
 
-  <!-- Footer -->
-  <footer class="footer" style="padding: 50px 24px 30px; border-top: 1px solid var(--card-border); margin-top: 60px; background: rgba(10, 15, 12, 0.95);">
-    <div style="max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; text-align: inherit;" class="footer-grid-layout">
-      
-      <!-- Col 1: Brand Info -->
-      <div>
-        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
-          <img src="brand_logo_official.png" alt="Hikma & Nour" style="width: 38px; height: 38px; object-fit: contain;">
-          <span style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 800; color: var(--accent-gold);">HIKMA & NOUR</span>
+    <!-- Footer Organized in 3 Clean Columns: Explorer, Découvrir, Légal -->
+    <footer class="footer" style="padding: 50px 24px 30px; border-top: 1px solid var(--card-border); margin-top: 60px; background: rgba(10, 15, 12, 0.95);">
+      <div style="max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; text-align: inherit;" class="footer-grid-layout">
+        
+        <!-- Col 1: Brand Info -->
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+            <img src="brand_logo_official.png" alt="Hikma & Nour" style="width: 38px; height: 38px; object-fit: contain;">
+            <span style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 800; color: var(--accent-gold);">HIKMA & NOUR</span>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.7; margin-bottom: 14px;">
+            Sagesse • Philosophie • Sérénité<br>
+            Un espace de réflexion calme, inspiré des grands penseurs pour cultiver la paix intérieure et la force de l'esprit.
+          </p>
         </div>
-        <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.7; margin-bottom: 14px;">
-          الحكمة • الفلسفة • علم النفس<br>
-          مساحة للتأمل الرصين، حكمة كبار المفكرين وبناء القوة النفسية والهدوء الداخلي.
-        </p>
+
+        <!-- Col 2: Explorer -->
+        <div>
+          <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;" data-i18n="footerExplorer">🧭 Explorer</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
+            <li><a href="#homeSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="home">Accueil</a></li>
+            <li><a href="articles/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="articles">Articles</a></li>
+            <li><a href="thinkers/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="thinkers">Penseurs</a></li>
+            <li><a href="./quotes/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="quotes">Citations</a></li>
+            <li><a href="./audio/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="audio">Audio</a></li>
+            <li><a href="bio.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="about">À propos</a></li>
+            <li><a href="#contactSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="contactNav">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Découvrir -->
+        <div>
+          <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;" data-i18n="footerDiscover">✨ Découvrir</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
+            <li><a href="./quizzes/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="quiz">Quiz Philosophiques</a></li>
+            <li><a href="#helpSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="helpTitle">Aide & FAQ</a></li>
+            <li><a href="./shop/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="shop">Boutique</a></li>
+            <li><a href="./calendar/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="calendar">Calendrier 365</a></li>
+            <li><a href="articles/?category=philosophy" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="philosophy">Philosophie</a></li>
+            <li><a href="articles/?category=psychology" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="psychologySub">Psychologie</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Légal -->
+        <div>
+          <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;" data-i18n="footerLegal">🔒 Légal</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
+            <li><a href="privacy-policy.html" style="color: var(--accent-gold); text-decoration: none; font-weight: 600;" data-i18n="privacyPolicy">Politique de confidentialité</a></li>
+            <li><a href="terms-of-service.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="termsOfService">Conditions d'utilisation</a></li>
+            <li><a href="cookie-policy.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="cookiePolicy">Politique des cookies</a></li>
+          </ul>
+        </div>
+
       </div>
 
-      <!-- Col 2: Navigation Hierarchy -->
-      <div>
-        <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;">🏠 الخريطة الرئيسية</h4>
-        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
-          <li><a href="#homeSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">🏠 Accueil / الرئيسية</a></li>
-          <li><a href="articles/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">📚 Articles / المقالات</a></li>
-          <li><a href="thinkers/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">🧠 Penseurs / الفلاسفة</a></li>
-          <li><a href="./quotes/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">💭 Citations / اقتباسات</a></li>
-          <li><a href="./audio/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">🎧 Audio / كتب صوتية</a></li>
-          <li><a href="bio.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">ℹ️ À propos / عن الموقع</a></li>
-          <li><a href="#contactSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">📩 Contact / اتصل بنا</a></li>
-        </ul>
+      <div style="margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center;">
+        <div style="display: flex; justify-content: center; gap: 14px 20px; flex-wrap: wrap; font-size: 0.88rem; margin-bottom: 14px; font-weight: 600;">
+          <a href="bio.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="about">À propos</a>
+          <span style="color: rgba(255,255,255,0.2);">•</span>
+          <a href="#contactSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="contactNav">Contact</a>
+          <span style="color: rgba(255,255,255,0.2);">•</span>
+          <a href="#helpSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="helpTitle">FAQ</a>
+          <span style="color: rgba(255,255,255,0.2);">•</span>
+          <a href="shop/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="shop">Boutique</a>
+          <span style="color: rgba(255,255,255,0.2);">•</span>
+          <a href="privacy-policy.html" style="color: var(--accent-gold); text-decoration: none; transition: color 0.2s;" data-i18n="privacy">Confidentialité</a>
+          <span style="color: rgba(255,255,255,0.2);">•</span>
+          <a href="terms-of-service.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="terms">Conditions d'utilisation</a>
+          <span style="color: rgba(255,255,255,0.2);">•</span>
+          <a href="cookie-policy.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="cookies">Cookies</a>
+        </div>
+
+        <p style="color: var(--text-secondary); font-size: 0.82rem; margin: 0;">&copy; 2026 Le Jardin des Pensées (حكمة ونور). <span data-i18n="credits">Conçu avec sagesse, calme et sérénité. ✨🌿</span></p>
       </div>
-
-      <!-- Col 3: Services & Secondary Menu -->
-      <div>
-        <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;">✨ خدمات ومحتوى تفاعلي</h4>
-        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
-          <li><a href="./quizzes/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">🧠 Quiz / الاختبارات الفلسفية</a></li>
-          <li><a href="#helpSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">❓ FAQ & Support / الأسئلة الشائعة</a></li>
-          <li><a href="./shop/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">🛍️ Boutique / متجر الحكمة</a></li>
-          <li><a href="./calendar/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">📅 Calendrier / التقويم ٣٦٥ يوماً</a></li>
-          <li><a href="articles/?category=philosophy" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">🏛️ Philosophie / الفلسفة</a></li>
-          <li><a href="articles/?category=psychology" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">🧠 Psychologie / علم النفس</a></li>
-        </ul>
-      </div>
-
-      <!-- Col 4: Legal & Policies -->
-      <div>
-        <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;">🔒 المعلومات القانونية والسياسات</h4>
-        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
-          <li><a href="privacy-policy.html" style="color: var(--accent-gold); text-decoration: none; font-weight: 600;">🔒 Politique de confidentialité / سياسة الخصوصية</a></li>
-          <li><a href="terms-of-service.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">📜 Conditions d'utilisation / شروط الاستخدام</a></li>
-          <li><a href="cookie-policy.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">🍪 Politique des cookies / ملفات تعريف الارتباط</a></li>
-          <li><a href="#contactSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">🤝 Collaborations & Partenariats / التعاون</a></li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div style="margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center;">
-      <!-- Streamlined Secondary / Footer Links Bar -->
-      <div style="display: flex; justify-content: center; gap: 14px 20px; flex-wrap: wrap; font-size: 0.88rem; margin-bottom: 14px; font-weight: 600;">
-        <a href="bio.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">ℹ️ À propos</a>
-        <span style="color: rgba(255,255,255,0.2);">•</span>
-        <a href="#contactSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">📩 Contact</a>
-        <span style="color: rgba(255,255,255,0.2);">•</span>
-        <a href="#helpSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">❓ FAQ</a>
-        <span style="color: rgba(255,255,255,0.2);">•</span>
-        <a href="shop/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">🛍️ Boutique</a>
-        <span style="color: rgba(255,255,255,0.2);">•</span>
-        <a href="privacy-policy.html" style="color: var(--accent-gold); text-decoration: none; transition: color 0.2s;">🔒 Confidentialité</a>
-        <span style="color: rgba(255,255,255,0.2);">•</span>
-        <a href="terms-of-service.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">📜 Conditions d'utilisation</a>
-        <span style="color: rgba(255,255,255,0.2);">•</span>
-        <a href="cookie-policy.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">🍪 Cookies</a>
-      </div>
-
-      <p style="color: var(--text-secondary); font-size: 0.82rem; margin: 0;">&copy; 2026 حكمة ونور | Le Jardin des Pensées. <span data-i18n="credits">Conçu avec sagesse, calme et sérénité. ✨🌿</span></p>
-    </div>
-  </footer>
-</div>
+    </footer>
+  </div>
 
   <!-- Video Lightbox Modal -->
   <div class="modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Lecteur vidéo">

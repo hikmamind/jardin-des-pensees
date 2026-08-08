@@ -374,11 +374,8 @@ function setupCheckoutSimulator() {
   const form = document.getElementById('checkoutForm');
   const feedback = document.getElementById('checkoutFeedback');
   const submitBtn = document.getElementById('checkoutSubmitBtn');
-
-  const cardNumDisplay = document.getElementById('cardNumDisplay');
-  const cardHolderDisplay = document.getElementById('cardHolderDisplay');
   const cardHolderInput = document.getElementById('cardHolderInput');
-  const cardNumberInput = document.getElementById('cardNumberInput');
+  const checkoutEmailInput = document.getElementById('checkoutEmailInput');
 
   if (!modal || !closeBtn || !checkoutBtn || !form || !feedback || !submitBtn) return;
 
@@ -387,10 +384,6 @@ function setupCheckoutSimulator() {
     closeCartDrawer();
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
-    
-    // Reset displays
-    cardNumDisplay.textContent = '•••• •••• •••• ••••';
-    cardHolderDisplay.textContent = currentLang === 'ar' ? 'اسم حامل البطاقة' : 'NOM DU TITULAIRE';
     feedback.style.display = 'none';
   });
 
@@ -405,48 +398,18 @@ function setupCheckoutSimulator() {
     if (e.target === modal) closeModal();
   });
 
-  // Card preview live sync
-  if (cardHolderInput) {
-    cardHolderInput.addEventListener('input', (e) => {
-      const val = e.target.value.trim().toUpperCase();
-      cardHolderDisplay.textContent = val || (currentLang === 'ar' ? 'اسم حامل البطاقة' : 'NOM DU TITULAIRE');
-    });
-  }
-
-  if (cardNumberInput) {
-    cardNumberInput.addEventListener('input', (e) => {
-      let val = e.target.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
-      let matches = val.match(/\d{4,16}/g);
-      let match = (matches && matches[0]) || '';
-      let parts = [];
-
-      for (let i = 0, len = match.length; i < len; i += 4) {
-        parts.push(match.substring(i, i + 4));
-      }
-
-      if (parts.length > 0) {
-        cardNumberInput.value = parts.join(' ');
-        cardNumDisplay.textContent = parts.join(' ');
-      } else {
-        cardNumberInput.value = val;
-        cardNumDisplay.textContent = val || '•••• •••• •••• ••••';
-      }
-    });
-  }
-
-  // Handle Mock Payment Submission
+  // Handle Digital Order Confirmation
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     
     feedback.className = 'form-feedback';
     feedback.style.display = 'none';
 
-    // Mock validation
-    const name = cardHolderInput.value.trim();
-    const cardNum = cardNumberInput.value.replace(/\s+/g, '');
+    const name = cardHolderInput ? cardHolderInput.value.trim() : '';
+    const email = checkoutEmailInput ? checkoutEmailInput.value.trim() : '';
 
-    if (!name || cardNum.length < 16) {
-      feedback.textContent = currentLang === 'ar' ? 'يرجى التحقق من صحة البيانات المدخلة.' : 'Veuillez vérifier les informations de paiement.';
+    if (!name || !email || !email.includes('@')) {
+      feedback.textContent = currentLang === 'ar' ? 'يرجى إدخال الاسم وبريد إلكتروني صالح.' : 'Veuillez saisir votre nom et un email valide.';
       feedback.classList.add('error');
       feedback.style.display = 'block';
       return;

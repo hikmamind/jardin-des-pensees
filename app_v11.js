@@ -20,19 +20,13 @@ const LANG_METADATA = {
   ar: { label: "AR" }
 };
 
-// Force Arabic on first load of this version to override old localStorage values
-if (!localStorage.getItem('lang_force_ar_v11')) {
-  localStorage.setItem('lang', 'ar');
-  localStorage.setItem('lang_force_ar_v11', 'true');
-}
-
-let currentLang = localStorage.getItem('lang') || 'ar';
+let currentLang = localStorage.getItem('site_lang_v1') || 'fr';
 let currentQuoteIndex = -1;
 
 // --- Language/Translation Engine ---
 function setLanguage(lang) {
   currentLang = lang;
-  localStorage.setItem('lang', lang);
+  localStorage.setItem('site_lang_v1', lang);
   
   // Set document attributes for direction & lang
   document.documentElement.lang = lang;
@@ -44,16 +38,29 @@ function setLanguage(lang) {
 
   // Update active language selector button representation
   const activeName = document.getElementById('activeLangName');
-  if (activeName) activeName.textContent = LANG_METADATA[lang].label;
+  if (activeName) activeName.textContent = (LANG_METADATA[lang] && LANG_METADATA[lang].label) || "FR";
 
   // Translate static labels marked with data-i18n
   const translatables = document.querySelectorAll('[data-i18n]');
   translatables.forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (TIKTOK_DATA.ui[lang] && TIKTOK_DATA.ui[lang][key]) {
-      el.textContent = TIKTOK_DATA.ui[lang][key];
+      if (key === 'schopenhauerThoughtList') {
+        el.innerHTML = TIKTOK_DATA.ui[lang][key];
+      } else {
+        el.textContent = TIKTOK_DATA.ui[lang][key];
+      }
     }
   });
+
+  // Dynamic Article Counter update
+  const count = (TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].articles) ? TIKTOK_DATA.content[lang].articles.length : 11;
+  const countEl = document.getElementById('totalArticlesCount');
+  if (countEl) countEl.textContent = count;
+  const countLabel = document.getElementById('allArticlesCountLabel');
+  if (countLabel) {
+    countLabel.textContent = lang === 'ar' ? `عرض كافة المقالات (${count})` : `Voir tous les articles (${count})`;
+  }
 
   // Translate input placeholders
   updatePlaceholders();
@@ -62,10 +69,6 @@ function setLanguage(lang) {
   populateProfile();
   populateNavbarDropdown();
   populateThinkers();
-  populateArticles();
-  populateAdvices();
-  populateLinks();
-  populateVideos();
   populateFaq();
   displayNewWisdom(true);
   
@@ -515,23 +518,7 @@ function bindFaqAccordion() {
   });
 }
 
-// --- Crypto Copy addresses to Clipboard ---
-function setupCryptoCopy() {
-  const copyBtns = document.querySelectorAll('.copy-btn');
-  copyBtns.forEach(btn => {
-    const tooltip = btn.querySelector('.copy-tooltip');
-    const address = btn.getAttribute('data-full-address');
-    
-    btn.addEventListener('click', () => {
-      navigator.clipboard.writeText(address).then(() => {
-        tooltip.classList.add('show');
-        setTimeout(() => {
-          tooltip.classList.remove('show');
-        }, 1500);
-      });
-    });
-  });
-}
+
 
 
 
@@ -667,7 +654,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initNavbarScroll();
   setupContactForm();
-  setupCryptoCopy();
 });
 
 
