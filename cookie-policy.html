@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ar" data-theme="dark" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سياسة ملفات تعريف الارتباط | Politique des Cookies - HIKMA & NOUR</title>
+  <meta name="description" content="سياسة ملفات تعريف الارتباط (Cookies) الخاصة بموقع HIKMA & NOUR (Le Jardin des Pensées) - الشفافية حول استخدام الكوكيز وحفظ التفضيلات.">
+  <link rel="icon" type="image/png" href="brand_logo_official.png">
+  <link rel="stylesheet" href="style.css?v=14">
+
+  <style>
+    .privacy-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 120px 24px 80px;
+    }
+
+    .privacy-card {
+      background: var(--card-bg, #1A241E);
+      border: 1px solid var(--border-gold, rgba(179, 138, 60, 0.3));
+      border-radius: 24px;
+      padding: 40px 35px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    [data-theme="light"] .privacy-card {
+      background: #FAF6EF;
+      border-color: rgba(179, 138, 60, 0.3);
+    }
+
+    .privacy-title {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 900;
+      color: var(--accent-gold, #DFB15B);
+      margin: 0 0 10px;
+      font-family: 'Playfair Display', 'Amiri', serif;
+    }
+
+    .privacy-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-secondary, #B8AFA0);
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-gold, rgba(179, 138, 60, 0.2));
+    }
+
+    .privacy-section {
+      margin-bottom: 30px;
+    }
+
+    .privacy-section-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--accent-gold, #DFB15B);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .privacy-text {
+      color: var(--text-secondary, #B8AFA0);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .privacy-text strong {
+      color: var(--text-primary, #FAF6EF);
+    }
+
+    .privacy-list {
+      color: var(--text-secondary, #B8AFA0);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      padding-right: 20px;
+      margin-bottom: 16px;
+    }
+
+    [dir="ltr"] .privacy-list {
+      padding-right: 0;
+      padding-left: 20px;
+    }
+
+    .privacy-list li {
+      margin-bottom: 8px;
+    }
+
+    .lang-switcher-row {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .lang-pill-btn {
+      background: rgba(179, 138, 60, 0.15);
+      border: 1px solid var(--border-gold, rgba(179, 138, 60, 0.3));
+      color: var(--accent-gold, #DFB15B);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .lang-pill-btn.active, .lang-pill-btn:hover {
+      background: var(--accent-gold, #DFB15B);
+      color: #122319;
+    }
+
+    .back-home-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent-gold, #DFB15B);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+      transition: opacity 0.2s;
+    }
+
+    .back-home-link:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Decorative Glowing Orbs -->
+  <div class="glowing-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <div class="privacy-container">
+    <a href="index.html" class="back-home-link">
+      <span>←</span>
+      <span id="backText">العودة إلى الصفحة الرئيسية / Retour à l'accueil</span>
+    </a>
+
+    <div class="lang-switcher-row">
+      <button class="lang-pill-btn active" onclick="setPolicyLang('ar')">العربية</button>
+      <button class="lang-pill-btn" onclick="setPolicyLang('fr')">Français</button>
+    </div>
+
+    <!-- ARABIC CONTENT -->
+    <div class="privacy-card" id="content-ar">
+      <h1 class="privacy-title">سياسة ملفات تعريف الارتباط (Cookies)</h1>
+      <div class="privacy-subtitle">آخر تحديث: 8 أغسطس 2026 | الشفافية وحماية تجربة التصفح في «حكمة ونور»</div>
+
+      <div class="privacy-section">
+        <div class="privacy-section-title">🍪 1. ما هي ملفات تعريف الارتباط؟</div>
+        <p class="privacy-text">
+          ملفات تعريف الارتباط (Cookies) هي ملفات نصية صغيرة تُحفظ على جهازك (الحاسوب، الهاتف الذكي، أو الجهاز اللوحي) عند زيارة الموقع، وتُستخدم لتذكر تفضيلاتك وتوفير تجربة تصفح سلسة ومخصصة.
+        </p>
+      </div>
+
+      <div class="privacy-section">
+        <div class="privacy-section-title">⚙️ 2. كيف نستخدم ملفات تعريف الارتباط؟</div>
+        <p class="privacy-text">نستخدم ملفات تعريف الارتباط للأغراض التالية فقط:</p>
+        <ul class="privacy-list">
+          <li><strong>تفضيلات المظهر واللغة (Essential) :</strong> لحفظ اختيارك للوضع الليلي/النهاري ولغتك المفضلة (العربية، الفرنسية، الإنجليزية).</li>
+          <li><strong>التفاعلات والملاحظات (LocalStorage) :</strong> لحفظ حالة الإعجابات وتقييم النجوم والتعليقات التي تكتبها على المقالات والكتب الصوتية محلياً في جهازك.</li>
+          <li><strong>الأداء والتحليلات الأساسية :</strong> لتحسين سرعة تحميل الصفحات وتجربة القراءة وسماع الصوتيات.</li>
+        </ul>
+      </div>
+
+      <div class="privacy-section">
+        <div class="privacy-section-title">🛡️ 3. كيفية إدارة وتعطيل الكوكيز</div>
+        <p class="privacy-text">
+          يمكنك في أي وقت ضبط إعدادات متصفحك لقبول أو رفض ملفات تعريف الارتباط، أو مسح الذاكرة التخزينية المؤقتة من خلال إعدادات الخصوصية في متصفحك (Chrome, Safari, Firefox, Edge).
+        </p>
+      </div>
+
+      <div class="privacy-section">
+        <div class="privacy-section-title">📩 4. التواصل معنا</div>
+        <p class="privacy-text">
+          إذا كانت لديك أي أسئلة حول سياسة ملفات تعريف الارتباط، يسعدنا تواصلك معنا:
+          <br>
+          <strong>contact@jardin-des-pensees.com</strong>
+        </p>
+      </div>
+    </div>
+
+    <!-- FRENCH CONTENT -->
+    <div class="privacy-card" id="content-fr" style="display: none;" dir="ltr">
+      <h1 class="privacy-title">Politique relative aux Cookies</h1>
+      <div class="privacy-subtitle">Dernière mise à jour : 8 août 2026 | Transparence & Protection de navigation sur « Le Jardin des Pensées »</div>
+
+      <div class="privacy-section">
+        <div class="privacy-section-title">🍪 1. Qu'est-ce qu'un Cookie ?</div>
+        <p class="privacy-text">
+          Un cookie est un petit fichier texte déposé sur votre terminal (ordinateur, tablette ou smartphone) lors de la consultation d'un site internet. Il permet de mémoriser vos préférences et d'optimiser votre confort de lecture.
+        </p>
+      </div>
+
+      <div class="privacy-section">
+        <div class="privacy-section-title">⚙️ 2. Quels Cookies utilisons-nous ?</div>
+        <p class="privacy-text">Nous utilisons uniquement des cookies et stockages locaux indispensables :</p>
+        <ul class="privacy-list">
+          <li><strong>Cookies de Préférences (Essentiels) :</strong> Mémorisation de votre choix de thème (mode sombre / clair) et de la langue active (Français, Arabe, Anglais).</li>
+          <li><strong>Interactions Sociales Locales (LocalStorage) :</strong> Enregistrement de vos likes, notes 5 étoiles et commentaires saisis sur les articles et pistes audio.</li>
+          <li><strong>Performance & Fluidité :</strong> Optimisation du cache pour assurer un chargement ultra-rapide des synthèses audio et articles.</li>
+        </ul>
+      </div>
+
+      <div class="privacy-section">
+        <div class="privacy-section-title">🛡️ 3. Gestion et Désactivation des Cookies</div>
+        <p class="privacy-text">
+          Vous pouvez à tout moment configurer votre navigateur pour accepter ou refuser les cookies, ou supprimer l'historique de navigation via les paramètres de votre navigateur (Google Chrome, Safari, Firefox, Edge).
+        </p>
+      </div>
+
+      <div class="privacy-section">
+        <div class="privacy-section-title">📩 4. Nous Contacter</div>
+        <p class="privacy-text">
+          Pour toute question concernant notre politique des cookies, vous pouvez nous écrire à :
+          <br>
+          <strong>contact@jardin-des-pensees.com</strong>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function setPolicyLang(lang) {
+      const arBox = document.getElementById('content-ar');
+      const frBox = document.getElementById('content-fr');
+      const btns = document.querySelectorAll('.lang-pill-btn');
+
+      if (lang === 'fr') {
+        arBox.style.display = 'none';
+        frBox.style.display = 'block';
+        document.documentElement.setAttribute('dir', 'ltr');
+        document.documentElement.setAttribute('lang', 'fr');
+        btns[0].classList.remove('active');
+        btns[1].classList.add('active');
+      } else {
+        arBox.style.display = 'block';
+        frBox.style.display = 'none';
+        document.documentElement.setAttribute('dir', 'rtl');
+        document.documentElement.setAttribute('lang', 'ar');
+        btns[0].classList.add('active');
+        btns[1].classList.remove('active');
+      }
+    }
+
+    // Auto-detect language from localStorage
+    window.addEventListener('DOMContentLoaded', () => {
+      const currentLang = localStorage.getItem('site_lang') || 'ar';
+      if (currentLang === 'fr' || currentLang === 'en') {
+        setPolicyLang('fr');
+      } else {
+        setPolicyLang('ar');
+      }
+    });
+  </script>
+</body>
+</html>
