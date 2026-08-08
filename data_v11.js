@@ -167,7 +167,16 @@ const TIKTOK_DATA = {
       "privacy": "Confidentialité",
       "terms": "Conditions d'utilisation",
       "cookies": "Cookies",
-      "search": "Rechercher..."
+      "search": "Rechercher...",
+      "psychoTitle": "Psychologie & Conseils",
+      "psychoSubtitle": "Comprendre l'esprit humain, la paix intérieure et la gestion des relations.",
+      "allPsychoArticles": "Tous les conseils psycho",
+      "psyCard1Title": "Pourquoi les gens respectent une personne silencieuse ?",
+      "psyCard1Desc": "La puissance de la retenue, du mystère et de la maîtrise de soi pour forger un respect authentique.",
+      "psyCard2Title": "Pourquoi les gens s'éloignent quand vous réussissez ?",
+      "psyCard2Desc": "Comprendre les dynamiques de l'envie, la projection psychologique et comment préserver sa paix intérieure.",
+      "psyCard3Title": "Comment bâtir une confiance en soi authentique ?",
+      "psyCard3Desc": "Se libérer du besoin de validation externe et forger une sécurité psychologique ancrée de l'intérieur."
     },
     "en": {
       "home": "Home",
@@ -450,7 +459,16 @@ const TIKTOK_DATA = {
       "privacy": "الخصوصية",
       "terms": "الشروط",
       "cookies": "الكوكيز",
-      "search": "بحث..."
+      "search": "بحث...",
+      "psychoTitle": "علم النفس وتطوير الذات",
+      "psychoSubtitle": "فهم أعماق النفس البشرية، السكينة الداخلية، وإدارة العلاقات بذكاء.",
+      "allPsychoArticles": "جميع مقالات علم النفس",
+      "psyCard1Title": "لماذا يحترم الناس الشخص الصامت؟",
+      "psyCard1Desc": "قوة الصمت والهدوء في بناء الكاريزما والاحترام الذاتي الحقيقي.",
+      "psyCard2Title": "لماذا يبتعد الناس عنك عندما تنجح؟",
+      "psyCard2Desc": "التحليل النفسي لسلوك المحيطين عند تحقيق النجاح وكيف تحافظ على سلامك النفسي.",
+      "psyCard3Title": "كيف تبني ثقة حقيقية بنفسك من الداخل؟",
+      "psyCard3Desc": "التحرر من الرغبة في إرضاء الآخرين وصياغة تقدير ذاتي راسخ لا تهزه الآراء."
     }
   },
   "content": {
