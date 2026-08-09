@@ -28,6 +28,7 @@ function saveLanguage(lang) {
 let currentLang = getSavedLanguage();
 let currentThinkerId = 'all';
 let currentSearch = '';
+let activeThinkerFile = null;
 
 // Page specific translations
 const THINKERS_PAGE_TRANSLATIONS = {
@@ -99,6 +100,12 @@ function setLanguage(lang) {
   populateNavbarDropdown();
   populateFilterTags();
   populateThinkers(currentThinkerId, currentSearch);
+
+  // If reader modal is currently open, re-render it in the newly selected language!
+  const modal = document.getElementById('thinkerModal');
+  if (modal && modal.classList.contains('active') && activeThinkerFile) {
+    openThinkerModalById(activeThinkerFile);
+  }
 }
 
 function initLanguageSelector() {
@@ -353,10 +360,41 @@ function initPageLogic() {
 
   // Initial thinker load from URL parameters
   const urlParams = new URLSearchParams(window.location.search);
-  const initialThinker = urlParams.get('thinker') || 'all';
-  currentThinkerId = initialThinker;
-  updateActiveTag(initialThinker);
+  const initialThinker = urlParams.get('thinker') || urlParams.get('bio') || urlParams.get('id') || 'all';
+  
+  const thinkersList = TIKTOK_DATA.content[currentLang].thinkers || [];
+  const matchingThinker = thinkersList.find(t => t.id === initialThinker);
+
+  if (matchingThinker) {
+    // If param matches a specific thinker ID, auto-open thinker modal
+    currentThinkerId = 'all';
+    updateActiveTag('all');
+    setTimeout(() => {
+      openThinkerModalById(matchingThinker.id);
+    }, 150);
+  } else {
+    currentThinkerId = initialThinker;
+    updateActiveTag(initialThinker);
+  }
 }
+
+// Global helper to open thinker modal by ID or index
+window.openThinkerModalById = function(idOrIndex) {
+  const thinkersList = TIKTOK_DATA.content[currentLang].thinkers || [];
+  let thinkerIndex = -1;
+
+  if (typeof idOrIndex === 'number') {
+    thinkerIndex = idOrIndex;
+  } else {
+    thinkerIndex = thinkersList.findIndex(t => t.id === idOrIndex || t.name.toLowerCase().includes(idOrIndex.toLowerCase()));
+  }
+
+  if (thinkerIndex !== -1) {
+    openThinkerModalWithIndex(thinkerIndex);
+  }
+};
+
+let openThinkerModalWithIndex = function() {};
 
 // --- Thinker Biography Modal Logic ---
 
@@ -576,6 +614,16 @@ function setupThinkerModal(thinkers) {
       `;
     }).join('');
 
+    // Scroll reader container to top!
+    const scrollContainer = modal.querySelector('.reader-scroll-container');
+    if (scrollContainer) scrollContainer.scrollTop = 0;
+
+    // Track active thinker ID & update URL search parameter
+    activeThinkerFile = thinker.id;
+    const url = new URL(window.location.href);
+    url.searchParams.set('thinker', thinker.id);
+    window.history.pushState({}, '', url);
+
     // Show Modal & Disable Background Scroll
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -585,6 +633,13 @@ function setupThinkerModal(thinkers) {
     const closeModal = () => {
       modal.classList.remove('active');
       document.body.style.overflow = '';
+      activeThinkerFile = null;
+      
+      const cleanUrl = new URL(window.location.href);
+      cleanUrl.searchParams.delete('thinker');
+      cleanUrl.searchParams.delete('bio');
+      cleanUrl.searchParams.delete('id');
+      window.history.pushState({}, '', cleanUrl);
     };
     
     closeBtn.onclick = closeModal;
@@ -596,6 +651,8 @@ function setupThinkerModal(thinkers) {
       }
     };
   }
+
+  openThinkerModalWithIndex = openThinkerModal;
 
   // Bind Card Click to open reader modal
   cards.forEach(card => {
