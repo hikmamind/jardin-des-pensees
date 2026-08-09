@@ -7,11 +7,16 @@ const ICONS = {
 
 const LANG_METADATA = {
   ar: { label: "العربية", code: "ar" },
-  fr: { label: "Français", code: "fr" }
+  fr: { label: "Français", code: "fr" },
+  en: { label: "English", code: "en" }
 };
 
 function getSavedLanguage() {
-  return localStorage.getItem('site_lang_v1') || localStorage.getItem('lang') || localStorage.getItem('preferredLang') || 'ar';
+  const saved = localStorage.getItem('site_lang_v1') || localStorage.getItem('lang') || localStorage.getItem('preferredLang');
+  if (saved && (saved === 'ar' || saved === 'fr' || saved === 'en')) {
+    return saved;
+  }
+  return 'ar';
 }
 
 function saveLanguage(lang) {
@@ -30,6 +35,11 @@ const THINKERS_PAGE_TRANSLATIONS = {
     searchPlaceholder: "Rechercher un philosophe...",
     noResults: "Aucun philosophe ne correspond à votre recherche.",
     bio: "L'histoire de la pensée humaine à travers ses plus illustres représentants."
+  },
+  en: {
+    searchPlaceholder: "Search for a thinker...",
+    noResults: "No thinkers found matching your search.",
+    bio: "The history of human thought through its most prominent figures."
   },
   ar: {
     searchPlaceholder: "ابحث عن فيلسوف...",
@@ -273,8 +283,8 @@ function populateThinkers(thinkerId = 'all', keyword = '') {
           <a class="card-action-link" data-index="${index}">
             <span>${readLabel}</span>
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
+              <line x1="${currentLang === 'ar' ? '19' : '5'}" y1="12" x2="${currentLang === 'ar' ? '5' : '19'}" y2="12"></line>
+              <polyline points="${currentLang === 'ar' ? '12 19 5 12 12 5' : '12 5 19 12 12 19'}"></polyline>
             </svg>
           </a>
         </div>

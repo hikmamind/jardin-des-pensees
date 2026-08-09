@@ -2,11 +2,16 @@ import TIKTOK_DATA from '../data_v11.js';
 
 const LANG_METADATA = {
   ar: { label: "العربية", code: "ar" },
-  fr: { label: "Français", code: "fr" }
+  fr: { label: "Français", code: "fr" },
+  en: { label: "English", code: "en" }
 };
 
 function getSavedLanguage() {
-  return localStorage.getItem('site_lang_v1') || localStorage.getItem('lang') || localStorage.getItem('preferredLang') || 'ar';
+  const saved = localStorage.getItem('site_lang_v1') || localStorage.getItem('lang') || localStorage.getItem('preferredLang');
+  if (saved && (saved === 'ar' || saved === 'fr' || saved === 'en')) {
+    return saved;
+  }
+  return 'ar';
 }
 
 function saveLanguage(lang) {

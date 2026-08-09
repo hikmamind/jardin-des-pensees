@@ -7,11 +7,16 @@ const ICONS = {
 
 const LANG_METADATA = {
   ar: { label: "العربية", code: "ar" },
-  fr: { label: "Français", code: "fr" }
+  fr: { label: "Français", code: "fr" },
+  en: { label: "English", code: "en" }
 };
 
 function getSavedLanguage() {
-  return localStorage.getItem('site_lang_v1') || localStorage.getItem('lang') || localStorage.getItem('preferredLang') || 'ar';
+  const saved = localStorage.getItem('site_lang_v1') || localStorage.getItem('lang') || localStorage.getItem('preferredLang');
+  if (saved && (saved === 'ar' || saved === 'fr' || saved === 'en')) {
+    return saved;
+  }
+  return 'ar';
 }
 
 function saveLanguage(lang) {
@@ -31,12 +36,26 @@ const ARTICLES_PAGE_TRANSLATIONS = {
     noResults: "Aucun article ne correspond à votre recherche.",
     bio: "Stoïcisme, philosophie classique, psychologie et croissance personnelle."
   },
+  en: {
+    searchPlaceholder: "Search for an article...",
+    noResults: "No articles found matching your search.",
+    bio: "Stoicism, classical philosophy, psychology, and personal growth."
+  },
   ar: {
     searchPlaceholder: "ابحث عن مقال...",
     noResults: "لم يتم العثور على أي مقالات تطابق بحثك.",
     bio: "الرواقية، الفلسفة الكلاسيكية، علم النفس والتنمية الذاتية."
   }
 };
+
+function getArticleUrl(file) {
+  if (!file) return './why-people-respect-silent-person.html';
+  const filesInFilesDir = ['self-discipline.html', 'stop-overthinking.html', 'stoicisme-force-calme.html', 'absurde-camus.html'];
+  if (filesInFilesDir.includes(file)) {
+    return `../files/${file}`;
+  }
+  return `./${file}`;
+}
 
 // --- Language Engine ---
 function setLanguage(lang) {
@@ -181,23 +200,31 @@ function initNavbarScroll() {
 function populateArticles(category = 'all', keyword = '') {
   const container = document.getElementById('articlesList');
   const noResultsEl = document.getElementById('noResults');
-  let articles = TIKTOK_DATA.content[currentLang].articles;
-  const readLabel = TIKTOK_DATA.ui[currentLang].readArticle || (currentLang === 'ar' ? "اقرأ المقال" : "Lire l'article");
-  const featuredLabel = TIKTOK_DATA.ui[currentLang].featured || (currentLang === 'ar' ? "مميز" : "En vedette");
+  let articles = (TIKTOK_DATA.content[currentLang] && TIKTOK_DATA.content[currentLang].articles) 
+    ? TIKTOK_DATA.content[currentLang].articles 
+    : (TIKTOK_DATA.content['ar'] ? TIKTOK_DATA.content['ar'].articles : []);
+
+  const readLabel = (TIKTOK_DATA.ui[currentLang] && TIKTOK_DATA.ui[currentLang].readArticle) 
+    ? TIKTOK_DATA.ui[currentLang].readArticle 
+    : (currentLang === 'ar' ? "اقرأ المقال" : currentLang === 'fr' ? "Lire l'article" : "Read article");
+
+  const featuredLabel = (TIKTOK_DATA.ui[currentLang] && TIKTOK_DATA.ui[currentLang].featured) 
+    ? TIKTOK_DATA.ui[currentLang].featured 
+    : (currentLang === 'ar' ? "مميز" : currentLang === 'fr' ? "En vedette" : "Featured");
 
   if (!container || !articles) return;
 
   // 1. Filter by category
-  if (category !== 'all') {
+  if (category && category !== 'all') {
     articles = articles.filter(art => art.category === category);
   }
 
   // 2. Filter by search keyword
-  if (keyword.trim() !== '') {
+  if (keyword && keyword.trim() !== '') {
     const term = keyword.toLowerCase().trim();
     articles = articles.filter(art => 
-      art.title.toLowerCase().includes(term) || 
-      art.desc.toLowerCase().includes(term)
+      (art.title && art.title.toLowerCase().includes(term)) || 
+      (art.desc && art.desc.toLowerCase().includes(term))
     );
   }
 
@@ -210,12 +237,22 @@ function populateArticles(category = 'all', keyword = '') {
     if (noResultsEl) noResultsEl.style.display = 'none';
 
     container.innerHTML = articles.map((art) => {
-      const targetUrl = art.file ? art.file : `../files/${art.file || 'stop-overthinking.html'}`;
+      const targetUrl = getArticleUrl(art.file);
       const badgeHtml = art.featured ? `<span class="card-featured-badge">${featuredLabel}</span>` : "";
-      const categoryLabel = TIKTOK_DATA.ui[currentLang][art.category] || art.category;
       
-      const imageHtml = art.image ? `
-        <img src="../${art.image}" alt="${art.title}" class="article-image">
+      const categoryKey = art.category;
+      let categoryLabel = categoryKey;
+      if (TIKTOK_DATA.ui[currentLang]) {
+        if (categoryKey === 'philosophy') categoryLabel = TIKTOK_DATA.ui[currentLang].philosophy || "الفلسفة";
+        else if (categoryKey === 'psychology') categoryLabel = TIKTOK_DATA.ui[currentLang].psychologySub || "علم النفس";
+        else if (categoryKey === 'development') categoryLabel = TIKTOK_DATA.ui[currentLang].development || "تطوير الذات";
+        else if (categoryKey === 'history') categoryLabel = TIKTOK_DATA.ui[currentLang].history || "تاريخ الأفكار";
+        else if (TIKTOK_DATA.ui[currentLang][categoryKey]) categoryLabel = TIKTOK_DATA.ui[currentLang][categoryKey];
+      }
+      
+      const imageSrc = art.image ? (art.image.startsWith('../') ? art.image : `../${art.image}`) : '';
+      const imageHtml = imageSrc ? `
+        <img src="${imageSrc}" alt="${art.title}" class="article-image">
       ` : `
         <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.02)">
           <svg viewBox="0 0 24 24" width="32" height="32" stroke="var(--accent-gold)" fill="none" stroke-width="1.5" style="opacity: 0.3;">
@@ -345,12 +382,13 @@ function initPageLogic() {
   const initialCategory = urlParams.get('category') || 'all';
   currentCategory = initialCategory;
   updateActiveTag(initialCategory);
+  populateArticles(currentCategory, currentSearch);
 
   // 5. Auto-open specific article from URL param (?article=filename.html)
   const articleParam = urlParams.get('article');
   if (articleParam) {
     setTimeout(() => {
-      const allArticles = TIKTOK_DATA.content[currentLang].articles;
+      const allArticles = (TIKTOK_DATA.content[currentLang] && TIKTOK_DATA.content[currentLang].articles) ? TIKTOK_DATA.content[currentLang].articles : [];
       const matchIdx = allArticles.findIndex(a => a.file === articleParam);
       if (matchIdx !== -1) {
         const cards = document.querySelectorAll('.article-card');

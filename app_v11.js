@@ -16,11 +16,16 @@ const ICONS = {
 // Language Metadata
 const LANG_METADATA = {
   ar: { label: "العربية", code: "ar" },
-  fr: { label: "Français", code: "fr" }
+  fr: { label: "Français", code: "fr" },
+  en: { label: "English", code: "en" }
 };
 
 function getSavedLanguage() {
-  return localStorage.getItem('site_lang_v1') || localStorage.getItem('lang') || localStorage.getItem('preferredLang') || 'ar';
+  const saved = localStorage.getItem('site_lang_v1') || localStorage.getItem('lang') || localStorage.getItem('preferredLang');
+  if (saved && (saved === 'ar' || saved === 'fr' || saved === 'en')) {
+    return saved;
+  }
+  return 'ar';
 }
 
 function saveLanguage(lang) {
@@ -34,6 +39,7 @@ let currentQuoteIndex = -1;
 
 // --- Language/Translation Engine ---
 function setLanguage(lang) {
+  if (!['ar', 'fr', 'en'].includes(lang)) lang = 'ar';
   currentLang = lang;
   saveLanguage(lang);
   
@@ -78,7 +84,9 @@ function setLanguage(lang) {
   if (countEl) countEl.textContent = count;
   const countLabel = document.getElementById('allArticlesCountLabel');
   if (countLabel) {
-    countLabel.textContent = lang === 'ar' ? `عرض كافة المقالات (${count})` : `Voir tous les articles (${count})`;
+    countLabel.textContent = lang === 'ar' ? `عرض كافة المقالات (${count}) ←` : 
+                             lang === 'fr' ? `Voir tous les articles (${count}) →` : 
+                             `View all articles (${count}) →`;
   }
 
   // Translate input placeholders
@@ -275,8 +283,8 @@ function populateThinkers() {
         <a class="card-action-link" style="pointer-events: none;">
           <span>${readBioLabel}</span>
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
+            <line x1="${currentLang === 'ar' ? '19' : '5'}" y1="12" x2="${currentLang === 'ar' ? '5' : '19'}" y2="12"></line>
+            <polyline points="${currentLang === 'ar' ? '12 19 5 12 12 5' : '12 5 19 12 12 19'}"></polyline>
           </svg>
         </a>
       </div>
@@ -297,10 +305,9 @@ function populateRecentArticlesHome() {
   const container = document.getElementById('recentArticlesGrid');
   if (!container) return;
 
-  const isAr = currentLang === 'ar';
-  const readLabel = isAr ? 'اقرأ المقال ←' : 'Lire l\'article →';
+  const readLabel = (currentLang === 'ar') ? 'اقرأ المقال ←' : (currentLang === 'fr') ? 'Lire l\'article →' : 'Read article →';
 
-  const articlesData = isAr ? [
+  const articlesData = (currentLang === 'ar') ? [
     {
       title: 'الرواقية: فلسفة القوة والهدوء الداخلي',
       category: 'الرواقية',
@@ -347,7 +354,7 @@ function populateRecentArticlesHome() {
       url: './articles/why-people-respect-silent-person.html'
     },
     {
-      title: 'لماذا يبتعد الناس عنك عندما تنجح؟',
+      title: 'لماذا يبتعد الناس عنك عندما تبدأ بالنجاح؟',
       category: 'علم النفس',
       categoryColor: '#60A5FA',
       categoryBg: 'rgba(96, 165, 250, 0.15)',
@@ -355,7 +362,7 @@ function populateRecentArticlesHome() {
       desc: 'التحليل النفسي لسلوك المحيطين عند تحقيق النجاح، وديناميكيات الحسد، وكيف تحافظ على سلامك الداخلي.',
       url: './articles/why-people-distance-when-you-succeed.html'
     }
-  ] : [
+  ] : (currentLang === 'fr') ? [
     {
       title: 'Le Stoïcisme : Philosophie de la Force et du Calme',
       category: 'Stoïcisme',
@@ -410,6 +417,61 @@ function populateRecentArticlesHome() {
       desc: 'Comprendre les dynamiques de l\'envie, la projection psychologique et comment préserver sa paix intérieure.',
       url: './articles/why-people-distance-when-you-succeed.html'
     }
+  ] : [
+    {
+      title: 'Stoicism: A Philosophy of Strength and Inner Calm',
+      category: 'Stoicism',
+      categoryColor: '#34D399',
+      categoryBg: 'rgba(52, 211, 153, 0.15)',
+      readTime: '⏱️ 6 min',
+      desc: 'A practical guide to applying the dichotomy of control, Amor Fati, and building an unshakeable inner fortress.',
+      url: './files/stoicisme-force-calme.html'
+    },
+    {
+      title: 'How to Stop Overthinking and Continuous Anxiety?',
+      category: 'Psychology',
+      categoryColor: '#60A5FA',
+      categoryBg: 'rgba(96, 165, 250, 0.15)',
+      readTime: '⏱️ 5 min',
+      desc: 'Proven psychological strategies to break the ruminative loop and regain peaceful clarity in the present moment.',
+      url: './files/stop-overthinking.html'
+    },
+    {
+      title: 'Self-Discipline and Willpower According to the Ancients',
+      category: 'Self-Development',
+      categoryColor: '#FBBF24',
+      categoryBg: 'rgba(251, 191, 36, 0.15)',
+      readTime: '⏱️ 7 min',
+      desc: 'Teachings of Marcus Aurelius and Seneca to master impulses and build unwavering daily habits.',
+      url: './files/self-discipline.html'
+    },
+    {
+      title: 'The Absurd and Freedom in Albert Camus',
+      category: 'Existentialism',
+      categoryColor: '#A78BFA',
+      categoryBg: 'rgba(167, 139, 250, 0.15)',
+      readTime: '⏱️ 6 min',
+      desc: 'How to create meaning and lucid revolt in a silent universe? Camus’ inspiring life philosophy.',
+      url: './files/absurde-camus.html'
+    },
+    {
+      title: 'Why Do People Respect a Silent Person?',
+      category: 'Psychology',
+      categoryColor: '#60A5FA',
+      categoryBg: 'rgba(96, 165, 250, 0.15)',
+      readTime: '⏱️ 5 min',
+      desc: 'The power of restraint, mystery, and self-mastery in forging authentic charisma and self-respect.',
+      url: './articles/why-people-respect-silent-person.html'
+    },
+    {
+      title: 'Why Do People Distance Themselves When You Succeed?',
+      category: 'Psychology',
+      categoryColor: '#60A5FA',
+      categoryBg: 'rgba(96, 165, 250, 0.15)',
+      readTime: '⏱️ 6 min',
+      desc: 'Understanding the psychology of envy, projection, and how to safeguard your inner peace.',
+      url: './articles/why-people-distance-when-you-succeed.html'
+    }
   ];
 
   container.innerHTML = articlesData.map(item => `
@@ -433,10 +495,9 @@ function populateAudioHome() {
   const container = document.getElementById('audioCardsGrid');
   if (!container) return;
 
-  const isAr = currentLang === 'ar';
-  const listenLabel = isAr ? '▶ استمع الآن' : '▶ Écouter';
+  const listenLabel = (currentLang === 'ar') ? '▶ استمع الآن' : (currentLang === 'fr') ? '▶ Écouter' : '▶ Listen now';
 
-  const audioData = isAr ? [
+  const audioData = (currentLang === 'ar') ? [
     {
       title: 'الغريب',
       author: 'ألبير كامو',
@@ -458,7 +519,7 @@ function populateAudioHome() {
       desc: 'رحلة ملهمة لراعٍ أندلسي يبحث عن أسطورته الذاتية وتحقيق غايته في الحياة.',
       image: 'audio_alchemist_cover.jpg'
     }
-  ] : [
+  ] : (currentLang === 'fr') ? [
     {
       title: 'L\'Étranger',
       author: 'Albert Camus',
@@ -478,6 +539,28 @@ function populateAudioHome() {
       author: 'Paulo Coelho',
       duration: '⏱️ 13 min',
       desc: 'La quête initiatique d\'un berger à la recherche de sa Légende Personnelle.',
+      image: 'audio_alchemist_cover.jpg'
+    }
+  ] : [
+    {
+      title: 'The Stranger',
+      author: 'Albert Camus',
+      duration: '⏱️ 16 min',
+      desc: 'Camus\' masterpiece exploring existential absurdity, emotional truth, and personal honesty.',
+      image: 'audio_etranger_cover.jpg'
+    },
+    {
+      title: 'The Little Prince',
+      author: 'Antoine de Saint-Exupéry',
+      duration: '⏱️ 12 min',
+      desc: 'A timeless, poetic tale on looking at the world with the heart, because what is essential is invisible to the eye.',
+      image: 'audio_petit_prince_cover.jpg'
+    },
+    {
+      title: 'The Alchemist',
+      author: 'Paulo Coelho',
+      duration: '⏱️ 13 min',
+      desc: 'The inspiring journey of an Andalusian shepherd boy seeking his Personal Legend.',
       image: 'audio_alchemist_cover.jpg'
     }
   ];
