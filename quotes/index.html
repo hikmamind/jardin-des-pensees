@@ -689,106 +689,18 @@
         </div>
       </section>
 
-      <!-- Dynamic Quote Generator & Deep Wisdom Study Section -->
-      <section class="wisdom-study-section" id="wisdomSection" style="margin-bottom: 50px;">
+      <!-- Dynamic Quote Generator Card -->
+      <div class="wisdom-card" id="wisdomSection" style="max-width: 800px; margin: 0 auto 50px; background: var(--card-bg); border: 1px solid var(--card-border); padding: 40px; border-radius: 24px; text-align: center; box-shadow: 0 15px 40px var(--shadow-color); position: relative; overflow: hidden;">
+        <span class="quote-symbol" style="font-size: 4rem; color: var(--accent-gold); opacity: 0.3; font-family: Georgia, serif; line-height: 1; display: block; margin-bottom: 10px;">“</span>
         
-        <!-- Main Quote Box -->
-        <div class="wisdom-card" style="max-width: 900px; margin: 0 auto 30px; background: var(--card-bg); border: 1px solid var(--card-border); padding: 40px 30px; border-radius: 24px; text-align: center; box-shadow: 0 15px 40px var(--shadow-color); position: relative; overflow: hidden;">
-          <span class="quote-symbol" style="font-size: 4rem; color: var(--accent-gold); opacity: 0.25; font-family: Georgia, serif; line-height: 1; display: block; margin-bottom: 10px;">“</span>
-          
-          <p class="wisdom-text" id="wisdomText" style="font-size: 1.5rem; font-style: italic; line-height: 1.7; color: var(--text-primary); margin-bottom: 20px; font-family: 'Playfair Display', 'Amiri', serif; min-height: 70px; transition: opacity 0.3s ease;">
-            "ما يقلق الناس ليس الأشياء في حد ذاتها، بل الأحكام التي يطلقونها عليها."
-          </p>
-
-          <div style="display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 25px;">
-            <img src="../quote_epictetus.jpg" id="wisdomAuthorImg" alt="إبيكتيتوس" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-gold);">
-            <span class="wisdom-author" id="wisdomAuthor" style="font-size: 1rem; font-weight: 700; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 1px;">
-              — إبيكتيتوس (الرواقية)
-            </span>
-          </div>
-          
-          <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
-            <button class="submit-btn" id="nextWisdomBtn" style="padding: 12px 28px; display: inline-flex; align-items: center; gap: 8px; font-weight: 700;">
-              <span id="generateBtnLabel" data-i18n="generateBtn">توليد حكمة أخرى</span>
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>
-            </button>
-            <button class="submit-btn" id="copyWisdomBtn" style="padding: 12px 24px; background: rgba(223, 177, 91, 0.15); color: var(--accent-gold); border: 1px solid var(--accent-gold); display: inline-flex; align-items: center; gap: 8px; font-weight: 700;">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-              </svg>
-              <span id="copyWisdomBtnLabel">نسخ الاقتباس</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- 4 Quad Analysis Cards for Current Wisdom -->
-        <div class="quote-details-quad-grid" style="max-width: 1100px; margin: 0 auto 30px;">
-          <!-- Meaning Card -->
-          <div class="quote-detail-card">
-            <div class="quote-detail-header">
-              <span class="quote-detail-icon">💡</span>
-              <h4 class="quote-detail-title" id="mainMeaningTitle">معنى الاقتباس</h4>
-            </div>
-            <p class="quote-detail-desc" id="wisdomMeaning">
-              القلق والتوتر لا ينبعان من الأحداث الخارجية، بل من كيفية تفسيرنا لها ونظرتنا إليها.
-            </p>
-            <a href="../thinkers/" class="quote-detail-link" id="mainMeaningLink">اقرأ المزيد &larr;</a>
-          </div>
-
-          <!-- Philosophy Card -->
-          <div class="quote-detail-card">
-            <div class="quote-detail-header">
-              <span class="quote-detail-icon">📖</span>
-              <h4 class="quote-detail-title" id="mainPhilosophyTitle">التفسير الفلسفي</h4>
-            </div>
-            <p class="quote-detail-desc" id="wisdomPhilosophy">
-              يرى إبيكتيتوس أن مفتاح الحرية النفسية هو التمييز بين ما نتحكم فيه (أفكارنا وأحكامنا) وما لا نتحكم فيه (الظروف الخارجية).
-            </p>
-            <a href="../thinkers/" class="quote-detail-link" id="mainPhilosophyLink">اقرأ المزيد &larr;</a>
-          </div>
-
-          <!-- Lessons Card -->
-          <div class="quote-detail-card">
-            <div class="quote-detail-header">
-              <span class="quote-detail-icon">🌱</span>
-              <h4 class="quote-detail-title" id="mainLessonsTitle">ماذا نتعلم؟</h4>
-            </div>
-            <ul class="quote-detail-list" id="wisdomLessons">
-              <li class="quote-detail-list-item">تحمل مسؤولية مشاعرك.</li>
-              <li class="quote-detail-list-item">غير طريقة تفكيرك لتتغير حياتك.</li>
-              <li class="quote-detail-list-item">ركز على ردود أفعالك.</li>
-              <li class="quote-detail-list-item">الخوف وهم من صنع أفكارك.</li>
-            </ul>
-            <a href="../articles/" class="quote-detail-link" id="mainLessonsLink">اقرأ المزيد &larr;</a>
-          </div>
-
-          <!-- Application Card -->
-          <div class="quote-detail-card">
-            <div class="quote-detail-header">
-              <span class="quote-detail-icon">🧠</span>
-              <h4 class="quote-detail-title" id="mainApplicationTitle">تطبيق عملي</h4>
-            </div>
-            <p class="quote-detail-desc" id="wisdomApplication">
-              في المرة القادمة التي تشعر فيها بالغضب، توقف لثوانٍ واسأل نفسك: هل المشكلة في الحدث نفسه، أم في تفسيري له؟
-            </p>
-            <a href="../articles/" class="quote-detail-link" id="mainApplicationLink">اقرأ المزيد &larr;</a>
-          </div>
-        </div>
-
-        <!-- Reflection Box for Current Wisdom -->
-        <div class="bottom-reflection-card" style="max-width: 800px; margin: 0 auto;">
-          <div class="reflection-badge-icon">?</div>
-          <h4 class="reflection-title" id="mainReflectionTitle">سؤال للتأمل</h4>
-          <p class="reflection-text" id="wisdomReflection">
-            ما هو الحدث الأخير الذي تسبب في توترك؟ وهل كان التوتر بسبب الحدث أم بسبب توقعاتك؟
-          </p>
-          <a href="../#contactSection" class="reflection-btn" id="mainReflectionBtn" style="text-decoration: none; text-align: center; display: inline-block;">
-            شارك إجابتك في التعليقات
-          </a>
-        </div>
-
-      </section>
+        <p class="wisdom-text" id="wisdomText" style="font-size: 1.4rem; font-style: italic; line-height: 1.6; color: var(--text-primary); margin-bottom: 20px; font-family: 'Playfair Display', 'Amiri', serif; min-height: 80px; transition: opacity 0.3s ease;">...</p>
+        <span class="wisdom-author" id="wisdomAuthor" style="font-size: 0.95rem; font-weight: 700; color: var(--accent-gold); text-transform: uppercase; tracking: 1px; display: block; margin-bottom: 30px;">...</span>
+        
+        <button class="submit-btn" id="nextWisdomBtn" style="padding: 10px 25px; margin: 0 auto; display: flex; align-items: center; gap: 8px;">
+          <span data-i18n="generateBtn">توليد حكمة أخرى</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>
+        </button>
+      </div>
 
       <!-- Philosophical Calendar Banner & Monthly Artwork Carousel in Quotes Section -->
       <section class="quotes-calendar-banner" style="margin: 40px 0 50px; background: linear-gradient(135deg, rgba(223, 177, 91, 0.12), rgba(18, 26, 21, 0.95)); border: 1px solid var(--accent-gold); border-radius: 24px; padding: 35px 30px; box-shadow: 0 15px 40px var(--shadow-color);">
@@ -957,19 +869,19 @@
         <div class="reader-breadcrumbs">
           <span data-i18n="home">الرئيسية</span> &rsaquo; 
           <a href="#" style="color: inherit; text-decoration: none;" data-i18n="quotes">اقتباسات</a> &rsaquo; 
-          <span id="modalQuoteAuthorBreadcrumb">إبيكتيتوس</span>
+          <span id="modalQuoteAuthorBreadcrumb">...</span>
         </div>
 
         <!-- Split Quote Hero Section -->
         <div class="quote-modal-hero">
           <div class="quote-modal-hero-left">
-            <img src="../quote_epictetus.jpg" id="modalQuoteAuthorImage" alt="إبيكتيتوس">
+            <img src="" id="modalQuoteAuthorImage" alt="Portrait">
           </div>
           <div class="quote-modal-hero-right">
             <span class="quote-modal-symbol-top">“</span>
-            <p class="quote-modal-text" id="modalQuoteText">"ما يقلق الناس ليس الأشياء في حد ذاتها، بل الأحكام التي يطلقونها عليها."</p>
+            <p class="quote-modal-text" id="modalQuoteText">...</p>
             <span class="quote-modal-symbol-bottom">”</span>
-            <div class="quote-modal-author" id="modalQuoteAuthor">— إبيكتيتوس (الرواقية)</div>
+            <div class="quote-modal-author" id="modalQuoteAuthor">...</div>
           </div>
         </div>
 
@@ -981,7 +893,7 @@
               <span class="quote-detail-icon">💡</span>
               <h4 class="quote-detail-title" id="meaningTitle">معنى الاقتباس</h4>
             </div>
-            <p class="quote-detail-desc" id="modalQuoteMeaning">القلق والتوتر لا ينبعان من الأحداث الخارجية، بل من كيفية تفسيرنا لها ونظرتنا إليها.</p>
+            <p class="quote-detail-desc" id="modalQuoteMeaning">...</p>
             <a href="../thinkers/" class="quote-detail-link" id="meaningLink">اقرأ المزيد &larr;</a>
           </div>
 
@@ -991,7 +903,7 @@
               <span class="quote-detail-icon">📖</span>
               <h4 class="quote-detail-title" id="philosophyTitle">التفسير الفلسفي</h4>
             </div>
-            <p class="quote-detail-desc" id="modalQuotePhilosophy">يرى إبيكتيتوس أن مفتاح الحرية النفسية هو التمييز بين ما نتحكم فيه (أفكارنا وأحكامنا) وما لا نتحكم فيه (الظروف الخارجية).</p>
+            <p class="quote-detail-desc" id="modalQuotePhilosophy">...</p>
             <a href="../thinkers/" class="quote-detail-link" id="philosophyLink">اقرأ المزيد &larr;</a>
           </div>
 
@@ -1002,10 +914,7 @@
               <h4 class="quote-detail-title" id="lessonsTitle">ماذا نتعلم؟</h4>
             </div>
             <ul class="quote-detail-list" id="modalQuoteLessons">
-              <li class="quote-detail-list-item">تحمل مسؤولية مشاعرك.</li>
-              <li class="quote-detail-list-item">غير طريقة تفكيرك لتتغير حياتك.</li>
-              <li class="quote-detail-list-item">ركز على ردود أفعالك.</li>
-              <li class="quote-detail-list-item">الخوف وهم من صنع أفكارك.</li>
+              <!-- Dynamically populated -->
             </ul>
             <a href="../articles/" class="quote-detail-link" id="lessonsLink">اقرأ المزيد &larr;</a>
           </div>
@@ -1016,7 +925,7 @@
               <span class="quote-detail-icon">🧠</span>
               <h4 class="quote-detail-title" id="applicationTitle">تطبيق عملي</h4>
             </div>
-            <p class="quote-detail-desc" id="modalQuoteApplication">في المرة القادمة التي تشعر فيها بالغضب، توقف لثوانٍ واسأل نفسك: هل المشكلة في الحدث نفسه، أم في تفسيري له؟</p>
+            <p class="quote-detail-desc" id="modalQuoteApplication">...</p>
             <a href="../articles/" class="quote-detail-link" id="applicationLink">اقرأ المزيد &larr;</a>
           </div>
         </div>
@@ -1027,7 +936,7 @@
           <div class="bottom-reflection-card">
             <div class="reflection-badge-icon">?</div>
             <h4 class="reflection-title" id="reflectionTitle">سؤال للتأمل</h4>
-            <p class="reflection-text" id="modalQuoteReflection">ما هو الحدث الأخير الذي تسبب في توترك؟ وهل كان التوتر بسبب الحدث أم بسبب توقعاتك؟</p>
+            <p class="reflection-text" id="modalQuoteReflection">...</p>
             <button class="reflection-btn" id="reflectionBtn">شارك إجابتك في التعليقات</button>
           </div>
 
@@ -1047,8 +956,8 @@
           <div class="bottom-similar-quote-card">
             <span class="quote-card-ornament">❝</span>
             <h4 class="similar-quote-title" id="similarQuoteTitle">اقتباس مشابه</h4>
-            <p class="similar-quote-text" id="modalQuoteSimilarText">"لا تطلب أن تحدث الأشياء كما ترغب، بل ارغب في أن تحدث كما تحدث وسوف تكون هادئاً."</p>
-            <div class="quote-modal-author" id="modalQuoteSimilarAuthor" style="font-size: 0.9rem; margin-top: 5px;">— إبيكتيتوس</div>
+            <p class="similar-quote-text" id="modalQuoteSimilarText">...</p>
+            <div class="quote-modal-author" id="modalQuoteSimilarAuthor" style="font-size: 0.9rem; margin-top: 5px;">...</div>
           </div>
         </div>
 
