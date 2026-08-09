@@ -6,6 +6,12 @@ const LANG_METADATA = {
   en: { label: "English", code: "en" }
 };
 
+const DAYS_OF_WEEK = {
+  ar: ["الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"],
+  fr: ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"],
+  en: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+};
+
 function getSavedLanguage() {
   const saved = localStorage.getItem('site_lang_v1') || localStorage.getItem('lang') || localStorage.getItem('preferredLang');
   if (saved && (saved === 'ar' || saved === 'fr' || saved === 'en')) {
@@ -23,7 +29,7 @@ function saveLanguage(lang) {
 let currentLang = getSavedLanguage();
 let activeTheme = localStorage.getItem('theme') || 'dark';
 let activeMonthIndex = new Date().getMonth();
-let currentModalQuoteData = null;
+let activeModalDayData = null; // { day, monthIdx }
 
 const MONTHS_DATA = {
   ar: [
@@ -155,14 +161,34 @@ function showToast(msg) {
   }, 2500);
 }
 
+// Helper to get weekday name for 2026
+function getWeekdayName(day, monthIdx) {
+  const date = new Date(2026, monthIdx, day);
+  const dayIdx = date.getDay();
+  return (DAYS_OF_WEEK[currentLang] || DAYS_OF_WEEK.ar)[dayIdx];
+}
+
 // Initialize Language Selector
 function initLanguageSelector() {
   const activeLangName = document.getElementById('activeLangName');
   const langDropdown = document.getElementById('langDropdown');
   const langBtn = document.getElementById('langBtn');
   
-  if (activeLangName) activeLangName.textContent = (LANG_METADATA[currentLang] && LANG_METADATA[currentLang].label) || "العربية";
+  if (activeLangName) {
+    activeLangName.textContent = (LANG_METADATA[currentLang] && LANG_METADATA[currentLang].label) || "العربية";
+  }
   
+  if (langDropdown) {
+    const langOpts = langDropdown.querySelectorAll('.lang-opt');
+    langOpts.forEach(o => {
+      if (o.getAttribute('data-lang') === currentLang) {
+        o.classList.add('active');
+      } else {
+        o.classList.remove('active');
+      }
+    });
+  }
+
   if (langBtn && langDropdown) {
     langBtn.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -179,7 +205,9 @@ function initLanguageSelector() {
         const selectedLang = opt.getAttribute('data-lang');
         currentLang = selectedLang;
         saveLanguage(currentLang);
-        if (activeLangName) activeLangName.textContent = (LANG_METADATA[currentLang] && LANG_METADATA[currentLang].label) || "العربية";
+        if (activeLangName) {
+          activeLangName.textContent = (LANG_METADATA[currentLang] && LANG_METADATA[currentLang].label) || "العربية";
+        }
         
         langOpts.forEach(o => {
           if (o.getAttribute('data-lang') === currentLang) {
@@ -192,6 +220,11 @@ function initLanguageSelector() {
         applyLanguageDirection();
         translatePage();
         renderCalendar();
+
+        // If day modal is open, refresh it in the new language
+        if (activeModalDayData) {
+          openDayModal(activeModalDayData.day, activeModalDayData.monthIdx);
+        }
       });
     });
   }
@@ -313,12 +346,19 @@ function renderMonthBanner(idx) {
 }
 
 function getQuoteForDay(day, monthIdx) {
-  const quotes = TIKTOK_DATA.content[currentLang].quotes || [];
-  if (quotes.length === 0) return { text: "...", author: "...", reflection: "..." };
+  const quotes = (TIKTOK_DATA.content[currentLang] && TIKTOK_DATA.content[currentLang].quotes) || [];
+  if (quotes.length === 0) {
+    return {
+      text: currentLang === 'ar' ? 'الحكمة تبدأ بالمعرفة والهدوء.' : currentLang === 'en' ? 'Wisdom begins with knowledge and calm.' : 'La sagesse commence par la connaissance et la sérénité.',
+      author: currentLang === 'ar' ? 'حكمة ونور' : 'Hikma & Nour',
+      reflection: currentLang === 'ar' ? 'تأمل اليوم في بناء السلام الداخلي.' : currentLang === 'en' ? 'Reflect today on building inner peace.' : 'Méditez aujourd\'hui sur la paix intérieure et la maîtrise de soi.',
+      image: 'thinkers/images/epictete.jpg'
+    };
+  }
   const quoteIndex = (day + monthIdx * 7) % quotes.length;
   const q = quotes[quoteIndex];
   
-  const reflectionText = q.reflection || (currentLang === 'ar'
+  const reflectionText = q.reflection || q.reflectionQuestion || (currentLang === 'ar'
     ? `تأمل اليوم: كيف تجعل من هذا المعنى دليلاً عملياً في قراراتك وتعاملك مع الآخرين اليوم؟`
     : currentLang === 'en'
     ? `Today's reflection: How can you apply this insight to guide your choices and interactions today?`
@@ -328,7 +368,7 @@ function getQuoteForDay(day, monthIdx) {
     text: q.text,
     author: q.author,
     reflection: reflectionText,
-    image: q.image
+    image: q.image || 'thinkers/images/epictete.jpg'
   };
 }
 
@@ -343,17 +383,19 @@ function renderDaysGrid(monthIdx) {
   for (let day = 1; day <= month.days; day++) {
     const quoteObj = getQuoteForDay(day, monthIdx);
     const isToday = (monthIdx === today.getMonth() && day === today.getDate());
+    const weekday = getWeekdayName(day, monthIdx);
+
     const dayLabel = currentLang === 'ar'
-      ? `اليوم ${day} — ${month.name}`
+      ? `${weekday} ${day} — ${month.name}`
       : currentLang === 'en'
-      ? `${month.name} ${day}`
-      : `${day} ${month.name}`;
+      ? `${weekday}, ${month.name} ${day}`
+      : `${weekday} ${day} ${month.name}`;
 
     html += `
       <div class="day-item-card ${isToday ? 'is-today' : ''}" data-day="${day}" data-month="${monthIdx}">
         <div>
           <div class="day-card-number">${dayLabel}</div>
-          <div class="day-card-snippet">"${quoteObj.text}"</div>
+          <div class="day-card-snippet">« ${quoteObj.text} »</div>
         </div>
         <div class="day-card-author">— ${quoteObj.author}</div>
       </div>
@@ -379,7 +421,7 @@ function renderTodayHighlight() {
   const aEl = document.getElementById('todayAuthorText');
   const rEl = document.getElementById('todayReflectionText');
   
-  if (qEl) qEl.textContent = `"${todayQuote.text}"`;
+  if (qEl) qEl.textContent = `« ${todayQuote.text} »`;
   if (aEl) aEl.textContent = `— ${todayQuote.author}`;
   if (rEl) {
     const prefix = currentLang === 'ar' ? 'تأمل اليوم: ' : currentLang === 'en' ? "Today's Reflection: " : 'Méditation du jour : ';
@@ -418,19 +460,26 @@ function openDayModal(day, monthIdx) {
   const months = MONTHS_DATA[currentLang] || MONTHS_DATA.ar;
   const month = months[monthIdx];
   const quoteObj = getQuoteForDay(day, monthIdx);
+  const weekday = getWeekdayName(day, monthIdx);
 
-  currentModalQuoteData = quoteObj;
+  activeModalDayData = { day, monthIdx, quoteObj };
 
   const dayLabel = currentLang === 'ar'
-    ? `اليوم ${day} — شهر ${month.name}`
+    ? `${weekday} ${day} — شهر ${month.name}`
     : currentLang === 'en'
-    ? `${month.name} ${day} — Daily Meditation`
-    : `Jour ${day} — ${month.name}`;
+    ? `${weekday}, ${month.name} ${day}`
+    : `${weekday} ${day} ${month.name}`;
+
+  const reflectionPrefix = currentLang === 'ar'
+    ? '💡 تأمل اليوم: '
+    : currentLang === 'en'
+    ? "💡 Today's Meditation: "
+    : '💡 Méditation & Réflexion : ';
 
   document.getElementById('modalDayDate').textContent = dayLabel;
-  document.getElementById('modalDayQuote').textContent = `"${quoteObj.text}"`;
+  document.getElementById('modalDayQuote').textContent = `« ${quoteObj.text} »`;
   document.getElementById('modalDayAuthor').textContent = `— ${quoteObj.author}`;
-  document.getElementById('modalDayReflection').textContent = `💡 ${quoteObj.reflection}`;
+  document.getElementById('modalDayReflection').textContent = `${reflectionPrefix}${quoteObj.reflection}`;
 
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
@@ -441,6 +490,7 @@ function closeDayModal() {
   if (!modal) return;
   modal.classList.remove('active');
   document.body.style.overflow = '';
+  activeModalDayData = null;
 }
 
 // Navigation & Actions Wireup
@@ -492,9 +542,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const copyBtn = document.getElementById('modalCopyBtn');
   if (copyBtn) {
     copyBtn.addEventListener('click', () => {
-      if (!currentModalQuoteData) return;
-      const textToCopy = `« ${currentModalQuoteData.text} » — ${currentModalQuoteData.author}`;
-      const toastMsg = currentLang === 'ar' ? 'تم نسخ الاقتباس بنجاح!' : currentLang === 'en' ? 'Quote copied!' : 'Citation copiée !';
+      if (!activeModalDayData || !activeModalDayData.quoteObj) return;
+      const q = activeModalDayData.quoteObj;
+      const textToCopy = `« ${q.text} » — ${q.author}`;
+      const toastMsg = currentLang === 'ar' ? 'تم نسخ الاقتباس بنجاح!' : currentLang === 'en' ? 'Quote copied to clipboard!' : 'Citation copiée dans le presse-papiers !';
       
       navigator.clipboard.writeText(textToCopy).then(() => {
         showToast(toastMsg);
@@ -508,11 +559,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const shareBtn = document.getElementById('modalShareBtn');
   if (shareBtn) {
     shareBtn.addEventListener('click', () => {
-      if (!currentModalQuoteData) return;
-      const shareText = `"${currentModalQuoteData.text}" — ${currentModalQuoteData.author}`;
+      if (!activeModalDayData || !activeModalDayData.quoteObj) return;
+      const q = activeModalDayData.quoteObj;
+      const shareText = `« ${q.text} » — ${q.author}`;
       if (navigator.share) {
         navigator.share({
-          title: currentModalQuoteData.author,
+          title: q.author,
           text: shareText,
           url: window.location.href
         }).catch(() => {});
