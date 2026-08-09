@@ -6208,6 +6208,10 @@ textarea.form-control {
 }
 
 @media (max-width: 768px) {
+  .featured-article-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
   .thinker-spotlight-layout {
     grid-template-columns: 1fr !important;
     gap: 20px !important;

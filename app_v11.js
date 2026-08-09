@@ -70,10 +70,6 @@ function setLanguage(lang) {
   populateNavbarDropdown();
   populateThinkers();
   populateFaq();
-  displayNewWisdom(true);
-  
-  // Re-render current quiz screen
-  renderQuizScreen();
 }
 
 function updatePlaceholders() {
@@ -206,8 +202,11 @@ function animateCounter(elementId, targetStr) {
 // --- Dynamic Rendering of Sections ---
 function populateProfile() {
   const content = TIKTOK_DATA.content[currentLang];
-  document.getElementById('displayName').textContent = content.displayName;
-  document.getElementById('bio').textContent = content.bio;
+  if (!content) return;
+  const nameEl = document.getElementById('displayName');
+  if (nameEl) nameEl.textContent = content.displayName;
+  const bioEl = document.getElementById('bio');
+  if (bioEl) bioEl.textContent = content.bio;
 
   const followersCountEl = document.getElementById('followersCount');
   if (followersCountEl && followersCountEl.textContent === "0") {
@@ -222,7 +221,7 @@ function populateThinkers() {
   if (!container) return;
   const thinkers = TIKTOK_DATA.content[currentLang].thinkers;
   if (!thinkers) return;
-  const readBioLabel = TIKTOK_DATA.ui[currentLang].readBio || "Lire la biographie";
+  const readBioLabel = TIKTOK_DATA.ui[currentLang].discoverThinker || "Découvrir →";
   const featuredLabel = TIKTOK_DATA.ui[currentLang].featured || "En vedette";
 
   // Display exactly the 4 requested major thinkers: Nietzsche, Marc Aurèle, Sénèque, Camus
