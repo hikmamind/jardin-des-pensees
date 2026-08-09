@@ -6,7 +6,7 @@
   "main": "index.html",
   "scripts": {
     "dev": "npx -y http-server -p 3000 -c-1",
-    "build": "node -c data_v11.js app_v11.js articles/articles_v11.js thinkers/thinkers_v11.js"
+    "build": "node -c data_v11.js app_v11.js articles/articles_v11.js thinkers/thinkers_v11.js quotes/quotes_v11.js"
   },
   "keywords": [
     "sagesse",
