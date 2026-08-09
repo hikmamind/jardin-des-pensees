@@ -24,7 +24,6 @@ let currentLang = getSavedLanguage();
 let activeTheme = localStorage.getItem('theme') || 'dark';
 
 let currentQuoteIndex = -1;
-let activeQuoteIndex = null;
 
 // Initialize Theme
 function initTheme() {
@@ -149,12 +148,6 @@ function initLanguageSelector() {
         translatePage();
         displayNewWisdom(true);
         renderAllQuotes();
-
-        // If quote modal is open, re-render in newly selected language!
-        const modal = document.getElementById('quoteModal');
-        if (modal && modal.classList.contains('active') && activeQuoteIndex !== null) {
-          openQuoteModal(activeQuoteIndex);
-        }
       });
     });
   }
@@ -288,17 +281,6 @@ function renderAllQuotes() {
     });
   });
 
-  // Toast notification helper
-  function showToast(msg) {
-    const toast = document.getElementById('toastNotification');
-    if (!toast) return;
-    toast.textContent = msg;
-    toast.classList.add('active');
-    setTimeout(() => {
-      toast.classList.remove('active');
-    }, 2500);
-  }
-
   // Bind Copy Actions
   const copyButtons = container.querySelectorAll('.copy-btn');
   copyButtons.forEach(btn => {
@@ -306,11 +288,10 @@ function renderAllQuotes() {
       e.stopPropagation();
       const idx = parseInt(btn.getAttribute('data-index'), 10);
       const q = quotes[idx];
-      const textToCopy = `« ${q.text} » — ${q.author}`;
-      const toastMsg = currentLang === 'ar' ? 'تم نسخ الاقتباس بنجاح!' : currentLang === 'en' ? 'Quote copied!' : 'Citation copiée !';
+      const textToCopy = `"${q.text}" — ${q.author}`;
       
       navigator.clipboard.writeText(textToCopy).then(() => {
-        showToast(toastMsg);
+        showToast(currentLang === 'ar' ? 'تم النسخ إلى الحافظة !' : currentLang === 'en' ? 'Copied to clipboard!' : 'Copié dans le presse-papiers !');
       }).catch(err => {
         console.error("Clipboard copy failed: ", err);
       });
@@ -348,65 +329,27 @@ function openQuoteModal(idx) {
   const quote = quotes[idx];
   if (!quote) return;
 
-  // Fill in content with robust fallbacks
+  // Fill in content
   document.getElementById('modalQuoteAuthorBreadcrumb').textContent = quote.author;
-  document.getElementById('modalQuoteAuthorImage').src = quote.image ? `../${quote.image}` : '../brand_logo_official.png';
+  document.getElementById('modalQuoteAuthorImage').src = `../${quote.image}`;
   document.getElementById('modalQuoteAuthorImage').alt = quote.author;
   document.getElementById('modalQuoteText').textContent = quote.text;
   document.getElementById('modalQuoteAuthor').textContent = `— ${quote.author}`;
-
-  // Meaning
-  const meaningText = quote.meaning || (currentLang === 'ar'
-    ? `تأمل رصين في قول ${quote.author}: يذكرنا هذا المعنى بالحكمة الجوهرية والبحث عن السلام الداخلي والارتقاء بالنفس.`
-    : currentLang === 'en'
-    ? `A profound reflection on ${quote.author}'s wisdom, highlighting inner strength and intellectual clarity.`
-    : `Une réflexion profonde sur la pensée de ${quote.author}, soulignant la sérénité et la clarté d'esprit.`);
-  document.getElementById('modalQuoteMeaning').textContent = meaningText;
-
-  // Philosophy / Interpretation
-  const philosophyText = quote.philosophy || quote.explanation || (currentLang === 'ar'
-    ? `تندرج هذه المقولة ضمن التراث الفلسفي الذي يدعو للتحكم في الانفعالات والتركيز على العقل والمنطق بدلاً من الانسياق وراء العواطف العابرة.`
-    : currentLang === 'en'
-    ? `This quote stems from philosophical traditions advocating rational control over emotional impulses and cultivation of virtue.`
-    : `Cette citation s'inscrit dans la tradition philosophique prônant la maîtrise des impulsions et le développement de la vertu.`);
-  document.getElementById('modalQuotePhilosophy').textContent = philosophyText;
+  document.getElementById('modalQuoteMeaning').textContent = quote.meaning;
+  document.getElementById('modalQuotePhilosophy').textContent = quote.philosophy;
 
   // Lessons list mapping
-  const lessonsArray = (quote.lessons && quote.lessons.length > 0) ? quote.lessons : [
-    currentLang === 'ar' ? 'التحكم في الاستجابة الذهنية للأحداث.' : currentLang === 'en' ? 'Mastery of your mental response.' : 'Maîtrise de la réaction mentale.',
-    currentLang === 'ar' ? 'البحث عن السلام الداخلي والسكينة.' : currentLang === 'en' ? 'Cultivating inner peace and serenity.' : 'Recherche de la sérénité intérieure.',
-    currentLang === 'ar' ? 'التواضع الفكري والتعلم المستمر.' : currentLang === 'en' ? 'Intellectual humility and lifelong learning.' : 'Humilité intellectuelle et apprentissage.',
-    currentLang === 'ar' ? 'التركيز على ما يخضع لسيطرتك المباشرة.' : currentLang === 'en' ? 'Focusing exclusively on what is in your control.' : 'Focus sur ce qui dépend de soi.'
-  ];
   const lessonsContainer = document.getElementById('modalQuoteLessons');
-  lessonsContainer.innerHTML = lessonsArray.map(lesson => `
+  lessonsContainer.innerHTML = (quote.lessons || []).map(lesson => `
     <li class="quote-detail-list-item">${lesson}</li>
   `).join('');
 
-  // Application
-  const applicationText = quote.application || (currentLang === 'ar'
-    ? `طبق هذه الحكمة يومياً بالتوقف لمدة دقيقة عند مواجهة الضغوط، واسأل نفسك: هل هذا الأمر تحت سيطرتي الكاملة؟`
-    : currentLang === 'en'
-    ? `Apply this wisdom daily by pausing whenever faced with stress and asking: Is this within my direct control?`
-    : `Appliquez cette sagesse au quotidien en faisant une pause face au stress pour vous demander : cela dépend-il de moi ?`);
-  document.getElementById('modalQuoteApplication').textContent = applicationText;
+  document.getElementById('modalQuoteApplication').textContent = quote.application;
+  document.getElementById('modalQuoteReflection').textContent = quote.reflection;
 
-  // Reflection
-  const reflectionText = quote.reflection || quote.reflectionQuestion || (currentLang === 'ar'
-    ? `كيف يمكن لهذه الفكرة أن تغير نظرتك بالتحديد للتحديات والضغوط التي تواجهها اليوم؟`
-    : currentLang === 'en'
-    ? `How can this specific insight transform your approach to current challenges and daily stress?`
-    : `Comment cette pensée peut-elle transformer votre regard sur les difficultés actuelles ?`);
-  document.getElementById('modalQuoteReflection').textContent = reflectionText;
-
-  // Similar quote safely handled
-  const similarQuoteObj = quote.similarQuote || quotes[(idx + 1) % quotes.length];
-  if (similarQuoteObj) {
-    const simTextEl = document.getElementById('modalQuoteSimilarText');
-    const simAuthEl = document.getElementById('modalQuoteSimilarAuthor');
-    if (simTextEl) simTextEl.textContent = `"${similarQuoteObj.text}"`;
-    if (simAuthEl) simAuthEl.textContent = `— ${similarQuoteObj.author}`;
-  }
+  // Similar quote
+  document.getElementById('modalQuoteSimilarText').textContent = `"${quote.similarQuote.text}"`;
+  document.getElementById('modalQuoteSimilarAuthor').textContent = `— ${quote.similarQuote.author}`;
 
   // Localized headers translations
   document.getElementById('meaningTitle').textContent = currentLang === 'ar' ? 'معنى الاقتباس' : currentLang === 'en' ? 'Meaning of the Quote' : 'Signification de la citation';
@@ -436,16 +379,6 @@ function openQuoteModal(idx) {
     `;
   }).join('');
 
-  // Scroll reader container to top!
-  const scrollContainer = modal.querySelector('.reader-scroll-container');
-  if (scrollContainer) scrollContainer.scrollTop = 0;
-
-  // Track active quote index & update URL query param
-  activeQuoteIndex = idx;
-  const url = new URL(window.location.href);
-  url.searchParams.set('quote', idx);
-  window.history.pushState({}, '', url);
-
   // Show Modal & Disable Background Scroll
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
@@ -455,11 +388,6 @@ function openQuoteModal(idx) {
   const closeModal = () => {
     modal.classList.remove('active');
     document.body.style.overflow = '';
-    activeQuoteIndex = null;
-
-    const cleanUrl = new URL(window.location.href);
-    cleanUrl.searchParams.delete('quote');
-    window.history.pushState({}, '', cleanUrl);
   };
   
   closeBtn.onclick = closeModal;
@@ -485,16 +413,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextWisdomBtn = document.getElementById('nextWisdomBtn');
   if (nextWisdomBtn) {
     nextWisdomBtn.addEventListener('click', () => displayNewWisdom(false));
-  }
-
-  // Initial quote modal load from URL parameters if present
-  const urlParams = new URLSearchParams(window.location.search);
-  const quoteParam = urlParams.get('quote');
-  if (quoteParam !== null) {
-    const qIdx = parseInt(quoteParam, 10);
-    if (!isNaN(qIdx)) {
-      setTimeout(() => openQuoteModal(qIdx), 150);
-    }
   }
 });
 
