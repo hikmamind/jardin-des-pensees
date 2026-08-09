@@ -201,34 +201,143 @@ function translatePage() {
 }
 
 // --- Dynamic Wisdom generator ---
-function displayNewWisdom(immediate = false) {
+function displayNewWisdom(immediate = false, targetIdx = null) {
   const textEl = document.getElementById('wisdomText');
   const authorEl = document.getElementById('wisdomAuthor');
+  const imgEl = document.getElementById('wisdomAuthorImg');
+  const meaningEl = document.getElementById('wisdomMeaning');
+  const philosophyEl = document.getElementById('wisdomPhilosophy');
+  const lessonsEl = document.getElementById('wisdomLessons');
+  const appEl = document.getElementById('wisdomApplication');
+  const reflectEl = document.getElementById('wisdomReflection');
+
   if (!textEl || !authorEl) return;
 
   const quotes = TIKTOK_DATA.content[currentLang].quotes;
   if (!quotes || quotes.length === 0) return;
 
-  let nextIndex;
-  do {
-    nextIndex = Math.floor(Math.random() * quotes.length);
-  } while (nextIndex === currentQuoteIndex && quotes.length > 1);
+  if (targetIdx !== null && targetIdx >= 0 && targetIdx < quotes.length) {
+    currentQuoteIndex = targetIdx;
+  } else {
+    let nextIndex;
+    do {
+      nextIndex = Math.floor(Math.random() * quotes.length);
+    } while (nextIndex === currentQuoteIndex && quotes.length > 1);
+    currentQuoteIndex = nextIndex;
+  }
 
-  currentQuoteIndex = nextIndex;
   const quote = quotes[currentQuoteIndex];
 
-  if (immediate) {
+  // Meaning
+  const meaningText = quote.meaning || (currentLang === 'ar'
+    ? `تأمل رصين في قول ${quote.author}: يذكرنا هذا المعنى بالحكمة الجوهرية والبحث عن السلام الداخلي والارتقاء بالنفس.`
+    : currentLang === 'en'
+    ? `A profound reflection on ${quote.author}'s wisdom, highlighting inner strength and intellectual clarity.`
+    : `Une réflexion profonde sur la pensée de ${quote.author}, soulignant la sérénité et la clarté d'esprit.`);
+
+  // Philosophy / Interpretation
+  const philosophyText = quote.philosophy || quote.explanation || (currentLang === 'ar'
+    ? `تندرج هذه المقولة ضمن التراث الفلسفي الذي يدعو للتحكم في الانفعالات والتركيز على العقل والمنطق بدلاً من الانسياق وراء العواطف العابرة.`
+    : currentLang === 'en'
+    ? `This quote stems from philosophical traditions advocating rational control over emotional impulses and cultivation of virtue.`
+    : `Cette citation s'inscrit dans la tradition philosophique prônant la maîtrise des impulsions et le développement de la vertu.`);
+
+  // Lessons list mapping
+  const lessonsArray = (quote.lessons && quote.lessons.length > 0) ? quote.lessons : [
+    currentLang === 'ar' ? 'التحكم في الاستجابة الذهنية للأحداث.' : currentLang === 'en' ? 'Mastery of your mental response.' : 'Maîtrise de la réaction mentale.',
+    currentLang === 'ar' ? 'البحث عن السلام الداخلي والسكينة.' : currentLang === 'en' ? 'Cultivating inner peace and serenity.' : 'Recherche de la sérénité intérieure.',
+    currentLang === 'ar' ? 'التواضع الفكري والتعلم المستمر.' : currentLang === 'en' ? 'Intellectual humility and lifelong learning.' : 'Humilité intellectuelle et apprentissage.',
+    currentLang === 'ar' ? 'التركيز على ما يخضع لسيطرتك المباشرة.' : currentLang === 'en' ? 'Focusing exclusively on what is in your control.' : 'Focus sur ce qui dépend de soi.'
+  ];
+
+  // Application
+  const applicationText = quote.application || (currentLang === 'ar'
+    ? `طبق هذه الحكمة يومياً بالتوقف لمدة دقيقة عند مواجهة الضغوط، واسأل نفسك: هل هذا الأمر تحت سيطرتي الكاملة؟`
+    : currentLang === 'en'
+    ? `Apply this wisdom daily by pausing whenever faced with stress and asking: Is this within my direct control?`
+    : `Appliquez cette sagesse au quotidien en faisant une pause face au stress pour vous demander : cela dépend-il de moi ?`);
+
+  // Reflection
+  const reflectionText = quote.reflection || quote.reflectionQuestion || (currentLang === 'ar'
+    ? `كيف يمكن لهذه الفكرة أن تغير نظرتك بالتحديد للتحديات والضغوط التي تواجهها اليوم؟`
+    : currentLang === 'en'
+    ? `How can this specific insight transform your approach to current challenges and daily stress?`
+    : `Comment cette pensée peut-elle transformer votre regard sur les difficultés actuelles ?`);
+
+  // Localized headers for main wisdom study card
+  const meaningTitle = document.getElementById('mainMeaningTitle');
+  if (meaningTitle) meaningTitle.textContent = currentLang === 'ar' ? 'معنى الاقتباس' : currentLang === 'en' ? 'Meaning of the Quote' : 'Signification de la citation';
+
+  const philosophyTitle = document.getElementById('mainPhilosophyTitle');
+  if (philosophyTitle) philosophyTitle.textContent = currentLang === 'ar' ? 'التفسير الفلسفي' : currentLang === 'en' ? 'Philosophical Interpretation' : 'Interprétation philosophique';
+
+  const lessonsTitle = document.getElementById('mainLessonsTitle');
+  if (lessonsTitle) lessonsTitle.textContent = currentLang === 'ar' ? 'ماذا نتعلم؟' : currentLang === 'en' ? 'What do we learn?' : 'Que découvrons-nous ?';
+
+  const applicationTitle = document.getElementById('mainApplicationTitle');
+  if (applicationTitle) applicationTitle.textContent = currentLang === 'ar' ? 'تطبيق عملي' : currentLang === 'en' ? 'Practical Application' : 'Application pratique';
+
+  const reflectionTitle = document.getElementById('mainReflectionTitle');
+  if (reflectionTitle) reflectionTitle.textContent = currentLang === 'ar' ? 'سؤال للتأمل' : currentLang === 'en' ? 'Question for Reflection' : 'Question pour méditer';
+
+  const reflectionBtn = document.getElementById('mainReflectionBtn');
+  if (reflectionBtn) reflectionBtn.textContent = currentLang === 'ar' ? 'شارك إجابتك في التعليقات' : currentLang === 'en' ? 'Share your response in comments' : 'Partagez votre avis en commentaires';
+
+  const generateBtnLabel = document.getElementById('generateBtnLabel');
+  if (generateBtnLabel) generateBtnLabel.textContent = currentLang === 'ar' ? 'توليد حكمة أخرى' : currentLang === 'en' ? 'Generate another quote' : 'Générer une autre citation';
+
+  const copyWisdomBtnLabel = document.getElementById('copyWisdomBtnLabel');
+  if (copyWisdomBtnLabel) copyWisdomBtnLabel.textContent = currentLang === 'ar' ? 'نسخ الاقتباس' : currentLang === 'en' ? 'Copy quote' : 'Copier la citation';
+
+  const mainMeaningLink = document.getElementById('mainMeaningLink');
+  if (mainMeaningLink) mainMeaningLink.textContent = currentLang === 'ar' ? 'اقرأ المزيد ←' : currentLang === 'en' ? 'Read more →' : 'En savoir plus →';
+
+  const mainPhilosophyLink = document.getElementById('mainPhilosophyLink');
+  if (mainPhilosophyLink) mainPhilosophyLink.textContent = currentLang === 'ar' ? 'اقرأ المزيد ←' : currentLang === 'en' ? 'Read more →' : 'En savoir plus →';
+
+  const mainLessonsLink = document.getElementById('mainLessonsLink');
+  if (mainLessonsLink) mainLessonsLink.textContent = currentLang === 'ar' ? 'اقرأ المزيد ←' : currentLang === 'en' ? 'Read more →' : 'En savoir plus →';
+
+  const mainApplicationLink = document.getElementById('mainApplicationLink');
+  if (mainApplicationLink) mainApplicationLink.textContent = currentLang === 'ar' ? 'اقرأ المزيد ←' : currentLang === 'en' ? 'Read more →' : 'En savoir plus →';
+
+  const updateDomFields = () => {
     textEl.textContent = `"${quote.text}"`;
     authorEl.textContent = `— ${quote.author}`;
+    if (imgEl && quote.image) {
+      imgEl.src = `../${quote.image}`;
+      imgEl.alt = quote.author;
+    }
+    if (meaningEl) meaningEl.textContent = meaningText;
+    if (philosophyEl) philosophyEl.textContent = philosophyText;
+    if (lessonsEl) {
+      lessonsEl.innerHTML = lessonsArray.map(lesson => `<li class="quote-detail-list-item">${lesson}</li>`).join('');
+    }
+    if (appEl) appEl.textContent = applicationText;
+    if (reflectEl) reflectEl.textContent = reflectionText;
+  };
+
+  if (immediate) {
+    updateDomFields();
   } else {
     textEl.style.opacity = '0';
     authorEl.style.opacity = '0';
+    if (meaningEl) meaningEl.style.opacity = '0';
+    if (philosophyEl) philosophyEl.style.opacity = '0';
+    if (lessonsEl) lessonsEl.style.opacity = '0';
+    if (appEl) appEl.style.opacity = '0';
+    if (reflectEl) reflectEl.style.opacity = '0';
+
     setTimeout(() => {
-      textEl.textContent = `"${quote.text}"`;
-      authorEl.textContent = `— ${quote.author}`;
+      updateDomFields();
       textEl.style.opacity = '1';
       authorEl.style.opacity = '1';
-    }, 300);
+      if (meaningEl) meaningEl.style.opacity = '1';
+      if (philosophyEl) philosophyEl.style.opacity = '1';
+      if (lessonsEl) lessonsEl.style.opacity = '1';
+      if (appEl) appEl.style.opacity = '1';
+      if (reflectEl) reflectEl.style.opacity = '1';
+    }, 250);
   }
 }
 
@@ -485,6 +594,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextWisdomBtn = document.getElementById('nextWisdomBtn');
   if (nextWisdomBtn) {
     nextWisdomBtn.addEventListener('click', () => displayNewWisdom(false));
+  }
+
+  const copyWisdomBtn = document.getElementById('copyWisdomBtn');
+  if (copyWisdomBtn) {
+    copyWisdomBtn.addEventListener('click', () => {
+      const quotes = TIKTOK_DATA.content[currentLang].quotes;
+      const q = quotes[currentQuoteIndex >= 0 ? currentQuoteIndex : 0];
+      if (!q) return;
+      const textToCopy = `« ${q.text} » — ${q.author}`;
+      const toastMsg = currentLang === 'ar' ? 'تم نسخ الاقتباس بنجاح!' : currentLang === 'en' ? 'Quote copied!' : 'Citation copiée !';
+      
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        const toast = document.getElementById('toastNotification');
+        if (toast) {
+          toast.textContent = toastMsg;
+          toast.classList.add('active');
+          setTimeout(() => toast.classList.remove('active'), 2500);
+        }
+      }).catch(err => {
+        console.error("Clipboard copy failed: ", err);
+      });
+    });
   }
 
   // Initial quote modal load from URL parameters if present
