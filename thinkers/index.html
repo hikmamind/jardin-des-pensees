@@ -133,6 +133,46 @@
       font-size: 1.1rem;
     }
 
+    /* Thinkers page layout container & grid overrides */
+    .thinkers-page-container {
+      width: 100%;
+      max-width: 1280px;
+      margin-inline: auto;
+      padding-inline: 24px;
+      box-sizing: border-box;
+    }
+
+    .thinkers-grid {
+      display: grid !important;
+      grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+      gap: 24px !important;
+      margin-bottom: 40px !important;
+    }
+
+    @media (max-width: 1200px) {
+      .thinkers-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 20px !important;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .thinkers-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 16px !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .thinkers-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+      }
+      .thinkers-page-container {
+        padding-inline: 16px !important;
+      }
+    }
+
     /* Thinker Detail Reader Modal Styles */
     .thinker-modal-hero {
       display: grid;
@@ -860,14 +900,14 @@
     </nav>
   </header>
 
-  <div class="container">
+  <div class="container thinkers-page-container">
     <main style="padding-top: 20px;">
       
       <!-- Hero Header for Thinkers -->
       
       <section class="section-hero-split">
         <div class="hero-content-box">
-          <span class="hero-pill-badge">🏛️ معارض الفلاسفة والحكماء</span>
+          <span class="hero-pill-badge" data-i18n="thinkersHeroBadge">🏛️ معارض الفلاسفة والحكماء</span>
           <h1 class="section-hero-title" data-i18n="thinkersTitle">أعظم مفكري البشرية</h1>
           <p class="section-hero-desc" data-i18n="bio">تاريخ الفكر الإنساني وتطور الحكمة عبر أشهر المفكرين والفلاسفة عبر العصور.</p>
         </div>
@@ -889,7 +929,7 @@
 
       <!-- Thinkers Grid -->
       <section aria-labelledby="thinkers-heading">
-        <div class="thinkers-grid" id="thinkersList" style="margin-top: 40px;">
+        <div class="thinkers-grid" id="thinkersList" style="margin-top: 24px;">
           <!-- Dynamically populated thinkers -->
         </div>
         <div id="noResults" class="no-results" style="display: none;">
@@ -900,72 +940,71 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer" style="padding: 50px 24px 30px; border-top: 1px solid var(--card-border); margin-top: 60px; background: rgba(10, 15, 12, 0.95);">
-      <div style="max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; text-align: inherit;" class="footer-grid-layout">
+    <footer class="footer" style="padding: 50px 24px 30px; border-top: 1px solid var(--card-border); margin-top: 48px; background: rgba(10, 15, 12, 0.95);">
+      <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; text-align: inherit;" class="footer-grid-layout">
         <div>
           <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
             <img src="../brand_logo_official.png" alt="Hikma & Nour" style="width: 38px; height: 38px; object-fit: contain;">
             <span style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 800; color: var(--accent-gold);">HIKMA & NOUR</span>
           </div>
-          <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.7; margin-bottom: 14px;">
-            الحكمة • الفلسفة • علم النفس<br>
-            مساحة للتأمل الرصين، حكمة كبار المفكرين وبناء القوة النفسية والهدوء الداخلي.
+          <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.7; margin-bottom: 14px;" data-i18n="footerBrandDesc">
+            الحكمة • الفلسفة • علم النفس — مساحة للتأمل الرصين، حكمة كبار المفكرين وبناء القوة النفسية والهدوء الداخلي.
           </p>
         </div>
 
         <div>
-          <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;">🏠 الخريطة الرئيسية</h4>
+          <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;" data-i18n="mainSitemap">الخريطة الرئيسية</h4>
           <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
-            <li><a href="../" style="color: var(--text-secondary); text-decoration: none;">🏠 Accueil / الرئيسية</a></li>
-            <li><a href="../articles/" style="color: var(--text-secondary); text-decoration: none;">📚 Articles / المقالات</a></li>
-            <li><a href="./" style="color: var(--accent-gold); text-decoration: none; font-weight: 700;">🧠 Penseurs / الفلاسفة</a></li>
-            <li><a href="../quotes/" style="color: var(--text-secondary); text-decoration: none;">💭 Citations / اقتباسات</a></li>
-            <li><a href="../audio/" style="color: var(--text-secondary); text-decoration: none;">🎧 Audio / كتب صوتية</a></li>
-            <li><a href="../bio.html" style="color: var(--text-secondary); text-decoration: none;">ℹ️ À propos / عن الموقع</a></li>
-            <li><a href="../#contactSection" style="color: var(--text-secondary); text-decoration: none;">📩 Contact / اتصل بنا</a></li>
+            <li><a href="../" style="color: var(--text-secondary); text-decoration: none;" data-i18n="home">الرئيسية</a></li>
+            <li><a href="../articles/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="articles">المقالات</a></li>
+            <li><a href="./" style="color: var(--accent-gold); text-decoration: none; font-weight: 700;" data-i18n="thinkers">الفلاسفة</a></li>
+            <li><a href="../quotes/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="quotes">اقتباسات</a></li>
+            <li><a href="../audio/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="audio">الصوتيات</a></li>
+            <li><a href="../bio.html" style="color: var(--text-secondary); text-decoration: none;" data-i18n="about">من نحن</a></li>
+            <li><a href="../#contactSection" style="color: var(--text-secondary); text-decoration: none;" data-i18n="contact">اتصل بنا</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;">✨ خدمات ومحتوى تفاعلي</h4>
+          <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;" data-i18n="interactiveServices">خدمات ومحتوى تفاعلي</h4>
           <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
-            <li><a href="../quizzes/" style="color: var(--text-secondary); text-decoration: none;">🧠 Quiz / الاختبارات الفلسفية</a></li>
-            <li><a href="../#helpSection" style="color: var(--text-secondary); text-decoration: none;">❓ FAQ & Support / الأسئلة الشائعة</a></li>
-            <li><a href="../shop/" style="color: var(--text-secondary); text-decoration: none;">🛍️ Boutique / متجر الحكمة</a></li>
-            <li><a href="../calendar/" style="color: var(--text-secondary); text-decoration: none;">📅 Calendrier / التقويم ٣٦٥ يوماً</a></li>
-            <li><a href="../articles/?category=philosophy" style="color: var(--text-secondary); text-decoration: none;">🏛️ Philosophie / الفلسفة</a></li>
-            <li><a href="../articles/?category=psychology" style="color: var(--text-secondary); text-decoration: none;">🧠 Psychologie / علم النفس</a></li>
+            <li><a href="../quizzes/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="quiz">الاختبارات الفلسفية</a></li>
+            <li><a href="../#helpSection" style="color: var(--text-secondary); text-decoration: none;" data-i18n="faq">الأسئلة الشائعة</a></li>
+            <li><a href="../shop/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="shop">المتجر</a></li>
+            <li><a href="../calendar/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="calendar">التقويم</a></li>
+            <li><a href="../articles/?category=philosophy" style="color: var(--text-secondary); text-decoration: none;" data-i18n="philosophy">الفلسفة</a></li>
+            <li><a href="../articles/?category=psychology" style="color: var(--text-secondary); text-decoration: none;" data-i18n="psychologySub">علم النفس</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;">🔒 المعلومات القانونية والسياسات</h4>
+          <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;" data-i18n="legalInfoTitle">المعلومات القانونية والسياسات</h4>
           <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
-            <li><a href="../privacy-policy.html" style="color: var(--text-secondary); text-decoration: none;">🔒 Politique de confidentialité / سياسة الخصوصية</a></li>
-            <li><a href="../terms-of-service.html" style="color: var(--text-secondary); text-decoration: none;">📜 Conditions d'utilisation / شروط الاستخدام</a></li>
-            <li><a href="../cookie-policy.html" style="color: var(--text-secondary); text-decoration: none;">🍪 Politique des cookies / ملفات تعريف الارتباط</a></li>
-            <li><a href="../#contactSection" style="color: var(--text-secondary); text-decoration: none;">🤝 Collaborations & Partenariats / التعاون</a></li>
+            <li><a href="../privacy-policy.html" style="color: var(--text-secondary); text-decoration: none;" data-i18n="privacy">سياسة الخصوصية</a></li>
+            <li><a href="../terms-of-service.html" style="color: var(--text-secondary); text-decoration: none;" data-i18n="terms">شروط الاستخدام</a></li>
+            <li><a href="../cookie-policy.html" style="color: var(--text-secondary); text-decoration: none;" data-i18n="cookies">ملفات تعريف الارتباط</a></li>
+            <li><a href="../#contactSection" style="color: var(--text-secondary); text-decoration: none;" data-i18n="contactNav">اتصل بنا</a></li>
           </ul>
         </div>
       </div>
 
       <div style="margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center;">
         <div style="display: flex; justify-content: center; gap: 14px 20px; flex-wrap: wrap; font-size: 0.88rem; margin-bottom: 14px; font-weight: 600;">
-          <a href="../bio.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">ℹ️ À propos</a>
+          <a href="../cookie-policy.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="cookies">ملفات تعريف الارتباط</a>
           <span style="color: rgba(255,255,255,0.2);">•</span>
-          <a href="../#contactSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">📩 Contact</a>
+          <a href="../terms-of-service.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="terms">شروط الاستخدام</a>
           <span style="color: rgba(255,255,255,0.2);">•</span>
-          <a href="../#helpSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">❓ FAQ</a>
+          <a href="../privacy-policy.html" style="color: var(--accent-gold); text-decoration: none; transition: color 0.2s;" data-i18n="privacy">سياسة الخصوصية</a>
           <span style="color: rgba(255,255,255,0.2);">•</span>
-          <a href="../shop/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">🛍️ Boutique</a>
+          <a href="../shop/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="shop">المتجر</a>
           <span style="color: rgba(255,255,255,0.2);">•</span>
-          <a href="../privacy-policy.html" style="color: var(--accent-gold); text-decoration: none; transition: color 0.2s;">🔒 Confidentialité</a>
+          <a href="../#helpSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="faq">الأسئلة الشائعة</a>
           <span style="color: rgba(255,255,255,0.2);">•</span>
-          <a href="../terms-of-service.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">📜 Conditions d'utilisation</a>
+          <a href="../#contactSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="contact">اتصل بنا</a>
           <span style="color: rgba(255,255,255,0.2);">•</span>
-          <a href="../cookie-policy.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">🍪 Cookies</a>
+          <a href="../bio.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="about">من نحن</a>
         </div>
-        <p style="color: var(--text-secondary); font-size: 0.82rem; margin: 0;">&copy; 2026 حكمة ونور | Le Jardin des Pensées. <span data-i18n="credits">Conçu avec sagesse, calme et sérénité. ✨🌿</span></p>
+        <p style="color: var(--text-secondary); font-size: 0.82rem; margin: 0;"><span data-i18n="copyright">© 2026 حكمة ونور | حديقة الأفكار</span>. <span data-i18n="credits">صُمم بحكمة وهدوء وسكينة. ✨🌿</span></p>
       </div>
     </footer>
   </div>

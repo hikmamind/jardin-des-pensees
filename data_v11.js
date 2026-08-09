@@ -38,18 +38,15 @@ const TIKTOK_DATA = {
       "errorFields": "Veuillez remplir tous les champs.",
       "errorEmail": "Veuillez entrer une adresse email valide.",
       "thinkersTitle": "Grands Philosophes",
+      "thinkersHeroBadge": "🏛️ Galerie des grands philosophes",
       "articlesTitle": "Articles & Réflexions",
       "readMore": "Lire la suite",
       "credits": "Conçu avec sagesse, calme et sérénité. ✨🌿",
       "placeholderName": "Ex: Jean Dupont",
       "placeholderEmail": "Ex: jean.dupont@example.com",
       "placeholderMessage": "Bonjour, je souhaiterais collaborer...",
-      "philosophy": "Philosophie",
-      "psychologySub": "Psychologie",
-      "development": "Développement personnel",
-      "history": "Histoire des idées",
       "seeAll": "Voir tous →",
-      "seeAllThinkers": "Tous les philosophes →",
+      "seeAllThinkers": "Voir tous les penseurs →",
       "searchThinkerPlaceholder": "Rechercher un philosophe...",
       "schopenhauerName": "Schopenhauer",
       "nietzscheName": "Nietzsche",
@@ -62,7 +59,8 @@ const TIKTOK_DATA = {
       "socrateName": "Socrate",
       "jungName": "Carl Jung",
       "downloadWord": "Télécharger Document",
-      "bio": "Philosophie Stoïcienne, Sagesse des grands philosophes et Conseils Psychologiques.",
+      "bio": "Philosophie stoïcienne, sagesse des grands philosophes et conseils psychologiques.",
+      "articlesHeroBadge": "📖 Articles et études approfondies",
       "shopTitle": "Boutique Stoïcienne",
       "shopSubtitle": "Ressources, lectures et objets de sagesse pour votre quotidien.",
       "filterAll": "Tous les produits",
@@ -122,7 +120,7 @@ const TIKTOK_DATA = {
       "featuredQuote": "Ne cherchez pas une vie parfaite... mais un esprit équilibré",
       "featuredQuoteDesc": "La sagesse ne consiste pas à avoir toutes les réponses, mais à mieux comprendre les questions.",
       "joinJourney": "Faites partie de notre voyage intellectuel",
-      "subscribeDesc": "Abonnez-vous à notre newsletter pour recevoir nos meilleures réflexions.",
+      "subscribeDesc": "Abonnez-vous à notre lettre pour recevoir nos meilleures réflexions.",
       "subscribeBtn": "S'abonner",
       "featuresNewsletter1": "Mises à jour",
       "featuresNewsletter2": "Résumés de livres",
@@ -184,7 +182,6 @@ const TIKTOK_DATA = {
       "contactCtaDesc": "Contactez-nous pour toute proposition de projet, échange intellectuel ou suggestion éditoriale.",
       "contactCtaBtn": "Nous contacter →",
       "discoverThinker": "Découvrir →",
-      "seeAllThinkers": "Voir tous les penseurs →",
       "audioLibraryTitle": "La bibliothèque audio",
       "audioLibrarySubtitle": "Écoutez des réflexions, des résumés de livres et des histoires inspirantes.",
       "listenAudioBtn": "▶ Écouter",
@@ -200,7 +197,32 @@ const TIKTOK_DATA = {
       "contactShareDesc": "Une question, une suggestion ou une proposition de collaboration ? Nous serions heureux de vous lire.",
       "contactShareBtn": "Nous contacter →",
       "featuredSchopenhauerTitle": "L'Illusion du Bonheur selon Schopenhauer",
-      "featuredSchopenhauerDesc": "Pour Schopenhauer, la quête effrénée du bonheur engendre souvent déception et souffrance. Découvrez pourquoi la paix de l'âme réside dans la lucidité, l'absence de douleur et l'apaisement des désirs."
+      "featuredSchopenhauerDesc": "Pour Schopenhauer, la quête effrénée du bonheur engendre souvent déception et souffrance. Découvrez pourquoi la paix de l'âme réside dans la lucidité, l'absence de douleur et l'apaisement des désirs.",
+      "faq": "FAQ",
+      "contact": "Contact",
+      "copyright": "© 2026 Hikma & Nour | Le Jardin des Pensées",
+      "legalInfoTitle": "Informations légales & Politiques",
+      "mainSitemap": "Navigation principale",
+      "interactiveServices": "Services et contenu interactif",
+      "footerBrandDesc": "Sagesse • Philosophie • Psychologie — Un espace dédié à la réflexion sereine, à la sagesse des grands penseurs et à la paix intérieure.",
+      "footerBrandTagline": "Sagesse • Philosophie • Sérénité",
+      "saveLater": "Sauvegarder pour plus tard",
+      "saved": "Article sauvegardé !",
+      "share": "Partager l'article",
+      "copied": "Lien copié !",
+      "toc": "Dans cet article",
+      "intro": "Introduction",
+      "dontMiss": "Ne manquez pas nos prochains articles",
+      "subscribe": "S'abonner maintenant",
+      "privacyText": "Nous respectons strictement votre vie privée.",
+      "commentsTitle": "Commentaires & Échanges",
+      "addComment": "Laisser un commentaire",
+      "commentPlaceholder": "Partagez votre réflexion ou votre ressenti sur cet article...",
+      "postComment": "Publier",
+      "ratingTitle": "Notez cet article",
+      "backToArticles": "Retour aux articles",
+      "readTimeLabel": "Temps de lecture",
+      "authorLabel": "Par : Hikma & Nour"
     },
     "en": {
       "home": "Home",
@@ -234,6 +256,7 @@ const TIKTOK_DATA = {
       "errorFields": "Please fill in all fields.",
       "errorEmail": "Please enter a valid email address.",
       "thinkersTitle": "Great Philosophers",
+      "thinkersHeroBadge": "🏛️ Gallery of Great Thinkers",
       "articlesTitle": "Articles & Reflections",
       "readMore": "Read More",
       "credits": "Designed with wisdom, calm, and serenity. ✨🌿",
@@ -241,7 +264,7 @@ const TIKTOK_DATA = {
       "placeholderEmail": "e.g., john.doe@example.com",
       "placeholderMessage": "Hello, I would like to collaborate...",
       "seeAll": "See all →",
-      "seeAllThinkers": "All thinkers →",
+      "seeAllThinkers": "View All Thinkers →",
       "searchThinkerPlaceholder": "Search for a thinker...",
       "schopenhauerName": "Schopenhauer",
       "nietzscheName": "Nietzsche",
@@ -255,6 +278,7 @@ const TIKTOK_DATA = {
       "jungName": "Carl Jung",
       "downloadWord": "Download Document",
       "bio": "Stoic Philosophy, Wisdom of the Great Thinkers, and Psychological Insights.",
+      "articlesHeroBadge": "📖 Articles & In-Depth Studies",
       "shopTitle": "Stoic Shop",
       "shopSubtitle": "Resources, readings, and wisdom artifacts for your daily life.",
       "filterAll": "All products",
@@ -308,7 +332,7 @@ const TIKTOK_DATA = {
       "featuredQuote": "Do not seek a perfect life... but a balanced mind",
       "featuredQuoteDesc": "Wisdom is not in having all the answers, but in understanding the questions better.",
       "joinJourney": "Be part of our intellectual journey",
-      "subscribeDesc": "Subscribe to our newsletter to receive our best thoughts.",
+      "subscribeDesc": "Subscribe to our newsletter for weekly philosophical insights.",
       "subscribeBtn": "Subscribe Now",
       "featuresNewsletter1": "Regular updates",
       "featuresNewsletter2": "Book summaries",
@@ -345,13 +369,13 @@ const TIKTOK_DATA = {
       "quizShortDesc": "Mindsets & Philosophical Schools",
       "faqShortDesc": "Frequently asked questions & support",
       "footerExplorer": "🧭 Explore",
-      "footerDiscover": "✨ Discover",
+      "footerDiscover": "✨ Discover More",
       "footerLegal": "🔒 Legal",
       "privacyPolicy": "Privacy Policy",
       "termsOfService": "Terms of Service",
       "cookiePolicy": "Cookie Policy",
       "privacy": "Privacy",
-      "terms": "Terms of Service",
+      "terms": "Terms of Use",
       "cookies": "Cookies",
       "search": "Search...",
       "psychoTitle": "Psychology & Insights",
@@ -370,7 +394,6 @@ const TIKTOK_DATA = {
       "contactCtaDesc": "Reach out to us for project proposals, intellectual discussions, or editorial suggestions.",
       "contactCtaBtn": "Contact Us →",
       "discoverThinker": "Discover →",
-      "seeAllThinkers": "View All Thinkers →",
       "audioLibraryTitle": "Audio Library",
       "audioLibrarySubtitle": "Listen to reflections, book summaries, and inspiring philosophical stories.",
       "listenAudioBtn": "▶ Listen now",
@@ -388,19 +411,42 @@ const TIKTOK_DATA = {
       "featuredSchopenhauerTitle": "The Illusion of Happiness According to Schopenhauer",
       "featuredSchopenhauerDesc": "For Schopenhauer, the relentless chase for happiness brings disappointment and suffering. Discover why peace of mind lies in lucidity, freedom from pain, and mastering our desires.",
       "footerBrandTagline": "Wisdom • Philosophy • Serenity",
-      "footerBrandDesc": "Wisdom • Philosophy • Serenity<br>A tranquil space for reflection, inspired by the great thinkers to cultivate inner peace and mental strength."
+      "footerBrandDesc": "Wisdom • Philosophy • Psychology — A sanctuary for mindful contemplation, teachings of great thinkers, and inner calm.",
+      "faq": "FAQ",
+      "contact": "Contact",
+      "copyright": "© 2026 Hikma & Nour | Garden of Thoughts",
+      "legalInfoTitle": "Legal & Policies",
+      "mainSitemap": "Main Navigation",
+      "interactiveServices": "Interactive Services & Content",
+      "saveLater": "Save for Later",
+      "saved": "Article saved!",
+      "share": "Share Article",
+      "copied": "Link copied!",
+      "toc": "Table of Contents",
+      "intro": "Introduction",
+      "dontMiss": "Don't Miss Upcoming Articles",
+      "subscribe": "Subscribe Now",
+      "privacyText": "We strictly respect your privacy.",
+      "commentsTitle": "Comments & Discussions",
+      "addComment": "Leave a Comment",
+      "commentPlaceholder": "Share your thoughts or reflections on this article...",
+      "postComment": "Post Comment",
+      "ratingTitle": "Rate this article",
+      "backToArticles": "Back to Articles",
+      "readTimeLabel": "Reading Time",
+      "authorLabel": "By: Hikma & Nour"
     },
     "ar": {
       "home": "الرئيسية",
       "articles": "المقالات",
-      "philosophy": "فلسفة",
+      "philosophy": "الفلسفة",
       "psychologySub": "علم النفس",
-      "development": "تطوير الذات",
-      "history": "تاريخ الفكر",
+      "development": "التنمية الذاتية",
+      "history": "تاريخ الأفكار",
       "thinkers": "الفلاسفة",
       "quotes": "اقتباسات",
       "audio": "الصوتيات",
-      "about": "عن الموقع",
+      "about": "من نحن",
       "contactNav": "اتصل بنا",
       "calendar": "التقويم",
       "psychology": "علم النفس",
@@ -422,23 +468,21 @@ const TIKTOK_DATA = {
       "errorFields": "يرجى ملء جميع الحقول.",
       "errorEmail": "يرجى إدخال بريد إلكتروني صالح.",
       "thinkersTitle": "كبار الفلاسفة",
+      "thinkersHeroBadge": "🏛️ معارض الفلاسفة والحكماء",
       "articlesTitle": "مقالات وتأملات",
       "readMore": "اقرأ المزيد",
       "credits": "صُمّم بحكمة، هدوء وسكينة. ✨🌿",
       "placeholderName": "مثال: أحمد محمد",
       "placeholderEmail": "مثال: ahmed@example.com",
       "placeholderMessage": "مرحباً، أود التعاون معكم...",
-      "philosophy": "الفلسفة",
-      "psychologySub": "علم النفس",
-      "development": "التنمية الذاتية",
-      "history": "تاريخ الأفكار",
       "seeAll": "عرض الكل ←",
-      "seeAllThinkers": "جميع الفلاسفة ←",
+      "seeAllThinkers": "عرض جميع الفلاسفة ←",
       "searchThinkerPlaceholder": "ابحث عن فيلسوف...",
       "schopenhauerName": "شوبنهاور",
       "nietzscheName": "نيتشه",
       "camusName": "كامو",
       "marcaureleName": "ماركوس أوريليوس",
+      "articlesHeroBadge": "📖 مقالات ودراسات عميقة",
       "senequeName": "سينيكا",
       "kantName": "كانط",
       "hegelName": "هيغل",
@@ -476,7 +520,7 @@ const TIKTOK_DATA = {
       "donateSubmit": "إرسال التبرع",
       "donationSuccess": "نشكركم جزيل الشكر والامتنان على دعمكم الكريم والسخي! 🌿✨",
       "donateCustom": "مبلغ آخر",
-      "readArticle": "اقرأ المزيد",
+      "readArticle": "اقرأ المقال",
       "readBio": "اقرأ السيرة",
       "featured": "مميز",
       "quizTitle": "اختبار الشخصية الفلسفية",
@@ -506,7 +550,7 @@ const TIKTOK_DATA = {
       "featuredQuote": "لا تبحث عن حياة مثالية... بل عن عقلٍ متوازن",
       "featuredQuoteDesc": "الحكمة ليست في أن نملك كل الإجابات، بل في أن نفهم الأسئلة بشكل أفضل.",
       "joinJourney": "كن جزءاً من رحلتنا الفكرية",
-      "subscribeDesc": "اشترك في نشرتنا البريدية لتصلك أفضل المقالات والاقتباسات الملهمة مباشرة إلى بريدك.",
+      "subscribeDesc": "اشترك في نشرتنا البريدية لتصلك مقالات ملهمة أسبوعياً.",
       "subscribeBtn": "اشترك الآن",
       "featuresNewsletter1": "تحديثات دورية",
       "featuresNewsletter2": "ملخصات كتب",
@@ -541,15 +585,15 @@ const TIKTOK_DATA = {
       "shopShortDesc": "كتب ودلائل فلسفية مجانية",
       "quizShortDesc": "أنماط التفكير والذكاء العاطفي",
       "faqShortDesc": "إجابات سريعة ودليل الاستخدام",
-      "footerExplorer": "🧭 الخريطة الرئيسية",
-      "footerDiscover": "✨ خدمات ومحتوى تفاعلي",
-      "footerLegal": "🔒 المعلومات القانونية والسياسات",
+      "footerExplorer": "🧭 استكشف",
+      "footerDiscover": "✨ اكتشف المزيد",
+      "footerLegal": "🔒 المعلومات القانونية",
       "privacyPolicy": "سياسة الخصوصية",
       "termsOfService": "شروط الاستخدام",
       "cookiePolicy": "ملفات تعريف الارتباط",
-      "privacy": "الخصوصية",
-      "terms": "الشروط",
-      "cookies": "الكوكيز",
+      "privacy": "سياسة الخصوصية",
+      "terms": "شروط الاستخدام",
+      "cookies": "ملفات تعريف الارتباط",
       "search": "بحث...",
       "psychoTitle": "علم النفس وتطوير الذات",
       "psychoSubtitle": "فهم أعماق النفس البشرية، السكينة الداخلية، وإدارة العلاقات بذكاء.",
@@ -567,7 +611,6 @@ const TIKTOK_DATA = {
       "contactCtaDesc": "تواصل معنا لأي استفسار، اقتراح للتعاون أو تبادل للأفكار الفلسفية.",
       "contactCtaBtn": "تواصل معنا الآن ←",
       "discoverThinker": "اكتشف المزيد ←",
-      "seeAllThinkers": "عرض جميع الفلاسفة ←",
       "audioLibraryTitle": "المكتبة الصوتية",
       "audioLibrarySubtitle": "استمع إلى تأملات، ملخصات كتب وروايات فلسفية ملهمة.",
       "listenAudioBtn": "▶ استمع الآن",
@@ -583,7 +626,32 @@ const TIKTOK_DATA = {
       "contactShareDesc": "هل لديك سؤال أو اقتراح أو فكرة للتعاون؟ يسعدنا دائماً التواصل معكم.",
       "contactShareBtn": "تواصل معنا الآن ←",
       "featuredSchopenhauerTitle": "لماذا اعتبر شوبنهاور أن السعادة مجرد وهم؟",
-      "featuredSchopenhauerDesc": "دراسة فلسفية ونفسية عميقة في فلسفة آرثر شوبنهاور: كيف تحركنا الإرادة، ولماذا نعيش في بندول بين الألم والملل وكيف نصل للسلام الداخلي."
+      "featuredSchopenhauerDesc": "دراسة فلسفية ونفسية عميقة في فلسفة آرثر شوبنهاور: كيف تحركنا الإرادة، ولماذا نعيش في بندول بين الألم والملل وكيف نصل للسلام الداخلي.",
+      "faq": "الأسئلة الشائعة",
+      "contact": "اتصل بنا",
+      "copyright": "© 2026 حكمة ونور | حديقة الأفكار",
+      "legalInfoTitle": "المعلومات القانونية والسياسات",
+      "mainSitemap": "الخريطة الرئيسية",
+      "interactiveServices": "خدمات ومحتوى تفاعلي",
+      "footerBrandDesc": "الحكمة • الفلسفة • علم النفس — مساحة للتأمل الرصين، حكمة كبار المفكرين وبناء القوة النفسية والهدوء الداخلي.",
+      "footerBrandTagline": "حكمة • فلسفة • سكينة",
+      "saveLater": "حفظ للمطالعة لاحقاً",
+      "saved": "تم الحفظ بنجاح!",
+      "share": "مشاركة المقال",
+      "copied": "تم نسخ الرابط!",
+      "toc": "في هذا المقال",
+      "intro": "المقدمة",
+      "dontMiss": "لا تفوت مقالاتنا القادمة",
+      "subscribe": "اشترك الآن",
+      "privacyText": "نحن نحترم خصوصيتك بالكامل.",
+      "commentsTitle": "التعليقات والمناقشات",
+      "addComment": "أضف تعليقك",
+      "commentPlaceholder": "شاركنا رأيك أو تأملاتك حول هذا المقال...",
+      "postComment": "نشر التعليق",
+      "ratingTitle": "ما رأيك في هذا المقال؟",
+      "backToArticles": "العودة للمقالات",
+      "readTimeLabel": "وقت القراءة",
+      "authorLabel": "بقلم: حكمة ونور"
     }
   },
   "content": {
@@ -1763,142 +1831,382 @@ const TIKTOK_DATA = {
           "file": "why-people-distance-when-you-succeed.html",
           "title": "Pourquoi les gens s'éloignent-ils quand vous commencez à réussir ?",
           "category": "psychology",
-          "categoryName": "Psychologie & Relations",
+          "categoryName": "Psychologie & Développement",
           "readTime": "8 min de lecture",
-          "author": "حكمة ونور | Hikma & Nour",
+          "date": "20 Mai 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Une analyse psychologique lucide qui dévoile la dynamique des relations face au succès, l'envie inconsciente et l'art de préserver sa paix intérieure.",
           "image": "why_people_distance_success_hero.jpg",
-          "desc": "Le succès ne transforme pas seulement votre vie, il révèle la vérité sur votre entourage. Comprendre la psychologie de l'envie et préserver sa paix intérieure.",
-          "date": "4 août 2026"
+          "imageAlt": "Une personne observant la ville depuis les hauteurs, méditant sur les relations humaines après la réussite",
+          "quote": "Le succès ne vous change pas ; il fait tomber les masques et révèle la véritable nature de ceux qui vous entourent.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+            "Introduction",
+            "1. Le succès modifie votre place dans le regard des autres",
+            "2. La comparaison sociale et le mécanisme de l'envie",
+            "3. Tout le monde n'est pas prêt à vous voir progresser",
+            "4. Le succès comme révélateur des liens authentiques",
+            "5. 5 règles pour gérer ces changements avec sagesse",
+            "Conclusion & Sérénité"
+          ],
+          "body": [
+            "Au début de toute quête, beaucoup vous encourageront et manifesteront leur sympathie. Mais dès que vos efforts portent leurs fruits et que vos ambitions deviennent réalité, un comportement étrange peut apparaître chez certains proches : prise de distance, froideur ou critiques déguisées.",
+            "La psychologie sociale explique ce phénomène par la 'comparaison sociale automatique'. Quand une personne voit un égal progresser rapidement, son ego perçoit une menace inconsciente pour sa propre valeur, transformant l'admiration initiale en insécurité puis en jalousie.",
+            "Certaines personnes vous aiment, à condition que vous ne les dépassiez pas. Votre présence au même niveau les rassure ; votre ascension les renvoie à leurs propres renoncements.",
+            "Le succès est un filtre salutaire. Il permet de distinguer clairement les compagnons d'opportunité des amis sincères qui célèbrent véritablement votre élévation.",
+            "Pour préserver votre paix : ne vous excusez jamais de réussir, évitez les justifications inutiles, restez humble sans éteindre votre éclat et entourez-vous de personnes animées d'une vision positive."
+          ],
+          "comments": [
+            {
+              "author": "Julien R.",
+              "time": "Il y a 3 heures",
+              "text": "Une analyse d'une remarquable justesse. J'ai vécu cette situation exacte lors du lancement de mon entreprise."
+            },
+            {
+              "author": "Élodie B.",
+              "time": "Il y a 6 heures",
+              "text": "La règle de ne jamais s'excuser de réussir m'a libérée d'un immense sentiment de culpabilité."
+            }
+          ]
         },
-
-      
         {
           "id": "why-people-respect-silent-person",
           "file": "why-people-respect-silent-person.html",
-          "title": "Pourquoi les gens respectent-ils plus une personne silencieuse qu'une personne bavarde ?",
+          "title": "Pourquoi les gens respectent-ils plus une personne silencieuse ?",
           "category": "psychology",
-          "categoryName": "Psychologie & Philosophie",
-          "readTime": "7-9 min",
-          "date": "2 août 2026",
-          "desc": "Une analyse psychologique profonde sur la puissance du silence, du charisme et de l'écoute active.",
-          "image": "silence_respect_hero.jpg"
+          "categoryName": "Psychologie & Charisme",
+          "readTime": "7 min de lecture",
+          "date": "18 Mai 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Comment le silence maîtrisé forge une autorité naturelle et pourquoi l'écoute attentive est l'arme suprême des esprits forts.",
+          "image": "silence_respect_hero.jpg",
+          "imageAlt": "Buste classique dans une attitude de recueillement et de profonde sérénité",
+          "quote": "Si la parole est d'argent, le silence opportun est une sagesse et une puissance réservées aux esprits maîtres d'eux-mêmes.",
+          "quoteAuthor": "— Sagesse Philosophique",
+          "toc": [
+            "Introduction",
+            "1. Le mystère positif et l'attrait du silence",
+            "2. Le pouvoir d'observation et de discernement",
+            "3. Les paroles rares qui ont du poids",
+            "4. Maîtriser ses émotions et éviter les faux pas",
+            "Conclusion : Pratiquer le silence intelligent"
+          ],
+          "body": [
+            "Dans un monde bruyant où chacun s'efforce d'attirer l'attention par un flot continu de paroles, la retenue devient une force magnétique rare.",
+            "Le silence crée une aura de mystère et d'assurance. Celui qui ne parle que lorsqu'il a quelque chose d'essentiel à exprimer suscite naturellement une écoute attentive et respectueuse.",
+            "En vous taisant, vous observez les dynamiques, décodez le non-dit et gagnez un avantage stratégique déterminant dans chaque échange."
+          ],
+          "comments": [
+            {
+              "author": "Marc L.",
+              "time": "Il y a 4 heures",
+              "text": "Le silence est une force prodigieuse. Moins je parle inutilement, plus mes décisions sont respectées."
+            }
+          ]
         },
         {
           "id": "nietzsche-psychological-strength",
           "file": "nietzsche-psychological-strength.html",
-          "title": "Que pouvez-vous apprendre de Nietzsche pour devenir psychologiquement plus fort ?",
+          "title": "Que pouvez-vous apprendre de Nietzsche pour devenir plus fort ?",
           "category": "philosophy",
-          "categoryName": "Philosophie & Psychologie",
-          "readTime": "8 min",
-          "date": "1 août 2026",
-          "desc": "Les leçons fondamentales de Friedrich Nietzsche pour développer la résilience mentale et transformer la douleur en force.",
-          "image": "nietzsche_psychological_strength_hero.jpg"
+          "categoryName": "Philosophie Existentielle",
+          "readTime": "8 min de lecture",
+          "date": "15 Mai 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Les enseignements majeurs de Friedrich Nietzsche pour transcender l'adversité, forger son autonomie et sculpter une volonté inébranlable.",
+          "image": "nietzsche_psychological_strength_hero.jpg",
+          "imageAlt": "Un alpiniste face à un sommet escarpé au-dessus des nuages, symbole de dépassement nietzschéen",
+          "quote": "Ce qui ne me tue pas me rend plus fort.",
+          "quoteAuthor": "— Friedrich Nietzsche",
+          "toc": [
+            "Introduction",
+            "1. L'Amor Fati : aimer son destin",
+            "2. Sublimer l'épreuve et la souffrance",
+            "3. Se libérer du conformisme grégaire",
+            "4. Créer ses propres valeurs",
+            "Conclusion & Exercice pratique"
+          ],
+          "body": [
+            "Friedrich Nietzsche ne promettait pas une félicité facile. Pour lui, la grandeur humaine ne s'épanouit que dans le dépassement lucide des obstacles.",
+            "Le concept d'Amor Fati nous invite non seulement à accepter notre réalité, mais à embrasser chaque défi comme une opportunité d'accroître notre puissance d'agir.",
+            "L'esprit fort ne se plaint pas : il transforme la douleur en carburant pour la création, la discipline et la conquête de soi."
+          ],
+          "comments": [
+            {
+              "author": "Antoine V.",
+              "time": "Il y a 1 jour",
+              "text": "La notion d'Amor Fati m'a aidé à traverser une épreuve personnelle majeure avec courage."
+            }
+          ]
         },
         {
           "id": "schopenhauer-happiness-illusion",
           "file": "schopenhauer-happiness-illusion.html",
-          "title": "Pourquoi Schopenhauer considérait-il le bonheur comme une simple illusion ?",
+          "title": "Pourquoi Schopenhauer considérait-il le bonheur comme une illusion ?",
           "category": "philosophy",
-          "categoryName": "Philosophie & Psychologie",
-          "readTime": "8-10 min",
-          "date": "1 août 2026",
-          "desc": "Une analyse philosophique profonde de la pensée de Schopenhauer : le cycle des désirs, l'illusion du bonheur et la sérénité.",
-          "image": "schopenhauer_happiness_illusion_hero.jpg"
+          "categoryName": "Philosophie & Sagesse",
+          "readTime": "9 min de lecture",
+          "date": "12 Mai 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Une exploration profonde de la pensée d'Arthur Schopenhauer : la tyrannie des désirs, l'ennui et le véritable chemin vers la paix de l'âme.",
+          "image": "schopenhauer_happiness_illusion_hero.jpg",
+          "imageAlt": "Un lac serein au soleil couchant reflétant la contemplation et l'apaisement intérieur",
+          "quote": "La vie oscille comme un pendule de droite à gauche, de la souffrance à l'ennui.",
+          "quoteAuthor": "— Arthur Schopenhauer",
+          "toc": [
+            "Introduction",
+            "1. La Volonté et le cycle perpétuel du désir",
+            "2. Le piège de l'ennui post-réalisation",
+            "3. La nature négative du bonheur (l'absence de douleur)",
+            "4. L'art et la contemplation comme asile",
+            "Conclusion : Vers une existence sereine"
+          ],
+          "body": [
+            "Pour Schopenhauer, la quête effrénée du plaisir est la source première de nos tourments. Chaque désir inassouvi crée un manque douloureux, et chaque satisfaction éphémère débouche sur l'ennui.",
+            "La véritable sagesse consiste à concevoir le bonheur de façon lucide : il réside dans l'absence de souffrance physique et de trouble mental, et dans la paix d'un esprit libéré des avidités superficielles."
+          ],
+          "comments": [
+            {
+              "author": "Laurent G.",
+              "time": "Il y a 2 jours",
+              "text": "Définir le bonheur comme l'absence de douleur m'a ôté une pression sociale colossale."
+            }
+          ]
         },
         {
           "id": "solitude-blessing-or-curse",
           "file": "solitude-blessing-or-curse.html",
-          "title": "La solitude est-elle une bénédiction ou une punition ? La voie vers la découverte de soi selon les philosophes",
+          "title": "La solitude est-elle une bénédiction ou une punition ?",
           "category": "philosophy",
-          "categoryName": "Philosophie & Sérénité",
-          "readTime": "8 min",
-          "date": "31 juillet 2026",
-          "desc": "Découvrez comment Schopenhauer et Nietzsche percevaient la solitude positive comme une clé vers la liberté intérieure.",
-          "image": "solitude_blessing_curse_hero.jpg"
+          "categoryName": "Philosophie & Méditation",
+          "readTime": "8 min de lecture",
+          "date": "10 Mai 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "La voie des philosophes pour faire de la solitude choisie un sanctuaire d'introspection et de paix au cœur d'un monde frénétique.",
+          "image": "solitude_blessing_curse_hero.jpg",
+          "imageAlt": "Forêt d'automne paisible avec un marcheur solitaire contemplant la beauté du silence",
+          "quote": "On ne peut être pleinement soi-même qu'aussi longtemps qu'on est seul.",
+          "quoteAuthor": "— Arthur Schopenhauer",
+          "toc": [
+            "Introduction",
+            "1. Solitude choisie vs isolement subi",
+            "2. Forger l'indépendance d'esprit dans le calme",
+            "3. Retrouver sa voix intérieure authentique",
+            "Conclusion & Équilibre"
+          ],
+          "body": [
+            "Il existe une différence fondamentale entre la souffrance de l'isolement et la richesse de la solitude choisie. Dans le recueillement, l'esprit se libère des faux rôles pour dialoguer en vérité avec lui-même."
+          ],
+          "comments": [
+            {
+              "author": "Camille M.",
+              "time": "Il y a 3 jours",
+              "text": "Mes moments de solitude matinale sont devenus indispensables à mon équilibre mental."
+            }
+          ]
         },
         {
           "id": "7-errors-mind-growth",
           "file": "7-errors-mind-growth.html",
-          "title": "7 erreurs qui empêchent votre esprit de grandir : leçons de Socrate, Nietzsche et Marc Aurèle",
+          "title": "7 erreurs qui empêchent votre esprit de grandir",
           "category": "history",
-          "categoryName": "Histoire des idées & Esprit",
-          "readTime": "8 min",
-          "date": "31 juillet 2026",
-          "desc": "Découvrez les 7 pièges mentaux à éviter pour aiguiser votre pensée et développer votre sagesse selon les grands philosophes.",
-          "image": "mind_growth_errors_hero.jpg"
+          "categoryName": "Histoire des Idées",
+          "readTime": "8 min de lecture",
+          "date": "8 Mai 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Leçons de Socrate, Nietzsche et Marc Aurèle pour éliminer les biais mentaux et cultiver un esprit critique rigoureux et libre.",
+          "image": "mind_growth_errors_hero.jpg",
+          "imageAlt": "Bibliothèque classique éclairée à la lanterne avec de précieux volumes philosophiques",
+          "quote": "Tout ce que je sais, c'est que je ne sais rien.",
+          "quoteAuthor": "— Socrate",
+          "toc": [
+            "Introduction",
+            "1. L'illusion de la certitude absolue",
+            "2. Accumuler des informations sans les assimiler",
+            "3. La peur de la contradiction féconde",
+            "4. La paresse intellectuelle",
+            "Conclusion : Pratique de l'examen socratique"
+          ],
+          "body": [
+            "Socrate nous a enseigné que le commencement de toute sagesse authentique est l'humilité de reconnaître nos ignorances. Questionner nos certitudes est la condition sine qua non de toute évolution."
+          ],
+          "comments": [
+            {
+              "author": "Thomas B.",
+              "time": "Il y a 4 jours",
+              "text": "L'humilité intellectuelle socratique est le meilleur antidote au dogmatisme moderne."
+            }
+          ]
         },
         {
           "id": "happiness-in-wrong-place",
           "file": "happiness-in-wrong-place.html",
-          "title": "Pourquoi cherchons-nous le bonheur au mauvais endroit ? Voyage entre Schopenhauer, les Stoïciens et Épicure",
+          "title": "Pourquoi cherchons-nous le bonheur au mauvais endroit ?",
           "category": "philosophy",
-          "categoryName": "Philosophie & Vie",
-          "readTime": "7 min",
-          "date": "31 juillet 2026",
-          "desc": "Un voyage philosophique captivant pour redéfinir la sérénité et le vrai bonheur au-delà des illusions matérielles.",
-          "image": "happiness_wrong_place_hero.jpg"
+          "categoryName": "Philosophie & Art de Vivre",
+          "readTime": "7 min de lecture",
+          "date": "5 Mai 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Un voyage au cœur des sagesses stoïcienne et épicurienne pour cesser de courir après les mirages extérieurs.",
+          "image": "happiness_wrong_place_hero.jpg",
+          "imageAlt": "Une fenêtre donnant sur les premières lueurs du jour symbolisant la paix intérieure",
+          "quote": "N'altère pas ce que tu as par le désir de ce que tu n'as pas ; souviens-toi que ce que tu as maintenant était autrefois désiré.",
+          "quoteAuthor": "— Épicure",
+          "toc": [
+            "Introduction",
+            "1. L'adaptation hédonique et la course sans fin",
+            "2. La sérénité stoïcienne par la maîtrise de ses jugements",
+            "3. La frugalité joyeuse selon Épicure",
+            "Conclusion : Habiter le présent"
+          ],
+          "body": [
+            "Le bonheur n'est pas un trésor lointain à acquérir à force de possessions, mais une manière d'accueillir et de savourer le réel avec clarté et modération."
+          ],
+          "comments": [
+            {
+              "author": "Nathalie P.",
+              "time": "Il y a 5 jours",
+              "text": "Ce texte rappelle l'essentiel : apprécier ce que l'on possède déjà."
+            }
+          ]
         },
         {
-          "category": "psychology",
+          "id": "true-confidence-inside",
           "file": "true-confidence-inside.html",
-          "image": "person_window_sunrise.jpg",
-          "featured": true,
           "title": "Comment construire une vraie confiance en soi de l'intérieur ?",
-          "readTime": "5 min de lecture",
-          "desc": "Un guide pratique pour développer votre confiance pas à pas et transformer votre vie.",
-          "body": [
-            "La vraie confiance ne consiste pas à paraître fort devant les autres, mais à se sentir serein même quand personne ne vous regarde.",
-            "Elle commence de l'intérieur, par la façon dont vous vous percevez et par le dialogue interne que vous entretenez chaque jour.",
-            "Arrêtez de vous comparer aux autres, acceptez vos erreurs comme des leçons, et célébrez chaque petit progrès."
-          ]
-        },
-        {
-          "category": "history",
-          "file": "hikma-citations-philosophiques.html",
-          "image": "quotes_article_hero.jpg",
-          "featured": true,
-          "title": "Sagesses et Citations Immortelles des Grands Penseurs",
-          "readTime": "8 min de lecture",
-          "desc": "20 citations qui ont changé la vision de millions de personnes — Schopenhauer, Socrate, Marc Aurèle, Nietzsche et bien d'autres.",
-          "body": [
-            "Depuis les débuts des civilisations, les sages et philosophes ont laissé des mots qui ont transcendé les frontières du temps. L'homme peut partir, mais l'idée sincère reste vivante.",
-            "Une citation n'est pas qu'une belle formule, c'est une expérience humaine résumée en peu de mots. Une seule phrase peut changer votre façon de penser.",
-            "Parce qu'elles résument des années d'expérience en quelques lignes. Elles sont nées de la douleur, de la méditation, du succès ou de l'échec.",
-            "Les grandes paroles vivent plus longtemps que leurs auteurs."
-          ]
-        },
-        {
-          "category": "development",
-          "file": "self-discipline.html",
-          "image": "self_discipline.jpg",
-          "featured": true,
-          "title": "Comment cultiver l'autodiscipline ?",
-          "readTime": "9 min read",
-          "desc": "L'habitude qui change votre vie plus que le talent. Découvrez un guide pratique pour rester engagé et constant.",
-          "body": [
-            "Tout le monde rêve de réaliser de grands objectifs, mais peu y parviennent. La raison n'est pas un manque d'intelligence ou de talent, mais l'absence d'autodiscipline. La motivation peut vous donner un bon départ, mais elle est fluctuante et dépend de votre humeur. L'autodiscipline, quant à elle, est la décision qui vous pousse à continuer, même quand vous n'en avez pas envie.",
-            "Les personnes que nous considérons comme des réussites ne possèdent pas toujours des super-pouvoirs, mais elles partagent une habitude simple : faire ce qui doit être fait au bon moment, même lorsque c'est difficile. Dans cet article, nous découvrirons ce qu'est l'autodiscipline, pourquoi elle constitue le fondement du succès, et comment vous pouvez la bâtir étape par étape.",
-            "L'autodiscipline est la capacité de s'en tenir à ce qui sert vos objectifs, même quand la motivation fait défaut. C'est un choix conscient entre le confort immédiat et les résultats à long terme. C'est pourquoi l'autodiscipline ne dépend pas de l'humeur, mais repose sur des habitudes quotidiennes solidement ancrées.",
-            "Quelle est la différence entre la motivation et l'autodiscipline ? La motivation est comme l'étincelle qui allume le feu, mais elle ne suffit pas à le maintenir. L'autodiscipline est le bois qui permet au feu de continuer à brûler. Si vous ne comptez que sur la motivation, vous commencerez de nombreux projets sans jamais les terminer. Avec l'autodiscipline, vous progressez régulièrement, même dans les jours les plus difficiles.",
-            "Pour bâtir cette discipline, adoptez cinq habitudes : commencez par de petites étapes faciles à maintenir, déterminez des heures fixes pour vos activités clés, concevez un environnement qui favorise votre réussite en éliminant les distractions, pardonnez-vous en cas de faux pas sans abandonner, et privilégiez la régularité sur le long terme.",
-            "L'autodiscipline n'est pas un don inné, mais une compétence qui se développe avec la pratique et la patience. Commencez dès aujourd'hui par une petite action constructive, répétez-la demain, et vous découvrirez dans quelques mois que votre vie a changé parce que vous vous êtes engagé, sans attendre que l'inspiration vienne à vous."
-          ]
-        },
-        {
           "category": "psychology",
-          "file": "stop-overthinking.html",
-          "image": "overthinking_calm.jpg",
-          "featured": true,
-          "title": "Comment arrêter de trop penser ?",
-          "readTime": "10 min read",
-          "desc": "Un guide pratique pour retrouver le calme mental, maîtriser vos pensées et vous libérer de l'anxiété.",
+          "categoryName": "Psychologie de l'Épanouissement",
+          "readTime": "5 min de lecture",
+          "date": "1 Mai 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Un guide concret pour forger une sécurité intérieure inaltérable sans dépendre de l'approbation d'autrui.",
+          "image": "person_window_sunrise.jpg",
+          "imageAlt": "Une personne assise calmement face au lever du soleil incarnant la sérénité et l'assurance intérieure",
+          "quote": "La confiance en soi ne consiste pas à penser que tout le monde va vous apprécier, mais à être parfaitement serein si certains ne vous apprécient pas.",
+          "quoteAuthor": "— Sagesse Psychologique",
+          "toc": [
+            "Introduction",
+            "1. Confiance authentique vs assurance de façade",
+            "2. Briser le besoin compulsif de plaire",
+            "3. Le dialogue intérieur constructif",
+            "Conclusion : Pratique quotidienne"
+          ],
           "body": [
-            "Vous est-il déjà arrivé de vous réveiller en pleine nuit parce que votre esprit refusait de s'arrêter ? Vous avez peut-être rejoué la même situation des dizaines de fois, ou imaginé des centaines de scénarios qui ne se réaliseront jamais. Cet état est connu sous le nom de surchauffe mentale (Overthinking), et c'est l'un des problèmes psychologiques les plus courants de notre époque.",
-            "Penser peut sembler positif, mais cela devient un fardeau lorsque cela tourne en boucle, consommant votre énergie sans jamais vous mener à une solution. La bonne nouvelle est que le surmenage mental n'est pas un trait de votre personnalité, mais une habitude mentale dont vous pouvez débarrasser votre esprit par l'entraînement. Dans ce guide, vous découvrirez les causes de la surchauffe, ses effets, et comment retrouver votre calme.",
-            "Qu'est-ce que le surmenage mental ? C'est le fait d'analyser sans fin le même problème sans jamais prendre de décision ou de direction concrète. Au lieu de vous aider, votre pensée vous emprisonne. Elle tourne souvent autour des erreurs du passé, de la peur de l'avenir, de l'opinion des autres et des décisions difficiles.",
-            "Pourquoi pensons-nous trop ? Plusieurs causes l'expliquent : la peur de l'échec qui nous pousse à procrastiner, le perfectionnisme où tout doit être irréprochable, les expériences passées douloureuses qui poussent le cerveau à anticiper tous les risques, et la comparaison constante via les réseaux sociaux.",
-            "Pour vous en libérer, voici sept étapes simples : demandez-vous si cette pensée est une réalité ou une simple hypothèse, couchez vos idées sur papier pour libérer de l'espace, dédiez un temps de réflexion limité (15 minutes max) par jour, concentrez-vous uniquement sur ce que vous pouvez contrôler, bougez pour apaiser votre esprit, limitez l'usage du téléphone, et pratiquez la pleine conscience en vivant le moment présent.",
-            "Si le surmenage mental vous empêche de dormir ou impacte négativement votre travail, vos études ou vos relations de manière prolongée, n'hésitez pas à consulter un professionnel de la santé mentale. Retrouver le calme ne consiste pas à tout contrôler, mais à accepter ce qui échappe à notre contrôle."
+            "L'assurance réelle ne se mesure pas au bruit que l'on fait en entrant dans une pièce, mais à la paix que l'on ressent avec soi-même lorsque les regards s'éteignent."
+          ],
+          "comments": [
+            {
+              "author": "Romain T.",
+              "time": "Il y a 1 semaine",
+              "text": "Se détacher de l'approbation des autres a transformé ma façon d'aborder mes projets."
+            }
+          ]
+        },
+        {
+          "id": "hikma-citations-philosophiques",
+          "file": "hikma-citations-philosophiques.html",
+          "title": "Sagesses et Citations Immortelles des Grands Penseurs",
+          "category": "history",
+          "categoryName": "Histoire de la Pensée",
+          "readTime": "8 min de lecture",
+          "date": "28 Avril 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "20 maximes philosophiques intemporelles de Socrate, Marc Aurèle, Sénèque et Nietzsche décryptées pour éclairer notre quotidien.",
+          "image": "quotes_article_hero.jpg",
+          "imageAlt": "Manuscrit philosophique et livres anciens à la lumière chaleureuse d'une bougie",
+          "quote": "Les grandes pensées traversent les siècles comme des phares dans la nuit.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+            "Introduction",
+            "1. Sagesse socratique et platonicienne",
+            "2. Les piliers du stoïcisme romain",
+            "3. L'élan existentiel moderne",
+            "Conclusion : Méditer les maximes"
+          ],
+          "body": [
+            "Une citation philosophique majeure est un condensé de décennies de méditation et d'épreuves vécues par les plus grands esprits de l'histoire humaine."
+          ],
+          "comments": [
+            {
+              "author": "Sophie K.",
+              "time": "Il y a 1 semaine",
+              "text": "Une formidable sélection que je relis régulièrement pour garder le cap."
+            }
+          ]
+        },
+        {
+          "id": "self-discipline",
+          "file": "self-discipline.html",
+          "title": "Comment cultiver l'autodiscipline ? L'art de la persévérance",
+          "category": "development",
+          "categoryName": "Développement & Maîtrise de Soi",
+          "readTime": "9 min de lecture",
+          "date": "25 Avril 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Pourquoi la discipline surpasse toujours la motivation éphémère et comment bâtir des habitudes solides pour accomplir ses projets.",
+          "image": "self_discipline.jpg",
+          "imageAlt": "Un chemin pavé s'étendant vers l'horizon symbolisant la constance et l'autodiscipline quotidienne",
+          "quote": "La discipline est le pont entre vos objectifs et leurs accomplissements.",
+          "quoteAuthor": "— Jim Rohn",
+          "toc": [
+            "Introduction",
+            "1. Pourquoi la motivation s'effondre et la discipline triomphe",
+            "2. La puissance des micro-habitudes quotidiennes",
+            "3. Structurer son environnement pour éliminer les frictions",
+            "4. Réagir avec résilience face aux faux pas",
+            "Conclusion : Le plan d'action"
+          ],
+          "body": [
+            "L'enthousiasme est l'étincelle initiale, mais c'est l'autodiscipline quotidienne qui maintient la flamme allumée jusqu'à la réussite durable.",
+            "Les personnes accomplies ne comptent pas sur leur humeur du jour : elles s'appuient sur des routines claires et non négociables."
+          ],
+          "comments": [
+            {
+              "author": "Nicolas F.",
+              "time": "Il y a 2 semaines",
+              "text": "La constance des petites actions a changé ma productivité du tout au tout."
+            }
+          ]
+        },
+        {
+          "id": "stop-overthinking",
+          "file": "stop-overthinking.html",
+          "title": "Comment Stopper les Pensées Obsédantes et l'Anxiété ?",
+          "category": "psychology",
+          "categoryName": "Psychologie & Sérénité",
+          "readTime": "6 min de lecture",
+          "date": "20 Mai 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Un guide pratique et éprouvé pour briser le cycle des ruminations mentales, calmer le système nerveux et retrouver la sérénité du moment présent.",
+          "image": "overthinking_calm.jpg",
+          "imageAlt": "Une personne méditant sereinement au lever du soleil libérée de l'anxiété et des ruminations",
+          "quote": "L'anxiété ne vide pas demain de ses peines, elle vide seulement aujourd'hui de sa force.",
+          "quoteAuthor": "— Arthur Schopenhauer",
+          "toc": [
+            "Introduction",
+            "1. Qu'est-ce que l'anxiété et le surmenage mental ?",
+            "2. Pourquoi ruminons-nous sans cesse ?",
+            "3. La dichotomie du contrôle stoïcienne",
+            "4. 7 étapes pratiques pour retrouver le calme",
+            "Conclusion : Vivre dans l'instant présent"
+          ],
+          "body": [
+            "Vous est-il déjà arrivé de vous réveiller en pleine nuit parce que votre esprit refusait de s'arrêter ? Vous avez peut-être rejoué la même scène des dizaines de fois ou imaginé des scénarios catastrophes qui ne se produiront jamais. Cette surcharge mentale et cette anxiété chronique sont parmi les plus grands voleurs de paix intérieure de notre époque.",
+            "Trop penser n'est pas un gage d'intelligence, mais un piège circulaire qui épuise votre énergie sans apporter de solution concrète. Sa racine provient souvent de la peur de l'échec ou d'un besoin irréaliste de tout contrôler.",
+            "La philosophie stoïcienne offre un remède souverain avec la 'dichotomie du contrôle' : séparez vos pensées entre ce qui dépend de vous (vos actions, votre attitude, vos choix présents) et ce qui ne dépend pas de vous (le passé, l'avenir, l'opinion des autres). Concentrez 100 % de votre énergie sur ce qui est en votre pouvoir.",
+            "Pour apaiser immédiatement votre esprit : 1. Notez vos pensées par écrit pour désencombrer votre cerveau. 2. Accordez-vous une 'fenêtre d'inquiétude' de 15 minutes par jour, puis passez à autre chose. 3. Marchez et bougez pour libérer les tensions corporelles. 4. Pratiquez la respiration lente pour reconnecter votre corps à l'instant présent."
+          ],
+          "comments": [
+            {
+              "author": "Julien M.",
+              "time": "Il y a 2 heures",
+              "text": "Une lecture salvatrice. Appliquer la dichotomie du contrôle stoïcienne m'a permis d'alléger considérablement ma charge mentale."
+            },
+            {
+              "author": "Claire D.",
+              "time": "Il y a 5 heures",
+              "text": "La méthode d'écriture des pensées est bluffante d'efficacité. Merci pour cette pépite de sagesse."
+            }
           ]
         }
       ],
@@ -3614,140 +3922,377 @@ const TIKTOK_DATA = {
           "file": "why-people-distance-when-you-succeed.html",
           "title": "Why Do People Distance Themselves When You Start Succeeding?",
           "category": "psychology",
-          "categoryName": "Psychology & Relationships",
+          "categoryName": "Psychology & Growth",
           "readTime": "8 min read",
-          "author": "Hikma & Nour",
+          "date": "May 20, 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "A deep psychological analysis revealing the dynamics of relationships when you advance, unconscious envy, and the art of preserving inner peace.",
           "image": "why_people_distance_success_hero.jpg",
-          "desc": "Success does not only change your life, it reveals the truth about those around you. Understand the psychology of envy and protect your inner peace.",
-          "date": "August 4, 2026"
+          "imageAlt": "A person standing on a high viewpoint overlooking the city, contemplating human relationships after success",
+          "quote": "Success does not change you; it drops the masks and reveals the true intentions of those around you.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+            "Introduction",
+            "1. Success changes your standing in others' eyes",
+            "2. Social comparison and the mechanics of envy",
+            "3. Not everyone is ready to see you surpass them",
+            "4. Success as a revealing filter of true friendships",
+            "5. 5 rules to handle changing circles with wisdom",
+            "Conclusion & Inner Harmony"
+          ],
+          "body": [
+            "At the beginning of your journey, many will offer encouragement and well wishes. But as soon as your dreams turn into tangible achievements, an unexpected shift often happens: gradual withdrawal, coolness, or subtle critique from people you thought were with you.",
+            "Social psychology explains this through automatic social comparison. When someone sees an equal take significant leaps forward, their ego experiences an unconscious threat to their self-worth, turning initial admiration into insecurity and unspoken resentment.",
+            "True success filters your circle with precision. It reveals who walked beside you for convenience and who genuinely rejoices in your elevation.",
+            "To protect your inner calm: never apologize for your success, avoid endless defensive arguments, stay grounded in humility, and nurture ties with those who share a constructive vision."
+          ],
+          "comments": [
+            {
+              "author": "Julian R.",
+              "time": "3 hours ago",
+              "text": "Incredibly accurate analysis. Experienced this exact shift when I launched my tech startup."
+            },
+            {
+              "author": "Elodie B.",
+              "time": "6 hours ago",
+              "text": "The rule of never apologizing for succeeding cured my long-standing guilt."
+            }
+          ]
         },
         {
           "id": "why-people-respect-silent-person",
           "file": "why-people-respect-silent-person.html",
           "title": "Why Do People Respect a Silent Person More Than a Talkative One?",
           "category": "psychology",
-          "categoryName": "Psychology & Mind",
-          "readTime": "7-9 min",
-          "date": "2 August 2026",
-          "desc": "A deep psychological analysis of how silence commands respect, inner confidence, and emotional intelligence.",
-          "image": "silence_respect_hero.jpg"
+          "categoryName": "Psychology & Charisma",
+          "readTime": "7 min read",
+          "date": "May 18, 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "How mindful silence builds natural charisma, invisible authority, and why deep listening is the ultimate strength in human interactions.",
+          "image": "silence_respect_hero.jpg",
+          "imageAlt": "Classical statue in silent contemplative pose embodying profound wisdom and composure",
+          "quote": "If speech is silver, timely silence is wisdom and power mastered only by disciplined minds.",
+          "quoteAuthor": "— Philosophical Wisdom",
+          "toc": [
+            "Introduction",
+            "1. Positive mystery and the magnetism of silence",
+            "2. The power of observation and emotional control",
+            "3. Rare words that carry immense weight",
+            "4. Avoiding slip-ups and dominating the room",
+            "Conclusion: Practicing Wise Silence"
+          ],
+          "body": [
+            "In a noisy world obsessed with constant broadcasting, restraint is a rare and commanding virtue. A person who speaks only when having something vital to say instantly commands attention and genuine respect."
+          ],
+          "comments": [
+            {
+              "author": "Marcus L.",
+              "time": "4 hours ago",
+              "text": "Silence is genuine authority. The less I speak impulsively, the more weight my words hold."
+            }
+          ]
         },
         {
           "id": "nietzsche-psychological-strength",
           "file": "nietzsche-psychological-strength.html",
           "title": "What Can You Learn from Nietzsche to Become Psychologically Stronger?",
           "category": "philosophy",
-          "categoryName": "Philosophy & Mind",
-          "readTime": "8 min",
-          "date": "1 August 2026",
-          "desc": "Core psychological lessons from Friedrich Nietzsche to build mental resilience and transform suffering into strength.",
-          "image": "nietzsche_psychological_strength_hero.jpg"
+          "categoryName": "Existential Philosophy",
+          "readTime": "8 min read",
+          "date": "May 15, 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Key teachings from Friedrich Nietzsche on turning adversity into fuel, overcoming herd mentality, and building uncompromising self-mastery.",
+          "image": "nietzsche_psychological_strength_hero.jpg",
+          "imageAlt": "A mountaineer overlooking majestic peaks above the clouds, embodying Nietzschean psychological elevation",
+          "quote": "What does not kill me makes me stronger.",
+          "quoteAuthor": "— Friedrich Nietzsche",
+          "toc": [
+            "Introduction",
+            "1. Amor Fati: loving your destiny",
+            "2. Sublimating suffering into mental power",
+            "3. Freeing yourself from herd conformity",
+            "4. Creating your own values",
+            "Conclusion & Practical Takeaway"
+          ],
+          "body": [
+            "Nietzsche offered no easy comfort. He saw human greatness as something forged through relentless self-overcoming in the fires of adversity.",
+            "Amor Fati asks us not merely to tolerate life's hardships, but to welcome them as the necessary soil in which our strength and wisdom grow."
+          ],
+          "comments": [
+            {
+              "author": "Anthony V.",
+              "time": "1 day ago",
+              "text": "Nietzsche's Amor Fati helped me reframe a major career setback into the greatest growth period of my life."
+            }
+          ]
         },
         {
           "id": "schopenhauer-happiness-illusion",
           "file": "schopenhauer-happiness-illusion.html",
           "title": "Why Did Schopenhauer Consider Happiness to Be a Mere Illusion?",
           "category": "philosophy",
-          "categoryName": "Philosophy & Mind",
-          "readTime": "8-10 min",
-          "date": "1 August 2026",
-          "desc": "A deep philosophical study into Schopenhauer's thought: the cycle of desires, happiness as a mirage, and inner peace.",
-          "image": "schopenhauer_happiness_illusion_hero.jpg"
+          "categoryName": "Philosophy & Wisdom",
+          "readTime": "9 min read",
+          "date": "May 12, 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "A deep philosophical exploration of Arthur Schopenhauer: the endless cycle of desires, boredom, and the true path to tranquility.",
+          "image": "schopenhauer_happiness_illusion_hero.jpg",
+          "imageAlt": "A peaceful calm lake at sunset reflecting serene contemplation and release from superficial desires",
+          "quote": "Life swings like a pendulum to and fro between pain and boredom.",
+          "quoteAuthor": "— Arthur Schopenhauer",
+          "toc": [
+            "Introduction",
+            "1. The Will to Live and the treadmill of desire",
+            "2. The trap of boredom after achievement",
+            "3. The negative nature of true happiness (freedom from pain)",
+            "4. Art and contemplation as the supreme sanctuary",
+            "Conclusion: Living a Peaceful Life"
+          ],
+          "body": [
+            "Schopenhauer demonstrated that chasing perpetual euphoria is the root cause of human distress. True contentment is negative in nature: the absence of physical pain and mental turmoil."
+          ],
+          "comments": [
+            {
+              "author": "Lawrence G.",
+              "time": "2 days ago",
+              "text": "Defining happiness as freedom from pain relieved an immense weight of societal pressure."
+            }
+          ]
         },
         {
           "id": "solitude-blessing-or-curse",
           "file": "solitude-blessing-or-curse.html",
-          "title": "Is Solitude a Blessing or a Curse? How Philosophers See Solitude as a Path to Self-Discovery",
+          "title": "Is Solitude a Blessing or a Curse? The Path to Self-Discovery",
           "category": "philosophy",
           "categoryName": "Philosophy & Mind",
-          "readTime": "8 min",
-          "date": "31 July 2026",
-          "desc": "Explore how Schopenhauer and Nietzsche viewed solitude as an essential gateway to inner peace and self-discovery.",
-          "image": "solitude_blessing_curse_hero.jpg"
+          "readTime": "8 min read",
+          "date": "May 10, 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "How great philosophers see intentional solitude as a sanctuary of self-discovery, clarity, and renewal in an overstimulated world.",
+          "image": "solitude_blessing_curse_hero.jpg",
+          "imageAlt": "Autumn forest trail with a lone traveler walking peacefully in contemplation",
+          "quote": "A man can be himself only so long as he is alone.",
+          "quoteAuthor": "— Arthur Schopenhauer",
+          "toc": [
+            "Introduction",
+            "1. Chosen solitude vs painful loneliness",
+            "2. Cultivating independence of thought",
+            "3. Reconnecting with your authentic inner voice",
+            "Conclusion & Harmony"
+          ],
+          "body": [
+            "There is a crucial distinction between loneliness and purposeful solitude. In solitude, the mind strips away social masks to converse honestly with its deepest self."
+          ],
+          "comments": [
+            {
+              "author": "Camille M.",
+              "time": "3 days ago",
+              "text": "My morning 30-minute solitude walk is the cornerstone of my daily sanity."
+            }
+          ]
         },
         {
           "id": "7-errors-mind-growth",
           "file": "7-errors-mind-growth.html",
-          "title": "7 Mistakes Preventing You from Developing Your Mind: Lessons from Socrates, Nietzsche, and Marcus Aurelius",
+          "title": "7 Mistakes Preventing You from Developing Your Mind",
           "category": "history",
-          "categoryName": "History of Ideas & Mind",
-          "readTime": "8 min",
-          "date": "31 July 2026",
-          "desc": "Uncover the 7 mental traps blocking your cognitive growth and wisdom based on timeless philosophical lessons.",
-          "image": "mind_growth_errors_hero.jpg"
+          "categoryName": "History of Ideas",
+          "readTime": "8 min read",
+          "date": "May 8, 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Timeless lessons from Socrates, Nietzsche, and Marcus Aurelius to dismantle cognitive biases and cultivate sharp critical thinking.",
+          "image": "mind_growth_errors_hero.jpg",
+          "imageAlt": "Vintage lantern-lit library with timeless philosophical volumes",
+          "quote": "The only true wisdom is in knowing you know nothing.",
+          "quoteAuthor": "— Socrates",
+          "toc": [
+            "Introduction",
+            "1. The illusion of absolute certainty",
+            "2. Consuming data without deep synthesis",
+            "3. Avoiding constructive intellectual opposition",
+            "4. Surrendering to mental passivity",
+            "Conclusion: Daily Socratic Practice"
+          ],
+          "body": [
+            "Socrates showed that genuine intellect begins with intellectual humility. Willingness to question your own assumptions is the foundation of mental growth."
+          ],
+          "comments": [
+            {
+              "author": "Thomas B.",
+              "time": "4 days ago",
+              "text": "Socratic humility is the sharpest cure for modern digital arrogance."
+            }
+          ]
         },
         {
           "id": "happiness-in-wrong-place",
           "file": "happiness-in-wrong-place.html",
-          "title": "Why Do We Search for Happiness in the Wrong Place? A Journey with Schopenhauer, Stoics, and Epicurus",
+          "title": "Why Do We Search for Happiness in the Wrong Place?",
           "category": "philosophy",
-          "categoryName": "Philosophy & Life",
-          "readTime": "7 min",
-          "date": "31 July 2026",
-          "desc": "A profound philosophical exploration redefining inner peace and happiness beyond material illusions.",
-          "image": "happiness_wrong_place_hero.jpg"
+          "categoryName": "Philosophy & Living",
+          "readTime": "7 min read",
+          "date": "May 5, 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "A journey through Stoicism, Epicureanism, and Schopenhauer to stop chasing external mirages and embrace authentic peace.",
+          "image": "happiness_wrong_place_hero.jpg",
+          "imageAlt": "A sunlit window morning view symbolizing genuine internal peace and clarity",
+          "quote": "Do not spoil what you have by desiring what you have not; remember that what you now have was once among the things you only hoped for.",
+          "quoteAuthor": "— Epicurus",
+          "toc": [
+            "Introduction",
+            "1. The hedonic treadmill and the endless chase",
+            "2. Stoic serenity through judgment control",
+            "3. Epicurean simplicity and joy",
+            "Conclusion: Inhabiting the Present"
+          ],
+          "body": [
+            "Contentment is not a distant reward found at the end of infinite accumulation; it is a refined lens through which we appreciate the present moment."
+          ],
+          "comments": [
+            {
+              "author": "Nathalie P.",
+              "time": "5 days ago",
+              "text": "This article is a potent reminder to savor what is already here."
+            }
+          ]
         },
         {
-          "category": "psychology",
+          "id": "true-confidence-inside",
           "file": "true-confidence-inside.html",
-          "image": "person_window_sunrise.jpg",
-          "featured": true,
           "title": "How to Build True Inner Self-Confidence?",
-          "readTime": "5 min read",
-          "desc": "A practical step-by-step guide to building lasting self-confidence from within.",
-          "body": [
-            "True self-confidence isn't about appearing strong to others, but feeling peaceful even when no one is watching.",
-            "It starts from within, in the way you see yourself and the daily conversation happening in your mind.",
-            "Stop comparing yourself to others, accept your mistakes as lessons, and celebrate every small victory."
-          ]
-        },
-        {
-          "category": "history",
-          "file": "hikma-citations-philosophiques.html",
-          "image": "quotes_article_hero.jpg",
-          "featured": true,
-          "title": "Timeless Wisdom & Quotes from the Greatest Thinkers",
-          "readTime": "8 min read",
-          "desc": "20 quotes that changed the perspective of millions — Schopenhauer, Socrates, Marcus Aurelius, Nietzsche and many more.",
-          "body": [
-            "Since the dawn of civilizations, sages and philosophers have left behind words that transcended the boundaries of time. A person may pass, but a sincere idea lives on.",
-            "A quote is not just a beautiful phrase — it is a human experience distilled into a few words. A single sentence can change the way you think or the decision that changes your life.",
-            "Because they compress years of experience into a few lines. They were born from pain, reflection, success, or failure. That's why they reach the heart so quickly.",
-            "Great words live longer than their authors."
-          ]
-        },
-        {
-          "category": "development",
-          "file": "self-discipline.html",
-          "image": "self_discipline.jpg",
-          "featured": true,
-          "title": "How to Build Self-Discipline?",
-          "readTime": "9 min read",
-          "desc": "The habit that changes your life more than talent. A practical guide to remaining committed and consistent.",
-          "body": [
-            "Everyone dreams of achieving big goals, but only a few reach them. The reason is not a lack of intelligence or talent, but the absence of self-discipline. Motivation might give you a strong start, but it is a temporary feeling that changes with circumstances and mood. Discipline, however, is the decision that drives you to keep going even when you don't feel like working.",
-            "People we consider successful do not always have superpowers, but they possess a simple habit: doing what needs to be done at the right time, even when it is hard. In this article, we will look at what self-discipline means, why it is the foundation of success, and how you can build it step by step.",
-            "Self-discipline is the ability to commit to what serves your goals, even when you don't feel like doing it. It is a conscious choice between temporary comfort and long-term results. For this reason, discipline does not rely on your emotional state, but on daily habits.",
-            "Motivation vs. Discipline: Motivation is like the spark that starts the fire, but it is not enough to keep it going. Discipline is the wood that keeps the fire burning. If you rely only on motivation, you will start many projects and finish none. But if you rely on discipline, you will make steady progress even on hard days.",
-            "To build self-discipline, practice five habits: start with small steps you can maintain daily, set fixed times for key activities, design your environment to help you succeed by removing distractions, forgive yourself when you stumble, and focus on consistency over intensity.",
-            "Discipline is not a talent some people are born with, but a skill that anyone can develop through practice and patience. Start today with a small step, repeat it tomorrow, and in a few months you will find that your life has changed because you committed, rather than waiting for inspiration."
-          ]
-        },
-        {
           "category": "psychology",
-          "file": "stop-overthinking.html",
-          "image": "overthinking_calm.jpg",
-          "featured": true,
-          "title": "How to Stop Overthinking?",
-          "readTime": "10 min read",
-          "desc": "A practical guide to restore mental calm, regain control of your thoughts, and quiet anxiety.",
+          "categoryName": "Psychology & Self-Worth",
+          "readTime": "5 min read",
+          "date": "May 1, 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "A practical guide to cultivating unshakeable inner security without relying on external validation or pleasing others.",
+          "image": "person_window_sunrise.jpg",
+          "imageAlt": "A person sitting peacefully by a morning window embodying deep quiet self-assurance",
+          "quote": "Self-confidence is not about believing everyone will like you; it is being completely at ease if they do not.",
+          "quoteAuthor": "— Psychological Insight",
+          "toc": [
+            "Introduction",
+            "1. Authentic confidence vs superficial posturing",
+            "2. Breaking the approval addiction",
+            "3. Constructive inner self-talk",
+            "Conclusion: Daily Practice"
+          ],
           "body": [
-            "Have you ever woken up in the middle of the night because your mind just wouldn't stop racing? You might have replayed the same situation dozens of times, or imagined hundreds of scenarios that will never happen. This state is known as overthinking, and it is one of the most common psychological issues of our modern era.",
-            "Thinking might seem like a positive thing, but it becomes a burden when it turns circular, consuming your energy without ever leading to a solution. The good news is that overthinking is not part of your personality, but rather a mental habit that your brain can be trained to overcome. In this guide, you will learn the causes of overthinking, how it impacts you, and ways to quiet your mind.",
-            "What is overthinking? It is the repetitive analysis of the same problem without ever reaching a decision or outcome. Instead of helping you solve the problem, it leaves you stuck inside it. It usually revolves around past mistakes, fear of the future, others' opinions, or difficult decisions.",
-            "Why do we overthink? There are several key reasons: the fear of failure which leads to procrastination, perfectionism where we want everything to be flawless, painful past experiences that make the brain anticipate every possibility, and constant comparison on social media.",
-            "To break free, practice seven practical steps: ask yourself if a thought is a fact or just a possibility, write down your thoughts to declutter your mind, set a dedicated thinking time (15 minutes only) per day, focus only on what you can control, move your body to quiet your mind, reduce phone usage, and live in the present moment.",
-            "If overthinking prevents you from sleeping or negatively impacts your work, studies, or relationships over a long period, it is best to consult a mental health professional. Peace of mind doesn't come from controlling everything, but from accepting what is outside our control."
+            "True confidence is not loud bravado; it is a quiet, steady inner security that remains steadfast regardless of shifting external opinions."
+          ],
+          "comments": [
+            {
+              "author": "Roman T.",
+              "time": "1 week ago",
+              "text": "Releasing the need for approval transformed my career and personal life."
+            }
+          ]
+        },
+        {
+          "id": "hikma-citations-philosophiques",
+          "file": "hikma-citations-philosophiques.html",
+          "title": "Timeless Wisdom & Quotes from the Greatest Thinkers",
+          "category": "history",
+          "categoryName": "History of Thought",
+          "readTime": "8 min read",
+          "date": "April 28, 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "20 immortal quotes from Socrates, Marcus Aurelius, Seneca, and Nietzsche decoded to guide and inspire your daily life.",
+          "image": "quotes_article_hero.jpg",
+          "imageAlt": "Philosophical manuscript and classic antique books under warm candle glow",
+          "quote": "Great thoughts outlive centuries, shining like beacons across generations.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+            "Introduction",
+            "1. Socratic and Platonic insight",
+            "2. Pillars of Roman Stoicism",
+            "3. Modern existential drive",
+            "Conclusion: Living the Wisdom"
+          ],
+          "body": [
+            "A profound quote represents decades of lived hardship and contemplation distilled into timeless, actionable clarity."
+          ],
+          "comments": [
+            {
+              "author": "Sophia K.",
+              "time": "1 week ago",
+              "text": "A breathtaking compilation that I revisit whenever I need perspective."
+            }
+          ]
+        },
+        {
+          "id": "self-discipline",
+          "file": "self-discipline.html",
+          "title": "How to Build Self-Discipline: The Habit That Changes Everything",
+          "category": "development",
+          "categoryName": "Personal Growth & Mastery",
+          "readTime": "9 min read",
+          "date": "April 25, 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Why disciplined habits outshine fleeting motivation and how to build daily consistency to achieve your highest goals.",
+          "image": "self_discipline.jpg",
+          "imageAlt": "A stone pathway stretching toward the horizon symbolizing steady daily discipline and persistence",
+          "quote": "Discipline is the bridge between your goals and your true accomplishments.",
+          "quoteAuthor": "— Jim Rohn",
+          "toc": [
+            "Introduction",
+            "1. Why motivation fades and discipline prevails",
+            "2. The compounding power of micro-habits",
+            "3. Structuring your environment to reduce friction",
+            "4. Bouncing back from inevitable slip-ups",
+            "Conclusion: 30-Day Blueprint"
+          ],
+          "body": [
+            "Motivation provides the initial spark, but self-discipline provides the daily fuel to carry projects through to triumph.",
+            "High achievers do not rely on mood; they rely on automated, non-negotiable systems that make execution effortless."
+          ],
+          "comments": [
+            {
+              "author": "Nicholas F.",
+              "time": "2 weeks ago",
+              "text": "Focusing on consistency over intensity changed my work ethic forever."
+            }
+          ]
+        },
+        {
+          "id": "stop-overthinking",
+          "file": "stop-overthinking.html",
+          "title": "How to Stop Overthinking and Continuous Anxiety?",
+          "category": "psychology",
+          "categoryName": "Psychology & Serenity",
+          "readTime": "6 min read",
+          "date": "May 20, 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "A proven psychological guide to break the cycle of mental rumination, calm the nervous system, and reclaim peaceful clarity in the present moment.",
+          "image": "overthinking_calm.jpg",
+          "imageAlt": "A person meditating peacefully at sunrise, free from anxiety and overthinking",
+          "quote": "Anxiety does not empty tomorrow of its sorrows, but only empties today of its strength.",
+          "quoteAuthor": "— Arthur Schopenhauer",
+          "toc": [
+            "Introduction",
+            "1. What is Overthinking and Chronic Anxiety?",
+            "2. Why Do We Fall into the Rumination Trap?",
+            "3. The Stoic Dichotomy of Control",
+            "4. 7 Practical Steps to Regain Peace Immediately",
+            "Conclusion: Inhabiting the Present Moment"
+          ],
+          "body": [
+            "Have you ever woken up in the middle of the night because your mind refused to stop replaying old conversations or inventing catastrophic future scenarios? This mental overload and continuous anxiety are among the greatest thieves of peace in our modern world.",
+            "Overthinking is not a sign of deep intellect; it is a circular trap of hesitation and fear that drains your energy without offering any real solution. Its roots often lie in fear of failure or an unrealistic urge to control the uncontrollable.",
+            "Stoic philosophy provides a definitive remedy with the 'Dichotomy of Control': divide everything into what is within your control (your actions, choices, present responses) and what is outside your control (the past, other people's opinions, the future). Direct 100% of your energy to what is in your power, and release the rest.",
+            "To regain calm immediately: 1. Write down your thoughts to clear mental clutter. 2. Set a dedicated 15-minute 'worry window' per day, then close the notebook. 3. Engage in physical movement to release stored stress. 4. Practice deep slow breathing to ground your nervous system in the present moment."
+          ],
+          "comments": [
+            {
+              "author": "David K.",
+              "time": "2 hours ago",
+              "text": "Truly illuminating article. The dichotomy of control exercise immediately helped me let go of things beyond my control."
+            },
+            {
+              "author": "Sophia L.",
+              "time": "5 hours ago",
+              "text": "Setting a dedicated 15-minute thinking time and journaling changed my mornings completely. Thank you for this wisdom."
+            }
           ]
         }
       ],
@@ -5610,140 +6155,391 @@ const TIKTOK_DATA = {
           "file": "why-people-distance-when-you-succeed.html",
           "title": "لماذا يبتعد الناس عنك عندما تبدأ بالنجاح؟",
           "category": "psychology",
-          "categoryName": "علم النفس والعلاقات",
-          "readTime": "8 دقائق قراءة",
-          "author": "حكمة ونور",
+          "categoryName": "علم النفس وتطوير الذات",
+          "readTime": "٨ دقائق قراءة",
+          "date": "٢٠ مايو ٢٠٢٦",
+          "author": "حكمة ونور | Hikma & Nour",
+          "desc": "تحليل نفسي عميق يكشف أسرار تغير العلاقات عند التقدم، ولماذا يتحول الإعجاب إلى برود أو غيرة وكيف تحمي سلامك الداخلي.",
           "image": "why_people_distance_success_hero.jpg",
-          "desc": "النجاح لا يغير حياتك فقط، بل يكشف حقيقة من حولك. اكتشف الأسباب النفسية للغيرة وكيف تحافظ على سلامك الداخلي.",
-          "date": "4 أغسطس 2026"
+          "imageAlt": "شخص ينظر إلى الأفق من قمة عالية متأملاً في حقيقة العلاقات بعد النجاح",
+          "quote": "النجاح لا يغيرك أنت، بل يسقط الأقنعة ويكشف حقيقة ما يضمره الآخرون نحوك.",
+          "quoteAuthor": "— حكمة ونور",
+          "toc": [
+            "المقدمة",
+            "١. النجاح يغير موقعك في عيون الآخرين",
+            "٢. آلية المقارنة الاجتماعية والغيرة اللاواعية",
+            "٣. ليس الجميع مستعداً لرؤيتك تتجاوزهم",
+            "٤. النجاح كمرآة كاشفة للعلاقات الحقيقية",
+            "٥. ٥ قواعد للتعامل مع تغير المحيطين بحكمة",
+            "خاتمة وسلام نفسي"
+          ],
+          "body": [
+            "في بداية أي رحلة نحو تحقيق الأهداف، ستجد الكثيرين يشجعونك ويظهرون الدعم والتمني بالخير. لكن ما إن تبدأ ثمار عملك بالظهور، وتتحول الأحلام إلى إنجازات ملموسة، حتى تلاحظ سلوكاً غريباً من بعض المقربين: انسحاب تدريجي، برود في التفاعل، أو حتى انتقادات مبطنة.",
+            "علم النفس الاجتماعي يفسر هذه الظاهرة بما يُعرف بـ 'المقارنة الاجتماعية التلقائية'. فعندما يرى الإنسان شخصاً كان في نفس مستواه يتقدم خطوات كبيرة إلى الأمام، يستشعر عقله الباطن نوعاً من التهديد لقيمته الذاتية، فيتحول الإعجاب المبدئي إلى شعور بالدونية ومن ثم إلى غيرة صامتة.",
+            "البعض يحبك ويدعمك، بشرط ألا تتفوق عليه. وجودك في نفس الدائرة يشعره بالأمان، أما صعودك فيجعله يواجه كسله أو تقصيره الخاص، وهو أمر مؤلم يفضل الهروب منه بقطع الصلة أو التقليل من حجم نجاحك.",
+            "النجاح الحقيقي ليس مجرد وصول إلى أهداف مادية أو مهنية، بل هو غربال دقيق يصفي علاقاتك. إنه يميز بوضوح بين من كان يرافقك لغرض، ومن يسعد حقاً لارتقائك ويسندك في كل الظروف.",
+            "للحفاظ على سلامك النفسي: أولاً، لا تبرر نجاحك ولا تعتذر عن إنجازاتك. ثانياً، لا تدخل في جدالات دفاعية. ثالثاً، حافظ على تواضعك دون أن تطفئ بريقك لإرضاء غيرك. ورابعاً، أحط نفسك بالقلة الصادقة التي تشاركك الطموح والرؤية."
+          ],
+          "comments": [
+            {
+              "author": "كريم المنصور",
+              "time": "منذ ٣ ساعات",
+              "text": "تحليل دقيق وواقعي جداً، مررت بهذه التجربة تماماً عندما بدأت مشروعي الخاص."
+            },
+            {
+              "author": "هدى السعدي",
+              "time": "منذ ٦ ساعات",
+              "text": "قاعدة عدم الاعتذار عن النجاح غيرت نظرتي للكثير من المواقف المحرجة."
+            }
+          ]
         },
         {
           "id": "why-people-respect-silent-person",
           "file": "why-people-respect-silent-person.html",
           "title": "لماذا يحترم الناس الشخص الصامت أكثر من كثير الكلام؟",
           "category": "psychology",
-          "categoryName": "علم النفس • الفلسفة",
-          "readTime": "7 إلى 9 دقائق قراءة",
-          "date": "2 أغسطس 2026",
-          "desc": "تحليل نفسي وفلسفي عميق: كيف يمنحك الصمت الهيبة والثقة بالنفس، ولماذا يُعتبر الإنصات الذكي أكثر قوة من كثرة الحديث.",
-          "image": "silence_respect_hero.jpg"
+          "categoryName": "علم النفس والكاريزما",
+          "readTime": "٧ دقائق قراءة",
+          "date": "١٨ مايو ٢٠٢٦",
+          "author": "حكمة ونور | Hikma & Nour",
+          "desc": "كيف يمنحك الصمت الواعي هيبة غير مرئية وقدرة على التحكم في المواقف، ولماذا يعد فن الاستماع سلاح الأقوياء.",
+          "image": "silence_respect_hero.jpg",
+          "imageAlt": "تمثال كلاسيكي في وضعية التأمل الصامت يجسد عمق الحكمة والرزانة",
+          "quote": "إذا كان الكلام من فضة، فإن الصمت في حينه حكمة وقوة لا يمتلكها إلا العظماء.",
+          "quoteAuthor": "— حكماء الفلسفة",
+          "toc": [
+            "المقدمة",
+            "١. الغموض الإيجابي وجاذبية الصمت",
+            "٢. قوة الملاحظة والتقاط ما وراء الكلمات",
+            "٣. الكلمات القليلة ذات الوزن الثقيل",
+            "٤. تجنب زلات اللسان والسيطرة على الانفعال",
+            "خاتمة: كيف تمارس الصمت الحكيم؟"
+          ],
+          "body": [
+            "في مجتمعاتنا المعاصرة المليئة بالضجيج والمنافسة على لفت الانتباه، يعتقد الكثيرون أن الحديث المستمر هو السبيل الوحيد لإثبات الحضور. لكن الواقع النفسي يثبت العكس تماماً: الشخص الصامت يحظى دائماً بهيبة واحترام استثنائيين.",
+            "الصمت يمنح صاحبه هالة من الغموض الإيجابي. فالإنسان الذي يتحدث قليلاً لا يكشف كل أوراقه، مما يجعل الآخرين يفكرون ملياً قبل مخاطبته أو تقييم تصرفاته.",
+            "حين تصمت، تتحول من متحدث مشتت إلى مراقب ذكي يرى لغة الجسد، ويفهم نبرات الصوت، ويلتقط ما لم يقله الحاضرون. هذه المعرفة تمنحك تفوقاً استراتيجياً في أي نقاش أو تفاوض.",
+            "الكلمات الكثيرة تفقد قيمتها بمرور الوقت، أما الشخص الذي لا يتكلم إلا حين يكون لديه ما يستحق القول، فإن كلماته تسقط في النفوس كالقوانين وتستحوذ على إنصات الجميع."
+          ],
+          "comments": [
+            {
+              "author": "طارق الزهراني",
+              "time": "منذ ٤ ساعات",
+              "text": "الصمت قوة حقيقية، كلما قل كلامي زادت قدرتي على فهم الناس."
+            }
+          ]
         },
         {
           "id": "nietzsche-psychological-strength",
           "file": "nietzsche-psychological-strength.html",
-          "title": "ماذا يمكن أن تتعلم من نيتشه لتصبح أقوى نفسيًا؟",
+          "title": "ماذا يمكن أن تتعلم من نيتشه لتصبح أقوى نفسياً؟",
           "category": "philosophy",
-          "categoryName": "الفلسفة وعلم النفس",
-          "readTime": "8 دقائق قراءة",
-          "date": "1 أغسطس 2026",
-          "desc": "دروس من الفيلسوف فريدريش نيتشه لبناء صلابة نفسية، مواجهة الألم، وتحويل الصعوبات إلى مصدر قوة حقيقية.",
-          "image": "nietzsche_psychological_strength_hero.jpg"
+          "categoryName": "الفلسفة الوجودية",
+          "readTime": "٨ دقائق قراءة",
+          "date": "١٥ مايو ٢٠٢٦",
+          "author": "حكمة ونور | Hikma & Nour",
+          "desc": "دروس خالدة من فريدريش نيتشه حول تحويل المعاناة إلى وقود، وتجاوز القيود الفكرية وصياغة الذات المتفوقة.",
+          "image": "nietzsche_psychological_strength_hero.jpg",
+          "imageAlt": "متسلق جبال يقف على قمة وعرة فوق السحاب في إشارة لقوة نيتشه الفلسفية",
+          "quote": "ما لا يقتلني، يجعلني أقوى وأشد صلابة.",
+          "quoteAuthor": "— فريدريش نيتشه",
+          "toc": [
+            "المقدمة",
+            "١. حب القدر (Amor Fati)",
+            "٢. تحويل الألم إلى سمو عقلي",
+            "٣. التحرر من عقلية القطيع",
+            "٤. صياغة قيمك الذاتية",
+            "خاتمة وتطبيق عملي"
+          ],
+          "body": [
+            "لم يكن فريدريش نيتشه فيلسوفاً يبحث عن الراحة أو يقدم وعوداً بالسعادة السهلة. بل كان يرى أن الحياة صراع مستمر، وأن العظمة الإنسانية تولد من رحم الشدائد والمحن.",
+            "مفهوم 'حب القدر' (Amor Fati) هو جوهر القوة عند نيتشه: ألا تكتفي بقبول ما يحدث لك، بل أن تحبه وترى فيه فرصة لصقل إرادتك واكتساب حكمة أعمق.",
+            "الألم ليس عقاباً بل هو معلم لا يرحم. الشخص القوي نفسياً لا يهرب من المعاناة ولا يغرق في الشكوى، بل يحول طاقة الألم إلى إبداع وعمل وإرادة لا تلين.",
+            "يدعونا نيتشه إلى كسر قيود التبعية الفكرية، وألا نسمح للآراء السائدة بأن تحدد لنا كيف نعيش أو ماذا نستحق. كن أنت المهندس الحقيقي لقيمك ومسارك."
+          ],
+          "comments": [
+            {
+              "author": "ياسين المرابط",
+              "time": "منذ يوم واحد",
+              "text": "فلسفة نيتشه في تحويل المعاناة إلى قوة غيرت حياتي بعد أزمة صحية قاسية."
+            }
+          ]
         },
         {
           "id": "schopenhauer-happiness-illusion",
           "file": "schopenhauer-happiness-illusion.html",
           "title": "لماذا اعتبر شوبنهاور أن السعادة مجرد وهم؟",
           "category": "philosophy",
-          "categoryName": "الفلسفة • علم النفس • تطوير الذات",
-          "readTime": "8 إلى 10 دقائق",
-          "date": "1 أغسطس 2026",
-          "desc": "دراسة فلسفية ونفسية عميقة في فلسفة آرثر شوبنهاور: دورة الرغبات، وهم الامتلاك، وكيفية الوصول إلى السلام الداخلي.",
-          "image": "schopenhauer_happiness_illusion_hero.jpg"
+          "categoryName": "الفلسفة والرؤى",
+          "readTime": "٩ دقائق قراءة",
+          "date": "١٢ مايو ٢٠٢٦",
+          "author": "حكمة ونور | Hikma & Nour",
+          "desc": "دراسة فلسفية ونفسية عميقة في فلسفة آرثر شوبنهاور: دورة الرغبات، وهم الامتلاك، وكيفية الوصول إلى السلام والسكينة.",
+          "image": "schopenhauer_happiness_illusion_hero.jpg",
+          "imageAlt": "بحر هادئ وغروب تأملي يعكس فلسفة شوبنهاور في السكينة والتحرر من الرغبات",
+          "quote": "الحياة تتأرجح كالبندول بين الألم والملل، والسكينة هي التحرر من سطوة الرغبات.",
+          "quoteAuthor": "— آرثر شوبنهاور",
+          "toc": [
+            "المقدمة",
+            "١. إرادة الحياة ودورة الرغبات اللانهائية",
+            "٢. لماذا نقع في فخ الملل بعد الوصول؟",
+            "٣. السعادة السلبية: غياب الألم والاضطراب",
+            "٤. الفن والتأمل كوسيلة للنجاة والصفاء",
+            "خاتمة: حكمة شوبنهاور لعيش هادئ"
+          ],
+          "body": [
+            "يرى آرثر شوبنهاور أن مطاردة السعادة الإيجابية المطلقة هي السبب الأول لتعاسة الإنسان. فالرغبة حين تنشأ تكون مصحوبة بألم النقص، وحين تتحقق لا تمنحنا إلا متعة عابرة يعقبها ملل خانق.",
+            "الحل الفلسفي الذي يقترحه شوبنهاور ليس الاستسلام، بل تبني نظرة واقعية وعميقة: السعادة الحقيقية هي حالة 'سلبية' تعني انعدام الألم الجسدي والاضطراب النفسي.",
+            "حين تتوقف عن انتظار الفرح الخارق من الأشياء الخارجية والمقتنيات، وتبدأ في تقدير الهدوء اليومي والسلام الداخلي، تتلاشى خيبة الأمل وتستقر روحك."
+          ],
+          "comments": [
+            {
+              "author": "سمير عادل",
+              "time": "منذ يومين",
+              "text": "فكرة أن السعادة هي غياب الألم ساعدتني على التخلص من هوس المقارنة الدائم."
+            }
+          ]
         },
         {
           "id": "solitude-blessing-or-curse",
           "file": "solitude-blessing-or-curse.html",
-          "title": "هل العزلة نعمة أم عقاب؟ كيف يرى الفلاسفة أن الوحدة طريق لاكتشاف الذات",
+          "title": "هل العزلة نعمة أم عقاب؟ طريق الفلاسفة لاكتشاف الذات",
           "category": "philosophy",
-          "categoryName": "الفلسفة والنفس",
-          "readTime": "8 دقائق قراءة",
-          "date": "31 يوليو 2026",
-          "desc": "كيف يرى الفلاسفة (شوبنهاور، نيتشه) أن الوحدة طريق لاكتشاف الذات وبناء السلام الداخلي في عالم مليء بالضوضاء.",
-          "image": "solitude_blessing_curse_hero.jpg"
+          "categoryName": "الفلسفة والتأمل",
+          "readTime": "٨ دقائق قراءة",
+          "date": "١٠ مايو ٢٠٢٦",
+          "author": "حكمة ونور | Hikma & Nour",
+          "desc": "كيف يرى الفلاسفة أن الوحدة الإيجابية طريق لاكتشاف الذات وبناء السلام الداخلي في عالم مليء بالضوضاء.",
+          "image": "solitude_blessing_curse_hero.jpg",
+          "imageAlt": "غابة خريفية هادئة وشخص يسير في سكينة متأملاً في رحلة العزلة",
+          "quote": "لا يجد الإنسان الحرية الحقيقية إلا حين يكون وحيداً مع ذاته وأفكاره.",
+          "quoteAuthor": "— آرثر شوبنهاور",
+          "toc": [
+            "المقدمة",
+            "١. الفرق بين العزلة الإرادية والوحدة المؤلمة",
+            "٢. كيف تبني العزلة قوة فكرية واستقلالية؟",
+            "٣. استعادة الاتصال بالصوت الداخلي",
+            "خاتمة وتوازن الحياة"
+          ],
+          "body": [
+            "هناك فارق جوهري بين الشعور بالوحدة المؤلمة (Loneliness) وبين ممارسة العزلة الإرادية الخالصة (Solitude). فالأولى عجز عن التواصل، بينما الثانية امتلاء فكري ولقاء راقٍ مع النفس.",
+            "في خلوتك، تتخلص من ضغط التوقعات المجتمعية والتصنع، وتبدأ في معرفة ما تريده حقاً لا ما يريده الآخرون منك. العزلة هي المشتل الحقيقي للإبداع وتجديد الطاقة النفسية."
+          ],
+          "comments": [
+            {
+              "author": "مريم فهد",
+              "time": "منذ ٣ أيام",
+              "text": "العزلة اليومية لمدة نصف ساعة أصبحت طقسي المقدس لتجديد صفاء الذهن."
+            }
+          ]
         },
         {
           "id": "7-errors-mind-growth",
           "file": "7-errors-mind-growth.html",
-          "title": "٧ أخطاء تمنعك من تنمية عقلك: دروس من سقراط ونيتشه وماركوس أوريليوس",
+          "title": "٧ أخطاء تمنعك من تنمية عقلك: دروس من سقراط ونيتشه وأوريليوس",
           "category": "history",
           "categoryName": "تاريخ الأفكار والعقل",
-          "readTime": "8 دقائق قراءة",
-          "date": "31 يوليو 2026",
-          "desc": "دروس من سقراط ونيتشه وماركوس أوريليوس للتخلص من الأخطاء السبعة التي تمنع العقل من النمو وتطوير الحكمة.",
-          "image": "mind_growth_errors_hero.jpg"
+          "readTime": "٨ دقائق قراءة",
+          "date": "٨ مايو ٢٠٢٦",
+          "author": "حكمة ونور | Hikma & Nour",
+          "desc": "دروس عقلية خالدة لتفكيك التحيزات الذهنية والتخلص من العادات التي تعيق التفكير النقدي وتطور الحكمة.",
+          "image": "mind_growth_errors_hero.jpg",
+          "imageAlt": "مكتبة تاريخية تفيض بالكتب القديمة والمصابيح الكلاسيكية الموحية بالمعرفة",
+          "quote": "العقل الذي لا يتعلم التشكيك في يقينياته يظل سجين وهم المعرفة.",
+          "quoteAuthor": "— سقراط",
+          "toc": [
+            "المقدمة",
+            "١. فخ اليقين المطلق والتعصب للفكرة",
+            "٢. الخلط بين تراكم المعلومات وعمق الفهم",
+            "٣. تجنب الأفكار المعارضة",
+            "٤. الاستسلام للكسل الفكري",
+            "خاتمة: تمرين سقراطي يومي"
+          ],
+          "body": [
+            "سقراط علمنا أن البداية الحقيقية للحكمة هي الاعتراف بالجهل: 'كل ما أعرفه هو أنني لا أعرف شيئاً'. فالشخص الذي يظن أنه يعلم كل شيء يغلق عقله عن كل تطور جديد.",
+            "تنمية العقل تتطلب شجاعة مواجهة قناعاتنا الخاصة وإخضاعها للمساءلة المستمرة، والبحث عن المعرفة التي تبني وتصقل الشخصية لا مجرد استهلاك السطحيات."
+          ],
+          "comments": [
+            {
+              "author": "أنس الحكيم",
+              "time": "منذ ٤ أيام",
+              "text": "الدرس السقراطي بالتواضع المعرفي هو أهم علاج لغرور العصر الرقمي."
+            }
+          ]
         },
         {
           "id": "happiness-in-wrong-place",
           "file": "happiness-in-wrong-place.html",
-          "title": "لماذا نبحث عن السعادة في المكان الخطأ؟ رحلة فلسفية بين شوبنهاور والرواقيين وإبيقور",
+          "title": "لماذا نبحث عن السعادة في المكان الخطأ؟ رحلة فلسفية",
           "category": "philosophy",
-          "categoryName": "الفلسفة والحياة",
-          "readTime": "7 دقائق قراءة",
-          "date": "31 يوليو 2026",
-          "desc": "رحلة فلسفية بين شوبنهاور والرواقيين وإبيقور لفهم المعنى الحقيقي للسعادة والتوقف عن البحث عنها في المكان الخطأ.",
-          "image": "happiness_wrong_place_hero.jpg"
+          "categoryName": "الفلسفة وجودة الحياة",
+          "readTime": "٧ دقائق قراءة",
+          "date": "٥ مايو ٢٠٢٦",
+          "author": "حكمة ونور | Hikma & Nour",
+          "desc": "رحلة تجمع بين حكمة الرواقيين وإبيقور وشوبنهاور لفهم معنى السعادة والتوقف عن البحث عنها في المظاهر الزائلة.",
+          "image": "happiness_wrong_place_hero.jpg",
+          "imageAlt": "نافذة تعكس أضواء الصباح والسكينة كرمز للسلام الداخلي الحقيقي",
+          "quote": "لا تجعل سعادتك معلقة بما لا تملك، بل قدّر ما بين يديك وتذكر أن ما تملكه الآن كان يوماً من أمنياتك.",
+          "quoteAuthor": "— إبيقور",
+          "toc": [
+            "المقدمة",
+            "١. وهم التكيف اللذي والركض المستمر",
+            "٢. الرواقية: السعادة ثمرة نقاء الفكر",
+            "٣. إبيقور ولذة البساطة والصداقة",
+            "خاتمة: كيف تعيش السعادة الآن؟"
+          ],
+          "body": [
+            "تخبرنا الفلسفة القديمة أن السعادة ليست وجهة نصل إليها بعد امتلاك المزيد من الأشياء، بل هي عدسة نرى بها العالم من حولنا ونقدر بها ما نعيشه الآن.",
+            "الرواقيون أثبتوا أن راحة البال لا تتطلب قصوراً أو ثروات طائلة، بل تتطلب عقلاً واعياً يدرك أن القيمة الحقيقية تنبع من الاستقامة والرضا والتحكم في ردود الأفعال."
+          ],
+          "comments": [
+            {
+              "author": "نجلاء العتيبي",
+              "time": "منذ ٥ أيام",
+              "text": "مقال يلمس الروح، تذكرت كم من النعم نغفل عنها ونحن نركض وراء السراب."
+            }
+          ]
         },
         {
-          "category": "psychology",
+          "id": "true-confidence-inside",
           "file": "true-confidence-inside.html",
-          "image": "person_window_sunrise.jpg",
-          "featured": true,
-          "title": "كيف تبني ثقة حقيقية من الداخل؟",
-          "readTime": "5 دقائق قراءة",
-          "desc": "دليل عملي لبناء الثقة بالنفس خطوة بخطوة وتحويل حياتك نحو الأفضل.",
-          "body": [
-            "الثقة بالنفس ليست أن تبدو قوياً أمام الآخرين، بل أن تشعر بالطمأنينة حتى عندما لا يراك أحد. يعتقد كثير من الناس أن الثقة تأتي من النجاح، أو المال، أو المظهر الخارجي، لكن الحقيقة مختلفة تماماً.",
-            "فالثقة الحقيقية تبدأ من الداخل، من الطريقة التي تنظر بها إلى نفسك، ومن الحوار الذي يدور في عقلك كل يوم. قد يمر الإنسان بلحظات شك، أو خوف، أو فشل، لكن هذه التجارب لا تحدد قيمته.",
-            "توقف عن مقارنة نفسك بالآخرين، تقبل أخطاءك وتعلم منها، احتفل بالإنجازات الصغيرة، واستخدم لغة إيجابية مع نفسك دائماً."
-          ]
-        },
-        {
-          "category": "history",
-          "file": "hikma-citations-philosophiques.html",
-          "image": "quotes_article_hero.jpg",
-          "featured": true,
-          "title": "حكم وأقوال خالدة من عظماء الفكر",
-          "readTime": "8 دقائق قراءة",
-          "desc": "20 اقتباسًا غيّرت نظرة ملايين الأشخاص إلى الحياة — شوبنهاور، سقراط، ماركوس أوريليوس، نيتشه وكثيرون.",
-          "body": [
-            "منذ بداية الحضارات، ترك الحكماء والفلاسفة كلمات تجاوزت حدود الزمن. قد يرحل الإنسان، لكن الفكرة الصادقة تبقى حيّة، تنتقل من جيل إلى آخر، وتلهم الملايين.",
-            "فالاقتباس ليس مجرد عبارة جميلة، بل تجربة إنسانية اختُصرت في كلمات قليلة. وربما تكون جملة واحدة سببًا في تغيير طريقة تفكيرك، أو في اتخاذ قرار يغيّر حياتك.",
-            "لأنها تختصر سنوات من التجربة في بضعة أسطر. هي كلمات ولدت من الألم، أو التأمل، أو النجاح، أو الفشل. ولهذا تصل إلى القلب بسرعة.",
-            "الكلمات العظيمة تعيش أكثر من أصحابها."
-          ]
-        },
-        {
-          "category": "development",
-          "file": "self-discipline.html",
-          "image": "self_discipline.jpg",
-          "featured": true,
-          "title": "كيف تبني الانضباط الذاتي؟",
-          "readTime": "9 دقائق قراءة",
-          "desc": "العادة التي تغير حياتك أكثر من الموهبة ودليل عملي للالتزام والاستمرار.",
-          "body": [
-            "يحلم الجميع بتحقيق أهداف كبيرة، لكن القليل فقط يصل إليها. والسبب ليس نقص الذكاء أو الموهبة، بل غياب الانضباط الذاتي. فالتحفيز قد يمنحك بداية قوية، لكنه شعور مؤقت يتغير مع الظروف والمزاج. أما الانضباط فهو القرار الذي يدفعك للاستمرار حتى عندما لا تشعر بالرغبة في العمل.",
-            "إن الأشخاص الذين نعتبرهم ناجحين لا يملكون دائمًا قدرات خارقة، لكنهم يمتلكون عادة بسيطة: يفعلون ما يجب فعله في الوقت المناسب، حتى عندما يكون الأمر صعبًا. في هذا المقال سنتعرف على معنى الانضباط الذاتي، ولماذا يعد أساس النجاح، وكيف يمكنك بناؤه خطوة بخطوة.",
-            "الانضباط الذاتي هو القدرة على الالتزام بما يخدم أهدافك، حتى عندما لا تشعر بالرغبة في القيام به. إنه اختيار واعٍ بين الراحة المؤقتة والنتائج طويلة المدى. ولهذا السبب، لا يعتمد الانضباط على الحالة المزاجية، بل على العادات اليومية.",
-            "الحماس يشبه الشرارة التي تشعل النار، لكنه لا يكفي للحفاظ عليها. أما الانضباط، فهو الحطب الذي يجعلها تستمر في الاشتعال. إذا اعتمدت على الحماس فقط، ستبدأ مشاريع كثيرة ولن تكملها. أما إذا اعتمدت على الانضباط، فستحقق تقدمًا ثابتًا حتى في الأيام الصعبة.",
-            "لبناء الانضباط الذاتي، ننصح بخمس عادات أساسية: ابدأ بخطوات صغيرة وعادات بسيطة، حدد وقتًا ثابتًا للأنشطة المختلفة، اجعل بيئتك تساعدك بوضع المحفزات وإبعاد المشتتات، سامح نفسك عند التعثر والعودة سريعًا، وركز بشكل كامل على الاستمرارية اليومية.",
-            "الانضباط ليس موهبة يولد بها البعض، بل مهارة يمكن لأي شخص أن يطورها بالممارسة والصبر. ابدأ اليوم بخطوة صغيرة، وكررها غدًا، وبعد أشهر ستكتشف أن حياتك تغيرت لأنك التزمت، لا لأنك انتظرت الدافع والحماس."
-          ]
-        },
-        {
+          "title": "كيف تبني ثقة حقيقية بنفسك من الداخل؟",
           "category": "psychology",
-          "file": "stop-overthinking.html",
-          "image": "overthinking_calm.jpg",
-          "featured": true,
-          "title": "كيف تتوقف عن التفكير الزائد؟",
-          "readTime": "10 دقائق قراءة",
-          "desc": "دليل عملي لاستعادة هدوء العقل والسيطرة على أفكارك والتخلص من القلق المستمر.",
+          "categoryName": "علم النفس والذات",
+          "readTime": "٥ دقائق قراءة",
+          "date": "١ مايو ٢٠٢٦",
+          "author": "حكمة ونور | Hikma & Nour",
+          "desc": "دليل عملي لبناء الثقة بالنفس خطوة بخطوة والتخلص من الحاجة المستمرة لإرضاء الآخرين أو انتظار تقييمهم.",
+          "image": "person_window_sunrise.jpg",
+          "imageAlt": "شخص يجلس أمام النافذة عند الشروق في تأمل وثقة داخلية هادئة",
+          "quote": "الثقة بالنفس ليست الاعتقاد بأن الجميع سيعجب بك، بل هي ألا تكترث إن لم يعجبوا بك.",
+          "quoteAuthor": "— حكمة نفسية",
+          "toc": [
+            "المقدمة",
+            "١. الثقة الحقيقية مقابل الثقة المزيفة",
+            "٢. التحرر من عقدة إرضاء الجميع",
+            "٣. الحوار الذاتي الإيجابي والواقعي",
+            "خاتمة: خطوات التطبيق اليومي"
+          ],
           "body": [
-            "هل سبق أن استيقظت في منتصف الليل لأن عقلك لم يتوقف عن التفكير؟ ربما راجعت نفس الموقف عشرات المرات، أو تخيلت مئات السيناريوهات التي قد لا تحدث أبدًا. هذه الحالة تُعرف باسم التفكير الزائد (Overthinking)، وهي من أكثر المشكلات النفسية انتشارًا في عصرنا.",
-            "قد يبدو التفكير شيئًا إيجابيًا، لكنه يتحول إلى عبء عندما يصبح دائريًا، فيستهلك طاقتك دون أن يقودك إلى أي حل. الخبر الجيد هو أن التفكير الزائد ليس جزءًا من شخصيتك، بل عادة ذهنية يمكن تدريب العقل على التخلص منها. في هذا الدليل، ستتعرف على أسباب التفكير الزائد، وكيف يؤثر على حياتك، وأفضل الطرق العملية لاستعادة هدوء ذهنك.",
-            "التفكير الزائد هو تكرار تحليل المشكلة نفسها مرات عديدة دون الوصول إلى قرار أو نتيجة. بدلًا من أن يساعدك التفكير على حل المشكلة، يجعلك عالقًا داخلها. غالبًا ما يدور حول أخطاء الماضي، الخوف من المستقبل، آراء الآخرين، والقرارات الصعبة.",
-            "هناك عدة أسباب للتفكير الزائد: الخوف من الفشل الذي يجعل الإنسان يخشى اتخاذ القرار فيؤجل كل شيء، السعي إلى الكمال حيث يريد أن يكون كل شيء مثاليًا، التجارب السابقة المؤلمة التي تجعل العقل يحاول توقع كل الاحتمالات، والمقارنة المستمرة التي تجعلنا نظن أن الجميع يعيش حياة أفضل.",
-            "للتخلص من التفكير الزائد، اتبع سبع خطوات عملية: اسأل نفسك هل هذه الفكرة حقيقة أم مجرد احتمال، اكتب أفكارك لتقليل الفوضى الذهنية، حدّد وقتًا للتفكير (15 دقيقة فقط)، ركز على ما تستطيع التحكم فيه، تحرك لممارسة الرياضة والمشي، قلل استخدام الهاتف والمقارنة، وعش اللحظة الحالية بالتنفس العميق.",
-            "إذا أصبح التفكير الزائد يمنعك من النوم، أو يؤثر في عملك أو دراستك أو علاقاتك بشكل مستمر مع ضيق شديد، فمن الأفضل استشارة مختص في الصحة النفسية. راحة العقل لا تأتي من السيطرة على كل شيء، بل من قبول أن بعض الأمور ستظل خارج سيطرتنا."
+            "الثقة بالنفس الحقيقية لا تأتي من استعراض القوة أو محاولة إثبات الذات في كل مجلس. إنها طمأنينة داخلية عميقة تنبع من معرفة قدراتك وتقبل عيوبك والعمل على إصلاحها دون خجل.",
+            "حين تكف عن قياس قيمتك بنظرات الآخرين واستحسانهم، تبدأ في بناء شخصية صلبة ومرنة قادرة على تجاوز الفشل دون أن تنهار معنوياتها."
+          ],
+          "comments": [
+            {
+              "author": "فيصل الرشيدي",
+              "time": "منذ أسبوع",
+              "text": "التركيز على الحوار الداخلي أحدث فرقاً هائلاً في ثقتي بعملي ولقاءاتي."
+            }
+          ]
+        },
+        {
+          "id": "hikma-citations-philosophiques",
+          "file": "hikma-citations-philosophiques.html",
+          "title": "حكم وأقوال خالدة من عظماء الفكر الإنساني",
+          "category": "history",
+          "categoryName": "تاريخ وحكمة الأفكار",
+          "readTime": "٨ دقائق قراءة",
+          "date": "٢٨ أبريل ٢٠٢٦",
+          "author": "حكمة ونور | Hikma & Nour",
+          "desc": "مختارات من أعظم المقولات الفلسفية التي غيرت مجرى التفكير الإنساني مع تحليل عميق لمعانيها وتطبيقاتها المعاصرة.",
+          "image": "quotes_article_hero.jpg",
+          "imageAlt": "مجموعة من الاقتباسات والكتب الفلسفية القديمة مع ضوء شمعة دافئ",
+          "quote": "الكلمات الصادقة تعيش أطول من أصحابها وتبقى منارات للأجيال القادمة.",
+          "quoteAuthor": "— حكمة ونور",
+          "toc": [
+            "المقدمة",
+            "١. حكمة سقراط وأفلاطون",
+            "٢. الرواقية: ماركوس أوريليوس وسينيكا",
+            "٣. الوجودية ونيتشه",
+            "خاتمة: كيف تجعل الحكمة أسلوب حياة؟"
+          ],
+          "body": [
+            "الاقتباس الفلسفي ليس مجرد جملة بليغة، بل هو عصارة تجارب وأزمات واكتشافات إنسانية استغرقت عمراً كاملاً لتصاغ في كلمات معدودة.",
+            "حين نتأمل هذه الحكم، فإننا نتصل بعقول أعظم المفكرين الذين واجهوا نفس مخاوفنا وتساؤلاتنا ووجدوا لها إجابات تنير دروب الحياة."
+          ],
+          "comments": [
+            {
+              "author": "باسل الشمري",
+              "time": "منذ أسبوع",
+              "text": "مجموعة ملهمة جداً، أحتفظ ببعض هذه الاقتباسات على مكتبي يومياً."
+            }
+          ]
+        },
+        {
+          "id": "self-discipline",
+          "file": "self-discipline.html",
+          "title": "كيف تبني الانضباط الذاتي؟ دليل العادة التي تصنع الفارق",
+          "category": "development",
+          "categoryName": "تطوير الذات والإنتاجية",
+          "readTime": "٩ دقائق قراءة",
+          "date": "٢٥ أبريل ٢٠٢٦",
+          "author": "حكمة ونور | Hikma & Nour",
+          "desc": "دليل تطبيقي شامل يشرح لماذا يتفوق الانضباط على الحماس المؤقت، وكيف تبني عادات يومية حديدية تضمن وصولك لأهدافك.",
+          "image": "self_discipline.jpg",
+          "imageAlt": "طريق مرصوف يمتد نحو الأفق يرمز للاستمرارية والانضباط الذاتي اليومي",
+          "quote": "الانضباط هو الجسر المتين بين أهدافك وإنجازاتك الحقيقية.",
+          "quoteAuthor": "— جيم رون",
+          "toc": [
+            "المقدمة",
+            "١. لماذا يخذلك الحماس وينقذك الانضباط؟",
+            "٢. سيكولوجية العادات الصغيرة والمستمرة",
+            "٣. تصميم بيئة محفزة تقلل الإغراءات",
+            "٤. التعامل مع التعثر والعودة السريعة",
+            "خاتمة: خطة الـ ٣٠ يوماً"
+          ],
+          "body": [
+            "التحفيز هو الشرارة التي تبدأ الرحلة، لكنه شعور متقلب يزول مع التعب والمزاج السيئ. أما الانضباط الذاتي فهو المحرك الحقيقي الذي يجعلك تستمر في العمل حتى حين تنعدم رغبتك.",
+            "الناجحون لا يملكون إرادة خارقة طوال الوقت، بل يملكون أنظمة وعادات تجعل الأداء واجباً تلقائياً لا يتطلب جهداً ذهنياً مستنزفاً.",
+            "ابدأ بخطوات صغيرة جداً لا يمكن لعقلك رفضها، وركز على الحضور والاستمرارية اليومية بدلاً من السعي للكمال المستحيل."
+          ],
+          "comments": [
+            {
+              "author": "عمر الفاروق",
+              "time": "منذ أسبوعين",
+              "text": "الانضباط هو سر كل إنجاز حققته. المقال يضع النقاط على الحروف بأسلوب رائع."
+            }
+          ]
+        },
+        {
+          "id": "stop-overthinking",
+          "file": "stop-overthinking.html",
+          "title": "كيف تتوقف عن التفكير الزائد والقلق المستمر؟",
+          "category": "psychology",
+          "categoryName": "علم النفس والسكينة",
+          "readTime": "٦ دقائق قراءة",
+          "date": "٢٠ مايو ٢٠٢٦",
+          "author": "حكمة ونور | Hikma & Nour",
+          "desc": "دليل عملي لاستعادة هدوء العقل، تفكيك دورة القلق المرهقة والسيطرة على الأفكار الدائرية لعيش اللحظة الحالية بسلام.",
+          "image": "overthinking_calm.jpg",
+          "imageAlt": "شخص يتأمل في هدوء عند شروق الشمس متحرراً من القلق والتفكير الزائد",
+          "quote": "القلق لا يفرغ الغد من همومه، لكنه يفرغ اليوم من قوته وسكينته.",
+          "quoteAuthor": "— آرثر شوبنهاور",
+          "toc": [
+            "المقدمة",
+            "١. ما هو التفكير الزائد والقلق المستمر؟",
+            "٢. لماذا نقع في فخ الاجترار الفكري؟",
+            "٣. ثنائية التحكم الرواقية لتحرير الذهن",
+            "٤. ٧ خطوات عملية للتخلص من القلق فوراً",
+            "خاتمة: العيش في اللحظة الحالية"
+          ],
+          "body": [
+            "هل سبق أن استيقظت في منتصف الليل لأن عقلك يرفض التوقف عن استرجاع مواقف قديمة أو تخيل سيناريوهات كارثية للمستقبل؟ هذه الحالة تُعرف بالتفكير الزائد (Overthinking)، وهي من أكثر مصادر استنزاف الطاقة النفسية في عصرنا.",
+            "التفكير الزائد ليس علامة على الذكاء بل هو حلقة مفرغة من القلق والتردد تجعلك تدور حول المشكلة دون أن تخطو خطوة واحدة نحو الحل. جذوره غالباً ما تكون في الخوف من الفشل أو الرغبة المفرطة في السيطرة على المجهول.",
+            "الفلسفة الرواقية تقدم لنا علاجاً حاسماً عبر 'ثنائية التحكم': قسّم كل ما يشغلك إلى فئتين: أمور تخضع لسيطرتك المباشرة (أفعالك، قراراتك، استجابتك)، وأمور خارجة عن إرادتك تماماً (آراء الناس، الماضي، المستقبل). ركّز طاقتك بالكامل على الفئة الأولى ودع ما سواها بسلام.",
+            "للتخلص من القلق فوراً: أولاً، اكتب أفكارك على ورقة لتفريغ الشحنة الذهنية. ثانياً، خصص ١٥ دقيقة يومياً فقط للتفكير والحلول ثم أغلق الملف. ثالثاً، تحرك ومارس الرياضة لكسر الحالة الجسدية للتوتر. ورابعاً، ركز على التنفس العميق واستحضر اللحظة الحالية."
+          ],
+          "comments": [
+            {
+              "author": "أحمد بن علي",
+              "time": "منذ ساعتين",
+              "text": "مقال رائع جداً، تطبيق ثنائية التحكم ساعدني كثيراً في التوقف عن القلق من أمور خارجة عن إرادتي."
+            },
+            {
+              "author": "سارة المنصوري",
+              "time": "منذ ٥ ساعات",
+              "text": "خطوة كتابة الأفكار وتحديد وقت للتفكير غيرت يومي تماماً. شكراً لكم على هذه الحكمة."
+            }
           ]
         }
       ],
