@@ -13,25 +13,28 @@ const ICONS = {
 };
 
 const LANG_METADATA = {
-  fr: { label: "FR" },
-  en: { label: "EN" },
-  ar: { label: "AR" }
+  ar: { label: "العربية", code: "ar" },
+  fr: { label: "Français", code: "fr" }
 };
 
-// Force Arabic on first load of this version to override old localStorage values
-if (!localStorage.getItem('lang_force_ar_v11')) {
-  localStorage.setItem('lang', 'ar');
-  localStorage.setItem('lang_force_ar_v11', 'true');
+function getSavedLanguage() {
+  return localStorage.getItem('site_lang_v1') || localStorage.getItem('lang') || localStorage.getItem('preferredLang') || 'ar';
 }
 
-let currentLang = localStorage.getItem('lang') || 'ar';
+function saveLanguage(lang) {
+  localStorage.setItem('site_lang_v1', lang);
+  localStorage.setItem('lang', lang);
+  localStorage.setItem('preferredLang', lang);
+}
+
+let currentLang = getSavedLanguage();
 let currentCategory = 'all';
 let cart = JSON.parse(localStorage.getItem('stoic_shop_cart')) || [];
 
 // --- Language Engine ---
 function setLanguage(lang) {
   currentLang = lang;
-  localStorage.setItem('lang', lang);
+  saveLanguage(lang);
   
   // Set document direction & lang
   document.documentElement.lang = lang;
@@ -43,7 +46,17 @@ function setLanguage(lang) {
 
   // Update active language label in navbar
   const activeName = document.getElementById('activeLangName');
-  if (activeName) activeName.textContent = LANG_METADATA[lang].label;
+  if (activeName) activeName.textContent = (LANG_METADATA[lang] && LANG_METADATA[lang].label) || "العربية";
+
+  // Update active dropdown options
+  const options = document.querySelectorAll('.lang-opt');
+  options.forEach(opt => {
+    if (opt.getAttribute('data-lang') === lang) {
+      opt.classList.add('active');
+    } else {
+      opt.classList.remove('active');
+    }
+  });
 
   // Translate all elements with data-i18n
   const translatables = document.querySelectorAll('[data-i18n]');

@@ -6,18 +6,21 @@ const ICONS = {
 };
 
 const LANG_METADATA = {
-  fr: { label: "FR" },
-  en: { label: "EN" },
-  ar: { label: "AR" }
+  ar: { label: "العربية", code: "ar" },
+  fr: { label: "Français", code: "fr" }
 };
 
-// Force Arabic on first load of this version to override old localStorage values
-if (!localStorage.getItem('lang_force_ar_v11')) {
-  localStorage.setItem('lang', 'ar');
-  localStorage.setItem('lang_force_ar_v11', 'true');
+function getSavedLanguage() {
+  return localStorage.getItem('site_lang_v1') || localStorage.getItem('lang') || localStorage.getItem('preferredLang') || 'ar';
 }
 
-let currentLang = localStorage.getItem('lang') || 'ar';
+function saveLanguage(lang) {
+  localStorage.setItem('site_lang_v1', lang);
+  localStorage.setItem('lang', lang);
+  localStorage.setItem('preferredLang', lang);
+}
+
+let currentLang = getSavedLanguage();
 let currentCategory = 'all';
 let currentSearch = '';
 
@@ -27,11 +30,6 @@ const ARTICLES_PAGE_TRANSLATIONS = {
     searchPlaceholder: "Rechercher un article...",
     noResults: "Aucun article ne correspond à votre recherche.",
     bio: "Stoïcisme, philosophie classique, psychologie et croissance personnelle."
-  },
-  en: {
-    searchPlaceholder: "Search articles...",
-    noResults: "No articles match your search.",
-    bio: "Stoicism, classical philosophy, psychology, and personal growth."
   },
   ar: {
     searchPlaceholder: "ابحث عن مقال...",
@@ -43,7 +41,7 @@ const ARTICLES_PAGE_TRANSLATIONS = {
 // --- Language Engine ---
 function setLanguage(lang) {
   currentLang = lang;
-  localStorage.setItem('lang', lang);
+  saveLanguage(lang);
   
   // Set document direction & lang
   document.documentElement.lang = lang;
@@ -55,7 +53,17 @@ function setLanguage(lang) {
 
   // Update navbar language label
   const activeName = document.getElementById('activeLangName');
-  if (activeName) activeName.textContent = LANG_METADATA[lang].label;
+  if (activeName) activeName.textContent = (LANG_METADATA[lang] && LANG_METADATA[lang].label) || "العربية";
+
+  // Update active dropdown options
+  const options = document.querySelectorAll('.lang-opt');
+  options.forEach(opt => {
+    if (opt.getAttribute('data-lang') === lang) {
+      opt.classList.add('active');
+    } else {
+      opt.classList.remove('active');
+    }
+  });
 
   // Translate all static keys marked with data-i18n
   const translatables = document.querySelectorAll('[data-i18n]');
@@ -68,10 +76,14 @@ function setLanguage(lang) {
 
   // Localized placeholders & details
   const searchInput = document.getElementById('searchInput');
-  if (searchInput) searchInput.placeholder = ARTICLES_PAGE_TRANSLATIONS[lang].searchPlaceholder;
+  if (searchInput && ARTICLES_PAGE_TRANSLATIONS[lang]) {
+    searchInput.placeholder = ARTICLES_PAGE_TRANSLATIONS[lang].searchPlaceholder;
+  }
   
   const noResultsEl = document.getElementById('noResults');
-  if (noResultsEl) noResultsEl.textContent = ARTICLES_PAGE_TRANSLATIONS[lang].noResults;
+  if (noResultsEl && ARTICLES_PAGE_TRANSLATIONS[lang]) {
+    noResultsEl.textContent = ARTICLES_PAGE_TRANSLATIONS[lang].noResults;
+  }
 
   // Re-populate dynamic parts
   populateNavbarDropdown();
@@ -170,8 +182,8 @@ function populateArticles(category = 'all', keyword = '') {
   const container = document.getElementById('articlesList');
   const noResultsEl = document.getElementById('noResults');
   let articles = TIKTOK_DATA.content[currentLang].articles;
-  const readLabel = TIKTOK_DATA.ui[currentLang].readArticle || "Lire l'article";
-  const featuredLabel = TIKTOK_DATA.ui[currentLang].featured || "En vedette";
+  const readLabel = TIKTOK_DATA.ui[currentLang].readArticle || (currentLang === 'ar' ? "اقرأ المقال" : "Lire l'article");
+  const featuredLabel = TIKTOK_DATA.ui[currentLang].featured || (currentLang === 'ar' ? "مميز" : "En vedette");
 
   if (!container || !articles) return;
 
@@ -197,8 +209,7 @@ function populateArticles(category = 'all', keyword = '') {
     container.style.display = 'grid';
     if (noResultsEl) noResultsEl.style.display = 'none';
 
-    const downloadLabel = TIKTOK_DATA.ui[currentLang].downloadWord || "Word";
-    container.innerHTML = articles.map((art, index) => {
+    container.innerHTML = articles.map((art) => {
       const targetUrl = art.file ? art.file : `../files/${art.file || 'stop-overthinking.html'}`;
       const badgeHtml = art.featured ? `<span class="card-featured-badge">${featuredLabel}</span>` : "";
       const categoryLabel = TIKTOK_DATA.ui[currentLang][art.category] || art.category;
@@ -235,8 +246,8 @@ function populateArticles(category = 'all', keyword = '') {
               <span class="card-action-link" style="margin-top: 0; color: var(--accent-gold); font-weight:700; display:inline-flex; align-items:center; gap:6px;">
                 <span>${readLabel}</span>
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
+                  <line x1="${currentLang === 'ar' ? '19' : '5'}" y1="12" x2="${currentLang === 'ar' ? '5' : '19'}" y2="12"></line>
+                  <polyline points="${currentLang === 'ar' ? '12 19 5 12 12 5' : '12 5 19 12 12 19'}"></polyline>
                 </svg>
               </span>
             </div>
@@ -338,12 +349,10 @@ function initPageLogic() {
   // 5. Auto-open specific article from URL param (?article=filename.html)
   const articleParam = urlParams.get('article');
   if (articleParam) {
-    // Wait for articles to be rendered, then find and open the matching one
     setTimeout(() => {
       const allArticles = TIKTOK_DATA.content[currentLang].articles;
       const matchIdx = allArticles.findIndex(a => a.file === articleParam);
       if (matchIdx !== -1) {
-        // Trigger click on the matching card, or directly call setupArticleModal + open
         const cards = document.querySelectorAll('.article-card');
         if (cards[matchIdx]) {
           const readBtn = cards[matchIdx].querySelector('.card-action-link');
@@ -365,79 +374,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // --- Article Modal Logic ---
 function setupArticleModal(articles) {
-  const modal = document.getElementById('articleModal');
-  const closeBtn = document.getElementById('articleModalCloseBtn');
-  const titleEl = document.getElementById('modalArticleTitle');
-  const descEl = document.getElementById('modalArticleDesc');
-  const badgeEl = document.getElementById('modalArticleCategoryBadge');
-  const breadcrumbCatEl = document.getElementById('modalArticleCategoryBreadcrumb');
-  const breadcrumbTitleEl = document.getElementById('modalArticleTitleBreadcrumb');
-  const dateEl = document.getElementById('modalArticleDate');
-  const readTimeEl = document.getElementById('modalArticleReadTime');
-  const imgEl = document.getElementById('modalArticleImage');
-  
-  const quoteEl = document.getElementById('modalSidebarQuote');
-  const quoteAuthorEl = document.getElementById('modalSidebarQuoteAuthor');
-  const bodyEl = document.getElementById('modalArticleBody');
-  
   const cards = document.querySelectorAll('.article-card');
   
-  if (!modal || !closeBtn || !titleEl || !bodyEl) return;
-  
-  function openArticleModal(index) {
-    const art = articles[index];
-    if (!art) return;
-    
-    // Direct navigation to article standalone page
-    const targetUrl = art.file ? art.file : `../files/${art.file || ''}`;
-    if (targetUrl) {
-      window.location.href = targetUrl;
-      return;
-    }
-    document.body.style.overflow = 'hidden';
-    
-    // Auto-scroll modal to top
-    const scrollContainer = modal.querySelector('.reader-scroll-container');
-    if (scrollContainer) {
-      scrollContainer.scrollTop = 0;
-    }
-  }
-
   cards.forEach(card => {
-    const clickables = card.querySelectorAll('[data-index]');
-    clickables.forEach(c => {
-      c.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        const index = parseInt(c.getAttribute('data-index'), 10);
-        openArticleModal(index);
-      });
-    });
-    card.addEventListener('click', (e) => {
-      if (e.target.closest('.article-download-link')) return;
-      const readBtn = card.querySelector('.card-action-link');
-      if (readBtn) {
-        const index = parseInt(readBtn.getAttribute('data-index'), 10);
-        openArticleModal(index);
+    card.addEventListener('click', () => {
+      const target = card.getAttribute('data-target');
+      if (target) {
+        window.location.href = target;
       }
     });
   });
-
-  function closeModal() {
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  closeBtn.addEventListener('click', closeModal);
-
-  // Close on backdrop click (if clicking outside main content)
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      closeModal();
-    }
-  });
 }
-
 
 function setupMobileNavOverlay() {
   const hamburger = document.getElementById('navHamburger');
@@ -482,4 +429,3 @@ function setupMobileNavOverlay() {
     });
   }
 }
-

@@ -1,6 +1,21 @@
 import TIKTOK_DATA from '../data_v11.js';
 
-let currentLang = localStorage.getItem('preferredLang') || 'ar';
+const LANG_METADATA = {
+  ar: { label: "العربية", code: "ar" },
+  fr: { label: "Français", code: "fr" }
+};
+
+function getSavedLanguage() {
+  return localStorage.getItem('site_lang_v1') || localStorage.getItem('lang') || localStorage.getItem('preferredLang') || 'ar';
+}
+
+function saveLanguage(lang) {
+  localStorage.setItem('site_lang_v1', lang);
+  localStorage.setItem('lang', lang);
+  localStorage.setItem('preferredLang', lang);
+}
+
+let currentLang = getSavedLanguage();
 let activeTheme = localStorage.getItem('theme') || 'dark';
 
 let currentQuoteIndex = -1;
@@ -87,7 +102,7 @@ function initLanguageSelector() {
   const langDropdown = document.getElementById('langDropdown');
   const langBtn = document.getElementById('langBtn');
   
-  if (activeLangName) activeLangName.textContent = currentLang.toUpperCase();
+  if (activeLangName) activeLangName.textContent = (LANG_METADATA[currentLang] && LANG_METADATA[currentLang].label) || "العربية";
   
   if (langBtn && langDropdown) {
     langBtn.addEventListener('click', (e) => {
@@ -103,24 +118,31 @@ function initLanguageSelector() {
     langOpts.forEach(opt => {
       opt.addEventListener('click', () => {
         const selectedLang = opt.getAttribute('data-lang');
-        if (selectedLang !== currentLang) {
-          currentLang = selectedLang;
-          localStorage.setItem('preferredLang', currentLang);
-          activeLangName.textContent = currentLang.toUpperCase();
-          
-          // Apply document direction
-          if (currentLang === 'ar') {
-            document.documentElement.setAttribute('dir', 'rtl');
-            document.documentElement.setAttribute('lang', 'ar');
+        currentLang = selectedLang;
+        saveLanguage(currentLang);
+        if (activeLangName) activeLangName.textContent = (LANG_METADATA[currentLang] && LANG_METADATA[currentLang].label) || "العربية";
+        
+        // Update active class
+        langOpts.forEach(o => {
+          if (o.getAttribute('data-lang') === currentLang) {
+            o.classList.add('active');
           } else {
-            document.documentElement.setAttribute('dir', 'ltr');
-            document.documentElement.setAttribute('lang', currentLang);
+            o.classList.remove('active');
           }
-          
-          translatePage();
-          displayNewWisdom(true);
-          renderAllQuotes();
+        });
+        
+        // Apply document direction
+        if (currentLang === 'ar') {
+          document.documentElement.setAttribute('dir', 'rtl');
+          document.documentElement.setAttribute('lang', 'ar');
+        } else {
+          document.documentElement.setAttribute('dir', 'ltr');
+          document.documentElement.setAttribute('lang', currentLang);
         }
+        
+        translatePage();
+        displayNewWisdom(true);
+        renderAllQuotes();
       });
     });
   }
@@ -132,6 +154,18 @@ function initLanguageSelector() {
   } else {
     document.documentElement.setAttribute('dir', 'ltr');
     document.documentElement.setAttribute('lang', currentLang);
+  }
+  
+  // Update active class on initial load
+  if (langDropdown) {
+    const langOpts = langDropdown.querySelectorAll('.lang-opt');
+    langOpts.forEach(o => {
+      if (o.getAttribute('data-lang') === currentLang) {
+        o.classList.add('active');
+      } else {
+        o.classList.remove('active');
+      }
+    });
   }
   
   translatePage();

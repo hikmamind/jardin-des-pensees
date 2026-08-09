@@ -13,20 +13,29 @@ const ICONS = {
   'user': '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle>'
 };
 
-// Language Names map
+// Language Metadata
 const LANG_METADATA = {
-  fr: { label: "FR" },
-  en: { label: "EN" },
-  ar: { label: "AR" }
+  ar: { label: "العربية", code: "ar" },
+  fr: { label: "Français", code: "fr" }
 };
 
-let currentLang = localStorage.getItem('site_lang_v1') || 'fr';
+function getSavedLanguage() {
+  return localStorage.getItem('site_lang_v1') || localStorage.getItem('lang') || localStorage.getItem('preferredLang') || 'ar';
+}
+
+function saveLanguage(lang) {
+  localStorage.setItem('site_lang_v1', lang);
+  localStorage.setItem('lang', lang);
+  localStorage.setItem('preferredLang', lang);
+}
+
+let currentLang = getSavedLanguage();
 let currentQuoteIndex = -1;
 
 // --- Language/Translation Engine ---
 function setLanguage(lang) {
   currentLang = lang;
-  localStorage.setItem('site_lang_v1', lang);
+  saveLanguage(lang);
   
   // Set document attributes for direction & lang
   document.documentElement.lang = lang;
@@ -38,7 +47,17 @@ function setLanguage(lang) {
 
   // Update active language selector button representation
   const activeName = document.getElementById('activeLangName');
-  if (activeName) activeName.textContent = (LANG_METADATA[lang] && LANG_METADATA[lang].label) || "FR";
+  if (activeName) activeName.textContent = (LANG_METADATA[lang] && LANG_METADATA[lang].label) || "العربية";
+
+  // Update active state in dropdown options
+  const langOptions = document.querySelectorAll('.lang-opt');
+  langOptions.forEach(opt => {
+    if (opt.getAttribute('data-lang') === lang) {
+      opt.classList.add('active');
+    } else {
+      opt.classList.remove('active');
+    }
+  });
 
   // Translate static labels marked with data-i18n
   const translatables = document.querySelectorAll('[data-i18n]');
@@ -69,6 +88,8 @@ function setLanguage(lang) {
   populateProfile();
   populateNavbarDropdown();
   populateThinkers();
+  populateRecentArticlesHome();
+  populateAudioHome();
   populateFaq();
 }
 
@@ -76,10 +97,12 @@ function updatePlaceholders() {
   const nameInput = document.getElementById('contactName');
   const emailInput = document.getElementById('contactEmail');
   const messageInput = document.getElementById('contactMessage');
+  const searchInput = document.getElementById('globalSearchInput') || document.getElementById('searchInput');
   
   if (nameInput) nameInput.placeholder = TIKTOK_DATA.ui[currentLang].placeholderName;
   if (emailInput) emailInput.placeholder = TIKTOK_DATA.ui[currentLang].placeholderEmail;
   if (messageInput) messageInput.placeholder = TIKTOK_DATA.ui[currentLang].placeholderMessage;
+  if (searchInput) searchInput.placeholder = TIKTOK_DATA.ui[currentLang].search || "بحث...";
 }
 
 function initLanguageSelector() {
@@ -268,6 +291,213 @@ function populateThinkers() {
       window.location.href = `./thinkers/?thinker=${id}`;
     });
   });
+}
+
+function populateRecentArticlesHome() {
+  const container = document.getElementById('recentArticlesGrid');
+  if (!container) return;
+
+  const isAr = currentLang === 'ar';
+  const readLabel = isAr ? 'اقرأ المقال ←' : 'Lire l\'article →';
+
+  const articlesData = isAr ? [
+    {
+      title: 'الرواقية: فلسفة القوة والهدوء الداخلي',
+      category: 'الرواقية',
+      categoryColor: '#34D399',
+      categoryBg: 'rgba(52, 211, 153, 0.15)',
+      readTime: '⏱️ 6 دقائق',
+      desc: 'دليل عملي لتطبيق ثنائية التحكم، وحب القدر، وبناء قلعة داخلية حصينة في مواجهة تقلبات الحياة.',
+      url: './files/stoicisme-force-calme.html'
+    },
+    {
+      title: 'كيف تتوقف عن التفكير المفرط والقلق المستمر؟',
+      category: 'علم النفس',
+      categoryColor: '#60A5FA',
+      categoryBg: 'rgba(96, 165, 250, 0.15)',
+      readTime: '⏱️ 5 دقائق',
+      desc: 'أساليب نفسية وعقلية مجربة لكسر حلقة الاجترار الفكري واستعادة السكينة والهدوء في الحاضر.',
+      url: './files/stop-overthinking.html'
+    },
+    {
+      title: 'الانضباط الذاتي وقوة الإرادة عند الفلاسفة القدماء',
+      category: 'تطوير الذات',
+      categoryColor: '#FBBF24',
+      categoryBg: 'rgba(251, 191, 36, 0.15)',
+      readTime: '⏱️ 7 دقائق',
+      desc: 'تعاليم ماركوس أوريليوس وسينيكا للتحكم في النزوات العشوائية وبناء عادات يومية صلبة وواعية.',
+      url: './files/self-discipline.html'
+    },
+    {
+      title: 'العبث والحرية عند ألبير كامو',
+      category: 'الوجودية',
+      categoryColor: '#A78BFA',
+      categoryBg: 'rgba(167, 139, 250, 0.15)',
+      readTime: '⏱️ 6 دقائق',
+      desc: 'كيف تصنع المعنى والتمرد الواعي في عالم صامت؟ الفلسفة الملهمة لكامو في حب الحياة والحرية.',
+      url: './files/absurde-camus.html'
+    },
+    {
+      title: 'لماذا يحترم الناس الشخص الصامت أكثر من كثير الكلام؟',
+      category: 'علم النفس',
+      categoryColor: '#60A5FA',
+      categoryBg: 'rgba(96, 165, 250, 0.15)',
+      readTime: '⏱️ 5 دقائق',
+      desc: 'قوة الصمت والهدوء والغموض في بناء الهيبة والكاريزما والاحترام الذاتي الحقيقي.',
+      url: './articles/why-people-respect-silent-person.html'
+    },
+    {
+      title: 'لماذا يبتعد الناس عنك عندما تنجح؟',
+      category: 'علم النفس',
+      categoryColor: '#60A5FA',
+      categoryBg: 'rgba(96, 165, 250, 0.15)',
+      readTime: '⏱️ 6 دقائق',
+      desc: 'التحليل النفسي لسلوك المحيطين عند تحقيق النجاح، وديناميكيات الحسد، وكيف تحافظ على سلامك الداخلي.',
+      url: './articles/why-people-distance-when-you-succeed.html'
+    }
+  ] : [
+    {
+      title: 'Le Stoïcisme : Philosophie de la Force et du Calme',
+      category: 'Stoïcisme',
+      categoryColor: '#34D399',
+      categoryBg: 'rgba(52, 211, 153, 0.15)',
+      readTime: '⏱️ 6 min',
+      desc: 'Un guide pratique pour appliquer la dichotomie du contrôle, l\'amor fati et bâtir une forteresse intérieure solide.',
+      url: './files/stoicisme-force-calme.html'
+    },
+    {
+      title: 'Comment Stopper les Pensées Obsédantes et l\'Anxiété ?',
+      category: 'Psychologie',
+      categoryColor: '#60A5FA',
+      categoryBg: 'rgba(96, 165, 250, 0.15)',
+      readTime: '⏱️ 5 min',
+      desc: 'Des méthodes éprouvées pour briser le cycle des ruminations mentales et retrouver la sérénité du moment présent.',
+      url: './files/stop-overthinking.html'
+    },
+    {
+      title: 'L\'Autodiscipline et la Volonté selon les Anciens',
+      category: 'Développement',
+      categoryColor: '#FBBF24',
+      categoryBg: 'rgba(251, 191, 36, 0.15)',
+      readTime: '⏱️ 7 min',
+      desc: 'Les enseignements de Marc Aurèle et Sénèque pour dominer ses pulsions et maîtriser ses habitudes quotidiennes.',
+      url: './files/self-discipline.html'
+    },
+    {
+      title: 'L\'Absurde et la Liberté chez Albert Camus',
+      category: 'Existentialisme',
+      categoryColor: '#A78BFA',
+      categoryBg: 'rgba(167, 139, 250, 0.15)',
+      readTime: '⏱️ 6 min',
+      desc: 'Comment forger du sens et une révolte lucide dans un monde silencieux ? La philosophie vivifiante de Camus.',
+      url: './files/absurde-camus.html'
+    },
+    {
+      title: 'Pourquoi les gens respectent une personne silencieuse ?',
+      category: 'Psychologie',
+      categoryColor: '#60A5FA',
+      categoryBg: 'rgba(96, 165, 250, 0.15)',
+      readTime: '⏱️ 5 min',
+      desc: 'La puissance de la retenue, du mystère et de la maîtrise de soi pour forger un respect authentique.',
+      url: './articles/why-people-respect-silent-person.html'
+    },
+    {
+      title: 'Pourquoi les gens s\'éloignent quand vous réussissez ?',
+      category: 'Psychologie',
+      categoryColor: '#60A5FA',
+      categoryBg: 'rgba(96, 165, 250, 0.15)',
+      readTime: '⏱️ 6 min',
+      desc: 'Comprendre les dynamiques de l\'envie, la projection psychologique et comment préserver sa paix intérieure.',
+      url: './articles/why-people-distance-when-you-succeed.html'
+    }
+  ];
+
+  container.innerHTML = articlesData.map(item => `
+    <div class="article-card" style="background: rgba(18, 28, 22, 0.85); border: 1px solid rgba(223, 177, 91, 0.25); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.25s, border-color 0.25s;">
+      <div>
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+          <span style="background: ${item.categoryBg}; color: ${item.categoryColor}; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 12px;">${item.category}</span>
+          <span style="color: var(--text-muted); font-size: 0.8rem;">${item.readTime}</span>
+        </div>
+        <h3 style="font-size: 1.15rem; color: #FFFDF8; margin: 0 0 10px; font-weight: 700; line-height: 1.4;">${item.title}</h3>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin: 0 0 18px;">${item.desc}</p>
+      </div>
+      <a href="${item.url}" class="social-btn" style="text-decoration: none; justify-content: center; width: 100%; padding: 10px;">
+        <span>${readLabel}</span>
+      </a>
+    </div>
+  `).join('');
+}
+
+function populateAudioHome() {
+  const container = document.getElementById('audioCardsGrid');
+  if (!container) return;
+
+  const isAr = currentLang === 'ar';
+  const listenLabel = isAr ? '▶ استمع الآن' : '▶ Écouter';
+
+  const audioData = isAr ? [
+    {
+      title: 'الغريب',
+      author: 'ألبير كامو',
+      duration: '⏱️ 16 دقيقة',
+      desc: 'تحفة كامو الأدبية حول عبثية الوجود والصدق المطلق مع الذات.',
+      image: 'audio_etranger_cover.jpg'
+    },
+    {
+      title: 'الأمير الصغير',
+      author: 'أنطوان دو سانت إكزوبيري',
+      duration: '⏱️ 12 دقيقة',
+      desc: 'قصة فلسفية وشاعرية عالمية حول جوهر الأشياء الذي لا يُرى إلا بالقلب.',
+      image: 'audio_petit_prince_cover.jpg'
+    },
+    {
+      title: 'الخيميائي',
+      author: 'باولو كويلو',
+      duration: '⏱️ 13 دقيقة',
+      desc: 'رحلة ملهمة لراعٍ أندلسي يبحث عن أسطورته الذاتية وتحقيق غايته في الحياة.',
+      image: 'audio_alchemist_cover.jpg'
+    }
+  ] : [
+    {
+      title: 'L\'Étranger',
+      author: 'Albert Camus',
+      duration: '⏱️ 16 min',
+      desc: 'Le chef-d\'œuvre de Camus sur l\'absurdité de l\'existence et la sincérité absolue.',
+      image: 'audio_etranger_cover.jpg'
+    },
+    {
+      title: 'Le Petit Prince',
+      author: 'Antoine de Saint-Exupéry',
+      duration: '⏱️ 12 min',
+      desc: 'Un conte poétique et philosophique universel sur l\'essentiel invisible pour les yeux.',
+      image: 'audio_petit_prince_cover.jpg'
+    },
+    {
+      title: 'L\'Alchimiste',
+      author: 'Paulo Coelho',
+      duration: '⏱️ 13 min',
+      desc: 'La quête initiatique d\'un berger à la recherche de sa Légende Personnelle.',
+      image: 'audio_alchemist_cover.jpg'
+    }
+  ];
+
+  container.innerHTML = audioData.map(item => `
+    <div class="article-card" style="background: rgba(18, 28, 22, 0.85); border: 1px solid rgba(223, 177, 91, 0.25); border-radius: 18px; padding: 18px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.25s, border-color 0.25s;">
+      <div>
+        <div style="width: 100%; height: 180px; border-radius: 14px; overflow: hidden; margin-bottom: 14px; position: relative;">
+          <img src="${item.image}" alt="${item.title} - ${item.author}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+          <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.75); color: #FFF; font-size: 0.75rem; padding: 3px 8px; border-radius: 8px; font-weight: 600;">${item.duration}</span>
+        </div>
+        <h3 style="font-size: 1.12rem; color: #FFFDF8; margin: 0 0 6px; font-weight: 700;">${item.title}</h3>
+        <p style="font-size: 0.82rem; color: var(--accent-gold); margin: 0 0 8px; font-weight: 600;">${item.author}</p>
+        <p style="font-size: 0.86rem; color: var(--text-secondary); line-height: 1.5; margin: 0 0 14px;">${item.desc}</p>
+      </div>
+      <a href="./audio/" class="quiz-btn" style="text-decoration: none; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
+        <span>${listenLabel}</span>
+      </a>
+    </div>
+  `).join('');
 }
 
 function populateArticles(filterCategory = 'all') {

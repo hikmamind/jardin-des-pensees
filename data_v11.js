@@ -39,7 +39,7 @@ const TIKTOK_DATA = {
       "errorEmail": "Veuillez entrer une adresse email valide.",
       "thinkersTitle": "Grands Philosophes",
       "articlesTitle": "Articles & Réflexions",
-      "readMore": "اقرأ المزيد",
+      "readMore": "Lire la suite",
       "credits": "Conçu avec sagesse, calme et sérénité. ✨🌿",
       "placeholderName": "Ex: Jean Dupont",
       "placeholderEmail": "Ex: jean.dupont@example.com",
