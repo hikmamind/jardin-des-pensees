@@ -76,6 +76,10 @@
       max-width: 600px;
       margin: 0 auto;
     }
+
+    body {
+      background: linear-gradient(180deg, rgba(7, 10, 8, 0.88) 0%, rgba(7, 10, 8, 0.96) 100%), url('../shop_page_hero.jpg') center/cover no-repeat fixed !important;
+    }
   </style>
 
   <!-- PWA & Mobile Web App Meta -->
@@ -86,12 +90,6 @@
   <meta name="apple-mobile-web-app-title" content="حكمة ونور">
   <link rel="apple-touch-icon" href="../icon-192.png">
   <meta name="theme-color" content="#0D1410">
-
-<style>
-    body {
-      background: linear-gradient(180deg, rgba(7, 10, 8, 0.88) 0%, rgba(7, 10, 8, 0.96) 100%), url('../shop_page_hero.jpg') center/cover no-repeat fixed !important;
-    }
-  </style>
 </head>
 <body>
 
@@ -139,56 +137,56 @@
         <a href="../thinkers/" class="nav-link" data-i18n="thinkers">Penseurs</a>
         <a href="../quotes/" class="nav-link" data-i18n="quotes">Citations</a>
         <a href="../audio/" class="nav-link" data-i18n="audio">Audio</a>
+        <a href="../quizzes/" class="nav-link" data-i18n="quiz">Quiz</a>
         <a href="../bio.html" class="nav-link" data-i18n="about">À propos</a>
         <a href="../#contactSection" class="nav-link" data-i18n="contactNav">Contact</a>
       </div>
         
-        <div class="nav-actions">
-          <!-- Language Selector -->
-          <div class="lang-selector">
-            <button class="lang-btn" id="langBtn" aria-label="تغيير اللغة">
-              <svg class="globe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px; height:16px;">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="2" y1="12" x2="22" y2="12"></line>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-              </svg>
-              <span id="activeLangName">العربية</span>
-            </button>
-            <div class="lang-dropdown" id="langDropdown">
-              <button class="lang-opt active" data-lang="ar" aria-label="العربية">العربية</button>
-              <button class="lang-opt" data-lang="fr" aria-label="Français">Français</button>
-              <button class="lang-opt" data-lang="en" aria-label="English">English</button>
-            </div>
+      <div class="nav-actions">
+        <!-- Language Selector -->
+        <div class="lang-selector">
+          <button class="lang-btn" id="langBtn" aria-label="تغيير اللغة">
+            <svg class="globe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px; height:16px;">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="activeLangName">العربية</span>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-opt active" data-lang="ar" aria-label="العربية">العربية</button>
+            <button class="lang-opt" data-lang="fr" aria-label="Français">Français</button>
+            <button class="lang-opt" data-lang="en" aria-label="English">English</button>
           </div>
-          
-          <!-- Theme Toggle Switcher -->
-          <button class="theme-toggle" id="themeToggleBtn" aria-label="Changer de thème">
-            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="5"></circle>
-              <line x1="12" y1="1" x2="12" y2="3"></line>
-              <line x1="12" y1="21" x2="12" y2="23"></line>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-              <line x1="1" y1="12" x2="3" y2="12"></line>
-              <line x1="21" y1="12" x2="23" y2="12"></line>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
-            <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-          </button>
-
-          <!-- Shopping Cart Trigger -->
-          <button class="cart-icon-wrapper" id="cartToggleBtn" aria-label="Voir le panier" style="display: none;">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="9" cy="21" r="1"></circle>
-              <circle cx="20" cy="21" r="1"></circle>
-              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-            </svg>
-            <span class="cart-badge" id="cartBadgeCount" style="display: none;">0</span>
-          </button>
         </div>
+        
+        <!-- Theme Toggle Switcher -->
+        <button class="theme-toggle" id="themeToggleBtn" aria-label="Changer de thème">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Shopping Cart Trigger -->
+        <button class="cart-icon-wrapper" id="cartToggleBtn" aria-label="عرض السلة">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge" id="cartBadgeCount" style="display: none;">0</span>
+        </button>
       </div>
     </nav>
   </header>
@@ -198,12 +196,11 @@
     <main style="padding-top: 110px;">
       
       <!-- Shop Hero Header -->
-      
       <section class="section-hero-split" style="margin-top: 20px;">
         <div class="hero-content-box">
-          <span class="hero-pill-badge">🛍️ المكتبة الرواقية والمقتنيات</span>
+          <span class="hero-pill-badge" data-i18n="shopHeroBadge">🛍️ المكتبة الرواقية والمقتنيات</span>
           <h1 class="section-hero-title" data-i18n="shopTitle">متجر الحكمة والكتب الفلسفية</h1>
-          <p class="section-hero-desc" data-i18n="shopSubtitle">قراءات، أدلة عمليّة ومقتنيات مستهامة من الحكمة القديمة لإثراء حياتك اليومية بالهدوء والعمق.</p>
+          <p class="section-hero-desc" data-i18n="shopSubtitle">قراءات، أدلة عمليّة ومقتنيات مستلهمة من الحكمة القديمة لإثراء حياتك اليومية بالهدوء والعمق.</p>
         </div>
         <div class="hero-image-box">
           <img src="shop_page_hero.jpg" alt="متجر الكتب والحكمة">
@@ -213,9 +210,9 @@
       <!-- Category Filter tag pills -->
       <div class="search-filter-container">
         <div class="tags-container" id="categoryFilters">
-          <button class="tag-btn active" data-category="all" data-i18n="filterAll">Tous les produits</button>
-          <button class="tag-btn" data-category="digital" data-i18n="filterDigital">Produits Numériques</button>
-          <button class="tag-btn" data-category="physical" data-i18n="filterPhysical">Objets Physiques</button>
+          <button class="tag-btn active" data-category="all" data-i18n="filterAll">جميع المنتجات</button>
+          <button class="tag-btn" data-category="digital" data-i18n="filterDigital">منتجات رقمية</button>
+          <button class="tag-btn" data-category="physical" data-i18n="filterPhysical">مقتنيات مادية</button>
         </div>
       </div>
 
@@ -234,65 +231,65 @@
             <img src="../brand_logo_official.png" alt="Hikma & Nour" style="width: 38px; height: 38px; object-fit: contain;">
             <span style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 800; color: var(--accent-gold);">HIKMA & NOUR</span>
           </div>
-          <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.7; margin-bottom: 14px;">
+          <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.7; margin-bottom: 14px;" data-i18n="footerBrandDesc">
             الحكمة • الفلسفة • علم النفس<br>
             مساحة للتأمل الرصين، حكمة كبار المفكرين وبناء القوة النفسية والهدوء الداخلي.
           </p>
         </div>
 
         <div>
-          <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;">🏠 الخريطة الرئيسية</h4>
+          <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;" data-i18n="mainSitemap">🏠 الخريطة الرئيسية</h4>
           <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
-            <li><a href="../" style="color: var(--text-secondary); text-decoration: none;">🏠 Accueil / الرئيسية</a></li>
-            <li><a href="../articles/" style="color: var(--text-secondary); text-decoration: none;">📚 Articles / المقالات</a></li>
-            <li><a href="../thinkers/" style="color: var(--text-secondary); text-decoration: none;">🧠 Penseurs / الفلاسفة</a></li>
-            <li><a href="../quotes/" style="color: var(--text-secondary); text-decoration: none;">💭 Citations / اقتباسات</a></li>
-            <li><a href="../audio/" style="color: var(--text-secondary); text-decoration: none;">🎧 Audio / كتب صوتية</a></li>
-            <li><a href="../bio.html" style="color: var(--text-secondary); text-decoration: none;">ℹ️ À propos / عن الموقع</a></li>
-            <li><a href="../#contactSection" style="color: var(--text-secondary); text-decoration: none;">📩 Contact / اتصل بنا</a></li>
+            <li><a href="../" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerHome">🏠 الرئيسية</a></li>
+            <li><a href="../articles/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerArticles">📚 المقالات</a></li>
+            <li><a href="../thinkers/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerThinkers">🧠 الفلاسفة</a></li>
+            <li><a href="../quotes/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerQuotes">💭 الاقتباسات</a></li>
+            <li><a href="../audio/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerAudio">🎧 الصوتيات</a></li>
+            <li><a href="../bio.html" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerAbout">ℹ️ عن الموقع</a></li>
+            <li><a href="../#contactSection" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerContact">📩 اتصل بنا</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;">✨ خدمات ومحتوى تفاعلي</h4>
+          <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;" data-i18n="interactiveServices">✨ خدمات ومحتوى تفاعلي</h4>
           <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
-            <li><a href="../quizzes/" style="color: var(--text-secondary); text-decoration: none;">🧠 Quiz / الاختبارات الفلسفية</a></li>
-            <li><a href="../#helpSection" style="color: var(--text-secondary); text-decoration: none;">❓ FAQ & Support / الأسئلة الشائعة</a></li>
-            <li><a href="./" style="color: var(--accent-gold); text-decoration: none; font-weight: 700;">🛍️ Boutique / متجر الحكمة</a></li>
-            <li><a href="../calendar/" style="color: var(--text-secondary); text-decoration: none;">📅 Calendrier / التقويم ٣٦٥ يوماً</a></li>
-            <li><a href="../articles/?category=philosophy" style="color: var(--text-secondary); text-decoration: none;">🏛️ Philosophie / الفلسفة</a></li>
-            <li><a href="../articles/?category=psychology" style="color: var(--text-secondary); text-decoration: none;">🧠 Psychologie / علم النفس</a></li>
+            <li><a href="../quizzes/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerQuizzes">🧠 الاختبارات الفلسفية</a></li>
+            <li><a href="../#helpSection" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerFaq">❓ الأسئلة الشائعة</a></li>
+            <li><a href="./" style="color: var(--accent-gold); text-decoration: none; font-weight: 700;" data-i18n="footerShop">🛍️ متجر الحكمة</a></li>
+            <li><a href="../calendar/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerCalendar">📅 التقويم ٣٦٥ يوماً</a></li>
+            <li><a href="../articles/?category=philosophy" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerPhilosophy">🏛️ الفلسفة</a></li>
+            <li><a href="../articles/?category=psychology" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerPsychology">🧠 علم النفس</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;">🔒 المعلومات القانونية والسياسات</h4>
+          <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;" data-i18n="legalInfoTitle">🔒 المعلومات القانونية والسياسات</h4>
           <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
-            <li><a href="../privacy-policy.html" style="color: var(--text-secondary); text-decoration: none;">🔒 Politique de confidentialité / سياسة الخصوصية</a></li>
-            <li><a href="../terms-of-service.html" style="color: var(--text-secondary); text-decoration: none;">📜 Conditions d'utilisation / شروط الاستخدام</a></li>
-            <li><a href="../cookie-policy.html" style="color: var(--text-secondary); text-decoration: none;">🍪 Politique des cookies / ملفات تعريف الارتباط</a></li>
-            <li><a href="../#contactSection" style="color: var(--text-secondary); text-decoration: none;">🤝 Collaborations & Partenariats / التعاون</a></li>
+            <li><a href="../privacy-policy.html" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerPrivacy">🔒 سياسة الخصوصية</a></li>
+            <li><a href="../terms-of-service.html" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerTerms">📜 شروط الاستخدام</a></li>
+            <li><a href="../cookie-policy.html" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerCookies">🍪 ملفات تعريف الارتباط</a></li>
+            <li><a href="../#contactSection" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerCollab">🤝 التعاون والشراكات</a></li>
           </ul>
         </div>
       </div>
 
       <div style="margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center;">
         <div style="display: flex; justify-content: center; gap: 14px 20px; flex-wrap: wrap; font-size: 0.88rem; margin-bottom: 14px; font-weight: 600;">
-          <a href="../bio.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">ℹ️ À propos</a>
+          <a href="../bio.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="footerAbout">ℹ️ عن الموقع</a>
           <span style="color: rgba(255,255,255,0.2);">•</span>
-          <a href="../#contactSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">📩 Contact</a>
+          <a href="../#contactSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="footerContact">📩 اتصل بنا</a>
           <span style="color: rgba(255,255,255,0.2);">•</span>
-          <a href="../#helpSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">❓ FAQ</a>
+          <a href="../#helpSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="footerFaq">❓ الأسئلة الشائعة</a>
           <span style="color: rgba(255,255,255,0.2);">•</span>
-          <a href="./" style="color: var(--accent-gold); text-decoration: none; font-weight: 700;">🛍️ Boutique</a>
+          <a href="./" style="color: var(--accent-gold); text-decoration: none; font-weight: 700;" data-i18n="footerShop">🛍️ متجر الحكمة</a>
           <span style="color: rgba(255,255,255,0.2);">•</span>
-          <a href="../privacy-policy.html" style="color: var(--accent-gold); text-decoration: none; transition: color 0.2s;">🔒 Confidentialité</a>
+          <a href="../privacy-policy.html" style="color: var(--accent-gold); text-decoration: none; transition: color 0.2s;" data-i18n="footerPrivacyShort">🔒 الخصوصية</a>
           <span style="color: rgba(255,255,255,0.2);">•</span>
-          <a href="../terms-of-service.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">📜 Conditions d'utilisation</a>
+          <a href="../terms-of-service.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="footerTerms">📜 شروط الاستخدام</a>
           <span style="color: rgba(255,255,255,0.2);">•</span>
-          <a href="../cookie-policy.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">🍪 Cookies</a>
+          <a href="../cookie-policy.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="footerCookies">🍪 ملفات تعريف الارتباط</a>
         </div>
-        <p style="color: var(--text-secondary); font-size: 0.82rem; margin: 0;">&copy; 2026 حكمة ونور | Le Jardin des Pensées. <span data-i18n="credits">Conçu avec sagesse, calme et sérénité. ✨🌿</span></p>
+        <p style="color: var(--text-secondary); font-size: 0.82rem; margin: 0;">&copy; 2026 حكمة ونور | Le Jardin des Pensées. <span data-i18n="credits">صُنع بحكمة، هدوء وصفاء. ✨🌿</span></p>
       </div>
     </footer>
   </div>
@@ -301,7 +298,7 @@
   <div class="cart-drawer-overlay" id="cartOverlay"></div>
   <div class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true">
     <div class="cart-header">
-      <h2 class="serif-title" style="margin: 0; font-size: 1.4rem;" data-i18n="cartTitle">Votre Panier</h2>
+      <h2 class="serif-title" style="margin: 0; font-size: 1.4rem;" data-i18n="cartTitle">سلة التسوق</h2>
       <button class="cart-close-btn" id="cartCloseBtn" aria-label="Fermer le panier">&times;</button>
     </div>
     <div class="cart-items-list" id="cartItemsList">
@@ -309,11 +306,11 @@
     </div>
     <div class="cart-footer">
       <div class="cart-total-row">
-        <span data-i18n="cartTotal">Sous-total :</span>
+        <span data-i18n="cartTotal">المجموع الفرعي :</span>
         <span class="cart-total-val" id="cartTotalVal">0.00 €</span>
       </div>
       <button class="checkout-btn" id="checkoutBtn" disabled>
-        <span data-i18n="checkoutBtn">Passer la commande</span>
+        <span data-i18n="checkoutBtn">إتمام الطلب</span>
       </button>
     </div>
   </div>
@@ -322,26 +319,26 @@
   <div class="modal" id="checkoutModal" role="dialog" aria-modal="true" aria-label="Finaliser votre commande">
     <button class="modal-close" id="checkoutModalCloseBtn" aria-label="Fermer la fenêtre">&times;</button>
     <div class="modal-content" style="max-width: 500px; padding: 40px; border-radius: 24px; background: rgba(13, 30, 19, 0.98); border: 1px solid var(--card-border); backdrop-filter: blur(30px);">
-      <h2 class="serif-title" id="checkoutModalTitle" style="font-size: 1.6rem; margin-bottom: 12px; color: var(--text-primary);" data-i18n="checkoutTitle">Finaliser votre commande</h2>
+      <h2 class="serif-title" id="checkoutModalTitle" style="font-size: 1.6rem; margin-bottom: 12px; color: var(--text-primary);" data-i18n="checkoutTitle">إتمام طلبك</h2>
       <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px; line-height: 1.6;" data-i18n="checkoutDesc">
-        Confirmez votre commande pour accéder immédiatement au téléchargement gratuit de vos e-books et guides stoïciens.
+        أكّد طلبك للوصول الفوري للتحميل المباشر لكتبك وأدلتك الفلسفية مجاناً.
       </p>
       
-      <!-- Clean Digital Order Form (No Fake Cards) -->
+      <!-- Clean Digital Order Form -->
       <form id="checkoutForm" style="display: flex; flex-direction: column; gap: 16px;">
         <div class="form-group">
-          <label style="display: block; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 5px;" data-i18n="checkoutName">Nom complet</label>
-          <input type="text" id="cardHolderInput" required class="contact-input" placeholder="Ex: Jean Dupont" style="width: 100%;">
+          <label style="display: block; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 5px;" data-i18n="checkoutName">الاسم الكامل</label>
+          <input type="text" id="cardHolderInput" required class="contact-input" placeholder="مثال: ياسين الإدريسي" style="width: 100%;">
         </div>
         <div class="form-group">
-          <label style="display: block; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 5px;" data-i18n="contactEmail">Adresse Email (pour recevoir vos liens)</label>
-          <input type="email" id="checkoutEmailInput" required class="contact-input" placeholder="Ex: jean.dupont@example.com" style="width: 100%;">
+          <label style="display: block; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 5px;" data-i18n="checkoutEmailLabel">البريد الإلكتروني (لتلقي روابط التحميل)</label>
+          <input type="email" id="checkoutEmailInput" required class="contact-input" placeholder="مثال: name@example.com" style="width: 100%;">
         </div>
         
         <div id="checkoutFeedback" class="form-feedback" style="display: none; margin-top: 10px;"></div>
         
         <button type="submit" class="submit-btn" id="checkoutSubmitBtn" style="margin-top: 15px; width: 100%;">
-          <span data-i18n="checkoutSubmit">Confirmer et Télécharger</span>
+          <span data-i18n="checkoutSubmit">تأكيد وتحميل</span>
           <svg viewBox="0 0 24 24" style="width: 16px; height: 16px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
         </button>
       </form>
@@ -359,31 +356,6 @@
           .then(reg => console.log('[PWA] Service Worker registered:', reg.scope))
           .catch(err => console.log('[PWA] Service Worker registration failed:', err));
       });
-    }
-
-    // PWA Install Prompt Handler
-    let deferredPrompt;
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      const installBtn = document.getElementById('pwaInstallBtn');
-      if (installBtn) {
-        installBtn.style.display = 'inline-flex';
-      }
-    });
-
-    function triggerPwaInstall() {
-      if (deferredPrompt) {
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') {
-            console.log('[PWA] User accepted the install prompt');
-          }
-          deferredPrompt = null;
-        });
-      } else {
-        alert('لتثبيت التطبيق على هاتفك:\n1. اضغط على خيارات المتصفح (⋮ أو 📤)\n2. اختر "إضافة إلى الشاشة الرئيسية" (Add to Home Screen)');
-      }
     }
   </script>
 

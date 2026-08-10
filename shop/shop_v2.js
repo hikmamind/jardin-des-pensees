@@ -64,16 +64,30 @@ function setLanguage(lang) {
   });
 
   // Translate all elements with data-i18n
+  const ui = TIKTOK_DATA.ui[lang] || TIKTOK_DATA.ui.ar;
   const translatables = document.querySelectorAll('[data-i18n]');
   translatables.forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (TIKTOK_DATA.ui[lang] && TIKTOK_DATA.ui[lang][key]) {
-      el.textContent = TIKTOK_DATA.ui[lang][key];
+    if (ui[key]) {
+      if (key === 'footerBrandDesc') {
+        el.innerHTML = ui[key];
+      } else {
+        el.textContent = ui[key];
+      }
     }
   });
 
-  // Re-populate elements
-  populateNavbarDropdown();
+  // Update Placeholders in Checkout Modal
+  const cardHolderInput = document.getElementById('cardHolderInput');
+  if (cardHolderInput && ui.placeholderName) {
+    cardHolderInput.placeholder = ui.placeholderName;
+  }
+  const checkoutEmailInput = document.getElementById('checkoutEmailInput');
+  if (checkoutEmailInput && ui.placeholderEmail) {
+    checkoutEmailInput.placeholder = ui.placeholderEmail;
+  }
+
+  // Re-populate products and cart UI
   populateProducts(currentCategory);
   updateCartUI();
 }
@@ -109,6 +123,7 @@ function initLanguageSelector() {
 function initTheme() {
   const savedTheme = localStorage.getItem('theme') || 'dark';
   document.documentElement.setAttribute('data-theme', savedTheme);
+  updateThemeIcons(savedTheme);
 
   const themeBtn = document.getElementById('themeToggleBtn');
   if (themeBtn) {
@@ -117,32 +132,18 @@ function initTheme() {
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
+      updateThemeIcons(newTheme);
     });
   }
 }
 
-// --- Dynamic Navbar Dropdown Builder ---
-function populateNavbarDropdown() {
-  const subMenu = document.getElementById('thinkersSubMenu');
-  if (!subMenu) return;
-  
-  const thinkers = TIKTOK_DATA.content[currentLang].thinkers;
-  const seeAllLabel = TIKTOK_DATA.ui[currentLang].seeAllThinkers || "Tous les philosophes →";
-  
-  let html = thinkers.map(t => {
-    const basePath = window.location.pathname.includes('/articles/') || 
-                     window.location.pathname.includes('/thinkers/') || 
-                     window.location.pathname.includes('/shop/') ? '../thinkers/' : './thinkers/';
-    return `<a href="${basePath}?thinker=${t.id}" class="sub-link" data-thinker="${t.id}">${t.name}</a>`;
-  }).join('');
-  
-  const seeAllPath = window.location.pathname.includes('/articles/') || 
-                     window.location.pathname.includes('/thinkers/') || 
-                     window.location.pathname.includes('/shop/') ? '../thinkers/?thinker=all' : './thinkers/?thinker=all';
-                     
-  html += `<a href="${seeAllPath}" class="sub-link see-all" data-thinker="all">${seeAllLabel}</a>`;
-  
-  subMenu.innerHTML = html;
+function updateThemeIcons(theme) {
+  const sun = document.querySelector('#themeToggleBtn .sun-icon');
+  const moon = document.querySelector('#themeToggleBtn .moon-icon');
+  if (sun && moon) {
+    sun.style.display = theme === 'light' ? 'block' : 'none';
+    moon.style.display = theme === 'dark' ? 'block' : 'none';
+  }
 }
 
 // --- Products Data Setup ---
@@ -157,7 +158,6 @@ function getProducts() {
   ];
 }
 
-
 // --- Populate Products List ---
 function populateProducts(category = 'all') {
   const container = document.getElementById('productsList');
@@ -168,19 +168,20 @@ function populateProducts(category = 'all') {
     products = products.filter(p => p.type === category);
   }
 
-  const addLabel = TIKTOK_DATA.ui[currentLang].addToCart || "Ajouter au panier";
+  const ui = TIKTOK_DATA.ui[currentLang] || TIKTOK_DATA.ui.ar;
+  const addLabel = ui.addToCart || "أضف إلى السلة";
+  const downloadLabel = ui.downloadBtn || (currentLang === 'ar' ? 'تحميل' : currentLang === 'en' ? 'Download' : 'Télécharger');
+  const freeLabel = ui.freeLabel || (currentLang === 'ar' ? 'مجاني' : currentLang === 'en' ? 'Free' : 'Gratuit');
 
   container.innerHTML = products.map(prod => {
     const title = currentLang === 'ar' ? prod.titleAr : currentLang === 'en' ? prod.titleEn : prod.titleFr;
     const desc = currentLang === 'ar' ? prod.descAr : currentLang === 'en' ? prod.descEn : prod.descFr;
-    const priceStr = prod.price === 0 ? (currentLang === 'ar' ? 'مجاني' : 'Gratuit') : `${prod.price.toFixed(2)} €`;
+    const priceStr = prod.price === 0 ? freeLabel : `${prod.price.toFixed(2)} €`;
     const iconSvg = ICONS[prod.icon];
-    const categoryLabel = TIKTOK_DATA.ui[currentLang][prod.type === 'digital' ? 'filterDigital' : 'filterPhysical'] || prod.type;
+    const categoryLabel = ui[prod.type === 'digital' ? 'filterDigital' : 'filterPhysical'] || prod.type;
 
     const isDirectDownload = prod.price === 0 && prod.type === 'digital';
-    const btnLabel = isDirectDownload 
-      ? (currentLang === 'ar' ? 'تحميل' : currentLang === 'en' ? 'Download' : 'Télécharger') 
-      : addLabel;
+    const btnLabel = isDirectDownload ? downloadLabel : addLabel;
     const btnIcon = isDirectDownload ? ICONS['book-open'] : ICONS['plus'];
     const btnClass = isDirectDownload ? 'direct-download-btn' : 'add-to-cart-btn';
 
@@ -291,12 +292,13 @@ function removeFromCart(prodId, forceAll = false) {
 
 // Update Cart Count, Badges and Items Drawer rendering
 function updateCartUI() {
-  const badge = document.getElementById('cartCountBadge');
+  const badge = document.getElementById('cartBadgeCount');
   const listContainer = document.getElementById('cartItemsList');
-  const totalAmountEl = document.getElementById('cartTotalAmount');
-  const checkoutBtn = document.getElementById('cartCheckoutBtn');
+  const totalAmountEl = document.getElementById('cartTotalVal');
+  const checkoutBtn = document.getElementById('checkoutBtn');
   
   const products = getProducts();
+  const ui = TIKTOK_DATA.ui[currentLang] || TIKTOK_DATA.ui.ar;
   
   // Calculate total count
   const totalCount = cart.reduce((acc, item) => acc + item.qty, 0);
@@ -308,9 +310,9 @@ function updateCartUI() {
   if (totalCount === 0) {
     if (listContainer) {
       listContainer.innerHTML = `
-        <div class="cart-empty-state">
-          <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-          <p data-i18n="cartEmpty">${TIKTOK_DATA.ui[currentLang].cartEmpty}</p>
+        <div class="cart-empty-state" style="text-align: center; padding: 40px 20px; color: var(--text-secondary);">
+          <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1" style="margin-bottom: 12px; opacity: 0.6;"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          <p style="margin: 0; font-size: 0.95rem;">${ui.cartEmpty || 'سلة المشتريات فارغة حالياً.'}</p>
         </div>
       `;
     }
@@ -324,6 +326,8 @@ function updateCartUI() {
   let totalSum = 0;
   let itemsHtml = '';
 
+  const freeLabel = ui.freeLabel || (currentLang === 'ar' ? 'مجاني' : currentLang === 'en' ? 'Free' : 'Gratuit');
+
   cart.forEach(item => {
     const prod = products.find(p => p.id === item.id);
     if (!prod) return;
@@ -332,21 +336,21 @@ function updateCartUI() {
     const priceSum = prod.price * item.qty;
     totalSum += priceSum;
     
-    const displayPrice = prod.price === 0 ? (currentLang === 'ar' ? 'مجاني' : 'Gratuit') : `${prod.price.toFixed(2)} €`;
+    const displayPrice = prod.price === 0 ? freeLabel : `${prod.price.toFixed(2)} €`;
 
     itemsHtml += `
-      <div class="cart-item">
-        <div class="cart-item-info">
-          <h4 class="cart-item-title">${title}</h4>
-          <span class="cart-item-price">${displayPrice} x ${item.qty}</span>
+      <div class="cart-item" style="display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.08);">
+        <div class="cart-item-info" style="flex: 1; padding-inline-end: 12px;">
+          <h4 class="cart-item-title" style="margin: 0 0 4px; font-size: 0.95rem; color: var(--text-primary);">${title}</h4>
+          <span class="cart-item-price" style="font-size: 0.85rem; color: var(--accent-gold); font-weight: 700;">${displayPrice} x ${item.qty}</span>
         </div>
-        <div class="cart-item-actions">
-          <div class="qty-controls">
-            <button class="qty-btn minus" data-id="${prod.id}">-</button>
-            <span class="qty-num">${item.qty}</span>
-            <button class="qty-btn plus" data-id="${prod.id}">+</button>
+        <div class="cart-item-actions" style="display: flex; align-items: center; gap: 8px;">
+          <div class="qty-controls" style="display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.06); border-radius: 8px; padding: 2px 6px;">
+            <button class="qty-btn minus" data-id="${prod.id}" style="background: none; border: none; color: var(--text-primary); cursor: pointer; font-size: 1rem; padding: 2px 6px;">-</button>
+            <span class="qty-num" style="font-size: 0.85rem; font-weight: 700;">${item.qty}</span>
+            <button class="qty-btn plus" data-id="${prod.id}" style="background: none; border: none; color: var(--text-primary); cursor: pointer; font-size: 1rem; padding: 2px 6px;">+</button>
           </div>
-          <button class="cart-remove-btn" data-id="${prod.id}">
+          <button class="cart-remove-btn" data-id="${prod.id}" style="background: none; border: none; color: var(--text-secondary); cursor: pointer; padding: 6px; transition: color 0.2s;" title="Supprimer">
             ${ICONS['trash']}
           </button>
         </div>
@@ -384,11 +388,11 @@ function updateCartUI() {
   });
 }
 
-// --- Visa/Card payment Simulator ---
+// --- Digital Order Checkout Simulator ---
 function setupCheckoutSimulator() {
   const modal = document.getElementById('checkoutModal');
   const closeBtn = document.getElementById('checkoutModalCloseBtn');
-  const checkoutBtn = document.getElementById('cartCheckoutBtn');
+  const checkoutBtn = document.getElementById('checkoutBtn');
   const form = document.getElementById('checkoutForm');
   const feedback = document.getElementById('checkoutFeedback');
   const submitBtn = document.getElementById('checkoutSubmitBtn');
@@ -425,14 +429,16 @@ function setupCheckoutSimulator() {
 
     const name = cardHolderInput ? cardHolderInput.value.trim() : '';
     const email = checkoutEmailInput ? checkoutEmailInput.value.trim() : '';
+    const ui = TIKTOK_DATA.ui[currentLang] || TIKTOK_DATA.ui.ar;
 
     if (!name || !email || !email.includes('@')) {
-      feedback.textContent = currentLang === 'ar' ? 'يرجى إدخال الاسم وبريد إلكتروني صالح.' : 'Veuillez saisir votre nom et un email valide.';
+      feedback.textContent = ui.checkoutError || (currentLang === 'ar' ? 'يرجى إدخال الاسم وبريد إلكتروني صالح.' : 'Veuillez saisir votre nom et un email valide.');
       feedback.classList.add('error');
       feedback.style.display = 'block';
       return;
     }
 
+    const products = getProducts();
     // Check for digital items in cart before emptying it
     const digitalItems = cart.filter(item => {
       const prod = products.find(p => p.id === item.id);
@@ -445,28 +451,26 @@ function setupCheckoutSimulator() {
       'prod_7_habits': { name: '../articles/7-habits/index.html', labelFr: 'Lire l\'article 7 Habitudes', labelAr: 'قراءة مقال ٧ عادات', labelEn: 'Read 7 Habits Article' },
       'prod_marc_aurele_pdf': { name: 'e-book-marc-aurele.pdf', labelFr: 'Télécharger E-book Marc Aurèle (PDF)', labelAr: 'تحميل كتاب ماركوس أوريليوس (PDF)', labelEn: 'Download Marcus Aurelius Ebook (PDF)' },
       'prod_schopenhauer': { name: '20-citations-schopenhauer.html', labelFr: 'Lire l\'E-book Schopenhauer', labelAr: 'قراءة كتاب شوبنهاور', labelEn: 'Read Schopenhauer Ebook' },
-      'prod_guide': { name: 'stoicisme-force-calme.html', labelFr: 'Lire le Guide Stoïcien', labelAr: 'قراءة دليل الرواقية', labelEn: 'Read Stoic Guide' },
-      'prod_notion': { name: 'readme.txt', labelFr: 'Instructions Notion', labelAr: 'تعليمات مفكرة Notion', labelEn: 'Notion Instructions' },
-      'prod_wallpaper': { name: 'readme.txt', labelFr: 'Télécharger les Fonds d\'écran', labelAr: 'تحميل خلفيات الشاشة', labelEn: 'Download Wallpapers' }
+      'prod_guide': { name: 'stoicisme-force-calme.html', labelFr: 'Lire le Guide Stoïcien', labelAr: 'قراءة دليل الرواقية', labelEn: 'Read Stoic Guide' }
     };
 
     // Trigger simulation transition
     submitBtn.disabled = true;
-    const origText = submitBtn.innerHTML;
-    submitBtn.textContent = currentLang === 'ar' ? 'جاري التحقق...' : 'Vérification en cours...';
+    const origHtml = submitBtn.innerHTML;
+    submitBtn.textContent = ui.checkoutProcessing || (currentLang === 'ar' ? 'جاري المعالجة والتجهيز...' : 'Traitement de votre commande...');
 
     setTimeout(() => {
       // Success feedback animation
-      let successMsg = TIKTOK_DATA.ui[currentLang].checkoutSuccess || "Commande validée avec succès ! 🌿✨";
+      let successMsg = `<div style="font-weight: 700; font-size: 1.05rem; margin-bottom: 10px;">${ui.checkoutSuccess || 'تم تأكيد طلبك بنجاح! 🌿✨'}</div>`;
       
       if (digitalItems.length > 0) {
-        successMsg += `<div style="margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 15px; text-align: right;">`;
-        successMsg += `<p style="font-weight: bold; margin-bottom: 12px; color: var(--accent-gold);">${currentLang === 'ar' ? 'روابط تحميل الكتب والمنتجات الرقمية:' : 'Liens de téléchargement :'}</p>`;
+        successMsg += `<div style="margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 15px; text-align: inherit;">`;
+        successMsg += `<p style="font-weight: bold; margin-bottom: 12px; color: var(--accent-gold);">${ui.checkoutDownloadLinksHeader || (currentLang === 'ar' ? 'روابط تحميل الكتب والمنتجات الرقمية:' : 'Liens de téléchargement :')}</p>`;
         digitalItems.forEach(item => {
           const map = fileMap[item.id];
           if (map) {
             const label = currentLang === 'ar' ? map.labelAr : currentLang === 'en' ? map.labelEn : map.labelFr;
-            successMsg += `<a href="../files/${map.name}" download target="_blank" class="btn-primary-outline" style="display: block; margin-bottom: 8px; text-align: center; font-size: 0.9rem; padding: 8px 15px; text-decoration: none; border-radius: 6px;">${label}</a>`;
+            successMsg += `<a href="../files/${map.name}" download target="_blank" class="btn-primary-outline" style="display: block; margin-bottom: 8px; text-align: center; font-size: 0.9rem; padding: 10px 15px; text-decoration: none; border-radius: 8px; background: rgba(52, 211, 153, 0.1); border: 1px solid var(--accent-green); color: var(--text-primary); font-weight: 600;">${label}</a>`;
           }
         });
         successMsg += `</div>`;
@@ -485,22 +489,22 @@ function setupCheckoutSimulator() {
         setTimeout(() => {
           closeModal();
           submitBtn.disabled = false;
-          submitBtn.innerHTML = origText;
+          submitBtn.innerHTML = origHtml;
         }, 2500);
       } else {
         submitBtn.disabled = false;
-        submitBtn.textContent = currentLang === 'ar' ? 'إغلاق' : 'Fermer';
+        submitBtn.textContent = ui.closeBtn || (currentLang === 'ar' ? 'إغلاق' : 'Fermer');
         
         // Remove standard form submit behavior and turn button into a simple close trigger
         const closeHandler = (evt) => {
           evt.preventDefault();
           closeModal();
-          submitBtn.innerHTML = origText;
+          submitBtn.innerHTML = origHtml;
           submitBtn.removeEventListener('click', closeHandler);
         };
         submitBtn.addEventListener('click', closeHandler);
       }
-    }, 2000);
+    }, 1500);
   });
 }
 
