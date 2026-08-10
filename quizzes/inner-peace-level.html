@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" data-theme="dark" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -151,7 +151,7 @@
       border-radius: 16px;
       padding: 22px;
       margin-bottom: 30px;
-      text-align: right;
+      text-align: inherit;
       font-size: 0.95rem;
       color: var(--text-brown);
       line-height: 1.9;
@@ -248,7 +248,7 @@
       border: 1.5px solid var(--border-gold);
       border-radius: 16px;
       padding: 16px 20px;
-      text-align: right;
+      text-align: inherit;
       font-size: 1rem;
       font-weight: 600;
       color: var(--text-brown);
@@ -518,11 +518,79 @@
 </head>
 <body>
 
+  <!-- Header Sticky Navigation Bar -->
+  <header class="navbar-header">
+    <nav class="navbar" aria-label="Navigation principale">
+      <a href="../" class="nav-brand" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+        <img src="../brand_logo_official.png" alt="حكمة ونور" class="brand-logo-img">
+        <div style="display: flex; flex-direction: column; line-height: 1.1; text-align: left;">
+          <span class="brand-name" id="navBrandName" style="font-size: 1.15rem; font-weight: 800; tracking: 1px; font-family: 'Playfair Display', serif; color: var(--text-primary);">HIKMA & NOUR</span>
+          <span style="font-size: 0.6rem; font-weight: 600; color: var(--text-secondary); letter-spacing: 0.5px;">الحكمة • الفلسفة • علم النفس</span>
+        </div>
+      </a>
+      
+      <!-- Hamburger Menu for Mobile -->
+      <button class="nav-hamburger" id="navHamburger" aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <!-- Navigation Menu -->
+      <div class="nav-menu" id="navMenu">
+        <a href="../" class="nav-link" data-i18n="home">Accueil</a>
+        <a href="../articles/" class="nav-link" id="articlesNavLink" data-i18n="articles">Articles</a>
+        <a href="../thinkers/" class="nav-link" data-i18n="thinkers">Penseurs</a>
+        <a href="../quotes/" class="nav-link" data-i18n="quotes">Citations</a>
+        <a href="../audio/" class="nav-link" data-i18n="audio">Audio</a>
+        <a href="../bio.html" class="nav-link" data-i18n="about">À propos</a>
+        <a href="../#contactSection" class="nav-link" data-i18n="contactNav">Contact</a>
+      </div>
+        
+      <div class="nav-actions">
+        <!-- Language Selector -->
+        <div class="lang-selector">
+          <button class="lang-btn" id="langBtn" aria-label="تغيير اللغة">
+            <svg class="globe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px; height:16px;">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="activeLangName">العربية</span>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-opt active" data-lang="ar" aria-label="العربية">العربية</button>
+            <button class="lang-opt" data-lang="fr" aria-label="Français">Français</button>
+            <button class="lang-opt" data-lang="en" aria-label="English">English</button>
+          </div>
+        </div>
+        
+        <!-- Dark/Light Theme Button Toggle -->
+        <button class="theme-toggle" id="themeToggleBtn" aria-label="Changer de thème">
+          <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
   <div class="quiz-container">
 
     <!-- Top Nav -->
     <div class="quiz-top-nav">
-      <a href="../">← الرئيسية</a>
+      <a href="../" id="homeBackLink">← الرئيسية</a>
       <span style="font-weight:800; color:var(--accent-gold);">🧘 HIKMA & NOUR QUIZ</span>
     </div>
 
@@ -532,25 +600,24 @@
         <img src="../quiz_inner_peace_hero.jpg" alt="السلام الداخلي والتأمل">
       </div>
       <div class="quiz-hero-content">
-        <span class="quiz-badge">اختبار الهدوء النفسي</span>
-        <h1 class="quiz-title">ما مستوى سلامك الداخلي؟</h1>
-        <p class="quiz-subtitle">اكتشف مدى هدوئك النفسي وقدرتك على مواجهة الصعوبات من خلال الإجابة عن 15 سؤالًا.</p>
+        <span class="quiz-badge" id="heroBadge">اختبار الهدوء النفسي</span>
+        <h1 class="quiz-title" id="heroTitle">ما مستوى سلامك الداخلي؟</h1>
+        <p class="quiz-subtitle" id="heroSubtitle">اكتشف مدى هدوئك النفسي وقدرتك على مواجهة الصعوبات من خلال الإجابة عن 15 سؤالًا.</p>
 
         <div class="quiz-stats-row">
-          <div class="quiz-stat-pill">⏱ مدة الاختبار: 3 دقائق</div>
-          <div class="quiz-stat-pill">🎯 عدد الأسئلة: 15</div>
-          <div class="quiz-stat-pill">📊 النتيجة: تحليل شخصي + نصائح عملية</div>
+          <div class="quiz-stat-pill" id="statDuration">⏱ مدة الاختبار: 3 دقائق</div>
+          <div class="quiz-stat-pill" id="statQCount">🎯 عدد الأسئلة: 15</div>
+          <div class="quiz-stat-pill" id="statResultDesc">📊 النتيجة: تحليل شخصي + نصائح عملية</div>
         </div>
 
         <div class="quiz-intro-box">
-          <p style="margin:0 0 8px; font-weight:800; color:var(--accent-gold);">مقدمة الاختبار:</p>
-          السلام الداخلي لا يعني أن حياتك خالية من المشكلات، بل يعني أنك تستطيع مواجهة الصعوبات دون أن تفقد توازنك.<br>
-          أجب عن الأسئلة التالية بصدق، وستحصل على تقييم لمستوى سلامك الداخلي مع نصائح تساعدك على تطويره.
+          <p style="margin:0 0 8px; font-weight:800; color:var(--accent-gold);" id="introBoxTitle">مقدمة الاختبار:</p>
+          <span id="introBoxText">السلام الداخلي لا يعني أن حياتك خالية من المشكلات، بل يعني أنك تستطيع مواجهة الصعوبات دون أن تفقد توازنك.<br>أجب عن الأسئلة التالية بصدق، وستحصل على تقييم لمستوى سلامك الداخلي مع نصائح تساعدك على تطويره.</span>
         </div>
 
         <button id="startQuizBtn" class="btn-gold-start">
-          <span>ابدأ الاختبار</span>
-          <span>←</span>
+          <span id="startBtnText">ابدأ الاختبار</span>
+          <span id="startBtnArrow">←</span>
         </button>
       </div>
     </div>
@@ -562,11 +629,11 @@
       </div>
 
       <div class="question-step-header">
-        <span id="questionStepLabel">سؤال 1 من 15</span>
+        <span id="questionStepLabel"></span>
         <span>🧘 HIKMA QUIZ</span>
       </div>
 
-      <h2 id="questionText" class="question-title-text">عنوان السؤال</h2>
+      <h2 id="questionText" class="question-title-text"></h2>
 
       <div id="optionsContainer" class="options-list">
         <!-- Options generated dynamically -->
@@ -576,53 +643,50 @@
     <!-- ─── RESULT SCREEN ─── -->
     <div id="resultScreen" class="result-screen-card">
       <div class="result-header-badge">
-        <span class="quiz-badge">نتيجة اختبار السلام الداخلي</span>
-        <h2 id="resLevelTitle" class="result-level-title">عنوان النتيجة</h2>
+        <span class="quiz-badge" id="resHeaderBadge">نتيجة اختبار السلام الداخلي</span>
+        <h2 id="resLevelTitle" class="result-level-title"></h2>
       </div>
 
       <!-- Score Box -->
       <div class="match-percent-box">
-        <div id="resScoreNum" class="match-number">75/100</div>
-        <div class="match-label">مستوى سلامك الداخلي (من 100 نقطة)</div>
+        <div id="resScoreNum" class="match-number"></div>
+        <div class="match-label" id="resScoreLabel">مستوى سلامك الداخلي (من 100 نقطة)</div>
       </div>
 
       <!-- Description -->
       <div class="result-section-box">
-        <div class="result-section-title">🧘 التحليل النفسي</div>
-        <p id="resDescText" class="result-body-text">نص التحليل...</p>
+        <div class="result-section-title" id="resPsyTitle">🧘 التحليل النفسي</div>
+        <p id="resDescText" class="result-body-text"></p>
       </div>
 
       <!-- Tips List -->
       <div class="result-section-box">
-        <div class="result-section-title">💡 نصائح عمليّة لتطوير سلامك الداخلي</div>
+        <div class="result-section-title" id="resTipsTitle">💡 نصائح عمليّة لتطوير سلامك الداخلي</div>
         <ul id="resTipsList" class="tips-list">
           <!-- Tips inserted dynamically -->
         </ul>
       </div>
 
       <!-- Quote -->
-      <div class="result-quote-banner">
+      <div class="result-quote-banner" id="resQuoteBanner">
         "السلام الداخلي لا يأتي عندما تختفي العواصف، بل عندما تتعلم كيف تمشي بثبات تحت المطر."
       </div>
 
       <!-- 7 Day Challenge -->
       <div class="challenge-box-card">
-        <div class="challenge-title">🎯 تحدي 7 أيام للسلام الداخلي</div>
-        <p style="font-size: 0.88rem; color: var(--text-brown-muted); margin: 0 0 10px;">لمدة أسبوع كامل، مارس الخطوات التالية يومياً:</p>
-        <ul class="challenge-list">
-          <li>اقرأ 10 دقائق يوميًا.</li>
-          <li>امشِ 20 دقيقة في الهواء الطلق.</li>
-          <li>اكتب 3 أشياء تشعر بالامتنان لها.</li>
-          <li>ابتعد عن الهاتف ساعة كاملة قبل النوم.</li>
+        <div class="challenge-title" id="challengeTitle">🎯 تحدي 7 أيام للسلام الداخلي</div>
+        <p style="font-size: 0.88rem; color: var(--text-brown-muted); margin: 0 0 10px;" id="challengeSub">لمدة أسبوع كامل، مارس الخطوات التالية يومياً:</p>
+        <ul class="challenge-list" id="challengeList">
+          <!-- Populated dynamically -->
         </ul>
-        <p style="font-size: 0.85rem; color: var(--accent-gold); font-weight: 700; margin: 0;">
+        <p style="font-size: 0.85rem; color: var(--accent-gold); font-weight: 700; margin: 0;" id="challengeFooter">
           في نهاية الأسبوع، أعد الاختبار وقارن نتيجتك لتلاحظ مدى تقدمك النفسي!
         </p>
       </div>
 
       <!-- Recommended Articles -->
       <div class="result-section-box">
-        <div class="result-section-title">📚 مقالات مقترحة لتعزيز هدوئك</div>
+        <div class="result-section-title" id="recTitle">📚 مقالات مقترحة لتعزيز هدوئك</div>
         <ul class="result-links-list">
           <li><a href="../articles/?article=stop-overthinking.html">📖 كيف تتوقف عن التفكير الزائد؟</a></li>
           <li><a href="../articles/?article=self-discipline.html">📖 قوة التأمل والانضباط في الحياة اليومية</a></li>
@@ -639,295 +703,458 @@
 
   </div>
 
-  <script>
-    var questions = [
-      {
-        q: "عندما يحدث أمر مزعج بشكل مفاجئ...",
-        options: [
-          { text: "أفقد أعصابي بسرعة.", pts: 0 },
-          { text: "أشعر بالانزعاج لكن أهدأ بعد قليل.", pts: 1 },
-          { text: "أحاول فهم الموقف قبل الرد.", pts: 2 },
-          { text: "أبقى هادئًا وأبحث عن الحل.", pts: 3 }
+  <!-- Footer -->
+  <footer class="footer" style="padding: 50px 24px 30px; border-top: 1px solid var(--card-border); margin-top: 60px; background: rgba(10, 15, 12, 0.95);">
+    <div style="max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; text-align: inherit;" class="footer-grid-layout">
+      <div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+          <img src="../brand_logo_official.png" alt="Hikma & Nour" style="width: 38px; height: 38px; object-fit: contain;">
+          <span style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 800; color: var(--accent-gold);">HIKMA & NOUR</span>
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.7; margin-bottom: 14px;" data-i18n="footerBrandDesc">
+          الحكمة • الفلسفة • علم النفس<br>
+          مساحة للتأمل الرصين، حكمة كبار المفكرين وبناء القوة النفسية والهدوء الداخلي.
+        </p>
+      </div>
+
+      <div>
+        <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;" data-i18n="mainSitemap">🏠 الخريطة الرئيسية</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
+          <li><a href="../" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerHome">🏠 الرئيسية</a></li>
+          <li><a href="../articles/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerArticles">📚 المقالات</a></li>
+          <li><a href="../thinkers/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerThinkers">🧠 الفلاسفة</a></li>
+          <li><a href="../quotes/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerQuotes">💭 الاقتباسات</a></li>
+          <li><a href="../audio/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerAudio">🎧 الصوتيات</a></li>
+          <li><a href="../bio.html" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerAbout">ℹ️ عن الموقع</a></li>
+          <li><a href="../#contactSection" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerContact">📩 اتصل بنا</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;" data-i18n="interactiveServices">✨ خدمات ومحتوى تفاعلي</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
+          <li><a href="./" style="color: var(--accent-gold); text-decoration: none; font-weight: 700;" data-i18n="footerQuizzes">🧠 الاختبارات الفلسفية</a></li>
+          <li><a href="../#helpSection" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerFaq">❓ الأسئلة الشائعة</a></li>
+          <li><a href="../shop/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerShop">🛍️ متجر الحكمة</a></li>
+          <li><a href="../calendar/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerCalendar">📅 التقويم ٣٦٥ يوماً</a></li>
+          <li><a href="../articles/?category=philosophy" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerPhilosophy">🏛️ الفلسفة</a></li>
+          <li><a href="../articles/?category=psychology" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerPsychology">🧠 علم النفس</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;" data-i18n="legalInfoTitle">🔒 المعلومات القانونية والسياسات</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
+          <li><a href="../privacy-policy.html" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerPrivacy">🔒 سياسة الخصوصية</a></li>
+          <li><a href="../terms-of-service.html" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerTerms">📜 شروط الاستخدام</a></li>
+          <li><a href="../cookie-policy.html" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerCookies">🍪 ملفات تعريف الارتباط</a></li>
+          <li><a href="../#contactSection" style="color: var(--text-secondary); text-decoration: none;" data-i18n="footerCollab">🤝 التعاون والشراكات</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center;">
+      <div style="display: flex; justify-content: center; gap: 14px 20px; flex-wrap: wrap; font-size: 0.88rem; margin-bottom: 14px; font-weight: 600;">
+        <a href="../bio.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="footerAbout">ℹ️ عن الموقع</a>
+        <span style="color: rgba(255,255,255,0.2);">•</span>
+        <a href="../#contactSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="footerContact">📩 اتصل بنا</a>
+        <span style="color: rgba(255,255,255,0.2);">•</span>
+        <a href="../#helpSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="footerFaq">❓ الأسئلة الشائعة</a>
+        <span style="color: rgba(255,255,255,0.2);">•</span>
+        <a href="../shop/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="footerShop">🛍️ متجر الحكمة</a>
+        <span style="color: rgba(255,255,255,0.2);">•</span>
+        <a href="../privacy-policy.html" style="color: var(--accent-gold); text-decoration: none; transition: color 0.2s;" data-i18n="footerPrivacyShort">🔒 الخصوصية</a>
+        <span style="color: rgba(255,255,255,0.2);">•</span>
+        <a href="../terms-of-service.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="footerTerms">📜 شروط الاستخدام</a>
+        <span style="color: rgba(255,255,255,0.2);">•</span>
+        <a href="../cookie-policy.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="footerCookies">🍪 ملفات تعريف الارتباط</a>
+      </div>
+      <p style="color: var(--text-secondary); font-size: 0.82rem; margin: 0;">&copy; 2026 حكمة ونور | Le Jardin des Pensées. <span data-i18n="credits">Conçu avec sagesse, calme et sérénité. ✨🌿</span></p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import TIKTOK_DATA from '../data_v11.js';
+
+    const LANG_METADATA = {
+      ar: { label: "العربية", code: "ar" },
+      fr: { label: "Français", code: "fr" },
+      en: { label: "English", code: "en" }
+    };
+
+    function getSavedLanguage() {
+      const saved = localStorage.getItem('site_lang_v1') || localStorage.getItem('lang') || localStorage.getItem('preferredLang');
+      if (saved && (saved === 'ar' || saved === 'fr' || saved === 'en')) {
+        return saved;
+      }
+      return 'ar';
+    }
+
+    function saveLanguage(lang) {
+      localStorage.setItem('site_lang_v1', lang);
+      localStorage.setItem('lang', lang);
+      localStorage.setItem('preferredLang', lang);
+    }
+
+    let currentLang = getSavedLanguage();
+
+    const innerPeaceTranslations = {
+      ar: {
+        badge: "اختبار الهدوء النفسي",
+        title: "ما مستوى سلامك الداخلي؟",
+        subtitle: "اكتشف مدى هدوئك النفسي وقدرتك على مواجهة الصعوبات من خلال الإجابة عن 15 سؤالًا.",
+        duration: "⏱ مدة الاختبار: 3 دقائق",
+        qCount: "🎯 عدد الأسئلة: 15",
+        resultDesc: "📊 النتيجة: تحليل شخصي + نصائح عملية",
+        introTitle: "مقدمة الاختبار:",
+        introText: "السلام الداخلي لا يعني أن حياتك خالية من المشكلات، بل يعني أنك تستطيع مواجهة الصعوبات دون أن تفقد توازنك.<br>أجب عن الأسئلة التالية بصدق، وستحصل على تقييم لمستوى سلامك الداخلي مع نصائح تساعدك على تطويره.",
+        startBtn: "ابدأ الاختبار",
+        stepPrefix: "سؤال",
+        ofText: "من",
+        resBadge: "نتيجة اختبار السلام الداخلي",
+        resScoreLabel: "مستوى سلامك الداخلي (من 100 نقطة)",
+        psyTitle: "🧘 التحليل النفسي",
+        tipsTitle: "💡 نصائح عمليّة لتطوير سلامك الداخلي",
+        quote: "«السلام الداخلي لا يأتي عندما تختفي العواصف، بل عندما تتعلم كيف تمشي بثبات تحت المطر.»",
+        challengeTitle: "🎯 تحدي 7 أيام للسلام الداخلي",
+        challengeSub: "لمدة أسبوع كامل، مارس الخطوات التالية يومياً:",
+        challengeTasks: [
+          "اقرأ 10 دقائق يوميًا.",
+          "امشِ 20 دقيقة في الهواء الطلق.",
+          "اكتب 3 أشياء تشعر بالامتنان لها.",
+          "ابتعد عن الهاتف ساعة كاملة قبل النوم."
+        ],
+        challengeFooter: "في نهاية الأسبوع، أعد الاختبار وقارن نتيجتك لتلاحظ مدى تقدمك النفسي!",
+        recTitle: "📚 مقالات مقترحة لتعزيز هدوئك",
+        retakeBtn: "🔄 أعد الاختبار",
+        homeBack: "← الرئيسية",
+        questions: [
+          { q: "عندما يحدث أمر مزعج بشكل مفاجئ...", options: [{ text: "أفقد أعصابي بسرعة.", pts: 0 }, { text: "أشعر بالانزعاج لكن أهدأ بعد قليل.", pts: 1 }, { text: "أحاول فهم الموقف قبل الرد.", pts: 2 }, { text: "أبقى هادئًا وأبحث عن الحل.", pts: 3 }] },
+          { q: "كم مرة تشعر بالقلق بشأن المستقبل؟", options: [{ text: "دائمًا", pts: 0 }, { text: "غالبًا", pts: 1 }, { text: "أحيانًا", pts: 2 }, { text: "نادرًا", pts: 3 }] },
+          { q: "هل تستطيع الاستمتاع باللحظة الحالية؟", options: [{ text: "أبدًا", pts: 0 }, { text: "قليلًا", pts: 1 }, { text: "غالبًا", pts: 2 }, { text: "دائمًا", pts: 3 }] },
+          { q: "عندما يخطئ شخص في حقك...", options: [{ text: "لا أسامحه.", pts: 0 }, { text: "أحتاج وقتًا طويلًا.", pts: 1 }, { text: "أحاول أن أتفهمه.", pts: 2 }, { text: "أسامح إذا كان يستحق فرصة.", pts: 3 }] },
+          { q: "كم مرة تقارن نفسك بالآخرين؟", options: [{ text: "طوال الوقت", pts: 0 }, { text: "كثيرًا", pts: 1 }, { text: "أحيانًا", pts: 2 }, { text: "نادرًا", pts: 3 }] },
+          { q: "كيف تنام ليلًا؟", options: [{ text: "بصعوبة.", pts: 0 }, { text: "نوم متقطع.", pts: 1 }, { text: "نوم جيد.", pts: 2 }, { text: "أنام بهدوء.", pts: 3 }] },
+          { q: "هل تخصص وقتًا لنفسك؟", options: [{ text: "أبدًا", pts: 0 }, { text: "نادرًا", pts: 1 }, { text: "أحيانًا", pts: 2 }, { text: "كل يوم", pts: 3 }] },
+          { q: "ما الذي يزعجك أكثر؟", options: [{ text: "رأي الناس.", pts: 0 }, { text: "الفشل.", pts: 1 }, { text: "المستقبل.", pts: 2 }, { text: "لا شيء لفترة طويلة.", pts: 3 }] },
+          { q: "عندما تواجه مشكلة...", options: [{ text: "أستسلم.", pts: 0 }, { text: "أقلق كثيرًا.", pts: 1 }, { text: "أبحث عن حل.", pts: 2 }, { text: "أتعامل معها بهدوء.", pts: 3 }] },
+          { q: "هل تشعر بالامتنان لما تملكه؟", options: [{ text: "نادرًا.", pts: 0 }, { text: "أحيانًا.", pts: 1 }, { text: "غالبًا.", pts: 2 }, { text: "دائمًا.", pts: 3 }] },
+          { q: "كم ساعة تستخدم الهاتف يوميًا؟", options: [{ text: "أكثر من 8 ساعات", pts: 0 }, { text: "5–8 ساعات", pts: 1 }, { text: "3–5 ساعات", pts: 2 }, { text: "أقل من 3 ساعات", pts: 3 }] },
+          { q: "هل تستمتع بالجلوس وحدك؟", options: [{ text: "لا", pts: 0 }, { text: "قليلًا", pts: 1 }, { text: "نعم", pts: 2 }, { text: "كثيرًا", pts: 3 }] },
+          { q: "كيف تتعامل مع النقد؟", options: [{ text: "أغضب.", pts: 0 }, { text: "أنزعج.", pts: 1 }, { text: "أستفيد منه.", pts: 2 }, { text: "أرحب به إذا كان بنّاءً.", pts: 3 }] },
+          { q: "هل تمارس التأمل أو المشي أو القراءة؟", options: [{ text: "أبدًا", pts: 0 }, { text: "أحيانًا", pts: 1 }, { text: "أسبوعيًا", pts: 2 }, { text: "يوميًا", pts: 3 }] },
+          { q: "كيف تصف حالتك النفسية اليوم؟", options: [{ text: "مرهق جدًا.", pts: 0 }, { text: "متوتر.", pts: 1 }, { text: "متوازن.", pts: 2 }, { text: "هادئ.", pts: 3 }] }
+        ],
+        tiers: [
+          { min: 0, max: 25, title: "🔴 0–25 نقطة: تحتاج إلى استعادة هدوئك", desc: "تشعر بضغط نفسي كبير، وقد تؤثر الضغوط اليومية في طريقة تفكيرك وقراراتك.", tips: ["نم جيدًا.", "قلل استخدام الهاتف.", "مارس المشي في الهواء الطلق.", "تحدث مع شخص تثق به."] },
+          { min: 26, max: 50, title: "🟠 26–50 نقطة: أنت في مرحلة البحث عن التوازن", desc: "لديك لحظات من الهدوء، لكنها تختفي سريعًا عند مواجهة الضغوط الصعبة.", tips: ["خصص وقتًا يوميًا لنفسك.", "اكتب ما تشعر به لتفريغ التوتر.", "مارس الامتنان للأشياء البسيطة."] },
+          { min: 51, max: 75, title: "🟡 51–75 نقطة: سلام داخلي جيد", desc: "تعرف كيف تتعامل مع معظم المواقف، لكن لا يزال بإمكانك تطوير قدرتك على التحكم في التوتر والوصول إلى ثبات أعمق.", tips: ["استمر في القراءة الملهمة.", "مارس التأمل بشكل منتظم.", "حافظ على عاداتك الصحية والرياضية."] },
+          { min: 76, max: 100, title: "🟢 76–100 نقطة: تتمتع بسلام داخلي مميز", desc: "أنت شخص متزن، وتعرف كيف تواجه الحياة بهدوء وصبر. لا يعني ذلك أن حياتك خالية من المشكلات، بل أنك تعلمت كيف لا تسمح لها بأن تسلبك راحة عقلك.", tips: ["حافظ على هذا الاتزان الرائع.", "انشر الهدوء والطاقة الإيجابية من حولك.", "استمر في تحدي التطور الشخصي."] }
         ]
       },
-      {
-        q: "كم مرة تشعر بالقلق بشأن المستقبل؟",
-        options: [
-          { text: "دائمًا", pts: 0 },
-          { text: "غالبًا", pts: 1 },
-          { text: "أحيانًا", pts: 2 },
-          { text: "نادرًا", pts: 3 }
+      fr: {
+        badge: "Test de Sérénité Intérieure",
+        title: "Quel est votre niveau de paix intérieure ?",
+        subtitle: "Découvrez votre niveau de calme psychologique et votre capacité à faire face aux difficultés en répondant à 15 questions.",
+        duration: "⏱ Durée : 3 minutes",
+        qCount: "🎯 Questions : 15",
+        resultDesc: "📊 Résultat : Analyse personnalisée + Conseils pratiques",
+        introTitle: "Introduction du test :",
+        introText: "La paix intérieure ne signifie pas que votre vie soit exempte de problèmes, mais que vous puissiez faire face aux difficultés sans perdre votre équilibre.<br>Répondez en toute sincérité pour obtenir une évaluation de votre paix intérieure avec des conseils pratiques.",
+        startBtn: "Commencer le test",
+        stepPrefix: "Question",
+        ofText: "sur",
+        resBadge: "Résultat du test de paix intérieure",
+        resScoreLabel: "Niveau de paix intérieure (sur 100)",
+        psyTitle: "🧘 Analyse psychologique",
+        tipsTitle: "💡 Conseils pratiques pour développer votre paix intérieure",
+        quote: "« La paix intérieure ne vient pas quand les tempêtes disparaissent, mais lorsque vous apprenez à marcher sereinement sous la pluie. »",
+        challengeTitle: "🎯 Défi 7 jours pour la paix intérieure",
+        challengeSub: "Pendant une semaine complète, pratiquez ces étapes quotidiennement :",
+        challengeTasks: [
+          "Lisez 10 minutes chaque jour.",
+          "Marchez 20 minutes en plein air.",
+          "Écrivez 3 choses pour lesquelles vous éprouvez de la gratitude.",
+          "Éloignez-vous des écrans une heure avant de dormir."
+        ],
+        challengeFooter: "À la fin de la semaine, refaites le test pour mesurer vos progrès !",
+        recTitle: "📚 Articles recommandés pour votre sérénité",
+        retakeBtn: "🔄 Refaire le test",
+        homeBack: "← Accueil",
+        questions: [
+          { q: "Lorsqu'un événement perturbateur survient soudainement...", options: [{ text: "Je me mets en colère rapidement.", pts: 0 }, { text: "Je suis agacé mais me calme peu après.", pts: 1 }, { text: "J'essaie de comprendre la situation avant de réagir.", pts: 2 }, { text: "Je reste calme et cherche des solutions.", pts: 3 }] },
+          { q: "À quelle fréquence vous inquiétez-vous pour l'avenir ?", options: [{ text: "Toujours", pts: 0 }, { text: "Souvent", pts: 1 }, { text: "Parfois", pts: 2 }, { text: "Rarement", pts: 3 }] },
+          { q: "Parvenez-vous à savourer le moment présent ?", options: [{ text: "Jamais", pts: 0 }, { text: "Rarement", pts: 1 }, { text: "Souvent", pts: 2 }, { text: "Toujours", pts: 3 }] },
+          { q: "Lorsque quelqu'un vous fait du tort...", options: [{ text: "Je ne pardonne pas.", pts: 0 }, { text: "Il me faut beaucoup de temps.", pts: 1 }, { text: "J'essaie de comprendre ses raisons.", pts: 2 }, { text: "Je pardonne sereinement.", pts: 3 }] },
+          { q: "À quelle fréquence vous comparez-vous aux autres ?", options: [{ text: "Tout le temps", pts: 0 }, { text: "Souvent", pts: 1 }, { text: "Parfois", pts: 2 }, { text: "Rarement", pts: 3 }] },
+          { q: "Comment qualifiez-vous votre sommeil ?", options: [{ text: "Très difficile", pts: 0 }, { text: "Sommeil agité", pts: 1 }, { text: "Bon sommeil", pts: 2 }, { text: "Sommeil très paisible", pts: 3 }] },
+          { q: "Accordez-vous du temps pour vous-même ?", options: [{ text: "Jamais", pts: 0 }, { text: "Rarement", pts: 1 }, { text: "Régulièrement", pts: 2 }, { text: "Chaque jour", pts: 3 }] },
+          { q: "Qu'est-ce qui vous perturbe le plus ?", options: [{ text: "Le jugement des autres", pts: 0 }, { text: "La peur de l'échec", pts: 1 }, { text: "L'incertitude du futur", pts: 2 }, { text: "Rien ne perturbe longtemps ma sérénité", pts: 3 }] },
+          { q: "Face à une difficulté majeure...", options: [{ text: "J'abandonne", pts: 0 }, { text: "Je m'inquiète énormément", pts: 1 }, { text: "Je cherche activement une solution", pts: 2 }, { text: "Je l'aborde avec calme et lucidité", pts: 3 }] },
+          { q: "Éprouvez-vous de la gratitude pour ce que vous avez ?", options: [{ text: "Rarement", pts: 0 }, { text: "Parfois", pts: 1 }, { text: "Souvent", pts: 2 }, { text: "Toujours", pts: 3 }] },
+          { q: "Combien d'heures passez-vous sur votre smartphone par jour ?", options: [{ text: "Plus de 8h", pts: 0 }, { text: "5 à 8 heures", pts: 1 }, { text: "3 à 5 heures", pts: 2 }, { text: "Moins de 3 heures", pts: 3 }] },
+          { q: "Aimez-vous passer du temps en solitude ?", options: [{ text: "Pas du tout", pts: 0 }, { text: "Un peu", pts: 1 }, { text: "Oui", pts: 2 }, { text: "Énormément", pts: 3 }] },
+          { q: "Comment réagissez-vous aux critiques ?", options: [{ text: "Je m'énerve", pts: 0 }, { text: "Je suis vexé", pts: 1 }, { text: "J'essaie d'en tirer enseignement", pts: 2 }, { text: "Je les accueille calmement", pts: 3 }] },
+          { q: "Pratiquez-vous la méditation, la marche ou la lecture ?", options: [{ text: "Jamais", pts: 0 }, { text: "Parfois", pts: 1 }, { text: "Chaque semaine", pts: 2 }, { text: "Chaque jour", pts: 3 }] },
+          { q: "Comment décririez-vous votre état d'esprit aujourd'hui ?", options: [{ text: "Très épuisé", pts: 0 }, { text: "Tendu", pts: 1 }, { text: "Équilibré", pts: 2 }, { text: "Serein et calme", pts: 3 }] }
+        ],
+        tiers: [
+          { min: 0, max: 25, title: "🔴 0–25 pts : Besoin d'accorder du repos à votre esprit", desc: "Vous ressentez une pression psychologique importante, et le stress quotidien peut altérer vos décisions et vos pensées.", tips: ["Dormez suffisamment.", "Réduisez le temps d'écran.", "Faites des promenades au grand air.", "Confiez-vous à un proche de confiance."] },
+          { min: 26, max: 50, title: "🟠 26–50 pts : En quête d'équilibre intérieur", desc: "Vous connaissez des moments de calme, mais ils s'estompent rapidement face aux épreuves et au stress quotidien.", tips: ["Accordez-vous un temps précieux chaque jour.", "Écrivez vos émotions pour libérer les tensions.", "Pratiquez la gratitude pour les petites choses."] },
+          { min: 51, max: 75, title: "🟡 51–75 pts : Bonne sérénité au quotidien", desc: "Vous savez faire face à la majorité des situations, tout en ayant encore la possibilité de développer votre sérénité au quotidien.", tips: ["Poursuivez les lectures inspirantes.", "Pratiquez la méditation régulièrement.", "Maintenez vos habitudes saines."] },
+          { min: 76, max: 100, title: "🟢 76–100 pts : Paix intérieure remarquable et profonde", desc: "Vous êtes une personne équilibrée et lucide. Votre vie n'est pas exempte de difficultés, mais vous ne les laissez pas altérer votre tranquillité d'esprit.", tips: ["Conservez cet équilibre remarquable.", "Diffusez votre calme autour de vous.", "Poursuivez votre chemin d'épanouissement."] }
         ]
       },
-      {
-        q: "هل تستطيع الاستمتاع باللحظة الحالية؟",
-        options: [
-          { text: "أبدًا", pts: 0 },
-          { text: "قليلًا", pts: 1 },
-          { text: "غالبًا", pts: 2 },
-          { text: "دائمًا", pts: 3 }
-        ]
-      },
-      {
-        q: "عندما يخطئ شخص في حقك...",
-        options: [
-          { text: "لا أسامحه.", pts: 0 },
-          { text: "أحتاج وقتًا طويلًا.", pts: 1 },
-          { text: "أحاول أن أتفهمه.", pts: 2 },
-          { text: "أسامح إذا كان يستحق فرصة.", pts: 3 }
-        ]
-      },
-      {
-        q: "كم مرة تقارن نفسك بالآخرين؟",
-        options: [
-          { text: "طوال الوقت", pts: 0 },
-          { text: "كثيرًا", pts: 1 },
-          { text: "أحيانًا", pts: 2 },
-          { text: "نادرًا", pts: 3 }
-        ]
-      },
-      {
-        q: "كيف تنام ليلًا؟",
-        options: [
-          { text: "بصعوبة.", pts: 0 },
-          { text: "نوم متقطع.", pts: 1 },
-          { text: "نوم جيد.", pts: 2 },
-          { text: "أنام بهدوء.", pts: 3 }
-        ]
-      },
-      {
-        q: "هل تخصص وقتًا لنفسك؟",
-        options: [
-          { text: "أبدًا", pts: 0 },
-          { text: "نادرًا", pts: 1 },
-          { text: "أحيانًا", pts: 2 },
-          { text: "كل يوم", pts: 3 }
-        ]
-      },
-      {
-        q: "ما الذي يزعجك أكثر؟",
-        options: [
-          { text: "رأي الناس.", pts: 0 },
-          { text: "الفشل.", pts: 1 },
-          { text: "المستقبل.", pts: 2 },
-          { text: "لا شيء لفترة طويلة.", pts: 3 }
-        ]
-      },
-      {
-        q: "عندما تواجه مشكلة...",
-        options: [
-          { text: "أستسلم.", pts: 0 },
-          { text: "أقلق كثيرًا.", pts: 1 },
-          { text: "أبحث عن حل.", pts: 2 },
-          { text: "أتعامل معها بهدوء.", pts: 3 }
-        ]
-      },
-      {
-        q: "هل تشعر بالامتنان لما تملكه؟",
-        options: [
-          { text: "نادرًا.", pts: 0 },
-          { text: "أحيانًا.", pts: 1 },
-          { text: "غالبًا.", pts: 2 },
-          { text: "دائمًا.", pts: 3 }
-        ]
-      },
-      {
-        q: "كم ساعة تستخدم الهاتف يوميًا؟",
-        options: [
-          { text: "أكثر من 8 ساعات", pts: 0 },
-          { text: "5–8 ساعات", pts: 1 },
-          { text: "3–5 ساعات", pts: 2 },
-          { text: "أقل من 3 ساعات", pts: 3 }
-        ]
-      },
-      {
-        q: "هل تستمتع بالجلوس وحدك؟",
-        options: [
-          { text: "لا", pts: 0 },
-          { text: "قليلًا", pts: 1 },
-          { text: "نعم", pts: 2 },
-          { text: "كثيرًا", pts: 3 }
-        ]
-      },
-      {
-        q: "كيف تتعامل مع النقد؟",
-        options: [
-          { text: "أغضب.", pts: 0 },
-          { text: "أنزعج.", pts: 1 },
-          { text: "أستفيد منه.", pts: 2 },
-          { text: "أرحب به إذا كان بنّاءً.", pts: 3 }
-        ]
-      },
-      {
-        q: "هل تمارس التأمل أو المشي أو القراءة؟",
-        options: [
-          { text: "أبدًا", pts: 0 },
-          { text: "أحيانًا", pts: 1 },
-          { text: "أسبوعيًا", pts: 2 },
-          { text: "يوميًا", pts: 3 }
-        ]
-      },
-      {
-        q: "كيف تصف حالتك النفسية اليوم؟",
-        options: [
-          { text: "مرهق جدًا.", pts: 0 },
-          { text: "متوتر.", pts: 1 },
-          { text: "متوازن.", pts: 2 },
-          { text: "هادئ.", pts: 3 }
+      en: {
+        badge: "Inner Peace Quiz",
+        title: "What is Your Level of Inner Peace?",
+        subtitle: "Discover your psychological calm and ability to navigate life's challenges by answering 15 questions.",
+        duration: "⏱ Duration: 3 minutes",
+        qCount: "🎯 Questions: 15",
+        resultDesc: "📊 Result: Personal Analysis + Practical Tips",
+        introTitle: "Quiz Introduction:",
+        introText: "Inner peace does not mean a life free of trouble; it means remaining steadfast without losing your emotional balance.<br>Answer honestly to get a full assessment of your inner tranquility along with actionable guidance.",
+        startBtn: "Start Quiz",
+        stepPrefix: "Question",
+        ofText: "of",
+        resBadge: "Inner Peace Assessment Result",
+        resScoreLabel: "Your Inner Peace Level (out of 100)",
+        psyTitle: "🧘 Psychological Analysis",
+        tipsTitle: "💡 Practical Tips to Cultivate Inner Peace",
+        quote: "“Inner peace comes not when the storm passes, but when you learn to stand calm amidst the rain.”",
+        challengeTitle: "🎯 7-Day Inner Peace Challenge",
+        challengeSub: "For one full week, practice these steps daily:",
+        challengeTasks: [
+          "Read for 10 minutes daily.",
+          "Take a 20-minute walk outdoors.",
+          "Write down 3 things you are grateful for.",
+          "Stay away from screens 1 hour before sleep."
+        ],
+        challengeFooter: "At the end of the week, retake the test to track your emotional progress!",
+        recTitle: "📚 Recommended Reading for Calm",
+        retakeBtn: "🔄 Retake Quiz",
+        homeBack: "← Home",
+        questions: [
+          { q: "When something sudden and troubling occurs...", options: [{ text: "I lose my temper quickly.", pts: 0 }, { text: "I feel upset but calm down shortly after.", pts: 1 }, { text: "I try to understand the situation before reacting.", pts: 2 }, { text: "I remain calm and look for a solution.", pts: 3 }] },
+          { q: "How often do you worry about the future?", options: [{ text: "Always", pts: 0 }, { text: "Often", pts: 1 }, { text: "Sometimes", pts: 2 }, { text: "Rarely", pts: 3 }] },
+          { q: "Are you able to enjoy the present moment?", options: [{ text: "Never", pts: 0 }, { text: "Rarely", pts: 1 }, { text: "Often", pts: 2 }, { text: "Always", pts: 3 }] },
+          { q: "When someone wrongs you...", options: [{ text: "I never forgive.", pts: 0 }, { text: "It takes me a long time.", pts: 1 }, { text: "I try to understand their perspective.", pts: 2 }, { text: "I forgive and move forward smoothly.", pts: 3 }] },
+          { q: "How often do you compare yourself to others?", options: [{ text: "Constantly", pts: 0 }, { text: "Often", pts: 1 }, { text: "Sometimes", pts: 2 }, { text: "Rarely", pts: 3 }] },
+          { q: "How is your sleep at night?", options: [{ text: "Very difficult", pts: 0 }, { text: "Restless sleep", pts: 1 }, { text: "Good sleep", pts: 2 }, { text: "Deep and peaceful", pts: 3 }] },
+          { q: "Do you dedicate time for yourself?", options: [{ text: "Never", pts: 0 }, { text: "Rarely", pts: 1 }, { text: "Regularly", pts: 2 }, { text: "Every day", pts: 3 }] },
+          { q: "What disturbs you the most?", options: [{ text: "Others' opinions", pts: 0 }, { text: "Fear of failure", pts: 1 }, { text: "Uncertainty about the future", pts: 2 }, { text: "Nothing perturbs my peace for long", pts: 3 }] },
+          { q: "When facing a serious obstacle...", options: [{ text: "I give up", pts: 0 }, { text: "I worry excessively", pts: 1 }, { text: "I search for solutions", pts: 2 }, { text: "I approach it with calm and clarity", pts: 3 }] },
+          { q: "Do you feel gratitude for what you possess?", options: [{ text: "Rarely", pts: 0 }, { text: "Sometimes", pts: 1 }, { text: "Often", pts: 2 }, { text: "Always", pts: 3 }] },
+          { q: "How many hours do you use your smartphone daily?", options: [{ text: "More than 8 hours", pts: 0 }, { text: "5–8 hours", pts: 1 }, { text: "3–5 hours", pts: 2 }, { text: "Less than 3 hours", pts: 3 }] },
+          { q: "Do you enjoy spending time alone?", options: [{ text: "Not at all", pts: 0 }, { text: "A little", pts: 1 }, { text: "Yes", pts: 2 }, { text: "Very much", pts: 3 }] },
+          { q: "How do you respond to criticism?", options: [{ text: "I get angry", pts: 0 }, { text: "I feel hurt", pts: 1 }, { text: "I learn from it", pts: 2 }, { text: "I welcome constructiveness with calm", pts: 3 }] },
+          { q: "Do you practice meditation, walking, or reading?", options: [{ text: "Never", pts: 0 }, { text: "Sometimes", pts: 1 }, { text: "Weekly", pts: 2 }, { text: "Daily", pts: 3 }] },
+          { q: "How would you describe your mental state today?", options: [{ text: "Extremely exhausted", pts: 0 }, { text: "Stressed", pts: 1 }, { text: "Balanced", pts: 2 }, { text: "Peaceful and calm", pts: 3 }] }
+        ],
+        tiers: [
+          { min: 0, max: 25, title: "🔴 0–25 pts: Need to restore your mental tranquility", desc: "You are experiencing high stress, and daily pressure may be clouding your decisions and peace of mind.", tips: ["Get sufficient sleep.", "Reduce smartphone screen time.", "Enjoy daily outdoor walks.", "Talk to a trusted friend."] },
+          { min: 26, max: 50, title: "🟠 26–50 pts: Seeking inner balance", desc: "You experience moments of peace, but they vanish quickly when confronted with major life challenges.", tips: ["Dedicating daily time for yourself.", "Write down your emotions to release tension.", "Practice gratitude for simple moments."] },
+          { min: 51, max: 75, title: "🟡 51–75 pts: Solid level of inner peace", desc: "You manage most daily situations well, while still having room to deepen your mental tranquility and stability.", tips: ["Continue inspiring readings.", "Practice meditation regularly.", "Maintain healthy lifestyle habits."] },
+          { min: 76, max: 100, title: "🟢 76–100 pts: Outstanding inner peace and harmony", desc: "You are balanced and resilient. Life still presents obstacles, but you never let them strip away your mental sanctuary.", tips: ["Maintain this wonderful balance.", "Spread calm and positive energy around you.", "Continue your journey of self-cultivation."] }
         ]
       }
-    ];
+    };
 
-    var resultsTiers = [
-      {
-        min: 0,
-        max: 25,
-        title: "🔴 0–25 نقطة: تحتاج إلى استعادة هدوئك",
-        desc: "تشعر بضغط نفسي كبير، وقد تؤثر الضغوط اليومية في طريقة تفكيرك وقراراتك.",
-        tips: ["نم جيدًا.", "قلل استخدام الهاتف.", "مارس المشي في الهواء الطلق.", "تحدث مع شخص تثق به."]
-      },
-      {
-        min: 26,
-        max: 50,
-        title: "🟠 26–50 نقطة: أنت في مرحلة البحث عن التوازن",
-        desc: "لديك لحظات من الهدوء، لكنها تختفي سريعًا عند مواجهة الضغوط الصعبة.",
-        tips: ["خصص وقتًا يوميًا لنفسك.", "اكتب ما تشعر به لتفريغ التوتر.", "مارس الامتنان للأشياء البسيطة."]
-      },
-      {
-        min: 51,
-        max: 75,
-        title: "🟡 51–75 نقطة: سلام داخلي جيد",
-        desc: "تعرف كيف تتعامل مع معظم المواقف، لكن لا يزال بإمكانك تطوير قدرتك على التحكم في التوتر والوصول إلى ثبات أعمق.",
-        tips: ["استمر في القراءة الملهمة.", "مارس التأمل بشكل منتظم.", "حافظ على عاداتك الصحية والرياضية."]
-      },
-      {
-        min: 76,
-        max: 100,
-        title: "🟢 76–100 نقطة: تتمتع بسلام داخلي مميز",
-        desc: "أنت شخص متزن، وتعرف كيف تواجه الحياة بهدوء وصبر. لا يعني ذلك أن حياتك خالية من المشكلات، بل أنك تعلمت كيف لا تسمح لها بأن تسلبك راحة عقلك.",
-        tips: ["حافظ على هذا الاتزان الرائع.", "انشر الهدوء والطاقة الإيجابية من حولك.", "استمر في تحدي التطور الشخصي."]
+    let currentIndex = 0;
+    let totalPoints = 0;
+    let quizStateScreen = 'start';
+
+    function updateLanguageUI() {
+      const lang = currentLang;
+      const t = innerPeaceTranslations[lang] || innerPeaceTranslations.ar;
+      const ui = TIKTOK_DATA.ui[lang] || TIKTOK_DATA.ui.ar;
+
+      if (lang === 'ar') {
+        document.documentElement.setAttribute('dir', 'rtl');
+        document.documentElement.setAttribute('lang', 'ar');
+      } else {
+        document.documentElement.setAttribute('dir', 'ltr');
+        document.documentElement.setAttribute('lang', lang);
       }
-    ];
 
-    var currentIndex = 0;
-    var totalPoints = 0;
+      const activeLangName = document.getElementById('activeLangName');
+      if (activeLangName) activeLangName.textContent = LANG_METADATA[lang].label;
 
-    document.addEventListener('DOMContentLoaded', function() {
-      var startScreen = document.getElementById('startScreen');
-      var questionScreen = document.getElementById('questionScreen');
-      var resultScreen = document.getElementById('resultScreen');
-      var startBtn = document.getElementById('startQuizBtn');
+      const langOpts = document.querySelectorAll('.lang-opt');
+      langOpts.forEach(opt => {
+        if (opt.getAttribute('data-lang') === lang) {
+          opt.classList.add('active');
+        } else {
+          opt.classList.remove('active');
+        }
+      });
 
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (ui[key]) {
+          if (key === 'footerBrandDesc') {
+            el.innerHTML = ui[key];
+          } else {
+            el.textContent = ui[key];
+          }
+        }
+      });
+
+      document.getElementById('homeBackLink').textContent = t.homeBack;
+      document.getElementById('heroBadge').textContent = t.badge;
+      document.getElementById('heroTitle').textContent = t.title;
+      document.getElementById('heroSubtitle').textContent = t.subtitle;
+      document.getElementById('statDuration').textContent = t.duration;
+      document.getElementById('statQCount').textContent = t.qCount;
+      document.getElementById('statResultDesc').textContent = t.resultDesc;
+      document.getElementById('introBoxTitle').textContent = t.introTitle;
+      document.getElementById('introBoxText').innerHTML = t.introText;
+      document.getElementById('startBtnText').textContent = t.startBtn;
+      document.getElementById('startBtnArrow').textContent = lang === 'ar' ? '←' : '→';
+
+      document.getElementById('resHeaderBadge').textContent = t.resBadge;
+      document.getElementById('resScoreLabel').textContent = t.resScoreLabel;
+      document.getElementById('resPsyTitle').textContent = t.psyTitle;
+      document.getElementById('resTipsTitle').textContent = t.tipsTitle;
+      document.getElementById('resQuoteBanner').textContent = t.quote;
+      document.getElementById('challengeTitle').textContent = t.challengeTitle;
+      document.getElementById('challengeSub').textContent = t.challengeSub;
+      document.getElementById('challengeFooter').textContent = t.challengeFooter;
+      document.getElementById('recTitle').textContent = t.recTitle;
+      document.getElementById('retakeBtn').textContent = t.retakeBtn;
+
+      const challengeList = document.getElementById('challengeList');
+      if (challengeList) {
+        challengeList.innerHTML = t.challengeTasks.map(task => `<li>${task}</li>`).join('');
+      }
+
+      if (quizStateScreen === 'question') {
+        renderQuestion();
+      } else if (quizStateScreen === 'result') {
+        showResult();
+      }
+    }
+
+    function renderQuestion() {
+      const t = innerPeaceTranslations[currentLang] || innerPeaceTranslations.ar;
+      const questionsList = t.questions;
+      const qData = questionsList[currentIndex];
+
+      document.getElementById('questionStepLabel').textContent = `${t.stepPrefix} ${currentIndex + 1} ${t.ofText} ${questionsList.length}`;
+      document.getElementById('questionText').textContent = qData.q;
+      
+      const pct = ((currentIndex + 1) / questionsList.length) * 100;
+      document.getElementById('progressBarFill').style.width = pct + '%';
+
+      const container = document.getElementById('optionsContainer');
+      container.innerHTML = '';
+
+      qData.options.forEach((opt) => {
+        const btn = document.createElement('button');
+        btn.className = 'option-btn';
+        btn.type = 'button';
+        btn.innerHTML = `<div class="option-radio-dot"></div><span>${opt.text}</span>`;
+        btn.addEventListener('click', () => {
+          totalPoints += opt.pts;
+          currentIndex++;
+          if (currentIndex < questionsList.length) {
+            renderQuestion();
+          } else {
+            showResult();
+          }
+        });
+        container.appendChild(btn);
+      });
+    }
+
+    function showResult() {
+      quizStateScreen = 'result';
+      const t = innerPeaceTranslations[currentLang] || innerPeaceTranslations.ar;
+      
+      document.getElementById('startScreen').style.display = 'none';
+      document.getElementById('questionScreen').style.display = 'none';
+      
+      const resultScreen = document.getElementById('resultScreen');
+      resultScreen.style.display = 'block';
+      resultScreen.classList.add('active');
+
+      const finalScore = Math.round((totalPoints / 45) * 100);
+      document.getElementById('resScoreNum').textContent = `${finalScore}/100`;
+
+      const tier = t.tiers.find(tierItem => finalScore >= tierItem.min && finalScore <= tierItem.max) || t.tiers[0];
+
+      document.getElementById('resLevelTitle').textContent = tier.title;
+      document.getElementById('resDescText').textContent = tier.desc;
+
+      const tipsContainer = document.getElementById('resTipsList');
+      tipsContainer.innerHTML = '';
+      tier.tips.forEach((tip) => {
+        const li = document.createElement('li');
+        li.textContent = tip;
+        tipsContainer.appendChild(li);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const langBtn = document.getElementById('langBtn');
+      const langDropdown = document.getElementById('langDropdown');
+      if (langBtn && langDropdown) {
+        langBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          langDropdown.classList.toggle('active');
+        });
+        document.addEventListener('click', () => {
+          langDropdown.classList.remove('active');
+        });
+        const langOpts = langDropdown.querySelectorAll('.lang-opt');
+        langOpts.forEach(opt => {
+          opt.addEventListener('click', () => {
+            currentLang = opt.getAttribute('data-lang');
+            saveLanguage(currentLang);
+            updateLanguageUI();
+          });
+        });
+      }
+
+      const themeToggleBtn = document.getElementById('themeToggleBtn');
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', newTheme);
+          localStorage.setItem('theme', newTheme);
+        });
+      }
+
+      const startBtn = document.getElementById('startQuizBtn');
       if (startBtn) {
-        startBtn.addEventListener('click', function() {
-          startScreen.style.display = 'none';
-          questionScreen.style.display = 'block';
-          questionScreen.classList.add('active');
+        startBtn.addEventListener('click', () => {
+          currentIndex = 0;
+          totalPoints = 0;
+          quizStateScreen = 'question';
+          document.getElementById('startScreen').style.display = 'none';
+          document.getElementById('resultScreen').style.display = 'none';
+          const qScreen = document.getElementById('questionScreen');
+          qScreen.style.display = 'block';
+          qScreen.classList.add('active');
           renderQuestion();
         });
       }
 
-      function renderQuestion() {
-        var qData = questions[currentIndex];
-        document.getElementById('questionStepLabel').textContent = 'سؤال ' + (currentIndex + 1) + ' من ' + questions.length;
-        document.getElementById('questionText').textContent = qData.q;
-        
-        var pct = ((currentIndex + 1) / questions.length) * 100;
-        document.getElementById('progressBarFill').style.width = pct + '%';
-
-        var container = document.getElementById('optionsContainer');
-        container.innerHTML = '';
-
-        qData.options.forEach(function(opt) {
-          var btn = document.createElement('button');
-          btn.className = 'option-btn';
-          btn.type = 'button';
-          btn.innerHTML = '<div class="option-radio-dot"></div><span>' + opt.text + '</span>';
-          btn.addEventListener('click', function() {
-            totalPoints += opt.pts;
-            currentIndex++;
-            if (currentIndex < questions.length) {
-              renderQuestion();
-            } else {
-              showResult();
-            }
-          });
-          container.appendChild(btn);
-        });
-      }
-
-      function showResult() {
-        questionScreen.style.display = 'none';
-        resultScreen.style.display = 'block';
-        resultScreen.classList.add('active');
-
-        // Scale points to percentage (max points = 45)
-        var finalScore = Math.round((totalPoints / 45) * 100);
-        document.getElementById('resScoreNum').textContent = finalScore + '/100';
-
-        var tier = resultsTiers.find(function(t) {
-          return finalScore >= t.min && finalScore <= t.max;
-        }) || resultsTiers[0];
-
-        document.getElementById('resLevelTitle').textContent = tier.title;
-        document.getElementById('resDescText').textContent = tier.desc;
-
-        var tipsContainer = document.getElementById('resTipsList');
-        tipsContainer.innerHTML = '';
-        tier.tips.forEach(function(tip) {
-          var li = document.createElement('li');
-          li.textContent = tip;
-          tipsContainer.appendChild(li);
-        });
-      }
-
-      var retakeBtn = document.getElementById('retakeBtn');
+      const retakeBtn = document.getElementById('retakeBtn');
       if (retakeBtn) {
-        retakeBtn.addEventListener('click', function() {
+        retakeBtn.addEventListener('click', () => {
           currentIndex = 0;
           totalPoints = 0;
-          resultScreen.style.display = 'none';
-          questionScreen.style.display = 'none';
-          startScreen.style.display = 'block';
+          quizStateScreen = 'start';
+          document.getElementById('resultScreen').style.display = 'none';
+          document.getElementById('questionScreen').style.display = 'none';
+          document.getElementById('startScreen').style.display = 'block';
         });
       }
+
+      updateLanguageUI();
     });
-  </script>
-
-  <!-- Service Worker PWA Registration -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('../sw.js')
-          .then(reg => console.log('[PWA] Service Worker registered:', reg.scope))
-          .catch(err => console.log('[PWA] Service Worker registration failed:', err));
-      });
-    }
-
-    // PWA Install Prompt Handler
-    let deferredPrompt;
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      const installBtn = document.getElementById('pwaInstallBtn');
-      if (installBtn) {
-        installBtn.style.display = 'inline-flex';
-      }
-    });
-
-    function triggerPwaInstall() {
-      if (deferredPrompt) {
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') {
-            console.log('[PWA] User accepted the install prompt');
-          }
-          deferredPrompt = null;
-        });
-      } else {
-        alert('لتثبيت التطبيق على هاتفك:\n1. اضغط على خيارات المتصفح (⋮ أو 📤)\n2. اختر "إضافة إلى الشاشة الرئيسية" (Add to Home Screen)');
-      }
-    }
   </script>
 </body>
 </html>
