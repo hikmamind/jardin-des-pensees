@@ -197,7 +197,11 @@ function translatePage() {
   translatables.forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (ui[key]) {
-      el.textContent = ui[key];
+      if (key === 'footerBrandDesc') {
+        el.innerHTML = ui[key];
+      } else {
+        el.textContent = ui[key];
+      }
     }
   });
 
