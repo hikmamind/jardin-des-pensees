@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ar" data-theme="dark" dir="rtl">
+<html lang="ar" data-theme="dark" dir="rtl" id="htmlRoot">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>المكتبة الصوتية | حكمة ونور (HIKMA & NOUR)</title>
-  <meta name="description" content="المكتبة الصوتية الكاملة لرواية الخيميائي وكتب الفلسفة والتنمية الذاتية.">
+  <title id="seoPageTitle">المكتبة الصوتية | حكمة ونور (HIKMA & NOUR)</title>
+  <meta name="description" id="seoPageDesc" content="المكتبة الصوتية الكاملة لرواية الخيميائي وكتب الفلسفة والتنمية الذاتية.">
 
   <link rel="canonical" href="https://jardin-des-pensees.onrender.com/audio/">
   <link rel="alternate" hreflang="ar" href="https://jardin-des-pensees.onrender.com/audio/">
@@ -718,6 +718,35 @@
       .player-track-info { max-width: 130px !important; }
       .player-track-meta h4 { max-width: 85px !important; }
     }
+
+    /* ── Language Selector Styles ── */
+    #audioLangBtn:hover {
+      background: rgba(223, 177, 91, 0.15) !important;
+      border-color: var(--gold) !important;
+    }
+    .audio-lang-opt:hover {
+      background: rgba(223, 177, 91, 0.12) !important;
+      color: var(--gold-light) !important;
+    }
+    [dir="ltr"] #audioLangDropdown { left: auto; right: 0; }
+    [dir="rtl"] #audioLangDropdown { left: 0; right: auto; }
+
+    /* ── Audio Language Badge ── */
+    .audio-lang-badge {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 0.72rem; margin-top: 4px;
+      color: var(--gold); opacity: 0.85; font-weight: 600;
+    }
+    [dir="ltr"] .audiobook-card .card-info { direction: ltr; text-align: left; }
+    [dir="ltr"] .book-hero-banner,
+    [dir="ltr"] .detail-split-layout { direction: ltr; }
+    [dir="ltr"] .chapter-row-item:hover { transform: translateX(4px); }
+    [dir="rtl"] .chapter-row-item:hover { transform: translateX(-4px); }
+    [dir="ltr"] .back-btn { flex-direction: row-reverse; }
+    [dir="ltr"] .sidebar { border-left: 1px solid var(--border); border-right: none; }
+    [dir="ltr"] .bottom-player-bar,
+    [dir="ltr"] .top-header { direction: ltr; }
+
   </style>
 </head>
 <body>
@@ -735,23 +764,23 @@
       </a>
 
       <ul class="nav-menu">
-        <li class="nav-item"><a href="../"><span>🏠</span> الرئيسية</a></li>
-        <li class="nav-item"><a href="../articles/"><span>📚</span> المقالات</a></li>
-        <li class="nav-item"><a href="../thinkers/"><span>🧠</span> الفلاسفة</a></li>
-        <li class="nav-item"><a href="../quotes/"><span>💭</span> الاقتباسات</a></li>
-        <li class="nav-item active"><a href="./" onclick="showLibraryGrid(); return false;"><span>🎧</span> الصوتيات</a></li>
-        <li class="nav-item"><a href="../bio.html"><span>ℹ️</span> عن الموقع</a></li>
-        <li class="nav-item"><a href="../#contactSection"><span>📩</span> اتصل بنا</a></li>
+        <li class="nav-item"><a href="../" data-i18n-nav="home"><span>🏠</span> <span data-i18n="home">الرئيسية</span></a></li>
+        <li class="nav-item"><a href="../articles/" data-i18n-nav="articles"><span>📚</span> <span data-i18n="articles">المقالات</span></a></li>
+        <li class="nav-item"><a href="../thinkers/" data-i18n-nav="thinkers"><span>🧠</span> <span data-i18n="thinkers">الفلاسفة</span></a></li>
+        <li class="nav-item"><a href="../quotes/" data-i18n-nav="quotes"><span>💭</span> <span data-i18n="quotes">الاقتباسات</span></a></li>
+        <li class="nav-item active"><a href="./" onclick="showLibraryGrid(); return false;"><span>🎧</span> <span data-i18n="audio">الصوتيات</span></a></li>
+        <li class="nav-item"><a href="../bio.html" data-i18n-nav="about"><span>ℹ️</span> <span data-i18n="about">عن الموقع</span></a></li>
+        <li class="nav-item"><a href="../#contactSection" data-i18n-nav="contactNav"><span>📩</span> <span data-i18n="contactNav">اتصل بنا</span></a></li>
       </ul>
 
-      <div class="nav-section-title">التصنيفات الشائعة</div>
+      <div class="nav-section-title" id="sidebarCategoriesLabel" data-i18n="audioCategoriesTitle">التصنيفات الشائعة</div>
       <ul class="nav-menu" id="categories">
-        <li class="category-item active"><a href="#" onclick="filterAudioCategory('all', this); return false;"><span>✨</span> الكل</a></li>
-        <li class="category-item"><a href="#" onclick="filterAudioCategory('فلسفة', this); return false;"><span>🧠</span> فلسفة</a></li>
-        <li class="category-item"><a href="#" onclick="filterAudioCategory('تنمية ذاتية', this); return false;"><span>🌿</span> تنمية ذاتية</a></li>
-        <li class="category-item"><a href="#" onclick="filterAudioCategory('تاريخ', this); return false;"><span>🏰</span> تاريخ</a></li>
-        <li class="category-item"><a href="#" onclick="filterAudioCategory('علم النفس', this); return false;"><span>Ψ</span> علم النفس</a></li>
-        <li class="category-item"><a href="#" onclick="filterAudioCategory('دين وروحانيات', this); return false;"><span>🪷</span> دين وروحانيات</a></li>
+        <li class="category-item active"><a href="#" onclick="filterAudioCategory('all', this); return false;"><span>✨</span> <span data-i18n="catAll">الكل</span></a></li>
+        <li class="category-item"><a href="#" onclick="filterAudioCategory('فلسفة', this); return false;"><span>🧠</span> <span data-i18n="catPhilosophy">فلسفة</span></a></li>
+        <li class="category-item"><a href="#" onclick="filterAudioCategory('تنمية ذاتية', this); return false;"><span>🌿</span> <span data-i18n="catSelfDev">تنمية ذاتية</span></a></li>
+        <li class="category-item"><a href="#" onclick="filterAudioCategory('تاريخ', this); return false;"><span>🏰</span> <span data-i18n="catHistory">تاريخ</span></a></li>
+        <li class="category-item"><a href="#" onclick="filterAudioCategory('علم النفس', this); return false;"><span>Ψ</span> <span data-i18n="catPsychology">علم النفس</span></a></li>
+        <li class="category-item"><a href="#" onclick="filterAudioCategory('دين وروحانيات', this); return false;"><span>🪷</span> <span data-i18n="catSpirituality">دين وروحانيات</span></a></li>
       </ul>
     </aside>
 
@@ -764,10 +793,24 @@
 
         <div class="search-box" onclick="openGlobalSearchModal()" style="cursor: pointer;">
           <span class="search-icon">🔍</span>
-          <input type="text" class="search-input" placeholder="ابحث عن كتاب، مقال، أو مؤلف... (Ctrl+K)" readonly onclick="openGlobalSearchModal()">
+          <input type="text" class="search-input" id="audioSearchInput" placeholder="ابحث عن كتاب، مقال، أو مؤلف... (Ctrl+K)" readonly onclick="openGlobalSearchModal()">
         </div>
 
-        <div class="top-actions"></div>
+        <div class="top-actions" style="display:flex;align-items:center;gap:12px;">
+          <!-- Language Selector -->
+          <div style="position:relative;" id="audioLangSelectorWrap">
+            <button id="audioLangBtn" onclick="toggleAudioLangDropdown()" style="display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.04);border:1px solid rgba(223,177,91,0.3);border-radius:20px;padding:7px 14px;color:var(--gold-light);font-size:0.82rem;font-weight:700;cursor:pointer;transition:all 0.2s;" aria-label="Language Selector">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              <span id="audioActiveLangName">العربية</span>
+              <span>▾</span>
+            </button>
+            <div id="audioLangDropdown" style="display:none;position:absolute;top:calc(100% + 8px);left:0;background:#0F1611;border:1px solid rgba(223,177,91,0.3);border-radius:14px;padding:6px;z-index:9999;min-width:130px;box-shadow:0 8px 24px rgba(0,0,0,0.8);">
+              <button data-lang="ar" onclick="setAudioLang('ar')" class="audio-lang-opt" style="display:block;width:100%;text-align:right;padding:8px 12px;background:transparent;border:none;color:var(--ivory);font-size:0.88rem;cursor:pointer;border-radius:10px;transition:background 0.15s;">العربية (AR)</button>
+              <button data-lang="fr" onclick="setAudioLang('fr')" class="audio-lang-opt" style="display:block;width:100%;text-align:right;padding:8px 12px;background:transparent;border:none;color:var(--ivory);font-size:0.88rem;cursor:pointer;border-radius:10px;transition:background 0.15s;">Français (FR)</button>
+              <button data-lang="en" onclick="setAudioLang('en')" class="audio-lang-opt" style="display:block;width:100%;text-align:right;padding:8px 12px;background:transparent;border:none;color:var(--ivory);font-size:0.88rem;cursor:pointer;border-radius:10px;transition:background 0.15s;">English (EN)</button>
+            </div>
+          </div>
+        </div>
       </header>
 
       <!-- Scrollable Body -->
@@ -779,14 +822,14 @@
         <div id="libraryGridView">
           <div class="page-title-row">
             <div class="page-title-group">
-              <h1>📚 المكتبة الصوتية</h1>
-              <div class="page-subtitle">7 كتب صوتية (الروايات الصوتية الرئيسية)</div>
+              <h1><span>📚</span> <span data-i18n="audioLibraryTitle">المكتبة الصوتية</span></h1>
+              <div class="page-subtitle" id="audioLibrarySubtitle" data-i18n="audioLibrarySubtitle">7 كتب صوتية (الروايات الصوتية الرئيسية)</div>
             </div>
 
             <div class="view-controls">
               <select class="sort-select" onchange="filterBooksBySort(this.value)">
-                <option value="default">الأحدث</option>
-                <option value="popular">الأكثر استماعاً</option>
+                <option value="default" data-i18n-opt="sortLatest">الأحدث</option>
+                <option value="popular" data-i18n-opt="sortPopular">الأكثر استماعاً</option>
               </select>
             </div>
           </div>
@@ -809,6 +852,7 @@
                 <div class="info-text-group">
                   <span class="card-arabic-title">الخيميائي</span>
                   <span class="card-arabic-author">باولو كويلو</span>
+                  <span class="audio-lang-badge" data-i18n="audioAvailableInArabic" style="display:inline-block;font-size:0.72rem;margin-top:4px;color:var(--gold);opacity:0.85;">🎙️ الصوت متوفر بالعربية</span>
                 </div>
                 <button class="card-dots-btn">⋮</button>
               </div>
@@ -829,6 +873,7 @@
                 <div class="info-text-group">
                   <span class="card-arabic-title">الجريمة والعقاب</span>
                   <span class="card-arabic-author">فيودور دوستويفسكي</span>
+                  <span class="audio-lang-badge" data-i18n="audioAvailableInArabic" style="display:inline-block;font-size:0.72rem;margin-top:4px;color:var(--gold);opacity:0.85;">🎙️ الصوت متوفر بالعربية</span>
                 </div>
                 <button class="card-dots-btn">⋮</button>
               </div>
@@ -849,6 +894,7 @@
                 <div class="info-text-group">
                   <span class="card-arabic-title">الغريب</span>
                   <span class="card-arabic-author">ألبير كامو</span>
+                  <span class="audio-lang-badge" data-i18n="audioAvailableInArabic" style="display:inline-block;font-size:0.72rem;margin-top:4px;color:var(--gold);opacity:0.85;">🎙️ الصوت متوفر بالعربية</span>
                 </div>
                 <button class="card-dots-btn">⋮</button>
               </div>
@@ -869,6 +915,7 @@
                 <div class="info-text-group">
                   <span class="card-arabic-title">الأمير الصغير</span>
                   <span class="card-arabic-author">أنطوان دي سانت إكزوبيري</span>
+                  <span class="audio-lang-badge" data-i18n="audioAvailableInArabic" style="display:inline-block;font-size:0.72rem;margin-top:4px;color:var(--gold);opacity:0.85;">🎙️ الصوت متوفر بالعربية</span>
                 </div>
                 <button class="card-dots-btn">⋮</button>
               </div>
@@ -889,6 +936,7 @@
                 <div class="info-text-group">
                   <span class="card-arabic-title">التحول (المسخ)</span>
                   <span class="card-arabic-author">فرانز كافكا</span>
+                  <span class="audio-lang-badge" data-i18n="audioAvailableInArabic" style="display:inline-block;font-size:0.72rem;margin-top:4px;color:var(--gold);opacity:0.85;">🎙️ الصوت متوفر بالعربية</span>
                 </div>
                 <button class="card-dots-btn">⋮</button>
               </div>
@@ -909,6 +957,7 @@
                 <div class="info-text-group">
                   <span class="card-arabic-title">الشيخ والبحر</span>
                   <span class="card-arabic-author">ارنست همنغواي</span>
+                  <span class="audio-lang-badge" data-i18n="audioAvailableInArabic" style="display:inline-block;font-size:0.72rem;margin-top:4px;color:var(--gold);opacity:0.85;">🎙️ الصوت متوفر بالعربية</span>
                 </div>
                 <button class="card-dots-btn">⋮</button>
               </div>
@@ -929,6 +978,7 @@
                 <div class="info-text-group">
                   <span class="card-arabic-title">رسائل إلى ميلينا</span>
                   <span class="card-arabic-author">فرانز كافكا</span>
+                  <span class="audio-lang-badge" data-i18n="audioAvailableInArabic" style="display:inline-block;font-size:0.72rem;margin-top:4px;color:var(--gold);opacity:0.85;">🎙️ الصوت متوفر بالعربية</span>
                 </div>
                 <button class="card-dots-btn">⋮</button>
               </div>
@@ -936,34 +986,7 @@
 
           </div><!-- /#booksGrid -->
 
-          <!-- Main Audio Page General Comments Section -->
-          <div style="background:rgba(15, 22, 17, 0.95);border:1px solid rgba(223, 177, 91, 0.35);border-radius:22px;padding:26px;margin-top:40px;box-shadow:0 12px 35px rgba(0,0,0,0.6);position:relative;z-index:20;">
-            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:12px;">
-              <h3 style="font-size:1.2rem;color:var(--gold-light);margin:0;display:flex;align-items:center;gap:10px;">
-                <span>💬</span> شاركنا رأيك وتعليقك حول المكتبة الصوتية
-              </h3>
-              <div style="font-size:0.85rem;color:#F5D98A;font-weight:700;">★★★★★ 4.9/5 (1,420 تقييم)</div>
-            </div>
 
-            <!-- Form -->
-            <form id="generalAudioCommentForm" onsubmit="submitGeneralAudioComment(event); return false;" style="display:flex;flex-direction:column;gap:12px;margin-bottom:20px;">
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-                <input type="text" id="genCommentAuthor" placeholder="اسمك الكريم *" required class="comment-input-field">
-                <select id="genCommentRating" class="comment-input-field" style="color:#F5D98A;font-weight:700;">
-                  <option value="5">★★★★★ (5/5) ممتاز جداً</option>
-                  <option value="4">★★★★☆ (4/5) جيد جداً</option>
-                  <option value="3">★★★☆☆ (3/5) متوسط</option>
-                </select>
-              </div>
-              <textarea id="genCommentText" placeholder="اكتب رأيك أو تعليقك هنا..." required rows="3" class="comment-input-field"></textarea>
-              <button type="button" class="btn-primary-play" id="genCommentSubmitBtn" onclick="submitGeneralAudioComment(event)" style="justify-content:center;padding:12px;font-size:0.95rem;">
-                <span>🚀</span> نشر التعليق والتقييم
-              </button>
-            </form>
-
-            <!-- General Comments Feed -->
-            <div id="generalAudioCommentsFeed" style="display:flex;flex-direction:column;gap:12px;"></div>
-          </div>
         </div>
 
 
@@ -975,9 +998,9 @@
           <!-- Top Navigation Back Button -->
           <div class="detail-top-nav">
             <button class="back-btn" onclick="showLibraryGrid()">
-              <span>←</span> العودة إلى المكتبة
+              <span id="backBtnArrow">←</span> <span data-i18n="backToLibrary">العودة إلى المكتبة</span>
             </button>
-            <button class="share-btn">🔗 مشاركة</button>
+            <button class="share-btn" onclick="openShareModal('audio')"><span>🔗</span> <span data-i18n="shareBtn">مشاركة</span></button>
           </div>
 
           <!-- Hero Book Banner -->
@@ -993,6 +1016,7 @@
                 <span class="meta-pill" id="detailTotalDuration">6 ساعة 42 دقيقة</span>
                 <span class="meta-pill">رواية ملهمة</span>
                 <span class="rating-stars">★★★★☆ 4.9 (1,248 تقييم)</span>
+                <span class="meta-pill" id="detailAudioLangBadge" data-i18n="audioAvailableInArabic" style="color:var(--gold);border-color:rgba(223,177,91,0.4);background:rgba(223,177,91,0.08);">🎙️ الصوت متوفر بالعربية</span>
               </div>
 
               <p class="detail-desc" id="detailBookDesc">
@@ -1001,17 +1025,15 @@
 
               <div class="detail-actions-row">
                 <button class="btn-primary-play" onclick="playCurrentChapter(0)">
-                  <span>▶</span> متابعة الاستماع
+                  <span>▶</span> <span data-i18n="listenBtn">متابعة الاستماع</span>
                 </button>
                 <button class="btn-sec-action" id="audioLikeBtn" onclick="toggleAudioLike()">
-                  <span id="audioLikeIcon">❤️</span> <span id="audioLikeText">إعجاب</span> (<span id="audioLikeCount">1,248</span>)
+                  <span id="audioLikeIcon">❤️</span> <span id="audioLikeText" data-i18n="likeBtn">إعجاب</span> (<span id="audioLikeCount">1,248</span>)
                 </button>
                 <button class="btn-sec-action" onclick="openShareModal('audio')">
-                  <span>🔗</span> مشاركة
+                  <span>🔗</span> <span data-i18n="shareBtn">مشاركة</span>
                 </button>
-                <button class="btn-sec-action" onclick="switchTab('comments', document.querySelectorAll('#tabsBar .tab-btn')[3])">
-                  <span>💬</span> التعليقات
-                </button>
+
               </div>
             </div>
           </div>
@@ -1022,15 +1044,15 @@
             <!-- Left Main Column: Tabs & Chapters List -->
             <div>
               <div class="detail-tabs-bar" id="tabsBar">
-                <button class="tab-btn active" onclick="switchTab('chapters', this)">الفصول</button>
-                <button class="tab-btn" onclick="switchTab('about', this)">عن الكتاب</button>
-                <button class="tab-btn" onclick="switchTab('quotes', this)">إقتباسات</button>
-                <button class="tab-btn" onclick="switchTab('comments', this)">💬 التعليقات والتقييمات (<span id="tabCommentsCount">4</span>)</button>
+                <button class="tab-btn active" onclick="switchTab('chapters', this)" data-i18n="tabChapters">الفصول</button>
+                <button class="tab-btn" onclick="switchTab('about', this)" data-i18n="tabAbout">عن الكتاب</button>
+                <button class="tab-btn" onclick="switchTab('quotes', this)" data-i18n="tabQuotes">إقتباسات</button>
+
               </div>
 
               <!-- TAB: Chapters -->
               <div id="tabChapters">
-                <h3 style="font-size: 1.15rem; color: var(--gold-light); margin-bottom: 16px;">قائمة الفصول</h3>
+                <h3 style="font-size: 1.15rem; color: var(--gold-light); margin-bottom: 16px;" data-i18n="chaptersListTitle">قائمة الفصول</h3>
                 <!-- Chapters List (Matching Image 1) -->
                 <div class="chapters-playlist" id="chaptersPlaylistRows">
                   <!-- Chapters will be rendered dynamically by JS -->
@@ -1048,56 +1070,7 @@
                 <div class="quote-box" style="margin-top:12px;">«الألم والمعاناة ضروريان دائماً للوعي الكبير والقلب الرفيع.»</div>
               </div>
 
-              <!-- TAB: Comments & Ratings -->
-              <div id="tabComments" style="display:none;">
-                <!-- Rating Overview Card -->
-                <div style="background:rgba(15, 22, 17, 0.85);border:1px solid var(--border-light);border-radius:18px;padding:22px;margin-bottom:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px;">
-                  <div style="display:flex;align-items:center;gap:16px;">
-                    <div style="font-size:2.8rem;font-weight:900;color:var(--gold-light);line-height:1;" id="avgRatingScore">4.9</div>
-                    <div>
-                      <div class="interactive-star-rating" id="userStarSelector" style="font-size:1.5rem;color:#F5D98A;cursor:pointer;letter-spacing:3px;">
-                        <span data-star="1" onclick="setUserAudioRating(1)">★</span>
-                        <span data-star="2" onclick="setUserAudioRating(2)">★</span>
-                        <span data-star="3" onclick="setUserAudioRating(3)">★</span>
-                        <span data-star="4" onclick="setUserAudioRating(4)">★</span>
-                        <span data-star="5" onclick="setUserAudioRating(5)">★</span>
-                      </div>
-                      <div style="font-size:0.82rem;color:var(--text-muted);margin-top:4px;" id="ratingCountText">مبني على 1,248 تقييم</div>
-                    </div>
-                  </div>
-                  <button class="btn-primary-play" style="padding:10px 18px;font-size:0.85rem;" onclick="document.getElementById('commentAuthorInput').focus()">
-                    ✍️ أضف تقييمك وتعليقك
-                  </button>
-                </div>
 
-                <!-- Add Comment Form -->
-                <div style="background:rgba(20, 29, 23, 0.9);border:1px solid rgba(223,177,91,0.3);border-radius:18px;padding:20px;margin-bottom:24px;position:relative;z-index:20;">
-                  <h4 style="color:var(--gold-light);font-size:1rem;margin-bottom:14px;display:flex;align-items:center;gap:8px;">
-                    <span>💬</span> أضف تعليقك وانطباعك حول هذا العمل الصوتي
-                  </h4>
-                  <form id="audioCommentForm" onsubmit="submitAudioComment(event); return false;">
-                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
-                      <input type="text" id="commentAuthorInput" placeholder="اسمك الكريم *" required class="comment-input-field">
-                      <select id="commentRatingSelect" class="comment-input-field" style="color:#F5D98A;font-weight:700;">
-                        <option value="5">★★★★★ (5/5) ممتاز جداً</option>
-                        <option value="4">★★★★☆ (4/5) جيد جداً</option>
-                        <option value="3">★★★☆☆ (3/5) متوسط</option>
-                        <option value="2">★★☆☆☆ (2/5) مقبول</option>
-                        <option value="1">★☆☆☆☆ (1/5) سيء</option>
-                      </select>
-                    </div>
-                    <textarea id="commentTextInput" placeholder="اكتب تعليقك أو انطباعك عن الصوت والقصة..." required rows="3" class="comment-input-field"></textarea>
-                    <button type="button" class="btn-primary-play" id="submitAudioCommentBtn" onclick="submitAudioComment(event)" style="width:100%;justify-content:center;padding:12px;font-size:0.95rem;">
-                      <span>🚀</span> نشر التعليق والتقييم
-                    </button>
-                  </form>
-                </div>
-
-                <!-- Comments Feed List -->
-                <div id="audioCommentsList" style="display:flex;flex-direction:column;gap:12px;">
-                  <!-- Dynamic comments -->
-                </div>
-              </div>
             </div>
 
             <!-- Right Column Widgets (Matching Image 1) -->
@@ -1154,6 +1127,8 @@
 
         </div>
 
+        <!-- Subtle visual transition -->
+        <div style="margin-top:36px;margin-bottom:8px;height:1px;background:linear-gradient(90deg, transparent, rgba(223,177,91,0.25), transparent);backdrop-filter:blur(8px);"></div>
       </main>
     </div>
 
@@ -1574,7 +1549,6 @@
 
       // Render dynamic recommendations from the 7 main books
       renderRecommendations(bookKey);
-      loadAudioComments();
 
       document.getElementById('libraryGridView').style.display = 'none';
       document.getElementById('bookDetailView').style.display = 'block';
@@ -1835,123 +1809,7 @@
       if (countEl) countEl.textContent = currentCount.toLocaleString();
     }
 
-    // ── Interactive Rating Stars System ──
-    let userAudioRating = 5;
-    function setUserAudioRating(rating) {
-      userAudioRating = rating;
-      const stars = document.querySelectorAll('#userStarSelector span');
-      stars.forEach((star, idx) => {
-        if (idx < rating) {
-          star.style.color = '#F5D98A';
-          star.style.opacity = '1';
-        } else {
-          star.style.color = '#555';
-          star.style.opacity = '0.5';
-        }
-      });
-      const select = document.getElementById('commentRatingSelect');
-      if (select) select.value = rating;
-    }
 
-    // ── Comments Engine for Audiobooks ──
-    const defaultCommentsMap = {
-      alchemist: [
-        { author: "ياسين الإدريسي", text: "رواية استثنائية تؤكد أن الشغف هو محرك الروح. الإلقاء الصوتي خيالي!", rating: 5, date: "منذ يومين", likes: 24 },
-        { author: "مريم العلمي", text: "الفصل الخامس مع الثعلب أعاد تشكيل نظرتي للترويض والعلاقات الإنسانية.", rating: 5, date: "منذ 4 أيام", likes: 18 },
-        { author: "أحمد بناني", text: "جودة الصوت والتعليق الصوتي رائعة جداً، أشكر القائمين على هذا الموقع الراقي.", rating: 5, date: "منذ أسبوع", likes: 12 }
-      ],
-      crime_punishment: [
-        { author: "عمر الفاروق", text: "تحليل نفسي رهيب لشخصية راسكولنيكوف. الصوت ينقل التوتر بدقة عالية!", rating: 5, date: "منذ يوم", likes: 31 },
-        { author: "سارة الكردي", text: "دوستويفسكي يغوص في أعماق الضمير الإنساني. إنتاج صوتي مبهر.", rating: 5, date: "منذ 3 أيام", likes: 19 }
-      ],
-      etranger: [
-        { author: "كريم المنصوري", text: "كامو والعبثية بصوت هادئ وعميق. تجربة استماع ممتعة للغاية.", rating: 5, date: "منذ 5 أيام", likes: 15 }
-      ],
-      milena: [
-        { author: "فاطمة الزهراء", text: "رسائل كافكا لميلينا تجسد أصدق صور العشق والخوف الإنساني. روعة هائلة!", rating: 5, date: "منذ 6 ساعات", likes: 42 },
-        { author: "هشام التازي", text: "«الحب هو أن تكون السكين...» إلقاء ممتاز يلامس الوجدان.", rating: 5, date: "منذ يوم", likes: 28 }
-      ]
-    };
-
-    function loadAudioComments() {
-      const listEl = document.getElementById('audioCommentsList');
-      const countEl = document.getElementById('tabCommentsCount');
-      if (!listEl) return;
-
-      const savedKey = `comments_audio_${activeBookKey}`;
-      let comments = JSON.parse(localStorage.getItem(savedKey) || 'null');
-      if (!comments) {
-        comments = defaultCommentsMap[activeBookKey] || [
-          { author: "مستمع شغوف", text: "عمل صوتي راقٍ وأداء رائع جداً ننصح بالاستماع إليه!", rating: 5, date: "منذ أسبوع", likes: 9 }
-        ];
-      }
-
-      if (countEl) countEl.textContent = comments.length;
-
-      listEl.innerHTML = comments.map(c => {
-        const initials = c.author ? c.author.charAt(0).toUpperCase() : '👤';
-        const starsHtml = '★'.repeat(c.rating || 5) + '☆'.repeat(5 - (c.rating || 5));
-        return `
-          <div class="comment-card-item">
-            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
-              <div style="display:flex;align-items:center;gap:10px;">
-                <div class="comment-avatar">${initials}</div>
-                <div>
-                  <h5 style="font-size:0.92rem;font-weight:700;color:#FFFDF8;margin:0;">${c.author}</h5>
-                  <span style="font-size:0.75rem;color:rgba(250,246,239,0.5);">${c.date}</span>
-                </div>
-              </div>
-              <div style="color:#F5D98A;font-size:0.85rem;font-weight:700;">${starsHtml}</div>
-            </div>
-            <p style="font-size:0.88rem;color:rgba(250,246,239,0.85);line-height:1.6;margin:0 0 10px;">${c.text}</p>
-            <div style="display:flex;align-items:center;gap:14px;font-size:0.78rem;color:var(--text-muted);">
-              <span style="cursor:pointer;" onclick="likeComment(this)">❤️ مفيد (${c.likes || 0})</span>
-              <span style="cursor:pointer;" onclick="this.textContent='تم الإبلاغ'">🚩 إبلاغ</span>
-            </div>
-          </div>
-        `;
-      }).join('');
-    }
-
-    function submitAudioComment(e) {
-      if (e) e.preventDefault();
-      const authorInput = document.getElementById('commentAuthorInput');
-      const textInput = document.getElementById('commentTextInput');
-      const ratingSelect = document.getElementById('commentRatingSelect');
-
-      if (!authorInput || !textInput) return;
-      const authorVal = authorInput.value.trim();
-      const textVal = textInput.value.trim();
-
-      if (!authorVal || !textVal) {
-        alert('يرجى كتابة الاسم والتعليق قبل النشر!');
-        return;
-      }
-
-      const newComment = {
-        author: authorVal,
-        text: textVal,
-        rating: parseInt(ratingSelect ? ratingSelect.value : '5', 10),
-        date: "الآن",
-        likes: 0
-      };
-
-      const savedKey = `comments_audio_${activeBookKey}`;
-      let comments = JSON.parse(localStorage.getItem(savedKey) || 'null');
-      if (!comments) comments = defaultCommentsMap[activeBookKey] || [];
-
-      comments.unshift(newComment);
-      localStorage.setItem(savedKey, JSON.stringify(comments));
-
-      textInput.value = '';
-      loadAudioComments();
-      alert('✓ تم نشر تعليقك وتقييمك بنجاح!');
-    }
-
-    function likeComment(btn) {
-      btn.style.color = '#EF4444';
-      btn.textContent = '❤️ شكراً لك!';
-    }
 
     // ── Universal Share Modal Engine ──
     function openShareModal(type) {
@@ -2000,82 +1858,339 @@
       }
     }
 
-    // ── Main Audio Page General Comments Logic ──
-    const defaultGeneralAudioComments = [
-      { author: "إبراهيم المودن", text: "مكتبة صوتية مذهلة! جودة الصوت واختيار الكتب الفلسفية الرائعة يجعل هذا الموقع أفضل منصة استماع عربية.", rating: 5, date: "منذ يومين", likes: 45 },
-      { author: "ليلى بناني", text: "أستمع إلى رسائل كافكا والشيخ والبحر أثناء قيادتي للسيارة يومياً. عمل إبداعي تشكرون عليه!", rating: 5, date: "منذ 4 أيام", likes: 32 },
-      { author: "حمزة العلمي", text: "الفصول مقسمة بدقة عالية والأداء الصوتي مريح للأذن. واصلوا هذا العطاء الممتاز.", rating: 5, date: "منذ أسبوع", likes: 21 }
-    ];
 
-    function loadGeneralAudioComments() {
-      const feed = document.getElementById('generalAudioCommentsFeed');
-      if (!feed) return;
 
-      const savedKey = `comments_audio_general_main`;
-      let comments = JSON.parse(localStorage.getItem(savedKey) || 'null');
-      if (!comments) comments = defaultGeneralAudioComments;
+    // ═══════════════════════════════════════════════════════
+    // AUDIO PAGE — COMPLETE i18n / TRILINGUAL SYSTEM (AR/FR/EN)
+    // ═══════════════════════════════════════════════════════
 
-      feed.innerHTML = comments.map(c => {
-        const initials = c.author ? c.author.charAt(0).toUpperCase() : '👤';
-        const starsHtml = '★'.repeat(c.rating || 5) + '☆'.repeat(5 - (c.rating || 5));
-        return `
-          <div class="comment-card-item">
-            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
-              <div style="display:flex;align-items:center;gap:10px;">
-                <div class="comment-avatar">${initials}</div>
-                <div>
-                  <h5 style="font-size:0.92rem;font-weight:700;color:#FFFDF8;margin:0;">${c.author}</h5>
-                  <span style="font-size:0.75rem;color:rgba(250,246,239,0.5);">${c.date}</span>
-                </div>
-              </div>
-              <div style="color:#F5D98A;font-size:0.85rem;font-weight:700;">${starsHtml}</div>
-            </div>
-            <p style="font-size:0.88rem;color:rgba(250,246,239,0.85);line-height:1.6;margin:0 0 8px;">${c.text}</p>
-            <div style="display:flex;align-items:center;gap:14px;font-size:0.78rem;color:var(--text-muted);">
-              <span style="cursor:pointer;" onclick="likeComment(this)">❤️ مفيد (${c.likes || 0})</span>
-            </div>
-          </div>
-        `;
-      }).join('');
-    }
+    const audioI18n = {
+      ar: {
+        // SEO
+        pageTitle: 'المكتبة الصوتية | حكمة ونور (HIKMA & NOUR)',
+        pageDesc: 'المكتبة الصوتية الكاملة لروايات وكتب الفلسفة والتنمية الذاتية بالعربية.',
+        // Nav
+        home: 'الرئيسية', articles: 'المقالات', thinkers: 'الفلاسفة',
+        quotes: 'الاقتباسات', audio: 'الصوتيات', about: 'عن الموقع', contactNav: 'اتصل بنا',
+        // Sidebar
+        audioCategoriesTitle: 'التصنيفات الشائعة',
+        catAll: 'الكل', catPhilosophy: 'فلسفة', catSelfDev: 'تنمية ذاتية',
+        catHistory: 'تاريخ', catPsychology: 'علم النفس', catSpirituality: 'دين وروحانيات',
+        // Library Grid
+        audioLibraryTitle: 'المكتبة الصوتية',
+        audioLibrarySubtitle: '7 كتب صوتية (الروايات الصوتية الرئيسية)',
+        sortLatest: 'الأحدث', sortPopular: 'الأكثر استماعاً',
+        searchPlaceholder: 'ابحث عن كتاب، مقال، أو مؤلف... (Ctrl+K)',
+        // Audio language badge
+        audioAvailableInArabic: '🎙️ الصوت متوفر بالعربية',
+        // Book Detail
+        backToLibrary: 'العودة إلى المكتبة',
+        shareBtn: 'مشاركة',
+        listenBtn: 'متابعة الاستماع',
+        likeBtn: 'إعجاب',
+        likedBtn: 'تم الإعجاب',
+        chaptersListTitle: 'قائمة الفصول',
+        tabChapters: 'الفصول', tabAbout: 'عن الكتاب',
+        tabQuotes: 'إقتباسات', tabComments: 'التعليقات والتقييمات',
+        chapterLabel: 'الفصل',
+        minutesLabel: 'دقيقة',
+        downloadLabel: 'تحميل',
+        widgetRecTitle: 'قد يعجبك أيضاً',
+        widgetQuoteTitle: 'اقتباس من الفصل',
+        saveQuoteBtn: 'حفظ الاقتباس',
+        chaptersCount: (n) => `${n} فصول`,
+        // Comments
+        commentNamePlaceholder: 'اسمك الكريم *',
+        commentTextPlaceholder: 'اكتب تعليقك أو انطباعك عن الصوت والقصة...',
+        commentSubmitBtn: '🚀 نشر التعليق والتقييم',
+        commentAddTitle: 'أضف تعليقك وانطباعك حول هذا العمل الصوتي',
+        ratingBasedOn: (n) => `مبني على ${n} تقييم`,
+        // Rating options
+        ratingExcellent: '★★★★★ (5/5) ممتاز جداً',
+        ratingGood: '★★★★☆ (4/5) جيد جداً',
+        ratingAvg: '★★★☆☆ (3/5) متوسط',
+        ratingFair: '★★☆☆☆ (2/5) مقبول',
+        ratingBad: '★☆☆☆☆ (1/5) سيء',
+        addRatingBtn: '✍️ أضف تقييمك وتعليقك',
+        // General comments section
+        generalCommentsTitle: 'شاركنا رأيك وتعليقك حول المكتبة الصوتية',
+        generalCommentNamePlaceholder: 'اسمك الكريم *',
+        generalCommentTextPlaceholder: 'اكتب رأيك أو تعليقك هنا...',
+        generalSubmitBtn: '🚀 نشر التعليق والتقييم',
+        commentSuccessMsg: '✓ تم نشر تعليقك وتقييمك بنجاح!',
+        commentSuccessGeneral: '✓ تم نشر تعليقك بنجاح في المكتبة الصوتية!',
+        commentRequiredAlert: 'يرجى كتابة الاسم والتعليق قبل النشر!',
+        usefulBtn: '❤️ مفيد',
+        reportBtn: '🚩 إبلاغ',
+        reportedText: 'تم الإبلاغ',
+        // Player bar
+        chapterBadgePrefix: 'الفصل',
+        // Share modal
+        shareModalTitle: '🔗 مشاركة المحتوى',
+        shareModalSubDefault: 'شارِك هذا العمل الإنساني الرائع مع أصدقائك عبر المنصات التالية',
+        copyBtn: 'نسخ',
+        copySuccessText: '✓ تم نسخ الرابط بنجاح إلى الحافظة!',
+        // Audio unavailable
+        audioUnavailable: 'الصوت غير متوفر حالياً.',
+        // Dir
+        dir: 'rtl', langName: 'العربية'
+      },
+      fr: {
+        pageTitle: 'Bibliothèque Audio | HIKMA & NOUR',
+        pageDesc: 'Bibliothèque audio de romans et de livres de philosophie et de développement personnel, en arabe.',
+        home: 'Accueil', articles: 'Articles', thinkers: 'Penseurs',
+        quotes: 'Citations', audio: 'Audio', about: 'À propos', contactNav: 'Contact',
+        audioCategoriesTitle: 'Catégories populaires',
+        catAll: 'Tous', catPhilosophy: 'Philosophie', catSelfDev: 'Développement personnel',
+        catHistory: 'Histoire', catPsychology: 'Psychologie', catSpirituality: 'Spiritualité',
+        audioLibraryTitle: 'Bibliothèque audio',
+        audioLibrarySubtitle: '7 livres audio (principaux romans audio)',
+        sortLatest: 'Les plus récents', sortPopular: 'Les plus écoutés',
+        searchPlaceholder: 'Rechercher un livre, un article ou un auteur... (Ctrl+K)',
+        audioAvailableInArabic: '🎙️ Audio disponible en arabe',
+        backToLibrary: 'Retour à la bibliothèque',
+        shareBtn: 'Partager',
+        listenBtn: 'Écouter',
+        likeBtn: 'J\'aime',
+        likedBtn: 'Aimé',
+        chaptersListTitle: 'Liste des chapitres',
+        tabChapters: 'Chapitres', tabAbout: 'À propos du livre',
+        tabQuotes: 'Citations', tabComments: 'Commentaires & Avis',
+        chapterLabel: 'Chapitre',
+        minutesLabel: 'min',
+        downloadLabel: 'Télécharger',
+        widgetRecTitle: 'Vous pourriez aimer',
+        widgetQuoteTitle: 'Citation du chapitre',
+        saveQuoteBtn: 'Sauvegarder la citation',
+        chaptersCount: (n) => `${n} chapitres`,
+        commentNamePlaceholder: 'Votre nom *',
+        commentTextPlaceholder: 'Écrivez votre commentaire ou impression sur cet audio...',
+        commentSubmitBtn: '🚀 Publier le commentaire',
+        commentAddTitle: 'Ajoutez votre commentaire sur cette œuvre audio',
+        ratingBasedOn: (n) => `Basé sur ${n} avis`,
+        ratingExcellent: '★★★★★ (5/5) Excellent',
+        ratingGood: '★★★★☆ (4/5) Très bien',
+        ratingAvg: '★★★☆☆ (3/5) Moyen',
+        ratingFair: '★★☆☆☆ (2/5) Passable',
+        ratingBad: '★☆☆☆☆ (1/5) Mauvais',
+        addRatingBtn: '✍️ Ajouter votre avis',
+        generalCommentsTitle: 'Partagez votre avis sur la bibliothèque audio',
+        generalCommentNamePlaceholder: 'Votre nom *',
+        generalCommentTextPlaceholder: 'Écrivez votre avis ou commentaire ici...',
+        generalSubmitBtn: '🚀 Publier le commentaire',
+        commentSuccessMsg: '✓ Votre commentaire a été publié avec succès !',
+        commentSuccessGeneral: '✓ Votre commentaire a été publié dans la bibliothèque audio !',
+        commentRequiredAlert: 'Veuillez saisir votre nom et votre commentaire avant de publier !',
+        usefulBtn: '❤️ Utile',
+        reportBtn: '🚩 Signaler',
+        reportedText: 'Signalé',
+        chapterBadgePrefix: 'Chapitre',
+        shareModalTitle: '🔗 Partager le contenu',
+        shareModalSubDefault: 'Partagez cette œuvre remarquable avec vos amis via les plateformes suivantes',
+        copyBtn: 'Copier',
+        copySuccessText: '✓ Lien copié dans le presse-papiers !',
+        audioUnavailable: 'Audio momentanément indisponible.',
+        dir: 'ltr', langName: 'Français'
+      },
+      en: {
+        pageTitle: 'Audio Library | HIKMA & NOUR',
+        pageDesc: 'Complete audio library of philosophy, self-development novels and books narrated in Arabic.',
+        home: 'Home', articles: 'Articles', thinkers: 'Thinkers',
+        quotes: 'Quotes', audio: 'Audio', about: 'About', contactNav: 'Contact',
+        audioCategoriesTitle: 'Popular Categories',
+        catAll: 'All', catPhilosophy: 'Philosophy', catSelfDev: 'Self-Development',
+        catHistory: 'History', catPsychology: 'Psychology', catSpirituality: 'Spirituality',
+        audioLibraryTitle: 'Audio Library',
+        audioLibrarySubtitle: '7 audiobooks (main audio novels)',
+        sortLatest: 'Latest', sortPopular: 'Most Listened',
+        searchPlaceholder: 'Search for a book, article, or author... (Ctrl+K)',
+        audioAvailableInArabic: '🎙️ Audio available in Arabic',
+        backToLibrary: 'Back to Library',
+        shareBtn: 'Share',
+        listenBtn: 'Listen',
+        likeBtn: 'Like',
+        likedBtn: 'Liked',
+        chaptersListTitle: 'Chapter List',
+        tabChapters: 'Chapters', tabAbout: 'About the Book',
+        tabQuotes: 'Quotes', tabComments: 'Comments & Reviews',
+        chapterLabel: 'Chapter',
+        minutesLabel: 'min',
+        downloadLabel: 'Download',
+        widgetRecTitle: 'You May Also Like',
+        widgetQuoteTitle: 'Quote from the Chapter',
+        saveQuoteBtn: 'Save Quote',
+        chaptersCount: (n) => `${n} chapters`,
+        commentNamePlaceholder: 'Your name *',
+        commentTextPlaceholder: 'Write your comment or impression of this audio work...',
+        commentSubmitBtn: '🚀 Post Comment',
+        commentAddTitle: 'Add your comment about this audio work',
+        ratingBasedOn: (n) => `Based on ${n} reviews`,
+        ratingExcellent: '★★★★★ (5/5) Excellent',
+        ratingGood: '★★★★☆ (4/5) Very Good',
+        ratingAvg: '★★★☆☆ (3/5) Average',
+        ratingFair: '★★☆☆☆ (2/5) Fair',
+        ratingBad: '★☆☆☆☆ (1/5) Poor',
+        addRatingBtn: '✍️ Add Your Review',
+        generalCommentsTitle: 'Share your opinion on the Audio Library',
+        generalCommentNamePlaceholder: 'Your name *',
+        generalCommentTextPlaceholder: 'Write your opinion or comment here...',
+        generalSubmitBtn: '🚀 Post Comment',
+        commentSuccessMsg: '✓ Your comment was posted successfully!',
+        commentSuccessGeneral: '✓ Your comment was posted to the Audio Library!',
+        commentRequiredAlert: 'Please enter your name and comment before posting!',
+        usefulBtn: '❤️ Helpful',
+        reportBtn: '🚩 Report',
+        reportedText: 'Reported',
+        chapterBadgePrefix: 'Chapter',
+        shareModalTitle: '🔗 Share Content',
+        shareModalSubDefault: 'Share this remarkable work with your friends via the following platforms',
+        copyBtn: 'Copy',
+        copySuccessText: '✓ Link copied to clipboard!',
+        audioUnavailable: 'Audio currently unavailable.',
+        dir: 'ltr', langName: 'English'
+      }
+    };
 
-    function submitGeneralAudioComment(e) {
-      if (e) e.preventDefault();
-      const authorInput = document.getElementById('genCommentAuthor');
-      const textInput = document.getElementById('genCommentText');
-      const ratingSelect = document.getElementById('genCommentRating');
+    let currentAudioLang = localStorage.getItem('hikma_lang') || 'ar';
+    // Expose globally for functions defined before i18n block
+    window.currentAudioLang = currentAudioLang;
+    window.audioI18n = audioI18n;
 
-      if (!authorInput || !textInput) return;
-      const authorVal = authorInput.value.trim();
-      const textVal = textInput.value.trim();
+    function applyAudioI18n(lang) {
+      currentAudioLang = lang;
+      localStorage.setItem('hikma_lang', lang);
+      const t = audioI18n[lang] || audioI18n.ar;
 
-      if (!authorVal || !textVal) {
-        alert('يرجى كتابة الاسم والتعليق قبل النشر!');
-        return;
+      // Update html dir and lang
+      const htmlRoot = document.getElementById('htmlRoot');
+      if (htmlRoot) {
+        htmlRoot.setAttribute('dir', t.dir);
+        htmlRoot.setAttribute('lang', lang);
       }
 
-      const newComment = {
-        author: authorVal,
-        text: textVal,
-        rating: parseInt(ratingSelect ? ratingSelect.value : '5', 10),
-        date: "الآن",
-        likes: 0
-      };
+      // SEO
+      const titleEl = document.getElementById('seoPageTitle');
+      if (titleEl) titleEl.textContent = t.pageTitle;
+      const descEl = document.getElementById('seoPageDesc');
+      if (descEl) descEl.setAttribute('content', t.pageDesc);
 
-      const savedKey = `comments_audio_general_main`;
-      let comments = JSON.parse(localStorage.getItem(savedKey) || 'null');
-      if (!comments) comments = defaultGeneralAudioComments;
+      // Update active lang button label
+      const langNameEl = document.getElementById('audioActiveLangName');
+      if (langNameEl) langNameEl.textContent = t.langName;
 
-      comments.unshift(newComment);
-      localStorage.setItem(savedKey, JSON.stringify(comments));
+      // Update active lang option highlight
+      document.querySelectorAll('.audio-lang-opt').forEach(btn => {
+        const isActive = btn.getAttribute('data-lang') === lang;
+        btn.style.background = isActive ? 'rgba(223,177,91,0.15)' : 'transparent';
+        btn.style.color = isActive ? 'var(--gold-light)' : 'var(--ivory)';
+        btn.style.fontWeight = isActive ? '700' : '400';
+      });
 
-      textInput.value = '';
-      loadGeneralAudioComments();
-      alert('✓ تم نشر تعليقك بنجاح في المكتبة الصوتية!');
+      // Apply all data-i18n elements
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined && typeof t[key] === 'string') {
+          el.textContent = t[key];
+        }
+      });
+
+      // Update sort select options
+      document.querySelectorAll('[data-i18n-opt]').forEach(opt => {
+        const key = opt.getAttribute('data-i18n-opt');
+        if (t[key]) opt.textContent = t[key];
+      });
+
+      // Search placeholder
+      const searchInput = document.getElementById('audioSearchInput');
+      if (searchInput) searchInput.placeholder = t.searchPlaceholder;
+
+      // Back button arrow direction
+      const backArrow = document.getElementById('backBtnArrow');
+      if (backArrow) backArrow.textContent = (t.dir === 'rtl') ? '←' : '→';
+
+      // Update "liked" state text dynamically
+      const likeTextEl = document.getElementById('audioLikeText');
+      if (likeTextEl && document.getElementById('audioLikeBtn')) {
+        const key = `like_audio_${activeBookKey}`;
+        const isLiked = localStorage.getItem(key) === 'true';
+        likeTextEl.textContent = isLiked ? t.likedBtn : t.likeBtn;
+      }
+
+      // Update chapter list heading (if visible)
+      const chapHeading = document.querySelector('#tabChapters h3[data-i18n="chaptersListTitle"]');
+      if (chapHeading) chapHeading.textContent = t.chaptersListTitle;
+
+
+
+      // Update chapter-badge prefix in player bar
+      if (document.getElementById('playerChapBadge')) {
+        const chapIdx = activeChapterIndex;
+        document.getElementById('playerChapBadge').textContent = `${t.chapterBadgePrefix} ${chapIdx + 1}`;
+      }
+
+      // Update widget recommendation title
+      const widgetRec = document.querySelector('.widget-box:last-child .widget-title');
+      if (widgetRec) widgetRec.textContent = t.widgetRecTitle;
+
+      // Re-render chapter list to get translated labels if book detail is open
+      if (document.getElementById('bookDetailView').style.display !== 'none' && activeBookKey) {
+        refreshChapterListLabels(t);
+      }
+
+      // Update sidebar "التصنيفات الشائعة" label
+      const catLabel = document.getElementById('sidebarCategoriesLabel');
+      if (catLabel) catLabel.textContent = t.audioCategoriesTitle;
+
+      // Update library subtitle if it has been customized
+      const libSubtitle = document.getElementById('audioLibrarySubtitle');
+      if (libSubtitle && !libSubtitle.dataset.customized) {
+        libSubtitle.textContent = t.audioLibrarySubtitle;
+      }
     }
 
-    document.addEventListener('DOMContentLoaded', loadGeneralAudioComments);
-    loadGeneralAudioComments();
+    function refreshChapterListLabels(t) {
+      const book = booksFullDatabase[activeBookKey];
+      if (!book) return;
+      const rows = document.querySelectorAll('.chapter-row-item');
+      rows.forEach((row, idx) => {
+        const chap = book.chapters[idx];
+        if (!chap) return;
+        const pEl = row.querySelector('.chap-text p');
+        if (pEl) pEl.textContent = `${chap.duration} ${t.minutesLabel}`;
+        const dlIcon = row.querySelector('.download-icon');
+        if (dlIcon) dlIcon.setAttribute('title', t.downloadLabel);
+      });
+    }
+
+    // Language dropdown toggle
+    function toggleAudioLangDropdown() {
+      const dd = document.getElementById('audioLangDropdown');
+      if (dd) dd.style.display = dd.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function setAudioLang(lang) {
+      applyAudioI18n(lang);
+      const dd = document.getElementById('audioLangDropdown');
+      if (dd) dd.style.display = 'none';
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      const wrap = document.getElementById('audioLangSelectorWrap');
+      if (wrap && !wrap.contains(e.target)) {
+        const dd = document.getElementById('audioLangDropdown');
+        if (dd) dd.style.display = 'none';
+      }
+    });
+
+    // Apply i18n on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      applyAudioI18n(currentAudioLang);
+    });
+    // Also apply immediately in case DOMContentLoaded already fired
+    if (document.readyState !== 'loading') {
+      applyAudioI18n(currentAudioLang);
+    }
   </script>
 
   <!-- Service Worker Registration -->
