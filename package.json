@@ -5,7 +5,8 @@
   "description": "Site officiel de Le Jardin des Pensées (@lejardindespensees)",
   "main": "index.html",
   "scripts": {
-    "dev": "npx -y http-server -p 3000 -c-1",
+    "start": "node server.js",
+    "dev": "node server.js",
     "build": "node -c data_v11.js app_v11.js articles/articles_v11.js thinkers/thinkers_v11.js quotes/quotes_v11.js quotes/calendar/calendar_v11.js"
   },
   "keywords": [
@@ -15,5 +16,12 @@
     "tiktok"
   ],
   "author": "Antigravity",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "stripe": "^22.5.0"
+  }
 }

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar" data-theme="dark" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commande Confirmée | Hikma & Nour</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      background: var(--bg-primary);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      padding: 20px;
+    }
+    .success-container {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 40px;
+      border-radius: 16px;
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .success-icon {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      color: #34D399;
+    }
+    h1 {
+      color: var(--text-primary);
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+    p {
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+    .download-section {
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: var(--accent-gold);
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: opacity 0.3s;
+    }
+    .btn:hover {
+      opacity: 0.8;
+    }
+    .btn-download {
+      background: rgba(52, 211, 153, 0.1);
+      border: 1px solid #34D399;
+      color: #34D399;
+    }
+    .loader {
+      border: 4px solid rgba(255,255,255,0.1);
+      border-top: 4px solid var(--accent-gold);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 20px;
+    }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <div class="success-container">
+    <div id="loadingState">
+      <div class="loader"></div>
+      <h2 id="loadingText" style="color:var(--text-primary);">Verification du paiement...</h2>
+    </div>
+
+    <div id="successState" style="display:none;">
+      <div class="success-icon">✓</div>
+      <h1 id="title">تم تأكيد طلبك</h1>
+      <p id="message">شكراً لك! لقد تم استلام الدفع بنجاح. يمكنك تحميل منتجاتك الآن.</p>
+      
+      <div class="download-section" id="downloadLinks">
+        <!-- JS va injecter les boutons ici -->
+      </div>
+
+      <div style="margin-top: 30px;">
+        <a href="../shop/index.html" class="btn" id="btn-back">العودة إلى المتجر</a>
+      </div>
+    </div>
+
+    <div id="errorState" style="display:none;">
+      <div class="success-icon" style="color: #ef4444;">❌</div>
+      <h1 id="errorTitle">Erreur</h1>
+      <p id="errorMessage">Impossible de vérifier le paiement. Veuillez contacter le support.</p>
+      <a href="../shop/index.html" class="btn" id="btn-back-error">Retour à la boutique</a>
+    </div>
+  </div>
+
+  <script type="module">
+    import { SHOP_PRODUCTS } from './products_data.js';
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const lang = urlParams.get('lang') || 'ar';
+    const sessionId = urlParams.get('session_id');
+
+    const T = {
+      ar: {
+        loading: "جاري التحقق من الدفع...",
+        title: "تم تأكيد طلبك",
+        msg: "شكراً لك! لقد تم استلام الدفع بنجاح. يمكنك تحميل منتجاتك أدناه.",
+        btn: "العودة إلى المتجر",
+        downloadText: "تحميل: ",
+        errorTitle: "حدث خطأ",
+        errorMsg: "تعذر التحقق من الدفع. يرجى الانتظار قليلاً وتحديث الصفحة."
+      },
+      fr: {
+        loading: "Vérification du paiement...",
+        title: "Commande confirmée",
+        msg: "Merci ! Votre paiement a été reçu avec succès. Vous pouvez télécharger vos produits ci-dessous.",
+        btn: "Retour à la boutique",
+        downloadText: "Télécharger : ",
+        errorTitle: "Erreur",
+        errorMsg: "Impossible de vérifier le paiement. Veuillez patienter et rafraîchir la page."
+      },
+      en: {
+        loading: "Verifying payment...",
+        title: "Order confirmed",
+        msg: "Thank you! Your payment was received successfully. You can download your products below.",
+        btn: "Back to shop",
+        downloadText: "Download: ",
+        errorTitle: "Error",
+        errorMsg: "Could not verify payment. Please wait a moment and refresh the page."
+      }
+    };
+
+    if (lang === 'fr' || lang === 'en') {
+      document.documentElement.lang = lang;
+      document.documentElement.dir = 'ltr';
+    }
+
+    const t = T[lang] || T.ar;
+    document.getElementById('loadingText').textContent = t.loading;
+    document.getElementById('title').textContent = t.title;
+    document.getElementById('message').textContent = t.msg;
+    document.getElementById('btn-back').textContent = t.btn;
+    document.getElementById('errorTitle').textContent = t.errorTitle;
+    document.getElementById('errorMessage').textContent = t.errorMsg;
+    document.getElementById('btn-back-error').textContent = t.btn;
+
+    async function checkPaymentStatus() {
+      if (!sessionId) {
+        showError();
+        return;
+      }
+
+      try {
+        // En prod, DOMAIN_URL serait injecté ou on utilise des chemins relatifs si même domaine
+        const response = await fetch(\`/api/order/status/\${sessionId}\`);
+        if (!response.ok) {
+          throw new Error('Order not found');
+        }
+        
+        const data = await response.json();
+        
+        if (data.status === 'paid') {
+          showSuccess(data.download_token, data.products);
+          
+          // Clear cart on success
+          localStorage.removeItem('stoic_shop_cart');
+        } else {
+          showError();
+        }
+      } catch (err) {
+        console.error(err);
+        showError();
+      }
+    }
+
+    function showSuccess(token, productIds) {
+      document.getElementById('loadingState').style.display = 'none';
+      document.getElementById('successState').style.display = 'block';
+
+      const downloadContainer = document.getElementById('downloadLinks');
+      
+      productIds.forEach(id => {
+        const prod = SHOP_PRODUCTS.find(p => p.id === id);
+        if (prod) {
+          const title = prod.title[lang] || prod.title.ar;
+          const a = document.createElement('a');
+          a.href = \`/api/download/\${token}?productId=\${id}\`;
+          a.className = 'btn btn-download';
+          a.target = '_blank';
+          a.textContent = t.downloadText + title;
+          downloadContainer.appendChild(a);
+        }
+      });
+    }
+
+    function showError() {
+      document.getElementById('loadingState').style.display = 'none';
+      document.getElementById('errorState').style.display = 'block';
+    }
+
+    // Le webhook peut prendre quelques secondes. 
+    // On fait quelques tentatives avant d'afficher une erreur.
+    let retries = 0;
+    const interval = setInterval(async () => {
+      try {
+        const response = await fetch(\`/api/order/status/\${sessionId}\`);
+        if (response.ok) {
+          const data = await response.json();
+          if (data.status === 'paid') {
+            clearInterval(interval);
+            showSuccess(data.download_token, data.products);
+            localStorage.removeItem('stoic_shop_cart');
+          }
+        }
+      } catch(e) {}
+      
+      retries++;
+      if (retries >= 5) {
+        clearInterval(interval);
+        showError();
+      }
+    }, 2000);
+
+  </script>
+</body>
+</html>

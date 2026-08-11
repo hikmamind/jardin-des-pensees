@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ar" data-theme="dark" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO — updated dynamically by product-page.js -->
+  <title id="pageTitle">فيشة المنتج | حكمة ونور</title>
+  <meta name="description" id="pageMetaDesc" content="اكتشف منتجات حكمة ونور الفلسفية.">
+  <link rel="canonical" id="pageCanonical" href="https://jardin-des-pensees.onrender.com/shop/product/">
+  <link rel="icon" type="image/png" href="../../brand_logo_official.png">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="../../style.css?v=13">
+
+  <!-- PWA -->
+  <link rel="manifest" href="../../manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="حكمة ونور">
+  <link rel="apple-touch-icon" href="../../icon-192.png">
+  <meta name="theme-color" content="#0D1410">
+
+  <style>
+    /* ── Page Background ── */
+    body {
+      background: linear-gradient(180deg, rgba(7, 10, 8, 0.92) 0%, rgba(7, 10, 8, 0.98) 100%),
+                  url('../../shop_page_hero.jpg') center/cover no-repeat fixed !important;
+    }
+
+    /* ── Product Page Layout ── */
+    .product-page-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 110px 24px 80px;
+    }
+
+    /* ── Breadcrumb ── */
+    .product-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+    .product-breadcrumb a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .product-breadcrumb a:hover { color: var(--accent-gold); }
+    .product-breadcrumb .sep { opacity: 0.4; }
+    .product-breadcrumb .current { color: var(--accent-gold); font-weight: 600; }
+
+    /* ── Main Product Grid ── */
+    .product-main-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 52px;
+      align-items: start;
+      margin-bottom: 60px;
+    }
+    @media (max-width: 768px) {
+      .product-main-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    /* ── Product Image Side ── */
+    .product-image-side {
+      position: sticky;
+      top: 100px;
+    }
+    @media (max-width: 768px) {
+      .product-image-side { position: static; }
+    }
+    .product-cover-frame {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      aspect-ratio: 4/3;
+      background: var(--card-bg);
+    }
+    .product-cover-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .product-type-badge-wrap {
+      margin-top: 16px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .product-type-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      border: 1px solid;
+    }
+    .product-type-badge.digital {
+      background: rgba(52, 211, 153, 0.08);
+      border-color: rgba(52, 211, 153, 0.4);
+      color: #34D399;
+    }
+    .product-type-badge.physical {
+      background: rgba(223, 177, 91, 0.08);
+      border-color: rgba(223, 177, 91, 0.4);
+      color: var(--accent-gold);
+    }
+
+    /* ── Product Info Side ── */
+    .product-info-side {}
+
+    .product-page-title {
+      font-family: 'Playfair Display', 'Amiri', serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.3;
+      margin: 0 0 14px;
+    }
+
+    .product-page-short-desc {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .product-price-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--accent-gold);
+      margin-bottom: 28px;
+    }
+    .product-price-tag .free-badge {
+      font-size: 0.9rem;
+      background: rgba(52, 211, 153, 0.12);
+      border: 1px solid rgba(52, 211, 153, 0.4);
+      color: #34D399;
+      padding: 4px 12px;
+      border-radius: 14px;
+      font-weight: 700;
+    }
+
+    /* ── Details Pills ── */
+    .product-meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .meta-pill {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 8px 16px;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .meta-pill strong { color: var(--text-primary); }
+
+    /* ── CTA Button ── */
+    .product-cta-area {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .btn-add-to-cart-page {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--accent-gold) 0%, #F0C775 100%);
+      color: #1A0F00;
+      font-size: 1.1rem;
+      font-weight: 900;
+      padding: 16px 36px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      box-shadow: 0 6px 20px rgba(179, 138, 60, 0.35);
+      transition: all 0.3s;
+      text-decoration: none;
+      width: 100%;
+    }
+    .btn-add-to-cart-page:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(179, 138, 60, 0.5);
+    }
+    .btn-back-to-shop {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: transparent;
+      border: 1.5px solid var(--card-border);
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 12px 24px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-family: inherit;
+      text-decoration: none;
+      transition: all 0.25s;
+      width: 100%;
+      text-align: center;
+    }
+    .btn-back-to-shop:hover {
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+    }
+    .cart-added-confirm {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #34D399;
+      padding: 10px;
+      border-radius: 12px;
+      background: rgba(52,211,153,0.08);
+      border: 1px solid rgba(52,211,153,0.3);
+    }
+
+    /* ── Section Boxes ── */
+    .product-section-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 28px;
+      backdrop-filter: blur(10px);
+    }
+    .product-section-heading {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--accent-gold);
+      margin: 0 0 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Playfair Display', 'Amiri', serif;
+    }
+    .product-long-desc {
+      font-size: 0.98rem;
+      color: var(--text-primary);
+      line-height: 2;
+      margin: 0;
+    }
+
+    /* ── Features List ── */
+    .product-features-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .product-features-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+    .product-features-list li::before {
+      content: '✓';
+      color: #34D399;
+      font-weight: 900;
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ── Details Table ── */
+    .product-details-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .product-details-table tr + tr td {
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .product-details-table td {
+      padding: 10px 0;
+      font-size: 0.9rem;
+      vertical-align: top;
+    }
+    .product-details-table td:first-child {
+      color: var(--text-secondary);
+      padding-inline-end: 20px;
+      white-space: nowrap;
+      min-width: 120px;
+    }
+    .product-details-table td:last-child {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* ── Related Products Grid ── */
+    .related-products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .related-product-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+    }
+    .related-product-card:hover {
+      border-color: var(--accent-gold);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    }
+    .related-card-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+    }
+    .related-card-body {
+      padding: 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .related-card-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin: 0 0 8px;
+      line-height: 1.4;
+    }
+    .related-card-price {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      margin-top: auto;
+    }
+
+    /* ── 404 Not Found ── */
+    .product-not-found {
+      text-align: center;
+      padding: 80px 24px;
+    }
+    .product-not-found h1 {
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+    }
+    .product-not-found p {
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+    }
+
+    /* ── Footer match shop ── */
+    .footer-sep { color: rgba(255,255,255,0.2); }
+  </style>
+</head>
+<body>
+
+  <!-- Background Orbs -->
+  <div class="glowing-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- ══ NAVBAR ══ -->
+  <header class="navbar-header">
+    <nav class="navbar" aria-label="Navigation principale">
+      <a href="../../" class="nav-brand" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <img src="../../brand_logo_official.png" alt="حكمة ونور" class="brand-logo-img">
+        <div style="display:flex;flex-direction:column;line-height:1.1;text-align:left;">
+          <span class="brand-name" style="font-size:1.15rem;font-weight:800;font-family:'Playfair Display',serif;color:var(--text-primary);">HIKMA & NOUR</span>
+          <span style="font-size:0.6rem;font-weight:600;color:var(--text-secondary);letter-spacing:0.5px;">الحكمة • الفلسفة • علم النفس</span>
+        </div>
+      </a>
+
+      <button class="nav-hamburger" id="navHamburger" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <a href="../../" class="nav-link" data-i18n="home">Accueil</a>
+        <div class="nav-dropdown-item" id="articlesDropdownContainer">
+          <a href="../../articles/" class="nav-link" data-i18n="articles">Articles</a>
+          <div class="nav-sub-menu" id="articlesSubMenu">
+            <a href="../../articles/?category=philosophy" class="sub-link" data-i18n="philosophy">Philosophie</a>
+            <a href="../../articles/?category=psychology" class="sub-link" data-i18n="psychologySub">Psychologie</a>
+            <a href="../../articles/?category=development" class="sub-link" data-i18n="development">Développement personnel</a>
+            <a href="../../articles/?category=history" class="sub-link" data-i18n="history">Histoire des idées</a>
+            <a href="../../articles/?category=all" class="sub-link see-all" data-i18n="seeAll">Voir tous →</a>
+          </div>
+        </div>
+        <a href="../../thinkers/" class="nav-link" data-i18n="thinkers">Penseurs</a>
+        <a href="../../quotes/" class="nav-link" data-i18n="quotes">Citations</a>
+        <a href="../../audio/" class="nav-link" data-i18n="audio">Audio</a>
+        <a href="../../quizzes/" class="nav-link" data-i18n="quiz">Quiz</a>
+        <a href="../" class="nav-link" style="color:var(--accent-gold);font-weight:700;" data-i18n="shopNav">Boutique</a>
+        <a href="../../bio.html" class="nav-link" data-i18n="about">À propos</a>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Language Selector -->
+        <div class="lang-selector">
+          <button class="lang-btn" id="langBtn" aria-label="تغيير اللغة">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="activeLangName">العربية</span>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-opt active" data-lang="ar">العربية</button>
+            <button class="lang-opt" data-lang="fr">Français</button>
+            <button class="lang-opt" data-lang="en">English</button>
+          </div>
+        </div>
+
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggleBtn" aria-label="Changer de thème">
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+          </svg>
+        </button>
+
+        <!-- Cart button (shared with shop) -->
+        <button class="cart-icon-wrapper" id="cartToggleBtn" aria-label="عرض السلة">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge" id="cartBadgeCount" style="display:none;">0</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ══ MAIN CONTENT — populated dynamically ══ -->
+  <div class="main-container">
+    <main>
+      <div class="product-page-wrap" id="productPageWrap">
+        <!-- JS fills this -->
+        <div style="text-align:center;padding:80px 24px;color:var(--text-secondary);">
+          <p>جاري التحميل...</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- ══ FOOTER ══ -->
+    <footer class="footer" style="padding:50px 24px 30px;border-top:1px solid var(--card-border);margin-top:60px;background:rgba(10,15,12,0.95);">
+      <div style="max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;" class="footer-grid-layout">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+            <img src="../../brand_logo_official.png" alt="Hikma & Nour" style="width:38px;height:38px;object-fit:contain;">
+            <span style="font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:800;color:var(--accent-gold);">HIKMA & NOUR</span>
+          </div>
+          <p style="color:var(--text-secondary);font-size:0.88rem;line-height:1.7;margin-bottom:14px;" data-i18n="footerBrandDesc">
+            الحكمة • الفلسفة • علم النفس
+          </p>
+        </div>
+        <div>
+          <h4 style="color:#FFFDF8;font-size:0.95rem;margin-bottom:14px;font-weight:700;border-bottom:1px solid rgba(223,177,91,0.2);padding-bottom:6px;" data-i18n="mainSitemap">🏠 الخريطة الرئيسية</h4>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;font-size:0.88rem;">
+            <li><a href="../../" style="color:var(--text-secondary);text-decoration:none;" data-i18n="footerHome">🏠 الرئيسية</a></li>
+            <li><a href="../../articles/" style="color:var(--text-secondary);text-decoration:none;" data-i18n="footerArticles">📚 المقالات</a></li>
+            <li><a href="../../thinkers/" style="color:var(--text-secondary);text-decoration:none;" data-i18n="footerThinkers">🧠 الفلاسفة</a></li>
+            <li><a href="../../quotes/" style="color:var(--text-secondary);text-decoration:none;" data-i18n="footerQuotes">💭 الاقتباسات</a></li>
+            <li><a href="../../audio/" style="color:var(--text-secondary);text-decoration:none;" data-i18n="footerAudio">🎧 الصوتيات</a></li>
+            <li><a href="../../bio.html" style="color:var(--text-secondary);text-decoration:none;" data-i18n="footerAbout">ℹ️ عن الموقع</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color:#FFFDF8;font-size:0.95rem;margin-bottom:14px;font-weight:700;border-bottom:1px solid rgba(223,177,91,0.2);padding-bottom:6px;" data-i18n="interactiveServices">✨ خدمات تفاعلية</h4>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;font-size:0.88rem;">
+            <li><a href="../../quizzes/" style="color:var(--text-secondary);text-decoration:none;" data-i18n="footerQuizzes">🧠 الاختبارات الفلسفية</a></li>
+            <li><a href="../" style="color:var(--accent-gold);text-decoration:none;font-weight:700;" data-i18n="footerShop">🛍️ متجر الحكمة</a></li>
+            <li><a href="../../calendar/" style="color:var(--text-secondary);text-decoration:none;" data-i18n="footerCalendar">📅 التقويم ٣٦٥ يوماً</a></li>
+            <li><a href="../../articles/?category=philosophy" style="color:var(--text-secondary);text-decoration:none;" data-i18n="footerPhilosophy">🏛️ الفلسفة</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color:#FFFDF8;font-size:0.95rem;margin-bottom:14px;font-weight:700;border-bottom:1px solid rgba(223,177,91,0.2);padding-bottom:6px;" data-i18n="legalInfoTitle">🔒 السياسات القانونية</h4>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;font-size:0.88rem;">
+            <li><a href="../../privacy-policy.html" style="color:var(--text-secondary);text-decoration:none;" data-i18n="footerPrivacy">🔒 سياسة الخصوصية</a></li>
+            <li><a href="../../terms-of-service.html" style="color:var(--text-secondary);text-decoration:none;" data-i18n="footerTerms">📜 شروط الاستخدام</a></li>
+            <li><a href="../../cookie-policy.html" style="color:var(--text-secondary);text-decoration:none;" data-i18n="footerCookies">🍪 سياسة الكوكيز</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top:36px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);text-align:center;">
+        <p style="color:var(--text-secondary);font-size:0.82rem;margin:0;">&copy; 2026 حكمة ونور | Le Jardin des Pensées. <span data-i18n="credits">صُنع بحكمة وصفاء. ✨🌿</span></p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Cart Drawer (shared logic with shop) -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true">
+    <div class="cart-header">
+      <h2 class="serif-title" style="margin:0;font-size:1.4rem;" data-i18n="cartTitle">سلة التسوق</h2>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Fermer">&times;</button>
+    </div>
+    <div class="cart-items-list" id="cartItemsList"></div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span data-i18n="cartTotal">المجموع الفرعي :</span>
+        <span class="cart-total-val" id="cartTotalVal">0.00 €</span>
+      </div>
+      <button class="checkout-btn" id="checkoutBtn" disabled>
+        <span data-i18n="checkoutBtn">إتمام الطلب</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Product Page JS -->
+  <script type="module" src="product-page.js"></script>
+
+  <!-- Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('../../sw.js').catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>

@@ -147,14 +147,24 @@ function updateThemeIcons(theme) {
 }
 
 // --- Products Data Setup ---
+// Slug map: matches products_data.js slugs for routing to /shop/product/?slug=...
+const PRODUCT_SLUGS = {
+  'prod_audio':          'audio-sanctuary',
+  'prod_calendar':       'philosophical-calendar',
+  'prod_7_habits':       '7-habits-potential',
+  'prod_marc_aurele_pdf':'marcus-aurelius-ebook',
+  'prod_schopenhauer':   'schopenhauer-quotes',
+  'prod_guide':          'stoic-guide'
+};
+
 function getProducts() {
   return [
-    { id: 'prod_audio', type: 'digital', price: 0.00, icon: 'book-open', image: '../audio_sanctuary_hero.jpg', titleFr: 'Studio Audio & Citadelle Intérieure', titleEn: 'Audio Studio & Inner Citadel', titleAr: 'الاستوديو الصوتي والقلعة الداخلية', descFr: 'Mixeur d\'ambiances stoïciennes (Pluie, Feu, 432Hz) et lecteur de sagesses philosophiques. Gratuit.', descEn: 'Stoic ambient soundscape mixer (Rain, Fire, 432Hz) and philosophical wisdom narrator. Free.', descAr: 'خافق الأجواء الرواقية (أصوات الأمطار، النار، 432Hz) وقارئ الحكمة الصوتي للتركيز والتأمل. مجاني.' },
-    { id: 'prod_calendar', type: 'digital', price: 0.00, icon: 'book-open', image: '../philosophical_calendar_hero.jpg', titleFr: 'Calendrier Philosophique (365 Jours)', titleEn: 'Philosophical Calendar (365 Days)', titleAr: 'التقويم الفلسفي اليومي (٣٦٥ يوماً)', descFr: '365 jours de sagesse stoïcienne et de pensées quotidiennes pour faire grandir votre esprit. Gratuit et imprimable.', descEn: '365 days of stoic wisdom and daily thoughts to elevate your mind. Free & printable.', descAr: '٣٦٥ يوماً من الحكمة والرواقية لتأمل وتطوير الذات يومياً. مجاني وقابل للطباعة PDF.' },
-    { id: 'prod_7_habits', type: 'digital', price: 0.00, icon: 'book-open', image: '../habits_library_hero.jpg', titleFr: '7 Habitudes qui Détruisent votre Potentiel', titleEn: '7 Habits That Destroy Your Potential', titleAr: '٧ عادات تدمر إمكانياتك دون أن تشعر', descFr: 'Comment dépasser vos mauvaises habitudes selon la sagesse des plus grands penseurs. Article illustré gratuit.', descEn: 'How to overcome bad habits according to the wisdom of the greatest thinkers. Free illustrated article.', descAr: 'كيف تتجاوز عاداتك السيئة وفقاً لحكمة أعظم المفكرين. مقال مجاني مصوّر بجودة عالية.' },
-    { id: 'prod_marc_aurele_pdf', type: 'digital', price: 0.00, icon: 'book-open', image: '../marc_aurelius_writing.jpg', titleFr: 'E-book Marc Aurèle (PDF)', titleEn: 'Marcus Aurelius E-book (PDF)', titleAr: 'كتاب ماركوس أوريليوس (PDF)', descFr: 'Le livre PDF complet de Marc Aurèle avec le guide stoïcien et les exercices pratiques.', descEn: 'The complete PDF book of Marcus Aurelius with the Stoic guide and practical exercises.', descAr: 'كتاب إلكتروني كامل بصيغة PDF يحتوي على دليل الرواقية الكامل والتمارين التطبيقية لماركوس أوريليوس.' },
-    { id: 'prod_schopenhauer', type: 'digital', price: 0.00, icon: 'book-open', image: '../thinkers/images/schopenhauer.jpg', titleFr: '20 Citations de Schopenhauer', titleEn: '20 Quotes of Schopenhauer', titleAr: '20 اقتباساً لآرثر شوبنهاور', descFr: 'E-book contenant 20 citations phares avec explications détaillées, leçons et questions de réflexion.', descEn: 'Ebook containing 20 key quotes with detailed explanations, lessons, and reflection questions.', descAr: 'كتاب إلكتروني يحتوي على 20 اقتباساً مختارة مع الشرح والدروس وأسئلة التأمل.' },
-    { id: 'prod_guide', type: 'digital', price: 0.00, icon: 'book-open', image: '../stoicisme-modern.jpg', titleFr: 'Guide Stoïcien Complet', titleEn: 'Complete Stoic Guide', titleAr: 'دليل الرواقية الكامل', descFr: 'Un guide de 50 pages sur l\'art de la citadelle intérieure et la maîtrise des peurs.', descEn: 'A 50-page guide on the art of the inner citadel and conquering fears.', descAr: 'دليل شامل من 50 صفحة عن فن بناء قلعة العقل والتغلب على المخاوف.' }
+    { id: 'prod_audio',          type: 'digital', price: 0.00, icon: 'book-open', image: '../audio_sanctuary_hero.jpg',         titleFr: 'Studio Audio & Citadelle Intérieure',          titleEn: 'Audio Studio & Inner Citadel',                  titleAr: 'الاستوديو الصوتي والقلعة الداخلية',       descFr: 'Mixeur d\'ambiances stoïciennes (Pluie, Feu, 432Hz) et lecteur de sagesses philosophiques. Gratuit.', descEn: 'Stoic ambient soundscape mixer (Rain, Fire, 432Hz) and philosophical wisdom narrator. Free.', descAr: 'خافق الأجواء الرواقية (أصوات الأمطار، النار، 432Hz) وقارئ الحكمة الصوتي للتركيز والتأمل. مجاني.' },
+    { id: 'prod_calendar',       type: 'digital', price: 0.00, icon: 'book-open', image: '../philosophical_calendar_hero.jpg',   titleFr: 'Calendrier Philosophique (365 Jours)',          titleEn: 'Philosophical Calendar (365 Days)',              titleAr: 'التقويم الفلسفي اليومي (٣٦٥ يوماً)',       descFr: '365 jours de sagesse stoïcienne et de pensées quotidiennes pour faire grandir votre esprit. Gratuit et imprimable.', descEn: '365 days of stoic wisdom and daily thoughts to elevate your mind. Free & printable.', descAr: '٣٦٥ يوماً من الحكمة والرواقية لتأمل وتطوير الذات يومياً. مجاني وقابل للطباعة PDF.' },
+    { id: 'prod_7_habits',       type: 'digital', price: 0.00, icon: 'book-open', image: '../habits_library_hero.jpg',           titleFr: '7 Habitudes qui Détruisent votre Potentiel',   titleEn: '7 Habits That Destroy Your Potential',         titleAr: '٧ عادات تدمر إمكانياتك دون أن تشعر',     descFr: 'Comment dépasser vos mauvaises habitudes selon la sagesse des plus grands penseurs. Article illustré gratuit.', descEn: 'How to overcome bad habits according to the wisdom of the greatest thinkers. Free illustrated article.', descAr: 'كيف تتجاوز عاداتك السيئة وفقاً لحكمة أعظم المفكرين. مقال مجاني مصوّر بجودة عالية.' },
+    { id: 'prod_marc_aurele_pdf',type: 'digital', price: 0.00, icon: 'book-open', image: '../marc_aurelius_writing.jpg',         titleFr: 'E-book Marc Aurèle (PDF)',                     titleEn: 'Marcus Aurelius E-book (PDF)',                  titleAr: 'كتاب ماركوس أوريليوس (PDF)',              descFr: 'Le livre PDF complet de Marc Aurèle avec le guide stoïcien et les exercices pratiques.', descEn: 'The complete PDF book of Marcus Aurelius with the Stoic guide and practical exercises.', descAr: 'كتاب إلكتروني كامل بصيغة PDF يحتوي على دليل الرواقية الكامل والتمارين التطبيقية لماركوس أوريليوس.' },
+    { id: 'prod_schopenhauer',   type: 'digital', price: 0.00, icon: 'book-open', image: '../thinkers/images/schopenhauer.jpg', titleFr: '20 Citations de Schopenhauer',                 titleEn: '20 Quotes of Schopenhauer',                    titleAr: '20 اقتباساً لآرثر شوبنهاور',             descFr: 'E-book contenant 20 citations phares avec explications détaillées, leçons et questions de réflexion.', descEn: 'Ebook containing 20 key quotes with detailed explanations, lessons, and reflection questions.', descAr: 'كتاب إلكتروني يحتوي على 20 اقتباساً مختارة مع الشرح والدروس وأسئلة التأمل.' },
+    { id: 'prod_guide',          type: 'digital', price: 0.00, icon: 'book-open', image: '../stoicisme-modern.jpg',              titleFr: 'Guide Stoïcien Complet',                       titleEn: 'Complete Stoic Guide',                         titleAr: 'دليل الرواقية الكامل',                    descFr: 'Un guide de 50 pages sur l\'art de la citadelle intérieure et la maîtrise des peurs.', descEn: 'A 50-page guide on the art of the inner citadel and conquering fears.', descAr: 'دليل شامل من 50 صفحة عن فن بناء قلعة العقل والتغلب على المخاوف.' }
   ];
 }
 
@@ -169,56 +179,76 @@ function populateProducts(category = 'all') {
   }
 
   const ui = TIKTOK_DATA.ui[currentLang] || TIKTOK_DATA.ui.ar;
-  const addLabel = ui.addToCart || "أضف إلى السلة";
-  const downloadLabel = ui.downloadBtn || (currentLang === 'ar' ? 'تحميل' : currentLang === 'en' ? 'Download' : 'Télécharger');
-  const freeLabel = ui.freeLabel || (currentLang === 'ar' ? 'مجاني' : currentLang === 'en' ? 'Free' : 'Gratuit');
+  const addLabel    = ui.addToCart    || (currentLang === 'ar' ? 'أضف إلى السلة' : currentLang === 'en' ? 'Add to cart'  : 'Ajouter au panier');
+  const viewLabel   = ui.viewProduct  || (currentLang === 'ar' ? 'عرض المنتج'    : currentLang === 'en' ? 'View product' : 'Voir le produit');
+  const downloadLabel = ui.downloadBtn || (currentLang === 'ar' ? 'تحميل'         : currentLang === 'en' ? 'Download'     : 'Télécharger');
+  const freeLabel   = ui.freeLabel    || (currentLang === 'ar' ? 'مجاني'         : currentLang === 'en' ? 'Free'         : 'Gratuit');
 
   container.innerHTML = products.map(prod => {
-    const title = currentLang === 'ar' ? prod.titleAr : currentLang === 'en' ? prod.titleEn : prod.titleFr;
-    const desc = currentLang === 'ar' ? prod.descAr : currentLang === 'en' ? prod.descEn : prod.descFr;
-    const priceStr = prod.price === 0 ? freeLabel : `${prod.price.toFixed(2)} €`;
-    const iconSvg = ICONS[prod.icon];
+    const title       = currentLang === 'ar' ? prod.titleAr : currentLang === 'en' ? prod.titleEn : prod.titleFr;
+    const desc        = currentLang === 'ar' ? prod.descAr  : currentLang === 'en' ? prod.descEn  : prod.descFr;
+    const priceStr    = prod.price === 0 ? freeLabel : `${prod.price.toFixed(2)} €`;
+    const iconSvg     = ICONS[prod.icon];
     const categoryLabel = ui[prod.type === 'digital' ? 'filterDigital' : 'filterPhysical'] || prod.type;
+    const productSlug = PRODUCT_SLUGS[prod.id] || prod.id;
+    const productUrl  = `product/?slug=${productSlug}`;
 
     const isDirectDownload = prod.price === 0 && prod.type === 'digital';
     const btnLabel = isDirectDownload ? downloadLabel : addLabel;
-    const btnIcon = isDirectDownload ? ICONS['book-open'] : ICONS['plus'];
+    const btnIcon  = isDirectDownload ? ICONS['book-open'] : ICONS['plus'];
     const btnClass = isDirectDownload ? 'direct-download-btn' : 'add-to-cart-btn';
 
-    // File mapping
+    // File mapping (kept for direct-download logic)
     const fileMap = {
-      'prod_audio': '../audio/index.html',
-      'prod_calendar': '../calendar/index.html',
-      'prod_7_habits': '../articles/7-habits/index.html',
-      'prod_marc_aurele_pdf': 'e-book-marc-aurele.pdf',
-      'prod_schopenhauer': '20-citations-schopenhauer.html',
-      'prod_guide': 'stoicisme-force-calme.html'
+      'prod_audio':          '../audio/index.html',
+      'prod_calendar':       '../calendar/index.html',
+      'prod_7_habits':       '../articles/7-habits/index.html',
+      'prod_marc_aurele_pdf':'e-book-marc-aurele.pdf',
+      'prod_schopenhauer':   '20-citations-schopenhauer.html',
+      'prod_guide':          'stoicisme-force-calme.html'
     };
     const fileName = fileMap[prod.id] || 'readme.txt';
 
     return `
-      <div class="product-card">
-        <div class="product-icon-container">
-          ${prod.image ? `<img src="${prod.image}" alt="${title}" class="product-image">` : iconSvg}
-          <span class="product-badge ${prod.type}">${categoryLabel}</span>
-        </div>
-        <h3 class="product-title">${title}</h3>
+      <div class="product-card" style="position:relative;">
+        <!-- Clickable overlay: image + title → product page -->
+        <a href="${productUrl}"
+           class="product-card-link"
+           aria-label="${viewLabel}: ${title}"
+           style="display:block;text-decoration:none;color:inherit;">
+          <div class="product-icon-container">
+            ${prod.image ? `<img src="${prod.image}" alt="${title}" class="product-image">` : iconSvg}
+            <span class="product-badge ${prod.type}">${categoryLabel}</span>
+          </div>
+          <h3 class="product-title" style="color:var(--text-primary);">${title}</h3>
+        </a>
         <p class="product-desc">${desc}</p>
-        <div class="product-footer-row" style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <div class="product-footer-row" style="margin-top:auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;width:100%;gap:8px;">
           <span class="product-price">${priceStr}</span>
-          <button class="product-btn ${btnClass}" data-id="${prod.id}" data-file="${fileName}">
-            ${btnIcon}
-            <span>${btnLabel}</span>
-          </button>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+            <!-- View Product button → product detail page -->
+            <a href="${productUrl}" class="product-btn view-product-btn"
+               style="background:transparent;border:1px solid var(--accent-gold);color:var(--accent-gold);padding:8px 14px;border-radius:50px;font-size:0.78rem;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:5px;white-space:nowrap;transition:all 0.2s;"
+               aria-label="${viewLabel}: ${title}">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              ${viewLabel}
+            </a>
+            <!-- Main action button (add to cart / download) -->
+            <button class="product-btn ${btnClass}" data-id="${prod.id}" data-file="${fileName}" style="white-space:nowrap;">
+              ${btnIcon}
+              <span>${btnLabel}</span>
+            </button>
+          </div>
         </div>
       </div>
     `;
   }).join('');
 
-  // Bind clicks to newly created buttons
+  // Bind clicks to newly created add-to-cart buttons
   const addBtns = container.querySelectorAll('.add-to-cart-btn');
   addBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
       const prodId = btn.getAttribute('data-id');
       addToCart(prodId);
     });
@@ -226,7 +256,8 @@ function populateProducts(category = 'all') {
 
   const downloadBtns = container.querySelectorAll('.direct-download-btn');
   downloadBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
       const fileName = btn.getAttribute('data-file');
       window.open(`../files/${fileName}`, '_blank');
     });
@@ -389,122 +420,56 @@ function updateCartUI() {
 }
 
 // --- Digital Order Checkout Simulator ---
+// --- Real Stripe Checkout ---
 function setupCheckoutSimulator() {
-  const modal = document.getElementById('checkoutModal');
-  const closeBtn = document.getElementById('checkoutModalCloseBtn');
   const checkoutBtn = document.getElementById('checkoutBtn');
-  const form = document.getElementById('checkoutForm');
-  const feedback = document.getElementById('checkoutFeedback');
-  const submitBtn = document.getElementById('checkoutSubmitBtn');
-  const cardHolderInput = document.getElementById('cardHolderInput');
-  const checkoutEmailInput = document.getElementById('checkoutEmailInput');
+  if (!checkoutBtn) return;
 
-  if (!modal || !closeBtn || !checkoutBtn || !form || !feedback || !submitBtn) return;
+  checkoutBtn.addEventListener('click', async () => {
+    // Check if cart is empty
+    if (cart.length === 0) return;
 
-  // Open checkout
-  checkoutBtn.addEventListener('click', () => {
-    closeCartDrawer();
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-    feedback.style.display = 'none';
-  });
+    // Filter paid products (free products don't go to stripe)
+    const paidItems = [];
+    const products = getProducts();
+    cart.forEach(item => {
+      const p = products.find(prod => prod.id === item.id);
+      if (p && p.price > 0) paidItems.push(item);
+    });
 
-  function closeModal() {
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-    form.reset();
-  }
-
-  closeBtn.addEventListener('click', closeModal);
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
-  });
-
-  // Handle Digital Order Confirmation
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    feedback.className = 'form-feedback';
-    feedback.style.display = 'none';
-
-    const name = cardHolderInput ? cardHolderInput.value.trim() : '';
-    const email = checkoutEmailInput ? checkoutEmailInput.value.trim() : '';
-    const ui = TIKTOK_DATA.ui[currentLang] || TIKTOK_DATA.ui.ar;
-
-    if (!name || !email || !email.includes('@')) {
-      feedback.textContent = ui.checkoutError || (currentLang === 'ar' ? 'يرجى إدخال الاسم وبريد إلكتروني صالح.' : 'Veuillez saisir votre nom et un email valide.');
-      feedback.classList.add('error');
-      feedback.style.display = 'block';
+    if (paidItems.length === 0) {
+      alert(currentLang === 'ar' ? 'السلة تحتوي على منتجات مجانية فقط.' : 'Le panier ne contient que des produits gratuits.');
       return;
     }
 
-    const products = getProducts();
-    // Check for digital items in cart before emptying it
-    const digitalItems = cart.filter(item => {
-      const prod = products.find(p => p.id === item.id);
-      return prod && prod.type === 'digital';
-    });
+    checkoutBtn.disabled = true;
+    const origText = checkoutBtn.innerHTML;
+    checkoutBtn.innerHTML = currentLang === 'ar' ? 'جاري التحويل...' : (currentLang === 'en' ? 'Redirecting...' : 'Redirection...');
 
-    const fileMap = {
-      'prod_audio': { name: '../audio/index.html', labelFr: 'Ouvrir le Studio Audio', labelAr: 'دخول الاستوديو الصوتي', labelEn: 'Open Audio Studio' },
-      'prod_calendar': { name: '../calendar/index.html', labelFr: 'Ouvrir le Calendrier Philosophique', labelAr: 'فتح التقويم الفلسفي', labelEn: 'Open Philosophical Calendar' },
-      'prod_7_habits': { name: '../articles/7-habits/index.html', labelFr: 'Lire l\'article 7 Habitudes', labelAr: 'قراءة مقال ٧ عادات', labelEn: 'Read 7 Habits Article' },
-      'prod_marc_aurele_pdf': { name: 'e-book-marc-aurele.pdf', labelFr: 'Télécharger E-book Marc Aurèle (PDF)', labelAr: 'تحميل كتاب ماركوس أوريليوس (PDF)', labelEn: 'Download Marcus Aurelius Ebook (PDF)' },
-      'prod_schopenhauer': { name: '20-citations-schopenhauer.html', labelFr: 'Lire l\'E-book Schopenhauer', labelAr: 'قراءة كتاب شوبنهاور', labelEn: 'Read Schopenhauer Ebook' },
-      'prod_guide': { name: 'stoicisme-force-calme.html', labelFr: 'Lire le Guide Stoïcien', labelAr: 'قراءة دليل الرواقية', labelEn: 'Read Stoic Guide' }
-    };
+    try {
+      const response = await fetch('/api/create-checkout-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          items: paidItems,
+          lang: currentLang
+        })
+      });
 
-    // Trigger simulation transition
-    submitBtn.disabled = true;
-    const origHtml = submitBtn.innerHTML;
-    submitBtn.textContent = ui.checkoutProcessing || (currentLang === 'ar' ? 'جاري المعالجة والتجهيز...' : 'Traitement de votre commande...');
-
-    setTimeout(() => {
-      // Success feedback animation
-      let successMsg = `<div style="font-weight: 700; font-size: 1.05rem; margin-bottom: 10px;">${ui.checkoutSuccess || 'تم تأكيد طلبك بنجاح! 🌿✨'}</div>`;
-      
-      if (digitalItems.length > 0) {
-        successMsg += `<div style="margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 15px; text-align: inherit;">`;
-        successMsg += `<p style="font-weight: bold; margin-bottom: 12px; color: var(--accent-gold);">${ui.checkoutDownloadLinksHeader || (currentLang === 'ar' ? 'روابط تحميل الكتب والمنتجات الرقمية:' : 'Liens de téléchargement :')}</p>`;
-        digitalItems.forEach(item => {
-          const map = fileMap[item.id];
-          if (map) {
-            const label = currentLang === 'ar' ? map.labelAr : currentLang === 'en' ? map.labelEn : map.labelFr;
-            successMsg += `<a href="../files/${map.name}" download target="_blank" class="btn-primary-outline" style="display: block; margin-bottom: 8px; text-align: center; font-size: 0.9rem; padding: 10px 15px; text-decoration: none; border-radius: 8px; background: rgba(52, 211, 153, 0.1); border: 1px solid var(--accent-green); color: var(--text-primary); font-weight: 600;">${label}</a>`;
-          }
-        });
-        successMsg += `</div>`;
-      }
-      
-      feedback.innerHTML = successMsg;
-      feedback.classList.add('success');
-      feedback.style.display = 'block';
-      
-      // Empty local cart
-      cart = [];
-      saveCart();
-      updateCartUI();
-
-      if (digitalItems.length === 0) {
-        setTimeout(() => {
-          closeModal();
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = origHtml;
-        }, 2500);
+      const data = await response.json();
+      if (data.url) {
+        window.location.href = data.url;
       } else {
-        submitBtn.disabled = false;
-        submitBtn.textContent = ui.closeBtn || (currentLang === 'ar' ? 'إغلاق' : 'Fermer');
-        
-        // Remove standard form submit behavior and turn button into a simple close trigger
-        const closeHandler = (evt) => {
-          evt.preventDefault();
-          closeModal();
-          submitBtn.innerHTML = origHtml;
-          submitBtn.removeEventListener('click', closeHandler);
-        };
-        submitBtn.addEventListener('click', closeHandler);
+        alert(data.error || 'Erreur lors de la création de la session');
+        checkoutBtn.disabled = false;
+        checkoutBtn.innerHTML = origText;
       }
-    }, 1500);
+    } catch (err) {
+      console.error(err);
+      alert('Erreur serveur.');
+      checkoutBtn.disabled = false;
+      checkoutBtn.innerHTML = origText;
+    }
   });
 }
 
