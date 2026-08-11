@@ -9,7 +9,9 @@ export const SHOP_PRODUCTS = [
     id: 'prod_audio',
     slug: 'audio-sanctuary',
     type: 'digital',
+    isFree: true,
     price: 0.00,
+    fileUrl: '/audio/',
     image: '../../audio_sanctuary_hero.jpg',
     imageAlt: {
       ar: 'الاستوديو الصوتي — أجواء رواقية للتأمل',
@@ -82,7 +84,9 @@ export const SHOP_PRODUCTS = [
     id: 'prod_calendar',
     slug: 'philosophical-calendar',
     type: 'digital',
+    isFree: true,
     price: 0.00,
+    fileUrl: '/calendar/',
     image: '../../philosophical_calendar_hero.jpg',
     imageAlt: {
       ar: 'التقويم الفلسفي اليومي — ٣٦٥ يوماً من الحكمة',
@@ -155,7 +159,9 @@ export const SHOP_PRODUCTS = [
     id: 'prod_7_habits',
     slug: '7-habits-potential',
     type: 'digital',
+    isFree: true,
     price: 0.00,
+    fileUrl: '/articles/7-habits/',
     image: '../../habits_library_hero.jpg',
     imageAlt: {
       ar: '٧ عادات تدمر إمكانياتك — مقال فلسفي',
@@ -228,7 +234,9 @@ export const SHOP_PRODUCTS = [
     id: 'prod_marc_aurele_pdf',
     slug: 'marcus-aurelius-ebook',
     type: 'digital',
-    price: 10.00,
+    isFree: true,
+    price: 0.00,
+    fileUrl: '/files/e-book-marc-aurele.pdf',
     image: '../../marc_aurelius_writing.jpg',
     imageAlt: {
       ar: 'ماركوس أوريليوس — دليل الرواقية PDF',
@@ -300,7 +308,9 @@ export const SHOP_PRODUCTS = [
     id: 'prod_schopenhauer',
     slug: 'schopenhauer-quotes',
     type: 'digital',
+    isFree: true,
     price: 0.00,
+    fileUrl: '/files/20-citations-schopenhauer.html',
     image: '../../schopenhauer_library_portrait.jpg',
     imageAlt: {
       ar: '20 اقتباساً لآرثر شوبنهاور — كتاب إلكتروني',
@@ -372,7 +382,9 @@ export const SHOP_PRODUCTS = [
     id: 'prod_guide',
     slug: 'stoic-guide',
     type: 'digital',
+    isFree: true,
     price: 0.00,
+    fileUrl: '/files/stoicisme-force-calme.html',
     image: '../../stoicisme-modern.jpg',
     imageAlt: {
       ar: 'دليل الرواقية الكامل — حكمة ونور',

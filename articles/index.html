@@ -6,6 +6,11 @@
   
   <!-- SEO Meta Tags -->
   <title>حكمة ونور | المقالات والدراسات الفلسفية</title>
+  <meta property="og:title" id="ogTitle" content="حكمة ونور | المقالات">
+  <meta property="og:description" id="ogDesc" content="">
+  <meta property="og:image" id="ogImage" content="">
+  <meta property="og:type" content="article">
+  <link rel="canonical" id="canonicalUrl" href="">
   <meta name="description" content="استكشف مقالات ودراسات معمقة في الفلسفة، الرواقية، علم النفس، والحكمة لتطوير الذات وبناء السلام الداخلي.">
   <link rel="canonical" href="https://jardin-des-pensees.onrender.com/articles/">
   <link rel="alternate" hreflang="ar" href="https://jardin-des-pensees.onrender.com/articles/">
@@ -372,6 +377,9 @@
   <!-- Article Reader Modal Overlay (Single Fullscreen Modal) -->
   <div class="full-screen-reader-modal" id="articleReaderModal" role="dialog" aria-modal="true" aria-labelledby="modalArticleTitle">
     <header class="reader-sticky-header">
+      <div class="reader-progress-container" style="width: 100%; height: 3px; background: rgba(255,255,255,0.05); position: absolute; bottom: 0; left: 0;">
+        <div class="reader-progress-bar" id="readingProgressBar" style="width: 0%; height: 100%; background: var(--accent-gold); transition: width 0.1s ease-out;"></div>
+      </div>
       <div class="reader-header-nav">
         <div style="display: flex; align-items: center; gap: 10px;">
           <img src="../brand_logo_official.png" alt="Hikma & Nour" style="width: 32px; height: 32px; object-fit: contain;">

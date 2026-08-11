@@ -301,10 +301,16 @@ function renderProductContent(product) {
 
         <!-- CTA -->
         <div class="product-cta-area">
-          <button class="btn-add-to-cart-page" id="addToCartBtn" aria-label="${T.addToCart}">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-            ${T.addToCart}
-          </button>
+          ${product.isFree === true
+            ? `<button class="btn-add-to-cart-page" id="downloadDirectBtn" aria-label="${lang === 'ar' ? 'تحميل مجاني' : lang === 'fr' ? 'Télécharger gratuitement' : 'Download for free'}">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                ${lang === 'ar' ? 'تحميل مجاني' : lang === 'fr' ? 'Télécharger gratuitement' : 'Download for free'}
+               </button>`
+            : `<button class="btn-add-to-cart-page" id="addToCartBtn" aria-label="${T.addToCart}">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                ${T.addToCart}
+               </button>`
+          }
           <div class="cart-added-confirm" id="cartAddedConfirm" role="status">${T.addedToCart}</div>
           <a href="../" class="btn-back-to-shop">
             ← ${T.backToShop}
@@ -363,10 +369,23 @@ function renderProductContent(product) {
     ${relatedHTML}
   `;
 
-  // Bind Add to Cart button
+  // Bind Add to Cart / Download buttons
   const addBtn = document.getElementById('addToCartBtn');
   if (addBtn) {
     addBtn.addEventListener('click', () => addToCart(product.id));
+  }
+
+  const dlBtn = document.getElementById('downloadDirectBtn');
+  if (dlBtn) {
+    dlBtn.addEventListener('click', () => {
+      window.open(product.fileUrl || '#', '_blank');
+      const confirm = document.getElementById('cartAddedConfirm');
+      if (confirm) {
+        confirm.textContent = lang === 'ar' ? 'يبدأ التنزيل... شكراً لاكتشافك حديقة الأفكار.' : lang === 'fr' ? 'Téléchargement en cours... Merci de découvrir Jardin des Pensées.' : 'Downloading... Thank you for discovering Jardin des Pensées.';
+        confirm.style.display = 'flex';
+        setTimeout(() => { confirm.style.display = 'none'; }, 4000);
+      }
+    });
   }
 }
 
