@@ -1,4 +1,6 @@
-import TIKTOK_DATA from '../data_v11.js';
+const fs = require('fs');
+
+const jsContent = `import TIKTOK_DATA from '../data_v11.js';
 
 const LANG_METADATA = {
   ar: { label: "العربية", code: "ar" },
@@ -470,7 +472,7 @@ function populateArticles(category, keyword) {
       return '<div class="article-card" style="cursor: pointer;" data-file="' + targetFile + '">' +
           '<div class="article-image-container">' +
             badgeHtml +
-            '<img src="' + imageSrc + '" alt="' + imageAlt + '" class="article-image" onerror="this.src=\'../main_home_hd_bg.jpg\';">' +
+            '<img src="' + imageSrc + '" alt="' + imageAlt + '" class="article-image" onerror="this.src=\\'../main_home_hd_bg.jpg\\';">' +
           '</div>' +
           '<div class="card-meta-row">' +
             '<span style="color: var(--accent-green); font-weight: 600; text-transform: uppercase;">' + categoryLabel + '</span>' +
@@ -541,7 +543,7 @@ function renderArticle404(slug) {
   const t = ARTICLES_PAGE_TRANSLATIONS[currentLang] || ARTICLES_PAGE_TRANSLATIONS['ar'];
 
   root.innerHTML = '<div style="text-align: center; padding: 90px 20px; max-width: 600px; margin: 0 auto;">' +
-      '<span style="font-size: 4rem; display: block; margin-bottom: 10px; color: var(--accent-gold); opacity: 0.6; font-family: \'Playfair Display\', serif;">404</span>' +
+      '<span style="font-size: 4rem; display: block; margin-bottom: 10px; color: var(--accent-gold); opacity: 0.6; font-family: \\'Playfair Display\\', serif;">404</span>' +
       '<h2 style="font-size: 2rem; color: #FFFDF8; font-weight: 800; margin-bottom: 16px;">' + t.notFoundTitle + '</h2>' +
       '<p style="font-size: 1.1rem; color: #D1C5B4; line-height: 1.8; margin-bottom: 35px;">' + t.notFoundDesc + '</p>' +
       '<button onclick="closeArticleReader()" style="background: #DFB15B; color: #070A08; font-weight: 800; font-size: 1rem; border: none; padding: 14px 34px; border-radius: 30px; cursor: pointer; transition: transform 0.2s; box-shadow: 0 8px 25px rgba(223, 177, 91, 0.4);">' +
@@ -648,12 +650,12 @@ function openArticleReader(slugOrFile) {
 
   // Breadcrumbs
   const truncatedTitle = article.title.length > 40 ? article.title.slice(0, 40) + '...' : article.title;
-  contentHtml += '<nav class="reader-breadcrumbs" aria-label="Fil d\'Ariane">' +
+  contentHtml += '<nav class="reader-breadcrumbs" aria-label="Fil d\\'Ariane">' +
       '<a href="../" class="crumb-link">' + t.homeCrumb + '</a>' +
       '<span class="crumb-sep">›</span>' +
       '<span class="crumb-link" onclick="closeArticleReader()">' + t.articlesCrumb + '</span>' +
       '<span class="crumb-sep">›</span>' +
-      '<span class="crumb-link" onclick="closeArticleReader(); handleCategoryChange(\'' + article.category + '\')">' + categoryName + '</span>' +
+      '<span class="crumb-link" onclick="closeArticleReader(); handleCategoryChange(\\'' + article.category + '\\')">' + categoryName + '</span>' +
       '<span class="crumb-sep">›</span>' +
       '<span class="crumb-current">' + truncatedTitle + '</span>' +
     '</nav>';
@@ -687,35 +689,35 @@ function openArticleReader(slugOrFile) {
           '<span class="magazine-meta-item">⏱️ ' + article.readTime + '</span>' +
         '</div>' +
         '<div class="magazine-actions-group">' +
-          '<button type="button" class="btn-mag-action' + saveActive + '" id="btnMagSave" onclick="window.handleMagazineSave(\'' + article.id + '\')" aria-label="' + saveLabel + '">' +
+          '<button type="button" class="btn-mag-action' + saveActive + '" id="btnMagSave" onclick="window.handleMagazineSave(\\'' + article.id + '\\')" aria-label="' + saveLabel + '">' +
             '<span>' + saveIcon + '</span>' +
             '<span id="txtMagSave">' + saveLabel + '</span>' +
           '</button>' +
-          '<button type="button" class="btn-mag-action' + likeActive + '" id="btnMagLike" onclick="window.handleMagazineLike(\'' + article.id + '\')" aria-label="' + likeLabel + '">' +
+          '<button type="button" class="btn-mag-action' + likeActive + '" id="btnMagLike" onclick="window.handleMagazineLike(\\'' + article.id + '\\')" aria-label="' + likeLabel + '">' +
             '<span>' + likeIcon + '</span>' +
             '<span id="txtMagLike">' + likeLabel + '</span>' +
           '</button>' +
-          '<button type="button" class="btn-mag-action" onclick="window.handleMagazineShare(\'copy\')" title="' + t.shareArticle + '">' +
+          '<button type="button" class="btn-mag-action" onclick="window.handleMagazineShare(\\'copy\\')" title="' + t.shareArticle + '">' +
             '<span>↗</span>' +
             '<span>' + t.shareArticle + '</span>' +
           '</button>' +
         '</div>' +
       '</div>' +
       '<div class="magazine-cover-wrapper">' +
-        '<img src="' + imgSrc + '" alt="' + imgAlt + '" loading="eager" onerror="this.src=\'../main_home_hd_bg.jpg\';">' +
+        '<img src="' + imgSrc + '" alt="' + imgAlt + '" loading="eager" onerror="this.src=\\'../main_home_hd_bg.jpg\\';">' +
       '</div>' +
     '</header>';
 
   // Mobile Collapsible TOC
   if (tocEntries.length > 0) {
     contentHtml += '<div class="magazine-mobile-toc" id="magMobileToc">' +
-        '<div class="magazine-mobile-toc-header" onclick="document.getElementById(\'magMobileToc\').classList.toggle(\'open\')">' +
+        '<div class="magazine-mobile-toc-header" onclick="document.getElementById(\\'magMobileToc\\').classList.toggle(\\'open\\')">' +
           '<span>' + t.mobileTocTitle + '</span>' +
           '<span>▾</span>' +
         '</div>' +
         '<div class="magazine-mobile-toc-content">' +
           '<ul class="magazine-toc-list">' +
-            tocEntries.map(e => '<li><a href="#' + e.id + '" onclick="event.preventDefault(); document.getElementById(\'' + e.id + '\')?.scrollIntoView({behavior:\'smooth\', block:\'start\'}); document.getElementById(\'magMobileToc\').classList.remove(\'open\');">' + e.title + '</a></li>').join('') +
+            tocEntries.map(e => '<li><a href="#' + e.id + '" onclick="event.preventDefault(); document.getElementById(\\'' + e.id + '\\')?.scrollIntoView({behavior:\\'smooth\\', block:\\'start\\'}); document.getElementById(\\'magMobileToc\\').classList.remove(\\'open\\');">' + e.title + '</a></li>').join('') +
           '</ul>' +
         '</div>' +
       '</div>';
@@ -736,13 +738,13 @@ function openArticleReader(slugOrFile) {
             t.tocTitle +
           '</h4>' +
           '<ul class="magazine-toc-list" id="magTocDesktop">' +
-            tocEntries.map((e, idx) => '<li class="' + (idx === 0 ? 'active' : '') + '"><a href="#' + e.id + '" onclick="event.preventDefault(); document.getElementById(\'' + e.id + '\')?.scrollIntoView({behavior:\'smooth\', block:\'start\'});">' + e.title + '</a></li>').join('') +
+            tocEntries.map((e, idx) => '<li class="' + (idx === 0 ? 'active' : '') + '"><a href="#' + e.id + '" onclick="event.preventDefault(); document.getElementById(\\'' + e.id + '\\')?.scrollIntoView({behavior:\\'smooth\\', block:\\'start\\'});">' + e.title + '</a></li>').join('') +
           '</ul>' +
         '</div>'
       ) : '') +
       '<div class="magazine-sidebar-card" style="text-align: center;">' +
         '<span class="magazine-quote-icon">❝</span>' +
-        '<p style="font-size: 1.05rem; font-style: italic; color: #FFFDF8; line-height: 1.6; font-family: \'Noto Naskh Arabic\', \'Playfair Display\', serif; margin: 0 0 10px;">' +
+        '<p style="font-size: 1.05rem; font-style: italic; color: #FFFDF8; line-height: 1.6; font-family: \\'Noto Naskh Arabic\\', \\'Playfair Display\\', serif; margin: 0 0 10px;">' +
           sidebarQuote +
         '</p>' +
         '<span style="font-size: 0.8rem; font-weight: 800; color: #DFB15B; text-transform: uppercase;">' +
@@ -879,7 +881,7 @@ function openArticleReader(slugOrFile) {
   contentHtml += '<div class="magazine-cta-card">' +
       '<h3>' + t.ctaTitle + '</h3>' +
       '<p>' + t.ctaDesc + '</p>' +
-      '<button type="button" class="magazine-cta-btn" onclick="closeArticleReader(); setTimeout(() => { document.getElementById(\'globalSearchBtn\')?.click(); }, 150);">' +
+      '<button type="button" class="magazine-cta-btn" onclick="closeArticleReader(); setTimeout(() => { document.getElementById(\\'globalSearchBtn\\')?.click(); }, 150);">' +
         t.ctaBtn +
       '</button>' +
     '</div>';
@@ -889,20 +891,20 @@ function openArticleReader(slugOrFile) {
       '<div class="magazine-rating-row">' +
         '<span style="font-weight: 700; font-size: 1.05rem; color: #FFFDF8;">' + t.ratePrompt + '</span>' +
         '<div class="star-rating-mag" id="magStarRating">' +
-          '<span onclick="window.handleMagazineRate(\'' + article.id + '\', 1)">★</span>' +
-          '<span onclick="window.handleMagazineRate(\'' + article.id + '\', 2)">★</span>' +
-          '<span onclick="window.handleMagazineRate(\'' + article.id + '\', 3)">★</span>' +
-          '<span onclick="window.handleMagazineRate(\'' + article.id + '\', 4)">★</span>' +
-          '<span onclick="window.handleMagazineRate(\'' + article.id + '\', 5)">★</span>' +
+          '<span onclick="window.handleMagazineRate(\\'' + article.id + '\\', 1)">★</span>' +
+          '<span onclick="window.handleMagazineRate(\\'' + article.id + '\\', 2)">★</span>' +
+          '<span onclick="window.handleMagazineRate(\\'' + article.id + '\\', 3)">★</span>' +
+          '<span onclick="window.handleMagazineRate(\\'' + article.id + '\\', 4)">★</span>' +
+          '<span onclick="window.handleMagazineRate(\\'' + article.id + '\\', 5)">★</span>' +
         '</div>' +
       '</div>' +
       '<div class="magazine-share-row">' +
         '<span style="font-weight: 600; font-size: 0.92rem; color: #998D7D;">' + t.shareArticle + ' :</span>' +
         '<div class="magazine-share-buttons">' +
-          '<button type="button" class="share-btn-pill whatsapp" onclick="window.handleMagazineShare(\'whatsapp\')">WhatsApp</button>' +
-          '<button type="button" class="share-btn-pill twitter" onclick="window.handleMagazineShare(\'twitter\')">X / Twitter</button>' +
-          '<button type="button" class="share-btn-pill facebook" onclick="window.handleMagazineShare(\'facebook\')">Facebook</button>' +
-          '<button type="button" class="share-btn-pill copy" onclick="window.handleMagazineShare(\'copy\')">📋 ' + (currentLang === 'ar' ? 'نسخ الرابط' : currentLang === 'fr' ? 'Copier le lien' : 'Copy link') + '</button>' +
+          '<button type="button" class="share-btn-pill whatsapp" onclick="window.handleMagazineShare(\\'whatsapp\\')">WhatsApp</button>' +
+          '<button type="button" class="share-btn-pill twitter" onclick="window.handleMagazineShare(\\'twitter\\')">X / Twitter</button>' +
+          '<button type="button" class="share-btn-pill facebook" onclick="window.handleMagazineShare(\\'facebook\\')">Facebook</button>' +
+          '<button type="button" class="share-btn-pill copy" onclick="window.handleMagazineShare(\\'copy\\')">📋 ' + (currentLang === 'ar' ? 'نسخ الرابط' : currentLang === 'fr' ? 'Copier le lien' : 'Copy link') + '</button>' +
         '</div>' +
       '</div>' +
     '</div>';
@@ -925,7 +927,7 @@ function openArticleReader(slugOrFile) {
           '<p style="color: #D1C5B4; margin: 0; font-size: 0.98rem; line-height: 1.65;">' + c.text + '</p>' +
         '</div>').join('') +
       '</div>' +
-      '<form id="magCommentForm" onsubmit="window.handleMagazineCommentSubmit(event, \'' + article.id + '\')" style="background: rgba(22, 31, 25, 0.85); border: 1.5px solid rgba(223, 177, 91, 0.2); padding: 22px; border-radius: 18px;">' +
+      '<form id="magCommentForm" onsubmit="window.handleMagazineCommentSubmit(event, \\'' + article.id + '\\')" style="background: rgba(22, 31, 25, 0.85); border: 1.5px solid rgba(223, 177, 91, 0.2); padding: 22px; border-radius: 18px;">' +
         '<textarea id="magCommentInput" placeholder="' + t.commentPlaceholder + '" required style="width: 100%; min-height: 95px; padding: 14px; border-radius: 12px; border: 1px solid rgba(223, 177, 91, 0.2); background: rgba(0,0,0,0.3); color: #fff; font-family: inherit; font-size: 0.98rem; box-sizing: border-box; resize: vertical; margin-bottom: 12px; outline: none;"></textarea>' +
         '<button type="submit" style="background: #DFB15B; color: #070A08; font-weight: 800; border: none; padding: 11px 26px; border-radius: 30px; cursor: pointer; transition: all 0.2s;">' + t.postCommentBtn + '</button>' +
       '</form>' +
@@ -944,8 +946,8 @@ function openArticleReader(slugOrFile) {
             const rImg = r.image ? (r.image.startsWith('../') ? r.image : '../' + r.image) : '../main_home_hd_bg.jpg';
             const rCat = r.categoryName || (TIKTOK_DATA.ui[currentLang] && TIKTOK_DATA.ui[currentLang][r.category]) || r.category;
             const rTarget = r.file || r.id;
-            return '<div class="magazine-related-card" onclick="openArticleReader(\'' + rTarget + '\')">' +
-                '<img src="' + rImg + '" alt="' + r.title + '" loading="lazy" onerror="this.src=\'../main_home_hd_bg.jpg\';">' +
+            return '<div class="magazine-related-card" onclick="openArticleReader(\\'' + rTarget + '\\')">' +
+                '<img src="' + rImg + '" alt="' + r.title + '" loading="lazy" onerror="this.src=\\'../main_home_hd_bg.jpg\\';">' +
                 '<div class="magazine-related-card-body">' +
                   '<span class="magazine-related-card-category">' + rCat + '</span>' +
                   '<h4 class="magazine-related-card-title">' + r.title + '</h4>' +
@@ -1278,3 +1280,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbarScroll();
   initPageLogic();
 });
+`;
+
+fs.writeFileSync('articles/articles_v11.js', jsContent);
+console.log('Fixed and wrote articles/articles_v11.js without regex bugs');
