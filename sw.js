@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hikma-nour-v1';
+const CACHE_NAME = 'hikma-nour-v5';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',

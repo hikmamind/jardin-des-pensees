@@ -979,13 +979,22 @@ function initQuotesApp() {
     }
   });
 
+  // Popstate Listener for browser Back/Forward navigation
+  window.addEventListener('popstate', () => {
+    const params = new URLSearchParams(window.location.search);
+    const param = params.get('quote');
+    if (param !== null && param.trim() !== '') {
+      window.openQuoteModal(param);
+    } else {
+      window.closeQuoteModal();
+    }
+  });
+
   // Check URL parameter on initial load (?quote=0, ?quote=epictetus-things-and-judgments, etc.)
   const urlParams = new URLSearchParams(window.location.search);
   const quoteParam = urlParams.get('quote');
   if (quoteParam !== null && quoteParam.trim() !== '') {
-    setTimeout(() => {
-      window.openQuoteModal(quoteParam);
-    }, 100);
+    window.openQuoteModal(quoteParam);
   }
 }
 
