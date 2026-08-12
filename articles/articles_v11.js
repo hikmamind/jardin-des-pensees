@@ -325,10 +325,97 @@ function setupArticleModalListeners() {
   });
 }
 
+
 function showArticleNotFound() {
   const modal = document.getElementById('articleReaderModal');
   if (!modal) return;
   const bodyEl = document.getElementById('modalArticleBody');
+  if (bodyEl) {
+    const t = ARTICLES_PAGE_TRANSLATIONS[currentLang] || ARTICLES_PAGE_TRANSLATIONS['ar'];
+    bodyEl.innerHTML = `
+      <div class="article-not-found" style="text-align: center; padding: 60px 20px;">
+        <h2 style="font-size: 2rem; color: var(--accent-gold); margin-bottom: 20px;">404</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 30px;">${t.noResults || "Article introuvable"}</p>
+        <button onclick="closeArticleReader()" style="background: var(--accent-gold); color: #060606; font-weight: 700; border: none; padding: 12px 24px; border-radius: 30px; cursor: pointer;">
+          ← ${currentLang === 'ar' ? 'العودة للمقالات' : (currentLang === 'fr' ? 'Retour aux articles' : 'Back to articles')}
+        </button>
+      </div>
+    `;
+    const hero = document.querySelector('.reader-hero-section');
+    if (hero) hero.style.display = 'none';
+    const sidebar = document.querySelector('.reader-sidebar');
+    if (sidebar) sidebar.style.display = 'none';
+    const breadcrumbs = document.querySelector('.reader-breadcrumbs');
+    if (breadcrumbs) breadcrumbs.style.display = 'none';
+  }
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function openArticleReader(file) {
+  activeArticleFile = file;
+  const articles = (TIKTOK_DATA.content[currentLang] && TIKTOK_DATA.content[currentLang].articles) || [];
+  const article = articles.find(a => a.file === file) || articles[0];
+  if (!article) return;
+
+  const modal = document.getElementById('articleReaderModal');
+  if (!modal) return;
+
+  // 1. Breadcrumbs & Badges
+  const catBadge = document.getElementById('modalArticleCategoryBadge');
+  const catBreadcrumb = document.getElementById('modalArticleCategoryBreadcrumb');
+  const titleBreadcrumb = document.getElementById('modalArticleTitleBreadcrumb');
+  const titleEl = document.getElementById('modalArticleTitle');
+  const descEl = document.getElementById('modalArticleDesc');
+  const dateEl = document.getElementById('modalArticleDate');
+  const timeEl = document.getElementById('modalArticleReadTime');
+  const coverImg = document.getElementById('modalArticleImage');
+  const quoteEl = document.getElementById('modalSidebarQuote');
+  const quoteAuthorEl = document.getElementById('modalSidebarQuoteAuthor');
+  const bodyEl = document.getElementById('modalArticleBody');
+  const tocList = document.querySelector('.toc-list');
+
+  const categoryName = article.categoryName || (TIKTOK_DATA.ui[currentLang] && TIKTOK_DATA.ui[currentLang][article.category]) || article.category;
+
+  if (catBadge) catBadge.textContent = categoryName;
+  if (catBreadcrumb) catBreadcrumb.textContent = categoryName;
+  if (titleBreadcrumb) titleBreadcrumb.textContent = article.title;
+  if (titleEl) titleEl.textContent = article.title;
+  if (descEl) descEl.textContent = article.desc;
+  if (dateEl) dateEl.textContent = article.date || "2026";
+  if (timeEl) timeEl.textContent = article.readTime;
+
+  // 2. Cover Image with real src and localized alt (never 'Cover')
+  if (coverImg) {
+    const imgSrc = article.image ? (article.image.startsWith('../') ? article.image : `../${article.image}`) : '../main_home_hd_bg.jpg';
+    coverImg.src = imgSrc;
+    coverImg.alt = article.imageAlt || article.title;
+    coverImg.onerror = function() {
+      this.src = '../main_home_hd_bg.jpg';
+      this.alt = article.title;
+    };
+  }
+
+  // 3. Sidebar Quote
+  if (quoteEl) quoteEl.textContent = article.quote || (TIKTOK_DATA.ui[currentLang] && TIKTOK_DATA.ui[currentLang].featuredQuote) || "الحكمة في الهدوء الداخلي.";
+  if (quoteAuthorEl) quoteAuthorEl.textContent = article.quoteAuthor || "— Hikma & Nour";
+
+  // 4. Table of Contents
+  if (tocList) {
+    const tocItems = article.toc && Array.isArray(article.toc) ? article.toc : [
+      currentLang === 'ar' ? "المقدمة" : currentLang === 'fr' ? "Introduction" : "Introduction",
+      currentLang === 'ar' ? "الأفكار الرئيسية" : currentLang === 'fr' ? "Points clés" : "Key Takeaways",
+      currentLang === 'ar' ? "الخاتمة والتطبيق" : currentLang === 'fr' ? "Conclusion" : "Conclusion"
+    ];
+
+    tocList.innerHTML = tocItems.map((item, idx) => `
+      <li class="${idx === 0 ? 'active' : ''}">
+        <a href="#sec-${idx}" onclick="event.preventDefault(); document.getElementById('sec-${idx}')?.scrollIntoView({behavior:'smooth'});">${item}</a>
+      </li>
+    `).join('');
+  }
+
+  // 5. Body Paragraphs & Sections
   if (bodyEl) {
     const t = ARTICLES_PAGE_TRANSLATIONS[currentLang] || ARTICLES_PAGE_TRANSLATIONS['ar'];
     
@@ -358,10 +445,9 @@ function showArticleNotFound() {
       "author": { "@type": "Organization", "name": "Hikma & Nour" }
     });
 
-    // Content Generation
     let contentHtml = `<div class="article-content-flow" style="font-family: inherit; font-size: 1.15rem; line-height: 2;">`;
 
-    // "En bref" / Summary block
+    // Summary block
     contentHtml += `
       <div class="article-summary-card" style="background: rgba(22, 31, 25, 0.85); border: 1.5px solid rgba(223, 177, 91, 0.3); border-right: 4px solid var(--accent-gold); padding: 25px 30px; border-radius: 16px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.25);">
         <strong style="color: var(--accent-gold-bright); font-size: 1.1rem; display: flex; align-items: center; gap: 8px;">
@@ -372,19 +458,14 @@ function showArticleNotFound() {
       </div>
     `;
 
-    // Process article.body which is an array of sections or paragraphs
     const paragraphs = (article.body && Array.isArray(article.body)) ? article.body : [article.desc];
-    
-    // We will render sections. If paragraphs is just strings, we treat them as sections.
     let sectionIdx = 1;
+    
     paragraphs.forEach((p, idx) => {
-      // If it's a string, just wrap in p
       let pHtml = `<p style="margin-bottom: 24px; color: var(--text-sub);">${p}</p>`;
-      
-      // If the content is an object with title and content
       if (typeof p === 'object') {
         pHtml = `
-          <h2 id="sec-${idx}" style="font-size: 1.7rem; font-weight: 800; color: var(--accent-gold-bright); margin: 50px 0 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(223, 177, 91, 0.2); font-family: 'Noto Naskh Arabic', serif;">
+          <h2 id="sec-${idx}" class="observer-section" style="font-size: 1.7rem; font-weight: 800; color: var(--accent-gold-bright); margin: 50px 0 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(223, 177, 91, 0.2); font-family: 'Noto Naskh Arabic', serif;">
             <span style="color: var(--accent-gold); opacity: 0.5; margin-inline-end: 10px; font-size: 1.4rem;">0${sectionIdx++}</span> ${p.title}
           </h2>
         `;
@@ -394,14 +475,8 @@ function showArticleNotFound() {
           });
         }
       }
+      contentHtml += `<div id="sec-block-${idx}" class="article-reading-section observer-section">${pHtml}</div>`;
       
-      contentHtml += `
-        <div id="sec-block-${idx}" class="article-reading-section observer-section">
-          ${pHtml}
-        </div>
-      `;
-      
-      // Insert Quote after 2nd section as an example if it exists
       if (idx === 1 && article.quote) {
         contentHtml += `
           <div class="quote-box" style="position: relative; padding: 30px 40px; background: rgba(22, 31, 25, 0.85); border-right: 4px solid var(--accent-gold); border-radius: 16px; margin: 45px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.25);">
@@ -413,7 +488,6 @@ function showArticleNotFound() {
       }
     });
 
-    // Conclusion & "À retenir"
     if (article.inBrief) {
       contentHtml += `
         <div style="margin: 50px 0; padding: 30px; background: rgba(223, 177, 91, 0.05); border: 1px solid rgba(223, 177, 91, 0.2); border-radius: 20px;">
@@ -421,12 +495,7 @@ function showArticleNotFound() {
             ✦ ${currentLang === 'ar' ? 'ما يجب أن تتذكره' : (currentLang === 'fr' ? 'À retenir' : 'Key Takeaways')}
           </h3>
           <ul style="list-style: none; padding: 0; margin: 0;">
-            ${article.inBrief.map(item => `
-              <li style="margin-bottom: 14px; display: flex; gap: 12px; color: var(--text-main); align-items: flex-start;">
-                <span style="color: var(--accent-gold); font-size: 1.2rem; line-height: 1.2;">•</span>
-                <span style="line-height: 1.6;">${item}</span>
-              </li>
-            `).join('')}
+            ${article.inBrief.map(item => `<li style="margin-bottom: 14px; display: flex; gap: 12px; color: var(--text-main); align-items: flex-start;"><span style="color: var(--accent-gold); font-size: 1.2rem; line-height: 1.2;">•</span><span style="line-height: 1.6;">${item}</span></li>`).join('')}
           </ul>
         </div>
       `;
@@ -441,32 +510,24 @@ function showArticleNotFound() {
       `;
     }
 
-    // CTA Final
+    // CTA
     contentHtml += `
       <div style="text-align: center; margin: 60px 0; padding: 40px 20px; background: rgba(22, 31, 25, 0.85); border-radius: 24px; border: 1px solid rgba(223, 177, 91, 0.2);">
-        <h3 style="font-size: 1.4rem; color: var(--text-main); margin-bottom: 16px;">
-          ${currentLang === 'ar' ? 'هل أعجبك هذا المقال؟' : (currentLang === 'fr' ? 'Vous avez aimé cet article ?' : 'Enjoyed this article?')}
-        </h3>
-        <p style="color: var(--text-muted); margin-bottom: 24px; font-size: 0.95rem;">
-          ${currentLang === 'ar' ? 'اكتشف المزيد من الأفكار حول علم النفس، الفلسفة وتطوير الذات.' : (currentLang === 'fr' ? 'Découvrez d\'autres réflexions sur la psychologie et la philosophie.' : 'Discover more ideas about psychology and philosophy.')}
-        </p>
+        <h3 style="font-size: 1.4rem; color: var(--text-main); margin-bottom: 16px;">${currentLang === 'ar' ? 'هل أعجبك هذا المقال؟' : (currentLang === 'fr' ? 'Vous avez aimé cet article ?' : 'Enjoyed this article?')}</h3>
+        <p style="color: var(--text-muted); margin-bottom: 24px; font-size: 0.95rem;">${currentLang === 'ar' ? 'اكتشف المزيد من الأفكار حول علم النفس، الفلسفة وتطوير الذات.' : (currentLang === 'fr' ? 'Découvrez d\'autres réflexions sur la psychologie et la philosophie.' : 'Discover more ideas about psychology and philosophy.')}</p>
         <button onclick="closeArticleReader(); setTimeout(() => document.getElementById('globalSearchBtn').click(), 100);" style="background: var(--accent-gold); color: #060606; font-weight: 800; border: none; padding: 14px 30px; border-radius: 30px; cursor: pointer; transition: transform 0.2s; font-size: 1.05rem;">
           ${currentLang === 'ar' ? 'اكتشف المزيد من المقالات ←' : (currentLang === 'fr' ? 'Découvrir les articles →' : 'Explore more articles →')}
         </button>
       </div>
     `;
 
-    // Rating & Share
+    // Social/Comments
     contentHtml += `
       <div class="article-interactive-hub" style="margin-top: 40px; padding: 25px; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 18px;">
         <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.08);">
           <span style="font-weight: 700; font-size: 1rem; color: var(--text-primary);">${t.ratePrompt}</span>
           <div class="star-rating-widget" style="display: flex; gap: 6px; font-size: 1.5rem; color: var(--accent-gold); cursor: pointer;">
-            <span onclick="window.rateArticle(1)">★</span>
-            <span onclick="window.rateArticle(2)">★</span>
-            <span onclick="window.rateArticle(3)">★</span>
-            <span onclick="window.rateArticle(4)">★</span>
-            <span onclick="window.rateArticle(5)">★</span>
+            <span onclick="window.rateArticle(1)">★</span><span onclick="window.rateArticle(2)">★</span><span onclick="window.rateArticle(3)">★</span><span onclick="window.rateArticle(4)">★</span><span onclick="window.rateArticle(5)">★</span>
           </div>
         </div>
         <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-top: 20px;">
@@ -487,7 +548,6 @@ function showArticleNotFound() {
       </div>
     `;
 
-    // Comments Section
     const commentsList = (article.comments && Array.isArray(article.comments)) ? article.comments : [];
     contentHtml += `
       <section class="article-comments-section" style="margin-top: 45px;">
@@ -495,36 +555,26 @@ function showArticleNotFound() {
           <span>💬</span> ${t.commentsHeader} (${commentsList.length})
         </h3>
         <div id="commentsListContainer" style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 30px;">
-          ${commentsList.map(c => `
-            <div class="comment-item" style="background: rgba(255,255,255,0.02); border: 1px solid var(--card-border); padding: 16px 20px; border-radius: 14px;">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                <span style="font-weight: 700; color: var(--accent-gold); font-size: 0.95rem;">${c.author}</span>
-                <span style="font-size: 0.8rem; color: var(--text-secondary);">${c.time}</span>
-              </div>
-              <p style="color: var(--text-primary); margin: 0; font-size: 0.95rem; line-height: 1.6;">${c.text}</p>
-            </div>
-          `).join('')}
+          ${commentsList.map(c => `<div class="comment-item" style="background: rgba(255,255,255,0.02); border: 1px solid var(--card-border); padding: 16px 20px; border-radius: 14px;"><div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;"><span style="font-weight: 700; color: var(--accent-gold); font-size: 0.95rem;">${c.author}</span><span style="font-size: 0.8rem; color: var(--text-secondary);">${c.time}</span></div><p style="color: var(--text-primary); margin: 0; font-size: 0.95rem; line-height: 1.6;">${c.text}</p></div>`).join('')}
         </div>
         <form id="articleCommentForm" onsubmit="window.submitComment(event)" style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 20px; border-radius: 16px;">
           <textarea id="commentTextInput" placeholder="${t.commentPlaceholder}" required style="width: 100%; min-height: 90px; padding: 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.12); background: rgba(0,0,0,0.2); color: #fff; font-family: inherit; font-size: 0.95rem; box-sizing: border-box; resize: vertical; margin-bottom: 12px;"></textarea>
-          <button type="submit" style="background: var(--accent-gold); color: #060606; font-weight: 700; border: none; padding: 10px 22px; border-radius: 10px; cursor: pointer; transition: transform 0.2s;">${t.postCommentBtn}</button>
+          <button type="submit" style="background: var(--accent-gold); color: #060606; font-weight: 700; border: none; padding: 10px 22px; border-radius: 10px; cursor: pointer;">${t.postCommentBtn}</button>
         </form>
       </section>
     `;
 
-    // Related Articles
-    let relatedHtml = '';
     const allArts = TIKTOK_DATA.content[currentLang].articles;
     const related = allArts.filter(a => a.id !== article.id && a.category === article.category).slice(0, 3);
     if (related.length > 0) {
-      relatedHtml = `
+      contentHtml += `
         <div class="related-articles" style="margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.08);">
           <h3 style="font-size: 1.5rem; color: var(--accent-gold-bright); margin-bottom: 24px; font-weight: 800;">
             ${currentLang === 'ar' ? 'اقرأ أيضاً' : (currentLang === 'fr' ? 'Articles similaires' : 'Related articles')}
           </h3>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
             ${related.map(r => `
-              <div onclick="openArticleReader('${r.id}')" style="cursor: pointer; background: rgba(22, 31, 25, 0.85); border: 1px solid rgba(223, 177, 91, 0.15); border-radius: 16px; overflow: hidden; transition: transform 0.3s;">
+              <div onclick="openArticleReader('${r.id}')" style="cursor: pointer; background: rgba(22, 31, 25, 0.85); border: 1px solid rgba(223, 177, 91, 0.15); border-radius: 16px; overflow: hidden;">
                 <img src="${r.image ? (r.image.startsWith('../') ? r.image : '../' + r.image) : '../main_home_hd_bg.jpg'}" style="width: 100%; height: 140px; object-fit: cover;">
                 <div style="padding: 16px;">
                   <div style="color: var(--accent-gold); font-size: 0.75rem; font-weight: 700; margin-bottom: 6px;">${r.categoryName || r.category}</div>
@@ -538,14 +588,11 @@ function showArticleNotFound() {
       `;
     }
     
-    contentHtml += relatedHtml;
     contentHtml += `</div>`;
     bodyEl.innerHTML = contentHtml;
-    
-    // Dynamic TOC builder and Intersection Observer
     buildDynamicTOC(paragraphs);
   }
-  // Update browser URL query param
+// Update browser URL query param
   const url = new URL(window.location.href);
   url.searchParams.set('article', file);
   window.history.pushState({}, '', url);
@@ -776,59 +823,44 @@ document.addEventListener('DOMContentLoaded', () => {
   initPageLogic();
 });
 
-// --- Premium Reading Experience Helpers ---
 function buildDynamicTOC(paragraphs) {
   const tocList = document.querySelector('.toc-list');
   if (!tocList) return;
-  
   let tocHtml = '';
   let tocIdx = 0;
-  
   paragraphs.forEach((p, idx) => {
     if (typeof p === 'object') {
-      tocHtml += `<li class="${tocIdx === 0 ? 'active' : ''}">
-        <a href="#sec-${idx}" onclick="event.preventDefault(); document.getElementById('sec-${idx}')?.scrollIntoView({behavior:'smooth', block: 'start'});" style="transition: color 0.2s;">${p.title}</a>
-      </li>`;
+      tocHtml += `<li class="${tocIdx === 0 ? 'active' : ''}"><a href="#sec-${idx}" onclick="event.preventDefault(); document.getElementById('sec-${idx}')?.scrollIntoView({behavior:'smooth', block: 'start'});" style="transition: color 0.2s;">${p.title}</a></li>`;
       tocIdx++;
     }
   });
-  
   if (tocHtml !== '') {
     tocHtml += `<li><a href="#sec-conclusion" onclick="event.preventDefault(); document.getElementById('sec-conclusion')?.scrollIntoView({behavior:'smooth', block: 'start'});" style="transition: color 0.2s;">${currentLang === 'ar' ? 'الخلاصة' : (currentLang === 'fr' ? 'Conclusion' : 'Conclusion')}</a></li>`;
     tocList.innerHTML = tocHtml;
   }
-  
-  // Set up Intersection Observer for active TOC item
   setupScrollSpy();
 }
 
 function setupScrollSpy() {
   const sections = document.querySelectorAll('.observer-section');
   const navItems = document.querySelectorAll('.toc-list li');
-  
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         navItems.forEach(li => li.classList.remove('active'));
         const id = entry.target.id;
         const activeLink = document.querySelector(`.toc-list a[href="#${id}"]`);
-        if (activeLink) {
-          activeLink.parentElement.classList.add('active');
-        }
+        if (activeLink) activeLink.parentElement.classList.add('active');
       }
     });
   }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
-
   sections.forEach(sec => observer.observe(sec));
   
-  // Progress Bar
   const scrollContainer = document.querySelector('.reader-scroll-container');
   const progressBar = document.getElementById('readingProgressBar');
   if (scrollContainer && progressBar) {
     scrollContainer.addEventListener('scroll', () => {
-      const scrollTop = scrollContainer.scrollTop;
-      const scrollHeight = scrollContainer.scrollHeight - scrollContainer.clientHeight;
-      const progress = (scrollTop / scrollHeight) * 100;
+      const progress = (scrollContainer.scrollTop / (scrollContainer.scrollHeight - scrollContainer.clientHeight)) * 100;
       progressBar.style.width = progress + '%';
     });
   }
