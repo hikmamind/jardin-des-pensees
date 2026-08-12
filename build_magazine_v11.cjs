@@ -1,4 +1,6 @@
-import TIKTOK_DATA from '../data_v11.js';
+const fs = require('fs');
+
+const jsContent = `import TIKTOK_DATA from '../data_v11.js';
 
 const LANG_METADATA = {
   ar: { label: "العربية", code: "ar" },
@@ -235,7 +237,7 @@ function getArticleRating(id) {
 function setArticleRating(id, rating) {
   localStorage.setItem('hikma_rating_' + id, rating);
   const t = ARTICLES_PAGE_TRANSLATIONS[currentLang] || ARTICLES_PAGE_TRANSLATIONS['ar'];
-  showToast(`${t.rateThanks} ${rating}/5 ★`);
+  showToast(\`\${t.rateThanks} \${rating}/5 ★\`);
 }
 
 function getArticleCustomComments(id) {
@@ -259,13 +261,13 @@ function findArticleBySlugOrFile(slugOrFile, lang) {
   const articles = (TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].articles) || [];
   
   const clean = slugOrFile.toString().trim().toLowerCase()
-    .replace(/^(./|../|articles/)+/, '')
-    .replace(/.html$/, '');
+    .replace(/^(\.\/|\.\.\/|articles\/)+/, '')
+    .replace(/\.html$/, '');
 
   // 1. Direct match in active language
   let found = articles.find(a => {
     const aId = (a.id || '').toLowerCase().trim();
-    const aFile = (a.file || '').toLowerCase().trim().replace(/.html$/, '');
+    const aFile = (a.file || '').toLowerCase().trim().replace(/\.html$/, '');
     return aId === clean || aFile === clean || a.file === slugOrFile;
   });
 
@@ -277,7 +279,7 @@ function findArticleBySlugOrFile(slugOrFile, lang) {
     const list = (TIKTOK_DATA.content[l] && TIKTOK_DATA.content[l].articles) || [];
     const match = list.find(a => {
       const aId = (a.id || '').toLowerCase().trim();
-      const aFile = (a.file || '').toLowerCase().trim().replace(/.html$/, '');
+      const aFile = (a.file || '').toLowerCase().trim().replace(/\.html$/, '');
       return aId === clean || aFile === clean || a.file === slugOrFile;
     });
     if (match) {
@@ -387,10 +389,10 @@ function populateNavbarDropdown() {
   const seeAllLabel = (TIKTOK_DATA.ui[currentLang] && TIKTOK_DATA.ui[currentLang].seeAllThinkers) || "Tous les philosophes →";
   
   let html = thinkers.map(t => {
-    return `<a href="../thinkers/?thinker=${t.id}" class="sub-link" data-thinker="${t.id}">${t.name}</a>`;
+    return \`<a href="../thinkers/?thinker=\${t.id}" class="sub-link" data-thinker="\${t.id}">\${t.name}</a>\`;
   }).join('');
   
-  html += `<a href="../thinkers/?thinker=all" class="sub-link see-all" data-thinker="all">${seeAllLabel}</a>`;
+  html += \`<a href="../thinkers/?thinker=all" class="sub-link see-all" data-thinker="all">\${seeAllLabel}</a>\`;
   subMenu.innerHTML = html;
 }
 
@@ -446,39 +448,39 @@ function populateArticles(category = 'all', keyword = '') {
     if (noResultsEl) noResultsEl.style.display = 'none';
 
     container.innerHTML = articles.map((art) => {
-      const badgeHtml = art.featured ? `<span class="card-featured-badge">${featuredLabel}</span>` : "";
+      const badgeHtml = art.featured ? \`<span class="card-featured-badge">\${featuredLabel}</span>\` : "";
       const categoryLabel = art.categoryName || (TIKTOK_DATA.ui[currentLang] && TIKTOK_DATA.ui[currentLang][art.category]) || art.category;
       
-      const imageSrc = art.image ? (art.image.startsWith('../') ? art.image : `../${art.image}`) : '../main_home_hd_bg.jpg';
+      const imageSrc = art.image ? (art.image.startsWith('../') ? art.image : \`../\${art.image}\`) : '../main_home_hd_bg.jpg';
       const imageAlt = art.imageAlt || art.title;
 
-      return `
-        <div class="article-card" style="cursor: pointer;" data-file="${art.file || art.id}">
+      return \`
+        <div class="article-card" style="cursor: pointer;" data-file="\${art.file || art.id}">
           <div class="article-image-container">
-            ${badgeHtml}
-            <img src="${imageSrc}" alt="${imageAlt}" class="article-image" onerror="this.src='../main_home_hd_bg.jpg';">
+            \${badgeHtml}
+            <img src="\${imageSrc}" alt="\${imageAlt}" class="article-image" onerror="this.src='../main_home_hd_bg.jpg';">
           </div>
           <div class="card-meta-row">
-            <span style="color: var(--accent-green); font-weight: 600; text-transform: uppercase;">${categoryLabel}</span>
+            <span style="color: var(--accent-green); font-weight: 600; text-transform: uppercase;">\${categoryLabel}</span>
             <span class="card-meta-dot">•</span>
             <span style="display: inline-flex; align-items: center; gap: 4px;">
               <svg class="card-meta-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              ${art.readTime}
+              \${art.readTime}
             </span>
           </div>
-          <h3 class="article-title" style="margin-top: 10px;">${art.title}</h3>
-          <p class="article-desc">${art.desc}</p>
+          <h3 class="article-title" style="margin-top: 10px;">\${art.title}</h3>
+          <p class="article-desc">\${art.desc}</p>
           <div class="article-actions" style="margin-top: auto; padding-top: 15px; display: flex; gap: 15px; align-items: center;">
             <button class="card-action-link" type="button" style="background:none; border:none; padding:0; cursor:pointer; color: var(--accent-gold); font-weight:700; display:inline-flex; align-items:center; gap:6px;">
-              <span>${readLabel}</span>
+              <span>\${readLabel}</span>
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="${currentLang === 'ar' ? '19' : '5'}" y1="12" x2="${currentLang === 'ar' ? '5' : '19'}" y2="12"></line>
-                <polyline points="${currentLang === 'ar' ? '12 19 5 12 12 5' : '12 5 19 12 12 19'}"></polyline>
+                <line x1="\${currentLang === 'ar' ? '19' : '5'}" y1="12" x2="\${currentLang === 'ar' ? '5' : '19'}" y2="12"></line>
+                <polyline points="\${currentLang === 'ar' ? '12 19 5 12 12 5' : '12 5 19 12 12 19'}"></polyline>
               </svg>
             </button>
           </div>
         </div>
-      `;
+      \`;
     }).join('');
 
     setupArticleModalListeners();
@@ -527,16 +529,16 @@ function renderArticle404(slug) {
 
   const t = ARTICLES_PAGE_TRANSLATIONS[currentLang] || ARTICLES_PAGE_TRANSLATIONS['ar'];
 
-  root.innerHTML = `
+  root.innerHTML = \`
     <div style="text-align: center; padding: 90px 20px; max-width: 600px; margin: 0 auto;">
       <span style="font-size: 4rem; display: block; margin-bottom: 10px; color: var(--accent-gold); opacity: 0.6; font-family: 'Playfair Display', serif;">404</span>
-      <h2 style="font-size: 2rem; color: #FFFDF8; font-weight: 800; margin-bottom: 16px;">${t.notFoundTitle}</h2>
-      <p style="font-size: 1.1rem; color: #D1C5B4; line-height: 1.8; margin-bottom: 35px;">${t.notFoundDesc}</p>
+      <h2 style="font-size: 2rem; color: #FFFDF8; font-weight: 800; margin-bottom: 16px;">\${t.notFoundTitle}</h2>
+      <p style="font-size: 1.1rem; color: #D1C5B4; line-height: 1.8; margin-bottom: 35px;">\${t.notFoundDesc}</p>
       <button onclick="closeArticleReader()" style="background: #DFB15B; color: #070A08; font-weight: 800; font-size: 1rem; border: none; padding: 14px 34px; border-radius: 30px; cursor: pointer; transition: transform 0.2s; box-shadow: 0 8px 25px rgba(223, 177, 91, 0.4);">
-        ${t.backToArticles}
+        \${t.backToArticles}
       </button>
     </div>
-  `;
+  \`;
 
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
@@ -556,14 +558,14 @@ function openArticleReader(slugOrFile) {
   activeArticleFile = article.file || article.id;
   const t = ARTICLES_PAGE_TRANSLATIONS[currentLang] || ARTICLES_PAGE_TRANSLATIONS['ar'];
   const categoryName = article.categoryName || (TIKTOK_DATA.ui[currentLang] && TIKTOK_DATA.ui[currentLang][article.category]) || article.category;
-  const imgSrc = article.image ? (article.image.startsWith('../') ? article.image : `../${article.image}`) : '../main_home_hd_bg.jpg';
+  const imgSrc = article.image ? (article.image.startsWith('../') ? article.image : \`../\${article.image}\`) : '../main_home_hd_bg.jpg';
   const imgAlt = article.imageAlt || article.title;
   const isSaved = isArticleSaved(article.id);
   const isLiked = isArticleLiked(article.id);
   const userRating = getArticleRating(article.id);
 
   // 1. Dynamic SEO updates
-  document.title = `${article.title} | Hikma & Nour`;
+  document.title = \`\${article.title} | Hikma & Nour\`;
   const ogTitle = document.getElementById('ogTitle');
   if (ogTitle) ogTitle.content = article.title;
   const ogDesc = document.getElementById('ogDesc');
@@ -571,7 +573,7 @@ function openArticleReader(slugOrFile) {
   const ogImage = document.getElementById('ogImage');
   if (ogImage) ogImage.content = imgSrc;
   const canonical = document.getElementById('canonicalUrl');
-  if (canonical) canonical.href = `https://jardin-des-pensees.onrender.com/articles/?article=${article.file || article.id}`;
+  if (canonical) canonical.href = \`https://jardin-des-pensees.onrender.com/articles/?article=\${article.file || article.id}\`;
 
   // 2. Structured JSON-LD
   let ldJson = document.getElementById('articleJsonLd');
@@ -603,7 +605,7 @@ function openArticleReader(slugOrFile) {
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://jardin-des-pensees.onrender.com/articles/?article=${article.file || article.id}`
+      "@id": \`https://jardin-des-pensees.onrender.com/articles/?article=\${article.file || article.id}\`
     }
   });
 
@@ -612,15 +614,15 @@ function openArticleReader(slugOrFile) {
   if (article.sections && Array.isArray(article.sections)) {
     article.sections.forEach((sec, idx) => {
       if (sec.title && sec.type !== 'insight' && sec.type !== 'practical') {
-        tocEntries.push({ id: `sec-${idx}`, title: sec.title });
+        tocEntries.push({ id: \`sec-\${idx}\`, title: sec.title });
       } else if (sec.type === 'practical' && sec.title) {
-        tocEntries.push({ id: `sec-practical`, title: sec.title });
+        tocEntries.push({ id: \`sec-practical\`, title: sec.title });
       }
     });
   } else if (article.body && Array.isArray(article.body)) {
     article.body.forEach((item, idx) => {
       if (typeof item === 'object' && item.title) {
-        tocEntries.push({ id: `sec-${idx}`, title: item.title });
+        tocEntries.push({ id: \`sec-\${idx}\`, title: item.title });
       }
     });
   }
@@ -636,337 +638,337 @@ function openArticleReader(slugOrFile) {
   let contentHtml = '';
 
   // Breadcrumbs
-  contentHtml += `
+  contentHtml += \`
     <nav class="reader-breadcrumbs" aria-label="Fil d'Ariane">
-      <a href="../" class="crumb-link">${t.homeCrumb}</a>
+      <a href="../" class="crumb-link">\${t.homeCrumb}</a>
       <span class="crumb-sep">›</span>
-      <span class="crumb-link" onclick="closeArticleReader()">${t.articlesCrumb}</span>
+      <span class="crumb-link" onclick="closeArticleReader()">\${t.articlesCrumb}</span>
       <span class="crumb-sep">›</span>
-      <span class="crumb-link" onclick="closeArticleReader(); handleCategoryChange('${article.category}')">${categoryName}</span>
+      <span class="crumb-link" onclick="closeArticleReader(); handleCategoryChange('\${article.category}')">\${categoryName}</span>
       <span class="crumb-sep">›</span>
-      <span class="crumb-current">${article.title.length > 40 ? article.title.slice(0, 40) + '...' : article.title}</span>
+      <span class="crumb-current">\${article.title.length > 40 ? article.title.slice(0, 40) + '...' : article.title}</span>
     </nav>
-  `;
+  \`;
 
   // Magazine Hero
-  contentHtml += `
+  contentHtml += \`
     <header class="magazine-hero">
       <div class="magazine-hero-top">
-        <span class="magazine-category-badge">${categoryName}</span>
+        <span class="magazine-category-badge">\${categoryName}</span>
       </div>
-      <h1 class="magazine-hero-title">${article.title}</h1>
-      ${article.chapo ? `<p class="magazine-hero-chapo">${article.chapo}</p>` : `<p class="magazine-hero-chapo">${article.desc}</p>`}
+      <h1 class="magazine-hero-title">\${article.title}</h1>
+      \${article.chapo ? \`<p class="magazine-hero-chapo">\${article.chapo}</p>\` : \`<p class="magazine-hero-chapo">\${article.desc}</p>\`}
       
       <div class="magazine-meta-bar">
         <div class="magazine-meta-left">
           <div class="magazine-meta-author">
             <img src="../brand_logo_official.png" alt="Hikma & Nour">
-            <span>${article.author || 'Hikma & Nour | حكمة ونور'}</span>
+            <span>\${article.author || 'Hikma & Nour | حكمة ونور'}</span>
           </div>
           <span class="meta-divider">•</span>
-          <span class="magazine-meta-item">📅 ${article.date || '20 Mai 2026'}</span>
+          <span class="magazine-meta-item">📅 \${article.date || '20 Mai 2026'}</span>
           <span class="meta-divider">•</span>
-          <span class="magazine-meta-item">⏱️ ${article.readTime}</span>
+          <span class="magazine-meta-item">⏱️ \${article.readTime}</span>
         </div>
 
         <div class="magazine-actions-group">
-          <button type="button" class="btn-mag-action ${isSaved ? 'active' : ''}" id="btnMagSave" onclick="window.handleMagazineSave('${article.id}')" aria-label="${isSaved ? t.savedBtnLabel : t.saveBtnLabel}">
-            <span>${isSaved ? '♥' : '♡'}</span>
-            <span id="txtMagSave">${isSaved ? t.savedBtnLabel : t.saveBtnLabel}</span>
+          <button type="button" class="btn-mag-action \${isSaved ? 'active' : ''}" id="btnMagSave" onclick="window.handleMagazineSave('\${article.id}')" aria-label="\${isSaved ? t.savedBtnLabel : t.saveBtnLabel}">
+            <span>\${isSaved ? '♥' : '♡'}</span>
+            <span id="txtMagSave">\${isSaved ? t.savedBtnLabel : t.saveBtnLabel}</span>
           </button>
           
-          <button type="button" class="btn-mag-action ${isLiked ? 'active' : ''}" id="btnMagLike" onclick="window.handleMagazineLike('${article.id}')" aria-label="${isLiked ? t.likedBtnLabel : t.likeBtnLabel}">
-            <span>${isLiked ? '❤️' : '🤍'}</span>
-            <span id="txtMagLike">${isLiked ? t.likedBtnLabel : t.likeBtnLabel}</span>
+          <button type="button" class="btn-mag-action \${isLiked ? 'active' : ''}" id="btnMagLike" onclick="window.handleMagazineLike('\${article.id}')" aria-label="\${isLiked ? t.likedBtnLabel : t.likeBtnLabel}">
+            <span>\${isLiked ? '❤️' : '🤍'}</span>
+            <span id="txtMagLike">\${isLiked ? t.likedBtnLabel : t.likeBtnLabel}</span>
           </button>
 
-          <button type="button" class="btn-mag-action" onclick="window.handleMagazineShare('copy')" title="${t.shareArticle}">
+          <button type="button" class="btn-mag-action" onclick="window.handleMagazineShare('copy')" title="\${t.shareArticle}">
             <span>↗</span>
-            <span>${t.shareArticle}</span>
+            <span>\${t.shareArticle}</span>
           </button>
         </div>
       </div>
 
       <div class="magazine-cover-wrapper">
-        <img src="${imgSrc}" alt="${imgAlt}" loading="eager" onerror="this.src='../main_home_hd_bg.jpg';">
+        <img src="\${imgSrc}" alt="\${imgAlt}" loading="eager" onerror="this.src='../main_home_hd_bg.jpg';">
       </div>
     </header>
-  `;
+  \`;
 
   // Mobile Collapsible TOC
   if (tocEntries.length > 0) {
-    contentHtml += `
+    contentHtml += \`
       <div class="magazine-mobile-toc" id="magMobileToc">
         <div class="magazine-mobile-toc-header" onclick="document.getElementById('magMobileToc').classList.toggle('open')">
-          <span>${t.mobileTocTitle}</span>
+          <span>\${t.mobileTocTitle}</span>
           <span>▾</span>
         </div>
         <div class="magazine-mobile-toc-content">
           <ul class="magazine-toc-list">
-            ${tocEntries.map(e => `
+            \${tocEntries.map(e => \`
               <li>
-                <a href="#${e.id}" onclick="event.preventDefault(); document.getElementById('${e.id}')?.scrollIntoView({behavior:'smooth', block:'start'}); document.getElementById('magMobileToc').classList.remove('open');">${e.title}</a>
+                <a href="#\${e.id}" onclick="event.preventDefault(); document.getElementById('\${e.id}')?.scrollIntoView({behavior:'smooth', block:'start'}); document.getElementById('magMobileToc').classList.remove('open');">\${e.title}</a>
               </li>
-            `).join('')}
+            \`).join('')}
           </ul>
         </div>
       </div>
-    `;
+    \`;
   }
 
   // Split Grid Container
-  contentHtml += `<div class="magazine-split-grid">`;
+  contentHtml += \`<div class="magazine-split-grid">\`;
 
   // Left Sticky Sidebar
-  contentHtml += `
+  contentHtml += \`
     <aside class="magazine-sidebar">
-      ${tocEntries.length > 0 ? `
+      \${tocEntries.length > 0 ? \`
         <div class="magazine-sidebar-card">
           <h4 class="magazine-sidebar-title">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
-            ${t.tocTitle}
+            \${t.tocTitle}
           </h4>
           <ul class="magazine-toc-list" id="magTocDesktop">
-            ${tocEntries.map((e, idx) => `
-              <li class="${idx === 0 ? 'active' : ''}">
-                <a href="#${e.id}" onclick="event.preventDefault(); document.getElementById('${e.id}')?.scrollIntoView({behavior:'smooth', block:'start'});">${e.title}</a>
+            \${tocEntries.map((e, idx) => \`
+              <li class="\${idx === 0 ? 'active' : ''}">
+                <a href="#\${e.id}" onclick="event.preventDefault(); document.getElementById('\${e.id}')?.scrollIntoView({behavior:'smooth', block:'start'});">\${e.title}</a>
               </li>
-            `).join('')}
+            \`).join('')}
           </ul>
         </div>
-      ` : ''}
+      \` : ''}
 
       <div class="magazine-sidebar-card" style="text-align: center;">
         <span class="magazine-quote-icon">❝</span>
         <p style="font-size: 1.05rem; font-style: italic; color: #FFFDF8; line-height: 1.6; font-family: 'Noto Naskh Arabic', 'Playfair Display', serif; margin: 0 0 10px;">
-          ${article.quote || (TIKTOK_DATA.ui[currentLang] && TIKTOK_DATA.ui[currentLang].featuredQuote) || "الحكمة في الهدوء الداخلي."}
+          \${article.quote || (TIKTOK_DATA.ui[currentLang] && TIKTOK_DATA.ui[currentLang].featuredQuote) || "الحكمة في الهدوء الداخلي."}
         </p>
         <span style="font-size: 0.8rem; font-weight: 800; color: #DFB15B; text-transform: uppercase;">
-          ${article.quoteAuthor || "— Hikma & Nour"}
+          \${article.quoteAuthor || "— Hikma & Nour"}
         </span>
       </div>
 
       <div class="magazine-sidebar-card" style="text-align: center;">
-        <h4 class="magazine-sidebar-title" style="justify-content: center; border: none; padding-bottom: 0;">${t.newsletterTitle}</h4>
-        <p style="font-size: 0.85rem; color: #998D7D; line-height: 1.5; margin-bottom: 14px;">${t.newsletterDesc}</p>
+        <h4 class="magazine-sidebar-title" style="justify-content: center; border: none; padding-bottom: 0;">\${t.newsletterTitle}</h4>
+        <p style="font-size: 0.85rem; color: #998D7D; line-height: 1.5; margin-bottom: 14px;">\${t.newsletterDesc}</p>
         <form onsubmit="event.preventDefault(); window.handleNewsletterSubscribe(event);" style="display: flex; flex-direction: column; gap: 10px;">
           <input type="email" placeholder="email@example.com" required style="padding: 10px 14px; border-radius: 8px; border: 1px solid rgba(223, 177, 91, 0.25); background: rgba(0,0,0,0.3); color: #fff; text-align: center; outline: none; font-size: 0.88rem;">
-          <button type="submit" style="background: #DFB15B; color: #070A08; font-weight: 800; border: none; padding: 10px; border-radius: 8px; cursor: pointer; font-size: 0.88rem;">${t.newsletterBtn}</button>
+          <button type="submit" style="background: #DFB15B; color: #070A08; font-weight: 800; border: none; padding: 10px; border-radius: 8px; cursor: pointer; font-size: 0.88rem;">\${t.newsletterBtn}</button>
         </form>
       </div>
     </aside>
-  `;
+  \`;
 
   // Right Main Reading Stream
-  contentHtml += `<article class="magazine-reading-stream">`;
+  contentHtml += \`<article class="magazine-reading-stream">\`;
 
   // Summary / "À retenir" Box
   if (article.summaryBox) {
-    contentHtml += `
+    contentHtml += \`
       <div class="magazine-summary-card">
         <div class="magazine-summary-title">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-          ${article.summaryBox.title || t.takeawaysTitle}
+          \${article.summaryBox.title || t.takeawaysTitle}
         </div>
-        <p class="magazine-summary-text">${article.summaryBox.summary}</p>
-        ${article.summaryBox.question ? `<p class="magazine-summary-question">💭 ${article.summaryBox.question}</p>` : ''}
+        <p class="magazine-summary-text">\${article.summaryBox.summary}</p>
+        \${article.summaryBox.question ? \`<p class="magazine-summary-question">💭 \${article.summaryBox.question}</p>\` : ''}
       </div>
-    `;
+    \`;
   }
 
   // Render Structured Sections or Body
   if (article.sections && Array.isArray(article.sections)) {
     article.sections.forEach((sec, idx) => {
       if (sec.type === 'insight') {
-        contentHtml += `
+        contentHtml += \`
           <div class="magazine-insight-card">
-            <span class="magazine-insight-badge">${sec.badge || '🧠 Idée Clé'}</span>
-            <h3 class="magazine-insight-title">${sec.title}</h3>
-            <p class="magazine-insight-text">${sec.text}</p>
+            <span class="magazine-insight-badge">\${sec.badge || '🧠 Idée Clé'}</span>
+            <h3 class="magazine-insight-title">\${sec.title}</h3>
+            <p class="magazine-insight-text">\${sec.text}</p>
           </div>
-        `;
+        \`;
       } else if (sec.type === 'practical') {
-        contentHtml += `
+        contentHtml += \`
           <div class="magazine-practical-card" id="sec-practical">
-            <h3 class="magazine-practical-title">🎯 ${sec.title}</h3>
-            ${sec.desc ? `<p class="magazine-practical-desc">${sec.desc}</p>` : ''}
+            <h3 class="magazine-practical-title">🎯 \${sec.title}</h3>
+            \${sec.desc ? \`<p class="magazine-practical-desc">\${sec.desc}</p>\` : ''}
             <div class="practical-tips-list">
-              ${sec.tips.map(tip => `
+              \${sec.tips.map(tip => \`
                 <div class="practical-tip-item">
-                  <div class="practical-tip-num">${tip.num}</div>
+                  <div class="practical-tip-num">\${tip.num}</div>
                   <div class="practical-tip-body">
-                    <h4>${tip.title}</h4>
-                    <p>${tip.text}</p>
+                    <h4>\${tip.title}</h4>
+                    <p>\${tip.text}</p>
                   </div>
                 </div>
-              `).join('')}
+              \`).join('')}
             </div>
           </div>
-        `;
+        \`;
       } else {
-        contentHtml += `
-          <div class="magazine-section-block" id="sec-${idx}">
+        contentHtml += \`
+          <div class="magazine-section-block" id="sec-\${idx}">
             <div class="magazine-section-header">
-              <span class="magazine-section-num">${sec.num || ('0' + (idx + 1))}</span>
-              <h2 class="magazine-section-title">${sec.title}</h2>
+              <span class="magazine-section-num">\${sec.num || ('0' + (idx + 1))}</span>
+              <h2 class="magazine-section-title">\${sec.title}</h2>
             </div>
             <div class="magazine-section-body">
-              ${sec.content.map(p => `<p>${p}</p>`).join('')}
+              \${sec.content.map(p => \`<p>\${p}</p>\`).join('')}
             </div>
           </div>
-        `;
+        \`;
       }
 
       // Mid-article Quote placement
       if (idx === 1 && article.quote) {
-        contentHtml += `
+        contentHtml += \`
           <div class="magazine-quote-box">
             <span class="magazine-quote-icon">❝</span>
-            <p class="magazine-quote-text">« ${article.quote} »</p>
-            <span class="magazine-quote-author">${article.quoteAuthor || '— Hikma & Nour'}</span>
+            <p class="magazine-quote-text">« \${article.quote} »</p>
+            <span class="magazine-quote-author">\${article.quoteAuthor || '— Hikma & Nour'}</span>
           </div>
-        `;
+        \`;
       }
     });
   } else if (article.body && Array.isArray(article.body)) {
     // Graceful fallback for legacy articles
     article.body.forEach((item, idx) => {
       if (typeof item === 'object') {
-        contentHtml += `
-          <div class="magazine-section-block" id="sec-${idx}">
+        contentHtml += \`
+          <div class="magazine-section-block" id="sec-\${idx}">
             <div class="magazine-section-header">
-              <span class="magazine-section-num">0${idx + 1}</span>
-              <h2 class="magazine-section-title">${item.title}</h2>
+              <span class="magazine-section-num">0\${idx + 1}</span>
+              <h2 class="magazine-section-title">\${item.title}</h2>
             </div>
             <div class="magazine-section-body">
-              ${Array.isArray(item.content) ? item.content.map(p => `<p>${p}</p>`).join('') : `<p>${item.content}</p>`}
+              \${Array.isArray(item.content) ? item.content.map(p => \`<p>\${p}</p>\`).join('') : \`<p>\${item.content}</p>\`}
             </div>
           </div>
-        `;
+        \`;
       } else {
-        contentHtml += `<p>${item}</p>`;
+        contentHtml += \`<p>\${item}</p>\`;
       }
       
       if (idx === 1 && article.quote) {
-        contentHtml += `
+        contentHtml += \`
           <div class="magazine-quote-box">
             <span class="magazine-quote-icon">❝</span>
-            <p class="magazine-quote-text">« ${article.quote} »</p>
-            <span class="magazine-quote-author">${article.quoteAuthor || '— Hikma & Nour'}</span>
+            <p class="magazine-quote-text">« \${article.quote} »</p>
+            <span class="magazine-quote-author">\${article.quoteAuthor || '— Hikma & Nour'}</span>
           </div>
-        `;
+        \`;
       }
     });
   }
 
   // Key Takeaways Card
   if (article.inBrief && Array.isArray(article.inBrief)) {
-    contentHtml += `
+    contentHtml += \`
       <div class="magazine-takeaways-card" id="sec-takeaways">
         <h3 class="magazine-takeaways-title">
-          ${t.takeawaysTitle}
+          \${t.takeawaysTitle}
         </h3>
         <ul class="magazine-takeaways-list">
-          ${article.inBrief.map(b => `
+          \${article.inBrief.map(b => \`
             <li>
               <span class="dot">•</span>
-              <span>${b}</span>
+              <span>\${b}</span>
             </li>
-          `).join('')}
+          \`).join('')}
         </ul>
       </div>
-    `;
+    \`;
   }
 
   // Conclusion
   if (article.conclusion) {
-    contentHtml += `
+    contentHtml += \`
       <div class="magazine-section-block" id="sec-conclusion">
         <div class="magazine-section-header">
           <span class="magazine-section-num">✦</span>
-          <h2 class="magazine-section-title">${t.conclusionTitle}</h2>
+          <h2 class="magazine-section-title">\${t.conclusionTitle}</h2>
         </div>
-        <p style="font-size: 1.15rem; line-height: 1.95; color: #D1C5B4;">${article.conclusion}</p>
+        <p style="font-size: 1.15rem; line-height: 1.95; color: #D1C5B4;">\${article.conclusion}</p>
       </div>
-    `;
+    \`;
   }
 
   // Final Memorable Quote
   if (article.finalQuote) {
-    contentHtml += `
+    contentHtml += \`
       <div class="magazine-final-quote-card">
-        <p>${article.finalQuote}</p>
-        <span style="font-size: 0.9rem; font-weight: 800; color: #DFB15B;">${article.finalQuoteAuthor || '— Hikma & Nour | حكمة ونور'}</span>
+        <p>\${article.finalQuote}</p>
+        <span style="font-size: 0.9rem; font-weight: 800; color: #DFB15B;">\${article.finalQuoteAuthor || '— Hikma & Nour | حكمة ونور'}</span>
       </div>
-    `;
+    \`;
   }
 
   // CTA Box
-  contentHtml += `
+  contentHtml += \`
     <div class="magazine-cta-card">
-      <h3>${t.ctaTitle}</h3>
-      <p>${t.ctaDesc}</p>
+      <h3>\${t.ctaTitle}</h3>
+      <p>\${t.ctaDesc}</p>
       <button type="button" class="magazine-cta-btn" onclick="closeArticleReader(); setTimeout(() => { document.getElementById('globalSearchBtn')?.click(); }, 150);">
-        ${t.ctaBtn}
+        \${t.ctaBtn}
       </button>
     </div>
-  `;
+  \`;
 
   // Interactive Hub (Rating & Social Share)
-  contentHtml += `
+  contentHtml += \`
     <div class="magazine-hub-card">
       <div class="magazine-rating-row">
-        <span style="font-weight: 700; font-size: 1.05rem; color: #FFFDF8;">${t.ratePrompt}</span>
+        <span style="font-weight: 700; font-size: 1.05rem; color: #FFFDF8;">\${t.ratePrompt}</span>
         <div class="star-rating-mag" id="magStarRating">
-          <span onclick="window.handleMagazineRate('${article.id}', 1)">★</span>
-          <span onclick="window.handleMagazineRate('${article.id}', 2)">★</span>
-          <span onclick="window.handleMagazineRate('${article.id}', 3)">★</span>
-          <span onclick="window.handleMagazineRate('${article.id}', 4)">★</span>
-          <span onclick="window.handleMagazineRate('${article.id}', 5)">★</span>
+          <span onclick="window.handleMagazineRate('\${article.id}', 1)">★</span>
+          <span onclick="window.handleMagazineRate('\${article.id}', 2)">★</span>
+          <span onclick="window.handleMagazineRate('\${article.id}', 3)">★</span>
+          <span onclick="window.handleMagazineRate('\${article.id}', 4)">★</span>
+          <span onclick="window.handleMagazineRate('\${article.id}', 5)">★</span>
         </div>
       </div>
 
       <div class="magazine-share-row">
-        <span style="font-weight: 600; font-size: 0.92rem; color: #998D7D;">${t.shareArticle} :</span>
+        <span style="font-weight: 600; font-size: 0.92rem; color: #998D7D;">\${t.shareArticle} :</span>
         <div class="magazine-share-buttons">
           <button type="button" class="share-btn-pill whatsapp" onclick="window.handleMagazineShare('whatsapp')">WhatsApp</button>
           <button type="button" class="share-btn-pill twitter" onclick="window.handleMagazineShare('twitter')">X / Twitter</button>
           <button type="button" class="share-btn-pill facebook" onclick="window.handleMagazineShare('facebook')">Facebook</button>
-          <button type="button" class="share-btn-pill copy" onclick="window.handleMagazineShare('copy')">📋 ${currentLang === 'ar' ? 'نسخ الرابط' : currentLang === 'fr' ? 'Copier le lien' : 'Copy link'}</button>
+          <button type="button" class="share-btn-pill copy" onclick="window.handleMagazineShare('copy')">📋 \${currentLang === 'ar' ? 'نسخ الرابط' : currentLang === 'fr' ? 'Copier le lien' : 'Copy link'}</button>
         </div>
       </div>
     </div>
-  `;
+  \`;
 
   // Comments Section
   const staticComments = (article.comments && Array.isArray(article.comments)) ? article.comments : [];
   const customComments = getArticleCustomComments(article.id);
   const allComments = [...customComments, ...staticComments];
 
-  contentHtml += `
+  contentHtml += \`
     <section class="magazine-comments-section" style="margin-top: 50px;">
       <h3 style="font-size: 1.35rem; font-weight: 800; color: #FFFDF8; margin-bottom: 24px; display: flex; align-items: center; gap: 10px;">
-        <span>💬</span> ${t.commentsHeader} (${allComments.length})
+        <span>💬</span> \${t.commentsHeader} (\${allComments.length})
       </h3>
 
       <div id="magCommentsList" style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 30px;">
-        ${allComments.map(c => `
+        \${allComments.map(c => \`
           <div style="background: rgba(22, 31, 25, 0.85); border: 1px solid rgba(223, 177, 91, 0.18); padding: 18px 22px; border-radius: 16px;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-              <span style="font-weight: 800; color: #F0C775; font-size: 0.95rem;">${c.author}</span>
-              <span style="font-size: 0.8rem; color: #998D7D;">${c.time}</span>
+              <span style="font-weight: 800; color: #F0C775; font-size: 0.95rem;">\${c.author}</span>
+              <span style="font-size: 0.8rem; color: #998D7D;">\${c.time}</span>
             </div>
-            <p style="color: #D1C5B4; margin: 0; font-size: 0.98rem; line-height: 1.65;">${c.text}</p>
+            <p style="color: #D1C5B4; margin: 0; font-size: 0.98rem; line-height: 1.65;">\${c.text}</p>
           </div>
-        `).join('')}
+        \`).join('')}
       </div>
 
-      <form id="magCommentForm" onsubmit="window.handleMagazineCommentSubmit(event, '${article.id}')" style="background: rgba(22, 31, 25, 0.85); border: 1.5px solid rgba(223, 177, 91, 0.2); padding: 22px; border-radius: 18px;">
-        <textarea id="magCommentInput" placeholder="${t.commentPlaceholder}" required style="width: 100%; min-height: 95px; padding: 14px; border-radius: 12px; border: 1px solid rgba(223, 177, 91, 0.2); background: rgba(0,0,0,0.3); color: #fff; font-family: inherit; font-size: 0.98rem; box-sizing: border-box; resize: vertical; margin-bottom: 12px; outline: none;"></textarea>
-        <button type="submit" style="background: #DFB15B; color: #070A08; font-weight: 800; border: none; padding: 11px 26px; border-radius: 30px; cursor: pointer; transition: all 0.2s;">${t.postCommentBtn}</button>
+      <form id="magCommentForm" onsubmit="window.handleMagazineCommentSubmit(event, '\${article.id}')" style="background: rgba(22, 31, 25, 0.85); border: 1.5px solid rgba(223, 177, 91, 0.2); padding: 22px; border-radius: 18px;">
+        <textarea id="magCommentInput" placeholder="\${t.commentPlaceholder}" required style="width: 100%; min-height: 95px; padding: 14px; border-radius: 12px; border: 1px solid rgba(223, 177, 91, 0.2); background: rgba(0,0,0,0.3); color: #fff; font-family: inherit; font-size: 0.98rem; box-sizing: border-box; resize: vertical; margin-bottom: 12px; outline: none;"></textarea>
+        <button type="submit" style="background: #DFB15B; color: #070A08; font-weight: 800; border: none; padding: 11px 26px; border-radius: 30px; cursor: pointer; transition: all 0.2s;">\${t.postCommentBtn}</button>
       </form>
     </section>
-  `;
+  \`;
 
   // Related Articles (3 cards)
   const allArts = (TIKTOK_DATA.content[currentLang] && TIKTOK_DATA.content[currentLang].articles) || [];
@@ -974,31 +976,31 @@ function openArticleReader(slugOrFile) {
   const fallbackRelated = related.length > 0 ? related : allArts.filter(a => a.id !== article.id).slice(0, 3);
 
   if (fallbackRelated.length > 0) {
-    contentHtml += `
+    contentHtml += \`
       <section class="magazine-related-section">
-        <h3 class="magazine-related-title">${t.relatedTitle}</h3>
+        <h3 class="magazine-related-title">\${t.relatedTitle}</h3>
         <div class="magazine-related-grid">
-          ${fallbackRelated.map(r => {
-            const rImg = r.image ? (r.image.startsWith('../') ? r.image : `../${r.image}`) : '../main_home_hd_bg.jpg';
+          \${fallbackRelated.map(r => {
+            const rImg = r.image ? (r.image.startsWith('../') ? r.image : \`../\${r.image}\`) : '../main_home_hd_bg.jpg';
             const rCat = r.categoryName || (TIKTOK_DATA.ui[currentLang] && TIKTOK_DATA.ui[currentLang][r.category]) || r.category;
-            return `
-              <div class="magazine-related-card" onclick="openArticleReader('${r.file || r.id}')">
-                <img src="${rImg}" alt="${r.title}" loading="lazy" onerror="this.src='../main_home_hd_bg.jpg';">
+            return \`
+              <div class="magazine-related-card" onclick="openArticleReader('\${r.file || r.id}')">
+                <img src="\${rImg}" alt="\${r.title}" loading="lazy" onerror="this.src='../main_home_hd_bg.jpg';">
                 <div class="magazine-related-card-body">
-                  <span class="magazine-related-card-category">${rCat}</span>
-                  <h4 class="magazine-related-card-title">${r.title}</h4>
-                  <div class="magazine-related-card-meta">⏱️ ${r.readTime}</div>
+                  <span class="magazine-related-card-category">\${rCat}</span>
+                  <h4 class="magazine-related-card-title">\${r.title}</h4>
+                  <div class="magazine-related-card-meta">⏱️ \${r.readTime}</div>
                 </div>
               </div>
-            `;
+            \`;
           }).join('')}
         </div>
       </section>
-    `;
+    \`;
   }
 
-  contentHtml += `</article>`; // End reading stream
-  contentHtml += `</div>`; // End split grid
+  contentHtml += \`</article>\`; // End reading stream
+  contentHtml += \`</div>\`; // End split grid
 
   // 5. Inject HTML into Modal Root
   root.innerHTML = contentHtml;
@@ -1043,7 +1045,7 @@ function setupMagazineScrollSpy() {
         if (entry.isIntersecting) {
           navItems.forEach(li => li.classList.remove('active'));
           const id = entry.target.id;
-          const activeLink = document.querySelector(`#magTocDesktop a[href="#${id}"]`);
+          const activeLink = document.querySelector(\`#magTocDesktop a[href="#\${id}"]\`);
           if (activeLink) {
             activeLink.parentElement.classList.add('active');
           }
@@ -1120,11 +1122,11 @@ window.handleMagazineShare = function(platform) {
   const t = ARTICLES_PAGE_TRANSLATIONS[currentLang] || ARTICLES_PAGE_TRANSLATIONS['ar'];
 
   if (platform === 'whatsapp') {
-    window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(shareTitle + ' ' + shareUrl)}`, '_blank');
+    window.open(\`https://api.whatsapp.com/send?text=\${encodeURIComponent(shareTitle + ' ' + shareUrl)}\`, '_blank');
   } else if (platform === 'twitter') {
-    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareTitle)}&url=${encodeURIComponent(shareUrl)}`, '_blank');
+    window.open(\`https://twitter.com/intent/tweet?text=\${encodeURIComponent(shareTitle)}&url=\${encodeURIComponent(shareUrl)}\`, '_blank');
   } else if (platform === 'facebook') {
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank');
+    window.open(\`https://www.facebook.com/sharer/sharer.php?u=\${encodeURIComponent(shareUrl)}\`, '_blank');
   } else {
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(shareUrl).then(() => {
@@ -1159,13 +1161,13 @@ window.handleMagazineCommentSubmit = function(e, id) {
   if (list) {
     const newEl = document.createElement('div');
     newEl.style.cssText = 'background: rgba(223, 177, 91, 0.08); border: 1.5px solid rgba(223, 177, 91, 0.35); padding: 18px 22px; border-radius: 16px; animation: fadeIn 0.3s ease;';
-    newEl.innerHTML = `
+    newEl.innerHTML = \`
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-        <span style="font-weight: 800; color: #F0C775; font-size: 0.95rem;">${commentObj.author}</span>
-        <span style="font-size: 0.8rem; color: #998D7D;">${commentObj.time}</span>
+        <span style="font-weight: 800; color: #F0C775; font-size: 0.95rem;">\${commentObj.author}</span>
+        <span style="font-size: 0.8rem; color: #998D7D;">\${commentObj.time}</span>
       </div>
-      <p style="color: #FFFDF8; margin: 0; font-size: 0.98rem; line-height: 1.65;">${commentObj.text}</p>
-    `;
+      <p style="color: #FFFDF8; margin: 0; font-size: 0.98rem; line-height: 1.65;">\${commentObj.text}</p>
+    \`;
     list.prepend(newEl);
   }
 
@@ -1320,3 +1322,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbarScroll();
   initPageLogic();
 });
+`;
+
+fs.writeFileSync('articles/articles_v11.js', jsContent);
+console.log('Successfully wrote Magazine V3 Engine in articles/articles_v11.js');
