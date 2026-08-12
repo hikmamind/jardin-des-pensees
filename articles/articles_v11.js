@@ -489,7 +489,7 @@ function populateArticles(category, keyword) {
                 '<line x1="' + (currentLang === 'ar' ? '19' : '5') + '" y1="12" x2="' + (currentLang === 'ar' ? '5' : '19') + '" y2="12"></line>' +
                 '<polyline points="' + (currentLang === 'ar' ? '12 19 5 12 12 5' : '12 5 19 12 12 19') + '"></polyline>' +
               '</svg>' +
-            </button>' +
+            '</button>' +
           '</div>' +
         '</div>';
     }).join('');
