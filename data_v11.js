@@ -885,7 +885,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Le bonheur ne s'achète pas, il se façonne à l'intérieur de l'esprit.",
             "author": "Socrate"
-          }
+          },
+          "id": "epictetus-things-and-judgments"
         },
         {
           "text": "Une vie sans examen ne vaut pas la peine d'être vécue.",
@@ -904,7 +905,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Connais-toi toi-même, c'est là que commence la sagesse.",
             "author": "Platon"
-          }
+          },
+          "id": "socrates-know-nothing"
         },
         {
           "text": "Nous souffrons plus souvent dans l'imagination que dans la réalité.",
@@ -923,7 +925,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Celui qui craint de souffrir souffre déjà de sa crainte.",
             "author": "Épictète"
-          }
+          },
+          "id": "seneca-difficult-things"
         },
         {
           "text": "Celui qui a un \"pourquoi\" qui lui tient lieu de vie peut supporter presque tous les \"comment\".",
@@ -942,7 +945,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "La fin est ce qui donne sa forme et sa force à la vie.",
             "author": "Aristote"
-          }
+          },
+          "id": "nietzsche-why-to-live"
         },
         {
           "text": "Je ne suis pas ce qui m'est arrivé, je suis ce que je choisis de devenir.",
@@ -961,7 +965,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "La liberté est ce que vous faites de ce qu'on vous a fait.",
             "author": "Jean-Paul Sartre"
-          }
+          },
+          "id": "jung-resist-persists"
         },
         {
           "text": "Le bonheur de votre vie dépend de la qualité de vos pensées.",
@@ -980,7 +985,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Le bonheur ne réside pas dans les choses, mais dans l'esprit.",
             "author": "Schopenhauer"
-          }
+          },
+          "id": "marcus-aurelius-quality-of-thoughts"
         },
         {
           "text": "Au milieu de l'hiver, j'apprenais enfin qu'il y avait en moi un été invincible.",
@@ -999,7 +1005,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "L'obstacle est le chemin.",
             "author": "Marc Aurèle"
-          }
+          },
+          "id": "camus-invincible-summer"
         },
         {
           "text": "Je pense, donc je suis.",
@@ -1018,7 +1025,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Le dialogue intérieur façonne notre réalité.",
             "author": "Marc Aurèle"
-          }
+          },
+          "id": "descartes-cogito-ergo-sum"
         },
         {
           "text": "L'existence précède l'essence.",
@@ -1037,7 +1045,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Je suis ce que je choisis de devenir.",
             "author": "Carl Jung"
-          }
+          },
+          "id": "sartre-existence-precedes-essence"
         },
         {
           "text": "Le cœur a ses raisons que la raison ne connaît point.",
@@ -1056,7 +1065,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Les sentiments sincères sont un guide infaillible.",
             "author": "Rousseau"
-          }
+          },
+          "id": "pascal-heart-has-its-reasons"
         },
         {
           "text": "Un voyage de mille lieues commence par un pas.",
@@ -1075,7 +1085,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "L'excellence est une habitude façonnée au quotidien.",
             "author": "Aristote"
-          }
+          },
+          "id": "lao-tzu-journey-thousand-miles"
         },
         {
           "text": "L'homme sage n'attend rien des autres, il n'attend tout que de lui-même.",
@@ -1094,7 +1105,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Votre esprit est votre citadelle et votre ultime refuge.",
             "author": "Marc Aurèle"
-          }
+          },
+          "id": "confucius-never-falling"
         },
         {
           "text": "Tout ce que je sais, c'est que je ne sais rien.",
@@ -1113,7 +1125,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Le premier pas vers la sagesse est d'avouer son ignorance.",
             "author": "Platon"
-          }
+          },
+          "id": "socrates-unexamined-life"
         },
         {
           "text": "La victoire sur soi-même est la plus grande des victoires.",
@@ -1132,7 +1145,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Le succès est le fruit de la discipline maintenue au fil des ans.",
             "author": "Marc Aurèle"
-          }
+          },
+          "id": "plato-conquering-oneself"
         },
         {
           "text": "Nous sommes ce que nous répétons chaque jour. L'excellence n'est pas un acte, mais une habitude.",
@@ -1151,7 +1165,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "La discipline est le pont entre les objectifs et leur réalisation.",
             "author": "Schopenhauer"
-          }
+          },
+          "id": "aristotle-we-are-repeated-habits"
         },
         {
           "text": "Le bonheur appartient à ceux qui se suffisent à eux-mêmes.",
@@ -1170,7 +1185,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Le bonheur de votre vie dépend de la qualité de vos pensées.",
             "author": "Marc Aurèle"
-          }
+          },
+          "id": "schopenhauer-self-sufficiency"
         },
         {
           "text": "Ne pas rire, ne pas déplorer, ne pas détester, mais comprendre.",
@@ -1189,7 +1205,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Comprendre est le premier pas vers la libération psychologique.",
             "author": "Carl Jung"
-          }
+          },
+          "id": "spinoza-peace-is-virtue"
         },
         {
           "text": "L'homme est né libre, et partout il est dans les fers.",
@@ -1208,7 +1225,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Je ne suis pas ce qui m'est arrivé, je suis ce que je choisis d'être.",
             "author": "Carl Jung"
-          }
+          },
+          "id": "rousseau-born-free-in-chains"
         },
         {
           "text": "Sapere aude ! Aie le courage de te servir de ton propre entendement !",
@@ -1227,7 +1245,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Une vie sans examen ne vaut pas la peine d'être vécue.",
             "author": "Socrate"
-          }
+          },
+          "id": "kant-sapere-aude"
         },
         {
           "text": "La vie ne peut être comprise qu'en regardant en arrière, mais elle doit être vécue en regardant en avant.",
@@ -1246,7 +1265,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Je ne suis pas le produit de mon passé, je suis le projet de mon futur.",
             "author": "Carl Jung"
-          }
+          },
+          "id": "kierkegaard-life-backward-forward"
         },
         {
           "text": "Un jour, en regardant en arrière, les années de lutte vous apparaîtront comme les plus belles.",
@@ -1265,7 +1285,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Celui qui a un pourquoi peut supporter tous les comment.",
             "author": "Nietzsche"
-          }
+          },
+          "id": "freud-nothing-disappears"
         },
         {
           "text": "La meilleure vengeance est de ne pas ressembler à celui qui t'a causé l'offense.",
@@ -1284,7 +1305,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Ce qui trouble les hommes, ce ne sont pas les choses mais leurs jugements.",
             "author": "Épictète"
-          }
+          },
+          "id": "marcus-aurelius-best-revenge"
         },
         {
           "text": "Tant que tu vis, continue d'apprendre comment vivre.",
@@ -1303,7 +1325,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "La conscience de soi est le début de la sagesse.",
             "author": "Socrate"
-          }
+          },
+          "id": "seneca-keep-learning-how-to-live"
         },
         {
           "text": "La plus grande chose du monde, c'est de savoir être à soi.",
@@ -1322,7 +1345,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Le bonheur appartient à ceux qui se suffisent à eux-mêmes.",
             "author": "Schopenhauer"
-          }
+          },
+          "id": "montaigne-belong-to-oneself"
         },
         {
           "text": "J'ai décidé d'être heureux parce que c'est bon pour la santé.",
@@ -1341,7 +1365,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Le bonheur de votre vie dépend de la qualité de vos pensées.",
             "author": "Marc Aurèle"
-          }
+          },
+          "id": "voltaire-happy-good-for-health"
         },
         {
           "text": "Ce qui ne me tue pas me rend plus fort.",
@@ -1360,7 +1385,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Au milieu de l'hiver, j'apprenais qu'il y avait en moi un été invincible.",
             "author": "Albert Camus"
-          }
+          },
+          "id": "nietzsche-what-does-not-kill-me"
         }
       ],
       "advices": [
@@ -4044,7 +4070,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Happiness is not bought, it is crafted within the mind.",
             "author": "Socrates"
-          }
+          },
+          "id": "epictetus-things-and-judgments"
         },
         {
           "text": "The unexamined life is not worth living.",
@@ -4063,7 +4090,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Know yourself, for that is where wisdom begins.",
             "author": "Plato"
-          }
+          },
+          "id": "socrates-know-nothing"
         },
         {
           "text": "We suffer more often in imagination than in reality.",
@@ -4082,7 +4110,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "He who worries before it is necessary, worries more than is necessary.",
             "author": "Epictetus"
-          }
+          },
+          "id": "seneca-difficult-things"
         },
         {
           "text": "He who has a why to live can bear almost any how.",
@@ -4101,7 +4130,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "The end is what gives shape and strength to life.",
             "author": "Aristotle"
-          }
+          },
+          "id": "nietzsche-why-to-live"
         },
         {
           "text": "I am not what happened to me, I am what I choose to become.",
@@ -4120,7 +4150,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Freedom is what you do with what was done to you.",
             "author": "Jean-Paul Sartre"
-          }
+          },
+          "id": "jung-resist-persists"
         },
         {
           "text": "The happiness of your life depends upon the quality of your thoughts.",
@@ -4139,7 +4170,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Happiness lies not in things, but in the mind.",
             "author": "Schopenhauer"
-          }
+          },
+          "id": "marcus-aurelius-quality-of-thoughts"
         },
         {
           "text": "In the depth of winter, I finally learned that within me there lay an invincible summer.",
@@ -4158,7 +4190,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "The obstacle is the way.",
             "author": "Marcus Aurelius"
-          }
+          },
+          "id": "camus-invincible-summer"
         },
         {
           "text": "I think, therefore I am.",
@@ -4177,7 +4210,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Self-talk shapes our reality.",
             "author": "Marcus Aurelius"
-          }
+          },
+          "id": "descartes-cogito-ergo-sum"
         },
         {
           "text": "Existence precedes essence.",
@@ -4196,7 +4230,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "I am what I choose to become.",
             "author": "Carl Jung"
-          }
+          },
+          "id": "sartre-existence-precedes-essence"
         },
         {
           "text": "The heart has its reasons which reason knows nothing of.",
@@ -4215,7 +4250,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Sincere feelings are an infallible guide.",
             "author": "Rousseau"
-          }
+          },
+          "id": "pascal-heart-has-its-reasons"
         },
         {
           "text": "A journey of a thousand miles begins with a single step.",
@@ -4234,7 +4270,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Excellence is a habit shaped by daily repetition.",
             "author": "Aristotle"
-          }
+          },
+          "id": "lao-tzu-journey-thousand-miles"
         },
         {
           "text": "The wise man expects nothing from others; he expects everything from himself.",
@@ -4253,7 +4290,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Your mind is your citadel and ultimate refuge.",
             "author": "Marcus Aurelius"
-          }
+          },
+          "id": "confucius-never-falling"
         },
         {
           "text": "All I know is that I know nothing.",
@@ -4272,7 +4310,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "The first step to wisdom is admitting ignorance.",
             "author": "Plato"
-          }
+          },
+          "id": "socrates-unexamined-life"
         },
         {
           "text": "The first and greatest victory is to conquer yourself.",
@@ -4291,7 +4330,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Success is the result of discipline maintained over years.",
             "author": "Marcus Aurelius"
-          }
+          },
+          "id": "plato-conquering-oneself"
         },
         {
           "text": "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
@@ -4310,7 +4350,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Discipline is the bridge between goals and accomplishment.",
             "author": "Schopenhauer"
-          }
+          },
+          "id": "aristotle-we-are-repeated-habits"
         },
         {
           "text": "Happiness belongs to those who are sufficient unto themselves.",
@@ -4329,7 +4370,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Happiness depends on the quality of your thoughts.",
             "author": "Marcus Aurelius"
-          }
+          },
+          "id": "schopenhauer-self-sufficiency"
         },
         {
           "text": "Not to laugh, not to lament, not to detest, but to understand.",
@@ -4348,7 +4390,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Understanding is the first step to psychological freedom.",
             "author": "Carl Jung"
-          }
+          },
+          "id": "spinoza-peace-is-virtue"
         },
         {
           "text": "Man is born free, and everywhere he is in chains.",
@@ -4367,7 +4410,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "I am not what happened to me, I am what I choose to become.",
             "author": "Carl Jung"
-          }
+          },
+          "id": "rousseau-born-free-in-chains"
         },
         {
           "text": "Sapere aude! Dare to know! Have courage to use your own reason!",
@@ -4386,7 +4430,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "The unexamined life is not worth living.",
             "author": "Socrates"
-          }
+          },
+          "id": "kant-sapere-aude"
         },
         {
           "text": "Life can only be understood backwards; but it must be lived forwards.",
@@ -4405,7 +4450,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "I am not what happened to me, I am what I choose to become.",
             "author": "Carl Jung"
-          }
+          },
+          "id": "kierkegaard-life-backward-forward"
         },
         {
           "text": "One day, in retrospect, the years of struggle will strike you as the most beautiful.",
@@ -4424,7 +4470,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "He who has a why to live can bear almost any how.",
             "author": "Nietzsche"
-          }
+          },
+          "id": "freud-nothing-disappears"
         },
         {
           "text": "The best revenge is to be unlike him who performed the injury.",
@@ -4443,7 +4490,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Men are disturbed not by things, but by the views they take of them.",
             "author": "Epictetus"
-          }
+          },
+          "id": "marcus-aurelius-best-revenge"
         },
         {
           "text": "As long as you live, keep learning how to live.",
@@ -4462,7 +4510,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Self-awareness is the first step to wisdom and virtue.",
             "author": "Socrates"
-          }
+          },
+          "id": "seneca-keep-learning-how-to-live"
         },
         {
           "text": "The greatest thing in the world is to know how to belong to oneself.",
@@ -4481,7 +4530,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "Happiness belongs to those who are sufficient unto themselves.",
             "author": "Schopenhauer"
-          }
+          },
+          "id": "montaigne-belong-to-oneself"
         },
         {
           "text": "I have decided to be happy because it is good for my health.",
@@ -4500,7 +4550,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "The happiness of your life depends upon the quality of your thoughts.",
             "author": "Marcus Aurelius"
-          }
+          },
+          "id": "voltaire-happy-good-for-health"
         },
         {
           "text": "What does not kill me makes me stronger.",
@@ -4519,7 +4570,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "In the depth of winter, I found an invincible summer.",
             "author": "Albert Camus"
-          }
+          },
+          "id": "nietzsche-what-does-not-kill-me"
         }
       ],
       "advices": [
@@ -7199,7 +7251,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "السعادة لا تباع في الأسواق، بل تصنع داخل عقلك.",
             "author": "سقراط"
-          }
+          },
+          "id": "epictetus-things-and-judgments"
         },
         {
           "text": "الحياة غير المفحوصة لا تستحق العيش.",
@@ -7218,7 +7271,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "اعرف نفسك بنفسك، فمن هناك تبدأ الحكمة.",
             "author": "أفلاطون"
-          }
+          },
+          "id": "socrates-know-nothing"
         },
         {
           "text": "نحن نعاني في الغالب في الخيال أكثر مما نعاني في الواقع.",
@@ -7237,7 +7291,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "من يقلق قبل أن يحين الوقت، يقلق أكثر مما ينبغي.",
             "author": "إبيكتيتوس"
-          }
+          },
+          "id": "seneca-difficult-things"
         },
         {
           "text": "من لديه \"لماذا\" يعيش من أجلها يمكنه تحمل أي \"كيف\" تقريبًا.",
@@ -7256,7 +7311,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "الغاية هي التي تمنح الحياة شكلها وقوتها.",
             "author": "أرسطو"
-          }
+          },
+          "id": "nietzsche-why-to-live"
         },
         {
           "text": "أنا لست ما حدث لي، أنا ما اخترت أن أكون.",
@@ -7275,7 +7331,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "الحرية هي ما تفعله بما فُعل بك.",
             "author": "جان بول سارتر"
-          }
+          },
+          "id": "jung-resist-persists"
         },
         {
           "text": "السعادة في حياتك تعتمد على جودة أفكارك.",
@@ -7294,7 +7351,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "السعادة ليست في الظروف، بل في طريقة التفكير.",
             "author": "شوبنهاور"
-          }
+          },
+          "id": "marcus-aurelius-quality-of-thoughts"
         },
         {
           "text": "في وسط الشتاء، علمت أخيراً أن هناك في داخلي صيفاً لا يقهر.",
@@ -7313,7 +7371,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "العقبة هي الطريق.",
             "author": "ماركوس أوريليوس"
-          }
+          },
+          "id": "camus-invincible-summer"
         },
         {
           "text": "أنا أفكر، إذن أنا موجود.",
@@ -7332,7 +7391,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "الحديث الداخلي هو صانع الواقع.",
             "author": "ماركوس أوريليوس"
-          }
+          },
+          "id": "descartes-cogito-ergo-sum"
         },
         {
           "text": "الوجود يسبق الجوهر.",
@@ -7351,7 +7411,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "أنت ما تختار أن تكونه الآن.",
             "author": "كارل يونغ"
-          }
+          },
+          "id": "sartre-existence-precedes-essence"
         },
         {
           "text": "للقلب أسباب لا يعرفها العقل.",
@@ -7370,7 +7431,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "المشاعر الصادقة مرشد لا يخطئ.",
             "author": "روسو"
-          }
+          },
+          "id": "pascal-heart-has-its-reasons"
         },
         {
           "text": "رحلة الألف ميل تبدأ بخطوة واحدة.",
@@ -7389,7 +7451,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "التميز عادة تتشكل بالتكرار اليومي.",
             "author": "أرسطو"
-          }
+          },
+          "id": "lao-tzu-journey-thousand-miles"
         },
         {
           "text": "الرجل الحكيم لا ينتظر شيئاً من الآخرين، بل ينتظر كل شيء من نفسه.",
@@ -7408,7 +7471,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "أنت قلعتك الحصينة وملاذك الأخير.",
             "author": "ماركوس أوريليوس"
-          }
+          },
+          "id": "confucius-never-falling"
         },
         {
           "text": "كل ما أعرفه هو أنني لا أعرف شيئاً.",
@@ -7427,7 +7491,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "أول خطوة في الحكمة هي الاعتراف بالجهل.",
             "author": "أفلاطون"
-          }
+          },
+          "id": "socrates-unexamined-life"
         },
         {
           "text": "الانتصار على النفس هو أعظم الانتصارات.",
@@ -7446,7 +7511,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "النجاح يصنعه الانضباط الذي يستمر لسنوات.",
             "author": "ماركوس أوريليوس"
-          }
+          },
+          "id": "plato-conquering-oneself"
         },
         {
           "text": "نحن ما نكرره كل يوم. التميز ليس عملاً بل عادة.",
@@ -7465,7 +7531,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "الانضباط هو الجسر بين الأهداف والإنجاز.",
             "author": "شوبنهاور"
-          }
+          },
+          "id": "aristotle-we-are-repeated-habits"
         },
         {
           "text": "السعادة ملك لأولئك الذين يكتفون بأنفسهم.",
@@ -7484,7 +7551,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "السعادة تعتمد على جودة أفكارك وحديثك الداخلي.",
             "author": "ماركوس أوريليوس"
-          }
+          },
+          "id": "schopenhauer-self-sufficiency"
         },
         {
           "text": "لا تضحك، لا تبكِ، لا تكره، بل افهم.",
@@ -7503,7 +7571,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "الفهم هو أول خطوة نحو التحرر النفسي.",
             "author": "كارل يونغ"
-          }
+          },
+          "id": "spinoza-peace-is-virtue"
         },
         {
           "text": "يولد الإنسان حراً، ولكنه في كل مكان يرسخ في القيود.",
@@ -7522,7 +7591,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "أنت لست ما حدث لك بل ما تختار أن تكونه.",
             "author": "كارل يونغ"
-          }
+          },
+          "id": "rousseau-born-free-in-chains"
         },
         {
           "text": "تجرأ على المعرفة! كن شجاعاً لاستخدام عقلك الخاص!",
@@ -7541,7 +7611,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "الحياة غير المفحوصة لا تستحق العيش.",
             "author": "سقراط"
-          }
+          },
+          "id": "kant-sapere-aude"
         },
         {
           "text": "لا يمكن فهم الحياة إلا بالنظر إلى الوراء، ولكن يجب أن نعيشها بالنظر إلى الأمام.",
@@ -7560,7 +7631,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "أنا لست ما حدث لي، بل ما اخترت أن أكونه.",
             "author": "كارل يونغ"
-          }
+          },
+          "id": "kierkegaard-life-backward-forward"
         },
         {
           "text": "يومًا ما، عندما تنظر إلى الوراء، ستظهر لك سنوات الكفاح كأجمل السنوات.",
@@ -7579,7 +7651,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "من لديه لماذا يعيش يمكنه تحمل أي كيف.",
             "author": "نيتشه"
-          }
+          },
+          "id": "freud-nothing-disappears"
         },
         {
           "text": "أفضل انتقام هو ألا تكون مثل من آذاك.",
@@ -7598,7 +7671,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "ما يقلق الناس ليس الأشياء بل الأحكام التي يطلقونها عليها.",
             "author": "إبيكتيتوس"
-          }
+          },
+          "id": "marcus-aurelius-best-revenge"
         },
         {
           "text": "طالما أنك تعيش، فاستمر في تعلم كيف تعيش.",
@@ -7617,7 +7691,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "الوعي بالذات هو أول خطوة للحكمة والفضيلة.",
             "author": "سقراط"
-          }
+          },
+          "id": "seneca-keep-learning-how-to-live"
         },
         {
           "text": "أعظم شيء في العالم هو أن تعرف كيف تنتمي لنفسك.",
@@ -7636,7 +7711,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "السعادة ملك لأولئك الذين يكتفون بأنفسهم.",
             "author": "شوبنهاور"
-          }
+          },
+          "id": "montaigne-belong-to-oneself"
         },
         {
           "text": "لقد قررت أن أكون سعيداً لأن ذلك مفيد لصحتي.",
@@ -7655,7 +7731,8 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "السعادة في حياتك تعتمد على جودة أفكارك.",
             "author": "ماركوس أوريليوس"
-          }
+          },
+          "id": "voltaire-happy-good-for-health"
         },
         {
           "text": "ما لا يقتلني يجعلني أقوى.",
@@ -7674,150 +7751,151 @@ const TIKTOK_DATA = {
           "similarQuote": {
             "text": "في وسط الشتاء علمت أن في داخلي صيفاً لا يقهر.",
             "author": "ألبير كامو"
-          }
+          },
+          "id": "nietzsche-what-does-not-kill-me"
         },
         {
-          "id": "quote-new-0",
+          "id": "hikma-calm-and-wisdom",
           "quote": "دقيقة واحدة من القراءة قد تغيّر حياة كاملة.",
           "text": "دقيقة واحدة من القراءة قد تغيّر حياة كاملة.",
           "author": "حكمة خالدة",
           "category": "wisdom"
         },
         {
-          "id": "quote-new-1",
+          "id": "socrates-virtue-and-soul",
           "quote": "الحياة التي لا تُفحص لا تستحق أن تُعاش.",
           "text": "الحياة التي لا تُفحص لا تستحق أن تُعاش.",
           "author": "سقراط",
           "category": "wisdom"
         },
         {
-          "id": "quote-new-2",
+          "id": "schopenhauer-inner-wealth",
           "quote": "من لا يحب العزلة، لا يحب الحرية.",
           "text": "من لا يحب العزلة، لا يحب الحرية.",
           "author": "شوبنهاور",
           "category": "wisdom"
         },
         {
-          "id": "quote-new-3",
+          "id": "marcus-aurelius-mind-sanctuary",
           "quote": "العوائق في الطريق تصبح هي الطريق بنفسه.",
           "text": "العوائق في الطريق تصبح هي الطريق بنفسه.",
           "author": "ماركوس أوريليوس",
           "category": "wisdom"
         },
         {
-          "id": "quote-new-4",
+          "id": "schopenhauer-solitude-peace",
           "quote": "السعادة ليست إلا غيابًا مؤقتًا للألم.",
           "text": "السعادة ليست إلا غيابًا مؤقتًا للألم.",
           "author": "شوبنهاور",
           "category": "wisdom"
         },
         {
-          "id": "quote-new-5",
+          "id": "seneca-time-and-destiny",
           "quote": "نحن نعاني في مخيلتنا أكثر بكثير مما نعاني في الواقع.",
           "text": "نحن نعاني في مخيلتنا أكثر بكثير مما نعاني في الواقع.",
           "author": "سينيكا",
           "category": "wisdom"
         },
         {
-          "id": "quote-new-6",
+          "id": "plutarch-patience-and-character",
           "quote": "العقل ليس وعاءً نملؤه، بل نارًا نوقدها.",
           "text": "العقل ليس وعاءً نملؤه، بل نارًا نوقدها.",
           "author": "بلوتارخ",
           "category": "wisdom"
         },
         {
-          "id": "quote-new-8",
+          "id": "lao-tzu-silence-and-stillness",
           "quote": "من يعرف الآخرين أريب، ومن يعرف نفسه حكيم.",
           "text": "من يعرف الآخرين أريب، ومن يعرف نفسه حكيم.",
           "author": "لاوتسو",
           "category": "wisdom"
         },
         {
-          "id": "quote-new-9",
+          "id": "epicurus-tranquility-of-soul",
           "quote": "ليس الغني من يملك الكثير، بل من يكتفي بما لديه.",
           "text": "ليس الغني من يملك الكثير، بل من يكتفي بما لديه.",
           "author": "إبيقور",
           "category": "wisdom"
         },
         {
-          "id": "quote-new-10",
+          "id": "camus-lucidity-and-freedom",
           "quote": "في قلب كل شتاء، تعلمت أن في داخلي صيفًا لا يُقهر.",
           "text": "في قلب كل شتاء، تعلمت أن في داخلي صيفًا لا يُقهر.",
           "author": "ألبير كامو",
           "category": "wisdom"
         },
         {
-          "id": "quote-new-11",
+          "id": "plato-shadows-and-truth",
           "quote": "أعظم انتصار هو الانتصار على الذات.",
           "text": "أعظم انتصار هو الانتصار على الذات.",
           "author": "أفلاطون",
           "category": "wisdom"
         },
         {
-          "id": "quote-new-12",
+          "id": "aristotle-golden-mean",
           "quote": "الجهل أصل كل شر، وفضيلة العقل هي المعرفة.",
           "text": "الجهل أصل كل شر، وفضيلة العقل هي المعرفة.",
           "author": "أرسطو",
           "category": "wisdom"
         },
         {
-          "id": "quote-new-13",
+          "id": "marcus-aurelius-impermanence",
           "quote": "السلام الداخلي لا يعتمد على ما يحدث لنا، بل على كيف نفسره.",
           "text": "السلام الداخلي لا يعتمد على ما يحدث لنا، بل على كيف نفسره.",
           "author": "ماركوس أوريليوس",
           "category": "wisdom"
         },
         {
-          "id": "quote-new-14",
+          "id": "confucius-benevolence-and-duty",
           "quote": "امتلاك النفس عند الغضب هو الاختبار الحقيقي للقوة.",
           "text": "امتلاك النفس عند الغضب هو الاختبار الحقيقي للقوة.",
           "author": "كونفوشيوس",
           "category": "wisdom"
         },
         {
-          "id": "quote-new-15",
+          "id": "kant-moral-law-within",
           "quote": "كلما ازدادت معرفتك، زاد إدراكك لما تجهله.",
           "text": "كلما ازدادت معرفتك، زاد إدراكك لما تجهله.",
           "author": "إيمانويل كانت",
           "category": "wisdom"
         },
         {
-          "id": "quote-new-16",
+          "id": "epictetus-dichotomy-of-control",
           "quote": "الهدوء الداخلي هو الحصن المنيع ضد عواصف الحياة.",
           "text": "الهدوء الداخلي هو الحصن المنيع ضد عواصف الحياة.",
           "author": "إبيكتيتوس",
           "category": "wisdom"
         },
         {
-          "id": "quote-new-17",
+          "id": "epicurus-friendship-and-simplicity",
           "quote": "الرضا بالقليل هو الثروة الحقيقية، لأن الطبيعة لا تطلب الكثير.",
           "text": "الرضا بالقليل هو الثروة الحقيقية، لأن الطبيعة لا تطلب الكثير.",
           "author": "إبيقور",
           "category": "wisdom"
         },
         {
-          "id": "quote-new-18",
+          "id": "spinoza-intellectual-love",
           "quote": "الصمت هو الإجابة الأكثر بلاغة في كثير من الأحيان.",
           "text": "الصمت هو الإجابة الأكثر بلاغة في كثير من الأحيان.",
           "author": "باروخ سبينوزا",
           "category": "wisdom"
         },
         {
-          "id": "quote-new-19",
+          "id": "marcus-aurelius-morning-meditation",
           "quote": "تذكر دائمًا أنك تملك السلطة على عقلك وليس على الأحداث الخارجية.",
           "text": "تذكر دائمًا أنك تملك السلطة على عقلك وليس على الأحداث الخارجية.",
           "author": "ماركوس أوريليوس",
           "category": "wisdom"
         },
         {
-          "id": "quote-new-20",
+          "id": "schopenhauer-will-and-art",
           "quote": "من يتملك الحاضر، يتملك حياته بالكامل.",
           "text": "من يتملك الحاضر، يتملك حياته بالكامل.",
           "author": "آرثر شوبنهاور",
           "category": "wisdom"
         },
         {
-          "id": "quote-new-21",
+          "id": "hikma-noble-mind",
           "quote": "السعادة تُصنع في الداخل، ولا تُشترى من الخارج.",
           "text": "السعادة تُصنع في الداخل، ولا تُشترى من الخارج.",
           "author": "حكمة رصينة",

@@ -7772,3 +7772,373 @@ textarea.form-control {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   QUOTES PREMIUM EDITORIAL READER (V3)
+   ========================================================================== */
+
+.quote-premium-hero {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 36px;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(16, 26, 20, 0.95) 0%, rgba(26, 38, 30, 0.9) 100%);
+  border: 1.5px solid rgba(223, 177, 91, 0.4);
+  border-radius: 26px;
+  padding: 36px;
+  box-shadow: 0 16px 45px rgba(0,0,0,0.6);
+  backdrop-filter: blur(16px);
+  margin-bottom: 35px;
+}
+
+@media (max-width: 850px) {
+  .quote-premium-hero {
+    grid-template-columns: 1fr;
+    padding: 26px 20px;
+    gap: 24px;
+    text-align: center;
+  }
+}
+
+.quote-premium-portrait-wrap {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 1 / 1;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 2px solid rgba(223, 177, 91, 0.45);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.6);
+  margin: 0 auto;
+}
+
+.quote-premium-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.quote-premium-portrait-wrap:hover .quote-premium-portrait-img {
+  transform: scale(1.04);
+}
+
+.quote-premium-quote-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.quote-premium-symbol {
+  font-size: 3.5rem;
+  color: #DFB15B;
+  opacity: 0.35;
+  font-family: Georgia, serif;
+  line-height: 1;
+  margin-bottom: -15px;
+}
+
+.quote-premium-text {
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1.55;
+  color: #FFFDF8;
+  font-family: 'Playfair Display', 'Amiri', serif;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .quote-premium-text {
+    font-size: 1.4rem;
+  }
+}
+
+.quote-premium-author-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+@media (max-width: 850px) {
+  .quote-premium-author-bar {
+    justify-content: center;
+  }
+}
+
+.quote-premium-author-name {
+  color: #DFB15B;
+  font-size: 1.15rem;
+  font-weight: 700;
+  font-family: 'Playfair Display', 'Amiri', serif;
+}
+
+.quote-premium-badge {
+  background: rgba(223, 177, 91, 0.12);
+  border: 1px solid rgba(223, 177, 91, 0.3);
+  color: #F5D98A;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 16px;
+}
+
+.quote-premium-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+@media (max-width: 850px) {
+  .quote-premium-actions {
+    justify-content: center;
+  }
+}
+
+/* Sections & Grids */
+.quote-premium-section {
+  background: rgba(18, 28, 22, 0.75);
+  border: 1px solid rgba(223, 177, 91, 0.25);
+  border-radius: 22px;
+  padding: 30px;
+  margin-bottom: 25px;
+  backdrop-filter: blur(10px);
+}
+
+@media (max-width: 768px) {
+  .quote-premium-section {
+    padding: 22px 18px;
+    border-radius: 18px;
+  }
+}
+
+.quote-premium-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid rgba(223, 177, 91, 0.2);
+  padding-bottom: 12px;
+}
+
+.quote-premium-section-icon {
+  font-size: 1.35rem;
+}
+
+.quote-premium-section-title {
+  color: #FFFDF8;
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 0;
+  font-family: 'Playfair Display', 'Amiri', serif;
+}
+
+.quote-premium-prose {
+  color: #E6DFD5;
+  font-size: 1.02rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.quote-premium-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+  .quote-premium-grid-2col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Lessons Checklist */
+.quote-premium-lessons-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quote-premium-lesson-item {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  color: #E6DFD5;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.quote-premium-lesson-check {
+  color: #DFB15B;
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+/* Author Hub Banner */
+.quote-premium-author-hub {
+  background: linear-gradient(135deg, rgba(14, 22, 17, 0.95), rgba(22, 34, 26, 0.95));
+  border: 1px solid rgba(223, 177, 91, 0.35);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+  .quote-premium-author-hub {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.quote-premium-author-hub-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+@media (max-width: 768px) {
+  .quote-premium-author-hub-left {
+    flex-direction: column;
+  }
+}
+
+.quote-premium-author-hub-avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #DFB15B;
+}
+
+.quote-premium-author-hub-title {
+  color: #FFFDF8;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.quote-premium-author-hub-desc {
+  color: #C2B6A6;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.quote-premium-author-hub-btn {
+  background: rgba(223, 177, 91, 0.15);
+  border: 1px solid #DFB15B;
+  color: #FFFDF8;
+  padding: 10px 22px;
+  border-radius: 24px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.quote-premium-author-hub-btn:hover {
+  background: #DFB15B;
+  color: #070A08;
+}
+
+/* Quote Navigator Bar */
+.quote-premium-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: rgba(14, 22, 17, 0.9);
+  border: 1px solid rgba(223, 177, 91, 0.3);
+  border-radius: 18px;
+  padding: 14px 20px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 600px) {
+  .quote-premium-nav-bar {
+    flex-wrap: wrap;
+  }
+  .quote-premium-nav-btn {
+    flex: 1 1 45%;
+    justify-content: center;
+  }
+  .quote-premium-nav-btn.random-btn {
+    flex: 1 1 100%;
+    order: -1;
+  }
+}
+
+.quote-premium-nav-btn {
+  background: transparent;
+  border: 1px solid rgba(223, 177, 91, 0.25);
+  color: #FFFDF8;
+  padding: 8px 18px;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.quote-premium-nav-btn:hover {
+  border-color: #DFB15B;
+  background: rgba(223, 177, 91, 0.12);
+  color: #DFB15B;
+}
+
+/* Similar Quotes Cards */
+.quote-premium-more-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.quote-premium-mini-card {
+  background: rgba(10, 16, 12, 0.7);
+  border: 1px solid rgba(223, 177, 91, 0.2);
+  border-radius: 16px;
+  padding: 18px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.quote-premium-mini-card:hover {
+  transform: translateY(-3px);
+  border-color: #DFB15B;
+  background: rgba(14, 22, 17, 0.85);
+}
+
+.quote-premium-mini-text {
+  color: #FFFDF8;
+  font-size: 0.96rem;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0 0 12px;
+}
+
+.quote-premium-mini-author {
+  color: #DFB15B;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
