@@ -2122,11 +2122,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "Marc L.",
-              "time": "Il y a 4 heures",
-              "text": "Le silence est une force prodigieuse. Moins je parle inutilement, plus mes décisions sont respectées."
+              "author": "Alexandre V.",
+              "time": "Il y a 3 heures",
+              "text": "Cette réflexion résonne profondément. La règle des 3 secondes transforme radicalement les réunions professionnelles."
+            },
+            {
+              "author": "Claire B.",
+              "time": "Il y a 6 heures",
+              "text": "Le silence maîtrisé est en effet la marque des esprits calmes et sûrs d'eux-mêmes."
             }
-          ]
+          ],
+          "chapo": "Dans une société saturée de bruits, d'affirmations gratuites et d'injonctions à l'expression continue, le silence s'affirme comme une puissance singulière. Loin d'être une faiblesse, il incarne l'autorité souveraine et la maîtrise de soi.",
+          "summaryBox": {
+            "title": "✦ Synthèse de l'article",
+            "summary": "Le silence n'est pas une absence de mots, mais le choix délibéré du contrôle émotionnel et de la lucidité. L'individu silencieux intrigue, retient ses cartes et impose une présence charismatique naturelle.",
+            "question": "Parlez-vous pour combler le vide, ou maîtrisez-vous l'art d'imposer votre présence par le calme ?"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "Le silence comme bouclier de maîtrise émotionnelle",
+              "content": [
+                "Ceux qui parlent sans discontinuer étalent leurs failles, leurs craintes et leurs intentions au grand jour. À l'inverse, le silence érige un rempart protecteur contre les réactions impulsives.",
+                "Pour les philosophes stoïciens, retenir sa langue constitue le sommet de la maîtrise de soi. En restant calme face à la provocation, vous contraignez l'autre à se confronter à son propre tumulte."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "La psychologie du mystère et du charisme retenu",
+              "content": [
+                "L'être humain respecte instinctivement ce qu'il ne parvient pas à sonder immédiatement. La sur-explication banalise l'individu, tandis que la retenue crée une aura de profondeur.",
+                "Lorsque vous parlez peu mais avec justesse et discernement, chaque mot prononcé acquiert la valeur d'une sentence écoutée avec respect et attention."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 Idée psychologique clé",
+              "title": "La pause tactique dans les interactions stratégiques",
+              "text": "En psychologie comportementale, le silence déstabilise le bavard. Marquer un temps d'arrêt de quelques secondes après une affirmation pousse l'interlocuteur à se justifier ou à adoucir sa position par malaise du vide."
+            },
+            {
+              "num": "03",
+              "title": "L'écoute active : l'intelligence relationnelle suprême",
+              "content": [
+                "L'individu silencieux n'est pas passif : il observe, analyse le langage non verbal, perçoit les hésitations et saisit le contexte invisible qui échappe à ceux qui ne pensent qu'à leur prochaine réplique.",
+                "L'écoute authentique offre un avantage décisif : la connaissance lucide des dynamiques humaines, source fondamentale de l'influence bienveillante."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "5 règles pour cultiver la puissance du silence",
+              "desc": "Conseils pratiques pour développer une présence posée au quotidien :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "La règle des 3 secondes",
+                  "text": "Avant de répondre à une interpellation ou une critique, respirez et observez 3 secondes de silence."
+                },
+                {
+                  "num": "2",
+                  "title": "Cessez de trop justifier",
+                  "text": "Une décision claire n'a pas besoin de plaidoyer : dites 'non' avec calme et fermeté."
+                },
+                {
+                  "num": "3",
+                  "title": "Gardez vos projets secrets",
+                  "text": "Laissez vos réalisations concrètes parler plutôt que d'annoncer prématurément vos intentions."
+                },
+                {
+                  "num": "4",
+                  "title": "Apprivoisez les silences",
+                  "text": "Ne comblez pas les pauses dans une conversation par du bavardage anxieux."
+                },
+                {
+                  "num": "5",
+                  "title": "Privilégiez la concision",
+                  "text": "Moins vous parlez, plus vos paroles ont du poids et marquent les esprits."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "Le silence est une preuve d'assurance et d'autodiscipline, jamais d'impuissance.",
+            "La retenue mesurée suscite un respect instinctif et préserve le mystère de l'esprit.",
+            "L'écoute profonde procure une compréhension fine des situations et des personnes.",
+            "L'excès de paroles dilue la portée du message et trahit l'anxiété.",
+            "La concision verbale force l'auditoire à une écoute attentive et respectueuse."
+          ],
+          "conclusion": "Le silence est le sanctuaire de la pensée lucide et la demeure de la paix intérieure. En apprenant à vous taire à bon escient, vous protégez non seulement votre énergie vitale, mais vous développez une souveraineté que nulle agitation extérieure ne peut troubler.",
+          "finalQuote": "« Le silence est le grand art de la conversation. »",
+          "finalQuoteAuthor": "— William Hazlitt | Hikma & Nour"
         },
         {
           "id": "nietzsche-psychological-strength",
@@ -2157,11 +2242,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "Antoine V.",
-              "time": "Il y a 1 jour",
-              "text": "La notion d'Amor Fati m'a aidé à traverser une épreuve personnelle majeure avec courage."
+              "author": "Julien M.",
+              "time": "Il y a 4 heures",
+              "text": "Une analyse magistrale qui rend justice à la profondeur de Nietzsche, loin des contresens habituels."
+            },
+            {
+              "author": "Nathalie D.",
+              "time": "Il y a 8 heures",
+              "text": "L'Amor Fati est une véritable boussole pour traverser les périodes de doute."
             }
-          ]
+          ],
+          "chapo": "La philosophie de Friedrich Nietzsche n'est pas une théorie abstraite, mais un hymne à la vie, un défi monumental lancé à l'être humain pour transcender ses faiblesses et forger une force intérieure inébranlable.",
+          "summaryBox": {
+            "title": "✦ L'Essence de la puissance selon Nietzsche",
+            "summary": "La force nietzschéenne n'est pas une domination d'autrui, mais un dépassement de soi-même : l'art souverain de transformer l'adversité et la souffrance en énergie vitale et en hauteur d'esprit.",
+            "question": "Considérez-vous vos épreuves comme des fardeaux destructeurs, ou comme le forgeage de votre esprit ?"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "Ce qui ne me tue pas me rend plus fort",
+              "content": [
+                "Pour Nietzsche, la souffrance n'est pas une malédiction, mais l'épreuve décisive qui sépare les esprits d'élite de la médiocrité complaisante. L'homme qui ne cherche que le confort s'atrophie inévitablement.",
+                "La douleur possède une vertu pédagogique incomparable : elle dépouille des illusions et contraint à puiser dans des ressources intérieures insoupçonnées."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "La Volonté de Puissance : le dépassement perpétuel de soi",
+              "content": [
+                "Le concept de 'Volonté de Puissance' (Wille zur Macht) désigne l'élan fondamental de croissance, de création et de maîtrise de ses propres passions.",
+                "L'homme noble accepte son destin avec vaillance (Amor Fati), sans jamais céder à l'amertume ou au ressentiment victimaire."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 Concept philosophique majeur",
+              "title": "L'Amor Fati : aimer son destin sans réserve",
+              "text": "Aimer son destin ne signifie pas se résigner, mais embrasser pleinement chaque événement de son existence : les victoires comme les tempêtes ont forgé votre force d'aujourd'hui."
+            },
+            {
+              "num": "03",
+              "title": "S'affranchir de la morale du troupeau",
+              "content": [
+                "Nietzsche met en garde contre la tyrannie du conformisme qui étouffe l'individualité créatrice. La véritable force psychologique exige le courage de se tenir debout, même en solitaire.",
+                "Être soi-même dans un monde qui cherche sans cesse à vous normaliser constitue le plus haut acte d'héroïsme spirituel."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "5 principes nietzschéens pour bâtir un mental solide",
+              "desc": "Comment incarner la philosophie de Nietzsche au quotidien :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "Embrassez la difficulté",
+                  "text": "Ne fuyez pas l'effort : les défis les plus rudes sont les plus formateurs."
+                },
+                {
+                  "num": "2",
+                  "title": "Pratiquez l'Amor Fati",
+                  "text": "Acceptez le réel et transformez chaque obstacle en tremplin d'apprentissage."
+                },
+                {
+                  "num": "3",
+                  "title": "Bannissez le ressentiment",
+                  "text": "Ne blâmez ni les autres ni les circonstances ; soyez l'unique maître de vos choix."
+                },
+                {
+                  "num": "4",
+                  "title": "Dépassez-vous quotidiennement",
+                  "text": "Ne vous comparez qu'à votre version d'hier."
+                },
+                {
+                  "num": "5",
+                  "title": "Cherchez la solitude créatrice",
+                  "text": "Isolez-vous régulièrement pour penser, créer et vous ressourcer."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "L'adversité est le catalyseur essentiel du renforcement psychologique.",
+            "La volonté de puissance est avant tout une conquête de soi et de ses pulsions.",
+            "L'Amor Fati délivre du regret stérile et réconcilie avec l'existence.",
+            "L'autonomie intellectuelle nécessite de s'émanciper du conformisme de masse.",
+            "La grandeur humaine réside dans la capacité à sublimer la douleur en création."
+          ],
+          "conclusion": "La pensée de Nietzsche est une invitation vibrante à l'affirmation de la vie : une existence portée par le courage, la fierté d'être soi et la joie de surmonter les obstacles. Lorsque vous embrassez l'épreuve avec vaillance, aucune tempête ne peut vous anéantir.",
+          "finalQuote": "« Celui qui a un pourquoi qui lui tient lieu de but peut vivre avec presque n'importe quel comment. »",
+          "finalQuoteAuthor": "— Friedrich Nietzsche | Hikma & Nour"
         },
         {
           "id": "schopenhauer-happiness-illusion",
@@ -2191,11 +2361,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "Laurent G.",
-              "time": "Il y a 2 jours",
-              "text": "Définir le bonheur comme l'absence de douleur m'a ôté une pression sociale colossale."
+              "author": "Marc D.",
+              "time": "Il y a 2 heures",
+              "text": "Une clarté d'exposition remarquable. Le concept du pendule éclaire toute la société de consommation moderne."
+            },
+            {
+              "author": "Sophie L.",
+              "time": "Il y a 5 heures",
+              "text": "Ce texte fait tellement de bien. Réduire ses désirs est effectivement la clé de la paix."
             }
-          ]
+          ],
+          "chapo": "Le bonheur est-il un état accessible ou un mirage qui s'évanouit dès qu'on le frôle ? Arthur Schopenhauer offre l'une des analyses les plus lucides et percutantes sur la dynamique du désir et les chemins de la sérénité.",
+          "summaryBox": {
+            "title": "✦ Le Dilemme du désir selon Schopenhauer",
+            "summary": "L'existence humaine oscille comme un pendule entre la souffrance du manque et l'ennui de la satiété. Le bonheur positif est une illusion ; la paix véritable réside dans l'apaisement du vouloir-vivre.",
+            "question": "Poursuivez-vous le bonheur comme une accumulation de plaisirs, ou cultivez-vous la quiétude de l'esprit ?"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "Le pendule de l'existence : entre souffrance et ennui",
+              "content": [
+                "Schopenhauer compare la vie humaine à un pendule oscillant sans trêve entre deux pôles : la souffrance causée par les désirs inassouvis, et l'ennui désarmant qui suit immédiatement leur satisfaction.",
+                "Chaque fois qu'un objectif est atteint, l'euphorie s'estompe rapidement pour laisser place à un nouveau tourment ou à une lancinante vacuité."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "La nature négative du bonheur : l'absence de douleur",
+              "content": [
+                "L'une des thèses cardinales de Schopenhauer est que le bonheur n'a pas de réalité positive : il correspond purement et simplement à l'absence de douleur physique et d'angoisse morale.",
+                "La santé et la tranquillité ne sont pleinement appréciées que lorsqu'elles viennent à manquer. La sagesse commande donc d'éviter la souffrance plutôt que de courir après les chimères du plaisir."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 Intuition philosophique majeure",
+              "title": "L'art et la contemplation comme asile spirituel",
+              "text": "La contemplation esthétique et la méditation suspendent temporairement le tyran du vouloir-vivre. Devant la beauté pure d'une œuvre ou de la nature, l'esprit s'affranchit du tumulte des désirs."
+            },
+            {
+              "num": "03",
+              "title": "La voie de la délivrance : renoncement et compassion",
+              "content": [
+                "Le salut de l'âme repose sur deux piliers : d'une part, la modération des besoins matériels ; d'autre part, la compassion universelle envers tous les êtres partageant la condition tragique de l'existence.",
+                "En réalisant que chaque être lutte contre la même souffrance, la bienveillance remplace la rivalité et l'âme accède à une paix inaltérable."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "5 étapes schopenhaueriennes vers la paix intérieure",
+              "desc": "Comment bâtir un équilibre mental préservé des tourments du désir :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "Modérez vos attentes envers la vie",
+                  "text": "Cessez d'exiger un bonheur féerique ; chaque jour sans tourment est une bénédiction."
+                },
+                {
+                  "num": "2",
+                  "title": "Réduisez vos besoins superflus",
+                  "text": "Moins vous désirez d'artifices, moins vous offrez de prises à l'angoisse."
+                },
+                {
+                  "num": "3",
+                  "title": "Chérissez le calme présent",
+                  "text": "Appréciez la santé et la quiétude tant qu'elles vous accompagnent."
+                },
+                {
+                  "num": "4",
+                  "title": "Cultivez la contemplation artistique",
+                  "text": "Consacrez du temps à la lecture, à la musique et à l'observation de la nature."
+                },
+                {
+                  "num": "5",
+                  "title": "Exercez une compassion active",
+                  "text": "Regardez autrui avec empathie, sachant que chacun porte ses propres peines."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "Le bonheur positif est une illusion éphémère ; le vrai bien est l'absence de douleur.",
+            "L'esprit humain oscille continuellement entre le manque et la satiété ennuyeuse.",
+            "La contemplation de l'art offre une trêve bienfaisante contre les tourments du désir.",
+            "Le désencombrement matériel et mental est le garant de la liberté intérieure.",
+            "La compassion envers le vivant est le couronnement de la lucidité philosophique."
+          ],
+          "conclusion": "La pensée de Schopenhauer n'est pas un pessimisme stérile, mais une formidable leçon de désillusionnement salutaire. En renonçant à la poursuite frénétique des faux bonheurs, vous découvrez en vous un sanctuaire de sérénité et de paix souveraine.",
+          "finalQuote": "« La plus grande des sagesses consiste à préférer la préservation contre la souffrance à la poursuite du plaisir. »",
+          "finalQuoteAuthor": "— Arthur Schopenhauer | Hikma & Nour"
         },
         {
           "id": "solitude-blessing-or-curse",
@@ -2223,11 +2478,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "Camille M.",
-              "time": "Il y a 3 jours",
-              "text": "Mes moments de solitude matinale sont devenus indispensables à mon équilibre mental."
+              "author": "Antoine P.",
+              "time": "Il y a 3 heures",
+              "text": "Une lecture qui réconcilie avec ses propres moments d'isolement. Très inspirant."
+            },
+            {
+              "author": "Camille R.",
+              "time": "Il y a 6 heures",
+              "text": "La citation de Tillich résume tout. Merci pour cet essai d'une grande finesse."
             }
-          ]
+          ],
+          "chapo": "Entre l'angoisse cuisante de l'isolement et la grâce féconde du recueillement, la solitude constitue l'une des épreuves les plus intenses de la condition humaine. Quand est-elle un tremplin d'élévation et quand devient-elle un piège de l'esprit ?",
+          "summaryBox": {
+            "title": "✦ Synthèse de la réflexion",
+            "summary": "La différence entre la solitude subie (l'isolement) et la solitude choisie réside dans la qualité du dialogue intérieur. La solitude fertile est le sanctuaire où l'esprit régénère ses forces et forge son authenticité.",
+            "question": "Fuyez-vous la solitude par peur du face-à-face avec vous-même, ou la cultivez-vous comme une oasis de paix ?"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "Isolement subi contre Solitude féconde",
+              "content": [
+                "L'isolement est un sentiment de vide et d'abandon, même au cœur d'une foule bruyante. La solitude féconde, au contraire, est un choix délibéré de retour à soi pour goûter à la plénitude de sa propre présence.",
+                "Comme l'écrivait Paul Tillich : 'Le langage a créé le mot solitude pour exprimer la douleur d'être seul, et le mot recueillement pour en exprimer la gloire'."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "Le laboratoire de la créativité et de l'authenticité",
+              "content": [
+                "Toutes les grandes découvertes philosophiques et créations artistiques sont nées dans le silence d'une chambre ou la marche solitaire. Le bruit social impose les jugements d'autrui ; la solitude libère votre voix singulière.",
+                "Loin des regards, les masques tombent : vous apprenez à exister par vous-même sans dépendre de la validation ou des applaudissements extérieurs."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 Insight psychologique majeur",
+              "title": "La capacité d'être seul comme signe de maturité",
+              "text": "En psychologie analytique (notamment chez Donald Winnicott), la capacité d'être seul sans angoisse constitue l'un des signes les plus manifestes de maturité affective et de solidité du moi intérieur."
+            },
+            {
+              "num": "03",
+              "title": "Les écueils de l'isolement et l'art de l'équilibre",
+              "content": [
+                "La solitude devient délétère lorsqu'elle sert de fuite névrotique face aux responsabilités ou de paravent à la dépression et au ressentiment.",
+                "La sagesse consiste en un va-et-vient harmonieux : se ressourcer dans le calme de son sanctuaire, puis revenir vers autrui avec bienveillance, clarté et générosité."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "5 pratiques pour faire de sa solitude une oasis",
+              "desc": "Comment apprivoiser et sublimer vos moments de recueillement :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "30 minutes de déconnexion totale",
+                  "text": "Chaque jour, éteignez tout écran et asseyez-vous dans le calme absolu."
+                },
+                {
+                  "num": "2",
+                  "title": "Tenez un journal introspectif",
+                  "text": "Écrire sans filtre libère les tensions et ordonne vos pensées les plus intimes."
+                },
+                {
+                  "num": "3",
+                  "title": "Marchez en solitaire dans la nature",
+                  "text": "La contemplation d'un paysage apaise le système nerveux et recentre l'esprit."
+                },
+                {
+                  "num": "4",
+                  "title": "Ne craignez pas le silence",
+                  "text": "Le calme n'est pas un vide stérile, mais l'espace où germe votre créativité."
+                },
+                {
+                  "num": "5",
+                  "title": "Choisissez des relations de qualité",
+                  "text": "Mieux vaut une noble solitude qu'une compagnie toxique qui dissout votre énergie."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "La solitude féconde est un choix souverain ; l'isolement est une blessure d'abandon.",
+            "Le recueillement est le berceau indispensable de toute création profonde.",
+            "Être en paix seul avec soi-même est la marque absolue de la maturité émotionnelle.",
+            "L'isolement devient nocif s'il sert de refuge à l'amertume ou au repli défensif.",
+            "L'équilibre harmonieux entre solitude et vie sociale préserve la santé mentale."
+          ],
+          "conclusion": "La solitude n'est pas un éloignement du monde, mais le lieu où nous forgeons notre lumière pour éclairer notre chemin. Lorsque vous devenez votre propre ami, vous n'êtes plus jamais orphelin dans l'univers.",
+          "finalQuote": "« La solitude est à l'esprit ce que la diète est au corps : mortelle si elle est trop longue, mais nécessaire. »",
+          "finalQuoteAuthor": "— Luc de Clapiers, Marquis de Vauvenargues | Hikma & Nour"
         },
         {
           "id": "7-errors-mind-growth",
@@ -2256,11 +2596,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "Thomas B.",
-              "time": "Il y a 4 jours",
-              "text": "L'humilité intellectuelle socratique est le meilleur antidote au dogmatisme moderne."
+              "author": "Guillaume T.",
+              "time": "Il y a 4 heures",
+              "text": "L'analyse sur les coûts irrécupérables m'a ouvert les yeux. Très utile pour mes choix de vie."
+            },
+            {
+              "author": "Élodie F.",
+              "time": "Il y a 7 heures",
+              "text": "Article clair, synthétique et immédiatement applicable au quotidien."
             }
-          ]
+          ],
+          "chapo": "Nous cherchons souvent les causes de nos blocages dans les aléas extérieurs ou les actions d'autrui, alors que les véritables obstacles résident dans des biais cognitifs et des schémas mentaux limitants ancrés en nous.",
+          "summaryBox": {
+            "title": "✦ Cartographie des biais de pensée",
+            "summary": "L'esprit humain use de raccourcis qui se transforment en pièges mentaux. Identifier ces 7 erreurs de la pensée est l'étape fondatrice pour déverrouiller votre potentiel et retrouver une clarté souveraine.",
+            "question": "Lequel de ces pièges mentaux draine le plus votre énergie et freine votre élan ?"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "Le piège du perfectionnisme et de la pensée binaire",
+              "content": [
+                "La pensée en tout-ou-rien divise la vie entre succès absolu et échec total, sans nuance. Cette distorsion engendre la paralysie et la procrastination par peur de produire une œuvre imparfaite.",
+                "La croissance véritable découle de la répétition patiente de petits progrès constants, non de miracles foudroyants."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "La quête de validation et le biais de confirmation",
+              "content": [
+                "Chercher constamment l'approbation d'autrui fait de vous l'otage de leurs humeurs. De surcroît, le biais de confirmation pousse votre cerveau à ne retenir que les signaux renforçant vos doutes anciens.",
+                "Libérer son intelligence exige de soumettre ses propres certitudes à l'épreuve d'un examen lucide et sans complaisance."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 Biais cognitif déterminant",
+              "title": "Le piège des coûts irrécupérables (Sunk Cost Fallacy)",
+              "text": "S'acharner dans une voie stérile ou une relation toxique sous prétexte qu'on y a déjà consacré du temps et de l'énergie est une illusion dévastatrice. Le courage consiste à savoir clore un chapitre pour renaître."
+            },
+            {
+              "num": "03",
+              "title": "La dramatisation et l'anticipation du pire",
+              "content": [
+                "Le cerveau primitif surévalue le danger pour survivre, mais dans le monde moderne, ce réflexe transforme de simples contretemps en scénarios apocalyptiques imaginaires.",
+                "Comme le rappelait Sénèque : 'Nous souffrons beaucoup plus souvent en imagination qu'en réalité'."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "Guide pratique : 5 antidotes aux erreurs de pensée",
+              "desc": "Comment reprogrammer vos réflexes mentaux :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "Cessez la pensée binaire",
+                  "text": "Remplacez 'tout ou rien' par la règle du '1% de progression quotidienne'."
+                },
+                {
+                  "num": "2",
+                  "title": "Arrêtez la télépathie",
+                  "text": "Ne présumez pas de ce que pensent les autres : posez des questions claires ou détachez-vous-en."
+                },
+                {
+                  "num": "3",
+                  "title": "Désamorcez la personnalisation",
+                  "text": "Les réactions d'autrui témoignent de leurs blessures, non de votre valeur."
+                },
+                {
+                  "num": "4",
+                  "title": "Agissez avant d'être prêt",
+                  "text": "L'élan se crée dans l'action concrète, jamais dans la rumination théorique."
+                },
+                {
+                  "num": "5",
+                  "title": "Évitez les comparaisons stériles",
+                  "text": "Votre unique point de repère doit être la personne que vous étiez hier."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "La plupart de nos barrières sont des constructions mentales erronées.",
+            "Le perfectionnisme rigide est l'ennemi juré de l'accomplissement réel.",
+            "Ne pas personnaliser les comportements d'autrui préserve une énergie vitale précieuse.",
+            "Savoir abandonner une voie sans issue est un acte de haute sagesse stratégique.",
+            "Désamorcer les scénarios catastrophes libère instantanément de l'anxiété."
+          ],
+          "conclusion": "Transformer son existence ne commence pas par changer le monde extérieur, mais par polir la lentille à travers laquelle nous l'interprétons. En purifiant votre esprit de ces erreurs, la sérénité et l'action fluide deviennent une seconde nature.",
+          "finalQuote": "« La vie d'un homme est ce que ses pensées en font. »",
+          "finalQuoteAuthor": "— Marc Aurèle | Hikma & Nour"
         },
         {
           "id": "happiness-in-wrong-place",
@@ -2288,11 +2713,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "Nathalie P.",
-              "time": "Il y a 5 jours",
-              "text": "Ce texte rappelle l'essentiel : apprécier ce que l'on possède déjà."
+              "author": "Damien V.",
+              "time": "Il y a 3 heures",
+              "text": "Un texte lumineux qui remet les priorités à leur juste place. Le stoïcisme est le remède de notre siècle."
+            },
+            {
+              "author": "Hélène M.",
+              "time": "Il y a 5 heures",
+              "text": "La dichotomie du contrôle est un principe que chacun devrait enseigner à ses enfants."
             }
-          ]
+          ],
+          "chapo": "Combien d'années gaspillons-nous à poursuivre des chimères en espérant qu'elles combleront notre soif d'absolu ? Pourquoi nous obstinons-nous à chercher le bonheur là où il est rigoureusement impossible de le trouver ?",
+          "summaryBox": {
+            "title": "✦ L'Ancrage du vrai bonheur",
+            "summary": "Le bonheur conditionné par les possessions et le statut social s'évapore aussitôt atteint. La félicité authentique est un état de plénitude intérieure et de cohérence avec soi-même qui ne s'achète ni ne se perd.",
+            "question": "Fondez-vous votre équilibre sur ce que vous possédez, ou sur ce que vous êtes et pensez ?"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "L'illusion du bonheur marchand et l'adaptation hédonique",
+              "content": [
+                "Le culte moderne de la consommation promet le bonheur derrière le prochain achat, la prochaine promotion ou l'approbation sociale. Pourtant, la psychologie a démontré le phénomène d'adaptation hédonique (Hedonic Treadmill) : le cerveau s'habitue à tout confort matériel et revient à son niveau de base.",
+                "Attacher sa joie aux faux-semblants revient à confier sa paix d'esprit à des vents que l'on ne contrôle pas."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "La dichotomie du contrôle stoïcienne",
+              "content": [
+                "Épictète a posé le principe suprême de la sagesse : distinguer ce qui dépend de nous (nos pensées, nos valeurs, nos choix) de ce qui n'en dépend pas (l'opinion d'autrui, la fortune, les aléas du destin).",
+                "En consacrant votre énergie exclusivement à votre for intérieur, vous devenez invulnérable à l'angoisse du lendemain."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 Découverte psychologique clé",
+              "title": "La gratitude active comme régulateur neurologique",
+              "text": "En neurosciences, la pratique délibérée de la gratitude pour les grâces simples du présent stimule la production de dopamine et de sérotonine, réalignant le cerveau vers un calme profond et durable."
+            },
+            {
+              "num": "03",
+              "title": "Le bonheur comme présence, non comme destination",
+              "content": [
+                "Le bonheur n'est pas un trophée remis au terme d'une course épuisante, mais la manière attentive dont vous marchez sur le chemin. C'est l'intensité de votre présence à l'instant.",
+                "La paix de l'âme ne signifie pas l'absence d'épreuves, mais la certitude d'une sérénité inaltérable au cœur de la tempête."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "5 principes pour ancrer le bonheur en soi",
+              "desc": "Pratiques stoïciennes et psychologiques pour le quotidien :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "Privilégiez les expériences aux objets",
+                  "text": "Les souvenirs et l'apprentissage forgent une joie beaucoup plus pérenne que les possessions."
+                },
+                {
+                  "num": "2",
+                  "title": "Appliquez la dichotomie du contrôle",
+                  "text": "Demandez-vous : 'Cela dépend-il de moi ?' Si non, ne lui offrez pas votre tourment."
+                },
+                {
+                  "num": "3",
+                  "title": "Rituel de gratitude matinal",
+                  "text": "Commencez la journée en nommant 3 réalités simples dont vous êtes reconnaissant."
+                },
+                {
+                  "num": "4",
+                  "title": "Cessez la comparaison numérique",
+                  "text": "Ne mesurez pas votre intimité à l'aune des vitrines artificielles des réseaux sociaux."
+                },
+                {
+                  "num": "5",
+                  "title": "Donnez du sens par la générosité",
+                  "text": "Servir une cause plus haute que soi procure le sentiment d'accomplissement suprême."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "Les biens et le statut social offrent un plaisir fugace mais aucune paix durable.",
+            "L'adaptation hédonique transforme la quête matérielle en mirage perpétuel.",
+            "Se concentrer sur ce qui dépend de soi est l'unique clé de la souveraineté intérieure.",
+            "La gratitude quotidienne rééduque l'attention vers l'abondance du présent.",
+            "Le vrai bonheur est une harmonie vécue au présent, non une promesse future."
+          ],
+          "conclusion": "Le bonheur n'a jamais été un trésor enfoui au loin, mais la manière dont nous habitons notre esprit. Lorsque vous cessez de le mendier à l'extérieur, vous découvrez qu'il a toujours résidé en vous-même.",
+          "finalQuote": "« Ce n'est pas celui qui a peu qui est pauvre, mais celui qui désire toujours plus. »",
+          "finalQuoteAuthor": "— Sénèque | Hikma & Nour"
         },
         {
           "id": "true-confidence-inside",
@@ -2320,11 +2830,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "Romain T.",
-              "time": "Il y a 1 semaine",
-              "text": "Se détacher de l'approbation des autres a transformé ma façon d'aborder mes projets."
+              "author": "Romain G.",
+              "time": "Il y a 2 heures",
+              "text": "La définition de la confiance comme 'réputation envers soi-même' est d'une justesse implacable."
+            },
+            {
+              "author": "Élise C.",
+              "time": "Il y a 4 heures",
+              "text": "Un essai d'une grande profondeur qui aide énormément à surmonter le syndrome de l'imposteur."
             }
-          ]
+          ],
+          "chapo": "Entre l'arrogance tapageuse et le doute paralysant, la confiance authentique se dresse comme une force sereine. Elle ne naît pas du regard d'autrui, mais de la paix avec soi-même et de l'estime de ses propres valeurs.",
+          "summaryBox": {
+            "title": "✦ L'Essence de la confiance souveraine",
+            "summary": "La véritable assurance ne consiste pas à prétendre être parfait ou supérieur, mais à posséder la force d'accepter son imperfectibilité tout en se fiant à sa capacité d'apprentissage face à l'inconnu.",
+            "question": "Votre assurance dépend-elle de l'approbation sociale, ou de votre alignement intérieur inébranlable ?"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "Assurance tranquille contre arrogance défensive",
+              "content": [
+                "L'arrogance est bruyante, fragile et cherche constamment à rabaisser pour se rassurer. À l'inverse, l'assurance véritable est silencieuse, posée et ne ressent nul besoin de prouver quoi que ce soit.",
+                "L'esprit solide n'a pas honte d'admettre son ignorance ou ses erreurs, car sa valeur fondamentale ne dépend pas d'un résultat passager."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "La confiance comme réputation envers soi-même",
+              "content": [
+                "En psychologie moderne, la confiance n'est pas une émotion mystique, mais la réputation intime que vous avez bâtie auprès de votre propre conscience. Chaque promesse tenue envers vous-même renforce votre socle intérieur.",
+                "Le décalage entre vos paroles publiques et vos actes secrets est le destructeur numéro un de l'estime de soi."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 Pilier de psychologie cognitive",
+              "title": "L'Auto-efficacité selon Albert Bandura",
+              "text": "L'auto-efficacité est la croyance intime en votre capacité à surmonter les obstacles et à apprendre ce qui vous manque. Vous ne prétendez pas tout savoir : vous avez confiance en votre faculté d'adaptation."
+            },
+            {
+              "num": "03",
+              "title": "Vaincre le syndrome de l'imposteur",
+              "content": [
+                "Douter de sa légitimité est fréquent chez les esprits réfléchis. La sagesse consiste à comprendre que le doute lucide est le moteur du perfectionnement, pourvu qu'il ne se transforme pas en auto-sabotage.",
+                "Cessez d'être votre propre procureur : avancez en artisan consciencieux dans l'apprentissage de la vie."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "5 pratiques pour forger une confiance inébranlable",
+              "desc": "Rituels quotidiens d'alignement et de solidité :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "Tenez vos micro-engagements",
+                  "text": "Chaque tâche accomplie dans l'ombre forge le respect de votre inconscient."
+                },
+                {
+                  "num": "2",
+                  "title": "Dédramatisez l'erreur",
+                  "text": "L'échec est une donnée informative sur la méthode, jamais un jugement sur votre être."
+                },
+                {
+                  "num": "3",
+                  "title": "Maîtrisez une compétence réelle",
+                  "text": "L'expertise concrète est le roc le plus solide sur lequel fonder son assurance."
+                },
+                {
+                  "num": "4",
+                  "title": "Soignez votre dialogue intérieur",
+                  "text": "Parlez-vous avec la bienveillance et l'exigence d'un mentor éclairé."
+                },
+                {
+                  "num": "5",
+                  "title": "Adoptez une posture d'ancrage",
+                  "text": "Tenez-vous droit et respirez calmement : le corps informe directement l'esprit de sa force."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "La vraie confiance est calme et mesurée ; l'arrogance est un masque d'insécurité.",
+            "L'estime de soi est le fruit direct des promesses tenues envers sa propre conscience.",
+            "L'auto-efficacité repose sur la certitude de savoir apprendre et s'adapter.",
+            "Le doute méthodique est sain dès lors qu'il stimule l'action au lieu de la paralyser.",
+            "L'expertise réelle et l'intégrité morale constituent les fondations de l'assurance."
+          ],
+          "conclusion": "La confiance en soi n'est pas un slogan superficiel, mais l'aboutissement d'une loyauté absolue envers ses principes et d'un travail patient de maîtrise personnelle. Lorsque vos racines sont profondes, nul vent ne peut vous déraciner.",
+          "finalQuote": "« Dès que vous aurez confiance en vous-même, vous saurez comment vivre. »",
+          "finalQuoteAuthor": "— Johann Wolfgang von Goethe | Hikma & Nour"
         },
         {
           "id": "hikma-citations-philosophiques",
@@ -2352,11 +2947,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "Sophie K.",
-              "time": "Il y a 1 semaine",
-              "text": "Une formidable sélection que je relis régulièrement pour garder le cap."
+              "author": "Nicolas B.",
+              "time": "Il y a 3 heures",
+              "text": "Une synthèse admirable. Ces 5 maximes sont un guide parfait pour le quotidien."
+            },
+            {
+              "author": "Marion V.",
+              "time": "Il y a 6 heures",
+              "text": "J'adore la citation d'Épictète. Pratique, clair et puissant."
             }
-          ]
+          ],
+          "chapo": "Une citation philosophique n'est pas un ornement littéraire, mais la quintessence d'une vie de méditations et d'épreuves. Comment transformer les maximes des grands sages en boussole quotidienne pour guider vos choix ?",
+          "summaryBox": {
+            "title": "✦ La Puissance de la maxime philosophique",
+            "summary": "La véritable sagesse condense la vérité existentielle en formules lumineuses qui réveillent la conscience et arment l'esprit face aux carrefours complexes de l'existence.",
+            "question": "Lisez-vous les citations pour briller en société, ou pour forger votre caractère et gouverner vos actions ?"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "La sagesse stoïcienne : la maîtrise des représentations",
+              "content": [
+                "De Marc Aurèle à Sénèque et Épictète, le stoïcisme offre une forteresse mentale contre l'inconstance du sort. Le principe souverain : 'Ce ne sont pas les choses qui nous troublent, mais le jugement que nous portons sur elles'.",
+                "En gravant ces préceptes dans sa mémoire pour les mobiliser dans l'adversité, chaque épreuve se transforme en exercice de vertu."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "La liberté et la responsabilité existentielle",
+              "content": [
+                "De Socrate à Kant, Nietzsche et Sartre, la tradition philosophique affirme la liberté et la dignité inaliénable de l'individu. Vous n'êtes pas le produit passif des circonstances, mais la somme de vos choix.",
+                "La liberté authentique est l'engagement courageux d'agir selon des valeurs élevées, même lorsque la facilité commande la lâcheté."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 Impact neurocognitif",
+              "title": "La thérapie par la sagesse (Logothérapie & TCC)",
+              "text": "Les thérapies cognitives modernes s'inspirent directement des maximes stoïciennes : verbaliser une vérité philosophique apaise immédiatement l'activité de l'amygdale cérébrale et rétablit le contrôle rationnel."
+            },
+            {
+              "num": "03",
+              "title": "Du verbe à l'acte : incarner sa philosophie",
+              "content": [
+                "Le pire écueil est de réduire la philosophie à un jeu d'esprit stérile. Le véritable philosophe est celui dont les actes témoignent de la noblesse de sa pensée face aux provocations et aux deuils.",
+                "Comme le tonnait Épictète : 'Ne dis pas comment on doit vivre, vis ainsi'."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "5 maximes fondamentales pour gouverner son quotidien",
+              "desc": "Boussole intemporelle pour l'élévation de l'esprit :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "Socrate",
+                  "text": "« Connais-toi toi-même » : examinez vos mobiles intimes avant de juger le monde."
+                },
+                {
+                  "num": "2",
+                  "title": "Marc Aurèle",
+                  "text": "« Ne perdez plus de temps à discuter de ce qu'est un homme de bien. Soyez-en un »."
+                },
+                {
+                  "num": "3",
+                  "title": "Sénèque",
+                  "text": "« Nous souffrons plus en imagination qu'en réalité » : cessez d'anticiper le malheur."
+                },
+                {
+                  "num": "4",
+                  "title": "Épictète",
+                  "text": "« Ce qui dépend de toi, fais-le ; ce qui n'en dépend pas, méprise-le »."
+                },
+                {
+                  "num": "5",
+                  "title": "Nietzsche",
+                  "text": "« Deviens ce que tu es » : réalisez votre potentiel unique sans compromission."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "La citation philosophique est une formule condensée de santé mentale.",
+            "Le stoïcisme enseigne la souveraineté absolue sur ses propres jugements.",
+            "La liberté humaine commence là où s'arrête la plainte victimaire.",
+            "La grandeur d'une pensée se mesure à la noblesse des actes qu'elle inspire.",
+            "Mobiliser les grands préceptes dans la crise désamorce le tumulte émotionnel."
+          ],
+          "conclusion": "Les paroles des maîtres sont des phares qui éclairent les nuits de doute. En ancrant ces sentences au plus profond de votre être, votre démarche dans le monde gagne en assurance, en noblesse et en sérénité.",
+          "finalQuote": "« Une vie sans examen ne vaut pas d'être vécue. »",
+          "finalQuoteAuthor": "— Socrate | Hikma & Nour"
         },
         {
           "id": "self-discipline",
@@ -2386,11 +3066,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "Nicolas F.",
-              "time": "Il y a 2 semaines",
-              "text": "La constance des petites actions a changé ma productivité du tout au tout."
+              "author": "Sébastien M.",
+              "time": "Il y a 3 heures",
+              "text": "L'article est d'une puissance redoutable. Le rituel matinal m'a permis de doubler ma productivité."
+            },
+            {
+              "author": "Camille J.",
+              "time": "Il y a 6 heures",
+              "text": "L'explication sur la gratification différée est tellement inspirante. Merci !"
             }
-          ]
+          ],
+          "chapo": "L'autodiscipline n'est pas une punition privative, mais la forme la plus haute de liberté et de souveraineté mentale. Comment bâtir une volonté d'airain capable de vous affranchir de la paresse et des distractions futiles ?",
+          "summaryBox": {
+            "title": "✦ L'Essence de la maîtrise de soi",
+            "summary": "L'autodiscipline est le pont qui relie les aspirations aux réalisations concrètes. L'esprit discipliné n'attend pas l'étincelle éphémère de la motivation : il s'appuie sur des rituels inébranlables.",
+            "question": "Gouvernez-vous votre journée selon les caprices du moment, ou selon un plan aligné sur vos nobles ambitions ?"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "L'illusion de la motivation et le pouvoir des habitudes",
+              "content": [
+                "Se fier à la motivation émotionnelle est un piège : elle fluctue avec la météo ou la fatigue. La discipline, en revanche, est la capacité souveraine d'accomplir ce qui doit l'être, même lorsque l'envie fait défaut.",
+                "Les habitudes sont les algorithmes de l'esprit : elles automatisent l'excellence et économisent l'énergie décisionnelle pour les grands défis."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "La gratification différée : socle de la grandeur",
+              "content": [
+                "La distinction majeure entre les destins remarquables et la médiocrité réside dans l'art de sacrifier le plaisir immédiat (distraction numérique, confort passif) au profit d'une victoire future de longue haleine.",
+                "Comme l'enseignaient les stoïciens : chaque triomphe sur le monde extérieur commence par la victoire sur ses propres pulsions."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 Principe de psychologie comportementale",
+              "title": "L'Ancrage de l'identité dans l'habitude (James Clear)",
+              "text": "La discipline durable ne repose pas sur ce que vous voulez obtenir, mais sur qui vous choisissez d'être : ne dites plus 'j'essaie d'étudier', affirmez 'je suis un esprit rigoureux qui chérit le savoir'."
+            },
+            {
+              "num": "03",
+              "title": "L'architecture de l'environnement : vaincre sans lutter",
+              "content": [
+                "La vraie discipline ne consiste pas à s'épuiser à résister aux tentations, mais à aménager un environnement où les bonnes actions sont fluides et les pièges inaccessibles.",
+                "Éloignez les distractions hors de votre champ visuel et préparez vos outils de travail à l'avance pour démarrer sans friction."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "5 règles stoïciennes pour forger une discipline d'acier",
+              "desc": "Protocole pratique de maîtrise quotidienne :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "La règle des 2 minutes",
+                  "text": "Amorcez toute nouvelle habitude par une action de 2 minutes pour vaincre l'inertie."
+                },
+                {
+                  "num": "2",
+                  "title": "Le rituel matinal sacré",
+                  "text": "Consacrez la première heure de votre journée à la tâche la plus exigeante."
+                },
+                {
+                  "num": "3",
+                  "title": "Sanctuarisez votre espace",
+                  "text": "Bannissez le smartphone de votre bureau pendant les sessions de travail profond."
+                },
+                {
+                  "num": "4",
+                  "title": "Ne manquez jamais deux fois",
+                  "text": "Si un imprévu brise votre routine un jour, reprenez impérativement le lendemain."
+                },
+                {
+                  "num": "5",
+                  "title": "Célébrez la régularité",
+                  "text": "Félicitez-vous de la fidélité au processus plutôt que de guetter des résultats hâtifs."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "La discipline est la liberté suprême ; le laisser-aller est un esclavage des pulsions.",
+            "Les rituels stables surpassent infiniment la motivation fluctuante.",
+            "La gratification différée est le prédicteur numéro un de la réussite durable.",
+            "Optimiser son environnement permet d'économiser sa force de volonté.",
+            "La répétition patiente d'efforts modestes produit des métamorphoses spectaculaires."
+          ],
+          "conclusion": "L'autodiscipline n'est pas une chaîne qui vous entrave, mais les ailes qui vous hissent vers vos idéaux les plus élevés. Lorsque vous devenez maître de vous-même, vous devenez maître de votre destinée.",
+          "finalQuote": "« Avec l'autodiscipline, presque tout devient possible. »",
+          "finalQuoteAuthor": "— Theodore Roosevelt | Hikma & Nour"
         },
         {
           "id": "stop-overthinking",
@@ -2422,16 +3187,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "Julien M.",
-              "time": "Il y a 2 heures",
-              "text": "Une lecture salvatrice. Appliquer la dichotomie du contrôle stoïcienne m'a permis d'alléger considérablement ma charge mentale."
+              "author": "Maxime R.",
+              "time": "Il y a 1 heure",
+              "text": "La respiration carrée et l'ancrage sensoriel m'ont sauvé d'une crise d'angoisse. Merci pour cet article d'utilité publique."
             },
             {
-              "author": "Claire D.",
-              "time": "Il y a 5 heures",
-              "text": "La méthode d'écriture des pensées est bluffante d'efficacité. Merci pour cette pépite de sagesse."
+              "author": "Laura P.",
+              "time": "Il y a 3 heures",
+              "text": "La défusion cognitive est une technique révolutionnaire quand on a tendance à trop analyser."
             }
-          ]
+          ],
+          "chapo": "Combien de nuits précieuses sont dévorées par la rumination mentale et l'analyse sans fin de scénarios imaginaires qui ne se réaliseront jamais ? Comment briser l'engrenage du sur-penser et retrouver un esprit limpide et serein ?",
+          "summaryBox": {
+            "title": "✦ L'Antidote au sur-penser",
+            "summary": "L'overthinking n'est pas une preuve d'intelligence, mais un piège de l'anxiété. La délivrance réside dans le passage immédiat de la rumination abstraite à l'action concrète et à l'ancrage sensoriel dans le présent.",
+            "question": "Vos ruminations résolvent-elles vos défis, ou créent-elles des tourments qui n'existaient pas ?"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "L'engrenage de la rumination mentale",
+              "content": [
+                "L'esprit anxieux rejoue les regrets du passé ou échafaude des catastrophes futures. Cette boucle infernale draine le glucose cérébral et inonde le corps de cortisol sans jamais produire la moindre solution.",
+                "Trop penser est une tentative désespérée et illusoire d'exercer un contrôle sur l'imprévisible."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "L'action physique comme antidote souverain",
+              "content": [
+                "Le cerveau ne peut pas à la fois ruminer et être pleinement engagé dans une action corporelle précise. Dès que le tourbillon mental s'amorce, bougez : marchez, écrivez, respirez ou accomplissez une tâche manuelle.",
+                "Le doute et l'angoisse naissent dans la stagnation ; la clarté et le courage jaillissent dans le mouvement."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 Clé de thérapie cognitive (ACT)",
+              "title": "La défusion cognitive : vous n'êtes pas vos pensées",
+              "text": "Vous n'êtes pas l'orateur de vos pensées, mais l'espace conscient dans lequel elles passent. En formulant : 'Je remarque que mon esprit produit une pensée d'échec', vous retirez instantanément à la pensée son pouvoir toxique."
+            },
+            {
+              "num": "03",
+              "title": "L'art de l'ancrage dans l'instant présent",
+              "content": [
+                "Nos souffrances se situent presque toutes dans deux temps inexistants : un passé révolu ou un futur imaginaire. Le seul espace où réside votre puissance d'action est l'Ici et Maintenant.",
+                "Rééduquer son attention sur ses sensations physiques coupe court au bavardage névrotique de l'égo."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "5 réflexes pour stopper l'overthinking sur-le-champ",
+              "desc": "Protocole d'urgence pour apaiser l'esprit :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "La règle des 5 secondes",
+                  "text": "Comptez 5-4-3-2-1 et passez immédiatement à une action physique pour court-circuiter le mental."
+                },
+                {
+                  "num": "2",
+                  "title": "La vidange cérébrale (Brain Dump)",
+                  "text": "Écrivez tout sur papier : voir les pensées posées dégonfle leur charge anxiogène."
+                },
+                {
+                  "num": "3",
+                  "title": "Le rendez-vous d'inquiétude",
+                  "text": "Allouez 15 minutes par jour aux soucis ; en dehors de ce créneau, reportez-les."
+                },
+                {
+                  "num": "4",
+                  "title": "L'ancrage 5-4-3-2-1",
+                  "text": "Nommez 5 choses visibles, 4 tactiles, 3 audibles, 2 olfactives et 1 gustative pour revenir au réel."
+                },
+                {
+                  "num": "5",
+                  "title": "La respiration carrée",
+                  "text": "Inspirez 4s, bloquez 4s, expirez 4s, bloquez 4s pour calmer le système nerveux parasympathique."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "Le sur-penser est une fuite anxieuse qui ne résout aucun problème réel.",
+            "L'action concrète est le remède le plus rapide contre la paralysie mentale.",
+            "La défusion cognitive rappelle que vous êtes l'observateur lucide de vos pensées.",
+            "Poser ses inquiétudes sur papier permet de les relativiser instantanément.",
+            "L'ancrage dans le présent désamorce les fantômes du passé et du futur."
+          ],
+          "conclusion": "Votre esprit est un outil sublime destiné à vous servir, non un geôlier qui vous tyrannise. Lorsque vous apprenez à apaiser la tempête intérieure, vous découvrez une paix aussi profonde et limpide qu'une eau calme.",
+          "finalQuote": "« L'inquiétude ne vide pas demain de ses chagrins, elle vide aujourd'hui de sa force. »",
+          "finalQuoteAuthor": "— Corrie ten Boom | Hikma & Nour"
         }
       ],
       "faq": [
@@ -4302,11 +5147,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "Marcus L.",
-              "time": "4 hours ago",
-              "text": "Silence is genuine authority. The less I speak impulsively, the more weight my words hold."
+              "author": "David Miller",
+              "time": "2 hours ago",
+              "text": "Incredible essay. The 3-second rule has completely elevated my communication at work."
+            },
+            {
+              "author": "Elena Rostova",
+              "time": "5 hours ago",
+              "text": "A truly timeless reminder of the elegance of self-restraint."
             }
-          ]
+          ],
+          "chapo": "In a world overwhelmed by noise and constant chatter, silence emerges not as an absence of speech, but as a commanding presence of dignity, self-mastery, and profound inner calm.",
+          "summaryBox": {
+            "title": "✦ Key Summary",
+            "summary": "Silence is not inability to speak, but a deliberate choice of emotional control and strategic timing. The quiet individual retains mystery, listens deeper, and commands effortless authority.",
+            "question": "Do you speak to fill empty air, or have you mastered the art of commanding respect through calm silence?"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "Silence as a Shield of Emotional Discipline",
+              "content": [
+                "Those who talk continuously reveal their insecurities, hidden motives, and fears without realizing it. Silence, conversely, acts as a protective fortress against impulsive overreactions.",
+                "Stoic wisdom teaches that controlling one's tongue is the highest form of self-rule. When you remain silent during heated moments, you compel others to confront their own turmoil."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "The Psychology of Mystery and Unspoken Charisma",
+              "content": [
+                "Human nature inherently respects what it cannot immediately measure or predict. Over-explaining trivializes personality, while thoughtful quietness builds undeniable gravity.",
+                "When you speak sparingly with weight and clarity, every word you utter carries immense value and commands the undivided attention of listeners."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 Psychological Insight",
+              "title": "The Tactical Pause in Negotiation and Daily Life",
+              "text": "In behavioral psychology, a deliberate pause after a statement creates constructive tension. Silence compels the counterpart to reconsider, elaborate, or soften their stance to fill the vacuum."
+            },
+            {
+              "num": "03",
+              "title": "Active Listening as Supreme Social Intelligence",
+              "content": [
+                "A silent person is never passive: they observe body language, detect subtle hesitations, and grasp the subtext that loud speakers inevitably overlook.",
+                "Authentic listening gives you the greatest advantage in human dynamics: deep clarity and grounded understanding."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "5 Rules to Master the Power of Silence",
+              "desc": "Practical steps to cultivate an unshakeable, calm presence :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "The 3-Second Rule",
+                  "text": "Before answering any provocative question, breathe and pause for 3 seconds."
+                },
+                {
+                  "num": "2",
+                  "title": "Stop Over-Justifying",
+                  "text": "Firm decisions need no long defense: say 'no' clearly and let it stand."
+                },
+                {
+                  "num": "3",
+                  "title": "Keep Your Plans Private",
+                  "text": "Let your finished results speak rather than broadcasting intentions beforehand."
+                },
+                {
+                  "num": "4",
+                  "title": "Embrace Awkward Pauses",
+                  "text": "Do not rush to fill conversational silence with anxious chatter."
+                },
+                {
+                  "num": "5",
+                  "title": "Value Brevity",
+                  "text": "Brevity is the essence of wit and the hallmark of a confident intellect."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "Silence is a sign of immense inner discipline, never weakness or indecision.",
+            "Calculated quietness fosters mystery and commands natural respect.",
+            "Attentive listening yields invaluable insight and situational awareness.",
+            "Excessive talking diminishes personal authority and betrays anxiety.",
+            "Concise speech forces listeners to pay genuine attention."
+          ],
+          "conclusion": "Silence is ultimately the sanctuary of deep wisdom and the cradle of mental peace. When you master purposeful silence, you preserve your vital energy and radiate a quiet sovereignty that no external chaos can shake.",
+          "finalQuote": "« Silence is a source of great strength. »",
+          "finalQuoteAuthor": "— Lao Tzu | Hikma & Nour"
         },
         {
           "id": "nietzsche-psychological-strength",
@@ -4336,11 +5266,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "Anthony V.",
-              "time": "1 day ago",
-              "text": "Nietzsche's Amor Fati helped me reframe a major career setback into the greatest growth period of my life."
+              "author": "Mark Henderson",
+              "time": "3 hours ago",
+              "text": "A truly empowering article. Nietzsche's insights on Amor Fati are transformative."
+            },
+            {
+              "author": "Sophia Lee",
+              "time": "7 hours ago",
+              "text": "Masterfully written. It captures the true spirit of self-overcoming."
             }
-          ]
+          ],
+          "chapo": "Friedrich Nietzsche's philosophy was never dry academic theory, but a radical hymn to life and a timeless challenge to overcome human weakness and build an unshakeable mind.",
+          "summaryBox": {
+            "title": "✦ The Core of Nietzschean Strength",
+            "summary": "Strength in Nietzsche's vision is not domination over others, but supreme self-overcoming: the noble art of transmuting adversity and pain into intellectual vitality and spiritual elevation.",
+            "question": "Do you perceive hardship as a crushing burden, or as the essential anvil upon which your character is forged?"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "What Does Not Kill Me Makes Me Stronger",
+              "content": [
+                "For Nietzsche, suffering is not a senseless punishment, but the fundamental trial that distinguishes remarkable minds from passive complacency. Continuous comfort inevitably breeds decay.",
+                "Pain carries profound psychological wisdom: it strips away vanity and forces the emergence of genuine inner resilience."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "The Will to Power : Continual Self-Overcoming",
+              "content": [
+                "The 'Will to Power' (Wille zur Macht) is the primal drive toward growth, creation, and sovereignty over one's impulses.",
+                "The noble individual loves their fate (Amor Fati) unconditionally, refusing to fall into bitter resentment or victim mentality."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 Philosophical Insight",
+              "title": "Amor Fati : Loving Fate Unconditionally",
+              "text": "Amor Fati is not passive resignation, but the joyful affirmation of every moment in your journey. Every scar and challenge has shaped your current consciousness."
+            },
+            {
+              "num": "03",
+              "title": "Breaking Free from Herd Mentality",
+              "content": [
+                "Nietzsche warned against the stifling tyranny of conformism. True psychological strength requires the courage to stand alone in defense of personal truth and authentic values.",
+                "Remaining true to oneself in a world designed to homogenize thought is the supreme form of spiritual heroism."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "5 Nietzschean Rules to Build an Unbreakable Mind",
+              "desc": "How to apply Nietzschean philosophy in modern life :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "Embrace Hardship",
+                  "text": "Do not shy away from arduous tasks; they build true competence."
+                },
+                {
+                  "num": "2",
+                  "title": "Practice Amor Fati",
+                  "text": "Accept reality and turn every roadblock into a stepping stone."
+                },
+                {
+                  "num": "3",
+                  "title": "Reject Victimhood",
+                  "text": "Take radical ownership of your decisions and destiny."
+                },
+                {
+                  "num": "4",
+                  "title": "Outgrow Your Past Self",
+                  "text": "Compete solely against who you were yesterday."
+                },
+                {
+                  "num": "5",
+                  "title": "Cultivate Fertile Solitude",
+                  "text": "Dedicate time to deep thinking away from collective noise."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "Adversity is the vital catalyst for psychological fortification.",
+            "The will to power is fundamentally self-mastery and inner growth.",
+            "Amor Fati liberates from regret and fosters deep existential peace.",
+            "Intellectual autonomy demands courage to resist social conformity.",
+            "Human greatness lies in the capacity to sublimate pain into creation."
+          ],
+          "conclusion": "Nietzsche's philosophy is an uncompromising invitation to live courageously, take full responsibility for one's destiny, and embrace every challenge as fuel for elevation. When you face life with boldness, no crisis can defeat you.",
+          "finalQuote": "« He who has a why to live can bear almost any how. »",
+          "finalQuoteAuthor": "— Friedrich Nietzsche | Hikma & Nour"
         },
         {
           "id": "schopenhauer-happiness-illusion",
@@ -4369,11 +5384,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "Lawrence G.",
-              "time": "2 days ago",
-              "text": "Defining happiness as freedom from pain relieved an immense weight of societal pressure."
+              "author": "Robert Clark",
+              "time": "4 hours ago",
+              "text": "One of the most lucid philosophical explanations I have ever read. Truly timeless."
+            },
+            {
+              "author": "Emily Watson",
+              "time": "6 hours ago",
+              "text": "The pendulum concept perfectly diagnoses modern consumer culture."
             }
-          ]
+          ],
+          "chapo": "Is happiness a reachable reality or a mirage that vanishes the moment we approach it? Arthur Schopenhauer offers one of the most profound and piercing examinations of desire and the path to genuine serenity.",
+          "summaryBox": {
+            "title": "✦ Schopenhauer's Dilemma of Desire",
+            "summary": "Human life swings like a pendulum between pain (when desires are unmet) and boredom (once they are fulfilled). Positive happiness is an illusion; true peace lies in quieting the Will to Live.",
+            "question": "Are you chasing continuous pleasure, or cultivating lasting peace of mind and inner tranquility?"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "The Pendulum of Life : Between Pain and Boredom",
+              "content": [
+                "Schopenhauer likens existence to a pendulum swinging perpetually between two poles: the suffering of unfulfilled desires, and the crushing boredom that follows their instant gratification.",
+                "Whenever we attain a long-sought goal, the initial thrill evaporates, quickly replaced by a new craving or existential emptiness."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "The Negative Nature of Happiness : Freedom from Pain",
+              "content": [
+                "One of Schopenhauer's greatest insights is that happiness has no positive substance: it is simply the negative state of being free from physical pain and psychological anxiety.",
+                "Health and peace are rarely appreciated until they are lost; wisdom therefore dictates minimizing suffering rather than recklessly pursuing transient pleasures."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 Philosophical Insight",
+              "title": "Art and Contemplation as a Sacred Sanctuary",
+              "text": "In aesthetic contemplation and deep meditation, the relentless Will is temporarily stilled. Observing beauty lifts the mind into pure, undisturbed serenity."
+            },
+            {
+              "num": "03",
+              "title": "The Path to Liberation : Simplicity and Universal Compassion",
+              "content": [
+                "True liberation rests on two pillars: reducing material attachments and cultivating sincere compassion for all living beings bound by existential struggle.",
+                "When you realize that everyone is fighting a silent battle, empathy replaces rivalry, guiding the soul toward lasting tranquility."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "5 Schopenhauerian Steps to Inner Peace",
+              "desc": "How to cultivate an unshakeable mind free from the tyranny of desire :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "Lower Expectations from the World",
+                  "text": "Do not demand perfection from life; celebrate every pain-free day as a victory."
+                },
+                {
+                  "num": "2",
+                  "title": "Minimize Superfluous Desires",
+                  "text": "Every unnecessary craving opens a new portal to anxiety."
+                },
+                {
+                  "num": "3",
+                  "title": "Value Present Calm",
+                  "text": "Appreciate health, peace, and simplicity while you have them."
+                },
+                {
+                  "num": "4",
+                  "title": "Immerse in Art and Nature",
+                  "text": "Read, listen to inspiring music, and spend time in natural silence."
+                },
+                {
+                  "num": "5",
+                  "title": "Practice Deep Empathy",
+                  "text": "Recognize that all living beings share the fragile struggle of existence."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "Positive happiness is an illusion; the absence of pain is the true good.",
+            "The human mind constantly swings between longing and boredom.",
+            "Art and meditation offer a sacred pause from the demands of the Will.",
+            "Material simplicity is the ultimate protector of mental peace.",
+            "Compassion for all life is the crowning virtue of philosophical maturity."
+          ],
+          "conclusion": "Schopenhauer's philosophy is not despair, but a profound awakening from endless chasing. When you let go of illusory pleasures, you discover an unshakeable fortress of serenity within your own soul.",
+          "finalQuote": "« The greatest wisdom is to make the prevention of suffering the primary aim of life. »",
+          "finalQuoteAuthor": "— Arthur Schopenhauer | Hikma & Nour"
         },
         {
           "id": "solitude-blessing-or-curse",
@@ -4401,11 +5501,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "Camille M.",
-              "time": "3 days ago",
-              "text": "My morning 30-minute solitude walk is the cornerstone of my daily sanity."
+              "author": "Gregory S.",
+              "time": "1 hour ago",
+              "text": "A truly liberating perspective on solitude. Absolutely brilliant."
+            },
+            {
+              "author": "Maya Chen",
+              "time": "4 hours ago",
+              "text": "Winnicott's concept of being alone is so true. Great article!"
             }
-          ]
+          ],
+          "chapo": "Between the painful sting of loneliness and the sublime grace of conscious solitude lies one of the deepest human journeys. When does being alone elevate the soul, and when does it become an existential cage?",
+          "summaryBox": {
+            "title": "✦ Essence of the Reflection",
+            "summary": "The vital difference between loneliness and solitude lies in the quality of your inner dialogue. Solitude is the sacred laboratory where the mind recharges its power and discovers authentic selfhood.",
+            "question": "Do you flee solitude out of fear of your own thoughts, or embrace it as a sanctuary of peace?"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "Loneliness vs. Fertile Solitude",
+              "content": [
+                "Loneliness is the painful feeling of emptiness even in a crowded room. Solitude, by contrast, is the deliberate, joyful choice to enjoy one's own company in quiet harmony.",
+                "As philosopher Paul Tillich profoundly remarked: 'Language has created the word loneliness to express the pain of being alone, and the word solitude to express the glory of being alone'."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "The Workshop of Creativity and Authenticity",
+              "content": [
+                "Every landmark philosophical insight and artistic masterpiece was born in quiet contemplation. Social noise imposes outside expectations; solitude gives room for your authentic voice to speak.",
+                "In solitude, social masks drop away: you learn to stand firm without craving continuous validation or external applause."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 Psychological Insight",
+              "title": "The Capacity to Be Alone as True Maturity",
+              "text": "In developmental psychology (notably Donald Winnicott), the capacity to be alone without anxiety is the definitive indicator of emotional maturity and stable self-worth."
+            },
+            {
+              "num": "03",
+              "title": "Avoiding the Traps of Negative Isolation",
+              "content": [
+                "Solitude turns destructive when used as an avoidance strategy to escape responsibility or hide behind resentment and social anxiety.",
+                "Wisdom requires dynamic rhythm: recharging in serene solitude, then returning to the community with strength, warmth, and generous contribution."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "5 Steps to Turn Solitude into an Inner Sanctuary",
+              "desc": "How to build a nourishing relationship with yourself :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "30 Minutes of Daily Digital Silence",
+                  "text": "Turn off devices and sit quietly with your thoughts or an inspiring book."
+                },
+                {
+                  "num": "2",
+                  "title": "Maintain an Uncensored Journal",
+                  "text": "Writing freely empties mental clutter and brings astonishing clarity."
+                },
+                {
+                  "num": "3",
+                  "title": "Walk Alone in Nature",
+                  "text": "Immersing yourself in open landscapes calms the nervous system."
+                },
+                {
+                  "num": "4",
+                  "title": "Welcome Mental Stillness",
+                  "text": "Quiet moments are not wasted time; they are vital incubation periods."
+                },
+                {
+                  "num": "5",
+                  "title": "Curate Your Circle Wisely",
+                  "text": "Fertile solitude is infinitely superior to toxic company that drains your spirit."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "Conscious solitude is self-mastery and glory; loneliness is a feeling of lack.",
+            "Deep creativity and clear thinking require the incubator of quiet space.",
+            "Comfort in one's own company is the supreme benchmark of emotional health.",
+            "Isolation is destructive when fueled by bitterness or defensive withdrawal.",
+            "A healthy balance between solitude and connection preserves mental vitality."
+          ],
+          "conclusion": "Solitude is not withdrawal from life, but the quiet well where we replenish our inner flame. When you make peace with your own soul, you will never feel alone in this vast universe.",
+          "finalQuote": "« Solitude is where one discovers that one is not alone. »",
+          "finalQuoteAuthor": "— Marty Rubin | Hikma & Nour"
         },
         {
           "id": "7-errors-mind-growth",
@@ -4434,11 +5619,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "Thomas B.",
-              "time": "4 days ago",
-              "text": "Socratic humility is the sharpest cure for modern digital arrogance."
+              "author": "Nathan Brooks",
+              "time": "3 hours ago",
+              "text": "The sunk cost fallacy explanation hit home. A superb and practical read."
+            },
+            {
+              "author": "Laura Kim",
+              "time": "6 hours ago",
+              "text": "Concise, brilliant, and deeply insightful."
             }
-          ]
+          ],
+          "chapo": "We often blame external circumstances or other people for our stagnation, yet our greatest roadblocks are subconscious cognitive distortions and habitual mental fallacies.",
+          "summaryBox": {
+            "title": "✦ Map of Mental Roadblocks",
+            "summary": "The human mind takes cognitive shortcuts that easily turn into destructive traps. Identifying these 7 mental errors is the foundational step to unlocking your potential and reclaiming mental clarity.",
+            "question": "Which of these mental distortions drains most of your energy and halts your progress?"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "The Trap of Perfectionism and All-or-Nothing Thinking",
+              "content": [
+                "Binary thinking divides existence into glorious perfection or complete failure. This distortion triggers chronic procrastination out of fear of producing imperfect work.",
+                "Genuine mastery comes from compounding small, consistent daily steps rather than demanding instant miracles."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "Seeking External Validation and Confirmation Bias",
+              "content": [
+                "Chasing constant approval makes you hostage to others' fluctuating moods. Furthermore, confirmation bias filters reality to reinforce your existing doubts and insecurities.",
+                "Liberating the intellect requires courageously testing your own assumptions against reality."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 Key Cognitive Bias",
+              "title": "The Sunk Cost Fallacy",
+              "text": "Clinging to a failing endeavor or draining relationship simply because you have already invested time is a fatal mental trap. True strength is knowing when to cut losses and begin anew."
+            },
+            {
+              "num": "03",
+              "title": "Catastrophizing and Anticipating the Worst",
+              "content": [
+                "Our evolutionary brain overestimates threat for survival, but in modern life, this mechanism turns minor inconveniences into imaginary catastrophes.",
+                "As Seneca taught: 'We suffer more often in imagination than in reality'."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "5 Antidotes to Overcome Mental Errors",
+              "desc": "Actionable mental shifts for daily clarity :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "Drop Binary Thinking",
+                  "text": "Replace 'all or nothing' with '1% continuous daily progress'."
+                },
+                {
+                  "num": "2",
+                  "title": "Stop Mind Reading",
+                  "text": "Do not guess what others think; communicate clearly or let it go."
+                },
+                {
+                  "num": "3",
+                  "title": "De-Personalize Reactions",
+                  "text": "Other people's actions reflect their inner turmoil, not your worth."
+                },
+                {
+                  "num": "4",
+                  "title": "Start Before You Feel Ready",
+                  "text": "Momentum is forged through real action, never passive overthinking."
+                },
+                {
+                  "num": "5",
+                  "title": "Compare Only with Yesterday",
+                  "text": "Your only legitimate benchmark is who you were yesterday."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "Most limitations in our lives are cognitive illusions forged within our minds.",
+            "Perfectionism paralyzes action; compounding small efforts creates lasting success.",
+            "Refusing to take things personally protects vast amounts of emotional energy.",
+            "Letting go of sunk costs is a supreme act of strategic intelligence.",
+            "Rational thinking permanently disarms the spiral of imaginary anxieties."
+          ],
+          "conclusion": "Transforming your life begins not by altering external events, but by purifying the mental lens through which you experience reality. When you discard these mental errors, peace and progress flow effortlessly.",
+          "finalQuote": "« The soul becomes dyed with the color of its thoughts. »",
+          "finalQuoteAuthor": "— Marcus Aurelius | Hikma & Nour"
         },
         {
           "id": "happiness-in-wrong-place",
@@ -4466,11 +5736,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "Nathalie P.",
-              "time": "5 days ago",
-              "text": "This article is a potent reminder to savor what is already here."
+              "author": "Marcus Vance",
+              "time": "2 hours ago",
+              "text": "Stoic dichotomy of control explained in the most elegant way. Truly brilliant."
+            },
+            {
+              "author": "Sarah Jenkins",
+              "time": "5 hours ago",
+              "text": "A deeply grounding article. A must-read for anyone feeling overwhelmed."
             }
-          ]
+          ],
+          "chapo": "How many years do we spend running after external achievements, believing they will finally grant us lasting peace, only to find our inner thirst unquenched? Why do we persist in seeking happiness where it cannot possibly reside?",
+          "summaryBox": {
+            "title": "✦ Anchoring Authentic Happiness",
+            "summary": "Happiness conditioned upon wealth and status evaporates the moment it is achieved. Authentic joy is an unshakeable state of inner harmony and alignment that can neither be bought nor stolen.",
+            "question": "Do you build your peace of mind on what you own, or on who you are and how you think?"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "The Illusion of Material Joy and the Hedonic Treadmill",
+              "content": [
+                "Consumer society promises that happiness hides behind the next purchase, promotion, or social approval. Yet psychology proves the 'Hedonic Treadmill' effect: we quickly adapt to any luxury, returning to our baseline level of longing.",
+                "Attaching peace of mind to external circumstances surrenders control to unpredictable winds."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "The Stoic Dichotomy of Control",
+              "content": [
+                "Epictetus taught that human sorrow originates from confusing what is in our control (our thoughts, values, choices) with what is outside it (others' opinions, wealth, the future).",
+                "When you direct your mental energy solely to your inner realm, you become unshakeable."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 Neuropsychological Insight",
+              "title": "Active Gratitude as a Neural Reset",
+              "text": "Neuroscience reveals that practicing deliberate gratitude for simple, present blessings releases dopamine and serotonin, rewiring neural pathways toward sustained calm and contentment."
+            },
+            {
+              "num": "03",
+              "title": "Happiness as Presence, Not a Destination",
+              "content": [
+                "Happiness is not a distant trophy waiting at the end of an exhausting race, but the mindful way you walk the journey today. It is complete immersion in the present moment.",
+                "Inner peace does not mean the absence of storm, but the certainty of calm within the center of the storm."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "5 Stoic Rules to Find Happiness Where It Truly Lives",
+              "desc": "Daily practices to anchor your soul in lasting contentment :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "Value Experiences Over Possessions",
+                  "text": "Memories and wisdom endure long after physical objects lose their shine."
+                },
+                {
+                  "num": "2",
+                  "title": "Apply the Dichotomy of Control",
+                  "text": "Ask: 'Is this up to me?' If not, refuse to surrender your peace to it."
+                },
+                {
+                  "num": "3",
+                  "title": "Morning Gratitude Practice",
+                  "text": "Start the day by acknowledging 3 simple blessings already in your life."
+                },
+                {
+                  "num": "4",
+                  "title": "Stop Social Comparison",
+                  "text": "Do not compare your private reality with curated public highlights."
+                },
+                {
+                  "num": "5",
+                  "title": "Seek Meaning Through Contribution",
+                  "text": "Serving something larger than yourself generates deep, lasting fulfillment."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "Material possessions provide fleeting pleasure but never lasting peace.",
+            "The hedonic treadmill turns material pursuit into an endless trap.",
+            "Focusing exclusively on what is within your control is the true foundation of peace.",
+            "Daily gratitude reorients the brain toward the abundance of the present.",
+            "Real happiness is complete self-harmony lived in the here and now."
+          ],
+          "conclusion": "Happiness was never a distant treasure to be hunted, but the clarity of our own mind. When you stop begging the outside world for peace, you discover it has been waiting within you all along.",
+          "finalQuote": "« It is not the man who has too little, but the man who craves more, that is poor. »",
+          "finalQuoteAuthor": "— Seneca | Hikma & Nour"
         },
         {
           "id": "true-confidence-inside",
@@ -4498,11 +5853,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "Roman T.",
-              "time": "1 week ago",
-              "text": "Releasing the need for approval transformed my career and personal life."
+              "author": "Liam Patterson",
+              "time": "1 hour ago",
+              "text": "Defining confidence as your reputation with yourself completely changed my perspective."
+            },
+            {
+              "author": "Karen Mitchell",
+              "time": "4 hours ago",
+              "text": "Brilliant, practical, and philosophically profound."
             }
-          ]
+          ],
+          "chapo": "Between loud arrogance and paralyzing self-doubt lies true confidence: a quiet, grounded force born from self-honesty, moral integrity, and deep inner peace.",
+          "summaryBox": {
+            "title": "✦ The Essence of Authentic Confidence",
+            "summary": "True self-confidence is not pretending to be flawless or superior to others, but having the courage to accept imperfection while trusting your ability to learn, adapt, and prevail.",
+            "question": "Is your confidence built on transient external validation, or on unshakeable inner alignment?"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "Quiet Assurance vs. Fragile Arrogance",
+              "content": [
+                "Arrogance is loud, defensive, and perpetually needs to demean others to feel secure. In contrast, genuine confidence is calm, steady, and feels no urge to engage in ego battles.",
+                "A truly confident person is never ashamed to admit ignorance or error, because their fundamental self-worth is not tied to a single moment."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "Confidence as Your Reputation with Yourself",
+              "content": [
+                "In modern psychology, confidence is not a magical feeling, but the sacred reputation you build with your own conscience. Every promise kept to yourself strengthens your foundation.",
+                "The gap between what you preach publicly and what you do in private is the single greatest destroyer of self-esteem."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 Psychological Cornerstone",
+              "title": "Albert Bandura's Self-Efficacy",
+              "text": "Self-efficacy is the grounded conviction in your ability to learn, adapt, and navigate novel challenges. You do not need to know everything beforehand; you trust your capacity to find solutions."
+            },
+            {
+              "num": "03",
+              "title": "Overcoming Impostor Syndrome",
+              "content": [
+                "Many accomplished minds struggle with impostor syndrome. Wisdom lies in recognizing that healthy self-doubt is the engine of mastery, as long as it does not freeze action.",
+                "Stop acting as your own harsh prosecutor; walk forward as a dedicated apprentice in the school of life."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "5 Daily Practices to Build Unshakeable Confidence",
+              "desc": "Actionable habits for daily groundedness :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "Keep Small Daily Promises",
+                  "text": "Complete small commitments daily to build genuine self-respect."
+                },
+                {
+                  "num": "2",
+                  "title": "De-Dramatize Mistakes",
+                  "text": "Errors are data about strategy, never a verdict on your soul."
+                },
+                {
+                  "num": "3",
+                  "title": "Master Real Competence",
+                  "text": "Genuine mastery in a chosen craft is the bedrock of confidence."
+                },
+                {
+                  "num": "4",
+                  "title": "Upgrade Inner Self-Talk",
+                  "text": "Speak to yourself with the wisdom, firmness, and compassion of a great mentor."
+                },
+                {
+                  "num": "5",
+                  "title": "Adopt Grounded Posture",
+                  "text": "Stand tall and breathe deeply: the body directly shapes brain neurochemistry."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "True confidence is calm and dignified; arrogance is a mask of vulnerability.",
+            "Self-esteem is the direct fruit of promises kept to your own conscience.",
+            "Self-efficacy means trusting your capacity to learn and adapt.",
+            "Constructive doubt is natural; never let it paralyze purposeful action.",
+            "Authentic skill and moral integrity are the enduring pillars of assurance."
+          ],
+          "conclusion": "Self-confidence is not a shallow slogan, but the profound reward of absolute self-honesty, discipline, and noble resilience. When your roots run deep, no wind can shake you.",
+          "finalQuote": "« As soon as you trust yourself, you will know how to live. »",
+          "finalQuoteAuthor": "— Johann Wolfgang von Goethe | Hikma & Nour"
         },
         {
           "id": "hikma-citations-philosophiques",
@@ -4530,11 +5970,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "Sophia K.",
-              "time": "1 week ago",
-              "text": "A breathtaking compilation that I revisit whenever I need perspective."
+              "author": "Arthur Pendelton",
+              "time": "2 hours ago",
+              "text": "The connection between Stoic maxims and CBT is brilliant. A masterclass in practical wisdom."
+            },
+            {
+              "author": "Hannah Scott",
+              "time": "5 hours ago",
+              "text": "Inspiring and empowering. These 5 maxims are on my desk every day."
             }
-          ]
+          ],
+          "chapo": "A philosophical quote is not mere literature, but the distilled essence of a lifetime of trials, reflection, and deep awakening. How can timeless wisdom serve as a daily compass for clear decisions and inner peace?",
+          "summaryBox": {
+            "title": "✦ The Power of Distilled Wisdom",
+            "summary": "True wisdom condenses existential reality into memorable axioms that awaken the intellect and guide purposeful action at life's most complex crossroads.",
+            "question": "Do you read quotes to impress others, or to forge your character and govern your choices?"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "Stoic Wisdom : Sovereignty Over Interpretations",
+              "content": [
+                "From Marcus Aurelius to Seneca and Epictetus, Stoicism offers an impenetrable mental fortress. The foundational principle: 'People are not disturbed by things, but by the view they take of them'.",
+                "When you internalize these truths, adversity becomes the ultimate arena for ethical training."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "Existential Freedom and Radical Ownership",
+              "content": [
+                "From Socrates to Kant, Nietzsche, and Sartre, philosophical tradition affirms absolute personal responsibility. You are not defined by what happened to you, but by what you choose today.",
+                "True freedom is the courageous commitment to act in accordance with high values even when comfort demands cowardice."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 Neurocognitive Impact",
+              "title": "Logotherapy & Cognitive Framing",
+              "text": "Modern cognitive behavioral therapies (CBT) draw directly from Stoic framing: reciting timeless philosophical principles dampens amygdala reactivity and restores prefrontal executive calm."
+            },
+            {
+              "num": "03",
+              "title": "From Words to Action : Embodying Philosophy",
+              "content": [
+                "The greatest danger is treating philosophy as an idle intellectual game. The true philosopher is recognized by their conduct under pressure and their kindness in conflict.",
+                "As Epictetus warned: 'Don't explain your philosophy. Embody it'."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "5 Core Maximes for Daily Living",
+              "desc": "A timeless compass for clarity and strength :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "Socrates",
+                  "text": "« Know thyself » : examine your true motives before passing judgment on others."
+                },
+                {
+                  "num": "2",
+                  "title": "Marcus Aurelius",
+                  "text": "« Waste no more time arguing about what a good man should be. Be one »."
+                },
+                {
+                  "num": "3",
+                  "title": "Seneca",
+                  "text": "« We suffer more often in imagination than in reality » : stop anticipating catastrophe."
+                },
+                {
+                  "num": "4",
+                  "title": "Epictetus",
+                  "text": "« It is not what happens to you, but how you react to it that matters »."
+                },
+                {
+                  "num": "5",
+                  "title": "Nietzsche",
+                  "text": "« Become who you are » : unleash your authentic potential without compromise."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "Philosophical quotes provide condensed blueprints for mental fortitude.",
+            "Stoicism grants absolute mastery over your private interpretations.",
+            "Authentic freedom begins where victim mentality ends.",
+            "The value of any philosophy is validated only through real action.",
+            "Invoking timeless truths in difficult moments restores emotional equilibrium."
+          ],
+          "conclusion": "The words of the sages are stars that guide us through dark waters of confusion. When you anchor these principles in your soul, you navigate existence with grace, courage, and unshakeable peace.",
+          "finalQuote": "« An unexamined life is not worth living. »",
+          "finalQuoteAuthor": "— Socrates | Hikma & Nour"
         },
         {
           "id": "self-discipline",
@@ -4564,11 +6089,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "Nicholas F.",
-              "time": "2 weeks ago",
-              "text": "Focusing on consistency over intensity changed my work ethic forever."
+              "author": "Ethan Ross",
+              "time": "2 hours ago",
+              "text": "Identity-based habits changed everything for me. An exceptional article."
+            },
+            {
+              "author": "Jessica Taylor",
+              "time": "5 hours ago",
+              "text": "Clear, practical, and highly motivating. A true gem."
             }
-          ]
+          ],
+          "chapo": "Self-discipline is not a restrictive punishment, but the ultimate expression of personal freedom and mental sovereignty. How do you forge an iron will to break free from procrastination and petty distractions?",
+          "summaryBox": {
+            "title": "✦ The Core of Self-Mastery",
+            "summary": "Self-discipline is the bridge between ambition and reality. A disciplined mind never waits for unpredictable bursts of motivation; it relies on rock-solid habits and structured daily execution.",
+            "question": "Do you govern your day by the whims of the moment, or by a conscious plan aligned with your highest values?"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "The Illusion of Motivation vs. The Power of Systems",
+              "content": [
+                "Relying on motivation is a trap: feelings fluctuate with tiredness and mood. Discipline, however, is the sovereign ability to execute what must be done, regardless of emotional resistance.",
+                "Habits are the mind's algorithms: they automate excellence and preserve precious mental energy for major challenges."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "Delayed Gratification : The Hallmark of Greatness",
+              "content": [
+                "The critical divide between extraordinary achievers and the ordinary crowd is the willingness to sacrifice instant pleasure (digital dopamine, idle comfort) for long-term mastery.",
+                "As Stoic philosophers taught: every victory over the outside world begins with self-conquest."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 Behavioral Science Insight",
+              "title": "Identity-Based Habits (James Clear)",
+              "text": "Lasting discipline arises not from what you want to achieve, but from who you decide to be: shift from 'I am trying to write' to 'I am a disciplined creator who honors my craft daily'."
+            },
+            {
+              "num": "03",
+              "title": "Environment Design : Winning Without Friction",
+              "content": [
+                "True discipline is not exhausting your willpower fighting temptations all day, but designing an environment where productive habits are effortless and distractions are eliminated.",
+                "Remove digital traps from your immediate sight and set up your workspace beforehand to start smoothly."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "5 Stoic & Scientific Rules for Iron Discipline",
+              "desc": "A proven protocol for daily focus and execution :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "The 2-Minute Rule",
+                  "text": "Scale down any new habit to a 2-minute starter action to demolish resistance."
+                },
+                {
+                  "num": "2",
+                  "title": "Sacred Morning Block",
+                  "text": "Dedicate your first 90 minutes to your single most challenging task."
+                },
+                {
+                  "num": "3",
+                  "title": "Purge Distractions",
+                  "text": "Place smartphones in another room during deep work sessions."
+                },
+                {
+                  "num": "4",
+                  "title": "Never Miss Twice",
+                  "text": "If unexpected events break your streak today, resume tomorrow without fail."
+                },
+                {
+                  "num": "5",
+                  "title": "Reward Consistency",
+                  "text": "Celebrate loyalty to the process rather than fixating on immediate outcomes."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "Discipline is ultimate freedom; chaos is slavery to fleeting impulses.",
+            "Stable daily systems infinitely outperform erratic motivation.",
+            "Delayed gratification is the primary predictor of long-term fulfillment.",
+            "Smart environment design preserves precious willpower for what matters.",
+            "Relentless small daily actions compound into monumental transformation."
+          ],
+          "conclusion": "Self-discipline is not a heavy chain, but the majestic wings that lift you toward your highest aspirations. When you master your own mind, you master your destiny.",
+          "finalQuote": "« With self-discipline, almost anything is possible. »",
+          "finalQuoteAuthor": "— Theodore Roosevelt | Hikma & Nour"
         },
         {
           "id": "stop-overthinking",
@@ -4600,16 +6210,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "David K.",
-              "time": "2 hours ago",
-              "text": "Truly illuminating article. The dichotomy of control exercise immediately helped me let go of things beyond my control."
+              "author": "Brian Kelly",
+              "time": "1 hour ago",
+              "text": "Box breathing and sensory grounding saved my day. A life-changing article."
             },
             {
-              "author": "Sophia L.",
-              "time": "5 hours ago",
-              "text": "Setting a dedicated 15-minute thinking time and journaling changed my mornings completely. Thank you for this wisdom."
+              "author": "Samantha Wright",
+              "time": "4 hours ago",
+              "text": "Cognitive defusion is so powerful. Thank you for this masterpiece."
             }
-          ]
+          ],
+          "chapo": "How many precious nights are swallowed by the endless spiral of overthinking and analyzing catastrophe scenarios that will never happen? How do you break the loop of mental rumination and reclaim supreme clarity and peace of mind?",
+          "summaryBox": {
+            "title": "✦ The Antidote to Overthinking",
+            "summary": "Overthinking is not analytical intelligence, but an anxiety loop. Liberation lies in shifting immediately from abstract rumination into concrete physical action and sensory presence in the now.",
+            "question": "Does continuous overthinking solve your challenges, or invent troubles that never existed?"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "The Anatomy of Mental Rumination",
+              "content": [
+                "An anxious mind continually replays past regrets or anticipates future disasters. This loop drains neural energy and floods the body with stress hormones without delivering a single workable solution.",
+                "Overthinking is a desperate, illusory attempt to exert control over the fundamentally unpredictable nature of reality."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "Physical Action as the Ultimate Cure",
+              "content": [
+                "The human brain cannot simultaneously ruminate and be fully immersed in physical movement. When the mental spiral begins, move: walk, write, breathe, or tackle a hands-on task.",
+                "Doubt and dread breed in stagnation; clarity and courage are born in motion."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 Cognitive Behavioral Technique (ACT)",
+              "title": "Cognitive Defusion : You Are Not Your Thoughts",
+              "text": "You are not the noisy speaker in your head; you are the conscious space in which thoughts arise and pass. By framing: 'I notice my mind is generating a thought of failure', you instantly disarm its toxic grip."
+            },
+            {
+              "num": "03",
+              "title": "Anchoring Deeply in the Present Moment",
+              "content": [
+                "Almost all suffering lives in two nonexistent realms: a past that is gone, and an imaginary future that has not arrived. The only place where your power resides is the Present.",
+                "Training your attention on physical sensations short-circuits the neurotic chatter of the ego."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "5 Immediate Steps to Stop Overthinking",
+              "desc": "Emergency mental toolkit for instant calm :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "The 5-Second Rule",
+                  "text": "Count 5-4-3-2-1 and take immediate physical action to interrupt mental looping."
+                },
+                {
+                  "num": "2",
+                  "title": "Paper Brain Dump",
+                  "text": "Write all anxieties on paper; seeing them externalized strips away their power."
+                },
+                {
+                  "num": "3",
+                  "title": "Designated Worry Time",
+                  "text": "Allocate 15 minutes in the afternoon for problem-solving; postpone worries outside this window."
+                },
+                {
+                  "num": "4",
+                  "title": "5-4-3-2-1 Sensory Grounding",
+                  "text": "Name 5 things you see, 4 you feel, 3 you hear, 2 you smell, and 1 you taste."
+                },
+                {
+                  "num": "5",
+                  "title": "Box Breathing",
+                  "text": "Inhale 4s, hold 4s, exhale 4s, hold 4s to immediately reset your parasympathetic nervous system."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "Overthinking is an anxious trap that solves zero real problems.",
+            "Physical action is the fastest antidote to analysis paralysis.",
+            "Cognitive defusion reminds you that you are the conscious observer, not the thought.",
+            "Dumping fears onto paper shrinks them into manageable realities.",
+            "Grounding in the present moment dissolves the illusions of past and future."
+          ],
+          "conclusion": "Your mind is a magnificent instrument designed to serve you, not a prison to hold you captive. When you quiet the inner noise, you discover a tranquil peace as still and clear as undisturbed water.",
+          "finalQuote": "« Worry does not empty tomorrow of its sorrow, it empties today of its strength. »",
+          "finalQuoteAuthor": "— Corrie ten Boom | Hikma & Nour"
         }
       ],
       "faq": [
@@ -6630,11 +8320,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "طارق الزهراني",
-              "time": "منذ ٤ ساعات",
-              "text": "الصمت قوة حقيقية، كلما قل كلامي زادت قدرتي على فهم الناس."
+              "author": "يوسف المنصوري",
+              "time": "منذ ساعتين",
+              "text": "مقال في غاية الروعة! الصمت في أوقات الغضب هو أعظم انتصار للإنسان على انفعالاته."
+            },
+            {
+              "author": "سارة بلقاسم",
+              "time": "منذ ٥ ساعات",
+              "text": "تطبيق قاعدة الـ ٣ ثوانٍ غير الكثير في طريقتي بالتواصل المهني."
             }
-          ]
+          ],
+          "chapo": "في عالم يضج بالكلام والصخب، يبرز الصمت ليس كغياب للحديث، بل كحضور طاغٍ يفيض بالرزانة والسيادة النفسية. كيف يتحول السكوت إلى أداة مهابة وسلطة عقلية تفرض احترام الجميع؟",
+          "summaryBox": {
+            "title": "✦ خلاصة المقال في سطور",
+            "summary": "الصمت ليس عجزاً عن التعبير، بل هو وعاء التحكم الذاتي واختيار التوقيت المناسب للتأثير. الشخص الصامت يثير فضول الآخرين ويحتفظ بأوراقه، مما يمنحه كاريزما وهيبة استثنائية.",
+            "question": "هل تستخدم كلماتك لتثبت وجودك، أم تدع حضورك وصمتك يتحدثان عن عمقك؟"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "الصمت كدرع للتحكم والانضباط العاطفي",
+              "content": [
+                "الإنسان الذي يتحدث دون توقف يكشف نقاط ضعفه، دوافعه الخفية، ومخاوفه دون أن يشعر. في المقابل، يمثل الصمت حاجزاً يحمي صاحبه من الاندفاع وردود الأفعال غير المحسوبة.",
+                "كما يرى حكماء الرواقية، فإن القدرة على كبح جماح اللسان هي أعلى درجات السيطرة على النفس. عندما تصمت في المواقف المشحونة، فإنك تجبر الطرف الآخر على مواجهة نفسه وصداه."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "سيكولوجية الغموض والجاذبية غير المنطوقة",
+              "content": [
+                "الطبيعة البشرية تميل بطبعها إلى احترام ما لا تفهمه بالكامل. الإفراط في الشرح يجعل الشخص كتاباً مفتوحاً ومبتذلاً، بينما يخلق الصمت مساحة من الغموض المهيب.",
+                "عندما تتكلم قليلاً ولكن بوزن وحكمة، يصبح لكل كلمة تنطق بها وزن الذهب وتستمع إليها الآذان بإنصات وتركيز."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 فكرة نفسية عميقة",
+              "title": "تأثير الصمت في التفاوض وإدارة النزاعات",
+              "text": "في علم النفس السلوكي، يُعد التوقف المؤقت (Tactical Pause) أقوى تكتيك لزعزعة يقين الخصم. الصمت لعدة ثوانٍ بعد سماع طرح معين يدفع المتكلم إلى التراجع أو التبرير لشعوره بعدم الارتياح من فراغ الصمت."
+            },
+            {
+              "num": "03",
+              "title": "الاستماع الفعّال كأعلى أشكال الذكاء الاجتماعي",
+              "content": [
+                "الصامت ليس منقطعاً عن العالم، بل هو في حالة مراقبة فائقة وتحليل مستمر. هو يرى لغة الجسد، يلتقط نبرات التردد، ويفهم السياق الأعمق الذي يعجز المتحدثون عن رؤيته.",
+                "الإنصات الصادق يمنحك أفضلية المعرفة، والمعرفة في العلاقات الإنسانية هي المنبع الحقيقي للنفوذ والاحترام."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "٥ قواعد لامتلاك قوة الصمت الواعي",
+              "desc": "تطبيقات عملية لبناء حضور مهيب والتخلص من ثرثرة القلق اليومية :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "قاعدة الـ ٣ ثوانٍ",
+                  "text": "قبل الرد على أي سؤال أو استفزاز، تنفس وانتظر ٣ ثوانٍ لترتيب فكرتك وإظهار الهدوء."
+                },
+                {
+                  "num": "2",
+                  "title": "لا تبرر ما لا يحتاج تبريراً",
+                  "text": "القرارات الحازمة لا تحتاج خطباً دفاعية؛ قل 'لا' بوضوح وأغلق الجملة."
+                },
+                {
+                  "num": "3",
+                  "title": "احتفظ بأسرارك ومشاريعك",
+                  "text": "دع نتائج أفعالك تتحدث بدلاً من إعلان نواياك قبل الأوان."
+                },
+                {
+                  "num": "4",
+                  "title": "لا تملأ الصمت المحرج بالثرثرة",
+                  "text": "تقبل لحظات السكون في الحوارات دون خوف أو ارتباك."
+                },
+                {
+                  "num": "5",
+                  "title": "اجعل كلماتك حاسمة ومختصرة",
+                  "text": "خير الكلام ما قل ودل، فالإيجاز علامة البلاغة وقوة الفكر."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "الصمت علامة قوة وضبط نفس وليس دليلاً على الضعف أو التردد.",
+            "الغموض المدروس يمنح الشخصية هيبة وجاذبية طبيعية.",
+            "الاستماع الحقيقي يوفر معلومات ثمينة ويمنحك السيطرة على مسار النقاش.",
+            "الثرثرة المفرطة تسلب الكلمات قيمتها وتكشف الهشاشة النفسية.",
+            "الإيجاز في التعبير رسالة ثقة تفرض على الجميع الإنصات."
+          ],
+          "conclusion": "الصمت في نهاية المطاف هو ملاذ الحكماء ومصدر طمأنينة الروح. عندما تتعلم كيف تصمت عن علم، فإنك لا تحمي طاقتك النفسية فحسب، بل تبني حولك هالة من الوقار والاتزان التي لا يمكن لأي صخب أن يخترقها.",
+          "finalQuote": "« إذا كان الكلام من فضة، فإن الصمت حكمة ووقار يعلو فوق كل كلام. »",
+          "finalQuoteAuthor": "— حكمة مأثورة | حكمة ونور"
         },
         {
           "id": "nietzsche-psychological-strength",
@@ -6666,11 +8441,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "ياسين المرابط",
-              "time": "منذ يوم واحد",
-              "text": "فلسفة نيتشه في تحويل المعاناة إلى قوة غيرت حياتي بعد أزمة صحية قاسية."
+              "author": "حمزة التازي",
+              "time": "منذ ٤ ساعات",
+              "text": "تحليل فلسفي دقيق وعميق لفكر نيتشه بعيداً عن التشويهات الشائعة."
+            },
+            {
+              "author": "منى العبدالله",
+              "time": "منذ ٧ ساعات",
+              "text": "مفهوم Amor Fati غير نظرتي تماماً للعثرات التي مررت بها في حياتي."
             }
-          ]
+          ],
+          "chapo": "لم تكن فلسفة فريدريك نيتشه مجرد تنظير أكاديمي بارد، بل كانت صرخة حياة وتحدياً جذرياً لتجاوز الضعف الإنساني وبناء عقلية صلبة لا تنكسر أمام عواصف الوجود.",
+          "summaryBox": {
+            "title": "✦ جوهر فلسفة نيتشه في القوة",
+            "summary": "القوة عند نيتشه ليست بطشاً بالآخرين، بل هي التغلب على الذات وتحويل الآلام والإخفاقات إلى وقود للارتقاء الفكري والروحي نحو مرتبة 'الإنسان المتفوق'.",
+            "question": "هل تتعامل مع الصعوبات كعقبات تسحقك، أم كأدوات تصقل إرادتك وصلابتك؟"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "ما لا يقتلك يجعلك أقوى : مبدأ الصلابة النفسية",
+              "content": [
+                "يرى نيتشه أن المعاناة ليست عقاباً أو عبثاً، بل هي المحك الأساسي الذي يميز العقول الاستثنائية عن العقول الخاملة. الإنسان الذي يبحث عن الراحة المستمرة يضمر ويفقد حيويته.",
+                "الألم يحمل في طياته درساً نفسياً عميقاً؛ فهو يعري الأوهام ويدفعنا لبناء موارد داخلية حقيقية لا تتأثر بالظروف الخارجية."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "إرادة القوة : تجاوز الذات المستمر",
+              "content": [
+                "مفهوم 'إرادة القوة' (Wille zur Macht) ليس رغبة في التسلط، بل هو الدافع الطبيعي للنمو، الإبداع، والسيادة على الانفعالات والغرائز.",
+                "الشخص القوي نيتشاوياً هو الذي يقبل مصيره بكل ما فيه من أفراح وأتراح (Amor Fati) دون تذمر أو لعب دور الضحية."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 بصيرة فلسفية نيتشاوية",
+              "title": "عشق القدر (Amor Fati) : قمة التحرر النفسي",
+              "text": "أن تحب قدرك لا يعني الاستسلام السلبي، بل يعني أن تقول 'نعم' لكل لحظة في حياتك؛ فالإخفاقات التي واجهتها هي التي شكلت وعيك وقوتك الحالية، وبدونها لما كنت الشخص الذي أنت عليه اليوم."
+            },
+            {
+              "num": "03",
+              "title": "التحرر من عقلية القطيع وتأكيد التفرد",
+              "content": [
+                "يحذر نيتشه من الخضوع الأعمى للأعراف والآراء الشائعة التي تقتل الإبداع والاستقلالية. القوة النفسية تتطلب شجاعة الوقوف وحيداً عند الدفاع عن الحقيقة والقيم الشخصية.",
+                "أن تكون نفسك في عالم يسعى جاهداً لجعلك شبيهاً بالآخرين هو التحدي الأكبر وأعظم مظاهر البطولة الروحية."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "٥ مبادئ نيتشاوية لبناء عقل لا ينكسر",
+              "desc": "كيف تطبق فلسفة نيتشه في حياتك المعاصرة :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "احتضن التحديات الصعبة",
+                  "text": "لا تتهرب من المهام الشاقة، فهي التي تصنع كفاءتك وتبني ثقتك بنفسك."
+                },
+                {
+                  "num": "2",
+                  "title": "مارس حب القدر (Amor Fati)",
+                  "text": "تقبل ما لا يمكنك تغييره واعتبر كل عائق فرصة جديدة للتعلم والارتقاء."
+                },
+                {
+                  "num": "3",
+                  "title": "ارفض عقلية الضحية",
+                  "text": "تحمل المسؤولية الكاملة عن حياتك وخياراتك دون إلقاء اللوم على الظروف."
+                },
+                {
+                  "num": "4",
+                  "title": "تجاوز ذاتك القديمة يومياً",
+                  "text": "اجعل منافسك الوحيد هو نسختك السابقة في الأمس."
+                },
+                {
+                  "num": "5",
+                  "title": "ابحث عن عزلتك الخصبة",
+                  "text": "خصص وقتاً للتأمل الفردي بعيداً عن صخب وتأثيرات الجموع."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "المعاناة ليست عدواً بل مدرسة لتطوير المناعة النفسية.",
+            "إرادة القوة هي السعي الدائم لتطوير الذات والسيادة على النفس.",
+            "مبدأ Amor Fati يحررك من الندم ويجعلك متصالحاً مع مسار حياتك.",
+            "الاستقلالية الفكرية تتطلب شجاعة الانفصال عن قوالب التفكير الجمعي.",
+            "العظمة تكمن في القدرة على تحويل المأساة إلى طاقة إبداعية."
+          ],
+          "conclusion": "فلسفة نيتشه ليست دعوة للقسوة، بل دعوة للحياة في أبهى صورها: حياة مبنية على الشجاعة، المسؤولية، وعشق التحدي. حين تنظر إلى مصاعبك بعين القوة، يتلاشى الخوف وتولد في داخلك طاقة لا تقهر.",
+          "finalQuote": "« من يملك سبباً يعيش من أجله، يمكنه تحمل أي كيف تقريباً. »",
+          "finalQuoteAuthor": "— فريدريك نيتشه | حكمة ونور"
         },
         {
           "id": "schopenhauer-happiness-illusion",
@@ -6701,11 +8561,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "سمير عادل",
-              "time": "منذ يومين",
-              "text": "فكرة أن السعادة هي غياب الألم ساعدتني على التخلص من هوس المقارنة الدائم."
+              "author": "طارق السليماني",
+              "time": "منذ ٣ ساعات",
+              "text": "رؤية شوبنهاور للبندول بين الألم والملل تفسر بدقة علة العصر الاستهلاكي الحديث."
+            },
+            {
+              "author": "إيمان الشريف",
+              "time": "منذ ٦ ساعات",
+              "text": "مقال رائع ومهدئ للأعصاب، يضع الأمور في نصابها الصحيح."
             }
-          ]
+          ],
+          "chapo": "هل السعادة هدف حقيقي يمكن الإمساك به، أم أنها سراب يتبدد كلما اقتربنا منه؟ يقدم آرثر شوبنهاور واحدة من أعمق الرؤى الفلسفية والنفسية حول طبيعة الرغبة الإنسانية ومسار السلام الداخلي.",
+          "summaryBox": {
+            "title": "✦ معضلة الرغبة عند شوبنهاور",
+            "summary": "يعيش الإنسان في بندول متأرجح بين الألم (عند الحرمان من الرغبة) والملل (عند تحقيقها). السعادة الإيجابية وهم، بينما السلام الحقيقي يكمن في التحرر من سطوة الرغبات وتهدئة الإرادة.",
+            "question": "هل تطارد السعادة كمتعة مستمرة، أم تبحث عن راحة البال والسكينة الداخلية الدائمة؟"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "بندول الحياة : بين الألم والملل",
+              "content": [
+                "يشبه شوبنهاور الوجود الإنساني ببندول يتأرجح باستمرار بين قطبين: الألم الناتج عن الرغبات غير الملباة، والملل القاتل الذي يتبع إشباع تلك الرغبات فوراً.",
+                "كلما حقق الإنسان هدفاً كان يظن أنه سيمنحه السعادة الأبدية، سرعان ما تتلاشى النشوة وتحل محلها رغبة جديدة أو فراغ نفسي خانق."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "طبيعة السعادة السلبية : غياب المعاناة",
+              "content": [
+                "من أعظم كشوفات شوبنهاور أن السعادة ليست حالة إيجابية ملموسة، بل هي حالة 'سلبية' تعني ببساطة غياب الألم والقلق والمرض.",
+                "الصحة والسكينة لا نشعر بقيمتهما إلا عند فقدانهما؛ لذا فالحكمة تقتضي تقليل التوقعات والتركيز على تجنب المعاناة بدلاً من الجري وراء الملذات العابرة."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 بصيرة شوبنهاورية عميقة",
+              "title": "الفن والتأمل كملاذ من عذاب الإرادة",
+              "text": "يرى شوبنهاور أن الانغماس في الفنون الرفيعة والتأمل الفلسفي يجمد 'إرادة الحياة' مؤقتاً، وينقل العقل من حالة الصراع مع الرغبات إلى حالة من الطمأنينة الخالصة والنقاء الجمالي."
+            },
+            {
+              "num": "03",
+              "title": "طريق النجاة : الزهد والتعاطف الكوني",
+              "content": [
+                "الخلاص الحقيقي عند شوبنهاور يمر عبر محطتين: الأولى هي تقليص الارتباط بالماديات والمظاهر، والثانية هي التعاطف الصادق مع كل الكائنات التي تشاركنا المعاناة الوجودية.",
+                "حين تدرك أن الجميع يتألم مثلك، يحل التراحم مكان التنافس الشرس، ويصل العقل إلى مرفأ الهدوء والسكينة."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "٥ خطوات شوبنهاورية لتحقيق السلام النفسي",
+              "desc": "كيف تبني هدوءاً داخلياً لا يتأثر بتقلبات الرغبة :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "اخفض سقف توقعاتك من العالم",
+                  "text": "توقف عن انتظار السعادة المثالية واعتبر كل يوم خالٍ من الألم نصراً حقيقياً."
+                },
+                {
+                  "num": "2",
+                  "title": "قلص رغباتك الاستهلاكية",
+                  "text": "كل رغبة جديدة تفتح باباً جديداً للقلق والتبعية."
+                },
+                {
+                  "num": "3",
+                  "title": "قدر قيمة الصحة والهدوء",
+                  "text": "تذكر أن أكبر النعم هي تلك التي لا نشعر بها لأنها تسير بانتظام."
+                },
+                {
+                  "num": "4",
+                  "title": "مارس التأمل والانغماس الفني",
+                  "text": "اقرأ، استمع للموسيقى الهادئة، وتأمل جمال الطبيعة لتصفية الذهن."
+                },
+                {
+                  "num": "5",
+                  "title": "عامل الآخرين برحمة وتفهم",
+                  "text": "اعلم أن خلف كل إنسان صراعاً خفياً مع رغباته ومخاوفه."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "السعادة الإيجابية وهم زائل بينما غياب الألم هو النعمة الحقيقية.",
+            "الإنسان يتأرجح دائماً بين ألم الحرمان وملل الإشباع.",
+            "الفن والتأمل يوفران استراحة مقدسة من وطأة رغبات النفس.",
+            "الزهد في الماديات والتطلعات يقلل مساحة القلق في الحياة.",
+            "التعاطف مع معاناة الآخرين هو جوهر الحكمة والسلام الروحي."
+          ],
+          "conclusion": "فلسفة شوبنهاور ليست دعوة لليأس، بل هي دعوة للاستيقاظ من وهم المطاردة التي لا تنتهي. عندما تتوقف عن مطاردة السعادة الزائفة، تجد في داخلك سلاماً هادئاً وراحة بال لا تقدر بثمن.",
+          "finalQuote": "« إن أعظم حكمة في الحياة هي أن تقتنع بأن تجنب المعاناة هو أفضل بكثير من البحث عن اللذة. »",
+          "finalQuoteAuthor": "— آرثر شوبنهاور | حكمة ونور"
         },
         {
           "id": "solitude-blessing-or-curse",
@@ -6734,11 +8679,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "مريم فهد",
-              "time": "منذ ٣ أيام",
-              "text": "العزلة اليومية لمدة نصف ساعة أصبحت طقسي المقدس لتجديد صفاء الذهن."
+              "author": "بدر الزهراني",
+              "time": "منذ ساعتين",
+              "text": "المقال لمس قلبي تماماً. تخصيص وقت للخلوة اليومية أنقذني من الاحتراق النفسي."
+            },
+            {
+              "author": "ريم بوعزيز",
+              "time": "منذ ٤ ساعات",
+              "text": "التمييز بين الوحدة والعزلة الخصبة شرح عميق ومريح للنفس."
             }
-          ]
+          ],
+          "chapo": "بين وحشة الانعزال المؤلم وبركة الخلوة الواعية، تكمن واحدة من أعظم التجارب الإنسانية. متى تصبح العزلة فرصة للنهوض بالروح، ومتى تتحول إلى سجن يخنق العقل؟",
+          "summaryBox": {
+            "title": "✦ جوهر العزلة الإيجابية",
+            "summary": "الفرق بين الوحدة المؤلمة (Loneliness) والعزلة الخصبة (Solitude) يكمن في جودة الحوار مع الذات. العزلة الواعية هي مختبر الحكماء لتجديد الطاقة واكتشاف الهوية الحقيقية.",
+            "question": "هل تهرب من العزلة خوفاً من مواجهة أفكارك، أم تستثمرها كواحة للسلام والارتقاء؟"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "الفرق الجوهري بين الوحدة والعزلة الخصبة",
+              "content": [
+                "الوحدة هي شعور قاهر بالفراغ والاغتراب حتى وسط الحشود، بينما العزلة الواعية هي اختيار حر للاختلاء بالنفس والاستمتاع بحضرتها دون انقطاع عن العالم.",
+                "كما كتب الفيلسوف بول تيليش: 'الوحدة تعبر عن ألم أن تكون وحيداً، بينما العزلة تعبر عن مجد أن تكون وحيداً'."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "العزلة كمختبر للإبداع وبناء الهوية",
+              "content": [
+                "كل إنجاز فكري أو فني عظيم في التاريخ وُلد في لحظات هدوء وتأمل منفرد. الصخب المستمر يفرض عليك آراء الآخرين، بينما تمنحك العزلة مساحة لسماع صوتك الداخلي الأصيل.",
+                "في العزلة تسقط الأقنعة الاجتماعية، وتتعلم كيف تقف على قدميك دون الحاجة إلى تصفيق أو مصادقة من حولك."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 رؤية نفسية حول العزلة",
+              "title": "العزلة كمعيار للنضج النفسي والعاطفي",
+              "text": "في علم النفس التحليلي، قدرة الإنسان على البقاء بمفرده بسلام ودون قلق هي أصدق مقياس للنضج العاطفي والاستقرار الداخلي، لأنها تدل على تصالحه التام مع ذاته."
+            },
+            {
+              "num": "03",
+              "title": "فخاخ العزلة السلبية وكيفية تجنبها",
+              "content": [
+                "تتحول العزلة إلى نقمة عندما تصبح هروباً مزمناً من المسؤولية أو ستارة تخفي وراءها الاكتئاب والرهاب الاجتماعي.",
+                "الحكمة تقتضي إيجاد توازن ديناميكي: التزود بالطاقة في خلوتك، ثم العودة إلى المجتمع للمشاركة والعطاء بحب وقوة."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "٥ خطوات لتحويل خلوتك إلى ملاذ روحي مثمر",
+              "desc": "كيف تبني علاقة صحية ومثمرة مع ذاتك :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "خصص نصف ساعة صمت يومياً",
+                  "text": "أغلق هاتفك واجلس بهدوء للتأمل أو القراءة دون أي مشتتات رقمية."
+                },
+                {
+                  "num": "2",
+                  "title": "دوّن خواطرك بحرية",
+                  "text": "الكتابة في عزلتك تفرغ شحنات التوتر وتمنحك وضوحاً فكرياً مذهلاً."
+                },
+                {
+                  "num": "3",
+                  "title": "امشِ في الطبيعة بمفردك",
+                  "text": "التجول في المساحات المفتوحة يجدد خلايا الدماغ ويعيد التوازن للنفس."
+                },
+                {
+                  "num": "4",
+                  "title": "لا تخف من الفراغ الذهني",
+                  "text": "لحظات السكون ليست وقتاً ضائعاً، بل هي فترة إعادة شحن ضرورية لطاقتك."
+                },
+                {
+                  "num": "5",
+                  "title": "اختر أصدقاءك بعناية",
+                  "text": "العزلة الخصبة أفضل ألف مرة من صحبة تسرق سلامك الداخلي وتستنزفك."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "العزلة الواعية مجد روحي واختيار حر، بينما الوحدة شعور بالحرمان.",
+            "أعظم الأفكار الإبداعية تنضج في لحظات السكون والتأمل المنفرد.",
+            "القدرة على البقاء وحيداً بسلام هي المؤشر الحقيقي للنضج النفسي.",
+            "العزلة السلبية هروب، بينما العزلة الإيجابية تجديد وبناء.",
+            "التوازن بين الخلوة والتواصل الاجتماعي هو صمام أمان الصحة النفسية."
+          ],
+          "conclusion": "العزلة ليست قطيعة مع الحياة، بل هي المحطة التي نتزود فيها بالنور لنضيء عتمة أيامنا. حين تصادق نفسك في خلوتك، لن تشعر بالغربة في هذا الكون أبداً.",
+          "finalQuote": "« لن تكون وحيداً أبداً ما دمت تحب الشخص الذي أنت معه حين تختلي بنفسك. »",
+          "finalQuoteAuthor": "— حكمة الحكماء | حكمة ونور"
         },
         {
           "id": "7-errors-mind-growth",
@@ -6768,11 +8798,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "أنس الحكيم",
-              "time": "منذ ٤ أيام",
-              "text": "الدرس السقراطي بالتواضع المعرفي هو أهم علاج لغرور العصر الرقمي."
+              "author": "خالد بنسالم",
+              "time": "منذ ٥ ساعات",
+              "text": "فخ التكلفة الغارقة هو ما جعلني أضيع سنوات في مسار خاطئ. مقال منير للعقول."
+            },
+            {
+              "author": "فاطمة الزهراء",
+              "time": "منذ ٨ ساعات",
+              "text": "تلخيص ذكي وعملي للغاية لتشوهات التفكير."
             }
-          ]
+          ],
+          "chapo": "كثيراً ما نبحث عن أسباب تعثرنا في الظروف الخارجية أو تصرفات الآخرين، بينما يكمن العائق الحقيقي في أنماط تفكير مغلوطة وتشوهات معرفية تتكرر في عقولنا دون وعي منا.",
+          "summaryBox": {
+            "title": "✦ خريطة الأخطاء العقلية الشائعة",
+            "summary": "العقل البشري يميل لاختصار الجهد عبر مغالطات فكرية متوارثة. التعرف على هذه الأخطاء السبعة هو الخطوة الأولى لتفكيكها واستعادة السيطرة الواعية على مسار نموك.",
+            "question": "أي من هذه الأخطاء العقلية يستهلك طاقتك ويمنعك من تحقيق إمكاناتك الكاملة؟"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "فخ الكمالية والتفكير الحدي (إما كل شيء أو لا شيء)",
+              "content": [
+                "التفكير الحدي يقسم الحياة إلى نجاح باهر أو فشل ذريع دون أي درجات وسيطة. هذا النمط يصيب الإنسان بالشلل والمماطلة خوفاً من تقديم عمل غير مثالي.",
+                "النمو الحقيقي يقوم على تراكم الخطوات الصغيرة المستمرة وليس على القفزات الخارقة المفاجئة."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "الارتهان لآراء الآخرين والانحياز التأكيدي",
+              "content": [
+                "البحث الدائم عن مصادقة المحيطين يجعلك رهينة لأمزجتهم وتوقعاتهم. يضاف إلى ذلك 'الانحياز التأكيدي' حيث يميل عقلك لرؤية ما يؤكد مخاوفك القديمة فقط.",
+                "تحرير التفكير يتطلب فحص القناعات بجرأة واستبعاد ما لا يخدم تطورك الشخصي."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 حقيقة في علم النفس الإدراكي",
+              "title": "تأثير التكلفة الغارقة (Sunk Cost Fallacy)",
+              "text": "التمسك بمشاريع فاشلة أو علاقات مستنزفة فقط لأنك استثمرت فيها وقتاً سابقاً هو خطأ معرفي جسيم. الشجاعة تكمن في معرفة متى تغلق الباب وتبدأ من جديد."
+            },
+            {
+              "num": "03",
+              "title": "تضخيم المخاوف وافتراض السيناريو الأسوأ دائماً",
+              "content": [
+                "العقل البدائي مبرمج على التحذير من المخاطر، لكنه في العصر الحديث يضخم التحديات البسيطة لتتحول إلى كوارث وهمية في خيالنا.",
+                "كما علمنا سينيكا: 'معاناتنا في الخيال تفوق بكثير معاناتنا في الواقع الحقيقي'."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "الخلاصة العملية : الأخطاء الـ ٧ وكيفية تصحيحها",
+              "desc": "دليل سريع لإعادة ضبط بوصلتك الذهنية :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "التفكير الحدي",
+                  "text": "استبدل 'إما كل شيء أو لا شيء' بمبدأ 'التحسن المستمر بنسبة 1% يومياً'."
+                },
+                {
+                  "num": "2",
+                  "title": "قراءة الأفكار",
+                  "text": "توقف عن افتراض ما يفكر به الآخرون عنك؛ اسأل بوضوح أو تجاهل."
+                },
+                {
+                  "num": "3",
+                  "title": "شخصنة الأمور",
+                  "text": "تذكر أن تصرفات الآخرين تعكس دواخلهم ومشاكلهم، ولا علاقة لها بقيمتك."
+                },
+                {
+                  "num": "4",
+                  "title": "المماطلة باسم التحضير",
+                  "text": "ابدأ بما لديك الآن ومن حيث أنت، فالكمال وليد الممارسة."
+                },
+                {
+                  "num": "5",
+                  "title": "مقارنة بدايتك بمواسم حصاد غيرك",
+                  "text": "ركز على مسارك الخاص فالسباق الحقيقي هو مع ذاتك السابقة."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "معظم القيود التي تحاصرنا هي أوهام معرفية بنيت داخل عقولنا.",
+            "الكمالية عدوة الإنجاز والتراكم البسيط هو سر النجاح المستدام.",
+            "التحرر من شخصنة سلوكيات الآخرين يوفر طاقة نفسية هائلة.",
+            "فخ التكلفة الغارقة يمنعك من التخلي عما استنزفك في الماضي.",
+            "تدريب العقل على التفكير الواقعي ينهي دوامة القلق الوهمي."
+          ],
+          "conclusion": "تغيير الحياة لا يبدأ بتغيير الظروف الخارجية، بل بإصلاح العدسة التي نرى بها العالم. حين تطهر عقلك من هذه الأخطاء، تنفتح أمامك آفاق النمو والسكينة بيسر وتلقائية.",
+          "finalQuote": "« إن سعادة حياتك تعتمد على طبيعة ونقاء أفكارك. »",
+          "finalQuoteAuthor": "— ماركوس أوريليوس | حكمة ونور"
         },
         {
           "id": "happiness-in-wrong-place",
@@ -6801,11 +8916,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "نجلاء العتيبي",
-              "time": "منذ ٥ أيام",
-              "text": "مقال يلمس الروح، تذكرت كم من النعم نغفل عنها ونحن نركض وراء السراب."
+              "author": "أنس المرابط",
+              "time": "منذ ساعتين",
+              "text": "مفهوم ثنائية التحكم الرواقية غير حياتي المهنية والشخصية تماماً."
+            },
+            {
+              "author": "نورة القحطاني",
+              "time": "منذ ٥ ساعات",
+              "text": "مقال يلامس الروح ويحرر النفس من سباق الماديات المنهك."
             }
-          ]
+          ],
+          "chapo": "كم من السنوات نقضيها في الركض وراء أهداف نظن أنها ستحقق لنا الهناء الأبدي، لنكتشف بعد بلوغها أن العطش لا يزال قائماً؟ لماذا نبحث عن السعادة في الأماكن التي يستحيل أن نجدها فيها؟",
+          "summaryBox": {
+            "title": "✦ سر السعادة الحقيقية ومقرها",
+            "summary": "السعادة الخارجية المشروطة بالممتلكات والمكانة سريعة التبخر. السعادة الحقيقية هي حالة رضا داخلي وتوافق مع الذات لا يمكن شراؤها ولا سلبها.",
+            "question": "هل تبني سعادتك على ما تملكه، أم على من أنت وكيف تفكر؟"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "وهم السعادة المشروطة بالماديات والمظاهر",
+              "content": [
+                "يرسخ المجتمع الاستهلاكي فكرة أن السعادة تختبئ خلف الشراء القادم، الترقية القادمة، أو الإعجاب الافتراضي. لكن علم النفس أثبت وجود 'حلقة التكيف الممتعة' (Hedonic Treadmill)، حيث يعتاد الإنسان على أي مكسب مادي ويعود لنفس مستوى شعوره السابق.",
+                "التعلق بالمظاهر يجعل سلامك الداخلي رهينة لأمور خارجة عن إرادتك تماماً."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "الحكمة الرواقية : ما تحت سيطرتك وما ليس تحتها",
+              "content": [
+                "علمنا إبيكتيتوس أن منبع الشقاء الإنساني هو الخلط بين ما هو في نطاق قدرتنا (أفكارنا، قيمنا، ردود أفعالنا) وما هو خارج نطاقنا (آراء الآخرين، الثروة، المستقبل).",
+                "حين تحصر رغباتك فيما تملكه فعلياً في داخلك، يتحرر عقلك من الترقب والقلق الدائم."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 بصيرة نفسية وفلسفية",
+              "title": "الامتنان الواعي : ترياق السخط والمقارنة",
+              "text": "في أحدث أبحاث علم النفس الإيجابي، ممارسة الامتنان اليومي للنعم البسيطة المتاحة تعيد برمجة مسارات الدماغ العصبية، مما يرفع هرمونات الارتياح ويقلل هرمونات التوتر بنسب مذهلة."
+            },
+            {
+              "num": "03",
+              "title": "السعادة كحالة حضور وليست محطة وصول",
+              "content": [
+                "السعادة ليست مكافأة تنتظرك في نهاية الطريق، بل هي الطريقة التي تمشي بها هذا الطريق. هي حضورك الكامل في اللحظة الراهنة وتذوقك لتفاصيل الحياة اليومية.",
+                "السلام الداخلي لا يعني غياب المشاكل، بل يعني وجود الهدوء في وسط العاصفة."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "٥ مبادئ لإيجاد السعادة في مكانها الحقيقي",
+              "desc": "خطوات يومية لترسيخ راحة البال :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "انقل تركيزك من الممتلكات إلى التجارب",
+                  "text": "الذكريات العميقة والتعلم يمنحان سعادة تدوم أطول بكثير من المقتنيات."
+                },
+                {
+                  "num": "2",
+                  "title": "طبق ثنائية التحكم الرواقية",
+                  "text": "اسأل نفسك دائماً: هل هذا الأمر بيدي؟ إن لم يكن، فلا تدعه يسلب هدوءك."
+                },
+                {
+                  "num": "3",
+                  "title": "مارس الامتنان الصباحي",
+                  "text": "ابدأ يومك بتذكر ٣ نعم بسيطة وموجودة بالفعل في حياتك."
+                },
+                {
+                  "num": "4",
+                  "title": "قلص المقارنات الاجتماعية",
+                  "text": "لا تقارن كواليس حياتك بمشاهد الآخرين المنتقاة على الشاشات."
+                },
+                {
+                  "num": "5",
+                  "title": "ابحث عن المعنى والعطاء",
+                  "text": "مساعدة الآخرين وإعطاء قيمة للمحيطين يولد إحساساً عميقاً بالامتلاء الروحي."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "الممتلكات والمكانة توفر راحة عابرة ولكنها لا تصنع سكينة دائمة.",
+            "حلقة التكيف الممتعة تجعل السعادة المادية سراباً لا نهائياً.",
+            "التركيز على ما يخضع لسيطرتك هو المفتاح الأوحد للسلام الداخلي.",
+            "الامتنان اليومي يعيد توجيه العقل لرؤية وفرة الحاضر.",
+            "السعادة الحقيقية هي التناغم التام مع الذات والعيش في اللحظة."
+          ],
+          "conclusion": "السعادة لم تكن يوماً في مكان بعيد حتى نبحث عنها، بل هي في طريقة استجابتنا للحياة. حين تتوقف عن البحث عنها في الخارج، تكتشف أنها كانت تسكن داخلك طوال الوقت.",
+          "finalQuote": "« ليس الفقير من يملك القليل، بل من يشتهي الكثير. »",
+          "finalQuoteAuthor": "— سينيكا | حكمة ونور"
         },
         {
           "id": "true-confidence-inside",
@@ -6834,11 +9034,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "فيصل الرشيدي",
-              "time": "منذ أسبوع",
-              "text": "التركيز على الحوار الداخلي أحدث فرقاً هائلاً في ثقتي بعملي ولقاءاتي."
+              "author": "طارق المهدي",
+              "time": "منذ ساعة",
+              "text": "فكرة أن الثقة هي سمعتك عند نفسك غيرت نظرتي كلياً لمفهوم الانضباط."
+            },
+            {
+              "author": "سعاد التميمي",
+              "time": "منذ ٣ ساعات",
+              "text": "مقال رائع ومتوازن جداً بين الطرح النفسي والتطبيق العملي."
             }
-          ]
+          ],
+          "chapo": "بين الغرور المصطنع والشك القاتل في الذات، تكمن الثقة الحقيقية كقوة هادئة ورصينة تنبع من التصالح مع النفس ومعرفة حدودها، بعيداً عن صخب المظاهر ومطاردة الاستحسان الخارجي.",
+          "summaryBox": {
+            "title": "✦ جوهر الثقة الأصيلة",
+            "summary": "الثقة الحقيقية ليست التظاهر بالكمال أو التفوق على الآخرين، بل هي الشجاعة في قبول عدم الكمال والاعتماد على الكفاءة الذاتية والثبات الأخلاقي في مواجهة المجهول.",
+            "question": "هل تستمد ثقتك من إعجاب الآخرين المؤقت، أم من سلامك الداخلي ويقينك بقيمتك الذاتية؟"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "الفرق بين الثقة الهادئة والغرور الهش",
+              "content": [
+                "الغرور صاخب، دفاعي، ويحتاج دائماً لإثبات نفسه وتحقير الآخرين للشعور بالأمان. في المقابل، الثقة الحقيقية صامتة، مستقرة، ولا تشعر بأي حاجة للدخول في صراعات إثبات الذات.",
+                "الواثق من نفسه لا يخاف من الاعتراف بالجهل أو الخطأ، لأن قيمته الجوهرية غير مرتبطة بنتيجة موقف عابر."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "الثقة كنتاج للكفاءة والوعود الموفاة مع الذات",
+              "content": [
+                "في علم النفس المعاصر، الثقة ليست مشاعر سحرية تهبط من السماء، بل هي سمعتك الطيبة لدى نفسك. كلما وفيت بوعد قطعته لنفسك (الاستيقاظ، العمل، الالتزام)، كلما ارتفعت ثقتك بقدراتك.",
+                "التناقض بين ما تقوله وما تفعله في الخفاء هو المدمر الأول لتقدير الذات."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 قاعدة نفسية ذهبية",
+              "title": "مفهوم الكفاءة الذاتية (Self-Efficacy)",
+              "text": "وفقاً لعالم النفس ألبرت باندورا، الثقة الحقيقية هي إيمانك بقدرتك على التعلم والتكيف مع التحديات الجديدة، وليست معرفتك المسبقة بكل شيء. أنت تثق في قدرتك على إيجاد الحلول."
+            },
+            {
+              "num": "03",
+              "title": "التحرر من متلازمة المحتال والخوف من الأحكام",
+              "content": [
+                "يعاني الكثيرون من 'متلازمة المحتال' والشك الدائم في أهليتهم. الحكمة تقتضي إدراك أن كل العقول العظيمة مرت بلحظات شك مماثلة، وأن الشك الصحي هو محرك البحث عن الإتقان.",
+                "توقف عن مراقبة نفسك بعيون الناقد القاسي، وتعامل مع مسارك كطالب يتعلم باستمرار في مدرسة الحياة."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "٥ خطوات يومية لبناء ثقة ذاتية لا تتزعزع",
+              "desc": "تطبيقات عملية لترسيخ اليقين والهدوء الداخلي :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "حافظ على وعودك الصغيرة لنفسك",
+                  "text": "التزم بالأهداف اليومية البسيطة لبناء هيبة ذاتية راسخة أمام عقلك الباطن."
+                },
+                {
+                  "num": "2",
+                  "title": "تقبل ارتكاب الأخطاء كجزء من التعلم",
+                  "text": "الخطأ دليل على أنك تحاول وتتطور؛ لا تجعل منه محاكمة لهويتك."
+                },
+                {
+                  "num": "3",
+                  "title": "طور مهارة حقيقية بتركيز عميق",
+                  "text": "الكفاءة المتقنة في مجال معين هي أمتن صخرة تبنى عليها الثقة الحقيقية."
+                },
+                {
+                  "num": "4",
+                  "title": "تحدث مع نفسك باحترام",
+                  "text": "راقب حديثك الداخلي وتوقف عن جلد الذات بألفاظ محبطة."
+                },
+                {
+                  "num": "5",
+                  "title": "مارس الوقفة الواثقة والتنفس العميق",
+                  "text": "لغة الجسد تؤثر مباشرة على كيمياء الدماغ ومستويات هرمون الثقة."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "الثقة الحقيقية هدوء ورزانة بينما الغرور قناع يخفي الهشاشة.",
+            "الثقة هي السمعة التي تبنيها مع نفسك عبر الالتزام بالوعود.",
+            "الكفاءة الذاتية تعني الإيمان بالقدرة على التكيف والتعلم المستمر.",
+            "الشك الطبيعي جزء من النمو ولا ينبغي أن يعطلك عن الفعل.",
+            "بناء مهارات صلبة هو المولد الأساسي لتقدير الذات الحقيقي."
+          ],
+          "conclusion": "الثقة بالنفس ليست شعاراً نردده، بل هي ثمرة رحلة طويلة من الصدق مع الذات، والانضباط، وقبول النقص البشري بنبل وشجاعة. حين تثق في جذورك، لن تخشى هبوب الرياح.",
+          "finalQuote": "« ما إن تثق بنفسك حتى تعرف كيف تعيش. »",
+          "finalQuoteAuthor": "— يوهان فولفغانغ فون غوته | حكمة ونور"
         },
         {
           "id": "hikma-citations-philosophiques",
@@ -6867,11 +9152,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "باسل الشمري",
-              "time": "منذ أسبوع",
-              "text": "مجموعة ملهمة جداً، أحتفظ ببعض هذه الاقتباسات على مكتبي يومياً."
+              "author": "كريم السعدي",
+              "time": "منذ ساعتين",
+              "text": "مجموعة مقتبسات مختارة بعناية فائقة وتحليل فلسفي ممتع جداً."
+            },
+            {
+              "author": "ليلى الحارثي",
+              "time": "منذ ٥ ساعات",
+              "text": "أجمل ما في المقال هو ربط الاقتباس بالتطبيق العملي في الحياة اليومية."
             }
-          ]
+          ],
+          "chapo": "الاقتباس الفلسفي ليس مجرد كلمات منمقة، بل هو خلاصة عقود من المعاناة والتأمل الإنساني العميق. كيف تحول أقوال الحكماء إلى بوصلة عملية توجه قراراتك اليومية وتمنحك السكينة؟",
+          "summaryBox": {
+            "title": "✦ قوة الحكمة المركزة",
+            "summary": "الحكمة الحقيقية هي تلك التي تختزل الحقيقة الوجودية في عبارة جامعة توقظ العقل وتلهمه السلوك القويم عند مفارق الطرق الحياتية المعقدة.",
+            "question": "هل تقرأ الحكم لتزيين حديثك، أم تجعل منها معايير صارمة تقود سلوكك وقراراتك؟"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "حكمة الرواقية : السيادة على الانفعالات",
+              "content": [
+                "من ماركوس أوريليوس إلى سينيكا وإبيكتيتوس، تقدم الرواقية مصفوفة فكرية لحماية السلام الداخلي من تقلبات الدهر. المبدأ الذهبي: 'لا تتحكم في الأحداث، بل في تفسيرك لها'.",
+                "حين تحفظ هذه القواعد عن ظهر قلب وتستدعيها في لحظات الغضب، تنقلب المحن إلى فرص للتدريب الأخلاقي."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "فلسفة الوجود والحرية : شجاعة الاختيار",
+              "content": [
+                "من سقراط إلى كانط وسارتر ونيتشه، تشدد الفلسفة الكلاسيكية والوجودية على المسؤولية الفردية المطلقة. أنت لست نتاج ما حدث لك، بل نتاج ما تختاره في هذه اللحظة.",
+                "الحرية ليست فوضى، بل هي التزام شجاع بالقيم الأخلاقية السامية حتى في أصعب الظروف."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 التأثير النفسي للحكمة",
+              "title": "العلاج بالمعنى والفلسفة الإرشادية",
+              "text": "أثبتت دراسات العلاج المعرفي السلوكي (CBT) أن استحضار المبادئ الفلسفية الرصينة يعيد توازن القشرة الجبهية في الدماغ ويهدئ الاستجابات العاطفية المفرطة في اللوزة الدماغية."
+            },
+            {
+              "num": "03",
+              "title": "تحويل القول المأثور إلى ممارسة حية",
+              "content": [
+                "أكبر خطأ هو التعامل مع الفلسفة كترف نظري. الحكيم الحقيقي هو الذي تتجسد فلسفته في أفعاله، في تعامله مع خصومه، وفي طريقة مواجهته للشدائد.",
+                "كما قال إبيكتيتوس: 'لا تتحدث طويلاً عن كيف ينبغي أن يكون الإنسان الفاضل، بل كن أنت هذا الإنسان'."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "٥ وصايا ذهبية من حكماء التاريخ",
+              "desc": "بوصلة يومية للصفاء الذهني والاتزان :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "مبدأ سقراط",
+                  "text": "« اعرف نفسك بنفسك » : راقب دوافعك الحقيقية قبل الحكم على الآخرين."
+                },
+                {
+                  "num": "2",
+                  "title": "مبدأ ماركوس أوريليوس",
+                  "text": "« لا تضيع مزيداً من الوقت في الجدال حول ما يجب أن يكون عليه الرجل الصالح؛ كن واحداً »."
+                },
+                {
+                  "num": "3",
+                  "title": "مبدأ سينيكا",
+                  "text": "« نحن نعاني في الخيال أكثر مما نعاني في الواقع » : لا تستبق المصائب قبل وقوعها."
+                },
+                {
+                  "num": "4",
+                  "title": "مبدأ إبيكتيتوس",
+                  "text": "« ليس ما يحدث لك هو ما يهم، بل طريقة ردك عليه »."
+                },
+                {
+                  "num": "5",
+                  "title": "مبدأ نيتشه",
+                  "text": "« من يملك سبباً يعيش لأجله، يتحمل أي كيف تقريباً »."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "الاقتباس الفلسفي خارطة طريق مختصرة لحل المعضلات النفسية.",
+            "الرواقية هي فن حماية السلام الداخلي عبر التحكم في التفسيرات.",
+            "الحرية الحقيقية تكمن في تحمل المسؤولية الكاملة عن الخيارات.",
+            "الفلسفة الحقيقية هي التي تترجم في السلوك وليس في التنظير.",
+            "استحضار الحكم في الأوقات الصعبة يعيد التوازن العصبي والفكري."
+          ],
+          "conclusion": "كلمات الحكماء نجوم تهدي السائرين في ظلمات الحيرة. حين تغرس هذه المبادئ في قلبك وعقلك، تصبح مسيرتك في الحياة أكثر ثباتاً، ورزانة، ونوراً.",
+          "finalQuote": "« إن الحياة غير المفحوصة لا تستحق العيش. »",
+          "finalQuoteAuthor": "— سقراط | حكمة ونور"
         },
         {
           "id": "self-discipline",
@@ -6902,11 +9272,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "عمر الفاروق",
-              "time": "منذ أسبوعين",
-              "text": "الانضباط هو سر كل إنجاز حققته. المقال يضع النقاط على الحروف بأسلوب رائع."
+              "author": "إلياس القادري",
+              "time": "منذ ساعتين",
+              "text": "قاعدة الهوية غيرت نظرتي كلياً للالتزام بالرياضة والعمل. مقال لا يقدر بثمن."
+            },
+            {
+              "author": "مريم العثماني",
+              "time": "منذ ٤ ساعات",
+              "text": "نظام الصباح المقدس وقاعدة الدقيقتين أنقذتني من التسويف المستمر."
             }
-          ]
+          ],
+          "chapo": "الانضباط الذاتي ليس عقاباً نحرم به أنفسنا من متعة الحياة، بل هو أعلى درجات الحرية والسيادة العقلية. كيف تبني إرادة فولاذية تحررك من قيود الكسل والمشتتات؟",
+          "summaryBox": {
+            "title": "✦ جوهر الانضباط الحقيقي",
+            "summary": "الانضباط هو الجسر الرابط بين الأهداف والإنجازات. الإنسان المنضبط لا ينتظر هبوط الحماس المؤقت، بل يعتمد على عادات راسخة ونظام يومي يقوده للنجاح الحتمي.",
+            "question": "هل تدير يومك وفق نزوات اللحظة، أم وفق خطة واعية تعكس قيمك وطموحاتك؟"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "وهم التحفيز وسلطة العادات المنظمة",
+              "content": [
+                "الاعتماد على الحماس العاطفي خديعة كبرى؛ فالتحفيز مشاعر عابرة تزول عند أول عقبة. في المقابل، الانضباط هو القدرة على تنفيذ ما يجب فعله بدقة حتى حين تنعدم الرغبة النفسية في العمل.",
+                "العادات هي خوارزميات الدماغ التي توفر الطاقة العصبية وتحول الأداء الاستثنائي إلى روتين يومي تلقائي."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "تأجيل الإشباع اللحظي : سر العظمة الإنسانية",
+              "content": [
+                "الفرق الحاسم بين العظماء والعاديين هو القدرة على التضحية بالمتعة الفورية (تصفح الهواتف، النوم الزائد، الأكل العشوائي) في سبيل تحقيق مكاسب مستقبلية كبرى.",
+                "كما يقول حكماء الرواقية: كل نصر خارجي يبدأ بانتصار باطني على شهوات النفس ونزواتها."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 بحث نفسي سلوكي",
+              "title": "قاعدة الهوية في بناء العادات (James Clear)",
+              "text": "الانضباط المستدام لا ينبع من الرغبة في تغيير النتائج فقط، بل من تغيير الهوية: بدلاً من أن تقول 'أنا أحاول ممارسة الرياضة'، قل لنفسك 'أنا شخص رياضي يحترم صحته'."
+            },
+            {
+              "num": "03",
+              "title": "هندسة البيئة وتقليل الاحتكاك مع المغريات",
+              "content": [
+                "الانضباط الحقيقي لا يعني مقاومة الإغراءات طوال اليوم بقوة الإرادة، بل يعني تصميم بيئة ذكية تجعل العادات الإيجابية سهلة والعادات السلبية شبه مستحيلة.",
+                "أبعد المشتتات عن متناول يدك، وجهز أدوات عملك مسبقاً لتنطلق دون تردد."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "٥ قواعد رواقية وعلمية لامتلاك الانضباط الحديدي",
+              "desc": "نظام عملي لترويض الإرادة وبناء التركيز :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "قاعدة الدقيقتين",
+                  "text": "أي عادة جديدة تريد اكتسابها، ابدأها بنشاط يستغرق دقيقتين فقط لكسر حاجز المقاومة."
+                },
+                {
+                  "num": "2",
+                  "title": "نظام الصباح المقدس",
+                  "text": "استثمر الساعات الأولى من اليوم في إنجاز أهم وأصعب مهمة قبل أن تتشتت طاقتك."
+                },
+                {
+                  "num": "3",
+                  "title": "أزل المشتتات مسبقاً",
+                  "text": "ضع الهاتف في غرفة أخرى أثناء جلسات العمل العميق."
+                },
+                {
+                  "num": "4",
+                  "title": "لا تكسر السلسلة مرتين",
+                  "text": "إذا فاتك الالتزام يوماً لعذر طارئ، لا تدعه يتكرر في اليوم التالي أبداً."
+                },
+                {
+                  "num": "5",
+                  "title": "كافئ نفسك على الاستمرارية",
+                  "text": "احتفل بالالتزام بالمسار وليس بالنتائج الفورية فقط."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "الانضباط هو الحرية الحقيقية؛ الفوضى استعباد للنزوات اللحظية.",
+            "الاعتماد على العادات الثابتة يفوق بأشواط الاعتماد على التحفيز المتقلب.",
+            "القدرة على تأجيل المتعة الفورية هي المعيار الأول للنجاح المستدام.",
+            "هندسة البيئة المحيطة تقلل الحاجة لاستنزاف قوة الإرادة.",
+            "الاستمرارية اليومية البسيطة تحقق نتائج خارقة على المدى البعيد."
+          ],
+          "conclusion": "الانضباط ليس قيداً يثقل كاهلك، بل هو الجناح الذي تحلق به نحو أهدافك السامية. حين تمتلك زمام نفسك، تمتلك مصيرك بالكامل.",
+          "finalQuote": "« بالانضباط الذاتي، كل شيء يصبح ممكناً. »",
+          "finalQuoteAuthor": "— ثيودور روزفلت | حكمة ونور"
         },
         {
           "id": "stop-overthinking",
@@ -6938,16 +9393,96 @@ const TIKTOK_DATA = {
           ],
           "comments": [
             {
-              "author": "أحمد بن علي",
-              "time": "منذ ساعتين",
-              "text": "مقال رائع جداً، تطبيق ثنائية التحكم ساعدني كثيراً في التوقف عن القلق من أمور خارجة عن إرادتي."
+              "author": "سامي القاضي",
+              "time": "منذ ساعة",
+              "text": "تمرين الحواس وتنفس المربع أوقف نوبة قلق كادت تدمر يومي. شكراً من القلب."
             },
             {
-              "author": "سارة المنصوري",
-              "time": "منذ ٥ ساعات",
-              "text": "خطوة كتابة الأفكار وتحديد وقت للتفكير غيرت يومي تماماً. شكراً لكم على هذه الحكمة."
+              "author": "هند الغامدي",
+              "time": "منذ ٣ ساعات",
+              "text": "مقال في قمة الإفادة والروعة. تقنية فك الاندماج المعرفي عبقرية."
             }
-          ]
+          ],
+          "chapo": "كم من الليالي سُرقت منا في دوامة التفكير المفرط وتحليل سيناريوهات لم تحدث ولن تحدث أبداً؟ كيف تكسر حلقة الاجترار الذهني وتستعيد صفاء عقلك وسلامك الداخلي؟",
+          "summaryBox": {
+            "title": "✦ علاج الإفراط في التفكير",
+            "summary": "الإفراط في التفكير ليس ذكاءً تحليلياً، بل هو فخ القلق والشك. الحل يكمن في الانتقال الفوري من التفكير النظري المكرر إلى الفعل الحركي والتواجد في اللحظة الراهنة.",
+            "question": "هل يحل التفكير المستمر مشاكلك، أم يخلق في عقلك مشاكل لم تكن موجودة أصلاً؟"
+          },
+          "sections": [
+            {
+              "num": "01",
+              "title": "تشريح فخ الاجترار الذهني (Rumination)",
+              "content": [
+                "يميل العقل القلق إلى إعادة تمثيل أحداث الماضي بحسرة أو توقع كوارث المستقبل برعب. هذا النمط يستنزف طاقة الدماغ ويفرز هرمونات التوتر دون تقديم أي حل عملي.",
+                "التفكير الزائد هو محاولة وهمية للسيطرة على ما لا يمكن التنبؤ به."
+              ]
+            },
+            {
+              "num": "02",
+              "title": "العمل الحركي كترياق مباشر للشلل الفكري",
+              "content": [
+                "العقل لا يستطيع القلق والتصرف الحركي بكفاءة في نفس اللحظة. عندما تشعر بدوامة الأفكار تسحبك للأسفل، تحرك فوراً: تنفس، اكتب، امشِ، أو ابدأ مهمة صغيرة.",
+                "كما يقول حكماء الفلسفة: الشك يولد في الركود، واليقين يولد في خضم الحركة والعمل."
+              ]
+            },
+            {
+              "type": "insight",
+              "badge": "🧠 تقنية في العلاج المعرفي",
+              "title": "تقنية فك الاندماج المعرفي (Cognitive Defusion)",
+              "text": "في العلاج بالقبول والالتزام (ACT)، تذكر أنك 'لست أفكارك، بل أنت المراقب الواعي لتلك الأفكار'. حين تقول لنفسك 'أنا ألاحظ أن عقلي يفكر في الفشل'، تفقد الفكرة سلطتها المخيفة عليك فوراً."
+            },
+            {
+              "num": "03",
+              "title": "ترويض العقل بالحضور واليقظة الذهنية",
+              "content": [
+                "معظم آلامنا تقع في زمنين غير موجودين: ماضٍ رحل ومستقبل لم يأتِ. المكان الوحيد الذي تملك فيه القوة والسيطرة هو 'الآن'.",
+                "تدريب العقل على التركيز على الحواس الخمس في اللحظة الحالية يقطع شلال الأفكار السلبية ويعيد الهدوء فوراً."
+              ]
+            },
+            {
+              "type": "practical",
+              "title": "٥ خطوات حاسمة لإيقاف التفكير المفرط فوراً",
+              "desc": "إسعافات أولية عقلية لاستعادة السكينة والتركيز :",
+              "tips": [
+                {
+                  "num": "1",
+                  "title": "قاعدة الـ ٥ ثوانٍ والفعل الفوري",
+                  "text": "عندما تجد نفسك غارقاً في التحليل، عد تنازلياً ٥-٤-٣-٢-١ وتحرك فوراً لفعل شيء ملموس."
+                },
+                {
+                  "num": "2",
+                  "title": "تفريغ الأفكار على الورق (Brain Dump)",
+                  "text": "اكتب كل مخاوفك في ورقة؛ حين تراها مكتوبة يدرك عقلك أنها أقل حجماً مما كان يتخيل."
+                },
+                {
+                  "num": "3",
+                  "title": "حدد وقتاً مخصصاً للقلق",
+                  "text": "خصص ١٥ دقيقة عصراً للتفكير في مشاكلك، وإذا راودك قلق خارج هذا الوقت أجله لتلك الجلسة."
+                },
+                {
+                  "num": "4",
+                  "title": "تمرين الحواس ٥-٤-٣-٢-١",
+                  "text": "لاحظ ٥ أشياء تراها، ٤ تلمسها، ٣ تسمعها، ٢ تشمها، وواحدة تتذوقها لتعود للحاضر."
+                },
+                {
+                  "num": "5",
+                  "title": "تنفس المربع (Box Breathing)",
+                  "text": "استنشق ٤ ثوانٍ، احبس ٤ ثوانٍ، ازفر ٤ ثوانٍ، واحبس ٤ ثوانٍ لإعادة ضبط جهازك العصبي."
+                }
+              ]
+            }
+          ],
+          "inBrief": [
+            "الإفراط في التفكير استنزاف طاقة وليس حلاً عملياً للمشكلات.",
+            "الحركة والفعل الملموس هما الترياق الأسرع لشلل التحليل.",
+            "أنت لست أفكارك، بل المراقب الواعي الذي يملك حرية تجاهلها.",
+            "تفريغ المخاوف على الورق يكشف تضاؤلها ويسهل معالجتها.",
+            "الحضور في اللحظة الراهنة ينهي معارك الماضي ومخاوف المستقبل."
+          ],
+          "conclusion": "عقلك أداة عظيمة خُلقت لتخدمك، لا لتكون سجيناً لوساوسها. حين تتعلم كيف تسكت الضجيج الداخلي، يولد في أعماقك سلام هادئ كصفحة بحيرة ساكنة.",
+          "finalQuote": "« القلق لا يفرغ الغد من همومه، لكنه يفرغ اليوم من قوته وسكينته. »",
+          "finalQuoteAuthor": "— كورين تين بوم | حكمة ونور"
         }
       ],
       "faq": [
