@@ -59,6 +59,7 @@ class ElementMock {
 }
 
 const elementsMap = {
+  'featuredArticleSection': new ElementMock('section', 'featuredArticleSection'),
   'articlesList': new ElementMock('div', 'articlesList', 'articles-grid'),
   'noResults': new ElementMock('div', 'noResults', 'no-results'),
   'searchInput': new ElementMock('input', 'searchInput'),
@@ -130,17 +131,19 @@ async function testFullRuntime() {
   console.log('✅ Module loaded without throwing errors');
   
   const listEl = elementsMap['articlesList'];
-  console.log('Initial grid HTML populated length:', listEl.innerHTML.length);
-  if (listEl.innerHTML.length > 0) {
-    console.log('✅ articlesList populated successfully on load');
+  const featuredEl = elementsMap['featuredArticleSection'];
+  console.log('Initial grid HTML length:', listEl.innerHTML.length);
+  console.log('Initial featured article HTML length:', featuredEl.innerHTML.length);
+  
+  if (listEl.innerHTML.length > 0 && featuredEl.innerHTML.length > 0) {
+    console.log('✅ Both Featured Article and Articles Grid populated successfully on load');
   } else {
-    throw new Error('❌ articlesList is empty on initial load!');
+    throw new Error('❌ articlesList or featuredArticleSection is empty on initial load!');
   }
   
   // Test category filtering
   console.log('\n--- Testing Category Filtering ---');
   ['all', 'philosophy', 'psychology', 'development', 'history'].forEach(cat => {
-    // Simulate category filter
     const tags = global.document.querySelectorAll('.tag-btn');
     const tag = tags.find(t => t.attributes['data-category'] === cat);
     if (tag) {

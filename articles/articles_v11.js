@@ -427,7 +427,9 @@ function populateArticles(category, keyword) {
   keyword = keyword || '';
   
   const container = document.getElementById('articlesList');
+  const featuredContainer = document.getElementById('featuredArticleSection');
   const noResultsEl = document.getElementById('noResults');
+  
   let articles = (TIKTOK_DATA.content[currentLang] && TIKTOK_DATA.content[currentLang].articles) 
     ? TIKTOK_DATA.content[currentLang].articles 
     : (TIKTOK_DATA.content['ar'] ? TIKTOK_DATA.content['ar'].articles : []);
@@ -436,30 +438,78 @@ function populateArticles(category, keyword) {
     || (currentLang === 'ar' ? "اقرأ المقال" : currentLang === 'fr' ? "Lire l'article" : "Read article");
 
   const featuredLabel = (TIKTOK_DATA.ui[currentLang] && TIKTOK_DATA.ui[currentLang].featured) 
-    || (currentLang === 'ar' ? "مميز" : currentLang === 'fr' ? "En vedette" : "Featured");
+    || (currentLang === 'ar' ? "مقال مميز" : currentLang === 'fr' ? "À la une" : "Featured");
 
   if (!container || !articles) return;
 
+  let filtered = [...articles];
+
   if (category && category !== 'all') {
-    articles = articles.filter(art => art.category === category);
+    filtered = filtered.filter(art => art.category === category);
   }
 
   if (keyword && keyword.trim() !== '') {
     const term = keyword.toLowerCase().trim();
-    articles = articles.filter(art => 
+    filtered = filtered.filter(art => 
       (art.title && art.title.toLowerCase().includes(term)) || 
       (art.desc && art.desc.toLowerCase().includes(term))
     );
   }
 
-  if (articles.length === 0) {
+  if (filtered.length === 0) {
+    if (featuredContainer) featuredContainer.style.display = 'none';
     container.style.display = 'none';
     if (noResultsEl) noResultsEl.style.display = 'block';
   } else {
-    container.style.display = 'grid';
     if (noResultsEl) noResultsEl.style.display = 'none';
 
-    container.innerHTML = articles.map(art => {
+    // Check if we should render Featured Article at the top (when on 'all' and no search filter)
+    let gridArticles = filtered;
+    if (featuredContainer && category === 'all' && (!keyword || keyword.trim() === '')) {
+      const featuredArt = filtered.find(a => a.id === 'why-people-distance-when-you-succeed' || a.featured) || filtered[0];
+      if (featuredArt) {
+        featuredContainer.style.display = 'block';
+        const catLabel = featuredArt.categoryName || (TIKTOK_DATA.ui[currentLang] && TIKTOK_DATA.ui[currentLang][featuredArt.category]) || featuredArt.category;
+        const fImgSrc = featuredArt.image ? (featuredArt.image.startsWith('../') ? featuredArt.image : '../' + featuredArt.image) : '../main_home_hd_bg.jpg';
+        const fTarget = featuredArt.file || featuredArt.id;
+
+        featuredContainer.innerHTML = '<div class="featured-headline-card" style="background: linear-gradient(135deg, rgba(16, 26, 20, 0.95) 0%, rgba(26, 38, 30, 0.9) 100%); border: 1.5px solid rgba(223, 177, 91, 0.45); border-radius: 26px; padding: 32px; box-shadow: 0 16px 45px rgba(0,0,0,0.6); position: relative; overflow: hidden; backdrop-filter: blur(16px);">' +
+            '<div style="display: grid; grid-template-columns: 1fr 340px; gap: 32px; align-items: center;" class="featured-article-grid">' +
+              '<div>' +
+                '<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap;">' +
+                  '<span style="background: rgba(223, 177, 91, 0.18); border: 1px solid rgba(223, 177, 91, 0.45); color: #F5D98A; font-weight: 800; font-size: 0.82rem; padding: 4px 14px; border-radius: 20px; display: inline-flex; align-items: center; gap: 6px;">' +
+                    '🌿 ' + featuredLabel +
+                  '</span>' +
+                  '<span style="background: rgba(52, 211, 153, 0.15); color: #34D399; font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: 14px;">' +
+                    catLabel +
+                  '</span>' +
+                  '<span style="color: rgba(250, 246, 239, 0.6); font-size: 0.85rem;">⏱️ ' + featuredArt.readTime + '</span>' +
+                '</div>' +
+                '<h2 class="serif-title" style="font-size: 1.85rem; color: #FFFDF8; line-height: 1.35; margin: 0 0 14px; font-weight: 800; cursor: pointer;" onclick="openArticleReader(\'' + fTarget + '\')">' +
+                  featuredArt.title +
+                '</h2>' +
+                '<p style="font-size: 1.02rem; color: rgba(250, 246, 239, 0.88); line-height: 1.75; margin: 0 0 24px;">' +
+                  featuredArt.desc +
+                '</p>' +
+                '<button type="button" class="quiz-btn" onclick="openArticleReader(\'' + fTarget + '\')" style="padding: 12px 28px; display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-size: 0.95rem; border-radius: 14px; cursor: pointer;">' +
+                  '<span>' + readLabel + '</span>' +
+                '</button>' +
+              '</div>' +
+              '<div style="text-align: center; cursor: pointer;" onclick="openArticleReader(\'' + fTarget + '\')">' +
+                '<img src="' + fImgSrc + '" alt="' + (featuredArt.imageAlt || featuredArt.title) + '" loading="eager" style="width: 100%; height: 230px; object-fit: cover; border-radius: 20px; border: 2px solid rgba(223, 177, 91, 0.4); box-shadow: 0 12px 35px rgba(0,0,0,0.6); transition: transform 0.3s ease;" onerror="this.src=\'../main_home_hd_bg.jpg\';">' +
+              '</div>' +
+            '</div>' +
+          '</div>';
+
+        // Render remaining articles in grid
+        gridArticles = filtered.filter(a => a.id !== featuredArt.id);
+      }
+    } else if (featuredContainer) {
+      featuredContainer.style.display = 'none';
+    }
+
+    container.style.display = 'grid';
+    container.innerHTML = gridArticles.map(art => {
       const badgeHtml = art.featured ? '<span class="card-featured-badge">' + featuredLabel + '</span>' : '';
       const categoryLabel = art.categoryName || (TIKTOK_DATA.ui[currentLang] && TIKTOK_DATA.ui[currentLang][art.category]) || art.category;
       
@@ -467,10 +517,10 @@ function populateArticles(category, keyword) {
       const imageAlt = art.imageAlt || art.title;
       const targetFile = art.file || art.id;
 
-      return '<div class="article-card" style="cursor: pointer;" data-file="' + targetFile + '">' +
+      return '<div class="article-card" style="cursor: pointer;" data-file="' + targetFile + '" onclick="openArticleReader(\'' + targetFile + '\')">' +
           '<div class="article-image-container">' +
             badgeHtml +
-            '<img src="' + imageSrc + '" alt="' + imageAlt + '" class="article-image" onerror="this.src=\'../main_home_hd_bg.jpg\';">' +
+            '<img src="' + imageSrc + '" alt="' + imageAlt + '" class="article-image" loading="lazy" onerror="this.src=\'../main_home_hd_bg.jpg\';">' +
           '</div>' +
           '<div class="card-meta-row">' +
             '<span style="color: var(--accent-green); font-weight: 600; text-transform: uppercase;">' + categoryLabel + '</span>' +
