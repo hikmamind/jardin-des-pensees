@@ -1271,10 +1271,16 @@ function setupMobileNavOverlay() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function initializeArticlesApp() {
   setupMobileNavOverlay();
   initTheme();
   initLanguageSelector();
   initNavbarScroll();
   initPageLogic();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initializeArticlesApp);
+} else {
+  initializeArticlesApp();
+}
