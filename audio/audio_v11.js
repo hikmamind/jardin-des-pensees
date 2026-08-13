@@ -1397,9 +1397,28 @@ function formatTime(seconds) {
 // Relative Date Formatter
 function formatReviewDate(timestamp) {
   if (!timestamp) return '';
-  const d = new Date(timestamp);
-  const locale = currentLang === 'ar' ? 'ar-EG' : currentLang === 'fr' ? 'fr-FR' : 'en-US';
-  return d.toLocaleDateString(locale, { day: 'numeric', month: 'short', year: 'numeric' });
+  try {
+    const now = Date.now();
+    const diffMs = now - timestamp;
+    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+    const t = AUDIO_I18N[currentLang] || AUDIO_I18N.ar;
+
+    if (diffDays === 0) {
+      return t.dateToday || "اليوم";
+    } else if (diffDays === 1) {
+      return t.dateYesterday || "بالأمس";
+    } else if (diffDays === 2) {
+      return t.dateDaysAgoTwo || "منذ يومين";
+    } else if (diffDays > 2 && diffDays < 30) {
+      return (t.dateDaysAgo || "منذ {n} أيام").replace('{n}', diffDays);
+    }
+
+    const d = new Date(timestamp);
+    const locale = currentLang === 'ar' ? 'ar-EG' : currentLang === 'fr' ? 'fr-FR' : 'en-US';
+    return d.toLocaleDateString(locale, { day: 'numeric', month: 'short', year: 'numeric' });
+  } catch (e) {
+    return '';
+  }
 }
 
 // ==========================================================================
@@ -1753,20 +1772,20 @@ function translatePage() {
   const rLabelSort = document.getElementById('labelSortReviews');
   const rLoadMore = document.getElementById('loadMoreReviewsText');
 
-  if (rSecHeading) rSecHeading.textContent = t.reviewsTitle;
-  if (rBadgeLabel) rBadgeLabel.textContent = t.reviewsBadgeLabel;
-  if (rSecSubtitle) rSecSubtitle.textContent = t.reviewsSectionSubtitle;
-  if (rLeg) rLeg.textContent = t.ratingLegend;
-  if (rFormTitle) rFormTitle.textContent = t.formTitle;
-  if (rLabelName) rLabelName.innerHTML = `${t.labelAuthorName} <span style="color:var(--gold);">*</span>`;
-  if (rLabelEmail) rLabelEmail.innerHTML = `${t.labelAuthorEmail} <span style="color:var(--text-muted);font-size:0.75rem;">${t.optionalTag}</span>`;
-  if (rLabelComment) rLabelComment.innerHTML = `${t.labelCommentText} <span style="color:var(--gold);">*</span>`;
-  if (rInputName) rInputName.placeholder = t.placeholderAuthorName;
-  if (rInputEmail) rInputEmail.placeholder = t.placeholderEmail;
-  if (rInputText) rInputText.placeholder = t.placeholderComment;
-  if (rBtnSub) rBtnSub.textContent = t.btnSubmitReview;
-  if (rLabelSort) rLabelSort.textContent = t.sortLabel;
-  if (rLoadMore) rLoadMore.textContent = t.loadMoreReviews;
+  if (rSecHeading) rSecHeading.textContent = t.reviewsSectionHeading || "آراء المستمعين";
+  if (rBadgeLabel) rBadgeLabel.textContent = t.reviewsBadgeLabel || "آراء المستمعين";
+  if (rSecSubtitle) rSecSubtitle.textContent = t.reviewsSectionSubtitle || "شارك تجربتك وساعدنا على تطوير مكتبة حكمـة ونور الصوتية";
+  if (rLeg) rLeg.textContent = t.ratingLegend || "تقييمك للعمل :";
+  if (rFormTitle) rFormTitle.textContent = t.formTitleText || "شاركنا تجربتك مع هذا العمل الصوتي";
+  if (rLabelName) rLabelName.innerHTML = `${t.labelAuthorName || 'الاسم'} <span style="color:var(--review-gold);">*</span>`;
+  if (rLabelEmail) rLabelEmail.innerHTML = `${t.labelAuthorEmail || 'البريد الإلكتروني'} <span style="color:var(--review-muted);font-size:0.75rem;">${t.optionalTag || '(اختياري)'}</span>`;
+  if (rLabelComment) rLabelComment.innerHTML = `${t.labelCommentText || 'رأيك'} <span style="color:var(--review-gold);">*</span>`;
+  if (rInputName) rInputName.placeholder = t.placeholderAuthorName || "اسمك أو لقبك";
+  if (rInputEmail) rInputEmail.placeholder = t.placeholderEmail || "لن يتم نشر بريدك الإلكتروني";
+  if (rInputText) rInputText.placeholder = t.placeholderComment || "شاركنا تجربتك مع هذا العمل الصوتي...";
+  if (rBtnSub) rBtnSub.textContent = t.submitReviewBtnText || "نشر التقييم";
+  if (rLabelSort) rLabelSort.textContent = t.sortLabel || "الترتيب :";
+  if (rLoadMore) rLoadMore.textContent = t.loadMoreReviews || "عرض المزيد من الآراء";
 
   // Sort dropdown options
   const sortSelect = document.getElementById('reviewsSortSelect');
@@ -2481,7 +2500,8 @@ window.handleCommentSubmit = function(e) {
   const res = AudioReviewsStore.submitComment(activeBookKey, { author, text, rating });
 
   if (res.success) {
-    if (textInput) textInput.value = '';
+    const form = document.getElementById('workCommentForm');
+    if (form) form.reset();
     updateCommentCharCount(textInput);
     if (noticeEl) {
       noticeEl.textContent = t.formSuccessMsg;
