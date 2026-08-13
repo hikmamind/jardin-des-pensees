@@ -211,6 +211,130 @@ app.get('/api/download/:token', (req, res) => {
   }
 });
 
+// --- Audio Reviews & Ratings API ---
+const audioRatingsStore = new Map();
+const audioCommentsStore = new Map();
+
+app.get('/api/audio/:workId/reviews', (req, res) => {
+  const { workId } = req.params;
+  const ratings = audioRatingsStore.get(workId) || [];
+  const comments = audioCommentsStore.get(workId) || [];
+
+  const totalRatings = ratings.length;
+  const sum = ratings.reduce((acc, r) => acc + r.rating, 0);
+  const average = totalRatings > 0 ? parseFloat((sum / totalRatings).toFixed(1)) : 0;
+
+  const distribution = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+  ratings.forEach(r => {
+    if (r.rating >= 1 && r.rating <= 5) distribution[r.rating]++;
+  });
+
+  const percentages = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+  if (totalRatings > 0) {
+    for (let i = 1; i <= 5; i++) {
+      percentages[i] = Math.round((distribution[i] / totalRatings) * 100);
+    }
+  }
+
+  res.json({
+    workId,
+    summary: {
+      totalCount: totalRatings,
+      average,
+      distribution,
+      percentages
+    },
+    comments
+  });
+});
+
+app.post('/api/audio/:workId/rating', (req, res) => {
+  const { workId } = req.params;
+  const { rating, clientId } = req.body;
+  const numRating = parseInt(rating, 10);
+
+  if (isNaN(numRating) || numRating < 1 || numRating > 5) {
+    return res.status(400).json({ error: 'Note invalide (doit être entre 1 et 5).' });
+  }
+
+  if (!audioRatingsStore.has(workId)) {
+    audioRatingsStore.set(workId, []);
+  }
+
+  const ratings = audioRatingsStore.get(workId);
+  const clientKey = clientId || req.ip;
+  const existingIdx = ratings.findIndex(r => r.clientKey === clientKey);
+
+  if (existingIdx >= 0) {
+    ratings[existingIdx].rating = numRating;
+    ratings[existingIdx].updatedAt = Date.now();
+  } else {
+    ratings.push({ clientKey, rating: numRating, createdAt: Date.now() });
+  }
+
+  const totalRatings = ratings.length;
+  const sum = ratings.reduce((acc, r) => acc + r.rating, 0);
+  const average = totalRatings > 0 ? parseFloat((sum / totalRatings).toFixed(1)) : 0;
+
+  res.json({
+    success: true,
+    workId,
+    userRating: numRating,
+    average,
+    totalCount: totalRatings
+  });
+});
+
+app.post('/api/audio/:workId/comments', (req, res) => {
+  const { workId } = req.params;
+  const { author, text, rating, parentId } = req.body;
+
+  const cleanAuthor = (author || '').trim().slice(0, 80);
+  const cleanText = (text || '').trim().slice(0, 1500);
+
+  if (!cleanAuthor) {
+    return res.status(400).json({ error: 'Le nom est obligatoire.' });
+  }
+  if (!cleanText) {
+    return res.status(400).json({ error: 'Le commentaire ne peut pas être vide.' });
+  }
+
+  if (!audioCommentsStore.has(workId)) {
+    audioCommentsStore.set(workId, []);
+  }
+
+  const comments = audioCommentsStore.get(workId);
+
+  if (parentId) {
+    const parent = comments.find(c => c.id === parentId);
+    if (!parent) {
+      return res.status(404).json({ error: 'Commentaire parent introuvable.' });
+    }
+    if (!parent.replies) parent.replies = [];
+    const newReply = {
+      id: `reply_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`,
+      author: cleanAuthor,
+      text: cleanText,
+      createdAt: Date.now()
+    };
+    parent.replies.push(newReply);
+    return res.json({ success: true, reply: newReply });
+  }
+
+  const newComment = {
+    id: `comm_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`,
+    workId,
+    author: cleanAuthor,
+    text: cleanText,
+    rating: (rating >= 1 && rating <= 5) ? rating : null,
+    createdAt: Date.now(),
+    replies: []
+  };
+
+  comments.unshift(newComment);
+  res.json({ success: true, comment: newComment });
+});
+
 // Start Server
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 Serveur démarré sur le port ${PORT}`);

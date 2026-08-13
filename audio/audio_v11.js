@@ -65,7 +65,42 @@ const AUDIO_I18N = {
     chapterPrefix: "الفصل",
     minutesLabel: "دقيقة",
     completedBadge: "مكتمل",
-    remainingLabel: "متبقي"
+    remainingLabel: "متبقي",
+    // Reviews & Ratings
+    reviewsTitle: "آراء المستمعين وتقييمات العمل",
+    reviewsCountLabel: "تقييمات",
+    reviewsSummary: "ملخص التقييمات",
+    ratingLegend: "تقييمك للعمل :",
+    starAria: "{n} نجوم من 5",
+    yourRatingIs: "تقييمك : {n}/5",
+    thankYouRating: "شكراً على تقييمك! 🌿",
+    emptyReviewsTitle: "لم يتم تقييم هذا العمل بعد",
+    emptyReviewsDesc: "كن أول من يشارك انطباعه وتقييمه لهذا الكتاب الصوتي.",
+    formTitle: "شارك رأيك أو ملاحظتك حول هذا الكتاب الصوتي",
+    labelAuthorName: "الاسم",
+    labelAuthorEmail: "البريد الإلكتروني",
+    optionalTag: "(اختياري)",
+    labelCommentText: "التعليق أو التأمل الفلسفي",
+    placeholderAuthorName: "اسمك أو لقبك",
+    placeholderEmail: "لن يتم نشر بريدك الإلكتروني",
+    placeholderComment: "شاركنا انطباعك، أفكارك، أو ما أثر فيك من هذا العمل الصوتي...",
+    btnSubmitReview: "نشر رأيي",
+    btnSubmitting: "جاري النشر...",
+    formSuccessMsg: "شكراً لك، تم نشر رأيك بنجاح! 🌿",
+    formErrorName: "يرجى كتابة اسمك.",
+    formErrorText: "يرجى كتابة نص التعليق.",
+    charCounterText: "{current} / {max} حرف",
+    sortLabel: "الترتيب :",
+    sortRecent: "الأحدث",
+    sortTopRated: "الأعلى تقييماً",
+    sortOldest: "الأقدم",
+    filterAll: "الكل",
+    replyBtnText: "رد 💬",
+    replyPlaceholder: "اكتب ردك هنا...",
+    submitReplyBtn: "إرسال الرد",
+    cancelReplyBtn: "إلغاء",
+    loadMoreReviews: "عرض المزيد من الآراء",
+    noFilteredReviews: "لا توجد آراء مطابقة لهذا الفلتر."
   },
   fr: {
     seoTitle: "Bibliothèque Audio de la Sagesse | Hikma & Nour",
@@ -119,7 +154,42 @@ const AUDIO_I18N = {
     chapterPrefix: "Chapitre",
     minutesLabel: "min",
     completedBadge: "Terminé",
-    remainingLabel: "restant"
+    remainingLabel: "restant",
+    // Reviews & Ratings
+    reviewsTitle: "Avis des auditeurs & Réflexions",
+    reviewsCountLabel: "évaluations",
+    reviewsSummary: "Résumé des évaluations",
+    ratingLegend: "Votre évaluation de l'œuvre :",
+    starAria: "{n} étoiles sur 5",
+    yourRatingIs: "Votre note : {n}/5",
+    thankYouRating: "Merci pour votre évaluation ! 🌿",
+    emptyReviewsTitle: "Cette œuvre n'a pas encore été évaluée",
+    emptyReviewsDesc: "Soyez la première personne à partager votre impression sur ce livre audio.",
+    formTitle: "Partagez votre avis ou votre réflexion philosophique",
+    labelAuthorName: "Nom",
+    labelAuthorEmail: "Adresse e-mail",
+    optionalTag: "(facultatif)",
+    labelCommentText: "Votre commentaire ou réflexion",
+    placeholderAuthorName: "Votre nom ou pseudonyme",
+    placeholderEmail: "Ne sera pas affiché publiquement",
+    placeholderComment: "Partagez vos impressions, vos réflexions ou ce que vous avez retenu...",
+    btnSubmitReview: "Publier mon avis",
+    btnSubmitting: "Publication en cours...",
+    formSuccessMsg: "Merci, votre avis a été publié avec succès ! 🌿",
+    formErrorName: "Veuillez renseigner votre nom.",
+    formErrorText: "Veuillez écrire un commentaire.",
+    charCounterText: "{current} / {max} caractères",
+    sortLabel: "Trier par :",
+    sortRecent: "Les plus récents",
+    sortTopRated: "Les mieux notés",
+    sortOldest: "Les plus anciens",
+    filterAll: "Tous",
+    replyBtnText: "Répondre 💬",
+    replyPlaceholder: "Écrire une réponse...",
+    submitReplyBtn: "Envoyer la réponse",
+    cancelReplyBtn: "Annuler",
+    loadMoreReviews: "Voir plus d'avis",
+    noFilteredReviews: "Aucun avis ne correspond à ce filtre."
   },
   en: {
     seoTitle: "The Audio Library of Wisdom | Hikma & Nour",
@@ -173,7 +243,42 @@ const AUDIO_I18N = {
     chapterPrefix: "Chapter",
     minutesLabel: "min",
     completedBadge: "Completed",
-    remainingLabel: "left"
+    remainingLabel: "left",
+    // Reviews & Ratings
+    reviewsTitle: "Listener Reviews & Ratings",
+    reviewsCountLabel: "ratings",
+    reviewsSummary: "Rating Summary",
+    ratingLegend: "Your Rating:",
+    starAria: "{n} stars out of 5",
+    yourRatingIs: "Your rating: {n}/5",
+    thankYouRating: "Thank you for your rating! 🌿",
+    emptyReviewsTitle: "This work has not been reviewed yet",
+    emptyReviewsDesc: "Be the first to share your reflections on this audiobook.",
+    formTitle: "Share your review or philosophical reflection",
+    labelAuthorName: "Name",
+    labelAuthorEmail: "Email address",
+    optionalTag: "(optional)",
+    labelCommentText: "Comment or reflection",
+    placeholderAuthorName: "Your name or nickname",
+    placeholderEmail: "Will not be published",
+    placeholderComment: "Share your thoughts, impressions, or philosophical takeaways...",
+    btnSubmitReview: "Post my review",
+    btnSubmitting: "Posting...",
+    formSuccessMsg: "Thank you, your review has been published! 🌿",
+    formErrorName: "Please enter your name.",
+    formErrorText: "Please enter your comment.",
+    charCounterText: "{current} / {max} characters",
+    sortLabel: "Sort by:",
+    sortRecent: "Most recent",
+    sortTopRated: "Highest rated",
+    sortOldest: "Oldest",
+    filterAll: "All",
+    replyBtnText: "Reply 💬",
+    replyPlaceholder: "Write a reply...",
+    submitReplyBtn: "Post reply",
+    cancelReplyBtn: "Cancel",
+    loadMoreReviews: "View more reviews",
+    noFilteredReviews: "No reviews match this filter."
   }
 };
 
@@ -434,7 +539,7 @@ const AUDIO_BOOKS_DATA = {
     category: 'philosophy',
     cover: './audio_etranger_cover.jpg',
     totalDuration: '16 min',
-    thinkerId: 'camus', // Real link to Camus thinker dossier!
+    thinkerId: 'camus',
     title: {
       ar: 'الغريب',
       fr: "L'Étranger",
@@ -740,6 +845,159 @@ const AUDIO_BOOKS_DATA = {
 };
 
 // ==========================================================================
+// AUDIO REVIEWS & RATINGS STORE (MODULAR STORAGE LAYER)
+// ==========================================================================
+
+const AudioReviewsStore = {
+  // 1. Get Ratings Summary for workId
+  getRatingSummary(workId) {
+    try {
+      const allRatings = JSON.parse(localStorage.getItem('hikma_audio_ratings') || '{}');
+      const workRatings = allRatings[workId] || [];
+      const userRating = allRatings[`user_${workId}`] || null;
+
+      const totalCount = workRatings.length;
+      const sum = workRatings.reduce((acc, r) => acc + (r.rating || r), 0);
+      const average = totalCount > 0 ? parseFloat((sum / totalCount).toFixed(1)) : 0;
+
+      const distribution = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+      workRatings.forEach(r => {
+        const val = typeof r === 'object' ? r.rating : r;
+        if (val >= 1 && val <= 5) distribution[val]++;
+      });
+
+      const percentages = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+      if (totalCount > 0) {
+        for (let i = 1; i <= 5; i++) {
+          percentages[i] = Math.round((distribution[i] / totalCount) * 100);
+        }
+      }
+
+      return { totalCount, average, distribution, percentages, userRating };
+    } catch (e) {
+      return { totalCount: 0, average: 0, distribution: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 }, percentages: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 }, userRating: null };
+    }
+  },
+
+  // 2. Submit Rating
+  submitRating(workId, rating) {
+    const num = parseInt(rating, 10);
+    if (isNaN(num) || num < 1 || num > 5) return null;
+
+    try {
+      const allRatings = JSON.parse(localStorage.getItem('hikma_audio_ratings') || '{}');
+      if (!allRatings[workId]) allRatings[workId] = [];
+
+      // Save user specific rating for this book
+      const userKey = `user_${workId}`;
+      const prevRating = allRatings[userKey];
+
+      if (prevRating) {
+        // Update user's previous rating
+        const idx = allRatings[workId].findIndex(r => (typeof r === 'object' ? r.isUser : false));
+        if (idx >= 0) {
+          allRatings[workId][idx].rating = num;
+          allRatings[workId][idx].updatedAt = Date.now();
+        } else {
+          allRatings[workId].push({ rating: num, isUser: true, createdAt: Date.now() });
+        }
+      } else {
+        allRatings[workId].push({ rating: num, isUser: true, createdAt: Date.now() });
+      }
+
+      allRatings[userKey] = num;
+      localStorage.setItem('hikma_audio_ratings', JSON.stringify(allRatings));
+
+      // Optional async sync to server API
+      fetch(`/api/audio/${workId}/rating`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ rating: num })
+      }).catch(() => {});
+
+      return this.getRatingSummary(workId);
+    } catch (e) {
+      return null;
+    }
+  },
+
+  // 3. Get Reviews / Comments for workId
+  getReviews(workId) {
+    try {
+      const allComments = JSON.parse(localStorage.getItem('hikma_audio_comments') || '{}');
+      return allComments[workId] || [];
+    } catch (e) {
+      return [];
+    }
+  },
+
+  // 4. Submit Comment / Review (with optional parentId for 1-level reply)
+  submitComment(workId, { author, text, rating = null, parentId = null }) {
+    const cleanAuthor = (author || '').trim().slice(0, 80);
+    const cleanText = (text || '').trim().slice(0, 1500);
+
+    if (!cleanAuthor || !cleanText) return { success: false, error: 'Champs obligatoires manquants.' };
+
+    try {
+      const allComments = JSON.parse(localStorage.getItem('hikma_audio_comments') || '{}');
+      if (!allComments[workId]) allComments[workId] = [];
+
+      if (parentId) {
+        // Find parent comment and append reply
+        const parent = allComments[workId].find(c => c.id === parentId);
+        if (!parent) return { success: false, error: 'Commentaire parent introuvable.' };
+        if (!parent.replies) parent.replies = [];
+
+        const newReply = {
+          id: `reply_${Date.now()}_${Math.random().toString(36).substring(2, 6)}`,
+          author: cleanAuthor,
+          text: cleanText,
+          createdAt: Date.now()
+        };
+        parent.replies.push(newReply);
+        localStorage.setItem('hikma_audio_comments', JSON.stringify(allComments));
+        return { success: true, reply: newReply };
+      }
+
+      const newComment = {
+        id: `comm_${Date.now()}_${Math.random().toString(36).substring(2, 6)}`,
+        workId,
+        author: cleanAuthor,
+        text: cleanText,
+        rating: (rating >= 1 && rating <= 5) ? rating : null,
+        createdAt: Date.now(),
+        replies: []
+      };
+
+      allComments[workId].unshift(newComment);
+      localStorage.setItem('hikma_audio_comments', JSON.stringify(allComments));
+
+      // Optional async sync to server API
+      fetch(`/api/audio/${workId}/comments`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ author: cleanAuthor, text: cleanText, rating, parentId })
+      }).catch(() => {});
+
+      return { success: true, comment: newComment };
+    } catch (e) {
+      return { success: false, error: e.message };
+    }
+  },
+
+  // 5. Delete Own Comment
+  deleteOwnComment(workId, commentId) {
+    try {
+      const allComments = JSON.parse(localStorage.getItem('hikma_audio_comments') || '{}');
+      if (allComments[workId]) {
+        allComments[workId] = allComments[workId].filter(c => c.id !== commentId);
+        localStorage.setItem('hikma_audio_comments', JSON.stringify(allComments));
+      }
+    } catch (e) {}
+  }
+};
+
+// ==========================================================================
 // APPLICATION STATE & PERSISTENCE
 // ==========================================================================
 
@@ -758,11 +1016,13 @@ function saveLanguage(lang) {
 }
 
 let currentLang = getSavedLanguage();
-let activeTheme = localStorage.getItem('theme') || 'dark';
 let activeCategory = 'all';
 let activeSearchQuery = '';
 let activeBookKey = 'milena'; // Reference prototype as default
 let activeChapterIndex = 0;
+let reviewsSortBy = 'recent';
+let reviewsStarFilter = 'all';
+let reviewsVisibleLimit = 6;
 
 // Central Audio Controller State
 const AudioState = {
@@ -853,6 +1113,14 @@ function formatTime(seconds) {
   const mins = Math.floor(seconds / 60);
   const secs = Math.floor(seconds % 60);
   return `${mins < 10 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
+}
+
+// Relative Date Formatter
+function formatReviewDate(timestamp) {
+  if (!timestamp) return '';
+  const d = new Date(timestamp);
+  const locale = currentLang === 'ar' ? 'ar-EG' : currentLang === 'fr' ? 'fr-FR' : 'en-US';
+  return d.toLocaleDateString(locale, { day: 'numeric', month: 'short', year: 'numeric' });
 }
 
 // ==========================================================================
@@ -1190,6 +1458,41 @@ function translatePage() {
   if (dShare) dShare.textContent = t.share;
   if (dLangBadge) dLangBadge.textContent = t.audioAvailableInArabic;
 
+  // Reviews & Ratings Form
+  const rSecHeading = document.getElementById('reviewsSectionHeading');
+  const rLeg = document.getElementById('ratingLegendText');
+  const rFormTitle = document.getElementById('reviewFormTitle');
+  const rLabelName = document.getElementById('labelAuthorName');
+  const rLabelEmail = document.getElementById('labelAuthorEmail');
+  const rLabelComment = document.getElementById('labelCommentText');
+  const rInputName = document.getElementById('commentAuthorName');
+  const rInputEmail = document.getElementById('commentEmail');
+  const rInputText = document.getElementById('commentText');
+  const rBtnSub = document.getElementById('submitReviewBtnText');
+  const rLabelSort = document.getElementById('labelSortReviews');
+  const rLoadMore = document.getElementById('loadMoreReviewsText');
+
+  if (rSecHeading) rSecHeading.textContent = t.reviewsTitle;
+  if (rLeg) rLeg.textContent = t.ratingLegend;
+  if (rFormTitle) rFormTitle.textContent = t.formTitle;
+  if (rLabelName) rLabelName.innerHTML = `${t.labelAuthorName} <span style="color:var(--gold);">*</span>`;
+  if (rLabelEmail) rLabelEmail.innerHTML = `${t.labelAuthorEmail} <span style="color:var(--text-muted);font-size:0.75rem;">${t.optionalTag}</span>`;
+  if (rLabelComment) rLabelComment.innerHTML = `${t.labelCommentText} <span style="color:var(--gold);">*</span>`;
+  if (rInputName) rInputName.placeholder = t.placeholderAuthorName;
+  if (rInputEmail) rInputEmail.placeholder = t.placeholderEmail;
+  if (rInputText) rInputText.placeholder = t.placeholderComment;
+  if (rBtnSub) rBtnSub.textContent = t.btnSubmitReview;
+  if (rLabelSort) rLabelSort.textContent = t.sortLabel;
+  if (rLoadMore) rLoadMore.textContent = t.loadMoreReviews;
+
+  // Sort dropdown options
+  const sortSelect = document.getElementById('reviewsSortSelect');
+  if (sortSelect) {
+    sortSelect.options[0].text = t.sortRecent;
+    sortSelect.options[1].text = t.sortTopRated;
+    sortSelect.options[2].text = t.sortOldest;
+  }
+
   // Common UI data-i18n
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
@@ -1276,7 +1579,6 @@ function renderFeaturedCard() {
   if (!container) return;
   const t = AUDIO_I18N[currentLang] || AUDIO_I18N.ar;
   
-  // Featured book: L'Alchimiste (alchemist) or Letters to Milena (milena)
   const book = AUDIO_BOOKS_DATA.alchemist || AUDIO_BOOKS_DATA.milena;
   const bTitle = book.title[currentLang] || book.title.ar;
   const bAuthor = book.author[currentLang] || book.author.ar;
@@ -1324,7 +1626,6 @@ function renderContinueListeningSection() {
   const section = document.getElementById('continueListeningSection');
   const grid = document.getElementById('continueListeningGrid');
   if (!section || !grid) return;
-  const t = AUDIO_I18N[currentLang] || AUDIO_I18N.ar;
 
   const progressMap = getSavedProgress();
   const inProgressKeys = Object.keys(progressMap).filter(k => {
@@ -1581,6 +1882,9 @@ window.openBookDetail = function(bookKey, scroll = true) {
   // Reset to first tab
   switchTab('chapters', document.getElementById('tabBtnChapters'));
 
+  // Render Reviews & Ratings Section for this bookKey
+  renderReviewsSection(bookKey);
+
   // Update dynamic SEO for this audiobook
   updateSeoMetadata(book);
 
@@ -1716,6 +2020,329 @@ function setupKeyboardTabs() {
 }
 
 // ==========================================================================
+// REVIEWS & RATINGS RENDER ENGINE
+// ==========================================================================
+
+function renderReviewsSection(workId) {
+  renderRatingSummary(workId);
+  renderUserRatingBox(workId);
+  renderCommentsList(workId);
+}
+
+function renderRatingSummary(workId) {
+  const container = document.getElementById('reviewsSummaryGrid');
+  const countBadge = document.getElementById('reviewsCountBadge');
+  if (!container) return;
+  const t = AUDIO_I18N[currentLang] || AUDIO_I18N.ar;
+
+  const summary = AudioReviewsStore.getRatingSummary(workId);
+  if (countBadge) countBadge.textContent = `${summary.totalCount} ${t.reviewsCountLabel}`;
+
+  if (summary.totalCount === 0) {
+    container.innerHTML = `
+      <div style="grid-column: 1 / -1; text-align: center; padding: 20px 10px;">
+        <div style="font-size: 2.2rem; margin-bottom: 8px;">🌱</div>
+        <h4 style="color: var(--gold); font-size: 1.1rem; margin: 0 0 6px;">${t.emptyReviewsTitle}</h4>
+        <p style="color: var(--review-muted); font-size: 0.88rem; margin: 0;">${t.emptyReviewsDesc}</p>
+      </div>
+    `;
+    return;
+  }
+
+  const starHtml = '★'.repeat(Math.round(summary.average)) + '☆'.repeat(5 - Math.round(summary.average));
+
+  container.innerHTML = `
+    <div class="summary-score-col">
+      <div class="big-score-num">${summary.average.toFixed(1)}</div>
+      <div class="big-stars-row">${starHtml}</div>
+      <div class="total-reviews-count">${summary.totalCount} ${t.reviewsCountLabel}</div>
+    </div>
+
+    <div class="distribution-bars-col">
+      ${[5, 4, 3, 2, 1].map(num => `
+        <div class="dist-row">
+          <span class="dist-label">${num} ★</span>
+          <div class="dist-bar-bg">
+            <div class="dist-bar-fill" style="width: ${summary.percentages[num]}%;"></div>
+          </div>
+          <span class="dist-pct">${summary.percentages[num]}%</span>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function renderUserRatingBox(workId) {
+  const summary = AudioReviewsStore.getRatingSummary(workId);
+  const statusEl = document.getElementById('ratingFeedbackStatus');
+  const t = AUDIO_I18N[currentLang] || AUDIO_I18N.ar;
+
+  updateStarButtonsUI(summary.userRating);
+
+  if (summary.userRating) {
+    if (statusEl) statusEl.textContent = t.yourRatingIs.replace('{n}', summary.userRating);
+  } else {
+    if (statusEl) statusEl.textContent = '';
+  }
+}
+
+function updateStarButtonsUI(rating) {
+  const buttons = document.querySelectorAll('#starRatingGroup .star-btn');
+  buttons.forEach(btn => {
+    const starNum = parseInt(btn.getAttribute('data-star'), 10);
+    if (rating && starNum <= rating) {
+      btn.classList.add('active');
+      btn.setAttribute('aria-checked', starNum === rating ? 'true' : 'false');
+    } else {
+      btn.classList.remove('active');
+      btn.setAttribute('aria-checked', 'false');
+    }
+  });
+}
+
+window.selectWorkRating = function(starNum) {
+  const t = AUDIO_I18N[currentLang] || AUDIO_I18N.ar;
+  AudioReviewsStore.submitRating(activeBookKey, starNum);
+  renderRatingSummary(activeBookKey);
+  renderUserRatingBox(activeBookKey);
+  showToast(t.thankYouRating);
+};
+
+// Character counter for comment
+window.updateCommentCharCount = function(textarea) {
+  const counter = document.getElementById('commentCharCounter');
+  const t = AUDIO_I18N[currentLang] || AUDIO_I18N.ar;
+  if (counter && textarea) {
+    counter.textContent = t.charCounterText.replace('{current}', textarea.value.length).replace('{max}', 1500);
+  }
+};
+
+// Form submit handler
+window.handleCommentSubmit = function(e) {
+  e.preventDefault();
+  const authorInput = document.getElementById('commentAuthorName');
+  const textInput = document.getElementById('commentText');
+  const noticeEl = document.getElementById('commentSubmitNotice');
+  const submitBtn = document.getElementById('btnSubmitReview');
+  const t = AUDIO_I18N[currentLang] || AUDIO_I18N.ar;
+
+  const author = authorInput ? authorInput.value.trim() : '';
+  const text = textInput ? textInput.value.trim() : '';
+
+  if (!author) {
+    alert(t.formErrorName);
+    return;
+  }
+  if (!text) {
+    alert(t.formErrorText);
+    return;
+  }
+
+  // Get current user rating if set
+  const summary = AudioReviewsStore.getRatingSummary(activeBookKey);
+  const rating = summary.userRating || null;
+
+  if (submitBtn) submitBtn.disabled = true;
+
+  const res = AudioReviewsStore.submitComment(activeBookKey, { author, text, rating });
+
+  if (res.success) {
+    if (textInput) textInput.value = '';
+    updateCommentCharCount(textInput);
+    if (noticeEl) {
+      noticeEl.textContent = t.formSuccessMsg;
+      noticeEl.style.display = 'block';
+      setTimeout(() => { noticeEl.style.display = 'none'; }, 4000);
+    }
+    renderRatingSummary(activeBookKey);
+    renderCommentsList(activeBookKey);
+    showToast(t.formSuccessMsg);
+  }
+
+  if (submitBtn) submitBtn.disabled = false;
+};
+
+// Render Comments List
+function renderCommentsList(workId) {
+  const container = document.getElementById('audioCommentsList');
+  const loadMoreWrap = document.getElementById('loadMoreReviewsWrap');
+  if (!container) return;
+  const t = AUDIO_I18N[currentLang] || AUDIO_I18N.ar;
+
+  let comments = AudioReviewsStore.getReviews(workId);
+
+  // 1. Star Filter
+  if (reviewsStarFilter !== 'all') {
+    const filterNum = parseInt(reviewsStarFilter, 10);
+    comments = comments.filter(c => c.rating === filterNum);
+  }
+
+  // 2. Sorting
+  if (reviewsSortBy === 'top_rated') {
+    comments.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+  } else if (reviewsSortBy === 'oldest') {
+    comments.sort((a, b) => (a.createdAt || 0) - (b.createdAt || 0));
+  } else {
+    // recent
+    comments.sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+  }
+
+  if (comments.length === 0) {
+    container.innerHTML = `
+      <div style="text-align: center; padding: 24px; color: var(--review-muted); font-size: 0.9rem;">
+        ${t.noFilteredReviews}
+      </div>
+    `;
+    if (loadMoreWrap) loadMoreWrap.style.display = 'none';
+    return;
+  }
+
+  const visibleComments = comments.slice(0, reviewsVisibleLimit);
+  if (loadMoreWrap) {
+    loadMoreWrap.style.display = comments.length > reviewsVisibleLimit ? 'block' : 'none';
+  }
+
+  container.innerHTML = visibleComments.map(c => {
+    const initial = (c.author || 'H').charAt(0).toUpperCase();
+    const starHtml = c.rating ? '★'.repeat(c.rating) + '☆'.repeat(5 - c.rating) : '';
+    const dateStr = formatReviewDate(c.createdAt);
+
+    // Escape text to prevent XSS
+    const safeAuthor = escapeHtml(c.author);
+    const safeText = escapeHtml(c.text);
+
+    return `
+      <article class="comment-card-item" id="comm_${c.id}">
+        <div class="comment-card-header">
+          <div class="comment-author-info">
+            <div class="comment-avatar">${initial}</div>
+            <div>
+              <div class="comment-author-name">${safeAuthor}</div>
+              <div class="comment-date">${dateStr}</div>
+            </div>
+          </div>
+          ${starHtml ? `<div class="comment-stars">${starHtml}</div>` : ''}
+        </div>
+
+        <div class="comment-body-text">${safeText}</div>
+
+        <div class="comment-actions-bar">
+          <button class="comment-reply-btn" onclick="openReplyForm('${c.id}')">${t.replyBtnText}</button>
+        </div>
+
+        <!-- Inline Reply Form Container -->
+        <div id="replyFormContainer_${c.id}" class="reply-form-wrap" style="display:none;">
+          <form onsubmit="handleReplySubmit('${c.id}', event)">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;">
+              <input type="text" id="replyAuthor_${c.id}" class="review-input" placeholder="${t.placeholderAuthorName}" required maxlength="80">
+            </div>
+            <textarea id="replyText_${c.id}" class="review-textarea" rows="2" placeholder="${t.replyPlaceholder}" required maxlength="500"></textarea>
+            <div style="display:flex;gap:8px;margin-top:8px;">
+              <button type="submit" class="btn-primary-play" style="padding:6px 14px;font-size:0.82rem;">${t.submitReplyBtn}</button>
+              <button type="button" class="btn-sec-action" style="padding:6px 14px;font-size:0.82rem;" onclick="closeReplyForm('${c.id}')">${t.cancelReplyBtn}</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Nested Replies (1-level depth) -->
+        ${c.replies && c.replies.length > 0 ? `
+          <div class="comment-replies-list">
+            ${c.replies.map(r => `
+              <div class="reply-card-item">
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+                  <strong style="color:var(--gold-light);font-size:0.85rem;">${escapeHtml(r.author)}</strong>
+                  <span style="color:var(--review-muted);font-size:0.72rem;">${formatReviewDate(r.createdAt)}</span>
+                </div>
+                <div style="font-size:0.85rem;color:var(--text-main);line-height:1.5;">${escapeHtml(r.text)}</div>
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
+      </article>
+    `;
+  }).join('');
+}
+
+// XSS Prevention string sanitizer
+function escapeHtml(str) {
+  if (!str) return '';
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+// Reply form togglers
+window.openReplyForm = function(commentId) {
+  const formWrap = document.getElementById(`replyFormContainer_${commentId}`);
+  if (formWrap) {
+    formWrap.style.display = formWrap.style.display === 'block' ? 'none' : 'block';
+  }
+};
+
+window.closeReplyForm = function(commentId) {
+  const formWrap = document.getElementById(`replyFormContainer_${commentId}`);
+  if (formWrap) formWrap.style.display = 'none';
+};
+
+window.handleReplySubmit = function(commentId, e) {
+  e.preventDefault();
+  const authorInput = document.getElementById(`replyAuthor_${commentId}`);
+  const textInput = document.getElementById(`replyText_${commentId}`);
+  const t = AUDIO_I18N[currentLang] || AUDIO_I18N.ar;
+
+  const author = authorInput ? authorInput.value.trim() : '';
+  const text = textInput ? textInput.value.trim() : '';
+
+  if (!author || !text) return;
+
+  const res = AudioReviewsStore.submitComment(activeBookKey, { author, text, parentId: commentId });
+  if (res.success) {
+    closeReplyForm(commentId);
+    renderCommentsList(activeBookKey);
+    showToast(t.formSuccessMsg);
+  }
+};
+
+// Filter & Sort handlers
+window.filterReviewsStar = function(filterVal, btn) {
+  reviewsStarFilter = filterVal;
+  document.querySelectorAll('#reviewsFilterPills .review-pill-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  renderCommentsList(activeBookKey);
+};
+
+window.handleReviewsSortChange = function(sortVal) {
+  reviewsSortBy = sortVal;
+  renderCommentsList(activeBookKey);
+};
+
+window.handleLoadMoreReviews = function() {
+  reviewsVisibleLimit += 6;
+  renderCommentsList(activeBookKey);
+};
+
+// Hover effects for rating stars
+function setupStarHoverEvents() {
+  const buttons = document.querySelectorAll('#starRatingGroup .star-btn');
+  buttons.forEach(btn => {
+    btn.addEventListener('mouseenter', () => {
+      const starNum = parseInt(btn.getAttribute('data-star'), 10);
+      buttons.forEach(b => {
+        const n = parseInt(b.getAttribute('data-star'), 10);
+        b.classList.toggle('hovered', n <= starNum);
+      });
+    });
+
+    btn.addEventListener('mouseleave', () => {
+      buttons.forEach(b => b.classList.remove('hovered'));
+    });
+  });
+}
+
+// ==========================================================================
 // ACTIONS & USER INTERACTION
 // ==========================================================================
 
@@ -1803,6 +2430,7 @@ function updateSeoMetadata(book) {
   if (twDesc) twDesc.content = bDesc;
 
   if (schemaEl) {
+    const summary = AudioReviewsStore.getRatingSummary(book.key);
     const schemaObj = {
       "@context": "https://schema.org",
       "@type": "Audiobook",
@@ -1820,6 +2448,16 @@ function updateSeoMetadata(book) {
         "name": "Hikma & Nour | Jardin des Pensées"
       }
     };
+
+    // Only add aggregateRating if real ratings exist
+    if (summary && summary.totalCount > 0) {
+      schemaObj.aggregateRating = {
+        "@type": "AggregateRating",
+        "ratingValue": summary.average.toString(),
+        "ratingCount": summary.totalCount.toString()
+      };
+    }
+
     schemaEl.textContent = JSON.stringify(schemaObj);
   }
 }
@@ -1832,6 +2470,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLanguageSelector();
   setupSearchInput();
   setupKeyboardTabs();
+  setupStarHoverEvents();
   renderFeaturedCard();
   renderContinueListeningSection();
   renderCatalogGrid('all');

@@ -1480,6 +1480,425 @@
         height: 40px;
         font-size: 1rem;
       }
+    /* ==========================================================================
+       REVIEWS & RATINGS DESIGN SYSTEM
+       ========================================================================== */
+    :root {
+      --review-bg: rgba(12, 22, 16, 0.85);
+      --review-card-bg: #0F1611;
+      --review-border: rgba(223, 177, 91, 0.22);
+      --review-gold: #DFB15B;
+      --review-text: #F7F1E5;
+      --review-muted: #8E9891;
+    }
+
+    .audio-reviews-section {
+      margin-top: 40px;
+      margin-bottom: 60px;
+      min-width: 0;
+    }
+
+    .reviews-summary-grid {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 24px;
+      background: var(--review-bg);
+      border: 1.5px solid var(--review-border);
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 24px;
+      align-items: center;
+      min-width: 0;
+    }
+
+    .summary-score-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-inline-end: 1px solid var(--review-border);
+      padding-inline-end: 20px;
+    }
+
+    .big-score-num {
+      font-size: 2.8rem;
+      font-weight: 800;
+      font-family: 'Playfair Display', 'Amiri', serif;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .big-stars-row {
+      color: var(--gold);
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+
+    .total-reviews-count {
+      font-size: 0.82rem;
+      color: var(--review-muted);
+    }
+
+    .distribution-bars-col {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .dist-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+      color: var(--review-muted);
+    }
+
+    .dist-label {
+      width: 45px;
+      white-space: nowrap;
+    }
+
+    .dist-bar-bg {
+      flex: 1;
+      height: 8px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .dist-bar-fill {
+      height: 100%;
+      background: var(--gold);
+      border-radius: 4px;
+      transition: width 0.4s ease;
+    }
+
+    .dist-pct {
+      width: 38px;
+      text-align: end;
+      font-weight: 600;
+      color: var(--review-text);
+    }
+
+    /* Rating box */
+    .user-rating-interactive-box {
+      background: var(--review-card-bg);
+      border: 1px solid var(--review-border);
+      border-radius: 16px;
+      padding: 18px 24px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .rating-fieldset {
+      border: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .rating-legend {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--review-text);
+    }
+
+    .star-rating-buttons {
+      display: inline-flex;
+      gap: 4px;
+    }
+
+    .star-btn {
+      background: transparent;
+      border: none;
+      font-size: 1.5rem;
+      color: rgba(255,255,255,0.2);
+      cursor: pointer;
+      padding: 2px 4px;
+      transition: color 0.15s, transform 0.15s;
+    }
+
+    .star-btn.hovered, .star-btn.active {
+      color: var(--gold);
+      transform: scale(1.15);
+    }
+
+    .rating-feedback-status {
+      font-size: 0.85rem;
+      color: var(--gold-light);
+      font-weight: 600;
+    }
+
+    /* Review Form */
+    .review-form-card {
+      background: var(--review-card-bg);
+      border: 1px solid var(--review-border);
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 28px;
+    }
+
+    .review-form-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--review-text);
+      margin: 0 0 18px;
+    }
+
+    .form-row-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--review-text);
+    }
+
+    .review-input, .review-textarea {
+      width: 100%;
+      background: rgba(7, 10, 8, 0.75);
+      border: 1.5px solid var(--border-light);
+      border-radius: 12px;
+      padding: 12px 14px;
+      color: var(--review-text);
+      font-family: inherit;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .review-input:focus, .review-textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 12px rgba(223, 177, 91, 0.2);
+    }
+
+    .char-count-wrap {
+      font-size: 0.74rem;
+      color: var(--review-muted);
+      text-align: end;
+      margin-top: 4px;
+    }
+
+    .form-actions-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+
+    .comment-notice-msg {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--gold-light);
+    }
+
+    /* Toolbar Filter & Sort */
+    .reviews-filter-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 12px;
+    }
+
+    .reviews-sort-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .reviews-select {
+      background: var(--review-card-bg);
+      border: 1px solid var(--review-border);
+      color: var(--review-text);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-family: inherit;
+      font-size: 0.85rem;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .reviews-star-filter-pills {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+    }
+
+    .review-pill-btn {
+      background: transparent;
+      border: 1px solid var(--border-light);
+      color: var(--review-muted);
+      padding: 4px 12px;
+      border-radius: 14px;
+      font-size: 0.78rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .review-pill-btn.active, .review-pill-btn:hover {
+      background: rgba(223, 177, 91, 0.15);
+      border-color: var(--gold);
+      color: var(--gold-light);
+    }
+
+    /* Comments List */
+    .audio-comments-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .comment-card-item {
+      background: var(--review-card-bg);
+      border: 1px solid var(--review-border);
+      border-radius: 18px;
+      padding: 18px 20px;
+      transition: border-color 0.2s;
+    }
+
+    .comment-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      gap: 12px;
+    }
+
+    .comment-author-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .comment-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(223,177,91,0.25), rgba(15,22,17,0.9));
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .comment-author-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--review-text);
+    }
+
+    .comment-date {
+      font-size: 0.75rem;
+      color: var(--review-muted);
+    }
+
+    .comment-stars {
+      color: var(--gold);
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+    }
+
+    .comment-body-text {
+      font-size: 0.9rem;
+      color: var(--text-main);
+      line-height: 1.65;
+      margin: 0 0 12px;
+      word-break: break-word;
+      white-space: pre-wrap;
+    }
+
+    .comment-actions-bar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .comment-reply-btn {
+      background: transparent;
+      border: none;
+      color: var(--gold);
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .comment-reply-btn:hover {
+      text-decoration: underline;
+    }
+
+    /* Replies container */
+    .comment-replies-list {
+      margin-top: 14px;
+      padding-inline-start: 24px;
+      border-inline-start: 2px solid rgba(223, 177, 91, 0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .reply-card-item {
+      background: rgba(7, 10, 8, 0.5);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 12px 14px;
+    }
+
+    .reply-form-wrap {
+      margin-top: 12px;
+      padding-inline-start: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .reviews-summary-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .summary-score-col {
+        border-inline-end: none;
+        border-bottom: 1px solid var(--review-border);
+        padding-inline-end: 0;
+        padding-bottom: 16px;
+      }
+      .form-row-2col {
+        grid-template-columns: 1fr;
+      }
+      .comment-replies-list {
+        padding-inline-start: 12px;
+      }
     }
   </style>
 </head>
@@ -1780,6 +2199,103 @@
           </div>
 
         </div>
+
+        <!-- ======================================================== -->
+        <!-- SECTION : AVIS DES AUDITEURS & ÉVALUATIONS               -->
+        <!-- ======================================================== -->
+        <section class="audio-reviews-section" id="audioReviewsSection" aria-labelledby="audioReviewsHeading">
+          <div class="section-editorial-heading">
+            <h3 class="section-editorial-title" id="audioReviewsHeading">
+              <span class="accent-icon">💬</span> <span id="reviewsSectionHeading">آراء المستمعين وتقييمات العمل</span>
+            </h3>
+            <div class="section-counter-badge">
+              <span id="reviewsCountBadge">0 تقييمات</span>
+            </div>
+          </div>
+
+          <!-- 1. Summary & Rating Distribution Grid -->
+          <div class="reviews-summary-grid" id="reviewsSummaryGrid">
+            <!-- Dynamic average score card + percentage distribution bars -->
+          </div>
+
+          <!-- 2. Interactive Star Rating Box -->
+          <div class="user-rating-interactive-box" id="userRatingBox">
+            <fieldset class="rating-fieldset" role="radiogroup" aria-label="Votre évaluation de l'œuvre">
+              <legend class="rating-legend" id="ratingLegendText">تقييمك للعمل :</legend>
+              <div class="star-rating-buttons" id="starRatingGroup">
+                <button type="button" class="star-btn" data-star="1" role="radio" aria-checked="false" aria-label="1 نجمة من 5" onclick="selectWorkRating(1)">★</button>
+                <button type="button" class="star-btn" data-star="2" role="radio" aria-checked="false" aria-label="2 نجوم من 5" onclick="selectWorkRating(2)">★</button>
+                <button type="button" class="star-btn" data-star="3" role="radio" aria-checked="false" aria-label="3 نجوم من 5" onclick="selectWorkRating(3)">★</button>
+                <button type="button" class="star-btn" data-star="4" role="radio" aria-checked="false" aria-label="4 نجوم من 5" onclick="selectWorkRating(4)">★</button>
+                <button type="button" class="star-btn" data-star="5" role="radio" aria-checked="false" aria-label="5 نجوم من 5" onclick="selectWorkRating(5)">★</button>
+              </div>
+              <span class="rating-feedback-status" id="ratingFeedbackStatus"></span>
+            </fieldset>
+          </div>
+
+          <!-- 3. Formulaire de commentaire -->
+          <div class="review-form-card">
+            <h4 class="review-form-title" id="reviewFormTitle">شارك رأيك أو ملاحظتك حول هذا الكتاب الصوتي</h4>
+            <form id="workCommentForm" onsubmit="handleCommentSubmit(event)">
+              <div class="form-row-2col">
+                <div class="form-group">
+                  <label for="commentAuthorName" id="labelAuthorName">الاسم <span style="color:var(--gold);">*</span></label>
+                  <input type="text" id="commentAuthorName" class="review-input" required maxlength="80" placeholder="اسمك أو لقبك">
+                </div>
+                <div class="form-group">
+                  <label for="commentEmail" id="labelAuthorEmail">البريد الإلكتروني <span style="color:var(--text-muted);font-size:0.75rem;">(اختياري)</span></label>
+                  <input type="email" id="commentEmail" class="review-input" placeholder="لن يتم نشر بريدك الإلكتروني">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="commentText" id="labelCommentText">التعليق أو التأمل الفلسفي <span style="color:var(--gold);">*</span></label>
+                <textarea id="commentText" class="review-textarea" required rows="4" maxlength="1500" placeholder="شاركنا انطباعك، أفكارك، أو ما أثر فيك من هذا العمل الصوتي..." oninput="updateCommentCharCount(this)"></textarea>
+                <div class="char-count-wrap" id="commentCharCounter">0 / 1500 حرف</div>
+              </div>
+
+              <div class="form-actions-row">
+                <button type="submit" class="btn-primary-play" id="btnSubmitReview">
+                  <span>✍️</span> <span id="submitReviewBtnText">نشر رأيي</span>
+                </button>
+                <div id="commentSubmitNotice" class="comment-notice-msg" style="display:none;"></div>
+              </div>
+            </form>
+          </div>
+
+          <!-- 4. Toolbar: Tri & Filtres -->
+          <div class="reviews-filter-toolbar">
+            <div class="reviews-sort-wrap">
+              <label for="reviewsSortSelect" id="labelSortReviews" style="font-size:0.85rem;color:var(--text-muted);">الترتيب :</label>
+              <select id="reviewsSortSelect" class="reviews-select" onchange="handleReviewsSortChange(this.value)">
+                <option value="recent">الأحدث</option>
+                <option value="top_rated">الأعلى تقييماً</option>
+                <option value="oldest">الأقدم</option>
+              </select>
+            </div>
+
+            <div class="reviews-star-filter-pills" id="reviewsFilterPills">
+              <button class="review-pill-btn active" data-filter="all" onclick="filterReviewsStar('all', this)">الكل</button>
+              <button class="review-pill-btn" data-filter="5" onclick="filterReviewsStar('5', this)">5 ★</button>
+              <button class="review-pill-btn" data-filter="4" onclick="filterReviewsStar('4', this)">4 ★</button>
+              <button class="review-pill-btn" data-filter="3" onclick="filterReviewsStar('3', this)">3 ★</button>
+              <button class="review-pill-btn" data-filter="2" onclick="filterReviewsStar('2', this)">2 ★</button>
+              <button class="review-pill-btn" data-filter="1" onclick="filterReviewsStar('1', this)">1 ★</button>
+            </div>
+          </div>
+
+          <!-- 5. Comments List & Replies -->
+          <div class="audio-comments-list" id="audioCommentsList">
+            <!-- Dynamic comments list -->
+          </div>
+
+          <!-- Load more reviews -->
+          <div id="loadMoreReviewsWrap" style="text-align:center;margin-top:24px;display:none;">
+            <button class="btn-sec-action" id="btnLoadMoreReviews" onclick="handleLoadMoreReviews()">
+              <span id="loadMoreReviewsText">عرض المزيد من الآراء</span>
+            </button>
+          </div>
+        </section>
 
       </div>
 
