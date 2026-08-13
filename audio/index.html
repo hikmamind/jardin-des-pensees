@@ -75,6 +75,19 @@
       --focus-ring: 0 0 0 2px var(--gold), 0 0 0 4px rgba(223, 177, 91, 0.3);
     }
 
+    [data-theme="light"] {
+      --audio-bg: #F4F7F5;
+      --audio-card-bg: #FFFFFF;
+      --audio-card-hover: #F0F4F1;
+      --gold: #B8860B;
+      --gold-light: #C8961E;
+      --ivory: #1A221C;
+      --text-main: #243028;
+      --text-muted: #647569;
+      --border-gold: rgba(184, 134, 11, 0.35);
+      --border-light: rgba(0, 0, 0, 0.1);
+    }
+
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -89,6 +102,7 @@
       font-family: 'Inter', 'Cairo', sans-serif;
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     /* Container without horizontal overflow */
@@ -104,6 +118,170 @@
     button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
       outline: none;
       box-shadow: var(--focus-ring);
+    }
+
+    /* ==========================================================================
+       NAVBAR CONTROLS & THEME TOGGLE (PREMIUM HIKMA & NOUR STYLING)
+       ========================================================================== */
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-inline-start: 15px;
+    }
+
+    .lang-selector-container {
+      position: relative;
+    }
+
+    .lang-btn {
+      background: rgba(18, 26, 21, 0.75);
+      border: 1.5px solid rgba(223, 177, 91, 0.28);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color: var(--gold);
+      padding: 8px 14px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 44px;
+      transition: all 250ms ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+    }
+
+    .lang-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold-light);
+      background: rgba(223, 177, 91, 0.12);
+      transform: translateY(-2px);
+      box-shadow: 0 0 14px rgba(223, 177, 91, 0.3);
+    }
+
+    .lang-dropdown {
+      position: absolute;
+      top: calc(100% + 8px);
+      inset-inline-end: 0;
+      background: rgba(15, 22, 17, 0.98);
+      border: 1px solid var(--border-gold);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 14px;
+      padding: 6px;
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      min-width: 140px;
+      z-index: 1100;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .lang-dropdown.active {
+      display: flex;
+    }
+
+    .lang-opt {
+      background: transparent;
+      border: none;
+      color: var(--text-main);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      font-family: inherit;
+      text-align: start;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      width: 100%;
+    }
+
+    .lang-opt:hover, .lang-opt.active {
+      background: rgba(223, 177, 91, 0.15);
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .theme-toggle-btn {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      min-height: 44px;
+      border-radius: 50%;
+      background: rgba(18, 26, 21, 0.75);
+      border: 1.5px solid rgba(223, 177, 91, 0.28);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color: var(--gold);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 0;
+      margin: 0;
+      outline: none;
+      transition: all 280ms cubic-bezier(0.2, 0.8, 0.2, 1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    [data-theme="light"] .theme-toggle-btn {
+      background: rgba(255, 255, 255, 0.9);
+      border-color: rgba(194, 149, 58, 0.45);
+      color: #9a6f17;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .theme-toggle-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold-light);
+      transform: translateY(-2px) scale(1.06);
+      box-shadow: 0 0 18px rgba(223, 177, 91, 0.4), 0 4px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    [data-theme="light"] .theme-toggle-btn:hover {
+      border-color: #c2953a;
+      color: #7b580f;
+      box-shadow: 0 0 16px rgba(194, 149, 58, 0.3), 0 4px 14px rgba(0, 0, 0, 0.12);
+    }
+
+    .theme-toggle-btn:focus-visible {
+      outline: none;
+      box-shadow: var(--focus-ring);
+    }
+
+    .theme-toggle-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      transition: transform 300ms ease, opacity 250ms ease;
+      pointer-events: none;
+    }
+
+    /* Icon visibility: show Sun in dark mode to switch to light; show Moon in light mode to switch to dark */
+    [data-theme="dark"] .theme-toggle-btn .sun-icon,
+    :root:not([data-theme="light"]) .theme-toggle-btn .sun-icon {
+      display: block;
+    }
+
+    [data-theme="dark"] .theme-toggle-btn .moon-icon,
+    :root:not([data-theme="light"]) .theme-toggle-btn .moon-icon {
+      display: none;
+    }
+
+    [data-theme="light"] .theme-toggle-btn .sun-icon {
+      display: none;
+    }
+
+    [data-theme="light"] .theme-toggle-btn .moon-icon {
+      display: block;
     }
 
     /* ==========================================================================
@@ -268,10 +446,19 @@
       display: flex;
       gap: 8px;
       overflow-x: auto;
+      overflow-y: hidden;
       padding: 4px 2px 14px;
-      scrollbar-width: thin;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
       justify-content: flex-start;
       min-width: 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .audio-categories-bar::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
     }
 
     .audio-cat-btn {
@@ -929,8 +1116,17 @@
       margin-bottom: 24px;
       padding-bottom: 8px;
       overflow-x: auto;
-      scrollbar-width: thin;
+      overflow-y: hidden;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
       min-width: 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .detail-tabs-bar::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
     }
 
     .tab-btn {
