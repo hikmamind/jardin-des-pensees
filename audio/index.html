@@ -1480,34 +1480,96 @@
         height: 40px;
         font-size: 1rem;
       }
+    }
+
     /* ==========================================================================
-       REVIEWS & RATINGS DESIGN SYSTEM
+       REVIEWS & RATINGS DESIGN SYSTEM (NOCTURNE & GOLD LUXURY)
        ========================================================================== */
     :root {
-      --review-bg: rgba(12, 22, 16, 0.85);
-      --review-card-bg: #0F1611;
+      --review-bg: rgba(12, 23, 17, 0.92);
+      --review-card-bg: #0C1712;
       --review-border: rgba(223, 177, 91, 0.22);
       --review-gold: #DFB15B;
+      --review-gold-light: #E5B85C;
       --review-text: #F7F1E5;
-      --review-muted: #8E9891;
+      --review-muted: #9EABA2;
     }
 
     .audio-reviews-section {
-      margin-top: 40px;
-      margin-bottom: 60px;
+      margin-top: 50px;
+      margin-bottom: 70px;
       min-width: 0;
+      width: 100%;
     }
 
+    .reviews-header-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 26px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .reviews-main-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--review-gold);
+      background: rgba(223, 177, 91, 0.1);
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(223, 177, 91, 0.25);
+      margin-bottom: 8px;
+    }
+
+    .reviews-main-title {
+      font-size: 1.65rem;
+      font-weight: 800;
+      font-family: 'Playfair Display', 'Amiri', serif;
+      color: var(--review-text);
+      margin: 0 0 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .reviews-main-subtitle {
+      font-size: 0.92rem;
+      color: var(--review-muted);
+      margin: 0;
+      max-width: 650px;
+      line-height: 1.55;
+    }
+
+    .reviews-header-status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--review-card-bg);
+      border: 1px solid var(--review-border);
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--review-gold);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+    }
+
+    /* Summary & Distribution Grid */
     .reviews-summary-grid {
       display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: 24px;
-      background: var(--review-bg);
-      border: 1.5px solid var(--review-border);
+      grid-template-columns: 220px 1fr;
+      gap: 28px;
+      background: var(--review-card-bg);
+      border: 1px solid var(--review-border);
       border-radius: 20px;
-      padding: 24px;
+      padding: 28px;
       margin-bottom: 24px;
       align-items: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
       min-width: 0;
     }
 
@@ -1518,84 +1580,144 @@
       justify-content: center;
       text-align: center;
       border-inline-end: 1px solid var(--review-border);
-      padding-inline-end: 20px;
+      padding-inline-end: 24px;
     }
 
     .big-score-num {
-      font-size: 2.8rem;
+      font-size: 3.2rem;
       font-weight: 800;
       font-family: 'Playfair Display', 'Amiri', serif;
-      color: var(--gold);
+      color: var(--review-gold);
       line-height: 1;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
+      text-shadow: 0 0 24px rgba(223, 177, 91, 0.35);
     }
 
     .big-stars-row {
-      color: var(--gold);
-      font-size: 1.2rem;
-      letter-spacing: 2px;
+      color: var(--review-gold);
+      font-size: 1.3rem;
+      letter-spacing: 3px;
       margin-bottom: 6px;
     }
 
     .total-reviews-count {
-      font-size: 0.82rem;
+      font-size: 0.85rem;
       color: var(--review-muted);
     }
 
     .distribution-bars-col {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 10px;
       min-width: 0;
     }
 
     .dist-row {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-size: 0.82rem;
+      gap: 12px;
+      font-size: 0.85rem;
       color: var(--review-muted);
     }
 
     .dist-label {
-      width: 45px;
+      width: 48px;
       white-space: nowrap;
+      color: var(--review-text);
+      font-weight: 600;
     }
 
     .dist-bar-bg {
       flex: 1;
-      height: 8px;
-      background: rgba(255,255,255,0.08);
-      border-radius: 4px;
+      height: 10px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 6px;
       overflow: hidden;
     }
 
     .dist-bar-fill {
       height: 100%;
-      background: var(--gold);
-      border-radius: 4px;
+      background: var(--gold-grad);
+      border-radius: 6px;
       transition: width 0.4s ease;
     }
 
     .dist-pct {
-      width: 38px;
+      width: 42px;
       text-align: end;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--review-text);
     }
 
-    /* Rating box */
+    /* Empty State Card */
+    .reviews-empty-state-card {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 36px 20px;
+    }
+
+    .empty-sparkle-icon {
+      font-size: 2.4rem;
+      color: var(--review-gold);
+      margin-bottom: 12px;
+      display: inline-block;
+      text-shadow: 0 0 20px rgba(223,177,91,0.6);
+      animation: pulseGlow 2.5s infinite alternate;
+    }
+
+    .empty-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      font-family: 'Playfair Display', 'Amiri', serif;
+      color: var(--review-text);
+      margin: 0 0 8px;
+    }
+
+    .empty-desc {
+      font-size: 0.92rem;
+      color: var(--review-muted);
+      margin: 0 0 18px;
+      max-width: 520px;
+      margin-inline: auto;
+      line-height: 1.6;
+    }
+
+    .empty-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(223, 177, 91, 0.12);
+      border: 1px solid var(--review-gold);
+      color: var(--review-gold);
+      padding: 9px 22px;
+      border-radius: 24px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .empty-cta-btn:hover {
+      background: var(--gold-grad);
+      color: #070A08;
+      box-shadow: 0 0 16px rgba(223, 177, 91, 0.4);
+      transform: translateY(-2px);
+    }
+
+    /* Rating Interactive Box */
     .user-rating-interactive-box {
       background: var(--review-card-bg);
       border: 1px solid var(--review-border);
-      border-radius: 16px;
-      padding: 18px 24px;
+      border-radius: 18px;
+      padding: 20px 26px;
       margin-bottom: 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 14px;
+      gap: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
     }
 
     .rating-fieldset {
@@ -1604,97 +1726,133 @@
       margin: 0;
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 18px;
       flex-wrap: wrap;
+      width: 100%;
     }
 
     .rating-legend {
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 1rem;
       color: var(--review-text);
+      float: inline-start;
+      margin: 0;
+      padding: 0;
     }
 
     .star-rating-buttons {
       display: inline-flex;
-      gap: 4px;
+      align-items: center;
+      gap: 6px;
+      outline: none;
     }
 
     .star-btn {
       background: transparent;
       border: none;
-      font-size: 1.5rem;
+      font-size: 2rem;
       color: rgba(255,255,255,0.2);
       cursor: pointer;
       padding: 2px 4px;
-      transition: color 0.15s, transform 0.15s;
+      transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+      line-height: 1;
     }
 
     .star-btn.hovered, .star-btn.active {
-      color: var(--gold);
-      transform: scale(1.15);
+      color: var(--review-gold);
+      transform: scale(1.2);
+      text-shadow: 0 0 16px rgba(223, 177, 91, 0.65);
     }
 
     .rating-feedback-status {
-      font-size: 0.85rem;
-      color: var(--gold-light);
-      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--review-gold-light);
+      font-weight: 700;
+      margin-inline-start: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
 
-    /* Review Form */
+    /* Review Form Card */
     .review-form-card {
       background: var(--review-card-bg);
       border: 1px solid var(--review-border);
       border-radius: 20px;
-      padding: 24px;
-      margin-bottom: 28px;
+      padding: 28px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.45);
     }
 
     .review-form-title {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 700;
       color: var(--review-text);
-      margin: 0 0 18px;
+      margin: 0 0 20px;
+      border-bottom: 1px solid rgba(223, 177, 91, 0.15);
+      padding-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .form-row-2col {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 16px;
+      gap: 18px;
+      margin-bottom: 18px;
     }
 
     .form-group {
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 8px;
     }
 
     .form-group label {
-      font-size: 0.85rem;
-      font-weight: 600;
+      font-size: 0.88rem;
+      font-weight: 700;
       color: var(--review-text);
+    }
+
+    .required-star {
+      color: var(--review-gold);
+    }
+
+    .optional-hint {
+      color: var(--review-muted);
+      font-size: 0.76rem;
+      font-weight: 400;
     }
 
     .review-input, .review-textarea {
       width: 100%;
-      background: rgba(7, 10, 8, 0.75);
-      border: 1.5px solid var(--border-light);
-      border-radius: 12px;
-      padding: 12px 14px;
-      color: var(--review-text);
+      background: rgba(6, 10, 8, 0.85);
+      border: 1.5px solid rgba(223, 177, 91, 0.25);
+      border-radius: 14px;
+      padding: 13px 16px;
+      color: #FFFDF8;
       font-family: inherit;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       outline: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
+      box-sizing: border-box;
+      transition: all 0.25s ease;
     }
 
     .review-input:focus, .review-textarea:focus {
-      border-color: var(--gold);
-      box-shadow: 0 0 12px rgba(223, 177, 91, 0.2);
+      border-color: var(--review-gold);
+      background: rgba(8, 14, 10, 0.95);
+      box-shadow: 0 0 16px rgba(223, 177, 91, 0.25);
+    }
+
+    .review-textarea {
+      resize: vertical;
+      min-height: 110px;
+      line-height: 1.6;
     }
 
     .char-count-wrap {
-      font-size: 0.74rem;
+      font-size: 0.76rem;
       color: var(--review-muted);
       text-align: end;
       margin-top: 4px;
@@ -1703,15 +1861,50 @@
     .form-actions-row {
       display: flex;
       align-items: center;
-      gap: 16px;
-      margin-top: 14px;
+      gap: 18px;
+      margin-top: 18px;
       flex-wrap: wrap;
     }
 
-    .comment-notice-msg {
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--gold-light);
+    .btn-submit-review {
+      background: linear-gradient(135deg, #E5B85C, #DFB15B);
+      color: #070A08;
+      border: none;
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 13px 32px;
+      border-radius: 30px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 16px rgba(223,177,91,0.35);
+      transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .btn-submit-review:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(223,177,91,0.55);
+      filter: brightness(1.06);
+    }
+
+    .comment-success-notice {
+      background: rgba(223, 177, 91, 0.12);
+      border: 1px solid var(--review-gold);
+      color: var(--review-text);
+      padding: 10px 20px;
+      border-radius: 14px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      animation: fadeInReview 0.3s ease;
+    }
+
+    @keyframes fadeInReview {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     /* Toolbar Filter & Sort */
@@ -1719,120 +1912,124 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 20px;
+      gap: 18px;
+      margin-bottom: 24px;
       flex-wrap: wrap;
-      border-bottom: 1px solid var(--border-light);
-      padding-bottom: 12px;
+      border-bottom: 1px solid var(--review-border);
+      padding-bottom: 14px;
     }
 
     .reviews-sort-wrap {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
     .reviews-select {
-      background: var(--review-card-bg);
+      background: rgba(6, 10, 8, 0.9);
       border: 1px solid var(--review-border);
       color: var(--review-text);
-      padding: 6px 12px;
+      padding: 8px 16px;
       border-radius: 20px;
       font-family: inherit;
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       outline: none;
       cursor: pointer;
     }
 
     .reviews-star-filter-pills {
       display: flex;
-      gap: 6px;
+      gap: 8px;
       overflow-x: auto;
     }
 
     .review-pill-btn {
-      background: transparent;
-      border: 1px solid var(--border-light);
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(223, 177, 91, 0.2);
       color: var(--review-muted);
-      padding: 4px 12px;
-      border-radius: 14px;
-      font-size: 0.78rem;
+      padding: 6px 14px;
+      border-radius: 16px;
+      font-size: 0.82rem;
+      font-weight: 600;
       cursor: pointer;
       transition: all 0.2s;
     }
 
     .review-pill-btn.active, .review-pill-btn:hover {
-      background: rgba(223, 177, 91, 0.15);
-      border-color: var(--gold);
-      color: var(--gold-light);
+      background: rgba(223, 177, 91, 0.18);
+      border-color: var(--review-gold);
+      color: var(--review-gold-light);
+      box-shadow: 0 0 10px rgba(223, 177, 91, 0.2);
     }
 
     /* Comments List */
     .audio-comments-list {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 18px;
     }
 
     .comment-card-item {
       background: var(--review-card-bg);
       border: 1px solid var(--review-border);
       border-radius: 18px;
-      padding: 18px 20px;
+      padding: 22px 26px;
       transition: border-color 0.2s;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.35);
     }
 
     .comment-card-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       gap: 12px;
     }
 
     .comment-author-info {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
 
     .comment-avatar {
-      width: 38px;
-      height: 38px;
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
-      background: linear-gradient(135deg, rgba(223,177,91,0.25), rgba(15,22,17,0.9));
-      border: 1px solid var(--gold);
-      color: var(--gold-light);
+      background: linear-gradient(135deg, rgba(223,177,91,0.25), rgba(12,23,17,0.95));
+      border: 1.5px solid var(--review-gold);
+      color: var(--review-gold-light);
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 800;
-      font-size: 0.95rem;
+      font-size: 1rem;
       flex-shrink: 0;
+      box-shadow: 0 0 12px rgba(223,177,91,0.2);
     }
 
     .comment-author-name {
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       color: var(--review-text);
     }
 
     .comment-date {
-      font-size: 0.75rem;
+      font-size: 0.78rem;
       color: var(--review-muted);
     }
 
     .comment-stars {
-      color: var(--gold);
-      font-size: 0.95rem;
-      letter-spacing: 1px;
+      color: var(--review-gold);
+      font-size: 1.05rem;
+      letter-spacing: 2px;
     }
 
     .comment-body-text {
-      font-size: 0.9rem;
+      font-size: 0.94rem;
       color: var(--text-main);
-      line-height: 1.65;
-      margin: 0 0 12px;
+      line-height: 1.75;
+      margin: 0 0 14px;
       word-break: break-word;
       white-space: pre-wrap;
     }
@@ -1843,17 +2040,38 @@
       gap: 14px;
     }
 
+    .comment-helpful-btn {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(223, 177, 91, 0.2);
+      color: var(--review-muted);
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .comment-helpful-btn.active, .comment-helpful-btn:hover {
+      background: rgba(223, 177, 91, 0.15);
+      border-color: var(--review-gold);
+      color: var(--review-gold);
+    }
+
     .comment-reply-btn {
       background: transparent;
       border: none;
-      color: var(--gold);
-      font-size: 0.8rem;
+      color: var(--review-gold);
+      font-size: 0.84rem;
       font-weight: 700;
       cursor: pointer;
       padding: 0;
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 6px;
     }
 
     .comment-reply-btn:hover {
@@ -1862,36 +2080,41 @@
 
     /* Replies container */
     .comment-replies-list {
-      margin-top: 14px;
+      margin-top: 16px;
       padding-inline-start: 24px;
-      border-inline-start: 2px solid rgba(223, 177, 91, 0.2);
+      border-inline-start: 2px solid rgba(223, 177, 91, 0.25);
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
     }
 
     .reply-card-item {
-      background: rgba(7, 10, 8, 0.5);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 12px;
-      padding: 12px 14px;
+      background: rgba(6, 10, 8, 0.6);
+      border: 1px solid rgba(223, 177, 91, 0.15);
+      border-radius: 14px;
+      padding: 14px 16px;
     }
 
     .reply-form-wrap {
-      margin-top: 12px;
-      padding-inline-start: 14px;
+      margin-top: 14px;
+      padding-inline-start: 16px;
     }
 
     @media (max-width: 768px) {
+      .reviews-header-block {
+        flex-direction: column;
+        align-items: flex-start;
+      }
       .reviews-summary-grid {
         grid-template-columns: 1fr;
         text-align: center;
+        padding: 20px 16px;
       }
       .summary-score-col {
         border-inline-end: none;
         border-bottom: 1px solid var(--review-border);
         padding-inline-end: 0;
-        padding-bottom: 16px;
+        padding-bottom: 18px;
       }
       .form-row-2col {
         grid-template-columns: 1fr;
@@ -1900,6 +2123,7 @@
         padding-inline-start: 12px;
       }
     }
+
   </style>
 </head>
 <body>
@@ -2201,33 +2425,46 @@
         </div>
 
         <!-- ======================================================== -->
-        <!-- SECTION : AVIS DES AUDITEURS & ÉVALUATIONS               -->
+        <!-- SECTION : AVIS DES AUDITEURS & ÉVALUATIONS (PREMIUM)      -->
         <!-- ======================================================== -->
         <section class="audio-reviews-section" id="audioReviewsSection" aria-labelledby="audioReviewsHeading">
-          <div class="section-editorial-heading">
-            <h3 class="section-editorial-title" id="audioReviewsHeading">
-              <span class="accent-icon">💬</span> <span id="reviewsSectionHeading">آراء المستمعين وتقييمات العمل</span>
-            </h3>
-            <div class="section-counter-badge">
-              <span id="reviewsCountBadge">0 تقييمات</span>
+          
+          <!-- Section Editorial Header -->
+          <div class="reviews-header-block">
+            <div class="reviews-header-left">
+              <div class="reviews-main-tag">
+                <span>✦</span>
+                <span id="reviewsBadgeLabel">آراء المستمعين</span>
+              </div>
+              <h3 class="reviews-main-title" id="audioReviewsHeading">
+                <span id="reviewsSectionHeading">آراء المستمعين</span>
+              </h3>
+              <p class="reviews-main-subtitle" id="reviewsSectionSubtitle">
+                شارك تجربتك وساعدنا على تطوير مكتبة حكمـة ونور الصوتية
+              </p>
+            </div>
+            
+            <div class="reviews-header-status-badge">
+              <span id="reviewsStatusIcon">✦</span>
+              <span id="reviewsCountBadge">لم يقيّم هذا العمل بعد</span>
             </div>
           </div>
 
           <!-- 1. Summary & Rating Distribution Grid -->
           <div class="reviews-summary-grid" id="reviewsSummaryGrid">
-            <!-- Dynamic average score card + percentage distribution bars -->
+            <!-- Dynamic average score card + percentage distribution bars or empty state -->
           </div>
 
           <!-- 2. Interactive Star Rating Box -->
           <div class="user-rating-interactive-box" id="userRatingBox">
             <fieldset class="rating-fieldset" role="radiogroup" aria-label="Votre évaluation de l'œuvre">
               <legend class="rating-legend" id="ratingLegendText">تقييمك للعمل :</legend>
-              <div class="star-rating-buttons" id="starRatingGroup">
-                <button type="button" class="star-btn" data-star="1" role="radio" aria-checked="false" aria-label="1 نجمة من 5" onclick="selectWorkRating(1)">★</button>
-                <button type="button" class="star-btn" data-star="2" role="radio" aria-checked="false" aria-label="2 نجوم من 5" onclick="selectWorkRating(2)">★</button>
-                <button type="button" class="star-btn" data-star="3" role="radio" aria-checked="false" aria-label="3 نجوم من 5" onclick="selectWorkRating(3)">★</button>
-                <button type="button" class="star-btn" data-star="4" role="radio" aria-checked="false" aria-label="4 نجوم من 5" onclick="selectWorkRating(4)">★</button>
-                <button type="button" class="star-btn" data-star="5" role="radio" aria-checked="false" aria-label="5 نجوم من 5" onclick="selectWorkRating(5)">★</button>
+              <div class="star-rating-buttons" id="starRatingGroup" tabindex="0" role="group" aria-label="Choisir une note de 1 à 5 étoiles">
+                <button type="button" class="star-btn" data-star="1" role="radio" aria-checked="false" aria-label="1 نجمة من 5 — ضعيف" onclick="selectWorkRating(1)" onmouseenter="previewStarHover(1)" onmouseleave="previewStarHover(0)">★</button>
+                <button type="button" class="star-btn" data-star="2" role="radio" aria-checked="false" aria-label="2 نجوم من 5 — مقبول" onclick="selectWorkRating(2)" onmouseenter="previewStarHover(2)" onmouseleave="previewStarHover(0)">★</button>
+                <button type="button" class="star-btn" data-star="3" role="radio" aria-checked="false" aria-label="3 نجوم من 5 — جيد" onclick="selectWorkRating(3)" onmouseenter="previewStarHover(3)" onmouseleave="previewStarHover(0)">★</button>
+                <button type="button" class="star-btn" data-star="4" role="radio" aria-checked="false" aria-label="4 نجوم من 5 — ممتاز" onclick="selectWorkRating(4)" onmouseenter="previewStarHover(4)" onmouseleave="previewStarHover(0)">★</button>
+                <button type="button" class="star-btn" data-star="5" role="radio" aria-checked="false" aria-label="5 نجوم من 5 — استثنائي" onclick="selectWorkRating(5)" onmouseenter="previewStarHover(5)" onmouseleave="previewStarHover(0)">★</button>
               </div>
               <span class="rating-feedback-status" id="ratingFeedbackStatus"></span>
             </fieldset>
@@ -2235,30 +2472,32 @@
 
           <!-- 3. Formulaire de commentaire -->
           <div class="review-form-card">
-            <h4 class="review-form-title" id="reviewFormTitle">شارك رأيك أو ملاحظتك حول هذا الكتاب الصوتي</h4>
+            <h4 class="review-form-title" id="reviewFormTitle">
+              <span>✍️</span> <span id="reviewFormTitleText">شاركنا تجربتك مع هذا العمل الصوتي</span>
+            </h4>
             <form id="workCommentForm" onsubmit="handleCommentSubmit(event)">
               <div class="form-row-2col">
                 <div class="form-group">
-                  <label for="commentAuthorName" id="labelAuthorName">الاسم <span style="color:var(--gold);">*</span></label>
+                  <label for="commentAuthorName" id="labelAuthorName">الاسم <span class="required-star">*</span></label>
                   <input type="text" id="commentAuthorName" class="review-input" required maxlength="80" placeholder="اسمك أو لقبك">
                 </div>
                 <div class="form-group">
-                  <label for="commentEmail" id="labelAuthorEmail">البريد الإلكتروني <span style="color:var(--text-muted);font-size:0.75rem;">(اختياري)</span></label>
+                  <label for="commentEmail" id="labelAuthorEmail">البريد الإلكتروني <span class="optional-hint">(اختياري)</span></label>
                   <input type="email" id="commentEmail" class="review-input" placeholder="لن يتم نشر بريدك الإلكتروني">
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="commentText" id="labelCommentText">التعليق أو التأمل الفلسفي <span style="color:var(--gold);">*</span></label>
-                <textarea id="commentText" class="review-textarea" required rows="4" maxlength="1500" placeholder="شاركنا انطباعك، أفكارك، أو ما أثر فيك من هذا العمل الصوتي..." oninput="updateCommentCharCount(this)"></textarea>
-                <div class="char-count-wrap" id="commentCharCounter">0 / 1500 حرف</div>
+                <label for="commentText" id="labelCommentText">رأيك <span class="required-star">*</span></label>
+                <textarea id="commentText" class="review-textarea" required rows="4" maxlength="1500" placeholder="شاركنا تجربتك مع هذا العمل الصوتي..." oninput="updateCommentCharCount(this)"></textarea>
+                <div class="char-count-wrap" id="commentCharCounter">0 / 1500</div>
               </div>
 
               <div class="form-actions-row">
-                <button type="submit" class="btn-primary-play" id="btnSubmitReview">
-                  <span>✍️</span> <span id="submitReviewBtnText">نشر رأيي</span>
+                <button type="submit" class="btn-submit-review" id="btnSubmitReview">
+                  <span id="submitReviewBtnText">نشر التقييم</span> <span>✦</span>
                 </button>
-                <div id="commentSubmitNotice" class="comment-notice-msg" style="display:none;"></div>
+                <div id="commentSubmitNotice" class="comment-success-notice" style="display:none;"></div>
               </div>
             </form>
           </div>
@@ -2266,7 +2505,7 @@
           <!-- 4. Toolbar: Tri & Filtres -->
           <div class="reviews-filter-toolbar">
             <div class="reviews-sort-wrap">
-              <label for="reviewsSortSelect" id="labelSortReviews" style="font-size:0.85rem;color:var(--text-muted);">الترتيب :</label>
+              <label for="reviewsSortSelect" id="labelSortReviews">الترتيب :</label>
               <select id="reviewsSortSelect" class="reviews-select" onchange="handleReviewsSortChange(this.value)">
                 <option value="recent">الأحدث</option>
                 <option value="top_rated">الأعلى تقييماً</option>
