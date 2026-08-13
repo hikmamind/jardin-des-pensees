@@ -3,2205 +3,1913 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title id="seoPageTitle">المكتبة الصوتية | حكمة ونور (HIKMA & NOUR)</title>
-  <meta name="description" id="seoPageDesc" content="المكتبة الصوتية الكاملة لرواية الخيميائي وكتب الفلسفة والتنمية الذاتية.">
-
-  <link rel="canonical" href="https://jardin-des-pensees.onrender.com/audio/">
+  
+  <!-- SEO Dynamic Meta Tags -->
+  <title id="seoPageTitle">المكتبة الصوتية للروايات والحكمة | حكمة ونور — HIKMA & NOUR</title>
+  <meta name="description" id="seoPageDesc" content="استمع إلى أروع الروايات العالمية وكتب الفلسفة والتنمية الذاتية المسجلة صوتياً باللغة العربية الفصحى عبر مكتبة حكمة ونور الصوتية.">
+  
+  <link rel="canonical" id="seoCanonical" href="https://jardin-des-pensees.onrender.com/audio/">
   <link rel="alternate" hreflang="ar" href="https://jardin-des-pensees.onrender.com/audio/">
   <link rel="alternate" hreflang="fr" href="https://jardin-des-pensees.onrender.com/audio/">
   <link rel="alternate" hreflang="en" href="https://jardin-des-pensees.onrender.com/audio/">
   <link rel="alternate" hreflang="x-default" href="https://jardin-des-pensees.onrender.com/audio/">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" id="ogUrl" content="https://jardin-des-pensees.onrender.com/audio/">
+  <meta property="og:title" id="ogTitle" content="المكتبة الصوتية للحكمة والفلسفة | حكمة ونور">
+  <meta property="og:description" id="ogDesc" content="استمع إلى روائع الأدب العالمي والفلسفة المسجلة باللغة العربية الفصحى.">
+  <meta property="og:image" id="ogImage" content="https://jardin-des-pensees.onrender.com/brand_logo_official.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" id="twUrl" content="https://jardin-des-pensees.onrender.com/audio/">
+  <meta name="twitter:title" id="twTitle" content="المكتبة الصوتية للحكمة والفلسفة | حكمة ونور">
+  <meta name="twitter:description" id="twDesc" content="استمع إلى روائع الأدب العالمي والفلسفة المسجلة باللغة العربية الفصحى.">
+  <meta name="twitter:image" id="twImage" content="https://jardin-des-pensees.onrender.com/brand_logo_official.png">
+
   <link rel="icon" type="image/png" href="../brand_logo_official.png">
   <link rel="manifest" href="../manifest.json">
   <meta name="theme-color" content="#070A08">
 
-  <!-- Fonts -->
+  <!-- Main Shared Stylesheet -->
+  <link rel="stylesheet" href="../style.css?v=14">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Noto+Naskh+Arabic:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,600&family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD Structured Data Schema -->
+  <script type="application/ld+json" id="audioSchemaJson">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "المكتبة الصوتية للحكمة والفلسفة | Hikma & Nour",
+    "description": "مكتبة صوتية تحتوي على روائع الأدب والفلسفة العالمية مسموعة باللغة العربية الفصحى.",
+    "url": "https://jardin-des-pensees.onrender.com/audio/",
+    "inLanguage": ["ar", "fr", "en"],
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hikma & Nour | Jardin des Pensées",
+      "logo": "https://jardin-des-pensees.onrender.com/brand_logo_official.png"
+    }
+  }
+  </script>
 
   <style>
+    /* ==========================================================================
+       AUDIO PREMIUM LIBRARY — DESIGN SYSTEM & ANTI-OVERFLOW RULES
+       ========================================================================== */
     :root {
-      --bg-dark: #070A08;
-      --bg-sidebar: #090E0A;
-      --bg-card: #0F1611;
-      --bg-card-hover: #162119;
+      --audio-bg: #070A08;
+      --audio-card-bg: #0F1611;
+      --audio-card-hover: #162119;
       --gold: #DFB15B;
       --gold-light: #F5D98A;
       --ivory: #FAF6EF;
       --text-main: #E2DDD5;
-      --text-muted: #858E87;
-      --border: rgba(223, 177, 91, 0.18);
-      --border-light: rgba(255, 255, 255, 0.07);
+      --text-muted: #8E9891;
+      --border-gold: rgba(223, 177, 91, 0.28);
+      --border-light: rgba(255, 255, 255, 0.08);
+      --focus-ring: 0 0 0 2px var(--gold), 0 0 0 4px rgba(223, 177, 91, 0.3);
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
 
-    body {
-      font-family: 'Cairo', 'Noto Naskh Arabic', sans-serif;
-      background: var(--bg-dark);
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background-color: var(--audio-bg);
       color: var(--text-main);
       min-height: 100vh;
-      display: flex;
-      overflow-x: hidden;
-      direction: rtl;
+      font-family: 'Inter', 'Cairo', sans-serif;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* Fixed Atmospheric Background Layer */
-    body::before {
-      content: '';
-      position: fixed; inset: 0;
-      background: linear-gradient(180deg, rgba(7, 10, 8, 0.88) 0%, rgba(7, 10, 8, 0.97) 100%), url('../audio_sanctuary_hd_bg.jpg') center/cover no-repeat fixed;
-      z-index: -1;
+    /* Container without horizontal overflow */
+    .audio-page-container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 20px 24px 120px;
+      min-width: 0;
     }
 
-    /* Main Layout */
-    .app-layout {
-      display: flex;
-      width: 100vw;
-      min-height: 100vh;
+    /* Focus visible for accessibility */
+    button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+      outline: none;
+      box-shadow: var(--focus-ring);
     }
 
-    /* Right Sidebar (RTL Navigation) */
-    .sidebar {
-      width: 280px;
-      background: rgba(9, 14, 10, 0.95);
-      border-left: 1px solid var(--border-light);
+    /* ==========================================================================
+       HERO HEADER — EDITORIAL SANCTUARY
+       ========================================================================== */
+    .audio-hero-card {
+      text-align: center;
+      position: relative;
+      padding: 44px 24px 36px;
+      background: linear-gradient(145deg, rgba(223, 177, 91, 0.12) 0%, rgba(18, 26, 21, 0.95) 45%, rgba(9, 14, 11, 0.98) 100%);
+      border: 1.5px solid var(--border-gold);
+      border-radius: 26px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      margin-bottom: 30px;
+      overflow: hidden;
+      min-width: 0;
+    }
+
+    .audio-hero-card::before {
+      content: "";
+      position: absolute;
+      top: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 360px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(223, 177, 91, 0.2) 0%, transparent 70%);
+      pointer-events: none;
+      filter: blur(35px);
+    }
+
+    .hero-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 6px 18px;
+      background: rgba(223, 177, 91, 0.12);
+      border: 1px solid rgba(223, 177, 91, 0.35);
+      border-radius: 30px;
+      margin-bottom: 14px;
+    }
+
+    .audio-hero-title {
+      font-size: clamp(2rem, 4vw, 2.9rem);
+      margin: 0 0 10px;
+      font-family: 'Playfair Display', 'Amiri', serif;
+      color: var(--ivory);
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    .audio-hero-subtitle {
+      color: var(--gold-light);
+      font-style: italic;
+      max-width: 680px;
+      margin: 0 auto 10px;
+      font-size: 1.15rem;
+      line-height: 1.6;
+    }
+
+    .audio-hero-desc {
+      color: var(--text-muted);
+      max-width: 620px;
+      margin: 0 auto 18px;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .audio-lang-notice-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(10, 16, 12, 0.85);
+      border: 1px solid var(--border-gold);
+      padding: 7px 18px;
+      border-radius: 30px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--gold);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    }
+
+    /* ==========================================================================
+       SEARCH & FILTERS BAR
+       ========================================================================== */
+    .audio-toolbar-row {
       display: flex;
       flex-direction: column;
-      padding: 24px 18px;
-      flex-shrink: 0;
-      z-index: 50;
-      backdrop-filter: blur(12px);
+      gap: 18px;
+      margin-bottom: 32px;
+      min-width: 0;
     }
 
-    .brand-header {
+    .audio-search-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    .audio-search-icon {
+      position: absolute;
+      inset-inline-start: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--gold);
+      font-size: 1rem;
+      pointer-events: none;
+    }
+
+    .audio-search-input {
+      width: 100%;
+      background: var(--audio-card-bg);
+      border: 1.5px solid var(--border-light);
+      border-radius: 30px;
+      padding: 13px 44px 13px 44px;
+      color: var(--ivory);
+      font-size: 0.94rem;
+      font-family: inherit;
+      outline: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+
+    .audio-search-input:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 20px rgba(223, 177, 91, 0.25);
+      background: #141c16;
+    }
+
+    .audio-search-clear-btn {
+      position: absolute;
+      inset-inline-end: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 1.1rem;
+      padding: 4px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      transition: color 0.2s;
+    }
+
+    .audio-search-clear-btn:hover {
+      color: var(--gold);
+    }
+
+    /* Categories Filter Bar */
+    .audio-categories-bar {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 4px 2px 14px;
+      scrollbar-width: thin;
+      justify-content: flex-start;
+      min-width: 0;
+    }
+
+    .audio-cat-btn {
+      background: var(--audio-card-bg);
+      border: 1px solid var(--border-light);
+      color: var(--text-muted);
+      padding: 9px 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      white-space: nowrap;
+      font-size: 0.88rem;
+      font-weight: 600;
+      font-family: inherit;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      flex-shrink: 0;
+      min-height: 44px;
+    }
+
+    .audio-cat-btn:hover, .audio-cat-btn.active {
+      background: var(--gold);
+      color: #070A08;
+      border-color: var(--gold);
+      font-weight: 700;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(223, 177, 91, 0.25);
+    }
+
+    /* Section Headings */
+    .section-editorial-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 32px 0 18px;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 10px;
+      min-width: 0;
+    }
+
+    .section-editorial-title {
+      font-family: 'Playfair Display', 'Amiri', serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--ivory);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+    }
+
+    .section-editorial-title span.accent-icon {
+      color: var(--gold);
+    }
+
+    .section-counter-badge {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       SECTION « À LA UNE » (FEATURED EDITORIAL CARD)
+       ========================================================================== */
+    .featured-audio-card {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 28px;
+      background: linear-gradient(145deg, rgba(223, 177, 91, 0.1) 0%, rgba(15, 22, 17, 0.95) 100%);
+      border: 1.5px solid var(--border-gold);
+      border-radius: 24px;
+      padding: 26px;
+      margin-bottom: 34px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.55);
+      transition: border-color 0.3s ease;
+      cursor: pointer;
+      min-width: 0;
+    }
+
+    .featured-audio-card:hover {
+      border-color: var(--gold);
+    }
+
+    .featured-cover-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1.5px solid var(--gold);
+    }
+
+    .featured-cover-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .featured-audio-card:hover .featured-cover-img {
+      transform: scale(1.05);
+    }
+
+    .featured-badge-tag {
+      position: absolute;
+      top: 10px;
+      inset-inline-start: 10px;
+      background: rgba(7, 10, 8, 0.85);
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 12px;
+      letter-spacing: 1px;
+    }
+
+    .featured-meta-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 0;
+    }
+
+    .featured-label {
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 4px;
+    }
+
+    .featured-title {
+      font-family: 'Playfair Display', 'Amiri', serif;
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: var(--ivory);
+      margin: 0 0 6px;
+      line-height: 1.25;
+    }
+
+    .featured-author {
+      font-size: 1rem;
+      color: var(--gold-light);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .featured-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 16px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .featured-badges-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .pill-badge {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border-light);
+      padding: 4px 12px;
+      border-radius: 14px;
+      font-size: 0.78rem;
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .pill-badge.lang {
+      color: var(--gold);
+      border-color: rgba(223, 177, 91, 0.35);
+      background: rgba(223, 177, 91, 0.08);
+    }
+
+    .featured-actions-row {
       display: flex;
       align-items: center;
       gap: 12px;
-      margin-bottom: 28px;
-      padding-right: 6px;
+      flex-wrap: wrap;
+    }
+
+    /* ==========================================================================
+       SECTION « CONTINUER L'ÉCOUTE » (SAVED PROGRESS RESUME)
+       ========================================================================== */
+    #continueListeningSection {
+      display: none;
+      margin-bottom: 34px;
+    }
+
+    .continue-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+      gap: 18px;
+      min-width: 0;
+    }
+
+    .continue-card {
+      background: var(--audio-card-bg);
+      border: 1px solid var(--border-gold);
+      border-radius: 18px;
+      padding: 16px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      min-width: 0;
+    }
+
+    .continue-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    }
+
+    .continue-thumb {
+      width: 64px;
+      height: 64px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1px solid var(--gold);
+      flex-shrink: 0;
+    }
+
+    .continue-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .continue-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--ivory);
+      margin: 0 0 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .continue-chap {
+      font-size: 0.78rem;
+      color: var(--gold-light);
+      margin-bottom: 6px;
+    }
+
+    .continue-progress-bar {
+      width: 100%;
+      height: 4px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-bottom: 4px;
+    }
+
+    .continue-progress-fill {
+      height: 100%;
+      background: var(--gold);
+      width: 0%;
+    }
+
+    .continue-time-text {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       AUDIO CATALOG GRID (BALANCED & RESPONSIVE)
+       ========================================================================== */
+    .audiobooks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+      min-width: 0;
+    }
+
+    .audiobook-card {
+      background: var(--audio-card-bg);
+      border: 1px solid var(--border-light);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+      cursor: pointer;
+      position: relative;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+      min-width: 0;
+    }
+
+    .audiobook-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--gold);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.7), 0 0 20px rgba(223, 177, 91, 0.2);
+    }
+
+    .card-cover-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background: #090e0b;
+    }
+
+    .card-cover-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .audiobook-card:hover .card-cover-img {
+      transform: scale(1.06);
+    }
+
+    .card-duration-badge {
+      position: absolute;
+      top: 10px;
+      inset-inline-end: 10px;
+      background: rgba(7, 10, 8, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      padding: 3px 9px;
+      border-radius: 12px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--ivory);
+      z-index: 2;
+    }
+
+    .card-audio-tag {
+      position: absolute;
+      top: 10px;
+      inset-inline-start: 10px;
+      background: rgba(223, 177, 91, 0.22);
+      border: 1px solid rgba(223, 177, 91, 0.45);
+      backdrop-filter: blur(8px);
+      padding: 3px 9px;
+      border-radius: 12px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--gold-light);
+      z-index: 2;
+      letter-spacing: 0.5px;
+    }
+
+    .card-play-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      z-index: 3;
+    }
+
+    .audiobook-card:hover .card-play-overlay {
+      opacity: 1;
+    }
+
+    .card-play-circle {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #070A08;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      box-shadow: 0 8px 25px rgba(223, 177, 91, 0.5);
+      transform: scale(0.85);
+      transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .audiobook-card:hover .card-play-circle {
+      transform: scale(1);
+    }
+
+    .card-body {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+      min-width: 0;
+    }
+
+    .card-title {
+      font-family: 'Playfair Display', 'Amiri', serif;
+      font-size: 1.22rem;
+      font-weight: 800;
+      color: var(--ivory);
+      margin: 0 0 4px;
+      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card-author {
+      font-size: 0.86rem;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .card-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 14px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card-footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border-light);
+      padding-top: 12px;
+      font-size: 0.78rem;
+    }
+
+    .card-lang-badge {
+      color: var(--gold-light);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .card-listen-btn-text {
+      color: var(--gold);
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* ==========================================================================
+       BOOK DETAIL VIEW (FICHE AUDIO APPROFONDIE)
+       ========================================================================== */
+    #bookDetailView {
+      display: none;
+      min-width: 0;
+    }
+
+    .detail-top-nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .detail-breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .detail-breadcrumbs a {
+      color: var(--text-muted);
       text-decoration: none;
-    }
-    .brand-logo-img {
-      width: 38px; height: 38px;
-      object-fit: contain;
-    }
-    .brand-text {
-      display: flex; flex-direction: column;
-    }
-    .brand-title-ar {
-      font-family: 'Noto Naskh Arabic', serif;
-      font-size: 1.35rem; font-weight: 700;
-      color: var(--gold); line-height: 1.1;
-    }
-    .brand-title-en {
-      font-size: 0.7rem; font-weight: 700;
-      letter-spacing: 2px; color: var(--gold-light); opacity: 0.85;
+      transition: color 0.2s;
     }
 
-    .nav-section-title {
-      font-size: 0.78rem; font-weight: 600;
-      color: var(--text-muted); margin: 20px 10px 8px;
-      text-transform: uppercase; letter-spacing: 0.5px;
+    .detail-breadcrumbs a:hover {
+      color: var(--gold);
     }
 
-    .nav-menu {
-      list-style: none;
-      display: flex; flex-direction: column; gap: 4px;
-    }
-
-    .nav-item a {
-      display: flex; align-items: center; gap: 14px;
-      padding: 11px 16px; border-radius: 12px;
-      color: var(--text-main); text-decoration: none;
-      font-size: 0.92rem; font-weight: 500;
-      transition: all 0.2s ease;
-    }
-    .nav-item a:hover {
-      background: rgba(255, 255, 255, 0.04);
-      color: var(--gold-light);
-    }
-    .nav-item.active a {
-      background: rgba(223, 177, 91, 0.12);
-      color: var(--gold-light);
-      border-right: 3px solid var(--gold);
+    .detail-breadcrumbs .active {
+      color: var(--gold);
       font-weight: 700;
     }
 
-    .category-item a {
-      display: flex; align-items: center; gap: 12px;
-      padding: 9px 16px; border-radius: 10px;
-      color: var(--text-muted); text-decoration: none;
-      font-size: 0.88rem; transition: all 0.2s ease;
-    }
-    .category-item a:hover {
-      color: var(--ivory); background: rgba(255, 255, 255, 0.03);
-    }
-    .category-item.active a {
-      background: rgba(223, 177, 91, 0.1);
-      color: var(--gold); font-weight: 700;
-    }
-
-    /* Premium Banner Card at sidebar bottom */
-    .premium-card {
-      margin-top: auto;
-      background: linear-gradient(135deg, rgba(223, 177, 91, 0.15), rgba(15, 22, 17, 0.9));
-      border: 1px solid var(--gold);
-      border-radius: 16px;
-      padding: 18px 16px;
-      text-align: center;
-    }
-    .premium-title {
-      font-size: 0.92rem; font-weight: 800; color: var(--gold-light);
-      margin-bottom: 4px; display: flex; align-items: center; justify-content: center; gap: 6px;
-    }
-    .premium-desc {
-      font-size: 0.75rem; color: var(--text-muted); margin-bottom: 12px; line-height: 1.4;
-    }
-    .premium-btn {
-      width: 100%; background: var(--gold); color: var(--bg-dark);
-      border: none; padding: 8px 0; border-radius: 10px;
-      font-weight: 700; font-size: 0.85rem; cursor: pointer;
-    }
-
-    /* Main Container Area */
-    .main-area {
-      flex: 1; display: flex; flex-direction: column; min-width: 0;
-    }
-
-    /* Top Navigation Header */
-    .top-header {
-      height: 70px; padding: 0 32px;
-      display: flex; align-items: center; justify-content: space-between;
-      border-bottom: 1px solid var(--border-light);
-      background: rgba(7, 10, 8, 0.8); backdrop-filter: blur(12px);
-      position: sticky; top: 0; z-index: 40;
-    }
-
-    .search-box {
-      position: relative; width: 380px;
-    }
-    .search-icon {
-      position: absolute; right: 14px; top: 50%;
-      transform: translateY(-50%); color: var(--text-muted); font-size: 0.95rem;
-    }
-    .search-input {
-      width: 100%; background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border-light); border-radius: 20px;
-      padding: 9px 40px 9px 16px; color: var(--ivory);
-      font-size: 0.88rem; outline: none; transition: all 0.25s ease;
-    }
-    .search-input:focus {
-      border-color: var(--gold); background: rgba(223, 177, 91, 0.05);
-      box-shadow: 0 0 15px rgba(223, 177, 91, 0.15);
-    }
-
-    .top-actions {
-      display: flex; align-items: center; gap: 14px;
-    }
-    .top-btn {
-      width: 40px; height: 40px; border-radius: 50%;
-      background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-light);
-      color: var(--text-main); display: flex; align-items: center; justify-content: center;
-      cursor: pointer; font-size: 1.1rem; transition: all 0.2s ease;
-    }
-    .top-btn:hover { background: var(--gold); color: var(--bg-dark); }
-
-    /* Scrollable Content Body */
-    .content-body {
-      padding: 28px 32px 100px; flex: 1; overflow-y: auto;
-    }
-
-    /* ---------------------------------------------------- */
-    /* STATE 1: LIBRARY GRID VIEW (Image 2)                */
-    /* ---------------------------------------------------- */
-    #libraryGridView {
-      display: block;
-    }
-
-    .page-title-row {
-      display: flex; align-items: center; justify-content: space-between;
-      margin-bottom: 28px;
-    }
-    .page-title-group h1 {
-      font-size: 1.65rem; font-weight: 800; color: var(--ivory);
-      display: flex; align-items: center; gap: 10px; margin-bottom: 4px;
-    }
-    .page-subtitle { font-size: 0.88rem; color: var(--text-muted); }
-
-    .view-controls { display: flex; align-items: center; gap: 12px; }
-    .sort-select {
-      background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-light);
-      color: var(--text-main); padding: 8px 16px; border-radius: 12px;
-      font-size: 0.88rem; outline: none; cursor: pointer;
-    }
-    .grid-view-btn {
-      width: 38px; height: 38px; border-radius: 10px;
-      background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-light);
-      color: var(--text-main); display: flex; align-items: center; justify-content: center;
+    .detail-back-btn {
+      background: rgba(223, 177, 91, 0.08);
+      border: 1px solid rgba(223, 177, 91, 0.25);
+      color: var(--gold);
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-size: 0.88rem;
+      font-weight: 600;
       cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 44px;
+      transition: all 0.25s ease;
     }
 
-    /* 8 Books Grid Layout */
-    .audiobooks-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
-    }
-    @media (max-width: 1200px) { .audiobooks-grid { grid-template-columns: repeat(3, 1fr); } }
-    @media (max-width: 900px) { .sidebar { display: none; } .audiobooks-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 550px) { .audiobooks-grid { grid-template-columns: 1fr; } }
-
-    .audiobook-card {
-      background: var(--bg-card); border: 1px solid var(--border-light);
-      border-radius: 18px; overflow: hidden; position: relative;
-      transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1); cursor: pointer;
-    }
-    .audiobook-card:hover {
-      transform: translateY(-6px); border-color: var(--gold);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7), 0 0 20px rgba(223, 177, 91, 0.18);
-    }
-    .card-cover-wrapper {
-      position: relative; width: 100%; aspect-ratio: 1 / 1; overflow: hidden;
-    }
-    .card-cover-img {
-      width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;
-    }
-    .audiobook-card:hover .card-cover-img { transform: scale(1.05); }
-
-    .cover-overlay-content {
-      position: absolute; inset: 0;
-      background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.92) 100%);
-      display: flex; flex-direction: column; justify-content: center; align-items: center;
-      text-align: center; padding: 16px; color: #FFF;
-    }
-    .cover-main-title {
-      font-family: 'Noto Naskh Arabic', serif; font-size: 1.5rem; font-weight: 700;
-      color: #FAF6EF; text-shadow: 0 3px 12px rgba(0,0,0,0.9); margin-bottom: 4px;
-    }
-    .cover-sub-title {
-      font-size: 0.85rem; color: var(--gold-light); text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+    .detail-back-btn:hover {
+      background: var(--gold);
+      color: #070A08;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(223, 177, 91, 0.25);
     }
 
-    .duration-badge {
-      position: absolute; bottom: 12px; right: 12px;
-      background: rgba(10, 14, 11, 0.85); border: 1px solid rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(8px); padding: 3px 10px; border-radius: 12px;
-      font-size: 0.75rem; font-weight: 600; color: var(--ivory); z-index: 2;
-    }
-    .play-overlay-btn {
-      position: absolute; inset: 0; background: rgba(0, 0, 0, 0.4);
-      display: flex; align-items: center; justify-content: center;
-      opacity: 0; transition: opacity 0.3s ease; z-index: 3;
-    }
-    .audiobook-card:hover .play-overlay-btn { opacity: 1; }
-    .play-icon-circle {
-      width: 54px; height: 54px; border-radius: 50%; background: var(--gold);
-      color: var(--bg-dark); display: flex; align-items: center; justify-content: center;
-      font-size: 1.3rem; box-shadow: 0 8px 25px rgba(223, 177, 91, 0.5);
-      transform: scale(0.8); transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-    }
-    .audiobook-card:hover .play-icon-circle { transform: scale(1); }
-
-    .card-info {
-      padding: 14px 16px; display: flex; align-items: center; justify-content: space-between;
-    }
-    .card-arabic-title { font-size: 1.05rem; font-weight: 700; color: var(--ivory); }
-    .card-arabic-author { font-size: 0.82rem; color: var(--text-muted); margin-top: 2px; }
-    .card-dots-btn { background: transparent; border: none; color: var(--text-muted); font-size: 1.2rem; cursor: pointer; }
-
-    /* ---------------------------------------------------- */
-    /* STATE 2: BOOK DETAILS & CHAPTERS PLAYLIST (Image 1)  */
-    /* ---------------------------------------------------- */
-    #bookDetailView {
-      display: none;
-    }
-
-    .detail-top-nav {
-      display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px;
-    }
-    .back-btn {
-      background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-light);
-      color: var(--ivory); padding: 8px 18px; border-radius: 20px;
-      font-size: 0.88rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px;
-      transition: all 0.2s ease;
-    }
-    .back-btn:hover { background: var(--gold); color: var(--bg-dark); }
-    .share-btn {
-      background: transparent; border: none; color: var(--text-muted);
-      font-size: 0.9rem; cursor: pointer; display: flex; align-items: center; gap: 6px;
-    }
-
+    /* Book Hero Dossier Banner */
     .book-hero-banner {
-      display: grid; grid-template-columns: 240px 1fr; gap: 28px;
-      background: rgba(15, 22, 17, 0.85); border: 1px solid var(--border);
-      border-radius: 24px; padding: 28px; backdrop-filter: blur(16px);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.6); margin-bottom: 28px;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 32px;
+      background: linear-gradient(145deg, rgba(223, 177, 91, 0.1) 0%, rgba(15, 22, 17, 0.95) 100%);
+      border: 1.5px solid var(--border-gold);
+      border-radius: 26px;
+      padding: 32px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+      margin-bottom: 34px;
+      min-width: 0;
     }
+
     .detail-cover-img {
-      width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 16px;
-      border: 1px solid var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 1.5px solid var(--gold);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
     }
+
     .detail-meta-box {
-      display: flex; flex-direction: column; justify-content: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 0;
     }
+
     .detail-title {
-      font-family: 'Noto Naskh Arabic', serif; font-size: 2.2rem; font-weight: 800;
-      color: var(--gold-light); margin-bottom: 4px;
+      font-family: 'Playfair Display', 'Amiri', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      font-weight: 800;
+      color: var(--ivory);
+      margin: 0 0 6px;
+      line-height: 1.2;
     }
-    .detail-author { font-size: 1.1rem; color: var(--ivory); margin-bottom: 12px; }
+
+    .detail-author {
+      font-size: 1.12rem;
+      color: var(--gold);
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
 
     .detail-badges-row {
-      display: flex; align-items: center; gap: 12px; margin-bottom: 14px; flex-wrap: wrap;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
     }
-    .meta-pill {
-      background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-light);
-      padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; color: var(--text-main);
-    }
-    .rating-stars { color: #F5D98A; font-size: 0.88rem; font-weight: 700; }
 
     .detail-desc {
-      font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 18px; max-width: 680px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 22px;
+      max-width: 720px;
     }
 
     .detail-actions-row {
-      display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
     }
+
     .btn-primary-play {
-      background: var(--gold); color: var(--bg-dark); border: none;
-      padding: 12px 28px; border-radius: 14px; font-weight: 800; font-size: 0.95rem;
-      cursor: pointer; display: flex; align-items: center; gap: 10px;
-      box-shadow: 0 8px 25px rgba(223, 177, 91, 0.4); transition: transform 0.2s ease;
+      background: var(--gold);
+      color: #070A08;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 44px;
+      box-shadow: 0 8px 25px rgba(223, 177, 91, 0.4);
+      transition: all 0.2s ease;
+      text-decoration: none;
     }
-    .btn-primary-play:hover { transform: scale(1.04); }
+
+    .btn-primary-play:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(223, 177, 91, 0.6);
+      background: #fff;
+    }
+
     .btn-sec-action {
-      background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-light);
-      color: var(--ivory); padding: 12px 20px; border-radius: 14px;
-      font-weight: 600; font-size: 0.88rem; cursor: pointer; display: flex; align-items: center; gap: 8px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-light);
+      color: var(--ivory);
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 44px;
+      transition: all 0.2s ease;
     }
 
-    /* 2-Column Detail Layout: Left Chapters List, Right Interactive Panels */
+    .btn-sec-action:hover {
+      background: rgba(223, 177, 91, 0.15);
+      border-color: var(--gold);
+      color: var(--gold-light);
+    }
+
+    /* 2-Column Dossier Layout */
     .detail-split-layout {
-      display: grid; grid-template-columns: 1fr 340px; gap: 28px;
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 32px;
+      margin-bottom: 60px;
+      min-width: 0;
     }
-    @media (max-width: 1100px) { .detail-split-layout { grid-template-columns: 1fr; } }
 
-    /* Tabs Bar */
+    /* Tabs Bar with accessible roles */
     .detail-tabs-bar {
-      display: flex; align-items: center; gap: 24px;
-      border-bottom: 1px solid var(--border-light); margin-bottom: 20px; padding-bottom: 10px;
-    }
-    .tab-btn {
-      background: transparent; border: none; color: var(--text-muted);
-      font-size: 1.05rem; font-weight: 700; cursor: pointer; padding-bottom: 8px;
-      position: relative;
-    }
-    .tab-btn.active { color: var(--gold); }
-    .tab-btn.active::after {
-      content: ''; position: absolute; bottom: -11px; right: 0; left: 0;
-      height: 3px; background: var(--gold); border-radius: 3px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid var(--border-light);
+      margin-bottom: 24px;
+      padding-bottom: 8px;
+      overflow-x: auto;
+      scrollbar-width: thin;
+      min-width: 0;
     }
 
-    /* Chapters Playlist (Matching Image 1) */
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 10px 16px;
+      position: relative;
+      font-family: inherit;
+      border-radius: 8px;
+      transition: all 0.2s;
+      white-space: nowrap;
+      min-height: 44px;
+    }
+
+    .tab-btn:hover {
+      color: var(--ivory);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .tab-btn.active {
+      color: var(--gold);
+      background: rgba(223, 177, 91, 0.1);
+    }
+
+    .tab-btn.active::after {
+      content: '';
+      position: absolute;
+      bottom: -9px;
+      inset-inline-start: 0;
+      inset-inline-end: 0;
+      height: 3px;
+      background: var(--gold);
+      border-radius: 3px;
+    }
+
+    /* Chapters Playlist */
     .chapters-playlist {
-      display: flex; flex-direction: column; gap: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-width: 0;
     }
+
     .chapter-row-item {
-      background: rgba(15, 22, 17, 0.8); border: 1px solid var(--border-light);
-      border-radius: 14px; padding: 14px 20px; display: flex; align-items: center;
-      justify-content: space-between; cursor: pointer; transition: all 0.2s ease;
+      background: var(--audio-card-bg);
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      min-width: 0;
     }
+
     .chapter-row-item:hover {
-      background: rgba(223, 177, 91, 0.08); border-color: var(--gold); transform: translateX(-4px);
+      background: rgba(223, 177, 91, 0.08);
+      border-color: var(--gold);
+      transform: translateY(-2px);
     }
+
     .chapter-row-item.active {
-      background: rgba(223, 177, 91, 0.15); border-color: var(--gold);
+      background: rgba(223, 177, 91, 0.14);
+      border-color: var(--gold);
       box-shadow: 0 0 20px rgba(223, 177, 91, 0.2);
     }
 
-    .chap-left { display: flex; align-items: center; gap: 16px; }
+    .chap-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      min-width: 0;
+    }
+
     .chap-play-btn {
-      width: 36px; height: 36px; border-radius: 50%; background: rgba(223, 177, 91, 0.12);
-      color: var(--gold); display: flex; align-items: center; justify-content: center;
-      font-size: 0.9rem; border: 1px solid var(--border); flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(223, 177, 91, 0.12);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      border: 1px solid var(--border-gold);
+      flex-shrink: 0;
     }
-    .chapter-row-item.active .chap-play-btn { background: var(--gold); color: var(--bg-dark); }
-    .chap-text h4 { font-size: 0.98rem; font-weight: 700; color: var(--ivory); margin-bottom: 2px; }
-    .chap-text p { font-size: 0.8rem; color: var(--text-muted); }
-    .chap-right { display: flex; align-items: center; gap: 16px; color: var(--text-muted); font-size: 0.85rem; }
-    .download-icon { color: var(--text-muted); cursor: pointer; }
-    .download-icon:hover { color: var(--gold); }
 
-    /* Right Sidebar Widgets (Image 1) */
-    .right-widgets-column { display: flex; flex-direction: column; gap: 24px; }
+    .chapter-row-item.active .chap-play-btn {
+      background: var(--gold);
+      color: #070A08;
+    }
+
+    .chap-text {
+      min-width: 0;
+    }
+
+    .chap-text h4 {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--ivory);
+      margin: 0 0 2px;
+      line-height: 1.3;
+    }
+
+    .chap-text p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .chap-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    /* Right Widgets Column */
+    .right-widgets-column {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      min-width: 0;
+    }
+
     .widget-box {
-      background: rgba(15, 22, 17, 0.85); border: 1px solid var(--border-light);
-      border-radius: 20px; padding: 20px; backdrop-filter: blur(12px);
+      background: var(--audio-card-bg);
+      border: 1px solid var(--border-light);
+      border-radius: 20px;
+      padding: 22px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      min-width: 0;
     }
+
     .widget-title {
-      font-size: 0.95rem; font-weight: 700; color: var(--gold-light);
-      margin-bottom: 14px; display: flex; align-items: center; justify-content: space-between;
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    /* Player Mini Card Widget in Right Column */
-    .mini-player-widget {
-      text-align: center; padding: 20px; background: rgba(0,0,0,0.3); border-radius: 16px;
-      border: 1px solid var(--border);
-    }
-    .mini-thumb {
-      width: 140px; height: 140px; border-radius: 16px; object-fit: cover;
-      border: 1px solid var(--gold); margin: 0 auto 14px; display: block;
-    }
-    .mini-controls-row {
-      display: flex; align-items: center; justify-content: center; gap: 16px; margin: 14px 0;
-    }
-    .mini-btn-play {
-      width: 46px; height: 46px; border-radius: 50%; background: var(--gold);
-      color: var(--bg-dark); border: none; font-size: 1.2rem; cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-    }
-
-    /* Quote Card Widget */
     .quote-box {
-      font-style: italic; font-size: 0.92rem; color: var(--ivory);
-      line-height: 1.7; background: rgba(223, 177, 91, 0.05); border-right: 3px solid var(--gold);
-      padding: 14px; border-radius: 10px; margin-bottom: 12px;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--ivory);
+      line-height: 1.7;
+      background: rgba(223, 177, 91, 0.06);
+      border-inline-start: 3px solid var(--gold);
+      padding: 14px 16px;
+      border-radius: 10px;
+      margin-bottom: 14px;
+      font-family: 'Playfair Display', 'Amiri', serif;
     }
 
-    /* Recommendations Widget */
     .rec-item {
-      display: flex; align-items: center; gap: 12px; margin-bottom: 12px; cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 10px;
+      border-radius: 12px;
+      transition: background 0.2s;
+      cursor: pointer;
+      margin-bottom: 8px;
+      min-width: 0;
     }
-    .rec-thumb { width: 44px; height: 44px; border-radius: 8px; object-fit: cover; }
-    .rec-info h5 { font-size: 0.88rem; font-weight: 700; color: var(--ivory); }
-    .rec-info p { font-size: 0.78rem; color: var(--text-muted); }
 
-    /* ── Premium Bottom Audio Player Bar ── */
+    .rec-item:hover {
+      background: rgba(255,255,255,0.04);
+    }
+
+    .rec-thumb {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      object-fit: cover;
+      border: 1px solid var(--border-gold);
+      flex-shrink: 0;
+    }
+
+    .rec-info {
+      min-width: 0;
+    }
+
+    .rec-info h5 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--ivory);
+      margin: 0 0 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .rec-info p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Author Link Button */
+    .author-thinker-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(223, 177, 91, 0.12);
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+      margin-top: 14px;
+      transition: all 0.2s;
+    }
+
+    .author-thinker-link:hover {
+      background: var(--gold);
+      color: #070A08;
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       BOTTOM FIXED AUDIO PLAYER BAR (PERSISTENT SINGLE CONTROLLER)
+       ========================================================================== */
     .bottom-player-bar {
-      position: fixed; bottom: 0; left: 0; right: 0; height: 88px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 88px;
       background: linear-gradient(135deg, rgba(7,10,8,0.98) 0%, rgba(14,20,10,0.98) 100%);
-      border-top: 1px solid rgba(212,175,55,0.35);
+      border-top: 1.5px solid var(--border-gold);
       backdrop-filter: blur(24px);
-      display: flex; align-items: center; justify-content: space-between; gap: 16px;
-      padding: 0 28px; z-index: 1000;
-      box-shadow: 0 -4px 40px rgba(0,0,0,0.85), 0 -1px 0 rgba(212,175,55,0.15);
-      transform: translateY(100%); transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 0 24px;
+      z-index: 1000;
+      box-shadow: 0 -8px 40px rgba(0,0,0,0.85);
+      transform: translateY(100%);
+      transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
     }
-    .bottom-player-bar.active { transform: translateY(0); }
 
-    /* Left: thumb + meta */
-    .player-track-info { display: flex; align-items: center; gap: 14px; min-width: 260px; max-width: 300px; }
-    .player-thumb-wrapper { position: relative; flex-shrink: 0; }
+    .bottom-player-bar.active {
+      transform: translateY(0);
+    }
+
+    .player-track-info {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 200px;
+      max-width: 280px;
+      cursor: pointer;
+    }
+
     .player-thumb {
-      width: 56px; height: 56px; border-radius: 10px; object-fit: cover;
-      border: 2px solid var(--gold); display: block;
-      box-shadow: 0 0 12px rgba(212,175,55,0.3);
+      width: 52px;
+      height: 52px;
+      border-radius: 10px;
+      object-fit: cover;
+      border: 1.5px solid var(--gold);
+      flex-shrink: 0;
     }
-    .player-thumb-glow {
-      position: absolute; inset: -4px; border-radius: 14px;
-      background: radial-gradient(circle, rgba(212,175,55,0.25) 0%, transparent 70%);
-      pointer-events: none;
-      animation: thumbPulse 2.5s ease-in-out infinite;
-    }
-    @keyframes thumbPulse { 0%,100%{opacity:0.4} 50%{opacity:1} }
 
-    .player-chap-badge {
-      display: inline-block; font-size: 0.68rem; font-weight: 700;
-      background: rgba(212,175,55,0.2); color: var(--gold-light);
-      border: 1px solid rgba(212,175,55,0.4); border-radius: 20px;
-      padding: 2px 10px; margin-bottom: 4px; letter-spacing: 0.5px;
+    .player-track-meta {
+      min-width: 0;
     }
+
     .player-track-meta h4 {
-      font-size: 0.92rem; color: var(--ivory); font-weight: 600;
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 230px;
+      font-size: 0.92rem;
+      color: var(--ivory);
+      font-weight: 700;
+      margin: 0 0 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
-    .player-track-meta p { font-size: 0.75rem; color: var(--text-muted); margin-top: 2px; }
 
-    /* Center: controls + progress */
+    .player-track-meta p {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
     .player-controls-center {
-      display: flex; flex-direction: column; align-items: center; gap: 8px; flex: 1; max-width: 560px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      flex: 1;
+      max-width: 560px;
+      min-width: 0;
     }
-    .player-buttons { display: flex; align-items: center; gap: 14px; }
+
+    .player-buttons {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
     .player-btn-main {
-      width: 46px; height: 46px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--gold), #c8922a);
-      color: var(--bg-dark); border: none; font-size: 1.15rem;
-      display: flex; align-items: center; justify-content: center; cursor: pointer;
-      box-shadow: 0 4px 16px rgba(212,175,55,0.45);
-      transition: transform 0.15s, box-shadow 0.15s;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #070A08;
+      border: none;
+      font-size: 1.15rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(223, 177, 91, 0.45);
+      transition: transform 0.15s, background 0.15s;
     }
-    .player-btn-main:hover { transform: scale(1.1); box-shadow: 0 6px 24px rgba(212,175,55,0.6); }
+
+    .player-btn-main:hover {
+      transform: scale(1.08);
+      background: #fff;
+    }
+
     .player-btn-sec {
-      background: transparent; border: 1px solid rgba(255,255,255,0.12); color: var(--text-muted);
-      font-size: 1rem; cursor: pointer; border-radius: 8px; padding: 5px 10px;
-      transition: color 0.2s, border-color 0.2s, background 0.2s;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      cursor: pointer;
+      border-radius: 8px;
+      padding: 6px 10px;
+      min-height: 38px;
+      transition: all 0.2s;
     }
-    .player-btn-sec:hover { color: var(--gold-light); border-color: rgba(212,175,55,0.5); background: rgba(212,175,55,0.08); }
 
-    .bar-progress-container { width: 100%; display: flex; align-items: center; gap: 10px; font-size: 0.73rem; color: var(--text-muted); }
+    .player-btn-sec:hover {
+      color: var(--gold-light);
+      border-color: var(--gold);
+      background: rgba(223, 177, 91, 0.1);
+    }
+
+    .bar-progress-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.74rem;
+      color: var(--text-muted);
+    }
+
     .bar-progress-bg {
-      flex: 1; height: 5px; background: rgba(255,255,255,0.1); border-radius: 4px;
-      cursor: pointer; position: relative; transition: height 0.2s;
+      flex: 1;
+      height: 6px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 4px;
+      cursor: pointer;
+      position: relative;
     }
-    .bar-progress-bg:hover { height: 8px; }
+
     .bar-progress-fill {
-      height: 100%; width: 0%; background: linear-gradient(90deg, var(--gold), #f5d98a);
-      border-radius: 4px; position: relative; transition: width 0.1s linear;
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--gold), #f5d98a);
+      border-radius: 4px;
+      position: relative;
     }
-    .bar-progress-thumb {
-      position: absolute; right: -6px; top: 50%; transform: translateY(-50%);
-      width: 13px; height: 13px; border-radius: 50%;
-      background: var(--gold-light); box-shadow: 0 0 8px rgba(212,175,55,0.7);
-      opacity: 0; transition: opacity 0.2s;
-    }
-    .bar-progress-bg:hover .bar-progress-thumb { opacity: 1; }
 
-    /* Right: volume + speed */
-    .player-right-controls { display: flex; align-items: center; gap: 16px; min-width: 180px; justify-content: flex-end; }
-    .speed-btn { font-size: 0.85rem; font-weight: 700; min-width: 44px; text-align: center; }
-    .player-vol-wrap { display: flex; align-items: center; gap: 8px; }
-    .vol-icon { font-size: 1.1rem; cursor: pointer; }
+    .player-right-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 180px;
+      justify-content: flex-end;
+    }
+
+    .speed-btn {
+      font-size: 0.85rem;
+      font-weight: 700;
+      min-width: 44px;
+      text-align: center;
+    }
+
+    .player-vol-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .vol-icon {
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
     .vol-slider {
-      -webkit-appearance: none; width: 80px; height: 4px;
-      background: rgba(255,255,255,0.15); border-radius: 4px; outline: none; cursor: pointer;
+      -webkit-appearance: none;
+      width: 75px;
+      height: 4px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
     }
+
     .vol-slider::-webkit-slider-thumb {
-      -webkit-appearance: none; width: 13px; height: 13px;
-      border-radius: 50%; background: var(--gold); cursor: pointer;
+      -webkit-appearance: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--gold);
+      cursor: pointer;
     }
 
-    /* Mobile Responsiveness for Studio Audio Page */
+    /* Sleep Timer Button */
+    .sleep-timer-btn {
+      font-size: 0.95rem;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: var(--text-muted);
+      border-radius: 8px;
+      padding: 6px 10px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .sleep-timer-btn.active {
+      color: var(--gold);
+      border-color: var(--gold);
+      background: rgba(223, 177, 91, 0.15);
+    }
+
+    /* Toast Notification */
+    .toast-notification {
+      position: fixed;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--audio-card-bg);
+      border: 1px solid var(--gold);
+      color: var(--ivory);
+      padding: 12px 26px;
+      border-radius: 30px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+      z-index: 2000;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .toast-notification.active {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* Responsive adjustments */
     @media (max-width: 900px) {
-      .app-layout { flex-direction: column !important; min-height: 100vh !important; }
-      .sidebar {
-        position: fixed !important; top: 0 !important; right: 0 !important; bottom: 0 !important;
-        width: 280px !important; max-width: 85vw !important;
-        z-index: 100000 !important;
-        transform: translateX(100%) !important;
-        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
-        box-shadow: -10px 0 40px rgba(0,0,0,0.95) !important;
+      .featured-audio-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 24px 18px;
       }
-      .sidebar.active { transform: translateX(0) !important; }
-      .audio-sidebar-overlay {
-        position: fixed !important; inset: 0 !important; background: rgba(0,0,0,0.75) !important;
-        z-index: 99990 !important; opacity: 0 !important; visibility: hidden !important;
-        transition: opacity 0.25s ease, visibility 0.25s ease !important;
+      .featured-cover-wrap {
+        width: 180px;
+        margin: 0 auto;
       }
-      .audio-sidebar-overlay.active { opacity: 1 !important; visibility: visible !important; }
-
-      .top-header { padding: 0 14px !important; gap: 10px !important; }
-      .search-box { flex: 1 !important; width: 100% !important; max-width: none !important; }
-      .audio-mobile-menu-btn {
-        display: flex !important; align-items: center !important; justify-content: center !important;
-        width: 40px !important; height: 40px !important; border-radius: 50% !important;
-        background: rgba(223, 177, 91, 0.15) !important; border: 1.5px solid var(--gold) !important;
-        color: var(--gold) !important; font-size: 1.2rem !important; cursor: pointer !important; flex-shrink: 0 !important;
+      .featured-meta-col {
+        align-items: center;
       }
-      .content-body { padding: 16px 12px 100px !important; }
-      .books-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important; gap: 14px !important; }
-
-      /* Book Detail View Mobile Layout Fix */
+      .featured-badges-row {
+        justify-content: center;
+      }
+      .featured-actions-row {
+        justify-content: center;
+      }
       .book-hero-banner {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
-        padding: 24px 16px !important;
-        gap: 20px !important;
-        grid-template-columns: 1fr !important;
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 24px 18px;
       }
       .detail-cover-img {
-        width: 200px !important;
-        height: 200px !important;
-        margin: 0 auto !important;
-        border-radius: 20px !important;
+        width: 180px;
+        margin: 0 auto;
       }
       .detail-meta-box {
-        width: 100% !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
-      }
-      .detail-title {
-        font-size: 1.6rem !important;
-        text-align: center !important;
-        margin-bottom: 6px !important;
-      }
-      .detail-author {
-        font-size: 1.05rem !important;
-        text-align: center !important;
-        margin-bottom: 14px !important;
+        align-items: center;
       }
       .detail-badges-row {
-        justify-content: center !important;
-        flex-wrap: wrap !important;
-        gap: 8px !important;
-        margin-bottom: 16px !important;
-      }
-      .detail-desc {
-        max-width: 100% !important;
-        text-align: center !important;
-        font-size: 0.9rem !important;
-        line-height: 1.65 !important;
-        margin-bottom: 20px !important;
+        justify-content: center;
       }
       .detail-actions-row {
-        width: 100% !important;
-        justify-content: center !important;
+        justify-content: center;
       }
-      .btn-primary-play {
-        width: 100% !important;
-        max-width: 320px !important;
-        justify-content: center !important;
-      }
-    }
-
-    @media (min-width: 901px) {
-      .audio-mobile-menu-btn { display: none !important; }
-    }
-
-    @media (max-width: 640px) {
-      /* Bottom Player Bar Mobile Responsive Fix */
-      .bottom-player-bar {
-        height: 76px !important;
-        padding: 8px 12px !important;
-        gap: 8px !important;
-        justify-content: space-between !important;
-      }
-      .player-track-info {
-        gap: 10px !important;
-        min-width: 0 !important;
-        max-width: 160px !important;
-        flex: 1 !important;
-      }
-      .player-thumb {
-        width: 44px !important;
-        height: 44px !important;
-        border-radius: 8px !important;
-      }
-      .player-track-meta h4 {
-        font-size: 0.82rem !important;
-        max-width: 110px !important;
-      }
-      .player-track-meta p {
-        font-size: 0.7rem !important;
-      }
-      .player-controls-center {
-        gap: 4px !important;
-        flex: none !important;
-      }
-      .player-buttons {
-        gap: 10px !important;
-      }
-      .player-btn-main {
-        width: 42px !important;
-        height: 42px !important;
-        font-size: 1.05rem !important;
-      }
-      .player-btn-sec {
-        font-size: 0.85rem !important;
-        padding: 5px 8px !important;
-      }
-      .bar-progress-container {
-        font-size: 0.68rem !important;
-        gap: 6px !important;
+      .detail-split-layout {
+        grid-template-columns: 1fr;
       }
       .player-right-controls {
-        display: none !important;
+        display: none;
       }
     }
 
-    @media (max-width: 420px) {
-      .player-vol-wrap { display: none !important; }
-      .speed-btn { font-size: 0.75rem !important; min-width: 32px !important; }
-      .books-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
-      .player-track-info { max-width: 130px !important; }
-      .player-track-meta h4 { max-width: 85px !important; }
+    @media (max-width: 600px) {
+      .audio-page-container {
+        padding: 12px 14px 110px;
+      }
+      .audio-hero-card {
+        padding: 32px 16px 26px;
+        border-radius: 20px;
+      }
+      .bottom-player-bar {
+        height: 76px;
+        padding: 6px 12px;
+      }
+      .player-track-info {
+        min-width: 0;
+        max-width: 120px;
+      }
+      .player-thumb {
+        width: 40px;
+        height: 40px;
+      }
+      .player-track-meta h4 {
+        font-size: 0.78rem;
+      }
+      .player-buttons {
+        gap: 8px;
+      }
+      .player-btn-main {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+      }
     }
-
-    /* ── Language Selector Styles ── */
-    #audioLangBtn:hover {
-      background: rgba(223, 177, 91, 0.15) !important;
-      border-color: var(--gold) !important;
-    }
-    .audio-lang-opt:hover {
-      background: rgba(223, 177, 91, 0.12) !important;
-      color: var(--gold-light) !important;
-    }
-    [dir="ltr"] #audioLangDropdown { left: auto; right: 0; }
-    [dir="rtl"] #audioLangDropdown { left: 0; right: auto; }
-
-    /* ── Audio Language Badge ── */
-    .audio-lang-badge {
-      display: inline-flex; align-items: center; gap: 4px;
-      font-size: 0.72rem; margin-top: 4px;
-      color: var(--gold); opacity: 0.85; font-weight: 600;
-    }
-    [dir="ltr"] .audiobook-card .card-info { direction: ltr; text-align: left; }
-    [dir="ltr"] .book-hero-banner,
-    [dir="ltr"] .detail-split-layout { direction: ltr; }
-    [dir="ltr"] .chapter-row-item:hover { transform: translateX(4px); }
-    [dir="rtl"] .chapter-row-item:hover { transform: translateX(-4px); }
-    [dir="ltr"] .back-btn { flex-direction: row-reverse; }
-    [dir="ltr"] .sidebar { border-left: 1px solid var(--border); border-right: none; }
-    [dir="ltr"] .bottom-player-bar,
-    [dir="ltr"] .top-header { direction: ltr; }
-
   </style>
 </head>
 <body>
 
-  <div class="app-layout">
-
-    <!-- Right Sidebar Menu -->
-    <aside class="sidebar">
-      <a href="../" class="brand-header">
-        <img src="../brand_logo_official.png" alt="Hikma & Nour Logo" class="brand-logo-img">
-        <div class="brand-text">
-          <span class="brand-title-ar">حكمة ونور</span>
-          <span class="brand-title-en">HIKMA & NOUR</span>
-        </div>
-      </a>
-
-      <ul class="nav-menu">
-        <li class="nav-item"><a href="../" data-i18n-nav="home"><span>🏠</span> <span data-i18n="home">الرئيسية</span></a></li>
-        <li class="nav-item"><a href="../articles/" data-i18n-nav="articles"><span>📚</span> <span data-i18n="articles">المقالات</span></a></li>
-        <li class="nav-item"><a href="../thinkers/" data-i18n-nav="thinkers"><span>🧠</span> <span data-i18n="thinkers">الفلاسفة</span></a></li>
-        <li class="nav-item"><a href="../quotes/" data-i18n-nav="quotes"><span>💭</span> <span data-i18n="quotes">الاقتباسات</span></a></li>
-        <li class="nav-item active"><a href="./" onclick="showLibraryGrid(); return false;"><span>🎧</span> <span data-i18n="audio">الصوتيات</span></a></li>
-        <li class="nav-item"><a href="../bio.html" data-i18n-nav="about"><span>ℹ️</span> <span data-i18n="about">عن الموقع</span></a></li>
-        <li class="nav-item"><a href="../#contactSection" data-i18n-nav="contactNav"><span>📩</span> <span data-i18n="contactNav">اتصل بنا</span></a></li>
-      </ul>
-
-      <div class="nav-section-title" id="sidebarCategoriesLabel" data-i18n="audioCategoriesTitle">التصنيفات الشائعة</div>
-      <ul class="nav-menu" id="categories">
-        <li class="category-item active"><a href="#" onclick="filterAudioCategory('all', this); return false;"><span>✨</span> <span data-i18n="catAll">الكل</span></a></li>
-        <li class="category-item"><a href="#" onclick="filterAudioCategory('فلسفة', this); return false;"><span>🧠</span> <span data-i18n="catPhilosophy">فلسفة</span></a></li>
-        <li class="category-item"><a href="#" onclick="filterAudioCategory('تنمية ذاتية', this); return false;"><span>🌿</span> <span data-i18n="catSelfDev">تنمية ذاتية</span></a></li>
-        <li class="category-item"><a href="#" onclick="filterAudioCategory('تاريخ', this); return false;"><span>🏰</span> <span data-i18n="catHistory">تاريخ</span></a></li>
-        <li class="category-item"><a href="#" onclick="filterAudioCategory('علم النفس', this); return false;"><span>Ψ</span> <span data-i18n="catPsychology">علم النفس</span></a></li>
-        <li class="category-item"><a href="#" onclick="filterAudioCategory('دين وروحانيات', this); return false;"><span>🪷</span> <span data-i18n="catSpirituality">دين وروحانيات</span></a></li>
-      </ul>
-    </aside>
-
-    <!-- Main Container Area -->
-    <div class="main-area">
-
-      <!-- Top Header -->
-      <header class="top-header">
-        <button class="audio-mobile-menu-btn" onclick="toggleAudioSidebar()" aria-label="فتح القائمة">☰</button>
-
-        <div class="search-box" onclick="openGlobalSearchModal()" style="cursor: pointer;">
-          <span class="search-icon">🔍</span>
-          <input type="text" class="search-input" id="audioSearchInput" placeholder="ابحث عن كتاب، مقال، أو مؤلف... (Ctrl+K)" readonly onclick="openGlobalSearchModal()">
-        </div>
-
-        <div class="top-actions" style="display:flex;align-items:center;gap:12px;">
-          <!-- Language Selector -->
-          <div style="position:relative;" id="audioLangSelectorWrap">
-            <button id="audioLangBtn" onclick="toggleAudioLangDropdown()" style="display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.04);border:1px solid rgba(223,177,91,0.3);border-radius:20px;padding:7px 14px;color:var(--gold-light);font-size:0.82rem;font-weight:700;cursor:pointer;transition:all 0.2s;" aria-label="Language Selector">
-              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-              <span id="audioActiveLangName">العربية</span>
-              <span>▾</span>
-            </button>
-            <div id="audioLangDropdown" style="display:none;position:absolute;top:calc(100% + 8px);left:0;background:#0F1611;border:1px solid rgba(223,177,91,0.3);border-radius:14px;padding:6px;z-index:9999;min-width:130px;box-shadow:0 8px 24px rgba(0,0,0,0.8);">
-              <button data-lang="ar" onclick="setAudioLang('ar')" class="audio-lang-opt" style="display:block;width:100%;text-align:right;padding:8px 12px;background:transparent;border:none;color:var(--ivory);font-size:0.88rem;cursor:pointer;border-radius:10px;transition:background 0.15s;">العربية (AR)</button>
-              <button data-lang="fr" onclick="setAudioLang('fr')" class="audio-lang-opt" style="display:block;width:100%;text-align:right;padding:8px 12px;background:transparent;border:none;color:var(--ivory);font-size:0.88rem;cursor:pointer;border-radius:10px;transition:background 0.15s;">Français (FR)</button>
-              <button data-lang="en" onclick="setAudioLang('en')" class="audio-lang-opt" style="display:block;width:100%;text-align:right;padding:8px 12px;background:transparent;border:none;color:var(--ivory);font-size:0.88rem;cursor:pointer;border-radius:10px;transition:background 0.15s;">English (EN)</button>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <!-- Scrollable Body -->
-      <main class="content-body">
-
-        <!-- ======================================================== -->
-        <!-- STATE 1: MAIN AUDIO LIBRARY GRID (Image 2)                -->
-        <!-- ======================================================== -->
-        <div id="libraryGridView">
-          <div class="page-title-row">
-            <div class="page-title-group">
-              <h1><span>📚</span> <span data-i18n="audioLibraryTitle">المكتبة الصوتية</span></h1>
-              <div class="page-subtitle" id="audioLibrarySubtitle" data-i18n="audioLibrarySubtitle">7 كتب صوتية (الروايات الصوتية الرئيسية)</div>
-            </div>
-
-            <div class="view-controls">
-              <select class="sort-select" onchange="filterBooksBySort(this.value)">
-                <option value="default" data-i18n-opt="sortLatest">الأحدث</option>
-                <option value="popular" data-i18n-opt="sortPopular">الأكثر استماعاً</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Featured Audiobooks Grid -->
-          <div class="audiobooks-grid" id="booksGrid">
-
-            <!-- Book 1: L'Alchimiste -->
-            <div class="audiobook-card" data-category="فلسفة تنمية ذاتية" onclick="openBookDetail('alchemist')">
-              <div class="card-cover-wrapper">
-                <img src="../audio_alchemist_cover.jpg" alt="الخيميائي" class="card-cover-img">
-                <div class="cover-overlay-content">
-                  <div class="cover-main-title">الخيميائي</div>
-                  <div class="cover-sub-title">باولو كويلو</div>
-                </div>
-                <div class="duration-badge">13m 09s</div>
-                <div class="play-overlay-btn"><div class="play-icon-circle">▶</div></div>
-              </div>
-              <div class="card-info">
-                <div class="info-text-group">
-                  <span class="card-arabic-title">الخيميائي</span>
-                  <span class="card-arabic-author">باولو كويلو</span>
-                  <span class="audio-lang-badge" data-i18n="audioAvailableInArabic" style="display:inline-block;font-size:0.72rem;margin-top:4px;color:var(--gold);opacity:0.85;">🎙️ الصوت متوفر بالعربية</span>
-                </div>
-                <button class="card-dots-btn">⋮</button>
-              </div>
-            </div>
-
-            <!-- Book 2: Crime et Châtiment (الجريمة والعقاب) -->
-            <div class="audiobook-card" data-category="فلسفة علم النفس" onclick="openBookDetail('crime_punishment')">
-              <div class="card-cover-wrapper">
-                <img src="../audio_crime_punishment_cover.jpg" alt="الجريمة والعقاب" class="card-cover-img">
-                <div class="cover-overlay-content">
-                  <div class="cover-main-title">الجريمة والعقاب</div>
-                  <div class="cover-sub-title">فيودور دوستويفسكي</div>
-                </div>
-                <div class="duration-badge">4h 15m</div>
-                <div class="play-overlay-btn"><div class="play-icon-circle">▶</div></div>
-              </div>
-              <div class="card-info">
-                <div class="info-text-group">
-                  <span class="card-arabic-title">الجريمة والعقاب</span>
-                  <span class="card-arabic-author">فيودور دوستويفسكي</span>
-                  <span class="audio-lang-badge" data-i18n="audioAvailableInArabic" style="display:inline-block;font-size:0.72rem;margin-top:4px;color:var(--gold);opacity:0.85;">🎙️ الصوت متوفر بالعربية</span>
-                </div>
-                <button class="card-dots-btn">⋮</button>
-              </div>
-            </div>
-
-            <!-- Book 3: L'Étranger (الغريب - ألبير كامو) -->
-            <div class="audiobook-card" data-category="فلسفة" onclick="openBookDetail('etranger')">
-              <div class="card-cover-wrapper">
-                <img src="./audio_etranger_cover.jpg" alt="الغريب" class="card-cover-img">
-                <div class="cover-overlay-content">
-                  <div class="cover-main-title">الغريب</div>
-                  <div class="cover-sub-title">ألبير كامو</div>
-                </div>
-                <div class="duration-badge">16m 05s</div>
-                <div class="play-overlay-btn"><div class="play-icon-circle">▶</div></div>
-              </div>
-              <div class="card-info">
-                <div class="info-text-group">
-                  <span class="card-arabic-title">الغريب</span>
-                  <span class="card-arabic-author">ألبير كامو</span>
-                  <span class="audio-lang-badge" data-i18n="audioAvailableInArabic" style="display:inline-block;font-size:0.72rem;margin-top:4px;color:var(--gold);opacity:0.85;">🎙️ الصوت متوفر بالعربية</span>
-                </div>
-                <button class="card-dots-btn">⋮</button>
-              </div>
-            </div>
-
-            <!-- Book 4: Le Petit Prince (الأمير الصغير - أنطوان دي سانت إكزوبيري) -->
-            <div class="audiobook-card" data-category="فلسفة تنمية ذاتية" onclick="openBookDetail('petit_prince')">
-              <div class="card-cover-wrapper">
-                <img src="./audio_petit_prince_cover.jpg" alt="الأمير الصغير" class="card-cover-img">
-                <div class="cover-overlay-content">
-                  <div class="cover-main-title">الأمير الصغير</div>
-                  <div class="cover-sub-title">أنطوان دي سانت إكزوبيري</div>
-                </div>
-                <div class="duration-badge">12m 27s</div>
-                <div class="play-overlay-btn"><div class="play-icon-circle">▶</div></div>
-              </div>
-              <div class="card-info">
-                <div class="info-text-group">
-                  <span class="card-arabic-title">الأمير الصغير</span>
-                  <span class="card-arabic-author">أنطوان دي سانت إكزوبيري</span>
-                  <span class="audio-lang-badge" data-i18n="audioAvailableInArabic" style="display:inline-block;font-size:0.72rem;margin-top:4px;color:var(--gold);opacity:0.85;">🎙️ الصوت متوفر بالعربية</span>
-                </div>
-                <button class="card-dots-btn">⋮</button>
-              </div>
-            </div>
-
-            <!-- Book 5: La Métamorphose (التحول / المسخ - فرانز كافكا) -->
-            <div class="audiobook-card" data-category="فلسفة علم النفس" onclick="openBookDetail('kafka')">
-              <div class="card-cover-wrapper">
-                <img src="./audio_kafka_cover.jpg" alt="التحول (المسخ)" class="card-cover-img">
-                <div class="cover-overlay-content">
-                  <div class="cover-main-title">التحول (المسخ)</div>
-                  <div class="cover-sub-title">فرانز كافكا</div>
-                </div>
-                <div class="duration-badge">12m 05s</div>
-                <div class="play-overlay-btn"><div class="play-icon-circle">▶</div></div>
-              </div>
-              <div class="card-info">
-                <div class="info-text-group">
-                  <span class="card-arabic-title">التحول (المسخ)</span>
-                  <span class="card-arabic-author">فرانز كافكا</span>
-                  <span class="audio-lang-badge" data-i18n="audioAvailableInArabic" style="display:inline-block;font-size:0.72rem;margin-top:4px;color:var(--gold);opacity:0.85;">🎙️ الصوت متوفر بالعربية</span>
-                </div>
-                <button class="card-dots-btn">⋮</button>
-              </div>
-            </div>
-
-            <!-- Book 6: Le Vieil Homme et la Mer (الشيخ والبحر - ارنست همنغواي) -->
-            <div class="audiobook-card" data-category="فلسفة تاريخ" onclick="openBookDetail('vieux')">
-              <div class="card-cover-wrapper">
-                <img src="./audio_vieux_cover.jpg" alt="الشيخ والبحر" class="card-cover-img">
-                <div class="cover-overlay-content">
-                  <div class="cover-main-title">الشيخ والبحر</div>
-                  <div class="cover-sub-title">ارنست همنغواي</div>
-                </div>
-                <div class="duration-badge">12m 56s</div>
-                <div class="play-overlay-btn"><div class="play-icon-circle">▶</div></div>
-              </div>
-              <div class="card-info">
-                <div class="info-text-group">
-                  <span class="card-arabic-title">الشيخ والبحر</span>
-                  <span class="card-arabic-author">ارنست همنغواي</span>
-                  <span class="audio-lang-badge" data-i18n="audioAvailableInArabic" style="display:inline-block;font-size:0.72rem;margin-top:4px;color:var(--gold);opacity:0.85;">🎙️ الصوت متوفر بالعربية</span>
-                </div>
-                <button class="card-dots-btn">⋮</button>
-              </div>
-            </div>
-
-            <!-- Book 7: Lettres à Milena (رسائل إلى ميلينا - فرانز كافكا) -->
-            <div class="audiobook-card" data-category="فلسفة دين وروحانيات" onclick="openBookDetail('milena')">
-              <div class="card-cover-wrapper">
-                <img src="./audio_milena_cover.jpg" alt="رسائل إلى ميلينا" class="card-cover-img">
-                <div class="cover-overlay-content">
-                  <div class="cover-main-title">رسائل إلى ميلينا</div>
-                  <div class="cover-sub-title">فرانز كافكا</div>
-                </div>
-                <div class="duration-badge">09m 45s</div>
-                <div class="play-overlay-btn"><div class="play-icon-circle">▶</div></div>
-              </div>
-              <div class="card-info">
-                <div class="info-text-group">
-                  <span class="card-arabic-title">رسائل إلى ميلينا</span>
-                  <span class="card-arabic-author">فرانز كافكا</span>
-                  <span class="audio-lang-badge" data-i18n="audioAvailableInArabic" style="display:inline-block;font-size:0.72rem;margin-top:4px;color:var(--gold);opacity:0.85;">🎙️ الصوت متوفر بالعربية</span>
-                </div>
-                <button class="card-dots-btn">⋮</button>
-              </div>
-            </div>
-
-          </div><!-- /#booksGrid -->
-
-
-        </div>
-
-
-        <!-- ======================================================== -->
-        <!-- STATE 2: DETAILED BOOK & CHAPTERS PLAYLIST VIEW (Image 1)  -->
-        <!-- ======================================================== -->
-        <div id="bookDetailView">
-
-          <!-- Top Navigation Back Button -->
-          <div class="detail-top-nav">
-            <button class="back-btn" onclick="showLibraryGrid()">
-              <span id="backBtnArrow">←</span> <span data-i18n="backToLibrary">العودة إلى المكتبة</span>
-            </button>
-            <button class="share-btn" onclick="openShareModal('audio')"><span>🔗</span> <span data-i18n="shareBtn">مشاركة</span></button>
-          </div>
-
-          <!-- Hero Book Banner -->
-          <div class="book-hero-banner">
-            <img src="../audio_alchemist_cover.jpg" alt="الخيميائي Cover" class="detail-cover-img" id="detailCoverImg">
-
-            <div class="detail-meta-box">
-              <h1 class="detail-title" id="detailBookTitle">الخيميائي</h1>
-              <div class="detail-author" id="detailBookAuthor">باولو كويلو</div>
-
-              <div class="detail-badges-row">
-                <span class="meta-pill" id="detailChaptersCount">12 فصول</span>
-                <span class="meta-pill" id="detailTotalDuration">6 ساعة 42 دقيقة</span>
-                <span class="meta-pill">رواية ملهمة</span>
-                <span class="rating-stars">★★★★☆ 4.9 (1,248 تقييم)</span>
-                <span class="meta-pill" id="detailAudioLangBadge" data-i18n="audioAvailableInArabic" style="color:var(--gold);border-color:rgba(223,177,91,0.4);background:rgba(223,177,91,0.08);">🎙️ الصوت متوفر بالعربية</span>
-              </div>
-
-              <p class="detail-desc" id="detailBookDesc">
-                رحلة شاب أندلسي يبحث عن كنز في مصر، ليكتشف أن أعظم كنز في الدنيا يكمن في اتباعه لحلمه والإستماع إلى قلبه.
-              </p>
-
-              <div class="detail-actions-row">
-                <button class="btn-primary-play" onclick="playCurrentChapter(0)">
-                  <span>▶</span> <span data-i18n="listenBtn">متابعة الاستماع</span>
-                </button>
-                <button class="btn-sec-action" id="audioLikeBtn" onclick="toggleAudioLike()">
-                  <span id="audioLikeIcon">❤️</span> <span id="audioLikeText" data-i18n="likeBtn">إعجاب</span> (<span id="audioLikeCount">1,248</span>)
-                </button>
-                <button class="btn-sec-action" onclick="openShareModal('audio')">
-                  <span>🔗</span> <span data-i18n="shareBtn">مشاركة</span>
-                </button>
-
-              </div>
-            </div>
-          </div>
-
-          <!-- 2-Column Split: Left Chapters List, Right Widgets -->
-          <div class="detail-split-layout">
-
-            <!-- Left Main Column: Tabs & Chapters List -->
-            <div>
-              <div class="detail-tabs-bar" id="tabsBar">
-                <button class="tab-btn active" onclick="switchTab('chapters', this)" data-i18n="tabChapters">الفصول</button>
-                <button class="tab-btn" onclick="switchTab('about', this)" data-i18n="tabAbout">عن الكتاب</button>
-                <button class="tab-btn" onclick="switchTab('quotes', this)" data-i18n="tabQuotes">إقتباسات</button>
-
-              </div>
-
-              <!-- TAB: Chapters -->
-              <div id="tabChapters">
-                <h3 style="font-size: 1.15rem; color: var(--gold-light); margin-bottom: 16px;" data-i18n="chaptersListTitle">قائمة الفصول</h3>
-                <!-- Chapters List (Matching Image 1) -->
-                <div class="chapters-playlist" id="chaptersPlaylistRows">
-                  <!-- Chapters will be rendered dynamically by JS -->
-                </div>
-              </div>
-
-              <!-- TAB: About -->
-              <div id="tabAbout" style="display:none;">
-                <div id="aboutBookContent" style="padding: 8px 0;"></div>
-              </div>
-
-              <!-- TAB: Quotes -->
-              <div id="tabQuotes" style="display:none;">
-                <div class="quote-box" style="margin-top:16px;font-size:1.1rem;">«لا يوجد شيء أصعب من الصدق، ولا شيء أسهل من الأكاذيب.»</div>
-                <div class="quote-box" style="margin-top:12px;">«الألم والمعاناة ضروريان دائماً للوعي الكبير والقلب الرفيع.»</div>
-              </div>
-
-
-            </div>
-
-            <!-- Right Column Widgets (Matching Image 1) -->
-            <div class="right-widgets-column">
-
-              <!-- Player Mini Widget -->
-              <div class="widget-box mini-player-widget">
-                <img src="../audio_alchemist_cover.jpg" alt="Thumb" class="mini-thumb" id="widgetThumb">
-                <h4 style="font-size: 1.05rem; color: var(--ivory);" id="widgetTrackTitle">الخيميائي</h4>
-                <p style="font-size: 0.8rem; color: var(--text-muted);" id="widgetChapTitle">الفصل الأول — الحلم الذي بدأ كل شيء</p>
-
-                <div class="mini-controls-row">
-                  <button class="player-btn-sec" onclick="rewind10()">↺ 15s</button>
-                  <button class="mini-btn-play" onclick="togglePlay()"><span id="widgetPlayIcon">▶</span></button>
-                  <button class="player-btn-sec" onclick="forward10()">↻ 15s</button>
-                </div>
-              </div>
-
-              <!-- Chapter Quote Box Widget -->
-              <div class="widget-box">
-                <div class="widget-title"><span>FORMAT</span> اقتباس من الفصل</div>
-                <div class="quote-box">
-                  «عندما تريد شيئاً بشدة، فإن كل الكون يتآمر لمساعدتك على تحقيقه.»
-                </div>
-                <button class="btn-sec-action" style="width: 100%; justify-content: center;">حفظ الاقتباس</button>
-              </div>
-
-              <!-- Recommendations Widget -->
-              <div class="widget-box">
-                <div class="widget-title">قد يعجبك أيضاً</div>
-
-                <div id="recommendationsContainer">
-                  <div class="rec-item" onclick="openBookDetail('crime_punishment')" style="cursor:pointer;">
-                    <img src="./audio_crime_cover.jpg" class="rec-thumb" style="width:48px;height:48px;border-radius:8px;object-fit:cover;">
-                    <div class="rec-info">
-                      <h5 style="font-size:0.92rem;font-weight:700;color:var(--ivory);margin-bottom:2px;">الجريمة والعقاب</h5>
-                      <p style="font-size:0.78rem;color:var(--text-muted);margin:0;">فيودور دوستويفسكي</p>
-                    </div>
-                  </div>
-
-                  <div class="rec-item" onclick="openBookDetail('milena')" style="cursor:pointer;">
-                    <img src="./audio_milena_cover.jpg" class="rec-thumb" style="width:48px;height:48px;border-radius:8px;object-fit:cover;">
-                    <div class="rec-info">
-                      <h5 style="font-size:0.92rem;font-weight:700;color:var(--ivory);margin-bottom:2px;">رسائل إلى ميلينا</h5>
-                      <p style="font-size:0.78rem;color:var(--text-muted);margin:0;">فرانز كافكا</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- Subtle visual transition -->
-        <div style="margin-top:36px;margin-bottom:8px;height:1px;background:linear-gradient(90deg, transparent, rgba(223,177,91,0.25), transparent);backdrop-filter:blur(8px);"></div>
-      </main>
-    </div>
-
+  <!-- Background Decorative Glowing Orbs -->
+  <div class="glowing-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
   </div>
 
-  <!-- Sticky Bottom Audio Player Bar — Premium Redesign -->
-  <div class="bottom-player-bar" id="bottomPlayerBar">
+  <!-- Header Sticky Navigation Bar (Shared) -->
+  <header class="navbar-header">
+    <nav class="navbar" aria-label="Navigation principale">
+      <a href="../" class="nav-brand" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+        <img src="../brand_logo_official.png" alt="Hikma & Nour" class="brand-logo-img">
+        <div style="display: flex; flex-direction: column; line-height: 1.1; text-align: left;">
+          <span class="brand-name" style="font-size: 1.15rem; font-weight: 800; font-family: 'Playfair Display', serif; color: var(--text-primary);">HIKMA & NOUR</span>
+          <span style="font-size: 0.6rem; font-weight: 600; color: var(--text-secondary); letter-spacing: 0.5px;" data-i18n="footerBrandTagline">الحكمة • الفلسفة • علم النفس</span>
+        </div>
+      </a>
+      
+      <!-- Hamburger Menu for Mobile -->
+      <button class="nav-hamburger" id="navHamburger" aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <!-- Navigation Menu -->
+      <div class="nav-menu" id="navMenu">
+        <a href="../" class="nav-link" data-i18n="home">الرئيسية</a>
+        
+        <div class="nav-dropdown-item" id="articlesDropdownContainer">
+          <a href="../articles/" class="nav-link" id="articlesNavLink" data-i18n="articles">المقالات</a>
+          <div class="nav-sub-menu" id="articlesSubMenu">
+            <a href="../articles/?category=philosophy" class="sub-link" data-category="philosophy" data-i18n="philosophy">الفلسفة</a>
+            <a href="../articles/?category=psychology" class="sub-link" data-category="psychology" data-i18n="psychologySub">علم النفس</a>
+            <a href="../articles/?category=development" class="sub-link" data-category="development" data-i18n="development">تطوير الذات</a>
+            <a href="../articles/?category=history" class="sub-link" data-category="history" data-i18n="history">تاريخ الأفكار</a>
+            <a href="../articles/?category=all" class="sub-link see-all" data-category="all" data-i18n="seeAll">عرض جميع المقالات ←</a>
+          </div>
+        </div>
 
-    <!-- Left: Cover + Track Info -->
-    <div class="player-track-info">
-      <div class="player-thumb-wrapper">
-        <img src="../audio_alchemist_cover.jpg" alt="صورة الغلاف / Audiobook Cover" class="player-thumb" id="playerThumbImg">
-        <div class="player-thumb-glow"></div>
+        <a href="../thinkers/" class="nav-link" data-i18n="thinkers">الفلاسفة</a>
+        <a href="../quotes/" class="nav-link" data-i18n="quotes">اقتباسات</a>
+        <a href="./" class="nav-link active" data-i18n="audio">الصوتيات</a>
+        <a href="../bio.html" class="nav-link" data-i18n="about">من نحن</a>
+        <a href="../#contactSection" class="nav-link" data-i18n="contactNav">اتصل بنا</a>
+
+        <!-- Controls: Language Selector & Theme Toggle -->
+        <div class="nav-controls" style="display: flex; align-items: center; gap: 12px; margin-inline-start: 15px;">
+          <!-- Language Selector -->
+          <div class="lang-selector-container">
+            <button class="lang-btn" id="langBtn" aria-label="Choisir la langue">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              <span id="activeLangName">العربية</span>
+              <span class="dropdown-arrow">▼</span>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+              <button class="lang-opt active" data-lang="ar">العربية (AR)</button>
+              <button class="lang-opt" data-lang="fr">Français (FR)</button>
+              <button class="lang-opt" data-lang="en">English (EN)</button>
+            </div>
+          </div>
+
+          <!-- Theme Toggle -->
+          <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Basculer le thème">
+            <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+        </div>
       </div>
+    </nav>
+  </header>
+
+  <!-- Main Audio Page Layout Container -->
+  <div class="audio-page-container">
+    <main class="main-content">
+
+      <!-- ======================================================== -->
+      <!-- STATE 1: MAIN AUDIO LIBRARY CATALOG VIEW                 -->
+      <!-- ======================================================== -->
+      <div id="libraryGridView">
+        
+        <!-- Hero Header -->
+        <section class="audio-hero-card" aria-labelledby="audioHeroTitle">
+          <div class="hero-badge-pill">
+            <span>🎧</span> <span id="heroBadgeText">المكتبة الصوتية للحكمة</span>
+          </div>
+          <h1 class="audio-hero-title" id="audioHeroTitle">المكتبة الصوتية</h1>
+          <p class="audio-hero-subtitle" id="audioHeroSubtitle">« استمع... تأمل... وغيّر نظرتك إلى الحياة. »</p>
+          <p class="audio-hero-desc" id="audioHeroDesc">روائع الأدب العالمي، الفلسفة وعلم النفس مسموعة بنبرة هادئة ورصينة.</p>
+          
+          <div class="audio-lang-notice-pill">
+            <span>🎙️</span> <span id="audioLangNoticeText">الصوت متوفر باللغة العربية الفصحى</span>
+          </div>
+        </section>
+
+        <!-- Search & Filter Toolbar -->
+        <div class="audio-toolbar-row">
+          
+          <!-- Search Input -->
+          <div class="audio-search-wrapper">
+            <span class="audio-search-icon">🔍</span>
+            <input type="text" class="audio-search-input" id="audioSearchInput" placeholder="ابحث عن كتاب، مؤلف، أو فكرة..." aria-label="Rechercher un livre audio">
+            <button class="audio-search-clear-btn" id="audioSearchClearBtn" aria-label="Effacer la recherche">✕</button>
+          </div>
+
+          <!-- Categories Filter Bar -->
+          <nav class="audio-categories-bar" id="categoriesBar" aria-label="Catégories audio">
+            <button class="audio-cat-btn active" data-category="all" onclick="filterAudioCategory('all', this)">
+              <span>✨</span> <span data-i18n="catAll">الكل</span>
+            </button>
+            <button class="audio-cat-btn" data-category="philosophy" onclick="filterAudioCategory('philosophy', this)">
+              <span>🧠</span> <span data-i18n="catPhilosophy">فلسفة وفكر</span>
+            </button>
+            <button class="audio-cat-btn" data-category="psychology" onclick="filterAudioCategory('psychology', this)">
+              <span>Ψ</span> <span data-i18n="catPsychology">علم النفس</span>
+            </button>
+            <button class="audio-cat-btn" data-category="classics" onclick="filterAudioCategory('classics', this)">
+              <span>🏰</span> <span data-i18n="catClassics">كلاسيكيات كبرى</span>
+            </button>
+            <button class="audio-cat-btn" data-category="selfdev" onclick="filterAudioCategory('selfdev', this)">
+              <span>🌿</span> <span data-i18n="catSelfDev">تنمية وحكمة</span>
+            </button>
+            <button class="audio-cat-btn" data-category="favorites" onclick="filterAudioCategory('favorites', this)">
+              <span>♥</span> <span data-i18n="catFavorites">المفضلة</span>
+            </button>
+            <button class="audio-cat-btn" data-category="in_progress" onclick="filterAudioCategory('in_progress', this)">
+              <span>⏳</span> <span data-i18n="catInProgress">قيد الاستماع</span>
+            </button>
+            <button class="audio-cat-btn" data-category="completed" onclick="filterAudioCategory('completed', this)">
+              <span>✓</span> <span data-i18n="catCompleted">المكتملة</span>
+            </button>
+          </nav>
+
+        </div>
+
+        <!-- ======================================================== -->
+        <!-- SECTION « À LA UNE » (FEATURED AUDIOBOOK)                 -->
+        <!-- ======================================================== -->
+        <section id="featuredAudioSection" aria-label="Œuvre à la une">
+          <!-- Populated dynamically via JS -->
+        </section>
+
+        <!-- ======================================================== -->
+        <!-- SECTION « CONTINUER L'ÉCOUTE » (RESUME PROGRESS)         -->
+        <!-- ======================================================== -->
+        <section id="continueListeningSection" aria-label="Continuer l'écoute">
+          <div class="section-editorial-heading">
+            <h2 class="section-editorial-title">
+              <span class="accent-icon">⏳</span> <span data-i18n="continueListeningTitle">واصل الاستماع</span>
+            </h2>
+          </div>
+          <div class="continue-grid" id="continueListeningGrid">
+            <!-- Populated dynamically if progress exists -->
+          </div>
+        </section>
+
+        <!-- ======================================================== -->
+        <!-- SECTION « TOUTE LA BIBLIOTHÈQUE » (CATALOG GRID)         -->
+        <!-- ======================================================== -->
+        <section id="allBooksSection" aria-label="Toute la bibliothèque">
+          <div class="section-editorial-heading">
+            <h2 class="section-editorial-title">
+              <span class="accent-icon">📚</span> <span data-i18n="allAudiobooksTitle">جميع الأعمال الصوتية</span>
+            </h2>
+            <div class="section-counter-badge">
+              <span id="audioBooksCount">7</span> <span data-i18n="audioBooksAvailableLabel">كتب وروايات متوفرة</span>
+            </div>
+          </div>
+
+          <!-- Catalog Grid -->
+          <div class="audiobooks-grid" id="booksGrid">
+            <!-- Dynamically populated via JS -->
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ======================================================== -->
+      <!-- STATE 2: BOOK DETAIL & CHAPTERS PLAYLIST VIEW            -->
+      <!-- ======================================================== -->
+      <div id="bookDetailView">
+        
+        <!-- Top Nav & Breadcrumbs -->
+        <div class="detail-top-nav-bar">
+          <nav class="detail-breadcrumbs" aria-label="Breadcrumb">
+            <a href="../" id="bHome">الرئيسية</a> &rsaquo; 
+            <a href="./" onclick="showLibraryGrid(); return false;" id="bAudio">الصوتيات</a> &rsaquo; 
+            <span class="active" id="bBookTitle">رسائل إلى ميلينا</span>
+          </nav>
+          <button class="detail-back-btn" onclick="showLibraryGrid()" aria-label="Retourner au catalogue">
+            <span id="detailBackArrow">←</span> <span id="detailBackText">العودة إلى المكتبة</span>
+          </button>
+        </div>
+
+        <!-- Book Hero Dossier Banner -->
+        <div class="book-hero-banner">
+          <img src="./audio_milena_cover.jpg" alt="Cover" class="detail-cover-img" id="detailCoverImg">
+
+          <div class="detail-meta-box">
+            <div class="pill-badge lang" style="align-self: flex-start; margin-bottom: 8px;">🎧 LIVRE AUDIO / كتاب صوتي</div>
+            <h1 class="detail-title" id="detailBookTitle">رسائل إلى ميلينا</h1>
+            <div class="detail-author" id="detailBookAuthor">فرانز كافكا</div>
+
+            <div class="detail-badges-row">
+              <span class="pill-badge" id="detailChaptersCount">4 فصول</span>
+              <span class="pill-badge" id="detailTotalDuration">10 دقائق</span>
+              <span class="pill-badge" id="detailCategoryTag">فلسفة وعلم النفس</span>
+              <span class="pill-badge lang" id="detailAudioLangBadge">🎙️ الصوت متوفر باللغة العربية</span>
+            </div>
+
+            <p class="detail-desc" id="detailBookDesc">
+              رسائل الشغف والخوف والهشاشة الإنسانية؛ بوح كافكا الصادق والمعذب إلى ميلينا ييسينسكا.
+            </p>
+
+            <div class="detail-actions-row">
+              <button class="btn-primary-play" id="detailMainPlayBtn" onclick="handleDetailMainPlay()">
+                <span>▶</span> <span id="detailListenBtnText">بدء الاستماع</span>
+              </button>
+              <button class="btn-sec-action" id="detailFavBtn" onclick="toggleDetailFav()" aria-label="Ajouter aux favoris">
+                <span id="detailFavIcon">♡</span> <span id="detailFavText">المفضلة</span>
+              </button>
+              <button class="btn-sec-action" id="detailShareBtn" onclick="shareCurrentAudio()" aria-label="Partager ce livre">
+                <span>🔗</span> <span id="detailShareText">مشاركة</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2-Column Split: Left Chapters & Tabs, Right Widgets -->
+        <div class="detail-split-layout">
+          
+          <!-- Left Column: Tabs & Content Panels -->
+          <div>
+            <div class="detail-tabs-bar" role="tablist" id="tabsBar" aria-label="Onglets du livre">
+              <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tabChapters" onclick="switchTab('chapters', this)" id="tabBtnChapters">قائمة الفصول</button>
+              <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tabAbout" onclick="switchTab('about', this)" id="tabBtnAbout">عن الرواية</button>
+              <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tabTakeaways" onclick="switchTab('takeaways', this)" id="tabBtnTakeaways">ماذا ستتعلم</button>
+              <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tabQuotes" onclick="switchTab('quotes', this)" id="tabBtnQuotes">اقتباسات</button>
+              <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tabAuthor" onclick="switchTab('author', this)" id="tabBtnAuthor">عن المؤلف</button>
+            </div>
+
+            <!-- Tab 1: Chapters Playlist -->
+            <div id="tabChapters" role="tabpanel" aria-labelledby="tabBtnChapters">
+              <div class="chapters-playlist" id="chaptersPlaylistRows">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+
+            <!-- Tab 2: About Book -->
+            <div id="tabAbout" role="tabpanel" aria-labelledby="tabBtnAbout" style="display:none;">
+              <div id="aboutBookContent" class="widget-box" style="line-height: 1.85;"></div>
+            </div>
+
+            <!-- Tab 3: Key Takeaways -->
+            <div id="tabTakeaways" role="tabpanel" aria-labelledby="tabBtnTakeaways" style="display:none;">
+              <div id="takeawaysBookContent" class="widget-box" style="line-height: 1.85;"></div>
+            </div>
+
+            <!-- Tab 4: Quotes -->
+            <div id="tabQuotes" role="tabpanel" aria-labelledby="tabBtnQuotes" style="display:none;">
+              <div id="quotesBookContent" class="widget-box" style="line-height: 1.85;"></div>
+            </div>
+
+            <!-- Tab 5: Author Bio -->
+            <div id="tabAuthor" role="tabpanel" aria-labelledby="tabBtnAuthor" style="display:none;">
+              <div id="authorBookContent" class="widget-box" style="line-height: 1.85;"></div>
+            </div>
+
+          </div>
+
+          <!-- Right Widgets Column -->
+          <div class="right-widgets-column">
+            
+            <!-- Chapter Highlight Quote Widget -->
+            <div class="widget-box">
+              <div class="widget-title"><span>✦</span> <span id="widgetQuoteTitle">اقتباس من العمل</span></div>
+              <div class="quote-box" id="widgetQuoteText">
+                «الحب هو أن تكون السكين التي أفتش بها في داخلي.»
+              </div>
+              <button class="btn-sec-action" style="width: 100%; justify-content: center;" onclick="copyWidgetQuote()">
+                <span id="widgetCopyQuoteText">نسخ الاقتباس</span>
+              </button>
+            </div>
+
+            <!-- Recommendations Widget (Continue Listening) -->
+            <div class="widget-box">
+              <div class="widget-title"><span>🎧</span> <span id="widgetRecTitle">واصل الاستماع</span></div>
+              <div id="recommendationsContainer">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Bottom Fixed Audio Player Bar (Persistent Singleton Controller) -->
+  <div class="bottom-player-bar" id="bottomPlayerBar" role="region" aria-label="Lecteur audio">
+    <!-- Left: Track info -->
+    <div class="player-track-info" onclick="handleMiniPlayerClick()" title="Ouvrir la fiche du livre">
+      <img src="./audio_milena_cover.jpg" alt="Cover" class="player-thumb" id="playerThumbImg">
       <div class="player-track-meta">
-        <div class="player-chap-badge" id="playerChapBadge">الفصل ١</div>
-        <h4 id="playerTitle">الفصل الأول — الحلم الذي بدأ كل شيء</h4>
-        <p id="playerSubtitle">الخيميائي • باولو كويلو</p>
+        <h4 id="playerTitle">رسائل إلى ميلينا — الفصل الأول</h4>
+        <p id="playerSubtitle">فرانز كافكا</p>
       </div>
     </div>
 
-    <!-- Center: Controls + Progress -->
+    <!-- Center: Player controls & Seeker -->
     <div class="player-controls-center">
       <div class="player-buttons">
-        <button class="player-btn-sec" onclick="playPrevChapter()" title="الفصل السابق">⏮</button>
-        <button class="player-btn-sec" onclick="rewind10()">↺ 15s</button>
-        <button class="player-btn-main" onclick="togglePlay()">
-          <span id="playerPlayIcon">▶</span>
-        </button>
-        <button class="player-btn-sec" onclick="forward10()">↻ 15s</button>
-        <button class="player-btn-sec" onclick="playNextChapter()" title="الفصل التالي">⏭</button>
+        <button class="player-btn-sec" onclick="playPrevChapter()" title="الفصل السابق" aria-label="Chapitre précédent">⏮</button>
+        <button class="player-btn-sec" onclick="rewind15()" title="تأخير 15 ثانية" aria-label="Reculer de 15 secondes">↺ 15s</button>
+        <button class="player-btn-main" onclick="togglePlay()" id="playerMainPlayBtn" aria-label="Lecture ou Pause">▶</button>
+        <button class="player-btn-sec" onclick="forward15()" title="تقديم 15 ثانية" aria-label="Avancer de 15 secondes">↻ 15s</button>
+        <button class="player-btn-sec" onclick="playNextChapter()" title="الفصل التالي" aria-label="Chapitre suivant">⏭</button>
       </div>
-
       <div class="bar-progress-container">
         <span id="barCurrentTime">00:00</span>
-        <div class="bar-progress-bg" onclick="seekAudioBar(event)" id="barProgressBg">
-          <div class="bar-progress-fill" id="barProgressFill">
-            <div class="bar-progress-thumb"></div>
-          </div>
+        <div class="bar-progress-bg" id="progressBarBg" onclick="seekAudioBar(event)" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progression de l'audio">
+          <div class="bar-progress-fill" id="barProgressFill"></div>
         </div>
         <span id="barTotalTime">00:00</span>
       </div>
     </div>
 
-    <!-- Right: Volume + Speed -->
+    <!-- Right: Speed, Timer & Volume -->
     <div class="player-right-controls">
-      <div class="player-speed-wrap">
-        <button class="player-btn-sec speed-btn" id="speedBtn" onclick="cycleSpeed()">1x</button>
-      </div>
+      <button class="player-btn-sec speed-btn" onclick="cycleSpeed()" id="speedBtn" aria-label="Vitesse de lecture">1x</button>
+      <button class="sleep-timer-btn" onclick="cycleSleepTimer()" id="sleepTimerBtn" title="Minuteur de veille" aria-label="Minuteur de veille">🌙</button>
       <div class="player-vol-wrap">
-        <span class="vol-icon" onclick="toggleMute()">🔊</span>
-        <input type="range" min="0" max="1" step="0.05" value="1" class="vol-slider" id="volSlider" oninput="setVolume(this.value)">
+        <span class="vol-icon" onclick="toggleMute()" id="volIcon" role="button" aria-label="Activer ou couper le son">🔊</span>
+        <input type="range" class="vol-slider" min="0" max="1" step="0.05" value="1" id="volSlider" oninput="setVolume(this.value)" aria-label="Contrôle du volume">
       </div>
-    </div>
-
-  </div>
-
-  <!-- Universal Share Modal -->
-  <div class="modal" id="shareModal" role="dialog" aria-modal="true" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:200000;align-items:center;justify-content:center;backdrop-filter:blur(10px);">
-    <div style="max-width:440px;width:90%;padding:28px;border-radius:24px;background:#0F1611;border:1px solid var(--gold);text-align:center;position:relative;box-shadow:0 20px 50px rgba(0,0,0,0.9);">
-      <button onclick="closeShareModal()" style="position:absolute;top:14px;left:18px;background:transparent;border:none;color:#fff;font-size:1.5rem;cursor:pointer;">&times;</button>
-      <h3 style="color:var(--gold-light);font-size:1.3rem;margin-bottom:8px;">🔗 مشاركة المحتوى</h3>
-      <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:20px;" id="shareModalSubtitle">شارِك هذا العمل الإنساني الرائع مع أصدقائك عبر المنصات التالية</p>
-      
-      <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:10px;margin-bottom:20px;">
-        <a id="shareWhatsapp" target="_blank" style="background:#25D366;color:#fff;padding:10px;border-radius:12px;text-decoration:none;font-weight:700;font-size:0.82rem;display:flex;flex-direction:column;align-items:center;gap:4px;"><span>🟢</span> واتساب</a>
-        <a id="shareTelegram" target="_blank" style="background:#0088cc;color:#fff;padding:10px;border-radius:12px;text-decoration:none;font-weight:700;font-size:0.82rem;display:flex;flex-direction:column;align-items:center;gap:4px;"><span>✈️</span> تلغرام</a>
-        <a id="shareTwitter" target="_blank" style="background:#1DA1F2;color:#fff;padding:10px;border-radius:12px;text-decoration:none;font-weight:700;font-size:0.82rem;display:flex;flex-direction:column;align-items:center;gap:4px;"><span>🐦</span> تويتر / X</a>
-      </div>
-
-      <div style="display:flex;align-items:center;gap:8px;background:rgba(0,0,0,0.5);border:1px solid var(--border-light);padding:8px 12px;border-radius:12px;">
-        <input type="text" id="shareUrlInput" readonly style="flex:1;background:transparent;border:none;color:#fff;font-size:0.8rem;outline:none;">
-        <button onclick="copyShareUrl()" style="background:var(--gold);color:#000;border:none;padding:6px 14px;border-radius:8px;font-weight:800;font-size:0.8rem;cursor:pointer;">نسخ</button>
-      </div>
-      <div id="copyToast" style="display:none;color:#34D399;font-size:0.82rem;font-weight:700;margin-top:10px;">✓ تم نسخ الرابط بنجاح إلى الحافظة!</div>
     </div>
   </div>
 
-  <!-- Audio Engine & View Switching Logic -->
-  <script>
-    let isPlaying = false;
-    let currentAudioEl = null;
-    let activeBookKey = 'alchemist';
-    let activeChapterIndex = 0;
-
-    const booksFullDatabase = {
-      alchemist: {
-        title: "الخيميائي",
-        author: "باولو كويلو",
-        cover: "../audio_alchemist_cover.jpg",
-        totalDuration: "13 دقيقة 09 ثواني",
-        desc: "رحلة شاب أندلسي يبحث عن كنز في مصر، ليكتشف أن أعظم كنز في الدنيا يكمن في اتباعه لحلمه والإستماع إلى قلبه.",
-        aboutText: `
-<h2 style="color:var(--gold-light);margin-bottom:6px;font-size:1.3rem;">📚 الخيميائي (L'Alchimiste) — ملخص الرواية الكاملة</h2>
-<p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:20px;">باولو كويلو · 1988 · رواية ملهمة وفلسفة الحياة</p>
-
-<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">🌟 الجزء الأول — الحلم والأسطورة الشخصية</h3>
-<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">تدور أحداث الرواية حول <strong>سنتياغو</strong>، راعي غنم أندلسي شاب، يتكرر لديه حلم غريب برؤية كنز مخبوء عند أهرامات مصر. يزور غجرية مفسرة للأحلام، ثم يلتقي بملك حكيم غامض يُدعى <strong>ملكي صادق</strong> (ملك سالم). يشجعه الملك على السير وراء <em>«أسطورته الشخصية»</em> (الهدف الذي يرغب المرء في تحقيقه بحق في حياته) ويعطيه حجرين سحريين (أوريم وتوميم) لمساعدته في قراءة الإشارات.</p>
-
-<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">🐫 الجزء الثاني — الرحلة عبر الصحراء وطنجة</h3>
-<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">يبحر سنتياغو إلى طنجة في المغرب، غير أنه يتعرض للسرقة وتُسلب كل أمواله. يستجمع شجاعته ويعمل لدى تاجر زجاج بلوري، فينجح بفطنته في تنشيط التجارة وجمع المال الكافي لمتابعة السفر. ينضم بعد ذلك إلى قافلة تضرب في أعماق الصحراء الكبرى متجهة إلى مصر. في واحة الفيون، يلتقي بفتاة الصحراء <strong>فاطمة</strong> ويقع في حبها، كما يلتقي بـ<strong>الكيميائي الحكيم</strong> الذي يرافقه في الجزء الأخير من رحلته، معلماً إياه كيفية الاستماع إلى قلبه وفهم لغة العالم.</p>
-
-<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">✨ الجزء الثالث — الوصول إلى الأهرامات والكنز</h3>
-<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">يصل سنتياغو أخيراً إلى أهرامات مصر ويبدأ في الحفر بشغف بحثاً عن كنز أحلامه. يهاجمه بعض اللصوص وينقلبون عليه بالضرب، غير أن أحدهم يسخر منه قائلاً إنه هو الآخر كان يحلم بكنز مدفون تحت كنيسة قديمة في الأندلس حيث يستريح الراعي مع غنمه! حينئذٍ يدرك سنتياغو المفارقة المدهشة: الكنز كان في موطنه الأصلي طوال الوقت، لكن الرحلة كانت ضرورية ليتحول روحياً ويتعلم لغة الكون.</p>
-
-<div style="background:rgba(212,175,55,0.1);border-right:3px solid var(--gold-light);padding:14px 16px;border-radius:6px;margin-top:14px;">
-  <p style="color:var(--gold-light);font-weight:600;margin-bottom:6px;">💡 الحكمة الكبرى للرواية</p>
-  <p style="line-height:1.75;color:var(--text-primary);margin:0;">«عندما تريد شيئاً بشدة، فإن كل الكون يتآمر لمساعدتك على تحقيقه.» الكنز الحقيقي ليس بالضرورة المال، بل التحول الروحي والشجاعة في اتباع الحلم والإنصات لصوت القلب.</p>
-</div>`,
-        chapters: [
-          { num: 1, name: "الفصل الأول", desc: "راعي الغنم سنتياغو والحلم بالكنز في الأهرامات", duration: "02:32", src: "alchimiste_chapitre1.mp3" },
-          { num: 2, name: "الفصل الثاني", desc: "لقاء ملك سالم والأسطورة الشخصية", duration: "02:50", src: "alchimiste_chapitre2.mp3" },
-          { num: 3, name: "الفصل الثالث", desc: "الرحيل إلى طنجة وتجارة الزجاج البلوري", duration: "02:12", src: "alchimiste_chapitre3.mp3" },
-          { num: 4, name: "الفصل الرابع", desc: "رحلة القافلة عبر الصحراء ولقاء الكيميائي", duration: "02:25", src: "alchimiste_chapitre4.mp3" },
-          { num: 5, name: "الفصل الخامس", desc: "الوصول إلى الأهرامات واكتشاف الكنز الحقيقي", duration: "03:10", src: "alchimiste_chapitre5.mp3" }
-        ]
-      },
-      crime_punishment: {
-        title: "الجريمة والعقاب",
-        author: "فيودور دوستويفسكي",
-        cover: "../audio_crime_punishment_cover.jpg",
-        totalDuration: "4 ساعة 15 دقيقة",
-        desc: "شاهكار دوستويفسكي الخالدة عن النفس البشرية والصراع بين الخير والشر ومفهوم العدالة والضمير.",
-        aboutText: `
-<h2 style="color:var(--gold-light);margin-bottom:6px;font-size:1.3rem;">📚 الجريمة والعقاب — ملخص الرواية الكاملة</h2>
-<p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:20px;">فيودور دوستويفسكي · 1866 · رواية نفسية فلسفية</p>
-
-<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">⚡ الجزء الأول — الفكرة والجريمة</h3>
-<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;"><strong>رودي راسكولنيكوف</strong>، طالب جامعي فقير في سانت بطرسبرغ، يعاني من شدة الفقر ويعيش في شقة مستأجرة ضيقة كالخزانة. يُطوّر نظرية فلسفية خطيرة مفادها أن البشر ينقسمون إلى فئتين: <em>«العاديون»</em> المقيّدون بالقانون، و<em>«العظماء»</em> الذين يحق لهم تجاوز القانون لخدمة الإنسانية — كنابليون وغيره. يقنع نفسه بأنه من الفئة الثانية، فيُخطّط لقتل آلينا إيفانوفنا، المرابية العجوز الجشعة التي يراها "قملة" تمتص دماء الفقراء. ينفّذ الجريمة بفأس، لكن يُفاجأ بحضور أخت العجوز ليزافيتا البريئة فيقتلها هي الأخرى. يفرّ مرتجفاً وهو منهك نفسياً.</p>
-
-<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">🌡️ الجزء الثاني — الهذيان والتحقيق</h3>
-<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">يصاب راسكولنيكوف بحمى شديدة ويظل طريح الفراش لأيام بسبب الصدمة النفسية. يستقبل زيارة صديقه <strong>رازوميخين</strong> الوفيّ الذي يُقدّم له المساعدة. يتعرف على المحقق الذكي <strong>بورفيري بيتروفيتش</strong> الذي يلتقي به عدة مرات ويبدأ بمناوشته فكرياً دون أن يملك دليلاً ملموساً. يلتقي راسكولنيكوف كذلك بـ<strong>سونيا مارميلادوف</strong>، الفتاة التي اضطُرّت للدعارة لإطعام أسرتها — وهي تمثّل رمز الإيمان والتضحية في الرواية.</p>
-
-<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">😈 الجزء الثالث — سفيدريغايلوف والإغراء</h3>
-<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">يظهر <strong>سفيدريغايلوف</strong>، رجل شرير غامض يُجسّد الانحلال الأخلاقي التام — نقيض راسكولنيكوف، إذ هو اختار الشر دون أي وخز من ضمير. يُحاول الاقتراب من أخت راسكولنيكوف <strong>دونيا</strong> لكنها ترفضه بحزم. تنخرط دونيا في علاقة مع المحامي الانتهازي <strong>لوجين</strong> الذي يسعى لإخضاعها مالياً، غير أن راسكولنيكوف يكشف نواياه ويُبعد لوجين عنها.</p>
-
-<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">💔 الجزء الرابع — الاعتراف لسونيا</h3>
-<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">يفقد راسكولنيكوف السيطرة على نفسه تدريجياً. الجريمة لم تمنحه الحرية التي توقّعها، بل سجنته في عذاب داخلي لا ينتهي. يذهب إلى سونيا ويعترف لها بجريمته. سونيا، رغم صدمتها، لا تُدينه بل تُحبّه وتُشجّعه على الاعتراف للشرطة وتحمّل العقوبة طريقاً للخلاص. تقرأ له قصة <em>إحياء لعازر</em> من الإنجيل — رمز البعث والأمل.</p>
-
-<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">⚖️ الجزء الخامس — نهاية سفيدريغايلوف والضغط</h3>
-<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">يُضيّق المحقق بورفيري الخناق على راسكولنيكوف في مواجهة فكرية حادة، مُعلناً أنه يعرف أنه المجرم لكنه يريده أن يعترف طوعاً. في موازٍ لذلك، يُقدم سفيدريغايلوف على الانتحار بعد أن يُودع مبلغاً من المال لإنقاذ أطفال سونيا — لحظة رمزية تُظهر أن حتى أكثر الأشرار فساداً قد يحتفظ بشرارة إنسانية.</p>
-
-<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">🕊️ الخاتمة — الاعتراف والفداء</h3>
-<p style="line-height:1.85;color:var(--text-primary);margin-bottom:18px;">يسير راسكولنيكوف إلى مركز الشرطة ويعترف بجريمته. يُحكم عليه بالسجن ثماني سنوات في سيبيريا. تذهب سونيا معه طوعاً، وتظل بجانبه طوال فترة السجن. في نهاية الرواية، يبدأ راسكولنيكوف في الشعور بالندم الحقيقي والرغبة في الحياة من جديد — والبداية الحقيقية لتحوّله الروحي.</p>
-
-<div style="background:rgba(212,175,55,0.1);border-right:3px solid var(--gold-light);padding:14px 16px;border-radius:6px;margin-top:4px;">
-  <p style="color:var(--gold-light);font-weight:600;margin-bottom:6px;">💡 الرسالة الكبرى للرواية</p>
-  <p style="line-height:1.75;color:var(--text-primary);margin:0;">لا يمكن للإنسان أن يتجاوز ضميره مهما بالغ في تبرير أفعاله عقلياً. الجريمة لا تُحرّر — بل تُسجن. والخلاص الحقيقي لا يكون إلا بالاعتراف والمحبة والتضحية.</p>
-</div>`,
-        chapters: [
-          { num: 1, name: "الجزء الأول — الفصل الأول", desc: "راسكولنيكوف والشقة الضيقة — الفكرة الأولى للجريمة", duration: "02:14", src: "crime_et_chatiment_chapitre1.mp3" },
-          { num: 2, name: "الجزء الأول — الفصل الثاني", desc: "اللقاء مع مارميلادوف في الحانة", duration: "01:59", src: "crime_et_chatiment_chapitre2.mp3" },
-          { num: 3, name: "الجزء الأول — الفصل الثالث", desc: "رسالة الأم ودونيا — الصراع العائلي", duration: "02:13", src: "crime_et_chatiment_chapitre3.mp3" },
-          { num: 4, name: "الجزء الأول — الفصل الرابع", desc: "الحلم المروّع بالفرس المقتولة والاستيقاظ", duration: "02:10", src: "crime_et_chatiment_chapitre4.mp3" },
-          { num: 5, name: "الجزء الأول — الفصل الخامس", desc: "لحظة الحسم — راسكولنيكوف يرتكب الجريمة", duration: "02:01", src: "crime_et_chatiment_chapitre5.mp3" },
-          { num: 6, name: "الجزء الأول — الفصل السادس", desc: "الفرار بعد الجريمة — الذعر والهذيان الأول", duration: "00:57", src: "crime_partie1_chapitre6.mp3" },
-          { num: 7, name: "الجزء الأول — الفصل السابع", desc: "الإغماء في مركز الشرطة — الشك يبدأ", duration: "00:57", src: "crime_partie1_chapitre7.mp3" },
-          { num: 8, name: "الجزء الثاني — الفصل الأول", desc: "الحمى الشديدة — رازوميخين يعتني بصديقه", duration: "00:49", src: "crime_partie2_chapitre1.mp3" },
-          { num: 9, name: "الجزء الثالث — الفصل الخامس", desc: "المواجهة الأولى مع المحقق بورفيري", duration: "00:46", src: "crime_partie3_chapitre5.mp3" },
-          { num: 10, name: "الجزء الخامس — الفصل الرابع", desc: "الاعتراف لسونيا — قصة لعازر وبعثه", duration: "00:44", src: "crime_partie5_chapitre4.mp3" },
-          { num: 11, name: "الجزء السادس — الفصل الثامن", desc: "الاعتراف للشرطة — الطريق إلى سيبيريا والفداء", duration: "00:42", src: "crime_partie6_chapitre8.mp3" }
-        ]
-      },
-      etranger: {
-        title: "الغريب",
-        author: "ألبير كامو",
-        cover: "./audio_etranger_cover.jpg",
-        totalDuration: "16 دقيقة 05 ثواني",
-        desc: "تحفة ألبير كامو الفلسفية الخالدة عن العبثية واللامبالاة ولامبالاة الكون تجاه مصير الإنسان.",
-        aboutText: `
-<h2 style="color:var(--gold-light);margin-bottom:6px;font-size:1.3rem;">📚 الغريب (L'Étranger) — ملخص الرواية الكاملة</h2>
-<p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:20px;">ألبير كامو · 1942 · رواية العبثية والوجودية</p>
-
-<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">☀️ الجزء الأول — اللامبالاة والشمس الحارقة</h3>
-<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">يبدأ بطل الرواية <strong>ميرسو</strong> (Meursault)، موظف مكاتب بسيط في الجزائر العاصمة، بجملته الشهيرة: <em>«يوم ماتت أمي، أو ربما الأمس، لا أعرف»</em>. يحضر جنازة والدته في دار العجزة دون أن يذرف دمعة واحدة أو يظهر حزناً ظاهرياً. في اليوم التالي، يذهب للسباحة ويلتقي بزميلته القديمة <strong>ماري كاردونا</strong> ويبدأ معها علاقة عاطفية، ويتصادق مع جاره <strong>ريمون سينتيس</strong> الذي ينخرط في خلافات مع عصابة عربية. في يوم صيفي خانق تحت أشعة الشمس الحارقة على الشاطئ، يتواجه ميرسو مع شقيق صديقة ريمون. وتحت تأثير حرارة الشمس والضوء المبهر، يستلّ ميرسو مسدساً ويطلق النار على الرجل العربي فيقتله، ثم يطلق أربع رصاصات أخرى على الجثة المحتضرة دون سبب مفهوم.</p>
-
-<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">⚖️ الجزء الثاني — المحاكمة والمواجهة مع العبث</h3>
-<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">يُسجن ميرسو وتُجرى محاكمته. غير أن النيابة والقضاة لا يحاكمونه على الجريمة نفسها بقدر ما يحاكمونه على <strong>«عدم بكائه في جنازة والدته»</strong> وصعوبة فهم مشاعره الإنسانية، معتبرين أنه شخص بلا قلب ولا يملك روحاً. يُحكم عليه بالسجن والإعدام. في زنزانته الأخيرة، يرفض ميرسو زيارة القسيس ويرفض التظاهر بالإيمان أو الندم الزائف. في لحظة غضب وتفرغ روحي، يستوعب ميرسو <em>«اللامبالاة اللطيفة للكون»</em> ويجد سلامه الداخلي، متقبلاً مصيره الحتمي بروح حرّة ومستقلة.</p>
-
-<div style="background:rgba(212,175,55,0.1);border-right:3px solid var(--gold-light);padding:14px 16px;border-radius:6px;margin-top:14px;">
-  <p style="color:var(--gold-light);font-weight:600;margin-bottom:6px;">💡 الفلسفة الكبرى للرواية (فلسفة العبث)</p>
-  <p style="line-height:1.75;color:var(--text-primary);margin:0;">يرفض ميرسو الكذب وتصنع المشاعر المشروطة مجتمعياً. هو "غريب" لأنه يرفض لعب اللعبة الاجتماعية، ويواجه حقيقة العبث بعيون مفتوحة وبدون أوهام.</p>
-</div>`,
-        chapters: [
-          { num: 1, name: "الجزء الأول — الفصل الأول", desc: "وفاة الأم والجنازة في ماريينغو", duration: "01:39", src: "letranger_p1_ch1.mp3" },
-          { num: 2, name: "الجزء الأول — الفصل الثاني", desc: "العودة إلى أورليان واللقاء مع ماري", duration: "01:26", src: "letranger_p1_ch2.mp3" },
-          { num: 3, name: "الجزء الأول — الفصل الثالث", desc: "ريمون سينتيس والجارة المزعجة", duration: "01:24", src: "letranger_p1_ch3.mp3" },
-          { num: 4, name: "الجزء الأول — الفصل الرابع", desc: "الأحد على الشاطئ ومواجهة العرب", duration: "01:26", src: "letranger_p1_ch4.mp3" },
-          { num: 5, name: "الجزء الأول — الفصل الخامس", desc: "عرض الترقية ورغبة ماري بالزواج", duration: "01:22", src: "letranger_p1_ch5.mp3" },
-          { num: 6, name: "الجزء الأول — الفصل السادس", desc: "الشمس الحارقة والجريمة على الشاطئ", duration: "01:33", src: "letranger_p1_ch6.mp3" },
-          { num: 7, name: "الجزء الثاني — الفصل الأول", desc: "التحقيق الأول والقاضي والصليب", duration: "01:17", src: "letranger_p2_ch1.mp3" },
-          { num: 8, name: "الجزء الثاني — الفصل الثاني", desc: "السجن وزيارة ماري الأولى والأخيرة", duration: "01:14", src: "letranger_p2_ch2.mp3" },
-          { num: 9, name: "الجزء الثاني — الفصل الثالث", desc: "المحاكمة شهادات الشهود", duration: "01:14", src: "letranger_p2_ch3.mp3" },
-          { num: 10, name: "الجزء الثاني — الفصل الرابع", desc: "مرافعة المدعي العام وحكم الإعدام", duration: "01:12", src: "letranger_p2_ch4.mp3" },
-          { num: 11, name: "الجزء الثاني — الفصل الخامس", desc: "المواجهة مع القسيس والسلام النفسي الأخير", duration: "01:19", src: "letranger_p2_ch5.mp3" }
-        ]
-      },
-      petit_prince: {
-        title: "الأمير الصغير",
-        author: "أنطوان دي سانت إكزوبيري",
-        cover: "./audio_petit_prince_cover.jpg",
-        totalDuration: "12 دقيقة 27 ثواني",
-        desc: "تحفة أنطوان دي سانت إكزوبيري الشاعريّة عن الحب والصداقة ومعنى الحياة كما يراها قلب الطفل.",
-        aboutText: `
-<h2 style="color:var(--gold-light);margin-bottom:6px;font-size:1.3rem;">📚 الأمير الصغير (Le Petit Prince) — ملخص الرواية الكاملة</h2>
-<p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:20px;">أنطوان دي سانت إكزوبيري · 1943 · تحفة الأدب الإنساني والفلسفي</p>
-
-<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">✈️ الجزء الأول — اللقاء الشاعر في الصحراء</h3>
-<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">يبدأ السرد مع <strong>الطيار</strong> الذي يتعطل محرك طائرته في وسط الصحراء الكبرى. بينما يحاول إصلاح الأعطال، يفاجأ بظهور طفل صهباني الشعر غريب يُدعى <strong>«الأمير الصغير»</strong> يطلب منه رسم خروف. يتبادل الاثنان الحديث، فيكشف الأمير الصغير أنه قادم من كويكب صغير جداً يُدعى <em>B-612</em>، يحتوي على ثلاثة براكين صغيرة ووردة فريدة مغرورة يحبها كثيراً لكنه اختلف معها فقرر مغادرة كوكبه لاستكشاف الكون.</p>
-
-<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">🌌 الجزء الثاني — رحلة الكواكب وعيوب الكبار</h3>
-<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">يزور الأمير الصغير ستة كواكب مختلفة، يمثل كل كوكب منها عيباً من عيوب عالم الكبار: <strong>الملك</strong> الذي يريد السيطرة على كل شيء، <strong>المغرور</strong> الذي لا يريد سوى الإعجاب، <strong>السكير</strong> المزنوق في حلقة مفرغة، <strong>رجل الأعمال</strong> الذي يعد النجوم ويمتلكها، <strong>سقاء المصابيح</strong> المحكوم بالروتين المجهد، و<strong>الجغرافي</strong> الذي يكتب عن العالم دون أن يراه. يخلص الأمير الصغير إلى أن <em>«الكبار أشخاص غريبو الأطوار حقاً»</em>.</p>
-
-<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">🦊 الجزء الثالث — كوكب الأرض وسر الثعلب</h3>
-<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">يصل الأمير الصغير إلى كوكب الأرض، ويتعرف على <strong>الثعلب الذكي</strong> الذي يعلمه معنى «الترويض» وبناء الروابط الإنسانية الصادقة. يمنحه الثعلب السر العظيم للحياة: <em>«لا نرى جيدا إلا بالقلب، والشيء المهم لا تراه العيون»</em>. يدرك الأمير أن وردته فريدة في العالم بسبب الوقت والحب اللذين منحها إياهما. في النهاية، يعود الأمير الصغير إلى كوكبه ووردته عن طريق لدغة أفعى الصحراء الرمزية، تاركاً للطيار ضحكته النجمية في السماء.</p>
-
-<div style="background:rgba(212,175,55,0.1);border-right:3px solid var(--gold-light);padding:14px 16px;border-radius:6px;margin-top:14px;">
-  <p style="color:var(--gold-light);font-weight:600;margin-bottom:6px;">💡 الحكمة الكبرى للرواية</p>
-  <p style="line-height:1.75;color:var(--text-primary);margin:0;">«أنت مسؤول للأبد عما استأنسته وتوددت إليه.» الجمال الحقيقي والمشاعر الصادقة تكمن في البساطة وقدرتنا على النظر إلى العالم بقلب طفل، بعيداً عن مادية وجفاف عالم الكبار.</p>
-</div>`,
-        chapters: [
-          { num: 1, name: "الفصل الأول", desc: "الطيار واللوحة الأولى والأفعى البوّاعة", duration: "02:29", src: "petit_prince_chapitre1.mp3" },
-          { num: 2, name: "الفصل الثاني", desc: "الهبوط الاضطراري في الصحراء ولقاء الأمير الصغير", duration: "02:22", src: "petit_prince_chapitre2.mp3" },
-          { num: 3, name: "الفصل الثالث", desc: "كوكب الأمير الصغير والخروف الصغير", duration: "02:29", src: "petit_prince_chapitre3.mp3" },
-          { num: 4, name: "الفصل الرابع", desc: "الكويكب B-612 والوردة الكبرياء", duration: "02:22", src: "petit_prince_chapitre4.mp3" },
-          { num: 5, name: "الفصل الخامس", desc: "رحلة الكواكب واللقاء مع الثعلب والحكمة الكبرى", duration: "02:45", src: "petit_prince_chapitre5.mp3" }
-        ]
-      },
-      kafka: {
-        title: "التحول (المسخ)",
-        author: "فرانز كافكا",
-        cover: "./audio_kafka_cover.jpg",
-        totalDuration: "12 دقيقة 05 ثواني",
-        desc: "شاهكار فرانز كافكا الفلسفية عن الاغتراب الإنساني والتحول المروع لغريغور سامسا إلى حشرة ضخمة.",
-        aboutText: `
-<h2 style="color:var(--gold-light);margin-bottom:6px;font-size:1.3rem;">📚 التحول / المسخ (La Métamorphose) — ملخص الرواية الكاملة</h2>
-<p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:20px;">فرانز كافكا · 1915 · شاهكار الألغاز والأدب الكافكاوي</p>
-
-<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">🪲 الجزء الأول — الصدمة الأولى والتحول المروع</h3>
-<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">يستيقظ <strong>غريغور سامسا</strong>، البائع المتجول الكادح الذي يعيل أسرته، صباح أحد الأيام من أحلام مضطربة ليجد نفسه قد تحول على سريره إلى <em>«حشرة ضخمة مروعة»</em>. لا يقلق غريغور في البداية بشأن جسده الغريب، بل ينهمك في التفكير بكيفية اللحاق بالقطار خوفاً من فقدان وظائفه وتأخر دفع ديون والده. عندما يطرق مدير عمله وعائلته باب الغرفة المغلقة، يخرج غريغور بصعوبة فيصاب الجميع بالذهول والرعب الشديد، ويقوم والده بغضبه بطرده وإغلاق الباب عليه قسراً.</p>
-
-<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">🍂 الجزء الثاني — العزلة وتغير المعاملة العائلية</h3>
-<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">تتحول حياة غريغور إلى عزلة تامة داخل غرفته المظلمة. تبدأ أخته <strong>غريت</strong> في البداية بالاعتناء به وإحضار الطعام الفاسد الذي بات يفضله، غير أن التعاطف الأسري يقل تدريجياً مع مرور الوقت. يصبح الأب والأم والأخت مجبرين على العمل لكسب عيشهم، فتتحول الحشرة في نظرهم من ابن وأخ معيل إلى عبء ثقيل ومقزز. في إحدى اللحظات، يرمي الأب غريغور بتفاحة تغرس في ظهره وتتسبب له بإصابة خطيرة وتلوث مؤلم يستمر لأسابيع.</p>
-
-<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">🕯️ الجزء الثالث — الموت والتحرر الشاحب</h3>
-<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">تسوء الأحوال المالية للعائلة فيستأجرون غرفة في المنزل لثلاثة مستأجرين غرباء. في إحدى الليالي، تضرب أخته غريت على الكمان، فينجذب غريغور لشغف الموسيقى ويخرج من الغرفة، مما يرعب المستأجرين ويرفضون دفع الأجرة. حينها تعلن الأخت بحزم أنه <em>«يجب التخلص من هذا الشيء»</em>. يتألم غريغور نفساً وجسداً، وينكفئ في غرفته ليموت بسكون في الصباح الباكر. تشعر العائلة براحة كبيرة وتخرج في رحلة إلى الريف للتخطيط لمستقبل جديد.</p>
-
-<div style="background:rgba(212,175,55,0.1);border-right:3px solid var(--gold-light);padding:14px 16px;border-radius:6px;margin-top:14px;">
-  <p style="color:var(--gold-light);font-weight:600;margin-bottom:6px;">💡 المغزى والرمزية الفلسفية (الكافكاوية)</p>
-  <p style="line-height:1.75;color:var(--text-primary);margin:0;">ترمز الرواية إلى الاغتراب الإنساني والقسوة الاجتماعية؛ فغريغور كان محبوباً ومقبولاً فقط طالما كان آلة لإنتاج المال، وحين فقد قدرته الإنتاجية وتحول إلى حشرة، تخلت عنه أقرب الناس إليه.</p>
-</div>`,
-        chapters: [
-          { num: 1, name: "الفصل الأول", desc: "الاستيقاظ المروع بغريغور سامسا كحشرة ضخمة", duration: "02:42", src: "metamorphose_chapitre1.mp3" },
-          { num: 2, name: "الفصل الثاني", desc: "ذعر العائلة ورئيس العمل في الغرفة المغلقة", duration: "02:28", src: "metamorphose_chapitre2.mp3" },
-          { num: 3, name: "الفصل الثالث", desc: "الأخت غريت والعناية الفاترة بالطعام الفاسد", duration: "02:24", src: "metamorphose_chapitre3.mp3" },
-          { num: 4, name: "الفصل الرابع", desc: "إصابة غريغور بالتفاحة وعزلة السرير المظلم", duration: "02:08", src: "metamorphose_chapitre4.mp3" },
-          { num: 5, name: "الفصل الخامس", desc: "موت غريغور الهادئ وتحرر العائلة نحو المستقبلي", duration: "02:23", src: "metamorphose_chapitre5.mp3" }
-        ]
-      },
-      vieux: {
-        title: "الشيخ والبحر",
-        author: "ارنست همنغواي",
-        cover: "./audio_vieux_cover.jpg",
-        totalDuration: "12 دقيقة 56 ثواني",
-        desc: "تحفة ارنست همنغواي الحائزة على جائزة نوبل؛ صراع الصياد العجوز سانتياغو ضد البحر والسمكة والمصير.",
-        aboutText: `
-<h2 style="color:var(--gold-light);margin-bottom:6px;font-size:1.3rem;">📚 الشيخ والبحر (The Old Man and the Sea) — ملخص الرواية الكاملة</h2>
-<p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:20px;">ارنست همنغواي · 1952 · تحفة الأدب العالمي الحائزة على جائزة نوبل في الأدب</p>
-
-<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">⛵ الجزء الأول — سوء الحظ والعزلة في البحر</h3>
-<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">تبدأ الرواية في قريّة صيادين كوبية، حيث يعاني الصياد العجوز <strong>«سانتياغو»</strong> من سوء حظ عاثر بعد أن مضى 84 يوماً متواصلة دون أن يظفر بسمكة واحدة. أُرغم الصبي الشاب <strong>مانولين</strong>، المخلص للعجوز، على ترك قاربه بأمر من والديه، لكنه يظل يخدم سانتياغو بحب ويجهز له طعامه وطعمه. في اليوم الخامس والثمانين، يقرر سانتياغو الإبحار بمفرده بعيداً جداً في مياه الخليج الدافئة العميقة بثقة وعزيمة لا تتزعزع.</p>
-
-<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">🎣 الجزء الثاني — الملحمة الكبرى وصراع سمكة المارلين</h3>
-<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">تعلّق بخيط صيد العجوز سمكة ضخمة جداً من نوع <strong>«المارلين»</strong> (Marline)، تفوق قارب سانتياغو حجماً وقوة. يرفض العجوز الاستسلام، ويبدأ صراع أسطوري ملحمي يدوم ثلاثة أيام وليلتين تحت شمس البحر الحارقة والظلام الدامس. يعاني سانتياغو من جروح يديه، وتقلصات عضلاته، والجوع والعطش والإرهاق الشديد، غير أنه ينظر إلى السمكة باحترام وحب كبيرين كخصم نصر وعظمة. في اليوم الثالث، ينجح سانتياغو بجهد خرافي في طعن السمكة برُمحه وثقب قلبها ويربطها بجانب قاربه.</p>
-
-<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">🦈 الجزء الثالث — هجوم أسماك القرش والمجد الخالد</h3>
-<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">أثناء طريق العودة، تجذب رائحة دماء السمكة أسراباً متتالية من <strong>أسماك القرش المفترسة</strong>. يقاتل سانتياغو بشراسة نادرة دفاعاً عن صيده، مستخدماً رمحه، ثم حزم سكينه على مجداف، وأخيراً هراوة القارب، حتى تكسرت أسلحته تماماً. تلتهم أسماك القرش كل لحم السمكة، ولا يتبقى منها سوى الهيكل العظمي العظيم والرأس. يصل العجوز منهكاً ومحطماً إلى الميناء في ظلام الليل، وينهض إلى كوخه لينام بحلم الأراقم والأشبال، في حين يقف الصيادون والسيّاح مذهولين أمام ضخامة الهيكل العظمي، ويبكي الصبي مانولين متعهداً بالصيد معه دائماً.</p>
-
-<div style="background:rgba(212,175,55,0.1);border-right:3px solid var(--gold-light);padding:14px 16px;border-radius:6px;margin-top:14px;">
-  <p style="color:var(--gold-light);font-weight:600;margin-bottom:6px;">💡 المغزى والأمثولة الفلسفية الخالدة</p>
-  <p style="line-height:1.75;color:var(--text-primary);margin:0;">«الإنسان لا يُهزم؛ قد يُدمر الإنسان لكنه لا يُهزم أبداً.» تجسد الرواية الإرادة الإنسانية والكرامة في مواجهة قوى الطبيعة والمصير المحتوم، وأن النصر الحقيقي يكمن في الإصرار والمحاولة والنزاهة، لا في الغنيمة المادية فقط.</p>
-</div>`,
-        chapters: [
-          { num: 1, name: "الفصل الأول", desc: "الصياد العجوز سانتياغو والصبي مانولين في القرية", duration: "02:21", src: "old_man_sea_chapitre1.mp3" },
-          { num: 2, name: "الفصل الثاني", desc: "الإبحار إلى المياه العميقة وعلوق سمكة المارلين", duration: "02:28", src: "old_man_sea_chapitre2.mp3" },
-          { num: 3, name: "الفصل الثالث", desc: "الصراع الأسطوري والصمود تحت الشمس والليل", duration: "02:51", src: "old_man_sea_chapitre3.mp3" },
-          { num: 4, name: "الفصل الرابع", desc: "الانتصار على المارلين وهجوم أسماك القرش الأول", duration: "02:36", src: "old_man_sea_chapitre4.mp3" },
-          { num: 5, name: "الفصل الخامس", desc: "معركة العودة الأخيرة والهيكل العظمي والمجد الخالد", duration: "02:40", src: "old_man_sea_chapitre5.mp3" }
-        ]
-      },
-      milena: {
-        title: "رسائل إلى ميلينا",
-        author: "فرانز كافكا",
-        cover: "./audio_milena_cover.jpg",
-        totalDuration: "09 دقيقة 45 ثواني",
-        desc: "رسائل العشق والشغف والخوف الإنساني العميق التي كتبها فرانز كافكا إلى الصحفية ميلينا ييسينسكا.",
-        aboutText: `
-<h2 style="color:var(--gold-light);margin-bottom:6px;font-size:1.3rem;">📚 رسائل إلى ميلينا (Briefe an Milena) — ملخص الكتاب الكامل</h2>
-<p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:20px;">فرانز كافكا · 1920-1923 · واحدة من أعمق رسائل الحب والحيرة في الأدب العالمي</p>
-
-<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">💌 الجزء الأول — بداية المراسلة والتعلق الروحي</h3>
-<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">بدأت المراسلات عام 1920 عندما تواصلت الصحفية والمترجمة التشيكية <strong>«ميلينا ييسينسكا»</strong> مع كافكا لرغبتها في ترجمة قصصه إلى التشيكية. سرعان ما تحولت الرسائل الرسمية إلى تدفق وجداني وشغف روحي استثنائي. يعبر كافكا في رسائله الأولى عن دهشته من فهم ميلينا لخيالاته ونصوصه الغامضة، ليجد فيها مرآة لنفسه المعذبة وملجأً من عزلة براغ وتخبط المرض.</p>
-
-<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">🕯️ الجزء الثاني — الشغف والخوف من اللقاء</h3>
-<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">تتطور الرسائل لتكشف عن التناقض الصارخ في شخصية كافكا؛ بين رغبته العارمة في القرب من ميلينا وخوفه الفطري الشديد من التواجد الفعلي والالتزام. كانت ميلينا امرأة متزوجة تعيش في فيينا، بينما كان كافكا يعاني من مرض السل في مصحة بوهيمية. يكتب كافكا بصدق مؤلم: <em>«الكتابة هي تجريد للنفس أمام الشياطين»</em>، محذراً ميلينا من طبيعته السوداوية وهشاشة صحته ونفسه المتطلبة.</p>
-
-<h3 style="color:var(--gold-light);margin:16px 0 8px;font-size:1.05rem;">🕊️ الجزء الثالث — الفراق الهادئ والنهاية التراجيدية</h3>
-<p style="line-height:1.85;color:var(--text-primary);margin-bottom:14px;">رغم اللقاءات القليلة القصيرة التي جمعتهما في فيينا وبراغ، تتزايد الصعوبات بين الالتزامات العائلية لميلينا وعجز كافكا عن العيش السوي. يتوصل الاثنان تدريجياً إلى ضرورة إنهاء الرسائل لحماية أرواحهما من الاحتراق. تتوقف الرسائل عام 1923 قبل أشهر قليلة من وفاة كافكا، لتبقى هذه الرسائل وثيقة إنسانية ونفسية فريدة تظهر كافكا الإنساني، الضعيف، المحب، والممزق بين الرغبة في الحب والهروب منه.</p>
-
-<div style="background:rgba(212,175,55,0.1);border-right:3px solid var(--gold-light);padding:14px 16px;border-radius:6px;margin-top:14px;">
-  <p style="color:var(--gold-light);font-weight:600;margin-bottom:6px;">💡 المغزى والأمثولة الفلسفية</p>
-  <p style="line-height:1.75;color:var(--text-primary);margin:0;">«الحب هو أن تكون السكين التي أفتش بها في داخلي.» تبرز الرسائل أن الحب الصادق ليس مجرد سعادة سهلة، بل هو مواجهة عارية للذات بكل مخاوفها وعيوبها وهشاشتها أمام الآخر.</p>
-</div>`,
-        chapters: [
-          { num: 1, name: "الفصل الأول", desc: "بداية المراسلة بين براغ وفيينا والتعلق الروحي", duration: "02:38", src: "kafka_milena_chapitre1.mp3" },
-          { num: 2, name: "الفصل الثاني", desc: "الشغف المشتعل والتصريح بالحب المستحيل", duration: "02:17", src: "kafka_milena_chapitre2.mp3" },
-          { num: 3, name: "الفصل الثالث", desc: "الخوف الكافكاوي من المواجهة وقسوة المرض", duration: "02:17", src: "kafka_milena_chapitre3.mp3" },
-          { num: 4, name: "الفصل الرابع", desc: "الوداع الاخير والسلام النفسي التراجيدي", duration: "02:33", src: "kafka_milena_chapitre4.mp3" }
-        ]
-      },
-      meditations: {
-        title: "تأملات",
-        author: "ماركوس أوريليوس",
-        cover: "../marc_aurelius_writing.jpg",
-        totalDuration: "2 ساعة 15 دقيقة",
-        desc: "تأملات وأفكار الإمبراطور الرواقي ماركوس أوريليوس في السيطرة على النفس والعيش بحكمة.",
-        chapters: [
-          { num: 1, name: "الكتاب الأول", desc: "الامتنان والدروس الأولى", duration: "25:10", src: "wise_narrator_intro.mp3" },
-          { num: 2, name: "الكتاب الثاني", desc: "طبيعة الإنسان والسلام الداخلي", duration: "32:15", src: "wise_narrator_intro.mp3" }
-        ]
-      },
-      subtle_art: {
-        title: "فن اللامبالاة",
-        author: "مارك مانسون",
-        cover: "../stoicisme-modern.jpg",
-        totalDuration: "4 ساعة 07 دقيقة",
-        desc: "دليل عملي للعيش بحرية والتركيز على ما يهم حقاً في الحياة.",
-        chapters: [
-          { num: 1, name: "الفصل الأول", desc: "لا تحاول", duration: "28:10", src: "wise_narrator_intro.mp3" },
-          { num: 2, name: "الفصل الثاني", desc: "السعادة مشكلة", duration: "31:45", src: "wise_narrator_intro.mp3" }
-        ]
-      },
-      power_of_now: {
-        title: "قوة الآن",
-        author: "إيكهارت تول",
-        cover: "../tree_sunset_field.jpg",
-        totalDuration: "3 ساعة 21 دقيقة",
-        desc: "التحرر من قيود العقل والعيش في لحظة الحاضر المطلقة.",
-        chapters: [
-          { num: 1, name: "الفصل الأول", desc: "أنت لست عقلك", duration: "22:15", src: "wise_narrator_intro.mp3" }
-        ]
-      }
-    };
-
-    function showLibraryGrid() {
-      document.getElementById('libraryGridView').style.display = 'block';
-      document.getElementById('bookDetailView').style.display = 'none';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function switchTab(tabName, btn) {
-      // Update button states
-      document.querySelectorAll('#tabsBar .tab-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      // Show/hide panels
-      document.getElementById('tabChapters').style.display = tabName === 'chapters' ? 'block' : 'none';
-      document.getElementById('tabAbout').style.display   = tabName === 'about'    ? 'block' : 'none';
-      document.getElementById('tabQuotes').style.display  = tabName === 'quotes'   ? 'block' : 'none';
-    }
-
-    function openBookDetail(bookKey) {
-      activeBookKey = bookKey;
-      const book = booksFullDatabase[bookKey] || booksFullDatabase.alchemist;
-
-      document.getElementById('detailBookTitle').textContent = book.title;
-      document.getElementById('detailBookAuthor').textContent = book.author;
-      document.getElementById('detailCoverImg').src = book.cover;
-      document.getElementById('widgetThumb').src = book.cover;
-      document.getElementById('detailChaptersCount').textContent = `${book.chapters.length} فصول`;
-      document.getElementById('detailTotalDuration').textContent = book.totalDuration;
-      document.getElementById('detailBookDesc').textContent = book.desc;
-
-      // Populate About tab
-      const aboutEl = document.getElementById('aboutBookContent');
-      if (book.aboutText) {
-        aboutEl.innerHTML = book.aboutText;
-      } else {
-        aboutEl.innerHTML = `<p style="color:var(--text-muted);line-height:1.8;">${book.desc}</p>`;
-      }
-
-      // Reset to Chapters tab
-      switchTab('chapters', document.querySelector('#tabsBar .tab-btn'));
-
-      // Render Chapters List (Exact Match to Image 1)
-      const container = document.getElementById('chaptersPlaylistRows');
-      container.innerHTML = '';
-
-      book.chapters.forEach((chap, idx) => {
-        const item = document.createElement('div');
-        item.className = `chapter-row-item ${idx === 0 ? 'active' : ''}`;
-        item.onclick = function() { playCurrentChapter(idx); };
-
-        item.innerHTML = `
-          <div class="chap-left">
-            <div class="chap-play-btn">${idx === 0 ? '🔊' : '▶'}</div>
-            <div class="chap-text">
-              <h4>${chap.name} — ${chap.desc}</h4>
-              <p>${chap.duration} دقيقة</p>
-            </div>
-          </div>
-          <div class="chap-right">
-            <span>${chap.duration}</span>
-            <span class="download-icon" title="تحميل">📥</span>
-          </div>
-        `;
-        container.appendChild(item);
-      });
-
-      // Render dynamic recommendations from the 7 main books
-      renderRecommendations(bookKey);
-
-      document.getElementById('libraryGridView').style.display = 'none';
-      document.getElementById('bookDetailView').style.display = 'block';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function renderRecommendations(currentBookKey) {
-      const recContainer = document.getElementById('recommendationsContainer');
-      if (!recContainer) return;
-      const mainBooksKeys = ['alchemist', 'crime_punishment', 'etranger', 'petit_prince', 'kafka', 'vieux', 'milena'];
-      const otherKeys = mainBooksKeys.filter(k => k !== currentBookKey);
-      const recKeys = [otherKeys[0], otherKeys[1]];
-      
-      recContainer.innerHTML = '';
-      recKeys.forEach(k => {
-        const b = booksFullDatabase[k];
-        if (!b) return;
-        const div = document.createElement('div');
-        div.className = 'rec-item';
-        div.onclick = function() { openBookDetail(k); };
-        div.style.cursor = 'pointer';
-        div.innerHTML = `
-          <img src="${b.cover}" class="rec-thumb" style="width:48px;height:48px;border-radius:8px;object-fit:cover;">
-          <div class="rec-info">
-            <h5 style="font-size:0.92rem;font-weight:700;color:var(--ivory);margin-bottom:2px;">${b.title}</h5>
-            <p style="font-size:0.78rem;color:var(--text-muted);margin:0;">${b.author}</p>
-          </div>
-        `;
-        recContainer.appendChild(div);
-      });
-    }
-
-    function filterAudioCategory(category, el) {
-      showLibraryGrid();
-
-      document.querySelectorAll('#categories .category-item').forEach(item => item.classList.remove('active'));
-      if (el) {
-        const parentLi = el.closest('.category-item');
-        if (parentLi) parentLi.classList.add('active');
-      }
-
-      const cards = document.querySelectorAll('.audiobook-card');
-      let count = 0;
-      cards.forEach(card => {
-        const cardCats = card.getAttribute('data-category') || '';
-        if (category === 'all' || cardCats.includes(category)) {
-          card.style.display = 'block';
-          count++;
-        } else {
-          card.style.display = 'none';
-        }
-      });
-
-      const subtitle = document.querySelector('.page-subtitle');
-      if (subtitle) {
-        subtitle.textContent = category === 'all' 
-          ? `7 كتب صوتية (الروايات الصوتية الرئيسية)` 
-          : `${count} كتب صوتية في تصنيف ${category}`;
-      }
-    }
-
-    function playCurrentChapter(chapterIndex) {
-      activeChapterIndex = chapterIndex;
-      const book = booksFullDatabase[activeBookKey] || booksFullDatabase.alchemist;
-      const chap = book.chapters[chapterIndex] || book.chapters[0];
-
-      // Highlight active chapter row
-      const rows = document.querySelectorAll('.chapter-row-item');
-      rows.forEach((row, idx) => {
-        if (idx === chapterIndex) {
-          row.classList.add('active');
-          row.querySelector('.chap-play-btn').textContent = '🔊';
-        } else {
-          row.classList.remove('active');
-          row.querySelector('.chap-play-btn').textContent = '▶';
-        }
-      });
-
-      // Update premium player bar
-      document.getElementById('playerChapBadge').textContent = `الفصل ${chapterIndex + 1}`;
-      document.getElementById('playerTitle').textContent = `${chap.name} — ${chap.desc}`;
-      document.getElementById('playerSubtitle').textContent = `${book.title} • ${book.author}`;
-      document.getElementById('playerThumbImg').src = book.cover;
-      document.getElementById('barTotalTime').textContent = chap.duration;
-      document.getElementById('barCurrentTime').textContent = '00:00';
-      document.getElementById('barProgressFill').style.width = '0%';
-
-      document.getElementById('widgetTrackTitle').textContent = book.title;
-      document.getElementById('widgetChapTitle').textContent = `${chap.name} — ${chap.desc}`;
-
-      document.getElementById('bottomPlayerBar').classList.add('active');
-
-      if (currentAudioEl) currentAudioEl.pause();
-      currentAudioEl = new Audio(chap.src);
-
-      currentAudioEl.ontimeupdate = function() {
-        if (currentAudioEl.duration) {
-          const pct = (currentAudioEl.currentTime / currentAudioEl.duration) * 100;
-          document.getElementById('barProgressFill').style.width = `${pct}%`;
-          document.getElementById('barCurrentTime').textContent = formatTime(currentAudioEl.currentTime);
-          document.getElementById('barTotalTime').textContent = formatTime(currentAudioEl.duration);
-        }
-      };
-
-      currentAudioEl.onended = function() {
-        isPlaying = false;
-        document.getElementById('playerPlayIcon').textContent = "▶";
-        document.getElementById('widgetPlayIcon').textContent = "▶";
-        if (activeChapterIndex < book.chapters.length - 1) {
-          playCurrentChapter(activeChapterIndex + 1);
-        }
-      };
-
-      isPlaying = true;
-      document.getElementById('playerPlayIcon').textContent = "⏸";
-      document.getElementById('widgetPlayIcon').textContent = "⏸";
-      currentAudioEl.play().catch(e => console.log(e));
-    }
-
-    function togglePlay() {
-      if (!currentAudioEl) {
-        playCurrentChapter(0);
-        return;
-      }
-      isPlaying = !isPlaying;
-      if (isPlaying) {
-        document.getElementById('playerPlayIcon').textContent = "⏸";
-        document.getElementById('widgetPlayIcon').textContent = "⏸";
-        currentAudioEl.play().catch(e => console.log(e));
-      } else {
-        document.getElementById('playerPlayIcon').textContent = "▶";
-        document.getElementById('widgetPlayIcon').textContent = "▶";
-        currentAudioEl.pause();
-      }
-    }
-
-    function openPlayerBar() {
-      document.getElementById('bottomPlayerBar').classList.add('active');
-      if (!currentAudioEl) playCurrentChapter(0);
-    }
-    function rewind10() {
-      if (currentAudioEl) currentAudioEl.currentTime = Math.max(0, currentAudioEl.currentTime - 10);
-    }
-    function forward10() {
-      if (currentAudioEl) currentAudioEl.currentTime = Math.min(currentAudioEl.duration || 0, currentAudioEl.currentTime + 10);
-    }
-    function seekAudioBar(e) {
-      if (currentAudioEl && currentAudioEl.duration) {
-        const rect = e.currentTarget.getBoundingClientRect();
-        const clickX = e.clientX - rect.left;
-        const pct = clickX / rect.width;
-        currentAudioEl.currentTime = pct * currentAudioEl.duration;
-      }
-    }
-    function formatTime(seconds) {
-      if (isNaN(seconds)) return "00:00";
-      const mins = Math.floor(seconds / 60);
-      const secs = Math.floor(seconds % 60);
-      return `${mins < 10 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
-    }
-    function filterBooks(query) {
-      const q = query.toLowerCase().trim();
-      const cards = document.querySelectorAll('.audiobook-card');
-      cards.forEach(card => {
-        const text = card.textContent.toLowerCase();
-        card.style.display = text.includes(q) ? 'block' : 'none';
-      });
-    }
-
-    // ── Mobile Sidebar Toggle ──
-    function toggleAudioSidebar() {
-      const sidebar = document.querySelector('.sidebar');
-      let overlay = document.getElementById('audioSidebarOverlay');
-      if (!overlay) {
-        overlay = document.createElement('div');
-        overlay.id = 'audioSidebarOverlay';
-        overlay.className = 'audio-sidebar-overlay';
-        overlay.onclick = toggleAudioSidebar;
-        document.body.appendChild(overlay);
-      }
-      const isActive = sidebar.classList.contains('active');
-      if (isActive) {
-        sidebar.classList.remove('active');
-        overlay.classList.remove('active');
-        document.body.style.overflow = '';
-      } else {
-        sidebar.classList.add('active');
-        overlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-    }
-
-    // ── Prev / Next Chapter ──
-    function playPrevChapter() {
-      const book = booksFullDatabase[activeBookKey] || booksFullDatabase.alchemist;
-      if (activeChapterIndex > 0) playCurrentChapter(activeChapterIndex - 1);
-    }
-    function playNextChapter() {
-      const book = booksFullDatabase[activeBookKey] || booksFullDatabase.alchemist;
-      if (activeChapterIndex < book.chapters.length - 1) playCurrentChapter(activeChapterIndex + 1);
-    }
-
-    // ── Speed Cycle: 1x → 1.25x → 1.5x → 2x → 0.75x → 1x ──
-    const speeds = [1, 1.25, 1.5, 2, 0.75];
-    let speedIdx = 0;
-    function cycleSpeed() {
-      speedIdx = (speedIdx + 1) % speeds.length;
-      const s = speeds[speedIdx];
-      if (currentAudioEl) currentAudioEl.playbackRate = s;
-      document.getElementById('speedBtn').textContent = `${s}x`;
-    }
-
-    // ── Volume & Mute ──
-    let isMuted = false, lastVol = 1;
-    function setVolume(val) {
-      lastVol = parseFloat(val);
-      if (currentAudioEl) currentAudioEl.volume = lastVol;
-      isMuted = lastVol === 0;
-      document.querySelector('.vol-icon').textContent = lastVol === 0 ? '🔇' : lastVol < 0.5 ? '🔉' : '🔊';
-    }
-    function toggleMute() {
-      isMuted = !isMuted;
-      const slider = document.getElementById('volSlider');
-      if (isMuted) {
-        if (currentAudioEl) currentAudioEl.volume = 0;
-        slider.value = 0;
-        document.querySelector('.vol-icon').textContent = '🔇';
-      } else {
-        if (currentAudioEl) currentAudioEl.volume = lastVol || 1;
-        slider.value = lastVol || 1;
-        document.querySelector('.vol-icon').textContent = '🔊';
-      }
-    }
-
-    // ── Interactive Likes System ──
-    function toggleAudioLike() {
-      const btn = document.getElementById('audioLikeBtn');
-      const countEl = document.getElementById('audioLikeCount');
-      const textEl = document.getElementById('audioLikeText');
-      const key = `like_audio_${activeBookKey}`;
-      let isLiked = localStorage.getItem(key) === 'true';
-      let currentCount = parseInt(localStorage.getItem(`count_audio_${activeBookKey}`) || '1248', 10);
-
-      isLiked = !isLiked;
-      localStorage.setItem(key, isLiked ? 'true' : 'false');
-      currentCount = isLiked ? currentCount + 1 : currentCount - 1;
-      localStorage.setItem(`count_audio_${activeBookKey}`, currentCount);
-
-      if (btn) {
-        if (isLiked) {
-          btn.classList.add('liked');
-          if (textEl) textEl.textContent = 'تم الإعجاب';
-        } else {
-          btn.classList.remove('liked');
-          if (textEl) textEl.textContent = 'إعجاب';
-        }
-      }
-      if (countEl) countEl.textContent = currentCount.toLocaleString();
-    }
-
-
-
-    // ── Universal Share Modal Engine ──
-    function openShareModal(type) {
-      const modal = document.getElementById('shareModal');
-      const urlInput = document.getElementById('shareUrlInput');
-      const subtitle = document.getElementById('shareModalSubtitle');
-      const pageUrl = window.location.href;
-
-      if (urlInput) urlInput.value = pageUrl;
-      const shareTitle = type === 'audio' ? `كتاب صوتي: ${document.getElementById('detailBookTitle').textContent}` : 'مقالة من حكمة ونور';
-      
-      if (subtitle) subtitle.textContent = `شارِك "${shareTitle}" مع أصدقائك عبر المنصات التالية`;
-
-      const encodedUrl = encodeURIComponent(pageUrl);
-      const encodedText = encodeURIComponent(`استمع إلى ${shareTitle} عبر منصة حكمة ونور ✨:`);
-
-      document.getElementById('shareWhatsapp').href = `https://api.whatsapp.com/send?text=${encodedText}%20${encodedUrl}`;
-      document.getElementById('shareTelegram').href = `https://t.me/share/url?url=${encodedUrl}&text=${encodedText}`;
-      document.getElementById('shareTwitter').href = `https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`;
-
-      if (modal) {
-        modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-      }
-    }
-
-    function closeShareModal() {
-      const modal = document.getElementById('shareModal');
-      if (modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = '';
-      }
-    }
-
-    function copyShareUrl() {
-      const input = document.getElementById('shareUrlInput');
-      const toast = document.getElementById('copyToast');
-      if (input) {
-        input.select();
-        navigator.clipboard.writeText(input.value).then(() => {
-          if (toast) {
-            toast.style.display = 'block';
-            setTimeout(() => { toast.style.display = 'none'; }, 2000);
-          }
-        });
-      }
-    }
-
-
-
-    // ═══════════════════════════════════════════════════════
-    // AUDIO PAGE — COMPLETE i18n / TRILINGUAL SYSTEM (AR/FR/EN)
-    // ═══════════════════════════════════════════════════════
-
-    const audioI18n = {
-      ar: {
-        // SEO
-        pageTitle: 'المكتبة الصوتية | حكمة ونور (HIKMA & NOUR)',
-        pageDesc: 'المكتبة الصوتية الكاملة لروايات وكتب الفلسفة والتنمية الذاتية بالعربية.',
-        // Nav
-        home: 'الرئيسية', articles: 'المقالات', thinkers: 'الفلاسفة',
-        quotes: 'الاقتباسات', audio: 'الصوتيات', about: 'عن الموقع', contactNav: 'اتصل بنا',
-        // Sidebar
-        audioCategoriesTitle: 'التصنيفات الشائعة',
-        catAll: 'الكل', catPhilosophy: 'فلسفة', catSelfDev: 'تنمية ذاتية',
-        catHistory: 'تاريخ', catPsychology: 'علم النفس', catSpirituality: 'دين وروحانيات',
-        // Library Grid
-        audioLibraryTitle: 'المكتبة الصوتية',
-        audioLibrarySubtitle: '7 كتب صوتية (الروايات الصوتية الرئيسية)',
-        sortLatest: 'الأحدث', sortPopular: 'الأكثر استماعاً',
-        searchPlaceholder: 'ابحث عن كتاب، مقال، أو مؤلف... (Ctrl+K)',
-        // Audio language badge
-        audioAvailableInArabic: '🎙️ الصوت متوفر بالعربية',
-        // Book Detail
-        backToLibrary: 'العودة إلى المكتبة',
-        shareBtn: 'مشاركة',
-        listenBtn: 'متابعة الاستماع',
-        likeBtn: 'إعجاب',
-        likedBtn: 'تم الإعجاب',
-        chaptersListTitle: 'قائمة الفصول',
-        tabChapters: 'الفصول', tabAbout: 'عن الكتاب',
-        tabQuotes: 'إقتباسات', tabComments: 'التعليقات والتقييمات',
-        chapterLabel: 'الفصل',
-        minutesLabel: 'دقيقة',
-        downloadLabel: 'تحميل',
-        widgetRecTitle: 'قد يعجبك أيضاً',
-        widgetQuoteTitle: 'اقتباس من الفصل',
-        saveQuoteBtn: 'حفظ الاقتباس',
-        chaptersCount: (n) => `${n} فصول`,
-        // Comments
-        commentNamePlaceholder: 'اسمك الكريم *',
-        commentTextPlaceholder: 'اكتب تعليقك أو انطباعك عن الصوت والقصة...',
-        commentSubmitBtn: '🚀 نشر التعليق والتقييم',
-        commentAddTitle: 'أضف تعليقك وانطباعك حول هذا العمل الصوتي',
-        ratingBasedOn: (n) => `مبني على ${n} تقييم`,
-        // Rating options
-        ratingExcellent: '★★★★★ (5/5) ممتاز جداً',
-        ratingGood: '★★★★☆ (4/5) جيد جداً',
-        ratingAvg: '★★★☆☆ (3/5) متوسط',
-        ratingFair: '★★☆☆☆ (2/5) مقبول',
-        ratingBad: '★☆☆☆☆ (1/5) سيء',
-        addRatingBtn: '✍️ أضف تقييمك وتعليقك',
-        // General comments section
-        generalCommentsTitle: 'شاركنا رأيك وتعليقك حول المكتبة الصوتية',
-        generalCommentNamePlaceholder: 'اسمك الكريم *',
-        generalCommentTextPlaceholder: 'اكتب رأيك أو تعليقك هنا...',
-        generalSubmitBtn: '🚀 نشر التعليق والتقييم',
-        commentSuccessMsg: '✓ تم نشر تعليقك وتقييمك بنجاح!',
-        commentSuccessGeneral: '✓ تم نشر تعليقك بنجاح في المكتبة الصوتية!',
-        commentRequiredAlert: 'يرجى كتابة الاسم والتعليق قبل النشر!',
-        usefulBtn: '❤️ مفيد',
-        reportBtn: '🚩 إبلاغ',
-        reportedText: 'تم الإبلاغ',
-        // Player bar
-        chapterBadgePrefix: 'الفصل',
-        // Share modal
-        shareModalTitle: '🔗 مشاركة المحتوى',
-        shareModalSubDefault: 'شارِك هذا العمل الإنساني الرائع مع أصدقائك عبر المنصات التالية',
-        copyBtn: 'نسخ',
-        copySuccessText: '✓ تم نسخ الرابط بنجاح إلى الحافظة!',
-        // Audio unavailable
-        audioUnavailable: 'الصوت غير متوفر حالياً.',
-        // Dir
-        dir: 'rtl', langName: 'العربية'
-      },
-      fr: {
-        pageTitle: 'Bibliothèque Audio | HIKMA & NOUR',
-        pageDesc: 'Bibliothèque audio de romans et de livres de philosophie et de développement personnel, en arabe.',
-        home: 'Accueil', articles: 'Articles', thinkers: 'Penseurs',
-        quotes: 'Citations', audio: 'Audio', about: 'À propos', contactNav: 'Contact',
-        audioCategoriesTitle: 'Catégories populaires',
-        catAll: 'Tous', catPhilosophy: 'Philosophie', catSelfDev: 'Développement personnel',
-        catHistory: 'Histoire', catPsychology: 'Psychologie', catSpirituality: 'Spiritualité',
-        audioLibraryTitle: 'Bibliothèque audio',
-        audioLibrarySubtitle: '7 livres audio (principaux romans audio)',
-        sortLatest: 'Les plus récents', sortPopular: 'Les plus écoutés',
-        searchPlaceholder: 'Rechercher un livre, un article ou un auteur... (Ctrl+K)',
-        audioAvailableInArabic: '🎙️ Audio disponible en arabe',
-        backToLibrary: 'Retour à la bibliothèque',
-        shareBtn: 'Partager',
-        listenBtn: 'Écouter',
-        likeBtn: 'J\'aime',
-        likedBtn: 'Aimé',
-        chaptersListTitle: 'Liste des chapitres',
-        tabChapters: 'Chapitres', tabAbout: 'À propos du livre',
-        tabQuotes: 'Citations', tabComments: 'Commentaires & Avis',
-        chapterLabel: 'Chapitre',
-        minutesLabel: 'min',
-        downloadLabel: 'Télécharger',
-        widgetRecTitle: 'Vous pourriez aimer',
-        widgetQuoteTitle: 'Citation du chapitre',
-        saveQuoteBtn: 'Sauvegarder la citation',
-        chaptersCount: (n) => `${n} chapitres`,
-        commentNamePlaceholder: 'Votre nom *',
-        commentTextPlaceholder: 'Écrivez votre commentaire ou impression sur cet audio...',
-        commentSubmitBtn: '🚀 Publier le commentaire',
-        commentAddTitle: 'Ajoutez votre commentaire sur cette œuvre audio',
-        ratingBasedOn: (n) => `Basé sur ${n} avis`,
-        ratingExcellent: '★★★★★ (5/5) Excellent',
-        ratingGood: '★★★★☆ (4/5) Très bien',
-        ratingAvg: '★★★☆☆ (3/5) Moyen',
-        ratingFair: '★★☆☆☆ (2/5) Passable',
-        ratingBad: '★☆☆☆☆ (1/5) Mauvais',
-        addRatingBtn: '✍️ Ajouter votre avis',
-        generalCommentsTitle: 'Partagez votre avis sur la bibliothèque audio',
-        generalCommentNamePlaceholder: 'Votre nom *',
-        generalCommentTextPlaceholder: 'Écrivez votre avis ou commentaire ici...',
-        generalSubmitBtn: '🚀 Publier le commentaire',
-        commentSuccessMsg: '✓ Votre commentaire a été publié avec succès !',
-        commentSuccessGeneral: '✓ Votre commentaire a été publié dans la bibliothèque audio !',
-        commentRequiredAlert: 'Veuillez saisir votre nom et votre commentaire avant de publier !',
-        usefulBtn: '❤️ Utile',
-        reportBtn: '🚩 Signaler',
-        reportedText: 'Signalé',
-        chapterBadgePrefix: 'Chapitre',
-        shareModalTitle: '🔗 Partager le contenu',
-        shareModalSubDefault: 'Partagez cette œuvre remarquable avec vos amis via les plateformes suivantes',
-        copyBtn: 'Copier',
-        copySuccessText: '✓ Lien copié dans le presse-papiers !',
-        audioUnavailable: 'Audio momentanément indisponible.',
-        dir: 'ltr', langName: 'Français'
-      },
-      en: {
-        pageTitle: 'Audio Library | HIKMA & NOUR',
-        pageDesc: 'Complete audio library of philosophy, self-development novels and books narrated in Arabic.',
-        home: 'Home', articles: 'Articles', thinkers: 'Thinkers',
-        quotes: 'Quotes', audio: 'Audio', about: 'About', contactNav: 'Contact',
-        audioCategoriesTitle: 'Popular Categories',
-        catAll: 'All', catPhilosophy: 'Philosophy', catSelfDev: 'Self-Development',
-        catHistory: 'History', catPsychology: 'Psychology', catSpirituality: 'Spirituality',
-        audioLibraryTitle: 'Audio Library',
-        audioLibrarySubtitle: '7 audiobooks (main audio novels)',
-        sortLatest: 'Latest', sortPopular: 'Most Listened',
-        searchPlaceholder: 'Search for a book, article, or author... (Ctrl+K)',
-        audioAvailableInArabic: '🎙️ Audio available in Arabic',
-        backToLibrary: 'Back to Library',
-        shareBtn: 'Share',
-        listenBtn: 'Listen',
-        likeBtn: 'Like',
-        likedBtn: 'Liked',
-        chaptersListTitle: 'Chapter List',
-        tabChapters: 'Chapters', tabAbout: 'About the Book',
-        tabQuotes: 'Quotes', tabComments: 'Comments & Reviews',
-        chapterLabel: 'Chapter',
-        minutesLabel: 'min',
-        downloadLabel: 'Download',
-        widgetRecTitle: 'You May Also Like',
-        widgetQuoteTitle: 'Quote from the Chapter',
-        saveQuoteBtn: 'Save Quote',
-        chaptersCount: (n) => `${n} chapters`,
-        commentNamePlaceholder: 'Your name *',
-        commentTextPlaceholder: 'Write your comment or impression of this audio work...',
-        commentSubmitBtn: '🚀 Post Comment',
-        commentAddTitle: 'Add your comment about this audio work',
-        ratingBasedOn: (n) => `Based on ${n} reviews`,
-        ratingExcellent: '★★★★★ (5/5) Excellent',
-        ratingGood: '★★★★☆ (4/5) Very Good',
-        ratingAvg: '★★★☆☆ (3/5) Average',
-        ratingFair: '★★☆☆☆ (2/5) Fair',
-        ratingBad: '★☆☆☆☆ (1/5) Poor',
-        addRatingBtn: '✍️ Add Your Review',
-        generalCommentsTitle: 'Share your opinion on the Audio Library',
-        generalCommentNamePlaceholder: 'Your name *',
-        generalCommentTextPlaceholder: 'Write your opinion or comment here...',
-        generalSubmitBtn: '🚀 Post Comment',
-        commentSuccessMsg: '✓ Your comment was posted successfully!',
-        commentSuccessGeneral: '✓ Your comment was posted to the Audio Library!',
-        commentRequiredAlert: 'Please enter your name and comment before posting!',
-        usefulBtn: '❤️ Helpful',
-        reportBtn: '🚩 Report',
-        reportedText: 'Reported',
-        chapterBadgePrefix: 'Chapter',
-        shareModalTitle: '🔗 Share Content',
-        shareModalSubDefault: 'Share this remarkable work with your friends via the following platforms',
-        copyBtn: 'Copy',
-        copySuccessText: '✓ Link copied to clipboard!',
-        audioUnavailable: 'Audio currently unavailable.',
-        dir: 'ltr', langName: 'English'
-      }
-    };
-
-    let currentAudioLang = localStorage.getItem('hikma_lang') || 'ar';
-    // Expose globally for functions defined before i18n block
-    window.currentAudioLang = currentAudioLang;
-    window.audioI18n = audioI18n;
-
-    function applyAudioI18n(lang) {
-      currentAudioLang = lang;
-      localStorage.setItem('hikma_lang', lang);
-      const t = audioI18n[lang] || audioI18n.ar;
-
-      // Update html dir and lang
-      const htmlRoot = document.getElementById('htmlRoot');
-      if (htmlRoot) {
-        htmlRoot.setAttribute('dir', t.dir);
-        htmlRoot.setAttribute('lang', lang);
-      }
-
-      // SEO
-      const titleEl = document.getElementById('seoPageTitle');
-      if (titleEl) titleEl.textContent = t.pageTitle;
-      const descEl = document.getElementById('seoPageDesc');
-      if (descEl) descEl.setAttribute('content', t.pageDesc);
-
-      // Update active lang button label
-      const langNameEl = document.getElementById('audioActiveLangName');
-      if (langNameEl) langNameEl.textContent = t.langName;
-
-      // Update active lang option highlight
-      document.querySelectorAll('.audio-lang-opt').forEach(btn => {
-        const isActive = btn.getAttribute('data-lang') === lang;
-        btn.style.background = isActive ? 'rgba(223,177,91,0.15)' : 'transparent';
-        btn.style.color = isActive ? 'var(--gold-light)' : 'var(--ivory)';
-        btn.style.fontWeight = isActive ? '700' : '400';
-      });
-
-      // Apply all data-i18n elements
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (t[key] !== undefined && typeof t[key] === 'string') {
-          el.textContent = t[key];
-        }
-      });
-
-      // Update sort select options
-      document.querySelectorAll('[data-i18n-opt]').forEach(opt => {
-        const key = opt.getAttribute('data-i18n-opt');
-        if (t[key]) opt.textContent = t[key];
-      });
-
-      // Search placeholder
-      const searchInput = document.getElementById('audioSearchInput');
-      if (searchInput) searchInput.placeholder = t.searchPlaceholder;
-
-      // Back button arrow direction
-      const backArrow = document.getElementById('backBtnArrow');
-      if (backArrow) backArrow.textContent = (t.dir === 'rtl') ? '←' : '→';
-
-      // Update "liked" state text dynamically
-      const likeTextEl = document.getElementById('audioLikeText');
-      if (likeTextEl && document.getElementById('audioLikeBtn')) {
-        const key = `like_audio_${activeBookKey}`;
-        const isLiked = localStorage.getItem(key) === 'true';
-        likeTextEl.textContent = isLiked ? t.likedBtn : t.likeBtn;
-      }
-
-      // Update chapter list heading (if visible)
-      const chapHeading = document.querySelector('#tabChapters h3[data-i18n="chaptersListTitle"]');
-      if (chapHeading) chapHeading.textContent = t.chaptersListTitle;
-
-
-
-      // Update chapter-badge prefix in player bar
-      if (document.getElementById('playerChapBadge')) {
-        const chapIdx = activeChapterIndex;
-        document.getElementById('playerChapBadge').textContent = `${t.chapterBadgePrefix} ${chapIdx + 1}`;
-      }
-
-      // Update widget recommendation title
-      const widgetRec = document.querySelector('.widget-box:last-child .widget-title');
-      if (widgetRec) widgetRec.textContent = t.widgetRecTitle;
-
-      // Re-render chapter list to get translated labels if book detail is open
-      if (document.getElementById('bookDetailView').style.display !== 'none' && activeBookKey) {
-        refreshChapterListLabels(t);
-      }
-
-      // Update sidebar "التصنيفات الشائعة" label
-      const catLabel = document.getElementById('sidebarCategoriesLabel');
-      if (catLabel) catLabel.textContent = t.audioCategoriesTitle;
-
-      // Update library subtitle if it has been customized
-      const libSubtitle = document.getElementById('audioLibrarySubtitle');
-      if (libSubtitle && !libSubtitle.dataset.customized) {
-        libSubtitle.textContent = t.audioLibrarySubtitle;
-      }
-    }
-
-    function refreshChapterListLabels(t) {
-      const book = booksFullDatabase[activeBookKey];
-      if (!book) return;
-      const rows = document.querySelectorAll('.chapter-row-item');
-      rows.forEach((row, idx) => {
-        const chap = book.chapters[idx];
-        if (!chap) return;
-        const pEl = row.querySelector('.chap-text p');
-        if (pEl) pEl.textContent = `${chap.duration} ${t.minutesLabel}`;
-        const dlIcon = row.querySelector('.download-icon');
-        if (dlIcon) dlIcon.setAttribute('title', t.downloadLabel);
-      });
-    }
-
-    // Language dropdown toggle
-    function toggleAudioLangDropdown() {
-      const dd = document.getElementById('audioLangDropdown');
-      if (dd) dd.style.display = dd.style.display === 'none' ? 'block' : 'none';
-    }
-
-    function setAudioLang(lang) {
-      applyAudioI18n(lang);
-      const dd = document.getElementById('audioLangDropdown');
-      if (dd) dd.style.display = 'none';
-    }
-
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function(e) {
-      const wrap = document.getElementById('audioLangSelectorWrap');
-      if (wrap && !wrap.contains(e.target)) {
-        const dd = document.getElementById('audioLangDropdown');
-        if (dd) dd.style.display = 'none';
-      }
-    });
-
-    // Apply i18n on page load
-    document.addEventListener('DOMContentLoaded', function() {
-      applyAudioI18n(currentAudioLang);
-    });
-    // Also apply immediately in case DOMContentLoaded already fired
-    if (document.readyState !== 'loading') {
-      applyAudioI18n(currentAudioLang);
-    }
-  </script>
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification" role="status" aria-live="polite">
+    تم نسخ الرابط بنجاح!
+  </div>
+
+  <!-- Shared Footer -->
+  <footer class="footer" style="padding: 50px 24px 30px; border-top: 1px solid var(--card-border); margin-top: 60px; background: rgba(10, 15, 12, 0.95);">
+    <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; text-align: inherit;" class="footer-grid-layout">
+      <div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+          <img src="../brand_logo_official.png" alt="Hikma & Nour" style="width: 38px; height: 38px; object-fit: contain;">
+          <span style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 800; color: var(--accent-gold);">HIKMA & NOUR</span>
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.7; margin-bottom: 14px;" data-i18n="footerBrandDesc">
+          الحكمة • الفلسفة • علم النفس — مساحة للتأمل الرصين، حكمة كبار المفكرين وبناء القوة النفسية والهدوء الداخلي.
+        </p>
+      </div>
+
+      <div>
+        <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;" data-i18n="mainSitemap">الخريطة الرئيسية</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
+          <li><a href="../" style="color: var(--text-secondary); text-decoration: none;" data-i18n="home">الرئيسية</a></li>
+          <li><a href="../articles/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="articles">المقالات</a></li>
+          <li><a href="../thinkers/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="thinkers">الفلاسفة</a></li>
+          <li><a href="../quotes/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="quotes">اقتباسات</a></li>
+          <li><a href="./" style="color: var(--accent-gold); text-decoration: none; font-weight: 700;" data-i18n="audio">الصوتيات</a></li>
+          <li><a href="../bio.html" style="color: var(--text-secondary); text-decoration: none;" data-i18n="about">من نحن</a></li>
+          <li><a href="../#contactSection" style="color: var(--text-secondary); text-decoration: none;" data-i18n="contact">اتصل بنا</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;" data-i18n="interactiveServices">خدمات ومحتوى تفاعلي</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
+          <li><a href="../quizzes/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="quiz">الاختبارات الفلسفية</a></li>
+          <li><a href="../#helpSection" style="color: var(--text-secondary); text-decoration: none;" data-i18n="faq">الأسئلة الشائعة</a></li>
+          <li><a href="../shop/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="shop">المتجر</a></li>
+          <li><a href="../quotes/calendar/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="calendar">التقويم</a></li>
+          <li><a href="../articles/?category=philosophy" style="color: var(--text-secondary); text-decoration: none;" data-i18n="philosophy">الفلسفة</a></li>
+          <li><a href="../articles/?category=psychology" style="color: var(--text-secondary); text-decoration: none;" data-i18n="psychologySub">علم النفس</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;" data-i18n="legalInfoTitle">المعلومات القانونية والسياسات</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
+          <li><a href="../privacy-policy.html" style="color: var(--text-secondary); text-decoration: none;" data-i18n="privacy">سياسة الخصوصية</a></li>
+          <li><a href="../terms-of-service.html" style="color: var(--text-secondary); text-decoration: none;" data-i18n="terms">شروط الاستخدام</a></li>
+          <li><a href="../cookie-policy.html" style="color: var(--text-secondary); text-decoration: none;" data-i18n="cookies">ملفات تعريف الارتباط</a></li>
+          <li><a href="../#contactSection" style="color: var(--text-secondary); text-decoration: none;" data-i18n="contactNav">اتصل بنا</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center;">
+      <div style="display: flex; justify-content: center; gap: 14px 20px; flex-wrap: wrap; font-size: 0.88rem; margin-bottom: 14px; font-weight: 600;">
+        <a href="../cookie-policy.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="cookies">ملفات تعريف الارتباط</a>
+        <span style="color: rgba(255,255,255,0.2);">•</span>
+        <a href="../terms-of-service.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="terms">شروط الاستخدام</a>
+        <span style="color: rgba(255,255,255,0.2);">•</span>
+        <a href="../privacy-policy.html" style="color: var(--accent-gold); text-decoration: none; transition: color 0.2s;" data-i18n="privacy">سياسة الخصوصية</a>
+        <span style="color: rgba(255,255,255,0.2);">•</span>
+        <a href="../shop/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="shop">المتجر</a>
+        <span style="color: rgba(255,255,255,0.2);">•</span>
+        <a href="../#helpSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="faq">الأسئلة الشائعة</a>
+        <span style="color: rgba(255,255,255,0.2);">•</span>
+        <a href="../#contactSection" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="contact">اتصل بنا</a>
+        <span style="color: rgba(255,255,255,0.2);">•</span>
+        <a href="../bio.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" data-i18n="about">من نحن</a>
+      </div>
+      <p style="color: var(--text-secondary); font-size: 0.82rem; margin: 0;"><span data-i18n="copyright">© 2026 حكمة ونور | حديقة الأفكار</span>. <span data-i18n="credits">صُمم بحكمة وهدوء وسكينة. ✨🌿</span></p>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript Logic Module -->
+  <script type="module" src="audio_v11.js"></script>
 
   <!-- Service Worker Registration -->
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('../sw.js');
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('../sw.js').catch(() => {});
+      });
     }
   </script>
-
-  <!-- Global Interactive Search Engine -->
-  <script src="../search.js?v=1"></script>
-
 </body>
 </html>
