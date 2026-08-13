@@ -1480,34 +1480,38 @@
         height: 40px;
         font-size: 1rem;
       }
+    }
+
     /* ==========================================================================
-       REVIEWS & RATINGS DESIGN SYSTEM
+       REVIEWS & RATINGS DESIGN SYSTEM (NOCTURNE & GOLD LUXURY)
        ========================================================================== */
     :root {
-      --review-bg: rgba(12, 22, 16, 0.85);
-      --review-card-bg: #0F1611;
+      --review-bg: rgba(12, 23, 17, 0.88);
+      --review-card-bg: #0C1712;
       --review-border: rgba(223, 177, 91, 0.22);
       --review-gold: #DFB15B;
       --review-text: #F7F1E5;
-      --review-muted: #8E9891;
+      --review-muted: #9EABA2;
     }
 
     .audio-reviews-section {
-      margin-top: 40px;
+      margin-top: 50px;
       margin-bottom: 60px;
       min-width: 0;
+      width: 100%;
     }
 
     .reviews-summary-grid {
       display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: 24px;
-      background: var(--review-bg);
-      border: 1.5px solid var(--review-border);
+      grid-template-columns: 220px 1fr;
+      gap: 28px;
+      background: var(--review-card-bg);
+      border: 1px solid var(--review-border);
       border-radius: 20px;
-      padding: 24px;
+      padding: 28px;
       margin-bottom: 24px;
       align-items: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
       min-width: 0;
     }
 
@@ -1518,84 +1522,89 @@
       justify-content: center;
       text-align: center;
       border-inline-end: 1px solid var(--review-border);
-      padding-inline-end: 20px;
+      padding-inline-end: 24px;
     }
 
     .big-score-num {
-      font-size: 2.8rem;
+      font-size: 3rem;
       font-weight: 800;
       font-family: 'Playfair Display', 'Amiri', serif;
       color: var(--gold);
       line-height: 1;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
+      text-shadow: 0 0 20px rgba(223, 177, 91, 0.3);
     }
 
     .big-stars-row {
       color: var(--gold);
-      font-size: 1.2rem;
-      letter-spacing: 2px;
+      font-size: 1.25rem;
+      letter-spacing: 3px;
       margin-bottom: 6px;
     }
 
     .total-reviews-count {
-      font-size: 0.82rem;
+      font-size: 0.85rem;
       color: var(--review-muted);
     }
 
     .distribution-bars-col {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 10px;
       min-width: 0;
     }
 
     .dist-row {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-size: 0.82rem;
+      gap: 12px;
+      font-size: 0.85rem;
       color: var(--review-muted);
     }
 
     .dist-label {
-      width: 45px;
+      width: 48px;
       white-space: nowrap;
+      color: var(--review-text);
+      font-weight: 600;
     }
 
     .dist-bar-bg {
       flex: 1;
-      height: 8px;
-      background: rgba(255,255,255,0.08);
-      border-radius: 4px;
+      height: 10px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 6px;
       overflow: hidden;
     }
 
     .dist-bar-fill {
       height: 100%;
-      background: var(--gold);
-      border-radius: 4px;
+      background: var(--gold-grad);
+      border-radius: 6px;
       transition: width 0.4s ease;
     }
 
     .dist-pct {
-      width: 38px;
+      width: 42px;
       text-align: end;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--review-text);
     }
 
-    /* Rating box */
+    /* Rating Interactive Box */
     .user-rating-interactive-box {
       background: var(--review-card-bg);
       border: 1px solid var(--review-border);
-      border-radius: 16px;
-      padding: 18px 24px;
+      border-radius: 18px;
+      padding: 20px 26px;
       margin-bottom: 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 14px;
+      gap: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
     }
 
     .rating-fieldset {
@@ -1604,97 +1613,116 @@
       margin: 0;
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 18px;
       flex-wrap: wrap;
+      width: 100%;
     }
 
     .rating-legend {
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 1rem;
       color: var(--review-text);
+      float: inline-start;
+      margin: 0;
+      padding: 0;
     }
 
     .star-rating-buttons {
       display: inline-flex;
-      gap: 4px;
+      align-items: center;
+      gap: 6px;
     }
 
     .star-btn {
       background: transparent;
       border: none;
-      font-size: 1.5rem;
-      color: rgba(255,255,255,0.2);
+      font-size: 1.9rem;
+      color: rgba(255,255,255,0.22);
       cursor: pointer;
       padding: 2px 4px;
-      transition: color 0.15s, transform 0.15s;
+      transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+      line-height: 1;
     }
 
     .star-btn.hovered, .star-btn.active {
       color: var(--gold);
-      transform: scale(1.15);
+      transform: scale(1.18);
+      text-shadow: 0 0 14px rgba(223, 177, 91, 0.6);
     }
 
     .rating-feedback-status {
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       color: var(--gold-light);
-      font-weight: 600;
+      font-weight: 700;
+      margin-inline-start: auto;
     }
 
-    /* Review Form */
+    /* Review Form Card */
     .review-form-card {
       background: var(--review-card-bg);
       border: 1px solid var(--review-border);
       border-radius: 20px;
-      padding: 24px;
-      margin-bottom: 28px;
+      padding: 28px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.45);
     }
 
     .review-form-title {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 700;
       color: var(--review-text);
-      margin: 0 0 18px;
+      margin: 0 0 20px;
+      border-bottom: 1px solid rgba(223, 177, 91, 0.15);
+      padding-bottom: 12px;
     }
 
     .form-row-2col {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 16px;
+      gap: 18px;
+      margin-bottom: 18px;
     }
 
     .form-group {
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 8px;
     }
 
     .form-group label {
-      font-size: 0.85rem;
-      font-weight: 600;
+      font-size: 0.88rem;
+      font-weight: 700;
       color: var(--review-text);
     }
 
     .review-input, .review-textarea {
       width: 100%;
-      background: rgba(7, 10, 8, 0.75);
-      border: 1.5px solid var(--border-light);
-      border-radius: 12px;
-      padding: 12px 14px;
-      color: var(--review-text);
+      background: rgba(6, 10, 8, 0.85);
+      border: 1.5px solid rgba(223, 177, 91, 0.25);
+      border-radius: 14px;
+      padding: 13px 16px;
+      color: #FFFDF8;
       font-family: inherit;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       outline: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
+      box-sizing: border-box;
+      transition: all 0.25s ease;
     }
 
     .review-input:focus, .review-textarea:focus {
       border-color: var(--gold);
-      box-shadow: 0 0 12px rgba(223, 177, 91, 0.2);
+      background: rgba(8, 14, 10, 0.95);
+      box-shadow: 0 0 16px rgba(223, 177, 91, 0.25);
+    }
+
+    .review-textarea {
+      resize: vertical;
+      min-height: 110px;
+      line-height: 1.6;
     }
 
     .char-count-wrap {
-      font-size: 0.74rem;
+      font-size: 0.76rem;
       color: var(--review-muted);
       text-align: end;
       margin-top: 4px;
@@ -1703,14 +1731,14 @@
     .form-actions-row {
       display: flex;
       align-items: center;
-      gap: 16px;
-      margin-top: 14px;
+      gap: 18px;
+      margin-top: 18px;
       flex-wrap: wrap;
     }
 
     .comment-notice-msg {
-      font-size: 0.88rem;
-      font-weight: 600;
+      font-size: 0.9rem;
+      font-weight: 700;
       color: var(--gold-light);
     }
 
@@ -1719,120 +1747,124 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 20px;
+      gap: 18px;
+      margin-bottom: 24px;
       flex-wrap: wrap;
-      border-bottom: 1px solid var(--border-light);
-      padding-bottom: 12px;
+      border-bottom: 1px solid var(--review-border);
+      padding-bottom: 14px;
     }
 
     .reviews-sort-wrap {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
     .reviews-select {
-      background: var(--review-card-bg);
+      background: rgba(6, 10, 8, 0.9);
       border: 1px solid var(--review-border);
       color: var(--review-text);
-      padding: 6px 12px;
+      padding: 8px 16px;
       border-radius: 20px;
       font-family: inherit;
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       outline: none;
       cursor: pointer;
     }
 
     .reviews-star-filter-pills {
       display: flex;
-      gap: 6px;
+      gap: 8px;
       overflow-x: auto;
     }
 
     .review-pill-btn {
-      background: transparent;
-      border: 1px solid var(--border-light);
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(223, 177, 91, 0.2);
       color: var(--review-muted);
-      padding: 4px 12px;
-      border-radius: 14px;
-      font-size: 0.78rem;
+      padding: 6px 14px;
+      border-radius: 16px;
+      font-size: 0.82rem;
+      font-weight: 600;
       cursor: pointer;
       transition: all 0.2s;
     }
 
     .review-pill-btn.active, .review-pill-btn:hover {
-      background: rgba(223, 177, 91, 0.15);
+      background: rgba(223, 177, 91, 0.18);
       border-color: var(--gold);
       color: var(--gold-light);
+      box-shadow: 0 0 10px rgba(223, 177, 91, 0.2);
     }
 
     /* Comments List */
     .audio-comments-list {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 18px;
     }
 
     .comment-card-item {
       background: var(--review-card-bg);
       border: 1px solid var(--review-border);
       border-radius: 18px;
-      padding: 18px 20px;
+      padding: 20px 24px;
       transition: border-color 0.2s;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.35);
     }
 
     .comment-card-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       gap: 12px;
     }
 
     .comment-author-info {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
 
     .comment-avatar {
-      width: 38px;
-      height: 38px;
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
-      background: linear-gradient(135deg, rgba(223,177,91,0.25), rgba(15,22,17,0.9));
-      border: 1px solid var(--gold);
+      background: linear-gradient(135deg, rgba(223,177,91,0.25), rgba(12,23,17,0.95));
+      border: 1.5px solid var(--gold);
       color: var(--gold-light);
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 800;
-      font-size: 0.95rem;
+      font-size: 1rem;
       flex-shrink: 0;
+      box-shadow: 0 0 12px rgba(223,177,91,0.2);
     }
 
     .comment-author-name {
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       color: var(--review-text);
     }
 
     .comment-date {
-      font-size: 0.75rem;
+      font-size: 0.78rem;
       color: var(--review-muted);
     }
 
     .comment-stars {
       color: var(--gold);
-      font-size: 0.95rem;
-      letter-spacing: 1px;
+      font-size: 1.05rem;
+      letter-spacing: 2px;
     }
 
     .comment-body-text {
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       color: var(--text-main);
-      line-height: 1.65;
-      margin: 0 0 12px;
+      line-height: 1.7;
+      margin: 0 0 14px;
       word-break: break-word;
       white-space: pre-wrap;
     }
@@ -1847,13 +1879,13 @@
       background: transparent;
       border: none;
       color: var(--gold);
-      font-size: 0.8rem;
+      font-size: 0.84rem;
       font-weight: 700;
       cursor: pointer;
       padding: 0;
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 6px;
     }
 
     .comment-reply-btn:hover {
@@ -1862,36 +1894,37 @@
 
     /* Replies container */
     .comment-replies-list {
-      margin-top: 14px;
+      margin-top: 16px;
       padding-inline-start: 24px;
-      border-inline-start: 2px solid rgba(223, 177, 91, 0.2);
+      border-inline-start: 2px solid rgba(223, 177, 91, 0.25);
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
     }
 
     .reply-card-item {
-      background: rgba(7, 10, 8, 0.5);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 12px;
-      padding: 12px 14px;
+      background: rgba(6, 10, 8, 0.6);
+      border: 1px solid rgba(223, 177, 91, 0.15);
+      border-radius: 14px;
+      padding: 14px 16px;
     }
 
     .reply-form-wrap {
-      margin-top: 12px;
-      padding-inline-start: 14px;
+      margin-top: 14px;
+      padding-inline-start: 16px;
     }
 
     @media (max-width: 768px) {
       .reviews-summary-grid {
         grid-template-columns: 1fr;
         text-align: center;
+        padding: 20px 16px;
       }
       .summary-score-col {
         border-inline-end: none;
         border-bottom: 1px solid var(--review-border);
         padding-inline-end: 0;
-        padding-bottom: 16px;
+        padding-bottom: 18px;
       }
       .form-row-2col {
         grid-template-columns: 1fr;
