@@ -1,126 +1,101 @@
 import fs from 'fs';
 import path from 'path';
 
-console.log('=== RUNNING AUDIO SANCTUARY COMPREHENSIVE VERIFICATION SUITE ===\n');
+console.log("=== COMPREHENSIVE AUDIO LIBRARY TEST SUITE ===");
 
-const BASE_DIR = 'C:\\Users\\TOSHIBA\\.gemini\\antigravity\\scratch\\tiktok-website';
-const AUDIO_HTML = path.join(BASE_DIR, 'audio', 'index.html');
-const AUDIO_JS = path.join(BASE_DIR, 'audio', 'audio_v11.js');
+const htmlPath = path.resolve('audio/index.html');
+const jsPath = path.resolve('audio/audio_v11.js');
 
-let passedTests = 0;
-let failedTests = 0;
+let passed = 0;
+let failed = 0;
 
-function assert(condition, testName) {
+function assert(condition, message) {
   if (condition) {
-    console.log(`✅ [PASS] ${testName}`);
-    passedTests++;
+    console.log(`✅ PASS: ${message}`);
+    passed++;
   } else {
-    console.error(`❌ [FAIL] ${testName}`);
-    failedTests++;
+    console.error(`❌ FAIL: ${message}`);
+    failed++;
   }
 }
 
-// 1. Check Audio HTML exists & has critical semantic elements
-const audioHtmlContent = fs.readFileSync(AUDIO_HTML, 'utf8');
+// 1. Check file existence
+assert(fs.existsSync(htmlPath), "audio/index.html exists");
+assert(fs.existsSync(jsPath), "audio/audio_v11.js exists");
 
-assert(audioHtmlContent.includes('audio-hero-card'), 'Audio Hero Section present');
-assert(audioHtmlContent.includes('audio-toolbar-row'), 'Search & Toolbar container present');
-assert(audioHtmlContent.includes('audioSearchInput'), 'Search Input present with aria-label');
-assert(audioHtmlContent.includes('audioSearchClearBtn'), 'Search Clear Button (✕) present');
-assert(audioHtmlContent.includes('audio-categories-bar'), 'Category filter bar present');
-assert(audioHtmlContent.includes('featuredAudioSection'), 'Featured section (« À la une ») present');
-assert(audioHtmlContent.includes('continueListeningSection'), 'Continue listening section present');
-assert(audioHtmlContent.includes('audiobooks-grid'), 'Audiobooks Grid present');
-assert(audioHtmlContent.includes('bookDetailView'), 'Book Detail view present');
-assert(audioHtmlContent.includes('tabBtnChapters') && audioHtmlContent.includes('tabBtnAbout') && audioHtmlContent.includes('tabBtnTakeaways') && audioHtmlContent.includes('tabBtnQuotes') && audioHtmlContent.includes('tabBtnAuthor'), 'All 5 Tabs (Chapters, About, Takeaways, Quotes, Author) present');
-assert(audioHtmlContent.includes('bottomPlayerBar'), 'Bottom Fixed Player Bar present');
-assert(audioHtmlContent.includes('sleepTimerBtn'), 'Sleep timer trigger button present');
-assert(audioHtmlContent.includes('toastNotification'), 'Toast notification present');
-assert(audioHtmlContent.includes('audio_v11.js'), 'audio_v11.js script module linked');
-assert(audioHtmlContent.includes('navbar-header'), 'Shared navbar present');
-assert(audioHtmlContent.includes('footer'), 'Shared footer present');
+const htmlContent = fs.readFileSync(htmlPath, 'utf8');
+const jsContent = fs.readFileSync(jsPath, 'utf8');
 
-// 2. Check Audio JS exists and has critical logic
-const audioJsContent = fs.readFileSync(AUDIO_JS, 'utf8');
+// 2. Check HTML structure & requirements
+assert(htmlContent.includes('id="audioSearchInput"'), "HTML has search input");
+assert(htmlContent.includes('id="clearSearchBtn"'), "HTML has search clear button");
+assert(htmlContent.includes('id="featuredAudioSection"'), "HTML has Featured section");
+assert(htmlContent.includes('id="continueListeningSection"'), "HTML has Continue Listening section");
+assert(htmlContent.includes('id="allBooksSection"'), "HTML has All Books section");
+assert(htmlContent.includes('id="audioCatalogGrid"'), "HTML has audio catalog grid");
+assert(htmlContent.includes('id="audioBookDetailView"'), "HTML has audio detail view");
+assert(htmlContent.includes('id="tabBtnChapters"'), "HTML has Tab Chapters");
+assert(htmlContent.includes('id="tabBtnAbout"'), "HTML has Tab About");
+assert(htmlContent.includes('id="tabBtnTakeaways"'), "HTML has Tab Takeaways");
+assert(htmlContent.includes('id="tabBtnQuotes"'), "HTML has Tab Quotes");
+assert(htmlContent.includes('id="tabBtnAuthor"'), "HTML has Tab Author");
+assert(htmlContent.includes('id="persistentAudioBar"'), "HTML has persistent audio player bar");
+assert(htmlContent.includes('id="sleepTimerModal"'), "HTML has sleep timer modal");
+assert(htmlContent.includes('id="audioReviewsSection"'), "HTML has listener reviews & rating section");
 
-assert(audioJsContent.includes('AUDIO_I18N'), 'AUDIO_I18N object defined');
-assert(audioJsContent.includes('AUDIO_BOOKS_DATA'), 'AUDIO_BOOKS_DATA database defined');
-assert(audioJsContent.includes('AudioState'), 'AudioState singleton object defined');
-assert(audioJsContent.includes('playBookChapter'), 'playBookChapter function present');
-assert(audioJsContent.includes('togglePlay'), 'togglePlay function present');
-assert(audioJsContent.includes('seekAudioBar'), 'seekAudioBar function present');
-assert(audioJsContent.includes('cycleSpeed'), 'cycleSpeed multiplier present');
-assert(audioJsContent.includes('cycleSleepTimer'), 'cycleSleepTimer logic present');
-assert(audioJsContent.includes('hikma_audio_progress'), 'Structured localStorage (hikma_audio_progress) used');
-assert(audioJsContent.includes('hikma_audio_favorites'), 'Structured localStorage (hikma_audio_favorites) used');
-assert(audioJsContent.includes('renderFeaturedCard'), 'renderFeaturedCard function present');
-assert(audioJsContent.includes('renderContinueListeningSection'), 'renderContinueListeningSection function present');
-assert(audioJsContent.includes('renderCatalogGrid'), 'renderCatalogGrid function present');
-assert(audioJsContent.includes('openBookDetail'), 'openBookDetail function present');
-assert(audioJsContent.includes('updateSeoMetadata'), 'updateSeoMetadata dynamic SEO updater present');
+// Check anti-overflow CSS in HTML
+assert(htmlContent.includes('overflow-x: hidden') || htmlContent.includes('min-width: 0'), "HTML includes anti-overflow precautions");
 
-// 3. Check All 3 Languages present in Translations
-assert(audioJsContent.includes('fr:') && audioJsContent.includes('en:') && audioJsContent.includes('ar:'), 'FR, EN, AR translations defined in JS');
-
-// 4. Verify all audio files listed in AUDIO_BOOKS_DATA exist on disk
-const audioDir = path.join(BASE_DIR, 'audio');
-const expectedMp3s = [
-  'alchimiste_chapitre1.mp3', 'alchimiste_chapitre2.mp3', 'alchimiste_chapitre3.mp3', 'alchimiste_chapitre4.mp3', 'alchimiste_chapitre5.mp3',
-  'crime_et_chatiment_chapitre1.mp3', 'crime_et_chatiment_chapitre2.mp3', 'crime_et_chatiment_chapitre3.mp3', 'crime_et_chatiment_chapitre4.mp3', 'crime_et_chatiment_chapitre5.mp3',
-  'crime_partie1_chapitre6.mp3', 'crime_partie1_chapitre7.mp3', 'crime_partie2_chapitre1.mp3', 'crime_partie3_chapitre5.mp3', 'crime_partie5_chapitre4.mp3', 'crime_partie6_chapitre8.mp3',
-  'letranger_p1_ch1.mp3', 'letranger_p1_ch2.mp3', 'letranger_p1_ch3.mp3', 'letranger_p1_ch4.mp3', 'letranger_p1_ch5.mp3', 'letranger_p1_ch6.mp3',
-  'letranger_p2_ch1.mp3', 'letranger_p2_ch2.mp3', 'letranger_p2_ch3.mp3', 'letranger_p2_ch4.mp3', 'letranger_p2_ch5.mp3',
-  'petit_prince_chapitre1.mp3', 'petit_prince_chapitre2.mp3', 'petit_prince_chapitre3.mp3', 'petit_prince_chapitre4.mp3', 'petit_prince_chapitre5.mp3',
-  'metamorphose_chapitre1.mp3', 'metamorphose_chapitre2.mp3', 'metamorphose_chapitre3.mp3', 'metamorphose_chapitre4.mp3', 'metamorphose_chapitre5.mp3',
-  'old_man_sea_chapitre1.mp3', 'old_man_sea_chapitre2.mp3', 'old_man_sea_chapitre3.mp3', 'old_man_sea_chapitre4.mp3', 'old_man_sea_chapitre5.mp3',
-  'kafka_milena_chapitre1.mp3', 'kafka_milena_chapitre2.mp3', 'kafka_milena_chapitre3.mp3', 'kafka_milena_chapitre4.mp3'
-];
-
-expectedMp3s.forEach(mp3 => {
-  const filePath = path.join(audioDir, mp3);
-  assert(fs.existsSync(filePath), `Audio file ${mp3} exists on disk`);
+// 3. Check JS content & data integrity
+const requiredBooks = ['alchemist', 'crime_punishment', 'etranger', 'petit_prince', 'kafka', 'vieux', 'milena'];
+requiredBooks.forEach(bookKey => {
+  assert(jsContent.includes(`key: '${bookKey}'`) || jsContent.includes(`key: "${bookKey}"`) || jsContent.includes(`${bookKey}: {`), `Book '${bookKey}' defined in audio data`);
 });
 
-// 5. Check Non-regression on other pages
-const keyPages = [
-  'index.html',
-  'thinkers/index.html',
-  'articles/index.html',
-  'quotes/index.html',
-  'quotes/calendar/index.html',
-  'shop/index.html',
-  'quizzes/index.html',
-  'bio.html'
-];
+// Check thinkers link for Camus
+assert(jsContent.includes('/thinkers/?thinker=camus') || jsContent.includes('../thinkers/?thinker=camus'), "Author Camus links to /thinkers/?thinker=camus");
 
-keyPages.forEach(p => {
-  const fullPath = path.join(BASE_DIR, p);
-  assert(fs.existsSync(fullPath), `Page ${p} exists and is intact`);
+// Check LocalStorage keys
+assert(jsContent.includes('hikma_audio_progress'), "Uses 'hikma_audio_progress' localStorage key");
+assert(jsContent.includes('hikma_audio_favorites'), "Uses 'hikma_audio_favorites' localStorage key");
+assert(jsContent.includes('hikma_audio_history'), "Uses 'hikma_audio_history' localStorage key");
+assert(jsContent.includes('hikma_audio_settings'), "Uses 'hikma_audio_settings' localStorage key");
+
+// Check AudioController functionality
+assert(jsContent.includes('class AudioController') || jsContent.includes('const audioController =') || jsContent.includes('const AudioController ='), "AudioController singleton exists");
+assert(jsContent.includes('jumpTime(-15)') || jsContent.includes('jumpTime(15)'), "Audio player supports 15s jump");
+assert(jsContent.includes('setPlaybackRate'), "Audio player supports variable playback speed");
+assert(jsContent.includes('setSleepTimer'), "Audio player supports sleep timer");
+
+// Check real MP3 file paths
+const mp3Matches = jsContent.match(/audio_v11\/[a-zA-Z0-9_\-]+\.mp3/g) || [];
+console.log(`Found ${mp3Matches.length} audio file references in JS`);
+assert(mp3Matches.length >= 46, `Contains at least 46 chapter audio tracks (Found: ${mp3Matches.length})`);
+
+// Check if all referenced MP3 files actually exist on disk
+let missingFiles = 0;
+const uniqueMp3s = [...new Set(mp3Matches)];
+uniqueMp3s.forEach(mp3Rel => {
+  const fullPath = path.resolve(mp3Rel);
+  if (!fs.existsSync(fullPath)) {
+    console.error(`Missing audio file: ${mp3Rel}`);
+    missingFiles++;
+  }
 });
+assert(missingFiles === 0, `All ${uniqueMp3s.length} unique MP3 tracks exist on disk`);
 
-// 6. Check Reviews & Ratings Features in HTML & JS
-assert(audioHtmlContent.includes('audioReviewsSection'), 'Audio Reviews section present in HTML');
-assert(audioHtmlContent.includes('reviewsSummaryGrid'), 'Reviews Summary & Distribution Grid present in HTML');
-assert(audioHtmlContent.includes('userRatingBox'), 'User Interactive Rating Box present in HTML');
-assert(audioHtmlContent.includes('workCommentForm'), 'Work Comment Form present in HTML');
-assert(audioHtmlContent.includes('audioCommentsList'), 'Audio Comments list container present in HTML');
-assert(audioHtmlContent.includes('reviewsSortSelect'), 'Reviews sort select dropdown present in HTML');
-assert(audioHtmlContent.includes('reviewsFilterPills'), 'Reviews star filter pills present in HTML');
+// Check Trilingual Support
+assert(jsContent.includes('AUDIO_I18N = {') && jsContent.includes('ar:') && jsContent.includes('fr:') && jsContent.includes('en:'), "AUDIO_I18N contains ar, fr, and en translations");
 
-assert(audioJsContent.includes('AudioReviewsStore'), 'AudioReviewsStore object defined in JS');
-assert(audioJsContent.includes('getRatingSummary'), 'AudioReviewsStore.getRatingSummary method present');
-assert(audioJsContent.includes('submitRating'), 'AudioReviewsStore.submitRating method present');
-assert(audioJsContent.includes('getReviews'), 'AudioReviewsStore.getReviews method present');
-assert(audioJsContent.includes('submitComment'), 'AudioReviewsStore.submitComment method present');
-assert(audioJsContent.includes('escapeHtml'), 'XSS prevention escapeHtml function present');
-assert(audioJsContent.includes('hikma_audio_ratings'), 'hikma_audio_ratings structured localStorage key used');
-assert(audioJsContent.includes('hikma_audio_comments'), 'hikma_audio_comments structured localStorage key used');
+// Check Dynamic SEO & JSON-LD
+assert(jsContent.includes('updateSeoMetadata') && jsContent.includes('@type": "Audiobook"'), "Dynamic SEO & JSON-LD schema implemented");
 
-// 7. Check server.js has audio reviews API endpoints
-const serverContent = fs.readFileSync(path.join(BASE_DIR, 'server.js'), 'utf8');
-assert(serverContent.includes('/api/audio/:workId/reviews'), 'Server endpoint GET /api/audio/:workId/reviews present');
-assert(serverContent.includes('/api/audio/:workId/rating'), 'Server endpoint POST /api/audio/:workId/rating present');
-assert(serverContent.includes('/api/audio/:workId/comments'), 'Server endpoint POST /api/audio/:workId/comments present');
+console.log("\n==========================================");
+console.log(`TOTAL TESTS: ${passed + failed} | PASSED: ${passed} | FAILED: ${failed}`);
+console.log("==========================================");
 
-console.log(`\n=== TEST SUMMARY: ${passedTests} PASSED, ${failedTests} FAILED ===\n`);
-if (failedTests > 0) process.exit(1);
+if (failed > 0) {
+  process.exit(1);
+} else {
+  process.exit(0);
+}

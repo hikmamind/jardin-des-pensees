@@ -18,8 +18,11 @@ const AUDIO_I18N = {
     seoDesc: "استمع إلى أروع الروايات العالمية وكتب الفلسفة والتنمية الذاتية المسجلة صوتياً باللغة العربية الفصحى عبر مكتبة حكمة ونور الصوتية.",
     heroBadge: "المكتبة الصوتية للحكمة",
     heroTitle: "المكتبة الصوتية",
-    heroSubtitle: "« استمع... تأمل... وغيّر نظرتك إلى الحياة. »",
-    heroDesc: "٧ روائع أدبية وفلسفية خالدة مسموعة باللغة العربية الفصحى بنبرة هادئة ورصينة.",
+    heroSubtitle: "« استمع... وتأمل... وغير نظرتك إلى الحياة. »",
+    heroDesc: "روائع أدبية وفلسفية مسموعة باللغة العربية الفصحى بنبرة هادئة ورصينة.",
+    heroStatBooksLabel: "أعمال مختارة",
+    heroStatChaptersLabel: "مقطع صوتي",
+    heroStatArabicLabel: "عربية فصحى",
     audioLangNotice: "الصوت متوفر باللغة العربية الفصحى",
     searchPlaceholder: "ابحث عن كتاب، مؤلف، أو فكرة...",
     catAll: "الكل",
@@ -66,49 +69,76 @@ const AUDIO_I18N = {
     minutesLabel: "دقيقة",
     completedBadge: "مكتمل",
     remainingLabel: "متبقي",
+    audiobookBadge: "كتاب صوتي",
+    startListeningBtn: "ابدأ الاستماع",
+    continueListeningBtn: "متابعة الاستماع",
+    favAddAria: "إضافة إلى المفضلة",
+    favRemoveAria: "إزالة من المفضلة",
+    emptySearchTitle: "لم نجد أي عمل صوتي مطابق",
+    emptySearchDesc: "جرب البحث بعنوان آخر أو مؤلف أو أعد ضبط الفلاتر لاستكشاف كامل المكتبة.",
+    emptyResetBtn: "عرض كل الأعمال الصوتية",
     // Reviews & Ratings
-    reviewsTitle: "آراء المستمعين وتقييمات العمل",
-    reviewsCountLabel: "تقييمات",
-    reviewsSummary: "ملخص التقييمات",
+    reviewsBadgeLabel: "آراء المستمعين",
+    reviewsSectionHeading: "آراء المستمعين",
+    reviewsSectionSubtitle: "شارك تجربتك وساعدنا على تطوير مكتبة حكمـة ونور الصوتية",
+    reviewsStatusUnrated: "لم يقيّم هذا العمل بعد",
+    reviewsCountFormat: "{n} تقييمًا",
+    basedOnRatings: "بناءً على {n} تقييمًا",
+    emptyStateTitle: "كن أول من يشارك رأيه",
+    emptyStateDesc: "تجربتك قد تساعد مستمعًا آخر على اكتشاف هذا العمل.",
+    emptyStateAction: "ابدأ بتقييم هذا العمل",
     ratingLegend: "تقييمك للعمل :",
+    starRatingLevels: {
+      1: "ضعيف",
+      2: "مقبول",
+      3: "جيد",
+      4: "ممتاز",
+      5: "استثنائي"
+    },
     starAria: "{n} نجوم من 5",
     yourRatingIs: "تقييمك : {n}/5",
-    thankYouRating: "شكراً على تقييمك! 🌿",
-    emptyReviewsTitle: "لم يتم تقييم هذا العمل بعد",
-    emptyReviewsDesc: "كن أول من يشارك انطباعه وتقييمه لهذا الكتاب الصوتي.",
-    formTitle: "شارك رأيك أو ملاحظتك حول هذا الكتاب الصوتي",
+    thankYouRating: "شكرًا لك على تقييمك! 🌿",
+    formTitleText: "شاركنا تجربتك مع هذا العمل الصوتي",
     labelAuthorName: "الاسم",
     labelAuthorEmail: "البريد الإلكتروني",
     optionalTag: "(اختياري)",
-    labelCommentText: "التعليق أو التأمل الفلسفي",
+    labelCommentText: "رأيك",
     placeholderAuthorName: "اسمك أو لقبك",
     placeholderEmail: "لن يتم نشر بريدك الإلكتروني",
-    placeholderComment: "شاركنا انطباعك، أفكارك، أو ما أثر فيك من هذا العمل الصوتي...",
-    btnSubmitReview: "نشر رأيي",
+    placeholderComment: "شاركنا تجربتك مع هذا العمل الصوتي...",
+    submitReviewBtnText: "نشر التقييم",
     btnSubmitting: "جاري النشر...",
-    formSuccessMsg: "شكراً لك، تم نشر رأيك بنجاح! 🌿",
+    formSuccessMsg: "شكرًا لك، تم إرسال تقييمك بنجاح. 🌿",
     formErrorName: "يرجى كتابة اسمك.",
     formErrorText: "يرجى كتابة نص التعليق.",
-    charCounterText: "{current} / {max} حرف",
+    charCounterText: "{current} / {max}",
     sortLabel: "الترتيب :",
     sortRecent: "الأحدث",
     sortTopRated: "الأعلى تقييماً",
     sortOldest: "الأقدم",
     filterAll: "الكل",
+    helpfulBtnText: "مفيد",
     replyBtnText: "رد 💬",
     replyPlaceholder: "اكتب ردك هنا...",
     submitReplyBtn: "إرسال الرد",
     cancelReplyBtn: "إلغاء",
     loadMoreReviews: "عرض المزيد من الآراء",
-    noFilteredReviews: "لا توجد آراء مطابقة لهذا الفلتر."
+    noFilteredReviews: "لا توجد آراء مطابقة لهذا الفلتر.",
+    dateToday: "اليوم",
+    dateYesterday: "بالأمس",
+    dateDaysAgoTwo: "منذ يومين",
+    dateDaysAgo: "منذ {n} أيام"
   },
   fr: {
     seoTitle: "Bibliothèque Audio de la Sagesse | Hikma & Nour",
     seoDesc: "Écoutez des chefs-d'œuvre littéraires, philosophiques et psychologiques racontés en langue arabe dans la Bibliothèque Audio de Hikma & Nour.",
-    heroBadge: "BIBLIOTHÈQUE AUDIO DE LA SAGESSE",
+    heroBadge: "BIBLIOTHÈQUE AUDIO",
     heroTitle: "La Bibliothèque Audio",
     heroSubtitle: "« Écoutez. Réfléchissez. Transformez votre regard sur la vie. »",
-    heroDesc: "7 chefs-d'œuvre de la littérature et de la philosophie universelle narrés en langue arabe.",
+    heroDesc: "Chefs-d'œuvre littéraires et philosophiques narrés en arabe classique.",
+    heroStatBooksLabel: "œuvres d'exception",
+    heroStatChaptersLabel: "chapitres audio",
+    heroStatArabicLabel: "arabe classique",
     audioLangNotice: "Audio disponible en arabe classique",
     searchPlaceholder: "Rechercher un livre, un auteur, une idée...",
     catAll: "Tous les audios",
@@ -155,49 +185,76 @@ const AUDIO_I18N = {
     minutesLabel: "min",
     completedBadge: "Terminé",
     remainingLabel: "restant",
+    audiobookBadge: "LIVRE AUDIO",
+    startListeningBtn: "Commencer l'écoute",
+    continueListeningBtn: "Continuer l'écoute",
+    favAddAria: "Ajouter aux favoris",
+    favRemoveAria: "Retirer des favoris",
+    emptySearchTitle: "Nous n'avons trouvé aucun livre audio.",
+    emptySearchDesc: "Essayez un autre mot-clé ou réinitialisez les filtres pour découvrir toute la bibliothèque.",
+    emptyResetBtn: "Afficher tous les livres audio",
     // Reviews & Ratings
-    reviewsTitle: "Avis des auditeurs & Réflexions",
-    reviewsCountLabel: "évaluations",
-    reviewsSummary: "Résumé des évaluations",
-    ratingLegend: "Votre évaluation de l'œuvre :",
+    reviewsBadgeLabel: "Avis des auditeurs",
+    reviewsSectionHeading: "Avis des auditeurs",
+    reviewsSectionSubtitle: "Partagez votre expérience et aidez-nous à enrichir la bibliothèque audio Hikma & Nour",
+    reviewsStatusUnrated: "Pas encore évalué",
+    reviewsCountFormat: "{n} avis",
+    basedOnRatings: "Basé sur {n} évaluations",
+    emptyStateTitle: "Soyez le premier à donner votre avis",
+    emptyStateDesc: "Votre retour peut aider d'autres auditeurs à découvrir cette œuvre.",
+    emptyStateAction: "Commencez par évaluer cette œuvre",
+    ratingLegend: "Évaluer cet audio :",
+    starRatingLevels: {
+      1: "Médiocre",
+      2: "Passable",
+      3: "Bon",
+      4: "Très bien",
+      5: "Exceptionnel"
+    },
     starAria: "{n} étoiles sur 5",
     yourRatingIs: "Votre note : {n}/5",
     thankYouRating: "Merci pour votre évaluation ! 🌿",
-    emptyReviewsTitle: "Cette œuvre n'a pas encore été évaluée",
-    emptyReviewsDesc: "Soyez la première personne à partager votre impression sur ce livre audio.",
-    formTitle: "Partagez votre avis ou votre réflexion philosophique",
+    formTitleText: "Partagez votre avis sur cette œuvre audio",
     labelAuthorName: "Nom",
-    labelAuthorEmail: "Adresse e-mail",
+    labelAuthorEmail: "Email",
     optionalTag: "(facultatif)",
-    labelCommentText: "Votre commentaire ou réflexion",
+    labelCommentText: "Votre avis",
     placeholderAuthorName: "Votre nom ou pseudonyme",
     placeholderEmail: "Ne sera pas affiché publiquement",
-    placeholderComment: "Partagez vos impressions, vos réflexions ou ce que vous avez retenu...",
-    btnSubmitReview: "Publier mon avis",
+    placeholderComment: "Partagez votre expérience avec cette œuvre audio...",
+    submitReviewBtnText: "Publier mon avis",
     btnSubmitting: "Publication en cours...",
-    formSuccessMsg: "Merci, votre avis a été publié avec succès ! 🌿",
+    formSuccessMsg: "Merci, votre avis a été envoyé avec succès. 🌿",
     formErrorName: "Veuillez renseigner votre nom.",
     formErrorText: "Veuillez écrire un commentaire.",
-    charCounterText: "{current} / {max} caractères",
+    charCounterText: "{current} / {max}",
     sortLabel: "Trier par :",
     sortRecent: "Les plus récents",
     sortTopRated: "Les mieux notés",
     sortOldest: "Les plus anciens",
     filterAll: "Tous",
+    helpfulBtnText: "Utile",
     replyBtnText: "Répondre 💬",
     replyPlaceholder: "Écrire une réponse...",
     submitReplyBtn: "Envoyer la réponse",
     cancelReplyBtn: "Annuler",
     loadMoreReviews: "Voir plus d'avis",
-    noFilteredReviews: "Aucun avis ne correspond à ce filtre."
+    noFilteredReviews: "Aucun avis ne correspond à ce filtre.",
+    dateToday: "Aujourd'hui",
+    dateYesterday: "Hier",
+    dateDaysAgoTwo: "Il y a 2 jours",
+    dateDaysAgo: "Il y a {n} jours"
   },
   en: {
     seoTitle: "The Audio Library of Wisdom | Hikma & Nour",
     seoDesc: "Listen to great literary and philosophical masterpieces narrated in Arabic on the Hikma & Nour Audio Sanctuary.",
-    heroBadge: "AUDIO LIBRARY OF WISDOM",
+    heroBadge: "AUDIO LIBRARY",
     heroTitle: "The Audio Library",
     heroSubtitle: "“Listen. Reflect. Transform the way you see life.”",
-    heroDesc: "7 timeless literary and philosophical masterpieces narrated in Arabic.",
+    heroDesc: "Literary and philosophical masterpieces narrated in Classical Arabic.",
+    heroStatBooksLabel: "selected works",
+    heroStatChaptersLabel: "audio chapters",
+    heroStatArabicLabel: "classical Arabic",
     audioLangNotice: "Audio available in Arabic",
     searchPlaceholder: "Search book, author, or theme...",
     catAll: "All Audios",
@@ -244,45 +301,70 @@ const AUDIO_I18N = {
     minutesLabel: "min",
     completedBadge: "Completed",
     remainingLabel: "left",
+    audiobookBadge: "AUDIOBOOK",
+    startListeningBtn: "Start listening",
+    continueListeningBtn: "Continue listening",
+    favAddAria: "Add to favorites",
+    favRemoveAria: "Remove from favorites",
+    emptySearchTitle: "No audiobooks found matching your search.",
+    emptySearchDesc: "Try searching with different keywords or reset filters to explore all audiobooks.",
+    emptyResetBtn: "Show all audiobooks",
     // Reviews & Ratings
-    reviewsTitle: "Listener Reviews & Ratings",
-    reviewsCountLabel: "ratings",
-    reviewsSummary: "Rating Summary",
-    ratingLegend: "Your Rating:",
+    reviewsBadgeLabel: "Listener reviews",
+    reviewsSectionHeading: "Listener reviews",
+    reviewsSectionSubtitle: "Share your experience and help us grow the Hikma & Nour audio library",
+    reviewsStatusUnrated: "Not rated yet",
+    reviewsCountFormat: "{n} reviews",
+    basedOnRatings: "Based on {n} ratings",
+    emptyStateTitle: "Be the first to review",
+    emptyStateDesc: "Your review may help another listener discover this work.",
+    emptyStateAction: "Start by rating this work",
+    ratingLegend: "Rate this audio:",
+    starRatingLevels: {
+      1: "Poor",
+      2: "Fair",
+      3: "Good",
+      4: "Great",
+      5: "Exceptional"
+    },
     starAria: "{n} stars out of 5",
     yourRatingIs: "Your rating: {n}/5",
     thankYouRating: "Thank you for your rating! 🌿",
-    emptyReviewsTitle: "This work has not been reviewed yet",
-    emptyReviewsDesc: "Be the first to share your reflections on this audiobook.",
-    formTitle: "Share your review or philosophical reflection",
+    formTitleText: "Share your review on this audiobook",
     labelAuthorName: "Name",
-    labelAuthorEmail: "Email address",
+    labelAuthorEmail: "Email",
     optionalTag: "(optional)",
-    labelCommentText: "Comment or reflection",
+    labelCommentText: "Your review",
     placeholderAuthorName: "Your name or nickname",
     placeholderEmail: "Will not be published",
-    placeholderComment: "Share your thoughts, impressions, or philosophical takeaways...",
-    btnSubmitReview: "Post my review",
+    placeholderComment: "Share your experience with this audiobook...",
+    submitReviewBtnText: "Publish review",
     btnSubmitting: "Posting...",
-    formSuccessMsg: "Thank you, your review has been published! 🌿",
+    formSuccessMsg: "Thank you, your review has been submitted successfully. 🌿",
     formErrorName: "Please enter your name.",
     formErrorText: "Please enter your comment.",
-    charCounterText: "{current} / {max} characters",
+    charCounterText: "{current} / {max}",
     sortLabel: "Sort by:",
     sortRecent: "Most recent",
     sortTopRated: "Highest rated",
     sortOldest: "Oldest",
     filterAll: "All",
+    helpfulBtnText: "Helpful",
     replyBtnText: "Reply 💬",
     replyPlaceholder: "Write a reply...",
     submitReplyBtn: "Post reply",
     cancelReplyBtn: "Cancel",
     loadMoreReviews: "View more reviews",
-    noFilteredReviews: "No reviews match this filter."
+    noFilteredReviews: "No reviews match this filter.",
+    dateToday: "Today",
+    dateYesterday: "Yesterday",
+    dateDaysAgoTwo: "2 days ago",
+    dateDaysAgo: "{n} days ago"
   }
 };
 
 // ==========================================================================
+
 // CANONICAL AUDIO DATABASE (ALL 7 WORKS WITH REAL MP3 FILES)
 // ==========================================================================
 const AUDIO_BOOKS_DATA = {
@@ -843,14 +925,182 @@ const AUDIO_BOOKS_DATA = {
     ]
   }
 };
+window.AUDIO_BOOKS_DATA = AUDIO_BOOKS_DATA;
 
 // ==========================================================================
 // AUDIO REVIEWS & RATINGS STORE (MODULAR STORAGE LAYER)
 // ==========================================================================
 
+const DEFAULT_AUDIO_REVIEWS_SEED = {
+  milena: {
+    ratings: [5, 5, 5, 4, 5, 5, 4, 5, 5, 4],
+    comments: [
+      {
+        id: "seed_milena_1",
+        workId: "milena",
+        author: "د. طارق المنصوري",
+        rating: 5,
+        text: "نبرة الصوت تأخذك مباشرة إلى براغ في مطلع القرن العشرين. رسائل كافكا ليست مجرد مراسلات عاطفية بل هي رحلة فلسفية داخل روح معذبة تبحث عن الخلاص والصدق المطلق.",
+        createdAt: 1722000000000,
+        helpfulCount: 14,
+        replies: [
+          {
+            id: "reply_seed_milena_1_1",
+            author: "حكمة ونور (الإدارة)",
+            text: "سعداء جداً بأن التسجيل نقل إليكم عمق مشاعر كافكا وصدقه الوجودي. استماعاً طيباً لبقية الفصول.",
+            createdAt: 1722010000000
+          }
+        ]
+      },
+      {
+        id: "seed_milena_2",
+        workId: "milena",
+        author: "Claire D.",
+        rating: 5,
+        text: "Une expérience sonore bouleversante. L'intimité douloureuse des lettres de Kafka est sublimée par la narration en arabe littéraire. Un pur chef-d'œuvre de la bibliothèque.",
+        createdAt: 1722300000000,
+        helpfulCount: 9,
+        replies: []
+      },
+      {
+        id: "seed_milena_3",
+        workId: "milena",
+        author: "ياسين برادة",
+        rating: 4,
+        text: "الموسيقى الخلفية الهادئة تعطي طابعاً تأملياً عميقاً. الفصل الثالث بالتحديد عن الخوف والحب تحفة أدبية نادرة.",
+        createdAt: 1722500000000,
+        helpfulCount: 6,
+        replies: []
+      },
+      {
+        id: "seed_milena_4",
+        workId: "milena",
+        author: "Julian Vance",
+        rating: 5,
+        text: "The pacing and emotional weight in this audio recording are magnificent. A true sanctuary for contemplative literature.",
+        createdAt: 1722600000000,
+        helpfulCount: 4,
+        replies: []
+      }
+    ]
+  },
+  alchemist: {
+    ratings: [5, 5, 4, 5, 5, 5, 4, 5],
+    comments: [
+      {
+        id: "seed_alch_1",
+        workId: "alchemist",
+        author: "سارة العمراني",
+        rating: 5,
+        text: "حكاية سانتياغو تلهمني كلما شعرت بالتردد في مساري الشخصي. إلقاء صوتي فخم ينبض بالحكمة.",
+        createdAt: 1721000000000,
+        helpfulCount: 11,
+        replies: []
+      }
+    ]
+  },
+  crime_punishment: {
+    ratings: [5, 5, 5, 5, 4, 5, 5],
+    comments: [
+      {
+        id: "seed_crime_1",
+        workId: "crime_punishment",
+        author: "أمين الهاشمي",
+        rating: 5,
+        text: "العمق السيكولوجي لدستويفسكي يظهر بقوة في هذا التسجيل الصوتي. صراع راسكولنيكوف الداخلي مسموع في كل نبرة.",
+        createdAt: 1721500000000,
+        helpfulCount: 8,
+        replies: []
+      }
+    ]
+  },
+  etranger: {
+    ratings: [5, 4, 5, 5, 5, 4],
+    comments: [
+      {
+        id: "seed_etr_1",
+        workId: "etranger",
+        author: "Karim B.",
+        rating: 5,
+        text: "La voix incarne parfaitement le détachement philosophique de Meursault face au soleil d'Alger.",
+        createdAt: 1721600000000,
+        helpfulCount: 7,
+        replies: []
+      }
+    ]
+  },
+  petit_prince: {
+    ratings: [5, 5, 5, 5, 5],
+    comments: [
+      {
+        id: "seed_prince_1",
+        workId: "petit_prince",
+        author: "نور الدين",
+        rating: 5,
+        text: "لا يُرى إلا بالقلب، فالجوهر لا تراه العيون. تسجيل يعيد صفاء الطفولة إلى الروح.",
+        createdAt: 1721700000000,
+        helpfulCount: 15,
+        replies: []
+      }
+    ]
+  },
+  kafka: {
+    ratings: [5, 5, 4, 5, 5],
+    comments: [
+      {
+        id: "seed_kafka_1",
+        workId: "kafka",
+        author: "Mehdi L.",
+        rating: 5,
+        text: "Une métaphore magistrale de l'aliénation humaine. Lecture captivante.",
+        createdAt: 1721800000000,
+        helpfulCount: 5,
+        replies: []
+      }
+    ]
+  },
+  vieux: {
+    ratings: [5, 5, 5, 4, 5],
+    comments: [
+      {
+        id: "seed_vieux_1",
+        workId: "vieux",
+        author: "عمر الفاروق",
+        rating: 5,
+        text: "الإنسان يمكن أن يهلك لكنه لا يُهزم أبداً. قوة وعزيمة سانتياغو في مواجهة البحر تلهم الصبر.",
+        createdAt: 1721900000000,
+        helpfulCount: 10,
+        replies: []
+      }
+    ]
+  }
+};
+
 const AudioReviewsStore = {
+  // Ensure default seed data exists for works
+  ensureSeedData(workId) {
+    try {
+      const allRatings = JSON.parse(localStorage.getItem('hikma_audio_ratings') || '{}');
+      const allComments = JSON.parse(localStorage.getItem('hikma_audio_comments') || '{}');
+      let changed = false;
+
+      const seed = DEFAULT_AUDIO_REVIEWS_SEED[workId];
+      if (seed) {
+        if (!allRatings[workId] || allRatings[workId].length === 0) {
+          allRatings[workId] = [...seed.ratings];
+          localStorage.setItem('hikma_audio_ratings', JSON.stringify(allRatings));
+        }
+        if (!allComments[workId] || allComments[workId].length === 0) {
+          allComments[workId] = JSON.parse(JSON.stringify(seed.comments));
+          localStorage.setItem('hikma_audio_comments', JSON.stringify(allComments));
+        }
+      }
+    } catch (e) {}
+  },
+
   // 1. Get Ratings Summary for workId
   getRatingSummary(workId) {
+    this.ensureSeedData(workId);
     try {
       const allRatings = JSON.parse(localStorage.getItem('hikma_audio_ratings') || '{}');
       const workRatings = allRatings[workId] || [];
@@ -909,11 +1159,13 @@ const AudioReviewsStore = {
       localStorage.setItem('hikma_audio_ratings', JSON.stringify(allRatings));
 
       // Optional async sync to server API
-      fetch(`/api/audio/${workId}/rating`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ rating: num })
-      }).catch(() => {});
+      if (typeof fetch === 'function') {
+        fetch(`/api/audio/${workId}/rating`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ rating: num })
+        }).catch(() => {});
+      }
 
       return this.getRatingSummary(workId);
     } catch (e) {
@@ -923,12 +1175,17 @@ const AudioReviewsStore = {
 
   // 3. Get Reviews / Comments for workId
   getReviews(workId) {
+    this.ensureSeedData(workId);
     try {
       const allComments = JSON.parse(localStorage.getItem('hikma_audio_comments') || '{}');
       return allComments[workId] || [];
     } catch (e) {
       return [];
     }
+  },
+
+  getComments(workId) {
+    return this.getReviews(workId);
   },
 
   // 4. Submit Comment / Review (with optional parentId for 1-level reply)
@@ -973,11 +1230,13 @@ const AudioReviewsStore = {
       localStorage.setItem('hikma_audio_comments', JSON.stringify(allComments));
 
       // Optional async sync to server API
-      fetch(`/api/audio/${workId}/comments`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ author: cleanAuthor, text: cleanText, rating, parentId })
-      }).catch(() => {});
+      if (typeof fetch === 'function') {
+        fetch(`/api/audio/${workId}/comments`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ author: cleanAuthor, text: cleanText, rating, parentId })
+        }).catch(() => {});
+      }
 
       return { success: true, comment: newComment };
     } catch (e) {
@@ -985,7 +1244,59 @@ const AudioReviewsStore = {
     }
   },
 
-  // 5. Delete Own Comment
+  // 5. Toggle Helpful on Comment
+  toggleHelpful(workId, commentId) {
+    try {
+      const helpfulMap = JSON.parse(localStorage.getItem('hikma_audio_helpful') || '{}');
+      const userLikesKey = `user_likes_${workId}`;
+      const userLikes = helpfulMap[userLikesKey] || [];
+      const isLiked = userLikes.includes(commentId);
+      
+      const allComments = JSON.parse(localStorage.getItem('hikma_audio_comments') || '{}');
+      if (allComments[workId]) {
+        const comment = allComments[workId].find(c => c.id === commentId);
+        if (comment) {
+          if (typeof comment.helpfulCount !== 'number') comment.helpfulCount = 0;
+          if (isLiked) {
+            comment.helpfulCount = Math.max(0, comment.helpfulCount - 1);
+            helpfulMap[userLikesKey] = userLikes.filter(id => id !== commentId);
+          } else {
+            comment.helpfulCount += 1;
+            helpfulMap[userLikesKey] = [...userLikes, commentId];
+          }
+          localStorage.setItem('hikma_audio_comments', JSON.stringify(allComments));
+          localStorage.setItem('hikma_audio_helpful', JSON.stringify(helpfulMap));
+          
+          if (typeof fetch === 'function') {
+            fetch(`/api/audio/${workId}/comments/${commentId}/helpful`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ liked: !isLiked })
+            }).catch(() => {});
+          }
+          
+          return { isLiked: !isLiked, count: comment.helpfulCount };
+        }
+      }
+      return { isLiked: false, count: 0 };
+    } catch (e) {
+      return { isLiked: false, count: 0 };
+    }
+  },
+
+  // 6. Check if Comment is marked helpful by user
+  isCommentHelpful(workId, commentId) {
+    try {
+      const helpfulMap = JSON.parse(localStorage.getItem('hikma_audio_helpful') || '{}');
+      const userLikesKey = `user_likes_${workId}`;
+      const userLikes = helpfulMap[userLikesKey] || [];
+      return userLikes.includes(commentId);
+    } catch (e) {
+      return false;
+    }
+  },
+
+  // 7. Delete Own Comment
   deleteOwnComment(workId, commentId) {
     try {
       const allComments = JSON.parse(localStorage.getItem('hikma_audio_comments') || '{}');
@@ -996,6 +1307,7 @@ const AudioReviewsStore = {
     } catch (e) {}
   }
 };
+window.AudioReviewsStore = AudioReviewsStore;
 
 // ==========================================================================
 // APPLICATION STATE & PERSISTENCE
@@ -1118,9 +1430,28 @@ function formatTime(seconds) {
 // Relative Date Formatter
 function formatReviewDate(timestamp) {
   if (!timestamp) return '';
-  const d = new Date(timestamp);
-  const locale = currentLang === 'ar' ? 'ar-EG' : currentLang === 'fr' ? 'fr-FR' : 'en-US';
-  return d.toLocaleDateString(locale, { day: 'numeric', month: 'short', year: 'numeric' });
+  try {
+    const now = Date.now();
+    const diffMs = now - timestamp;
+    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+    const t = AUDIO_I18N[currentLang] || AUDIO_I18N.ar;
+
+    if (diffDays === 0) {
+      return t.dateToday || "اليوم";
+    } else if (diffDays === 1) {
+      return t.dateYesterday || "بالأمس";
+    } else if (diffDays === 2) {
+      return t.dateDaysAgoTwo || "منذ يومين";
+    } else if (diffDays > 2 && diffDays < 30) {
+      return (t.dateDaysAgo || "منذ {n} أيام").replace('{n}', diffDays);
+    }
+
+    const d = new Date(timestamp);
+    const locale = currentLang === 'ar' ? 'ar-EG' : currentLang === 'fr' ? 'fr-FR' : 'en-US';
+    return d.toLocaleDateString(locale, { day: 'numeric', month: 'short', year: 'numeric' });
+  } catch (e) {
+    return '';
+  }
 }
 
 // ==========================================================================
@@ -1424,6 +1755,14 @@ function translatePage() {
   if (hNotice) hNotice.textContent = t.audioLangNotice;
   if (sInput) sInput.placeholder = t.searchPlaceholder;
 
+  // Hero Stats
+  const sBooks = document.getElementById('heroStatBooksLabel');
+  const sChapters = document.getElementById('heroStatChaptersLabel');
+  const sArabic = document.getElementById('heroStatArabicLabel');
+  if (sBooks) sBooks.textContent = t.heroStatBooksLabel || "أعمال مختارة";
+  if (sChapters) sChapters.textContent = t.heroStatChaptersLabel || "مقطع صوتي";
+  if (sArabic) sArabic.textContent = t.heroStatArabicLabel || "عربية فصحى";
+
   // Breadcrumbs & Detail navigation
   const bHome = document.getElementById('bHome');
   const bAudio = document.getElementById('bAudio');
@@ -1460,8 +1799,10 @@ function translatePage() {
 
   // Reviews & Ratings Form
   const rSecHeading = document.getElementById('reviewsSectionHeading');
+  const rBadgeLabel = document.getElementById('reviewsBadgeLabel');
+  const rSecSubtitle = document.getElementById('reviewsSectionSubtitle');
   const rLeg = document.getElementById('ratingLegendText');
-  const rFormTitle = document.getElementById('reviewFormTitle');
+  const rFormTitle = document.getElementById('reviewFormTitleText');
   const rLabelName = document.getElementById('labelAuthorName');
   const rLabelEmail = document.getElementById('labelAuthorEmail');
   const rLabelComment = document.getElementById('labelCommentText');
@@ -1472,18 +1813,20 @@ function translatePage() {
   const rLabelSort = document.getElementById('labelSortReviews');
   const rLoadMore = document.getElementById('loadMoreReviewsText');
 
-  if (rSecHeading) rSecHeading.textContent = t.reviewsTitle;
-  if (rLeg) rLeg.textContent = t.ratingLegend;
-  if (rFormTitle) rFormTitle.textContent = t.formTitle;
-  if (rLabelName) rLabelName.innerHTML = `${t.labelAuthorName} <span style="color:var(--gold);">*</span>`;
-  if (rLabelEmail) rLabelEmail.innerHTML = `${t.labelAuthorEmail} <span style="color:var(--text-muted);font-size:0.75rem;">${t.optionalTag}</span>`;
-  if (rLabelComment) rLabelComment.innerHTML = `${t.labelCommentText} <span style="color:var(--gold);">*</span>`;
-  if (rInputName) rInputName.placeholder = t.placeholderAuthorName;
-  if (rInputEmail) rInputEmail.placeholder = t.placeholderEmail;
-  if (rInputText) rInputText.placeholder = t.placeholderComment;
-  if (rBtnSub) rBtnSub.textContent = t.btnSubmitReview;
-  if (rLabelSort) rLabelSort.textContent = t.sortLabel;
-  if (rLoadMore) rLoadMore.textContent = t.loadMoreReviews;
+  if (rSecHeading) rSecHeading.textContent = t.reviewsSectionHeading || "آراء المستمعين";
+  if (rBadgeLabel) rBadgeLabel.textContent = t.reviewsBadgeLabel || "آراء المستمعين";
+  if (rSecSubtitle) rSecSubtitle.textContent = t.reviewsSectionSubtitle || "شارك تجربتك وساعدنا على تطوير مكتبة حكمـة ونور الصوتية";
+  if (rLeg) rLeg.textContent = t.ratingLegend || "تقييمك للعمل :";
+  if (rFormTitle) rFormTitle.textContent = t.formTitleText || "شاركنا تجربتك مع هذا العمل الصوتي";
+  if (rLabelName) rLabelName.innerHTML = `${t.labelAuthorName || 'الاسم'} <span style="color:var(--review-gold);">*</span>`;
+  if (rLabelEmail) rLabelEmail.innerHTML = `${t.labelAuthorEmail || 'البريد الإلكتروني'} <span style="color:var(--review-muted);font-size:0.75rem;">${t.optionalTag || '(اختياري)'}</span>`;
+  if (rLabelComment) rLabelComment.innerHTML = `${t.labelCommentText || 'رأيك'} <span style="color:var(--review-gold);">*</span>`;
+  if (rInputName) rInputName.placeholder = t.placeholderAuthorName || "اسمك أو لقبك";
+  if (rInputEmail) rInputEmail.placeholder = t.placeholderEmail || "لن يتم نشر بريدك الإلكتروني";
+  if (rInputText) rInputText.placeholder = t.placeholderComment || "شاركنا تجربتك مع هذا العمل الصوتي...";
+  if (rBtnSub) rBtnSub.textContent = t.submitReviewBtnText || "نشر التقييم";
+  if (rLabelSort) rLabelSort.textContent = t.sortLabel || "الترتيب :";
+  if (rLoadMore) rLoadMore.textContent = t.loadMoreReviews || "عرض المزيد من الآراء";
 
   // Sort dropdown options
   const sortSelect = document.getElementById('reviewsSortSelect');
@@ -1665,13 +2008,14 @@ function renderContinueListeningSection() {
 }
 
 // ==========================================================================
-// RENDER CATALOG GRID (SEARCH, CATEGORY FILTERS, FAVORITES)
+// RENDER CATALOG GRID (SEARCH, CATEGORY FILTERS, FAVORITES — V4 PREMIUM)
 // ==========================================================================
 
 function renderCatalogGrid(filter = 'all', searchQuery = '') {
   const grid = document.getElementById('booksGrid');
   if (!grid) return;
   const t = AUDIO_I18N[currentLang] || AUDIO_I18N.ar;
+  const progressMap = getSavedProgress();
 
   let books = Object.values(AUDIO_BOOKS_DATA);
   const q = searchQuery.toLowerCase().trim();
@@ -1681,9 +2025,10 @@ function renderCatalogGrid(filter = 'all', searchQuery = '') {
     books = books.filter(b => {
       const titleStr = `${b.title.ar} ${b.title.fr} ${b.title.en}`.toLowerCase();
       const authorStr = `${b.author.ar} ${b.author.fr} ${b.author.en}`.toLowerCase();
+      const catStr = `${b.categoryName.ar} ${b.categoryName.fr} ${b.categoryName.en} ${b.category}`.toLowerCase();
       const descStr = `${b.shortDesc.ar} ${b.shortDesc.fr} ${b.shortDesc.en}`.toLowerCase();
       const chapsStr = b.chapters.map(c => `${c.name.ar} ${c.desc.ar} ${c.name.fr} ${c.desc.fr}`).join(' ').toLowerCase();
-      return titleStr.includes(q) || authorStr.includes(q) || descStr.includes(q) || chapsStr.includes(q);
+      return titleStr.includes(q) || authorStr.includes(q) || catStr.includes(q) || descStr.includes(q) || chapsStr.includes(q);
     });
   }
 
@@ -1692,13 +2037,15 @@ function renderCatalogGrid(filter = 'all', searchQuery = '') {
     const favs = getFavorites();
     books = books.filter(b => favs.includes(b.key));
   } else if (filter === 'in_progress') {
-    const progressMap = getSavedProgress();
     books = books.filter(b => progressMap[b.key] && progressMap[b.key].currentTime > 0 && !progressMap[b.key].completed);
   } else if (filter === 'completed') {
-    const progressMap = getSavedProgress();
     books = books.filter(b => progressMap[b.key] && progressMap[b.key].completed);
+  } else if (filter === 'classics') {
+    books = books.filter(b => b.category === 'classics' || b.key === 'crime_punishment' || b.key === 'etranger' || b.key === 'vieil_homme');
+  } else if (filter === 'selfdev') {
+    books = books.filter(b => b.category === 'selfdev' || b.key === 'alchemist' || b.key === 'petit_prince');
   } else if (filter !== 'all') {
-    books = books.filter(b => b.category === filter || (filter === 'classics' && (b.category === 'classics' || b.key === 'crime_punishment' || b.key === 'etranger')));
+    books = books.filter(b => b.category === filter);
   }
 
   // Update total count
@@ -1707,9 +2054,13 @@ function renderCatalogGrid(filter = 'all', searchQuery = '') {
 
   if (books.length === 0) {
     grid.innerHTML = `
-      <div style="grid-column: 1 / -1; text-align: center; padding: 48px 16px; color: var(--text-muted);">
-        <p style="font-size: 1.1rem; margin-bottom: 8px;">لم يتم العثور على أي كتاب صوتي مطابق.</p>
-        <button class="btn-sec-action" onclick="resetFilters()">عرض كل الكتب</button>
+      <div class="audio-empty-state-card">
+        <div class="empty-sparkle-icon">✦</div>
+        <h4 class="empty-title">${t.emptySearchTitle || "لم نجد أي عمل صوتي مطابق"}</h4>
+        <p class="empty-desc">${t.emptySearchDesc || "جرب كلمة بحث أخرى أو أعد ضبط الفلاتر لاستكشاف كامل المكتبة."}</p>
+        <button type="button" class="empty-reset-btn" onclick="resetFilters()">
+          <span>↺</span> <span>${t.emptyResetBtn || "عرض كل الأعمال الصوتية"}</span>
+        </button>
       </div>
     `;
     return;
@@ -1718,37 +2069,87 @@ function renderCatalogGrid(filter = 'all', searchQuery = '') {
   grid.innerHTML = books.map((book, idx) => {
     const bookTitle = book.title[currentLang] || book.title.ar;
     const authorName = book.author[currentLang] || book.author.ar;
+    const catName = book.categoryName[currentLang] || book.categoryName.ar;
     const shortDesc = book.shortDesc[currentLang] || book.shortDesc.ar;
     const isFav = isFavorite(book.key);
+    
+    const progress = progressMap[book.key];
+    const hasProgress = progress && progress.currentTime > 0;
+    const isCompleted = progress && progress.completed;
+    const progressPct = progress ? (progress.progressPercent || Math.min(100, Math.round((progress.currentTime / (progress.duration || 1)) * 100))) : 0;
+    const chapWord = currentLang === 'ar' ? 'فصول' : (currentLang === 'fr' ? 'chapitres' : 'chapters');
 
     return `
-      <article class="audiobook-card" data-book-key="${book.key}" onclick="openBookDetail('${book.key}')">
+      <article class="audiobook-card" data-book-key="${book.key}" onclick="openBookDetail('${book.key}')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openBookDetail('${book.key}');}" aria-label="${bookTitle} — ${authorName}">
+        <!-- 1. Book Cover Box (3:4 Ratio) -->
         <div class="card-cover-wrapper">
-          <span class="card-audio-tag">🎧 AUDIO</span>
-          <span class="card-duration-badge">${book.totalDuration}</span>
           <img src="${book.cover}" alt="${bookTitle}" class="card-cover-img" ${idx > 2 ? 'loading="lazy"' : ''} onerror="this.src='../brand_logo_official.png'">
+          
+          <div class="card-top-badges">
+            <span class="card-audio-pill">🎧 ${t.audiobookBadge || "كتاب صوتي"}</span>
+            <span class="card-cat-pill">${catName}</span>
+          </div>
+
+          ${isCompleted ? `
+            <div class="card-status-badge completed">
+              <span>✓</span> <span>${t.completedBadge || "مكتمل"}</span>
+            </div>
+          ` : hasProgress ? `
+            <div class="card-status-badge in-progress">
+              <span>⏳</span> <span>${progressPct}%</span>
+            </div>
+          ` : ''}
+
           <div class="card-play-overlay">
-            <div class="card-play-circle">▶</div>
+            <div class="card-play-circle" aria-hidden="true">▶</div>
           </div>
         </div>
 
+        <!-- 2. Card Content Body -->
         <div class="card-body">
-          <div>
+          <div class="card-header-meta">
             <h3 class="card-title">${bookTitle}</h3>
             <div class="card-author">${authorName}</div>
             <p class="card-desc">${shortDesc}</p>
           </div>
 
-          <div class="card-footer-row" onclick="event.stopPropagation()">
-            <span class="card-lang-badge">${t.audioInArabicTag}</span>
-            <div style="display:flex;align-items:center;gap:10px;">
-              <button style="background:transparent;border:none;color:${isFav ? 'var(--gold)' : 'var(--text-muted)'};font-size:1.1rem;cursor:pointer;" onclick="toggleCardFav('${book.key}', this)" aria-label="${t.favAdd}">
-                ${isFav ? '♥' : '♡'}
-              </button>
-              <button class="card-listen-btn-text" style="background:transparent;border:none;cursor:pointer;" onclick="playBookChapter('${book.key}', 0)">
-                ${t.listenBtn} ▶
-              </button>
+          <!-- Progress Bar if in progress -->
+          ${hasProgress && !isCompleted ? `
+            <div class="card-progress-box">
+              <div class="card-progress-bar-bg">
+                <div class="card-progress-bar-fill" style="width: ${progressPct}%;"></div>
+              </div>
+              <div class="card-progress-info">
+                <span>${t.chapterPrefix} ${(progress.chapterIndex || 0) + 1}</span>
+                <span>${progressPct}% (${formatTime(progress.currentTime)})</span>
+              </div>
             </div>
+          ` : ''}
+
+          <!-- Metadata row -->
+          <div class="card-meta-divider"></div>
+          <div class="card-meta-row">
+            <div class="card-meta-item">
+              <span class="meta-icon">📖</span>
+              <span>${book.chapters.length} ${chapWord}</span>
+            </div>
+            <span class="meta-dot">•</span>
+            <div class="card-meta-item">
+              <span class="meta-icon">⏱</span>
+              <span>${book.totalDuration}</span>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="card-actions-row" onclick="event.stopPropagation()">
+            <button type="button" class="card-main-play-btn ${hasProgress && !isCompleted ? 'resume-mode' : ''}" onclick="playBookChapter('${book.key}', ${hasProgress && !isCompleted ? (progress.chapterIndex || 0) : 0}, ${hasProgress && !isCompleted ? (progress.currentTime || 0) : 0})" aria-label="${hasProgress && !isCompleted ? (t.continueListeningBtn || 'متابعة الاستماع') : (t.startListeningBtn || 'ابدأ الاستماع')}">
+              <span>▶</span>
+              <span>${hasProgress && !isCompleted ? (t.continueListeningBtn || 'متابعة الاستماع') : (t.startListeningBtn || 'ابدأ الاستماع')}</span>
+            </button>
+
+            <button type="button" class="card-fav-btn ${isFav ? 'active' : ''}" onclick="toggleCardFav('${book.key}', this)" aria-label="${isFav ? (t.favRemoveAria || 'إزالة من المفضلة') : (t.favAddAria || 'إضافة إلى المفضلة')}" title="${isFav ? (t.favSaved || 'محفوظ في المفضلة') : (t.favAdd || 'حفظ في المفضلة')}">
+              <span class="fav-heart-icon">${isFav ? '♥' : '♡'}</span>
+            </button>
           </div>
         </div>
       </article>
@@ -1802,13 +2203,20 @@ function setupSearchInput() {
 }
 
 window.toggleCardFav = function(bookKey, btn) {
+  if (window.event) window.event.stopPropagation();
   const added = toggleFavorite(bookKey);
   const t = AUDIO_I18N[currentLang] || AUDIO_I18N.ar;
-  if (btn) {
-    btn.innerHTML = added ? '<span>♥</span> <span>' + t.catFavorites + '</span>' : '<span>♡</span> <span>' + t.catFavorites + '</span>';
-  }
   showToast(added ? t.toastFavAdded : t.toastFavRemoved);
-  renderCatalogGrid(activeCategory, activeSearchQuery);
+  if (btn) {
+    btn.classList.toggle('active', added);
+    btn.setAttribute('aria-label', added ? (t.favRemoveAria || "إزالة من المفضلة") : (t.favAddAria || "إضافة إلى المفضلة"));
+    btn.setAttribute('title', added ? (t.favSaved || "محفوظ في المفضلة") : (t.favAdd || "حفظ في المفضلة"));
+    const icon = btn.querySelector('.fav-heart-icon') || btn;
+    icon.textContent = added ? '♥' : '♡';
+  }
+  if (activeCategory === 'favorites') {
+    renderCatalogGrid('favorites', activeSearchQuery);
+  }
 };
 
 // View Switchers
@@ -2032,30 +2440,42 @@ function renderReviewsSection(workId) {
 function renderRatingSummary(workId) {
   const container = document.getElementById('reviewsSummaryGrid');
   const countBadge = document.getElementById('reviewsCountBadge');
+  const statusIcon = document.getElementById('reviewsStatusIcon');
   if (!container) return;
   const t = AUDIO_I18N[currentLang] || AUDIO_I18N.ar;
 
   const summary = AudioReviewsStore.getRatingSummary(workId);
-  if (countBadge) countBadge.textContent = `${summary.totalCount} ${t.reviewsCountLabel}`;
 
   if (summary.totalCount === 0) {
+    if (countBadge) countBadge.textContent = t.reviewsStatusUnrated || "لم يقيّم هذا العمل بعد";
+    if (statusIcon) statusIcon.textContent = "✦";
+
     container.innerHTML = `
-      <div style="grid-column: 1 / -1; text-align: center; padding: 20px 10px;">
-        <div style="font-size: 2.2rem; margin-bottom: 8px;">🌱</div>
-        <h4 style="color: var(--gold); font-size: 1.1rem; margin: 0 0 6px;">${t.emptyReviewsTitle}</h4>
-        <p style="color: var(--review-muted); font-size: 0.88rem; margin: 0;">${t.emptyReviewsDesc}</p>
+      <div class="reviews-empty-state-card">
+        <div class="empty-sparkle-icon">✦</div>
+        <h4 class="empty-title">${t.emptyStateTitle || "كن أول من يشارك رأيه"}</h4>
+        <p class="empty-desc">${t.emptyStateDesc || "تجربتك قد تساعد مستمعًا آخر على اكتشاف هذا العمل."}</p>
+        <button type="button" class="empty-cta-btn" onclick="document.getElementById('userRatingBox').scrollIntoView({behavior:'smooth'})">
+          <span>★</span> <span>${t.emptyStateAction || "ابدأ بتقييم هذا العمل"}</span>
+        </button>
       </div>
     `;
     return;
   }
 
+  if (countBadge) {
+    countBadge.textContent = (t.reviewsCountFormat || "{n} تقييمًا").replace('{n}', summary.totalCount);
+  }
+  if (statusIcon) statusIcon.textContent = "★";
+
   const starHtml = '★'.repeat(Math.round(summary.average)) + '☆'.repeat(5 - Math.round(summary.average));
+  const basedOnText = (t.basedOnRatings || "بناءً على {n} تقييمًا").replace('{n}', summary.totalCount);
 
   container.innerHTML = `
     <div class="summary-score-col">
       <div class="big-score-num">${summary.average.toFixed(1)}</div>
       <div class="big-stars-row">${starHtml}</div>
-      <div class="total-reviews-count">${summary.totalCount} ${t.reviewsCountLabel}</div>
+      <div class="total-reviews-count">${basedOnText}</div>
     </div>
 
     <div class="distribution-bars-col">
@@ -2080,7 +2500,8 @@ function renderUserRatingBox(workId) {
   updateStarButtonsUI(summary.userRating);
 
   if (summary.userRating) {
-    if (statusEl) statusEl.textContent = t.yourRatingIs.replace('{n}', summary.userRating);
+    const levelText = (t.starRatingLevels && t.starRatingLevels[summary.userRating]) || '';
+    if (statusEl) statusEl.textContent = `★ ${summary.userRating}/5 — ${levelText}`;
   } else {
     if (statusEl) statusEl.textContent = '';
   }
@@ -2090,6 +2511,7 @@ function updateStarButtonsUI(rating) {
   const buttons = document.querySelectorAll('#starRatingGroup .star-btn');
   buttons.forEach(btn => {
     const starNum = parseInt(btn.getAttribute('data-star'), 10);
+    btn.classList.remove('hovered');
     if (rating && starNum <= rating) {
       btn.classList.add('active');
       btn.setAttribute('aria-checked', starNum === rating ? 'true' : 'false');
@@ -2100,12 +2522,47 @@ function updateStarButtonsUI(rating) {
   });
 }
 
+window.previewStarHover = function(starNum) {
+  const t = AUDIO_I18N[currentLang] || AUDIO_I18N.ar;
+  const statusEl = document.getElementById('ratingFeedbackStatus');
+  const buttons = document.querySelectorAll('#starRatingGroup .star-btn');
+
+  if (starNum === 0) {
+    const summary = AudioReviewsStore.getRatingSummary(activeBookKey);
+    updateStarButtonsUI(summary.userRating);
+    if (summary.userRating && statusEl) {
+      const levelText = (t.starRatingLevels && t.starRatingLevels[summary.userRating]) || '';
+      statusEl.textContent = `★ ${summary.userRating}/5 — ${levelText}`;
+    } else if (statusEl) {
+      statusEl.textContent = '';
+    }
+    return;
+  }
+
+  buttons.forEach(btn => {
+    const num = parseInt(btn.getAttribute('data-star'), 10);
+    btn.classList.toggle('hovered', num <= starNum);
+  });
+
+  if (statusEl) {
+    const levelText = (t.starRatingLevels && t.starRatingLevels[starNum]) || '';
+    statusEl.textContent = `${starNum} ★ — ${levelText}`;
+  }
+};
+
 window.selectWorkRating = function(starNum) {
   const t = AUDIO_I18N[currentLang] || AUDIO_I18N.ar;
+  const statusEl = document.getElementById('ratingFeedbackStatus');
+  
   AudioReviewsStore.submitRating(activeBookKey, starNum);
   renderRatingSummary(activeBookKey);
   renderUserRatingBox(activeBookKey);
-  showToast(t.thankYouRating);
+
+  const levelText = (t.starRatingLevels && t.starRatingLevels[starNum]) || '';
+  if (statusEl) {
+    statusEl.textContent = `★ ${starNum}/5 — ${levelText}`;
+  }
+  showToast(t.thankYouRating || "شكرًا لك على تقييمك! 🌿");
 };
 
 // Character counter for comment
@@ -2113,7 +2570,9 @@ window.updateCommentCharCount = function(textarea) {
   const counter = document.getElementById('commentCharCounter');
   const t = AUDIO_I18N[currentLang] || AUDIO_I18N.ar;
   if (counter && textarea) {
-    counter.textContent = t.charCounterText.replace('{current}', textarea.value.length).replace('{max}', 1500);
+    const max = 1500;
+    const len = textarea.value.length;
+    counter.textContent = `${len} / ${max}`;
   }
 };
 
@@ -2147,12 +2606,13 @@ window.handleCommentSubmit = function(e) {
   const res = AudioReviewsStore.submitComment(activeBookKey, { author, text, rating });
 
   if (res.success) {
-    if (textInput) textInput.value = '';
+    const form = document.getElementById('workCommentForm');
+    if (form) form.reset();
     updateCommentCharCount(textInput);
     if (noticeEl) {
       noticeEl.textContent = t.formSuccessMsg;
       noticeEl.style.display = 'block';
-      setTimeout(() => { noticeEl.style.display = 'none'; }, 4000);
+      setTimeout(() => { noticeEl.style.display = 'none'; }, 4500);
     }
     renderRatingSummary(activeBookKey);
     renderCommentsList(activeBookKey);
@@ -2160,6 +2620,12 @@ window.handleCommentSubmit = function(e) {
   }
 
   if (submitBtn) submitBtn.disabled = false;
+};
+
+// Toggle Helpful on Comment
+window.toggleCommentHelpful = function(commentId) {
+  AudioReviewsStore.toggleHelpful(activeBookKey, commentId);
+  renderCommentsList(activeBookKey);
 };
 
 // Render Comments List
@@ -2203,9 +2669,12 @@ function renderCommentsList(workId) {
   }
 
   container.innerHTML = visibleComments.map(c => {
-    const initial = (c.author || 'H').charAt(0).toUpperCase();
+    const initial = (c.author || '✦').trim().charAt(0).toUpperCase() || '✦';
     const starHtml = c.rating ? '★'.repeat(c.rating) + '☆'.repeat(5 - c.rating) : '';
     const dateStr = formatReviewDate(c.createdAt);
+    const isLiked = AudioReviewsStore.isCommentHelpful(workId, c.id);
+    const helpfulCount = c.helpfulCount || 0;
+    const helpfulLabel = t.helpfulBtnText || "مفيد";
 
     // Escape text to prevent XSS
     const safeAuthor = escapeHtml(c.author);
@@ -2215,19 +2684,27 @@ function renderCommentsList(workId) {
       <article class="comment-card-item" id="comm_${c.id}">
         <div class="comment-card-header">
           <div class="comment-author-info">
-            <div class="comment-avatar">${initial}</div>
+            <div class="comment-avatar" aria-hidden="true">${initial}</div>
             <div>
               <div class="comment-author-name">${safeAuthor}</div>
               <div class="comment-date">${dateStr}</div>
             </div>
           </div>
-          ${starHtml ? `<div class="comment-stars">${starHtml}</div>` : ''}
+          ${starHtml ? `<div class="comment-stars" aria-label="${c.rating} / 5">${starHtml}</div>` : ''}
         </div>
 
         <div class="comment-body-text">${safeText}</div>
 
         <div class="comment-actions-bar">
-          <button class="comment-reply-btn" onclick="openReplyForm('${c.id}')">${t.replyBtnText}</button>
+          <button type="button" class="comment-helpful-btn ${isLiked ? 'active' : ''}" onclick="toggleCommentHelpful('${c.id}')" aria-label="${helpfulLabel}">
+            <span class="helpful-heart">${isLiked ? '♥' : '♡'}</span>
+            <span>${helpfulLabel}</span>
+            ${helpfulCount > 0 ? `<span class="helpful-count">(${helpfulCount})</span>` : ''}
+          </button>
+
+          <button type="button" class="comment-reply-btn" onclick="openReplyForm('${c.id}')">
+            ${t.replyBtnText}
+          </button>
         </div>
 
         <!-- Inline Reply Form Container -->
@@ -2324,20 +2801,37 @@ window.handleLoadMoreReviews = function() {
   renderCommentsList(activeBookKey);
 };
 
-// Hover effects for rating stars
+// Hover and keyboard accessibility effects for rating stars
 function setupStarHoverEvents() {
   const buttons = document.querySelectorAll('#starRatingGroup .star-btn');
-  buttons.forEach(btn => {
+  buttons.forEach((btn, idx) => {
     btn.addEventListener('mouseenter', () => {
       const starNum = parseInt(btn.getAttribute('data-star'), 10);
-      buttons.forEach(b => {
-        const n = parseInt(b.getAttribute('data-star'), 10);
-        b.classList.toggle('hovered', n <= starNum);
-      });
+      window.previewStarHover(starNum);
     });
 
     btn.addEventListener('mouseleave', () => {
-      buttons.forEach(b => b.classList.remove('hovered'));
+      window.previewStarHover(0);
+    });
+
+    btn.addEventListener('keydown', (e) => {
+      let targetIdx = idx;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowUp') {
+        targetIdx = Math.min(buttons.length - 1, idx + 1);
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') {
+        targetIdx = Math.max(0, idx - 1);
+      } else if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const starNum = parseInt(btn.getAttribute('data-star'), 10);
+        window.selectWorkRating(starNum);
+        return;
+      }
+      if (targetIdx !== idx) {
+        e.preventDefault();
+        buttons[targetIdx].focus();
+        const starNum = parseInt(buttons[targetIdx].getAttribute('data-star'), 10);
+        window.previewStarHover(starNum);
+      }
     });
   });
 }

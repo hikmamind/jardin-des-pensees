@@ -335,6 +335,27 @@ app.post('/api/audio/:workId/comments', (req, res) => {
   res.json({ success: true, comment: newComment });
 });
 
+app.post('/api/audio/:workId/comments/:commentId/helpful', (req, res) => {
+  const { workId, commentId } = req.params;
+  const { liked } = req.body;
+  if (!audioCommentsStore.has(workId)) {
+    return res.status(404).json({ error: 'Commentaire introuvable.' });
+  }
+  const comments = audioCommentsStore.get(workId);
+  const comment = comments.find(c => c.id === commentId);
+  if (!comment) {
+    return res.status(404).json({ error: 'Commentaire introuvable.' });
+  }
+  if (!comment.helpfulCount) comment.helpfulCount = 0;
+  if (liked) {
+    comment.helpfulCount += 1;
+  } else {
+    comment.helpfulCount = Math.max(0, comment.helpfulCount - 1);
+  }
+  res.json({ success: true, helpfulCount: comment.helpfulCount });
+});
+
+
 // Start Server
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 Serveur démarré sur le port ${PORT}`);

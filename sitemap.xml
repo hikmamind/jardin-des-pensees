@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- 1. Homepage -->
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://jardin-des-pensees.onrender.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jardin-des-pensees.onrender.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jardin-des-pensees.onrender.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jardin-des-pensees.onrender.com/"/>
+  </url>
+
+  <!-- 2. Hub Articles -->
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/articles/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://jardin-des-pensees.onrender.com/articles/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jardin-des-pensees.onrender.com/articles/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jardin-des-pensees.onrender.com/articles/"/>
+  </url>
+
+  <!-- 2a. Pilier Philosophie -->
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/philosophie/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://jardin-des-pensees.onrender.com/philosophie/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jardin-des-pensees.onrender.com/philosophie/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jardin-des-pensees.onrender.com/philosophie/"/>
+  </url>
+
+  <!-- 2b. Pilier Psychologie -->
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/psychologie/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://jardin-des-pensees.onrender.com/psychologie/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jardin-des-pensees.onrender.com/psychologie/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jardin-des-pensees.onrender.com/psychologie/"/>
+  </url>
+
+  <!-- 2c. Pilier Développement Personnel -->
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/developpement-personnel/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://jardin-des-pensees.onrender.com/developpement-personnel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jardin-des-pensees.onrender.com/developpement-personnel/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jardin-des-pensees.onrender.com/developpement-personnel/"/>
+  </url>
+
+  <!-- 2d. Pilier Sagesse -->
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/sagesse/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://jardin-des-pensees.onrender.com/sagesse/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jardin-des-pensees.onrender.com/sagesse/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jardin-des-pensees.onrender.com/sagesse/"/>
+  </url>
+
+  <!-- 3. Hub Penseurs -->
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/thinkers/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://jardin-des-pensees.onrender.com/thinkers/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jardin-des-pensees.onrender.com/thinkers/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jardin-des-pensees.onrender.com/thinkers/"/>
+  </url>
+
+  <!-- 4. Hub Citations -->
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/quotes/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://jardin-des-pensees.onrender.com/quotes/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jardin-des-pensees.onrender.com/quotes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jardin-des-pensees.onrender.com/quotes/"/>
+  </url>
+
+  <!-- 5. Calendrier Philosophique 365 Jours -->
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/quotes/calendar/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://jardin-des-pensees.onrender.com/quotes/calendar/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jardin-des-pensees.onrender.com/quotes/calendar/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jardin-des-pensees.onrender.com/quotes/calendar/"/>
+  </url>
+
+  <!-- 6. Hub Bibliothèque Audio -->
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/audio/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://jardin-des-pensees.onrender.com/audio/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jardin-des-pensees.onrender.com/audio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jardin-des-pensees.onrender.com/audio/"/>
+  </url>
+
+  <!-- 7. Hub Boutique / E-books -->
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/shop/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://jardin-des-pensees.onrender.com/shop/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jardin-des-pensees.onrender.com/shop/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jardin-des-pensees.onrender.com/shop/"/>
+  </url>
+
+  <!-- 8. Hub Quiz -->
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/quizzes/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://jardin-des-pensees.onrender.com/quizzes/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jardin-des-pensees.onrender.com/quizzes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jardin-des-pensees.onrender.com/quizzes/"/>
+  </url>
+
+  <!-- 9. Articles Dédiés Majeurs -->
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/articles/schopenhauer-happiness-illusion.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/articles/why-people-respect-silent-person.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/articles/why-people-distance-when-you-succeed.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/articles/nietzsche-psychological-strength.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/articles/7-errors-mind-growth.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/articles/happiness-in-wrong-place.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/articles/solitude-blessing-or-curse.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/articles/true-confidence-inside.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/articles/hikma-citations-philosophiques.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 10. Articles Dédiés Pratiques (files) -->
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/files/stoicisme-force-calme.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/files/stop-overthinking.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/files/self-discipline.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/files/absurde-camus.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/files/intelligence-emotionnelle-stoicisme.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/files/epicurisme-bonheur.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/files/existentialisme-sens-sartre.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/files/nihilisme-surhomme-nietzsche.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/files/introduction-stoicisme.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/files/20-citations-schopenhauer.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 11. Quiz Interactifs -->
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/quizzes/which-philosopher-are-you.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/quizzes/inner-peace-level.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 12. Audio Spécialisé -->
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/audio/crime_punishment_summary.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 13. Pages Institutionnelles & Légales -->
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/bio.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/faq.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/contact.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/privacy-policy.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/terms-of-service.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://jardin-des-pensees.onrender.com/cookie-policy.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+</urlset>

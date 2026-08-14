@@ -5,28 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   
   <!-- SEO Dynamic Meta Tags -->
-  <title id="seoPageTitle">المكتبة الصوتية للروايات والحكمة | حكمة ونور — HIKMA & NOUR</title>
-  <meta name="description" id="seoPageDesc" content="استمع إلى أروع الروايات العالمية وكتب الفلسفة والتنمية الذاتية المسجلة صوتياً باللغة العربية الفصحى عبر مكتبة حكمة ونور الصوتية.">
+  <title>المكتبة الصوتية — فلسفة وحكمة | حكمة ونور</title>
+  <meta name="description" content="استمع إلى أروع الروايات العالمية وكتب الفلسفة والتنمية الذاتية المسجلة صوتياً باللغة العربية الفصحى عبر مكتبة حكمة ونور الصوتية. Découvrez notre bibliothèque audio de philosophie et sagesse.">
+  <meta name="keywords" content="كتب صوتية, روايات مسموعة, فلسفة صوتية, الخيميائي, الغريب, كافكا, الجريمة والعقاب, حكمة ونور, livres audio philosophie">
   
-  <link rel="canonical" id="seoCanonical" href="https://jardin-des-pensees.onrender.com/audio/">
+  <link rel="canonical" href="https://jardin-des-pensees.onrender.com/audio/">
   <link rel="alternate" hreflang="ar" href="https://jardin-des-pensees.onrender.com/audio/">
   <link rel="alternate" hreflang="fr" href="https://jardin-des-pensees.onrender.com/audio/">
   <link rel="alternate" hreflang="en" href="https://jardin-des-pensees.onrender.com/audio/">
   <link rel="alternate" hreflang="x-default" href="https://jardin-des-pensees.onrender.com/audio/">
   
   <!-- Open Graph / Facebook -->
+  <meta property="og:site_name" content="Hikma & Nour — حكمة ونور">
   <meta property="og:type" content="website">
-  <meta property="og:url" id="ogUrl" content="https://jardin-des-pensees.onrender.com/audio/">
-  <meta property="og:title" id="ogTitle" content="المكتبة الصوتية للحكمة والفلسفة | حكمة ونور">
-  <meta property="og:description" id="ogDesc" content="استمع إلى روائع الأدب العالمي والفلسفة المسجلة باللغة العربية الفصحى.">
-  <meta property="og:image" id="ogImage" content="https://jardin-des-pensees.onrender.com/brand_logo_official.png">
+  <meta property="og:url" content="https://jardin-des-pensees.onrender.com/audio/">
+  <meta property="og:title" content="المكتبة الصوتية — فلسفة وحكمة | حكمة ونور">
+  <meta property="og:description" content="استمع إلى روائع الأدب العالمي والفلسفة المسجلة باللغة العربية الفصحى عبر مكتبة حكمة ونور الصوتية.">
+  <meta property="og:image" content="https://jardin-des-pensees.onrender.com/audio_sanctuary_hd_bg.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ar_AR">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_US">
 
-  <!-- Twitter -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" id="twUrl" content="https://jardin-des-pensees.onrender.com/audio/">
-  <meta name="twitter:title" id="twTitle" content="المكتبة الصوتية للحكمة والفلسفة | حكمة ونور">
-  <meta name="twitter:description" id="twDesc" content="استمع إلى روائع الأدب العالمي والفلسفة المسجلة باللغة العربية الفصحى.">
-  <meta name="twitter:image" id="twImage" content="https://jardin-des-pensees.onrender.com/brand_logo_official.png">
+  <meta name="twitter:url" content="https://jardin-des-pensees.onrender.com/audio/">
+  <meta name="twitter:title" content="المكتبة الصوتية — فلسفة وحكمة | حكمة ونور">
+  <meta name="twitter:description" content="استمع إلى روائع الأدب العالمي والفلسفة المسجلة باللغة العربية الفصحى عبر مكتبة حكمة ونور الصوتية.">
+  <meta name="twitter:image" content="https://jardin-des-pensees.onrender.com/audio_sanctuary_hd_bg.jpg">
 
   <link rel="icon" type="image/png" href="../brand_logo_official.png">
   <link rel="manifest" href="../manifest.json">
@@ -75,6 +82,19 @@
       --focus-ring: 0 0 0 2px var(--gold), 0 0 0 4px rgba(223, 177, 91, 0.3);
     }
 
+    [data-theme="light"] {
+      --audio-bg: #F4F7F5;
+      --audio-card-bg: #FFFFFF;
+      --audio-card-hover: #F0F4F1;
+      --gold: #B8860B;
+      --gold-light: #C8961E;
+      --ivory: #1A221C;
+      --text-main: #243028;
+      --text-muted: #647569;
+      --border-gold: rgba(184, 134, 11, 0.35);
+      --border-light: rgba(0, 0, 0, 0.1);
+    }
+
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -89,6 +109,7 @@
       font-family: 'Inter', 'Cairo', sans-serif;
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     /* Container without horizontal overflow */
@@ -107,17 +128,183 @@
     }
 
     /* ==========================================================================
-       HERO HEADER — EDITORIAL SANCTUARY
+       NAVBAR CONTROLS & THEME TOGGLE (PREMIUM HIKMA & NOUR STYLING)
+       ========================================================================== */
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-inline-start: 15px;
+    }
+
+    .lang-selector-container {
+      position: relative;
+    }
+
+    .lang-btn {
+      background: rgba(18, 26, 21, 0.75);
+      border: 1.5px solid rgba(223, 177, 91, 0.28);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color: var(--gold);
+      padding: 8px 14px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 44px;
+      transition: all 250ms ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+    }
+
+    .lang-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold-light);
+      background: rgba(223, 177, 91, 0.12);
+      transform: translateY(-2px);
+      box-shadow: 0 0 14px rgba(223, 177, 91, 0.3);
+    }
+
+    .lang-dropdown {
+      position: absolute;
+      top: calc(100% + 8px);
+      inset-inline-end: 0;
+      background: rgba(15, 22, 17, 0.98);
+      border: 1px solid var(--border-gold);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 14px;
+      padding: 6px;
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      min-width: 140px;
+      z-index: 1100;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .lang-dropdown.active {
+      display: flex;
+    }
+
+    .lang-opt {
+      background: transparent;
+      border: none;
+      color: var(--text-main);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      font-family: inherit;
+      text-align: start;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      width: 100%;
+    }
+
+    .lang-opt:hover, .lang-opt.active {
+      background: rgba(223, 177, 91, 0.15);
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .theme-toggle-btn {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      min-height: 44px;
+      border-radius: 50%;
+      background: rgba(18, 26, 21, 0.75);
+      border: 1.5px solid rgba(223, 177, 91, 0.28);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color: var(--gold);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 0;
+      margin: 0;
+      outline: none;
+      transition: all 280ms cubic-bezier(0.2, 0.8, 0.2, 1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    [data-theme="light"] .theme-toggle-btn {
+      background: rgba(255, 255, 255, 0.9);
+      border-color: rgba(194, 149, 58, 0.45);
+      color: #9a6f17;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .theme-toggle-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold-light);
+      transform: translateY(-2px) scale(1.06);
+      box-shadow: 0 0 18px rgba(223, 177, 91, 0.4), 0 4px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    [data-theme="light"] .theme-toggle-btn:hover {
+      border-color: #c2953a;
+      color: #7b580f;
+      box-shadow: 0 0 16px rgba(194, 149, 58, 0.3), 0 4px 14px rgba(0, 0, 0, 0.12);
+    }
+
+    .theme-toggle-btn:focus-visible {
+      outline: none;
+      box-shadow: var(--focus-ring);
+    }
+
+    .theme-toggle-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      transition: transform 300ms ease, opacity 250ms ease;
+      pointer-events: none;
+    }
+
+    /* Icon visibility: show Sun in dark mode to switch to light; show Moon in light mode to switch to dark */
+    [data-theme="dark"] .theme-toggle-btn .sun-icon,
+    :root:not([data-theme="light"]) .theme-toggle-btn .sun-icon {
+      display: block;
+    }
+
+    [data-theme="dark"] .theme-toggle-btn .moon-icon,
+    :root:not([data-theme="light"]) .theme-toggle-btn .moon-icon {
+      display: none;
+    }
+
+    [data-theme="light"] .theme-toggle-btn .sun-icon {
+      display: none;
+    }
+
+    [data-theme="light"] .theme-toggle-btn .moon-icon {
+      display: block;
+    }
+
+    /* ==========================================================================
+    /* ==========================================================================
+       HERO HEADER — COMPACT PREMIUM EDITORIAL SANCTUARY
        ========================================================================== */
     .audio-hero-card {
       text-align: center;
       position: relative;
-      padding: 44px 24px 36px;
-      background: linear-gradient(145deg, rgba(223, 177, 91, 0.12) 0%, rgba(18, 26, 21, 0.95) 45%, rgba(9, 14, 11, 0.98) 100%);
-      border: 1.5px solid var(--border-gold);
-      border-radius: 26px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-      margin-bottom: 30px;
+      max-width: 920px;
+      margin: 0 auto 16px;
+      padding: 22px 20px 18px;
+      background: linear-gradient(145deg, rgba(223, 177, 91, 0.08) 0%, rgba(18, 26, 21, 0.95) 45%, rgba(9, 14, 11, 0.98) 100%);
+      border: 1px solid var(--border-gold);
+      border-radius: 20px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
       overflow: hidden;
       min-width: 0;
     }
@@ -125,70 +312,99 @@
     .audio-hero-card::before {
       content: "";
       position: absolute;
-      top: -80px;
+      top: -60px;
       left: 50%;
       transform: translateX(-50%);
-      width: 360px;
-      height: 180px;
-      background: radial-gradient(circle, rgba(223, 177, 91, 0.2) 0%, transparent 70%);
+      width: 280px;
+      height: 120px;
+      background: radial-gradient(circle, rgba(223, 177, 91, 0.16) 0%, transparent 70%);
       pointer-events: none;
-      filter: blur(35px);
+      filter: blur(28px);
     }
 
     .hero-badge-pill {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      font-size: 0.82rem;
+      gap: 6px;
+      font-size: 0.76rem;
       font-weight: 800;
       color: var(--gold);
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-      padding: 6px 18px;
-      background: rgba(223, 177, 91, 0.12);
-      border: 1px solid rgba(223, 177, 91, 0.35);
-      border-radius: 30px;
-      margin-bottom: 14px;
+      letter-spacing: 1.2px;
+      padding: 4px 14px;
+      background: rgba(223, 177, 91, 0.1);
+      border: 1px solid rgba(223, 177, 91, 0.3);
+      border-radius: 24px;
+      margin-bottom: 6px;
     }
 
     .audio-hero-title {
-      font-size: clamp(2rem, 4vw, 2.9rem);
-      margin: 0 0 10px;
+      font-size: clamp(1.75rem, 3.2vw, 2.35rem);
+      margin: 0 0 4px;
       font-family: 'Playfair Display', 'Amiri', serif;
       color: var(--ivory);
       font-weight: 800;
-      line-height: 1.25;
+      line-height: 1.2;
     }
 
     .audio-hero-subtitle {
       color: var(--gold-light);
       font-style: italic;
-      max-width: 680px;
-      margin: 0 auto 10px;
-      font-size: 1.15rem;
-      line-height: 1.6;
+      max-width: 620px;
+      margin: 0 auto 4px;
+      font-size: 0.98rem;
+      line-height: 1.4;
     }
 
     .audio-hero-desc {
       color: var(--text-muted);
-      max-width: 620px;
-      margin: 0 auto 18px;
-      font-size: 0.92rem;
-      line-height: 1.6;
+      max-width: 560px;
+      margin: 0 auto 10px;
+      font-size: 0.84rem;
+      line-height: 1.4;
+    }
+
+    .hero-stats-row {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin: 0 auto;
+      padding: 5px 18px;
+      background: rgba(18, 26, 21, 0.75);
+      border: 1px solid rgba(223, 177, 91, 0.22);
+      border-radius: 24px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+      flex-wrap: wrap;
+    }
+
+    .hero-stat-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .hero-stat-num {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--gold-light);
+      font-family: 'Playfair Display', 'Amiri', serif;
+    }
+
+    .hero-stat-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .hero-stat-divider {
+      color: rgba(223, 177, 91, 0.4);
+      font-size: 0.75rem;
     }
 
     .audio-lang-notice-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(10, 16, 12, 0.85);
-      border: 1px solid var(--border-gold);
-      padding: 7px 18px;
-      border-radius: 30px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--gold);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+      display: none;
     }
 
     /* ==========================================================================
@@ -197,8 +413,8 @@
     .audio-toolbar-row {
       display: flex;
       flex-direction: column;
-      gap: 18px;
-      margin-bottom: 32px;
+      gap: 12px;
+      margin-bottom: 20px;
       min-width: 0;
     }
 
@@ -268,10 +484,19 @@
       display: flex;
       gap: 8px;
       overflow-x: auto;
+      overflow-y: hidden;
       padding: 4px 2px 14px;
-      scrollbar-width: thin;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
       justify-content: flex-start;
       min-width: 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .audio-categories-bar::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
     }
 
     .audio-cat-btn {
@@ -549,91 +774,168 @@
     }
 
     /* ==========================================================================
-       AUDIO CATALOG GRID (BALANCED & RESPONSIVE)
+    /* ==========================================================================
+       AUDIO CATALOG GRID & PREMIUM EDITORIAL BOOK CARDS (V4)
        ========================================================================== */
     .audiobooks-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 24px;
-      margin-bottom: 40px;
+      margin-bottom: 48px;
       min-width: 0;
+      width: 100%;
+    }
+
+    @media (max-width: 1024px) and (min-width: 601px) {
+      .audiobooks-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .audiobooks-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
     }
 
     .audiobook-card {
-      background: var(--audio-card-bg);
-      border: 1px solid var(--border-light);
-      border-radius: 20px;
+      background: linear-gradient(180deg, #101813 0%, #0B110D 100%);
+      border: 1.5px solid rgba(223, 177, 91, 0.2);
+      border-radius: 22px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+      transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), 
+                  border-color 0.28s ease, 
+                  box-shadow 0.28s ease;
       cursor: pointer;
       position: relative;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
       min-width: 0;
+      width: 100%;
+    }
+
+    [data-theme="light"] .audiobook-card {
+      background: linear-gradient(180deg, #FFFFFF 0%, #F7FAF8 100%);
+      border-color: rgba(184, 134, 11, 0.25);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     }
 
     .audiobook-card:hover {
       transform: translateY(-6px);
-      border-color: var(--gold);
-      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.7), 0 0 20px rgba(223, 177, 91, 0.2);
+      border-color: rgba(223, 177, 91, 0.6);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.65), 0 0 24px rgba(223, 177, 91, 0.18);
     }
 
+    [data-theme="light"] .audiobook-card:hover {
+      border-color: #B8860B;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12), 0 0 20px rgba(184, 134, 11, 0.18);
+    }
+
+    .audiobook-card:focus-visible {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(223, 177, 91, 0.35);
+    }
+
+    /* Cover Area with 3:4 Book Ratio */
     .card-cover-wrapper {
       position: relative;
       width: 100%;
-      aspect-ratio: 1 / 1;
+      aspect-ratio: 3 / 4;
       overflow: hidden;
-      background: #090e0b;
+      background: #080C0A;
+      border-bottom: 1px solid rgba(223, 177, 91, 0.18);
     }
 
     .card-cover-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.5s ease;
+      transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.3s ease;
     }
 
     .audiobook-card:hover .card-cover-img {
-      transform: scale(1.06);
+      transform: scale(1.04);
+      filter: brightness(1.04);
     }
 
-    .card-duration-badge {
+    .card-top-badges {
       position: absolute;
-      top: 10px;
-      inset-inline-end: 10px;
-      background: rgba(7, 10, 8, 0.85);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(8px);
-      padding: 3px 9px;
-      border-radius: 12px;
-      font-size: 0.74rem;
-      font-weight: 700;
-      color: var(--ivory);
+      top: 12px;
+      inset-inline: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
       z-index: 2;
+      pointer-events: none;
     }
 
-    .card-audio-tag {
-      position: absolute;
-      top: 10px;
-      inset-inline-start: 10px;
-      background: rgba(223, 177, 91, 0.22);
-      border: 1px solid rgba(223, 177, 91, 0.45);
-      backdrop-filter: blur(8px);
-      padding: 3px 9px;
-      border-radius: 12px;
+    .card-audio-pill {
+      background: rgba(7, 10, 8, 0.88);
+      border: 1px solid rgba(223, 177, 91, 0.4);
+      backdrop-filter: blur(10px);
+      padding: 4px 10px;
+      border-radius: 14px;
       font-size: 0.72rem;
       font-weight: 800;
       color: var(--gold-light);
+      letter-spacing: 0.4px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+    }
+
+    .card-cat-pill {
+      background: rgba(18, 26, 21, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 4px 10px;
+      border-radius: 14px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--ivory);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 140px;
+    }
+
+    .card-status-badge {
+      position: absolute;
+      bottom: 12px;
+      inset-inline-start: 12px;
+      backdrop-filter: blur(10px);
+      padding: 4px 10px;
+      border-radius: 14px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
       z-index: 2;
-      letter-spacing: 0.5px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    .card-status-badge.completed {
+      background: rgba(12, 38, 22, 0.92);
+      border: 1px solid rgba(114, 232, 163, 0.45);
+      color: #72E8A3;
+    }
+
+    .card-status-badge.in-progress {
+      background: rgba(28, 22, 10, 0.92);
+      border: 1px solid rgba(223, 177, 91, 0.5);
+      color: var(--gold-light);
     }
 
     .card-play-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.35);
+      background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.6) 100%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -647,16 +949,17 @@
     }
 
     .card-play-circle {
-      width: 52px;
-      height: 52px;
+      width: 56px;
+      height: 56px;
       border-radius: 50%;
-      background: var(--gold);
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
       color: #070A08;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.3rem;
-      box-shadow: 0 8px 25px rgba(223, 177, 91, 0.5);
+      padding-inline-start: 3px;
+      box-shadow: 0 8px 25px rgba(223, 177, 91, 0.6);
       transform: scale(0.85);
       transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
     }
@@ -665,8 +968,9 @@
       transform: scale(1);
     }
 
+    /* Card Content Body */
     .card-body {
-      padding: 18px;
+      padding: 18px 18px 16px;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
@@ -674,9 +978,13 @@
       min-width: 0;
     }
 
+    .card-header-meta {
+      min-width: 0;
+    }
+
     .card-title {
       font-family: 'Playfair Display', 'Amiri', serif;
-      font-size: 1.22rem;
+      font-size: 1.25rem;
       font-weight: 800;
       color: var(--ivory);
       margin: 0 0 4px;
@@ -685,49 +993,242 @@
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
+      transition: color 0.2s ease;
+    }
+
+    .audiobook-card:hover .card-title {
+      color: var(--gold-light);
     }
 
     .card-author {
-      font-size: 0.86rem;
+      font-size: 0.88rem;
       color: var(--gold);
-      font-weight: 600;
+      font-weight: 700;
       margin-bottom: 8px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .card-desc {
-      font-size: 0.82rem;
+      font-size: 0.83rem;
       color: var(--text-muted);
       line-height: 1.5;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
 
-    .card-footer-row {
+    /* Progress Box for in-progress books */
+    .card-progress-box {
+      background: rgba(18, 26, 21, 0.8);
+      border: 1px solid rgba(223, 177, 91, 0.2);
+      border-radius: 10px;
+      padding: 8px 10px;
+      margin-bottom: 12px;
+    }
+
+    .card-progress-bar-bg {
+      width: 100%;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-bottom: 6px;
+    }
+
+    .card-progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #C99738 0%, var(--gold) 100%);
+      border-radius: 3px;
+      transition: width 0.3s ease;
+    }
+
+    .card-progress-info {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-top: 1px solid var(--border-light);
-      padding-top: 12px;
-      font-size: 0.78rem;
-    }
-
-    .card-lang-badge {
+      font-size: 0.72rem;
       color: var(--gold-light);
       font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 4px;
     }
 
-    .card-listen-btn-text {
-      color: var(--gold);
-      font-weight: 700;
+    .card-meta-divider {
+      height: 1px;
+      background: var(--border-light);
+      margin: 4px 0 12px;
+    }
+
+    .card-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .card-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .meta-icon {
+      font-size: 0.85rem;
+    }
+
+    .meta-dot {
+      color: rgba(223, 177, 91, 0.4);
+    }
+
+    /* Action Buttons Row */
+    .card-actions-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card-main-play-btn {
+      flex: 1;
+      background: linear-gradient(135deg, #E5B85C 0%, #DFB15B 60%, #C8961E 100%);
+      color: #070A08;
+      border: 1px solid rgba(223, 177, 91, 0.4);
+      padding: 9px 16px;
+      border-radius: 26px;
+      font-size: 0.86rem;
+      font-weight: 800;
+      font-family: inherit;
+      cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      justify-content: center;
+      gap: 8px;
+      min-height: 42px;
+      transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+      box-shadow: 0 4px 14px rgba(223, 177, 91, 0.25);
+      text-decoration: none;
+    }
+
+    .card-main-play-btn:hover {
+      background: linear-gradient(135deg, #F5D98A 0%, #E5B85C 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(223, 177, 91, 0.45);
+    }
+
+    .card-main-play-btn.resume-mode {
+      background: linear-gradient(135deg, #1C2B20 0%, #152219 100%);
+      color: var(--gold-light);
+      border: 1.5px solid var(--border-gold);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-main-play-btn.resume-mode:hover {
+      background: rgba(223, 177, 91, 0.15);
+      border-color: var(--gold);
+      color: var(--ivory);
+      box-shadow: 0 0 16px rgba(223, 177, 91, 0.25);
+    }
+
+    .card-fav-btn {
+      width: 42px;
+      height: 42px;
+      min-width: 42px;
+      min-height: 42px;
+      border-radius: 50%;
+      background: rgba(18, 26, 21, 0.75);
+      border: 1.5px solid rgba(223, 177, 91, 0.25);
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+      padding: 0;
+    }
+
+    .card-fav-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: scale(1.08);
+      background: rgba(223, 177, 91, 0.1);
+    }
+
+    .card-fav-btn.active {
+      border-color: var(--gold);
+      color: #E74C3C;
+      background: rgba(231, 76, 60, 0.12);
+    }
+
+    .card-fav-btn.active:hover {
+      color: #FF6B5B;
+      border-color: #E74C3C;
+    }
+
+    .card-fav-btn:active {
+      transform: scale(0.92);
+    }
+
+    /* Empty State Card */
+    .audio-empty-state-card {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 56px 24px;
+      background: var(--audio-card-bg);
+      border: 1.5px dashed var(--border-gold);
+      border-radius: 24px;
+      margin: 10px 0 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .empty-sparkle-icon {
+      font-size: 2.4rem;
+      color: var(--gold);
+      margin-bottom: 12px;
+      display: inline-block;
+      animation: subtlePulse 2.5s infinite ease-in-out;
+    }
+
+    .empty-title {
+      font-family: 'Playfair Display', 'Amiri', serif;
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--ivory);
+      margin: 0 0 8px;
+    }
+
+    .empty-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      max-width: 480px;
+      margin: 0 auto 20px;
+      line-height: 1.6;
+    }
+
+    .empty-reset-btn {
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+      color: #070A08;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 30px;
+      font-size: 0.88rem;
+      font-weight: 800;
+      font-family: inherit;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 16px rgba(223, 177, 91, 0.35);
+      transition: all 0.25s ease;
+    }
+
+    .empty-reset-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(223, 177, 91, 0.5);
     }
 
     /* ==========================================================================
@@ -929,8 +1430,17 @@
       margin-bottom: 24px;
       padding-bottom: 8px;
       overflow-x: auto;
-      scrollbar-width: thin;
+      overflow-y: hidden;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
       min-width: 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .detail-tabs-bar::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
     }
 
     .tab-btn {
@@ -1451,11 +1961,34 @@
 
     @media (max-width: 600px) {
       .audio-page-container {
-        padding: 12px 14px 110px;
+        padding: 10px 12px 105px;
       }
       .audio-hero-card {
-        padding: 32px 16px 26px;
-        border-radius: 20px;
+        padding: 16px 12px 14px;
+        border-radius: 16px;
+        margin-bottom: 12px;
+      }
+      .audio-hero-title {
+        font-size: 1.55rem;
+      }
+      .audio-hero-subtitle {
+        font-size: 0.88rem;
+        line-height: 1.35;
+      }
+      .audio-hero-desc {
+        font-size: 0.78rem;
+        line-height: 1.35;
+        margin-bottom: 8px;
+      }
+      .hero-stats-row {
+        gap: 8px;
+        padding: 4px 12px;
+      }
+      .hero-stat-num {
+        font-size: 0.95rem;
+      }
+      .hero-stat-label {
+        font-size: 0.72rem;
       }
       .bottom-player-bar {
         height: 76px;
@@ -1486,21 +2019,79 @@
        REVIEWS & RATINGS DESIGN SYSTEM (NOCTURNE & GOLD LUXURY)
        ========================================================================== */
     :root {
-      --review-bg: rgba(12, 23, 17, 0.88);
+      --review-bg: rgba(12, 23, 17, 0.92);
       --review-card-bg: #0C1712;
       --review-border: rgba(223, 177, 91, 0.22);
       --review-gold: #DFB15B;
+      --review-gold-light: #E5B85C;
       --review-text: #F7F1E5;
       --review-muted: #9EABA2;
     }
 
     .audio-reviews-section {
       margin-top: 50px;
-      margin-bottom: 60px;
+      margin-bottom: 70px;
       min-width: 0;
       width: 100%;
     }
 
+    .reviews-header-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 26px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .reviews-main-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--review-gold);
+      background: rgba(223, 177, 91, 0.1);
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(223, 177, 91, 0.25);
+      margin-bottom: 8px;
+    }
+
+    .reviews-main-title {
+      font-size: 1.65rem;
+      font-weight: 800;
+      font-family: 'Playfair Display', 'Amiri', serif;
+      color: var(--review-text);
+      margin: 0 0 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .reviews-main-subtitle {
+      font-size: 0.92rem;
+      color: var(--review-muted);
+      margin: 0;
+      max-width: 650px;
+      line-height: 1.55;
+    }
+
+    .reviews-header-status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--review-card-bg);
+      border: 1px solid var(--review-border);
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--review-gold);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+    }
+
+    /* Summary & Distribution Grid */
     .reviews-summary-grid {
       display: grid;
       grid-template-columns: 220px 1fr;
@@ -1526,18 +2117,18 @@
     }
 
     .big-score-num {
-      font-size: 3rem;
+      font-size: 3.2rem;
       font-weight: 800;
       font-family: 'Playfair Display', 'Amiri', serif;
-      color: var(--gold);
+      color: var(--review-gold);
       line-height: 1;
       margin-bottom: 6px;
-      text-shadow: 0 0 20px rgba(223, 177, 91, 0.3);
+      text-shadow: 0 0 24px rgba(223, 177, 91, 0.35);
     }
 
     .big-stars-row {
-      color: var(--gold);
-      font-size: 1.25rem;
+      color: var(--review-gold);
+      font-size: 1.3rem;
       letter-spacing: 3px;
       margin-bottom: 6px;
     }
@@ -1592,6 +2183,61 @@
       color: var(--review-text);
     }
 
+    /* Empty State Card */
+    .reviews-empty-state-card {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 36px 20px;
+    }
+
+    .empty-sparkle-icon {
+      font-size: 2.4rem;
+      color: var(--review-gold);
+      margin-bottom: 12px;
+      display: inline-block;
+      text-shadow: 0 0 20px rgba(223,177,91,0.6);
+      animation: pulseGlow 2.5s infinite alternate;
+    }
+
+    .empty-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      font-family: 'Playfair Display', 'Amiri', serif;
+      color: var(--review-text);
+      margin: 0 0 8px;
+    }
+
+    .empty-desc {
+      font-size: 0.92rem;
+      color: var(--review-muted);
+      margin: 0 0 18px;
+      max-width: 520px;
+      margin-inline: auto;
+      line-height: 1.6;
+    }
+
+    .empty-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(223, 177, 91, 0.12);
+      border: 1px solid var(--review-gold);
+      color: var(--review-gold);
+      padding: 9px 22px;
+      border-radius: 24px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .empty-cta-btn:hover {
+      background: var(--gold-grad);
+      color: #070A08;
+      box-shadow: 0 0 16px rgba(223, 177, 91, 0.4);
+      transform: translateY(-2px);
+    }
+
     /* Rating Interactive Box */
     .user-rating-interactive-box {
       background: var(--review-card-bg);
@@ -1631,13 +2277,14 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      outline: none;
     }
 
     .star-btn {
       background: transparent;
       border: none;
-      font-size: 1.9rem;
-      color: rgba(255,255,255,0.22);
+      font-size: 2rem;
+      color: rgba(255,255,255,0.2);
       cursor: pointer;
       padding: 2px 4px;
       transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -1645,16 +2292,19 @@
     }
 
     .star-btn.hovered, .star-btn.active {
-      color: var(--gold);
-      transform: scale(1.18);
-      text-shadow: 0 0 14px rgba(223, 177, 91, 0.6);
+      color: var(--review-gold);
+      transform: scale(1.2);
+      text-shadow: 0 0 16px rgba(223, 177, 91, 0.65);
     }
 
     .rating-feedback-status {
-      font-size: 0.9rem;
-      color: var(--gold-light);
+      font-size: 0.92rem;
+      color: var(--review-gold-light);
       font-weight: 700;
       margin-inline-start: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
 
     /* Review Form Card */
@@ -1674,6 +2324,9 @@
       margin: 0 0 20px;
       border-bottom: 1px solid rgba(223, 177, 91, 0.15);
       padding-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .form-row-2col {
@@ -1695,6 +2348,16 @@
       color: var(--review-text);
     }
 
+    .required-star {
+      color: var(--review-gold);
+    }
+
+    .optional-hint {
+      color: var(--review-muted);
+      font-size: 0.76rem;
+      font-weight: 400;
+    }
+
     .review-input, .review-textarea {
       width: 100%;
       background: rgba(6, 10, 8, 0.85);
@@ -1710,7 +2373,7 @@
     }
 
     .review-input:focus, .review-textarea:focus {
-      border-color: var(--gold);
+      border-color: var(--review-gold);
       background: rgba(8, 14, 10, 0.95);
       box-shadow: 0 0 16px rgba(223, 177, 91, 0.25);
     }
@@ -1736,10 +2399,45 @@
       flex-wrap: wrap;
     }
 
-    .comment-notice-msg {
-      font-size: 0.9rem;
+    .btn-submit-review {
+      background: linear-gradient(135deg, #E5B85C, #DFB15B);
+      color: #070A08;
+      border: none;
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 13px 32px;
+      border-radius: 30px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 16px rgba(223,177,91,0.35);
+      transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .btn-submit-review:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(223,177,91,0.55);
+      filter: brightness(1.06);
+    }
+
+    .comment-success-notice {
+      background: rgba(223, 177, 91, 0.12);
+      border: 1px solid var(--review-gold);
+      color: var(--review-text);
+      padding: 10px 20px;
+      border-radius: 14px;
+      font-size: 0.92rem;
       font-weight: 700;
-      color: var(--gold-light);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      animation: fadeInReview 0.3s ease;
+    }
+
+    @keyframes fadeInReview {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     /* Toolbar Filter & Sort */
@@ -1792,8 +2490,8 @@
 
     .review-pill-btn.active, .review-pill-btn:hover {
       background: rgba(223, 177, 91, 0.18);
-      border-color: var(--gold);
-      color: var(--gold-light);
+      border-color: var(--review-gold);
+      color: var(--review-gold-light);
       box-shadow: 0 0 10px rgba(223, 177, 91, 0.2);
     }
 
@@ -1808,7 +2506,7 @@
       background: var(--review-card-bg);
       border: 1px solid var(--review-border);
       border-radius: 18px;
-      padding: 20px 24px;
+      padding: 22px 26px;
       transition: border-color 0.2s;
       box-shadow: 0 6px 20px rgba(0,0,0,0.35);
     }
@@ -1832,8 +2530,8 @@
       height: 42px;
       border-radius: 50%;
       background: linear-gradient(135deg, rgba(223,177,91,0.25), rgba(12,23,17,0.95));
-      border: 1.5px solid var(--gold);
-      color: var(--gold-light);
+      border: 1.5px solid var(--review-gold);
+      color: var(--review-gold-light);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1855,15 +2553,15 @@
     }
 
     .comment-stars {
-      color: var(--gold);
+      color: var(--review-gold);
       font-size: 1.05rem;
       letter-spacing: 2px;
     }
 
     .comment-body-text {
-      font-size: 0.92rem;
+      font-size: 0.94rem;
       color: var(--text-main);
-      line-height: 1.7;
+      line-height: 1.75;
       margin: 0 0 14px;
       word-break: break-word;
       white-space: pre-wrap;
@@ -1875,10 +2573,31 @@
       gap: 14px;
     }
 
+    .comment-helpful-btn {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(223, 177, 91, 0.2);
+      color: var(--review-muted);
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .comment-helpful-btn.active, .comment-helpful-btn:hover {
+      background: rgba(223, 177, 91, 0.15);
+      border-color: var(--review-gold);
+      color: var(--review-gold);
+    }
+
     .comment-reply-btn {
       background: transparent;
       border: none;
-      color: var(--gold);
+      color: var(--review-gold);
       font-size: 0.84rem;
       font-weight: 700;
       cursor: pointer;
@@ -1915,6 +2634,10 @@
     }
 
     @media (max-width: 768px) {
+      .reviews-header-block {
+        flex-direction: column;
+        align-items: flex-start;
+      }
       .reviews-summary-grid {
         grid-template-columns: 1fr;
         text-align: center;
@@ -1933,6 +2656,7 @@
         padding-inline-start: 12px;
       }
     }
+
   </style>
 </head>
 <body>
@@ -2027,8 +2751,21 @@
           <p class="audio-hero-subtitle" id="audioHeroSubtitle">« استمع... تأمل... وغيّر نظرتك إلى الحياة. »</p>
           <p class="audio-hero-desc" id="audioHeroDesc">روائع الأدب العالمي، الفلسفة وعلم النفس مسموعة بنبرة هادئة ورصينة.</p>
           
-          <div class="audio-lang-notice-pill">
-            <span>🎙️</span> <span id="audioLangNoticeText">الصوت متوفر باللغة العربية الفصحى</span>
+          <div class="hero-stats-row" id="heroStatsRow">
+            <div class="hero-stat-item">
+              <span class="hero-stat-num" id="heroStatBooksCount">7</span>
+              <span class="hero-stat-label" id="heroStatBooksLabel">أعمال مختارة</span>
+            </div>
+            <span class="hero-stat-divider">•</span>
+            <div class="hero-stat-item">
+              <span class="hero-stat-num" id="heroStatChaptersCount">46</span>
+              <span class="hero-stat-label" id="heroStatChaptersLabel">فصل صوتي</span>
+            </div>
+            <span class="hero-stat-divider">•</span>
+            <div class="hero-stat-item">
+              <span class="hero-stat-num" id="heroStatArabicBadge">100%</span>
+              <span class="hero-stat-label" id="heroStatArabicLabel">عربية فصحى</span>
+            </div>
           </div>
         </section>
 
@@ -2137,7 +2874,7 @@
 
           <div class="detail-meta-box">
             <div class="pill-badge lang" style="align-self: flex-start; margin-bottom: 8px;">🎧 LIVRE AUDIO / كتاب صوتي</div>
-            <h1 class="detail-title" id="detailBookTitle">رسائل إلى ميلينا</h1>
+            <h2 class="detail-title" id="detailBookTitle">رسائل إلى ميلينا</h2>
             <div class="detail-author" id="detailBookAuthor">فرانز كافكا</div>
 
             <div class="detail-badges-row">
@@ -2234,33 +2971,46 @@
         </div>
 
         <!-- ======================================================== -->
-        <!-- SECTION : AVIS DES AUDITEURS & ÉVALUATIONS               -->
+        <!-- SECTION : AVIS DES AUDITEURS & ÉVALUATIONS (PREMIUM)      -->
         <!-- ======================================================== -->
         <section class="audio-reviews-section" id="audioReviewsSection" aria-labelledby="audioReviewsHeading">
-          <div class="section-editorial-heading">
-            <h3 class="section-editorial-title" id="audioReviewsHeading">
-              <span class="accent-icon">💬</span> <span id="reviewsSectionHeading">آراء المستمعين وتقييمات العمل</span>
-            </h3>
-            <div class="section-counter-badge">
-              <span id="reviewsCountBadge">0 تقييمات</span>
+          
+          <!-- Section Editorial Header -->
+          <div class="reviews-header-block">
+            <div class="reviews-header-left">
+              <div class="reviews-main-tag">
+                <span>✦</span>
+                <span id="reviewsBadgeLabel">آراء المستمعين</span>
+              </div>
+              <h3 class="reviews-main-title" id="audioReviewsHeading">
+                <span id="reviewsSectionHeading">آراء المستمعين</span>
+              </h3>
+              <p class="reviews-main-subtitle" id="reviewsSectionSubtitle">
+                شارك تجربتك وساعدنا على تطوير مكتبة حكمـة ونور الصوتية
+              </p>
+            </div>
+            
+            <div class="reviews-header-status-badge">
+              <span id="reviewsStatusIcon">✦</span>
+              <span id="reviewsCountBadge">لم يقيّم هذا العمل بعد</span>
             </div>
           </div>
 
           <!-- 1. Summary & Rating Distribution Grid -->
           <div class="reviews-summary-grid" id="reviewsSummaryGrid">
-            <!-- Dynamic average score card + percentage distribution bars -->
+            <!-- Dynamic average score card + percentage distribution bars or empty state -->
           </div>
 
           <!-- 2. Interactive Star Rating Box -->
           <div class="user-rating-interactive-box" id="userRatingBox">
             <fieldset class="rating-fieldset" role="radiogroup" aria-label="Votre évaluation de l'œuvre">
               <legend class="rating-legend" id="ratingLegendText">تقييمك للعمل :</legend>
-              <div class="star-rating-buttons" id="starRatingGroup">
-                <button type="button" class="star-btn" data-star="1" role="radio" aria-checked="false" aria-label="1 نجمة من 5" onclick="selectWorkRating(1)">★</button>
-                <button type="button" class="star-btn" data-star="2" role="radio" aria-checked="false" aria-label="2 نجوم من 5" onclick="selectWorkRating(2)">★</button>
-                <button type="button" class="star-btn" data-star="3" role="radio" aria-checked="false" aria-label="3 نجوم من 5" onclick="selectWorkRating(3)">★</button>
-                <button type="button" class="star-btn" data-star="4" role="radio" aria-checked="false" aria-label="4 نجوم من 5" onclick="selectWorkRating(4)">★</button>
-                <button type="button" class="star-btn" data-star="5" role="radio" aria-checked="false" aria-label="5 نجوم من 5" onclick="selectWorkRating(5)">★</button>
+              <div class="star-rating-buttons" id="starRatingGroup" tabindex="0" role="group" aria-label="Choisir une note de 1 à 5 étoiles">
+                <button type="button" class="star-btn" data-star="1" role="radio" aria-checked="false" aria-label="1 نجمة من 5 — ضعيف" onclick="selectWorkRating(1)" onmouseenter="previewStarHover(1)" onmouseleave="previewStarHover(0)">★</button>
+                <button type="button" class="star-btn" data-star="2" role="radio" aria-checked="false" aria-label="2 نجوم من 5 — مقبول" onclick="selectWorkRating(2)" onmouseenter="previewStarHover(2)" onmouseleave="previewStarHover(0)">★</button>
+                <button type="button" class="star-btn" data-star="3" role="radio" aria-checked="false" aria-label="3 نجوم من 5 — جيد" onclick="selectWorkRating(3)" onmouseenter="previewStarHover(3)" onmouseleave="previewStarHover(0)">★</button>
+                <button type="button" class="star-btn" data-star="4" role="radio" aria-checked="false" aria-label="4 نجوم من 5 — ممتاز" onclick="selectWorkRating(4)" onmouseenter="previewStarHover(4)" onmouseleave="previewStarHover(0)">★</button>
+                <button type="button" class="star-btn" data-star="5" role="radio" aria-checked="false" aria-label="5 نجوم من 5 — استثنائي" onclick="selectWorkRating(5)" onmouseenter="previewStarHover(5)" onmouseleave="previewStarHover(0)">★</button>
               </div>
               <span class="rating-feedback-status" id="ratingFeedbackStatus"></span>
             </fieldset>
@@ -2268,30 +3018,32 @@
 
           <!-- 3. Formulaire de commentaire -->
           <div class="review-form-card">
-            <h4 class="review-form-title" id="reviewFormTitle">شارك رأيك أو ملاحظتك حول هذا الكتاب الصوتي</h4>
+            <h4 class="review-form-title" id="reviewFormTitle">
+              <span>✍️</span> <span id="reviewFormTitleText">شاركنا تجربتك مع هذا العمل الصوتي</span>
+            </h4>
             <form id="workCommentForm" onsubmit="handleCommentSubmit(event)">
               <div class="form-row-2col">
                 <div class="form-group">
-                  <label for="commentAuthorName" id="labelAuthorName">الاسم <span style="color:var(--gold);">*</span></label>
+                  <label for="commentAuthorName" id="labelAuthorName">الاسم <span class="required-star">*</span></label>
                   <input type="text" id="commentAuthorName" class="review-input" required maxlength="80" placeholder="اسمك أو لقبك">
                 </div>
                 <div class="form-group">
-                  <label for="commentEmail" id="labelAuthorEmail">البريد الإلكتروني <span style="color:var(--text-muted);font-size:0.75rem;">(اختياري)</span></label>
+                  <label for="commentEmail" id="labelAuthorEmail">البريد الإلكتروني <span class="optional-hint">(اختياري)</span></label>
                   <input type="email" id="commentEmail" class="review-input" placeholder="لن يتم نشر بريدك الإلكتروني">
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="commentText" id="labelCommentText">التعليق أو التأمل الفلسفي <span style="color:var(--gold);">*</span></label>
-                <textarea id="commentText" class="review-textarea" required rows="4" maxlength="1500" placeholder="شاركنا انطباعك، أفكارك، أو ما أثر فيك من هذا العمل الصوتي..." oninput="updateCommentCharCount(this)"></textarea>
-                <div class="char-count-wrap" id="commentCharCounter">0 / 1500 حرف</div>
+                <label for="commentText" id="labelCommentText">رأيك <span class="required-star">*</span></label>
+                <textarea id="commentText" class="review-textarea" required rows="4" maxlength="1500" placeholder="شاركنا تجربتك مع هذا العمل الصوتي..." oninput="updateCommentCharCount(this)"></textarea>
+                <div class="char-count-wrap" id="commentCharCounter">0 / 1500</div>
               </div>
 
               <div class="form-actions-row">
-                <button type="submit" class="btn-primary-play" id="btnSubmitReview">
-                  <span>✍️</span> <span id="submitReviewBtnText">نشر رأيي</span>
+                <button type="submit" class="btn-submit-review" id="btnSubmitReview">
+                  <span id="submitReviewBtnText">نشر التقييم</span> <span>✦</span>
                 </button>
-                <div id="commentSubmitNotice" class="comment-notice-msg" style="display:none;"></div>
+                <div id="commentSubmitNotice" class="comment-success-notice" style="display:none;"></div>
               </div>
             </form>
           </div>
@@ -2299,7 +3051,7 @@
           <!-- 4. Toolbar: Tri & Filtres -->
           <div class="reviews-filter-toolbar">
             <div class="reviews-sort-wrap">
-              <label for="reviewsSortSelect" id="labelSortReviews" style="font-size:0.85rem;color:var(--text-muted);">الترتيب :</label>
+              <label for="reviewsSortSelect" id="labelSortReviews">الترتيب :</label>
               <select id="reviewsSortSelect" class="reviews-select" onchange="handleReviewsSortChange(this.value)">
                 <option value="recent">الأحدث</option>
                 <option value="top_rated">الأعلى تقييماً</option>

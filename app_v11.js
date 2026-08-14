@@ -93,6 +93,7 @@ function setLanguage(lang) {
   updatePlaceholders();
 
   // Re-populate all dynamic components with the active language content
+  renderWisdomQuote(false);
   populateProfile();
   populateNavbarDropdown();
   populateThinkers();
@@ -247,60 +248,318 @@ function populateProfile() {
   }
 }
 
+// --- 1. Wisdom of the Day (Quote Carousel & Cycling Engine) ---
+const HOMEPAGE_WISDOM_QUOTES = [
+  {
+    quote: {
+      ar: "« لا تزعج الأشياءُ الناسَ، بل الأحكام التي يطلقونها عليها. »",
+      fr: "« Ce qui trouble les hommes, ce ne sont pas les choses, mais les jugements qu'ils portent sur les choses. »",
+      en: "« Men are disturbed not by things, but by the view which they take of them. »"
+    },
+    author: {
+      ar: "إبيكتيتوس — الفلسفة الرواقية",
+      fr: "Épictète — Stoïcisme",
+      en: "Epictetus — Stoic Philosophy"
+    },
+    tag: {
+      ar: "الرواقية والسيطرة على العقل",
+      fr: "Stoïcisme & Maîtrise de soi",
+      en: "Stoicism & Self-Mastery"
+    }
+  },
+  {
+    quote: {
+      ar: "« من يمتلك سبباً يعيش من أجله، يمكنه أن يتحمل تقريباً أي كيفية. »",
+      fr: "« Celui qui a un pourquoi qui lui tient lieu de but peut supporter presque tous les comment. »",
+      en: "« He who has a why to live can bear almost any how. »"
+    },
+    author: {
+      ar: "فريدريش نيتشه — فيلسوف الإرادة",
+      fr: "Friedrich Nietzsche — Philosophie de la Volonté",
+      en: "Friedrich Nietzsche — Will to Power"
+    },
+    tag: {
+      ar: "المعنى والإرادة",
+      fr: "Sens & Volonté",
+      en: "Meaning & Purpose"
+    }
+  },
+  {
+    quote: {
+      ar: "« في منتصف الشتاء، اكتشفت أخيراً أن في داخلي صيفاً لا يقهر. »",
+      fr: "« Au milieu de l'hiver, j'ai découvert en moi un invincible été. »",
+      en: "« In the midst of winter, I found there was, within me, an invincible summer. »"
+    },
+    author: {
+      ar: "ألبير كامو — فلسفة التمرد والأمل",
+      fr: "Albert Camus — Philosophie de la Révolte",
+      en: "Albert Camus — Lucid Hope"
+    },
+    tag: {
+      ar: "القوة الداخلية والأمل",
+      fr: "Force Intérieure & Espoir",
+      en: "Inner Strength & Resilience"
+    }
+  },
+  {
+    quote: {
+      ar: "« تخلَّص من ظنك أنك قد آذيت، وسيزول الأذى نفسه. »",
+      fr: "« Supprime le jugement, et tu supprimes la plainte : 'On m'a fait du tort'. Supprime la plainte, et le tort est supprimé. »",
+      en: "« Reject your sense of injury and the injury itself disappears. »"
+    },
+    author: {
+      ar: "ماركوس أوريليوس — التأملات",
+      fr: "Marc Aurèle — Pensées pour moi-même",
+      en: "Marcus Aurelius — Meditations"
+    },
+    tag: {
+      ar: "السكينة والسلام الداخلي",
+      fr: "Paix intérieure & Sagesse",
+      en: "Inner Peace & Clarity"
+    }
+  },
+  {
+    quote: {
+      ar: "« السعادة الحقيقية هي الاستمتاع بالحاضر دون قلق مشؤوم بشأن المستقبل. »",
+      fr: "« Le vrai bonheur est de jouir du présent, sans dépendre anxieusement de l'avenir. »",
+      en: "« True happiness is to enjoy the present, without anxious dependence upon the future. »"
+    },
+    author: {
+      ar: "سينيكا — رسائل إلى لوسيليوس",
+      fr: "Sénèque — Lettres à Lucilius",
+      en: "Seneca — Letters from a Stoic"
+    },
+    tag: {
+      ar: "فن العيش في الحاضر",
+      fr: "L'art de vivre l'instant",
+      en: "Living in the Present"
+    }
+  },
+  {
+    quote: {
+      ar: "« الحياة تتأرجح كالبندول بين الألم والملل، والسكينة تكمن في التقليل من الرغبات. »",
+      fr: "« La vie oscille comme un pendule, de droite à gauche, de la souffrance à l'ennui. »",
+      en: "« Life swings like a pendulum backward and forward between pain and boredom. »"
+    },
+    author: {
+      ar: "آرثر شوبنهاور — حكمة فن العيش",
+      fr: "Arthur Schopenhauer — Aphorismes sur la sagesse",
+      en: "Arthur Schopenhauer — Wisdom of Life"
+    },
+    tag: {
+      ar: "الوضوح الذهني والتأمل",
+      fr: "Lucidité & Apaisement",
+      en: "Mental Clarity & Wisdom"
+    }
+  }
+];
+
+let wisdomQuoteIdx = 0;
+
+function renderWisdomQuote(animate = false) {
+  const quoteTextEl = document.getElementById('wisdomQuoteText');
+  const quoteAuthorEl = document.getElementById('wisdomQuoteAuthor');
+  const quoteTagEl = document.getElementById('wisdomQuoteTag');
+  const quoteBody = document.getElementById('wisdomQuoteBody');
+  if (!quoteTextEl || !quoteAuthorEl) return;
+
+  const item = HOMEPAGE_WISDOM_QUOTES[wisdomQuoteIdx];
+  const lang = currentLang;
+
+  if (animate && quoteBody) {
+    quoteBody.style.opacity = '0';
+    setTimeout(() => {
+      quoteTextEl.textContent = (item.quote && item.quote[lang]) || item.quote.ar;
+      quoteAuthorEl.textContent = (item.author && item.author[lang]) || item.author.ar;
+      if (quoteTagEl) quoteTagEl.textContent = (item.tag && item.tag[lang]) || item.tag.ar;
+      quoteBody.style.opacity = '1';
+    }, 200);
+  } else {
+    quoteTextEl.textContent = (item.quote && item.quote[lang]) || item.quote.ar;
+    quoteAuthorEl.textContent = (item.author && item.author[lang]) || item.author.ar;
+    if (quoteTagEl) quoteTagEl.textContent = (item.tag && item.tag[lang]) || item.tag.ar;
+  }
+}
+
+window.cycleWisdomQuote = function() {
+  wisdomQuoteIdx = (wisdomQuoteIdx + 1) % HOMEPAGE_WISDOM_QUOTES.length;
+  renderWisdomQuote(true);
+};
+
+// --- 2. Thinkers Section V4 ---
 function populateThinkers() {
   const container = document.getElementById('thinkersList');
   if (!container) return;
-  const thinkers = TIKTOK_DATA.content[currentLang].thinkers;
-  if (!thinkers) return;
-  const readBioLabel = TIKTOK_DATA.ui[currentLang].discoverThinker || "Découvrir →";
-  const featuredLabel = TIKTOK_DATA.ui[currentLang].featured || "En vedette";
+  const readBioLabel = (currentLang === 'ar') ? 'عرض المزيد ←' : (currentLang === 'fr') ? 'Découvrir le penseur →' : 'Discover Thinker →';
 
-  // Display exactly the 4 requested major thinkers: Nietzsche, Marc Aurèle, Sénèque, Camus
-  const targetIds = ['nietzsche', 'marcaurele', 'seneque', 'camus'];
-  const homeThinkers = [];
-  targetIds.forEach(id => {
-    const found = thinkers.find(t => t.id === id);
-    if (found) homeThinkers.push(found);
-  });
+  const thinkersV4Data = (currentLang === 'ar') ? [
+    {
+      id: 'socrate',
+      name: 'سقراط',
+      era: '470 – 399 ق.م · أثينا',
+      school: 'أبو الفلسفة والتفكير النقدي',
+      bio: '«اعرف نفسك بنفسك». حكيم أثينا الذي جعل من فحص الحياة والضمير الإنساني أسمى غايات الفكر.',
+      image: 'thinkers/images/socrate.jpg'
+    },
+    {
+      id: 'platon',
+      name: 'أفلاطون',
+      era: '428 – 348 ق.م · أثينا',
+      school: 'فلسفة المُثُل والمعرفة',
+      bio: 'مؤسس الأكاديمية وصاحب أسطورة الكهف، وجّه العقل البشري نحو البحث عن الحق والجمال الخالص.',
+      image: 'thinkers/images/platon.jpg'
+    },
+    {
+      id: 'nietzsche',
+      name: 'فريدريش نيتشه',
+      era: '1844 – 1900 · ألمانيا',
+      school: 'الوجودية وإرادة القوة',
+      bio: 'فيلسوف تجاوز الذات ومفهوم حب القدر (Amor Fati)، يدعو لاحتضان الحياة بشجاعة.',
+      image: 'thinkers/images/nietzsche.jpg'
+    },
+    {
+      id: 'camus',
+      name: 'ألبير كامو',
+      era: '1913 – 1960 · فرنسا',
+      school: 'فلسفة العبث والتمرد',
+      bio: 'أديب نوبل وفيلسوف الحرية، يدعو إلى التمرد الواعي والشغف بالحياة والجمال في عالم عبثي.',
+      image: 'thinkers/images/camus.jpg'
+    },
+    {
+      id: 'schopenhauer',
+      name: 'آرثر شوبنهاور',
+      era: '1788 – 1860 · ألمانيا',
+      school: 'فلسفة الإرادة والوضوح',
+      bio: 'فيلسوف الصراحة العقلية، شرح طبيعة الرغبة الإنسانية وكيفية بلوغ السلام النفسي بالاستغناء.',
+      image: 'thinkers/images/schopenhauer.jpg'
+    },
+    {
+      id: 'marcaurele',
+      name: 'ماركوس أوريليوس',
+      era: '121 – 180 م · روما',
+      school: 'الفلسفة الرواقية',
+      bio: 'الإمبراطور الفيلسوف صاحب "التأملات"، المرشد الخالد في الانضباط الذاتي والقلعة الداخلية.',
+      image: 'thinkers/images/marcaurele.jpg'
+    }
+  ] : (currentLang === 'fr') ? [
+    {
+      id: 'socrate',
+      name: 'Socrate',
+      era: '470 – 399 av. J.-C. · Athènes',
+      school: 'Père de la Philosophie',
+      bio: '« Connais-toi toi-même ». Le sage qui a placé l\'examen de l\'âme au cœur de la pensée.',
+      image: 'thinkers/images/socrate.jpg'
+    },
+    {
+      id: 'platon',
+      name: 'Platon',
+      era: '428 – 348 av. J.-C. · Athènes',
+      school: 'Théorie des Idées & Idéalisme',
+      bio: 'Fondateur de l\'Académie et penseur de l\'Allégorie de la caverne, quête de vérité pure.',
+      image: 'thinkers/images/platon.jpg'
+    },
+    {
+      id: 'nietzsche',
+      name: 'Friedrich Nietzsche',
+      era: '1844 – 1900 · Allemagne',
+      school: 'Volonté & Amor Fati',
+      bio: 'Penseur du dépassement de soi et de la grandeur d\'âme face aux défis de l\'existence.',
+      image: 'thinkers/images/nietzsche.jpg'
+    },
+    {
+      id: 'camus',
+      name: 'Albert Camus',
+      era: '1913 – 1960 · France',
+      school: 'L\'Absurde & La Révolte',
+      bio: 'Écrivain de la lucidité et de la révolte créatrice, chantre de la beauté et de la liberté.',
+      image: 'thinkers/images/camus.jpg'
+    },
+    {
+      id: 'schopenhauer',
+      name: 'Arthur Schopenhauer',
+      era: '1788 – 1860 · Allemagne',
+      school: 'Philosophie de la Volonté',
+      bio: 'Le maître de la lucidité psychologique, explorateur du désir et de la paix de l\'esprit.',
+      image: 'thinkers/images/schopenhauer.jpg'
+    },
+    {
+      id: 'marcaurele',
+      name: 'Marc Aurèle',
+      era: '121 – 180 ap. J.-C. · Rome',
+      school: 'Stoïcisme Impérial',
+      bio: 'L\'empereur philosophe, auteur des Pensées pour moi-même, maître de la citadelle intérieure.',
+      image: 'thinkers/images/marcaurele.jpg'
+    }
+  ] : [
+    {
+      id: 'socrate',
+      name: 'Socrates',
+      era: '470 – 399 BC · Athens',
+      school: 'Father of Philosophy',
+      bio: '« Know thyself ». The Athenian sage who placed the examined life above all else.',
+      image: 'thinkers/images/socrate.jpg'
+    },
+    {
+      id: 'platon',
+      name: 'Plato',
+      era: '428 – 348 BC · Athens',
+      school: 'Theory of Forms & Idealism',
+      bio: 'Founder of the Academy and thinker behind the Allegory of the Cave.',
+      image: 'thinkers/images/platon.jpg'
+    },
+    {
+      id: 'nietzsche',
+      name: 'Friedrich Nietzsche',
+      era: '1844 – 1900 · Germany',
+      school: 'Will to Power & Amor Fati',
+      bio: 'Philosopher of self-overcoming and living life with unyielding courage.',
+      image: 'thinkers/images/nietzsche.jpg'
+    },
+    {
+      id: 'camus',
+      name: 'Albert Camus',
+      era: '1913 – 1960 · France',
+      school: 'The Absurd & Lucid Revolt',
+      bio: 'Nobel laureate and philosopher of freedom, finding invincible summer in dark winters.',
+      image: 'thinkers/images/camus.jpg'
+    },
+    {
+      id: 'schopenhauer',
+      name: 'Arthur Schopenhauer',
+      era: '1788 – 1860 · Germany',
+      school: 'Philosophy of Will',
+      bio: 'Master of psychological honesty, dissecting human desires and the path to peace.',
+      image: 'thinkers/images/schopenhauer.jpg'
+    },
+    {
+      id: 'marcaurele',
+      name: 'Marcus Aurelius',
+      era: '121 – 180 AD · Rome',
+      school: 'Stoic Philosophy',
+      bio: 'The philosopher-emperor and author of Meditations, guide to the inner citadel.',
+      image: 'thinkers/images/marcaurele.jpg'
+    }
+  ];
 
-  const displayThinkers = homeThinkers.length === 4 ? homeThinkers : thinkers.slice(0, 4);
-
-  container.innerHTML = displayThinkers.map(thinker => {
-    const badgeHtml = thinker.featured ? `<span class="card-featured-badge">${featuredLabel}</span>` : "";
-    return `
-      <div class="thinker-card" data-thinker-id="${thinker.id}" style="cursor: pointer;">
-        <div class="thinker-image-container">
-          ${badgeHtml}
-          <img src="${thinker.image}" alt="${thinker.name}" class="thinker-image">
-        </div>
-        <div class="card-meta-row">
-          <span>${thinker.era}</span>
-          <span class="card-meta-dot">•</span>
-          <span style="color: var(--accent-green); font-weight: 600; text-transform: uppercase;">${thinker.school}</span>
-        </div>
-        <h3 class="thinker-name">${thinker.name}</h3>
-        <p class="thinker-bio">${thinker.bio}</p>
-        <a class="card-action-link" style="pointer-events: none;">
-          <span>${readBioLabel}</span>
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="${currentLang === 'ar' ? '19' : '5'}" y1="12" x2="${currentLang === 'ar' ? '5' : '19'}" y2="12"></line>
-            <polyline points="${currentLang === 'ar' ? '12 19 5 12 12 5' : '12 5 19 12 12 19'}"></polyline>
-          </svg>
-        </a>
+  container.className = 'thinkers-v4-grid';
+  container.innerHTML = thinkersV4Data.map(thinker => `
+    <article class="thinker-v4-card" onclick="window.location.href='./thinkers/?thinker=${thinker.id}'" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.location.href='./thinkers/?thinker=${thinker.id}';}">
+      <div class="thinker-v4-portrait-box">
+        <img src="${thinker.image}" alt="${thinker.name}" loading="lazy" class="thinker-v4-portrait-img" onerror="this.src='brand_logo_official.png'">
       </div>
-    `;
-  }).join('');
-
-  // Bind click redirect
-  const cards = container.querySelectorAll('.thinker-card');
-  cards.forEach(card => {
-    card.addEventListener('click', () => {
-      const id = card.getAttribute('data-thinker-id');
-      window.location.href = `./thinkers/?thinker=${id}`;
-    });
-  });
+      <div>
+        <h3 class="thinker-v4-name">${thinker.name}</h3>
+        <div class="thinker-v4-school">${thinker.school}</div>
+      </div>
+      <p class="thinker-v4-bio">${thinker.bio}</p>
+      <a href="./thinkers/?thinker=${thinker.id}" class="thinker-v4-btn" onclick="event.stopPropagation()">
+        <span>${readBioLabel}</span>
+      </a>
+    </article>
+  `).join('');
 }
 
+// --- 3. Featured Articles V4 ---
 function populateRecentArticlesHome() {
   const container = document.getElementById('recentArticlesGrid');
   if (!container) return;
@@ -309,277 +568,221 @@ function populateRecentArticlesHome() {
 
   const articlesData = (currentLang === 'ar') ? [
     {
+      title: 'لماذا اعتبر شوبنهاور أن السعادة مجرد وهم؟',
+      category: '🧠 الفلسفة',
+      readTime: '⏱️ 8 دقائق',
+      desc: 'دراسة فلسفية ونفسية في فلسفة الإرادة عند شوبنهاور: كيف نتحرر من بندول الألم والملل ونصل للسكينة.',
+      image: 'schopenhauer_happiness_illusion_hero.jpg',
+      url: './articles/schopenhauer-happiness-illusion.html'
+    },
+    {
       title: 'الرواقية: فلسفة القوة والهدوء الداخلي',
-      category: 'الرواقية',
-      categoryColor: '#34D399',
-      categoryBg: 'rgba(52, 211, 153, 0.15)',
+      category: '🏛️ الرواقية',
       readTime: '⏱️ 6 دقائق',
       desc: 'دليل عملي لتطبيق ثنائية التحكم، وحب القدر، وبناء قلعة داخلية حصينة في مواجهة تقلبات الحياة.',
+      image: 'marc_aurelius_writing.jpg',
       url: './files/stoicisme-force-calme.html'
     },
     {
       title: 'كيف تتوقف عن التفكير المفرط والقلق المستمر؟',
-      category: 'علم النفس',
-      categoryColor: '#60A5FA',
-      categoryBg: 'rgba(96, 165, 250, 0.15)',
+      category: 'Ψ علم النفس',
       readTime: '⏱️ 5 دقائق',
       desc: 'أساليب نفسية وعقلية مجربة لكسر حلقة الاجترار الفكري واستعادة السكينة والهدوء في الحاضر.',
+      image: 'overthinking_calm.jpg',
       url: './files/stop-overthinking.html'
-    },
-    {
-      title: 'الانضباط الذاتي وقوة الإرادة عند الفلاسفة القدماء',
-      category: 'تطوير الذات',
-      categoryColor: '#FBBF24',
-      categoryBg: 'rgba(251, 191, 36, 0.15)',
-      readTime: '⏱️ 7 دقائق',
-      desc: 'تعاليم ماركوس أوريليوس وسينيكا للتحكم في النزوات العشوائية وبناء عادات يومية صلبة وواعية.',
-      url: './files/self-discipline.html'
-    },
-    {
-      title: 'العبث والحرية عند ألبير كامو',
-      category: 'الوجودية',
-      categoryColor: '#A78BFA',
-      categoryBg: 'rgba(167, 139, 250, 0.15)',
-      readTime: '⏱️ 6 دقائق',
-      desc: 'كيف تصنع المعنى والتمرد الواعي في عالم صامت؟ الفلسفة الملهمة لكامو في حب الحياة والحرية.',
-      url: './files/absurde-camus.html'
-    },
-    {
-      title: 'لماذا يحترم الناس الشخص الصامت أكثر من كثير الكلام؟',
-      category: 'علم النفس',
-      categoryColor: '#60A5FA',
-      categoryBg: 'rgba(96, 165, 250, 0.15)',
-      readTime: '⏱️ 5 دقائق',
-      desc: 'قوة الصمت والهدوء والغموض في بناء الهيبة والكاريزما والاحترام الذاتي الحقيقي.',
-      url: './articles/why-people-respect-silent-person.html'
-    },
-    {
-      title: 'لماذا يبتعد الناس عنك عندما تبدأ بالنجاح؟',
-      category: 'علم النفس',
-      categoryColor: '#60A5FA',
-      categoryBg: 'rgba(96, 165, 250, 0.15)',
-      readTime: '⏱️ 6 دقائق',
-      desc: 'التحليل النفسي لسلوك المحيطين عند تحقيق النجاح، وديناميكيات الحسد، وكيف تحافظ على سلامك الداخلي.',
-      url: './articles/why-people-distance-when-you-succeed.html'
     }
   ] : (currentLang === 'fr') ? [
     {
+      title: 'Pourquoi Schopenhauer considérait-il le bonheur comme une illusion ?',
+      category: '🧠 Philosophie',
+      readTime: '⏱️ 8 min',
+      desc: 'Une analyse philosophique sur la Volonté chez Schopenhauer et les clés pour atteindre la paix de l\'âme.',
+      image: 'schopenhauer_happiness_illusion_hero.jpg',
+      url: './articles/schopenhauer-happiness-illusion.html'
+    },
+    {
       title: 'Le Stoïcisme : Philosophie de la Force et du Calme',
-      category: 'Stoïcisme',
-      categoryColor: '#34D399',
-      categoryBg: 'rgba(52, 211, 153, 0.15)',
+      category: '🏛️ Stoïcisme',
       readTime: '⏱️ 6 min',
-      desc: 'Un guide pratique pour appliquer la dichotomie du contrôle, l\'amor fati et bâtir une forteresse intérieure solide.',
+      desc: 'Un guide pratique pour appliquer la dichotomie du contrôle, l\'amor fati et bâtir une forteresse intérieure.',
+      image: 'marc_aurelius_writing.jpg',
       url: './files/stoicisme-force-calme.html'
     },
     {
       title: 'Comment Stopper les Pensées Obsédantes et l\'Anxiété ?',
-      category: 'Psychologie',
-      categoryColor: '#60A5FA',
-      categoryBg: 'rgba(96, 165, 250, 0.15)',
+      category: 'Ψ Psychologie',
       readTime: '⏱️ 5 min',
-      desc: 'Des méthodes éprouvées pour briser le cycle des ruminations mentales et retrouver la sérénité du moment présent.',
+      desc: 'Des méthodes éprouvées pour briser le cycle des ruminations mentales et retrouver la sérénité du présent.',
+      image: 'overthinking_calm.jpg',
       url: './files/stop-overthinking.html'
-    },
-    {
-      title: 'L\'Autodiscipline et la Volonté selon les Anciens',
-      category: 'Développement',
-      categoryColor: '#FBBF24',
-      categoryBg: 'rgba(251, 191, 36, 0.15)',
-      readTime: '⏱️ 7 min',
-      desc: 'Les enseignements de Marc Aurèle et Sénèque pour dominer ses pulsions et maîtriser ses habitudes quotidiennes.',
-      url: './files/self-discipline.html'
-    },
-    {
-      title: 'L\'Absurde et la Liberté chez Albert Camus',
-      category: 'Existentialisme',
-      categoryColor: '#A78BFA',
-      categoryBg: 'rgba(167, 139, 250, 0.15)',
-      readTime: '⏱️ 6 min',
-      desc: 'Comment forger du sens et une révolte lucide dans un monde silencieux ? La philosophie vivifiante de Camus.',
-      url: './files/absurde-camus.html'
-    },
-    {
-      title: 'Pourquoi les gens respectent une personne silencieuse ?',
-      category: 'Psychologie',
-      categoryColor: '#60A5FA',
-      categoryBg: 'rgba(96, 165, 250, 0.15)',
-      readTime: '⏱️ 5 min',
-      desc: 'La puissance de la retenue, du mystère et de la maîtrise de soi pour forger un respect authentique.',
-      url: './articles/why-people-respect-silent-person.html'
-    },
-    {
-      title: 'Pourquoi les gens s\'éloignent quand vous réussissez ?',
-      category: 'Psychologie',
-      categoryColor: '#60A5FA',
-      categoryBg: 'rgba(96, 165, 250, 0.15)',
-      readTime: '⏱️ 6 min',
-      desc: 'Comprendre les dynamiques de l\'envie, la projection psychologique et comment préserver sa paix intérieure.',
-      url: './articles/why-people-distance-when-you-succeed.html'
     }
   ] : [
     {
+      title: 'Why Did Schopenhauer Consider Happiness an Illusion?',
+      category: '🧠 Philosophy',
+      readTime: '⏱️ 8 min',
+      desc: 'A philosophical inquiry into Schopenhauer\'s Will and how to find serenity beyond pain and boredom.',
+      image: 'schopenhauer_happiness_illusion_hero.jpg',
+      url: './articles/schopenhauer-happiness-illusion.html'
+    },
+    {
       title: 'Stoicism: A Philosophy of Strength and Inner Calm',
-      category: 'Stoicism',
-      categoryColor: '#34D399',
-      categoryBg: 'rgba(52, 211, 153, 0.15)',
+      category: '🏛️ Stoicism',
       readTime: '⏱️ 6 min',
-      desc: 'A practical guide to applying the dichotomy of control, Amor Fati, and building an unshakeable inner fortress.',
+      desc: 'A practical guide to applying the dichotomy of control, Amor Fati, and building an inner fortress.',
+      image: 'marc_aurelius_writing.jpg',
       url: './files/stoicisme-force-calme.html'
     },
     {
       title: 'How to Stop Overthinking and Continuous Anxiety?',
-      category: 'Psychology',
-      categoryColor: '#60A5FA',
-      categoryBg: 'rgba(96, 165, 250, 0.15)',
+      category: 'Ψ Psychology',
       readTime: '⏱️ 5 min',
-      desc: 'Proven psychological strategies to break the ruminative loop and regain peaceful clarity in the present moment.',
+      desc: 'Proven psychological strategies to break mental ruminations and regain peace in the present.',
+      image: 'overthinking_calm.jpg',
       url: './files/stop-overthinking.html'
-    },
-    {
-      title: 'Self-Discipline and Willpower According to the Ancients',
-      category: 'Self-Development',
-      categoryColor: '#FBBF24',
-      categoryBg: 'rgba(251, 191, 36, 0.15)',
-      readTime: '⏱️ 7 min',
-      desc: 'Teachings of Marcus Aurelius and Seneca to master impulses and build unwavering daily habits.',
-      url: './files/self-discipline.html'
-    },
-    {
-      title: 'The Absurd and Freedom in Albert Camus',
-      category: 'Existentialism',
-      categoryColor: '#A78BFA',
-      categoryBg: 'rgba(167, 139, 250, 0.15)',
-      readTime: '⏱️ 6 min',
-      desc: 'How to create meaning and lucid revolt in a silent universe? Camus’ inspiring life philosophy.',
-      url: './files/absurde-camus.html'
-    },
-    {
-      title: 'Why Do People Respect a Silent Person?',
-      category: 'Psychology',
-      categoryColor: '#60A5FA',
-      categoryBg: 'rgba(96, 165, 250, 0.15)',
-      readTime: '⏱️ 5 min',
-      desc: 'The power of restraint, mystery, and self-mastery in forging authentic charisma and self-respect.',
-      url: './articles/why-people-respect-silent-person.html'
-    },
-    {
-      title: 'Why Do People Distance Themselves When You Succeed?',
-      category: 'Psychology',
-      categoryColor: '#60A5FA',
-      categoryBg: 'rgba(96, 165, 250, 0.15)',
-      readTime: '⏱️ 6 min',
-      desc: 'Understanding the psychology of envy, projection, and how to safeguard your inner peace.',
-      url: './articles/why-people-distance-when-you-succeed.html'
     }
   ];
 
-  container.innerHTML = articlesData.map(item => `
-    <div class="article-card" style="background: rgba(18, 28, 22, 0.85); border: 1px solid rgba(223, 177, 91, 0.25); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.25s, border-color 0.25s;">
-      <div>
-        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-          <span style="background: ${item.categoryBg}; color: ${item.categoryColor}; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 12px;">${item.category}</span>
-          <span style="color: var(--text-muted); font-size: 0.8rem;">${item.readTime}</span>
-        </div>
-        <h3 style="font-size: 1.15rem; color: #FFFDF8; margin: 0 0 10px; font-weight: 700; line-height: 1.4;">${item.title}</h3>
-        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin: 0 0 18px;">${item.desc}</p>
+  container.className = 'articles-v4-grid';
+  container.innerHTML = articlesData.map(art => `
+    <article class="article-v4-card" onclick="window.location.href='${art.url}'" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.location.href='${art.url}';}">
+      <div class="article-v4-cover-wrapper">
+        <img src="${art.image}" alt="${art.title}" loading="lazy" class="article-v4-cover-img" onerror="this.src='schopenhauer_happiness_illusion_hero.jpg'">
+        <span class="article-v4-cat-pill">${art.category}</span>
       </div>
-      <a href="${item.url}" class="social-btn" style="text-decoration: none; justify-content: center; width: 100%; padding: 10px;">
-        <span>${readLabel}</span>
-      </a>
-    </div>
+      <div class="article-v4-body">
+        <div>
+          <div class="article-v4-meta-row">
+            <span>${art.readTime}</span>
+            <span style="color: #DFB15B;">✦ Hikma & Nour</span>
+          </div>
+          <h3 class="article-v4-title" style="margin-top: 8px;">${art.title}</h3>
+          <p class="article-v4-desc" style="margin-top: 8px;">${art.desc}</p>
+        </div>
+        <a href="${art.url}" class="article-v4-cta-link" onclick="event.stopPropagation()">
+          <span>${readLabel}</span>
+        </a>
+      </div>
+    </article>
   `).join('');
 }
 
+// --- 4. Audio Library Section V4 ---
 function populateAudioHome() {
   const container = document.getElementById('audioCardsGrid');
   if (!container) return;
 
-  const listenLabel = (currentLang === 'ar') ? '▶ استمع الآن' : (currentLang === 'fr') ? '▶ Écouter' : '▶ Listen now';
+  const listenLabel = (currentLang === 'ar') ? 'ابدأ الاستماع ▶' : (currentLang === 'fr') ? 'Commencer l\'écoute ▶' : 'Start listening ▶';
 
   const audioData = (currentLang === 'ar') ? [
     {
+      key: 'milena',
+      title: 'رسائل إلى ميلينا',
+      author: 'فرانز كافكا',
+      duration: '⏱️ 10 دقائق',
+      chapters: '📖 4 فصول',
+      desc: 'مراسلات وجدانية وفلسفية عميقة حول الحب الإنساني، والخوف، والبحث عن الصدق المطلق.',
+      image: 'audio_milena_cover.jpg'
+    },
+    {
+      key: 'etranger',
       title: 'الغريب',
       author: 'ألبير كامو',
       duration: '⏱️ 16 دقيقة',
-      desc: 'تحفة كامو الأدبية حول عبثية الوجود والصدق المطلق مع الذات.',
+      chapters: '📖 6 فصول',
+      desc: 'تحفة كامو الأدبية الخالدة حول عبثية الوجود والصدق المتناهي مع الذات.',
       image: 'audio_etranger_cover.jpg'
     },
     {
-      title: 'الأمير الصغير',
-      author: 'أنطوان دو سانت إكزوبيري',
-      duration: '⏱️ 12 دقيقة',
-      desc: 'قصة فلسفية وشاعرية عالمية حول جوهر الأشياء الذي لا يُرى إلا بالقلب.',
-      image: 'audio_petit_prince_cover.jpg'
-    },
-    {
+      key: 'alchemist',
       title: 'الخيميائي',
       author: 'باولو كويلو',
       duration: '⏱️ 13 دقيقة',
-      desc: 'رحلة ملهمة لراعٍ أندلسي يبحث عن أسطورته الذاتية وتحقيق غايته في الحياة.',
+      chapters: '📖 6 فصول',
+      desc: 'رحلة ملهمة لراعٍ أندلسي يبحث عن أسطورته الذاتية وتحقيق غايته الحقيقية في الحياة.',
       image: 'audio_alchemist_cover.jpg'
     }
   ] : (currentLang === 'fr') ? [
     {
+      key: 'milena',
+      title: 'Lettres à Milena',
+      author: 'Franz Kafka',
+      duration: '⏱️ 10 min',
+      chapters: '📖 4 chapitres',
+      desc: 'Une correspondance intime et philosophique sur l\'amour, l\'angoisse et la quête de vérité.',
+      image: 'audio_milena_cover.jpg'
+    },
+    {
+      key: 'etranger',
       title: 'L\'Étranger',
       author: 'Albert Camus',
       duration: '⏱️ 16 min',
-      desc: 'Le chef-d\'œuvre de Camus sur l\'absurdité de l\'existence et la sincérité absolue.',
+      chapters: '📖 6 chapitres',
+      desc: 'Le chef-d\'œuvre de Camus sur l\'absurdité de l\'existence et la lucidité absolue.',
       image: 'audio_etranger_cover.jpg'
     },
     {
-      title: 'Le Petit Prince',
-      author: 'Antoine de Saint-Exupéry',
-      duration: '⏱️ 12 min',
-      desc: 'Un conte poétique et philosophique universel sur l\'essentiel invisible pour les yeux.',
-      image: 'audio_petit_prince_cover.jpg'
-    },
-    {
+      key: 'alchemist',
       title: 'L\'Alchimiste',
       author: 'Paulo Coelho',
       duration: '⏱️ 13 min',
+      chapters: '📖 6 chapitres',
       desc: 'La quête initiatique d\'un berger à la recherche de sa Légende Personnelle.',
       image: 'audio_alchemist_cover.jpg'
     }
   ] : [
     {
+      key: 'milena',
+      title: 'Letters to Milena',
+      author: 'Franz Kafka',
+      duration: '⏱️ 10 min',
+      chapters: '📖 4 chapters',
+      desc: 'An intimate and philosophical correspondence exploring human love, fear, and emotional truth.',
+      image: 'audio_milena_cover.jpg'
+    },
+    {
+      key: 'etranger',
       title: 'The Stranger',
       author: 'Albert Camus',
       duration: '⏱️ 16 min',
+      chapters: '📖 6 chapters',
       desc: 'Camus\' masterpiece exploring existential absurdity, emotional truth, and personal honesty.',
       image: 'audio_etranger_cover.jpg'
     },
     {
-      title: 'The Little Prince',
-      author: 'Antoine de Saint-Exupéry',
-      duration: '⏱️ 12 min',
-      desc: 'A timeless, poetic tale on looking at the world with the heart, because what is essential is invisible to the eye.',
-      image: 'audio_petit_prince_cover.jpg'
-    },
-    {
+      key: 'alchemist',
       title: 'The Alchemist',
       author: 'Paulo Coelho',
       duration: '⏱️ 13 min',
+      chapters: '📖 6 chapters',
       desc: 'The inspiring journey of an Andalusian shepherd boy seeking his Personal Legend.',
       image: 'audio_alchemist_cover.jpg'
     }
   ];
 
+  container.className = 'audio-v4-grid';
   container.innerHTML = audioData.map(item => `
-    <div class="article-card" style="background: rgba(18, 28, 22, 0.85); border: 1px solid rgba(223, 177, 91, 0.25); border-radius: 18px; padding: 18px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.25s, border-color 0.25s;">
-      <div>
-        <div style="width: 100%; height: 180px; border-radius: 14px; overflow: hidden; margin-bottom: 14px; position: relative;">
-          <img src="${item.image}" alt="${item.title} - ${item.author}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
-          <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.75); color: #FFF; font-size: 0.75rem; padding: 3px 8px; border-radius: 8px; font-weight: 600;">${item.duration}</span>
-        </div>
-        <h3 style="font-size: 1.12rem; color: #FFFDF8; margin: 0 0 6px; font-weight: 700;">${item.title}</h3>
-        <p style="font-size: 0.82rem; color: var(--accent-gold); margin: 0 0 8px; font-weight: 600;">${item.author}</p>
-        <p style="font-size: 0.86rem; color: var(--text-secondary); line-height: 1.5; margin: 0 0 14px;">${item.desc}</p>
+    <article class="audio-v4-card" onclick="window.location.href='./audio/?book=${item.key}'" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.location.href='./audio/?book=${item.key}';}">
+      <div class="audio-v4-cover-wrapper">
+        <img src="${item.image}" alt="${item.title} - ${item.author}" loading="lazy" class="audio-v4-cover-img" onerror="this.src='brand_logo_official.png'">
+        <span class="audio-v4-badge-tag">🎧 AUDIO</span>
       </div>
-      <a href="./audio/" class="quiz-btn" style="text-decoration: none; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
-        <span>${listenLabel}</span>
-      </a>
-    </div>
+      <div class="audio-v4-body">
+        <div>
+          <div class="audio-v4-meta-pills">
+            <span>${item.chapters}</span>
+            <span>•</span>
+            <span>${item.duration}</span>
+          </div>
+          <h3 class="audio-v4-title" style="margin-top: 8px;">${item.title}</h3>
+          <p class="audio-v4-author" style="margin-top: 4px;">${item.author}</p>
+          <p class="audio-v4-desc" style="margin-top: 8px;">${item.desc}</p>
+        </div>
+        <a href="./audio/?book=${item.key}" class="audio-v4-play-btn" onclick="event.stopPropagation()">
+          <span>${listenLabel}</span>
+        </a>
+      </div>
+    </article>
   `).join('');
 }
 
@@ -965,6 +1168,54 @@ function setupContactForm() {
   });
 }
 
+// --- Newsletter Form Handling V4 ---
+function setupNewsletterForm() {
+  const form = document.getElementById('homepageNewsletterForm');
+  const input = document.getElementById('homepageNewsletterEmail');
+  const feedback = document.getElementById('homepageNewsletterFeedback');
+  const submitBtn = document.getElementById('homepageNewsletterBtn');
+  if (!form || !input || !feedback) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = input.value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    if (!email || !emailRegex.test(email)) {
+      feedback.style.color = '#EF4444';
+      feedback.textContent = currentLang === 'ar' ? 'يرجى إدخال بريد إلكتروني صالح.' :
+                             currentLang === 'fr' ? 'Veuillez saisir une adresse email valide.' :
+                             'Please enter a valid email address.';
+      feedback.style.display = 'block';
+      return;
+    }
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = currentLang === 'ar' ? 'جاري الاشتراك...' : currentLang === 'fr' ? 'Inscription...' : 'Subscribing...';
+    }
+
+    setTimeout(() => {
+      try {
+        const list = JSON.parse(localStorage.getItem('hikma_newsletter_subscribers') || '[]');
+        if (!list.includes(email)) list.push(email);
+        localStorage.setItem('hikma_newsletter_subscribers', JSON.stringify(list));
+      } catch (err) {}
+
+      feedback.style.color = '#34D399';
+      feedback.textContent = currentLang === 'ar' ? 'شكراً لاشتراكك في حكمة ونور! أهلاً بك في رحلتنا الفكرية. 🌿✨' :
+                             currentLang === 'fr' ? 'Merci pour votre inscription à Hikma & Nour ! Bienvenue dans notre voyage intellectuel. 🌿✨' :
+                             'Thank you for subscribing to Hikma & Nour! Welcome to our intellectual journey. 🌿✨';
+      feedback.style.display = 'block';
+      form.reset();
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = currentLang === 'ar' ? 'اشترك الآن' : currentLang === 'fr' ? 'S\'abonner' : 'Subscribe';
+      }
+    }, 700);
+  });
+}
+
 // --- Initialize Page ---
 document.addEventListener('DOMContentLoaded', () => {
   setupMobileNavOverlay();
@@ -973,6 +1224,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initNavbarScroll();
   setupContactForm();
+  setupNewsletterForm();
 });
 
 
