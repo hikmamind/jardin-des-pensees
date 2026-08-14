@@ -18,8 +18,11 @@ const AUDIO_I18N = {
     seoDesc: "استمع إلى أروع الروايات العالمية وكتب الفلسفة والتنمية الذاتية المسجلة صوتياً باللغة العربية الفصحى عبر مكتبة حكمة ونور الصوتية.",
     heroBadge: "المكتبة الصوتية للحكمة",
     heroTitle: "المكتبة الصوتية",
-    heroSubtitle: "« استمع... تأمل... وغيّر نظرتك إلى الحياة. »",
-    heroDesc: "٧ روائع أدبية وفلسفية خالدة مسموعة باللغة العربية الفصحى بنبرة هادئة ورصينة.",
+    heroSubtitle: "« استمع... وتأمل... وغير نظرتك إلى الحياة. »",
+    heroDesc: "روائع أدبية وفلسفية مسموعة باللغة العربية الفصحى بنبرة هادئة ورصينة.",
+    heroStatBooksLabel: "أعمال مختارة",
+    heroStatChaptersLabel: "مقطع صوتي",
+    heroStatArabicLabel: "عربية فصحى",
     audioLangNotice: "الصوت متوفر باللغة العربية الفصحى",
     searchPlaceholder: "ابحث عن كتاب، مؤلف، أو فكرة...",
     catAll: "الكل",
@@ -66,6 +69,14 @@ const AUDIO_I18N = {
     minutesLabel: "دقيقة",
     completedBadge: "مكتمل",
     remainingLabel: "متبقي",
+    audiobookBadge: "كتاب صوتي",
+    startListeningBtn: "ابدأ الاستماع",
+    continueListeningBtn: "متابعة الاستماع",
+    favAddAria: "إضافة إلى المفضلة",
+    favRemoveAria: "إزالة من المفضلة",
+    emptySearchTitle: "لم نجد أي عمل صوتي مطابق",
+    emptySearchDesc: "جرب البحث بعنوان آخر أو مؤلف أو أعد ضبط الفلاتر لاستكشاف كامل المكتبة.",
+    emptyResetBtn: "عرض كل الأعمال الصوتية",
     // Reviews & Ratings
     reviewsBadgeLabel: "آراء المستمعين",
     reviewsSectionHeading: "آراء المستمعين",
@@ -121,10 +132,13 @@ const AUDIO_I18N = {
   fr: {
     seoTitle: "Bibliothèque Audio de la Sagesse | Hikma & Nour",
     seoDesc: "Écoutez des chefs-d'œuvre littéraires, philosophiques et psychologiques racontés en langue arabe dans la Bibliothèque Audio de Hikma & Nour.",
-    heroBadge: "BIBLIOTHÈQUE AUDIO DE LA SAGESSE",
+    heroBadge: "BIBLIOTHÈQUE AUDIO",
     heroTitle: "La Bibliothèque Audio",
     heroSubtitle: "« Écoutez. Réfléchissez. Transformez votre regard sur la vie. »",
-    heroDesc: "7 chefs-d'œuvre de la littérature et de la philosophie universelle narrés en langue arabe.",
+    heroDesc: "Chefs-d'œuvre littéraires et philosophiques narrés en arabe classique.",
+    heroStatBooksLabel: "œuvres d'exception",
+    heroStatChaptersLabel: "chapitres audio",
+    heroStatArabicLabel: "arabe classique",
     audioLangNotice: "Audio disponible en arabe classique",
     searchPlaceholder: "Rechercher un livre, un auteur, une idée...",
     catAll: "Tous les audios",
@@ -171,6 +185,14 @@ const AUDIO_I18N = {
     minutesLabel: "min",
     completedBadge: "Terminé",
     remainingLabel: "restant",
+    audiobookBadge: "LIVRE AUDIO",
+    startListeningBtn: "Commencer l'écoute",
+    continueListeningBtn: "Continuer l'écoute",
+    favAddAria: "Ajouter aux favoris",
+    favRemoveAria: "Retirer des favoris",
+    emptySearchTitle: "Nous n'avons trouvé aucun livre audio.",
+    emptySearchDesc: "Essayez un autre mot-clé ou réinitialisez les filtres pour découvrir toute la bibliothèque.",
+    emptyResetBtn: "Afficher tous les livres audio",
     // Reviews & Ratings
     reviewsBadgeLabel: "Avis des auditeurs",
     reviewsSectionHeading: "Avis des auditeurs",
@@ -226,10 +248,13 @@ const AUDIO_I18N = {
   en: {
     seoTitle: "The Audio Library of Wisdom | Hikma & Nour",
     seoDesc: "Listen to great literary and philosophical masterpieces narrated in Arabic on the Hikma & Nour Audio Sanctuary.",
-    heroBadge: "AUDIO LIBRARY OF WISDOM",
+    heroBadge: "AUDIO LIBRARY",
     heroTitle: "The Audio Library",
     heroSubtitle: "“Listen. Reflect. Transform the way you see life.”",
-    heroDesc: "7 timeless literary and philosophical masterpieces narrated in Arabic.",
+    heroDesc: "Literary and philosophical masterpieces narrated in Classical Arabic.",
+    heroStatBooksLabel: "selected works",
+    heroStatChaptersLabel: "audio chapters",
+    heroStatArabicLabel: "classical Arabic",
     audioLangNotice: "Audio available in Arabic",
     searchPlaceholder: "Search book, author, or theme...",
     catAll: "All Audios",
@@ -276,6 +301,14 @@ const AUDIO_I18N = {
     minutesLabel: "min",
     completedBadge: "Completed",
     remainingLabel: "left",
+    audiobookBadge: "AUDIOBOOK",
+    startListeningBtn: "Start listening",
+    continueListeningBtn: "Continue listening",
+    favAddAria: "Add to favorites",
+    favRemoveAria: "Remove from favorites",
+    emptySearchTitle: "No audiobooks found matching your search.",
+    emptySearchDesc: "Try searching with different keywords or reset filters to explore all audiobooks.",
+    emptyResetBtn: "Show all audiobooks",
     // Reviews & Ratings
     reviewsBadgeLabel: "Listener reviews",
     reviewsSectionHeading: "Listener reviews",
@@ -1722,6 +1755,14 @@ function translatePage() {
   if (hNotice) hNotice.textContent = t.audioLangNotice;
   if (sInput) sInput.placeholder = t.searchPlaceholder;
 
+  // Hero Stats
+  const sBooks = document.getElementById('heroStatBooksLabel');
+  const sChapters = document.getElementById('heroStatChaptersLabel');
+  const sArabic = document.getElementById('heroStatArabicLabel');
+  if (sBooks) sBooks.textContent = t.heroStatBooksLabel || "أعمال مختارة";
+  if (sChapters) sChapters.textContent = t.heroStatChaptersLabel || "مقطع صوتي";
+  if (sArabic) sArabic.textContent = t.heroStatArabicLabel || "عربية فصحى";
+
   // Breadcrumbs & Detail navigation
   const bHome = document.getElementById('bHome');
   const bAudio = document.getElementById('bAudio');
@@ -1967,13 +2008,14 @@ function renderContinueListeningSection() {
 }
 
 // ==========================================================================
-// RENDER CATALOG GRID (SEARCH, CATEGORY FILTERS, FAVORITES)
+// RENDER CATALOG GRID (SEARCH, CATEGORY FILTERS, FAVORITES — V4 PREMIUM)
 // ==========================================================================
 
 function renderCatalogGrid(filter = 'all', searchQuery = '') {
   const grid = document.getElementById('booksGrid');
   if (!grid) return;
   const t = AUDIO_I18N[currentLang] || AUDIO_I18N.ar;
+  const progressMap = getSavedProgress();
 
   let books = Object.values(AUDIO_BOOKS_DATA);
   const q = searchQuery.toLowerCase().trim();
@@ -1983,9 +2025,10 @@ function renderCatalogGrid(filter = 'all', searchQuery = '') {
     books = books.filter(b => {
       const titleStr = `${b.title.ar} ${b.title.fr} ${b.title.en}`.toLowerCase();
       const authorStr = `${b.author.ar} ${b.author.fr} ${b.author.en}`.toLowerCase();
+      const catStr = `${b.categoryName.ar} ${b.categoryName.fr} ${b.categoryName.en} ${b.category}`.toLowerCase();
       const descStr = `${b.shortDesc.ar} ${b.shortDesc.fr} ${b.shortDesc.en}`.toLowerCase();
       const chapsStr = b.chapters.map(c => `${c.name.ar} ${c.desc.ar} ${c.name.fr} ${c.desc.fr}`).join(' ').toLowerCase();
-      return titleStr.includes(q) || authorStr.includes(q) || descStr.includes(q) || chapsStr.includes(q);
+      return titleStr.includes(q) || authorStr.includes(q) || catStr.includes(q) || descStr.includes(q) || chapsStr.includes(q);
     });
   }
 
@@ -1994,13 +2037,15 @@ function renderCatalogGrid(filter = 'all', searchQuery = '') {
     const favs = getFavorites();
     books = books.filter(b => favs.includes(b.key));
   } else if (filter === 'in_progress') {
-    const progressMap = getSavedProgress();
     books = books.filter(b => progressMap[b.key] && progressMap[b.key].currentTime > 0 && !progressMap[b.key].completed);
   } else if (filter === 'completed') {
-    const progressMap = getSavedProgress();
     books = books.filter(b => progressMap[b.key] && progressMap[b.key].completed);
+  } else if (filter === 'classics') {
+    books = books.filter(b => b.category === 'classics' || b.key === 'crime_punishment' || b.key === 'etranger' || b.key === 'vieil_homme');
+  } else if (filter === 'selfdev') {
+    books = books.filter(b => b.category === 'selfdev' || b.key === 'alchemist' || b.key === 'petit_prince');
   } else if (filter !== 'all') {
-    books = books.filter(b => b.category === filter || (filter === 'classics' && (b.category === 'classics' || b.key === 'crime_punishment' || b.key === 'etranger')));
+    books = books.filter(b => b.category === filter);
   }
 
   // Update total count
@@ -2009,9 +2054,13 @@ function renderCatalogGrid(filter = 'all', searchQuery = '') {
 
   if (books.length === 0) {
     grid.innerHTML = `
-      <div style="grid-column: 1 / -1; text-align: center; padding: 48px 16px; color: var(--text-muted);">
-        <p style="font-size: 1.1rem; margin-bottom: 8px;">لم يتم العثور على أي كتاب صوتي مطابق.</p>
-        <button class="btn-sec-action" onclick="resetFilters()">عرض كل الكتب</button>
+      <div class="audio-empty-state-card">
+        <div class="empty-sparkle-icon">✦</div>
+        <h4 class="empty-title">${t.emptySearchTitle || "لم نجد أي عمل صوتي مطابق"}</h4>
+        <p class="empty-desc">${t.emptySearchDesc || "جرب كلمة بحث أخرى أو أعد ضبط الفلاتر لاستكشاف كامل المكتبة."}</p>
+        <button type="button" class="empty-reset-btn" onclick="resetFilters()">
+          <span>↺</span> <span>${t.emptyResetBtn || "عرض كل الأعمال الصوتية"}</span>
+        </button>
       </div>
     `;
     return;
@@ -2020,37 +2069,87 @@ function renderCatalogGrid(filter = 'all', searchQuery = '') {
   grid.innerHTML = books.map((book, idx) => {
     const bookTitle = book.title[currentLang] || book.title.ar;
     const authorName = book.author[currentLang] || book.author.ar;
+    const catName = book.categoryName[currentLang] || book.categoryName.ar;
     const shortDesc = book.shortDesc[currentLang] || book.shortDesc.ar;
     const isFav = isFavorite(book.key);
+    
+    const progress = progressMap[book.key];
+    const hasProgress = progress && progress.currentTime > 0;
+    const isCompleted = progress && progress.completed;
+    const progressPct = progress ? (progress.progressPercent || Math.min(100, Math.round((progress.currentTime / (progress.duration || 1)) * 100))) : 0;
+    const chapWord = currentLang === 'ar' ? 'فصول' : (currentLang === 'fr' ? 'chapitres' : 'chapters');
 
     return `
-      <article class="audiobook-card" data-book-key="${book.key}" onclick="openBookDetail('${book.key}')">
+      <article class="audiobook-card" data-book-key="${book.key}" onclick="openBookDetail('${book.key}')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openBookDetail('${book.key}');}" aria-label="${bookTitle} — ${authorName}">
+        <!-- 1. Book Cover Box (3:4 Ratio) -->
         <div class="card-cover-wrapper">
-          <span class="card-audio-tag">🎧 AUDIO</span>
-          <span class="card-duration-badge">${book.totalDuration}</span>
           <img src="${book.cover}" alt="${bookTitle}" class="card-cover-img" ${idx > 2 ? 'loading="lazy"' : ''} onerror="this.src='../brand_logo_official.png'">
+          
+          <div class="card-top-badges">
+            <span class="card-audio-pill">🎧 ${t.audiobookBadge || "كتاب صوتي"}</span>
+            <span class="card-cat-pill">${catName}</span>
+          </div>
+
+          ${isCompleted ? `
+            <div class="card-status-badge completed">
+              <span>✓</span> <span>${t.completedBadge || "مكتمل"}</span>
+            </div>
+          ` : hasProgress ? `
+            <div class="card-status-badge in-progress">
+              <span>⏳</span> <span>${progressPct}%</span>
+            </div>
+          ` : ''}
+
           <div class="card-play-overlay">
-            <div class="card-play-circle">▶</div>
+            <div class="card-play-circle" aria-hidden="true">▶</div>
           </div>
         </div>
 
+        <!-- 2. Card Content Body -->
         <div class="card-body">
-          <div>
+          <div class="card-header-meta">
             <h3 class="card-title">${bookTitle}</h3>
             <div class="card-author">${authorName}</div>
             <p class="card-desc">${shortDesc}</p>
           </div>
 
-          <div class="card-footer-row" onclick="event.stopPropagation()">
-            <span class="card-lang-badge">${t.audioInArabicTag}</span>
-            <div style="display:flex;align-items:center;gap:10px;">
-              <button style="background:transparent;border:none;color:${isFav ? 'var(--gold)' : 'var(--text-muted)'};font-size:1.1rem;cursor:pointer;" onclick="toggleCardFav('${book.key}', this)" aria-label="${t.favAdd}">
-                ${isFav ? '♥' : '♡'}
-              </button>
-              <button class="card-listen-btn-text" style="background:transparent;border:none;cursor:pointer;" onclick="playBookChapter('${book.key}', 0)">
-                ${t.listenBtn} ▶
-              </button>
+          <!-- Progress Bar if in progress -->
+          ${hasProgress && !isCompleted ? `
+            <div class="card-progress-box">
+              <div class="card-progress-bar-bg">
+                <div class="card-progress-bar-fill" style="width: ${progressPct}%;"></div>
+              </div>
+              <div class="card-progress-info">
+                <span>${t.chapterPrefix} ${(progress.chapterIndex || 0) + 1}</span>
+                <span>${progressPct}% (${formatTime(progress.currentTime)})</span>
+              </div>
             </div>
+          ` : ''}
+
+          <!-- Metadata row -->
+          <div class="card-meta-divider"></div>
+          <div class="card-meta-row">
+            <div class="card-meta-item">
+              <span class="meta-icon">📖</span>
+              <span>${book.chapters.length} ${chapWord}</span>
+            </div>
+            <span class="meta-dot">•</span>
+            <div class="card-meta-item">
+              <span class="meta-icon">⏱</span>
+              <span>${book.totalDuration}</span>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="card-actions-row" onclick="event.stopPropagation()">
+            <button type="button" class="card-main-play-btn ${hasProgress && !isCompleted ? 'resume-mode' : ''}" onclick="playBookChapter('${book.key}', ${hasProgress && !isCompleted ? (progress.chapterIndex || 0) : 0}, ${hasProgress && !isCompleted ? (progress.currentTime || 0) : 0})" aria-label="${hasProgress && !isCompleted ? (t.continueListeningBtn || 'متابعة الاستماع') : (t.startListeningBtn || 'ابدأ الاستماع')}">
+              <span>▶</span>
+              <span>${hasProgress && !isCompleted ? (t.continueListeningBtn || 'متابعة الاستماع') : (t.startListeningBtn || 'ابدأ الاستماع')}</span>
+            </button>
+
+            <button type="button" class="card-fav-btn ${isFav ? 'active' : ''}" onclick="toggleCardFav('${book.key}', this)" aria-label="${isFav ? (t.favRemoveAria || 'إزالة من المفضلة') : (t.favAddAria || 'إضافة إلى المفضلة')}" title="${isFav ? (t.favSaved || 'محفوظ في المفضلة') : (t.favAdd || 'حفظ في المفضلة')}">
+              <span class="fav-heart-icon">${isFav ? '♥' : '♡'}</span>
+            </button>
           </div>
         </div>
       </article>
@@ -2104,13 +2203,20 @@ function setupSearchInput() {
 }
 
 window.toggleCardFav = function(bookKey, btn) {
+  if (window.event) window.event.stopPropagation();
   const added = toggleFavorite(bookKey);
   const t = AUDIO_I18N[currentLang] || AUDIO_I18N.ar;
-  if (btn) {
-    btn.innerHTML = added ? '<span>♥</span> <span>' + t.catFavorites + '</span>' : '<span>♡</span> <span>' + t.catFavorites + '</span>';
-  }
   showToast(added ? t.toastFavAdded : t.toastFavRemoved);
-  renderCatalogGrid(activeCategory, activeSearchQuery);
+  if (btn) {
+    btn.classList.toggle('active', added);
+    btn.setAttribute('aria-label', added ? (t.favRemoveAria || "إزالة من المفضلة") : (t.favAddAria || "إضافة إلى المفضلة"));
+    btn.setAttribute('title', added ? (t.favSaved || "محفوظ في المفضلة") : (t.favAdd || "حفظ في المفضلة"));
+    const icon = btn.querySelector('.fav-heart-icon') || btn;
+    icon.textContent = added ? '♥' : '♡';
+  }
+  if (activeCategory === 'favorites') {
+    renderCatalogGrid('favorites', activeSearchQuery);
+  }
 };
 
 // View Switchers

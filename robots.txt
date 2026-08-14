@@ -1,0 +1,18 @@
+# robots.txt for HIKMA & NOUR (https://jardin-des-pensees.onrender.com/)
+User-agent: *
+Allow: /
+Allow: /articles/
+Allow: /thinkers/
+Allow: /quotes/
+Allow: /audio/
+Allow: /shop/
+Allow: /quizzes/
+Allow: /files/
+
+# Disallow internal API endpoints and secure files
+Disallow: /api/
+Disallow: /secure-files/
+Disallow: /node_modules/
+
+# Sitemap Location
+Sitemap: https://jardin-des-pensees.onrender.com/sitemap.xml
