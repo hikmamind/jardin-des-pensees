@@ -307,8 +307,6 @@ const TIKTOK_DATA = {
       "pillarWisdomBadge": "ركن الحكمة",
       "pillarWisdomTitle": "Sagesse",
       "pillarWisdomDesc": "Des maximes éternelles et des méditations profondes pour éclairer la vie, l'âme et la condition humaine.",
-      "pillarAudioBadge": "ركن الأعمال الصوتية",
-      "pillarAudioTitle": "Sanctuaire Audio",
       "pillarAudioDesc": "Écoutez les chefs-d'œuvre littéraires et philosophiques d'une voix arabe calme et immersive.",
       "pillarDiscoverBtn": "Découvrir le pilier →"
     },
@@ -821,6 +819,9 @@ const TIKTOK_DATA = {
       "discoverAllAudio": "استكشف الاستوديو الصوتي بالكامل ←",
       "quoteOfDayTitle": "حكمة اليوم",
       "quoteOfDayDesc": "«لا تزعج الأشياءُ الناسَ، بل الأحكام التي يطلقونها عليها.»",
+      "pillarIslamicBadge": "ركن الفكر الإسلامي",
+      "pillarIslamicTitle": "الفكر الإسلامي",
+      "pillarIslamicDesc": "استكشف تراث الفكر الإسلامي وأسئلته حول العقل والمعرفة والأخلاق والإنسان ومعنى الوجود.",
       "quoteOfDayAuthor": "— إبيكتيتوس",
       "discoverQuotesBtn": "استكشف جميع الاقتباسات ←",
       "supportProjectTitle": "❤️ دعم مشروع حكمة ونور",
