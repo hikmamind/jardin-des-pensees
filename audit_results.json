@@ -794,7 +794,7 @@
   {
     "file": "philosophie/index.html",
     "title": "الفلسفة والبحث عن المعنى | حكمة ونور",
-    "description": "استكشف الأركان الخمسة الكبرى في حكمة ونور: الفلسفة، علم النفس، تطوير الذات، الحكمة، والفكر الإسلامي. مقالات ودراسات وصوتيات معمقة.",
+    "description": "رحلة éditoriale premium في المحاور الفلسفية الخمسة، المدارس الكبرى، وأعظم الفلاسفة من اليونان إلى الفكر الإسلامي والوجودية المعاصرة.",
     "canonical": "https://jardin-des-pensees.onrender.com/philosophie/",
     "lang": "ar",
     "dir": "rtl",
@@ -803,14 +803,14 @@
       "الفلسفة والبحث عن المعنى"
     ],
     "ogTitle": "الفلسفة والبحث عن المعنى | حكمة ونور",
-    "ogDesc": "استكشف الأركان الخمسة الكبرى في حكمة ونور: الفلسفة، علم النفس، تطوير الذات، الحكمة، والفكر الإسلامي.",
+    "ogDesc": "رحلة éditoriale premium في المحاور الفلسفية الخمسة، المدارس الكبرى، وأعظم الفلاسفة.",
     "ogImage": "https://jardin-des-pensees.onrender.com/pillar_philosophy_hd.jpg",
     "ogUrl": "https://jardin-des-pensees.onrender.com/philosophie/",
     "ogType": "website",
     "twitterCard": "summary_large_image",
     "hasJsonLd": true,
     "jsonLdValid": true,
-    "totalImgs": 22,
+    "totalImgs": 23,
     "imgsWithoutAlt": 0
   },
   {
