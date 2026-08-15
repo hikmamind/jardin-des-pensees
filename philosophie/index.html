@@ -6,7 +6,7 @@
   
   <!-- SEO Meta Tags -->
   <title>الفلسفة والبحث عن المعنى | حكمة ونور</title>
-  <meta name="description" content="اكتشف الفلسفة، الوجودية، معنى الحياة، أفكار نيتشه وشوبنهاور وكامو وسارتر، ودراسات تساعدك على فهم نفسك والعالم.">
+  <meta name="description" content="اكتشف الفلسفة ومدارسها وأهم مفكريها وأفكارها حول الوجود والحقيقة والحرية ومعنى الحياة. مقالات ودراسات وصوتيات فلسفية معمقة.">
   <link rel="canonical" href="https://jardin-des-pensees.onrender.com/philosophie/">
   <link rel="alternate" hreflang="ar" href="https://jardin-des-pensees.onrender.com/philosophie/">
   <link rel="alternate" hreflang="fr" href="https://jardin-des-pensees.onrender.com/philosophie/">
@@ -18,7 +18,7 @@
   <meta property="og:site_name" content="Hikma & Nour — حكمة ونور">
   <meta property="og:type" content="website">
   <meta property="og:title" content="الفلسفة والبحث عن المعنى | حكمة ونور">
-  <meta property="og:description" content="اكتشف الفلسفة، الوجودية، معنى الحياة، أفكار نيتشه وشوبنهاور وكامو وسارتر، ودراسات تساعدك على فهم نفسك والعالم.">
+  <meta property="og:description" content="اكتشف الفلسفة ومدارسها وأهم مفكريها وأفكارها حول الوجود والحقيقة والحرية ومعنى الحياة. مقالات ودراسات وصوتيات فلسفية معمقة.">
   <meta property="og:image" content="https://jardin-des-pensees.onrender.com/pillar_philosophy_hd.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -28,7 +28,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="الفلسفة والبحث عن المعنى | حكمة ونور">
-  <meta name="twitter:description" content="اكتشف الفلسفة، الوجودية، معنى الحياة، أفكار نيتشه وشوبنهاور وكامو وسارتر، ودراسات تساعدك على فهم نفسك والعالم.">
+  <meta name="twitter:description" content="اكتشف الفلسفة ومدارسها وأهم مفكريها وأفكارها حول الوجود والحقيقة والحرية ومعنى الحياة.">
   <meta name="twitter:image" content="https://jardin-des-pensees.onrender.com/pillar_philosophy_hd.jpg">
 
   <!-- JSON-LD Structured Data Schema -->
@@ -41,7 +41,7 @@
         "@id": "https://jardin-des-pensees.onrender.com/philosophie/#webpage",
         "url": "https://jardin-des-pensees.onrender.com/philosophie/",
         "name": "الفلسفة والبحث عن المعنى | حكمة ونور",
-        "description": "اكتشف الفلسفة، الوجودية، معنى الحياة، أفكار نيتشه وشوبنهاور وكامو وسارتر، ودراسات تساعدك على فهم نفسك والعالم.",
+        "description": "اكتشف الفلسفة ومدارسها وأهم مفكريها وأفكارها حول الوجود والحقيقة والحرية ومعنى الحياة.",
         "inLanguage": "ar",
         "isPartOf": {
           "@type": "WebSite",
@@ -71,7 +71,7 @@
   </script>
 
   <!-- Main Stylesheet (Shared) -->
-  <link rel="stylesheet" href="../style.css?v=16">
+  <link rel="stylesheet" href="../style.css?v=17">
   
   <style>
     .pillar-breadcrumbs {
@@ -94,7 +94,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 15px;
-      margin: 60px 0 25px;
+      margin: 65px 0 25px;
       padding-bottom: 15px;
       border-bottom: 1px solid rgba(223, 177, 91, 0.2);
     }
@@ -104,264 +104,306 @@
       margin: 0;
       font-family: 'Playfair Display', 'Amiri', serif;
     }
-    .pillar-articles-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
-      margin-bottom: 40px;
+    .pillar-section-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin: 5px 0 0;
     }
-    .pillar-article-card {
+
+    /* Section: السؤال الكبير */
+    .grand-question-section {
+      background: radial-gradient(circle at center, rgba(223, 177, 91, 0.09) 0%, rgba(10, 14, 11, 0.95) 75%);
+      border: 1px solid rgba(223, 177, 91, 0.35);
+      border-radius: 26px;
+      padding: 55px 35px;
+      text-align: center;
+      margin: 45px 0 60px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
+    }
+    [data-theme="light"] .grand-question-section {
+      background: radial-gradient(circle at center, rgba(184, 142, 60, 0.1) 0%, #FFFFFF 85%);
+      border-color: rgba(184, 142, 60, 0.3);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+    }
+    .grand-question-badge {
+      display: inline-block;
+      font-size: 0.82rem;
+      color: #E7B84B;
+      border: 1px solid rgba(223, 177, 91, 0.35);
+      background: rgba(223, 177, 91, 0.08);
+      padding: 5px 16px;
+      border-radius: 20px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+    .grand-question-h2 {
+      font-size: 1.5rem;
+      color: var(--text-secondary);
+      font-family: 'Amiri', serif;
+      margin: 0 0 12px;
+    }
+    .grand-question-text {
+      font-size: 3rem;
+      color: #FFFDF8;
+      font-family: 'Playfair Display', 'Amiri', serif;
+      font-weight: 800;
+      margin: 0 0 20px;
+      letter-spacing: -0.5px;
+    }
+    [data-theme="light"] .grand-question-text {
+      color: #121A15;
+    }
+    .grand-question-desc {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      line-height: 1.85;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    /* Section: المدارس الفلسفية */
+    .schools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 24px;
+      margin: 30px 0 60px;
+    }
+    .school-card {
       background: rgba(14, 18, 15, 0.88);
       border: 1px solid rgba(223, 177, 91, 0.2);
+      border-radius: 22px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    [data-theme="light"] .school-card {
+      background: #FFFFFF;
+      border-color: rgba(184, 142, 60, 0.25);
+    }
+    .school-card:hover {
+      transform: translateY(-6px);
+      border-color: #E7B84B;
+      box-shadow: 0 16px 40px rgba(223, 177, 91, 0.14);
+    }
+    .school-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .school-icon-pill {
+      font-size: 1.5rem;
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(223, 177, 91, 0.1);
+      border: 1px solid rgba(223, 177, 91, 0.3);
+      border-radius: 14px;
+    }
+    .school-period {
+      font-size: 0.8rem;
+      color: #E7B84B;
+      font-weight: 700;
+      background: rgba(223, 177, 91, 0.08);
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(223, 177, 91, 0.2);
+    }
+    .school-title {
+      font-size: 1.35rem;
+      color: #FFFDF8;
+      font-family: 'Playfair Display', 'Amiri', serif;
+      margin: 0 0 10px;
+    }
+    [data-theme="light"] .school-title {
+      color: #121A15;
+    }
+    .school-desc {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+    .school-thinkers-tags {
+      font-size: 0.82rem;
+      color: #E7B84B;
+      margin-bottom: 18px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(223, 177, 91, 0.15);
+    }
+
+    /* Section: أعلام الفلسفة (12 Philosophes) */
+    .philosophers-showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 22px;
+      margin: 30px 0 60px;
+    }
+    .philosopher-profile-card {
+      background: rgba(14, 18, 15, 0.88);
+      border: 1px solid rgba(223, 177, 91, 0.2);
+      border-radius: 20px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: all 0.35s ease;
+    }
+    [data-theme="light"] .philosopher-profile-card {
+      background: #FFFFFF;
+      border-color: rgba(184, 142, 60, 0.25);
+    }
+    .philosopher-profile-card:hover {
+      transform: translateY(-5px);
+      border-color: #E7B84B;
+      box-shadow: 0 14px 35px rgba(223, 177, 91, 0.14);
+    }
+    .philosopher-avatar-frame {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid rgba(223, 177, 91, 0.4);
+      margin-bottom: 14px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    .philosopher-avatar-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .philosopher-name {
+      font-size: 1.2rem;
+      color: #FFFDF8;
+      font-family: 'Playfair Display', 'Amiri', serif;
+      margin: 0 0 4px;
+      font-weight: 700;
+    }
+    [data-theme="light"] .philosopher-name {
+      color: #121A15;
+    }
+    .philosopher-school-badge {
+      font-size: 0.78rem;
+      color: #E7B84B;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .philosopher-core-idea {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin-bottom: 16px;
+      flex-grow: 1;
+      font-style: italic;
+    }
+
+    /* Section: اقتباسات فلسفية */
+    .quotes-trio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+      margin: 30px 0 40px;
+    }
+    .quote-card-item {
+      background: rgba(14, 18, 15, 0.88);
+      border: 1px solid rgba(223, 177, 91, 0.25);
       border-radius: 20px;
       padding: 26px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: all 0.3s ease;
+      position: relative;
     }
-    [data-theme="light"] .pillar-article-card {
+    [data-theme="light"] .quote-card-item {
       background: #FFFFFF;
       border-color: rgba(184, 142, 60, 0.25);
     }
-    .pillar-article-card:hover {
-      transform: translateY(-5px);
-      border-color: #E7B84B;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    .quote-card-item::before {
+      content: "«";
+      font-size: 3.5rem;
+      color: rgba(223, 177, 91, 0.18);
+      position: absolute;
+      top: 10px;
+      right: 18px;
+      line-height: 1;
+      font-family: 'Amiri', serif;
+      pointer-events: none;
     }
-    .pillar-card-badge {
-      font-size: 0.8rem;
-      color: var(--accent-gold);
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    .pillar-card-title {
-      font-size: 1.25rem;
-      line-height: 1.45;
-      margin-bottom: 12px;
-      font-family: 'Playfair Display', 'Amiri', serif;
-    }
-    .pillar-card-title a {
-      color: #FFFDF8;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    [data-theme="light"] .pillar-card-title a {
-      color: #121A15;
-    }
-    .pillar-card-title a:hover {
-      color: #E7B84B;
-    }
-    .pillar-card-desc {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-      line-height: 1.65;
-      margin-bottom: 20px;
-      flex-grow: 1;
-    }
-    .pillar-card-link {
-      color: #E7B84B;
-      font-weight: 700;
-      text-decoration: none;
-      font-size: 0.92rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: gap 0.2s ease;
-    }
-    .pillar-card-link:hover {
-      gap: 10px;
-    }
-    .pillar-thinkers-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
-    }
-    .pillar-thinker-card {
-      background: rgba(14, 18, 15, 0.88);
-      border: 1px solid rgba(223, 177, 91, 0.2);
-      border-radius: 20px;
-      padding: 22px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      transition: all 0.3s ease;
-    }
-    [data-theme="light"] .pillar-thinker-card {
-      background: #FFFFFF;
-      border-color: rgba(184, 142, 60, 0.25);
-    }
-    .pillar-thinker-card:hover {
-      transform: translateY(-4px);
-      border-color: #E7B84B;
-      box-shadow: 0 10px 25px rgba(223, 177, 91, 0.15);
-    }
-    .pillar-thinker-avatar-box {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 2px solid rgba(223, 177, 91, 0.4);
-      flex-shrink: 0;
-    }
-    .pillar-thinker-avatar-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .pillar-thinker-info {
-      flex-grow: 1;
-    }
-    .pillar-thinker-name {
+    .quote-card-text {
       font-size: 1.15rem;
       color: #FFFDF8;
-      font-weight: 700;
-      margin: 0 0 4px;
-      font-family: 'Playfair Display', 'Amiri', serif;
+      font-family: 'Amiri', serif;
+      line-height: 1.7;
+      margin: 0 0 16px;
+      position: relative;
+      z-index: 1;
     }
-    [data-theme="light"] .pillar-thinker-name {
+    [data-theme="light"] .quote-card-text {
       color: #121A15;
     }
-    .pillar-thinker-role {
-      font-size: 0.82rem;
-      color: var(--text-secondary);
-      display: block;
-      margin-bottom: 6px;
-    }
-    .pillar-thinker-btn {
+    .quote-card-author {
+      font-size: 0.9rem;
       color: #E7B84B;
-      text-decoration: none;
-      font-size: 0.85rem;
       font-weight: 700;
+      text-align: left;
     }
-    
-    /* Luxury Audio Grid for Philosophy */
-    .pillar-audio-showcase-grid {
+
+    /* Section: للتأمل « سؤال لك » */
+    .contemplation-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 24px;
-      margin-top: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+      margin: 30px 0 60px;
     }
-    .pillar-audio-showcase-card {
-      background: rgba(14, 18, 15, 0.88);
-      border: 1px solid rgba(223, 177, 91, 0.2);
+    .contemplation-card {
+      background: radial-gradient(circle at top right, rgba(223, 177, 91, 0.08) 0%, rgba(14, 18, 15, 0.95) 70%);
+      border: 1px solid rgba(223, 177, 91, 0.25);
       border-radius: 22px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    [data-theme="light"] .pillar-audio-showcase-card {
-      background: #FFFFFF;
-      border-color: rgba(184, 142, 60, 0.25);
-    }
-    .pillar-audio-showcase-card:hover {
-      transform: translateY(-6px);
-      border-color: #E7B84B;
-      box-shadow: 0 16px 40px rgba(0,0,0,0.35);
-    }
-    .pillar-audio-cover-box {
-      position: relative;
-      width: 100%;
-      height: 190px;
-      overflow: hidden;
-    }
-    .pillar-audio-cover-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.6s ease;
-    }
-    .pillar-audio-showcase-card:hover .pillar-audio-cover-img {
-      transform: scale(1.04);
-    }
-    .pillar-audio-duration-tag {
-      position: absolute;
-      bottom: 12px;
-      left: 12px;
-      background: rgba(0, 0, 0, 0.75);
-      border: 1px solid rgba(223, 177, 91, 0.4);
-      color: #E7B84B;
-      padding: 4px 10px;
-      border-radius: 12px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      backdrop-filter: blur(4px);
-    }
-    .pillar-audio-body {
-      padding: 22px;
+      padding: 28px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      flex-grow: 1;
+      transition: all 0.3s ease;
     }
-
-    /* Section "رحلة الفكر" */
-    .journey-thought-box {
-      background: radial-gradient(circle at center, rgba(223, 177, 91, 0.12) 0%, rgba(7, 9, 7, 0.95) 70%);
-      border: 1px solid rgba(223, 177, 91, 0.35);
-      border-radius: 28px;
-      padding: 60px 40px;
-      text-align: center;
-      margin: 70px 0 30px;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    [data-theme="light"] .contemplation-card {
+      background: radial-gradient(circle at top right, rgba(184, 142, 60, 0.08) 0%, #FFFFFF 80%);
+      border-color: rgba(184, 142, 60, 0.25);
     }
-    [data-theme="light"] .journey-thought-box {
-      background: radial-gradient(circle at center, rgba(184, 142, 60, 0.12) 0%, #FFFFFF 80%);
-      border-color: rgba(184, 142, 60, 0.35);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    .contemplation-card:hover {
+      border-color: #E7B84B;
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
     }
-    .journey-thought-badge {
-      display: inline-block;
-      font-size: 0.85rem;
+    .contemplation-q-num {
+      font-size: 0.78rem;
       color: #E7B84B;
-      border: 1px solid rgba(223, 177, 91, 0.4);
-      background: rgba(223, 177, 91, 0.1);
-      padding: 5px 18px;
-      border-radius: 30px;
       font-weight: 700;
-      margin-bottom: 20px;
+      margin-bottom: 12px;
     }
-    .journey-thought-title {
-      font-size: 2.2rem;
+    .contemplation-q-title {
+      font-size: 1.22rem;
       color: #FFFDF8;
       font-family: 'Playfair Display', 'Amiri', serif;
-      margin: 0 0 16px;
-      font-weight: 800;
+      line-height: 1.6;
+      margin: 0 0 14px;
     }
-    [data-theme="light"] .journey-thought-title {
+    [data-theme="light"] .contemplation-q-title {
       color: #121A15;
     }
-    .journey-thought-quote {
-      font-size: 1.35rem;
-      color: #E7B84B;
-      font-family: 'Amiri', serif;
-      font-style: italic;
-      line-height: 1.8;
-      max-width: 780px;
-      margin: 0 auto 30px;
-    }
-    .journey-thought-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: #E7B84B;
-      color: #070A08;
-      padding: 14px 34px;
-      border-radius: 35px;
-      text-decoration: none;
-      font-weight: 800;
-      font-size: 1.05rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 25px rgba(223, 177, 91, 0.3);
-    }
-    .journey-thought-btn:hover {
-      background: #FFFDF8;
-      color: #070A08;
-      transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(223, 177, 91, 0.45);
+    .contemplation-hint {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -421,156 +463,312 @@
         <span style="color: var(--accent-gold);">الفلسفة والبحث عن المعنى</span>
       </nav>
 
-      <!-- 1. Pillar Hero Header Premium -->
+      <!-- 1. HERO IMMERSIF -->
       <section class="pillar-page-hero">
         <div class="pillar-hero-bg-overlay" style="background-image: url('../pillar_philosophy_hd.jpg');"></div>
         <div class="pillar-hero-content">
-          <span class="pillar-hero-badge">ركن الفلسفة والفكر الإنساني</span>
+          <span class="pillar-hero-badge">🏛️ ركن الفلسفة والفكر الإنساني</span>
           <h1 class="pillar-hero-h1">الفلسفة والبحث عن المعنى</h1>
-          <p class="pillar-hero-quote" style="font-size: 1.28rem; font-weight: 600;">
-            أفكار خالدة، دراسات معمقة، ورؤى تساعدك على فهم نفسك والعالم من حولك.
+          <p class="pillar-hero-quote" style="font-size: 1.25rem; font-weight: 600;">
+            « منذ فجر الحضارة، حاول الإنسان أن يفهم الوجود، ومعنى الحياة، والحرية، والحقيقة، والمصير. »
           </p>
           <p class="pillar-hero-desc">
-            « الفلسفة ليست ترفاً فكرياً، بل بوصلة الوجود وإيقاظ العقل في مواجهة الأسئلة الكبرى. » خض غمار الرؤى التحررية من الوجودية وصناعة المعنى إلى تشاؤم شوبنهاور وإرادة القوة عند نيتشه والعقلانية الكلاسيكية.
+            مرحباً بك في أروقة الفكر الإنساني الخالد. هنا نجوب المدارس الكبرى من أثينا وروما القديمة إلى الوجودية المعاصرة، لنفحص الأسئلة الوجودية العميقة التي تمنح حياتك بوصلة واضحة وعمقاً لا يزول.
           </p>
           <div class="pillar-hero-stats">
-            <div class="pillar-stat-pill">📜 25+ دراسة ومقال</div>
-            <div class="pillar-stat-pill">🏛️ 5 محاور كبرى</div>
-            <div class="pillar-stat-pill">⚡ 12+ كبار الفلاسفة</div>
+            <a href="#schools" class="pillar-stat-pill" style="text-decoration: none;">🏛️ 7 مدارس فكرية</a>
+            <a href="#thinkers" class="pillar-stat-pill" style="text-decoration: none;">⚡ 12+ كبار الفلاسفة</a>
+            <a href="#articles" class="pillar-stat-pill" style="text-decoration: none;">📜 مقالات ودراسات</a>
+            <a href="#quotes" class="pillar-stat-pill" style="text-decoration: none;">💬 حكم واقتباسات</a>
           </div>
         </div>
       </section>
 
-      <!-- 2. Sub-themes / Modules Section (5 Grands Piliers Cinématographiques) -->
-      <section>
+      <!-- 2. SECTION — السؤال الكبير -->
+      <section class="grand-question-section">
+        <span class="grand-question-badge">تأمل تأسيسي</span>
+        <h2 class="grand-question-h2">السؤال الذي بدأ منه كل شيء</h2>
+        <div class="grand-question-text">« لماذا نحن هنا؟ »</div>
+        <p class="grand-question-desc">
+          تبدأ الفلسفة دائماً عندما نتوقف عن الركض، ونتجرأ على طرح الأسئلة البسيطة في ظاهرها، والعميقة في جوهرها. ليست الفلسفة ترفاً مجرداً، بل هي محاولة واعية لفحص يقينياتنا، كسر القوالب الجاهزة، وإعادة بناء علاقتنا بالوجود والحرية والمصير.
+        </p>
+      </section>
+
+      <!-- 3. SECTION — المدارس الفلسفية -->
+      <section id="schools">
         <div class="pillar-section-heading">
-          <h2>المحاور الفكرية الأساسية</h2>
+          <div>
+            <h2>المدارس الفلسفية الكبرى</h2>
+            <p class="pillar-section-subtitle">أهم التيارات الفكرية التي شكلت الوعي البشري عبر التاريخ</p>
+          </div>
         </div>
         
-        <div class="pillar-modules-grid">
+        <div class="schools-grid">
           
-          <!-- Module 01: الوجودية وصناعة المعنى -->
-          <article class="pillar-module-card">
-            <div class="pillar-module-img-box">
-              <img src="../autumn_forest_solitude_walk_1785523055891.jpg" alt="الوجودية وصناعة المعنى" class="pillar-module-img" loading="lazy">
-              <div class="pillar-module-overlay"></div>
-              <div class="pillar-module-icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path>
-                </svg>
+          <!-- 01: الفلسفة اليونانية -->
+          <div class="school-card">
+            <div>
+              <div class="school-card-header">
+                <div class="school-icon-pill">🏛️</div>
+                <span class="school-period">القرن 5 - 4 ق.م</span>
               </div>
+              <h3 class="school-title">الفلسفة اليونانية</h3>
+              <p class="school-desc">مهد التساؤل العقلاني الغربي، تأسيس المنطق، فحص معنى الفضيلة والعدالة والدولة المثالية.</p>
+              <div class="school-thinkers-tags">أبرز الأعلام: سقراط • أفلاطون • أرسطو</div>
             </div>
-            <div class="pillar-module-body">
-              <div>
-                <div class="pillar-module-num">01 / المحور الأول</div>
-                <h3 class="pillar-module-title">الوجودية وصناعة المعنى</h3>
-                <p class="pillar-module-desc">رؤى سارتر وكامو حول الحرية والمسؤولية وخلق معنى شخصي في عالم صامت وعبثي.</p>
-              </div>
-              <a href="../files/existentialisme-sens-sartre.html" class="pillar-card-link">استكشف المحور ←</a>
-            </div>
-          </article>
+            <a href="../thinkers/" class="pillar-card-link">استكشف المدرسة ←</a>
+          </div>
 
-          <!-- Module 02: إرادة الحياة وتشاؤم شوبنهاور -->
-          <article class="pillar-module-card">
-            <div class="pillar-module-img-box">
-              <img src="../schopenhauer_lake_sunset_1785418673078.jpg" alt="إرادة الحياة وتشاؤم شوبنهاور" class="pillar-module-img" loading="lazy">
-              <div class="pillar-module-overlay"></div>
-              <div class="pillar-module-icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 14 14"></polyline>
-                </svg>
+          <!-- 02: الرواقية -->
+          <div class="school-card">
+            <div>
+              <div class="school-card-header">
+                <div class="school-icon-pill">🛡️</div>
+                <span class="school-period">القرن 3 ق.م - 2 م</span>
               </div>
+              <h3 class="school-title">الفلسفة الرواقية</h3>
+              <p class="school-desc">فن السكينة الداخلية والصلابة الذهنية، التمييز بين ما يخضع لسيطرتنا وما لا يخضع لها.</p>
+              <div class="school-thinkers-tags">أبرز الأعلام: سينيكا • إبيكتيتوس • ماركوس أوريليوس</div>
             </div>
-            <div class="pillar-module-body">
-              <div>
-                <div class="pillar-module-num">02 / المحور الثاني</div>
-                <h3 class="pillar-module-title">إرادة الحياة وتشاؤم شوبنهاور</h3>
-                <p class="pillar-module-desc">تشريح وهم السعادة المادية، وبندول الرغبة، وكيفية بلوغ السكينة بالتجرد والاستغناء.</p>
-              </div>
-              <a href="../articles/schopenhauer-happiness-illusion.html" class="pillar-card-link">استكشف المحور ←</a>
-            </div>
-          </article>
+            <a href="../files/introduction-stoicisme.html" class="pillar-card-link">استكشف المدرسة ←</a>
+          </div>
 
-          <!-- Module 03: إرادة القوة والإنسان الأسمى عند نيتشه -->
-          <article class="pillar-module-card">
-            <div class="pillar-module-img-box">
-              <img src="../nietzsche_mountain_climber_1785418757058.jpg" alt="إرادة القوة والإنسان الأسمى عند نيتشه" class="pillar-module-img" loading="lazy">
-              <div class="pillar-module-overlay"></div>
-              <div class="pillar-module-icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                </svg>
+          <!-- 03: الأفلاطونية -->
+          <div class="school-card">
+            <div>
+              <div class="school-card-header">
+                <div class="school-icon-pill">🌌</div>
+                <span class="school-period">القرن 4 ق.م</span>
               </div>
+              <h3 class="school-title">الأفلاطونية</h3>
+              <p class="school-desc">عالم المُثل الأزلية، أسطورة الكهف، وتوق النفس الإنسانية الدائم نحو الحقيقة والجمال المطلق.</p>
+              <div class="school-thinkers-tags">أبرز الأعلام: أفلاطون • أفلوطين</div>
             </div>
-            <div class="pillar-module-body">
-              <div>
-                <div class="pillar-module-num">03 / المحور الثالث</div>
-                <h3 class="pillar-module-title">إرادة القوة والإنسان الأسمى عند نيتشه</h3>
-                <p class="pillar-module-desc">تحويل الألم إلى طاقة، حب القدر (Amor Fati)، وتجاوز العدمية بالخلق والإبداع عند نيتشه.</p>
-              </div>
-              <a href="../files/nihilisme-surhomme-nietzsche.html" class="pillar-card-link">استكشف المحور ←</a>
-            </div>
-          </article>
+            <a href="../thinkers/" class="pillar-card-link">استكشف المدرسة ←</a>
+          </div>
 
-          <!-- Module 04: الفلسفة الكلاسيكية والعقلانية -->
-          <article class="pillar-module-card">
-            <div class="pillar-module-img-box">
-              <img src="../socrates_delphi_temple_1785418701783.jpg" alt="الفلسفة الكلاسيكية والعقلانية" class="pillar-module-img" loading="lazy">
-              <div class="pillar-module-overlay"></div>
-              <div class="pillar-module-icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 21h18M3 7h18M4 7v14M20 7v14M8 7v14M12 7v14M16 7v14M2 7l10-4 10 4"></path>
-                </svg>
+          <!-- 04: الأرسطية -->
+          <div class="school-card">
+            <div>
+              <div class="school-card-header">
+                <div class="school-icon-pill">📜</div>
+                <span class="school-period">القرن 4 ق.م</span>
               </div>
+              <h3 class="school-title">الأرسطية</h3>
+              <p class="school-desc">تأسيس علوم المنطق الصوري، دراسة الطبيعة والأخلاق ومبدأ الفضيلة بوصفها وسطاً بين رذيلتين.</p>
+              <div class="school-thinkers-tags">أبرز الأعلام: أرسطو • ثاوفرسطس • ابن رشد</div>
             </div>
-            <div class="pillar-module-body">
-              <div>
-                <div class="pillar-module-num">04 / المحور الرابع</div>
-                <h3 class="pillar-module-title">الفلسفة الكلاسيكية والعقلانية</h3>
-                <p class="pillar-module-desc">فحص الحياة والعقل الأخلاقي من سقراط وأفلاطون إلى كانط وديكارت وسبينوزا.</p>
-              </div>
-              <a href="../thinkers/" class="pillar-card-link">استكشف المحور ←</a>
-            </div>
-          </article>
+            <a href="../thinkers/" class="pillar-card-link">استكشف المدرسة ←</a>
+          </div>
 
-          <!-- Module 05: الأعمال الصوتية -->
-          <article class="pillar-module-card">
-            <div class="pillar-module-img-box">
-              <img src="../pillar_audio_hd.jpg" alt="الأعمال الفلسفية الصوتية" class="pillar-module-img" loading="lazy">
-              <div class="pillar-module-overlay"></div>
-              <div class="pillar-module-icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
-                  <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
-                </svg>
+          <!-- 05: الفلسفة الحديثة والعقلانية -->
+          <div class="school-card">
+            <div>
+              <div class="school-card-header">
+                <div class="school-icon-pill">⚡</div>
+                <span class="school-period">القرن 17 - 18 م</span>
               </div>
+              <h3 class="school-title">الفلسفة الحديثة والعقلانية</h3>
+              <p class="school-desc">الشك المنهجي، سيادة العقل البشري، فحص حدود المعرفة، وتأسيس الواجب الأخلاقي المطلق.</p>
+              <div class="school-thinkers-tags">أبرز الأعلام: ديكارت • سبينوزا • كانط</div>
             </div>
-            <div class="pillar-module-body">
-              <div>
-                <div class="pillar-module-num">05 / المحور الخامس</div>
-                <h3 class="pillar-module-title">الأعمال الفلسفية الصوتية</h3>
-                <p class="pillar-module-desc">تسجيلات صوتية وقراءات هادئة لأهم الروايات الفلسفية والأعمال الوجودية الكبرى.</p>
+            <a href="../thinkers/" class="pillar-card-link">استكشف المدرسة ←</a>
+          </div>
+
+          <!-- 06: الوجودية -->
+          <div class="school-card">
+            <div>
+              <div class="school-card-header">
+                <div class="school-icon-pill">🕯️</div>
+                <span class="school-period">القرن 19 - 20 م</span>
               </div>
-              <a href="../audio/" class="pillar-card-link">استكشف المحور ←</a>
+              <h3 class="school-title">الفلسفة الوجودية</h3>
+              <p class="school-desc">الوجود يسبق الماهية، الحرية والمسؤولية الفردية، ومواجهة عبثية العالم بالتمرد وصناعة المعنى.</p>
+              <div class="school-thinkers-tags">أبرز الأعلام: كيركغارد • نيتشه • سارتر • كامو</div>
             </div>
-          </article>
+            <a href="../files/existentialisme-sens-sartre.html" class="pillar-card-link">استكشف المدرسة ←</a>
+          </div>
+
+          <!-- 07: الفلسفة الإسلامية -->
+          <div class="school-card">
+            <div>
+              <div class="school-card-header">
+                <div class="school-icon-pill">🌙</div>
+                <span class="school-period">القرن 8 - 12 م</span>
+              </div>
+              <h3 class="school-title">الفلسفة الإسلامية والمشرقية</h3>
+              <p class="school-desc">التوفيق الإبداعي بين العقل والبرهان، نظرية الفيض المعرفي، وبناء صرح الحكمة الإنسانية الشاملة.</p>
+              <div class="school-thinkers-tags">أبرز الأعلام: الكندي • الفارابي • ابن سينا • ابن رشد</div>
+            </div>
+            <a href="../thinkers/" class="pillar-card-link">استكشف المدرسة ←</a>
+          </div>
 
         </div>
       </section>
 
-      <!-- 3. Featured Magazine Article Hero -->
-      <section>
+      <!-- 4. SECTION — أعلام الفلسفة (12 Major Philosophers) -->
+      <section id="thinkers">
         <div class="pillar-section-heading">
-          <h2>الدراسة الرئيسية في الفلسفة</h2>
+          <div>
+            <h2>أعلام الفلسفة الخالدون</h2>
+            <p class="pillar-section-subtitle">عقول عظيمة أضاءت دروب الفكر الإنساني</p>
+          </div>
         </div>
+        
+        <div class="philosophers-showcase-grid">
+          
+          <!-- 1: سقراط -->
+          <div class="philosopher-profile-card">
+            <div class="philosopher-avatar-frame">
+              <img src="../thinkers/images/socrate.jpg" alt="سقراط" loading="lazy" onerror="this.src='../brand_logo_official.png'">
+            </div>
+            <h3 class="philosopher-name">سقراط</h3>
+            <div class="philosopher-school-badge">الفلسفة الكلاسيكية</div>
+            <p class="philosopher-core-idea">« اعرف نفسك بنفسك، فالحياة غير المفحوصة لا تستحق العيش. »</p>
+            <a href="../thinkers/" class="pillar-card-link" style="font-size: 0.85rem;">اكتشف المفكر ←</a>
+          </div>
+
+          <!-- 2: أفلاطون -->
+          <div class="philosopher-profile-card">
+            <div class="philosopher-avatar-frame">
+              <img src="../thinkers/images/platon.jpg" alt="أفلاطون" loading="lazy" onerror="this.src='../brand_logo_official.png'">
+            </div>
+            <h3 class="philosopher-name">أفلاطون</h3>
+            <div class="philosopher-school-badge">عالم المُثل</div>
+            <p class="philosopher-core-idea">« المعرفة تذكّر، والحقيقة تكمن في عالم الأفكار الأزلية خلف ظلال الكهف. »</p>
+            <a href="../thinkers/" class="pillar-card-link" style="font-size: 0.85rem;">اكتشف المفكر ←</a>
+          </div>
+
+          <!-- 3: أرسطو -->
+          <div class="philosopher-profile-card">
+            <div class="philosopher-avatar-frame">
+              <img src="../thinkers/images/aristote.jpg" alt="أرسطو" loading="lazy" onerror="this.src='../brand_logo_official.png'">
+            </div>
+            <h3 class="philosopher-name">أرسطو</h3>
+            <div class="philosopher-school-badge">المعلم الأول • المنطق</div>
+            <p class="philosopher-core-idea">« نحن ما نفعله بتكرار، فالتميز إذن ليس فعلاً بل عادة وسلوك دائم. »</p>
+            <a href="../thinkers/" class="pillar-card-link" style="font-size: 0.85rem;">اكتشف المفكر ←</a>
+          </div>
+
+          <!-- 4: ديكارت -->
+          <div class="philosopher-profile-card">
+            <div class="philosopher-avatar-frame">
+              <img src="../thinkers/images/descartes.jpg" alt="رينيه ديكارت" loading="lazy" onerror="this.src='../brand_logo_official.png'">
+            </div>
+            <h3 class="philosopher-name">رينيه ديكارت</h3>
+            <div class="philosopher-school-badge">العقلانية الحديثة</div>
+            <p class="philosopher-core-idea">« أنا أفكر، إذن أنا موجود. والشك هو الطريق الأول نحو اليقين. »</p>
+            <a href="../thinkers/" class="pillar-card-link" style="font-size: 0.85rem;">اكتشف المفكر ←</a>
+          </div>
+
+          <!-- 5: سبينوزا -->
+          <div class="philosopher-profile-card">
+            <div class="philosopher-avatar-frame">
+              <img src="../thinkers/images/spinoza.jpg" alt="باروخ سبينوزا" loading="lazy" onerror="this.src='../brand_logo_official.png'">
+            </div>
+            <h3 class="philosopher-name">باروخ سبينوزا</h3>
+            <div class="philosopher-school-badge">وحدة الوجود</div>
+            <p class="philosopher-core-idea">« لا تسخر من الأفعال البشرية، ولا تندبها، ولا تبغضها، بل افهمها بعقلانية. »</p>
+            <a href="../thinkers/" class="pillar-card-link" style="font-size: 0.85rem;">اكتشف المفكر ←</a>
+          </div>
+
+          <!-- 6: كانط -->
+          <div class="philosopher-profile-card">
+            <div class="philosopher-avatar-frame">
+              <img src="../thinkers/images/kant.jpg" alt="إيمانويل كانط" loading="lazy" onerror="this.src='../brand_logo_official.png'">
+            </div>
+            <h3 class="philosopher-name">إيمانويل كانط</h3>
+            <div class="philosopher-school-badge">الفلسفة النقدية</div>
+            <p class="philosopher-core-idea">« تصرف دائماً بحيث تعامل الإنسانية في شخصك وفي الآخرين كغاية وليس وسيلة. »</p>
+            <a href="../thinkers/" class="pillar-card-link" style="font-size: 0.85rem;">اكتشف المفكر ←</a>
+          </div>
+
+          <!-- 7: نيتشه -->
+          <div class="philosopher-profile-card">
+            <div class="philosopher-avatar-frame">
+              <img src="../thinkers/images/nietzsche.jpg" alt="فريدريش نيتشه" loading="lazy" onerror="this.src='../brand_logo_official.png'">
+            </div>
+            <h3 class="philosopher-name">فريدريش نيتشه</h3>
+            <div class="philosopher-school-badge">إرادة القوة • تجاوز الذات</div>
+            <p class="philosopher-core-idea">« ما لا يقتلني يجعلني أقوى. ومبدأ حب القدر (Amor Fati) هو ذروة البطولة. »</p>
+            <a href="../thinkers/" class="pillar-card-link" style="font-size: 0.85rem;">اكتشف المفكر ←</a>
+          </div>
+
+          <!-- 8: شوبنهاور -->
+          <div class="philosopher-profile-card">
+            <div class="philosopher-avatar-frame">
+              <img src="../thinkers/images/schopenhauer.jpg" alt="آرثر شوبنهاور" loading="lazy" onerror="this.src='../brand_logo_official.png'">
+            </div>
+            <h3 class="philosopher-name">آرثر شوبنهاور</h3>
+            <div class="philosopher-school-badge">إرادة الحياة • فن العيش</div>
+            <p class="philosopher-core-idea">« العالم إرادة وتمثل، والسعادة الحقيقية تكمن في التجرد وصفاء التأمل. »</p>
+            <a href="../thinkers/" class="pillar-card-link" style="font-size: 0.85rem;">اكتشف المفكر ←</a>
+          </div>
+
+          <!-- 9: كيركغارد -->
+          <div class="philosopher-profile-card">
+            <div class="philosopher-avatar-frame">
+              <img src="../thinkers/images/kierkegaard.jpg" alt="سورين كيركغارد" loading="lazy" onerror="this.src='../brand_logo_official.png'">
+            </div>
+            <h3 class="philosopher-name">سورين كيركغارد</h3>
+            <div class="philosopher-school-badge">أبو الوجودية</div>
+            <p class="philosopher-core-idea">« الحياة لا تُفهم إلا بالنظر إلى الوراء، لكنها لا تُعاش إلا بالتقدم إلى الأمام. »</p>
+            <a href="../thinkers/" class="pillar-card-link" style="font-size: 0.85rem;">اكتشف المفكر ←</a>
+          </div>
+
+          <!-- 10: سارتر -->
+          <div class="philosopher-profile-card">
+            <div class="philosopher-avatar-frame">
+              <img src="../thinkers/images/sartre.jpg" alt="جان بول سارتر" loading="lazy" onerror="this.src='../brand_logo_official.png'">
+            </div>
+            <h3 class="philosopher-name">جان بول سارتر</h3>
+            <div class="philosopher-school-badge">الوجودية والحرية</div>
+            <p class="philosopher-core-idea">« الوجود يسبق الماهية، والإنسان محكوم عليه بأن يكون حراً ومسؤولاً عن مصيره. »</p>
+            <a href="../thinkers/" class="pillar-card-link" style="font-size: 0.85rem;">اكتشف المفكر ←</a>
+          </div>
+
+          <!-- 11: كامو -->
+          <div class="philosopher-profile-card">
+            <div class="philosopher-avatar-frame">
+              <img src="../thinkers/images/camus.jpg" alt="ألبير كامو" loading="lazy" onerror="this.src='../brand_logo_official.png'">
+            </div>
+            <h3 class="philosopher-name">ألبير كامو</h3>
+            <div class="philosopher-school-badge">العبث والتمرد</div>
+            <p class="philosopher-core-idea">« في قلب الشتاء القاسي، اكتشفت أخيراً أن في داخلي صيفاً لا يقهر. »</p>
+            <a href="../thinkers/" class="pillar-card-link" style="font-size: 0.85rem;">اكتشف المفكر ←</a>
+          </div>
+
+          <!-- 12: مونتين -->
+          <div class="philosopher-profile-card">
+            <div class="philosopher-avatar-frame">
+              <img src="../thinkers/images/montaigne.jpg" alt="ميشيل دي مونتين" loading="lazy" onerror="this.src='../brand_logo_official.png'">
+            </div>
+            <h3 class="philosopher-name">ميشيل دي مونتين</h3>
+            <div class="philosopher-school-badge">النزعة الإنسانية والمقالات</div>
+            <p class="philosopher-core-idea">« ما أعلمه هو أنني لا أعلم شيئاً على وجه اليقين، وأعظم فن هو أن تعرف كيف تعيش ذاتك. »</p>
+            <a href="../thinkers/" class="pillar-card-link" style="font-size: 0.85rem;">اكتشف المفكر ←</a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 5. SECTION — المقالات المختارة -->
+      <section id="articles">
+        <div class="pillar-section-heading">
+          <div>
+            <h2>المقالات والدراسات الفلسفية المختارة</h2>
+            <p class="pillar-section-subtitle">أهم الأبحاث والتحليلات المعمقة في الفكر الوجودي وفن العيش</p>
+          </div>
+        </div>
+
+        <!-- Featured Magazine Article -->
         <article class="featured-magazine-article">
           <div class="featured-article-img-wrapper">
             <img src="../pillar_philosophy_hd.jpg" alt="لماذا اعتبر شوبنهاور أن السعادة مجرد وهم؟" loading="lazy">
           </div>
           <div class="featured-article-body">
             <div>
-              <span class="pillar-card-badge">شوبنهاور • تشاؤم فلسفي</span>
+              <span class="pillar-card-badge">دراسة رئيسية • شوبنهاور والتشاؤم الفلسفي</span>
               <h3 class="pillar-card-title" style="font-size: 1.55rem; margin-top: 6px;">
                 <a href="../articles/schopenhauer-happiness-illusion.html">لماذا اعتبر شوبنهاور أن السعادة مجرد وهم؟</a>
               </h3>
@@ -584,14 +782,9 @@
             </div>
           </div>
         </article>
-      </section>
 
-      <!-- 4. Magazine Articles Grid -->
-      <section>
-        <div class="pillar-section-heading">
-          <h2>أهم المقالات والدراسات المعمقة</h2>
-        </div>
-        <div class="pillar-articles-grid">
+        <!-- Articles Grid -->
+        <div class="pillar-articles-grid" style="margin-top: 30px;">
           
           <article class="pillar-article-card">
             <div class="pillar-card-badge">نيتشه • إرادة القوة</div>
@@ -646,165 +839,166 @@
         </div>
       </section>
 
-      <!-- 5. Editorial Quote Banner -->
-      <section>
-        <div class="pillar-quote-banner">
-          <p class="pillar-quote-banner-text">« من يمتلك سبباً يعيش من أجله، يمكنه أن يتحمل تقريباً أي كيفية. »</p>
-          <div class="pillar-quote-banner-author">— فريدريش نيتشه (فيلسوف الإرادة)</div>
-        </div>
-      </section>
-
-      <!-- 6. Thinkers Section (5 Grands Philosophes) -->
-      <section>
+      <!-- 6. SECTION — اقتباسات فلسفية -->
+      <section id="quotes">
         <div class="pillar-section-heading">
-          <h2>أبرز الفلاسفة والمفكرين في هذا المحور</h2>
+          <div>
+            <h2>شذرات واقتباسات فلسفية</h2>
+            <p class="pillar-section-subtitle">كلمات خالدة تلخص عصارة الفكر الإنساني</p>
+          </div>
+          <a href="../quotes/" class="pillar-card-link" style="font-size: 0.95rem;">اكتشف المزيد من الاقتباسات ←</a>
         </div>
-        <div class="pillar-thinkers-grid">
+
+        <div class="quotes-trio-grid">
           
-          <div class="pillar-thinker-card">
-            <div class="pillar-thinker-avatar-box">
-              <img src="../thinkers/images/schopenhauer.jpg" alt="آرثر شوبنهاور" onerror="this.src='../brand_logo_official.png'">
-            </div>
-            <div class="pillar-thinker-info">
-              <h3 class="pillar-thinker-name">آرثر شوبنهاور</h3>
-              <span class="pillar-thinker-role">فيلسوف الإرادة والوضوح العقلي وتفكيك أوهام السعادة</span>
-              <a href="../thinkers/" class="pillar-thinker-btn" aria-label="عرض سيرة شوبنهاور">السيرة →</a>
-            </div>
+          <div class="quote-card-item">
+            <p class="quote-card-text">« الحياة غير المفحوصة بالتأمل والتساؤل لا تستحق أن تُعاش. »</p>
+            <div class="quote-card-author">— سقراط</div>
           </div>
 
-          <div class="pillar-thinker-card">
-            <div class="pillar-thinker-avatar-box">
-              <img src="../thinkers/images/nietzsche.jpg" alt="فريدريش نيتشه" onerror="this.src='../brand_logo_official.png'">
-            </div>
-            <div class="pillar-thinker-info">
-              <h3 class="pillar-thinker-name">فريدريش نيتشه</h3>
-              <span class="pillar-thinker-role">فيلسوف إرادة القوة وتجاوز الذات ومبدأ حب القدر</span>
-              <a href="../thinkers/" class="pillar-thinker-btn" aria-label="عرض سيرة نيتشه">السيرة →</a>
-            </div>
+          <div class="quote-card-item">
+            <p class="quote-card-text">« من يمتلك سبباً يعيش من أجله، يمكنه أن يتحمل تقريباً أي كيفية. »</p>
+            <div class="quote-card-author">— فريدريش نيتشه</div>
           </div>
 
-          <div class="pillar-thinker-card">
-            <div class="pillar-thinker-avatar-box">
-              <img src="../thinkers/images/camus.jpg" alt="ألبير كامو" onerror="this.src='../brand_logo_official.png'">
-            </div>
-            <div class="pillar-thinker-info">
-              <h3 class="pillar-thinker-name">ألبير كامو</h3>
-              <span class="pillar-thinker-role">أديب نوبل وفيلسوف التمرد والعبث والحرية الإنسانية</span>
-              <a href="../thinkers/" class="pillar-thinker-btn" aria-label="عرض سيرة كامو">السيرة →</a>
-            </div>
+          <div class="quote-card-item">
+            <p class="quote-card-text">« السعادة الحقيقية هي الاستمتاع بالحاضر دون قلق مشؤوم بشأن المستقبل. »</p>
+            <div class="quote-card-author">— سينيكا</div>
           </div>
 
-          <div class="pillar-thinker-card">
-            <div class="pillar-thinker-avatar-box">
-              <img src="../thinkers/images/sartre.jpg" alt="جان بول سارتر" onerror="this.src='../brand_logo_official.png'">
-            </div>
-            <div class="pillar-thinker-info">
-              <h3 class="pillar-thinker-name">جان بول سارتر</h3>
-              <span class="pillar-thinker-role">رائد الوجودية والحرية والمسؤولية وصناعة المعنى</span>
-              <a href="../thinkers/" class="pillar-thinker-btn" aria-label="عرض سيرة سارتر">السيرة →</a>
-            </div>
-          </div>
-
-          <div class="pillar-thinker-card">
-            <div class="pillar-thinker-avatar-box">
-              <img src="../thinkers/images/socrate.jpg" alt="سقراط" onerror="this.src='../brand_logo_official.png'">
-            </div>
-            <div class="pillar-thinker-info">
-              <h3 class="pillar-thinker-name">سقراط</h3>
-              <span class="pillar-thinker-role">أب الفلسفة الغربية ورائد منهج التساؤل وفحص الذات</span>
-              <a href="../thinkers/" class="pillar-thinker-btn" aria-label="عرض سيرة سقراط">السيرة →</a>
-            </div>
+          <div class="quote-card-item">
+            <p class="quote-card-text">« يجب أن نتخيل سيزيف سعيداً، لأن الصراع في حد ذاته كافٍ لملء قلب الإنسان. »</p>
+            <div class="quote-card-author">— ألبير كامو</div>
           </div>
 
         </div>
       </section>
 
-      <!-- 7. Audio Section (أعمال صوتية ومسموعة مختارة) -->
-      <section style="margin-top: 55px;">
+      <!-- 7. SECTION — الأعمال الصوتية -->
+      <section id="audio" style="margin-top: 55px;">
         <div class="pillar-section-heading">
-          <h2>أعمال صوتية ومسموعة مختارة</h2>
+          <div>
+            <h2>أعمال صوتية ومسموعة مختارة</h2>
+            <p class="pillar-section-subtitle">تسجيلات صوتية هادئة لأعظم الأعمال الفلسفية والأدبية</p>
+          </div>
+          <a href="../audio/" class="pillar-card-link" style="font-size: 0.95rem;">المكتبة الصوتية كاملة ←</a>
         </div>
-        <div class="pillar-audio-showcase-grid">
+
+        <div class="schools-grid">
           
           <!-- Audio 1: الغريب -->
-          <div class="pillar-audio-showcase-card">
-            <div class="pillar-audio-cover-box">
-              <img src="../audio_etranger_cover_1786035575190.jpg" alt="رواية الغريب الصوتية" class="pillar-audio-cover-img" loading="lazy" onerror="this.src='../pillar_audio_hd.jpg'">
-              <span class="pillar-audio-duration-tag">⏱️ ~ 3h 15m</span>
+          <div class="school-card" style="padding: 0; overflow: hidden;">
+            <div style="height: 180px; position: relative; overflow: hidden;">
+              <img src="../audio_etranger_cover_1786035575190.jpg" alt="رواية الغريب" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" onerror="this.src='../pillar_audio_hd.jpg'">
+              <span style="position: absolute; bottom: 10px; left: 10px; background: rgba(0,0,0,0.75); border: 1px solid rgba(223, 177, 91, 0.4); color: #E7B84B; padding: 3px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700;">⏱️ ~ 3h 15m</span>
             </div>
-            <div class="pillar-audio-body">
+            <div style="padding: 22px; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;">
               <div>
-                <div class="pillar-audio-badge">رواية فلسفية مسموعة</div>
-                <h3 class="pillar-audio-title">الغريب</h3>
-                <div class="pillar-audio-author">ألبير كامو</div>
-                <p class="pillar-audio-desc">تحفة كامو الخالدة حول العبث والحرية الإنسانية والصدق التام مع المشاعر الداخلية في مواجهة نفاق المجتمع.</p>
+                <span style="font-size: 0.78rem; color: #E7B84B; font-weight: 700;">رواية فلسفية مسموعة</span>
+                <h3 class="school-title" style="margin-top: 4px;">الغريب</h3>
+                <div style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 10px;">ألبير كامو</div>
+                <p class="school-desc">تحفة كامو حول العبث والحرية الإنسانية والصدق التام مع المشاعر الداخلية في مواجهة نفاق المجتمع.</p>
               </div>
-              <a href="../audio/?book=etranger" class="pillar-audio-btn" style="margin-top: 15px;">استمع الآن 🎙️</a>
+              <a href="../audio/?book=etranger" class="pillar-audio-btn" style="text-align: center; margin-top: 12px;">استمع الآن 🎙️</a>
             </div>
           </div>
 
           <!-- Audio 2: الجريمة والعقاب -->
-          <div class="pillar-audio-showcase-card">
-            <div class="pillar-audio-cover-box">
-              <img src="../crime_punishment_cover_1786021098346.jpg" alt="رواية الجريمة والعقاب الصوتية" class="pillar-audio-cover-img" loading="lazy" onerror="this.src='../pillar_audio_hd.jpg'">
-              <span class="pillar-audio-duration-tag">⏱️ ~ 8h 40m</span>
+          <div class="school-card" style="padding: 0; overflow: hidden;">
+            <div style="height: 180px; position: relative; overflow: hidden;">
+              <img src="../crime_punishment_cover_1786021098346.jpg" alt="رواية الجريمة والعقاب" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" onerror="this.src='../pillar_audio_hd.jpg'">
+              <span style="position: absolute; bottom: 10px; left: 10px; background: rgba(0,0,0,0.75); border: 1px solid rgba(223, 177, 91, 0.4); color: #E7B84B; padding: 3px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700;">⏱️ ~ 8h 40m</span>
             </div>
-            <div class="pillar-audio-body">
+            <div style="padding: 22px; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;">
               <div>
-                <div class="pillar-audio-badge">أدب كلاسيكي نفسي</div>
-                <h3 class="pillar-audio-title">الجريمة والعقاب</h3>
-                <div class="pillar-audio-author">فيودور دوستويفسكي</div>
-                <p class="pillar-audio-desc">رحلة نفسية وأخلاقية عميقة في صراع الضمير، الكبرياء الزائف، والبحث المضني عن الخلاص والتوبة الروحية.</p>
+                <span style="font-size: 0.78rem; color: #E7B84B; font-weight: 700;">أدب كلاسيكي ونفسي</span>
+                <h3 class="school-title" style="margin-top: 4px;">الجريمة والعقاب</h3>
+                <div style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 10px;">فيودور دوستويفسكي</div>
+                <p class="school-desc">رحلة نفسية وأخلاقية عميقة في صراع الضمير، الكبرياء الزائف، والبحث المضني عن الخلاص والتوبة الروحية.</p>
               </div>
-              <a href="../audio/?book=crime-punishment" class="pillar-audio-btn" style="margin-top: 15px;">استمع الآن 🎙️</a>
+              <a href="../audio/?book=crime-punishment" class="pillar-audio-btn" style="text-align: center; margin-top: 12px;">استمع الآن 🎙️</a>
             </div>
           </div>
 
           <!-- Audio 3: المسخ (التحول) -->
-          <div class="pillar-audio-showcase-card">
-            <div class="pillar-audio-cover-box">
-              <img src="../audio_kafka_cover_1786038803167.jpg" alt="رواية المسخ الصوتية" class="pillar-audio-cover-img" loading="lazy" onerror="this.src='../pillar_audio_hd.jpg'">
-              <span class="pillar-audio-duration-tag">⏱️ ~ 2h 10m</span>
+          <div class="school-card" style="padding: 0; overflow: hidden;">
+            <div style="height: 180px; position: relative; overflow: hidden;">
+              <img src="../audio_kafka_cover_1786038803167.jpg" alt="رواية المسخ الصوتية" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" onerror="this.src='../pillar_audio_hd.jpg'">
+              <span style="position: absolute; bottom: 10px; left: 10px; background: rgba(0,0,0,0.75); border: 1px solid rgba(223, 177, 91, 0.4); color: #E7B84B; padding: 3px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700;">⏱️ ~ 2h 10m</span>
             </div>
-            <div class="pillar-audio-body">
+            <div style="padding: 22px; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;">
               <div>
-                <div class="pillar-audio-badge">أدب وجودي ورمزي</div>
-                <h3 class="pillar-audio-title">المسخ (التحول)</h3>
-                <div class="pillar-audio-author">فرانز كافكا</div>
-                <p class="pillar-audio-desc">رمزية فلسفية بالغة العمق حول اغتراب الإنسان الحديث، هشاشة العلاقات الأسرية، وثقل التوقعات المادية.</p>
+                <span style="font-size: 0.78rem; color: #E7B84B; font-weight: 700;">أدب وجودي ورمزي</span>
+                <h3 class="school-title" style="margin-top: 4px;">المسخ (التحول)</h3>
+                <div style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 10px;">فرانز كافكا</div>
+                <p class="school-desc">رمزية فلسفية بالغة العمق حول اغتراب الإنسان الحديث، هشاشة العلاقات الأسرية، وثقل التوقعات المادية.</p>
               </div>
-              <a href="../audio/?book=metamorphose" class="pillar-audio-btn" style="margin-top: 15px;">استمع الآن 🎙️</a>
+              <a href="../audio/?book=metamorphose" class="pillar-audio-btn" style="text-align: center; margin-top: 12px;">استمع الآن 🎙️</a>
             </div>
           </div>
 
         </div>
       </section>
 
-      <!-- 8. Nouvelle Section Premium "رحلة الفكر" -->
-      <section>
-        <div class="journey-thought-box">
-          <span class="journey-thought-badge">رحلة الفكر</span>
-          <h2 class="journey-thought-title">الفلسفة والبحث الدائم عن المعنى</h2>
-          <p class="journey-thought-quote">
-            « الفلسفة لا تمنحك جميع الإجابات، لكنها تعلمك كيف تطرح الأسئلة التي تستحق أن تُطرح. »
-          </p>
+      <!-- 8. SECTION — للتأمل: « سؤال لك » -->
+      <section style="margin-top: 60px;">
+        <div class="pillar-section-heading">
           <div>
-            <a href="../thinkers/" class="journey-thought-btn">اكتشف عالم الفلاسفة ←</a>
+            <h2>للتأمل • سؤال لك</h2>
+            <p class="pillar-section-subtitle">أسئلة فلسفية تدعوك لفحص الذات وإعادة ترتيب أولوياتك</p>
           </div>
+        </div>
+
+        <div class="contemplation-grid">
+          
+          <div class="contemplation-card">
+            <div>
+              <div class="contemplation-q-num">تأمل 01</div>
+              <h3 class="contemplation-q-title">هل تعيش الحياة التي اخترتها أنت، أم الحياة التي اختارها الآخرون لك؟</h3>
+              <p class="contemplation-hint">كثيراً ما نتبنى رغبات المجتمع وتوقعات المحيطين دون أن ندرك أننا نتخلى تدريجياً عن صوتنا الحقيقي.</p>
+            </div>
+          </div>
+
+          <div class="contemplation-card">
+            <div>
+              <div class="contemplation-q-num">تأمل 02</div>
+              <h3 class="contemplation-q-title">إذا علمت أن اليوم هو آخر أيامك، هل ستفعل ما أنت مقدم على فعله الآن؟</h3>
+              <p class="contemplation-hint">تأمل الموت الرواقي (Memento Mori) ليس دعوة للحزن، بل بوصلة حاسمة لتصفية ما هو غير جوهري.</p>
+            </div>
+          </div>
+
+          <div class="contemplation-card">
+            <div>
+              <div class="contemplation-q-num">تأمل 03</div>
+              <h3 class="contemplation-q-title">هل الخوف من الفشل هو ما يعيقك، أم الخوف من اكتشاف حقيقة قدراتك؟</h3>
+              <p class="contemplation-hint">أحياناً يكون الهروب من خوض التجربة حيلة دفاعية لحماية صورتنا المثالية عن أنفسنا من أي اختبار حقيقي.</p>
+            </div>
+          </div>
+
+          <div class="contemplation-card">
+            <div>
+              <div class="contemplation-q-num">تأمل 04</div>
+              <h3 class="contemplation-q-title">ماذا لو كانت المعاناة التي تهرب منها هي الباب الوحيد لنضجك الداخلي؟</h3>
+              <p class="contemplation-hint">كما رأى نيتشه وشوبنهاور، لا ينضج الوعي الإنساني بالراحة المستمرة، بل بالصمود أمام رياح التجارب.</p>
+            </div>
+          </div>
+
         </div>
       </section>
 
-      <!-- 9. Final Exploration CTA -->
+      <!-- 9. CTA FINAL — الخاتمة الفكرية -->
       <section>
         <div class="pillar-cta-box">
-          <h2 style="font-size: 1.8rem; color: #FFFDF8; margin: 0 0 10px; font-family: 'Playfair Display', 'Amiri', serif;">هل تريد تعميق رؤيتك للعالم؟</h2>
-          <p style="color: var(--text-secondary); max-width: 650px; margin: 0 auto; line-height: 1.7;">
-            استكشف مقالات الفلسفة، سير كبار المفكرين، والأعمال الأدبية المسموعة لتوسيع أفقك الفكري.
+          <h2 style="font-size: 1.85rem; color: #FFFDF8; margin: 0 0 12px; font-family: 'Playfair Display', 'Amiri', serif;">
+            « الفلسفة لا تعطيك دائماً الإجابات... لكنها تعلمك كيف تطرح الأسئلة الصحيحة. »
+          </h2>
+          <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto 25px; line-height: 1.75;">
+            واصل رحلتك الفكرية عبر استكشاف تراجم المفكرين، قراءة المقالات المعمقة، أو الاستماع إلى الأعمال الصوتية الخالدة.
           </p>
           <div class="pillar-cta-actions">
-            <a href="../articles/" class="pillar-audio-btn" style="background: #E7B84B; color: #070A08;">اقرأ المقالات ←</a>
-            <a href="../thinkers/" class="pillar-audio-btn">اكتشف المفكرين 🏛️</a>
-            <a href="../audio/" class="pillar-audio-btn">استمع إلى الصوتيات 🎧</a>
+            <a href="../thinkers/" class="pillar-audio-btn" style="background: #E7B84B; color: #070A08;">استكشف المفكرين 🏛️</a>
+            <a href="../articles/" class="pillar-audio-btn">اقرأ المقالات 📜</a>
+            <a href="../audio/" class="pillar-audio-btn">استمع إلى الأعمال الصوتية 🎧</a>
           </div>
         </div>
       </section>
@@ -821,6 +1015,6 @@
     </div>
   </footer>
 
-  <script src="../app_v11.js?v=16" type="module"></script>
+  <script src="../app_v11.js?v=17" type="module"></script>
 </body>
 </html>

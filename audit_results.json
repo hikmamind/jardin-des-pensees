@@ -794,7 +794,7 @@
   {
     "file": "philosophie/index.html",
     "title": "الفلسفة والبحث عن المعنى | حكمة ونور",
-    "description": "اكتشف الفلسفة، الوجودية، معنى الحياة، أفكار نيتشه وشوبنهاور وكامو وسارتر، ودراسات تساعدك على فهم نفسك والعالم.",
+    "description": "اكتشف الفلسفة ومدارسها وأهم مفكريها وأفكارها حول الوجود والحقيقة والحرية ومعنى الحياة. مقالات ودراسات وصوتيات فلسفية معمقة.",
     "canonical": "https://jardin-des-pensees.onrender.com/philosophie/",
     "lang": "ar",
     "dir": "rtl",
@@ -803,14 +803,14 @@
       "الفلسفة والبحث عن المعنى"
     ],
     "ogTitle": "الفلسفة والبحث عن المعنى | حكمة ونور",
-    "ogDesc": "اكتشف الفلسفة، الوجودية، معنى الحياة، أفكار نيتشه وشوبنهاور وكامو وسارتر، ودراسات تساعدك على فهم نفسك والعالم.",
+    "ogDesc": "اكتشف الفلسفة ومدارسها وأهم مفكريها وأفكارها حول الوجود والحقيقة والحرية ومعنى الحياة. مقالات ودراسات وصوتيات فلسفية معمقة.",
     "ogImage": "https://jardin-des-pensees.onrender.com/pillar_philosophy_hd.jpg",
     "ogUrl": "https://jardin-des-pensees.onrender.com/philosophie/",
     "ogType": "website",
     "twitterCard": "summary_large_image",
     "hasJsonLd": true,
     "jsonLdValid": true,
-    "totalImgs": 15,
+    "totalImgs": 17,
     "imgsWithoutAlt": 0
   },
   {
