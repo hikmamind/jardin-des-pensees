@@ -463,24 +463,24 @@
   },
   {
     "file": "developpement-personnel/index.html",
-    "title": "تطوير الذات — الانضباط، العادات، والصلابة الذهنية | حكمة ونور",
-    "description": "أدلة عملية ومقالات عميقة في بناء الانضباط الذاتي، التخلص من العادات المدمرة، تأسيس الثقة الحقيقية، والارتقاء بالأداء الذهني.",
+    "title": "تطوير الذات وبناء حياة أقوى — الانضباط، العادات والصلابة الذهنية | حكمة ونور",
+    "description": "أفكار عملية لبناء الانضباط، الثقة، العادات، والشجاعة: أدلة عملية ومقالات عميقة في بناء الصلابة الذهنية والتطور التراكمي المستمر.",
     "canonical": "https://jardin-des-pensees.onrender.com/developpement-personnel/",
     "lang": "ar",
     "dir": "rtl",
     "h1Count": 1,
     "h1List": [
-      "تطوير الذات وبناء الصلابة الذهنية"
+      "تطوير الذات وبناء حياة أقوى"
     ],
-    "ogTitle": "تطوير الذات — الانضباط، العادات، والصلابة الذهنية | حكمة ونور",
-    "ogDesc": "أدلة عملية ومقالات عميقة في بناء الانضباط الذاتي، التخلص من العادات المدمرة، تأسيس الثقة الحقيقية، والارتقاء بالأداء الذهني.",
-    "ogImage": "https://jardin-des-pensees.onrender.com/shop_page_hero.jpg",
+    "ogTitle": "تطوير الذات وبناء حياة أقوى — الانضباط، العادات والصلابة الذهنية | حكمة ونور",
+    "ogDesc": "أفكار عملية لبناء الانضباط، الثقة، العادات، والشجاعة: أدلة عملية ومقالات عميقة في بناء الصلابة الذهنية والتطور التراكمي المستمر.",
+    "ogImage": "https://jardin-des-pensees.onrender.com/dev_hero_cinematic.jpg",
     "ogUrl": "https://jardin-des-pensees.onrender.com/developpement-personnel/",
     "ogType": "website",
     "twitterCard": "summary_large_image",
     "hasJsonLd": true,
     "jsonLdValid": true,
-    "totalImgs": 1,
+    "totalImgs": 13,
     "imgsWithoutAlt": 0
   },
   {
@@ -804,13 +804,13 @@
     ],
     "ogTitle": "الفلسفة — كبار المفكرين، الوجودية والبحث عن المعنى | حكمة ونور",
     "ogDesc": "استكشف أروقة الفلسفة الإنسانية الكبرى: الوجودية، العبث، إرادة القوة، ونقد وهم السعادة مع شوبنهاور، نيتشه، كامو، وسارتر.",
-    "ogImage": "https://jardin-des-pensees.onrender.com/articles_page_hero.jpg",
+    "ogImage": "https://jardin-des-pensees.onrender.com/pillar_philosophy_hd.jpg",
     "ogUrl": "https://jardin-des-pensees.onrender.com/philosophie/",
     "ogType": "website",
     "twitterCard": "summary_large_image",
     "hasJsonLd": true,
     "jsonLdValid": true,
-    "totalImgs": 1,
+    "totalImgs": 10,
     "imgsWithoutAlt": 0
   },
   {
@@ -837,24 +837,24 @@
   },
   {
     "file": "psychologie/index.html",
-    "title": "علم النفس — سيكولوجية السلوك، الوعي والذكاء العاطفي | حكمة ونور",
-    "description": "استكشف أعماق النفس البشرية: هيبة الصمت، سيكولوجية الحسد والعلاقات، علاج التفكير المفرط، وعلم نفس الأعماق مع يونغ وفرويد وأدلر.",
+    "title": "علم النفس وفهم الإنسان — سيكولوجية السلوك، المشاعر والوعي | حكمة ونور",
+    "description": "رحلة لفهم المشاعر والسلوك والعقل والعلاقات الإنسانية: هيبة الصمت، سيكولوجية الحسد، علاج التفكير المفرط، وعلم نفس الأعماق مع يونغ وفرويد وأدلر.",
     "canonical": "https://jardin-des-pensees.onrender.com/psychologie/",
     "lang": "ar",
     "dir": "rtl",
     "h1Count": 1,
     "h1List": [
-      "علم النفس والوعي الذاتي"
+      "علم النفس وفهم الإنسان"
     ],
-    "ogTitle": "علم النفس — سيكولوجية السلوك، الوعي والذكاء العاطفي | حكمة ونور",
-    "ogDesc": "استكشف أعماق النفس البشرية: هيبة الصمت، سيكولوجية الحسد والعلاقات، علاج التفكير المفرط، وعلم نفس الأعماق مع يونغ وفرويد وأدلر.",
-    "ogImage": "https://jardin-des-pensees.onrender.com/quizzes_page_hero.jpg",
+    "ogTitle": "علم النفس وفهم الإنسان — سيكولوجية السلوك، المشاعر والوعي | حكمة ونور",
+    "ogDesc": "رحلة لفهم المشاعر والسلوك والعقل والعلاقات الإنسانية: هيبة الصمت، سيكولوجية الحسد، علاج التفكير المفرط، وعلم نفس الأعماق مع يونغ وفرويد وأدلر.",
+    "ogImage": "https://jardin-des-pensees.onrender.com/psy_hero_cinematic.jpg",
     "ogUrl": "https://jardin-des-pensees.onrender.com/psychologie/",
     "ogType": "website",
     "twitterCard": "summary_large_image",
     "hasJsonLd": true,
     "jsonLdValid": true,
-    "totalImgs": 1,
+    "totalImgs": 11,
     "imgsWithoutAlt": 0
   },
   {
@@ -969,24 +969,24 @@
   },
   {
     "file": "sagesse/index.html",
-    "title": "الحكمة — الفلسفة الرواقية، السكينة وفن العيش الواعي | حكمة ونور",
-    "description": "اكتشف جوهر الحكمة الكلاسيكية: القلعة الداخلية الرواقية، السعادة البسيطة الأبيقورية، فن العزلة الواعية، وتقويم الحكمة ٣٦٥ يوماً.",
+    "title": "الحكمة التي تبقى — الفلسفة الرواقية، السكينة وفن العيش | حكمة ونور",
+    "description": "حكم وتأملات وأفكار خالدة تساعدك على رؤية الحياة بعمق أكبر: الرواقية، القلعة الداخلية، الأبيقورية، فن العيش الواعي، وتقويم الحكمة ٣٦٥ يوماً.",
     "canonical": "https://jardin-des-pensees.onrender.com/sagesse/",
     "lang": "ar",
     "dir": "rtl",
     "h1Count": 1,
     "h1List": [
-      "الحكمة والسكينة الداخلية"
+      "الحكمة التي تبقى"
     ],
-    "ogTitle": "الحكمة — الفلسفة الرواقية، السكينة وفن العيش الواعي | حكمة ونور",
-    "ogDesc": "اكتشف جوهر الحكمة الكلاسيكية: القلعة الداخلية الرواقية، السعادة البسيطة الأبيقورية، فن العزلة الواعية، وتقويم الحكمة ٣٦٥ يوماً.",
-    "ogImage": "https://jardin-des-pensees.onrender.com/quotes_page_hero.jpg",
+    "ogTitle": "الحكمة التي تبقى — الفلسفة الرواقية، السكينة وفن العيش | حكمة ونور",
+    "ogDesc": "حكم وتأملات وأفكار خالدة تساعدك على رؤية الحياة بعمق أكبر: الرواقية، القلعة الداخلية، الأبيقورية، فن العيش الواعي، وتقويم الحكمة ٣٦٥ يوماً.",
+    "ogImage": "https://jardin-des-pensees.onrender.com/wis_hero_cinematic.jpg",
     "ogUrl": "https://jardin-des-pensees.onrender.com/sagesse/",
     "ogType": "website",
     "twitterCard": "summary_large_image",
     "hasJsonLd": true,
     "jsonLdValid": true,
-    "totalImgs": 1,
+    "totalImgs": 13,
     "imgsWithoutAlt": 0
   },
   {

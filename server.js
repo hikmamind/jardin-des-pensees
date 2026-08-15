@@ -36,6 +36,11 @@ app.use('/secure-files', (req, res) => {
   res.status(403).send('Access denied.');
 });
 
+// Aliases and Canonical Redirects
+app.get(['/developpement', '/developpement/'], (req, res) => {
+  res.redirect(301, '/developpement-personnel/');
+});
+
 // Serve static files from the root directory
 app.use(express.static(__dirname));
 
