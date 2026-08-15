@@ -77,10 +77,10 @@
   </script>
 
   <!-- Main Stylesheet (Shared) -->
-  <link rel="stylesheet" href="../style.css?v=24">
+  <link rel="stylesheet" href="../style.css?v=25">
   
   <style>
-    /* Dark Academia Editorial Design Tokens (V5/V7) */
+    /* Dark Academia Editorial Design Tokens (V5/V8) */
     html.philosophie-page-v5, 
     body {
       background-color: #07100D !important;
@@ -250,7 +250,7 @@
     .philo-v5-heading {
       text-align: center;
       max-width: 720px;
-      margin: 0 auto 40px;
+      margin: 0 auto 45px;
     }
     .philo-v5-heading h2 {
       font-size: 2.2rem;
@@ -315,10 +315,10 @@
     .philo-card-giant-num {
       position: absolute;
       top: 10px;
-      right: 15px;
+      left: 15px;
       font-size: 3.5rem;
       font-weight: 900;
-      color: rgba(201, 168, 106, 0.18);
+      color: rgba(201, 168, 106, 0.22);
       font-family: 'Playfair Display', serif;
       line-height: 1;
       user-select: none;
@@ -383,45 +383,57 @@
       overflow: hidden;
     }
 
-    /* Rich Schools Grid with HD Illustrations (V7) */
-    .philo-schools-v7-grid {
+    /* V8 Schools Section Grid (3 Columns Desktop, 2 Tablet, 1 Mobile) */
+    .philo-schools-v8-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 26px;
     }
-    .philo-school-card-v7 {
+    @media (min-width: 640px) {
+      .philo-schools-v8-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 992px) {
+      .philo-schools-v8-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .philo-school-card-v8 {
       background: #0D1814;
       border: 1px solid rgba(201, 168, 106, 0.22);
-      border-radius: 22px;
+      border-radius: 24px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
       position: relative;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  border-color 0.35s ease,
+                  box-shadow 0.35s ease;
+      height: 100%;
     }
-    .philo-school-card-v7:hover {
+    .philo-school-card-v8:hover {
       transform: translateY(-6px);
       border-color: #C9A86A;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
     }
-    .philo-school-v7-imgbox {
+    .philo-school-v8-imgbox {
       position: relative;
       width: 100%;
-      height: 160px;
+      height: 200px; /* ~50% of total card height */
       overflow: hidden;
     }
-    .philo-school-v7-img {
+    .philo-school-v8-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.5s ease;
     }
-    .philo-school-card-v7:hover .philo-school-v7-img {
-      transform: scale(1.04);
+    .philo-school-card-v8:hover .philo-school-v8-img {
+      transform: scale(1.05);
     }
-    .philo-school-v7-body {
-      padding: 22px;
+    .philo-school-v8-body {
+      padding: 24px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -762,7 +774,7 @@
         </div>
       </section>
 
-      <!-- 14. ARTICLES PHILOSOPHIQUES V7 (CHACUN AVEC SA PROPRE ILLUSTRATION ÉDITORIALE) -->
+      <!-- 14. ARTICLES PHILOSOPHIQUES V7 -->
       <section class="philo-v5-section">
         <div class="philo-v5-heading">
           <h2>أهم المقالات والدراسات الفلسفية</h2>
@@ -858,106 +870,106 @@
         </div>
       </section>
 
-      <!-- 10 & 11. SECTION ÉCOLES PHILOSOPHIQUES V7 (GALERIE INTELLECTUELLE AVEC ILLUSTRATIONS HD 45-50% HAUTEUR) -->
+      <!-- 10 & 11. SECTION ÉCOLES PHILOSOPHIQUES V8 (GALERIE PHILOSOPHIQUE PREMIUM 3 COLONNES) -->
       <section id="schools" class="philo-v5-section">
         <div class="philo-v5-heading">
           <h2>المدارس الفلسفية</h2>
           <p>تيارات ومدارس أعادت تشكيل التفكير البشري عبر العصور.</p>
         </div>
 
-        <div class="philo-schools-v7-grid">
+        <div class="philo-schools-v8-grid">
           
           <!-- École 01: الفلسفة القديمة -->
-          <article class="philo-school-card-v7">
-            <div class="philo-school-v7-imgbox">
-              <img src="../socrates_delphi_temple.jpg" alt="معبد يوناني قديم يعبر عن نشأة الفلسفة القديمة والحوار السقراطي" class="philo-school-v7-img" loading="lazy">
+          <article class="philo-school-card-v8">
+            <div class="philo-school-v8-imgbox">
+              <img src="../socrates_delphi_temple.jpg" alt="أغورا يونانية قديمة ترمز إلى نشأة الفلسفة" class="philo-school-v8-img" loading="lazy">
               <div class="philo-card-v5-overlay"></div>
               <span class="philo-card-giant-num">01</span>
             </div>
-            <div class="philo-school-v7-body">
+            <div class="philo-school-v8-body">
               <div>
-                <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 8px;">الفلسفة القديمة</h3>
-                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px;">البحث في أصل الوجود والفضيلة والعقل بين أثينا والدلفي عند سقراط وأفلاطون وأرسطو.</p>
+                <h3 style="font-size: 1.3rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 10px;">الفلسفة القديمة</h3>
+                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.7; margin-bottom: 20px;">البحث في أصل الوجود والفضيلة والعقل، من أثينا إلى المدارس الفلسفية القديمة.</p>
               </div>
               <a href="../thinkers/" class="philo-card-v5-link">اكتشف المدرسة ←</a>
             </div>
           </article>
 
           <!-- École 02: الرواقية -->
-          <article class="philo-school-card-v7">
-            <div class="philo-school-v7-imgbox">
-              <img src="../marc_aurelius_writing.jpg" alt="تمثال وثيقة ماركوس أوريليوس تعبر عن السكينة والضبط الرواقي" class="philo-school-v7-img" loading="lazy">
+          <article class="philo-school-card-v8">
+            <div class="philo-school-v8-imgbox">
+              <img src="../marc_aurelius_writing.jpg" alt="تمثال قديم أمام بحر هائج يرمز إلى الثبات الرواقي" class="philo-school-v8-img" loading="lazy">
               <div class="philo-card-v5-overlay"></div>
               <span class="philo-card-giant-num">02</span>
             </div>
-            <div class="philo-school-v7-body">
+            <div class="philo-school-v8-body">
               <div>
-                <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 8px;">الرواقية</h3>
-                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px;">فن السيطرة على ما يمكننا التحكم فيه وتقبل ما لا نملك تغييرك بهدوء وسلام داخلي.</p>
+                <h3 style="font-size: 1.3rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 10px;">الرواقية</h3>
+                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.7; margin-bottom: 20px;">فن السيطرة على ما يمكننا التحكم فيه، وتقبّل ما لا نملك تغييره.</p>
               </div>
               <a href="../sagesse/" class="philo-card-v5-link">اكتشف المدرسة ←</a>
             </div>
           </article>
 
           <!-- École 03: الفلسفة الحديثة -->
-          <article class="philo-school-card-v7">
-            <div class="philo-school-v7-imgbox">
-              <img src="../desk_coffee_book.jpg" alt="مكتب دراسي قديم وكتب وأوراق تعبر عن المنهج العقلاني في الفلسفة الحديثة" class="philo-school-v7-img" loading="lazy">
+          <article class="philo-school-card-v8">
+            <div class="philo-school-v8-imgbox">
+              <img src="../desk_coffee_book.jpg" alt="مكتب فلسفي قديم وكتب ومخطوطات ترمز إلى العقل والمنهج" class="philo-school-v8-img" loading="lazy">
               <div class="philo-card-v5-overlay"></div>
               <span class="philo-card-giant-num">03</span>
             </div>
-            <div class="philo-school-v7-body">
+            <div class="philo-school-v8-body">
               <div>
-                <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 8px;">الفلسفة الحديثة</h3>
-                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px;">تأسيس منهج الشك والعقلانية وحقوق الإنسان من ديكارت وسبينوزا إلى كانط.</p>
+                <h3 style="font-size: 1.3rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 10px;">الفلسفة الحديثة</h3>
+                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.7; margin-bottom: 20px;">رحلة العقل من الشك والمنهج إلى المعرفة والعلم والحرية.</p>
               </div>
               <a href="../thinkers/" class="philo-card-v5-link">اكتشف المدرسة ←</a>
             </div>
           </article>
 
           <!-- École 04: الوجودية -->
-          <article class="philo-school-card-v7">
-            <div class="philo-school-v7-imgbox">
-              <img src="../autumn_forest_solitude_walk.jpg" alt="شخص يتأمل في غابة خريفية تعبيراً عن التفكير الحر والوجودي" class="philo-school-v7-img" loading="lazy">
+          <article class="philo-school-card-v8">
+            <div class="philo-school-v8-imgbox">
+              <img src="../autumn_forest_solitude_walk.jpg" alt="شخص يقف أمام أفق واسع يرمز إلى الحرية والوجود" class="philo-school-v8-img" loading="lazy">
               <div class="philo-card-v5-overlay"></div>
               <span class="philo-card-giant-num">04</span>
             </div>
-            <div class="philo-school-v7-body">
+            <div class="philo-school-v8-body">
               <div>
-                <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 8px;">الوجودية</h3>
-                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px;">التركيز على الوجود الفردي والحرية والمسؤولية وصناعة المعنى الذاتي في العالم.</p>
+                <h3 style="font-size: 1.3rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 10px;">الوجودية</h3>
+                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.7; margin-bottom: 20px;">الوجود والحرية والمسؤولية والبحث عن معنى يصنعه الإنسان بنفسه.</p>
               </div>
               <a href="../files/existentialisme-sens-sartre.html" class="philo-card-v5-link">اكتشف المدرسة ←</a>
             </div>
           </article>
 
           <!-- École 05: الفلسفة الأخلاقية -->
-          <article class="philo-school-card-v7">
-            <div class="philo-school-v7-imgbox">
-              <img src="../luxury_window_reflection.jpg" alt="ضوء وظلال عبر نافذة تعبر عن فحص القيم والضمير الأخلاقي" class="philo-school-v7-img" loading="lazy">
+          <article class="philo-school-card-v8">
+            <div class="philo-school-v8-imgbox">
+              <img src="../luxury_window_reflection.jpg" alt="ميزان قديم مضاء يرمز إلى العدالة والأخلاق" class="philo-school-v8-img" loading="lazy">
               <div class="philo-card-v5-overlay"></div>
               <span class="philo-card-giant-num">05</span>
             </div>
-            <div class="philo-school-v7-body">
+            <div class="philo-school-v8-body">
               <div>
-                <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 8px;">الفلسفة الأخلاقية</h3>
-                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px;">فحص مفاهيم الخير والعدالة والغاية الإنسانية ومسؤولية الفعل تجاه الذات والمجتمع.</p>
+                <h3 style="font-size: 1.3rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 10px;">الفلسفة الأخلاقية</h3>
+                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.7; margin-bottom: 20px;">أسئلة الخير والعدالة والغاية الإنسانية ومسؤولية الفعل.</p>
               </div>
               <a href="../articles/" class="philo-card-v5-link">اكتشف المدرسة ←</a>
             </div>
           </article>
 
           <!-- École 06: الفلسفة المعاصرة -->
-          <article class="philo-school-card-v7">
-            <div class="philo-school-v7-imgbox">
-              <img src="../person_window_sunrise.jpg" alt="إنسان ينظر من نافذة حديثة نحو الشروق تعبيراً عن التفكير المعاصر" class="philo-school-v7-img" loading="lazy">
+          <article class="philo-school-card-v8">
+            <div class="philo-school-v8-imgbox">
+              <img src="../person_window_sunrise.jpg" alt="مدينة حديثة وشخص يتأمل المشهد يرمزان إلى الفكر المعاصر" class="philo-school-v8-img" loading="lazy">
               <div class="philo-card-v5-overlay"></div>
               <span class="philo-card-giant-num">06</span>
             </div>
-            <div class="philo-school-v7-body">
+            <div class="philo-school-v8-body">
               <div>
-                <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 8px;">الفلسفة المعاصرة</h3>
-                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px;">تحليل اللغة والمعنى وتحديات العالم الحديث والتكنولوجيا والتفكيك المعرفي.</p>
+                <h3 style="font-size: 1.3rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 10px;">الفلسفة المعاصرة</h3>
+                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.7; margin-bottom: 20px;">اللغة والمعنى والهوية وتحديات العالم الحديث والتكنولوجيا.</p>
               </div>
               <a href="../thinkers/" class="philo-card-v5-link">اكتشف المدرسة ←</a>
             </div>
@@ -1155,6 +1167,6 @@
     </div>
   </footer>
 
-  <script src="../app_v11.js?v=24" type="module"></script>
+  <script src="../app_v11.js?v=25" type="module"></script>
 </body>
 </html>
