@@ -837,24 +837,24 @@
   },
   {
     "file": "psychologie/index.html",
-    "title": "علم النفس وفهم الإنسان — سيكولوجية السلوك، المشاعر والوعي | حكمة ونور",
-    "description": "رحلة لفهم العقل، المشاعر، السلوك، والعلاقات الإنسانية: مسارات فهم الذات، رواد التحليل النفسي وعلم النفس المعرفي، ودراسات نفسية رصينة.",
+    "title": "علم النفس وفهم الإنسان | Jardin des Pensées",
+    "description": "اكتشف علم النفس من خلال فهم الذات، المشاعر، العلاقات، السلوك والنمو، مع مقالات وأفكار من أبرز المفكرين.",
     "canonical": "https://jardin-des-pensees.onrender.com/psychologie/",
     "lang": "ar",
     "dir": "rtl",
     "h1Count": 1,
     "h1List": [
-      "علم النفس وفهم الإنسان"
+      "علم النفسوفهم الإنسان"
     ],
-    "ogTitle": "علم النفس وفهم الإنسان — سيكولوجية السلوك، المشاعر والوعي | حكمة ونور",
-    "ogDesc": "رحلة لفهم العقل، المشاعر، السلوك، والعلاقات الإنسانية: مسارات فهم الذات، رواد التحليل النفسي ودراسات نفسية رصينة.",
+    "ogTitle": "علم النفس وفهم الإنسان | Jardin des Pensées",
+    "ogDesc": "اكتشف علم النفس من خلال فهم الذات، المشاعر، العلاقات، السلوك والنمو، مع مقالات وأفكار من أبرز المفكرين.",
     "ogImage": "https://jardin-des-pensees.onrender.com/pillar_psychology_hd.jpg",
     "ogUrl": "https://jardin-des-pensees.onrender.com/psychologie/",
     "ogType": "website",
     "twitterCard": "summary_large_image",
     "hasJsonLd": true,
     "jsonLdValid": true,
-    "totalImgs": 15,
+    "totalImgs": 19,
     "imgsWithoutAlt": 0
   },
   {
