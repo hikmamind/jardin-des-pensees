@@ -794,7 +794,7 @@
   {
     "file": "philosophie/index.html",
     "title": "الفلسفة والبحث عن المعنى | حكمة ونور",
-    "description": "استكشف المحاور الفلسفية الخمسة الكبرى في حكمة ونور: الفلسفة القديمة، الحديثة، الوجودية، الإرادة والقوة، والأخلاق والحياة. مقالات ودراسات rصينة.",
+    "description": "مجلة فلسفية إلكترونية فاخرة: استكشف المسارات الفلسفية الخمسة الكبرى، المدارس الفكرية، وأعظم الفلاسفة من اليونان إلى الفلسفة المعاصرة.",
     "canonical": "https://jardin-des-pensees.onrender.com/philosophie/",
     "lang": "ar",
     "dir": "rtl",
@@ -803,14 +803,14 @@
       "الفلسفة والبحث عن المعنى"
     ],
     "ogTitle": "الفلسفة والبحث عن المعنى | حكمة ونور",
-    "ogDesc": "استكشف المحاور الفلسفية الخمسة الكبرى في حكمة ونور: الفلسفة القديمة، الحديثة، الوجودية، الإرادة والقوة، والأخلاق والحياة.",
+    "ogDesc": "مجلة فلسفية إلكترونية فاخرة: استكشف المسارات الفلسفية الخمسة الكبرى، المدارس الفكرية، وأعظم الفلاسفة.",
     "ogImage": "https://jardin-des-pensees.onrender.com/pillar_philosophy_hd.jpg",
     "ogUrl": "https://jardin-des-pensees.onrender.com/philosophie/",
     "ogType": "website",
     "twitterCard": "summary_large_image",
     "hasJsonLd": true,
     "jsonLdValid": true,
-    "totalImgs": 23,
+    "totalImgs": 15,
     "imgsWithoutAlt": 0
   },
   {
