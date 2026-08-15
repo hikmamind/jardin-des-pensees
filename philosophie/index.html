@@ -77,10 +77,10 @@
   </script>
 
   <!-- Main Stylesheet (Shared) -->
-  <link rel="stylesheet" href="../style.css?v=23">
+  <link rel="stylesheet" href="../style.css?v=24">
   
   <style>
-    /* Dark Academia Editorial Design Tokens (V5) */
+    /* Dark Academia Editorial Design Tokens (V5/V7) */
     html.philosophie-page-v5, 
     body {
       background-color: #07100D !important;
@@ -383,25 +383,49 @@
       overflow: hidden;
     }
 
-    /* Minimalist Schools Grid */
-    .philo-schools-v5-grid {
+    /* Rich Schools Grid with HD Illustrations (V7) */
+    .philo-schools-v7-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 20px;
+      gap: 24px;
     }
-    .philo-school-item-v5 {
+    .philo-school-card-v7 {
       background: #0D1814;
-      border: 1px solid rgba(201, 168, 106, 0.2);
-      border-radius: 18px;
-      padding: 22px 24px;
-      transition: all 0.3s ease;
+      border: 1px solid rgba(201, 168, 106, 0.22);
+      border-radius: 22px;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+      position: relative;
     }
-    .philo-school-item-v5:hover {
+    .philo-school-card-v7:hover {
+      transform: translateY(-6px);
       border-color: #C9A86A;
-      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+    }
+    .philo-school-v7-imgbox {
+      position: relative;
+      width: 100%;
+      height: 160px;
+      overflow: hidden;
+    }
+    .philo-school-v7-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .philo-school-card-v7:hover .philo-school-v7-img {
+      transform: scale(1.04);
+    }
+    .philo-school-v7-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
     }
 
     /* Philosophers Profile Cards V5 */
@@ -606,7 +630,7 @@
           <!-- Carte 01: الفلسفة القديمة -->
           <article class="philo-card-v5">
             <div class="philo-card-v5-imgbox">
-              <img src="../socrates_delphi_temple.jpg" alt="الفلسفة القديمة" class="philo-card-v5-img" loading="lazy">
+              <img src="../socrates_delphi_temple.jpg" alt="مكتبة فلسفية قديمة ترمز إلى بداية البحث عن المعرفة" class="philo-card-v5-img" loading="lazy">
               <div class="philo-card-v5-overlay"></div>
               <span class="philo-card-giant-num">01</span>
             </div>
@@ -623,7 +647,7 @@
           <!-- Carte 02: الفلسفة الحديثة -->
           <article class="philo-card-v5">
             <div class="philo-card-v5-imgbox">
-              <img src="../pillar_philosophy_hd.jpg" alt="الفلسفة الحديثة" class="philo-card-v5-img" loading="lazy">
+              <img src="../pillar_philosophy_hd.jpg" alt="مكتب دراسي قديم ومخطوطات تعبر عن العقلانية والمنهج الحديث" class="philo-card-v5-img" loading="lazy">
               <div class="philo-card-v5-overlay"></div>
               <span class="philo-card-giant-num">02</span>
             </div>
@@ -640,7 +664,7 @@
           <!-- Carte 03: الوجودية وصناعة المعنى -->
           <article class="philo-card-v5">
             <div class="philo-card-v5-imgbox">
-              <img src="../autumn_forest_solitude_walk.jpg" alt="الوجودية وصناعة المعنى" class="philo-card-v5-img" loading="lazy">
+              <img src="../autumn_forest_solitude_walk.jpg" alt="شخص يسير بمفرده في غابة غائمة تعبيراً عن التفكير الوجودي" class="philo-card-v5-img" loading="lazy">
               <div class="philo-card-v5-overlay"></div>
               <span class="philo-card-giant-num">03</span>
             </div>
@@ -657,7 +681,7 @@
           <!-- Carte 04: الإرادة والقوة وتجاوز الذات -->
           <article class="philo-card-v5">
             <div class="philo-card-v5-imgbox">
-              <img src="../nietzsche_mountain_climber.jpg" alt="الإرادة والقوة وتجاوز الذات" class="philo-card-v5-img" loading="lazy">
+              <img src="../nietzsche_mountain_climber.jpg" alt="متسلق قمم يرمز لإرادة القوة وتجاوز الذات" class="philo-card-v5-img" loading="lazy">
               <div class="philo-card-v5-overlay"></div>
               <span class="philo-card-giant-num">04</span>
             </div>
@@ -674,7 +698,7 @@
           <!-- Carte 05: الأخلاق والإنسان والحياة -->
           <article class="philo-card-v5">
             <div class="philo-card-v5-imgbox">
-              <img src="../pillar_growth_hd.jpg" alt="الأخلاق والإنسان والحياة" class="philo-card-v5-img" loading="lazy">
+              <img src="../pillar_growth_hd.jpg" alt="طريق مضاء بالضوء والظلال يعبر عن رحلة الأخلاق والضمير" class="philo-card-v5-img" loading="lazy">
               <div class="philo-card-v5-overlay"></div>
               <span class="philo-card-giant-num">05</span>
             </div>
@@ -709,7 +733,7 @@
         </div>
       </section>
 
-      <!-- 13. SECTION — STUDY MAG / ARTICLE À LA UNE -->
+      <!-- 13. SECTION — STUDY MAG / ARTICLE À LA UNE (V7 HD ILLUSTRATION SCHOPENHAUER) -->
       <section class="philo-v5-section">
         <div class="philo-v5-heading">
           <h2>الدراسة الفلسفية الرئيسية</h2>
@@ -718,7 +742,7 @@
 
         <div class="philo-mag-article">
           <div style="position: relative; min-height: 320px; overflow: hidden;">
-            <img src="../pillar_philosophy_hd.jpg" alt="لماذا اعتبر شوبنهاور أن السعادة مجرد وهم؟" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+            <img src="../oil_lamp_library_window.jpg" alt="مفكر يتأمل في مكتبة قديمة دلالة على فلسفة شوبنهاور في الوهم والسعادة" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
           </div>
           <div style="padding: 40px 35px; display: flex; flex-direction: column; justify-content: space-between;">
             <div>
@@ -738,128 +762,206 @@
         </div>
       </section>
 
-      <!-- 14. ARTICLES PHILOSOPHIQUES (1 PRINCIPAL + 4 SECONDAIRES) -->
+      <!-- 14. ARTICLES PHILOSOPHIQUES V7 (CHACUN AVEC SA PROPRE ILLUSTRATION ÉDITORIALE) -->
       <section class="philo-v5-section">
         <div class="philo-v5-heading">
           <h2>أهم المقالات والدراسات الفلسفية</h2>
           <p>مختارات تحريرية في التحليل الوجودي، الأخلاقي، والتأمل الإنساني</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;">
           
-          <article class="philo-card-v5" style="padding: 24px;">
-            <span style="font-size: 0.78rem; color: #C9A86A; font-weight: 700; margin-bottom: 8px;">نيتشه • إرادة القوة</span>
-            <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 10px; line-height: 1.4;">
-              <a href="../articles/nietzsche-psychological-strength.html" style="color: inherit; text-decoration: none;">كيف تبني قوة نفسية صلبة مستوحاة من فلسفة نيتشه؟</a>
-            </h3>
-            <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.65; margin-bottom: 20px;">دروس عملية في احتضان المعاناة وتطبيق مبدأ حب القدر (Amor Fati) بشجاعة وتحدي الصعاب.</p>
-            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(201, 168, 106, 0.15); padding-top: 14px; margin-top: auto;">
-              <span style="font-size: 0.82rem; color: #A9AAA4;">⏱️ 6 دقائق</span>
-              <a href="../articles/nietzsche-psychological-strength.html" class="philo-card-v5-link">اقرأ المقال كاملاً ←</a>
+          <!-- Article 1: Nietzsche -->
+          <article class="philo-card-v5">
+            <div class="philo-card-v5-imgbox">
+              <img src="../nietzsche_mountain_climber.jpg" alt="متسلق جبال يتجه نحو الشروق تعبيراً عن القوة النفسية وتجاوز الذات عند نيتشه" class="philo-card-v5-img" loading="lazy">
+              <div class="philo-card-v5-overlay"></div>
+            </div>
+            <div class="philo-card-v5-body">
+              <div>
+                <span style="font-size: 0.78rem; color: #C9A86A; font-weight: 700; margin-bottom: 8px; display: block;">نيتشه • إرادة القوة</span>
+                <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 10px; line-height: 1.4;">
+                  <a href="../articles/nietzsche-psychological-strength.html" style="color: inherit; text-decoration: none;">كيف تبني قوة نفسية صلبة مستوحاة من فلسفة نيتشه؟</a>
+                </h3>
+                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.65; margin-bottom: 20px;">دروس عملية في احتضان المعاناة وتطبيق مبدأ حب القدر (Amor Fati) بشجاعة وتحدي الصعاب.</p>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(201, 168, 106, 0.15); padding-top: 14px; margin-top: auto;">
+                <span style="font-size: 0.82rem; color: #A9AAA4;">⏱️ 6 دقائق</span>
+                <a href="../articles/nietzsche-psychological-strength.html" class="philo-card-v5-link">اقرأ المقال كاملاً ←</a>
+              </div>
             </div>
           </article>
 
-          <article class="philo-card-v5" style="padding: 24px;">
-            <span style="font-size: 0.78rem; color: #C9A86A; font-weight: 700; margin-bottom: 8px;">كامو • الوجودية والعبث</span>
-            <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 10px; line-height: 1.4;">
-              <a href="../files/absurde-camus.html" style="color: inherit; text-decoration: none;">العبث والحرية عند ألبير كامو</a>
-            </h3>
-            <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.65; margin-bottom: 20px;">أسطورة سيزيف وكيف نعيش بتمرد حر وسعادة واعية في مواجهة عبثية الوجود دون هروب وهمي.</p>
-            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(201, 168, 106, 0.15); padding-top: 14px; margin-top: auto;">
-              <span style="font-size: 0.82rem; color: #A9AAA4;">⏱️ 8 دقائق</span>
-              <a href="../files/absurde-camus.html" class="philo-card-v5-link">اقرأ المقال كاملاً ←</a>
+          <!-- Article 2: Camus -->
+          <article class="philo-card-v5">
+            <div class="philo-card-v5-imgbox">
+              <img src="../person_hill_horizon.jpg" alt="شخص يتأمل في أفق واسع تعبيراً عن الحرية في مواجهة العبث عند كامو" class="philo-card-v5-img" loading="lazy">
+              <div class="philo-card-v5-overlay"></div>
+            </div>
+            <div class="philo-card-v5-body">
+              <div>
+                <span style="font-size: 0.78rem; color: #C9A86A; font-weight: 700; margin-bottom: 8px; display: block;">كامو • الوجودية والعبث</span>
+                <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 10px; line-height: 1.4;">
+                  <a href="../files/absurde-camus.html" style="color: inherit; text-decoration: none;">العبث والحرية عند ألبير كامو</a>
+                </h3>
+                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.65; margin-bottom: 20px;">أسطورة سيزيف وكيف نعيش بتمرد حر وسعادة واعية في مواجهة عبثية الوجود دون هروب وهمي.</p>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(201, 168, 106, 0.15); padding-top: 14px; margin-top: auto;">
+                <span style="font-size: 0.82rem; color: #A9AAA4;">⏱️ 8 دقائق</span>
+                <a href="../files/absurde-camus.html" class="philo-card-v5-link">اقرأ المقال كاملاً ←</a>
+              </div>
             </div>
           </article>
 
-          <article class="philo-card-v5" style="padding: 24px;">
-            <span style="font-size: 0.78rem; color: #C9A86A; font-weight: 700; margin-bottom: 8px;">سارتر • الحرية والمسؤولية</span>
-            <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 10px; line-height: 1.4;">
-              <a href="../files/existentialisme-sens-sartre.html" style="color: inherit; text-decoration: none;">الوجودية وصناعة المعنى عند جان بول سارتر</a>
-            </h3>
-            <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.65; margin-bottom: 20px;">الوجود يسبق الماهية: كيف تصنع جوهرك ومصيرك بقراراتك الصادقة ومسؤوليتك التامة تجاه أفعالك.</p>
-            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(201, 168, 106, 0.15); padding-top: 14px; margin-top: auto;">
-              <span style="font-size: 0.82rem; color: #A9AAA4;">⏱️ 7 دقائق</span>
-              <a href="../files/existentialisme-sens-sartre.html" class="philo-card-v5-link">اقرأ المقال كاملاً ←</a>
+          <!-- Article 3: Sartre -->
+          <article class="philo-card-v5">
+            <div class="philo-card-v5-imgbox">
+              <img src="../path_fork_glowing_book.jpg" alt="مفترق طرق يرمز للاختيار والمسؤولية والحرية الوجودية عند سارتر" class="philo-card-v5-img" loading="lazy">
+              <div class="philo-card-v5-overlay"></div>
+            </div>
+            <div class="philo-card-v5-body">
+              <div>
+                <span style="font-size: 0.78rem; color: #C9A86A; font-weight: 700; margin-bottom: 8px; display: block;">سارتر • الحرية والمسؤولية</span>
+                <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 10px; line-height: 1.4;">
+                  <a href="../files/existentialisme-sens-sartre.html" style="color: inherit; text-decoration: none;">الوجودية وصناعة المعنى عند جان بول سارتر</a>
+                </h3>
+                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.65; margin-bottom: 20px;">الوجود يسبق الماهية: كيف تصنع جوهرك ومصيرك بقراراتك الصادقة ومسؤوليتك التامة تجاه أفعالك.</p>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(201, 168, 106, 0.15); padding-top: 14px; margin-top: auto;">
+                <span style="font-size: 0.82rem; color: #A9AAA4;">⏱️ 7 دقائق</span>
+                <a href="../files/existentialisme-sens-sartre.html" class="philo-card-v5-link">اقرأ المقال كاملاً ←</a>
+              </div>
             </div>
           </article>
 
-          <article class="philo-card-v5" style="padding: 24px;">
-            <span style="font-size: 0.78rem; color: #C9A86A; font-weight: 700; margin-bottom: 8px;">شوبنهاور • فن العيش</span>
-            <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 10px; line-height: 1.4;">
-              <a href="../files/20-citations-schopenhauer.html" style="color: inherit; text-decoration: none;">20 حكمة خالدة من آرثر شوبنهاور في فن العيش</a>
-            </h3>
-            <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.65; margin-bottom: 20px;">خلاصات عميقة في فهم الطبيعة البشرية، العزلة النبيلة، وفن التعامل مع صخب العالم بواقعية صريحة.</p>
-            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(201, 168, 106, 0.15); padding-top: 14px; margin-top: auto;">
-              <span style="font-size: 0.82rem; color: #A9AAA4;">⏱️ 5 دقائق</span>
-              <a href="../files/20-citations-schopenhauer.html" class="philo-card-v5-link">اقرأ المقال كاملاً ←</a>
+          <!-- Article 4: Schopenhauer 20 Quotes -->
+          <article class="philo-card-v5">
+            <div class="philo-card-v5-imgbox">
+              <img src="../journal_candle_dark.jpg" alt="دفتر تدوين قديم وشمعة ترمز للتأمل والعزلة النبيلة عند شوبنهاور" class="philo-card-v5-img" loading="lazy">
+              <div class="philo-card-v5-overlay"></div>
+            </div>
+            <div class="philo-card-v5-body">
+              <div>
+                <span style="font-size: 0.78rem; color: #C9A86A; font-weight: 700; margin-bottom: 8px; display: block;">شوبنهاور • فن العيش</span>
+                <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 10px; line-height: 1.4;">
+                  <a href="../files/20-citations-schopenhauer.html" style="color: inherit; text-decoration: none;">20 حكمة خالدة من آرثر شوبنهاور في فن العيش</a>
+                </h3>
+                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.65; margin-bottom: 20px;">خلاصات عميقة في فهم الطبيعة البشرية، العزلة النبيلة، وفن التعامل مع صخب العالم بواقعية صريحة.</p>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(201, 168, 106, 0.15); padding-top: 14px; margin-top: auto;">
+                <span style="font-size: 0.82rem; color: #A9AAA4;">⏱️ 5 دقائق</span>
+                <a href="../files/20-citations-schopenhauer.html" class="philo-card-v5-link">اقرأ المقال كاملاً ←</a>
+              </div>
             </div>
           </article>
 
         </div>
       </section>
 
-      <!-- 10 & 11. SECTION ÉCOLES PHILOSOPHIQUES (GRILLE MINIMALISTE V5) -->
+      <!-- 10 & 11. SECTION ÉCOLES PHILOSOPHIQUES V7 (GALERIE INTELLECTUELLE AVEC ILLUSTRATIONS HD 45-50% HAUTEUR) -->
       <section id="schools" class="philo-v5-section">
         <div class="philo-v5-heading">
           <h2>المدارس الفلسفية</h2>
           <p>تيارات ومدارس أعادت تشكيل التفكير البشري عبر العصور.</p>
         </div>
 
-        <div class="philo-schools-v5-grid">
+        <div class="philo-schools-v7-grid">
           
-          <div class="philo-school-item-v5">
-            <div>
-              <span style="font-size: 0.78rem; color: #C9A86A; font-weight: 800; font-family: 'Playfair Display', serif;">01</span>
-              <h3 style="font-size: 1.2rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 6px 0 8px;">الفلسفة القديمة</h3>
-              <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px;">البحث في أصل الوجود والفضيلة والعقل بين أثينا والدلفي.</p>
+          <!-- École 01: الفلسفة القديمة -->
+          <article class="philo-school-card-v7">
+            <div class="philo-school-v7-imgbox">
+              <img src="../socrates_delphi_temple.jpg" alt="معبد يوناني قديم يعبر عن نشأة الفلسفة القديمة والحوار السقراطي" class="philo-school-v7-img" loading="lazy">
+              <div class="philo-card-v5-overlay"></div>
+              <span class="philo-card-giant-num">01</span>
             </div>
-            <a href="../thinkers/" class="philo-card-v5-link">اكتشف ←</a>
-          </div>
+            <div class="philo-school-v7-body">
+              <div>
+                <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 8px;">الفلسفة القديمة</h3>
+                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px;">البحث في أصل الوجود والفضيلة والعقل بين أثينا والدلفي عند سقراط وأفلاطون وأرسطو.</p>
+              </div>
+              <a href="../thinkers/" class="philo-card-v5-link">اكتشف المدرسة ←</a>
+            </div>
+          </article>
 
-          <div class="philo-school-item-v5">
-            <div>
-              <span style="font-size: 0.78rem; color: #C9A86A; font-weight: 800; font-family: 'Playfair Display', serif;">02</span>
-              <h3 style="font-size: 1.2rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 6px 0 8px;">الرواقية</h3>
-              <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px;">فن السيطرة على ما يمكننا التحكم فيه وتقبل ما لا نملك تغييرك.</p>
+          <!-- École 02: الرواقية -->
+          <article class="philo-school-card-v7">
+            <div class="philo-school-v7-imgbox">
+              <img src="../marc_aurelius_writing.jpg" alt="تمثال وثيقة ماركوس أوريليوس تعبر عن السكينة والضبط الرواقي" class="philo-school-v7-img" loading="lazy">
+              <div class="philo-card-v5-overlay"></div>
+              <span class="philo-card-giant-num">02</span>
             </div>
-            <a href="../sagesse/" class="philo-card-v5-link">اكتشف ←</a>
-          </div>
+            <div class="philo-school-v7-body">
+              <div>
+                <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 8px;">الرواقية</h3>
+                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px;">فن السيطرة على ما يمكننا التحكم فيه وتقبل ما لا نملك تغييرك بهدوء وسلام داخلي.</p>
+              </div>
+              <a href="../sagesse/" class="philo-card-v5-link">اكتشف المدرسة ←</a>
+            </div>
+          </article>
 
-          <div class="philo-school-item-v5">
-            <div>
-              <span style="font-size: 0.78rem; color: #C9A86A; font-weight: 800; font-family: 'Playfair Display', serif;">03</span>
-              <h3 style="font-size: 1.2rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 6px 0 8px;">الفلسفة الحديثة</h3>
-              <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px;">تأسيس منهج الشك والعقلانية وحقوق الإنسان والمنهج العلمي.</p>
+          <!-- École 03: الفلسفة الحديثة -->
+          <article class="philo-school-card-v7">
+            <div class="philo-school-v7-imgbox">
+              <img src="../desk_coffee_book.jpg" alt="مكتب دراسي قديم وكتب وأوراق تعبر عن المنهج العقلاني في الفلسفة الحديثة" class="philo-school-v7-img" loading="lazy">
+              <div class="philo-card-v5-overlay"></div>
+              <span class="philo-card-giant-num">03</span>
             </div>
-            <a href="../thinkers/" class="philo-card-v5-link">اكتشف ←</a>
-          </div>
+            <div class="philo-school-v7-body">
+              <div>
+                <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 8px;">الفلسفة الحديثة</h3>
+                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px;">تأسيس منهج الشك والعقلانية وحقوق الإنسان من ديكارت وسبينوزا إلى كانط.</p>
+              </div>
+              <a href="../thinkers/" class="philo-card-v5-link">اكتشف المدرسة ←</a>
+            </div>
+          </article>
 
-          <div class="philo-school-item-v5">
-            <div>
-              <span style="font-size: 0.78rem; color: #C9A86A; font-weight: 800; font-family: 'Playfair Display', serif;">04</span>
-              <h3 style="font-size: 1.2rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 6px 0 8px;">الوجودية</h3>
-              <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px;">التركيز على الوجود الفردي والحرية والمسؤولية وصناعة المعنى.</p>
+          <!-- École 04: الوجودية -->
+          <article class="philo-school-card-v7">
+            <div class="philo-school-v7-imgbox">
+              <img src="../autumn_forest_solitude_walk.jpg" alt="شخص يتأمل في غابة خريفية تعبيراً عن التفكير الحر والوجودي" class="philo-school-v7-img" loading="lazy">
+              <div class="philo-card-v5-overlay"></div>
+              <span class="philo-card-giant-num">04</span>
             </div>
-            <a href="../files/existentialisme-sens-sartre.html" class="philo-card-v5-link">اكتشف ←</a>
-          </div>
+            <div class="philo-school-v7-body">
+              <div>
+                <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 8px;">الوجودية</h3>
+                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px;">التركيز على الوجود الفردي والحرية والمسؤولية وصناعة المعنى الذاتي في العالم.</p>
+              </div>
+              <a href="../files/existentialisme-sens-sartre.html" class="philo-card-v5-link">اكتشف المدرسة ←</a>
+            </div>
+          </article>
 
-          <div class="philo-school-item-v5">
-            <div>
-              <span style="font-size: 0.78rem; color: #C9A86A; font-weight: 800; font-family: 'Playfair Display', serif;">05</span>
-              <h3 style="font-size: 1.2rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 6px 0 8px;">الفلسفة الأخلاقية</h3>
-              <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px;">فحص مفاهيم الخير والعدالة والغاية الإنسانية ومسؤولية الفعل.</p>
+          <!-- École 05: الفلسفة الأخلاقية -->
+          <article class="philo-school-card-v7">
+            <div class="philo-school-v7-imgbox">
+              <img src="../luxury_window_reflection.jpg" alt="ضوء وظلال عبر نافذة تعبر عن فحص القيم والضمير الأخلاقي" class="philo-school-v7-img" loading="lazy">
+              <div class="philo-card-v5-overlay"></div>
+              <span class="philo-card-giant-num">05</span>
             </div>
-            <a href="../articles/" class="philo-card-v5-link">اكتشف ←</a>
-          </div>
+            <div class="philo-school-v7-body">
+              <div>
+                <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 8px;">الفلسفة الأخلاقية</h3>
+                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px;">فحص مفاهيم الخير والعدالة والغاية الإنسانية ومسؤولية الفعل تجاه الذات والمجتمع.</p>
+              </div>
+              <a href="../articles/" class="philo-card-v5-link">اكتشف المدرسة ←</a>
+            </div>
+          </article>
 
-          <div class="philo-school-item-v5">
-            <div>
-              <span style="font-size: 0.78rem; color: #C9A86A; font-weight: 800; font-family: 'Playfair Display', serif;">06</span>
-              <h3 style="font-size: 1.2rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 6px 0 8px;">الفلسفة المعاصرة</h3>
-              <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px;">تحليل اللغة والمعنى وتحديات العالم الحديث والتكنولوجيا.</p>
+          <!-- École 06: الفلسفة المعاصرة -->
+          <article class="philo-school-card-v7">
+            <div class="philo-school-v7-imgbox">
+              <img src="../person_window_sunrise.jpg" alt="إنسان ينظر من نافذة حديثة نحو الشروق تعبيراً عن التفكير المعاصر" class="philo-school-v7-img" loading="lazy">
+              <div class="philo-card-v5-overlay"></div>
+              <span class="philo-card-giant-num">06</span>
             </div>
-            <a href="../thinkers/" class="philo-card-v5-link">اكتشف ←</a>
-          </div>
+            <div class="philo-school-v7-body">
+              <div>
+                <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 8px;">الفلسفة المعاصرة</h3>
+                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px;">تحليل اللغة والمعنى وتحديات العالم الحديث والتكنولوجيا والتفكيك المعرفي.</p>
+              </div>
+              <a href="../thinkers/" class="philo-card-v5-link">اكتشف المدرسة ←</a>
+            </div>
+          </article>
 
         </div>
       </section>
@@ -1053,6 +1155,6 @@
     </div>
   </footer>
 
-  <script src="../app_v11.js?v=23" type="module"></script>
+  <script src="../app_v11.js?v=24" type="module"></script>
 </body>
 </html>
