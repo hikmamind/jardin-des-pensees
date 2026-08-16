@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO Meta Tags -->
-  <title id="philoMetaTitle">الفلسفة | حكمة ونور — رحلة في الأفكار التي شكّلت الفهم الإنساني</title>
-  <meta name="description" content="استكشف تاريخ الفلسفة، المدارس الفلسفية الكبرى، أهم المفكرين، والأسئلة التي شكّلت فهم الإنسان للوجود والمعرفة والسعادة مع حكمة ونور.">
-  <meta name="keywords" content="فلسفة, رواقية, وجودية, سقراط, أفلاطون, أرسطو, ماركوس أوريليوس, نيتشه, سارتر, كامو, شوبنهاور, كانط, مدارس فلسفية, philosophie, stoïcisme, existentialisme">
+  <title id="philoMetaTitle">الفلسفة | مدارس الفكر وأهم الفلاسفة | حكمة ونور</title>
+  <meta name="description" content="اكتشف المدارس الفلسفية الكبرى، أهم المفكرين، والأعمال التي شكلت تاريخ الفكر الإنساني مع حكمة ونور.">
+  <meta name="keywords" content="فلسفة, مدارس فلسفية, رواقية, وجودية, سقراط, أفلاطون, أرسطو, ماركوس أوريليوس, نيتشه, سارتر, كامو, شوبنهاور, كانط, philosophie, stoïcisme">
   <link rel="canonical" href="https://jardin-des-pensees.onrender.com/philosophie/">
   <link rel="alternate" hreflang="ar" href="https://jardin-des-pensees.onrender.com/philosophie/">
   <link rel="alternate" hreflang="fr" href="https://jardin-des-pensees.onrender.com/philosophie/">
@@ -18,21 +18,13 @@
   <!-- Open Graph -->
   <meta property="og:site_name" content="Hikma & Nour — حكمة ونور">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="الفلسفة | حكمة ونور — رحلة في الأفكار التي شكّلت الفهم الإنساني">
-  <meta property="og:description" content="استكشف تاريخ الفلسفة، المدارس الفلسفية الكبرى، أهم المفكرين، والأسئلة التي شكّلت فهم الإنسان للوجود والمعرفة والسعادة.">
+  <meta property="og:title" content="الفلسفة | مدارس الفكر وأهم الفلاسفة | حكمة ونور">
+  <meta property="og:description" content="اكتشف المدارس الفلسفية الكبرى، أهم المفكرين، والأعمال التي شكلت تاريخ الفكر الإنساني.">
   <meta property="og:image" content="https://jardin-des-pensees.onrender.com/pillar_philosophy_hd.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://jardin-des-pensees.onrender.com/philosophie/">
   <meta property="og:locale" content="ar_AR">
-  <meta property="og:locale:alternate" content="fr_FR">
-  <meta property="og:locale:alternate" content="en_US">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="الفلسفة | حكمة ونور">
-  <meta name="twitter:description" content="رحلة في الأفكار والمدارس الفلسفية التي شكّلت الفهم الإنساني عبر التاريخ.">
-  <meta name="twitter:image" content="https://jardin-des-pensees.onrender.com/pillar_philosophy_hd.jpg">
 
   <!-- JSON-LD Structured Data Schema -->
   <script type="application/ld+json">
@@ -44,7 +36,7 @@
         "@id": "https://jardin-des-pensees.onrender.com/philosophie/#webpage",
         "url": "https://jardin-des-pensees.onrender.com/philosophie/",
         "name": "الفلسفة | Hikma & Nour",
-        "description": "استكشف تاريخ الفلسفة، المدارس الفلسفية الكبرى، أهم المفكرين، والأسئلة التي شكّلت فهم الإنسان للوجود والمعرفة والسعادة.",
+        "description": "اكتشف المدارس الفلسفية الكبرى، أهم المفكرين، والأعمال التي شكلت تاريخ الفكر الإنساني.",
         "inLanguage": ["ar", "fr", "en"],
         "isPartOf": {
           "@type": "WebSite",
@@ -82,9 +74,16 @@
   <!-- Main Stylesheet (Shared) -->
   <link rel="stylesheet" href="../style.css?v=16">
 
-  <!-- Custom Styles for Philosophie V3 Refactor -->
+  <!-- Custom Styles for Philosophie V4 Refactor (Max-Width 1200px, 3/2/1 Grid Specs) -->
   <style>
-    /* Header Language Selector & Theme Toggle Clean Integration */
+    /* Container Strict Constraint */
+    .philo-v4-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header Right Actions (Language Dropdown & Theme Toggle Aligned) */
     .header-right-actions {
       display: flex;
       align-items: center;
@@ -184,18 +183,18 @@
       border-color: var(--accent-gold, #DFB15B);
     }
 
-    /* Hero V3 Styling */
-    .philo-hero-v3 {
+    /* Hero V4 Styling */
+    .philo-hero-v4 {
       position: relative;
       border-radius: 28px;
       overflow: hidden;
       background: #0A0F0D;
       border: 1px solid rgba(223, 177, 91, 0.28);
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-      margin-bottom: 40px;
+      margin-bottom: 45px;
     }
 
-    .philo-hero-bg-v3 {
+    .philo-hero-bg-v4 {
       position: absolute;
       inset: 0;
       width: 100%;
@@ -205,14 +204,14 @@
       filter: saturate(1.15) brightness(0.85);
     }
 
-    .philo-hero-overlay-v3 {
+    .philo-hero-overlay-v4 {
       position: absolute;
       inset: 0;
       background: linear-gradient(180deg, rgba(8, 14, 11, 0.6) 0%, rgba(10, 17, 13, 0.95) 100%),
                   radial-gradient(circle at 50% 30%, rgba(223, 177, 91, 0.12) 0%, transparent 70%);
     }
 
-    .philo-hero-content-v3 {
+    .philo-hero-content-v4 {
       position: relative;
       z-index: 2;
       padding: 65px 36px;
@@ -221,7 +220,7 @@
       margin: 0 auto;
     }
 
-    .philo-hero-badge-v3 {
+    .philo-hero-badge-v4 {
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -235,7 +234,7 @@
       margin-bottom: 20px;
     }
 
-    .philo-hero-title-v3 {
+    .philo-hero-title-v4 {
       font-size: clamp(2.4rem, 5.5vw, 3.8rem);
       color: #FFFDF8;
       font-family: 'Playfair Display', 'Amiri', serif;
@@ -244,7 +243,7 @@
       line-height: 1.2;
     }
 
-    .philo-hero-subtitle-v3 {
+    .philo-hero-subtitle-v4 {
       font-size: clamp(1.1rem, 2.5vw, 1.45rem);
       color: #E4C98A;
       font-family: 'Amiri', serif;
@@ -252,7 +251,7 @@
       margin-bottom: 16px;
     }
 
-    .philo-hero-desc-v3 {
+    .philo-hero-desc-v4 {
       font-size: 1.05rem;
       color: #D1D2CA;
       line-height: 1.8;
@@ -268,13 +267,13 @@
     }
 
     /* Section Heading Component */
-    .philo-v3-heading {
+    .philo-v4-heading {
       text-align: center;
       max-width: 780px;
-      margin: 0 auto 35px;
+      margin: 0 auto 38px;
     }
 
-    .philo-v3-heading h2 {
+    .philo-v4-heading h2 {
       font-size: clamp(1.8rem, 3.5vw, 2.3rem);
       color: #FAF6EF;
       font-family: 'Playfair Display', 'Amiri', serif;
@@ -282,7 +281,7 @@
       margin-bottom: 10px;
     }
 
-    .philo-v3-heading p {
+    .philo-v4-heading p {
       font-size: 1rem;
       color: #A9AAA4;
       line-height: 1.7;
@@ -290,13 +289,13 @@
 
     /* Introduction Section Card */
     .philo-intro-card {
-      background: rgba(14, 22, 17, 0.7);
+      background: rgba(14, 22, 17, 0.75);
       border: 1px solid rgba(223, 177, 91, 0.22);
       border-radius: 26px;
-      padding: 40px 32px;
+      padding: 42px 34px;
       text-align: center;
-      max-width: 920px;
-      margin: 0 auto 55px;
+      max-width: 960px;
+      margin: 0 auto 60px;
       box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
     }
 
@@ -305,27 +304,41 @@
       justify-content: center;
       gap: 12px 24px;
       flex-wrap: wrap;
-      margin: 22px 0 26px;
+      margin: 24px 0 28px;
     }
 
     .philo-question-pill {
       background: rgba(223, 177, 91, 0.08);
       border: 1px solid rgba(223, 177, 91, 0.25);
       border-radius: 20px;
-      padding: 6px 16px;
+      padding: 7px 18px;
       color: #E4C98A;
       font-size: 0.92rem;
       font-weight: 700;
     }
 
-    /* Parcours Cards Grid (Uniform 3/2/1 Layout) */
-    .philo-parcours-grid-5 {
+    /* Uniform Grid Rules (Desktop: 3 cols, Tablet: 2 cols, Mobile: 1 col) */
+    .philo-grid-3cols {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      margin-bottom: 55px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
     }
 
+    @media (max-width: 1023px) {
+      .philo-grid-3cols {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .philo-grid-3cols {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    /* Parcours Cards */
     .philo-parcours-card {
       background: rgba(14, 22, 17, 0.88);
       border: 1px solid rgba(223, 177, 91, 0.22);
@@ -334,7 +347,7 @@
       transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      height: 100%;
     }
 
     .philo-parcours-card:hover {
@@ -345,10 +358,11 @@
     }
 
     .philo-parcours-img-box {
-      height: 175px;
+      height: 180px;
       position: relative;
       overflow: hidden;
       background: #0A120D;
+      aspect-ratio: 16 / 9;
     }
 
     .philo-parcours-img {
@@ -408,6 +422,7 @@
       transition: all 0.25s ease;
       width: 100%;
       text-align: center;
+      margin-top: auto;
     }
 
     .philo-parcours-btn:hover {
@@ -416,14 +431,14 @@
     }
 
     .philo-parcours-btn.disabled {
-      opacity: 0.55;
+      opacity: 0.5;
       cursor: not-allowed;
       background: rgba(255, 255, 255, 0.04);
       border-color: rgba(255, 255, 255, 0.1);
-      color: #A9AAA4;
+      color: #777;
     }
 
-    /* Article Card with HD Image */
+    /* Article Card with HD Image (Strict 16:9 Aspect Ratio) */
     .philo-article-card-hd {
       background: rgba(14, 22, 17, 0.88);
       border: 1px solid rgba(223, 177, 91, 0.22);
@@ -432,6 +447,7 @@
       transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
       display: flex;
       flex-direction: column;
+      height: 100%;
     }
 
     .philo-article-card-hd:hover {
@@ -441,7 +457,8 @@
     }
 
     .philo-article-img-box {
-      height: 185px;
+      width: 100%;
+      aspect-ratio: 16 / 9;
       position: relative;
       overflow: hidden;
       background: #0A120D;
@@ -487,9 +504,13 @@
       line-height: 1.65;
       margin-bottom: 20px;
       flex-grow: 1;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
-    /* Thinker Portrait Card */
+    /* Thinker Portrait Card (Real Portraits) */
     .philo-thinker-portrait-card {
       background: rgba(14, 20, 16, 0.85);
       border: 1px solid rgba(223, 177, 91, 0.2);
@@ -500,6 +521,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      height: 100%;
     }
 
     .philo-thinker-portrait-card:hover {
@@ -516,6 +538,7 @@
       margin-bottom: 14px;
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
       background: #0A120D;
+      aspect-ratio: 1 / 1;
     }
 
     .philo-thinker-avatar-img {
@@ -536,15 +559,84 @@
       font-size: 0.8rem;
       color: #E4C98A;
       font-weight: 600;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
 
-    /* Schools Grid V3 */
-    .philo-schools-v3-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 28px;
-      margin-bottom: 55px;
+    /* School Card Styling */
+    .philo-school-card-v4 {
+      background: rgba(14, 22, 17, 0.88);
+      border: 1px solid rgba(223, 177, 91, 0.22);
+      border-radius: 24px;
+      overflow: hidden;
+      transition: all 0.35s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .philo-school-card-v4:hover {
+      border-color: rgba(223, 177, 91, 0.55);
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+    }
+
+    .philo-school-header-img {
+      height: 180px;
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+    }
+
+    .philo-school-header-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .philo-school-card-v4:hover .philo-school-header-img img {
+      transform: scale(1.06);
+    }
+
+    .philo-school-num-badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: rgba(10, 15, 12, 0.85);
+      border: 1px solid rgba(223, 177, 91, 0.4);
+      color: #E4C98A;
+      font-size: 0.82rem;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    [dir="ltr"] .philo-school-num-badge {
+      right: auto;
+      left: 14px;
+    }
+
+    .philo-school-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .philo-school-title {
+      font-size: 1.3rem;
+      color: #FAF6EF;
+      font-family: 'Playfair Display', 'Amiri', serif;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .philo-school-desc {
+      font-size: 0.9rem;
+      color: #A9AAA4;
+      line-height: 1.65;
+      margin-bottom: 18px;
+      flex-grow: 1;
     }
   </style>
 </head>
@@ -599,8 +691,8 @@
     </nav>
   </header>
 
-  <!-- Page Main Container -->
-  <div class="container" style="padding-top: 100px;">
+  <!-- Page Main Container (Strict max-width: 1200px) -->
+  <div class="philo-v4-container" style="padding-top: 100px;">
     
     <!-- Breadcrumbs Navigation -->
     <nav class="breadcrumb-container" aria-label="مسار التصفح" style="margin-bottom: 24px;">
@@ -613,30 +705,30 @@
       </ol>
     </nav>
 
-    <!-- A. HERO SECTION -->
-    <section class="philo-hero-v3">
-      <img src="../pillar_philosophy_hd.jpg" alt="الفلسفة — حكمة ونور" class="philo-hero-bg-v3">
-      <div class="philo-hero-overlay-v3"></div>
-      <div class="philo-hero-content-v3">
-        <div class="philo-hero-badge-v3" data-i18n="philoHeroBadge">
-          🏛️ عالم الفلسفة • البحث عن الحقيقة والسكينة
+    <!-- 1. HERO PHILOSOPHIE -->
+    <section class="philo-hero-v4">
+      <img src="../pillar_philosophy_hd.jpg" alt="الفلسفة — حكمة ونور" class="philo-hero-bg-v4">
+      <div class="philo-hero-overlay-v4"></div>
+      <div class="philo-hero-content-v4">
+        <div class="philo-hero-badge-v4" data-i18n="philoHeroBadge">
+          🏛️ عالم الفلسفة • مدارس الفكر وأهم الفلاسفة
         </div>
-        <h1 class="philo-hero-title-v3" data-i18n="philoHeroTitle">الفلسفة</h1>
-        <div class="philo-hero-subtitle-v3" data-i18n="philoHeroSubtitle">
+        <h1 class="philo-hero-title-v4" data-i18n="philoHeroTitle">الفلسفة</h1>
+        <div class="philo-hero-subtitle-v4" data-i18n="philoHeroSubtitle">
           رحلة في الأفكار التي شكّلت فهم الإنسان لذاته والعالم من حوله
         </div>
-        <p class="philo-hero-desc-v3" data-i18n="philoHeroDesc">
-          استكشف تاريخ الفلسفة، وأسئلتها الكبرى، ومدارسها الفكرية، وأهم المفكرين الذين حاولوا فهم الإنسان والحقيقة والسعادة والمعنى.
+        <p class="philo-hero-desc-v4" data-i18n="philoHeroDesc">
+          اكتشف المدارس الفلسفية الكبرى، أهم المفكرين، والأعمال التي شكلت تاريخ الفكر الإنساني مع حكمة ونور.
         </p>
         <div class="philo-gold-ornament"></div>
       </div>
     </section>
 
-    <!-- B. POURQUOI ÉTUDIER LA PHILOSOPHIE ? (INTRODUCTION) -->
-    <section style="margin: 40px 0 55px;">
+    <!-- 2. INTRODUCTION : POURQUOI ÉTUDIER LA PHILOSOPHIE ? -->
+    <section style="margin: 45px 0 60px;">
       <div class="philo-intro-card">
-        <h2 style="font-size: 1.7rem; color: #FAF6EF; font-family: 'Amiri', serif; margin-bottom: 14px;" data-i18n="philoIntroTitle">لماذا نقرأ الفلسفة اليوم؟</h2>
-        <p style="font-size: 1.04rem; color: #C5C6C0; line-height: 1.85; margin: 0 0 16px;" data-i18n="philoIntroLead">
+        <h2 style="font-size: 1.75rem; color: #FAF6EF; font-family: 'Amiri', serif; margin-bottom: 14px;" data-i18n="philoIntroTitle">لماذا نقرأ الفلسفة اليوم؟</h2>
+        <p style="font-size: 1.05rem; color: #C5C6C0; line-height: 1.85; margin: 0 0 18px;" data-i18n="philoIntroLead">
           ليست الفلسفة مجرد نظريات قديمة، بل طريقة حية في النظر إلى الحياة والأسئلة التي نعيشها كل يوم:
         </p>
         
@@ -654,14 +746,14 @@
       </div>
     </section>
 
-    <!-- C. LES PARCOURS PHILOSOPHIQUES (5 EDUCATIONAL PATHS) -->
-    <section id="parcours" style="margin: 55px 0;">
-      <div class="philo-v3-heading">
+    <!-- 3. PARCOURS PHILOSOPHIQUES (5 EDUCATIONAL PATHS) -->
+    <section id="parcours" style="margin: 60px 0;">
+      <div class="philo-v4-heading">
         <h2 data-i18n="philoParcoursTitle">المسارات الفلسفية التعليمية</h2>
         <p data-i18n="philoParcoursSubtitle">اختر مساراً فكرياً موجهاً واكتشف أطروحات الفلاسفة خطوة بخطوة</p>
       </div>
 
-      <div class="philo-parcours-grid-5">
+      <div class="philo-grid-3cols">
         <!-- Parcours 01 -->
         <article class="philo-parcours-card">
           <div class="philo-parcours-img-box">
@@ -729,87 +821,91 @@
       </div>
     </section>
 
-    <!-- D. ARTICLES PHILOSOPHIQUES (WITH HD CINEMATIC IMAGES) -->
-    <section id="articles" style="margin: 55px 0;">
-      <div class="philo-v3-heading">
+    <!-- 4. ARTICLES PHILOSOPHIQUES (3/2/1 GRID, HD IMAGES) -->
+    <section id="articles" style="margin: 60px 0;">
+      <div class="philo-v4-heading">
         <h2 data-i18n="philoArticlesTitle">مقالات فلسفية مختارة</h2>
         <p data-i18n="philoArticlesSubtitle">دراسات وتحليلات تحريرية معمقة في أمهات القضايا الفلسفية</p>
       </div>
 
-      <div id="philoArticlesGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(285px, 1fr)); gap: 26px;">
-        <!-- Rendered via Javascript with HD Images -->
+      <div id="philoArticlesGrid" class="philo-grid-3cols">
+        <!-- Rendered via Javascript with 100% Philosophy Articles & HD Images -->
       </div>
     </section>
 
-    <!-- E. LES GRANDES ÉCOLES PHILOSOPHIQUES -->
-    <section id="ecoles" style="margin: 55px 0;">
-      <div class="philo-v3-heading">
+    <!-- 5. ÉCOLES PHILOSOPHIQUES (SEPARATED FROM THINKERS) -->
+    <section id="ecoles" style="margin: 60px 0;">
+      <div class="philo-v4-heading">
         <h2 data-i18n="philoSchoolsTitle">المدارس الفلسفية الكبرى</h2>
         <p data-i18n="philoSchoolsSubtitle">تيارات وأفكار غيّرت طريقة الإنسان في فهم نفسه والعالم عبر العصور</p>
       </div>
 
-      <div class="philo-schools-v3-grid" id="philoSchoolsGrid">
-        <!-- Rendered via Javascript from SCHOOLS_DATA -->
+      <div class="philo-grid-3cols" id="philoSchoolsGrid">
+        <!-- Rendered via Javascript from SCHOOLS_DATA with school buttons pointing to dedicated routes or [ قريبًا ] -->
       </div>
     </section>
 
-    <!-- F. LES GRANDS PENSEURS (REAL PORTRAITS) -->
-    <section id="penseurs" style="margin: 55px 0;">
-      <div class="philo-v3-heading">
+    <!-- 6. PENSEURS (100% REAL PORTRAITS LINKING TO /thinkers/?thinker=ID) -->
+    <section id="penseurs" style="margin: 60px 0;">
+      <div class="philo-v4-heading">
         <h2 data-i18n="philoThinkersTitle">أبرز المفكرين والفلاسفة</h2>
         <p data-i18n="philoThinkersSubtitle">تعرّف على أعلام الفكر الذين أعادوا صياغة الأسئلة الكبرى للإنسانية</p>
       </div>
 
-      <div class="philo-thinkers-v3-grid" id="philoThinkersGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 22px;">
+      <div class="philo-grid-3cols" id="philoThinkersGrid">
         <!-- Rendered via Javascript with Real Portraits from thinkers/images/<id>.jpg -->
       </div>
     </section>
 
-    <!-- G. TEXTES ET ŒUVRES FONDAMENTALES -->
-    <section id="oeuvres" style="margin: 55px 0;">
-      <div class="philo-v3-heading">
+    <!-- 7. ŒUVRES FONDAMENTALES -->
+    <section id="oeuvres" style="margin: 60px 0;">
+      <div class="philo-v4-heading">
         <h2 data-i18n="resTitle">نصوص ومؤلفات أساسية</h2>
         <p data-i18n="resSubtitle">أعمال وكتب ساهمت في تشكيل تاريخ الفكر الفلسفي</p>
       </div>
 
-      <div class="philo-resources-grid">
-        <article class="philo-resource-card">
-          <span class="philo-resource-icon">📖</span>
-          <h3 style="font-size: 1.15rem; color: #FAF6EF; font-family: 'Amiri', serif; margin-bottom: 6px;" data-i18n="r1Title">التأملات — (Meditations)</h3>
-          <p style="font-size: 0.84rem; color: #E4C98A; margin-bottom: 8px;" data-i18n="r1Author">ماركوس أوريليوس</p>
-          <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px;" data-i18n="r1Desc">يوميات الإمبراطور الفيلسوف حول حراسة العقل، الصمود أمام المحن، والعيش وفق الطبيعة.</p>
-          <a href="../files/stoicisme-force-calme.html" class="philo-parcours-btn" style="padding: 8px 14px; font-size: 0.82rem;" data-i18n="btnReadWork">استكشف العمل ←</a>
+      <div class="philo-grid-3cols">
+        <article class="philo-parcours-card">
+          <div class="philo-parcours-img-box">
+            <img src="../marc_aurelius_writing.jpg" alt="التأملات — ماركوس أوريليوس" class="philo-parcours-img" loading="lazy">
+          </div>
+          <div class="philo-parcours-body">
+            <h3 style="font-size: 1.18rem; color: #FAF6EF; font-family: 'Amiri', serif; margin-bottom: 4px;" data-i18n="r1Title">التأملات — (Meditations)</h3>
+            <p style="font-size: 0.85rem; color: #E4C98A; margin-bottom: 10px;" data-i18n="r1Author">ماركوس أوريليوس</p>
+            <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 18px;" data-i18n="r1Desc">يوميات الإمبراطور الفيلسوف حول حراسة العقل، الصمود أمام المحن، والعيش وفق الطبيعة.</p>
+            <a href="../files/stoicisme-force-calme.html" class="philo-parcours-btn" data-i18n="btnReadWork">استكشف العمل ←</a>
+          </div>
         </article>
 
-        <article class="philo-resource-card">
-          <span class="philo-resource-icon">🏛️</span>
-          <h3 style="font-size: 1.15rem; color: #FAF6EF; font-family: 'Amiri', serif; margin-bottom: 6px;" data-i18n="r2Title">الجمهورية — (The Republic)</h3>
-          <p style="font-size: 0.84rem; color: #E4C98A; margin-bottom: 8px;" data-i18n="r2Author">أفلاطون</p>
-          <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px;" data-i18n="r2Desc">حوار فلسفي خالد حول العدالة، رمزيّة الكهف، وتأسيس الدولة الفاضلة ومفهوم الخير.</p>
-          <a href="../articles/7-errors-mind-growth.html" class="philo-parcours-btn" style="padding: 8px 14px; font-size: 0.82rem;" data-i18n="btnReadWork">استكشف العمل ←</a>
+        <article class="philo-parcours-card">
+          <div class="philo-parcours-img-box">
+            <img src="../socrates_delphi_temple.jpg" alt="الجمهورية — أفلاطون" class="philo-parcours-img" loading="lazy">
+          </div>
+          <div class="philo-parcours-body">
+            <h3 style="font-size: 1.18rem; color: #FAF6EF; font-family: 'Amiri', serif; margin-bottom: 4px;" data-i18n="r2Title">الجمهورية — (The Republic)</h3>
+            <p style="font-size: 0.85rem; color: #E4C98A; margin-bottom: 10px;" data-i18n="r2Author">أفلاطون</p>
+            <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 18px;" data-i18n="r2Desc">حوار فلسفي خالد حول العدالة، رمزيّة الكهف، وتأسيس الدولة الفاضلة ومفهوم الخير.</p>
+            <a href="../articles/7-errors-mind-growth.html" class="philo-parcours-btn" data-i18n="btnReadWork">استكشف العمل ←</a>
+          </div>
         </article>
 
-        <article class="philo-resource-card">
-          <span class="philo-resource-icon">⚖️</span>
-          <h3 style="font-size: 1.15rem; color: #FAF6EF; font-family: 'Amiri', serif; margin-bottom: 6px;" data-i18n="r3Title">أسطورة سيزيف — (The Myth of Sisyphus)</h3>
-          <p style="font-size: 0.84rem; color: #E4C98A; margin-bottom: 8px;" data-i18n="r3Author">ألبير كامو</p>
-          <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px;" data-i18n="r3Desc">تحليل فلسفة العبث، والتمرد الإنساني وصناعة السعادة بالرغم من عدمية العالم.</p>
-          <a href="../files/absurde-camus.html" class="philo-parcours-btn" style="padding: 8px 14px; font-size: 0.82rem;" data-i18n="btnReadWork">استكشف العمل ←</a>
-        </article>
-
-        <article class="philo-resource-card">
-          <span class="philo-resource-icon">💡</span>
-          <h3 style="font-size: 1.15rem; color: #FAF6EF; font-family: 'Amiri', serif; margin-bottom: 6px;" data-i18n="r4Title">هكذا تكلم زرادشت — (Thus Spoke Zarathustra)</h3>
-          <p style="font-size: 0.84rem; color: #E4C98A; margin-bottom: 8px;" data-i18n="r4Author">فريدريك نيتشه</p>
-          <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px;" data-i18n="r4Desc">ملحمة فلسفية وشعرية نقدية حول تجاوز الذات، إرادة القوة، ومواجهة العدمية.</p>
-          <a href="../files/nihilisme-surhomme-nietzsche.html" class="philo-parcours-btn" style="padding: 8px 14px; font-size: 0.82rem;" data-i18n="btnReadWork">استكشف العمل ←</a>
+        <article class="philo-parcours-card">
+          <div class="philo-parcours-img-box">
+            <img src="../solitude_blessing_curse_hero.jpg" alt="أسطورة سيزيف — ألبير كامو" class="philo-parcours-img" loading="lazy">
+          </div>
+          <div class="philo-parcours-body">
+            <h3 style="font-size: 1.18rem; color: #FAF6EF; font-family: 'Amiri', serif; margin-bottom: 4px;" data-i18n="r3Title">أسطورة سيزيف — (The Myth of Sisyphus)</h3>
+            <p style="font-size: 0.85rem; color: #E4C98A; margin-bottom: 10px;" data-i18n="r3Author">ألبير كامو</p>
+            <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 18px;" data-i18n="r3Desc">تحليل فلسفة العبث، والتمرد الإنساني وصناعة السعادة بالرغم من عدمية العالم.</p>
+            <a href="../files/absurde-camus.html" class="philo-parcours-btn" data-i18n="btnReadWork">استكشف العمل ←</a>
+          </div>
         </article>
       </div>
     </section>
 
-    <!-- H. CTA FINAL AND MEDITATION QUOTE -->
+    <!-- 8. CONCLUSION & MEDITATION QUOTE -->
     <section style="margin: 60px 0 50px;">
-      <div style="background: linear-gradient(135deg, rgba(14, 24, 18, 0.95) 0%, rgba(9, 16, 12, 0.98) 100%); border: 1px solid rgba(223, 177, 91, 0.3); border-radius: 28px; padding: 45px 30px; text-align: center; position: relative;">
+      <div style="background: linear-gradient(135deg, rgba(14, 24, 18, 0.95) 0%, rgba(9, 16, 12, 0.98) 100%); border: 1px solid rgba(223, 177, 91, 0.3); border-radius: 28px; padding: 48px 32px; text-align: center; position: relative;">
         <span style="font-size: 3rem; color: rgba(223, 177, 91, 0.25); font-family: Georgia, serif; line-height: 1; display: block; margin-bottom: 8px;">“</span>
         <p style="font-size: 1.65rem; color: #E4C98A; font-family: 'Amiri', serif; line-height: 1.8; max-width: 780px; margin: 0 auto 16px; font-weight: 700;" data-i18n="philoMeditationQuote">
           « لا يكفي أن نعرف، بل يجب أن نتساءل ونمارس الحكمة في حياتنا اليومية. »
@@ -824,7 +920,7 @@
 
     <!-- Footer -->
     <footer class="footer" style="padding: 50px 24px 30px; border-top: 1px solid var(--card-border); margin-top: 48px; background: rgba(10, 15, 12, 0.95);">
-      <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; text-align: inherit;" class="footer-grid-layout">
+      <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; text-align: inherit;" class="footer-grid-layout">
         <div>
           <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
             <img src="../brand_logo_official.png" alt="Hikma & Nour" style="width: 38px; height: 38px; object-fit: contain;">
@@ -844,7 +940,6 @@
             <li><a href="../quotes/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="quotes">اقتباسات</a></li>
             <li><a href="../audio/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="audio">الصوتيات</a></li>
             <li><a href="../bio.html" style="color: var(--text-secondary); text-decoration: none;" data-i18n="about">من نحن</a></li>
-            <li><a href="../#contactSection" style="color: var(--text-secondary); text-decoration: none;" data-i18n="contact">اتصل بنا</a></li>
           </ul>
         </div>
 
@@ -852,7 +947,6 @@
           <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;" data-i18n="interactiveServices">خدمات ومحتوى تفاعلي</h4>
           <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
             <li><a href="../quizzes/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="quiz">الاختبارات الفلسفية</a></li>
-            <li><a href="../#helpSection" style="color: var(--text-secondary); text-decoration: none;" data-i18n="faq">الأسئلة الشائعة</a></li>
             <li><a href="../shop/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="shop">المتجر</a></li>
             <li><a href="../calendar/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="calendar">التقويم</a></li>
             <li><a href="./" style="color: var(--accent-gold); text-decoration: none; font-weight: 700;" data-i18n="philosophy">الفلسفة</a></li>
@@ -866,7 +960,6 @@
             <li><a href="../privacy-policy.html" style="color: var(--text-secondary); text-decoration: none;" data-i18n="privacy">سياسة الخصوصية</a></li>
             <li><a href="../terms-of-service.html" style="color: var(--text-secondary); text-decoration: none;" data-i18n="terms">شروط الاستخدام</a></li>
             <li><a href="../cookie-policy.html" style="color: var(--text-secondary); text-decoration: none;" data-i18n="cookies">ملفات تعريف الارتباط</a></li>
-            <li><a href="../#contactSection" style="color: var(--text-secondary); text-decoration: none;" data-i18n="contactNav">اتصل بنا</a></li>
           </ul>
         </div>
       </div>
@@ -889,7 +982,7 @@
 
     const PHILO_TRANSLATIONS = {
       ar: {
-        metaTitle: "الفلسفة | حكمة ونور — رحلة في الأفكار التي شكّلت الفهم الإنساني",
+        metaTitle: "الفلسفة | مدارس الفكر وأهم الفلاسفة | حكمة ونور",
         navHome: "الرئيسية",
         navPhilosophy: "الفلسفة",
         navPsychology: "علم النفس",
@@ -900,10 +993,10 @@
         bcHome: "الرئيسية",
         bcPillars: "الأقسام الرئيسية",
         bcPhilosophy: "الفلسفة",
-        philoHeroBadge: "🏛️ عالم الفلسفة • البحث عن الحقيقة والسكينة",
+        philoHeroBadge: "🏛️ عالم الفلسفة • مدارس الفكر وأهم الفلاسفة",
         philoHeroTitle: "الفلسفة",
         philoHeroSubtitle: "رحلة في الأفكار التي شكّلت فهم الإنسان لذاته والعالم من حوله",
-        philoHeroDesc: "استكشف تاريخ الفلسفة، وأسئلتها الكبرى، ومدارسها الفكرية، وأهم المفكرين الذين حاولوا فهم الإنسان والحقيقة والسعادة والمعنى.",
+        philoHeroDesc: "اكتشف المدارس الفلسفية الكبرى، أهم المفكرين، والأعمال التي شكلت تاريخ الفكر الإنساني مع حكمة ونور.",
         philoIntroTitle: "لماذا نقرأ الفلسفة اليوم؟",
         philoIntroLead: "ليست الفلسفة مجرد نظريات قديمة، بل طريقة حية في النظر إلى الحياة والأسئلة التي نعيشها كل يوم:",
         q1: "لماذا نعيش؟",
@@ -951,9 +1044,6 @@
         r3Title: "أسطورة سيزيف — (The Myth of Sisyphus)",
         r3Author: "ألبير كامو",
         r3Desc: "تحليل فلسفة العبث، والتمرد الإنساني وصناعة السعادة بالرغم من عدمية العالم.",
-        r4Title: "هكذا تكلم زرادشت — (Thus Spoke Zarathustra)",
-        r4Author: "فريدريك نيتشه",
-        r4Desc: "ملحمة فلسفية وشعرية نقدية حول تجاوز الذات، إرادة القوة، ومواجهة العدمية.",
         btnReadWork: "استكشف العمل ←",
         btnReadArticle: "اقرأ المقال ←",
         btnExploreSchool: "استكشف المدرسة ←",
@@ -966,7 +1056,7 @@
         associatedThinkers: "فلاسفة المدرسة:"
       },
       fr: {
-        metaTitle: "Philosophie | Hikma & Nour — Exploration des idées qui ont façonné le monde",
+        metaTitle: "Philosophie | Écoles de pensée & Grands philosophes | Hikma & Nour",
         navHome: "Accueil",
         navPhilosophy: "Philosophie",
         navPsychology: "Psychologie",
@@ -977,10 +1067,10 @@
         bcHome: "Accueil",
         bcPillars: "Piliers Principaux",
         bcPhilosophy: "Philosophie",
-        philoHeroBadge: "🏛️ Le Monde de la Philosophie • Quête de Vérité & Sérénité",
+        philoHeroBadge: "🏛️ Le Monde de la Philosophie • Écoles & Philosophes",
         philoHeroTitle: "Philosophie",
         philoHeroSubtitle: "Une exploration des idées qui ont façonné notre compréhension de l'homme et du monde",
-        philoHeroDesc: "Explorez l'histoire de la philosophie, ses grandes interrogations, ses écoles de pensée et les philosophes majeurs qui ont pensé l'existence et la sérénité.",
+        philoHeroDesc: "Découvrez les grandes écoles philosophiques, les penseurs majeurs et les œuvres qui ont façonné la pensée humaine.",
         philoIntroTitle: "Pourquoi lire la philosophie aujourd'hui ?",
         philoIntroLead: "La philosophie n'est pas une simple théorie ancienne, mais une manière vivante d'aborder les questions quotidiennes :",
         q1: "Pourquoi vivons-nous ?",
@@ -1028,22 +1118,19 @@
         r3Title: "Le Mythe de Sisyphe — (The Myth of Sisyphus)",
         r3Author: "Albert Camus",
         r3Desc: "Essai fondateur sur la philosophie de l'absurde, la révolte et la création du sens.",
-        r4Title: "Ainsi parlait Zarathoustra — (Thus Spoke Zarathustra)",
-        r4Author: "Friedrich Nietzsche",
-        r4Desc: "Chef-d'œuvre philosophique et poétique sur le dépassement de soi et le surhomme.",
         btnReadWork: "Explorer l'œuvre ←",
         btnReadArticle: "Lire l'article ←",
-        btnExploreSchool: "Explorer l'école ←",
+        btnExploreSchool: "Découvrir l'école ←",
         btnExploreThinker: "Découvrir ses idées ←",
         philoMeditationQuote: "« Il ne suffit pas de savoir, il faut s'interroger et pratiquer la sagesse au quotidien. »",
         philoMeditationSub: "— Hikma & Nour —",
         philoMeditationBtn: "Découvrir les citations ←",
         comingSoonText: "Contenu à venir bientôt",
-        comingSoonBtn: "Bientôt disponible",
+        comingSoonBtn: "Prochainement",
         associatedThinkers: "Penseurs associés :"
       },
       en: {
-        metaTitle: "Philosophy | Hikma & Nour — Journey Through Ideas That Shaped Humanity",
+        metaTitle: "Philosophy | Schools of Thought & Key Philosophers | Hikma & Nour",
         navHome: "Home",
         navPhilosophy: "Philosophy",
         navPsychology: "Psychology",
@@ -1054,10 +1141,10 @@
         bcHome: "Home",
         bcPillars: "Main Pillars",
         bcPhilosophy: "Philosophy",
-        philoHeroBadge: "🏛️ World of Philosophy • Search for Truth & Serenity",
+        philoHeroBadge: "🏛️ World of Philosophy • Schools & Philosophers",
         philoHeroTitle: "Philosophy",
         philoHeroSubtitle: "A journey through the ideas that shaped human understanding of self and the world",
-        philoHeroDesc: "Explore the history of philosophy, its core questions, major schools of thought, and key thinkers who inquired into truth and meaning.",
+        philoHeroDesc: "Explore major philosophical schools, prominent thinkers, and foundational works that shaped human history.",
         philoIntroTitle: "Why Read Philosophy Today?",
         philoIntroLead: "Philosophy is not mere ancient theory, but a living way of inquiring into daily life questions:",
         q1: "Why do we live?",
@@ -1105,9 +1192,6 @@
         r3Title: "The Myth of Sisyphus",
         r3Author: "Albert Camus",
         r3Desc: "Foundational essay on the philosophy of absurdity, revolt, and creating joy.",
-        r4Title: "Thus Spoke Zarathustra",
-        r4Author: "Friedrich Nietzsche",
-        r4Desc: "Philosophical masterpiece on self-overcoming, will to power, and overcoming nihilism.",
         btnReadWork: "Explore Work ←",
         btnReadArticle: "Read Article ←",
         btnExploreSchool: "Explore School ←",
@@ -1121,49 +1205,12 @@
       }
     };
 
-    // SCHOOLS_DATA Definition (With Extensible Route Slugs)
+    // SCHOOLS_DATA Definition (With Dedicated Page Links or Disabled Coming Soon State)
     const SCHOOLS_DATA = [
-      {
-        id: 'school-ancient',
-        slug: 'platonisme',
-        num: '01',
-        image: '../socrates_delphi_temple.jpg',
-        title: { ar: 'الفلسفة اليونانية القديمة', fr: 'Philosophie Antique', en: 'Ancient Greek Philosophy' },
-        period: { ar: 'القرن ٦ ق.م — القرن ٤ م', fr: 'VIe s. av. J.-C. — IVe s. ap. J.-C.', en: '6th c. BCE — 4th c. CE' },
-        desc: {
-          ar: 'البحث في أصل الوجود والفضيلة والعقل، من أثينا إلى المدارس الفلسفية الأولى.',
-          fr: 'L\'exploration des premiers principes, de la vertu rationnelle et de la vérité.',
-          en: 'Exploring the first principles of existence, virtue, and rational inquiry.'
-        },
-        principles: {
-          ar: 'الفضيلة الأخلاقية • نقد المعرفة • الحكمة العملية',
-          fr: 'Vertu Morale • Éléments du Savoir • Sagesse Pratique',
-          en: 'Moral Virtue • Inquiry & Logic • Practical Wisdom'
-        },
-        articles: [
-          {
-            url: '../files/epicurisme-bonheur.html',
-            title: {
-              ar: 'الأبيقورية: كيف تبلغ السعادة في بساطة الحياة؟',
-              fr: 'L\'Épicurisme : Le bonheur dans la simplicité',
-              en: 'Epicureanism: Happiness in Simple Living'
-            }
-          },
-          {
-            url: '../articles/7-errors-mind-growth.html',
-            title: {
-              ar: '٧ أخطاء تمنعك من تنمية عقلك: دروس من سقراط ونيتشه وأوريليوس',
-              fr: '7 erreurs qui empêchent votre esprit de grandir',
-              en: '7 Mistakes Preventing You from Developing Your Mind'
-            }
-          }
-        ],
-        thinkers: [{ id: 'socrate', name: 'سقراط' }, { id: 'platon', name: 'أفلاطون' }, { id: 'aristote', name: 'أرسطو' }]
-      },
       {
         id: 'school-stoicism',
         slug: 'stoicisme',
-        num: '02',
+        num: '01',
         image: '../marc_aurelius_writing.jpg',
         title: { ar: 'الرواقية', fr: 'Stoïcisme', en: 'Stoicism' },
         period: { ar: 'القرن ٣ ق.م — القرن ٢ م', fr: 'IIIe s. av. J.-C. — IIe s. ap. J.-C.', en: '3rd c. BCE — 2nd c. CE' },
@@ -1172,87 +1219,50 @@
           fr: 'La maîtrise des réactions, le discernement du contrôle et la citadelle intérieure.',
           en: 'Mastering the mind, distinguishing what is under our control, and inner citadel.'
         },
-        principles: {
-          ar: 'ثنائية السيطرة • القلعة الداخلية • تقبل القدر (Amor Fati)',
-          fr: 'Dichotomie du Contrôle • Citadelle Intérieure • Amor Fati',
-          en: 'Dichotomy of Control • Inner Citadel • Amor Fati'
+        hasDedicatedPage: true,
+        pageUrl: './ecoles/stoicisme/'
+      },
+      {
+        id: 'school-ancient',
+        slug: 'platonisme',
+        num: '02',
+        image: '../socrates_delphi_temple.jpg',
+        title: { ar: 'الفلسفة اليونانية القديمة والأفلاطونية', fr: 'Philosophie Antique & Platonisme', en: 'Ancient Philosophy & Platonism' },
+        period: { ar: 'القرن ٦ ق.م — القرن ٤ م', fr: 'VIe s. av. J.-C. — IVe s. ap. J.-C.', en: '6th c. BCE — 4th c. CE' },
+        desc: {
+          ar: 'البحث في أصل الوجود والفضيلة والعقل، رمزيّة الكهف عالم المُثل والحوار السقراطي.',
+          fr: 'L\'exploration des premiers principes, de l\'allégorie de la caverne et du monde des Idées.',
+          en: 'Exploring first principles, virtue, the cave allegory, and the world of Forms.'
         },
-        articles: [
-          {
-            url: '../files/introduction-stoicisme.html',
-            title: {
-              ar: 'مدخل شامل إلى الفلسفة الرواقية: فن السكينة والصلابة',
-              fr: 'Guide Fondateur du Stoïcisme : L\'Art de la Sérénité',
-              en: 'Comprehensive Guide to Stoicism: Art of Serenity'
-            }
-          },
-          {
-            url: '../files/stoicisme-force-calme.html',
-            title: {
-              ar: 'قوة الهدوء: كيف تمنحك الرواقية صلابة نفسية أمام المحن؟',
-              fr: 'La Force du Calme : La résilience par le Stoïcisme',
-              en: 'The Power of Calm: Stoic Resilience in Adversity'
-            }
-          }
-        ],
-        thinkers: [{ id: 'marcaurele', name: 'ماركوس أوريليوس' }, { id: 'epictete', name: 'إبيكتيتوس' }, { id: 'seneque', name: 'سينيكا' }]
+        hasDedicatedPage: false
       },
       {
         id: 'school-modern',
         slug: 'rationalisme',
         num: '03',
         image: '../desk_coffee_book.jpg',
-        title: { ar: 'الفلسفة الحديثة والعقلانية', fr: 'Philosophie Moderne & Rationalisme', en: 'Modern Philosophy & Rationalism' },
+        title: { ar: 'العقلانية والفلسفة الحديثة', fr: 'Rationalisme & Philosophie Moderne', en: 'Rationalism & Modern Philosophy' },
         period: { ar: 'القرن ١٧ م — القرن ١٨ م', fr: 'XVIIe s. — XVIIIe s.', en: '17th c. — 18th c.' },
         desc: {
-          ar: 'رحلة التفكير العقلاني والمنهج العلمي من الشك الديكارتي إلى نقد العقل والنقد الفلسفي.',
-          fr: 'L\'essor du rationalisme, du doute méthodique et de l\'Aufklärung.',
+          ar: 'رحلة التفكير العقلاني والمنهج العلمي من الشك الديكارتي إلى نقد العقل والأنوار.',
+          fr: 'L\'essor du rationalisme, du doute méthodique et des Lumières.',
           en: 'The rise of rationalism, scientific method, and Enlightenment thought.'
         },
-        principles: {
-          ar: 'الشك المنهجي • العقلانية والنقد • الاستقلالية الفكرية',
-          fr: 'Doute Méthodique • Rationalisme & Critique • Autonomie',
-          en: 'Methodical Doubt • Rationalism & Critique • Autonomy'
-        },
-        articles: [], // Articles coming soon -> Displays [ قريباً ]
-        thinkers: [{ id: 'descartes', name: 'ديكارت' }, { id: 'spinoza', name: 'سبينوزا' }, { id: 'kant', name: 'كانط' }]
+        hasDedicatedPage: false
       },
       {
         id: 'school-existentialism',
         slug: 'existentialisme',
         num: '04',
         image: '../autumn_forest_solitude_walk.jpg',
-        title: { ar: 'الفلسفة الوجودية', fr: 'Philosophie Existentielle', en: 'Existential Philosophy' },
+        title: { ar: 'الفلسفة الوجودية والعبثية', fr: 'Philosophie Existentielle & Absurde', en: 'Existential Philosophy & Absurdity' },
         period: { ar: 'القرن ١٩ م — القرن ٢٠ م', fr: 'XIXe s. — XXe s.', en: '19th c. — 20th c.' },
         desc: {
           ar: 'الفلسفة التي تضع الوجود سابقاً على الماهية، وتدعو الإنسان لصناعة معناه بنفسه.',
           fr: 'La philosophie où l\'existence précède l\'essence : liberté absolue et création du sens.',
           en: 'The philosophy holding that existence precedes essence: absolute freedom and self-made meaning.'
         },
-        principles: {
-          ar: 'الوجود يسبق الماهية • الحرية والمسؤولية • مواجهة العبث',
-          fr: 'L\'Existence précède l\'Essence • Liberté & Choix • L\'Absurde',
-          en: 'Existence Precedes Essence • Freedom & Choice • Facing Absurdity'
-        },
-        articles: [
-          {
-            url: '../files/existentialisme-sens-sartre.html',
-            title: {
-              ar: 'الوجودية وصناعة المعنى عند سارتر: الحرية والمسؤولية',
-              fr: 'L\'Existentialisme et la quête de sens selon Jean-Paul Sartre',
-              en: 'Existentialism and the Search for Meaning according to Sartre'
-            }
-          },
-          {
-            url: '../files/absurde-camus.html',
-            title: {
-              ar: 'فلسفة العبث والحرية عند ألبير كامو: أسطورة سيزيف',
-              fr: 'La Philosophie de l\'Absurde et la Liberté selon Albert Camus',
-              en: 'The Philosophy of Absurdity and Freedom according to Albert Camus'
-            }
-          }
-        ],
-        thinkers: [{ id: 'sartre', name: 'سارتر' }, { id: 'camus', name: 'كامو' }, { id: 'kierkegaard', name: 'كيركغارد' }]
+        hasDedicatedPage: false
       },
       {
         id: 'school-moral',
@@ -1262,72 +1272,25 @@
         title: { ar: 'الفلسفة الأخلاقية', fr: 'Philosophie Morale', en: 'Moral Philosophy' },
         period: { ar: 'الفلسفة الأخلاقية عبر العصور', fr: 'Philosophie Morale à travers les âges', en: 'Moral Philosophy through Ages' },
         desc: {
-          ar: 'مساءلة طبيعة الخير والواجب الإنساني والبحث عن السعادة والعيش الفاضل.',
+          ar: 'مساءلة طبيعة الخير والواجب الإنساني والبحث عن السعادة والعيش الفاضل والعزلة.',
           fr: 'L\'examen du bien, du devoir, de la justice et d\'une vie vertueuse.',
           en: 'Inquiring into good, moral duty, justice, and a virtuous life.'
         },
-        principles: {
-          ar: 'الواجب الأخلاقي • غاية السعادة • الضمير والعدالة',
-          fr: 'Devoir Moral • Souverain Bien • Conscience & Justice',
-          en: 'Moral Duty • The Supreme Good • Conscience & Justice'
-        },
-        articles: [
-          {
-            url: '../articles/happiness-in-wrong-place.html',
-            title: {
-              ar: 'لماذا نبحث عن السعادة في المكان الخطأ؟ رحلة فلسفية',
-              fr: 'Pourquoi cherchons-nous le bonheur au mauvais endroit ?',
-              en: 'Why Do We Search for Happiness in the Wrong Place?'
-            }
-          },
-          {
-            url: '../articles/solitude-blessing-or-curse.html',
-            title: {
-              ar: 'هل العزلة نعمة أم عقاب؟ طريق الفلاسفة لاكتشاف الذات',
-              fr: 'La solitude est-elle une bénédiction ou une punition ?',
-              en: 'Is Solitude a Blessing ou une Punition ?',
-              en: 'Is Solitude a Blessing or a Curse? The Path to Self-Discovery'
-            }
-          }
-        ],
-        thinkers: [{ id: 'kant', name: 'كانط' }, { id: 'aristote', name: 'أرسطو' }, { id: 'spinoza', name: 'سبينوزا' }]
+        hasDedicatedPage: false
       },
       {
         id: 'school-contemporary',
         slug: 'contemporaine',
         num: '06',
         image: '../person_window_sunrise.jpg',
-        title: { ar: 'الفلسفة المعاصرة', fr: 'Philosophie Contemporaine', en: 'Contemporary Philosophy' },
+        title: { ar: 'الفلسفة المعاصرة والعدمية', fr: 'Philosophie Contemporaine & Nihilisme', en: 'Contemporary Philosophy & Nihilism' },
         period: { ar: 'القرن ١٩ م — العصر الحالي', fr: 'XIXe s. — Époque Contemporaine', en: '19th c. — Contemporary Era' },
         desc: {
-          ar: 'تشريح أزمات الحداثة، نقد الإرادة والعدمية عند شوبنهاور ونيتشه، وتأمل صراعات العصر.',
+          ar: 'تشريح أزمات الحداثة، نقد الإرادة والعدمية عند شوبنهاور ونيتشه، وتجاوز الذات.',
           fr: 'La critique de la modernité, l\'analyse de la Volonté et du Nihilisme.',
           en: 'Critique of modernity, analysis of the Will and Nihilism.'
         },
-        principles: {
-          ar: 'إرادة الحياة والقوة • نقد العدمية • تجاوز الذات',
-          fr: 'Volonté de Vivre & de Puissance • Critique du Nihilisme • Dépassement',
-          en: 'Will to Live & Power • Critique of Nihilism • Self-Overcoming'
-        },
-        articles: [
-          {
-            url: '../articles/schopenhauer-happiness-illusion.html',
-            title: {
-              ar: 'لماذا اعتبر شوبنهاور أن السعادة مجرد وهم؟',
-              fr: 'Pourquoi Schopenhauer considérait-il le bonheur comme une illusion ?',
-              en: 'Why Did Schopenhauer Consider Happiness to Be a Mere Illusion?'
-            }
-          },
-          {
-            url: '../files/nihilisme-surhomme-nietzsche.html',
-            title: {
-              ar: 'العدمية والإنسان الأعلى عند نيتشه',
-              fr: 'Le Nihilisme et le Surhomme selon Friedrich Nietzsche',
-              en: 'Nihilism and the Overman according to Friedrich Nietzsche'
-            }
-          }
-        ],
-        thinkers: [{ id: 'schopenhauer', name: 'شوبنهاور' }, { id: 'nietzsche', name: 'نيتشه' }]
+        hasDedicatedPage: false
       }
     ];
 
@@ -1363,54 +1326,25 @@
         const title = s.title[lang] || s.title.ar;
         const period = s.period[lang] || s.period.ar;
         const desc = s.desc[lang] || s.desc.ar;
-        const principles = s.principles[lang] || s.principles.ar;
         
-        let articlesHtml = '';
-        if (s.articles && s.articles.length > 0) {
-          articlesHtml = `
-            <div class="philo-school-articles-list">
-              ${s.articles.map(art => `
-                <a href="${art.url}" class="philo-school-article-link">
-                  <span>📄 ${art.title[lang] || art.title.ar}</span>
-                  <span style="color: var(--accent-gold); font-weight: 700;">←</span>
-                </a>
-              `).join('')}
-            </div>
-          `;
+        let buttonHtml = '';
+        if (s.hasDedicatedPage) {
+          buttonHtml = `<a href="${s.pageUrl}" class="philo-parcours-btn">${trans.btnExploreSchool}</a>`;
         } else {
-          articlesHtml = `
-            <div class="philo-school-coming-soon">
-              ⏳ ${trans.comingSoonText}
-            </div>
-          `;
+          buttonHtml = `<button class="philo-parcours-btn disabled" disabled>⏳ ${trans.comingSoonBtn}</button>`;
         }
 
-        const thinkersHtml = s.thinkers.map(th => {
-          const thinkerData = (TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].thinkers && TIKTOK_DATA.content[lang].thinkers.find(t => t.id === th.id));
-          const name = thinkerData ? thinkerData.name : th.name;
-          return `<a href="../thinkers/?thinker=${th.id}" class="philo-thinker-pill">👤 ${name}</a>`;
-        }).join('');
-
         return `
-          <article class="philo-school-card-v8" id="${s.id}">
+          <article class="philo-school-card-v4" id="${s.id}">
             <div class="philo-school-header-img">
               <img src="${s.image}" alt="${title}" loading="lazy">
               <span class="philo-school-num-badge">${s.num}</span>
             </div>
             <div class="philo-school-body">
-              <div style="font-size: 0.78rem; color: var(--accent-gold); font-weight: 700; margin-bottom: 4px;">⌛ ${period}</div>
+              <div style="font-size: 0.78rem; color: var(--accent-gold); font-weight: 700; margin-bottom: 6px;">⌛ ${period}</div>
               <h3 class="philo-school-title">${title}</h3>
               <p class="philo-school-desc">${desc}</p>
-              <div class="philo-school-principles">
-                💡 ${principles}
-              </div>
-              ${articlesHtml}
-              <div class="philo-school-thinkers-box">
-                <div class="philo-school-thinkers-title">${trans.associatedThinkers}</div>
-                <div class="philo-school-thinkers-pills">
-                  ${thinkersHtml}
-                </div>
-              </div>
+              ${buttonHtml}
             </div>
           </article>
         `;
@@ -1440,7 +1374,7 @@
             <div class="philo-article-body">
               <span class="philo-article-tag">📜 ${catLabel}</span>
               <h3 class="philo-article-title">${art.title}</h3>
-              <p class="philo-article-desc">${art.desc ? (art.desc.length > 110 ? art.desc.substring(0, 110) + '...' : art.desc) : 'دراسة فلسفية تحريرية معمقة.'}</p>
+              <p class="philo-article-desc">${art.desc ? (art.desc.length > 115 ? art.desc.substring(0, 115) + '...' : art.desc) : 'دراسة فلسفية تحريرية معمقة.'}</p>
               <a href="${url}" class="philo-parcours-btn">${trans.btnReadArticle}</a>
             </div>
           </article>
@@ -1455,7 +1389,7 @@
       const trans = PHILO_TRANSLATIONS[lang] || PHILO_TRANSLATIONS.ar;
       const thinkers = (TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].thinkers) || [];
       const topThinkerIds = ['socrate', 'platon', 'aristote', 'marcaurele', 'epictete', 'seneque', 'descartes', 'spinoza', 'kant', 'sartre', 'camus', 'nietzsche', 'schopenhauer'];
-      const filteredThinkers = thinkers.filter(t => topThinkerIds.includes(t.id)).slice(0, 8);
+      const filteredThinkers = thinkers.filter(t => topThinkerIds.includes(t.id)).slice(0, 9);
 
       grid.innerHTML = filteredThinkers.map(t => {
         const portraitImg = `../thinkers/images/${t.id}.jpg`;
@@ -1466,7 +1400,7 @@
             </div>
             <h3 class="philo-thinker-name">${t.name}</h3>
             <div class="philo-thinker-school">${t.school || ''}</div>
-            <a href="../thinkers/?thinker=${t.id}" class="philo-parcours-btn" style="padding: 7px 16px; font-size: 0.82rem; margin-top: auto;">${trans.btnExploreThinker}</a>
+            <a href="../thinkers/?thinker=${t.id}" class="philo-parcours-btn" style="padding: 8px 16px; font-size: 0.84rem; margin-top: auto;">${trans.btnExploreThinker}</a>
           </article>
         `;
       }).join('');

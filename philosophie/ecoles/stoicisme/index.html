@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ar" data-theme="dark" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title id="schoolMetaTitle">الرواقية (Stoicism) | المدرسة الرواقية والسكينة النفسية — حكمة ونور</title>
+  <meta name="description" content="استكشف المدرسة الرواقية: تاريخها، مبادئها الأساسية، ثنائية السيطرة، القلعة الداخلية، وأهم فلاسفتها ماركوس أوريليوس، إبيكتيتوس، وسينيكا.">
+  <meta name="keywords" content="الرواقية, ستويسيسم, stoicisme, ماركوس أوريليوس, إبيكتيتوس, سينيكا, القلعة الداخلية, ثنائية السيطرة, السكينة النفسية">
+  <link rel="canonical" href="https://jardin-des-pensees.onrender.com/philosophie/ecoles/stoicisme/">
+  <link rel="icon" type="image/png" href="../../../brand_logo_official.png">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Hikma & Nour — حكمة ونور">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="الرواقية | المدرسة الرواقية والسكينة النفسية">
+  <meta property="og:description" content="استكشف المدرسة الرواقية: تاريخها، مبادئها الأساسية، ثنائية السيطرة، وأهم فلاسفتها.">
+  <meta property="og:image" content="https://jardin-des-pensees.onrender.com/marc_aurelius_writing.jpg">
+  <meta property="og:url" content="https://jardin-des-pensees.onrender.com/philosophie/ecoles/stoicisme/">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="../../../style.css?v=16">
+
+  <style>
+    .school-hero {
+      position: relative;
+      border-radius: 28px;
+      overflow: hidden;
+      background: #0A0F0D;
+      border: 1px solid rgba(223, 177, 91, 0.3);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      margin-bottom: 40px;
+    }
+
+    .school-hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.35;
+      filter: saturate(1.15) brightness(0.85);
+    }
+
+    .school-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(8, 14, 11, 0.6) 0%, rgba(10, 17, 13, 0.95) 100%),
+                  radial-gradient(circle at 50% 30%, rgba(223, 177, 91, 0.12) 0%, transparent 70%);
+    }
+
+    .school-hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 65px 36px;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .school-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 18px;
+      border-radius: 30px;
+      background: rgba(223, 177, 91, 0.12);
+      border: 1px solid rgba(223, 177, 91, 0.35);
+      color: var(--accent-gold, #DFB15B);
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .school-title {
+      font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+      color: #FFFDF8;
+      font-family: 'Playfair Display', 'Amiri', serif;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .school-meta-pills {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .school-meta-pill {
+      background: rgba(223, 177, 91, 0.1);
+      border: 1px solid rgba(223, 177, 91, 0.25);
+      border-radius: 20px;
+      padding: 6px 16px;
+      color: #E4C98A;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .school-section-card {
+      background: rgba(14, 22, 17, 0.85);
+      border: 1px solid rgba(223, 177, 91, 0.22);
+      border-radius: 24px;
+      padding: 36px 30px;
+      margin-bottom: 35px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    .school-section-title {
+      font-size: 1.5rem;
+      color: #FAF6EF;
+      font-family: 'Playfair Display', 'Amiri', serif;
+      font-weight: 800;
+      margin-bottom: 18px;
+      border-bottom: 1px solid rgba(223, 177, 91, 0.2);
+      padding-bottom: 10px;
+    }
+
+    .concepts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .concept-card {
+      background: rgba(223, 177, 91, 0.06);
+      border: 1px solid rgba(223, 177, 91, 0.2);
+      border-radius: 16px;
+      padding: 20px;
+    }
+
+    .concept-title {
+      font-size: 1.1rem;
+      color: #E4C98A;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .concept-desc {
+      font-size: 0.92rem;
+      color: #C5C6C0;
+      line-height: 1.65;
+    }
+
+    .thinker-portrait-mini {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid var(--accent-gold, #DFB15B);
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="navbar-header">
+    <nav class="navbar" aria-label="التنقل الرئيسي">
+      <a href="../../../" class="nav-brand">
+        <img src="../../../brand_logo_official.png" alt="شعار حكمة ونور" class="brand-logo-img">
+        <div style="display: flex; flex-direction: column; line-height: 1.15;">
+          <span class="brand-name">HIKMA & NOUR</span>
+          <span class="brand-tagline-ar" style="font-size: 0.72rem; color: var(--text-secondary);">حكمة • فلسفة • سكينة</span>
+        </div>
+      </a>
+      
+      <div class="nav-menu">
+        <a href="../../../" class="nav-link">الرئيسية</a>
+        <a href="../../" class="nav-link active">الفلسفة</a>
+        <a href="../../../psychologie/" class="nav-link">علم النفس</a>
+        <a href="../../../sagesse/" class="nav-link">الحكمة</a>
+        <a href="../../../thinkers/" class="nav-link">المفكرون</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Main Container -->
+  <div class="container" style="padding-top: 100px; max-width: 1200px;">
+    
+    <!-- Breadcrumbs Navigation -->
+    <nav class="breadcrumb-container" aria-label="مسار التصفح" style="margin-bottom: 24px;">
+      <ol class="breadcrumb-list" style="display: flex; gap: 8px; list-style: none; padding: 0; margin: 0; font-size: 0.88rem; color: var(--text-secondary);">
+        <li><a href="../../../" style="color: var(--text-secondary); text-decoration: none;">الرئيسية</a></li>
+        <li>‹</li>
+        <li><a href="../../" style="color: var(--text-secondary); text-decoration: none;">الفلسفة</a></li>
+        <li>‹</li>
+        <li><span>المدارس الفلسفية</span></li>
+        <li>‹</li>
+        <li style="color: var(--accent-gold); font-weight: 700;">الرواقية</li>
+      </ol>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="school-hero">
+      <img src="../../../marc_aurelius_writing.jpg" alt="المدرسة الرواقية" class="school-hero-bg">
+      <div class="school-hero-overlay"></div>
+      <div class="school-hero-content">
+        <div class="school-badge">🏛️ مدرسة فلسفية كبرى</div>
+        <h1 class="school-title">الرواقية — (Stoicism)</h1>
+        
+        <div class="school-meta-pills">
+          <span class="school-meta-pill">⌛ الفترة: القرن ٣ ق.م — القرن ٢ م</span>
+          <span class="school-meta-pill">📍 النشأة: أثينا وروما القديمة</span>
+          <span class="school-meta-pill">🏛️ المؤسس: زينون الكيتيومي</span>
+        </div>
+
+        <p style="font-size: 1.1rem; color: #D1D2CA; line-height: 1.85; max-width: 800px; margin: 0 auto;">
+          مدرسة فلسفية يونانية ورومانية تركز على البناء النفسي المتين، والسيطرة على الانفعالات، وتطوير الحكمة العملية للعيش بسلام وسكينة رغم تقلبات الحياة.
+        </p>
+      </div>
+    </section>
+
+    <!-- 1. PRESENTATION & ORIGINS -->
+    <section class="school-section-card">
+      <h2 class="school-section-title">نبذة عن المدرسة ونشأتها</h2>
+      <p style="font-size: 1.02rem; color: #C5C6C0; line-height: 1.85;">
+        تأسست الرواقية في أثينا على يد زينون الكيتيومي حوالي عام 300 قبل الميلاد. واستمدت اسمها من "الرواق المعمد" (Stoa Poikile) حيث كان الفلاسفة يجتمعون للتباحث. انتقلت الرواقية لاحقاً إلى روما القديمة، لتصبح الفلسفة الأكثر تأثيراً في إدارة الحكم وحياة القادة والمفكرين مثل الإمبراطور ماركوس أوريليوس والفيلسوف إبيكتيتوس والمستشار سينيكا.
+      </p>
+    </section>
+
+    <!-- 2. FUNDAMENTAL PRINCIPLES & MAJOR CONCEPTS -->
+    <section class="school-section-card">
+      <h2 class="school-section-title">المبادئ والمفاهيم الكبرى</h2>
+      <div class="concepts-grid">
+        <div class="concept-card">
+          <div class="concept-title">⚖️ ثنائية السيطرة (Dichotomy of Control)</div>
+          <div class="concept-desc">التمييز الصارم بين ما يخضع لسيطرتنا المباشرة (أفكارنا، أفعالنا، رغباتنا) وما لا يخضع لها (الطقس، أفعال الآخرين، الماضي)، والتركيز الكلي على الأول.</div>
+        </div>
+
+        <div class="concept-card">
+          <div class="concept-title">🏰 القلعة الداخلية (The Inner Citadel)</div>
+          <div class="concept-desc">بناء حصن ذهني ونفسي داخلي يحمي العقل من الانفعالات الخارجية والاضطرابات، مما يمنح الفرد سكينة صلبة لا تتأثر بالظروف.</div>
+        </div>
+
+        <div class="concept-card">
+          <div class="concept-title">🌌 تقبل القدر (Amor Fati)</div>
+          <div class="concept-desc">مُحبة القدر وتقبّل الأحداث كما هي دون تذمّر، وتحويل كل عقبة إلى فرصة للتطور والنمو الأخلاقي.</div>
+        </div>
+
+        <div class="concept-card">
+          <div class="concept-title">⏳ تذكر الموت (Memento Mori)</div>
+          <div class="concept-desc">التأمل الدائم في حتمية الموت وقصر الحياة لاستثمار الوقت في الحكمة والفضيلة وعيش اللحظة بوعي تام.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. ASSOCIATED THINKERS -->
+    <section class="school-section-card">
+      <h2 class="school-section-title">أبرز فلاسفة الرواقية</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; text-align: center;">
+        
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(223, 177, 91, 0.2); border-radius: 18px; padding: 20px;">
+          <img src="../../../thinkers/images/marcaurele.jpg" alt="ماركوس أوريليوس" class="thinker-portrait-mini">
+          <h3 style="font-size: 1.15rem; color: #FAF6EF; font-family: 'Amiri', serif; margin-bottom: 4px;">ماركوس أوريليوس</h3>
+          <p style="font-size: 0.82rem; color: #E4C98A; margin-bottom: 12px;">الإمبراطور الفيلسوف</p>
+          <a href="../../../thinkers/?thinker=marcaurele" class="philo-parcours-btn" style="padding: 6px 14px; font-size: 0.8rem;">اكتشف أفكاره ←</a>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(223, 177, 91, 0.2); border-radius: 18px; padding: 20px;">
+          <img src="../../../thinkers/images/epictete.jpg" alt="إبيكتيتوس" class="thinker-portrait-mini">
+          <h3 style="font-size: 1.15rem; color: #FAF6EF; font-family: 'Amiri', serif; margin-bottom: 4px;">إبيكتيتوس</h3>
+          <p style="font-size: 0.82rem; color: #E4C98A; margin-bottom: 12px;">فيلسوف الحرية والحرية الداخلية</p>
+          <a href="../../../thinkers/?thinker=epictete" class="philo-parcours-btn" style="padding: 6px 14px; font-size: 0.8rem;">اكتشف أفكاره ←</a>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(223, 177, 91, 0.2); border-radius: 18px; padding: 20px;">
+          <img src="../../../thinkers/images/seneque.jpg" alt="سينيكا" class="thinker-portrait-mini">
+          <h3 style="font-size: 1.15rem; color: #FAF6EF; font-family: 'Amiri', serif; margin-bottom: 4px;">سينيكا</h3>
+          <p style="font-size: 0.82rem; color: #E4C98A; margin-bottom: 12px;">رجل الدولة والحكمة العملية</p>
+          <a href="../../../thinkers/?thinker=seneque" class="philo-parcours-btn" style="padding: 6px 14px; font-size: 0.8rem;">اكتشف أفكاره ←</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. ASSOCIATED ARTICLES & WORKS -->
+    <section class="school-section-card">
+      <h2 class="school-section-title">دراسات ومقالات ذات صلة</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+        
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(223, 177, 91, 0.2); border-radius: 16px; padding: 20px;">
+          <span style="font-size: 0.8rem; color: var(--accent-gold); font-weight: 700;">📜 مدخل فلسفي</span>
+          <h3 style="font-size: 1.1rem; color: #FAF6EF; margin: 8px 0;">مدخل شامل إلى الفلسفة الرواقية: فن السكينة والصلابة</h3>
+          <a href="../../../files/introduction-stoicisme.html" class="philo-parcours-btn" style="padding: 8px 14px; font-size: 0.82rem; margin-top: 10px;">اقرأ المقال ←</a>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(223, 177, 91, 0.2); border-radius: 16px; padding: 20px;">
+          <span style="font-size: 0.8rem; color: var(--accent-gold); font-weight: 700;">📖 مؤلف أساسي</span>
+          <h3 style="font-size: 1.1rem; color: #FAF6EF; margin: 8px 0;">التأملات — يوميات الإمبراطور ماركوس أوريليوس</h3>
+          <a href="../../../files/stoicisme-force-calme.html" class="philo-parcours-btn" style="padding: 8px 14px; font-size: 0.82rem; margin-top: 10px;">استكشف العمل ←</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Back to Philosophy Button -->
+    <div style="text-align: center; margin: 40px 0 60px;">
+      <a href="../../" class="philo-parcours-btn" style="width: auto; padding: 12px 28px; font-size: 1rem;">← العودة إلى عالم الفلسفة</a>
+    </div>
+
+  </div>
+</body>
+</html>
