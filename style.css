@@ -76,6 +76,22 @@ html {
   padding: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.nav-brand img,
+.brand-logo-img {
+  width: 44px !important;
+  height: 44px !important;
+  max-width: 44px !important;
+  max-height: 44px !important;
+  object-fit: contain !important;
+  border-radius: 50% !important;
+  flex-shrink: 0 !important;
+}
+
 .scroll-section {
   scroll-margin-top: 100px;
 }
@@ -5445,11 +5461,37 @@ textarea.form-control {
 }
 
 @media (min-width: 1025px) {
-  .nav-menu {
-    display: flex !important;
+  .nav-menu,
+  html[dir="rtl"] .nav-menu,
+  body[dir="rtl"] .nav-menu,
+  [dir="rtl"] .nav-menu {
+    position: static !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: auto !important;
+    max-width: none !important;
+    height: auto !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: none !important;
+    flex-direction: row !important;
+    padding: 0 !important;
     align-items: center !important;
     gap: 6px !important;
     flex-wrap: nowrap !important;
+    transform: none !important;
+    visibility: visible !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    z-index: auto !important;
+    display: flex !important;
+  }
+
+  .nav-hamburger {
+    display: none !important;
   }
 
   .nav-link {
@@ -5788,11 +5830,33 @@ textarea.form-control {
 
 /* ── Navigation Links (Pill Style) ── */
 @media (min-width: 1025px) {
-  .nav-menu {
-    display: flex !important;
+  .nav-menu,
+  html[dir="rtl"] .nav-menu,
+  body[dir="rtl"] .nav-menu,
+  [dir="rtl"] .nav-menu {
+    position: static !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: auto !important;
+    max-width: none !important;
+    height: auto !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: none !important;
+    flex-direction: row !important;
+    padding: 0 !important;
     align-items: center !important;
     gap: 6px !important;
     flex-wrap: nowrap !important;
+    transform: none !important;
+    visibility: visible !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    z-index: auto !important;
+    display: flex !important;
   }
 
   .nav-link {
