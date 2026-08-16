@@ -74,7 +74,7 @@
   <link rel="stylesheet" href="../style.css?v=28">
   
   <style>
-    /* Premium Visual Scoping for Psychologie (V3 Premium Finish) */
+    /* Premium Visual Scoping for Psychologie (V4 Premium Corrections) */
     html.psychologie-page, 
     body {
       background-color: #07100D !important; /* Deep Forest Dark Academia background */
@@ -417,13 +417,38 @@
       }
     }
 
-    /* Thinkers Section (4 columns on desktop) */
+    /* Dynamic Filter Button Styles */
+    .psy-filter-btn {
+      background: transparent;
+      border: 1px solid rgba(201, 168, 106, 0.25);
+      border-radius: 20px;
+      padding: 8px 18px;
+      font-size: 0.9rem;
+      color: #F2EEE5;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .psy-filter-btn:hover {
+      border-color: #C9A86A;
+      background: rgba(201, 168, 106, 0.12);
+      color: #E4C98A;
+    }
+    .psy-filter-btn.active {
+      background: #C9A86A !important;
+      color: #07100D !important;
+      border-color: #C9A86A !important;
+      font-weight: 700;
+    }
+
+    /* Thinkers Section (3 columns on desktop for V4) */
     .psy-thinkers-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 960px;
+      margin: 0 auto;
     }
-    @media (max-width: 1024px) {
+    @media (max-width: 860px) {
       .psy-thinkers-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -437,7 +462,7 @@
       background: #0D1814;
       border: 1px solid rgba(201, 168, 106, 0.2);
       border-radius: 20px;
-      padding: 24px 18px;
+      padding: 28px 20px;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -451,12 +476,12 @@
       box-shadow: 0 15px 35px rgba(0,0,0,0.3);
     }
     .psy-thinker-avatar {
-      width: 90px;
-      height: 90px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
       overflow: hidden;
       border: 2px solid rgba(201, 168, 106, 0.4);
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       filter: grayscale(0.9) contrast(1.1); /* Dark Academia monochrome lateral light effect */
       transition: filter 0.35s ease;
     }
@@ -585,7 +610,7 @@
         <span style="color: #C9A86A;">علم النفس وفهم الإنسان</span>
       </nav>
 
-      <!-- 2. HERO V3 -->
+      <!-- 2. HERO V4 -->
       <section class="psy-hero-container">
         <div class="psy-hero-bg"></div>
         <div class="psy-hero-content">
@@ -624,7 +649,7 @@
         <div class="psy-parcours-grid">
           
           <!-- Parcours 01 -->
-          <article class="psy-parcours-card">
+          <article class="psy-parcours-card" data-parcours-trigger="01" style="cursor: pointer;">
             <div class="psy-parcours-imgbox">
               <img src="../psy_self_awareness_hd.jpg" alt="شخص يتأمل انعكاسه في المرآة ويرمز إلى الوعي بالذات" class="psy-parcours-img" loading="lazy">
               <div class="psy-parcours-overlay"></div>
@@ -636,12 +661,12 @@
                 <h3 class="psy-parcours-title">علم النفس وفهم الذات</h3>
                 <p class="psy-parcours-desc">الوعي بالذات، الشخصية، الهوية، ونقاط القوة والضعف.</p>
               </div>
-              <a href="../articles/true-confidence-inside.html" class="psy-card-link">استكشف المسار →</a>
+              <a href="#articles" class="psy-card-link" data-parcours-trigger="01">استكشف المسار →</a>
             </div>
           </article>
 
           <!-- Parcours 02 -->
-          <article class="psy-parcours-card">
+          <article class="psy-parcours-card" data-parcours-trigger="02" style="cursor: pointer;">
             <div class="psy-parcours-imgbox">
               <img src="../psy_relationships_hd.jpg" alt="صورتان ظليتان منفصلتان تعبران عن التواصل والعلاقات" class="psy-parcours-img" loading="lazy">
               <div class="psy-parcours-overlay"></div>
@@ -653,12 +678,12 @@
                 <h3 class="psy-parcours-title">المشاعر والعلاقات</h3>
                 <p class="psy-parcours-desc">الحب، التعلق، الغيرة، الثقة، والعلاقات الإنسانية.</p>
               </div>
-              <a href="../articles/why-people-distance-when-you-succeed.html" class="psy-card-link">استكشف المسار →</a>
+              <a href="#articles" class="psy-card-link" data-parcours-trigger="02">استكشف المسار →</a>
             </div>
           </article>
 
           <!-- Parcours 03 -->
-          <article class="psy-parcours-card">
+          <article class="psy-parcours-card" data-parcours-trigger="03" style="cursor: pointer;">
             <div class="psy-parcours-imgbox">
               <img src="../psy_behavior_hd.jpg" alt="صورة ظلية محاطة بمسارات ترمز للتفكير واتخاذ القرار" class="psy-parcours-img" loading="lazy">
               <div class="psy-parcours-overlay"></div>
@@ -670,7 +695,7 @@
                 <h3 class="psy-parcours-title">العقل والسلوك</h3>
                 <p class="psy-parcours-desc">التحيزات، العادات، الذاكرة، واتخاذ القرارات وأنماط التفكير.</p>
               </div>
-              <a href="../articles/7-errors-mind-growth.html" class="psy-card-link">استكشف المسار →</a>
+              <a href="#articles" class="psy-card-link" data-parcours-trigger="03">استكشف المسار →</a>
             </div>
           </article>
 
@@ -680,7 +705,7 @@
         <div class="psy-parcours-grid-bottom">
           
           <!-- Parcours 04 -->
-          <article class="psy-parcours-card">
+          <article class="psy-parcours-card" data-parcours-trigger="04" style="cursor: pointer;">
             <div class="psy-parcours-imgbox">
               <img src="../dev_resilience_hd.jpg" alt="شجرة صلبة قاومت العواصف ترمز للمرونة النفسية" class="psy-parcours-img" loading="lazy">
               <div class="psy-parcours-overlay"></div>
@@ -692,12 +717,12 @@
                 <h3 class="psy-parcours-title">الجروح والصمود النفسي</h3>
                 <p class="psy-parcours-desc">الفشل، الرفض، الوحدة، الألم، والقدرة على التكيف مع الصعوبات.</p>
               </div>
-              <a href="../files/stop-overthinking.html" class="psy-card-link">استكشف المسار →</a>
+              <a href="#articles" class="psy-card-link" data-parcours-trigger="04">استكشف المسار →</a>
             </div>
           </article>
 
           <!-- Parcours 05 -->
-          <article class="psy-parcours-card">
+          <article class="psy-parcours-card" data-parcours-trigger="05" style="cursor: pointer;">
             <div class="psy-parcours-imgbox">
               <img src="../dev_growth_hd.jpg" alt="سلم حجري قديم يصعد نحو الضوء يرمز للنمو والارتقاء" class="psy-parcours-img" loading="lazy">
               <div class="psy-parcours-overlay"></div>
@@ -709,7 +734,7 @@
                 <h3 class="psy-parcours-title">علم النفس الإيجابي والنمو</h3>
                 <p class="psy-parcours-desc">السعادة، الامتنان، المرونة، المعنى، والنمو الشخصي.</p>
               </div>
-              <a href="../articles/nietzsche-psychological-strength.html" class="psy-card-link">استكشف المسار →</a>
+              <a href="#articles" class="psy-card-link" data-parcours-trigger="05">استكشف المسار →</a>
             </div>
           </article>
 
@@ -717,7 +742,7 @@
       </section>
 
       <!-- 7. ARTICLE À LA UNE (دراسة مميزة) -->
-      <section class="psy-section-block">
+      <section class="psy-section-block psy-featured-study-section">
         <div class="psy-section-heading">
           <h2>دراسة مميزة</h2>
           <p>تحليل معرفي رصيد لديناميكيات العلاقات الاجتماعية</p>
@@ -734,7 +759,7 @@
                 <a href="../articles/why-people-distance-when-you-succeed.html" style="color: inherit; text-decoration: none;">لماذا يبتعد بعض الناس عندما تنجح؟ التفسير النفسي للحسد والغيرة الاجتماعية</a>
               </h3>
               <p style="font-size: 0.95rem; color: #A9AAA4; line-height: 1.8; margin-bottom: 25px;">
-                تحليل عميق لديناميكيات العلاقات الإنسانية عند حدوث تغيرات إيجابية in حياتك: كيف تتأثر روابط الصداقة، ما هو التفسير النفسي للشعور بالتهديد، وكيف تبني حدودًا تحمي نجاحك ونموك الذاتي دون الشعور بالذنب.
+                تحليل عميق لديناميكيات العلاقات الإنسانية عند حدوث تغيرات إيجابية في حياتك: كيف تتأثر روابط الصداقة، ما هو التفسير النفسي للشعور بالتهديد، وكيف تبني حدودًا تحمي نجاحك ونموك الذاتي دون الشعور بالذنب.
               </p>
             </div>
             <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px; border-top: 1px solid rgba(201, 168, 106, 0.2); padding-top: 18px;">
@@ -745,17 +770,27 @@
         </div>
       </section>
 
-      <!-- 8 & 9. ARTICLES SECONDARY GRID -->
+      <!-- 8 & 9. ARTICLES SECONDARY GRID WITH FILTERS -->
       <section id="articles" class="psy-section-block">
         <div class="psy-section-heading">
           <h2>دراسات في علم النفس</h2>
           <p>تأملات وبحوث سيكولوجية تعيد صياغة وعيك بذاتك وتفاعلك مع المحيط.</p>
         </div>
 
+        <!-- V4 Premium Dynamic Filters -->
+        <div class="psy-articles-filters" style="display: flex; justify-content: center; gap: 12px; margin-bottom: 35px; flex-wrap: wrap;">
+          <button class="psy-filter-btn active" data-filter="all">الكل</button>
+          <button class="psy-filter-btn" data-filter="01">فهم الذات</button>
+          <button class="psy-filter-btn" data-filter="02">المشاعر والعلاقات</button>
+          <button class="psy-filter-btn" data-filter="03">العقل والسلوك</button>
+          <button class="psy-filter-btn" data-filter="04">الجروح والصمود</button>
+          <button class="psy-filter-btn" data-filter="05">علم النفس الإيجابي</button>
+        </div>
+
         <div class="psy-articles-grid">
           
-          <!-- Article 1 -->
-          <article class="psy-parcours-card">
+          <!-- Article 1: why-people-respect-silent-person (01) -->
+          <article class="psy-parcours-card" data-parcours="01">
             <div class="psy-parcours-imgbox" style="height: 160px;">
               <img src="../silence_respect_hero.jpg" alt="شخص صامت متأمل يرمز لقوة الحضور الهادئ" class="psy-parcours-img" loading="lazy">
               <div class="psy-parcours-overlay"></div>
@@ -775,8 +810,8 @@
             </div>
           </article>
 
-          <!-- Article 2 -->
-          <article class="psy-parcours-card">
+          <!-- Article 2: stop-overthinking (03) -->
+          <article class="psy-parcours-card" data-parcours="03">
             <div class="psy-parcours-imgbox" style="height: 160px;">
               <img src="../overthinking_calm.jpg" alt="عقل مزدحم بالمسارات يرمز للتفكير المفرط والاجترار الذهني" class="psy-parcours-img" loading="lazy">
               <div class="psy-parcours-overlay"></div>
@@ -796,29 +831,8 @@
             </div>
           </article>
 
-          <!-- Article 3 -->
-          <article class="psy-parcours-card">
-            <div class="psy-parcours-imgbox" style="height: 160px;">
-              <img src="../mind_growth_errors_hero.jpg" alt="متاهة معقدة ترمز للعقبات الذهنية التي تحول دون النضج" class="psy-parcours-img" loading="lazy">
-              <div class="psy-parcours-overlay"></div>
-            </div>
-            <div class="psy-parcours-body">
-              <div>
-                <span style="font-size: 0.78rem; color: #C9A86A; font-weight: 700; margin-bottom: 8px; display: block;">علم النفس المعرفي • تطور</span>
-                <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 10px; line-height: 1.4;">
-                  <a href="../articles/7-errors-mind-growth.html" style="color: inherit; text-decoration: none;">7 أخطاء تمنع عقلك من النضج والتطور الفكري</a>
-                </h3>
-                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.65; margin-bottom: 20px;">تفكيك المغالطات الإدراكية الشائعة التي تعيق البصيرة السليمة وتبني العوائق السلوكية والذهنية.</p>
-              </div>
-              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(201, 168, 106, 0.15); padding-top: 14px; margin-top: auto;">
-                <span style="font-size: 0.82rem; color: #A9AAA4;">⏱️ 7 دقائق</span>
-                <a href="../articles/7-errors-mind-growth.html" class="psy-card-link">اقرأ المقال →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Article 4 -->
-          <article class="psy-parcours-card">
+          <!-- Article 3: true-confidence-inside (01) -->
+          <article class="psy-parcours-card" data-parcours="01">
             <div class="psy-parcours-imgbox" style="height: 160px;">
               <img src="../dev_confidence_hd.jpg" alt="شخص يقف بثبات وثقة أمام أفق واسع" class="psy-parcours-img" loading="lazy">
               <div class="psy-parcours-overlay"></div>
@@ -837,6 +851,60 @@
               </div>
             </div>
           </article>
+
+          <!-- Article 4: self-discipline (03) -->
+          <article class="psy-parcours-card" data-parcours="03">
+            <div class="psy-parcours-imgbox" style="height: 160px;">
+              <img src="../self_discipline.jpg" alt="شخص يركز في العمل أو القراءة لبناء الانضباط" class="psy-parcours-img" loading="lazy">
+              <div class="psy-parcours-overlay"></div>
+            </div>
+            <div class="psy-parcours-body">
+              <div>
+                <span style="font-size: 0.78rem; color: #C9A86A; font-weight: 700; margin-bottom: 8px; display: block;">الانضباط • العادات والسلوك</span>
+                <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 10px; line-height: 1.4;">
+                  <a href="../files/self-discipline.html" style="color: inherit; text-decoration: none;">كيف تبني الانضباط الذاتي؟ دليل العادة التي تصنع الفارق</a>
+                </h3>
+                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.65; margin-bottom: 20px;">خطوات عملية لبناء الانضباط والمثابرة، والتغلب على التسويف والمماطلة لتحقيق الأهداف الاستراتيجية.</p>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(201, 168, 106, 0.15); padding-top: 14px; margin-top: auto;">
+                <span style="font-size: 0.82rem; color: #A9AAA4;">⏱️ 7 دقائق</span>
+                <a href="../files/self-discipline.html" class="psy-card-link">اقرأ المقال →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 5: solitude-blessing-or-curse (04) -->
+          <article class="psy-parcours-card" data-parcours="04">
+            <div class="psy-parcours-imgbox" style="height: 160px;">
+              <img src="../solitude_blessing_curse_hero.jpg" alt="شخص يمشي بمفرده في غابة في الخريف" class="psy-parcours-img" loading="lazy">
+              <div class="psy-parcours-overlay"></div>
+            </div>
+            <div class="psy-parcours-body">
+              <div>
+                <span style="font-size: 0.78rem; color: #C9A86A; font-weight: 700; margin-bottom: 8px; display: block;">العزلة والوجدان • الصمود</span>
+                <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 10px; line-height: 1.4;">
+                  <a href="../articles/solitude-blessing-or-curse.html" style="color: inherit; text-decoration: none;">هل العزلة نعمة أم عقاب؟ طريق الفلاسفة لاكتشاف الذات</a>
+                </h3>
+                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.65; margin-bottom: 20px;">استكشاف الفلسفة العميقة للعزلة، وكيف تكون ملاذًا آمنًا لبناء الوعي والسكينة أو سجنًا للروح.</p>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(201, 168, 106, 0.15); padding-top: 14px; margin-top: auto;">
+                <span style="font-size: 0.82rem; color: #A9AAA4;">⏱️ 6 دقائق</span>
+                <a href="../articles/solitude-blessing-or-curse.html" class="psy-card-link">اقرأ المقال →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Parcours 05 Fallback Card -->
+          <div class="psy-parcours-card" id="parcours-05-fallback" data-parcours="05" style="display: none; border-style: dashed; opacity: 0.8; justify-content: center; align-items: center; min-height: 300px; text-align: center; padding: 40px 20px;">
+            <div style="font-size: 3rem; margin-bottom: 15px; color: rgba(201, 168, 106, 0.4);">🌱</div>
+            <h3 style="font-size: 1.3rem; color: #C9A86A; margin-bottom: 10px; font-family: 'Amiri', serif;">محتوى جديد قريبًا</h3>
+            <p style="font-size: 0.9rem; color: #A9AAA4; max-width: 280px; margin: 0 auto;">اكتشف المقالات والبحوث المرتبطة بهذا المسار قريبًا.</p>
+          </div>
+
+          <!-- General No Articles Message -->
+          <div id="psy-no-articles" style="display: none; grid-column: 1 / -1; text-align: center; padding: 50px 20px;">
+            <p style="font-size: 1.1rem; color: #A9AAA4;">اكتشف المقالات المرتبطة بهذا الموضوع قريبًا</p>
+          </div>
 
         </div>
       </section>
@@ -858,7 +926,7 @@
             <h3 style="font-size: 1.15rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 4px;">سيغموند فرويد</h3>
             <div style="font-size: 0.78rem; color: #C9A86A; font-weight: 700; margin-bottom: 8px;">التحليل النفسي</div>
             <p style="font-size: 0.85rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px; flex-grow: 1;">استكشاف اللاوعي، الأحلام، وبنية النفس الإنسانية.</p>
-            <a href="../thinkers/" class="psy-card-link">اكتشف أفكاره →</a>
+            <a href="../thinkers/?thinker=freud" class="psy-card-link">اكتشف أفكاره →</a>
           </div>
 
           <!-- 02 كارل يونغ -->
@@ -869,7 +937,7 @@
             <h3 style="font-size: 1.15rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 4px;">كارل يونغ</h3>
             <div style="font-size: 0.78rem; color: #C9A86A; font-weight: 700; margin-bottom: 8px;">علم نفس الأعماق</div>
             <p style="font-size: 0.85rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px; flex-grow: 1;">اللاوعي الجمعي، الأنماط البدائية، ورحلة تحقيق الذات وتكامل الظل.</p>
-            <a href="../thinkers/" class="psy-card-link">اكتشف أفكاره →</a>
+            <a href="../thinkers/?thinker=jung" class="psy-card-link">اكتشف أفكاره →</a>
           </div>
 
           <!-- 03 ألفرد أدلر -->
@@ -880,62 +948,7 @@
             <h3 style="font-size: 1.15rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 4px;">ألفرد أدلر</h3>
             <div style="font-size: 0.78rem; color: #C9A86A; font-weight: 700; margin-bottom: 8px;">علم النفس الفردي</div>
             <p style="font-size: 0.85rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px; flex-grow: 1;">الشعور بالنقص، الرغبة في التفوق، والأثر الحاسم للشعور الاجتماعي.</p>
-            <a href="../thinkers/" class="psy-card-link">اكتشف أفكاره →</a>
-          </div>
-
-          <!-- 04 فيكتور فرانكل -->
-          <div class="psy-thinker-card">
-            <div class="psy-thinker-avatar">
-              <img src="../brand_logo_official.png" alt="فيكتور فرانكل" loading="lazy">
-            </div>
-            <h3 style="font-size: 1.15rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 4px;">فيكتور فرانكل</h3>
-            <div style="font-size: 0.78rem; color: #C9A86A; font-weight: 700; margin-bottom: 8px;">العلاج بالمعنى</div>
-            <p style="font-size: 0.85rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px; flex-grow: 1;">البحث عن المعنى كدافع إنساني أسمى وقوة التسامي في مواجهة المعاناة.</p>
-            <a href="../thinkers/" class="psy-card-link">اكتشف أفكاره →</a>
-          </div>
-
-          <!-- 05 كارل روجرز -->
-          <div class="psy-thinker-card">
-            <div class="psy-thinker-avatar">
-              <img src="../brand_logo_official.png" alt="كارل روجرز" loading="lazy">
-            </div>
-            <h3 style="font-size: 1.15rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 4px;">كارل روجرز</h3>
-            <div style="font-size: 0.78rem; color: #C9A86A; font-weight: 700; margin-bottom: 8px;">علم النفس الإنساني</div>
-            <p style="font-size: 0.85rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px; flex-grow: 1;">القبول غير المشروط، تحقيق الذات، وتنمية الإمكانات الإنسانية الفطرية.</p>
-            <a href="../thinkers/" class="psy-card-link">اكتشف أفكاره →</a>
-          </div>
-
-          <!-- 06 أبراهام ماسلو -->
-          <div class="psy-thinker-card">
-            <div class="psy-thinker-avatar">
-              <img src="../brand_logo_official.png" alt="أبراهام ماسلو" loading="lazy">
-            </div>
-            <h3 style="font-size: 1.15rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 4px;">أبراهام ماسلو</h3>
-            <div style="font-size: 0.78rem; color: #C9A86A; font-weight: 700; margin-bottom: 8px;">الاحتياجات الإنسانية</div>
-            <p style="font-size: 0.85rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px; flex-grow: 1;">تدرج الدوافع البشرية من الاحتياجات الأساسية إلى ذروة تحقيق الذات.</p>
-            <a href="../thinkers/" class="psy-card-link">اكتشف أفكاره →</a>
-          </div>
-
-          <!-- 07 دانيال كانيمان -->
-          <div class="psy-thinker-card">
-            <div class="psy-thinker-avatar">
-              <img src="../brand_logo_official.png" alt="دانيال كانيمان" loading="lazy">
-            </div>
-            <h3 style="font-size: 1.15rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 4px;">دانيال كانيمان</h3>
-            <div style="font-size: 0.78rem; color: #C9A86A; font-weight: 700; margin-bottom: 8px;">سيكولوجية القرار</div>
-            <p style="font-size: 0.85rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px; flex-grow: 1;">التفكير السريع والبطيء، الانحيازات الإدراكية، وفهم آليات اتخاذ القرار.</p>
-            <a href="../thinkers/" class="psy-card-link">اكتشف أفكاره →</a>
-          </div>
-
-          <!-- 08 إريك إريكسون -->
-          <div class="psy-thinker-card">
-            <div class="psy-thinker-avatar">
-              <img src="../brand_logo_official.png" alt="إريك إريكسون" loading="lazy">
-            </div>
-            <h3 style="font-size: 1.15rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 4px;">إريك إريكسون</h3>
-            <div style="font-size: 0.78rem; color: #C9A86A; font-weight: 700; margin-bottom: 8px;">النمو النفسي الاجتماعي</div>
-            <p style="font-size: 0.85rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px; flex-grow: 1;">مراحل التطور النفسي عبر دورة الحياة وبناء الهوية الإنسانية.</p>
-            <a href="../thinkers/" class="psy-card-link">اكتشف أفكاره →</a>
+            <a href="../thinkers/?thinker=adler" class="psy-card-link">اكتشف أفكاره →</a>
           </div>
 
         </div>
@@ -960,19 +973,18 @@
           <p>مفاهيم ومحاور أساسية تشكل خريطة النفس الإنسانية.</p>
         </div>
         <div class="psy-themes-cloud">
-          <a href="#parcours" class="psy-theme-pill">الوعي بالذات</a>
+          <a href="#parcours" class="psy-theme-pill" data-filter-trigger="01">الوعي بالذات</a>
           <a href="../articles/true-confidence-inside.html" class="psy-theme-pill">الثقة بالنفس</a>
           <a href="../articles/why-people-distance-when-you-succeed.html" class="psy-theme-pill">العلاقات</a>
           <a href="../articles/why-people-distance-when-you-succeed.html" class="psy-theme-pill">التعلق</a>
-          <a href="../files/stop-overthinking.html" class="psy-theme-pill">الوحدة</a>
+          <a href="../articles/solitude-blessing-or-curse.html" class="psy-theme-pill">الوحدة</a>
           <a href="../files/stop-overthinking.html" class="psy-theme-pill">الخوف</a>
           <a href="../files/stop-overthinking.html" class="psy-theme-pill">القلق</a>
-          <a href="../files/stop-overthinking.html" class="psy-theme-pill">العادات</a>
-          <a href="../articles/7-errors-mind-growth.html" class="psy-theme-pill">الذاكرة</a>
-          <a href="../articles/7-errors-mind-growth.html" class="psy-theme-pill">السلوك</a>
-          <a href="../articles/nietzsche-psychological-strength.html" class="psy-theme-pill">السعادة</a>
-          <a href="../articles/nietzsche-psychological-strength.html" class="psy-theme-pill">المرونة</a>
-          <a href="../articles/nietzsche-psychological-strength.html" class="psy-theme-pill">المعنى</a>
+          <a href="../files/self-discipline.html" class="psy-theme-pill">العادات</a>
+          <a href="../files/self-discipline.html" class="psy-theme-pill">السلوك</a>
+          <a href="#parcours" class="psy-theme-pill" data-filter-trigger="05">السعادة</a>
+          <a href="#parcours" class="psy-theme-pill" data-filter-trigger="04">المرونة</a>
+          <a href="#parcours" class="psy-theme-pill" data-filter-trigger="04">المعنى</a>
         </div>
       </section>
 
@@ -1009,5 +1021,96 @@
   </footer>
 
   <script src="../app_v11.js?v=28" type="module"></script>
+
+  <!-- Local Script for V4 Dynamic Filtering -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.psy-filter-btn');
+      const articleCards = document.querySelectorAll('.psy-articles-grid .psy-parcours-card, .psy-articles-grid #parcours-05-fallback');
+      const featuredSection = document.querySelector('.psy-featured-study-section');
+      const noResultsMsg = document.getElementById('psy-no-articles');
+
+      function filterArticles(parcoursId) {
+        // Update active button state
+        filterBtns.forEach(btn => {
+          if (btn.getAttribute('data-filter') === parcoursId) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        });
+
+        // Hide/Show Featured study based on filter (only visible on "all" or "02 - المشاعر والعلاقات")
+        if (featuredSection) {
+          if (parcoursId === 'all' || parcoursId === '02') {
+            featuredSection.style.display = 'block';
+          } else {
+            featuredSection.style.display = 'none';
+          }
+        }
+
+        let visibleCount = 0;
+        articleCards.forEach(card => {
+          const cardParcours = card.getAttribute('data-parcours');
+          if (parcoursId === 'all' || cardParcours === parcoursId) {
+            card.style.display = 'flex';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (visibleCount === 0) {
+          if (noResultsMsg) noResultsMsg.style.display = 'block';
+        } else {
+          if (noResultsMsg) noResultsMsg.style.display = 'none';
+        }
+      }
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+          filterArticles(filter);
+        });
+      });
+
+      // Hook parcours cards to filters
+      const parcoursTriggers = document.querySelectorAll('[data-parcours-trigger]');
+      parcoursTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+          e.preventDefault();
+          const parcoursId = trigger.getAttribute('data-parcours-trigger');
+          
+          filterArticles(parcoursId);
+          
+          // Smooth scroll to articles section
+          const articlesSec = document.getElementById('articles');
+          if (articlesSec) {
+            articlesSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      // Hook themes/tags to filters
+      const filterTriggers = document.querySelectorAll('[data-filter-trigger]');
+      filterTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+          e.preventDefault();
+          const parcoursId = trigger.getAttribute('data-filter-trigger');
+          
+          filterArticles(parcoursId);
+          
+          // Smooth scroll to articles section
+          const articlesSec = document.getElementById('articles');
+          if (articlesSec) {
+            articlesSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      // Initial state
+      filterArticles('all');
+    });
+  </script>
 </body>
 </html>
