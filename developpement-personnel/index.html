@@ -503,56 +503,18 @@
       overflow: hidden;
     }
 
-    /* Thinker Cards */
-    .dev-thinker-card-v2 {
-      background: rgba(14, 20, 16, 0.85);
-      border: 1px solid rgba(223, 177, 91, 0.2);
+    /* Placeholder Cards */
+    .dev-placeholder-card {
+      background: rgba(14, 22, 17, 0.5);
+      border: 1px dashed rgba(223, 177, 91, 0.3);
       border-radius: 22px;
-      padding: 24px 20px;
+      padding: 36px 24px;
       text-align: center;
-      transition: all 0.3s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
-      height: 100%;
-    }
-
-    .dev-thinker-card-v2:hover {
-      border-color: rgba(223, 177, 91, 0.5);
-      transform: translateY(-4px);
-    }
-
-    .dev-thinker-avatar-box {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      border: 2px solid var(--accent-gold, #DFB15B);
-      overflow: hidden;
-      margin-bottom: 14px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
-      background: #0A120D;
-      aspect-ratio: 1 / 1;
-    }
-
-    .dev-thinker-avatar-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .dev-thinker-name {
-      font-size: 1.2rem;
-      color: #FAF6EF;
-      font-family: 'Playfair Display', 'Amiri', serif;
-      font-weight: 800;
-      margin-bottom: 4px;
-    }
-
-    .dev-thinker-role {
-      font-size: 0.8rem;
-      color: #E4C98A;
-      font-weight: 600;
-      margin-bottom: 16px;
+      justify-content: center;
+      grid-column: 1 / -1;
     }
   </style>
 </head>
@@ -662,7 +624,7 @@
       </div>
     </section>
 
-    <!-- 3. LES 5 PARCOURS PÉDAGOGIQUES -->
+    <!-- 3. LES 5 PARCOURS PÉDAGOGIQUES (EXACTEMENT 5 PARCOURS) -->
     <section id="parcours" style="margin: 60px 0;">
       <div class="dev-v2-heading">
         <h2 data-i18n="devParcoursTitle">المسارات الخمسة لتطوير الذات</h2>
@@ -670,7 +632,7 @@
       </div>
 
       <div class="dev-grid-3cols">
-        <!-- Parcours 01 -->
+        <!-- Parcours 01 (Actif) -->
         <article class="dev-parcours-card">
           <div class="dev-parcours-img-box">
             <img src="../dev_discipline_hd.jpg" alt="الانضباط والعادات" class="dev-parcours-img" loading="lazy">
@@ -683,10 +645,10 @@
           </div>
         </article>
 
-        <!-- Parcours 02 -->
+        <!-- Parcours 02 (Bientôt disponible) -->
         <article class="dev-parcours-card">
           <div class="dev-parcours-img-box">
-            <img src="../dev_growth_hd.jpg" alt="الأهداف والطموح" class="dev-parcours-img" loading="lazy">
+            <img src="../dev_growth_hd.jpg" alt="الأهداف والطموح" class="dev-parcours-img" loading="lazy" style="filter: grayscale(0.5); opacity: 0.7;">
           </div>
           <div class="dev-parcours-body">
             <span class="dev-parcours-num" data-i18n="p2Num">02 — الأهداف والطموح</span>
@@ -696,7 +658,7 @@
           </div>
         </article>
 
-        <!-- Parcours 03 -->
+        <!-- Parcours 03 (Actif) -->
         <article class="dev-parcours-card">
           <div class="dev-parcours-img-box">
             <img src="../dev_confidence_hd.jpg" alt="الثقة والشجاعة" class="dev-parcours-img" loading="lazy">
@@ -709,10 +671,10 @@
           </div>
         </article>
 
-        <!-- Parcours 04 -->
+        <!-- Parcours 04 (Bientôt disponible) -->
         <article class="dev-parcours-card">
           <div class="dev-parcours-img-box">
-            <img src="../dev_focus_hd.jpg" alt="الوقت والتركيز" class="dev-parcours-img" loading="lazy">
+            <img src="../dev_focus_hd.jpg" alt="الوقت والتركيز" class="dev-parcours-img" loading="lazy" style="filter: grayscale(0.5); opacity: 0.7;">
           </div>
           <div class="dev-parcours-body">
             <span class="dev-parcours-num" data-i18n="p4Num">04 — الوقت والتركيز</span>
@@ -722,10 +684,10 @@
           </div>
         </article>
 
-        <!-- Parcours 05 -->
+        <!-- Parcours 05 (Bientôt disponible) -->
         <article class="dev-parcours-card">
           <div class="dev-parcours-img-box">
-            <img src="../dev_resilience_hd.jpg" alt="المرونة والتحول" class="dev-parcours-img" loading="lazy">
+            <img src="../dev_resilience_hd.jpg" alt="المرونة والتحول" class="dev-parcours-img" loading="lazy" style="filter: grayscale(0.5); opacity: 0.7;">
           </div>
           <div class="dev-parcours-body">
             <span class="dev-parcours-num" data-i18n="p5Num">05 — المرونة والتحول</span>
@@ -737,7 +699,7 @@
       </div>
     </section>
 
-    <!-- 4. ARTICLES PHILOSOPHIQUES (3/2/1 GRID — 100% PURE DEV CONTENT) -->
+    <!-- 4. ARTICLES DU PILIER (STRICTEMENT LES ARTICLES VALIDES DE DEV. PERSO) -->
     <section id="articles" style="margin: 60px 0;">
       <div class="dev-v2-heading">
         <h2 data-i18n="devArticlesTitle">مقالات وأدلة تطوير الذات</h2>
@@ -745,114 +707,75 @@
       </div>
 
       <div id="devArticlesGrid" class="dev-grid-3cols">
-        <!-- Rendered via Javascript (Strictly Pure Dev Articles) -->
+        <!-- Rendered via Javascript -->
       </div>
     </section>
 
-    <!-- 5. MÉTHODES & OUTILS (FUTURE EXTENSION DESIGN) -->
+    <!-- 5. MÉTHODES & OUTILS (PLACEHOLDER ÉLÉGANT — BIENTÔT DISPONIBLE) -->
     <section id="outils" style="margin: 60px 0;">
       <div class="dev-v2-heading">
         <h2 data-i18n="devToolsTitle">منهجيات وأدوات التطوير</h2>
         <p data-i18n="devToolsSubtitle">نماذج وأدوات تطبيقية لبناء الروتين والتحكم بالوقت والتركيز</p>
       </div>
 
-      <div class="dev-grid-3cols">
-        <article class="dev-parcours-card">
-          <div class="dev-parcours-img-box">
-            <img src="../dev_discipline_hd.jpg" alt="سجل العادات اليومي" class="dev-parcours-img" loading="lazy">
-          </div>
-          <div class="dev-parcours-body">
-            <span class="dev-parcours-num">📋 أداة 01</span>
-            <h3 class="dev-parcours-title" data-i18n="tool1Title">جدول تتبع العادات اليومي (Habit Tracker)</h3>
-            <p class="dev-parcours-desc" data-i18n="tool1Desc">أداة مرئية لتتبع التزامك بالعادات اليومية ومراقبة تطورك التراكمي أسسبوعياً.</p>
-            <button class="dev-btn-action disabled" disabled data-i18n="comingSoonBtn">⏳ أدوات عملية قادمة قريباً</button>
-          </div>
-        </article>
-
-        <article class="dev-parcours-card">
-          <div class="dev-parcours-img-box">
-            <img src="../dev_focus_hd.jpg" alt="تقنية العمل العميق" class="dev-parcours-img" loading="lazy">
-          </div>
-          <div class="dev-parcours-body">
-            <span class="dev-parcours-num">⏱️ أداة 02</span>
-            <h3 class="dev-parcours-title" data-i18n="tool2Title">دليل جلسات العمل العميق (Deep Work Sessions)</h3>
-            <p class="dev-parcours-desc" data-i18n="tool2Desc">منهجية تنظيم الوقت وعزل المشتتات لإنجاز مهامك المعقدة بكفاءة عالية.</p>
-            <button class="dev-btn-action disabled" disabled data-i18n="comingSoonBtn">⏳ أدوات عملية قادمة قريباً</button>
-          </div>
-        </article>
-
-        <article class="dev-parcours-card">
-          <div class="dev-parcours-img-box">
-            <img src="../dev_habits_hd.jpg" alt="المفكرة اليومية" class="dev-parcours-img" loading="lazy">
-          </div>
-          <div class="dev-parcours-body">
-            <span class="dev-parcours-num">📖 أداة 03</span>
-            <h3 class="dev-parcours-title" data-i18n="tool3Title">نموذج التقييم والمراجعة الأسبوعية</h3>
-            <p class="dev-parcours-desc" data-i18n="tool3Desc">أسئلة موجّهة لمراجعة إنجازات الأسبوع واستخلاص الدروس وتصحيح المسار.</p>
-            <button class="dev-btn-action disabled" disabled data-i18n="comingSoonBtn">⏳ أدوات عملية قادمة قريباً</button>
-          </div>
-        </article>
+      <div class="dev-placeholder-card">
+        <span style="font-size: 2.2rem; margin-bottom: 10px;">🛠️</span>
+        <h3 style="font-size: 1.35rem; color: #FAF6EF; margin-bottom: 8px;" data-i18n="phToolsTitle">أدوات ومنهجيات عمل قادمة قريباً</h3>
+        <p style="color: #A9AAA4; font-size: 0.95rem; max-width: 600px; line-height: 1.7; margin-bottom: 16px;" data-i18n="phToolsDesc">
+          نعمل على إعداد نماذج تفاعلية وسجلات تتبع العادات (Habit Trackers) ودليل الجلسات العميقة للمساعدة في التطبيق اليومي.
+        </p>
+        <span style="display: inline-block; padding: 6px 18px; border-radius: 20px; background: rgba(223, 177, 91, 0.1); border: 1px solid rgba(223, 177, 91, 0.3); color: #DFB15B; font-size: 0.85rem; font-weight: 700;" data-i18n="comingSoonBtn">⏳ قريباً</span>
       </div>
     </section>
 
-    <!-- 6. AUTEURS & MODÈLES DE DISCIPLINE -->
+    <!-- 6. AUTEURS & PENSEURS (PLACEHOLDER ÉLÉGANT — BIENTÔT DISPONIBLE) -->
     <section id="penseurs" style="margin: 60px 0;">
       <div class="dev-v2-heading">
-        <h2 data-i18n="devThinkersTitle">نماذج ملهمة في الانضباط والصلابة</h2>
-        <p data-i18n="devThinkersSubtitle">روّاد وفلاسفة قدّموا مبادئ خالدة في التحكم بالذات وإتقان العقل</p>
+        <h2 data-i18n="devThinkersTitle">شخصيات ومؤلفون في تطوير الذات</h2>
+        <p data-i18n="devThinkersSubtitle">روّاد ومتخصصون قدّموا رؤى عمليّة في بناء الإرادة والتطوير الشخصي</p>
       </div>
 
-      <div class="dev-grid-3cols" id="devThinkersGrid">
-        <!-- Rendered via Javascript with 100% Verified Profile Links -->
+      <div class="dev-placeholder-card">
+        <span style="font-size: 2.2rem; margin-bottom: 10px;">✍️</span>
+        <h3 style="font-size: 1.35rem; color: #FAF6EF; margin-bottom: 8px;" data-i18n="phThinkersTitle">أسماء ومفكرون قريباً</h3>
+        <p style="color: #A9AAA4; font-size: 0.95rem; max-width: 600px; line-height: 1.7; margin-bottom: 16px;" data-i18n="phThinkersDesc">
+          سيتم إدراج سير وإسهامات أهم كتاب ورواد تطوير الذات وبناء العادات ضمن هذا القسم فور تجهيز فساتهم الخاصة.
+        </p>
+        <span style="display: inline-block; padding: 6px 18px; border-radius: 20px; background: rgba(223, 177, 91, 0.1); border: 1px solid rgba(223, 177, 91, 0.3); color: #DFB15B; font-size: 0.85rem; font-weight: 700;" data-i18n="comingSoonBtn">⏳ قريباً</span>
       </div>
     </section>
 
-    <!-- 7. RESSOURCES & LIVRES AUDIO -->
+    <!-- 7. RESSOURCES & LIVRES (PLACEHOLDER ÉLÉGANT — BIENTÔT DISPONIBLE) -->
     <section id="livres" style="margin: 60px 0;">
       <div class="dev-v2-heading">
-        <h2 data-i18n="devAudioTitle">أعمال مسموعة في الرحلة الذاتية</h2>
-        <p data-i18n="devAudioSubtitle">كتب وروايات مسموعة تلهم التغيير والبحث عن المعنى</p>
+        <h2 data-i18n="devAudioTitle">كتب وموارد مسموعة</h2>
+        <p data-i18n="devAudioSubtitle">ترشيحات وأعمال صوتية ملهمة في رحلة التغيير المستمر</p>
       </div>
 
-      <div class="dev-grid-3cols" id="devAudioGrid">
-        <!-- Rendered via Javascript -->
+      <div class="dev-placeholder-card">
+        <span style="font-size: 2.2rem; margin-bottom: 10px;">📚</span>
+        <h3 style="font-size: 1.35rem; color: #FAF6EF; margin-bottom: 8px;" data-i18n="phAudioTitle">كتب وموارد قادمة قريباً</h3>
+        <p style="color: #A9AAA4; font-size: 0.95rem; max-width: 600px; line-height: 1.7; margin-bottom: 16px;" data-i18n="phAudioDesc">
+          نقوم حالياً بإعداد مكتبة صوتية وقراءات مسموعة لأهم الكتب المتخصصة في بناء العادات وتطوير الشخصية.
+        </p>
+        <span style="display: inline-block; padding: 6px 18px; border-radius: 20px; background: rgba(223, 177, 91, 0.1); border: 1px solid rgba(223, 177, 91, 0.3); color: #DFB15B; font-size: 0.85rem; font-weight: 700;" data-i18n="comingSoonBtn">⏳ قريباً</span>
       </div>
     </section>
 
-    <!-- 8. DÉFIS PRATIQUES -->
+    <!-- 8. DÉFIS PRATIQUES (PLACEHOLDER ÉLÉGANT — BIENTÔT DISPONIBLE) -->
     <section id="defis" style="margin: 60px 0;">
       <div class="dev-v2-heading">
         <h2 data-i18n="devChallengesTitle">التحديات العملية التطبيقية</h2>
         <p data-i18n="devChallengesSubtitle">تحديات محددة المدة لاختبار إرادتك وترسيخ الانضباط في حياتك</p>
       </div>
 
-      <div class="dev-grid-3cols">
-        <article class="dev-parcours-card">
-          <div class="dev-parcours-body">
-            <span class="dev-parcours-num">⚡ تحدي 7 أيام</span>
-            <h3 class="dev-parcours-title" data-i18n="c1Title">تحدي الاستيقاظ المبكر وتنظيم الصباح</h3>
-            <p class="dev-parcours-desc" data-i18n="c1Desc">التزام لمدة أسبوع كامل ببدء يومك بساعة واحدة قبل الموعد المعتاد واستغلالها للتعلم.</p>
-            <button class="dev-btn-action disabled" disabled data-i18n="comingSoonBtn">⏳ قريباً</button>
-          </div>
-        </article>
-
-        <article class="dev-parcours-card">
-          <div class="dev-parcours-body">
-            <span class="dev-parcours-num">🔥 تحدي 21 يوماً</span>
-            <h3 class="dev-parcours-title" data-i18n="c2Title">تحدي بناء عادة الانضباط اليومي</h3>
-            <p class="dev-parcours-desc" data-i18n="c2Desc">برنامج مكثف لمدة 21 يوماً لترسيخ عادة واحدة جديدة وإلغاء سلوك استنزافي.</p>
-            <button class="dev-btn-action disabled" disabled data-i18n="comingSoonBtn">⏳ قريباً</button>
-          </div>
-        </article>
-
-        <article class="dev-parcours-card">
-          <div class="dev-parcours-body">
-            <span class="dev-parcours-num">🏔️ تحدي 30 يوماً</span>
-            <h3 class="dev-parcours-title" data-i18n="c3Title">تحدي التطهير الرقمي والتركيز الشديد</h3>
-            <p class="dev-parcours-desc" data-i18n="c3Desc">شهر كامل من خفض استهلاك شبكات التواصل وتوجيه الانتباه نحو مشروعك الرئيسي.</p>
-            <button class="dev-btn-action disabled" disabled data-i18n="comingSoonBtn">⏳ قريباً</button>
-          </div>
-        </article>
+      <div class="dev-placeholder-card">
+        <span style="font-size: 2.2rem; margin-bottom: 10px;">🎯</span>
+        <h3 style="font-size: 1.35rem; color: #FAF6EF; margin-bottom: 8px;" data-i18n="phChallengesTitle">تحديات عملية قادمة قريباً</h3>
+        <p style="color: #A9AAA4; font-size: 0.95rem; max-width: 600px; line-height: 1.7; margin-bottom: 16px;" data-i18n="phChallengesDesc">
+          برامج تحدي تفاعلية (7 أيام، 21 يوماً، 30 يوماً) ستكون متاحة قريباً لمساعدتك على ترسيخ الالتزام اليومي.
+        </p>
+        <span style="display: inline-block; padding: 6px 18px; border-radius: 20px; background: rgba(223, 177, 91, 0.1); border: 1px solid rgba(223, 177, 91, 0.3); color: #DFB15B; font-size: 0.85rem; font-weight: 700;" data-i18n="comingSoonBtn">⏳ قريباً</span>
       </div>
     </section>
 
@@ -922,7 +845,7 @@
     </footer>
   </div>
 
-  <!-- Dynamic Javascript & Multilingual System -->
+  <!-- Dynamic Javascript & Multilingual System (Using existing site_lang_v1 system) -->
   <script type="module">
     import TIKTOK_DATA from '../data_v11.js';
 
@@ -980,17 +903,24 @@
         devArticlesSubtitle: "دراسات وأدلة عملية مخصصة لبناء الانضباط والعادات والثقة",
         devToolsTitle: "منهجيات وأدوات التطوير",
         devToolsSubtitle: "نماذج وأدوات تطبيقية لبناء الروتين والتحكم بالوقت والتركيز",
-        devThinkersTitle: "نماذج ملهمة في الانضباط والصلابة",
-        devThinkersSubtitle: "روّاد وفلاسفة قدّموا مبادئ خالدة في التحكم بالذات وإتقان العقل",
-        devAudioTitle: "أعمال مسموعة في الرحلة الذاتية",
-        devAudioSubtitle: "كتب وروايات مسموعة تلهم التغيير والبحث عن المعنى",
+        phToolsTitle: "أدوات ومنهجيات عمل قادمة قريباً",
+        phToolsDesc: "نعمل على إعداد نماذج تفاعلية وسجلات تتبع العادات (Habit Trackers) ودليل الجلسات العميقة للمساعدة في التطبيق اليومي.",
+        devThinkersTitle: "شخصيات ومؤلفون في تطوير الذات",
+        devThinkersSubtitle: "روّاد ومتخصصون قدّموا رؤى عمليّة في بناء الإرادة والتطوير الشخصي",
+        phThinkersTitle: "أسماء ومفكرون قريباً",
+        phThinkersDesc: "سيتم إدراج سير وإسهامات أهم كتاب ورواد تطوير الذات وبناء العادات ضمن هذا القسم فور تجهيز فساتهم الخاصة.",
+        devAudioTitle: "كتب وموارد مسموعة",
+        devAudioSubtitle: "ترشيحات وأعمال صوتية ملهمة في رحلة التغيير المستمر",
+        phAudioTitle: "كتب وموارد قادمة قريباً",
+        phAudioDesc: "نقوم حالياً بإعداد مكتبة صوتية وقراءات مسموعة لأهم الكتب المتخصصة في بناء العادات وتطوير الشخصية.",
         devChallengesTitle: "التحديات العملية التطبيقية",
         devChallengesSubtitle: "تحديات محددة المدة لاختبار إرادتك وترسيخ الانضباط في حياتك",
+        phChallengesTitle: "تحديات عملية قادمة قريباً",
+        phChallengesDesc: "برامج تحدي تفاعلية (7 أيام، 21 يوماً، 30 يوماً) ستكون متاحة قريباً لمساعدتك على ترسيخ الالتزام اليومي.",
         devCtaQuote: "« الانضباط اليومي هو الذي يحول الأحلام البعيدة إلى واقع ملموس. »",
         devCtaSub: "— حكمة ونور —",
         devCtaBtn: "استكشف جميع المقالات ←",
         btnReadArticle: "اقرأ المقال ←",
-        btnExploreThinker: "اكتشف أفكاره ←",
         comingSoonBtn: "⏳ قريباً"
       },
       fr: {
@@ -1040,17 +970,24 @@
         devArticlesSubtitle: "Analyses pratiques dédiées à la discipline, aux habitudes et à la confiance",
         devToolsTitle: "Méthodes & Outils Pratiques",
         devToolsSubtitle: "Modèles d'action pour structurer vos routines et votre temps",
-        devThinkersTitle: "Figures Inspirantes de la Discipline",
-        devThinkersSubtitle: "Penseurs et modèles ayant offert des principes intemporels de maîtrise de soi",
+        phToolsTitle: "Outils & Méthodes Bientôt Disponibles",
+        phToolsDesc: "Nous préparons des modules interactifs et modèles de suivi d'habitudes (Habit Trackers).",
+        devThinkersTitle: "Figures Inspirantes du Développement Personnel",
+        devThinkersSubtitle: "Penseurs et spécialistes ayant offert des principes intemporels de maîtrise de soi",
+        phThinkersTitle: "Auteurs Bientôt Disponibles",
+        phThinkersDesc: "Les profils des auteurs spécialisés en développement personnel seront ajoutés très prochainement.",
         devAudioTitle: "Livres Audio & Ressources",
         devAudioSubtitle: "Ouvrages audio inspirants pour votre parcours de croissance",
+        phAudioTitle: "Livres Bientôt Disponibles",
+        phAudioDesc: "Une sélection d'ouvrages audio spécialisés sera disponible très bientôt.",
         devChallengesTitle: "Défis Pratiques d'Action",
         devChallengesSubtitle: "Programmes ciblés pour tester votre volonté et ancrer l'autodiscipline",
+        phChallengesTitle: "Défis Bientôt Disponibles",
+        phChallengesDesc: "Des programmes de défis (7, 21 et 30 jours) seront bientôt disponibles.",
         devCtaQuote: "« La discipline quotidienne transforme les rêves éloignés en réalité tangible. »",
         devCtaSub: "— Hikma & Nour —",
         devCtaBtn: "Explorer tous les articles ←",
         btnReadArticle: "Lire l'article ←",
-        btnExploreThinker: "Découvrir ses idées ←",
         comingSoonBtn: "⏳ Bientôt disponible"
       },
       en: {
@@ -1100,22 +1037,29 @@
         devArticlesSubtitle: "Deep editorial guides dedicated to discipline, habits, and self-belief",
         devToolsTitle: "Practical Methods & Tools",
         devToolsSubtitle: "Action templates to organize your daily routine, focus, and time",
-        devThinkersTitle: "Inspirational Figures in Discipline",
+        phToolsTitle: "Tools & Methods Coming Soon",
+        phToolsDesc: "Interactive habit trackers and deep work session guides are currently in development.",
+        devThinkersTitle: "Inspirational Personal Growth Authors",
         devThinkersSubtitle: "Pioneers who offered timeless principles of self-mastery and inner toughness",
+        phThinkersTitle: "Authors Coming Soon",
+        phThinkersDesc: "Specialized personal growth author profiles will be featured soon.",
         devAudioTitle: "Audiobooks & Resources",
         devAudioSubtitle: "Inspiring audiobooks for your self-discovery and growth journey",
+        phAudioTitle: "Books Coming Soon",
+        phAudioDesc: "Specialized audiobooks will be available here soon.",
         devChallengesTitle: "Practical Action Challenges",
         devChallengesSubtitle: "Targeted programs to test your willpower and solidify discipline",
+        phChallengesTitle: "Challenges Coming Soon",
+        phChallengesDesc: "Interactive action challenges (7, 21, and 30 days) will be available soon.",
         devCtaQuote: "« Daily discipline transforms distant dreams into tangible reality. »",
         devCtaSub: "— Hikma & Nour —",
         devCtaBtn: "Explore All Articles ←",
         btnReadArticle: "Read Article ←",
-        btnExploreThinker: "Explore Ideas ←",
         comingSoonBtn: "⏳ Coming Soon"
       }
     };
 
-    // Article Path Mapping for 100% Pure Dev Content
+    // Article Path Mapping for Valid Personal Growth Content
     const DEV_ARTICLE_PATHS = {
       'self-discipline': '../files/self-discipline.html',
       '7-habits': '../articles/7-habits/',
@@ -1144,9 +1088,9 @@
       const trans = DEV_TRANSLATIONS[lang] || DEV_TRANSLATIONS.ar;
       const articles = (TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].articles) || [];
       
-      // Filter STRICTLY Pure Dev Articles ('self-discipline', '7-habits', 'true-confidence-inside')
-      const pureDevIds = ['self-discipline', '7-habits', 'true-confidence-inside'];
-      const filteredArticles = articles.filter(a => pureDevIds.includes(a.id));
+      // Filter STRICTLY Valid Personal Growth Articles ('self-discipline', '7-habits', 'true-confidence-inside')
+      const validDevIds = ['self-discipline', '7-habits', 'true-confidence-inside'];
+      const filteredArticles = articles.filter(a => validDevIds.includes(a.id));
 
       grid.innerHTML = filteredArticles.map(art => {
         const url = DEV_ARTICLE_PATHS[art.id] || `../articles/${art.id}.html`;
@@ -1163,63 +1107,6 @@
               <h3 class="dev-article-title">${art.title}</h3>
               <p class="dev-article-desc">${art.desc ? (art.desc.length > 115 ? art.desc.substring(0, 115) + '...' : art.desc) : (art.summary || 'دليل عملي لبناء الانضباط والعادات.')}</p>
               <a href="${url}" class="dev-btn-action">${trans.btnReadArticle}</a>
-            </div>
-          </article>
-        `;
-      }).join('');
-    }
-
-    function renderThinkersGrid(lang) {
-      const grid = document.getElementById('devThinkersGrid');
-      if (!grid) return;
-
-      const trans = DEV_TRANSLATIONS[lang] || DEV_TRANSLATIONS.ar;
-      const thinkers = (TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].thinkers) || [];
-      
-      // Select 3 models of discipline and self-mastery
-      const targetThinkerIds = ['marcaurele', 'epictete', 'nietzsche'];
-      const filteredThinkers = thinkers.filter(t => targetThinkerIds.includes(t.id));
-
-      const roleMap = {
-        'marcaurele': lang === 'ar' ? 'الإمبراطور الفيلسوف وأستاذ الانضباط اليومي' : lang === 'fr' ? 'Empereur Philosophe & Maître de l\'Autodiscipline' : 'Philosopher Emperor & Master of Self-Discipline',
-        'epictete': lang === 'ar' ? 'فيلسوف السيطرة على العقل والحرية الداخلية' : lang === 'fr' ? 'Philosophe de la Maîtrise de Soi' : 'Philosopher of Self-Mastery',
-        'nietzsche': lang === 'ar' ? 'فيلسوف إرادة القوة وتجاوز الذات' : lang === 'fr' ? 'Philosophe du Dépassement de Soi' : 'Philosopher of Self-Overcoming'
-      };
-
-      grid.innerHTML = filteredThinkers.map(t => {
-        const portraitImg = `../thinkers/images/${t.id}.jpg`;
-        return `
-          <article class="dev-thinker-card-v2">
-            <div class="dev-thinker-avatar-box">
-              <img src="${portraitImg}" alt="${t.name}" class="dev-thinker-avatar-img" loading="lazy" onerror="this.onerror=null; this.src='../brand_logo_official.png';">
-            </div>
-            <h3 class="dev-thinker-name">${t.name}</h3>
-            <div class="dev-thinker-role">${roleMap[t.id] || t.school}</div>
-            <a href="../thinkers/?thinker=${t.id}" class="dev-btn-action" style="padding: 8px 16px; font-size: 0.84rem; margin-top: auto;">${trans.btnExploreThinker}</a>
-          </article>
-        `;
-      }).join('');
-    }
-
-    function renderAudioGrid(lang) {
-      const grid = document.getElementById('devAudioGrid');
-      if (!grid) return;
-
-      const audio = (TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].audio) || [];
-      const targetAudioIds = ['alchemist', 'petit-prince'];
-      const filteredAudio = audio.filter(a => targetAudioIds.includes(a.id));
-
-      grid.innerHTML = filteredAudio.map(a => {
-        const badgeText = lang === 'ar' ? 'رواية مسموعة • رحلة الذات' : 'Livre Audio • Quête de soi';
-        const listenBtn = lang === 'ar' ? 'استمع إلى العمل 🎙️' : 'Écouter l\'œuvre 🎙️';
-        return `
-          <article class="dev-parcours-card">
-            <div class="dev-parcours-body">
-              <span class="dev-parcours-num">🎧 ${badgeText}</span>
-              <h3 class="dev-parcours-title">${a.title}</h3>
-              <p style="font-size: 0.85rem; color: #E4C98A; margin-bottom: 10px;">${a.author}</p>
-              <p class="dev-parcours-desc">${a.summary}</p>
-              <a href="../audio/?book=${a.id}" class="dev-btn-action">${listenBtn}</a>
             </div>
           </article>
         `;
@@ -1258,8 +1145,6 @@
 
       // Re-render Dynamic Grids
       renderArticlesGrid(lang);
-      renderThinkersGrid(lang);
-      renderAudioGrid(lang);
     }
 
     // Initialize Page
