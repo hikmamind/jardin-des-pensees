@@ -322,17 +322,34 @@
       </button>
 
       <div class="nav-menu" id="navMenu">
-        <a href="../" class="nav-link">الرئيسية</a>
-        <a href="../philosophie/" class="nav-link">الفلسفة</a>
-        <a href="../psychologie/" class="nav-link">علم النفس</a>
-        <a href="../developpement-personnel/" class="nav-link active">تطوير الذات</a>
-        <a href="../sagesse/" class="nav-link">الحكمة</a>
-        <a href="../thinkers/" class="nav-link">الفلاسفة</a>
-        <a href="../quotes/" class="nav-link">اقتباسات</a>
-        <a href="../audio/" class="nav-link">الصوتيات</a>
+        <a href="../" class="nav-link" data-i18n="home">الرئيسية</a>
+        <a href="../philosophie/" class="nav-link" data-i18n="philosophy">الفلسفة</a>
+        <a href="../psychologie/" class="nav-link" data-i18n="psychologySub">علم النفس</a>
+        <a href="../developpement-personnel/" class="nav-link active" data-i18n="development">تطوير الذات</a>
+        <a href="../sagesse/" class="nav-link" data-i18n="wisdom">الحكمة</a>
+        <a href="../thinkers/" class="nav-link" data-i18n="thinkers">الفلاسفة</a>
+        <a href="../quotes/" class="nav-link" data-i18n="quotes">اقتباسات</a>
+        <a href="../audio/" class="nav-link" data-i18n="audio">الصوتيات</a>
       </div>
 
       <div class="nav-actions">
+        <!-- Language Selector (AR Primary / FR Secondary) -->
+        <div class="lang-selector">
+          <button class="lang-btn" id="langBtn" aria-label="تغيير اللغة">
+            <svg class="globe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px; height:16px;">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="activeLangName">العربية</span>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-opt active" data-lang="ar" aria-label="العربية">العربية</button>
+            <button class="lang-opt" data-lang="fr" aria-label="Français">Français</button>
+            <button class="lang-opt" data-lang="en" aria-label="English">English</button>
+          </div>
+        </div>
+
         <button id="themeToggleBtn" class="theme-btn-nav" aria-label="Changer de thème">
           <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
           <svg class="moon-icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
@@ -346,27 +363,27 @@
       
       <!-- Breadcrumbs -->
       <nav class="pillar-breadcrumbs" aria-label="Fil d'Ariane">
-        <a href="../">الرئيسية</a>
+        <a href="../" data-i18n="home">الرئيسية</a>
         <span>›</span>
-        <span>الأقسام الرئيسية</span>
+        <span data-i18n="pillarsSectionTitle">المحاور الفكرية</span>
         <span>›</span>
-        <span style="color: var(--accent-gold);">تطوير الذات وبناء حياة أقوى</span>
+        <span style="color: var(--accent-gold);" data-i18n="devHeroTitle">تطوير الذات وبناء حياة أقوى</span>
       </nav>
 
       <!-- 1. Pillar Hero Header Premium -->
       <section class="pillar-page-hero">
         <div class="pillar-hero-bg-overlay" style="background-image: url('../dev_hero_cinematic.jpg');"></div>
         <div class="pillar-hero-content">
-          <span class="pillar-hero-badge">⚡ ركيزة تطوير الذات والصلابة الذهنية</span>
-          <h1 class="pillar-hero-h1">تطوير الذات وبناء حياة أقوى</h1>
-          <p class="pillar-hero-quote">« الشجاعة ليست غياب الخوف، بل هي الحكم بأن هناك شيئاً آخر أهم من الخوف. »</p>
-          <p class="pillar-hero-desc">
+          <span class="pillar-hero-badge" data-i18n="devHeroBadge">⚡ ركيزة تطوير الذات والصلابة الذهنية</span>
+          <h1 class="pillar-hero-h1" data-i18n="devHeroTitle">تطوير الذات وبناء حياة أقوى</h1>
+          <p class="pillar-hero-quote" data-i18n="devHeroQuote">« الشجاعة ليست غياب الخوف، بل هي الحكم بأن هناك شيئاً آخر أهم من الخوف. »</p>
+          <p class="pillar-hero-desc" data-i18n="devHeroSubtitle">
             أفكار عملية ورؤى فلسفية لبناء الانضباط الصارم، هندسة العادات اليومية، تأسيس الثقة الحقيقية بالنفس، ومواجهة تحديات الحياة بثبات وشجاعة عقلية مع أعظم نماذج القوة الذهنية.
           </p>
           <div class="pillar-hero-stats">
-            <div class="pillar-stat-pill">⚡ 30+ مقال ودليل عملي</div>
-            <div class="pillar-stat-pill">🏔️ 8 محاور بنائية</div>
-            <div class="pillar-stat-pill">🛡️ 10+ فلاسفة وقادة فكر</div>
+            <div class="pillar-stat-pill" data-i18n="devStat1">⚡ 30+ مقال ودليل عملي</div>
+            <div class="pillar-stat-pill" data-i18n="devStat2">🏔️ 8 محاور بنائية</div>
+            <div class="pillar-stat-pill" data-i18n="devStat3">🛡️ 10+ فلاسفة وقادة فكر</div>
           </div>
         </div>
       </section>
@@ -374,7 +391,7 @@
       <!-- 2. Sub-themes / Modules Section (8 Grands Piliers Cinématographiques) -->
       <section>
         <div class="pillar-section-heading">
-          <h2>المحاور الأساسية لتطوير الذات</h2>
+          <h2 data-i18n="devPathwaysTitle">المحاور الأساسية لتطوير الذات</h2>
         </div>
         
         <div class="pillar-modules-grid">
@@ -392,11 +409,11 @@
             </div>
             <div class="pillar-module-body">
               <div>
-                <div class="pillar-module-num">01 / المحور الأول</div>
-                <h3 class="pillar-module-title">الانضباط والتحكم بالذات</h3>
-                <p class="pillar-module-desc">كيف تبني إرادة حديدية، تتغلب على المماطلة، وتلتزم بأهدافك الكبرى يومياً.</p>
+                <div class="pillar-module-num" data-i18n="psyPath1Label">01 / المحور الأول</div>
+                <h3 class="pillar-module-title" data-i18n="devPath1Title">الانضباط والتحكم بالذات</h3>
+                <p class="pillar-module-desc" data-i18n="devPath1Desc">كيف تبني إرادة حديدية، تتغلب على المماطلة، وتلتزم بأهدافك الكبرى يومياً.</p>
               </div>
-              <a href="../files/self-discipline.html" class="pillar-card-link">استكشف المحور ←</a>
+              <a href="../files/self-discipline.html" class="pillar-card-link" data-i18n="discoverSchoolBtn">استكشف المحور ←</a>
             </div>
           </article>
 
@@ -414,11 +431,11 @@
             </div>
             <div class="pillar-module-body">
               <div>
-                <div class="pillar-module-num">02 / المحور الثاني</div>
-                <h3 class="pillar-module-title">العادات والتطور التراكمي</h3>
-                <p class="pillar-module-desc">تفكيك العادات السلبية وبناء روتين يومي يصنع فارقاً استثنائياً على المدى البعيد.</p>
+                <div class="pillar-module-num" data-i18n="psyPath2Label">02 / المحور الثاني</div>
+                <h3 class="pillar-module-title" data-i18n="devPath2Title">العادات والتطور التراكمي</h3>
+                <p class="pillar-module-desc" data-i18n="devPath2Desc">تفكيك العادات السلبية وبناء روتين يومي يصنع فارقاً استثنائياً على المدى البعيد.</p>
               </div>
-              <a href="../articles/7-habits/" class="pillar-card-link">استكشف المحور ←</a>
+              <a href="../articles/7-habits/" class="pillar-card-link" data-i18n="discoverSchoolBtn">استكشف المحور ←</a>
             </div>
           </article>
 
@@ -435,11 +452,11 @@
             </div>
             <div class="pillar-module-body">
               <div>
-                <div class="pillar-module-num">03 / المحور الثالث</div>
-                <h3 class="pillar-module-title">الثقة والصلابة الداخلية</h3>
-                <p class="pillar-module-desc">بناء تقدير ذاتي راسخ لا يتزعزع أمام آراء المحيطين وتقلبات الظروف العابرة.</p>
+                <div class="pillar-module-num" data-i18n="psyPath3Label">03 / المحور الثالث</div>
+                <h3 class="pillar-module-title" data-i18n="devPath3Title">الثقة والصلابة الداخلية</h3>
+                <p class="pillar-module-desc" data-i18n="devPath3Desc">بناء تقدير ذاتي راسخ لا يتزعزع أمام آراء المحيطين وتقلبات الظروف العابرة.</p>
               </div>
-              <a href="../articles/true-confidence-inside.html" class="pillar-card-link">استكشف المحور ←</a>
+              <a href="../articles/true-confidence-inside.html" class="pillar-card-link" data-i18n="discoverSchoolBtn">استكشف المحور ←</a>
             </div>
           </article>
 
@@ -456,11 +473,11 @@
             </div>
             <div class="pillar-module-body">
               <div>
-                <div class="pillar-module-num">04 / المحور الرابع</div>
-                <h3 class="pillar-module-title">الشجاعة وكسر التردد</h3>
-                <p class="pillar-module-desc">اتخاذ القرارات الصعبة، احتضان المخاطر المحسوبة، والفعل الحاسم رغم الخوف.</p>
+                <div class="pillar-module-num" data-i18n="psyPath4Label">04 / المحور الرابع</div>
+                <h3 class="pillar-module-title" data-i18n="devPath4Title">الشجاعة وكسر التردد</h3>
+                <p class="pillar-module-desc" data-i18n="devPath4Desc">اتخاذ القرارات الصعبة، احتضان المخاطر المحسوبة، والفعل الحاسم رغم الخوف.</p>
               </div>
-              <a href="../articles/nietzsche-psychological-strength.html" class="pillar-card-link">استكشف المحور ←</a>
+              <a href="../articles/nietzsche-psychological-strength.html" class="pillar-card-link" data-i18n="discoverSchoolBtn">استكشف المحور ←</a>
             </div>
           </article>
 
@@ -479,11 +496,11 @@
             </div>
             <div class="pillar-module-body">
               <div>
-                <div class="pillar-module-num">05 / المحور الخامس</div>
-                <h3 class="pillar-module-title">التركيز والعمل العميق</h3>
-                <p class="pillar-module-desc">حماية انتباهك من المشتتات الرقمية وتوجيه طاقتك العقلية نحو أهدافك الجوهرية.</p>
+                <div class="pillar-module-num" data-i18n="psyPath5Label">05 / المحور الخامس</div>
+                <h3 class="pillar-module-title" data-i18n="devPath5Title">التركيز والعمل العميق</h3>
+                <p class="pillar-module-desc" data-i18n="devPath5Desc">حماية انتباهك من المشتتات الرقمية وتوجيه طاقتك العقلية نحو أهدافك الجوهرية.</p>
               </div>
-              <a href="../files/stoicisme-force-calme.html" class="pillar-card-link">استكشف المحور ←</a>
+              <a href="../files/stoicisme-force-calme.html" class="pillar-card-link" data-i18n="discoverSchoolBtn">استكشف المحور ←</a>
             </div>
           </article>
 
@@ -504,11 +521,11 @@
             </div>
             <div class="pillar-module-body">
               <div>
-                <div class="pillar-module-num">06 / المحور السادس</div>
-                <h3 class="pillar-module-title">التغلب على الخوف والشك</h3>
-                <p class="pillar-module-desc">مواجهة المخاوف الدفينة، قهر متلازمة المحتال، والتقدم بثبات واثق في المجهول.</p>
+                <div class="pillar-module-num" data-i18n="psyPath6Label">06 / المحور السادس</div>
+                <h3 class="pillar-module-title" data-i18n="devPath6Title">التغلب على الخوف والشك</h3>
+                <p class="pillar-module-desc" data-i18n="devPath6Desc">مواجهة المخاوف الدفينة، قهر متلازمة المحتال، والتقدم بثبات واثق في المجهول.</p>
               </div>
-              <a href="../files/stop-overthinking.html" class="pillar-card-link">استكشف المحور ←</a>
+              <a href="../files/stop-overthinking.html" class="pillar-card-link" data-i18n="discoverSchoolBtn">استكشف المحور ←</a>
             </div>
           </article>
 
@@ -528,11 +545,11 @@
             </div>
             <div class="pillar-module-body">
               <div>
-                <div class="pillar-module-num">07 / المحور السابع</div>
-                <h3 class="pillar-module-title">المرونة وتجاوز الصدمات</h3>
-                <p class="pillar-module-desc">النهوض بعد الانكسار، تحويل الأزمات إلى فرص للنمو، وتطبيق مبدأ حب القدر (Amor Fati).</p>
+                <div class="pillar-module-num" data-i18n="psyPath7Label">07 / المحور السابع</div>
+                <h3 class="pillar-module-title" data-i18n="devPath7Title">المرونة وتجاوز الصدمات</h3>
+                <p class="pillar-module-desc" data-i18n="devPath7Desc">النهوض بعد الانكسار، تحويل الأزمات إلى فرص للنمو، وتطبيق مبدأ حب القدر (Amor Fati).</p>
               </div>
-              <a href="../articles/nietzsche-psychological-strength.html" class="pillar-card-link">استكشف المحور ←</a>
+              <a href="../articles/nietzsche-psychological-strength.html" class="pillar-card-link" data-i18n="discoverSchoolBtn">استكشف المحور ←</a>
             </div>
           </article>
 
@@ -550,11 +567,11 @@
             </div>
             <div class="pillar-module-body">
               <div>
-                <div class="pillar-module-num">08 / المحور الثامن</div>
-                <h3 class="pillar-module-title">النمو المستمر والتعلم الذاتي</h3>
-                <p class="pillar-module-desc">استراتيجيات القراءة العميقة، تنمية العقلية المتطورة، وبناء حياة ذات أثر مستدام.</p>
+                <div class="pillar-module-num" data-i18n="psyPath8Label">08 / المحور الثامن</div>
+                <h3 class="pillar-module-title" data-i18n="devPath8Title">النمو المستمر والتعلم الذاتي</h3>
+                <p class="pillar-module-desc" data-i18n="devPath8Desc">استراتيجيات القراءة العميقة، تنمية العقلية المتطورة، وبناء حياة ذات أثر مستدام.</p>
               </div>
-              <a href="../articles/7-errors-mind-growth.html" class="pillar-card-link">استكشف المحور ←</a>
+              <a href="../articles/7-errors-mind-growth.html" class="pillar-card-link" data-i18n="discoverSchoolBtn">استكشف المحور ←</a>
             </div>
           </article>
 
@@ -564,156 +581,60 @@
       <!-- 3. Featured Magazine Article Hero -->
       <section>
         <div class="pillar-section-heading">
-          <h2>الدليل الاستراتيجي في هذا المحور</h2>
+          <h2 data-i18n="devFeaturedTitle">الدليل الاستراتيجي في هذا المحور</h2>
         </div>
-        <article class="featured-magazine-article">
-          <div class="featured-article-img-wrapper">
-            <img src="../dev_discipline_hd.jpg" alt="الانضباط الذاتي: كيف تبني إرادة حديدية لا تنكسر؟" loading="lazy">
-          </div>
-          <div class="featured-article-body">
-            <div>
-              <span class="pillar-card-badge">الانضباط الذاتي • علم النفس السلوكي</span>
-              <h3 class="pillar-card-title" style="font-size: 1.55rem; margin-top: 6px;">
-                <a href="../files/self-discipline.html">الانضباط الذاتي: كيف تبني إرادة حديدية لا تنكسر؟</a>
-              </h3>
-              <p class="pillar-card-desc">
-                دليل استراتيجي متكامل في علم النفس السلوكي والفلسفة الرواقية لإتقان التحكم بالرغبات، القضاء على التسويف، وبناء نمط حياة يرتكز على الفعل الملموس والإنجاز المتواصل.
-              </p>
-            </div>
-            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; border-top: 1px solid rgba(223, 177, 91, 0.2); padding-top: 15px;">
-              <span style="font-size: 0.82rem; color: var(--text-secondary);">⏱️ 8 دقائق قراءة • دليل شامل</span>
-              <a href="../files/self-discipline.html" class="pillar-card-link" style="font-size: 0.95rem;">قراءة الدليل كاملاً ←</a>
-            </div>
-          </div>
-        </article>
+        <div class="featured-magazine-article" id="devFeaturedBox">
+          <!-- Dynamically Rendered by Javascript -->
+        </div>
       </section>
 
       <!-- 4. Magazine Articles Grid -->
       <section>
         <div class="pillar-section-heading">
-          <h2>أهم المقالات في تطوير الذات والصلابة الذهنية</h2>
+          <h2 data-i18n="devArticlesTitle">أهم المقالات في تطوير الذات والصلابة الذهنية</h2>
         </div>
-        <div class="pillar-articles-grid">
-          
-          <article class="pillar-article-card">
-            <div class="pillar-card-badge">ثقة بالنفس • قوة داخلية</div>
-            <h3 class="pillar-card-title"><a href="../articles/true-confidence-inside.html">الثقة الحقيقية: كيف تبنيها من الداخل دون تصنع؟</a></h3>
-            <p class="pillar-card-desc">الفارق الجوهري بين الثقة المزيفة القائمة على الغرور والثقة الحقيقية النابعة من الكفاءة والتصالح مع الذات.</p>
-            <a href="../articles/true-confidence-inside.html" class="pillar-card-link">قراءة المقال كاملاً ←</a>
-          </article>
-
-          <article class="pillar-article-card">
-            <div class="pillar-card-badge">هندسة العادات • نجاح</div>
-            <h3 class="pillar-card-title"><a href="../articles/7-habits/">العادات السبع للشخصيات الأكثر تأثيراً ونضجاً</a></h3>
-            <p class="pillar-card-desc">المبادئ الجوهرية للتحول من التبعية إلى الاستقلالية ثم إلى التكامل والفاعلية الكبرى في الحياة.</p>
-            <a href="../articles/7-habits/" class="pillar-card-link">قراءة المقال كاملاً ←</a>
-          </article>
-
-          <article class="pillar-article-card">
-            <div class="pillar-card-badge">صلابة ذهنية • نيتشه</div>
-            <h3 class="pillar-card-title"><a href="../articles/nietzsche-psychological-strength.html">كيف تبني قوة نفسية صلبة مستوحاة من نيتشه؟</a></h3>
-            <p class="pillar-card-desc">دروس عملية في تحويل المعاناة إلى وقود للإبداع، وممارسة مبدأ حب القدر بشجاعة نادرة.</p>
-            <a href="../articles/nietzsche-psychological-strength.html" class="pillar-card-link">قراءة المقال كاملاً ←</a>
-          </article>
-
-          <article class="pillar-article-card">
-            <div class="pillar-card-badge">فلسفة رواقية • هدوء</div>
-            <h3 class="pillar-card-title"><a href="../files/stoicisme-force-calme.html">القوة في الهدوء: كيف تصبح سيد نفسك؟</a></h3>
-            <p class="pillar-card-desc">كيف يمنحك الهدوء الرواقي تفوقاً ذهنياً حاسماً في عالم مليء بالفوضى والضجيج.</p>
-            <a href="../files/stoicisme-force-calme.html" class="pillar-card-link">قراءة المقال كاملاً ←</a>
-          </article>
-
+        <div class="pillar-articles-grid" id="devArticlesGrid">
+          <!-- Dynamically Rendered by Javascript -->
         </div>
       </section>
 
       <!-- 5. Editorial Quote Banner -->
       <section>
         <div class="pillar-quote-banner">
-          <p class="pillar-quote-banner-text">« ليس هناك نصر أعظم من أن ينتصر الإنسان على نفسه، والجهل بالنفس هو أصل كل فشل. »</p>
-          <div class="pillar-quote-banner-author">— أفلاطون (الفيلسوف اليوناني)</div>
+          <p class="pillar-quote-banner-text" data-i18n="devQuoteText">« ليس هناك نصر أعظم من أن ينتصر الإنسان على نفسه، والجهل بالنفس هو أصل كل فشل. »</p>
+          <div class="pillar-quote-banner-author" data-i18n="devQuoteAuthor">— أفلاطون (الفيلسوف اليوناني)</div>
         </div>
       </section>
 
       <!-- 6. Thinkers Section -->
       <section>
         <div class="pillar-section-heading">
-          <h2>نماذج ملهمة في الانضباط وبناء الذات</h2>
+          <h2 data-i18n="devThinkersTitle">نماذج ملهمة في الانضباط وبناء الذات</h2>
         </div>
-        <div class="pillar-thinkers-grid">
-          
-          <div class="pillar-thinker-card">
-            <div class="pillar-thinker-avatar-box">
-              <img src="../thinkers/images/marcaurele.jpg" alt="ماركوس أوريليوس" onerror="this.src='../brand_logo_official.png'">
-            </div>
-            <div class="pillar-thinker-info">
-              <h3 class="pillar-thinker-name">ماركوس أوريليوس</h3>
-              <span class="pillar-thinker-role">الإمبراطور الفيلسوف وأستاذ الانضباط اليومي</span>
-              <a href="../thinkers/" class="pillar-thinker-btn" aria-label="عرض سيرة ماركوس أوريليوس">السيرة كاملة ←</a>
-            </div>
-          </div>
-
-          <div class="pillar-thinker-card">
-            <div class="pillar-thinker-avatar-box">
-              <img src="../thinkers/images/epictete.jpg" alt="إبيكتيتوس" onerror="this.src='../brand_logo_official.png'">
-            </div>
-            <div class="pillar-thinker-info">
-              <h3 class="pillar-thinker-name">إبيكتيتوس</h3>
-              <span class="pillar-thinker-role">فيلسوف السيطرة على العقل والحرية الداخلية</span>
-              <a href="../thinkers/" class="pillar-thinker-btn" aria-label="عرض سيرة إبيكتيتوس">السيرة كاملة ←</a>
-            </div>
-          </div>
-
-          <div class="pillar-thinker-card">
-            <div class="pillar-thinker-avatar-box">
-              <img src="../thinkers/images/nietzsche.jpg" alt="فريدريش نيتشه" onerror="this.src='../brand_logo_official.png'">
-            </div>
-            <div class="pillar-thinker-info">
-              <h3 class="pillar-thinker-name">فريدريش نيتشه</h3>
-              <span class="pillar-thinker-role">فيلسوف إرادة القوة وتجاوز الذات المستمر</span>
-              <a href="../thinkers/" class="pillar-thinker-btn" aria-label="عرض سيرة فريدريش نيتشه">السيرة كاملة ←</a>
-            </div>
-          </div>
-
+        <div class="pillar-thinkers-grid" id="devThinkersGrid">
+          <!-- Dynamically Rendered by Javascript -->
         </div>
       </section>
 
       <!-- 7. Audio Section -->
       <section style="margin-top: 50px;">
         <div class="pillar-section-heading">
-          <h2>أعمال مسموعة في الرحلة الذاتية</h2>
+          <h2 data-i18n="devAudioTitle">أعمال مسموعة في الرحلة الذاتية</h2>
         </div>
-        <div class="pillar-audio-grid">
-          
-          <div class="pillar-audio-card">
-            <div class="pillar-audio-badge">رواية مسموعة • بحث عن الذات</div>
-            <h3 class="pillar-audio-title">الخيميائي</h3>
-            <div class="pillar-audio-author">باولو كويلو</div>
-            <p class="pillar-audio-desc">رحلة ملهمة في اتباع الأسطورة الشخصية، قراءة الإشارات، والإيمان بالحلم.</p>
-            <a href="../audio/?book=alchemist" class="pillar-audio-btn">استمع إلى العمل 🎙️</a>
-          </div>
-
-          <div class="pillar-audio-card">
-            <div class="pillar-audio-badge">أدب فلسفي • براءة وحكمة</div>
-            <h3 class="pillar-audio-title">الأمير الصغير</h3>
-            <div class="pillar-audio-author">أنطوان دو سانت إكزوبيري</div>
-            <p class="pillar-audio-desc">تأملات عميقة في جوهر الحياة، المسؤولية، ورؤية الأشياء بالقلب لا بالعين وحدها.</p>
-            <a href="../audio/?book=petit-prince" class="pillar-audio-btn">استمع إلى العمل 🎙️</a>
-          </div>
-
+        <div class="pillar-audio-grid" id="devAudioGrid">
+          <!-- Dynamically Rendered by Javascript -->
         </div>
       </section>
 
       <!-- 8. Final Pillar CTA -->
       <section>
         <div class="pillar-cta-box">
-          <h2 style="font-size: 1.8rem; color: #FFFDF8; margin: 0 0 10px; font-family: 'Playfair Display', 'Amiri', serif;">هل أنت مستعد لبناء نسخة أقوى من نفسك؟</h2>
-          <p style="color: var(--text-secondary); max-width: 650px; margin: 0 auto; line-height: 1.7;">
+          <h2 style="font-size: 1.8rem; color: #FFFDF8; margin: 0 0 10px; font-family: 'Playfair Display', 'Amiri', serif;" data-i18n="devCtaTitle">هل أنت مستعد لبناء نسخة أقوى من نفسك؟</h2>
+          <p style="color: var(--text-secondary); max-width: 650px; margin: 0 auto; line-height: 1.7;" data-i18n="devCtaSubtitle">
             استكشف المقالات والأدلة العملية التي تمهد لك طريق النجاح والصلابة العقلية.
           </p>
           <div class="pillar-cta-actions">
-            <a href="../articles/" class="pillar-audio-btn" style="background: #E7B84B; color: #070A08;">اقرأ المقالات ←</a>
-            <a href="../thinkers/" class="pillar-audio-btn">اكتشف المفكرين 🏛️</a>
-            <a href="../audio/" class="pillar-audio-btn">استمع إلى الصوتيات 🎧</a>
+            <a href="../articles/" class="pillar-audio-btn" style="background: #E7B84B; color: #070A08;" data-i18n="devCtaBtn">ابدأ التطوير الآن →</a>
           </div>
         </div>
       </section>
@@ -725,11 +646,152 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-bottom" style="text-align: center; padding: 40px 0 20px; color: var(--text-secondary); font-size: 0.9rem;">
-        <p>© 2026 حكمة ونور (HIKMA & NOUR) — Le Jardin des Pensées. جميع الحقوق محفوظة.</p>
+        <p data-i18n="footerCopyright">© 2026 حكمة ونور (HIKMA & NOUR) — Le Jardin des Pensées. جميع الحقوق محفوظة.</p>
       </div>
     </div>
   </footer>
 
-  <script src="../app_v11.js?v=15" type="module"></script>
+  <script src="../app_v11.js?v=28" type="module"></script>
+
+  <!-- Dynamic Rendering script for Personal Growth multilinguality (V5) -->
+  <script type="module">
+    import TIKTOK_DATA from '../data_v11.js';
+
+    const articlePathMap = {
+      'self-discipline': '../files/self-discipline.html',
+      'true-confidence-inside': '../articles/true-confidence-inside.html',
+      '7-habits': '../articles/7-habits/',
+      'nietzsche-psychological-strength': '../articles/nietzsche-psychological-strength.html',
+      'stoicisme-force-calme': '../files/stoicisme-force-calme.html'
+    };
+
+    function renderDynamicElements() {
+      const lang = document.documentElement.lang || 'ar';
+      
+      // 1. Render Featured Article (Self discipline guide)
+      const featuredBox = document.getElementById('devFeaturedBox');
+      if (featuredBox) {
+        const art = TIKTOK_DATA.content[lang].articles.find(a => a.id === 'self-discipline');
+        if (art) {
+          const badge = TIKTOK_DATA.ui[lang].devFeaturedBadge || 'دليل استراتيجي • أدلة عملية';
+          const readBtn = TIKTOK_DATA.ui[lang].readArticleBtn || 'اقرأ المقال →';
+          const readTimeText = lang === 'ar' ? `⏱️ ${art.readTime}` : `⏱️ ${art.readTime}`;
+          featuredBox.innerHTML = `
+            <div class="featured-article-img-wrapper">
+              <img src="../dev_discipline_hd.jpg" alt="${art.title}" loading="lazy">
+            </div>
+            <div class="featured-article-body">
+              <div>
+                <span class="pillar-card-badge">${badge}</span>
+                <h3 class="pillar-card-title" style="font-size: 1.55rem; margin-top: 6px;">
+                  <a href="${articlePathMap[art.id]}">${art.title}</a>
+                </h3>
+                <p class="pillar-card-desc">${art.summary}</p>
+              </div>
+              <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; border-top: 1px solid rgba(223, 177, 91, 0.2); padding-top: 15px;">
+                <span style="font-size: 0.82rem; color: var(--text-secondary);">${readTimeText}</span>
+                <a href="${articlePathMap[art.id]}" class="pillar-card-link" style="font-size: 0.95rem;">${readBtn}</a>
+              </div>
+            </div>
+          `;
+        }
+      }
+
+      // 2. Render Secondary Articles
+      const articlesGrid = document.getElementById('devArticlesGrid');
+      if (articlesGrid) {
+        const targetIds = ['true-confidence-inside', '7-habits', 'nietzsche-psychological-strength', 'stoicisme-force-calme'];
+        const list = TIKTOK_DATA.content[lang].articles.filter(a => targetIds.includes(a.id));
+        list.sort((a, b) => targetIds.indexOf(a.id) - targetIds.indexOf(b.id));
+
+        const badgeMap = {
+          'true-confidence-inside': lang === 'ar' ? 'ثقة بالنفس • قوة داخلية' : lang === 'fr' ? 'Confiance • Force' : 'Confidence • Strength',
+          '7-habits': lang === 'ar' ? 'هندسة العادات • نجاح' : lang === 'fr' ? 'Habitudes • Succès' : 'Habits • Success',
+          'nietzsche-psychological-strength': lang === 'ar' ? 'صلابة ذهنية • نيتشه' : lang === 'fr' ? 'Résilience • Nietzsche' : 'Resilience • Nietzsche',
+          'stoicisme-force-calme': lang === 'ar' ? 'فلسفة رواقية • هدوء' : lang === 'fr' ? 'Stoïcisme • Calme' : 'Stoicism • Calmness'
+        };
+
+        articlesGrid.innerHTML = list.map(art => {
+          const readBtn = TIKTOK_DATA.ui[lang].readArticleBtn || 'اقرأ المقال →';
+          return `
+            <article class="pillar-article-card">
+              <div class="pillar-card-badge">${badgeMap[art.id]}</div>
+              <h3 class="pillar-card-title"><a href="${articlePathMap[art.id]}">${art.title}</a></h3>
+              <p class="pillar-card-desc">${art.summary}</p>
+              <a href="${articlePathMap[art.id]}" class="pillar-card-link">${readBtn}</a>
+            </article>
+          `;
+        }).join('');
+      }
+
+      // 3. Render Thinkers
+      const thinkersGrid = document.getElementById('devThinkersGrid');
+      if (thinkersGrid) {
+        const targetThinkerIds = ['marcaurele', 'epictete', 'nietzsche'];
+        const list = TIKTOK_DATA.content[lang].thinkers.filter(t => targetThinkerIds.includes(t.id));
+        list.sort((a, b) => targetThinkerIds.indexOf(a.id) - targetThinkerIds.indexOf(b.id));
+
+        const avatarMap = {
+          'marcaurele': '../thinkers/images/marcaurele.jpg',
+          'epictete': '../thinkers/images/epictete.jpg',
+          'nietzsche': '../thinkers/images/nietzsche.jpg'
+        };
+
+        const roleMap = {
+          'marcaurele': lang === 'ar' ? 'الإمبراطور الفيلسوف وأستاذ الانضباط اليومي' : lang === 'fr' ? 'L\'Empereur Philosophe & Maître de l\'Autodiscipline' : 'The Philosopher Emperor & Master of Self-Discipline',
+          'epictete': lang === 'ar' ? 'فيلسوف السيطرة على العقل والحرية الداخلية' : lang === 'fr' ? 'Le Philosophe du Contrôle de Soi & Liberté Intérieure' : 'The Philosopher of dichotomy of control & Inner Freedom',
+          'nietzsche': lang === 'ar' ? 'فيلسوف إرادة القوة وتجاوز الذات المستمر' : lang === 'fr' ? 'Le Philosophe de la Volonté de Puissance & Dépassement' : 'The Philosopher of Will to Power & Self-Overcoming'
+        };
+
+        thinkersGrid.innerHTML = list.map(t => {
+          const discBtn = TIKTOK_DATA.ui[lang].discoverThinkerBtn || 'السيرة كاملة ←';
+          return `
+            <div class="pillar-thinker-card">
+              <div class="pillar-thinker-avatar-box">
+                <img src="${avatarMap[t.id]}" alt="${t.name}" onerror="this.src='../brand_logo_official.png'">
+              </div>
+              <div class="pillar-thinker-info">
+                <h3 class="pillar-thinker-name">${t.name}</h3>
+                <span class="pillar-thinker-role">${roleMap[t.id]}</span>
+                <a href="../thinkers/?thinker=${t.id}" class="pillar-thinker-btn">${discBtn}</a>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // 4. Render Audio Books
+      const audioGrid = document.getElementById('devAudioGrid');
+      if (audioGrid) {
+        const targetAudioIds = ['alchemist', 'petit-prince'];
+        const list = TIKTOK_DATA.content[lang].audio.filter(a => targetAudioIds.includes(a.id));
+        list.sort((a, b) => targetAudioIds.indexOf(a.id) - targetAudioIds.indexOf(b.id));
+
+        const badgeMap = {
+          'alchemist': lang === 'ar' ? 'رواية مسموعة • بحث عن الذات' : lang === 'fr' ? 'Livre Audio • Quête de Soi' : 'Audiobook • Self-Discovery',
+          'petit-prince': lang === 'ar' ? 'أدب فلسفي • براءة وحكمة' : lang === 'fr' ? 'Conte Philosophique • Sagesse' : 'Philosophical Tale • Wisdom'
+        };
+
+        audioGrid.innerHTML = list.map(a => {
+          const listenBtn = TIKTOK_DATA.ui[lang].audioListenBtn || 'استمع إلى العمل 🎙️';
+          return `
+            <div class="pillar-audio-card">
+              <div class="pillar-audio-badge">${badgeMap[a.id]}</div>
+              <h3 class="pillar-audio-title">${a.title}</h3>
+              <div class="pillar-audio-author">${a.author}</div>
+              <p class="pillar-audio-desc">${a.summary}</p>
+              <a href="../audio/?book=${a.id}" class="pillar-audio-btn">${listenBtn}</a>
+            </div>
+          `;
+        }).join('');
+      }
+    }
+
+    // Listen to language changes
+    window.addEventListener('siteLanguageChanged', renderDynamicElements);
+
+    // Initial render
+    renderDynamicElements();
+  </script>
 </body>
 </html>
