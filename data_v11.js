@@ -135,8 +135,8 @@ const TIKTOK_DATA = {
       "quizBackBtn": "Retour aux tests",
       "quizScoreTitle": "Votre Score / Profil Dominant",
       "quiz": "Quiz",
-      "heroTitle": "Idées immortelles pour une vie meilleure",
-      "heroSubtitle": "Des pensées et sagesses intemporelles issues des plus grands esprits de l'histoire, pour vous inspirer et vous aider à comprendre la vie plus profondément.",
+      "heroTitle": "La sagesse commence par une question.",
+      "heroSubtitle": "Des réflexions philosophiques, spirituelles et psychologiques pour éclairer votre esprit et comprendre le monde qui vous entoure.",
       "exploreArticles": "Explorer les articles",
       "balancedLife": "Vie équilibrée",
       "inspiringBooks": "Livres inspirants",
@@ -213,7 +213,7 @@ const TIKTOK_DATA = {
       "audioLibrarySubtitle": "Écoutez des réflexions, des résumés de livres et des histoires inspirantes.",
       "listenAudioBtn": "▶ Écouter",
       "discoverAllAudio": "Découvrir tout le studio audio →",
-      "quoteOfDayTitle": "La pensée du jour",
+      "quoteOfDayTitle": "Pensée du Jour",
       "quoteOfDayDesc": "« Ce qui trouble les hommes, ce ne sont pas les choses, mais les jugements qu'ils portent sur les choses. »",
       "quoteOfDayAuthor": "— Épictète",
       "discoverQuotesBtn": "Découvrir les citations →",
@@ -265,13 +265,9 @@ const TIKTOK_DATA = {
       "footerPsychology": "🧠 Psychologie",
       "footerCollab": "🤝 Collaborations & Partenariats",
       "footerPrivacyShort": "🔒 Confidentialité",
-      // Homepage V4 Keys (FR)
-      "heroTitle": "La sagesse commence par une question.",
-      "heroSubtitle": "Des réflexions philosophiques, spirituelles et psychologiques pour éclairer votre esprit et comprendre le monde qui vous entoure.",
       "heroExploreArticles": "Découvrir les articles",
       "heroExploreQuotes": "Explorer les pensées",
       "heroBrandBadge": "🌿 Sagesse • Philosophie • Sérénité",
-      "quoteOfDayTitle": "Pensée du Jour",
       "quoteOfDayCycleBtn": "Autre pensée ↻",
       "quoteOfDayAllBtn": "Découvrir toutes les citations →",
       "featuredArticlesTitle": "Articles à la une",
@@ -433,8 +429,8 @@ const TIKTOK_DATA = {
       "quizBackBtn": "Back to all quizzes",
       "quizScoreTitle": "Your Score / Dominant Profile",
       "quiz": "Quiz",
-      "heroTitle": "Immortal thoughts for a better life",
-      "heroSubtitle": "Timeless thoughts and wisdom from history's greatest minds, to inspire you and help you understand life more deeply.",
+      "heroTitle": "Wisdom begins with a question.",
+      "heroSubtitle": "Ideas from philosophy, wisdom, and psychology to help you understand yourself and the world around you.",
       "exploreArticles": "Explore articles",
       "balancedLife": "Balanced Life",
       "inspiringBooks": "Inspiring Books",
@@ -511,7 +507,7 @@ const TIKTOK_DATA = {
       "audioLibrarySubtitle": "Listen to reflections, book summaries, and inspiring philosophical stories.",
       "listenAudioBtn": "▶ Listen now",
       "discoverAllAudio": "Explore the full audio studio →",
-      "quoteOfDayTitle": "Quote of the Day",
+      "quoteOfDayTitle": "Wisdom of the Day",
       "quoteOfDayDesc": "“Men are disturbed not by things, but by the view which they take of them.”",
       "quoteOfDayAuthor": "— Epictetus",
       "discoverQuotesBtn": "Discover all quotes →",
@@ -563,13 +559,9 @@ const TIKTOK_DATA = {
       "footerPsychology": "🧠 Psychology",
       "footerCollab": "🤝 Collaborations & Partnerships",
       "footerPrivacyShort": "🔒 Privacy",
-      // Homepage V4 Keys (EN)
-      "heroTitle": "Wisdom begins with a question.",
-      "heroSubtitle": "Ideas from philosophy, wisdom, and psychology to help you understand yourself and the world around you.",
       "heroExploreArticles": "Explore Articles",
       "heroExploreQuotes": "Discover Quotes",
       "heroBrandBadge": "🌿 Wisdom • Philosophy • Serenity",
-      "quoteOfDayTitle": "Wisdom of the Day",
       "quoteOfDayCycleBtn": "Another quote ↻",
       "quoteOfDayAllBtn": "Explore all quotes →",
       "featuredArticlesTitle": "Featured Articles",
@@ -740,8 +732,8 @@ const TIKTOK_DATA = {
       "quizBackBtn": "العودة إلى الاختبارات",
       "quizScoreTitle": "درجتك / ملفك الشخصي المهيمن",
       "quiz": "الاختبارات",
-      "heroTitle": "أفكار خالدة لحياة أفضل",
-      "heroSubtitle": "أقوال وحكم خالدة من أعظم العقول في التاريخ، لتلهمك وتساعدك على فهم الحياة بعمق أكبر.",
+      "heroTitle": "الحكمة تبدأ بسؤال.",
+      "heroSubtitle": "أفكار من الفلسفة والحكمة وعلم النفس تساعدك على فهم نفسك والعالم من حولك.",
       "exploreArticles": "استكشف المقالات",
       "balancedLife": "حياة متوازنة",
       "inspiringBooks": "كتب ملهمة",
@@ -871,13 +863,9 @@ const TIKTOK_DATA = {
       "footerPhilosophy": "🏛️ الفلسفة",
       "footerCollab": "🤝 التعاون والشراكات",
       "footerPrivacyShort": "🔒 الخصوصية",
-      // Homepage V4 Keys (AR)
-      "heroTitle": "الحكمة تبدأ بسؤال.",
-      "heroSubtitle": "أفكار من الفلسفة والحكمة وعلم النفس تساعدك على فهم نفسك والعالم من حولك.",
       "heroExploreArticles": "اكتشف المقالات",
       "heroExploreQuotes": "استكشف الحكم",
       "heroBrandBadge": "🌿 حكمة • فلسفة • سكينة",
-      "quoteOfDayTitle": "حكمة اليوم",
       "quoteOfDayCycleBtn": "حكمة أخرى ↻",
       "quoteOfDayAllBtn": "استكشف جميع الحكم ←",
       "featuredArticlesTitle": "مقالات مختارة",
@@ -2246,6 +2234,405 @@ const TIKTOK_DATA = {
           ],
           "keyConcept": "-",
           "keyWorks": "-"
+        },
+        {
+          "id": "ghazali",
+          "featured": true,
+          "name": "Al-Ghazali",
+          "era": "1058 - 1111 ap. J.-C.",
+          "school": "Pensée Islamique / Épistémologie / Éthique",
+          "image": "thinkers/images/ghazali.jpg",
+          "bio": "Abu Hamid Al-Ghazali (Preuve de l'Islam), théologien, philosophe et juriste majeur. Auteur de « L'Erreur et la Délivrance » et de « Revivification des Sciences de la Religion ».",
+          "body": [
+            "Abu Hamid Al-Ghazali (1058 - 1111) est l'une des figures majeures de l'histoire intellectuelle islamique. Juriste, théologien et philosophe, il a marqué l'épistémologie par sa quête rigoureuse de la certitude.",
+            "Son œuvre autobiographique « L'Erreur et la Délivrance » préfigure l'examen critique du savoir des siècles avant le doute méthodique européen, affirmant l'harmonie entre raison éclairée et foi contemplative.",
+            "Ses travaux, notamment « Ihya Ulum al-Din », demeurent des références incontournables sur l'éthique, la spiritualité et la philosophie de la connaissance."
+          ],
+          "keyConcept": "Certitude épistémologique, Harmonie Foi & Raison",
+          "keyWorks": "L'Erreur et la Délivrance, Revivification des Sciences de la Religion",
+          "originalName": "أبو حامد محمد بن محمد الغزالي",
+          "subName": "Théologien, philosophe et penseur de la certitude",
+          "country": "Tous, Khorassan (Iran)",
+          "flag": "📜",
+          "heroQuote": "« La sagesse consiste à placer chaque connaissance à sa juste place. »",
+          "intro": "Al-Ghazali est un géant de la pensée islamique dont l'approche critique et spirituelle de la connaissance a marqué la philosophie orientale et occidentale.",
+          "bioDetails": {
+            "upbringing": "Né à Tous, il étudia les sciences religieuses et rationnelles auprès des plus grands savants de son temps.",
+            "studies": "Professeur à la prestigieuse université Nizamiyya de Bagdad, il atteignit le sommet de la reconnaissance académique.",
+            "life": "Il entreprit un cheminement spirituel et intellectuel à travers Damas, Jérusalem et La Mecque avant de revenir enseigner à Tous."
+          },
+          "historicalContext": "Il vécut à l'époque abbasside, marquée par d'intenses débats intellectuels entre théologiens, philosophes et mystiques.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "La quête de certitude",
+              "text": "Développement d'une méthode rigoureuse pour distinguer le savoir authentique des illusions."
+            },
+            {
+              "num": "02",
+              "title": "Complémentarité Raison & Révélation",
+              "text": "La raison est un outil d'analyse et de compréhension qui s'harmonise avec les valeurs de la Révélation."
+            },
+            {
+              "num": "03",
+              "title": "Éthique et réforme intérieure",
+              "text": "Présentation d'une éthique fondée sur l'alignement entre le savoir et l'action morale."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "name": "Certitude (Yaqin)",
+              "desc": "Un savoir solide exempt de doute méthodique."
+            },
+            {
+              "name": "Tazkiya",
+              "desc": "La purification éthique et l'élévation du caractère."
+            }
+          ],
+          "works": [
+            {
+              "title": "Ihya Ulum ad-Din",
+              "period": "1097",
+              "desc": "Monument de l'éthique et de la sagesse spirituelle."
+            },
+            {
+              "title": "Al-Munqidh min ad-Dalal",
+              "period": "1108",
+              "desc": "Récit autobiographique et philosophique sur la quête de la vérité."
+            }
+          ],
+          "influence": {
+            "names": [
+              "Averroès",
+              "Descartes",
+              "Thomas d'Aquin"
+            ],
+            "summary": "Son analyse épistémologique a influencé la pensée médiévale et les réflexions philosophiques ultérieures."
+          },
+          "quotes": [
+            "« Le savoir sans action est folie, et l'action sans savoir est vaine. »"
+          ],
+          "famousQuote": "« Le savoir sans action est folie, et l'action sans savoir est vaine. »",
+          "didYouKnow": "Al-Ghazali a consigné son cheminement intellectuel dans un livre autobiographique considéré comme l'un des premiers récits d'introspection philosophique.",
+          "reflectionQuestion": "Comment concilier rigueur intellectuelle et sérénité intérieure au quotidien ?",
+          "lessons": [
+            "La quête du savoir exige honnêteté intellectuelle et humilité.",
+            "La véritable sagesse unit la connaissance théorique à la vertu pratique."
+          ],
+          "timeline": [
+            {
+              "year": "1058",
+              "desc": "Naissance à Tous dans le Khorassan."
+            },
+            {
+              "year": "1091",
+              "desc": "Nomination à la Nizamiyya de Bagdad."
+            },
+            {
+              "year": "1111",
+              "desc": "Décès à Tous, laissant une œuvre monumentale."
+            }
+          ]
+        },
+        {
+          "id": "farabi",
+          "featured": true,
+          "name": "Al-Farabi",
+          "era": "872 - 950 ap. J.-C.",
+          "school": "Philosophie Islamique / Logique / Philosophie Politique",
+          "image": "thinkers/images/farabi.jpg",
+          "bio": "Al-Farabi (Le Second Maître), philosophe, logicien et fondateur de la philosophie politique islamique. Auteur de « La Cité Vertueuse ».",
+          "body": [
+            "Al-Farabi (872 - 950) surnommé « Le Second Maître » (après Aristote), est l'un des penseurs les plus brillants du Moyen Âge.",
+            "Pionnier de la philosophie politique et de la logique, il étudia la cité idéale dans son ouvrage « La Cité Vertueuse », abordant la justice, la sagesse et le gouvernement éclairé.",
+            "Ses écrits sur la logique, la métaphysique et la musique ont influencé aussi bien les savants arabo-musulmans que la scolastique européenne."
+          ],
+          "keyConcept": "La Cité Vertueuse, Logique & Philosophie Politique",
+          "keyWorks": "La Cité Vertueuse, Le Grand Livre de la Musique, Statistique des Sciences",
+          "originalName": "أبو نصر محمد بن محمد الفارابي",
+          "subName": "Le Second Maître, pionnier de la philosophie politique",
+          "country": "Farab / Bagdad / Damas",
+          "flag": "🏛️",
+          "heroQuote": "« La cité vertueuse est celle dont les citoyens coopèrent pour atteindre la véritable félicité. »",
+          "intro": "Pionnier de la philosophie politique et logicien hors pair, Al-Farabi a théorisé la société juste et le rôle de la sagesse dans la cité.",
+          "bioDetails": {
+            "upbringing": "Né à Farab, il se passionna très tôt pour les langues, la musique et la philosophie.",
+            "studies": "À Bagdad, il approfondit la logique et la métaphysique auprès des grands maîtres de l'époque.",
+            "life": "Il vécut dans la sobriété et l'étude à Damas jusqu'à la fin de ses jours."
+          },
+          "historicalContext": "Âge d'or de la philosophie et des traductions dans le monde islamique.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "La Cité Vertueuse",
+              "text": "Une théorie politique et éthique sur la coopération humaine et la recherche du bien commun."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "name": "La Cité Vertueuse",
+              "desc": "Modèle d'une société harmonieuse guidée par la sagesse."
+            }
+          ],
+          "works": [
+            {
+              "title": "La Cité Vertueuse",
+              "period": "940",
+              "desc": "Chef-d'œuvre de philosophie politique et morale."
+            }
+          ],
+          "influence": {
+            "names": [
+              "Avicenne",
+              "Averroès",
+              "Maimonide"
+            ],
+            "summary": "Il posa les fondements de la philosophie islamique rationnelle."
+          },
+          "quotes": [
+            "« Le bonheur ultime s'obtient par la sagesse et la vertu. »"
+          ],
+          "famousQuote": "« Le bonheur ultime s'obtient par la sagesse et la vertu. »",
+          "didYouKnow": "Il reçut le titre de 'Second Maître' pour ses travaux explicatifs et ses apports à la logique d'Aristote.",
+          "reflectionQuestion": "En quoi la recherche de la sagesse individuelle contribue-t-elle au bien-être collectif ?",
+          "lessons": [
+            "La coopération et la justice sont les piliers d'une communauté épanouie."
+          ],
+          "timeline": [
+            {
+              "year": "872",
+              "desc": "Naissance à Farab."
+            },
+            {
+              "year": "950",
+              "desc": "Décès à Damas."
+            }
+          ]
+        },
+        {
+          "id": "ibnsina",
+          "featured": true,
+          "name": "Ibn Sina (Avicenne)",
+          "era": "980 - 1037 ap. J.-C.",
+          "school": "Philosophie Islamique / Métaphysique / Médecine",
+          "image": "thinkers/images/ibnsina.jpg",
+          "bio": "Ibn Sina (Avicenne), géant de la philosophie et de la médecine. Auteur du « Canon de la Médecine » et du « Livre de la Guérison ».",
+          "body": [
+            "Ibn Sina (980 - 1037), connu en Occident sous le nom d'Avicenne, est l'un des plus grands esprits de l'histoire de l'humanité.",
+            "Sa somme philosophique « Le Livre de la Guérison » et son ouvrage médical « Le Canon de la Médecine » ont constitué les piliers du savoir médical et métaphysique durant des siècles.",
+            "Ses travaux sur l'âme, l'existence et la logique ont profondément influencé la philosophie médiévale et moderne."
+          ],
+          "keyConcept": "L'Être nécessaire, Philosophie de l'Esprit",
+          "keyWorks": "Le Canon de la Médecine, Le Livre de la Guérison",
+          "originalName": "أبو علي الحسين بن عبد الله بن سينا",
+          "subName": "Prince des savants et philosophe de l'existence",
+          "country": "Bukhara / Hamadan",
+          "flag": "🩺",
+          "heroQuote": "« L'illusion est la moitié de la maladie, la sérénité est la moitié du remède. »",
+          "intro": "Avicenne a illuminé la philosophie et la médecine par sa pensée rigoureuse et son encyclopédisme exceptionnel.",
+          "bioDetails": {
+            "upbringing": "Né près de Boukhara, il maîtrisa les sciences fondamentales dès son plus jeune âge.",
+            "studies": "À 18 ans, il était déjà reconnu comme un maître en médecine et en philosophie.",
+            "life": "Il rédigea une œuvre colossale tout en menant une vie scientifique intense."
+          },
+          "historicalContext": "Période de grande floraison scientifique et philosophique du monde musulman.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "Métaphysique et Philosophie de l'Âme",
+              "text": "Analyse approfondie de la nature de l'existence et de l'esprit humain."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "name": "L'Être Nécessaire",
+              "desc": "Concept métaphysique fondamental sur l'origine de l'existence."
+            }
+          ],
+          "works": [
+            {
+              "title": "Le Canon de la Médecine",
+              "period": "1025",
+              "desc": "Référence médicale universelle pendant plus de 500 ans."
+            }
+          ],
+          "influence": {
+            "names": [
+              "Al-Ghazali",
+              "Averroès",
+              "Thomas d'Aquin"
+            ],
+            "summary": "Son œuvre a façonné l'enseignement de la philosophie et de la médecine en Orient et en Occident."
+          },
+          "quotes": [
+            "« L'illusion est la moitié de la maladie, la sérénité est la moitié du remède. »"
+          ],
+          "famousQuote": "« L'illusion est la moitié de la maladie, la sérénité est la moitié du remède. »",
+          "didYouKnow": "Son « Canon de la Médecine » a été utilisé comme manuel officiel dans les universités européennes jusqu'au XVIIe siècle.",
+          "reflectionQuestion": "Quel rôle joue la sérénité mentale dans le maintien de la santé globale ?",
+          "lessons": [
+            "L'esprit et le corps forment une unité indissociable pour le bien-être."
+          ],
+          "timeline": [
+            {
+              "year": "980",
+              "desc": "Naissance près de Boukhara."
+            },
+            {
+              "year": "1037",
+              "desc": "Décès à Hamadan."
+            }
+          ]
+        },
+        {
+          "id": "ibnrushd",
+          "featured": true,
+          "name": "Ibn Rushd (Averroès)",
+          "era": "1126 - 1198 ap. J.-C.",
+          "school": "Philosophie Islamique / Rationalisme / Jurisprudence",
+          "image": "thinkers/images/ibnrushd.jpg",
+          "bio": "Ibn Rushd (Averroès), grand juge de Cordoue et philosophe rationaliste. Auteur du « Discours Décisif ».",
+          "body": [
+            "Ibn Rushd (1126 - 1198), connu sous le nom d'Averroès, est le plus illustre philosophe d'Al-Andalus.",
+            "Juriste et médecin, il défendit la recherche rationnelle dans son chef-d'œuvre « Le Discours Décisif », démontrant la concordance parfaite entre la raison philosophique et la sagesse spirituelle.",
+            "Ses commentaires d'Aristote ont inspiré la pensée européenne médiévale et ouvert la voie au rationalisme moderne."
+          ],
+          "keyConcept": "Accord de la Philosophie et de la Religion, Rationalisme",
+          "keyWorks": "Le Discours Décisif, Incohérence de l'Incohérence",
+          "originalName": "أبو الوليد محمد بن أحمد بن رشد",
+          "subName": "Grand Commentateur et pionnier du rationalisme",
+          "country": "Cordoue (Al-Andalus) / Marrakech",
+          "flag": "⚖️",
+          "heroQuote": "« La vérité ne peut contredire la vérité ; elle s'accorde avec elle et en témoigne. »",
+          "intro": "Averroès est le grand philosophe de Cordoue qui a théorisé l'harmonie souveraine entre raison démonstrative et vérité spirituelle.",
+          "bioDetails": {
+            "upbringing": "Né à Cordoue dans une lignée de grands magistrats, il étudia le droit, la médecine et la philosophie.",
+            "studies": "Nommé grand juge de Cordoue, il allia pratique juridique et réflexion philosophique.",
+            "life": "Il consacra sa vie à commenter Aristote et à rédiger des traités philosophiques majeurs."
+          },
+          "historicalContext": "Époque almohade en Andalousie, marquée par un essor culturel et intellectuel remarquable.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "L'Accord entre Raison et Révélation",
+              "text": "Démonstration que la recherche rationnelle de la vérité renforce la foi et la sagesse."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "name": "Le Discours Décisif",
+              "desc": "Traité sur le statut de la philosophie et de la logique."
+            }
+          ],
+          "works": [
+            {
+              "title": "Fasl al-Maqal (Discours Décisif)",
+              "period": "1179",
+              "desc": "Ouvrage fondamental sur la légitimité du raisonnement philosophique."
+            }
+          ],
+          "influence": {
+            "names": [
+              "Maimonide",
+              "Thomas d'Aquin",
+              "Les Penseurs de la Renaissance"
+            ],
+            "summary": "L'averroïsme a stimulé le réveil intellectuel des universités médiévales occidentales."
+          },
+          "quotes": [
+            "« La vérité ne peut contredire la vérité ; elle s'accorde avec elle et en témoigne. »"
+          ],
+          "famousQuote": "« La vérité ne peut contredire la vérité ; elle s'accorde avec elle et en témoigne. »",
+          "didYouKnow": "Il est surnommé 'Le Grand Commentateur' dans l'histoire de la philosophie occidentale.",
+          "reflectionQuestion": "Comment la pensée critique aide-t-elle à préserver l'équilibre et l'ouverture d'esprit ?",
+          "lessons": [
+            "La raison est un guide précieux pour la recherche de la vérité."
+          ],
+          "timeline": [
+            {
+              "year": "1126",
+              "desc": "Naissance à Cordoue."
+            },
+            {
+              "year": "1198",
+              "desc": "Décès à Marrakech."
+            }
+          ]
+        },
+        {
+          "id": "ibnkhaldun",
+          "featured": true,
+          "name": "Ibn Khaldoun",
+          "era": "1332 - 1406 ap. J.-C.",
+          "school": "Sociologie / Philosophie de l'Histoire / Économie",
+          "image": "thinkers/images/ibnkhaldun.jpg",
+          "bio": "Ibn Khaldoun, historien et pionnier de la sociologie et de la philosophie de l'histoire. Auteur de la célèbre « Muqaddimah ».",
+          "body": [
+            "Ibn Khaldoun (1332 - 1406) est le fondateur de la sociologie (la science de la civilisation humaine) et de la philosophie de l'histoire.",
+            "Dans sa célèbre « Muqaddimah » (Introduction à l'histoire universelle), il découvrit les lois économiques et sociales qui régissent la naissance, la croissance et le déclin des civilisations.",
+            "Son approche scientifique des faits sociaux anticipe la sociologie moderne de plusieurs siècles, faisant de lui l'un des esprits les plus novateurs de tous les temps."
+          ],
+          "keyConcept": "Sociologie (Ilm al-Umran), Cohésion Sociale (Asabiyyah)",
+          "keyWorks": "La Muqaddimah, Livre des Exemples",
+          "originalName": "أبو زيد عبد الرحمن بن محمد بن خaldون",
+          "subName": "Fondateur de la sociologie et philosophe de l'histoire",
+          "country": "Tunis / Fès / Grenade / Le Caire",
+          "flag": "🌍",
+          "heroQuote": "« L'homme est social par nature, et l'injustice annonce la ruine des civilisations. »",
+          "intro": "Ibn Khaldoun a révolutionné la compréhension de l'histoire en fondant la science de la société et de la dynamique des civilisations.",
+          "bioDetails": {
+            "upbringing": "Né à Tunis dans une famille andalouse lettrée, il étudia les sciences humaines et politiques.",
+            "studies": "Il exerça de hautes fonctions politiques au Maghreb, en Andalousie puis au Caire.",
+            "life": "Il rédigea sa Muqaddimah lors d'une retraite intellectuelle avant d'enseigner au Caire."
+          },
+          "historicalContext": "Période de mutations politiques intenses en Afrique du Nord et dans le bassin méditerranéen au XIVe siècle.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "La Science de la Civilisation (Sociologie)",
+              "text": "Analyse méthodique des structures sociales, économiques et politiques des sociétés."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "name": "La Muqaddimah",
+              "desc": "Ouvrage fondateur de la sociologie et de l'historiographie critique."
+            }
+          ],
+          "works": [
+            {
+              "title": "La Muqaddimah",
+              "period": "1377",
+              "desc": "Chef-d'œuvre mondial de philosophie sociale et historique."
+            }
+          ],
+          "influence": {
+            "names": [
+              "Auguste Comte",
+              "Arnold Toynbee",
+              "Machiavel"
+            ],
+            "summary": "Toynbee a qualifié la Muqaddimah de 'plus grande philosophie de l'histoire jamais créée par l'esprit humain'."
+          },
+          "quotes": [
+            "« La justice est le fondement de toute civilisation florissante. »"
+          ],
+          "famousQuote": "« La justice est le fondement de toute civilisation florissante. »",
+          "didYouKnow": "Il rédigea la première version de sa Muqaddimah en s'isolant dans le château d'Ibn Salama en Algérie.",
+          "reflectionQuestion": "En quoi la cohésion sociale et la justice sont-elles primordiales pour l'avenir de nos sociétés ?",
+          "lessons": [
+            "L'observation impartiale des lois sociales est nécessaire pour comprendre l'histoire."
+          ],
+          "timeline": [
+            {
+              "year": "1332",
+              "desc": "Naissance à Tunis."
+            },
+            {
+              "year": "1406",
+              "desc": "Décès au Caire."
+            }
+          ]
         }
       ],
       "articles": [
@@ -3567,6 +3954,106 @@ const TIKTOK_DATA = {
           "conclusion": "Votre esprit est un outil sublime destiné à vous servir, non un geôlier qui vous tyrannise. Lorsque vous apprenez à apaiser la tempête intérieure, vous découvrez une paix aussi profonde et limpide qu'une eau calme.",
           "finalQuote": "« L'inquiétude ne vide pas demain de ses chagrins, elle vide aujourd'hui de sa force. »",
           "finalQuoteAuthor": "— Corrie ten Boom | Hikma & Nour"
+        },
+        {
+          "id": "when-heart-loses-sweetness-of-faith",
+          "file": "when-heart-loses-sweetness-of-faith.html",
+          "title": "Pourquoi le cœur perd-il parfois le goût de la foi ?",
+          "category": "islamic-thought",
+          "categoryName": "Pensée islamique",
+          "pillarId": "faith-inner-life",
+          "pillarName": "Foi et vie intérieure",
+          "readTime": "9 min de lecture",
+          "date": "19 août 2026",
+          "author": "Hikma & Nour",
+          "desc": "Pourquoi traversons-nous parfois une période de sécheresse spirituelle ? Une réflexion apaisée sur la perte du goût de la foi et les chemins d’un retour progressif et sincère.",
+          "chapo": "Il arrive que la prière soit accomplie mais semble vide d'émotion, que les invocations soient récités machinalement, laissant s'installer une crainte silencieuse : ma foi s'est-elle éteinte ? La vérité que beaucoup oublient est qu'une baisse de ressenti spirituel n'est pas le signe d'une rupture, mais parfois l'appel discret d'un cœur fatigué qui demande à retrouver sa présence intérieure.",
+          "summaryBox": {
+            "title": "En quelques mots",
+            "summary": "La foi ne se mesure pas uniquement à l'intensité d'une émotion passagère ; la routine, la fatigue et la dispersion peuvent diminuer la présence intérieure sans pour autant effacer l'essence de la foi.",
+            "question": "Quelle pratique accomplissez-vous aujourd'hui par simple habitude, et comment pourriez-vous lui rendre un peu de présence et de sérénité ?"
+          },
+          "image": "../islam_parcours_03.jpg",
+          "imageAlt": "Une lumière douce traverse un espace sombre, symbole du retour progressif de la sérénité intérieure",
+          "quote": "Tout silence du cœur n’est pas une absence de foi ; il peut devenir l’appel d’un retour plus sincère et plus profond.",
+          "quoteAuthor": "Hikma & Nour",
+          "toc": [
+            {
+              "id": "sec-1",
+              "text": "01 — Quand les pratiques deviennent mécaniques"
+            },
+            {
+              "id": "sec-2",
+              "text": "02 — La foi n'est pas une émotion permanente"
+            },
+            {
+              "id": "sec-3",
+              "text": "03 — Le bruit intérieur disperse le cœur"
+            },
+            {
+              "id": "sec-4",
+              "text": "04 — La culpabilité peut-elle nous éloigner davantage ?"
+            },
+            {
+              "id": "sec-5",
+              "text": "05 — Quand l'épreuve transforme la relation à la foi"
+            },
+            {
+              "id": "sec-6",
+              "text": "06 — Revenir par de petites portes"
+            },
+            {
+              "id": "sec-7",
+              "text": "07 — Une foi durable se construit aussi dans le silence"
+            }
+          ],
+          "sections": [
+            {
+              "id": "sec-1",
+              "title": "01 — Quand les pratiques deviennent mécaniques",
+              "content": "<p>La régularité dans la pratique est une vertu noble qui structure la vie. Mais le problème apparaît lorsque le geste se détache de l'esprit : le corps s'incline, la langue récite, tandis que la conscience est absorbée par les soucis du quotidien.</p><p>Maintenir sa pratique même dans les moments de tiédeur est une preuve de constance. Cependant, la précipitation enlève à l'acte sa saveur intérieure. Une pratique accomplie sans émotion vive n'est pas inutile ; elle demande simplement à être ralentie pour que le cœur en réapprenne le sens.</p>"
+            },
+            {
+              "id": "sec-2",
+              "title": "02 — La foi n'est pas une émotion permanente",
+              "content": "<p>L'être humain connaît naturellement des fluctuations dans son énergie physique et émotionnelle. Exiger de maintenir un état d'exaltation spirituelle permanent conduit inévitablement à la frustration et à la culpabilité.</p><p>Il convient de distinguer la foi — en tant que conviction et fidélité — des vagues d'émotions passagères. L'engagement silencieux dans les jours ordinaires constitue le véritable fondement d'une maturité spirituelle solide.</p>"
+            },
+            {
+              "id": "sec-3",
+              "title": "03 — Le bruit intérieur disperse le cœur",
+              "content": "<p>La surconsommation numérique, les comparaisons incessantes et le flux continu d'informations épuisent le système nerveux et privent l'esprit du calme nécessaire à la méditation.</p><p>Un esprit encombré de bruit peine à ressentir la paix intérieure. Prendre chaque jour cinq minutes sans écran, sans musique ni multitâche, permet de créer un espace de silence favorable au ressourcement de l'âme.</p>"
+            },
+            {
+              "id": "sec-4",
+              "title": "04 — La culpabilité peut-elle nous éloigner davantage ?",
+              "content": "<p>Il existe une différence essentielle entre l’éveil de la conscience qui invite au bien et la culpabilité destructrice qui fait croire que l'on ne mérite plus de revenir.</p><p>Le perfectionnisme spirituel pousse parfois à l'abandon au moindre faux pas. Pourtant, la démarche spirituelle ne demande pas d'être parfait pour se réorienter, mais d'avancer avec sincérité et humilité.</p>"
+            },
+            {
+              "id": "sec-5",
+              "title": "05 — Quand l'épreuve transforme la relation à la foi",
+              "content": "<p>Face aux difficultés de la vie, les réactions varient : si certains y trouvent un refuge immédiat, d'autres traversent une phase de fatigue, d'incompréhension ou de silence intérieur.</p><p>Il est primordial de faire preuve de bienveillance envers soi-même et autrui. Lorsque la détresse est profonde et durable, le recours à un professionnel de santé qualifié est essentiel. La santé mentale et la foi ne s'opposent pas, elles se complètent.</p>"
+            },
+            {
+              "id": "sec-6",
+              "title": "06 — Revenir par de petites portes",
+              "content": "<p>Retrouver l'élan spirituel ne nécessite pas des résolutions héroïques ou irréalistes, mais des gestes simples et réguliers :</p><ul><li>Ralentir une seule pratique quotidienne en prenant le temps d'en méditer le sens.</li><li>Formuler quelques mots d'invocation avec une attention sincère.</li><li>Lire de courts passages avec calme et réflexion.</li><li>Accomplir une action bienveillante envers son prochain sans rien attendre en retour.</li></ul>"
+            },
+            {
+              "id": "sec-7",
+              "title": "07 — Une foi durable se construit aussi dans le silence",
+              "content": "<p>La croissance spirituelle n'est pas toujours spectaculaire. Les périodes de calme ou de doute apparent constituent souvent des phases nécessaires d'apprentissage et de maturation.</p><p>L'objectif n'est pas de reproduire exactement une émotion passée, mais de construire une relation plus adulte, consciente et apaisée avec le Créateur.</p>"
+            }
+          ],
+          "inBrief": [
+            "Une baisse du ressenti n'est pas la perte de la foi, mais un signe de fatigue ou de dispersion.",
+            "Accorder du repos à son corps et réduire le bruit numérique aide le cœur à retrouver sa paix.",
+            "La culpabilité excessive entrave le retour ; la sincérité commence par un pas simple.",
+            "La constance modérée et régulière construit une sérénité plus durable que l'enthousiasme forcé.",
+            "Consulter un professionnel de santé en cas de détresse psychologique est un acte de sagesse complémentaire à la spiritualité."
+          ],
+          "conclusion": "La sérénité du cœur n'est pas une conquête brutale, mais le fruit d'un cheminement bienveillant qui accepte la fragilité humaine tout en cherchant la lumière. Ne soyez pas sévère avec vous-même : chaque instant de sincérité est une pierre posée pour rebâtir votre paix intérieure.",
+          "finalQuote": "Le retour ne commence pas toujours par un grand changement, mais par un instant de sincérité où le cœur reconnaît son besoin de lumière.",
+          "finalQuoteAuthor": "Hikma & Nour"
         }
       ],
       "faq": [
@@ -5431,6 +5918,405 @@ const TIKTOK_DATA = {
           ],
           "keyConcept": "-",
           "keyWorks": "-"
+        },
+        {
+          "id": "ghazali",
+          "featured": true,
+          "name": "Al-Ghazali",
+          "era": "1058 - 1111 AD",
+          "school": "Islamic Thought / Epistemology / Ethics",
+          "image": "thinkers/images/ghazali.jpg",
+          "bio": "Abu Hamid Al-Ghazali, major Islamic philosopher, jurist, and epistemologist. Author of « Deliverance from Error » and « The Revivification of Religious Sciences ».",
+          "body": [
+            "Abu Hamid Al-Ghazali (1058 - 1111 AD) is one of the most prominent thinkers in Islamic intellectual history. He contributed deeply to epistemology, ethics, and theology.",
+            "His autobiographical work « Deliverance from Error » explores the search for certainty centuries before modern European philosophy, advocating harmony between reason and spiritual insight.",
+            "His writings continue to inspire studies on ethics, philosophy of mind, and the integration of knowledge."
+          ],
+          "keyConcept": "Epistemological Certainty, Harmony of Reason & Faith",
+          "keyWorks": "Deliverance from Error, The Revivification of Religious Sciences",
+          "originalName": "أبو حامد محمد بن محمد الغزالي",
+          "subName": "Philosopher, jurist, and pioneer of epistemology",
+          "country": "Tus, Khorasan (Iran)",
+          "flag": "📜",
+          "heroQuote": "« Wisdom lies in placing every knowledge in its rightful position. »",
+          "intro": "Al-Ghazali stands as a monumental figure in Islamic thought, bridging critical inquiry, moral philosophy, and spiritual enlightenment.",
+          "bioDetails": {
+            "upbringing": "Born in Tus, he pursued advanced studies in philosophy, jurisprudence, and theology under leading scholars.",
+            "studies": "He was appointed head professor at the prestigious Nizamiyya Academy in Baghdad.",
+            "life": "He spent years traveling across Damascus, Jerusalem, and Mecca, focusing on writing and ethical philosophy."
+          },
+          "historicalContext": "Lived during the Abbasid era, a period rich in philosophical dialogues and intellectual scholarship.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "The Search for Certainty",
+              "text": "Formulated a critical framework for evaluating knowledge and reaching certainty."
+            },
+            {
+              "num": "02",
+              "title": "Reason and Revelation",
+              "text": "Demonstrated that rational inquiry and revealed wisdom complement one another."
+            },
+            {
+              "num": "03",
+              "title": "Ethics and Inner Growth",
+              "text": "Promoted character development and ethical living as integral to knowledge."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "name": "Epistemological Certainty",
+              "desc": "Attaining knowledge verified beyond doubt."
+            },
+            {
+              "name": "Ethical Refinement",
+              "desc": "Cultivating virtue and intellectual integrity."
+            }
+          ],
+          "works": [
+            {
+              "title": "The Revivification of Religious Sciences",
+              "period": "1097 AD",
+              "desc": "A comprehensive treatise on ethics and human spirituality."
+            },
+            {
+              "title": "Deliverance from Error",
+              "period": "1108 AD",
+              "desc": "Autobiographical account of his intellectual journey."
+            }
+          ],
+          "influence": {
+            "names": [
+              "Averroes",
+              "Descartes",
+              "Aquinas"
+            ],
+            "summary": "His epistemological insights left a lasting imprint on Eastern and Western intellectual traditions."
+          },
+          "quotes": [
+            "« Knowledge without action is madness, and action without knowledge is futile. »"
+          ],
+          "famousQuote": "« Knowledge without action is madness, and action without knowledge is futile. »",
+          "didYouKnow": "He wrote one of the earliest spiritual autobiographies detailing the quest for intellectual certainty.",
+          "reflectionQuestion": "How do you balance critical reason with ethical mindfulness in everyday choices?",
+          "lessons": [
+            "True knowledge unites intellectual clarity with moral responsibility.",
+            "Philosophical inquiry is enriched by humility and self-awareness."
+          ],
+          "timeline": [
+            {
+              "year": "1058 AD",
+              "desc": "Born in Tus, Khorasan."
+            },
+            {
+              "year": "1091 AD",
+              "desc": "Appointed chief scholar at Baghdad's Nizamiyya."
+            },
+            {
+              "year": "1111 AD",
+              "desc": "Passed away in Tus, leaving a timeless intellectual heritage."
+            }
+          ]
+        },
+        {
+          "id": "farabi",
+          "featured": true,
+          "name": "Al-Farabi",
+          "era": "872 - 950 AD",
+          "school": "Islamic Philosophy / Logic / Political Thought",
+          "image": "thinkers/images/farabi.jpg",
+          "bio": "Al-Farabi (The Second Teacher), renowned philosopher and political theorist. Author of « The Virtuous City ».",
+          "body": [
+            "Al-Farabi (872 - 950 AD), known as 'The Second Teacher' (after Aristotle), was a foundational philosopher in political thought, metaphysics, and logic.",
+            "His work « The Virtuous City » presents an enduring vision of human cooperation, ethics, and enlightened governance focused on human happiness.",
+            "He contributed extensively to music theory, classification of sciences, and rational inquiry."
+          ],
+          "keyConcept": "The Virtuous City, Political Philosophy, Logic",
+          "keyWorks": "The Virtuous City, Classification of Sciences",
+          "originalName": "أبو نصر محمد بن محمد الفارابي",
+          "subName": "The Second Teacher, pioneer of political philosophy",
+          "country": "Farab / Baghdad / Damascus",
+          "flag": "🏛️",
+          "heroQuote": "« The virtuous city is that in which people cooperate to achieve true happiness. »",
+          "intro": "Al-Farabi laid the groundwork for political philosophy in Islamic civilization, exploring ideal governance and moral harmony.",
+          "bioDetails": {
+            "upbringing": "Born in Farab, he demonstrated early brilliance in languages and science.",
+            "studies": "Studied logic and philosophy in Baghdad during its golden intellectual era.",
+            "life": "Lived a contemplative life in Damascus dedicated to writing and research."
+          },
+          "historicalContext": "Lived during the height of the Islamic Golden Age of scientific and philosophical translations.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "The Virtuous Society",
+              "text": "Formulated a model of human society where governance serves moral excellence."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "name": "The Virtuous City",
+              "desc": "An ethical state founded on wisdom and shared wellbeing."
+            }
+          ],
+          "works": [
+            {
+              "title": "The Virtuous City",
+              "period": "940 AD",
+              "desc": "Classic text on political and ethical philosophy."
+            }
+          ],
+          "influence": {
+            "names": [
+              "Avicenna",
+              "Averroes",
+              "Maimonides"
+            ],
+            "summary": "Shaped medieval philosophical inquiry across cultures."
+          },
+          "quotes": [
+            "« True happiness is attained through wisdom and virtue. »"
+          ],
+          "famousQuote": "« True happiness is attained through wisdom and virtue. »",
+          "didYouKnow": "Earned the title 'The Second Teacher' for his monumental commentaries and logical works.",
+          "reflectionQuestion": "How can moral wisdom shape better governance and community cooperation today?",
+          "lessons": [
+            "A healthy society rests upon justice, wisdom, and mutual support."
+          ],
+          "timeline": [
+            {
+              "year": "872 AD",
+              "desc": "Born in Farab."
+            },
+            {
+              "year": "950 AD",
+              "desc": "Passed away in Damascus."
+            }
+          ]
+        },
+        {
+          "id": "ibnsina",
+          "featured": true,
+          "name": "Ibn Sina (Avicenna)",
+          "era": "980 - 1037 AD",
+          "school": "Islamic Philosophy / Metaphysics / Medicine",
+          "image": "thinkers/images/ibnsina.jpg",
+          "bio": "Ibn Sina (Avicenna), legendary philosopher, physician, and polymath. Author of « The Canon of Medicine » and « The Book of Healing ».",
+          "body": [
+            "Ibn Sina (980 - 1037 AD), known to the Western world as Avicenna, was one of the most influential polymaths in human history.",
+            "His medical treatise « The Canon of Medicine » and philosophical encyclopedia « The Book of Healing » anchored scientific study for over five centuries.",
+            "He made landmark contributions to metaphysics, epistemology, and the philosophy of mind."
+          ],
+          "keyConcept": "Necessary Being, Philosophy of Mind",
+          "keyWorks": "The Canon of Medicine, The Book of Healing",
+          "originalName": "أبو علي الحسين بن عبد الله بن سينا",
+          "subName": "Prince of Physicians, master of metaphysics",
+          "country": "Bukhara / Hamadan",
+          "flag": "🩺",
+          "heroQuote": "« Anxiety is half the disease, peace of mind is half the cure. »",
+          "intro": "Avicenna revolutionized medicine and metaphysics, standing as a titan of rational and philosophical inquiry.",
+          "bioDetails": {
+            "upbringing": "Born near Bukhara, he mastered logic, geometry, and medicine at an early age.",
+            "studies": "By age 18, he was an established authority in medical science and philosophical metaphysics.",
+            "life": "Authored hundreds of foundational books across multiple scientific disciplines."
+          },
+          "historicalContext": "The Golden Age of Islamic scientific discovery and intellectual synthesis.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "Metaphysics of Existence",
+              "text": "Formulated profound theories on existence, essence, and the human soul."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "name": "Necessary Existence",
+              "desc": "Metaphysical concept explaining absolute reality."
+            }
+          ],
+          "works": [
+            {
+              "title": "The Canon of Medicine",
+              "period": "1025 AD",
+              "desc": "The standard medical textbook in Europe and the Near East for centuries."
+            }
+          ],
+          "influence": {
+            "names": [
+              "Al-Ghazali",
+              "Averroes",
+              "Thomas Aquinas"
+            ],
+            "summary": "Transformed medical practice and scholastic philosophy worldwide."
+          },
+          "quotes": [
+            "« Anxiety is half the disease, peace of mind is half the cure. »"
+          ],
+          "famousQuote": "« Anxiety is half the disease, peace of mind is half the cure. »",
+          "didYouKnow": "His medical texts served as standard curricula at European universities for over 500 years.",
+          "reflectionQuestion": "How does mental tranquility impact physical vitality and intellectual focus?",
+          "lessons": [
+            "Holistic wellbeing links physical health to inner mental harmony."
+          ],
+          "timeline": [
+            {
+              "year": "980 AD",
+              "desc": "Born near Bukhara."
+            },
+            {
+              "year": "1037 AD",
+              "desc": "Passed away in Hamadan."
+            }
+          ]
+        },
+        {
+          "id": "ibnrushd",
+          "featured": true,
+          "name": "Ibn Rushd (Averroes)",
+          "era": "1126 - 1198 AD",
+          "school": "Islamic Philosophy / Rationalism / Jurisprudence",
+          "image": "thinkers/images/ibnrushd.jpg",
+          "bio": "Ibn Rushd (Averroes), Andalusian jurist, physician, and rationalist philosopher. Author of « The Decisive Treatise ».",
+          "body": [
+            "Ibn Rushd (1126 - 1198 AD), celebrated in the West as Averroes, was the chief judge of Cordoba and a premier philosopher of Al-Andalus.",
+            "In his masterwork « The Decisive Treatise », he demonstrated that rational inquiry and philosophical study naturally complement spiritual wisdom.",
+            "His seminal commentaries on Aristotle revitalized European rationalism during the Middle Ages."
+          ],
+          "keyConcept": "Harmony of Philosophy and Faith, Critical Rationalism",
+          "keyWorks": "The Decisive Treatise, Incoherence of the Incoherence",
+          "originalName": "أبو الوليد محمد بن أحمد بن رشد",
+          "subName": "The Great Commentator, defender of reason",
+          "country": "Cordoba (Al-Andalus) / Marrakesh",
+          "flag": "⚖️",
+          "heroQuote": "« Truth cannot contradict truth; rather, it agrees with it and bears witness to it. »",
+          "intro": "Averroes championed rational demonstration and dialogue, standing as a beacon of critical philosophy.",
+          "bioDetails": {
+            "upbringing": "Born into a distinguished family of jurists in Cordoba, studying law, medicine, and philosophy.",
+            "studies": "Served as Grand Judge of Cordoba while producing landmark philosophical treatises.",
+            "life": "Spent his life promoting scientific inquiry, commentary, and ethical philosophy."
+          },
+          "historicalContext": "The vibrant intellectual era of Al-Andalus and North Africa.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "Harmony of Knowledge",
+              "text": "Proved that rational truth and moral revelation share the same ultimate origin."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "name": "Rational Harmony",
+              "desc": "The integration of demonstrative logic and ethical wisdom."
+            }
+          ],
+          "works": [
+            {
+              "title": "The Decisive Treatise",
+              "period": "1179 AD",
+              "desc": "Landmark philosophical essay on legal and rational inquiry."
+            }
+          ],
+          "influence": {
+            "names": [
+              "Maimonides",
+              "Thomas Aquinas",
+              "Renaissance Scholars"
+            ],
+            "summary": "Averroism laid key foundations for the European Renaissance."
+          },
+          "quotes": [
+            "« Truth cannot contradict truth; rather, it agrees with it and bears witness to it. »"
+          ],
+          "famousQuote": "« Truth cannot contradict truth; rather, it agrees with it and bears witness to it. »",
+          "didYouKnow": "Known throughout Western history simply as 'The Commentator' for his analytical readings of Aristotle.",
+          "reflectionQuestion": "How does open-minded rational inquiry protect against dogma and prejudice?",
+          "lessons": [
+            "Critical reason is an essential pillar for discovering objective truth."
+          ],
+          "timeline": [
+            {
+              "year": "1126 AD",
+              "desc": "Born in Cordoba, Al-Andalus."
+            },
+            {
+              "year": "1198 AD",
+              "desc": "Passed away in Marrakesh."
+            }
+          ]
+        },
+        {
+          "id": "ibnkhaldun",
+          "featured": true,
+          "name": "Ibn Khaldun",
+          "era": "1332 - 1406 AD",
+          "school": "Sociology / Philosophy of History / Economics",
+          "image": "thinkers/images/ibnkhaldun.jpg",
+          "bio": "Ibn Khaldun, historian and pioneer of sociology and philosophy of history. Author of « The Muqaddimah ».",
+          "body": [
+            "Ibn Khaldun (1332 - 1406 AD) is universally recognized as the founder of sociology (the science of human civilization) and historiography.",
+            "His masterwork « The Muqaddimah » articulated the objective economic and social laws governing the rise, maturity, and decline of human societies.",
+            "His empirical analysis of social dynamics anticipated modern sociology by five centuries."
+          ],
+          "keyConcept": "Sociology of Civilization, Social Cohesion (Asabiyyah)",
+          "keyWorks": "The Muqaddimah, Kitab al-Ibar",
+          "originalName": "أبو زيد عبد الرحمن بن محمد بن خلدون",
+          "subName": "Father of Sociology and philosophy of history",
+          "country": "Tunis / Fez / Granada / Cairo",
+          "flag": "🌍",
+          "heroQuote": "« Human beings are social by nature, and injustice heralds the ruin of civilization. »",
+          "intro": "Ibn Khaldun pioneered the scientific study of human society, discovering fundamental principles of social change.",
+          "bioDetails": {
+            "upbringing": "Born in Tunis to a prominent Andalusian family, studying philosophy, literature, and law.",
+            "studies": "Served as a statesman and chief judge across North Africa, Al-Andalus, and Cairo.",
+            "life": "Composed the Muqaddimah during a secluded retreat dedicated to intellectual synthesis."
+          },
+          "historicalContext": "The complex geopolitical transformations of the 14th century Mediterranean world.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "Science of Human Civilization",
+              "text": "Established the systematic study of social cohesion, economics, and historical cycles."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "name": "The Muqaddimah",
+              "desc": "The foundational text of sociology and analytical history."
+            }
+          ],
+          "works": [
+            {
+              "title": "The Muqaddimah",
+              "period": "1377 AD",
+              "desc": "A monumental achievement in philosophy of history and social science."
+            }
+          ],
+          "influence": {
+            "names": [
+              "Auguste Comte",
+              "Arnold Toynbee",
+              "Machiavelli"
+            ],
+            "summary": "Historian Arnold Toynbee called the Muqaddimah 'the greatest work of its kind that has ever yet been created'."
+          },
+          "quotes": [
+            "« Justice is the foundation of civilization, and injustice marks its decline. »"
+          ],
+          "famousQuote": "« Justice is the foundation of civilization, and injustice marks its decline. »",
+          "didYouKnow": "He wrote the drafts of his groundbreaking Muqaddimah during a secluded stay in the fortress of Ibn Salama in Algeria.",
+          "reflectionQuestion": "How do social cohesion and fairness determine the resilience of modern societies?",
+          "lessons": [
+            "Understanding historical causes empowers communities to build sustainable futures."
+          ],
+          "timeline": [
+            {
+              "year": "1332 AD",
+              "desc": "Born in Tunis."
+            },
+            {
+              "year": "1406 AD",
+              "desc": "Passed away in Cairo."
+            }
+          ]
         }
       ],
       "articles": [
@@ -6748,6 +7634,106 @@ const TIKTOK_DATA = {
           "conclusion": "Your mind is a magnificent instrument designed to serve you, not a prison to hold you captive. When you quiet the inner noise, you discover a tranquil peace as still and clear as undisturbed water.",
           "finalQuote": "« Worry does not empty tomorrow of its sorrow, it empties today of its strength. »",
           "finalQuoteAuthor": "— Corrie ten Boom | Hikma & Nour"
+        },
+        {
+          "id": "when-heart-loses-sweetness-of-faith",
+          "file": "when-heart-loses-sweetness-of-faith.html",
+          "title": "Why Does the Heart Sometimes Lose the Sweetness of Faith?",
+          "category": "islamic-thought",
+          "categoryName": "Islamic Thought",
+          "pillarId": "faith-inner-life",
+          "pillarName": "Faith and Inner Life",
+          "readTime": "9 min read",
+          "date": "August 19, 2026",
+          "author": "Hikma & Nour",
+          "desc": "Why do we sometimes experience spiritual dryness? A compassionate reflection on losing the sweetness of faith and finding a gradual, sincere path back.",
+          "chapo": "Sometimes prayer is performed but feels devoid of emotion, and words are uttered while the heart feels distant, raising a silent worry: has my faith faded? The truth many overlook is that a dip in emotional intensity is not a severance of connection, but often a quiet call from a weary soul seeking to restore its presence.",
+          "summaryBox": {
+            "title": "In a Few Words",
+            "summary": "Faith is not measured solely by transient emotional highs; routine, exhaustion, and distraction can dim inner presence without erasing the core of faith.",
+            "question": "Which practice have you been performing mainly out of habit, and how could you bring a little presence and tranquility back to it?"
+          },
+          "image": "../islam_parcours_03.jpg",
+          "imageAlt": "Soft light entering a dark space, symbolizing the gradual return of inner serenity",
+          "quote": "Not every silence of the heart is an absence of faith; it may be an invitation to return with greater sincerity and depth.",
+          "quoteAuthor": "Hikma & Nour",
+          "toc": [
+            {
+              "id": "sec-1",
+              "text": "01 — When Worship Becomes Mechanical"
+            },
+            {
+              "id": "sec-2",
+              "text": "02 — Faith Is Not a Permanent Emotion"
+            },
+            {
+              "id": "sec-3",
+              "text": "03 — Inner Noise Scatters the Heart"
+            },
+            {
+              "id": "sec-4",
+              "text": "04 — Can Guilt Push Us Further Away?"
+            },
+            {
+              "id": "sec-5",
+              "text": "05 — When Hardship Reshapes Our Relationship with Faith"
+            },
+            {
+              "id": "sec-6",
+              "text": "06 — Returning Through Small Doors"
+            },
+            {
+              "id": "sec-7",
+              "text": "07 — Enduring Faith Is Also Built in Silence"
+            }
+          ],
+          "sections": [
+            {
+              "id": "sec-1",
+              "title": "01 — When Worship Becomes Mechanical",
+              "content": "<p>Consistency in practice is a noble discipline that structures daily life. However, a disconnect occurs when physical action separates from spiritual presence—when words flow while the mind wanders through daily anxieties.</p><p>Maintaining devotion during periods of dryness demonstrates steadfastness. Yet rushing through acts strips them of inner warmth. A practice carried out without intense feeling is not void; it simply invites us to slow down and rediscover its meaning.</p>"
+            },
+            {
+              "id": "sec-2",
+              "title": "02 — Faith Is Not a Permanent Emotion",
+              "content": "<p>Human beings naturally experience fluctuations in physical and emotional energy. Expecting a constant state of spiritual euphoria creates unnecessary frustration and self-doubt.</p><p>It is vital to distinguish faith—as deep conviction and loyalty—from transient emotional waves. Quiet perseverance on ordinary days forms the true bedrock of mature spiritual stability.</p>"
+            },
+            {
+              "id": "sec-3",
+              "title": "03 — Inner Noise Scatters the Heart",
+              "content": "<p>Digital sensory overload, constant social comparison, and endless information streams exhaust the nervous system, depriving the mind of the stillness needed for contemplation.</p><p>A heart cluttered with noise struggles to sense inner peace. Dedicating five minutes daily without screens or multitasking creates space for the soul to recover its clarity.</p>"
+            },
+            {
+              "id": "sec-4",
+              "title": "04 — Can Guilt Push Us Further Away?",
+              "content": "<p>There is a crucial distinction between healthy self-awareness that prompts positive change and destructive guilt that convinces a person they are beyond hope.</p><p>Spiritual perfectionism often leads people to give up after a misstep. Yet the spiritual path does not require perfection to realign—only sincere, humble steps forward.</p>"
+            },
+            {
+              "id": "sec-5",
+              "title": "05 — When Hardship Reshapes Our Relationship with Faith",
+              "content": "<p>Life's trials evoke different responses: while some find immediate solace, others experience fatigue, confusion, or spiritual numbness in the wake of emotional distress.</p><p>Approaching oneself and others with compassion is essential. When psychological distress is persistent or severe, seeking professional medical or mental health support is a wise and necessary step that complements spiritual well-being.</p>"
+            },
+            {
+              "id": "sec-6",
+              "title": "06 — Returning Through Small Doors",
+              "content": "<p>Overcoming spiritual dryness does not demand overwhelming resolutions, but gentle, consistent steps:</p><ul><li>Slowing down a single daily practice to reflect on its meaning.</li><li>Offering a brief, sincere prayer with full presence.</li><li>Reading short passages thoughtfully rather than rushing.</li><li>Engaging in a quiet act of kindness for another person.</li></ul>"
+            },
+            {
+              "id": "sec-7",
+              "title": "07 — Enduring Faith Is Also Built in Silence",
+              "content": "<p>Spiritual growth is rarely dramatic. Quiet periods of contemplation often serve as essential phases for recalibration and deeper understanding.</p><p>The goal of returning is not to replicate past feelings, but to cultivate a more conscious, mature, and peaceful connection with the Divine.</p>"
+            }
+          ],
+          "inBrief": [
+            "A temporary dip in feeling does not signify loss of faith, but rather fatigue or distraction.",
+            "Resting the body and reducing digital noise allows the heart to regain inner stillness.",
+            "Excessive guilt creates distance; sincere return begins with a simple, humble step.",
+            "Consistent, moderate practices cultivate lasting peace better than forced emotional spikes.",
+            "Seeking professional healthcare for persistent distress is a wise step that honors whole-person well-being."
+          ],
+          "conclusion": "Peace of heart is not achieved through force, but nurtured through a compassionate journey that acknowledges human weakness while seeking divine light. Be gentle with yourself: every moment of sincerity is a brick in rebuilding your inner serenity.",
+          "finalQuote": "The return does not always begin with a great change, but with a sincere moment in which the heart acknowledges its need for light.",
+          "finalQuoteAuthor": "Hikma & Nour"
         }
       ],
       "faq": [
@@ -8759,6 +9745,444 @@ const TIKTOK_DATA = {
           ],
           "keyConcept": "-",
           "keyWorks": "-"
+        },
+        {
+          "id": "ghazali",
+          "featured": true,
+          "name": "أبو حامد الغزالي",
+          "era": "1058 - 1111 م",
+          "school": "الفلسفة الإسلامية / علم الكلام / التصوف",
+          "image": "thinkers/images/ghazali.jpg",
+          "bio": "أبو حامد الغزالي (حجة الإسلام)، فيلسوف ومتكلم وفقيه ومصوف. صاحب كتاب «المنقذ من الضلال» و«إحياء علوم الدين»، يُعد من أبرز مفكري الحضارة الإسلامية في نظرية المعرفة واليقين.",
+          "body": [
+            "أبو حامد الغزالي (1058 - 1111 م) الملقب بـ «حجة الإسلام»، هو أحد أعظم عقول الفكر الإنساني والإسلامي. ولد في طوس (إيران الحالية) وعاش في العصر العباسي، وجمع بين الفقه، وعلم الكلام، والفلسفة، والتربية الروحية.",
+            "عُرف برحلته الفكرية الفريدة للبحث عن الحقيقة واليقين المعرفي، والتي وثقها في كتابه الشهير «المنقذ من الضلال». انتقد المنهج الشكي قبل رينيه ديكارت بقرون، وسعى إلى تحقيق التوازن بين العقل والوحي والشهود الروحي.",
+            "ترك أثرًا عميقًا في الفكر الإسلامي والعالمي من خلال مؤلفاته المرجعية مثل «إحياء علوم الدين»، و«تهافت الفلاسفة»، و«المستصفى في علم الأصول»، مما جعله رائدًا في تجديد الفكر وتأصيل نظرية المعرفة."
+          ],
+          "keyConcept": "اليقين المعرفي، التوفيق بين العقل والروح",
+          "keyWorks": "إحياء علوم الدين، المنقذ من الضلال، تهافت الفلاسفة",
+          "originalName": "أبو حامد محمد بن محمد الغزالي الطوسي",
+          "subName": "حجة الإسلام، فيلسوف ورائد نظرية المعرفة واليقين",
+          "country": "طوس، خراسان (إيران الحالية)",
+          "flag": "📜",
+          "heroQuote": "«الحكمة ليست مجرد معرفة، بل هي القدرة على وضع المعرفة في موضعها الصحيح.»",
+          "intro": "أبو حامد الغزالي هو حجة الإسلام ومؤسس نظرية النقد المعرفي واليقين في الفكر الإسلامي. رحلته من الشك إلى اليقين أثرت في الفلسفة الشرقية والغربية على حد سواء.",
+          "bioDetails": {
+            "upbringing": "ولد في طوس ودرس العلوم الشرعية والفلسفية على يد كبار علماء عصره كإمام الحرمين الجويني.",
+            "studies": "تولى تدريس النظامية ببغداد، أعلى منصب علمي في عصره، قبل أن يعتكف للزهد والبحث المعرفي.",
+            "life": "قضى سنوات في الشام والقدس ومكة متأدبًا ومصنفًا، ثم عاد إلى طوس متفرغًا للتعليم والعطاء الروحي."
+          },
+          "historicalContext": "عاش في العصر العباسي الثاني في مرحلة شهدت مناظرات فكرية وحوارات عميقة بين المتكلمين والفلاسفة والصوفية.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "البحث عن اليقين وتجاوز الشك",
+              "text": "صاغ منهجًا نقديًا للوصول إلى اليقين المعرفي من خلال العقل والحدس والشهود الروحي."
+            },
+            {
+              "num": "02",
+              "title": "التكامل بين العقل والوحي",
+              "text": "أكد أن العقل أداة فهم وتدبر، والوحي نور هادٍ، ولا تعارض حقيقي بين العقل الصريح والوحي الصحيح."
+            },
+            {
+              "num": "03",
+              "title": "تزكية النفس والأخلاق",
+              "text": "قدم في «إحياء علوم الدين» رؤية شاملة لإصلاح الباطن والتحلي بالفضائل وإخلاص العمل."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "name": "اليقين المعرفي",
+              "desc": "الوصول إلى معرفة ثابتة لا تطرقها الشكوك."
+            },
+            {
+              "name": "تزكية النفس",
+              "desc": "تهذيب السلوك وتطهير القلب والارتقاء بالأخلاق."
+            }
+          ],
+          "works": [
+            {
+              "title": "إحياء علوم الدين",
+              "period": "1097 م",
+              "desc": "موسوعة إسلامية في الأخلاق والسلوك والرقي الروحي."
+            },
+            {
+              "title": "المنقذ من الضلال",
+              "period": "1108 م",
+              "desc": "سيرة فكرية ونقدية ورحلة للبحث عن الحقيقة واليقين."
+            }
+          ],
+          "influence": {
+            "names": [
+              "ابن رشد",
+              "ديكارت",
+              "توما الأكويني"
+            ],
+            "summary": "أثرت منهجيته النقدية في الفلسفة الإسلامية والأوروبية، وكان له أثر في كتابات ديكارت وتوما الأكويني."
+          },
+          "quotes": [
+            "«العلم بلا عمل جنون، والعمل بلا علم لا يكون.»",
+            "«من لم يشك لم ينظر، ومن لم ينظر لم يبصر، ومن لم يبصر بقي في العمى والضلال.»"
+          ],
+          "famousQuote": "«العلم بلا عمل جنون، والعمل بلا علم لا يكون.»",
+          "didYouKnow": "خاض الغزالي تجربة شك نهجي عميقة دفعت ترك التعيين الرسمي ببغداد والتفرغ للبحث عن الحقيقة والسكينة.",
+          "reflectionQuestion": "كيف يمكنك الجمع بين التفكير النقدي العقلاني والسكينة الروحية في حياتك اليومية؟",
+          "lessons": [
+            "البحث المخلص عن الحقيقة يتطلب شجاعة نقدية وتواضعًا معرفيًا.",
+            "العلم النافع هو ما يقترن بالعمل الصالح والأخلاق الفاضلة.",
+            "التوازن بين متطلبات الجسد وروحانية النفس هو جوهر الحكمة."
+          ],
+          "timeline": [
+            {
+              "year": "1058 م",
+              "desc": "ولادته في مدينة طوس بإقليم خراسان."
+            },
+            {
+              "year": "1091 م",
+              "desc": "توليه التدريس في المدرسة النظامية ببغداد."
+            },
+            {
+              "year": "1095 م",
+              "desc": "بداية اعتزاله ورحلته الروحية والفكرية."
+            },
+            {
+              "year": "1111 م",
+              "desc": "وفاته في طوس تركًا أثرًا علميًا خالدًا."
+            }
+          ]
+        },
+        {
+          "id": "farabi",
+          "featured": true,
+          "name": "الفارابي",
+          "era": "872 - 950 م",
+          "school": "الفلسفة الإسلامية / المنطق / الفلسفة السياسية",
+          "image": "thinkers/images/farabi.jpg",
+          "bio": "أبو نصر الفارابي الملقب بـ «المعلم الثاني»، فيلسوف ومناطق ورائد الفلسفة السياسية والموسيقى في الحضارة الإسلامية. صاحب كتاب «آراء أهل المدينة الفاضلة».",
+          "body": [
+            "أبو نصر محمد الفارابي (872 - 950 م)، الملقب في التراث الفكري بـ «المعلم الثاني» (بعد أرسطو المعلم الأول)، هو أحد كبار الفلاسفة في التاريخ الإسلامي والإنساني.",
+            "شرح وتأمل أعمال أفلاطون وأرسطو، وصاغ نظرية فريدة في الفلسفة السياسية والأخلاقية أودعها في كتابه الخالد «آراء أهل المدينة الفاضلة»، متناولاً فيه المدينة الفاضلة والحاكم الفيلسوف والحكمة الإنسانية.",
+            "أسهم بشكل جوهري في تطوير علم المنطق، ونظرية المعرفة، وفلسفة الموسيقى (كتاب الموسيقى الكبير)، تاركًا أثرًا ممتدًا في الفلسفة الإسلامية والأوروبية."
+          ],
+          "keyConcept": "المدينة الفاضلة، العقل والمنطق، الفلسفة السياسية",
+          "keyWorks": "آراء أهل المدينة الفاضلة، كتاب الموسيقى الكبير، إحصاء العلوم",
+          "originalName": "أبو نصر محمد بن محمد الفارابي",
+          "subName": "المعلم الثاني، رائد الفلسفة السياسية والمنطق",
+          "country": "فاراب (كا kazakhstan الحالية) / بغداد / دمشق",
+          "flag": "🏛️",
+          "heroQuote": "«المدينة الفاضلة هي التي يهدف أهلها بالتعاون إلى تحقيق السعادة الحقيقية.»",
+          "intro": "الفارابي هو المعلم الثاني الذي وضع أسس الفلسفة السياسية والمنطق في الحضارة الإسلامية، مبتكر مفهوم المدينة الفاضلة المبنية على الحكم العادل والحكمة.",
+          "bioDetails": {
+            "upbringing": "ولد في فاراب واستهواه شغف المعرفة واللغات والعلوم منذ صغره.",
+            "studies": "انتقل إلى بغداد عاصمة العلم وعكف على دراسة المنطق والعلوم العقلية على يد كبار العلماء.",
+            "life": "عاش حياة زهد وتأمل في دمشق وحلب، مكرسًا وقته للتأليف والتفكير حتى وفاته."
+          },
+          "historicalContext": "عاش في العصر الذهبي للحضارة الإسلامية حيث ازدهرت حركة الترجمة والتأليف والحوار الفكري.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "المدينة الفاضلة والسعادة الإنسانية",
+              "text": "قدم رؤية فلسفية للمجتمع العادل الذي يتعاون أفراده لتحقيق الفضيلة والسعادة الحقيقية."
+            },
+            {
+              "num": "02",
+              "title": "المنطق وتبويب العلوم",
+              "text": "صنف العلوم في كتابه «إحصاء العلوم» ووضع قواعد المنطق والبحث الفلسفي."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "name": "المدينة الفاضلة",
+              "desc": "المجتمع الإنساني القائم على الحكمة والعدالة والتعاون."
+            }
+          ],
+          "works": [
+            {
+              "title": "آراء أهل المدينة الفاضلة",
+              "period": "940 م",
+              "desc": "أبرز مؤلفاته في الفلسفة السياسية والاجتماعية."
+            }
+          ],
+          "influence": {
+            "names": [
+              "ابن سينا",
+              "ابن رشد",
+              "موسى بن ميمون"
+            ],
+            "summary": "أثرت فلسفته في ابن سينا وابن رشد، وبنت أفكاره جسورًا بين الفلسفة اليونانية والفكر الإسلامي."
+          },
+          "quotes": [
+            "«السعادة هي الغاية التي يرومها كل إنسان، وأنها الفضيلة القصوى.»"
+          ],
+          "famousQuote": "«السعادة هي الغاية التي يرومها كل إنسان، وأنها الفضيلة القصوى.»",
+          "didYouKnow": "لقب بـ «المعلم الثاني» لتقدير مفكري عصره لجهوده الفذة في شرح وتطوير المنطق والفلسفة بعد أرسطو.",
+          "reflectionQuestion": "كيف يمكن للتعاون والعدالة في المجتمع أن يحققا الفضيلة والسعادة لأفراده؟",
+          "lessons": [
+            "العدالة والتعاون هما أساس ارتقاء المجتمعات الإنسانية.",
+            "المنطق والفكر المنظم أداة رئيسية لبناء الفهم الصحيح."
+          ],
+          "timeline": [
+            {
+              "year": "872 م",
+              "desc": "ولادته في فاراب."
+            },
+            {
+              "year": "900 م",
+              "desc": "استقراره في بغداد لطلب العلوم والمنطق."
+            },
+            {
+              "year": "950 م",
+              "desc": "وفاته في دمشق."
+            }
+          ]
+        },
+        {
+          "id": "ibnsina",
+          "featured": true,
+          "name": "ابن سينا",
+          "era": "980 - 1037 م",
+          "school": "الفلسفة الإسلامية / الطب / ما بعد الطبيعة",
+          "image": "thinkers/images/ibnsina.jpg",
+          "bio": "أبو علي ابن سينا الملقب بـ «الشيخ الرئيس» و«أفيسينا»، عبقري الفلسفة والطب والماورائيات. صاحب كتابي «الشفاء» و«القانون في الطب».",
+          "body": [
+            "أبو علي الحسين بن عبد الله بن سينا (980 - 1037 م)، الملقب بـ «الشيخ الرئيس» وفي الغرب بـ «أفيسينا (Avicenna)»، هو أحد أعظم العقول الفذة في تاريخ العلم والفلسفة الإنسانية.",
+            "جمع بين الفلسفة الإشراقية والتحليلية، وكتب موسوعته الفلسفية الخالدة «الشفاء»، وموسوعته الطبية «القانون في الطب» التي ظلت المرجع الأول للطب في أوروبا والعالم لعدة قرون.",
+            "قدم مساهمات عميقة في ما بعد الطبيعة (الفيزياء والميتافيزيقا)، ونظرية النفس، والوجود والواجب الوجود، متأثرًا ومطورًا للتقاليد الفلسفية العقلية."
+          ],
+          "keyConcept": "واجب الوجود، فلسفة النفس، الشفاء العلمي",
+          "keyWorks": "الشفاء، القانون في الطب، الإشارات والتنبيهات",
+          "originalName": "أبو علي الحسين بن عبد الله بن سينا",
+          "subName": "الشيخ الرئيس، أمير الأطباء وفيلسوف الميتافيزيقا",
+          "country": "بخارى (Uzbekistan الحالية) / همدان (إيران)",
+          "flag": "🩺",
+          "heroQuote": "«الوهم نصف الداء،والاطمئنان نصف الدواء، والصبر أول خطوات الشفاء.»",
+          "intro": "ابن سينا هو الشيخ الرئيس وعبقري الطب والفلسفة الميتافيزيقية الذي أضاءت مؤلفاته مسيرة العلم والفكر في الشرق والغرب.",
+          "bioDetails": {
+            "upbringing": "ولد قرب بخارى وأظهر نبوغًا مبكرًا حفظ فيه القرآن والعلوم في سن صغرى.",
+            "studies": "أتقن الطب والمنطق والفلسفة في شبابه حتى أصبح مرجعًا طبيًا وفلسفيًا وله من العمر ثمانية عشر عامًا.",
+            "life": "تنقل بين عواصم الفكر والتأليف، وألف عشرات الكتب في الفلسفة والطب والرياضيات والفلك."
+          },
+          "historicalContext": "عاش في عصر نهضة علمية وفلسفية كبرى في العالم الإسلامي تميزت بالبحث الموسوعي.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "فلسفة الوجود ونظرية النفس",
+              "text": "فرق بين الوجود والماهية، وصاغ برهان الصديقين ونظرية النفس الإنسانية."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "name": "واجب الوجود",
+              "desc": "المفهوم الميتافيزيقي للوجود المطلق."
+            }
+          ],
+          "works": [
+            {
+              "title": "كتاب الشفاء",
+              "period": "1027 م",
+              "desc": "موسوعة فلسفية شاملة في المنطق والطبيعيات والميتافيزيقا."
+            }
+          ],
+          "influence": {
+            "names": [
+              "الغزالي",
+              "ابن رشد",
+              "توما الأكويني"
+            ],
+            "summary": "أثرت مؤلفاته في الفلسفة الإسلامية واللاتينية، وحفظت كتبه مكانتها في جامعات أوروبا لمئات السنين."
+          },
+          "quotes": [
+            "«الوهم نصف الداء، والاطمئنان نصف الدواء، والصبر أول خطوات الشفاء.»"
+          ],
+          "famousQuote": "«الوهم نصف الداء، والاطمئنان نصف الدواء، والصبر أول خطوات الشفاء.»",
+          "didYouKnow": "كان كتاب «القانون في الطب» لابن سينا يُدرس كمرجع أساسي في كلية الطب بجامعة مونبلييه ولوفان لعدة قرون.",
+          "reflectionQuestion": "كيف تؤثر راحة النفس والاطمئنان الروحي على الصحة الجسدية والتفكير العقلاني؟",
+          "lessons": [
+            "التكامل بين العلم المادي والسكينة الروحية هو جوهر العافية.",
+            "الشغف الموسوعي هو مفتاح الابتكار وتجاوز الحدود المعرفية."
+          ],
+          "timeline": [
+            {
+              "year": "980 م",
+              "desc": "ولادته قرب بخارى."
+            },
+            {
+              "year": "1027 م",
+              "desc": "إتمام كتاب الشفاء الموسوعي."
+            },
+            {
+              "year": "1037 م",
+              "desc": "وفاته في همدان."
+            }
+          ]
+        },
+        {
+          "id": "ibnrushd",
+          "featured": true,
+          "name": "ابن رشد",
+          "era": "1126 - 1198 م",
+          "school": "الفلسفة الإسلامية / العقلانية / الفقه",
+          "image": "thinkers/images/ibnrushd.jpg",
+          "bio": "أبو الوليد ابن رشد الملقب بـ «الشارح الكبيـر» و«أفيروس»، قاض وفيلسوف وطبيب أندلسي. رائد العقلانية والتأويل وصاحب كتاب «فصل المقال».",
+          "body": [
+            "أبو الوليد محمد بن أحمد بن رشد (1126 - 1198 م)، المعروف في الغرب بـ «أفيروس (Averroes)»، هو قاضي الأندلس وفيلسوفها الأكبر ورائد الفكر العقلاني المتنور.",
+            "دافع عن الفلسفة والعقل في كتابه الفذ «فصل المقال فيما بين الحكمة والشريعة من الاتصال»، مؤكدًا أن النظر العقلاني والحكمة لا يخالفان الشريعة بل يعضدانها.",
+            "اشتهر بشروحاته الخالدة لأعمال أرسطو التي سمي بسببها «الشارح الكبير»، ولعبت مؤلفاته دورًا محوريًا في تمهيد عصر النهضة الأوروبية والفكر العقلاني العالمي."
+          ],
+          "keyConcept": "التوافق بين الحكمة والشريعة، العقلانية النقدية",
+          "keyWorks": "فصل المقال، تهافت التهافت، بداية المجتهد ونهاية المقتصد",
+          "originalName": "أبو الوليد محمد بن أحمد بن رشد الأندلسي",
+          "subName": "شارح أرسطو الأكبر ورائد العقلانية والتأويل",
+          "country": "قرطبة (الأندلس / إسبانيا الحالية) / مراكش",
+          "flag": "⚖️",
+          "heroQuote": "«الحسن ما حسنه العقل، والقبيح ما قبحه العقل.»",
+          "intro": "ابن رشد هو فيلسوف قرطبة وقاضيها ومؤسس المدرسة العقلانية النقدية الداعية للتوافق التام بين النظر العقلي والحكمة الشريفة.",
+          "bioDetails": {
+            "upbringing": "ولد في قرطبة في عائلة علم وقضاء عريقة ودرس الفقه والطب والفلسفة.",
+            "studies": "تولى قضاء قرطبة ثم قضاء الجماعة، وجمع بين الاجتهاد الفقهي والبحث الفلسفي.",
+            "life": "صنف عشرات المؤلفات الشارحة والمبتكرة في الفلسفة والطب والفقه حتى وفاته بمراكش."
+          },
+          "historicalContext": "عاش في الأندلس والمغرب العربي في العصر الموحدي الذي شهد حراكًا فكريًا وفقهيًا كبيرًا.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "التوافق بين الحكمة والشريعة",
+              "text": "أثبت في «فصل المقال» أن الحق لا يضاد الحق بل يوافقه ويثهد له."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "name": "التأويل العقلاني",
+              "desc": "منهج فهم النصوص بما لا يخالف البراهين العقلية القاطعة."
+            }
+          ],
+          "works": [
+            {
+              "title": "فصل المقال",
+              "period": "1179 م",
+              "desc": "رسالة فلسفية وفقهية مرجعية في وجوب النظر العقلي والتأويل."
+            }
+          ],
+          "influence": {
+            "names": [
+              "موسى بن ميمون",
+              "توما الأكويني",
+              "الفلاسفة العقلانيون"
+            ],
+            "summary": "شكلت الرشدية (Averroism) ركيزة رئيسية في تحريك الحركة العقلانية في الجامعات الأوروبية."
+          },
+          "quotes": [
+            "«الحق لا يضاد الحق بل يوافقه ويشهد له.»"
+          ],
+          "famousQuote": "«الحق لا يضاد الحق بل يوافقه ويشهد له.»",
+          "didYouKnow": "سمي بالشارح الكبير في أوروبا لأن شروحاته لأرسطو كانت المدخل الأساسي لإعادة اكتشاف الفلسفة العقلانية.",
+          "reflectionQuestion": "كيف يمكن للتفكير العقلاني النقدي أن يعزز فهمنا للقيم والأخلاق الإنسانية؟",
+          "lessons": [
+            "التفكير النقدي المنظم هو الطريق الأكيد لاكتشاف الحقيقة وتجنب التعصب."
+          ],
+          "timeline": [
+            {
+              "year": "1126 م",
+              "desc": "ولادته في قرطبة بالأندلس."
+            },
+            {
+              "year": "1179 م",
+              "desc": "تأليف كتاب فصل المقال."
+            },
+            {
+              "year": "1198 م",
+              "desc": "وفاته في مراكش."
+            }
+          ]
+        },
+        {
+          "id": "ibnkhaldun",
+          "featured": true,
+          "name": "ابن خلدون",
+          "era": "1332 - 1406 م",
+          "school": "فلسفة التاريخ / علم الاجتماع (العمران البشري) / الاقتصاد",
+          "image": "thinkers/images/ibnkhaldun.jpg",
+          "bio": "عبد الرحمن ابن خلدون، مؤرخ وفيلسوف ومؤسس علم الاجتماع وفلسفة التاريخ والعمران البشري. صاحب كتاب «المقدمة».",
+          "body": [
+            "عبد الرحمن بن محمد بن خلدون (1332 - 1406 م)، مؤسس علم الاجتماع (علم العمران البشري) وفلسفة التاريخ، هو أحد أعظم العقول المبتكرة في التاريخ الإنساني.",
+            "ألف كتاب «المقدمة» الذي وضع فيه القوانين الموضوعية لظهور الدول وسقوطها، والعصبية والاجتماع البشري، والاقتصاد والعمران، مبشرًا بالعلوم الاجتماعية الحديثة قبل خمسة قرون.",
+            "تميز بتحليله العلمي المحايد للظواهر التاريخية والاجتماعية، مما جعل مؤلفاته مرجعًا عالميًا نال إشادة كبار مؤرخي وفلاسفة العالم."
+          ],
+          "keyConcept": "العمران البشري، العصبية والدولة، فلسفة التاريخ",
+          "keyWorks": "المقدمة، كتاب العبر، التعريف بابن خلدون ورحلته غربًا وشرقًا",
+          "originalName": "أبو زيد عبد الرحمن بن محمد بن خلدون الحضرمي",
+          "subName": "مؤسس علم الاجتماع ورائد فلسفة التاريخ والعمران",
+          "country": "تونس / الأندلس / الفاس / القاهرة",
+          "flag": "🌍",
+          "heroQuote": "«الإنسان مدني بالطبع، والظلم مؤذن بخراب العمران.»",
+          "intro": "ابن خلدون هو مؤسس علم الاجتماع والعمران البشري وفيلسوف التاريخ الذي اكتشف القوانين الاجتماعية لتطور الأمم ودولها.",
+          "bioDetails": {
+            "upbringing": "ولد في تونس لأسرة أندلسية عريقة وعكف على دراسة الأدب والشريعة والمنطق.",
+            "studies": "تولى الكتابة والوزارة والقضاء في المغرب والأندلس والقاهرة، مما منحه خبرة واقعية عميقة.",
+            "life": "اعتكف في قلعة ابن سلامة بالجزائر لتأليف «المقدمة»، وتوفي بالقاهرة وهو قاضي مالكية مصر."
+          },
+          "historicalContext": "عاش في القرن الرابع عشر الميلادي خلال مرحلة تحولات سياسية واجتماعية كبرى في شمال إفريقيا والأندلس.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "علم العمران البشري والعصبية",
+              "text": "صاغ القوانين الاجتماعية لنشوء المجتمع البشري ودور الرابطة الاجتماعية (العصبية) في بناء الدولة."
+            },
+            {
+              "num": "02",
+              "title": "فلسفة التاريخ والدورة الحضارية",
+              "text": "أكد أن التاريخ ليس مجرد أخبار بل هو نظر وتحقيق وعلل وأسباب لنشوء الحضارات وأفولها."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "name": "العمران البشري",
+              "desc": "دراسة المجتمع البشري وظواهره الاقتصادية والاجتماعية."
+            },
+            {
+              "name": "العصبية",
+              "desc": "الرابطة الاجتماعية التضامنية التي تبنى بها الدول."
+            }
+          ],
+          "works": [
+            {
+              "title": "المقدمة",
+              "period": "1377 م",
+              "desc": "المؤلف التأسيسي لعلم الاجتماع وفلسفة التاريخ والعمران."
+            }
+          ],
+          "influence": {
+            "names": [
+              "أغوست كونت",
+              "أرنولد توينبي",
+              "علماء الاجتماع المحدثون"
+            ],
+            "summary": "اعتبره المؤرخ البريطاني أرنولد توينبي صاحب «أعظم فلسفة تاريخ صاغها عقل بشري في أي زمان ومكان»."
+          },
+          "quotes": [
+            "«العدل أساس العمران، والظلم مؤذن بخراب العمران.»"
+          ],
+          "famousQuote": "«العدل أساس العمران، والظلم مؤذن بخراب العمران.»",
+          "didYouKnow": "كتب ابن خلدون مسودة كتابه الشهير «المقدمة» في عزلة تامة داخل قلعة «ابن سلامة» في الجزائر.",
+          "reflectionQuestion": "كيف تؤثر العدالة والتضامن الاجتماعي على استقرار الحضارات وازدهارها اليوم؟",
+          "lessons": [
+            "فهم الماضي عبر دراسة أسبابه الاجتماعية يمنحنا رؤية أوضح للمستقبل.",
+            "العدل والمواطنة الصالحة هما الركيزة الأساسية لاستمرار أي مجتمع."
+          ],
+          "timeline": [
+            {
+              "year": "1332 م",
+              "desc": "ولادته في تونس."
+            },
+            {
+              "year": "1377 م",
+              "desc": "إتمام كتابة المقدمة في قلعة ابن سلامة."
+            },
+            {
+              "year": "1406 م",
+              "desc": "وفاته في القاهرة."
+            }
+          ]
         }
       ],
       "articles": [
@@ -10089,6 +11513,106 @@ const TIKTOK_DATA = {
           "conclusion": "عقلك أداة عظيمة خُلقت لتخدمك، لا لتكون سجيناً لوساوسها. حين تتعلم كيف تسكت الضجيج الداخلي، يولد في أعماقك سلام هادئ كصفحة بحيرة ساكنة.",
           "finalQuote": "« القلق لا يفرغ الغد من همومه، لكنه يفرغ اليوم من قوته وسكينته. »",
           "finalQuoteAuthor": "— كورين تين بوم | حكمة ونور"
+        },
+        {
+          "id": "when-heart-loses-sweetness-of-faith",
+          "file": "when-heart-loses-sweetness-of-faith.html",
+          "title": "لماذا يفقد القلب لذّة الإيمان أحيانًا؟",
+          "category": "islamic-thought",
+          "categoryName": "الفكر الإسلامي",
+          "pillarId": "faith-inner-life",
+          "pillarName": "الإيمان والحياة الروحية",
+          "readTime": "9 دقائق قراءة",
+          "date": "19 أغسطس 2026",
+          "author": "حكمة ونور",
+          "desc": "لماذا تمرّ قلوبنا أحيانًا بفترات من الفتور الروحي؟ قراءة هادئة في أسباب غياب لذّة الإيمان، والفرق بين ضعف الشعور وفقدان الطريق، وكيف نعود إلى الله بخطوات صادقة ومتوازنة.",
+          "chapo": "قد يصلي الإنسان وقلبه غائب، ويردد الأذكار دون أن يستشعر دفأها، فيتسلل إليه خوف صامت: هل ضاعت إيمانياتي؟ الحقيقة التي يغفل عنها الكثيرون أن الخمول العاطفي أو الروحي ليس بالضرورة دليلاً على انقطاع الصلة، بل قد يكون صرخة تنبيه من النفس المتعَبة لترميم حضورها الداخلي.",
+          "summaryBox": {
+            "title": "في نقاط سريعة",
+            "summary": "التقلب الروحي طبيعة بشرية؛ فالإيمان لا يقاس بمدى وهج العاطفة اللحظية بل بصدق الاستمرار. التعب الجسدي والروتين وضجيج الحياة قد تحجب حلاوة الطاعة دون أن تلغي أصل الإيمان.",
+            "question": "ما العبادة التي تؤديها اليوم بحكم العادة، وكيف يمكنك أن تعيد إليها شيئًا من الحضور والسكينة؟"
+          },
+          "image": "../islam_parcours_03.jpg",
+          "imageAlt": "ضوء هادئ يتسلل إلى مكان مظلم في مشهد يرمز إلى عودة السكينة إلى القلب",
+          "quote": "ليس كل صمت في القلب غيابًا للإيمان؛ فقد يكون دعوة إلى عودة أصدق وأعمق.",
+          "quoteAuthor": "حكمة ونور",
+          "toc": [
+            {
+              "id": "sec-1",
+              "text": "١. حين تتحول العبادة إلى عادة بلا حضور"
+            },
+            {
+              "id": "sec-2",
+              "text": "٢. الإيمان ليس شعورًا ثابتًا لا يتغير"
+            },
+            {
+              "id": "sec-3",
+              "text": "٣. ضجيج الحياة يشتت القلب"
+            },
+            {
+              "id": "sec-4",
+              "text": "٤. هل يدفعنا الشعور بالذنب إلى مزيد من البعد؟"
+            },
+            {
+              "id": "sec-5",
+              "text": "٥. حين تعيد المحنة تشكيل علاقتنا بالإيمان"
+            },
+            {
+              "id": "sec-6",
+              "text": "٦. العودة تبدأ من أبواب صغيرة"
+            },
+            {
+              "id": "sec-7",
+              "text": "٧. الإيمان المستقر يُبنى أيضًا في أوقات الصمت"
+            }
+          ],
+          "sections": [
+            {
+              "id": "sec-1",
+              "title": "١. حين تتحول العبادة إلى عادة بلا حضور",
+              "content": "<p>التكرار والمواظبة على العبادات أمر محمود وسلوك نبيل، يمنح الحياة هيكلاً من الاستقرار. غير أن الإشكال يظهر عندما ينفصل الجسد عن الروح؛ فتتحرك الجوارح في الصلاة وتلهج الألسن بالدعاء بينما يجول الفكر في أودية الدنيا ومشاغلها.</p><p>الاستمرار في العبادة حتى في فترات الفتور هو أصل الانضباط، لكن السعي السريع والإسراع في الأداء يفرغ العمل من قيمته الشعورية. العبادة التي تؤدى دون حضور كامل لا تعني أنها باطلة، بل تعني أنها بحاجة إلى تمهل ليتذوق القلب معناها من جديد.</p>"
+            },
+            {
+              "id": "sec-2",
+              "title": "٢. الإيمان ليس شعورًا ثابتًا لا يتغير",
+              "content": "<p>يمر الإنسان بتقلبات طبيعية في طاقته النفسية والبدنية. واشتراط الحفاظ على أعلى درجات التأثر الروحي والعاطفي في كل لحظة يولد إحباطاً مستمراً وشكاً غير مبرر في الذات.</p><p>هناك فرق جوهري بين الإيمان كيقين والتزام، وبين الإيمان كشعور عاطفي متوهج. إن الثبات الصامت والأداء الهادئ في الأيام العادية يمثلان الركيزة الحقيقية للإيمان البالغ والنضج الروحي المستقر.</p>"
+            },
+            {
+              "id": "sec-3",
+              "title": "٣. ضجيج الحياة يشتت القلب",
+              "content": "<p>إن الانغماس في التشتت الرقمي، والمقارنات الاجتماعية المستمرة، وتدفق الأخبار والمعلومات دون انقطاع، يرهق الجهاز العصبي ويمنع النفس من تحقيق الهدوء المطلوبة للتأمل والعبادة.</p><p>القلب المزدحم بالصخب ينقبض عن استشعار السكينة. واقتطاع خمس دقائق يومياً بعيداً عن الشاشات والوسائط، في صمت تام، يساعد على تهيئة الروح لاستعادة صفائها وحضورها أمام الخالق.</p>"
+            },
+            {
+              "id": "sec-4",
+              "title": "٤. هل يدفعنا الشعور بالذنب إلى مزيد من البعد؟",
+              "content": "<p>هناك فارق كبير بين صحوة الضمير النبيلة التي تدعو إلى الإصلاح، وبين الشعور المدمّر بالذنب الذي يوهم الإنسان بأنه قد قُطع أمله أو أنه غير جدير بالعودة والرحمة.</p><p>إن المثالية الروحية المفرطة تجعل التعثر الموقت يبدو وكأنه انهيار كامل، مما يدفع البعض إلى الهرب والاستسلام. لكن الباب يبدأ دائماً بالعودة التلقائية الصادقة دون انتظار الوصول إلى الكمال المطلق.</p>"
+            },
+            {
+              "id": "sec-5",
+              "title": "٥. حين تعيد المحنة تشكيل علاقتنا بالإيمان",
+              "content": "<p>تؤثر الصدمات والابتلاءات بطرق مختلفة؛ فبينما يجد البعض في الصبر ملجأً وراحة، قد يشعر آخرون بالتعب أو الحيرة وتراجع الطاقة الروحية أمام وطأة الأثر النفسي.</p><p>من الواجب التراحم وعدم إطلاق أحكام قاسية على من يمر بضيق. وحين يستمر الألم النفسي أو يرافقه اكتئاب، يصبح طلب الاستشارة الطبية والنفسية المتخصصة أمراً ضرورياً وواجباً، فالطب والنفس لا يتناقضان مع الإيمان بل يتكاملان معه.</p>"
+            },
+            {
+              "id": "sec-6",
+              "title": "٦. العودة تبدأ من أبواب صغيرة",
+              "content": "<p>إن معالجة الفتور لا تتطلب قفزات مفاجئة أو تكليف النفس بما لا تطيق، بل تتطلب خطوات تدريجية خفيفة وثابتة:</p><ul><li>التباطؤ في أداء عمل روحي واحد بقراءة متأنية وفهم.</li><li>تخصيص دقائق قليلة للدعاء بعفوية وصدق.</li><li>قراءة أجزاء قصيرة جداً من القرآن مع التأمل في معانيها.</li><li>مساعدة محتاج أو تقديم عمل خير إنساني خالص.</li></ul>"
+            },
+            {
+              "id": "sec-7",
+              "title": "٧. الإيمان المستقر يُبنى أيضًا في أوقات الصمت",
+              "content": "<p>ليس الاستقرار الروحي مشهداً درامياً أو انفعالاً لحظياً، بل هو بناء تراكمي هادئ. وفترات الصمت التائه ليست بالضرورة خسراناً، بل قد تكون محطة إعادة اكتشاف وضبط لمسار العبد مع ربه.</p><p>إن هدف العودة ليس استرجاع مشاعر الماضي ذاتها، بل تأسيس علاقة جديدة أعمق وأوعى وأكثر نضجاً مع الخالق سبحانه.</p>"
+            }
+          ],
+          "inBrief": [
+            "ضعف الشعور اللحظي لا يعني زوال أصل الإيمان أو انقطاع الصلة.",
+            "الاهتمام بالراحة البدنية وتخفيف التشتت الرقمي يعيد للنفس توازنها الروحي.",
+            "الشعور المفرط بالذنب عائق؛ والعودة الصادقة تبدأ فوراً وبلا تعقيد.",
+            "التدرج والخطوات الصغيرة الدائمة تثمر ثباتاً أعمق من الطفرات العاطفية المجهدة.",
+            "طلب الدعم النفسي عند الاكتئاب أو الضغوط الشديدة هو خطوة وعي وحكمة تكمل الإيمان."
+          ],
+          "conclusion": "إن طمأنينة القلب ليست مكسباً عابراً، بل هي ثمرة مسار متوازن يعترف بالضعف البشري ويتطلع إلى الرحمة الإلهية. لا تقسى على نفسك في أوقات الجفاف الفكري أو الروحي، فكل دقيقة صدق تمضيها في محاولة الاقتراب هي حجر أساس في بناء سلامك الداخلي.",
+          "finalQuote": "قد لا يبدأ الرجوع بخطوة كبيرة، بل بلحظة صدق يعترف فيها القلب بحاجته إلى النور.",
+          "finalQuoteAuthor": "حكمة ونور"
         }
       ],
       "faq": [
@@ -10631,3 +12155,6 @@ const TIKTOK_DATA = {
 };
 
 export default TIKTOK_DATA;
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = TIKTOK_DATA;
+}
