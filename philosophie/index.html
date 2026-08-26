@@ -727,119 +727,65 @@
       font-weight: 800;
       background: rgba(223, 177, 91, 0.2);
     }
-  </style>
-
-    
-/* ============================================================
-   PHILOSOPHIE V5.3 — ÉCOLES PHILOSOPHIQUES GRILLE & CARTE
-   ============================================================ */
-.philo-schools-section {
-  display: block;
-  margin: 80px auto;
-}
-
-.philo-schools-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  margin-top: 40px;
-}
-
-.philo-school-card,
-.philo-school-card:visited {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  overflow: hidden;
-  color: #f2eee5;
-  background: #0d1814;
-  border: 1px solid rgba(201, 168, 106, 0.28);
-  border-radius: 14px;
-  text-decoration: none;
-  transition:
-    transform 180ms ease,
-    border-color 180ms ease;
-}
-
-.philo-school-card:hover {
-  color: #fffdf8;
-  border-color: #c9a86a;
-  transform: translateY(-3px);
-}
-
-.philo-school-card:focus-visible {
-  outline: 3px solid rgba(228, 201, 138, 0.5);
-  outline-offset: 4px;
-}
-
-.philo-school-image-box {
-  position: relative;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-}
-
-.philo-school-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.philo-school-number {
-  position: absolute;
-  top: 12px;
-  inset-inline-start: 12px;
-  padding: 5px 9px;
-  color: #e4c98a;
-  background: rgba(7, 16, 13, 0.88);
-  border: 1px solid rgba(201, 168, 106, 0.4);
-  border-radius: 6px;
-}
-
-.philo-school-body {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  padding: 20px;
-}
-
-.philo-school-period {
-  color: #c9a86a;
-  font-size: 0.82rem;
-}
-
-.philo-school-title {
-  margin: 8px 0;
-  color: #f2eee5;
-  font-size: 1.2rem;
-}
-
-.philo-school-description {
-  flex: 1;
-  color: #a9aaa4;
-  line-height: 1.65;
-}
-
-.philo-school-link {
-  margin-top: 16px;
-  color: #e4c98a;
-  font-weight: 700;
-}
-
-@media (max-width: 900px) {
-  .philo-schools-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 600px) {
+  
+  /* Écoles philosophiques */
   .philo-schools-section {
-    margin: 56px auto;
+    display: block;
+    margin: 80px auto;
   }
 
   .philo-schools-grid {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 40px;
   }
-}
+
+  .philo-school-card,
+  .philo-school-card:visited {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    color: #f2eee5;
+    background: #0d1814;
+    border: 1px solid rgba(201, 168, 106, 0.28);
+    border-radius: 14px;
+    text-decoration: none;
+  }
+
+  .philo-school-image-box {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+
+  .philo-school-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .philo-school-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  @media (max-width: 900px) {
+    .philo-schools-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 600px) {
+    .philo-schools-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  </style>
 
 </head>
 
@@ -1071,6 +1017,11 @@
         aria-live="polite"
       ></div>
     </section>
+
+
+
+
+    
 
 
 
