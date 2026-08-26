@@ -1757,6 +1757,12 @@
     document.addEventListener('DOMContentLoaded', () => {
       const currentLang = getSavedLang();
       updateLanguage(currentLang);
+    });
+    // Fallback in case DOMContentLoaded already fired
+    if (document.readyState === 'interactive' || document.readyState === 'complete') {
+      const currentLang = getSavedLang();
+      updateLanguage(currentLang);
+    }
 
       // Header Language Dropdown Fix (Floating menu, non-disruptive)
       const langBtn = document.getElementById('langSelectorBtn');
