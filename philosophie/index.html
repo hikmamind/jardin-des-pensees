@@ -728,10 +728,16 @@
       background: rgba(223, 177, 91, 0.2);
     }
   
-  /* Écoles philosophiques */
+  
+
+  
+  /* Écoles philosophiques (Cartes Physiques Static) */
   .philo-schools-section {
     display: block;
+    width: 100%;
+    max-width: 1120px;
     margin: 80px auto;
+    padding: 0 24px;
   }
 
   .philo-schools-grid {
@@ -752,6 +758,20 @@
     border: 1px solid rgba(201, 168, 106, 0.28);
     border-radius: 14px;
     text-decoration: none;
+    transition:
+      transform 180ms ease,
+      border-color 180ms ease;
+  }
+
+  .philo-school-card:hover {
+    color: #fffdf8;
+    border-color: #c9a86a;
+    transform: translateY(-3px);
+  }
+
+  .philo-school-card:focus-visible {
+    outline: 3px solid rgba(228, 201, 138, 0.5);
+    outline-offset: 4px;
   }
 
   .philo-school-image-box {
@@ -766,11 +786,45 @@
     object-fit: cover;
   }
 
+  .philo-school-number {
+    position: absolute;
+    top: 12px;
+    inset-inline-start: 12px;
+    padding: 5px 9px;
+    color: #e4c98a;
+    background: rgba(7, 16, 13, 0.9);
+    border: 1px solid rgba(201, 168, 106, 0.4);
+    border-radius: 6px;
+  }
+
   .philo-school-body {
     display: flex;
     flex: 1;
     flex-direction: column;
     padding: 20px;
+  }
+
+  .philo-school-period {
+    color: #c9a86a;
+    font-size: 0.82rem;
+  }
+
+  .philo-school-title {
+    margin: 8px 0;
+    color: #f2eee5;
+    font-size: 1.2rem;
+  }
+
+  .philo-school-description {
+    flex: 1;
+    color: #a9aaa4;
+    line-height: 1.65;
+  }
+
+  .philo-school-link {
+    margin-top: 16px;
+    color: #e4c98a;
+    font-weight: 700;
   }
 
   @media (max-width: 900px) {
@@ -780,12 +834,17 @@
   }
 
   @media (max-width: 600px) {
+    .philo-schools-section {
+      margin: 56px auto;
+      padding: 0 16px;
+    }
+
     .philo-schools-grid {
       grid-template-columns: 1fr;
     }
   }
 
-  </style>
+</style>
 
 </head>
 
@@ -981,42 +1040,428 @@
     </section>
 
 
-    <!-- 4. ÉCOLES PHILOSOPHIQUES (7 MAJOR SCHOOLS) -->
+    <!-- 4. LES 7 ÉCOLES PHILOSOPHIQUES (CARTES HTML PHYSIQUES STATIC) -->
     <section
-      id="ecoles"
+      id="ecoles-philosophiques"
       class="philo-section-block philo-schools-section"
-      aria-labelledby="philoSchoolsHeading"
+      aria-labelledby="schoolsTitle"
     >
       <div class="philo-section-heading">
-        <span class="philo-section-badge">
-          🏛️
-          <span
-            data-ar="المدارس الفكرية"
-            data-fr="Écoles de pensée"
-            data-en="Schools of Thought"
-          >
-            المدارس الفكرية
-          </span>
+        <span
+          class="philo-section-badge"
+          data-ar="🏛️ المدارس الفكرية"
+          data-fr="🏛️ Écoles de pensée"
+          data-en="🏛️ Schools of Thought"
+        >
+          🏛️ المدارس الفكرية
         </span>
 
         <h2
-          id="philoSchoolsHeading"
-          data-i18n="philoSchoolsTitle"
+          id="schoolsTitle"
+          data-ar="المدارس الفلسفية الكبرى"
+          data-fr="Les grandes écoles philosophiques"
+          data-en="The Great Philosophical Schools"
         >
           المدارس الفلسفية الكبرى
         </h2>
 
-        <p data-i18n="philoSchoolsSubtitle">
+        <p
+          data-ar="مدارس وأفكار غيّرت طريقة الإنسان في فهم نفسه والعالم عبر العصور"
+          data-fr="Des écoles et des idées qui ont transformé notre compréhension de l’être humain et du monde."
+          data-en="Schools and ideas that transformed our understanding of humanity and the world."
+        >
           مدارس وأفكار غيّرت طريقة الإنسان في فهم نفسه والعالم عبر العصور
         </p>
       </div>
 
       <div
-        id="philoSchoolsGrid"
+        id="philoSchoolsStatic"
         class="philo-schools-grid"
-        aria-live="polite"
-      ></div>
+      >
+        <!-- École 01 -->
+        <a
+          class="philo-school-card"
+          href="./ecoles/stoicisme/"
+        >
+          <div class="philo-school-image-box">
+            <img
+              class="philo-school-image"
+              src="../marc_aurelius_writing.jpg"
+              alt="Stoïcisme"
+              loading="lazy"
+            >
+            <span class="philo-school-number">01</span>
+          </div>
+
+          <div class="philo-school-body">
+            <span
+              class="philo-school-period"
+              data-ar="القرن ٣ ق.م — القرن ٢ م"
+              data-fr="IIIe s. av. J.-C. — IIe s."
+              data-en="3rd c. BCE — 2nd c. CE"
+            >
+              القرن ٣ ق.م — القرن ٢ م
+            </span>
+
+            <h3
+              class="philo-school-title"
+              data-ar="الرواقية"
+              data-fr="Stoïcisme"
+              data-en="Stoicism"
+            >
+              الرواقية
+            </h3>
+
+            <p
+              class="philo-school-description"
+              data-ar="فن السيطرة على العقل وبناء القلعة الداخلية."
+              data-fr="La maîtrise des réactions, du contrôle et de la citadelle intérieure."
+              data-en="Mastering reactions, control and the inner citadel."
+            >
+              فن السيطرة على العقل وبناء القلعة الداخلية.
+            </p>
+
+            <span
+              class="philo-school-link"
+              data-ar="تعرّف على المدرسة ←"
+              data-fr="Découvrir l’école →"
+              data-en="Discover the school →"
+            >
+              تعرّف على المدرسة ←
+            </span>
+          </div>
+        </a>
+
+        <!-- École 02 -->
+        <a
+          class="philo-school-card"
+          href="./ecoles/platonisme/"
+        >
+          <div class="philo-school-image-box">
+            <img
+              class="philo-school-image"
+              src="../socrates_delphi_temple.jpg"
+              alt="Philosophie Antique & Platonisme"
+              loading="lazy"
+            >
+            <span class="philo-school-number">02</span>
+          </div>
+
+          <div class="philo-school-body">
+            <span
+              class="philo-school-period"
+              data-ar="القرن ٦ ق.م — القرن ٤ م"
+              data-fr="VIe s. av. J.-C. — IVe s."
+              data-en="6th c. BCE — 4th c. CE"
+            >
+              القرن ٦ ق.م — القرن ٤ م
+            </span>
+
+            <h3
+              class="philo-school-title"
+              data-ar="الفلسفة اليونانية القديمة والأفلاطونية"
+              data-fr="Philosophie Antique & Platonisme"
+              data-en="Ancient Philosophy & Platonism"
+            >
+              الفلسفة اليونانية القديمة والأفلاطونية
+            </h3>
+
+            <p
+              class="philo-school-description"
+              data-ar="البحث في أصل الوجود والفضيلة والعقل، رمزيّة الكهف عالم المُثل والحوار السقراطي."
+              data-fr="L'exploration des premiers principes, de l'allégorie de la caverne et du monde des Idées."
+              data-en="Exploring first principles, virtue, the cave allegory, and the world of Forms."
+            >
+              البحث في أصل الوجود والفضيلة والعقل، رمزيّة الكهف عالم المُثل والحوار السقراطي.
+            </p>
+
+            <span
+              class="philo-school-link"
+              data-ar="تعرّف على المدرسة ←"
+              data-fr="Découvrir l’école →"
+              data-en="Discover the school →"
+            >
+              تعرّف على المدرسة ←
+            </span>
+          </div>
+        </a>
+
+        <!-- École 03 -->
+        <a
+          class="philo-school-card"
+          href="./ecoles/islamique/"
+        >
+          <div class="philo-school-image-box">
+            <img
+              class="philo-school-image"
+              src="../bookshelves_candle.jpg"
+              alt="Philosophie Islamique & Sagesse Orientale"
+              loading="lazy"
+            >
+            <span class="philo-school-number">03</span>
+          </div>
+
+          <div class="philo-school-body">
+            <span
+              class="philo-school-period"
+              data-ar="القرن ٨ م — القرن ١٥ م"
+              data-fr="VIIIe s. — XVe s."
+              data-en="8th c. — 15th c."
+            >
+              القرن ٨ م — القرن ١٥ م
+            </span>
+
+            <h3
+              class="philo-school-title"
+              data-ar="الفلسفة الإسلامية والحكمة الشرقية"
+              data-fr="Philosophie Islamique & Sagesse Orientale"
+              data-en="Islamic Philosophy & Eastern Wisdom"
+            >
+              الفلسفة الإسلامية والحكمة الشرقية
+            </h3>
+
+            <p
+              class="philo-school-description"
+              data-ar="التوفيق بين العقل والنقل، الميتافيزيقا المشائية، ونشأة الفلسفة الحضارية."
+              data-fr="L'harmonie entre Raison et Foi, la métaphysique peripatétique et la philosophie de la civilisation."
+              data-en="Harmony between Reason and Faith, peripatetic metaphysics, and civilizational philosophy."
+            >
+              التوفيق بين العقل والنقل، الميتافيزيقا المشائية، ونشأة الفلسفة الحضارية.
+            </p>
+
+            <span
+              class="philo-school-link"
+              data-ar="تعرّف على المدرسة ←"
+              data-fr="Découvrir l’école →"
+              data-en="Discover the school →"
+            >
+              تعرّف على المدرسة ←
+            </span>
+          </div>
+        </a>
+
+        <!-- École 04 -->
+        <a
+          class="philo-school-card"
+          href="./ecoles/rationalisme/"
+        >
+          <div class="philo-school-image-box">
+            <img
+              class="philo-school-image"
+              src="../desk_coffee_book.jpg"
+              alt="Rationalisme & Philosophie Moderne"
+              loading="lazy"
+            >
+            <span class="philo-school-number">04</span>
+          </div>
+
+          <div class="philo-school-body">
+            <span
+              class="philo-school-period"
+              data-ar="القرن ١٧ م — القرن ١٨ م"
+              data-fr="XVIIe s. — XVIIIe s."
+              data-en="17th c. — 18th c."
+            >
+              القرن ١٧ م — القرن ١٨ م
+            </span>
+
+            <h3
+              class="philo-school-title"
+              data-ar="العقلانية والفلسفة الحديثة"
+              data-fr="Rationalisme & Philosophie Moderne"
+              data-en="Rationalism & Modern Philosophy"
+            >
+              العقلانية والفلسفة الحديثة
+            </h3>
+
+            <p
+              class="philo-school-description"
+              data-ar="الشك المنهجي، الكوجيتو، ونشأة الفكر الفلسفي الحديث والتنوير."
+              data-fr="Le doute méthodique, le cogito et l'essor de la philosophie moderne."
+              data-en="Methodical doubt, the cogito, and the rise of modern philosophy."
+            >
+              الشك المنهجي، الكوجيتو، ونشأة الفكر الفلسفي الحديث والتنوير.
+            </p>
+
+            <span
+              class="philo-school-link"
+              data-ar="تعرّف على المدرسة ←"
+              data-fr="Découvrir l’école →"
+              data-en="Discover the school →"
+            >
+              تعرّف على المدرسة ←
+            </span>
+          </div>
+        </a>
+
+        <!-- École 05 -->
+        <a
+          class="philo-school-card"
+          href="./ecoles/existentialisme/"
+        >
+          <div class="philo-school-image-box">
+            <img
+              class="philo-school-image"
+              src="../autumn_forest_solitude_walk.jpg"
+              alt="Philosophie Existentielle & Absurde"
+              loading="lazy"
+            >
+            <span class="philo-school-number">05</span>
+          </div>
+
+          <div class="philo-school-body">
+            <span
+              class="philo-school-period"
+              data-ar="القرن ١٩ م — القرن ٢٠ م"
+              data-fr="XIXe s. — XXe s."
+              data-en="19th c. — 20th c."
+            >
+              القرن ١٩ م — القرن ٢٠ م
+            </span>
+
+            <h3
+              class="philo-school-title"
+              data-ar="الفلسفة الوجودية والعبثية"
+              data-fr="Philosophie Existentielle & Absurde"
+              data-en="Existential Philosophy & Absurdity"
+            >
+              الفلسفة الوجودية والعبثية
+            </h3>
+
+            <p
+              class="philo-school-description"
+              data-ar="الوجود يسبق الماهية، الحرية المطلقة، ومواجهة العبث وصناعة المعنى."
+              data-fr="L'existence précède l'essence : liberté absolue et création du sens."
+              data-en="Existence precedes essence: absolute freedom and creating meaning."
+            >
+              الوجود يسبق الماهية، الحرية المطلقة، ومواجهة العبث وصناعة المعنى.
+            </p>
+
+            <span
+              class="philo-school-link"
+              data-ar="تعرّف على المدرسة ←"
+              data-fr="Découvrir l’école →"
+              data-en="Discover the school →"
+            >
+              تعرّف على المدرسة ←
+            </span>
+          </div>
+        </a>
+
+        <!-- École 06 -->
+        <a
+          class="philo-school-card"
+          href="./ecoles/morale/"
+        >
+          <div class="philo-school-image-box">
+            <img
+              class="philo-school-image"
+              src="../luxury_window_reflection.jpg"
+              alt="Philosophie Morale"
+              loading="lazy"
+            >
+            <span class="philo-school-number">06</span>
+          </div>
+
+          <div class="philo-school-body">
+            <span
+              class="philo-school-period"
+              data-ar="الفلسفة الأخلاقية عبر العصور"
+              data-fr="Philosophie Morale à travers les âges"
+              data-en="Moral Philosophy Through the Ages"
+            >
+              الفلسفة الأخلاقية عبر العصور
+            </span>
+
+            <h3
+              class="philo-school-title"
+              data-ar="الفلسفة الأخلاقية"
+              data-fr="Philosophie Morale"
+              data-en="Moral Philosophy"
+            >
+              الفلسفة الأخلاقية
+            </h3>
+
+            <p
+              class="philo-school-description"
+              data-ar="الخير، الواجب، العدالة، وبناء الحياة الفاضلة والاتزان الأخلاقي عبر العصور."
+              data-fr="L'examen du bien, du devoir, de la justice et d'une vie vertueuse."
+              data-en="Examining the good, duty, justice, and the virtuous life."
+            >
+              الخير، الواجب، العدالة، وبناء الحياة الفاضلة والاتزان الأخلاقي عبر العصور.
+            </p>
+
+            <span
+              class="philo-school-link"
+              data-ar="تعرّف على المدرسة ←"
+              data-fr="Découvrir l’école →"
+              data-en="Discover the school →"
+            >
+              تعرّف على المدرسة ←
+            </span>
+          </div>
+        </a>
+
+        <!-- École 07 -->
+        <a
+          class="philo-school-card"
+          href="./ecoles/contemporaine/"
+        >
+          <div class="philo-school-image-box">
+            <img
+              class="philo-school-image"
+              src="../person_window_sunrise.jpg"
+              alt="Philosophie Contemporaine & Nihilisme"
+              loading="lazy"
+            >
+            <span class="philo-school-number">07</span>
+          </div>
+
+          <div class="philo-school-body">
+            <span
+              class="philo-school-period"
+              data-ar="القرن ١٩ م — العصر الحالي"
+              data-fr="XIXe s. — Époque Contemporaine"
+              data-en="19th c. — Contemporary Era"
+            >
+              القرن ١٩ م — العصر الحالي
+            </span>
+
+            <h3
+              class="philo-school-title"
+              data-ar="الفلسفة المعاصرة والعدمية"
+              data-fr="Philosophie Contemporaine & Nihilisme"
+              data-en="Contemporary Philosophy & Nihilism"
+            >
+              الفلسفة المعاصرة والعدمية
+            </h3>
+
+            <p
+              class="philo-school-description"
+              data-ar="تشريح أزمات الحداثة، نقد الإرادة والعدمية عند شوبنهاور ونيتشه، وتجاوز الذات."
+              data-fr="La critique de la modernité, l'analyse de la Volonté et du Nihilisme."
+              data-en="Critique of modernity, analysis of the Will and Nihilism."
+            >
+              تشريح أزمات الحداثة، نقد الإرادة والعدمية عند شوبنهاور ونيتشه، وتجاوز الذات.
+            </p>
+
+            <span
+              class="philo-school-link"
+              data-ar="تعرّف على المدرسة ←"
+              data-fr="Découvrir l’école →"
+              data-en="Discover the school →"
+            >
+              تعرّف على المدرسة ←
+            </span>
+          </div>
+        </a>
+      </div>
     </section>
+
+
+
+
+    
 
 
 
@@ -1854,6 +2299,16 @@
     }
 
     function updateLanguage(lang) {
+
+      // Multilingual update for physical ecoles cards
+      document
+        .querySelectorAll('#ecoles-philosophiques [data-ar][data-fr][data-en]')
+        .forEach(element => {
+          element.textContent =
+            element.getAttribute(`data-${lang}`) ||
+            element.getAttribute('data-ar');
+        });
+
       const data = PHILO_TRANSLATIONS[lang] || PHILO_TRANSLATIONS.ar;
       
       document.documentElement.lang = lang;
