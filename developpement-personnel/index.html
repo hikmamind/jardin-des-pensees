@@ -537,6 +537,88 @@
     opacity: 1 !important;
   }
 
+  
+  /* Dev Thinkers Physical Cards */
+  .dev-thinker-card,
+  .dev-thinker-card:visited {
+    background: rgba(18, 28, 22, 0.92);
+    border: 1px solid rgba(201, 168, 106, 0.25);
+    border-radius: 16px;
+    padding: 24px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+  }
+  .dev-thinker-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(201, 168, 106, 0.45);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  }
+  .dev-thinker-portrait-box {
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(201, 168, 106, 0.45);
+    margin: 0 auto 16px;
+    background: #0B120E;
+  }
+  .dev-thinker-portrait-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    filter: grayscale(0.4);
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+  .dev-thinker-card:hover .dev-thinker-portrait-img {
+    filter: grayscale(0);
+    transform: scale(1.04);
+  }
+  .dev-thinker-name {
+    font-size: 1.18rem;
+    color: #FAF6EF;
+    font-family: 'Playfair Display', 'Amiri', serif;
+    margin: 0 0 6px;
+    font-weight: 700;
+  }
+  .dev-thinker-meta {
+    font-size: 0.8rem;
+    color: #C9A86A;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .dev-thinker-bio {
+    font-size: 0.88rem;
+    color: #B8AFA0;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .dev-thinker-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: rgba(201, 168, 106, 0.1);
+    border: 1px solid rgba(201, 168, 106, 0.3);
+    color: #C9A86A;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.86rem;
+    font-weight: 700;
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .dev-thinker-card:hover .dev-thinker-btn {
+    background: #C9A86A;
+    color: #0B1410;
+  }
+
   </style>
 </head>
 
@@ -759,20 +841,81 @@
       </div>
     </section>
 
-    <!-- 6. AUTEURS & PENSEURS (PLACEHOLDER ÉLÉGANT — BIENTÔT DISPONIBLE) -->
+    <!-- 6. AUTEURS & PENSEURS (6 CARTES HTML PHYSIQUES) -->
     <section id="penseurs" style="margin: 60px 0;">
       <div class="dev-v2-heading">
         <h2 data-i18n="devThinkersTitle">شخصيات ومؤلفون في تطوير الذات</h2>
         <p data-i18n="devThinkersSubtitle">روّاد ومتخصصون قدّموا رؤى عمليّة في بناء الإرادة والتطوير الشخصي</p>
       </div>
 
-      <div class="dev-placeholder-card">
-        <span style="font-size: 2.2rem; margin-bottom: 10px;">✍️</span>
-        <h3 style="font-size: 1.35rem; color: #FAF6EF; margin-bottom: 8px;" data-i18n="phThinkersTitle">أسماء ومفكرون قريباً</h3>
-        <p style="color: #A9AAA4; font-size: 0.95rem; max-width: 600px; line-height: 1.7; margin-bottom: 16px;" data-i18n="phThinkersDesc">
-          سيتم إدراج سير وإسهامات أهم كتاب ورواد تطوير الذات وبناء العادات ضمن هذا القسم فور تجهيز فساتهم الخاصة.
-        </p>
-        <span style="display: inline-block; padding: 6px 18px; border-radius: 20px; background: rgba(223, 177, 91, 0.1); border: 1px solid rgba(223, 177, 91, 0.3); color: #DFB15B; font-size: 0.85rem; font-weight: 700;" data-i18n="comingSoonBtn">⏳ قريباً</span>
+      <div class="dev-grid-3cols">
+        
+        <!-- Thinker 01: William James -->
+        <a class="dev-thinker-card" href="../thinkers/william-james/">
+          <div class="dev-thinker-portrait-box">
+            <img src="../thinkers/images/william-james.jpg" alt="ويليام جيمس" class="dev-thinker-portrait-img" loading="lazy">
+          </div>
+          <h3 class="dev-thinker-name">ويليام جيمس</h3>
+          <div class="dev-thinker-meta">⌛ 1842 – 1910 • 🌍 الولايات المتحدة</div>
+          <p class="dev-thinker-bio">رائد دراسة العادات وتأثير التكرار العصبي والفلسفة البراغماتية في بناء القوة الشخصية.</p>
+          <span class="dev-thinker-btn">عرض الملف الشخصي ←</span>
+        </a>
+
+        <!-- Thinker 02: Albert Bandura -->
+        <a class="dev-thinker-card" href="../thinkers/albert-bandura/">
+          <div class="dev-thinker-portrait-box">
+            <img src="../thinkers/images/albert-bandura.jpg" alt="ألبرت باندورا" class="dev-thinker-portrait-img" loading="lazy">
+          </div>
+          <h3 class="dev-thinker-name">ألبرت باندورا</h3>
+          <div class="dev-thinker-meta">⌛ 1925 – 2021 • 🌍 كندا / امريكا</div>
+          <p class="dev-thinker-bio">مبتكر مفهوم الفعالية الذاتية والتعلم الملاحظ ودور الإيمان بالقدرة في الإنجاز.</p>
+          <span class="dev-thinker-btn">عرض الملف الشخصي ←</span>
+        </a>
+
+        <!-- Thinker 03: Viktor Frankl -->
+        <a class="dev-thinker-card" href="../thinkers/viktor-frankl/">
+          <div class="dev-thinker-portrait-box">
+            <img src="../thinkers/images/viktor-frankl.jpg" alt="فيكتور فرانكل" class="dev-thinker-portrait-img" loading="lazy">
+          </div>
+          <h3 class="dev-thinker-name">فيكتور فرانكل</h3>
+          <div class="dev-thinker-meta">⌛ 1905 – 1997 • 🌍 النمسا</div>
+          <p class="dev-thinker-bio">مؤسس العلاج بالمعنى وصاحب كتاب الإنسان يبحث عن المعنى، ورائد الحرية الروحية.</p>
+          <span class="dev-thinker-btn">عرض الملف الشخصي ←</span>
+        </a>
+
+        <!-- Thinker 04: Carol Dweck -->
+        <a class="dev-thinker-card" href="../thinkers/carol-dweck/">
+          <div class="dev-thinker-portrait-box">
+            <img src="../thinkers/images/carol-dweck.jpg" alt="كارول دويك" class="dev-thinker-portrait-img" loading="lazy">
+          </div>
+          <h3 class="dev-thinker-name">كارول دويك</h3>
+          <div class="dev-thinker-meta">⌛ 1946 – الآن • 🌍 الولايات المتحدة</div>
+          <p class="dev-thinker-bio">صاحبة أبحاث عقلية النمو والتفريق بين الذهنية الثابتة وذهنية التطوير المستمر.</p>
+          <span class="dev-thinker-btn">عرض الملف الشخصي ←</span>
+        </a>
+
+        <!-- Thinker 05: Mihály Csíkszentmihályi -->
+        <a class="dev-thinker-card" href="../thinkers/mihaly-csikszentmihalyi/">
+          <div class="dev-thinker-portrait-box">
+            <img src="../thinkers/images/mihaly-csikszentmihalyi.jpg" alt="ميهاي تشيكسينتميهاي" class="dev-thinker-portrait-img" loading="lazy">
+          </div>
+          <h3 class="dev-thinker-name">ميهاي تشيكسينتميهاي</h3>
+          <div class="dev-thinker-meta">⌛ 1934 – 2021 • 🌍 المجر / امريكا</div>
+          <p class="dev-thinker-bio">مكتشف حالة التدفق والتركيز التام والاندماج في الإنجاز والعمل الإبداعي.</p>
+          <span class="dev-thinker-btn">عرض الملف الشخصي ←</span>
+        </a>
+
+        <!-- Thinker 06: Angela Duckworth -->
+        <a class="dev-thinker-card" href="../thinkers/angela-duckworth/">
+          <div class="dev-thinker-portrait-box">
+            <img src="../thinkers/images/angela-duckworth.jpg" alt="أنجيلا داكوورث" class="dev-thinker-portrait-img" loading="lazy">
+          </div>
+          <h3 class="dev-thinker-name">أنجيلا داكوورث</h3>
+          <div class="dev-thinker-meta">⌛ 1970 – الآن • 🌍 الولايات المتحدة</div>
+          <p class="dev-thinker-bio">صاحبة أبحاث العزيمة والتأكيد على أن الشغف والمثابرة طويلة الأمد يفوقان الموهبة.</p>
+          <span class="dev-thinker-btn">عرض الملف الشخصي ←</span>
+        </a>
+
       </div>
     </section>
 

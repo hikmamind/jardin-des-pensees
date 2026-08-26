@@ -12220,7 +12220,205 @@ const PSYCHOLOGIE_PARCOURS_V5_2 = {
       { fr: "💡 La véritable confiance naît de l alignement intérieur.", ar: "💡 الثقة الحقيقية تنبع من التوافق الداخلي.", en: "💡 True confidence springs from inner alignment." }
     ],
     articles: ["articles/true-confidence-inside.html", "files/stop-overthinking.html"],
-    thinkers: ["freud", "jung", "adler"]
+    thinkers: [
+      {
+        "id": "angela-duckworth",
+        "name": "Angela Duckworth",
+        "era": "1970 – Present",
+        "school": "Personal Growth",
+        "category": "personal-growth",
+        "profileUrl": "./angela-duckworth/",
+        "image": "images/angela-duckworth.jpg",
+        "bio": "Pioneer of Grit research, demonstrating passion and perseverance.",
+        "keyConcept": "Grit, Perseverance"
+},
+      {
+        "id": "mihaly-csikszentmihalyi",
+        "name": "Mihály Csíkszentmihályi",
+        "era": "1934 – 2021",
+        "school": "Personal Growth",
+        "category": "personal-growth",
+        "profileUrl": "./mihaly-csikszentmihalyi/",
+        "image": "images/mihaly-csikszentmihalyi.jpg",
+        "bio": "Pioneer of the Flow concept and optimal cognitive focus.",
+        "keyConcept": "Flow State, Focus"
+},
+      {
+        "id": "carol-dweck",
+        "name": "Carol Dweck",
+        "era": "1946 – Present",
+        "school": "Personal Growth",
+        "category": "personal-growth",
+        "profileUrl": "./carol-dweck/",
+        "image": "images/carol-dweck.jpg",
+        "bio": "Pioneer of Growth Mindset research and learning through challenges.",
+        "keyConcept": "Growth Mindset"
+},
+      {
+        "id": "viktor-frankl",
+        "name": "Viktor Frankl",
+        "era": "1905 – 1997",
+        "school": "Personal Growth",
+        "category": "personal-growth",
+        "profileUrl": "./viktor-frankl/",
+        "image": "images/viktor-frankl.jpg",
+        "bio": "Founder of logotherapy and author of Man's Search for Meaning.",
+        "keyConcept": "Search for Meaning, Logotherapy"
+},
+      {
+        "id": "albert-bandura",
+        "name": "Albert Bandura",
+        "era": "1925 – 2021",
+        "school": "Personal Growth",
+        "category": "personal-growth",
+        "profileUrl": "./albert-bandura/",
+        "image": "images/albert-bandura.jpg",
+        "bio": "Pioneer of the self-efficacy framework and social learning theory.",
+        "keyConcept": "Self-Efficacy, Social Learning"
+},
+      {
+        "id": "william-james",
+        "name": "William James",
+        "era": "1842 – 1910",
+        "school": "Personal Growth",
+        "category": "personal-growth",
+        "profileUrl": "./william-james/",
+        "image": "images/william-james.jpg",
+        "bio": "Pioneer of habit formation, willpower, and pragmatist psychology.",
+        "keyConcept": "Habits, Willpower, Pragmatism"
+},
+      {
+        "id": "angela-duckworth",
+        "name": "Angela Duckworth",
+        "era": "1970 – Présent",
+        "school": "Développement personnel",
+        "category": "personal-growth",
+        "profileUrl": "./angela-duckworth/",
+        "image": "images/angela-duckworth.jpg",
+        "bio": "Pionnière des recherches sur le Grit : la combinaison unique de passion et de persévérance.",
+        "keyConcept": "Grit, Persévérance"
+},
+      {
+        "id": "mihaly-csikszentmihalyi",
+        "name": "Mihály Csíkszentmihályi",
+        "era": "1934 – 2021",
+        "school": "Développement personnel",
+        "category": "personal-growth",
+        "profileUrl": "./mihaly-csikszentmihalyi/",
+        "image": "images/mihaly-csikszentmihalyi.jpg",
+        "bio": "Pionnier du concept de Flow et de l'expérience optimale dans le travail.",
+        "keyConcept": "État de Flow, Concentration"
+},
+      {
+        "id": "carol-dweck",
+        "name": "Carol Dweck",
+        "era": "1946 – Présent",
+        "school": "Développement personnel",
+        "category": "personal-growth",
+        "profileUrl": "./carol-dweck/",
+        "image": "images/carol-dweck.jpg",
+        "bio": "Pionnière des recherches sur le Growth Mindset et la résilience face à l'échec.",
+        "keyConcept": "Growth Mindset"
+},
+      {
+        "id": "viktor-frankl",
+        "name": "Viktor Frankl",
+        "era": "1905 – 1997",
+        "school": "Développement personnel",
+        "category": "personal-growth",
+        "profileUrl": "./viktor-frankl/",
+        "image": "images/viktor-frankl.jpg",
+        "bio": "Fondateur de la logothérapie et auteur de \"Man's Search for Meaning\", pionnier du sens.",
+        "keyConcept": "Quête de Sens, Logothérapie"
+},
+      {
+        "id": "albert-bandura",
+        "name": "Albert Bandura",
+        "era": "1925 – 2021",
+        "school": "Développement personnel",
+        "category": "personal-growth",
+        "profileUrl": "./albert-bandura/",
+        "image": "images/albert-bandura.jpg",
+        "bio": "Pionnier du concept d'auto-efficacité et de l'apprentissage par observation.",
+        "keyConcept": "Auto-efficacité, Apprentissage Social"
+},
+      {
+        "id": "william-james",
+        "name": "William James",
+        "era": "1842 – 1910",
+        "school": "Développement personnel",
+        "category": "personal-growth",
+        "profileUrl": "./william-james/",
+        "image": "images/william-james.jpg",
+        "bio": "Pionnier de l'étude des habitudes, de la volonté et de la psychologie pragmatique.",
+        "keyConcept": "Habitudes, Volonté, Pragmatisme"
+},
+      {
+        "id": "angela-duckworth",
+        "name": "أنجيلا داكوورث",
+        "era": "1970 – الآن",
+        "school": "تطوير الذات",
+        "category": "personal-growth",
+        "profileUrl": "./angela-duckworth/",
+        "image": "images/angela-duckworth.jpg",
+        "bio": "صاحبة أبحاث العزيمة والتأكيد على أن الشغف والمثابرة طويلة الأمد يفوقان الموهبة.",
+        "keyConcept": "العزيمة (Grit)، والمثابرة"
+},
+      {
+        "id": "mihaly-csikszentmihalyi",
+        "name": "ميهاي تشيكسينتميهاي",
+        "era": "1934 – 2021",
+        "school": "تطوير الذات",
+        "category": "personal-growth",
+        "profileUrl": "./mihaly-csikszentmihalyi/",
+        "image": "images/mihaly-csikszentmihalyi.jpg",
+        "bio": "مكتشف حالة التدفق والتركيز التام والاندماج في الإنجاز والعمل الإبداعي.",
+        "keyConcept": "حالة التدفق (Flow)، التركيز"
+},
+      {
+        "id": "carol-dweck",
+        "name": "كارول دويك",
+        "era": "1946 – الآن",
+        "school": "تطوير الذات",
+        "category": "personal-growth",
+        "profileUrl": "./carol-dweck/",
+        "image": "images/carol-dweck.jpg",
+        "bio": "صاحبة أبحاث عقلية النمو والتفريق بين الذهنية الثابتة وذهنية التطوير المستمر.",
+        "keyConcept": "عقلية النمو (Growth Mindset)"
+},
+      {
+        "id": "viktor-frankl",
+        "name": "فيكتور فرانكل",
+        "era": "1905 – 1997",
+        "school": "تطوير الذات",
+        "category": "personal-growth",
+        "profileUrl": "./viktor-frankl/",
+        "image": "images/viktor-frankl.jpg",
+        "bio": "مؤسس العلاج بالمعنى وصاحب كتاب الإنسان يبحث عن المعنى، ورائد الحرية الروحية.",
+        "keyConcept": "البحث عن المعنى، الحرية النفسية"
+},
+      {
+        "id": "albert-bandura",
+        "name": "ألبرت باندورا",
+        "era": "1925 – 2021",
+        "school": "تطوير الذات",
+        "category": "personal-growth",
+        "profileUrl": "./albert-bandura/",
+        "image": "images/albert-bandura.jpg",
+        "bio": "مبتكر مفهوم الفعالية الذاتية والتعلم الملاحظ ودور الإيمان بالقدرة في الإنجاز.",
+        "keyConcept": "الكفاءة الذاتية، التفكير الإيجابي"
+},
+      {
+        "id": "william-james",
+        "name": "ويليام جيمس",
+        "era": "1842 – 1910",
+        "school": "تطوير الذات",
+        "category": "personal-growth",
+        "profileUrl": "./william-james/",
+        "image": "images/william-james.jpg",
+        "bio": "رائد دراسة العادات وتأثير التكرار العصبي والفلسفة البراغماتية في بناء القوة الشخصية.",
+        "keyConcept": "العادات، الإرادة، البراغماتية"
+},"freud", "jung", "adler"]
   },
   "emotions-relationships": {
     id: "emotions-relationships",

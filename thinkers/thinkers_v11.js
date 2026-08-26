@@ -236,14 +236,18 @@ function populateFilterTags() {
   
   const thinkers = (TIKTOK_DATA.content[currentLang] && TIKTOK_DATA.content[currentLang].thinkers) || [];
   const seeAllLabel = (THINKERS_PAGE_TRANSLATIONS[currentLang] && THINKERS_PAGE_TRANSLATIONS[currentLang].seeAll) || "Tous les philosophes";
+  const pgLabel = currentLang === 'ar' ? 'تطوير الذات' : (currentLang === 'fr' ? 'Développement personnel' : 'Personal Growth');
   
   // Extract unique schools
   const schools = Array.from(new Set(thinkers.map(t => t.school).filter(Boolean))).slice(0, 7);
+  if (!schools.includes('personal-growth') && !schools.includes(pgLabel)) {
+    schools.unshift(pgLabel);
+  }
 
   let html = `<button class="tag-btn ${currentCategory === 'all' ? 'active' : ''}" data-category="all" onclick="window.handleCategoryChange('all')">${seeAllLabel}</button>`;
   
   schools.forEach(school => {
-    const isActive = currentCategory === school ? 'active' : '';
+    const isActive = (currentCategory === school || currentCategory === 'personal-growth') ? 'active' : '';
     html += `<button class="tag-btn ${isActive}" data-category="${school}" onclick="window.handleCategoryChange('${school}')">${school}</button>`;
   });
   
@@ -278,9 +282,14 @@ function populateThinkers(category = 'all', keyword = '') {
 
   let filtered = [...thinkers];
 
-  // 1. Filter by category (school)
+  // 1. Filter by category (school or category ID)
   if (category && category !== 'all') {
-    filtered = filtered.filter(t => t.school === category || t.id === category);
+    filtered = filtered.filter(t => 
+      t.school === category || 
+      t.category === category || 
+      t.id === category ||
+      (category === 'personal-growth' && (t.category === 'personal-growth' || t.school === 'تطوير الذات' || t.school === 'Développement personnel' || t.school === 'Personal Growth'))
+    );
   }
 
   // 2. Filter by search keyword
@@ -305,6 +314,32 @@ function populateThinkers(category = 'all', keyword = '') {
     container.innerHTML = filtered.map(thinker => {
       const badgeHtml = thinker.featured ? `<span class="card-featured-badge">${featuredLabel}</span>` : "";
       const imgSrc = thinker.image ? (thinker.image.startsWith('../') ? thinker.image : `../${thinker.image}`) : '../featured_philosopher.jpg';
+      const profileUrl = thinker.profileUrl || `?thinker=${encodeURIComponent(thinker.id)}`;
+
+      if (thinker.profileUrl) {
+        return `
+          <a class="thinker-card" href="${profileUrl}" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
+            <div class="thinker-image-container">
+              ${badgeHtml}
+              <img src="${imgSrc}" alt="${thinker.name}" class="thinker-image" loading="lazy" onerror="this.src='../featured_philosopher.jpg'">
+            </div>
+            <div class="card-meta-row">
+              <span>${thinker.era}</span>
+              <span class="card-meta-dot">•</span>
+              <span style="color: var(--accent-green); font-weight: 600; text-transform: uppercase;">${thinker.school}</span>
+            </div>
+            <h3 class="thinker-name">${thinker.name}</h3>
+            <p class="thinker-bio">${thinker.bio}</p>
+            <div class="card-action-link" style="margin-top: auto; padding-top: 10px; display: inline-flex; align-items: center; gap: 6px; color: var(--accent-gold); font-weight: 700;">
+              <span>${readLabel}</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="${currentLang === 'ar' ? '19' : '5'}" y1="12" x2="${currentLang === 'ar' ? '5' : '19'}" y2="12"></line>
+                <polyline points="${currentLang === 'ar' ? '12 5 19 12 12 19' : '12 5 19 12 12 19'}"></polyline>
+              </svg>
+            </div>
+          </a>
+        `;
+      }
 
       return `
         <div class="thinker-card" style="cursor: pointer;" onclick="window.openThinkerModalById('${thinker.id}')">
@@ -323,7 +358,7 @@ function populateThinkers(category = 'all', keyword = '') {
             <span>${readLabel}</span>
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="${currentLang === 'ar' ? '19' : '5'}" y1="12" x2="${currentLang === 'ar' ? '5' : '19'}" y2="12"></line>
-              <polyline points="${currentLang === 'ar' ? '12 19 5 12 12 5' : '12 5 19 12 12 19'}"></polyline>
+              <polyline points="${currentLang === 'ar' ? '12 5 19 12 12 19' : '12 5 19 12 12 19'}"></polyline>
             </svg>
           </div>
         </div>

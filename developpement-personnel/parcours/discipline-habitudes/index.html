@@ -443,16 +443,33 @@
       // Figures Section
       document.getElementById('figuresHeading').textContent = lang === 'ar' ? '👤 أبحاث ورؤى رواد التفكير والتطوير' : (lang === 'fr' ? '👤 Figures & chercheurs associés' : '👤 Key Researchers & Thinkers');
       const figuresGrid = document.getElementById('figuresGrid');
+      const readProfileText = lang === 'ar' ? 'قراءة الملف الشخصي ←' : (lang === 'fr' ? 'Lire le profil →' : 'Read profile →');
+      const thinkerSlugMap = {
+        'William James': 'william-james',
+        'James Clear': 'william-james',
+        'Albert Bandura': 'albert-bandura',
+        'Viktor Frankl': 'viktor-frankl',
+        'Carol Dweck': 'carol-dweck',
+        'Mihály Csíkszentmihályi': 'mihaly-csikszentmihalyi',
+        'Angela Duckworth': 'angela-duckworth'
+      };
+
       figuresGrid.innerHTML = PAGE_DATA.figures.map(fig => {
         const fRole = fig.role[lang] || fig.role.ar;
         const fBio = fig.bio[lang] || fig.bio.ar;
+        const tSlug = thinkerSlugMap[fig.name] || 'william-james';
+        const avatarImg = `../../../thinkers/images/${tSlug}.jpg`;
+
         return `
-          <div class="figure-card-visual">
-            <div class="figure-avatar-box">${fig.icon}</div>
+          <a href="../../../thinkers/${tSlug}/" class="figure-card-visual" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
+            <div class="figure-avatar-box" style="padding: 0; overflow: hidden;">
+              <img src="${avatarImg}" alt="${fig.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" onerror="this.onerror=null; this.src='../../../brand_logo_official.png';">
+            </div>
             <h3 class="figure-name">${fig.name}</h3>
             <div class="figure-role">${fRole}</div>
             <p class="figure-bio">${fBio}</p>
-          </div>
+            <span class="article-btn-link" style="margin-top: 14px; font-size: 0.84rem; padding: 6px 12px; text-align: center;">${readProfileText}</span>
+          </a>
         `;
       }).join('');
 
