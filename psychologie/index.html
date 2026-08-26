@@ -665,7 +665,7 @@
         </div>
       </section>
 
-      <!-- 6. PARCOURS DE LECTURE (5 INTERACTIVE PATHWAYS) -->
+      <!-- 6. PARCOURS DE LECTURE (5 PHYSICAL PATHWAYS) -->
       <section class="psy-section-block" id="parcours">
         <div class="psy-section-heading">
           <h2 data-i18n="psyParcoursTitle">مسارات موجهة حسب احتياجك</h2>
@@ -676,55 +676,55 @@
         <div class="psy-parcours-grid">
           
           <!-- Parcours 01 -->
-          <article class="psy-parcours-card" data-pathway-id="self" data-parcours-trigger="self" tabindex="0" role="button" aria-label="استكشف المسار الأول: علم النفس وفهم الذات">
+          <a href="./parcours/psychologie-de-soi/" class="psy-parcours-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
             <div class="psy-parcours-imgbox">
-              <img src="../psy_self_awareness_hd.jpg" alt="شخص يتأمل انعكاسه في المرآة ويرمز إلى الوعي بالذات" class="psy-parcours-img" loading="lazy">
+              <img src="../psy_self_awareness_hd.jpg" alt="علم النفس وفهم الذات" class="psy-parcours-img" loading="lazy">
               <div class="psy-parcours-overlay"></div>
               <span class="psy-parcours-num">01</span>
             </div>
-            <div class="psy-parcours-body">
+            <div class="psy-parcours-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="psy-parcours-label" data-i18n="psyPath1Label">المسار الأول</div>
                 <h3 class="psy-parcours-title" data-i18n="psyPath1Title">علم النفس وفهم الذات</h3>
                 <p class="psy-parcours-desc" data-i18n="psyPath1Desc">الوعي بالذات، الشخصية، الهوية، ونقاط القوة والضعف.</p>
               </div>
-              <button type="button" class="psy-card-link" onclick="event.stopPropagation(); openPsychologyPathway('self');" data-i18n="readMore" style="background:none; border:none; padding:0; font:inherit; cursor:pointer;">استكشف المسار ←</button>
+              <span class="psy-card-link" data-i18n="readMore" style="margin-top: 15px;">استكشف المسار ←</span>
             </div>
-          </article>
+          </a>
 
           <!-- Parcours 02 -->
-          <article class="psy-parcours-card" data-pathway-id="emotions-relations" data-parcours-trigger="emotions-relations" tabindex="0" role="button" aria-label="استكشف المسار الثاني: المشاعر والعلاقات">
+          <a href="./parcours/emotions-relations/" class="psy-parcours-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
             <div class="psy-parcours-imgbox">
-              <img src="../psy_relationships_hd.jpg" alt="صورتان ظليتان منفصلتان تعبران عن التواصل والعلاقات" class="psy-parcours-img" loading="lazy">
+              <img src="../psy_relationships_hd.jpg" alt="المشاعر والعلاقات" class="psy-parcours-img" loading="lazy">
               <div class="psy-parcours-overlay"></div>
               <span class="psy-parcours-num">02</span>
             </div>
-            <div class="psy-parcours-body">
+            <div class="psy-parcours-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="psy-parcours-label" data-i18n="psyPath2Label">المسار الثاني</div>
                 <h3 class="psy-parcours-title" data-i18n="psyPath2Title">المشاعر والعلاقات</h3>
                 <p class="psy-parcours-desc" data-i18n="psyPath2Desc">الحب، التعلق، الغيرة، الثقة، والعلاقات الإنسانية.</p>
               </div>
-              <button type="button" class="psy-card-link" onclick="event.stopPropagation(); openPsychologyPathway('emotions-relations');" data-i18n="readMore" style="background:none; border:none; padding:0; font:inherit; cursor:pointer;">استكشف المسار ←</button>
+              <span class="psy-card-link" data-i18n="readMore" style="margin-top: 15px;">استكشف المسار ←</span>
             </div>
-          </article>
+          </a>
 
           <!-- Parcours 03 -->
-          <article class="psy-parcours-card" data-pathway-id="mind-behavior" data-parcours-trigger="mind-behavior" tabindex="0" role="button" aria-label="استكشف المسار الثالث: العقل والسلوك">
+          <a href="./parcours/esprit-comportement/" class="psy-parcours-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
             <div class="psy-parcours-imgbox">
-              <img src="../psy_behavior_hd.jpg" alt="صورة ظلية محاطة بمسارات ترمز للتفكير واتخاذ القرار" class="psy-parcours-img" loading="lazy">
+              <img src="../psy_behavior_hd.jpg" alt="العقل والسلوك" class="psy-parcours-img" loading="lazy">
               <div class="psy-parcours-overlay"></div>
               <span class="psy-parcours-num">03</span>
             </div>
-            <div class="psy-parcours-body">
+            <div class="psy-parcours-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="psy-parcours-label" data-i18n="psyPath3Label">المسار الثالث</div>
                 <h3 class="psy-parcours-title" data-i18n="psyPath3Title">العقل والسلوك</h3>
                 <p class="psy-parcours-desc" data-i18n="psyPath3Desc">التحيزات، العادات، الذاكرة، واتخاذ القرارات وأنماط التفكير.</p>
               </div>
-              <button type="button" class="psy-card-link" onclick="event.stopPropagation(); openPsychologyPathway('mind-behavior');" data-i18n="readMore" style="background:none; border:none; padding:0; font:inherit; cursor:pointer;">استكشف المسار ←</button>
+              <span class="psy-card-link" data-i18n="readMore" style="margin-top: 15px;">استكشف المسار ←</span>
             </div>
-          </article>
+          </a>
 
         </div>
 
@@ -732,41 +732,40 @@
         <div class="psy-parcours-grid-bottom">
           
           <!-- Parcours 04 -->
-          <article class="psy-parcours-card" data-pathway-id="wounds-resilience" data-parcours-trigger="wounds-resilience" tabindex="0" role="button" aria-label="استكشف المسار الرابع: الجروح والصمود النفسي">
+          <a href="./parcours/blessures-resilience/" class="psy-parcours-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
             <div class="psy-parcours-imgbox">
-              <img src="../dev_resilience_hd.jpg" alt="شجرة صلبة قاومت العواصف ترمز للمرونة النفسية" class="psy-parcours-img" loading="lazy">
+              <img src="../dev_resilience_hd.jpg" alt="الجروح والصمود النفسي" class="psy-parcours-img" loading="lazy">
               <div class="psy-parcours-overlay"></div>
               <span class="psy-parcours-num">04</span>
             </div>
-            <div class="psy-parcours-body">
+            <div class="psy-parcours-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="psy-parcours-label" data-i18n="psyPath4Label">المسار الرابع</div>
                 <h3 class="psy-parcours-title" data-i18n="psyPath4Title">الجروح والصمود النفسي</h3>
                 <p class="psy-parcours-desc" data-i18n="psyPath4Desc">الفشل، الرفض، الوحدة، الألم، والقدرة على التكيف مع الصعوبات.</p>
               </div>
-              <button type="button" class="psy-card-link" onclick="event.stopPropagation(); openPsychologyPathway('wounds-resilience');" data-i18n="readMore" style="background:none; border:none; padding:0; font:inherit; cursor:pointer;">استكشف المسار ←</button>
+              <span class="psy-card-link" data-i18n="readMore" style="margin-top: 15px;">استكشف المسار ←</span>
             </div>
-          </article>
+          </a>
 
           <!-- Parcours 05 -->
-          <article class="psy-parcours-card" data-pathway-id="positive-psychology" data-parcours-trigger="positive-psychology" tabindex="0" role="button" aria-label="استكشف المسار الخامس: علم النفس الإيجابي والنمو">
+          <a href="./parcours/psychologie-positive/" class="psy-parcours-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
             <div class="psy-parcours-imgbox">
-              <img src="../dev_growth_hd.jpg" alt="سلم حجري قديم يصعد نحو الضوء يرمز للنمو والارتقاء" class="psy-parcours-img" loading="lazy">
+              <img src="../dev_growth_hd.jpg" alt="علم النفس الإيجابي والنمو" class="psy-parcours-img" loading="lazy">
               <div class="psy-parcours-overlay"></div>
               <span class="psy-parcours-num">05</span>
             </div>
-            <div class="psy-parcours-body">
+            <div class="psy-parcours-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="psy-parcours-label" data-i18n="psyPath5Label">المسار الخامس</div>
                 <h3 class="psy-parcours-title" data-i18n="psyPath5Title">علم النفس الإيجابي والنمو</h3>
                 <p class="psy-parcours-desc" data-i18n="psyPath5Desc">السعادة، الامتنان، المرونة، المعنى، والنمو الشخصي.</p>
               </div>
-              <button type="button" class="psy-card-link" onclick="event.stopPropagation(); openPsychologyPathway('positive-psychology');" data-i18n="readMore" style="background:none; border:none; padding:0; font:inherit; cursor:pointer;">استكشف المسار ←</button>
+              <span class="psy-card-link" data-i18n="readMore" style="margin-top: 15px;">استكشف المسار ←</span>
             </div>
-          </article>
+          </a>
 
         </div>
-      </section>
       </section>
 
       <!-- 7. ARTICLE À LA UNE (دراسة مميزة) -->
@@ -872,12 +871,7 @@
     </main>
   </div>
 
-  <!-- Dedicated Psychology Pathway View Container -->
-  <section id="psychologyPathwayView" class="container" style="display:none; padding-top: 30px; padding-bottom: 80px;" aria-live="polite">
-    <div style="max-width: 900px; margin: 0 auto;" id="psychologyPathwayContent">
-      <!-- Dynamically rendered by renderPsychologyPathway -->
-    </div>
-  </section>
+  
 
   <!-- Full Screen Dedicated Domain Modal / View -->
   <div class="full-screen-reader-modal" id="domainModalView" role="dialog" aria-modal="true" aria-label="Vue du Domaine Psychologique">
@@ -899,17 +893,7 @@
     </div>
   </div>
 
-  <!-- Full Screen Dedicated Parcours Modal / View -->
-  <div class="full-screen-reader-modal" id="parcoursModalView" role="dialog" aria-modal="true" aria-label="Vue du Parcours Intellectuel">
-    <header class="reader-sticky-header">
-      <div class="reader-header-nav" style="max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 12px 24px;">
-        <button class="lang-selector-btn" id="closeParcoursModalBtn" onclick="closeParcoursModal()" style="cursor: pointer; text-decoration: none; border-radius: 20px; font-weight: 700;">
-          ← <span data-i18n="backToPsy">العودة إلى علم النفس</span>
-        </button>
-        <div style="font-weight: 800; color: #C9A86A; font-size: 1.05rem;" id="parcoursModalTopTitle">
-          🧭 مسارات علم النفس
-        </div>
-      </div>
+  
     </header>
 
     <div class="reader-scroll-container" style="padding: 40px 20px 80px;">
