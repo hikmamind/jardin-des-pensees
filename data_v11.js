@@ -2637,6 +2637,21 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "id": "wisdom-stoicism-control",
+          "file": "wisdom-stoicism-control.html",
+          "title": "La sagesse stoïcienne : apprendre à maîtriser ce qui dépend de nous",
+          "category": "sagesse",
+          "categoryName": "Sagesse & Sérénité",
+          "readTime": "9 min de lecture",
+          "date": "24 Août 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Une étude approfondie et un guide pratique sur la dichotomie du contrôle, la citadelle intérieure et l'art de vivre stoïcien.",
+          "image": "wis_hero_cinematic.jpg",
+          "imageAlt": "Buste stoïcien symbolisant la citadelle intérieure et la maîtrise de soi",
+          "quote": "Ce qui trouble les hommes, ce ne sont pas les choses, mais les jugements qu'ils portent sur les choses.",
+          "quoteAuthor": "— Épictète | Hikma & Nour"
+        },
+        {
           "id": "why-people-distance-when-you-succeed",
           "file": "why-people-distance-when-you-succeed.html",
           "title": "Pourquoi les gens s'éloignent-ils lorsque vous réussissez ?",
@@ -6320,6 +6335,21 @@ const TIKTOK_DATA = {
         }
       ],
       "articles": [
+        {
+          "id": "wisdom-stoicism-control",
+          "file": "wisdom-stoicism-control.html",
+          "title": "Stoic Wisdom: Learning to Master What Depends on Us",
+          "category": "sagesse",
+          "categoryName": "Wisdom & Serenity",
+          "readTime": "9 min read",
+          "date": "August 24, 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "A comprehensive study and practical guide on the dichotomy of control, the inner citadel, and daily Stoic practice.",
+          "image": "wis_hero_cinematic.jpg",
+          "imageAlt": "Stoic bust symbolizing inner citadel and emotional mastery",
+          "quote": "Men are disturbed not by things, but by the view which they take of things.",
+          "quoteAuthor": "— Epictetus | Hikma & Nour"
+        },
         {
           "id": "why-people-distance-when-you-succeed",
           "file": "why-people-distance-when-you-succeed.html",
@@ -10187,6 +10217,21 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "id": "wisdom-stoicism-control",
+          "file": "wisdom-stoicism-control.html",
+          "title": "الحكمة الرواقية: كيف نتعلم السيطرة على ما يقع ضمن إرادتنا؟",
+          "category": "sagesse",
+          "categoryName": "الحكمة والسكينة",
+          "readTime": "٩ دقائق قراءة",
+          "date": "٢٤ أغسطس ٢٠٢٦",
+          "author": "حكمة ونور | Hikma & Nour",
+          "desc": "دراسة شاملة ودليل عملي في الفلسفة الرواقية، ثنائية التحكم، وبناء القلعة الباطنية لدى إبيكتيتوس وسينيكا وماركوس أوريليوس.",
+          "image": "wis_hero_cinematic.jpg",
+          "imageAlt": "تمثال فلسفي رواقي يرمز للسكينة وضبط النفس",
+          "quote": "لا تزعج الأشياءُ الناسَ، بل الأحكام والتصورات التي يطلقونها عليها.",
+          "quoteAuthor": "— إبيكتيتوس | حكمة ونور"
+        },
+        {
           "id": "why-people-distance-when-you-succeed",
           "file": "why-people-distance-when-you-succeed.html",
           "title": "لماذا يبتعد الناس عنك عندما تبدأ بالنجاح؟",
@@ -12154,7 +12199,106 @@ const TIKTOK_DATA = {
   }
 };
 
-export default TIKTOK_DATA;
+
+/* ============================================================
+   PSYCHOLOGIE V5.2 — DATA PARCOURS INTELLECTUELS
+   ============================================================ */
+const PSYCHOLOGIE_PARCOURS_V5_2 = {
+  "self-psychology": {
+    id: "self-psychology",
+    number: "01",
+    title: { fr: "Psychologie de soi", ar: "علم النفس وفهم الذات", en: "Self-Psychology" },
+    subtitle: { fr: "Explorez les profondeurs du psychisme et de la conscience de soi", ar: "استكشف أعماق النفس والوعي الذاتي", en: "Explore the depths of the psyche and self-awareness" },
+    intro: {
+      fr: "Un parcours dédié à l exploration de la structure psychique, du système inconscient et du développement de l estime personnelle.",
+      ar: "مسار مخصص لاستكشاف الهيكل النفسي، الوعي واللاوعي، وتطوير تقدير الذات.",
+      en: "A journey dedicated to exploring psychological structure, the subconscious mind, and building self-esteem."
+    },
+    principles: [
+      { fr: "💡 La prise de conscience de l inconscient éclaircit les choix de vie.", ar: "💡 إدراك اللاوعي يوضح خيارات الحياة.", en: "💡 Becoming conscious of the unconscious illuminates life choices." },
+      { fr: "💡 L individuation exige la confrontation avec ses propres ombres.", ar: "💡 التفرّد يتطلب مواجهة الظلال الذاتية.", en: "💡 Individuation requires confronting one s own shadow." },
+      { fr: "💡 La véritable confiance naît de l alignement intérieur.", ar: "💡 الثقة الحقيقية تنبع من التوافق الداخلي.", en: "💡 True confidence springs from inner alignment." }
+    ],
+    articles: ["articles/true-confidence-inside.html", "files/stop-overthinking.html"],
+    thinkers: ["freud", "jung", "adler"]
+  },
+  "emotions-relationships": {
+    id: "emotions-relationships",
+    number: "02",
+    title: { fr: "Émotions & Relations", ar: "المشاعر والعلاقات", en: "Emotions & Relationships" },
+    subtitle: { fr: "Comprendre les attachements, la dynamique affective et les liens humains", ar: "فهم الارتباط، الديناميكية العاطفية، والروابط الإنسانية", en: "Understand attachments, emotional dynamics, and human bonds" },
+    intro: {
+      fr: "Analyse des schémas d attachement, de la régulation émotionnelle et de la communication empathique.",
+      ar: "تحليل أنماط التعلق، التنظيم العاطفي، والتواصل التعاطفي.",
+      en: "Analysis of attachment styles, emotional regulation, and empathetic communication."
+    },
+    principles: [
+      { fr: "💡 L attachement précoce préfigure le style relationnel adulte.", ar: "💡 التعلق المبكر يشكل نمط العلاقات عند الكبر.", en: "💡 Early attachment shapes adult relational patterns." },
+      { fr: "💡 Reconnaître ses émotions est la première étape de leur régulation.", ar: "💡 التعرف على المشاعر هو الخطوة الأولى لتنظيمها.", en: "💡 Recognizing emotions is the first step toward regulation." },
+      { fr: "💡 L empathie active transforme la qualité des liens sociaux.", ar: "💡 التعاطف الفعال يغير جودة الروابط الاجتماعية.", en: "💡 Active empathy transforms the quality of social bonds." }
+    ],
+    articles: ["articles/why-people-distance-when-you-succeed.html"],
+    thinkers: ["freud", "jung"]
+  },
+  "mind-behavior": {
+    id: "mind-behavior",
+    number: "03",
+    title: { fr: "Esprit & Comportement", ar: "العقل والسلوك", en: "Mind & Behavior" },
+    subtitle: { fr: "Étude des processus cognitifs, des schémas de pensée et de l apprentissage", ar: "دراسة العمليات المعرفية، أنماط التفكير، والتعلم", en: "Study of cognitive processes, thought patterns, and learning" },
+    intro: {
+      fr: "Décryptage des biais cognitifs, de la modification comportementale et de la prise de décision.",
+      ar: "تفكيك التحيزات المعرفية، تعديل السلوك، واتخاذ القرار.",
+      en: "Decoding cognitive biases, behavioral modification, and decision-making."
+    },
+    principles: [
+      { fr: "💡 Nos pensées influencent directement nos réponses émotionnelles et comportements.", ar: "💡 أفكارنا تؤثر مباشرة على استجاباتنا العاطفية وسلوكنا.", en: "💡 Our thoughts directly influence our emotional responses and behavior." },
+      { fr: "💡 La restructuration cognitive permet de défaire les croyances limitantes.", ar: "💡 إعادة الهيكلة المعرفية تسمح بتفكيك المعتقدات المقيدة.", en: "💡 Cognitive restructuring untangles limiting beliefs." },
+      { fr: "💡 L apprentissage continu modifie la plasticité cérébrale.", ar: "💡 التعلم المستمر يغير المرونة العصبية للدماغ.", en: "💡 Continuous learning alters neuroplasticity." }
+    ],
+    articles: ["files/stop-overthinking.html", "files/self-discipline.html"],
+    thinkers: ["freud"]
+  },
+  "wounds-resilience": {
+    id: "wounds-resilience",
+    number: "04",
+    title: { fr: "Blessures & Résilience", ar: "الجروح والصمود النفسي", en: "Wounds & Resilience" },
+    subtitle: { fr: "Transformer le traumatisme, surmonter l adversité et retrouver le sens", ar: "تحويل الصدمات، تجاوز الشدائد، وإعادة اكتشاف المعنى", en: "Transforming trauma, overcoming adversity, and discovering meaning" },
+    intro: {
+      fr: "Exploration des mécanismes d adaptation face aux épreuves, de la reconstruction de soi et de la croissance post-traumatique.",
+      ar: "استكشاف آليات التكيف مع الأزمات، إعادة بناء الذات، والنمو بعد الصدمات.",
+      en: "Exploration of coping mechanisms, self-reconstruction, and post-traumatic growth."
+    },
+    principles: [
+      { fr: "💡 La résilience est un processus dynamique qui se cultive au quotidien.", ar: "💡 الصمود النفسي عملية ديناميكية يتم تنميتها يوميا.", en: "💡 Resilience is a dynamic process cultivated daily." },
+      { fr: "💡 Trouver du sens à la souffrance est la clé de la guérison psychique.", ar: "💡 إيجاد معنى للمعاناة هو مفتاح الشفاء النفسي.", en: "💡 Finding meaning in suffering is the key to psychological healing." },
+      { fr: "💡 La solitude choisie peut devenir le berceau de la reconstruction.", ar: "💡 العزلة الاختيارية قد تكون مهد التجدد والتأهيل.", en: "💡 Chosen solitude can become the cradle of renewal." }
+    ],
+    articles: ["articles/solitude-blessing-or-curse.html"],
+    thinkers: ["jung"]
+  },
+  "positive-psychology": {
+    id: "positive-psychology",
+    number: "05",
+    title: { fr: "Psychologie Positive", ar: "علم النفس الإيجابي والنمو", en: "Positive Psychology" },
+    subtitle: { fr: "Développer les forces de caractère, le bien-être et l épanouissement", ar: "تنمية نقاط القوة، الرفاهية، والازدهار الشخصي", en: "Fostering character strengths, well-being, and flourishing" },
+    intro: {
+      fr: "Étude scientifique des facteurs favorisant le bien-être durable, l optimisme lucide et la réalisation de soi.",
+      ar: "الدراسة العلمية للعوامل المحفزة للرفاهية المستدامة، التفاؤل الواعي، وتحقيق الذات.",
+      en: "Scientific study of factors fostering sustainable well-being, lucid optimism, and self-actualization."
+    },
+    principles: [
+      { fr: "💡 Le bonheur s appuie sur la culture active des forces personnelles.", ar: "💡 السعادة تعتمد على التنمية النشطة لنقاط القوة الشخصية.", en: "💡 Happiness relies on actively cultivating personal strengths." },
+      { fr: "💡 La gratitude et la pleine présence renforcent la santé psychologique.", ar: "💡 الامتنان والحضور الكامل يعززان الصحة النفسية.", en: "💡 Gratitude and mindfulness strengthen psychological health." },
+      { fr: "💡 Le sentiment d accomplissement découle d objectifs alignés sur ses valeurs.", ar: "💡 الشعور بالإنجاز ينبع من أهداف متوافقة مع القيم.", en: "💡 A sense of accomplishment flows from goals aligned with values." }
+    ],
+    articles: ["articles/why-people-respect-silent-person.html"],
+    thinkers: ["adler"]
+  }
+};
+
+TIKTOK_DATA.PSYCHOLOGIE_PARCOURS_V5_2 = PSYCHOLOGIE_PARCOURS_V5_2;
+
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = TIKTOK_DATA;
 }
+export default TIKTOK_DATA;

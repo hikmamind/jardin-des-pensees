@@ -6,7 +6,7 @@
   
   <!-- SEO Meta Tags -->
   <title id="pageTitleTag">الفكر الإسلامي — رحلة في الفكر والحكمة والحضارة | حكمة ونور</title>
-  <meta name="description" content="استكشف الفكر الإسلامي والحكمة والفلسفة والأخلاق وأفكار كبار المفكرين المسلمين مع حكمة ونور. Études et réflexions sur la pensée islamique, la raison et la sagesse.">
+  <meta name="description" id="metaDescTag" content="استكشف الفكر الإسلامي والحكمة والفلسفة والأخلاق وأفكار كبار المفكرين المسلمين مع حكمة ونور. Études et réflexions sur la pensée islamique, la raison et la sagesse.">
   <meta name="keywords" content="الفكر الإسلامي, الغزالي, الفارابي, ابن سينا, ابن رشد, ابن خلدون, العقل والوحي, الحكمة, الفلسفة الإسلامية, pensée islamique, philosophie islamique">
   <link rel="canonical" href="https://jardin-des-pensees.onrender.com/islam/">
   <link rel="alternate" hreflang="ar" href="https://jardin-des-pensees.onrender.com/islam/">
@@ -18,8 +18,8 @@
   <!-- Open Graph -->
   <meta property="og:site_name" content="Hikma & Nour — حكمة ونور">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="الفكر الإسلامي — رحلة في الفكر والحكمة والحضارة | حكمة ونور">
-  <meta property="og:description" content="دراسات وتأملات في الفكر الإسلامي، والعقل، والوحي، والأخلاق، والحكمة، وأعمال كبار المفكرين المسلمين.">
+  <meta property="og:title" id="ogTitleTag" content="الفكر الإسلامي — رحلة في الفكر والحكمة والحضارة | حكمة ونور">
+  <meta property="og:description" id="ogDescTag" content="دراسات وتأملات في الفكر الإسلامي، والعقل، والوحي، والأخلاق، والحكمة، وأعمال كبار المفكرين المسلمين.">
   <meta property="og:image" content="https://jardin-des-pensees.onrender.com/islamic_thought_hd.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -30,8 +30,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="الفكر الإسلامي | حكمة ونور">
-  <meta name="twitter:description" content="دراسات وتأملات في الفكر الإسلامي، والعقل، والوحي، والأخلاق، والحكمة، وأعمال كبار المفكرين المسلمين.">
+  <meta name="twitter:title" id="twTitleTag" content="الفكر الإسلامي | حكمة ونور">
+  <meta name="twitter:description" id="twDescTag" content="دراسات وتأملات في الفكر الإسلامي، والعقل، والوحي، والأخلاق، والحكمة، وأعمال كبار المفكرين المسلمين.">
   <meta name="twitter:image" content="https://jardin-des-pensees.onrender.com/islamic_thought_hd.jpg">
 
   <!-- JSON-LD Structured Data Schema -->
@@ -83,6 +83,13 @@
   <link rel="stylesheet" href="../style.css?v=16">
 
   <style>
+    /* Global Container Standard */
+    .islam-main-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 100px 20px 40px;
+    }
+
     /* Custom Islam Pillar Specific Styles */
     .islam-hero-card {
       position: relative;
@@ -114,7 +121,7 @@
     .islam-hero-content {
       position: relative;
       z-index: 2;
-      padding: 60px 40px;
+      padding: 60px 30px;
       text-align: center;
       max-width: 860px;
       margin: 0 auto;
@@ -159,14 +166,27 @@
       max-width: 760px;
     }
 
-    .islam-axes-grid {
+    /* 5 Parcours Grid Layout: 3 cols desktop, 2 cols tablet, 1 col mobile */
+    .islam-parcours-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 24px;
       margin: 35px 0;
     }
 
-    .islam-axis-card {
+    @media (max-width: 1024px) {
+      .islam-parcours-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .islam-parcours-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .islam-parcours-card {
       background: rgba(14, 22, 17, 0.85);
       border: 1px solid rgba(223, 177, 91, 0.18);
       border-radius: 20px;
@@ -179,31 +199,32 @@
       overflow: hidden;
     }
 
-    .islam-axis-card:hover {
+    .islam-parcours-card:hover {
       transform: translateY(-4px);
       border-color: rgba(223, 177, 91, 0.45);
       box-shadow: 0 12px 30px rgba(223, 177, 91, 0.15);
       background: rgba(18, 28, 22, 0.95);
     }
 
-    .islam-axis-number {
-      font-size: 0.82rem;
+    .islam-parcours-number {
+      font-size: 0.85rem;
       font-weight: 800;
       color: var(--accent-gold, #DFB15B);
       letter-spacing: 1px;
       margin-bottom: 12px;
+      display: inline-block;
     }
 
-    .islam-axis-title {
-      font-size: 1.3rem;
+    .islam-parcours-title {
+      font-size: 1.35rem;
       color: #FAF6EF;
       font-family: 'Playfair Display', 'Amiri', serif;
       font-weight: 700;
       margin-bottom: 10px;
     }
 
-    .islam-axis-desc {
-      font-size: 0.92rem;
+    .islam-parcours-desc {
+      font-size: 0.94rem;
       color: #A9AAA4;
       line-height: 1.7;
       margin-bottom: 20px;
@@ -225,44 +246,65 @@
       width: fit-content;
     }
 
+    /* Thinkers Grid Layout: 3 cols desktop, 2 cols tablet, 1 col mobile */
     .islam-thinkers-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
       margin-top: 30px;
+    }
+
+    @media (max-width: 1024px) {
+      .islam-thinkers-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .islam-thinkers-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .islam-thinker-card {
       background: rgba(14, 20, 16, 0.85);
-      border: 1px solid rgba(223, 177, 91, 0.16);
-      border-radius: 20px;
-      padding: 24px;
+      border: 1px solid rgba(223, 177, 91, 0.2);
+      border-radius: 22px;
+      padding: 26px;
       text-align: center;
       transition: all 0.35s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .islam-thinker-card:hover {
-      border-color: rgba(223, 177, 91, 0.4);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      border-color: rgba(223, 177, 91, 0.45);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+      background: rgba(18, 26, 20, 0.95);
     }
 
     .islam-thinker-avatar {
-      width: 72px;
-      height: 72px;
+      width: 84px;
+      height: 84px;
       border-radius: 50%;
       margin: 0 auto 14px;
-      background: radial-gradient(circle at 35% 35%, #1A281E 0%, #0A120D 100%);
       border: 2px solid var(--accent-gold, #DFB15B);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.8rem;
-      box-shadow: 0 4px 15px rgba(223, 177, 91, 0.2);
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+      background: #0A120D;
+      aspect-ratio: 1 / 1;
+    }
+
+    .islam-thinker-avatar-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .islam-thinker-name {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       color: #FAF6EF;
       font-weight: 700;
       font-family: 'Amiri', serif;
@@ -270,17 +312,88 @@
     }
 
     .islam-thinker-tag {
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       color: #E4C98A;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       font-weight: 600;
     }
 
     .islam-thinker-bio {
-      font-size: 0.88rem;
+      font-size: 0.9rem;
       color: #A9AAA4;
-      line-height: 1.6;
+      line-height: 1.65;
       margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .islam-thinker-works {
+      background: rgba(8, 14, 10, 0.6);
+      border: 1px solid rgba(223, 177, 91, 0.15);
+      border-radius: 12px;
+      padding: 10px 12px;
+      margin-bottom: 18px;
+      text-align: right;
+    }
+
+    [dir="ltr"] .islam-thinker-works {
+      text-align: left;
+    }
+
+    .islam-thinker-works-title {
+      font-size: 0.76rem;
+      color: #DFB15B;
+      font-weight: 700;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .islam-thinker-works-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.82rem;
+      color: #D1D2CC;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .islam-thinker-work-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .islam-thinker-work-status {
+      font-size: 0.72rem;
+      color: #9CA3AF;
+      font-style: italic;
+    }
+
+    .islam-thinker-link-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 10px 16px;
+      border-radius: 12px;
+      background: rgba(223, 177, 91, 0.12);
+      border: 1px solid rgba(223, 177, 91, 0.35);
+      color: #F3E5AB;
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .islam-thinker-link-btn:hover {
+      background: rgba(223, 177, 91, 0.25);
+      border-color: #DFB15B;
+      color: #FFFFFF;
+      transform: translateY(-1px);
     }
 
     .islam-quote-box {
@@ -297,12 +410,102 @@
       font-size: clamp(1.3rem, 3vw, 1.7rem);
       color: #E4C98A;
       font-family: 'Amiri', serif;
-      line-height: 1.8;
+      line-height: 1.85;
       font-weight: 700;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
+    }
+  
+
+    /* Language Dropdown Selector Fix */
+    .lang-selector-dropdown,
+    .lang-selector-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .lang-selector-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      height: 38px;
+      border-radius: 20px;
+      background: rgba(223, 177, 91, 0.1);
+      border: 1px solid rgba(223, 177, 91, 0.3);
+      color: var(--accent-gold, #DFB15B);
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.25s ease;
+    }
+
+    .lang-selector-btn:hover {
+      background: rgba(223, 177, 91, 0.2);
+      border-color: var(--accent-gold, #DFB15B);
+    }
+
+    .lang-dropdown,
+    .lang-dropdown-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      left: auto;
+      background: #0D1410;
+      border: 1px solid rgba(223, 177, 91, 0.35);
+      border-radius: 14px;
+      padding: 6px 0;
+      min-width: 165px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.8);
+      z-index: 1000;
+      display: none;
+      flex-direction: column;
+    }
+
+    .lang-dropdown.show,
+    .lang-dropdown-menu.show {
+      display: flex !important;
+    }
+
+    [dir="ltr"] .lang-dropdown,
+    [dir="ltr"] .lang-dropdown-menu {
+      left: 0;
+      right: auto;
+    }
+
+    .lang-opt {
+      width: 100%;
+      padding: 10px 16px;
+      background: transparent;
+      border: none;
+      color: #A9AAA4;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-align: right;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    [dir="ltr"] .lang-opt {
+      text-align: left;
+    }
+
+    .lang-opt:hover {
+      background: rgba(223, 177, 91, 0.15);
+      color: #E4C98A;
+    }
+
+    .lang-opt.active {
+      color: #DFB15B;
+      font-weight: 800;
+      background: rgba(223, 177, 91, 0.2);
     }
   </style>
-</head>
+
+    </head>
 
 <body>
 
@@ -354,8 +557,8 @@
     </nav>
   </header>
 
-  <!-- Page Main Container -->
-  <div class="container" style="padding-top: 100px;">
+  <!-- Page Main Container (Standardized 1200px max-width) -->
+  <div class="islam-main-container">
     
     <!-- Breadcrumbs Navigation -->
     <nav class="breadcrumb-container" aria-label="مسار التصفح" style="margin-bottom: 24px;">
@@ -394,159 +597,228 @@
       </div>
     </section>
 
-    <!-- 3. GRANDS AXES DE LA PENSÉE ISLAMIQUE -->
+    <!-- 3. EXACT 5 PARCOURS OF ISLAMIC THOUGHT -->
     <section style="margin: 50px 0;">
       <div style="text-align: center; margin-bottom: 35px;">
-        <h2 style="font-size: 2rem; color: #FAF6EF; font-family: 'Playfair Display', 'Amiri', serif;" data-i18n="islamAxesTitle">المحاور والمسارات الفكرية الكبرى</h2>
-        <p style="font-size: 1rem; color: #A9AAA4; margin-top: 8px;" data-i18n="islamAxesSubtitle">ركائز الفكر الإسلامي وأسئلته الكبرى عبر التطور التاريخي</p>
+        <h2 style="font-size: 2rem; color: #FAF6EF; font-family: 'Playfair Display', 'Amiri', serif;" data-i18n="islamAxesTitle">المسارات الفكرية الخمسة</h2>
+        <p style="font-size: 1rem; color: #A9AAA4; margin-top: 8px;" data-i18n="islamAxesSubtitle">أبواب المعرفة والحكمة في الفكر الإسلامي</p>
       </div>
 
-      <div class="islam-axes-grid" id="islamAxesGrid">
-        <!-- 01 -->
-        <article class="islam-axis-card">
+      <div class="islam-parcours-grid" id="islamParcoursGrid">
+        <!-- 01 — Raison & Révélation -->
+        <article class="islam-parcours-card">
           <div>
-            <span class="islam-axis-number">01</span>
-            <h3 class="islam-axis-title" data-i18n="axis1Title">العقل والوحي</h3>
-            <p class="islam-axis-desc" data-i18n="axis1Desc">دراسة جدلية العلاقة بين البرهان العقلي والنقل، والتوفيق المعرفي بين الحكمة والشريعة.</p>
+            <span class="islam-parcours-number">01</span>
+            <h3 class="islam-parcours-title" data-i18n="p1Title">العقل والوحي</h3>
+            <p class="islam-parcours-desc" data-i18n="p1Desc">دراسة جدلية العلاقة بين البرهان العقلي والنقل، والتوفيق المعرفي بين التفكير والوحي والمعرفة.</p>
           </div>
-          <div class="islam-coming-soon-badge" data-i18n="badgeComingSoon">محتوى قادم قريبًا</div>
+          <div class="islam-coming-soon-badge" data-i18n="badgeComingSoon">⏳ محتوى قادم قريبًا</div>
         </article>
 
-        <!-- 02 -->
-        <article class="islam-axis-card">
+        <!-- 02 — Philosophie islamique -->
+        <article class="islam-parcours-card">
           <div>
-            <span class="islam-axis-number">02</span>
-            <h3 class="islam-axis-title" data-i18n="axis2Title">الفلسفة الإسلامية</h3>
-            <p class="islam-axis-desc" data-i18n="axis2Desc">إسهامات الفلاسفة المسلمين في الوجود والمعرفة والمنطق ونظرية النفس.</p>
+            <span class="islam-parcours-number">02</span>
+            <h3 class="islam-parcours-title" data-i18n="p2Title">الفلسفة الإسلامية</h3>
+            <p class="islam-parcours-desc" data-i18n="p2Desc">إسهامات الفلاسفة المسلمين في الوجود والمعرفة والمنطق ونظرية النفس والميتافيزيقا.</p>
           </div>
-          <div class="islam-coming-soon-badge" data-i18n="badgeComingSoon">محتوى قادم قريبًا</div>
+          <div class="islam-coming-soon-badge" data-i18n="badgeComingSoon">⏳ مقالات قادمة قريبًا</div>
         </article>
 
-        <!-- 03 -->
-        <article class="islam-axis-card">
+        <!-- 03 — Sagesse & Éthique -->
+        <article class="islam-parcours-card">
           <div>
-            <span class="islam-axis-number">03</span>
-            <h3 class="islam-axis-title" data-i18n="axis3Title">الحكمة والأخلاق</h3>
-            <p class="islam-axis-desc" data-i18n="axis3Desc">تهذيب الأخلاق، بناء الشخصية المتوازنة، والحكمة في إدارة النفس والمجتمع.</p>
+            <span class="islam-parcours-number">03</span>
+            <h3 class="islam-parcours-title" data-i18n="p3Title">الحكمة والأخلاق</h3>
+            <p class="islam-parcours-desc" data-i18n="p3Desc">تهذيب النفس، بناء الفضيلة، الحكمة العملية، والمسؤولية في إدارة الذات والمجتمع.</p>
           </div>
-          <div class="islam-coming-soon-badge" data-i18n="badgeComingSoon">محتوى قادم قريبًا</div>
+          <div class="islam-coming-soon-badge" data-i18n="badgeComingSoon">⏳ مقالات قادمة قريبًا</div>
         </article>
 
-        <!-- 04 -->
-        <article class="islam-axis-card">
+        <!-- 04 — Grands penseurs musulmans -->
+        <article class="islam-parcours-card">
           <div>
-            <span class="islam-axis-number">04</span>
-            <h3 class="islam-axis-title" data-i18n="axis4Title">الإنسان والوجود</h3>
-            <p class="islam-axis-desc" data-i18n="axis4Desc">التأمل الفلسفي والإيماني في غاية الوجود الإنساني ومعنى الحياة ومصير الكائن.</p>
+            <span class="islam-parcours-number">04</span>
+            <h3 class="islam-parcours-title" data-i18n="p4Title">العلماء والمفكرون</h3>
+            <p class="islam-parcours-desc" data-i18n="p4Desc">أعلام الفكر الإسلامي وصناع النهضة الفلسفية والمعرفية: الغزالي، الفارابي، ابن سينا، ابن رشد، وابن خلدون.</p>
           </div>
-          <div class="islam-coming-soon-badge" data-i18n="badgeComingSoon">محتوى قادم قريبًا</div>
+          <a href="#thinkersSection" class="islam-coming-soon-badge" style="background: rgba(223, 177, 91, 0.18); color: #FFFDF8; border-color: #DFB15B; text-decoration: none;" data-i18n="p4Link">استكشف المفكرين ↓</a>
         </article>
 
-        <!-- 05 -->
-        <article class="islam-axis-card">
+        <!-- 05 — Civilisation & Société -->
+        <article class="islam-parcours-card">
           <div>
-            <span class="islam-axis-number">05</span>
-            <h3 class="islam-axis-title" data-i18n="axis5Title">العلم والمعرفة</h3>
-            <p class="islam-axis-desc" data-i18n="axis5Desc">تاريخ العلوم، مناهج البحث المعرفي، والابتكار العلمي في العصر الذهبي.</p>
+            <span class="islam-parcours-number">05</span>
+            <h3 class="islam-parcours-title" data-i18n="p5Title">الحضارة والعمران</h3>
+            <p class="islam-parcours-desc" data-i18n="p5Desc">فلسفة العمران البشري، التاريخ الاجتماعي، نشأة الدول والتفاعل الحضاري الثقافي.</p>
           </div>
-          <div class="islam-coming-soon-badge" data-i18n="badgeComingSoon">محتوى قادم قريبًا</div>
-        </article>
-
-        <!-- 06 -->
-        <article class="islam-axis-card">
-          <div>
-            <span class="islam-axis-number">06</span>
-            <h3 class="islam-axis-title" data-i18n="axis6Title">الحضارة والفكر</h3>
-            <p class="islam-axis-desc" data-i18n="axis6Desc">فلسفة العمران البشري، نشأة الدول والمجتمعات، والتفاعل الحضاري الإنساني.</p>
-          </div>
-          <div class="islam-coming-soon-badge" data-i18n="badgeComingSoon">محتوى قادم قريبًا</div>
+          <div class="islam-coming-soon-badge" data-i18n="badgeComingSoon">⏳ مقالات قادمة قريبًا</div>
         </article>
       </div>
     </section>
 
-    <!-- 4. ARTICLES SECTION (REAL DATA VERIFIED) -->
+    <!-- 4. PROMINENT THINKERS SECTION (5 TARGET THINKERS) -->
+    <section id="thinkersSection" style="margin: 60px 0;">
+      <div style="text-align: center; margin-bottom: 35px;">
+        <h2 style="font-size: 2rem; color: #FAF6EF; font-family: 'Playfair Display', 'Amiri', serif;" data-i18n="islamThinkersTitle">كبار العلماء والمفكرين المسلمين</h2>
+        <p style="font-size: 1rem; color: #A9AAA4; margin-top: 8px;" data-i18n="islamThinkersSubtitle">أعلام وصناع النهضة المعرفية والفلسفية</p>
+      </div>
+
+      <div class="islam-thinkers-grid">
+        <!-- 1. Al-Ghazali -->
+        <article class="islam-thinker-card">
+          <div>
+            <div class="islam-thinker-avatar"><img src="../thinkers/images/ghazali.jpg" alt="أبو حامد الغزالي" class="islam-thinker-avatar-img" loading="lazy" onerror="this.onerror=null; this.src='../islamic_thought_hd.jpg';"></div>
+            <h3 class="islam-thinker-name" data-i18n="tGhazaliName">أبو حامد الغزالي</h3>
+            <div class="islam-thinker-tag" data-i18n="tGhazaliTag">حجة الإسلام (1058 - 1111)</div>
+            <p class="islam-thinker-bio" data-i18n="tGhazaliBio">فيلسوف ومتكلم ومتصوف صاحب «المنقذ من الضلال» و«إحياء علوم الدين»، بحث في نقد المعرفة والشك اليقيني.</p>
+            
+            <!-- Works -->
+            <div class="islam-thinker-works">
+              <div class="islam-thinker-works-title" data-i18n="worksHeader">أبرز المؤلفات:</div>
+              <ul class="islam-thinker-works-list">
+                <li class="islam-thinker-work-item"><span>• المنقذ من الضلال</span> <span class="islam-thinker-work-status" data-i18n="resSoon">⏳ المصدر قادم</span></li>
+                <li class="islam-thinker-work-item"><span>• إحياء علوم الدين</span> <span class="islam-thinker-work-status" data-i18n="resSoon">⏳ المصدر قادم</span></li>
+              </ul>
+            </div>
+          </div>
+          
+          <a href="../thinkers/?thinker=ghazali" class="islam-thinker-link-btn" data-i18n="btnReadBio">
+            <span>عرض السيرة الذاتية</span> <span>←</span>
+          </a>
+        </article>
+
+        <!-- 2. Al-Farabi -->
+        <article class="islam-thinker-card">
+          <div>
+            <div class="islam-thinker-avatar"><img src="../thinkers/images/farabi.jpg" alt="الفارابي" class="islam-thinker-avatar-img" loading="lazy" onerror="this.onerror=null; this.src='../islamic_thought_hd.jpg';"></div>
+            <h3 class="islam-thinker-name" data-i18n="tFarabiName">الفارابي</h3>
+            <div class="islam-thinker-tag" data-i18n="tFarabiTag">المعلم الثاني (872 - 950)</div>
+            <p class="islam-thinker-bio" data-i18n="tFarabiBio">صاحب «آراء أهل المدينة الفاضلة»، الذي وضع أسس الفلسفة السياسية الإسلامية والتنظيم المعرفي للعلوم.</p>
+            
+            <!-- Works -->
+            <div class="islam-thinker-works">
+              <div class="islam-thinker-works-title" data-i18n="worksHeader">أبرز المؤلفات:</div>
+              <ul class="islam-thinker-works-list">
+                <li class="islam-thinker-work-item"><span>• آراء أهل المدينة الفاضلة</span> <span class="islam-thinker-work-status" data-i18n="resSoon">⏳ المصدر قادم</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <a href="../thinkers/?thinker=farabi" class="islam-thinker-link-btn" data-i18n="btnReadBio">
+            <span>عرض السيرة الذاتية</span> <span>←</span>
+          </a>
+        </article>
+
+        <!-- 3. Ibn Sina -->
+        <article class="islam-thinker-card">
+          <div>
+            <div class="islam-thinker-avatar"><img src="../thinkers/images/ibnsina.jpg" alt="ابن سينا" class="islam-thinker-avatar-img" loading="lazy" onerror="this.onerror=null; this.src='../islamic_thought_hd.jpg';"></div>
+            <h3 class="islam-thinker-name" data-i18n="tSinaName">ابن سينا</h3>
+            <div class="islam-thinker-tag" data-i18n="tSinaTag">الشيخ الرئيس (980 - 1037)</div>
+            <p class="islam-thinker-bio" data-i18n="tSinaBio">صاحب «القانون في الطب» و«الشفاء»، العبقري الذي صاغ أحد أعظم الأنساق الفلسفية والطبية في التاريخ.</p>
+            
+            <!-- Works -->
+            <div class="islam-thinker-works">
+              <div class="islam-thinker-works-title" data-i18n="worksHeader">أبرز المؤلفات:</div>
+              <ul class="islam-thinker-works-list">
+                <li class="islam-thinker-work-item"><span>• القانون في الطب</span> <span class="islam-thinker-work-status" data-i18n="resSoon">⏳ المصدر قادم</span></li>
+                <li class="islam-thinker-work-item"><span>• كتاب الشفاء</span> <span class="islam-thinker-work-status" data-i18n="resSoon">⏳ المصدر قادم</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <a href="../thinkers/?thinker=ibnsina" class="islam-thinker-link-btn" data-i18n="btnReadBio">
+            <span>عرض السيرة الذاتية</span> <span>←</span>
+          </a>
+        </article>
+
+        <!-- 4. Ibn Rushd -->
+        <article class="islam-thinker-card">
+          <div>
+            <div class="islam-thinker-avatar"><img src="../thinkers/images/ibnrushd.jpg" alt="ابن رشد" class="islam-thinker-avatar-img" loading="lazy" onerror="this.onerror=null; this.src='../islamic_thought_hd.jpg';"></div>
+            <h3 class="islam-thinker-name" data-i18n="tRushdName">ابن رشد</h3>
+            <div class="islam-thinker-tag" data-i18n="tRushdTag">الشارح الأكبر (1126 - 1198)</div>
+            <p class="islam-thinker-bio" data-i18n="tRushdBio">قاضي إشبيلية وصاحب «فصل المقال» و«تهافت التهافت»، الذي دافع عن العقل والبرهان وأثّر عميقاً في الفكر الإنساني.</p>
+            
+            <!-- Works -->
+            <div class="islam-thinker-works">
+              <div class="islam-thinker-works-title" data-i18n="worksHeader">أبرز المؤلفات:</div>
+              <ul class="islam-thinker-works-list">
+                <li class="islam-thinker-work-item"><span>• فصل المقال</span> <span class="islam-thinker-work-status" data-i18n="resSoon">⏳ المصدر قادم</span></li>
+                <li class="islam-thinker-work-item"><span>• تهافت التهافت</span> <span class="islam-thinker-work-status" data-i18n="resSoon">⏳ المصدر قادم</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <a href="../thinkers/?thinker=ibnrushd" class="islam-thinker-link-btn" data-i18n="btnReadBio">
+            <span>عرض السيرة الذاتية</span> <span>←</span>
+          </a>
+        </article>
+
+        <!-- 5. Ibn Khaldun -->
+        <article class="islam-thinker-card">
+          <div>
+            <div class="islam-thinker-avatar"><img src="../thinkers/images/ibnkhaldun.jpg" alt="ابن خلدون" class="islam-thinker-avatar-img" loading="lazy" onerror="this.onerror=null; this.src='../islamic_thought_hd.jpg';"></div>
+            <h3 class="islam-thinker-name" data-i18n="tKhaldunName">ابن خلدون</h3>
+            <div class="islam-thinker-tag" data-i18n="tKhaldunTag">مؤسس علم العمران (1332 - 1406)</div>
+            <p class="islam-thinker-bio" data-i18n="tKhaldunBio">صاحب «المقدمة» الشهيرة، مؤسس علم الاجتماع والفلسفة التاريخية، ومحلل قوانين العصبية والعمران والبيئة.</p>
+            
+            <!-- Works -->
+            <div class="islam-thinker-works">
+              <div class="islam-thinker-works-title" data-i18n="worksHeader">أبرز المؤلفات:</div>
+              <ul class="islam-thinker-works-list">
+                <li class="islam-thinker-work-item"><span>• مقدمة ابن خلدون</span> <span class="islam-thinker-work-status" data-i18n="resSoon">⏳ المصدر قادم</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <a href="../thinkers/?thinker=ibnkhaldun" class="islam-thinker-link-btn" data-i18n="btnReadBio">
+            <span>عرض السيرة الذاتية</span> <span>←</span>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. CORAN ET HADITH DISCLAIMER SECTION -->
     <section style="margin: 50px 0;">
+      <div style="background: rgba(10, 18, 14, 0.85); border: 1px solid rgba(223, 177, 91, 0.25); border-radius: 24px; padding: 36px 30px; text-align: center; max-width: 900px; margin: 0 auto;">
+        <span style="font-size: 2.4rem; display: block; margin-bottom: 12px;">🕌</span>
+        <h2 style="font-size: 1.6rem; color: #FAF6EF; font-family: 'Amiri', serif; margin-bottom: 12px;" data-i18n="quranSectionTitle">القرآن والحديث</h2>
+        <p style="font-size: 1rem; color: #E4C98A; line-height: 1.8; margin: 0;" data-i18n="quranDisclaimer">
+          سيتم إضافة النصوص والمراجع الموثقة تدريجيًا مع التحقق الكامل من مصادرها.
+        </p>
+      </div>
+    </section>
+
+    <!-- 6. ARTICLES SECTION (REAL DATA VERIFIED) -->
+    <section style="margin: 55px 0;">
       <div style="text-align: center; margin-bottom: 30px;">
         <h2 style="font-size: 1.8rem; color: #FAF6EF; font-family: 'Playfair Display', 'Amiri', serif;" data-i18n="islamArticlesTitle">دراسات ومقالات الفكر الإسلامي</h2>
         <p style="font-size: 0.95rem; color: #A9AAA4;" data-i18n="islamArticlesSubtitle">قراءات وبحوث تحريرية معمقة</p>
       </div>
 
-      <!-- Real Data Check: No fake links, beautiful upcoming studies box -->
-      <div style="background: rgba(14, 22, 17, 0.7); border: 1px dashed rgba(223, 177, 91, 0.3); border-radius: 20px; padding: 40px 24px; text-align: center; max-width: 680px; margin: 0 auto;">
-        <span style="font-size: 2.2rem; display: block; margin-bottom: 12px;">📚</span>
-        <h3 style="font-size: 1.3rem; color: #FAF6EF; font-family: 'Amiri', serif; margin-bottom: 8px;" data-i18n="articlesComingTitle">مقالات ودراسات قادمة</h3>
-        <p style="font-size: 0.92rem; color: #A9AAA4; margin-bottom: 18px; line-height: 1.7;" data-i18n="articlesComingDesc">
-          نعمل على إعداد دراسات جديدة ومحكمة في مجالات الفلسفة الإسلامية والتأصيل المعرفي وعلم العمران.
+      <!-- Verified Real Data Container: No fake articles -->
+      <div style="background: rgba(14, 22, 17, 0.75); border: 1px dashed rgba(223, 177, 91, 0.35); border-radius: 22px; padding: 45px 24px; text-align: center; max-width: 720px; margin: 0 auto;">
+        <span style="font-size: 2.5rem; display: block; margin-bottom: 14px;">📚</span>
+        <h3 style="font-size: 1.4rem; color: #FAF6EF; font-family: 'Amiri', serif; margin-bottom: 10px;" data-i18n="articlesComingTitle">مقالات ودراسات قادمة</h3>
+        <p style="font-size: 0.96rem; color: #A9AAA4; margin-bottom: 20px; line-height: 1.75;" data-i18n="articlesComingDesc">
+          نعمل على إعداد دراسات جديدة ومحكمة في مجالات الفلسفة الإسلامية والتأصيل المعرفي وعلم العمران وسيتم نشرها تدريجياً.
         </p>
-        <span class="islam-coming-soon-badge" style="margin: 0 auto;" data-i18n="badgeSoon">قريبًا</span>
+        <span class="islam-coming-soon-badge" style="margin: 0 auto;" data-i18n="badgeSoon">⏳ مقالات قادمة قريبًا</span>
       </div>
     </section>
 
-    <!-- 5. PROMINENT THINKERS SECTION -->
-    <section style="margin: 55px 0;">
-      <div style="text-align: center; margin-bottom: 35px;">
-        <h2 style="font-size: 2rem; color: #FAF6EF; font-family: 'Playfair Display', 'Amiri', serif;" data-i18n="islamThinkersTitle">أبرز مفكري الفكر الإسلامي</h2>
-        <p style="font-size: 1rem; color: #A9AAA4; margin-top: 8px;" data-i18n="islamThinkersSubtitle">أعلام وصناع النهضة المعرفية والفلسفية</p>
-      </div>
-
-      <div class="islam-thinkers-grid">
-        <!-- Al-Ghazali -->
-        <article class="islam-thinker-card">
-          <div class="islam-thinker-avatar">📜</div>
-          <h3 class="islam-thinker-name" data-i18n="tGhazaliName">أبو حامد الغزالي</h3>
-          <div class="islam-thinker-tag" data-i18n="tGhazaliTag">فيلسوف ومتصوف (1058 - 1111)</div>
-          <p class="islam-thinker-bio" data-i18n="tGhazaliBio">حجة الإسلام، صاحب «المنقذ من الضلال» و«تهافت الفلاسفة»، الذي بحث في نقد المعرفة والشك اليقيني.</p>
-          <div class="islam-coming-soon-badge" style="margin: 0 auto;" data-i18n="badgeCardSoon">بطاقة قادمة قريبًا</div>
-        </article>
-
-        <!-- Al-Farabi -->
-        <article class="islam-thinker-card">
-          <div class="islam-thinker-avatar">🏛️</div>
-          <h3 class="islam-thinker-name" data-i18n="tFarabiName">الفارابي</h3>
-          <div class="islam-thinker-tag" data-i18n="tFarabiTag">المعلم الثاني (872 - 950)</div>
-          <p class="islam-thinker-bio" data-i18n="tFarabiBio">صاحب «آراء أهل المدينة الفاضلة»، الذي وضع أسس الفلسفة السياسية الإسلامية والتنظيم المعرفي للعلوم.</p>
-          <div class="islam-coming-soon-badge" style="margin: 0 auto;" data-i18n="badgeCardSoon">بطاقة قادمة قريبًا</div>
-        </article>
-
-        <!-- Ibn Sina -->
-        <article class="islam-thinker-card">
-          <div class="islam-thinker-avatar">🔬</div>
-          <h3 class="islam-thinker-name" data-i18n="tSinaName">ابن سينا</h3>
-          <div class="islam-thinker-tag" data-i18n="tSinaTag">الشيخ الرئيس (980 - 1037)</div>
-          <p class="islam-thinker-bio" data-i18n="tSinaBio">صاحب «الشفا» و«الإشارات والتنبيهات»، العبقري الذي صاغ أحد أعظم الأنساق الفلسفية والطبية في التاريخ.</p>
-          <div class="islam-coming-soon-badge" style="margin: 0 auto;" data-i18n="badgeCardSoon">بطاقة قادمة قريبًا</div>
-        </article>
-
-        <!-- Ibn Rushd -->
-        <article class="islam-thinker-card">
-          <div class="islam-thinker-avatar">⚖️</div>
-          <h3 class="islam-thinker-name" data-i18n="tRushdName">ابن رشد</h3>
-          <div class="islam-thinker-tag" data-i18n="tRushdTag">الشارح الأكبر (1126 - 1198)</div>
-          <p class="islam-thinker-bio" data-i18n="tRushdBio">قاضي إشبيلية وصاحب «فصل المقال»، الذي دافع عن العقل والعقلانية وأثّر عميقاً في الفكر الإنساني.</p>
-          <div class="islam-coming-soon-badge" style="margin: 0 auto;" data-i18n="badgeCardSoon">بطاقة قادمة قريبًا</div>
-        </article>
-
-        <!-- Ibn Khaldun -->
-        <article class="islam-thinker-card">
-          <div class="islam-thinker-avatar">🌍</div>
-          <h3 class="islam-thinker-name" data-i18n="tKhaldunName">ابن خلدون</h3>
-          <div class="islam-thinker-tag" data-i18n="tKhaldunTag">مؤسس علم العمران (1332 - 1406)</div>
-          <p class="islam-thinker-bio" data-i18n="tKhaldunBio">صاحب «المقدمة» الشهيرة، مؤسس علم الاجتماع والفلسفة التاريخية، ومحلل قوانين العصبية والدول.</p>
-          <div class="islam-coming-soon-badge" style="margin: 0 auto;" data-i18n="badgeCardSoon">بطاقة قادمة قريبًا</div>
-        </article>
-      </div>
-    </section>
-
-    <!-- 6. SELECTED WISDOMS / QUOTES -->
+    <!-- 7. TIMELIESS WISDOM / ANONYMOUS QUOTE SECTION (OPTION A RESTRICTION ENFORCED) -->
     <section class="islam-quote-box">
       <div style="font-size: 0.85rem; color: #C9A86A; font-weight: 800; text-transform: uppercase; margin-bottom: 10px;" data-i18n="quoteHeader">حكم وأقوال خالدة</div>
       <blockquote class="islam-quote-text" data-i18n="quoteText">
         « ليست الحكمة مجرد معرفة، بل هي القدرة على وضع المعرفة في موضعها الصحيح. »
       </blockquote>
-      <div style="font-size: 0.9rem; color: #A9AAA4; font-weight: 600;" data-i18n="quoteSub">— جوهر الحكمة والفكر المستنير —</div>
+      <div style="font-size: 0.92rem; color: #A9AAA4; font-weight: 600;" data-i18n="quoteSub">— حكمة مجهولة المصدر —</div>
     </section>
 
-    <!-- 7. UPCOMING ROADMAP SECTION -->
+    <!-- 8. UPCOMING ROADMAP SECTION -->
     <section style="margin: 50px 0 60px;">
       <div style="background: rgba(10, 18, 14, 0.9); border: 1px solid rgba(223, 177, 91, 0.25); border-radius: 24px; padding: 40px 30px; text-align: center;">
         <h2 style="font-size: 1.6rem; color: #FAF6EF; font-family: 'Playfair Display', 'Amiri', serif; margin-bottom: 10px;" data-i18n="roadmapTitle">قريبًا في الفكر الإسلامي</h2>
@@ -629,6 +901,7 @@
     const ISLAM_PAGE_TRANSLATIONS = {
       ar: {
         pageTitle: "الفكر الإسلامي — رحلة في الفكر والحكمة والحضارة | حكمة ونور",
+        metaDesc: "استكشف الفكر الإسلامي والحكمة والفلسفة والأخلاق وأفكار كبار المفكرين المسلمين مع حكمة ونور.",
         navHome: "الرئيسية",
         navPhilosophy: "الفلسفة",
         navPsychology: "علم النفس",
@@ -645,47 +918,50 @@
         islamHeroDesc: "دراسات وتأملات في الفكر الإسلامي، والعقل، والوحي، والأخلاق، والحكمة، وأعمال كبار المفكرين المسلمين عبر التاريخ.",
         islamIntroTitle: "التأصيل المعرفي والتكامل الفكري",
         islamIntroText: "يقدم ركن الفكر الإسلامي مساحة مستقلة للتأمل والرصد الفلسفي والمعرفي: قراءة أطروحات التوفيق بين البرهان والنقل، وبناء الأخلاق المدنية، وتطوير العلوم والفنون الإنسانية في الحضارة الإسلامية.",
-        islamAxesTitle: "المحاور والمسارات الفكرية الكبرى",
-        islamAxesSubtitle: "ركائز الفكر الإسلامي وأسئلته الكبرى عبر التطور التاريخي",
-        axis1Title: "العقل والوحي",
-        axis1Desc: "دراسة جدلية العلاقة بين البرهان العقلي والنقل، والتوفيق المعرفي بين الحكمة والشريعة.",
-        axis2Title: "الفلسفة الإسلامية",
-        axis2Desc: "إسهامات الفلاسفة المسلمين في الوجود والمعرفة والمنطق ونظرية النفس.",
-        axis3Title: "الحكمة والأخلاق",
-        axis3Desc: "تهذيب الأخلاق، بناء الشخصية المتوازنة، والحكمة في إدارة النفس والمجتمع.",
-        axis4Title: "الإنسان والوجود",
-        axis4Desc: "التأمل الفلسفي والإيماني في غاية الوجود الإنساني ومعنى الحياة ومصير الكائن.",
-        axis5Title: "العلم والمعرفة",
-        axis5Desc: "تاريخ العلوم، مناهج البحث المعرفي، والابتكار العلمي في العصر الذهبي.",
-        axis6Title: "الحضارة والفكر",
-        axis6Desc: "فلسفة العمران البشري، نشأة الدول والمجتمعات، والتفاعل الحضاري الإنساني.",
-        badgeComingSoon: "محتوى قادم قريبًا",
-        islamArticlesTitle: "دراسات ومقالات الفكر الإسلامي",
-        islamArticlesSubtitle: "قراءات وبحوث تحريرية معمقة",
-        articlesComingTitle: "مقالات ودراسات قادمة",
-        articlesComingDesc: "نعمل على إعداد دراسات جديدة ومحكمة في مجالات الفلسفة الإسلامية والتأصيل المعرفي وعلم العمران.",
-        badgeSoon: "قريبًا",
-        islamThinkersTitle: "أبرز مفكري الفكر الإسلامي",
+        islamAxesTitle: "المسارات الفكرية الخمسة",
+        islamAxesSubtitle: "أبواب المعرفة والحكمة في الفكر الإسلامي",
+        p1Title: "العقل والوحي",
+        p1Desc: "دراسة جدلية العلاقة بين البرهان العقلي والنقل، والتوفيق المعرفي بين التفكير والوحي والمعرفة.",
+        p2Title: "الفلسفة الإسلامية",
+        p2Desc: "إسهامات الفلاسفة المسلمين في الوجود والمعرفة والمنطق ونظرية النفس والميتافيزيقا.",
+        p3Title: "الحكمة والأخلاق",
+        p3Desc: "تهذيب النفس، بناء الفضيلة، الحكمة العملية، والمسؤولية في إدارة الذات والمجتمع.",
+        p4Title: "العلماء والمفكرون",
+        p4Desc: "أعلام الفكر الإسلامي وصناع النهضة الفلسفية والمعرفية: الغزالي، الفارابي، ابن سينا، ابن رشد، وابن خلدون.",
+        p4Link: "استكشف المفكرين ↓",
+        p5Title: "الحضارة والعمران",
+        p5Desc: "فلسفة العمران البشري، التاريخ الاجتماعي، نشأة الدول والتفاعل الحضاري الثقافي.",
+        badgeComingSoon: "⏳ محتوى قادم قريبًا",
+        islamThinkersTitle: "كبار العلماء والمفكرين المسلمين",
         islamThinkersSubtitle: "أعلام وصناع النهضة المعرفية والفلسفية",
         tGhazaliName: "أبو حامد الغزالي",
-        tGhazaliTag: "فيلسوف ومتصوف (1058 - 1111)",
-        tGhazaliBio: "حجة الإسلام، صاحب «المنقذ من الضلال» و«تهافت الفلاسفة»، الذي بحث في نقد المعرفة والشك اليقيني.",
+        tGhazaliTag: "حجة الإسلام (1058 - 1111)",
+        tGhazaliBio: "فيلسوف ومتكلم ومتصوف صاحب «المنقذ من الضلال» و«إحياء علوم الدين»، بحث في نقد المعرفة والشك اليقيني.",
         tFarabiName: "الفارابي",
         tFarabiTag: "المعلم الثاني (872 - 950)",
         tFarabiBio: "صاحب «آراء أهل المدينة الفاضلة»، الذي وضع أسس الفلسفة السياسية الإسلامية والتنظيم المعرفي للعلوم.",
         tSinaName: "ابن سينا",
         tSinaTag: "الشيخ الرئيس (980 - 1037)",
-        tSinaBio: "صاحب «الشفا» و«الإشارات والتنبيهات»، العبقري الذي صاغ أحد أعظم الأنساق الفلسفية والطبية في التاريخ.",
+        tSinaBio: "صاحب «القانون في الطب» و«الشفاء»، العبقري الذي صاغ أحد أعظم الأنساق الفلسفية والطبية في التاريخ.",
         tRushdName: "ابن رشد",
         tRushdTag: "الشارح الأكبر (1126 - 1198)",
-        tRushdBio: "قاضي إشبيلية وصاحب «فصل المقال»، الذي دافع عن العقل والعقلانية وأثّر عميقاً في الفكر الإنساني.",
+        tRushdBio: "قاضي إشبيلية وصاحب «فصل المقال» و«تهافت التهافت»، الذي دافع عن العقل والبرهان وأثّر عميقاً في الفكر الإنساني.",
         tKhaldunName: "ابن خلدون",
         tKhaldunTag: "مؤسس علم العمران (1332 - 1406)",
-        tKhaldunBio: "صاحب «المقدمة» الشهيرة، مؤسس علم الاجتماع والفلسفة التاريخية، ومحلل قوانين العصبية والدول.",
-        badgeCardSoon: "بطاقة قادمة قريبًا",
+        tKhaldunBio: "صاحب «المقدمة» الشهيرة، مؤسس علم الاجتماع والفلسفة التاريخية، ومحلل قوانين العصبية والعمران والبيئة.",
+        worksHeader: "أبرز المؤلفات:",
+        resSoon: "⏳ المصدر قادم",
+        btnReadBio: "عرض السيرة الذاتية ←",
+        quranSectionTitle: "القرآن والحديث",
+        quranDisclaimer: "سيتم إضافة النصوص والمراجع الموثقة تدريجيًا مع التحقق الكامل من مصادرها.",
+        islamArticlesTitle: "دراسات ومقالات الفكر الإسلامي",
+        islamArticlesSubtitle: "قراءات وبحوث تحريرية معمقة",
+        articlesComingTitle: "مقالات ودراسات قادمة",
+        articlesComingDesc: "نعمل على إعداد دراسات جديدة ومحكمة في مجالات الفلسفة الإسلامية والتأصيل المعرفي وعلم العمران وسيتم نشرها تدريجياً.",
+        badgeSoon: "⏳ مقالات قادمة قريبًا",
         quoteHeader: "حكم وأقوال خالدة",
         quoteText: "« ليست الحكمة مجرد معرفة، بل هي القدرة على وضع المعرفة في موضعها الصحيح. »",
-        quoteSub: "— جوهر الحكمة والفكر المستنير —",
+        quoteSub: "— حكمة مجهولة المصدر —",
         roadmapTitle: "قريبًا في الفكر الإسلامي",
         roadmapDesc: "محتوى مستمر ومتجدد يغطي أطروحات الفكر الإسلامي وتاريخ المدارس العلمية.",
         tagStudies: "دراسات جديدة",
@@ -695,6 +971,7 @@
       },
       fr: {
         pageTitle: "Pensée Islamique — Raison, Sagesse & Civilisation | Hikma & Nour",
+        metaDesc: "Études et réflexions sur la pensée islamique, la raison, la révélation, l'éthique et les grands penseurs musulmans.",
         navHome: "Accueil",
         navPhilosophy: "Philosophie",
         navPsychology: "Psychologie",
@@ -711,47 +988,50 @@
         islamHeroDesc: "Études et réflexions sur la pensée islamique, la raison, la révélation, l'éthique et les grandes figures intellectuelles.",
         islamIntroTitle: "Fondement Épistémologique & Intégration de la Pensée",
         islamIntroText: "Le pilier de la Pensée Islamique offre un espace autonome de réflexion philosophique et intellectuelle : conciliation entre raison et révélation, éthique civile et sociologie humaine.",
-        islamAxesTitle: "Grands Axes & Orientations Intellectuelles",
-        islamAxesSubtitle: "Les piliers de la pensée islamique et ses grandes interrogations historiques",
-        axis1Title: "Raison & Révélation",
-        axis1Desc: "Étude de la relation dialectique entre démonstration rationnelle et textes sacrés.",
-        axis2Title: "Philosophie Islamique",
-        axis2Desc: "Contributions des philosophes musulmans à la métaphysique, l'épistémologie et la logique.",
-        axis3Title: "Sagesse & Éthique",
-        axis3Desc: "Perfectionnement moral, construction d'une personnalité équilibrée et gouvernance de soi.",
-        axis4Title: "L'Homme & L'Existence",
-        axis4Desc: "Méditation philosophique sur le sens de l'existence humaine et le destin de l'être.",
-        axis5Title: "Science & Connaissance",
-        axis5Desc: "Histoire des sciences, méthodologies de recherche et réussites de l'Âge d'Or.",
-        axis6Title: "Civilisation & Société",
-        axis6Desc: "Philosophie de la civilisation humaine, naissance des États et dynamique sociale.",
-        badgeComingSoon: "Contenu à venir bientôt",
-        islamArticlesTitle: "Articles & Études sur la Pensée Islamique",
-        islamArticlesSubtitle: "Lectures et recherches approfondies",
-        articlesComingTitle: "Articles & Études à venir",
-        articlesComingDesc: "Nous préparons de nouvelles études académiques dans le domaine de la philosophie islamique et de la sociologie.",
-        badgeSoon: "À venir",
-        islamThinkersTitle: "Grands Penseurs de la Pensée Islamique",
+        islamAxesTitle: "Les 5 Parcours Intellectuels",
+        islamAxesSubtitle: "Portes de la connaissance et de la sagesse islamiques",
+        p1Title: "Raison & Révélation",
+        p1Desc: "Étude de la relation dialectique entre démonstration rationnelle, révélation, connaissance et pensée.",
+        p2Title: "Philosophie Islamique",
+        p2Desc: "Contributions des philosophes musulmans à la métaphysique, la théorie de la connaissance et la logique.",
+        p3Title: "Sagesse & Éthique",
+        p3Desc: "Perfectionnement moral, vertu, sagesse pratique et responsabilité dans la gestion de soi et de la société.",
+        p4Title: "Grands Penseurs Musulmans",
+        p4Desc: "Penseurs majeurs de la renaissance intellectuelle : Al-Ghazali, Al-Farabi, Ibn Sina, Ibn Rushd et Ibn Khaldoun.",
+        p4Link: "Découvrir les penseurs ↓",
+        p5Title: "Civilisation & Société",
+        p5Desc: "Philosophie de la civilisation humaine, histoire sociale, émergence des États et dynamique culturelle.",
+        badgeComingSoon: "⏳ Contenu bientôt disponible",
+        islamThinkersTitle: "Grands Penseurs Musulmans",
         islamThinkersSubtitle: "Figures majeures et bâtisseurs de la renaissance intellectuelle",
         tGhazaliName: "Al-Ghazali",
-        tGhazaliTag: "Philosophe & Théologien (1058 - 1111)",
-        tGhazaliBio: "Auteur de « L'Erreur et la Délivrance », grand penseur de l'épistémologie et de la certitude.",
+        tGhazaliTag: "Preuve de l'Islam (1058 - 1111)",
+        tGhazaliBio: "Philosophe et théologien auteur de « L'Erreur et la Délivrance » et « Revivification des sciences de la religion ».",
         tFarabiName: "Al-Farabi",
         tFarabiTag: "Le Second Maître (872 - 950)",
         tFarabiBio: "Pionnier de la philosophie politique islamique et auteur de « La Cité Vertueuse ».",
         tSinaName: "Ibn Sina (Avicenne)",
         tSinaTag: "Le Prince des Savants (980 - 1037)",
-        tSinaBio: "Auteur du « Canon » et du « Livre de la Guérison », géant de la métaphysique et de la médecine.",
+        tSinaBio: "Auteur du « Canon de la médecine » et du « Livre de la Guérison », géant de la métaphysique.",
         tRushdName: "Ibn Rushd (Averroès)",
         tRushdTag: "Le Grand Commentateur (1126 - 1198)",
         tRushdBio: "Défenseur de la raison et de la philosophie, auteur du célèbre « Discours Décisif ».",
         tKhaldunName: "Ibn Khaldoun",
         tKhaldunTag: "Fondateur de la Sociologie (1332 - 1406)",
         tKhaldunBio: "Auteur de la célèbre « Muqaddimah », père de la sociologie et de la philosophie de l'histoire.",
-        badgeCardSoon: "Fiche à venir",
-        quoteHeader: "Citations & Sagesse الخالدة",
+        worksHeader: "Œuvres majeures :",
+        resSoon: "⏳ Ressource à venir",
+        btnReadBio: "Voir la biographie →",
+        quranSectionTitle: "Coran & Hadith",
+        quranDisclaimer: "Les textes coraniques et hadiths référencés seront ajoutés progressivement avec leurs sources vérifiées.",
+        islamArticlesTitle: "Articles & Études sur la Pensée Islamique",
+        islamArticlesSubtitle: "Lectures et recherches approfondies",
+        articlesComingTitle: "Articles & Études à venir",
+        articlesComingDesc: "Nous préparons de nouvelles études académiques dans le domaine de la philosophie islamique et de la sociologie.",
+        badgeSoon: "⏳ Articles à venir bientôt",
+        quoteHeader: "Citations & Sagesse Immortelle",
         quoteText: "« La sagesse n'est pas seulement un savoir, mais la capacité de placer chaque chose à sa juste place. »",
-        quoteSub: "— Essence de la sagesse et de la pensée éclairée —",
+        quoteSub: "— Sagesse d'origine anonyme —",
         roadmapTitle: "Bientôt dans la Pensée Islamique",
         roadmapDesc: "Un contenu continu et enrichi couvrant les thèses de la pensée et de l'histoire intellectuelle.",
         tagStudies: "Nouvelles études",
@@ -761,6 +1041,7 @@
       },
       en: {
         pageTitle: "Islamic Thought — Reason, Wisdom & Civilization | Hikma & Nour",
+        metaDesc: "Studies and reflections on Islamic thought, reason, revelation, ethics, and major Muslim thinkers.",
         navHome: "Home",
         navPhilosophy: "Philosophy",
         navPsychology: "Psychology",
@@ -777,47 +1058,50 @@
         islamHeroDesc: "Studies and reflections on Islamic thought, reason, revelation, ethics, and major intellectual figures.",
         islamIntroTitle: "Epistemological Foundation & Intellectual Integration",
         islamIntroText: "The Islamic Thought pillar provides an autonomous space for philosophical and intellectual reflection: reconciling reason and revelation, civil ethics, and human sociology.",
-        islamAxesTitle: "Major Themes & Intellectual Paths",
-        islamAxesSubtitle: "Pillars of Islamic thought and its historical inquiries",
-        axis1Title: "Reason & Revelation",
-        axis1Desc: "Study of the dialectical relationship between rational demonstration and sacred texts.",
-        axis2Title: "Islamic Philosophy",
-        axis2Desc: "Contributions of Muslim philosophers to metaphysics, epistemology, and logic.",
-        axis3Title: "Wisdom & Ethics",
-        axis3Desc: "Moral refinement, building a balanced character, and self-governance.",
-        axis4Title: "Human & Existence",
-        axis4Desc: "Philosophical reflection on the purpose of human existence and life's meaning.",
-        axis5Title: "Science & Knowledge",
-        axis5Desc: "History of sciences, research methodologies, and Golden Age innovations.",
-        axis6Title: "Civilization & Thought",
-        axis6Desc: "Philosophy of human civilization, social dynamics, and historical dynamics.",
-        badgeComingSoon: "Content coming soon",
-        islamArticlesTitle: "Islamic Thought Articles & Studies",
-        islamArticlesSubtitle: "Deep editorial readings and research",
-        articlesComingTitle: "Upcoming Articles & Studies",
-        articlesComingDesc: "We are preparing new academic studies in Islamic philosophy, epistemology, and sociology.",
-        badgeSoon: "Coming soon",
-        islamThinkersTitle: "Prominent Islamic Thinkers",
+        islamAxesTitle: "The 5 Intellectual Paths",
+        islamAxesSubtitle: "Gateways to knowledge and wisdom in Islamic thought",
+        p1Title: "Reason & Revelation",
+        p1Desc: "Study of the dialectical relationship between rational demonstration, revelation, knowledge, and thought.",
+        p2Title: "Islamic Philosophy",
+        p2Desc: "Contributions of Muslim philosophers to metaphysics, epistemology, and logic.",
+        p3Title: "Wisdom & Ethics",
+        p3Desc: "Moral refinement, virtue, practical wisdom, and responsibility in managing self and society.",
+        p4Title: "Muslim Thinkers & Scholars",
+        p4Desc: "Key figures of intellectual renaissance: Al-Ghazali, Al-Farabi, Ibn Sina, Ibn Rushd, and Ibn Khaldun.",
+        p4Link: "Explore Thinkers ↓",
+        p5Title: "Civilization & Society",
+        p5Desc: "Philosophy of human civilization, social history, emergence of states, and cultural dynamics.",
+        badgeComingSoon: "⏳ Content coming soon",
+        islamThinkersTitle: "Prominent Muslim Thinkers",
         islamThinkersSubtitle: "Key figures and builders of intellectual renaissance",
         tGhazaliName: "Al-Ghazali",
-        tGhazaliTag: "Philosopher & Theologian (1058 - 1111)",
-        tGhazaliBio: "Author of « The Deliverance from Error », master of epistemology and certainty.",
+        tGhazaliTag: "Proof of Islam (1058 - 1111)",
+        tGhazaliBio: "Philosopher and theologian author of « The Deliverance from Error » and « Revival of Religious Sciences ».",
         tFarabiName: "Al-Farabi",
         tFarabiTag: "The Second Teacher (872 - 950)",
         tFarabiBio: "Pioneer of Islamic political philosophy and author of « The Virtuous City ».",
         tSinaName: "Ibn Sina (Avicenna)",
         tSinaTag: "Prince of Physicians (980 - 1037)",
-        tSinaBio: "Author of « The Canon » and « The Book of Healing », genius of metaphysics and medicine.",
+        tSinaBio: "Author of « The Canon of Medicine » and « The Book of Healing », genius of metaphysics.",
         tRushdName: "Ibn Rushd (Averroes)",
         tRushdTag: "The Great Commentator (1126 - 1198)",
         tRushdBio: "Defender of reason and philosophy, author of « The Decisive Treatise ».",
         tKhaldunName: "Ibn Khaldun",
         tKhaldunTag: "Father of Sociology (1332 - 1406)",
         tKhaldunBio: "Author of « The Muqaddimah », founder of sociology and philosophy of history.",
-        badgeCardSoon: "Profile coming soon",
+        worksHeader: "Major Works:",
+        resSoon: "⏳ Resource coming soon",
+        btnReadBio: "View Biography →",
+        quranSectionTitle: "Quran & Hadith",
+        quranDisclaimer: "Referenced Quranic and Hadith content will be added progressively with verified sources.",
+        islamArticlesTitle: "Islamic Thought Articles & Studies",
+        islamArticlesSubtitle: "Deep editorial readings and research",
+        articlesComingTitle: "Upcoming Articles & Studies",
+        articlesComingDesc: "We are preparing new academic studies in Islamic philosophy, epistemology, and sociology.",
+        badgeSoon: "⏳ Articles coming soon",
         quoteHeader: "Timeless Wisdom & Quotes",
         quoteText: "« Wisdom is not merely knowledge, but the ability to place knowledge in its rightful place. »",
-        quoteSub: "— Essence of wisdom and enlightened thought —",
+        quoteSub: "— Anonymous Source of Wisdom —",
         roadmapTitle: "Coming Soon in Islamic Thought",
         roadmapDesc: "Continuous and updated content covering Islamic thought thesis and scientific heritage.",
         tagStudies: "New Studies",
@@ -836,6 +1120,230 @@
       localStorage.setItem('lang', lang);
     }
 
+        const PARCOURS_ISLAM_DATA = [
+      {
+        id: 'parcours-01-raison-revelation',
+        num: '01',
+        image: './images/islam_parcours_01.jpg',
+        title: {
+          ar: 'العقل والوحي',
+          fr: 'Raison & Révélation',
+          en: 'Reason & Revelation'
+        },
+        desc: {
+          ar: 'استكشاف العلاقات بين العقل والوحي والمعرفة والبحث عن الحقيقة في الفكر الإسلامي.',
+          fr: 'Explorer les rapports entre raison, révélation, connaissance et recherche de la vérité dans la pensée islamique.',
+          en: 'Explore the relationships between reason, revelation, knowledge, and truth-seeking in Islamic thought.'
+        },
+        principles: {
+          ar: ['العقل والنقل', 'مصادر المعرفة', 'البحث عن الحقيقة'],
+          fr: ['Raison et Tradition', 'Sources de la connaissance', 'Quête de la vérité'],
+          en: ['Reason and Tradition', 'Sources of Knowledge', 'Quest for Truth']
+        },
+        articles: [
+          {
+            url: '../files/raison-et-revelation.html',
+            title: {
+              ar: 'العقل والوحي في الفكر الإسلامي',
+              fr: 'Raison et Révélation dans la pensée islamique',
+              en: 'Reason and Revelation in Islamic Thought'
+            }
+          }
+        ],
+        thinkerIds: ['ghazali', 'ibnrushd']
+      },
+      {
+        id: 'parcours-02-philosophie-islamique',
+        num: '02',
+        image: './images/islam_parcours_02.jpg',
+        title: {
+          ar: 'الفلسفة الإسلامية',
+          fr: 'Philosophie islamique',
+          en: 'Islamic Philosophy'
+        },
+        desc: {
+          ar: 'اكتشاف الأسئلة الميتافيزيقية والفلسفية والفكرية الكبرى التي طورها المفكرون المسلمون.',
+          fr: 'Découvrir les grandes questions métaphysiques, philosophiques et intellectuelles développées par les penseurs musulmans.',
+          en: 'Discover major metaphysical, philosophical, and intellectual questions developed by Muslim thinkers.'
+        },
+        principles: {
+          ar: ['الوجود والماهية', 'العقل والفلسفة', 'الحكمة والمعرفة'],
+          fr: ['Existence et Essence', 'Raison et Philosophie', 'Sagesse et Connaissance'],
+          en: ['Existence and Essence', 'Reason and Philosophy', 'Wisdom and Knowledge']
+        },
+        articles: [],
+        thinkerIds: ['farabi', 'ibnsina', 'ibnrushd']
+      },
+      {
+        id: 'parcours-03-sagesse-ethique',
+        num: '03',
+        image: './images/islam_parcours_03.jpg',
+        title: {
+          ar: 'الحكمة والأخلاق',
+          fr: 'Sagesse & Éthique',
+          en: 'Wisdom & Ethics'
+        },
+        desc: {
+          ar: 'دراسة البحث عن الحكمة والتربية الأخلاقية وتزكية النفس في التراث الفكري الإسلامي.',
+          fr: 'Étudier la recherche de la sagesse, la formation morale et la purification intérieure dans la tradition intellectuelle islamique.',
+          en: 'Study the pursuit of wisdom, moral cultivation, and inner purification in the Islamic intellectual tradition.'
+        },
+        principles: {
+          ar: ['تهذيب النفس', 'الأخلاق والسلوك', 'الحكمة العملية'],
+          fr: ["Purification de l'âme", 'Éthique et Comportement', 'Sagesse pratique'],
+          en: ['Inner Purification', 'Ethics and Conduct', 'Practical Wisdom']
+        },
+        articles: [],
+        thinkerIds: ['ghazali', 'ibnsina']
+      },
+      {
+        id: 'parcours-04-science-connaissance',
+        num: '04',
+        image: './images/islam_parcours_04.jpg',
+        title: {
+          ar: 'العلم والمعرفة',
+          fr: 'Science & Connaissance',
+          en: 'Science & Knowledge'
+        },
+        desc: {
+          ar: 'استكشاف تصورات المعرفة والعلم والمنهج لدى كبار العلماء والمفكرين المسلمين.',
+          fr: 'Explorer les conceptions de la connaissance, de la science et de la méthode chez les grands savants et penseurs musulmans.',
+          en: 'Explore conceptions of knowledge, science, and method among great Muslim scholars and thinkers.'
+        },
+        principles: {
+          ar: ['مصادر العلم', 'منهج البحث', 'العقل والتجربة'],
+          fr: ['Sources de la science', 'Méthode de recherche', 'Raison et Expérience'],
+          en: ['Sources of Science', 'Research Method', 'Reason and Experience']
+        },
+        articles: [],
+        thinkerIds: ['farabi', 'ibnsina', 'ghazali']
+      },
+      {
+        id: 'parcours-05-civilisation-umran',
+        num: '05',
+        image: './images/islam_parcours_05.jpg',
+        title: {
+          ar: 'الحضارة والعمران',
+          fr: 'Civilisation & ʿUmrān',
+          en: 'Civilization & ʿUmrān'
+        },
+        desc: {
+          ar: 'فهم نشأة المجتمعات والحضارة والتغير التاريخي والديناميكيات البشرية.',
+          fr: 'Comprendre la formation des sociétés, la civilisation, le changement historique et les dynamiques humaines.',
+          en: 'Understand social formation, civilization, historical change, and human dynamics.'
+        },
+        principles: {
+          ar: ['العمران البشري', 'المجتمع والدولة', 'التغير الحضاري'],
+          fr: ['ʿUmrān (Civilisation humaine)', 'Société et État', 'Changement civilisaturel'],
+          en: ['ʿUmrān (Human Civilization)', 'Society and State', 'Civilizational Change']
+        },
+        articles: [],
+        thinkerIds: ['ibnkhaldun']
+      }
+    ];
+
+    function renderIslamParcours(lang) {
+      const grid = document.getElementById('islamParcoursGrid');
+      if (!grid) return;
+
+      const labels = {
+        ar: {
+          principlesHeader: "الأسس والأفكار الرئيسية",
+          articlesHeader: "المقالات والأبحاث المتاحة",
+          thinkersHeader: "الفلاسفة والمفكرون المرتبطون",
+          comingSoonBadge: "⏳ مقالات قادمة قريبًا"
+        },
+        fr: {
+          principlesHeader: "Principes & idées clés",
+          articlesHeader: "Articles disponibles",
+          thinkersHeader: "Penseurs associés",
+          comingSoonBadge: "⏳ Articles à venir"
+        },
+        en: {
+          principlesHeader: "Principles & Key Ideas",
+          articlesHeader: "Available articles",
+          thinkersHeader: "Associated thinkers",
+          comingSoonBadge: "⏳ Articles coming soon"
+        }
+      };
+
+      const trans = labels[lang] || labels.ar;
+      const allThinkers = (TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].thinkers) || [];
+
+      grid.innerHTML = PARCOURS_ISLAM_DATA.map(p => {
+        const title = p.title[lang] || p.title.ar;
+        const desc = p.desc[lang] || p.desc.ar;
+        const principlesList = (p.principles && (p.principles[lang] || p.principles.ar)) || [];
+        const articlesList = p.articles || [];
+        const thinkerIds = p.thinkerIds || [];
+
+        // Articles HTML (Real available articles or coming soon badge)
+        let articlesHtml = '';
+        if (articlesList.length > 0) {
+          articlesHtml = `
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px;">
+              ${articlesList.map(a => {
+                const aTitle = (a.title && (a.title[lang] || a.title.ar)) || '';
+                return `<li style="font-size: 0.84rem;"><a href="${a.url}" style="color: #E4C98A; text-decoration: none; font-weight: 600; transition: color 0.2s;">📄 ${aTitle} ←</a></li>`;
+              }).join('')}
+            </ul>
+          `;
+        } else {
+          articlesHtml = `
+            <div style="background: rgba(223, 177, 91, 0.08); border: 1px solid rgba(223, 177, 91, 0.25); color: #E4C98A; font-size: 0.8rem; font-weight: 700; border-radius: 20px; padding: 6px 14px; display: inline-flex; align-items: center; gap: 6px; width: fit-content;">
+              ${trans.comingSoonBadge}
+            </div>
+          `;
+        }
+
+        // Thinkers HTML (Pills linking to ../thinkers/?thinker=<id>)
+        let thinkersHtml = '';
+        if (thinkerIds.length > 0) {
+          thinkersHtml = thinkerIds.map(tid => {
+            const tObj = allThinkers.find(t => t.id === tid);
+            const tName = tObj ? tObj.name : tid;
+            return `<a href="../thinkers/?thinker=${tid}" style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 16px; background: rgba(223, 177, 91, 0.12); border: 1px solid rgba(223, 177, 91, 0.3); color: #FAF6EF; font-size: 0.8rem; font-weight: 700; text-decoration: none; transition: all 0.2s ease;">${tName}</a>`;
+          }).join('');
+        }
+
+        return `
+          <article class="islam-parcours-card" id="${p.id}" style="background: rgba(14, 22, 17, 0.85); border: 1px solid rgba(223, 177, 91, 0.18); border-radius: 20px; padding: 24px; display: flex; flex-direction: column; height: 100%; transition: all 0.35s ease;">
+            <div style="height: 150px; position: relative; overflow: hidden; border-radius: 14px; margin: -24px -24px 16px -24px;">
+              <img src="${p.image}" alt="${title}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+              <span style="position: absolute; top: 12px; right: 12px; background: rgba(10,15,12,0.85); border: 1px solid rgba(223, 177, 91, 0.4); color: #E4C98A; font-size: 0.82rem; font-weight: 800; padding: 4px 12px; border-radius: 20px;">${p.num}</span>
+            </div>
+
+            <div style="display: flex; flex-direction: column; flex-grow: 1;">
+              <h3 style="font-size: 1.25rem; color: #FAF6EF; font-family: 'Playfair Display', 'Amiri', serif; font-weight: 700; margin-bottom: 8px;">${title}</h3>
+              <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 14px; flex-grow: 1;">${desc}</p>
+
+              <!-- Principes -->
+              <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(223, 177, 91, 0.15);">
+                <div style="font-size: 0.78rem; font-weight: 700; color: #E4C98A; margin-bottom: 6px;">💡 ${trans.principlesHeader}</div>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px;">
+                  ${principlesList.map(princ => `<li style="font-size: 0.84rem; color: #D1D2CA; display: flex; align-items: baseline; gap: 6px;"><span style="color: var(--accent-gold, #DFB15B);">•</span> <span>${princ}</span></li>`).join('')}
+                </ul>
+              </div>
+
+              <!-- Articles -->
+              <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(223, 177, 91, 0.15);">
+                <div style="font-size: 0.78rem; font-weight: 700; color: #E4C98A; margin-bottom: 6px;">📖 ${trans.articlesHeader}</div>
+                ${articlesHtml}
+              </div>
+
+              <!-- Thinkers -->
+              <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(223, 177, 91, 0.15);">
+                <div style="font-size: 0.78rem; font-weight: 700; color: #E4C98A; margin-bottom: 6px;">◉ ${trans.thinkersHeader}</div>
+                <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                  ${thinkersHtml}
+                </div>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
     function updateLanguage(lang) {
       const data = ISLAM_PAGE_TRANSLATIONS[lang] || ISLAM_PAGE_TRANSLATIONS.ar;
       
@@ -846,6 +1354,22 @@
       const titleTag = document.getElementById('pageTitleTag');
       if (titleTag && data.pageTitle) titleTag.textContent = data.pageTitle;
 
+      // Update Meta Descriptions
+      const metaDesc = document.getElementById('metaDescTag');
+      if (metaDesc && data.metaDesc) metaDesc.setAttribute('content', data.metaDesc);
+
+      const ogTitle = document.getElementById('ogTitleTag');
+      if (ogTitle && data.pageTitle) ogTitle.setAttribute('content', data.pageTitle);
+
+      const ogDesc = document.getElementById('ogDescTag');
+      if (ogDesc && data.metaDesc) ogDesc.setAttribute('content', data.metaDesc);
+
+      const twTitle = document.getElementById('twTitleTag');
+      if (twTitle && data.pageTitle) twTitle.setAttribute('content', data.pageTitle);
+
+      const twDesc = document.getElementById('twDescTag');
+      if (twDesc && data.metaDesc) twDesc.setAttribute('content', data.metaDesc);
+
       // Update navbar active label
       const activeLangName = document.getElementById('activeLangName');
       if (activeLangName) activeLangName.textContent = (LANG_METADATA[lang] && LANG_METADATA[lang].label) || "العربية";
@@ -855,6 +1379,9 @@
         if (opt.getAttribute('data-lang') === lang) opt.classList.add('active');
         else opt.classList.remove('active');
       });
+
+      // Re-render Dynamic Parcours
+      renderIslamParcours(lang);
 
       // Update all translatable elements
       document.querySelectorAll('[data-i18n]').forEach(el => {
