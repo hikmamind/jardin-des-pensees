@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ar" data-theme="dark" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title id="pageTitle">الوقت والتركيز | تطوير الذات | حكمة ونور</title>
+  <meta name="description" id="pageMetaDesc" content="إدارة الانتباه والعمل العميق وحماية الوقت من المشتتات.">
+  <link rel="canonical" href="https://jardin-des-pensees.onrender.com/developpement-personnel/parcours/temps-concentration/">
+  <link rel="icon" type="image/png" href="../../../brand_logo_official.png">
+
+  <!-- Shared Stylesheets -->
+  <link rel="stylesheet" href="../../../style.css?v=16">
+  <link rel="stylesheet" href="../../dev_parcours.css">
+</head>
+<body>
+
+  <!-- Background Decorative Glowing Orbs -->
+  <div class="glowing-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Header Sticky Navigation Bar -->
+  <header class="navbar-header">
+    <nav class="navbar" aria-label="Navigation principale">
+      <a href="../../../" class="nav-brand" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+        <img src="../../../brand_logo_official.png" alt="حكمة ونور" class="brand-logo-img">
+        <div style="display: flex; flex-direction: column; line-height: 1.1; text-align: left;">
+          <span class="brand-name" style="font-size: 1.15rem; font-weight: 800; font-family: 'Playfair Display', serif; color: var(--text-primary);">HIKMA & NOUR</span>
+          <span style="font-size: 0.6rem; font-weight: 600; color: var(--text-secondary); letter-spacing: 0.5px;">الحكمة • الفلسفة • علم النفس</span>
+        </div>
+      </a>
+      
+      <button class="nav-hamburger" id="navHamburger" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <a href="../../../" class="nav-link" data-i18n="home">الرئيسية</a>
+        <a href="../../../philosophie/" class="nav-link" data-i18n="philosophy">الفلسفة</a>
+        <a href="../../../psychologie/" class="nav-link" data-i18n="psychologySub">علم النفس</a>
+        <a href="../../" class="nav-link active" data-i18n="development">تطوير الذات</a>
+        <a href="../../../sagesse/" class="nav-link" data-i18n="wisdom">الحكمة</a>
+        <a href="../../../thinkers/" class="nav-link" data-i18n="thinkers">الفلاسفة</a>
+        <a href="../../../quotes/" class="nav-link" data-i18n="quotes">اقتباسات</a>
+        <a href="../../../audio/" class="nav-link" data-i18n="audio">الصوتيات</a>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Language Selector -->
+        <div class="lang-selector">
+          <button class="lang-btn" id="langBtn" aria-label="تغيير اللغة">
+            <svg class="globe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px; height:16px;">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="activeLangName">العربية</span>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-opt active" data-lang="ar" aria-label="العربية">العربية</button>
+            <button class="lang-opt" data-lang="fr" aria-label="Français">Français</button>
+            <button class="lang-opt" data-lang="en" aria-label="English">English</button>
+          </div>
+        </div>
+
+        <button id="themeToggleBtn" class="theme-btn-nav" aria-label="Changer de thème">
+          <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="dev-page-container">
+    
+    <!-- 1. Fil d'Ariane -->
+    <nav class="breadcrumb-nav" aria-label="Fil d'Ariane du parcours">
+      <a href="../../../" id="bcHome">الرئيسية</a> &gt;
+      <a href="../../" id="bcDev">تطوير الذات</a> &gt;
+      <span id="bcCurrent">الوقت والتركيز</span>
+    </nav>
+
+    <!-- 2. Hero Section -->
+    <section class="dev-hero-box">
+      <img src="../../../overthinking_calm.jpg" alt="الوقت والتركيز" class="dev-hero-bg">
+      <div class="dev-hero-overlay"></div>
+      <div class="dev-hero-content">
+        <div class="dev-badge" id="parcoursBadge">🚀 المسار 04 • الوقت والتركيز</div>
+        <h1 class="dev-h1" id="parcoursSubtitle">إدارة الانتباه والعمل العميق</h1>
+        <p class="dev-intro" id="parcoursIntro">دليل عملي لاستعادة الانتباه في عصر تشتت الانتباه، وحماية الساعات الذهبية للعمل الفكري العميق والإنتاجية العالية.</p>
+      </div>
+    </section>
+
+    <!-- 3. Principes et Idées Clés -->
+    <section class="principles-section">
+      <h2 class="dev-section-heading" id="principlesHeading">
+        💡 الركائز والمبادئ العملية للمسار
+      </h2>
+      <div class="principles-grid" id="principlesGrid">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- 4. Articles Réellement Disponibles -->
+    <section class="articles-section">
+      <h2 class="dev-section-heading" id="articlesHeading">
+        📚 المقالات والأبحاث المتاحة في هذا المسار
+      </h2>
+      <div class="articles-grid" id="articlesGrid">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- 5. Figures et Auteurs Associés (Cartes Informatives) -->
+    <section class="figures-section">
+      <h2 class="dev-section-heading" id="figuresHeading">
+        👤 أبحاث ورؤى رواد التفكير والتطوير
+      </h2>
+      <div class="figures-grid" id="figuresGrid">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- 6. Plan d'Action / Exercice Pratique -->
+    <section class="exercise-section">
+      <h2 class="exercise-title" id="exerciseTitle">
+        🎯 تمرين عملي: تقنية البومودورو والتركيز
+      </h2>
+      <p class="exercise-desc" id="exerciseDesc">
+        قم ببرمجة 25 دقيقة من العمل الخالي تماماً من التشتيت يتبعها 5 دقائق استراحة لمدة 4 دورات.
+      </p>
+      <ul class="exercise-steps" id="exerciseSteps">
+        <!-- Rendered via JS -->
+      </ul>
+    </section>
+
+    <!-- 7. Bouton Retour Premium V5.3 -->
+    <section class="dev-back-section">
+      <a class="parcours-back-link" href="../../">
+        <span class="back-arrow" aria-hidden="true">←</span>
+        <span id="backBtnText" data-i18n="backToDevelopment">العودة إلى تطوير الذات</span>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" style="padding: 50px 24px 30px; border-top: 1px solid var(--card-border); margin-top: 48px; background: rgba(10, 15, 12, 0.95);">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; text-align: inherit;" class="footer-grid-layout">
+      <div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+          <img src="../../../brand_logo_official.png" alt="Hikma & Nour" style="width: 38px; height: 38px; object-fit: contain;">
+          <span style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 800; color: var(--accent-gold);">HIKMA & NOUR</span>
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.7; margin-bottom: 14px;" data-i18n="footerBrandDesc">
+          الحكمة • الفلسفة • علم النفس — مساحة للتأمل الرصين، حكمة كبار المفكرين وبناء القوة النفسية والهدوء الداخلي.
+        </p>
+      </div>
+
+      <div>
+        <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;" data-i18n="mainSitemap">الخريطة الرئيسية</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
+          <li><a href="../../../" style="color: var(--text-secondary); text-decoration: none;" data-i18n="home">الرئيسية</a></li>
+          <li><a href="../../../articles/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="articles">المقالات</a></li>
+          <li><a href="../../../thinkers/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="thinkers">الفلاسفة</a></li>
+          <li><a href="../../../quotes/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="quotes">اقتباسات</a></li>
+          <li><a href="../../../audio/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="audio">الصوتيات</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;" data-i18n="interactiveServices">خدمات ومحتوى تفاعلي</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
+          <li><a href="../../../philosophie/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="philosophy">الفلسفة</a></li>
+          <li><a href="../../../psychologie/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="psychologySub">علم النفس</a></li>
+          <li><a href="../../" style="color: var(--accent-gold); text-decoration: none; font-weight: 700;" data-i18n="development">تطوير الذات</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../../app_v11.js?v=28" type="module"></script>
+  <script type="module">
+    const PAGE_DATA = {
+  "slug": "temps-concentration",
+  "num": "04",
+  "image": "overthinking_calm.jpg",
+  "metaTitle": {
+    "ar": "الوقت والتركيز | تطوير الذات | حكمة ونور",
+    "fr": "Temps & Concentration | Développement Personnel | Hikma & Nour",
+    "en": "Time & Focus | Personal Development | Hikma & Nour"
+  },
+  "metaDesc": {
+    "ar": "إدارة الانتباه والعمل العميق وحماية الوقت من المشتتات.",
+    "fr": "Gestion de l'attention, travail profond et protection du temps.",
+    "en": "Attention management, deep work, and protecting time from distractions."
+  },
+  "title": {
+    "ar": "الوقت والتركيز",
+    "fr": "Temps & Concentration",
+    "en": "Time & Focus"
+  },
+  "subtitle": {
+    "ar": "إدارة الانتباه والعمل العميق",
+    "fr": "Gestion de l'attention et travail profond",
+    "en": "Attention Management and Deep Work"
+  },
+  "intro": {
+    "ar": "دليل عملي لاستعادة الانتباه في عصر تشتت الانتباه، وحماية الساعات الذهبية للعمل الفكري العميق والإنتاجية العالية.",
+    "fr": "Un guide pratique pour maîtriser son attention, éliminer les distractions et cultiver le travail profond.",
+    "en": "A practical guide to mastering attention, eliminating distractions, and cultivating deep work."
+  },
+  "principles": [
+    {
+      "num": "01",
+      "title": {
+        "ar": "حماية فترات العمل العميق",
+        "fr": "Protéger les périodes de travail profond",
+        "en": "Protect Deep Work Periods"
+      },
+      "text": {
+        "ar": "💡 خصص كتل زمنية خالية من أي تشتيت لإنجاز المهام الذكية والتركيز المعقد.",
+        "fr": "💡 Réservez des blocs de temps ininterrompus pour vos tâches le plus exigeantes.",
+        "en": "💡 Reserve uninterrupted time blocks for your most demanding cognitive tasks."
+      }
+    },
+    {
+      "num": "02",
+      "title": {
+        "ar": "تقليل المقاطعات الرقمية",
+        "fr": "Réduire les interruptions numériques",
+        "en": "Minimize Digital Interruptions"
+      },
+      "text": {
+        "ar": "💡 أغلق التنبيهات ونظم بيئة العمل لتخفيف التشتت العصبي المتكرر.",
+        "fr": "💡 Désactivez les notifications et structurez votre espace pour préserver votre attention.",
+        "en": "💡 Turn off notifications and structure your workspace to preserve focus."
+      }
+    },
+    {
+      "num": "03",
+      "title": {
+        "ar": "تنظيم الوقت حسْب الأهمية",
+        "fr": "Organiser le temps selon les priorités",
+        "en": "Organize Time Around Priorities"
+      },
+      "text": {
+        "ar": "💡 ركّز على الأعمال القليلة ذات الأثر الهائل بدلاً من الانشغال بالسطحيات.",
+        "fr": "💡 Concentrez-vous sur les actions à fort impact plutôt que sur les tâches secondaires.",
+        "en": "💡 Focus on high-impact actions rather than getting consumed by minor tasks."
+      }
+    }
+  ],
+  "articles": [
+    {
+      "id": "self-discipline",
+      "url": "../../../files/self-discipline.html",
+      "thumb": "../../../self_discipline.jpg",
+      "title": {
+        "ar": "الانضباط الذاتي: دليل التطوير المستمر",
+        "fr": "L'Autodiscipline : Guide du Développement Continu",
+        "en": "Self-Discipline: Guide to Continuous Growth"
+      },
+      "desc": {
+        "ar": "استراتيجيات عمليّة لتطوير قوة الإرادة والتركيز.",
+        "fr": "Des stratégies pour renforcer le calme et la concentration.",
+        "en": "Strategies to strengthen calm and deep focus."
+      }
+    },
+    {
+      "id": "7-habits",
+      "url": "../../../articles/7-habits/",
+      "thumb": "../../../atomic-habits.jpg",
+      "title": {
+        "ar": "العادات السبع للأشخاص الأكثر فعالية",
+        "fr": "Les 7 Habitudes de Ceux qui Réussissent Tout ce qu'ils Entreprennent",
+        "en": "The 7 Habits of Highly Effective People"
+      },
+      "desc": {
+        "ar": "ترتيب الأولويات وإدارة الوقت وفق مربع الأهمية.",
+        "fr": "Gestion du temps et organisation des priorités.",
+        "en": "Time management and prioritizing important tasks."
+      }
+    }
+  ],
+  "figures": [
+    {
+      "name": "Mihály Csíkszentmihályi",
+      "role": {
+        "ar": "عالم نفس",
+        "fr": "Psychologue",
+        "en": "Psychologist"
+      },
+      "bio": {
+        "ar": "رائد أبحاث الانغماس الفكري والشغف بالعمل العالي التركيز.",
+        "fr": "Pionnier du concept d'immersion et de concentration optimale.",
+        "en": "Pioneer of the optimal focus and cognitive flow concept."
+      },
+      "icon": "⏱️"
+    },
+    {
+      "name": "Angela Duckworth",
+      "role": {
+        "ar": "باحثة في العزيمة والتركيز",
+        "fr": "Chercheuse en Persévérance",
+        "en": "Grit & Focus Researcher"
+      },
+      "bio": {
+        "ar": "باحثة في مفهوم العزيمة والتركيز الطويل الأجل على الهدف.",
+        "fr": "Autrice des recherches sur la persévérance et la passion à long terme.",
+        "en": "Researcher on grit, perseverance, and long-term goal focus."
+      },
+      "icon": "📊"
+    }
+  ],
+  "exercise": {
+    "title": {
+      "ar": "🎯 تمرين عملي: تقنية البومودورو والتركيز",
+      "fr": "🎯 Exercice pratique : La méthode Pomodoro",
+      "en": "🎯 Practical Exercise: The Pomodoro Technique"
+    },
+    "desc": {
+      "ar": "قم ببرمجة 25 دقيقة من العمل الخالي تماماً من التشتيت يتبعها 5 دقائق استراحة لمدة 4 دورات.",
+      "fr": "Effectuez 25 minutes de travail concentré sans aucune distraction, suivies de 5 minutes de pause.",
+      "en": "Perform 25 minutes of completely distraction-free work followed by a 5-minute break."
+    },
+    "steps": [
+      {
+        "label": {
+          "ar": "الخطوة ١",
+          "fr": "Étape 1",
+          "en": "Step 1"
+        },
+        "text": {
+          "ar": "أبعد الهاتف وأغلق التبويبات الثانوية.",
+          "fr": "Éloignez votre téléphone et fermez les onglets inutiles.",
+          "en": "Put your phone away and close unnecessary tabs."
+        }
+      },
+      {
+        "label": {
+          "ar": "الخطوة ٢",
+          "fr": "Étape 2",
+          "en": "Step 2"
+        },
+        "text": {
+          "ar": "ضبط المؤقت لمدة 25 دقيقة عمل مركز.",
+          "fr": "Réglez un minuteur sur 25 minutes de concentration absolue.",
+          "en": "Set a timer for 25 minutes of absolute focus."
+        }
+      },
+      {
+        "label": {
+          "ar": "الخطوة ٣",
+          "fr": "Étape 3",
+          "en": "Step 3"
+        },
+        "text": {
+          "ar": "خذ 5 دقائق راحة استرخاء.",
+          "fr": "Prenez 5 minutes de pause complète.",
+          "en": "Take a complete 5-minute break."
+        }
+      }
+    ]
+  }
+};
+
+    function getSavedLang() {
+      return localStorage.getItem('site_lang_v1') || localStorage.getItem('lang') || 'ar';
+    }
+
+    function renderPage(lang) {
+      document.documentElement.setAttribute('lang', lang);
+      document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+      // Title & Meta
+      document.getElementById('pageTitle').textContent = PAGE_DATA.metaTitle[lang] || PAGE_DATA.metaTitle.ar;
+      document.getElementById('pageMetaDesc').setAttribute('content', PAGE_DATA.metaDesc[lang] || PAGE_DATA.metaDesc.ar);
+
+      // Breadcrumbs
+      document.getElementById('bcHome').textContent = lang === 'ar' ? 'الرئيسية' : (lang === 'fr' ? 'Accueil' : 'Home');
+      document.getElementById('bcDev').textContent = lang === 'ar' ? 'تطوير الذات' : (lang === 'fr' ? 'Développement Personnel' : 'Personal Development');
+      document.getElementById('bcCurrent').textContent = PAGE_DATA.title[lang] || PAGE_DATA.title.ar;
+
+      // Hero
+      document.getElementById('parcoursBadge').textContent = '🚀 ' + (lang === 'ar' ? 'المسار ' : (lang === 'fr' ? 'Parcours ' : 'Pathway ')) + PAGE_DATA.num + ' • ' + (PAGE_DATA.title[lang] || PAGE_DATA.title.ar);
+      document.getElementById('parcoursSubtitle').textContent = PAGE_DATA.subtitle[lang] || PAGE_DATA.subtitle.ar;
+      document.getElementById('parcoursIntro').textContent = PAGE_DATA.intro[lang] || PAGE_DATA.intro.ar;
+
+      // Principles Grid
+      document.getElementById('principlesHeading').textContent = lang === 'ar' ? '💡 الركائز والمبادئ العملية للمسار' : (lang === 'fr' ? '💡 Principes & idées clés du parcours' : '💡 Key Principles & Core Ideas');
+      const principlesGrid = document.getElementById('principlesGrid');
+      principlesGrid.innerHTML = PAGE_DATA.principles.map(p => {
+        const pTitle = p.title[lang] || p.title.ar;
+        const pText = p.text[lang] || p.text.ar;
+        return `
+          <div class="principle-card">
+            <span class="principle-num">${p.num}</span>
+            <h3 style="font-size: 1.15rem; color: var(--accent-gold-bright); font-family: var(--font-serif); margin: 0;">${pTitle}</h3>
+            <p class="principle-text">${pText}</p>
+          </div>
+        `;
+      }).join('');
+
+      // Articles Grid
+      document.getElementById('articlesHeading').textContent = lang === 'ar' ? '📚 المقالات والأبحاث المتاحة في هذا المسار' : (lang === 'fr' ? '📚 Articles & études disponibles dans ce parcours' : '📚 Available Articles & Studies');
+      const readArtText = lang === 'ar' ? 'اقرأ المقال ←' : (lang === 'fr' ? 'Lire l\'article →' : 'Read article →');
+      
+      const articlesGrid = document.getElementById('articlesGrid');
+      if (PAGE_DATA.articles && PAGE_DATA.articles.length > 0) {
+        articlesGrid.innerHTML = PAGE_DATA.articles.map(art => {
+          const aTitle = art.title[lang] || art.title.ar;
+          const aDesc = art.desc[lang] || art.desc.ar;
+          return `
+            <a href="${art.url}" class="article-card-visual">
+              <div class="article-thumb-box">
+                <img src="${art.thumb}" alt="${aTitle}" class="article-thumb-img" loading="lazy" onerror="this.onerror=null; this.src='../../../articles_page_hero.jpg';">
+              </div>
+              <div class="article-card-body">
+                <div>
+                  <span class="article-badge">🚀 article</span>
+                  <h3 class="article-title">${aTitle}</h3>
+                  <p class="article-desc">${aDesc}</p>
+                </div>
+                <span class="article-btn-link">${readArtText}</span>
+              </div>
+            </a>
+          `;
+        }).join('');
+      } else {
+        const comingSoonMsg = lang === 'ar' ? '⏳ مقالات قادمة قريبًا' : (lang === 'fr' ? '⏳ Articles à venir' : '⏳ Articles coming soon');
+        articlesGrid.innerHTML = `
+          <div style="background: rgba(201, 168, 106, 0.08); border: 1.5px dashed rgba(201, 168, 106, 0.35); border-radius: 20px; padding: 35px; text-align: center; color: var(--accent-gold, #C9A86A); font-size: 1.15rem; font-weight: 700; grid-column: 1 / -1;">
+            ${comingSoonMsg}
+          </div>
+        `;
+      }
+
+      // Figures Section
+      document.getElementById('figuresHeading').textContent = lang === 'ar' ? '👤 أبحاث ورؤى رواد التفكير والتطوير' : (lang === 'fr' ? '👤 Figures & chercheurs associés' : '👤 Key Researchers & Thinkers');
+      const figuresGrid = document.getElementById('figuresGrid');
+      figuresGrid.innerHTML = PAGE_DATA.figures.map(fig => {
+        const fRole = fig.role[lang] || fig.role.ar;
+        const fBio = fig.bio[lang] || fig.bio.ar;
+        return `
+          <div class="figure-card-visual">
+            <div class="figure-avatar-box">${fig.icon}</div>
+            <h3 class="figure-name">${fig.name}</h3>
+            <div class="figure-role">${fRole}</div>
+            <p class="figure-bio">${fBio}</p>
+          </div>
+        `;
+      }).join('');
+
+      // Exercise Section
+      document.getElementById('exerciseTitle').textContent = PAGE_DATA.exercise.title[lang] || PAGE_DATA.exercise.title.ar;
+      document.getElementById('exerciseDesc').textContent = PAGE_DATA.exercise.desc[lang] || PAGE_DATA.exercise.desc.ar;
+      const exerciseSteps = document.getElementById('exerciseSteps');
+      exerciseSteps.innerHTML = PAGE_DATA.exercise.steps.map(s => {
+        const stepLabel = s.label[lang] || s.label.ar;
+        const stepText = s.text[lang] || s.text.ar;
+        return `
+          <li class="exercise-step-item">
+            <strong>${stepLabel}:</strong> ${stepText}
+          </li>
+        `;
+      }).join('');
+
+      // Back Button Text
+      document.getElementById('backBtnText').textContent = lang === 'ar' ? 'العودة إلى تطوير الذات' : (lang === 'fr' ? 'Retour au Développement Personnel' : 'Back to Personal Development');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderPage(getSavedLang());
+    });
+    if (document.readyState === 'interactive' || document.readyState === 'complete') {
+      renderPage(getSavedLang());
+    }
+
+    window.addEventListener('siteLanguageChanged', (e) => {
+      if (e && e.detail && e.detail.lang) {
+        renderPage(e.detail.lang);
+      } else {
+        renderPage(getSavedLang());
+      }
+    });
+  </script>
+</body>
+</html>

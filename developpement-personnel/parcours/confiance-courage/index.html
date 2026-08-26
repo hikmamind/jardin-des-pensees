@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ar" data-theme="dark" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title id="pageTitle">الثقة والشجاعة | تطوير الذات | حكمة ونور</title>
+  <meta name="description" id="pageMetaDesc" content="التقدير الذاتي وتجاوز المخاوف واتخاذ القرارات الجريئة والأصيلة.">
+  <link rel="canonical" href="https://jardin-des-pensees.onrender.com/developpement-personnel/parcours/confiance-courage/">
+  <link rel="icon" type="image/png" href="../../../brand_logo_official.png">
+
+  <!-- Shared Stylesheets -->
+  <link rel="stylesheet" href="../../../style.css?v=16">
+  <link rel="stylesheet" href="../../dev_parcours.css">
+</head>
+<body>
+
+  <!-- Background Decorative Glowing Orbs -->
+  <div class="glowing-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Header Sticky Navigation Bar -->
+  <header class="navbar-header">
+    <nav class="navbar" aria-label="Navigation principale">
+      <a href="../../../" class="nav-brand" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+        <img src="../../../brand_logo_official.png" alt="حكمة ونور" class="brand-logo-img">
+        <div style="display: flex; flex-direction: column; line-height: 1.1; text-align: left;">
+          <span class="brand-name" style="font-size: 1.15rem; font-weight: 800; font-family: 'Playfair Display', serif; color: var(--text-primary);">HIKMA & NOUR</span>
+          <span style="font-size: 0.6rem; font-weight: 600; color: var(--text-secondary); letter-spacing: 0.5px;">الحكمة • الفلسفة • علم النفس</span>
+        </div>
+      </a>
+      
+      <button class="nav-hamburger" id="navHamburger" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <a href="../../../" class="nav-link" data-i18n="home">الرئيسية</a>
+        <a href="../../../philosophie/" class="nav-link" data-i18n="philosophy">الفلسفة</a>
+        <a href="../../../psychologie/" class="nav-link" data-i18n="psychologySub">علم النفس</a>
+        <a href="../../" class="nav-link active" data-i18n="development">تطوير الذات</a>
+        <a href="../../../sagesse/" class="nav-link" data-i18n="wisdom">الحكمة</a>
+        <a href="../../../thinkers/" class="nav-link" data-i18n="thinkers">الفلاسفة</a>
+        <a href="../../../quotes/" class="nav-link" data-i18n="quotes">اقتباسات</a>
+        <a href="../../../audio/" class="nav-link" data-i18n="audio">الصوتيات</a>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Language Selector -->
+        <div class="lang-selector">
+          <button class="lang-btn" id="langBtn" aria-label="تغيير اللغة">
+            <svg class="globe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px; height:16px;">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="activeLangName">العربية</span>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-opt active" data-lang="ar" aria-label="العربية">العربية</button>
+            <button class="lang-opt" data-lang="fr" aria-label="Français">Français</button>
+            <button class="lang-opt" data-lang="en" aria-label="English">English</button>
+          </div>
+        </div>
+
+        <button id="themeToggleBtn" class="theme-btn-nav" aria-label="Changer de thème">
+          <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="dev-page-container">
+    
+    <!-- 1. Fil d'Ariane -->
+    <nav class="breadcrumb-nav" aria-label="Fil d'Ariane du parcours">
+      <a href="../../../" id="bcHome">الرئيسية</a> &gt;
+      <a href="../../" id="bcDev">تطوير الذات</a> &gt;
+      <span id="bcCurrent">الثقة والشجاعة</span>
+    </nav>
+
+    <!-- 2. Hero Section -->
+    <section class="dev-hero-box">
+      <img src="../../../dev_confidence_hd.jpg" alt="الثقة والشجاعة" class="dev-hero-bg">
+      <div class="dev-hero-overlay"></div>
+      <div class="dev-hero-content">
+        <div class="dev-badge" id="parcoursBadge">🚀 المسار 03 • الثقة والشجاعة</div>
+        <h1 class="dev-h1" id="parcoursSubtitle">التقدير الذاتي واتخاذ القرار بشجاعة</h1>
+        <p class="dev-intro" id="parcoursIntro">مسار متكامل لبناء الصلابة النفسية، وتجاوز الشكوك الذاتية، ومواجهة المخاوف عبر الفعل المباشر والقرارات الحازمة.</p>
+      </div>
+    </section>
+
+    <!-- 3. Principes et Idées Clés -->
+    <section class="principles-section">
+      <h2 class="dev-section-heading" id="principlesHeading">
+        💡 الركائز والمبادئ العملية للمسار
+      </h2>
+      <div class="principles-grid" id="principlesGrid">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- 4. Articles Réellement Disponibles -->
+    <section class="articles-section">
+      <h2 class="dev-section-heading" id="articlesHeading">
+        📚 المقالات والأبحاث المتاحة في هذا المسار
+      </h2>
+      <div class="articles-grid" id="articlesGrid">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- 5. Figures et Auteurs Associés (Cartes Informatives) -->
+    <section class="figures-section">
+      <h2 class="dev-section-heading" id="figuresHeading">
+        👤 أبحاث ورؤى رواد التفكير والتطوير
+      </h2>
+      <div class="figures-grid" id="figuresGrid">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- 6. Plan d'Action / Exercice Pratique -->
+    <section class="exercise-section">
+      <h2 class="exercise-title" id="exerciseTitle">
+        🎯 تمرين عملي: سلم مواجهة الخوف
+      </h2>
+      <p class="exercise-desc" id="exerciseDesc">
+        حدد موقفاً يشعرك بالتردد، واكتب خطوة صغيرة واحدة يمكنك اتخاذها اليوم لمواجهته.
+      </p>
+      <ul class="exercise-steps" id="exerciseSteps">
+        <!-- Rendered via JS -->
+      </ul>
+    </section>
+
+    <!-- 7. Bouton Retour Premium V5.3 -->
+    <section class="dev-back-section">
+      <a class="parcours-back-link" href="../../">
+        <span class="back-arrow" aria-hidden="true">←</span>
+        <span id="backBtnText" data-i18n="backToDevelopment">العودة إلى تطوير الذات</span>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" style="padding: 50px 24px 30px; border-top: 1px solid var(--card-border); margin-top: 48px; background: rgba(10, 15, 12, 0.95);">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; text-align: inherit;" class="footer-grid-layout">
+      <div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+          <img src="../../../brand_logo_official.png" alt="Hikma & Nour" style="width: 38px; height: 38px; object-fit: contain;">
+          <span style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 800; color: var(--accent-gold);">HIKMA & NOUR</span>
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.7; margin-bottom: 14px;" data-i18n="footerBrandDesc">
+          الحكمة • الفلسفة • علم النفس — مساحة للتأمل الرصين، حكمة كبار المفكرين وبناء القوة النفسية والهدوء الداخلي.
+        </p>
+      </div>
+
+      <div>
+        <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;" data-i18n="mainSitemap">الخريطة الرئيسية</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
+          <li><a href="../../../" style="color: var(--text-secondary); text-decoration: none;" data-i18n="home">الرئيسية</a></li>
+          <li><a href="../../../articles/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="articles">المقالات</a></li>
+          <li><a href="../../../thinkers/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="thinkers">الفلاسفة</a></li>
+          <li><a href="../../../quotes/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="quotes">اقتباسات</a></li>
+          <li><a href="../../../audio/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="audio">الصوتيات</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;" data-i18n="interactiveServices">خدمات ومحتوى تفاعلي</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
+          <li><a href="../../../philosophie/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="philosophy">الفلسفة</a></li>
+          <li><a href="../../../psychologie/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="psychologySub">علم النفس</a></li>
+          <li><a href="../../" style="color: var(--accent-gold); text-decoration: none; font-weight: 700;" data-i18n="development">تطوير الذات</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../../app_v11.js?v=28" type="module"></script>
+  <script type="module">
+    const PAGE_DATA = {
+  "slug": "confiance-courage",
+  "num": "03",
+  "image": "dev_confidence_hd.jpg",
+  "metaTitle": {
+    "ar": "الثقة والشجاعة | تطوير الذات | حكمة ونور",
+    "fr": "Confiance & Courage | Développement Personnel | Hikma & Nour",
+    "en": "Confidence & Courage | Personal Development | Hikma & Nour"
+  },
+  "metaDesc": {
+    "ar": "التقدير الذاتي وتجاوز المخاوف واتخاذ القرارات الجريئة والأصيلة.",
+    "fr": "Estime de soi, dépassement des peurs et prise de décision authentique.",
+    "en": "Self-esteem, overcoming fears, and making authentic decisions."
+  },
+  "title": {
+    "ar": "الثقة والشجاعة",
+    "fr": "Confiance & Courage",
+    "en": "Confidence & Courage"
+  },
+  "subtitle": {
+    "ar": "التقدير الذاتي واتخاذ القرار بشجاعة",
+    "fr": "Estime de soi et prise de décision",
+    "en": "Self-Esteem and Decision-Making"
+  },
+  "intro": {
+    "ar": "مسار متكامل لبناء الصلابة النفسية، وتجاوز الشكوك الذاتية، ومواجهة المخاوف عبر الفعل المباشر والقرارات الحازمة.",
+    "fr": "Un parcours d'affirmation de soi pour surmonter le doute, faire face aux peurs et décider avec assurance.",
+    "en": "A pathway for self-affirmation to overcome doubt, face fears, and make confident decisions."
+  },
+  "principles": [
+    {
+      "num": "01",
+      "title": {
+        "ar": "بناء الثقة عبر الفعل المباشر",
+        "fr": "Construire la confiance par l'action",
+        "en": "Build Confidence Through Action"
+      },
+      "text": {
+        "ar": "💡 الثقة لا تسبق العمل بل تتبعه؛ الفعل الشجاع هو الذي يصنع الشعور بالقوة.",
+        "fr": "💡 La confiance ne précède pas l'action, elle en découle ; l'acte courageux génère l'assurance.",
+        "en": "💡 Confidence follows action rather than preceding it; brave steps generate inner strength."
+      }
+    },
+    {
+      "num": "02",
+      "title": {
+        "ar": "التمييز بين الخوف والخطر",
+        "fr": "Distinguer le risque réel de la peur imaginée",
+        "en": "Distinguish Real Risk from Imagined Fear"
+      },
+      "text": {
+        "ar": "💡 فكّك التخوفات الذهنية وقيّم المخاطر الفعلية بعقلانية بعيداً عن التضخيم.",
+        "fr": "💡 Analysez objectivement les risques réels et séparez-les des angoisses imaginaires.",
+        "en": "💡 Objectively analyze real risks and separate them from imaginary anxieties."
+      }
+    },
+    {
+      "num": "03",
+      "title": {
+        "ar": "اتخاذ قرارات متناسقة مع القيم",
+        "fr": "Prendre des décisions cohérentes avec ses valeurs",
+        "en": "Make Decisions Consistent with Values"
+      },
+      "text": {
+        "ar": "💡 الشجاعة الحقيقية هي الثبات على مبادئك حتى عند مواجهة الرفض أو التردد.",
+        "fr": "💡 Le vrai courage consiste à agir selon ses principes malgré la pression extérieure.",
+        "en": "💡 True courage means standing by your principles despite external pressures."
+      }
+    }
+  ],
+  "articles": [
+    {
+      "id": "true-confidence-inside",
+      "url": "../../../articles/true-confidence-inside.html",
+      "thumb": "../../../articles/mirror_stronger_self.jpg",
+      "title": {
+        "ar": "الثقة الحقيقية بالنفس تنبع من الداخل",
+        "fr": "La Véritable Confiance en Soi Vient de L'Intérieur",
+        "en": "True Self-Confidence Comes from Within"
+      },
+      "desc": {
+        "ar": "دراسة عميقة في بناء الصلابة النفسية وتجاوز الشكوك الذاتية.",
+        "fr": "Une étude approfondie sur la construction de la résilience psychologique.",
+        "en": "An in-depth study on building psychological resilience."
+      }
+    }
+  ],
+  "figures": [
+    {
+      "name": "Albert Bandura",
+      "role": {
+        "ar": "عالم نفس وباحث الكفاءة الذاتية",
+        "fr": "Psychologue & Chercheur en Auto-efficacité",
+        "en": "Psychologist & Self-Efficacy Researcher"
+      },
+      "bio": {
+        "ar": "صاحب نظرية الفعالية الذاتية وبناء الإيمان بالقدرة الشخصية.",
+        "fr": "Pionnier du concept d'auto-efficacité (Self-Efficacy).",
+        "en": "Pioneer of the Self-Efficacy framework in psychology."
+      },
+      "icon": "🧠"
+    },
+    {
+      "name": "William James",
+      "role": {
+        "ar": "فيلسوف ونفساني",
+        "fr": "Philosophe & Psychologue",
+        "en": "Philosopher & Psychologist"
+      },
+      "bio": {
+        "ar": "مؤكد أن الفعل هو الذي يحرك المشاعر ويشكل الشجاعة.",
+        "fr": "Penseur de l'action créatrice et de la maîtrise émotionnelle.",
+        "en": "Promoter of creative action shaping emotional courage."
+      },
+      "icon": "🏛️"
+    }
+  ],
+  "exercise": {
+    "title": {
+      "ar": "🎯 تمرين عملي: سلم مواجهة الخوف",
+      "fr": "🎯 Exercice pratique : L'échelle de confrontation",
+      "en": "🎯 Practical Exercise: The Exposure Ladder"
+    },
+    "desc": {
+      "ar": "حدد موقفاً يشعرك بالتردد، واكتب خطوة صغيرة واحدة يمكنك اتخاذها اليوم لمواجهته.",
+      "fr": "Identifiez une situation qui suscite l'hésitation et accomplissez une micro-action dès aujourd'hui.",
+      "en": "Identify one situation causing hesitation and take one micro-action today to face it."
+    },
+    "steps": [
+      {
+        "label": {
+          "ar": "الخطوة ١",
+          "fr": "Étape 1",
+          "en": "Step 1"
+        },
+        "text": {
+          "ar": "دون المخاوف أو القرار المعطل.",
+          "fr": "Notez la décision ou la peur qui vous freine.",
+          "en": "Note down the decision or fear holding you back."
+        }
+      },
+      {
+        "label": {
+          "ar": "الخطوة ٢",
+          "fr": "Étape 2",
+          "en": "Step 2"
+        },
+        "text": {
+          "ar": "اكتب أسوأ سيناريو محتمل وقيّم حقيقته.",
+          "fr": "Évaluez le pire scénario réel et vos moyens d'y repondre.",
+          "en": "Evaluate the worst-case scenario and your coping response."
+        }
+      },
+      {
+        "label": {
+          "ar": "الخطوة ٣",
+          "fr": "Étape 3",
+          "en": "Step 3"
+        },
+        "text": {
+          "ar": "قم بالفعل الأول الشجاع فوراً.",
+          "fr": "Passez immédiatement à la première action.",
+          "en": "Take immediate action on step one."
+        }
+      }
+    ]
+  }
+};
+
+    function getSavedLang() {
+      return localStorage.getItem('site_lang_v1') || localStorage.getItem('lang') || 'ar';
+    }
+
+    function renderPage(lang) {
+      document.documentElement.setAttribute('lang', lang);
+      document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+      // Title & Meta
+      document.getElementById('pageTitle').textContent = PAGE_DATA.metaTitle[lang] || PAGE_DATA.metaTitle.ar;
+      document.getElementById('pageMetaDesc').setAttribute('content', PAGE_DATA.metaDesc[lang] || PAGE_DATA.metaDesc.ar);
+
+      // Breadcrumbs
+      document.getElementById('bcHome').textContent = lang === 'ar' ? 'الرئيسية' : (lang === 'fr' ? 'Accueil' : 'Home');
+      document.getElementById('bcDev').textContent = lang === 'ar' ? 'تطوير الذات' : (lang === 'fr' ? 'Développement Personnel' : 'Personal Development');
+      document.getElementById('bcCurrent').textContent = PAGE_DATA.title[lang] || PAGE_DATA.title.ar;
+
+      // Hero
+      document.getElementById('parcoursBadge').textContent = '🚀 ' + (lang === 'ar' ? 'المسار ' : (lang === 'fr' ? 'Parcours ' : 'Pathway ')) + PAGE_DATA.num + ' • ' + (PAGE_DATA.title[lang] || PAGE_DATA.title.ar);
+      document.getElementById('parcoursSubtitle').textContent = PAGE_DATA.subtitle[lang] || PAGE_DATA.subtitle.ar;
+      document.getElementById('parcoursIntro').textContent = PAGE_DATA.intro[lang] || PAGE_DATA.intro.ar;
+
+      // Principles Grid
+      document.getElementById('principlesHeading').textContent = lang === 'ar' ? '💡 الركائز والمبادئ العملية للمسار' : (lang === 'fr' ? '💡 Principes & idées clés du parcours' : '💡 Key Principles & Core Ideas');
+      const principlesGrid = document.getElementById('principlesGrid');
+      principlesGrid.innerHTML = PAGE_DATA.principles.map(p => {
+        const pTitle = p.title[lang] || p.title.ar;
+        const pText = p.text[lang] || p.text.ar;
+        return `
+          <div class="principle-card">
+            <span class="principle-num">${p.num}</span>
+            <h3 style="font-size: 1.15rem; color: var(--accent-gold-bright); font-family: var(--font-serif); margin: 0;">${pTitle}</h3>
+            <p class="principle-text">${pText}</p>
+          </div>
+        `;
+      }).join('');
+
+      // Articles Grid
+      document.getElementById('articlesHeading').textContent = lang === 'ar' ? '📚 المقالات والأبحاث المتاحة في هذا المسار' : (lang === 'fr' ? '📚 Articles & études disponibles dans ce parcours' : '📚 Available Articles & Studies');
+      const readArtText = lang === 'ar' ? 'اقرأ المقال ←' : (lang === 'fr' ? 'Lire l\'article →' : 'Read article →');
+      
+      const articlesGrid = document.getElementById('articlesGrid');
+      if (PAGE_DATA.articles && PAGE_DATA.articles.length > 0) {
+        articlesGrid.innerHTML = PAGE_DATA.articles.map(art => {
+          const aTitle = art.title[lang] || art.title.ar;
+          const aDesc = art.desc[lang] || art.desc.ar;
+          return `
+            <a href="${art.url}" class="article-card-visual">
+              <div class="article-thumb-box">
+                <img src="${art.thumb}" alt="${aTitle}" class="article-thumb-img" loading="lazy" onerror="this.onerror=null; this.src='../../../articles_page_hero.jpg';">
+              </div>
+              <div class="article-card-body">
+                <div>
+                  <span class="article-badge">🚀 article</span>
+                  <h3 class="article-title">${aTitle}</h3>
+                  <p class="article-desc">${aDesc}</p>
+                </div>
+                <span class="article-btn-link">${readArtText}</span>
+              </div>
+            </a>
+          `;
+        }).join('');
+      } else {
+        const comingSoonMsg = lang === 'ar' ? '⏳ مقالات قادمة قريبًا' : (lang === 'fr' ? '⏳ Articles à venir' : '⏳ Articles coming soon');
+        articlesGrid.innerHTML = `
+          <div style="background: rgba(201, 168, 106, 0.08); border: 1.5px dashed rgba(201, 168, 106, 0.35); border-radius: 20px; padding: 35px; text-align: center; color: var(--accent-gold, #C9A86A); font-size: 1.15rem; font-weight: 700; grid-column: 1 / -1;">
+            ${comingSoonMsg}
+          </div>
+        `;
+      }
+
+      // Figures Section
+      document.getElementById('figuresHeading').textContent = lang === 'ar' ? '👤 أبحاث ورؤى رواد التفكير والتطوير' : (lang === 'fr' ? '👤 Figures & chercheurs associés' : '👤 Key Researchers & Thinkers');
+      const figuresGrid = document.getElementById('figuresGrid');
+      figuresGrid.innerHTML = PAGE_DATA.figures.map(fig => {
+        const fRole = fig.role[lang] || fig.role.ar;
+        const fBio = fig.bio[lang] || fig.bio.ar;
+        return `
+          <div class="figure-card-visual">
+            <div class="figure-avatar-box">${fig.icon}</div>
+            <h3 class="figure-name">${fig.name}</h3>
+            <div class="figure-role">${fRole}</div>
+            <p class="figure-bio">${fBio}</p>
+          </div>
+        `;
+      }).join('');
+
+      // Exercise Section
+      document.getElementById('exerciseTitle').textContent = PAGE_DATA.exercise.title[lang] || PAGE_DATA.exercise.title.ar;
+      document.getElementById('exerciseDesc').textContent = PAGE_DATA.exercise.desc[lang] || PAGE_DATA.exercise.desc.ar;
+      const exerciseSteps = document.getElementById('exerciseSteps');
+      exerciseSteps.innerHTML = PAGE_DATA.exercise.steps.map(s => {
+        const stepLabel = s.label[lang] || s.label.ar;
+        const stepText = s.text[lang] || s.text.ar;
+        return `
+          <li class="exercise-step-item">
+            <strong>${stepLabel}:</strong> ${stepText}
+          </li>
+        `;
+      }).join('');
+
+      // Back Button Text
+      document.getElementById('backBtnText').textContent = lang === 'ar' ? 'العودة إلى تطوير الذات' : (lang === 'fr' ? 'Retour au Développement Personnel' : 'Back to Personal Development');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderPage(getSavedLang());
+    });
+    if (document.readyState === 'interactive' || document.readyState === 'complete') {
+      renderPage(getSavedLang());
+    }
+
+    window.addEventListener('siteLanguageChanged', (e) => {
+      if (e && e.detail && e.detail.lang) {
+        renderPage(e.detail.lang);
+      } else {
+        renderPage(getSavedLang());
+      }
+    });
+  </script>
+</body>
+</html>

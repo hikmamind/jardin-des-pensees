@@ -516,6 +516,27 @@
       justify-content: center;
       grid-column: 1 / -1;
     }
+  
+  /* Dev Parcours Physical Link Cards */
+  .dev-parcours-card,
+  .dev-parcours-card:visited {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+  }
+  .dev-parcours-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(201, 168, 106, 0.45);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  }
+  .dev-parcours-card .dev-parcours-img {
+    filter: none !important;
+    opacity: 1 !important;
+  }
+
   </style>
 </head>
 
@@ -624,7 +645,7 @@
       </div>
     </section>
 
-    <!-- 3. LES 5 PARCOURS PÉDAGOGIQUES (EXACTEMENT 5 PARCOURS) -->
+    <!-- 3. LES 5 PARCOURS PÉDAGOGIQUES (5 PHYSICAL PATHWAYS) -->
     <section id="parcours" style="margin: 60px 0;">
       <div class="dev-v2-heading">
         <h2 data-i18n="devParcoursTitle">المسارات الخمسة لتطوير الذات</h2>
@@ -632,70 +653,80 @@
       </div>
 
       <div class="dev-grid-3cols">
-        <!-- Parcours 01 (Actif) -->
-        <article class="dev-parcours-card">
+        <!-- Parcours 01 -->
+        <a class="dev-parcours-card" href="./parcours/discipline-habitudes/">
           <div class="dev-parcours-img-box">
             <img src="../dev_discipline_hd.jpg" alt="الانضباط والعادات" class="dev-parcours-img" loading="lazy">
           </div>
-          <div class="dev-parcours-body">
-            <span class="dev-parcours-num" data-i18n="p1Num">01 — الانضباط والعادات</span>
-            <h3 class="dev-parcours-title" data-i18n="p1Title">تأسيس الإرادة وهندسة الروتين</h3>
-            <p class="dev-parcours-desc" data-i18n="p1Desc">كيف تبني انضباطاً حديدياً، تتغلب على التسويف، وتصنع عادات يومية تضاعف إنجازك.</p>
-            <a href="../files/self-discipline.html" class="dev-btn-action" data-i18n="p1Btn">ابدأ المسار ←</a>
+          <div class="dev-parcours-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="dev-parcours-num" data-i18n="p1Num">01 — الانضباط والعادات</span>
+              <h3 class="dev-parcours-title" data-i18n="p1Title">تأسيس الإرادة وهندسة الروتين</h3>
+              <p class="dev-parcours-desc" data-i18n="p1Desc">كيف تبني انضباطاً حديدياً، تتغلب على التسويف، وتصنع عادات يومية تضاعف إنجازك.</p>
+            </div>
+            <span class="dev-btn-action" style="margin-top: 15px; text-align: center;">استكشف المسار ←</span>
           </div>
-        </article>
+        </a>
 
-        <!-- Parcours 02 (Bientôt disponible) -->
-        <article class="dev-parcours-card">
+        <!-- Parcours 02 -->
+        <a class="dev-parcours-card" href="./parcours/objectifs-ambition/">
           <div class="dev-parcours-img-box">
-            <img src="../dev_growth_hd.jpg" alt="الأهداف والطموح" class="dev-parcours-img" loading="lazy" style="filter: grayscale(0.5); opacity: 0.7;">
+            <img src="../dev_hero_cinematic.jpg" alt="الأهداف والطموح" class="dev-parcours-img" loading="lazy">
           </div>
-          <div class="dev-parcours-body">
-            <span class="dev-parcours-num" data-i18n="p2Num">02 — الأهداف والطموح</span>
-            <h3 class="dev-parcours-title" data-i18n="p2Title">التخطيط الاستراتيجي والرؤية</h3>
-            <p class="dev-parcours-desc" data-i18n="p2Desc">صياغة الأهداف الكبرى، تقسيم المشاريع، ومتابعة التطور الشخصي باستمرار.</p>
-            <button class="dev-btn-action disabled" disabled data-i18n="comingSoonBtn">⏳ قريباً</button>
+          <div class="dev-parcours-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="dev-parcours-num" data-i18n="p2Num">02 — الأهداف والطموح</span>
+              <h3 class="dev-parcours-title" data-i18n="p2Title">التخطيط الاستراتيجي والرؤية</h3>
+              <p class="dev-parcours-desc" data-i18n="p2Desc">صياغة الأهداف الكبرى، تقسيم المشاريع، ومتابعة التطور الشخصي باستمرار.</p>
+            </div>
+            <span class="dev-btn-action" style="margin-top: 15px; text-align: center;">استكشف المسار ←</span>
           </div>
-        </article>
+        </a>
 
-        <!-- Parcours 03 (Actif) -->
-        <article class="dev-parcours-card">
+        <!-- Parcours 03 -->
+        <a class="dev-parcours-card" href="./parcours/confiance-courage/">
           <div class="dev-parcours-img-box">
             <img src="../dev_confidence_hd.jpg" alt="الثقة والشجاعة" class="dev-parcours-img" loading="lazy">
           </div>
-          <div class="dev-parcours-body">
-            <span class="dev-parcours-num" data-i18n="p3Num">03 — الثقة والشجاعة</span>
-            <h3 class="dev-parcours-title" data-i18n="p3Title">التقدير الذاتي ومواجهة التردد</h3>
-            <p class="dev-parcours-desc" data-i18n="p3Desc">بناء ثقة داخلية صلبة لا تتأثر بآراء الآخرين واتخاذ القرارات الشجاعة.</p>
-            <a href="../articles/true-confidence-inside.html" class="dev-btn-action" data-i18n="p3Btn">ابدأ المسار ←</a>
+          <div class="dev-parcours-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="dev-parcours-num" data-i18n="p3Num">03 — الثقة والشجاعة</span>
+              <h3 class="dev-parcours-title" data-i18n="p3Title">التقدير الذاتي ومواجهة التردد</h3>
+              <p class="dev-parcours-desc" data-i18n="p3Desc">بناء ثقة داخلية صلبة لا تتأثر بآراء الآخرين واتخاذ القرارات الشجاعة.</p>
+            </div>
+            <span class="dev-btn-action" style="margin-top: 15px; text-align: center;">استكشف المسار ←</span>
           </div>
-        </article>
+        </a>
 
-        <!-- Parcours 04 (Bientôt disponible) -->
-        <article class="dev-parcours-card">
+        <!-- Parcours 04 -->
+        <a class="dev-parcours-card" href="./parcours/temps-concentration/">
           <div class="dev-parcours-img-box">
-            <img src="../dev_focus_hd.jpg" alt="الوقت والتركيز" class="dev-parcours-img" loading="lazy" style="filter: grayscale(0.5); opacity: 0.7;">
+            <img src="../overthinking_calm.jpg" alt="الوقت والتركيز" class="dev-parcours-img" loading="lazy">
           </div>
-          <div class="dev-parcours-body">
-            <span class="dev-parcours-num" data-i18n="p4Num">04 — الوقت والتركيز</span>
-            <h3 class="dev-parcours-title" data-i18n="p4Title">إدارة الانتباه والعمل العميق</h3>
-            <p class="dev-parcours-desc" data-i18n="p4Desc">التخلص من المشتتات الرقمية، تنظيم الأولويات، وإتقان التركيز المكثف.</p>
-            <button class="dev-btn-action disabled" disabled data-i18n="comingSoonBtn">⏳ قريباً</button>
+          <div class="dev-parcours-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="dev-parcours-num" data-i18n="p4Num">04 — الوقت والتركيز</span>
+              <h3 class="dev-parcours-title" data-i18n="p4Title">إدارة الانتباه والعمل العميق</h3>
+              <p class="dev-parcours-desc" data-i18n="p4Desc">التخلص من المشتتات الرقمية، تنظيم الأولويات، وإتقان التركيز المكثف.</p>
+            </div>
+            <span class="dev-btn-action" style="margin-top: 15px; text-align: center;">استكشف المسار ←</span>
           </div>
-        </article>
+        </a>
 
-        <!-- Parcours 05 (Bientôt disponible) -->
-        <article class="dev-parcours-card">
+        <!-- Parcours 05 -->
+        <a class="dev-parcours-card" href="./parcours/resilience-transformation/">
           <div class="dev-parcours-img-box">
-            <img src="../dev_resilience_hd.jpg" alt="المرونة والتحول" class="dev-parcours-img" loading="lazy" style="filter: grayscale(0.5); opacity: 0.7;">
+            <img src="../mirror_stronger_self.jpg" alt="المرونة والتحول" class="dev-parcours-img" loading="lazy">
           </div>
-          <div class="dev-parcours-body">
-            <span class="dev-parcours-num" data-i18n="p5Num">05 — المرونة والتحول</span>
-            <h3 class="dev-parcours-title" data-i18n="p5Title">النهوض بعد الانكسار والتعلم</h3>
-            <p class="dev-parcours-desc" data-i18n="p5Desc">التعامل مع الانتكاسات، بناء الصلابة النفسية، وتحويل العقبات إلى فرص للنمو.</p>
-            <button class="dev-btn-action disabled" disabled data-i18n="comingSoonBtn">⏳ قريباً</button>
+          <div class="dev-parcours-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="dev-parcours-num" data-i18n="p5Num">05 — المرونة والتحول</span>
+              <h3 class="dev-parcours-title" data-i18n="p5Title">النهوض بعد الانكسار والتعلم</h3>
+              <p class="dev-parcours-desc" data-i18n="p5Desc">التعامل مع الانتكاسات، بناء الصلابة النفسية، وتحويل العقبات إلى فرص للنمو.</p>
+            </div>
+            <span class="dev-btn-action" style="margin-top: 15px; text-align: center;">استكشف المسار ←</span>
           </div>
-        </article>
+        </a>
       </div>
     </section>
 
