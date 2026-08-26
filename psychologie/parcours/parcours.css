@@ -438,3 +438,83 @@ body {
     transform: none !important;
   }
 }
+
+
+/* ============================================================
+   V5.4 VISUAL FIX — PREMIUM BACK TO PSYCHOLOGY BUTTON
+   ============================================================ */
+.parcours-back-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px 56px;
+  margin-top: 48px;
+  border-top: 1px solid rgba(201, 168, 106, 0.22);
+}
+
+.parcours-back-link,
+.parcours-back-link:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 11px 24px;
+  color: #e4c98a !important;
+  background: rgba(13, 24, 20, 0.92);
+  border: 1px solid rgba(201, 168, 106, 0.55);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.parcours-back-link:hover {
+  color: #fffdf8 !important;
+  background: rgba(201, 168, 106, 0.14);
+  border-color: #c9a86a;
+  transform: translateY(-2px);
+}
+
+.parcours-back-link:focus-visible {
+  outline: 3px solid rgba(228, 201, 138, 0.45);
+  outline-offset: 4px;
+}
+
+.parcours-back-link .back-arrow {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+[dir="rtl"] .parcours-back-link .back-arrow {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 480px) {
+  .parcours-back-section {
+    padding: 32px 16px 40px;
+    margin-top: 36px;
+  }
+
+  .parcours-back-link {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parcours-back-link {
+    transition: none;
+  }
+
+  .parcours-back-link:hover {
+    transform: none;
+  }
+}

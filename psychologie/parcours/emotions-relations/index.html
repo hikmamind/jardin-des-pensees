@@ -125,12 +125,13 @@
       </div>
     </section>
 
-    <!-- 6. Bouton Retour -->
-    <div class="return-btn-box">
-      <a href="../../" class="psy-btn-gold" style="padding: 14px 36px; font-size: 1.05rem; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;" id="backBtn">
-        ← العودة إلى علم النفس
+    <!-- 6. Bouton Retour Premium V5.4 -->
+    <section class="parcours-back-section">
+      <a class="parcours-back-link" href="../../">
+        <span class="back-arrow" aria-hidden="true">←</span>
+        <span id="backBtnText" data-i18n="backToPsychology">العودة إلى علم النفس</span>
       </a>
-    </div>
+    </section>
 
   </main>
 
@@ -360,7 +361,7 @@
       }
 
       // Back Button
-      document.getElementById('backBtn').textContent = lang === 'ar' ? '← العودة إلى علم النفس' : (lang === 'fr' ? '← Retour à la Psychologie' : '← Back to Psychology');
+      document.getElementById('backBtnText').textContent = lang === 'ar' ? '← العودة إلى علم النفس' : (lang === 'fr' ? '← Retour à la Psychologie' : '← Back to Psychology');
     }
 
     document.addEventListener('DOMContentLoaded', () => {
