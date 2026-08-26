@@ -1,3 +1,7 @@
+// ============================================================
+// HIKMA & NOUR (حكمة ونور) — MULTILINGUAL DATA STORE (V11)
+// ============================================================
+
 const TIKTOK_DATA = {
   "username": "@lejardindespensees",
   "stats": {
@@ -1537,204 +1541,6 @@ const TIKTOK_DATA = {
       ],
       "thinkers": [
         {
-          "id": "angela-duckworth",
-          "name": "Angela Duckworth",
-          "era": "Born 1970",
-          "school": "Psychology • Perseverance (Grit)",
-          "category": "personal-growth",
-          "profileUrl": "./angela-duckworth/",
-          "image": "images/angela-duckworth.jpg",
-          "bio": "Psychology professor at Penn University and author of the global bestseller Grit.",
-          "keyConcept": "Grit, Perseverance"
-},
-        {
-          "id": "mihaly-csikszentmihalyi",
-          "name": "Mihály Csíkszentmihályi",
-          "era": "1934 – 2021",
-          "school": "Positive Psychology • Flow State",
-          "category": "personal-growth",
-          "profileUrl": "./mihaly-csikszentmihalyi/",
-          "image": "images/mihaly-csikszentmihalyi.jpg",
-          "bio": "Positive psychology pioneer and architect of the optimal Flow State theory.",
-          "keyConcept": "Flow State, Focus"
-},
-        {
-          "id": "carol-dweck",
-          "name": "Carol Dweck",
-          "era": "Born 1946",
-          "school": "Developmental Psychology • Growth Mindset",
-          "category": "personal-growth",
-          "profileUrl": "./carol-dweck/",
-          "image": "images/carol-dweck.jpg",
-          "bio": "Stanford psychology professor and pioneer of the Growth Mindset vs Fixed Mindset.",
-          "keyConcept": "Growth Mindset, Learning"
-},
-        {
-          "id": "viktor-frankl",
-          "name": "Viktor Frankl",
-          "era": "1905 – 1997",
-          "school": "Logotherapy • Existential Psychology",
-          "category": "personal-growth",
-          "profileUrl": "./viktor-frankl/",
-          "image": "images/viktor-frankl.jpg",
-          "bio": "Austrian psychiatrist, founder of logotherapy and author of Man's Search for Meaning.",
-          "keyConcept": "Logotherapy, Freedom of Attitude"
-},
-        {
-          "id": "albert-bandura",
-          "name": "Albert Bandura",
-          "era": "1925 – 2021",
-          "school": "Social Psychology • Self-Efficacy",
-          "category": "personal-growth",
-          "profileUrl": "./albert-bandura/",
-          "image": "images/albert-bandura.jpg",
-          "bio": "Psychologist founder of Social Learning Theory and the Self-Efficacy framework.",
-          "keyConcept": "Self-Efficacy, Observational Learning"
-},
-        {
-          "id": "william-james",
-          "name": "William James",
-          "era": "1842 – 1910",
-          "school": "Modern Psychology • Pragmatism",
-          "category": "personal-growth",
-          "profileUrl": "./william-james/",
-          "image": "images/william-james.jpg",
-          "bio": "American philosopher and psychologist, father of American psychology and pioneer in habit theory.",
-          "keyConcept": "Habit Theory, Attention"
-},
-        {
-          "id": "angela-duckworth",
-          "name": "Angela Duckworth",
-          "era": "Born 1970",
-          "school": "Psychologie • Persévérance (Grit)",
-          "category": "personal-growth",
-          "profileUrl": "./angela-duckworth/",
-          "image": "images/angela-duckworth.jpg",
-          "bio": "Chercheuse en psychologie à l'Université de Pennsylvanie et autrice du livre Grit.",
-          "keyConcept": "Grit, Persévérance"
-},
-        {
-          "id": "mihaly-csikszentmihalyi",
-          "name": "Mihály Csíkszentmihályi",
-          "era": "1934 – 2021",
-          "school": "Psychologie positive • État de Flow",
-          "category": "personal-growth",
-          "profileUrl": "./mihaly-csikszentmihalyi/",
-          "image": "images/mihaly-csikszentmihalyi.jpg",
-          "bio": "Psychologue pionnier de la psychologie positive et théoricien de l'état de Flow.",
-          "keyConcept": "Flow State, Immersion totale"
-},
-        {
-          "id": "carol-dweck",
-          "name": "Carol Dweck",
-          "era": "Born 1946",
-          "school": "Psychologie du développement • Mindset",
-          "category": "personal-growth",
-          "profileUrl": "./carol-dweck/",
-          "image": "images/carol-dweck.jpg",
-          "bio": "Professeure de psychologie à Stanford, pionnière des recherches sur le Growth Mindset.",
-          "keyConcept": "Growth Mindset, Apprentissage"
-},
-        {
-          "id": "viktor-frankl",
-          "name": "Viktor Frankl",
-          "era": "1905 – 1997",
-          "school": "Logothérapie • Psychologie existentielle",
-          "category": "personal-growth",
-          "profileUrl": "./viktor-frankl/",
-          "image": "images/viktor-frankl.jpg",
-          "bio": "Psychiatre autrichien, fondateur de la logothérapie et auteur de Man's Search for Meaning.",
-          "keyConcept": "Logothérapie, Liberté d'attitude"
-},
-        {
-          "id": "albert-bandura",
-          "name": "Albert Bandura",
-          "era": "1925 – 2021",
-          "school": "Psychologie sociale • Auto-efficacité",
-          "category": "personal-growth",
-          "profileUrl": "./albert-bandura/",
-          "image": "images/albert-bandura.jpg",
-          "bio": "Psychologue créateur de la théorie de l'apprentissage social et du concept d'auto-efficacité.",
-          "keyConcept": "Auto-efficacité, Modélisation"
-},
-        {
-          "id": "william-james",
-          "name": "William James",
-          "era": "1842 – 1910",
-          "school": "Psychologie moderne • Pragmatisme",
-          "category": "personal-growth",
-          "profileUrl": "./william-james/",
-          "image": "images/william-james.jpg",
-          "bio": "Philosophe et psychologue américain, père de la psychologie américaine et pionnier de la théorie des habitudes.",
-          "keyConcept": "Théorie des habitudes, Attention"
-},
-        {
-          "id": "angela-duckworth",
-          "name": "أنجيلا داكوورث",
-          "era": "١٩٧٠ — الآن",
-          "school": "علم النفس • العزيمة (Grit)",
-          "category": "personal-growth",
-          "profileUrl": "./angela-duckworth/",
-          "image": "images/angela-duckworth.jpg",
-          "bio": "باحثة وأستاذة علم النفس بجامعة بنسلفانيا ومؤلفة كتاب Grit حول الشغف والمثابرة.",
-          "keyConcept": "العزيمة (Grit)، المثابرة"
-},
-        {
-          "id": "mihaly-csikszentmihalyi",
-          "name": "ميهالي تشيكسينتميهالي",
-          "era": "١٩٣٤ — ٢٠٢١",
-          "school": "علم النفس الإيجابي • حالة التدفق",
-          "category": "personal-growth",
-          "profileUrl": "./mihaly-csikszentmihalyi/",
-          "image": "images/mihaly-csikszentmihalyi.jpg",
-          "bio": "عالم نفس مكتشف ومبرهن نظرية التدفق الذهني (Flow) والاندماج الكامل.",
-          "keyConcept": "حالة التدفق، الاندماج الفكري"
-},
-        {
-          "id": "carol-dweck",
-          "name": "كارول دويك",
-          "era": "١٩٤٦ — الآن",
-          "school": "علم النفس التنموي • عقلية النمو",
-          "category": "personal-growth",
-          "profileUrl": "./carol-dweck/",
-          "image": "images/carol-dweck.jpg",
-          "bio": "أستاذة علم النفس بجامعة ستانفورد وصاحبة أبحاث عقلية النمو (Growth Mindset).",
-          "keyConcept": "عقلية النمو، مهارة التعلم"
-},
-        {
-          "id": "viktor-frankl",
-          "name": "فيكتور فرانكل",
-          "era": "١٩٠٥ — ١٩٩٧",
-          "school": "العلاج بالمعنى • علم النفس الوجودي",
-          "category": "personal-growth",
-          "profileUrl": "./viktor-frankl/",
-          "image": "images/viktor-frankl.jpg",
-          "bio": "طبيب نفسي نمساوي ومؤسس العلاج بالمعنى ومؤلف الإنسان يبحث عن المعنى.",
-          "keyConcept": "العلاج بالمعنى، حرية اختيار الموقف"
-},
-        {
-          "id": "albert-bandura",
-          "name": "ألبيرت باندورا",
-          "era": "١٩٢٥ — ٢٠٢١",
-          "school": "علم النفس المعرفي • الكفاءة الذاتية",
-          "category": "personal-growth",
-          "profileUrl": "./albert-bandura/",
-          "image": "images/albert-bandura.jpg",
-          "bio": "مؤسس نظرية التعلم الاجتماعي ومفهوم الفعالية الذاتية (Self-Efficacy).",
-          "keyConcept": "الكفاءة الذاتية، التعلم بالنمذجة"
-},
-        {
-          "id": "william-james",
-          "name": "وليم جيمس",
-          "era": "١٨٤٢ — ١٩١٠",
-          "school": "علم النفس الحديث • البراغماتية",
-          "category": "personal-growth",
-          "profileUrl": "./william-james/",
-          "image": "images/william-james.jpg",
-          "bio": "فيلسوف وعالم نفس أمريكي، يلقب بأبي علم النفس الأمريكي. صاغ نظريات العادات والاتزاع وتوجيه الإرادة.",
-          "keyConcept": "العادات، الانتباه الوظيفي"
-},
-        {
           "id": "platon",
           "featured": true,
           "name": "Platon",
@@ -2832,6 +2638,560 @@ const TIKTOK_DATA = {
             {
               "year": "1406",
               "desc": "Décès au Caire."
+            }
+          ]
+        },
+        {
+          "id": "william-james",
+          "featured": true,
+          "name": "William James",
+          "era": "1842 – 1910",
+          "school": "Développement personnel",
+          "category": "personal-growth",
+          "image": "thinkers/images/william-james.jpg",
+          "bio": "Pionnier de la neuroplasticité des habitudes, du pragmatisme et de l'action créatrice.",
+          "body": [
+            "William James (1842-1910) est un philosophe et psychologue américain, souvent considéré comme le père de la psychologie américaine et cofondateur du pragmatisme.",
+            "Il a apporté des contributions majeures sur la formation des habitudes, le contrôle volontaire de l'attention et le rôle de l'action sur nos états émotionnels."
+          ],
+          "keyConcept": "Habitudes & Pragmatisme",
+          "keyWorks": "The Principles of Psychology, Pragmatism",
+          "originalName": "William James",
+          "subName": "Père de la psychologie américaine, philosophe pragmatiste et théoricien de l'action",
+          "country": "États-Unis",
+          "flag": "🏛️",
+          "heroQuote": "« La plus grande découverte de ma génération est que l'être humain peut modifier sa vie en modifiant son état d'esprit. »",
+          "intro": "William James a posé les bases scientifiques de la neuroplasticité des habitudes et démontré que l'action volontaire précède et façonne nos émotions.",
+          "bioDetails": {
+            "upbringing": "Né à New York dans une famille d'intellectuels éminents, il étudie en Amérique et en Europe.",
+            "studies": "Diplômé en médecine à Harvard, il se passionne pour la physiologie puis la psychologie.",
+            "life": "Il enseigne plusieurs décennies à Harvard et fonde le premier laboratoire de psychologie expérimentale américain."
+          },
+          "historicalContext": "Sa pensée émerge lors de l'essor des sciences expérimentales et de la démocratisation du savoir au XIXe siècle.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "La neuroplasticité des habitudes",
+              "text": "Les habitudes creusent des chemins neuro-chimiques ; la répétition constante automatise l'action."
+            },
+            {
+              "num": "02",
+              "title": "L'expérience créatrice et la volonté",
+              "text": "La conviction d'être capable de changer est la condition préalable pour passer à l'action."
+            },
+            {
+              "num": "03",
+              "title": "L'action façonne l'état émotionnel",
+              "text": "Agissez avec calme et courage, et votre état émotionnel interne s'alignera naturellement."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "term": "Stream of Consciousness",
+              "definition": "La conscience n'est pas fragmentée mais s'écoule comme une rivière."
+            },
+            {
+              "term": "Pragmatisme Éthique",
+              "definition": "La vérité d'une idée se mesure à ses effets pratiques."
+            }
+          ],
+          "works": [
+            {
+              "title": "The Principles of Psychology",
+              "year": "1890",
+              "desc": "Ouvrage fondateur de la psychologie moderne."
+            },
+            {
+              "title": "Talks to Teachers on Psychology",
+              "year": "1899",
+              "desc": "Applications pratiques sur les habitudes et la pédagogie."
+            },
+            {
+              "title": "Pragmatism",
+              "year": "1907",
+              "desc": "Fondement du courant pragmatiste en philosophie."
+            }
+          ],
+          "influence": [
+            "A influencé John Dewey, Albert Bandura et James Clear dans la psychologie des habitudes."
+          ],
+          "quotes": [
+            "« La plus grande découverte de ma génération est que l'être humain peut modifier sa vie en modifiant son état d'esprit. »",
+            "« Agissez comme si ce que vous faites faisait une différence. C'est le cas. »"
+          ],
+          "famousQuote": "« La plus grande découverte de ma génération est que l'être humain peut modifier sa vie en modifiant son état d'esprit. »",
+          "didYouKnow": "Il était le frère du célèbre romancier Henry James.",
+          "reflectionQuestion": "Comment pouvez-vous appliquer le principe de l'action immédiate aujourd'hui ?",
+          "lessons": [
+            "Commencez par de petites actions.",
+            "Aménagez votre environnement.",
+            "Automatisez vos routines."
+          ],
+          "timeline": [
+            {
+              "year": "1842",
+              "title": "Naissance",
+              "desc": "Naissance à New York."
+            },
+            {
+              "year": "1890",
+              "title": "Principes de psychologie",
+              "desc": "Publication de son chef-d'œuvre."
+            },
+            {
+              "year": "1910",
+              "title": "Décès",
+              "desc": "Décès dans le New Hampshire."
+            }
+          ]
+        },
+        {
+          "id": "albert-bandura",
+          "featured": true,
+          "name": "Albert Bandura",
+          "era": "1925 – 2021",
+          "school": "Développement personnel",
+          "category": "personal-growth",
+          "image": "thinkers/images/albert-bandura.jpg",
+          "bio": "Pionnier du sentiment d'auto-efficacité et de l'apprentissage social par observation.",
+          "body": [
+            "Albert Bandura (1925-2021) est un psychologue canadien-américain, mondialement réputé pour la théorie de l'apprentissage social.",
+            "Ses travaux sur l'auto-efficacité (Self-Efficacy) ont montré que la croyance en ses propres compétences détermine l'effort et la persévérance."
+          ],
+          "keyConcept": "Auto-efficacité & Apprentissage",
+          "keyWorks": "Social Learning Theory, Self-Efficacy",
+          "originalName": "Albert Bandura",
+          "subName": "Psychologue social, théoricien de l'auto-efficacité et du modelage comportemental",
+          "country": "Canada / États-Unis",
+          "flag": "🧠",
+          "heroQuote": "« Les personnes qui ont un fort sentiment d'efficacité considèrent les difficultés comme des défis à relever plutôt que des menaces à éviter. »",
+          "intro": "Albert Bandura a révolutionné la psychologie en démontrant que le sentiment d'auto-efficacité est le levier principal de la réussite.",
+          "bioDetails": {
+            "upbringing": "Né dans un petit village de l'Alberta, il fait preuve d'une grande autonomie intellectuelle dès son jeune âge.",
+            "studies": "Doctorat à l'Université d'Iowa puis carrière légendaire de chercheur à Stanford.",
+            "life": "Il a reçu la National Medal of Science pour sa contribution exceptionnelle aux sciences humaines."
+          },
+          "historicalContext": "Ses recherches ont permis le passage du béhaviorisme strict vers la psychologie socio-cognitive.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "L'auto-efficacité comme moteur",
+              "text": "La conviction d'avoir les capacités de réussir détermine l'effort investi et la résilience."
+            },
+            {
+              "num": "02",
+              "title": "L'apprentissage par observation",
+              "text": "L'être humain développe de nouvelles compétences en observant des modèles inspirants."
+            },
+            {
+              "num": "03",
+              "title": "Le déterminisme réciproque",
+              "text": "La personne, son comportement et son environnement s'influencent mutuellement."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "term": "Auto-efficacité",
+              "definition": "Croyance en sa propre capacité à organiser et exécuter les actions requises."
+            }
+          ],
+          "works": [
+            {
+              "title": "Social Learning Theory",
+              "year": "1977",
+              "desc": "Ouvrage fondateur de la théorie de l'apprentissage social."
+            },
+            {
+              "title": "Self-Efficacy: The Exercise of Control",
+              "year": "1997",
+              "desc": "L'étude complète sur le sentiment d'efficacité personnelle."
+            }
+          ],
+          "influence": [
+            "Pionnier en psychologie de l'éducation, en coaching et en développement de la résilience."
+          ],
+          "quotes": [
+            "« Les personnes qui ont un fort sentiment d'efficacité considèrent les difficultés comme des défis à relever plutôt que des menaces à éviter. »"
+          ],
+          "famousQuote": "« Les personnes qui ont un fort sentiment d'efficacité considèrent les difficultés comme des défis à relever plutôt que des menaces à éviter. »",
+          "didYouKnow": "Son expérience de la poupée Bobo reste l'une des plus célèbres de la psychologie.",
+          "reflectionQuestion": "Dans quel domaine avez-vous besoin de renforcer votre sentiment d'auto-efficacité ?",
+          "lessons": [
+            "Entourez-vous de bons modèles.",
+            "Accumulez de petites victoires.",
+            "Développez la maîtrise de soi."
+          ],
+          "timeline": [
+            {
+              "year": "1925",
+              "title": "Naissance",
+              "desc": "Naissance en Alberta."
+            },
+            {
+              "year": "1977",
+              "title": "Théorie de l'auto-efficacité",
+              "desc": "Publication de ses travaux fondateurs."
+            },
+            {
+              "year": "2021",
+              "title": "Décès",
+              "desc": "Décès à Stanford."
+            }
+          ]
+        },
+        {
+          "id": "viktor-frankl",
+          "featured": true,
+          "name": "Viktor Frankl",
+          "era": "1905 – 1997",
+          "school": "Développement personnel",
+          "category": "personal-growth",
+          "image": "thinkers/images/viktor-frankl.jpg",
+          "bio": "Fondateur de la logothérapie et auteur de Découvrir un sens à sa vie.",
+          "body": [
+            "Viktor Frankl (1905-1997) est un neurologue et psychiatre autrichien, fondateur de la logothérapie.",
+            "Ayant survécu aux camps de concentration, il a démontré que la quête de sens est la force motrice fondamentale de l'être humain."
+          ],
+          "keyConcept": "Sens & Résilience",
+          "keyWorks": "Man's Search for Meaning, The Will to Meaning",
+          "originalName": "Viktor Frankl",
+          "subName": "Psychiatre vienneois, fondateur de la logothérapie et penseur de la liberté intérieure",
+          "country": "Autriche",
+          "flag": "🏔️",
+          "heroQuote": "« Celui qui a un \"pourquoi\" qui lui tient lieu de but peut vivre avec n'importe quel \"comment\". »",
+          "intro": "Viktor Frankl a montré que même dans les épreuves les plus sombres, l'homme conserve la liberté ultime de choisir son attitude.",
+          "bioDetails": {
+            "upbringing": "Né à Vienne, il se passionne très tôt pour la psychiatrie et échange avec Freud et Adler.",
+            "studies": "Diplômé de médecine à Vienne, il se spécialise dans la prévention du suicide.",
+            "life": "Déporté pendant la Seconde Guerre mondiale, il transforme son expérience en méthode thérapeutique universelle."
+          },
+          "historicalContext": "Son œuvre émerge des traumatismes de la Seconde Guerre mondiale et du besoin de reconstruction morale.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "La volonté de sens comme force vitale",
+              "text": "La quête d'un sens à son existence est la motivation première de l'être humain."
+            },
+            {
+              "num": "02",
+              "title": "La liberté ultime d'attitude",
+              "text": "Tout peut être enlevé à un homme, sauf la liberté de choisir son attitude face aux événements."
+            },
+            {
+              "num": "03",
+              "title": "La responsabilité envers la vie",
+              "text": "La question n'est pas ce que nous attendons de la vie, mais ce que la vie attend de nous."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "term": "Logothérapie",
+              "definition": "Psychothérapie fondée sur la recherche et la découverte d'un sens à la vie."
+            }
+          ],
+          "works": [
+            {
+              "title": "Man's Search for Meaning",
+              "year": "1946",
+              "desc": "Découvrir un sens à sa vie : témoignage et méthode."
+            },
+            {
+              "title": "The Will to Meaning",
+              "year": "1969",
+              "desc": "Principes fondamentaux de la logothérapie."
+            }
+          ],
+          "influence": [
+            "Inspiration majeure de la psychologie existentielle et du coaching de vie."
+          ],
+          "quotes": [
+            "« Celui qui a un \"pourquoi\" qui lui tient lieu de but peut vivre avec n'importe quel \"comment\". »"
+          ],
+          "famousQuote": "« Celui qui a un \"pourquoi\" qui lui tient lieu de but peut vivre avec n'importe quel \"comment\". »",
+          "didYouKnow": "Il a rédigé le manuscrit de son livre majeur sur des bouts de papier volés dans les camps.",
+          "reflectionQuestion": "Quel sens donnez-vous aux défis que vous traversez actuellement ?",
+          "lessons": [
+            "Trouvez une cause plus grande que vous.",
+            "Gardez le contrôle de votre attitude.",
+            "Assumez votre liberté."
+          ],
+          "timeline": [
+            {
+              "year": "1905",
+              "title": "Naissance",
+              "desc": "Naissance à Vienne."
+            },
+            {
+              "year": "1946",
+              "title": "Découvrir un sens à sa vie",
+              "desc": "Publication de son livre culte."
+            },
+            {
+              "year": "1997",
+              "title": "Décès",
+              "desc": "Décès à Vienne."
+            }
+          ]
+        },
+        {
+          "id": "carol-dweck",
+          "featured": true,
+          "name": "Carol Dweck",
+          "era": "1946 – Présent",
+          "school": "Développement personnel",
+          "category": "personal-growth",
+          "image": "thinkers/images/carol-dweck.jpg",
+          "bio": "Chercheuse renommée sur l'état d'esprit de croissance (Growth Mindset).",
+          "body": [
+            "Carol Dweck (née en 1946) est professeure de psychologie à l'Université de Stanford.",
+            "Elle est mondialement connue pour avoir mis en évidence la différence entre l'état d'esprit fixe et l'état d'esprit de croissance."
+          ],
+          "keyConcept": "Growth Mindset",
+          "keyWorks": "Mindset: The New Psychology of Success",
+          "originalName": "Carol Dweck",
+          "subName": "Professeure à Stanford et théoricienne du Growth Mindset",
+          "country": "États-Unis",
+          "flag": "💡",
+          "heroQuote": "« Dans un état d'esprit de croissance, les défis sont des occasions d'apprendre et non des jugements. »",
+          "intro": "Carol Dweck a révolutionné l'apprentissage en démontrant que l'intelligence et les compétences se développent par l'effort.",
+          "bioDetails": {
+            "upbringing": "Née à New York, elle étudie la psychologie cognitive et sociale.",
+            "studies": "Doctorat à Yale, elle enseigne à Columbia puis à Stanford.",
+            "life": "Ses recherches sont appliquées dans l'éducation, l'entreprise et le sport d'élite."
+          },
+          "historicalContext": "Son œuvre s'inscrit dans le renouveau de la psychologie positive et de l'apprentissage continu.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "L'état d'esprit fixe vs de croissance",
+              "text": "Les capacités ne sont pas figées ; l'effort et la pratique développent l'intelligence."
+            },
+            {
+              "num": "02",
+              "title": "Reconsidérer l'échec comme apprentissage",
+              "text": "L'erreur n'est pas un échec mais une donnée précieuse pour progresser."
+            },
+            {
+              "num": "03",
+              "title": "Le pouvoir du « pas encore »",
+              "text": "Lorsque vous rencontrez une difficulté, dites : « je ne le maîtrise pas encore »."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "term": "Growth Mindset",
+              "definition": "La conviction que les compétences s'améliorent par l'effort et la méthode."
+            }
+          ],
+          "works": [
+            {
+              "title": "Mindset: The New Psychology of Success",
+              "year": "2006",
+              "desc": "Le livre incontournable sur l'état d'esprit de croissance."
+            }
+          ],
+          "influence": [
+            "Utilisée dans les plus grandes écoles et entreprises mondiales pour stimuler l'innovation."
+          ],
+          "quotes": [
+            "« Dans un état d'esprit de croissance, les défis sont des occasions d'apprendre et non des jugements. »"
+          ],
+          "famousQuote": "« Dans un état d'esprit de croissance, les défis sont des occasions d'apprendre et non des jugements. »",
+          "didYouKnow": "Son concept du \"Pas encore\" a transformé les méthodes d'évaluation scolaires.",
+          "reflectionQuestion": "Voyez-vous vos obstacles actuels comme des limites ou comme des opportunités de grandir ?",
+          "lessons": [
+            "Valorisez l'effort plutôt que le don.",
+            "Adoptez le mot \"Pas encore\".",
+            "Apprenez de chaque erreur."
+          ],
+          "timeline": [
+            {
+              "year": "1946",
+              "title": "Naissance",
+              "desc": "Naissance à New York."
+            },
+            {
+              "year": "2006",
+              "title": "Mindset",
+              "desc": "Publication de son ouvrage référence."
+            }
+          ]
+        },
+        {
+          "id": "mihaly-csikszentmihalyi",
+          "featured": true,
+          "name": "Mihály Csíkszentmihályi",
+          "era": "1934 – 2021",
+          "school": "Développement personnel",
+          "category": "personal-growth",
+          "image": "thinkers/images/mihaly-csikszentmihalyi.jpg",
+          "bio": "Pionnier du concept de Flow et de la concentration optimale dans l'action.",
+          "body": [
+            "Mihály Csíkszentmihályi (1934-2021) est un psychologue hongrois-américain, cofondateur de la psychologie positive.",
+            "Il est célèbre pour avoir théorisé le concept de \"Flow\", cet état mental d'immersion et d'efficacité maximale."
+          ],
+          "keyConcept": "Théorie du Flow",
+          "keyWorks": "Flow: The Psychology of Optimal Experience, Creativity",
+          "originalName": "Mihály Csíkszentmihályi",
+          "subName": "Cofondateur de la psychologie positive et créateur de la théorie du Flow",
+          "country": "Hongrie / États-Unis",
+          "flag": "⏱️",
+          "heroQuote": "« Les meilleurs moments surviennent lorsque le corps ou l'esprit est tendu jusqu'à ses limites dans un effort volontaire pour accomplir quelque chose de difficile et de significatif. »",
+          "intro": "Mihály Csíkszentmihályi a révélé les conditions scientifiques de la concentration absolue et de l'épanouissement dans le travail.",
+          "bioDetails": {
+            "upbringing": "Né à Fiume, il émigre aux États-Unis après la guerre pour étudier la psychologie.",
+            "studies": "Doctorat à l'Université de Chicago où il dirigera le département de psychologie.",
+            "life": "Il a consacré sa vie à l'étude du bonheur, de la créativité et du travail profond."
+          },
+          "historicalContext": "Son œuvre pose les fondements de la recherche sur la performance optimale et le bien-être au travail.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "L'état de Flow ou d'immersion",
+              "text": "Le Flow survient lorsque l'esprit s'immerge totalement dans un défi à la hauteur de ses compétences."
+            },
+            {
+              "num": "02",
+              "title": "L'attention comme ressource précieuse",
+              "text": "L'attention est la ressource la plus précieuse ; la contrôler améliore la qualité de vie."
+            },
+            {
+              "num": "03",
+              "title": "Objectifs clairs et retour immédiat",
+              "text": "La concentration optimale exige des objectifs clairs et des signaux de progrès immédiats."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "term": "Le Flow",
+              "definition": "Un état mental d'immersion totale et de sérénité active dans la tâche."
+            }
+          ],
+          "works": [
+            {
+              "title": "Flow: The Psychology of Optimal Experience",
+              "year": "1990",
+              "desc": "L'ouvrage majeur sur la psychologie de l'expérience optimale."
+            },
+            {
+              "title": "Creativity",
+              "year": "1996",
+              "desc": "Étude approfondie sur la créativité et la découverte."
+            }
+          ],
+          "influence": [
+            "Source d'inspiration essentielle pour le Deep Work et la psychologie du sport d'élite."
+          ],
+          "quotes": [
+            "« Les meilleurs moments surviennent lorsque le corps ou l'esprit est tendu jusqu'à ses limites dans un effort volontaire pour accomplir quelque chose de difficile et de significatif. »"
+          ],
+          "famousQuote": "« Les meilleurs moments surviennent lorsque le corps ou l'esprit est tendu jusqu'à ses limites dans un effort volontaire pour accomplir quelque chose de difficile et de significatif. »",
+          "didYouKnow": "Il a inventé la méthode d'échantillonnage de l'expérience quotidienne pour mesurer le bonheur en temps réel.",
+          "reflectionQuestion": "Quelles activités vous plongent naturellement dans un état de Flow ?",
+          "lessons": [
+            "Équilibrez défi et compétences.",
+            "Éliminez les distractions.",
+            "Fixez des étapes précises."
+          ],
+          "timeline": [
+            {
+              "year": "1934",
+              "title": "Naissance",
+              "desc": "Naissance à Fiume."
+            },
+            {
+              "year": "1990",
+              "title": "Flow",
+              "desc": "Publication de son livre culte."
+            },
+            {
+              "year": "2021",
+              "title": "Décès",
+              "desc": "Décès en Californie."
+            }
+          ]
+        },
+        {
+          "id": "angela-duckworth",
+          "featured": true,
+          "name": "Angela Duckworth",
+          "era": "1970 – Présent",
+          "school": "Développement personnel",
+          "category": "personal-growth",
+          "image": "thinkers/images/angela-duckworth.jpg",
+          "bio": "Spécialiste du Grit, combinant passion et persévérance à long terme.",
+          "body": [
+            "Angela Duckworth (née en 1970) est professeure de psychologie à l'Université de Pennsylvanie.",
+            "Elle est reconnue pour ses recherches sur le Grit, démontrant que la persévérance passionnée surpasse le talent brut."
+          ],
+          "keyConcept": "Grit & Persévérance",
+          "keyWorks": "Grit: The Power of Passion and Perseverance",
+          "originalName": "Angela Duckworth",
+          "subName": "Professeure à l'Université de Pennsylvanie et chercheuse sur la persévérance",
+          "country": "États-Unis",
+          "flag": "📊",
+          "heroQuote": "« L'effort multiplie le talent pour créer la compétence, puis multiplie la compétence pour créer la réussite. »",
+          "intro": "Angela Duckworth a prouvé scientifiquement que la ténacité et la passion à long terme sont les vrais clés de la réussite.",
+          "bioDetails": {
+            "upbringing": "Née dans le New Jersey, elle étudie la neurobiologie à Harvard puis les sciences à Oxford.",
+            "studies": "Après avoir été enseignante, elle passe son doctorat en psychologie à Penn.",
+            "life": "Lauréate du prix MacArthur, elle a fondé le Character Lab pour promouvoir le développement du caractère."
+          },
+          "historicalContext": "Son œuvre redéfinit la réussite en remplaçant le mythe du don inné par la valeur de l'entraînement délibéré.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "Le Grit surpasse le talent brut",
+              "text": "Le talent compte, mais l'effort compte deux fois plus pour transformer la compétence en réussite."
+            },
+            {
+              "num": "02",
+              "title": "La pratique délibérée",
+              "text": "La vraie progression exige de cibler ses faiblesses avec un retour d'information précis."
+            },
+            {
+              "num": "03",
+              "title": "La passion comme fidélité au cap",
+              "text": "La vraie passion n'est pas une étincelle éphémère mais un engagement durable."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "term": "Grit",
+              "definition": "La combinaison d'une passion constante et d'une persévérance inébranlable."
+            }
+          ],
+          "works": [
+            {
+              "title": "Grit: The Power of Passion and Perseverance",
+              "year": "2016",
+              "desc": "L'ouvrage référence sur la puissance de la persévérance."
+            }
+          ],
+          "influence": [
+            "Largement adoptée dans le coaching sportif, l'éducation et le leadership d'entreprise."
+          ],
+          "quotes": [
+            "« L'effort multiplie le talent pour créer la compétence, puis multiplie la compétence pour créer la réussite. »"
+          ],
+          "famousQuote": "« L'effort multiplie le talent pour créer la compétence, puis multiplie la compétence pour créer la réussite. »",
+          "didYouKnow": "Elle a enseigné les mathématiques dans les écoles publiques avant de devenir chercheuse à l'université.",
+          "reflectionQuestion": "Sur quel projet prioritaire êtes-vous prêt à maintenir votre effort cette année ?",
+          "lessons": [
+            "Pratiquez de manière délibérée.",
+            "Ne renoncez pas au premier obstacle.",
+            "Nourrissez votre passion."
+          ],
+          "timeline": [
+            {
+              "year": "1970",
+              "title": "Naissance",
+              "desc": "Naissance dans le New Jersey."
+            },
+            {
+              "year": "2016",
+              "title": "Grit",
+              "desc": "Publication de son livre succès mondial."
             }
           ]
         }
@@ -6531,6 +6891,560 @@ const TIKTOK_DATA = {
             {
               "year": "1406 AD",
               "desc": "Passed away in Cairo."
+            }
+          ]
+        },
+        {
+          "id": "william-james",
+          "featured": true,
+          "name": "William James",
+          "era": "1842 – 1910",
+          "school": "Personal Growth",
+          "category": "personal-growth",
+          "image": "thinkers/images/william-james.jpg",
+          "bio": "Father of American psychology and pioneer of habit formation and Pragmatism.",
+          "body": [
+            "William James (1842-1910) was an American philosopher and psychologist, widely considered the father of American psychology.",
+            "He made pioneering contributions on habit formation, the voluntary control of attention, and how action shapes emotion."
+          ],
+          "keyConcept": "Habits & Pragmatism",
+          "keyWorks": "The Principles of Psychology, Pragmatism",
+          "originalName": "William James",
+          "subName": "Father of American Psychology, Pragmatist Philosopher, and Habit Theorist",
+          "country": "United States",
+          "flag": "🏛️",
+          "heroQuote": "« The greatest discovery of my generation is that a human being can alter his life by altering his attitudes of mind. »",
+          "intro": "William James established the scientific basis of habit neuroplasticity and showed that brave action shapes emotion.",
+          "bioDetails": {
+            "upbringing": "Born in New York City into an intellectual family, educated in America and Europe.",
+            "studies": "Earned his MD at Harvard, shifting to physiology, psychology, and philosophy.",
+            "life": "Taught for decades at Harvard and established the first American experimental psychology lab."
+          },
+          "historicalContext": "His work emerged during the 19th-century rise of experimental science.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "Neuroplasticity of Habits",
+              "text": "Habits carve neural pathways in the brain; constant repetition makes actions automatic."
+            },
+            {
+              "num": "02",
+              "title": "Will to Believe and Act",
+              "text": "Belief in one's ability to change is the first essential step toward taking action."
+            },
+            {
+              "num": "03",
+              "title": "Action Shapes Emotion",
+              "text": "Act calmly and bravely, and your inner emotional state will follow your action."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "term": "Stream of Consciousness",
+              "definition": "Consciousness is a continuous, unbroken flow."
+            },
+            {
+              "term": "Ethical Pragmatism",
+              "definition": "The truth of an idea is measured by its practical consequences."
+            }
+          ],
+          "works": [
+            {
+              "title": "The Principles of Psychology",
+              "year": "1890",
+              "desc": "Landmark textbook establishing modern psychology."
+            },
+            {
+              "title": "Talks to Teachers on Psychology",
+              "year": "1899",
+              "desc": "Practical applications on habit formation and education."
+            },
+            {
+              "title": "Pragmatism",
+              "year": "1907",
+              "desc": "Foundational work on pragmatic philosophy."
+            }
+          ],
+          "influence": [
+            "Influenced John Dewey, Albert Bandura, and James Clear in habit science."
+          ],
+          "quotes": [
+            "« The greatest discovery of my generation is that a human being can alter his life by altering his attitudes of mind. »",
+            "« Act as if what you do makes a difference. It does. »"
+          ],
+          "famousQuote": "« The greatest discovery of my generation is that a human being can alter his life by altering his attitudes of mind. »",
+          "didYouKnow": "He was the brother of famous novelist Henry James.",
+          "reflectionQuestion": "How can you apply immediate action to overcome hesitation today?",
+          "lessons": [
+            "Start with small actions.",
+            "Design your environment.",
+            "Automate your routines."
+          ],
+          "timeline": [
+            {
+              "year": "1842",
+              "title": "Birth",
+              "desc": "Born in New York."
+            },
+            {
+              "year": "1890",
+              "title": "Principles of Psychology",
+              "desc": "Published his masterpiece."
+            },
+            {
+              "year": "1910",
+              "title": "Death",
+              "desc": "Passed away in New Hampshire."
+            }
+          ]
+        },
+        {
+          "id": "albert-bandura",
+          "featured": true,
+          "name": "Albert Bandura",
+          "era": "1925 – 2021",
+          "school": "Personal Growth",
+          "category": "personal-growth",
+          "image": "thinkers/images/albert-bandura.jpg",
+          "bio": "Renowned psychologist who established Self-Efficacy and Social Learning Theory.",
+          "body": [
+            "Albert Bandura (1925-2021) was an influential Canadian-American psychologist renowned for Social Learning Theory.",
+            "His work on Self-Efficacy proved that belief in one's capability determines effort, resilience, and success."
+          ],
+          "keyConcept": "Self-Efficacy & Learning",
+          "keyWorks": "Social Learning Theory, Self-Efficacy",
+          "originalName": "Albert Bandura",
+          "subName": "Social Psychologist, Self-Efficacy Theorist, and Behavioral Modeling Pioneer",
+          "country": "Canada / United States",
+          "flag": "🧠",
+          "heroQuote": "« People with high self-efficacy approach difficult tasks as challenges to be mastered rather than threats to be avoided. »",
+          "intro": "Albert Bandura revolutionized psychology by showing that self-efficacy belief drives achievement.",
+          "bioDetails": {
+            "upbringing": "Born in Mundare, Alberta, demonstrating independence from an early age.",
+            "studies": "Earned PhD at University of Iowa and spent a legendary research career at Stanford.",
+            "life": "Awarded the National Medal of Science for outstanding contributions to human behavior."
+          },
+          "historicalContext": "His research bridged behaviorism and cognitive psychology.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "Self-Efficacy as a Driver",
+              "text": "The belief in one's capability determines how much effort is invested and maintained."
+            },
+            {
+              "num": "02",
+              "title": "Observational Modeling",
+              "text": "Humans acquire skills and confidence by observing successful role models."
+            },
+            {
+              "num": "03",
+              "title": "Reciprocal Determinism",
+              "text": "Personal factors, behavior, and environment continuously interact."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "term": "Self-Efficacy",
+              "definition": "Belief in one's capability to execute actions needed to reach specific goals."
+            }
+          ],
+          "works": [
+            {
+              "title": "Social Learning Theory",
+              "year": "1977",
+              "desc": "Foundational text on observational learning."
+            },
+            {
+              "title": "Self-Efficacy: The Exercise of Control",
+              "year": "1997",
+              "desc": "Comprehensive work on developing self-efficacy."
+            }
+          ],
+          "influence": [
+            "Pioneered educational psychology, coaching, and resilience training."
+          ],
+          "quotes": [
+            "« People with high self-efficacy approach difficult tasks as challenges to be mastered rather than threats to be avoided. »"
+          ],
+          "famousQuote": "« People with high self-efficacy approach difficult tasks as challenges to be mastered rather than threats to be avoided. »",
+          "didYouKnow": "His Bobo Doll experiment remains one of psychology's most famous studies.",
+          "reflectionQuestion": "In what area do you need to boost your self-efficacy belief this week?",
+          "lessons": [
+            "Surround yourself with role models.",
+            "Accumulate small wins.",
+            "Build self-mastery."
+          ],
+          "timeline": [
+            {
+              "year": "1925",
+              "title": "Birth",
+              "desc": "Born in Alberta."
+            },
+            {
+              "year": "1977",
+              "title": "Self-Efficacy Theory",
+              "desc": "Published landmark framework."
+            },
+            {
+              "year": "2021",
+              "title": "Death",
+              "desc": "Passed away at Stanford."
+            }
+          ]
+        },
+        {
+          "id": "viktor-frankl",
+          "featured": true,
+          "name": "Viktor Frankl",
+          "era": "1905 – 1997",
+          "school": "Personal Growth",
+          "category": "personal-growth",
+          "image": "thinkers/images/viktor-frankl.jpg",
+          "bio": "Founder of Logotherapy and author of Man's Search for Meaning.",
+          "body": [
+            "Viktor Frankl (1905-1997) was an Austrian neurologist, psychiatrist, and founder of Logotherapy.",
+            "Having survived concentration camps, he proved that the search for meaning is humanity's primary motivation."
+          ],
+          "keyConcept": "Meaning & Resilience",
+          "keyWorks": "Man's Search for Meaning, The Will to Meaning",
+          "originalName": "Viktor Frankl",
+          "subName": "Viennese Psychiatrist, Logotherapy Founder, and Existential Thinker",
+          "country": "Austria",
+          "flag": "🏔️",
+          "heroQuote": "« Those who have a 'why' to live, can bear almost any 'how'. »",
+          "intro": "Viktor Frankl showed that even in extreme hardship, humans retain the ultimate freedom to choose their attitude.",
+          "bioDetails": {
+            "upbringing": "Born in Vienna, fascinated early on by psychiatry and corresponded with Freud and Adler.",
+            "studies": "Earned MD at University of Vienna, specializing in suicide prevention.",
+            "life": "Surviving concentration camps, he transformed his ordeal into a universal therapy."
+          },
+          "historicalContext": "His work emerged from WWII trauma and the human need for moral reconstruction.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "The Will to Meaning",
+              "text": "The striving to find meaning in one's life is the primary motivational force."
+            },
+            {
+              "num": "02",
+              "title": "Ultimate Freedom of Attitude",
+              "text": "Everything can be taken from a man but the freedom to choose one's attitude in any circumstance."
+            },
+            {
+              "num": "03",
+              "title": "Responsibility to Life",
+              "text": "It does not matter what we expect from life, but rather what life expects from us."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "term": "Logotherapy",
+              "definition": "Psychotherapy focused on discovering meaning in work, love, and suffering."
+            }
+          ],
+          "works": [
+            {
+              "title": "Man's Search for Meaning",
+              "year": "1946",
+              "desc": "Timeless account of survival and purpose."
+            },
+            {
+              "title": "The Will to Meaning",
+              "year": "1969",
+              "desc": "Core foundations of existential analysis."
+            }
+          ],
+          "influence": [
+            "Major inspiration for existential psychology and life coaching."
+          ],
+          "quotes": [
+            "« Those who have a 'why' to live, can bear almost any 'how'. »"
+          ],
+          "famousQuote": "« Those who have a 'why' to live, can bear almost any 'how'. »",
+          "didYouKnow": "He wrote his manuscript secret notes on stolen scraps of paper in the camps.",
+          "reflectionQuestion": "What meaning or purpose gives you strength through current challenges?",
+          "lessons": [
+            "Find a purpose greater than yourself.",
+            "Control your internal attitude.",
+            "Embrace responsibility."
+          ],
+          "timeline": [
+            {
+              "year": "1905",
+              "title": "Birth",
+              "desc": "Born in Vienna."
+            },
+            {
+              "year": "1946",
+              "title": "Man's Search for Meaning",
+              "desc": "Published his classic book."
+            },
+            {
+              "year": "1997",
+              "title": "Death",
+              "desc": "Passed away in Vienna."
+            }
+          ]
+        },
+        {
+          "id": "carol-dweck",
+          "featured": true,
+          "name": "Carol Dweck",
+          "era": "1946 – Present",
+          "school": "Personal Growth",
+          "category": "personal-growth",
+          "image": "thinkers/images/carol-dweck.jpg",
+          "bio": "Pioneering researcher on the Growth Mindset versus Fixed Mindset.",
+          "body": [
+            "Carol Dweck (born 1946) is a Lewis and Virginia Eaton Professor of Psychology at Stanford University.",
+            "She is world-famous for discovering the difference between a fixed mindset and a growth mindset."
+          ],
+          "keyConcept": "Growth Mindset",
+          "keyWorks": "Mindset: The New Psychology of Success",
+          "originalName": "Carol Dweck",
+          "subName": "Stanford Professor and Growth Mindset Pioneer",
+          "country": "United States",
+          "flag": "💡",
+          "heroQuote": "« In a growth mindset, challenges are opportunities to learn rather than judgments. »",
+          "intro": "Carol Dweck transformed learning science by proving that intelligence and skills grow through effort.",
+          "bioDetails": {
+            "upbringing": "Born in New York City, studying social and cognitive psychology.",
+            "studies": "PhD at Yale, teaching at Columbia and Stanford.",
+            "life": "Her research is widely applied in education, corporate innovation, and sports."
+          },
+          "historicalContext": "Her work aligns with modern positive psychology and lifelong learning.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "Fixed vs. Growth Mindset",
+              "text": "Abilities are not fixed; effort and strategic practice continually build skill."
+            },
+            {
+              "num": "02",
+              "title": "Reframe Failure as Learning",
+              "text": "Mistakes are not failures but feedback essential for progress."
+            },
+            {
+              "num": "03",
+              "title": "The Power of \"Not Yet\"",
+              "text": "When facing difficulty, remember you have \"not yet\" mastered it."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "term": "Growth Mindset",
+              "definition": "The belief that basic abilities can be developed through dedication and hard work."
+            }
+          ],
+          "works": [
+            {
+              "title": "Mindset: The New Psychology of Success",
+              "year": "2006",
+              "desc": "The landmark book on the psychology of success."
+            }
+          ],
+          "influence": [
+            "Applied in top schools and Fortune 500 companies worldwide."
+          ],
+          "quotes": [
+            "« In a growth mindset, challenges are opportunities to learn rather than judgments. »"
+          ],
+          "famousQuote": "« In a growth mindset, challenges are opportunities to learn rather than judgments. »",
+          "didYouKnow": "Her \"Not Yet\" framework transformed educational assessment methods.",
+          "reflectionQuestion": "Do you view your current obstacles as limits or growth opportunities?",
+          "lessons": [
+            "Praise effort over talent.",
+            "Use the phrase \"Not Yet\".",
+            "Learn from every error."
+          ],
+          "timeline": [
+            {
+              "year": "1946",
+              "title": "Birth",
+              "desc": "Born in New York."
+            },
+            {
+              "year": "2006",
+              "title": "Mindset",
+              "desc": "Published landmark book."
+            }
+          ]
+        },
+        {
+          "id": "mihaly-csikszentmihalyi",
+          "featured": true,
+          "name": "Mihály Csíkszentmihályi",
+          "era": "1934 – 2021",
+          "school": "Personal Growth",
+          "category": "personal-growth",
+          "image": "thinkers/images/mihaly-csikszentmihalyi.jpg",
+          "bio": "Renowned psychologist who named and defined the psychological state of Flow.",
+          "body": [
+            "Mihály Csíkszentmihályi (1934-2021) was a Hungarian-American psychologist, positive psychology cofounder.",
+            "He is famous for recognizing and naming the concept of Flow—a state of total absorption and optimal experience."
+          ],
+          "keyConcept": "Flow & Focus",
+          "keyWorks": "Flow: The Psychology of Optimal Experience, Creativity",
+          "originalName": "Mihály Csíkszentmihályi",
+          "subName": "Positive Psychology Cofounder and Flow Theory Creator",
+          "country": "Hungary / United States",
+          "flag": "⏱️",
+          "heroQuote": "« The best moments usually occur when a person's body or mind is stretched to its limits in a voluntary effort to accomplish something difficult and worthwhile. »",
+          "intro": "Mihály Csíkszentmihályi uncovered the scientific conditions of deep focus and optimal performance.",
+          "bioDetails": {
+            "upbringing": "Born in Fiume, emigrated to the US after WWII to study psychology.",
+            "studies": "PhD at University of Chicago, heading the psychology department.",
+            "life": "Devoted his life to studying happiness, creativity, and deep engagement."
+          },
+          "historicalContext": "His work laid the foundation for deep work research and peak performance.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "The State of Flow",
+              "text": "Flow occurs when the mind is fully immersed in an activity balancing high challenge and skill."
+            },
+            {
+              "num": "02",
+              "title": "Attention as a Finite Resource",
+              "text": "Attention is our most valuable cognitive resource; controlling it defines quality of life."
+            },
+            {
+              "num": "03",
+              "title": "Clear Goals and Immediate Feedback",
+              "text": "Optimal concentration requires clear micro-goals and immediate feedback."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "term": "Flow",
+              "definition": "A mental state of complete absorption, active enjoyment, and deep focus."
+            }
+          ],
+          "works": [
+            {
+              "title": "Flow: The Psychology of Optimal Experience",
+              "year": "1990",
+              "desc": "Landmark work on the psychology of optimal experience."
+            },
+            {
+              "title": "Creativity",
+              "year": "1996",
+              "desc": "In-depth study on human creativity and innovation."
+            }
+          ],
+          "influence": [
+            "Essential foundation for Deep Work and peak sports performance."
+          ],
+          "quotes": [
+            "« The best moments usually occur when a person's body or mind is stretched to its limits in a voluntary effort to accomplish something difficult and worthwhile. »"
+          ],
+          "famousQuote": "« The best moments usually occur when a person's body or mind is stretched to its limits in a voluntary effort to accomplish something difficult and worthwhile. »",
+          "didYouKnow": "He invented the Experience Sampling Method to measure real-time daily happiness.",
+          "reflectionQuestion": "What activities naturally put you into a state of Flow?",
+          "lessons": [
+            "Balance challenge and skill.",
+            "Eliminate distractions.",
+            "Set clear micro-goals."
+          ],
+          "timeline": [
+            {
+              "year": "1934",
+              "title": "Birth",
+              "desc": "Born in Fiume."
+            },
+            {
+              "year": "1990",
+              "title": "Flow",
+              "desc": "Published landmark book."
+            },
+            {
+              "year": "2021",
+              "title": "Death",
+              "desc": "Passed away in California."
+            }
+          ]
+        },
+        {
+          "id": "angela-duckworth",
+          "featured": true,
+          "name": "Angela Duckworth",
+          "era": "1970 – Present",
+          "school": "Personal Growth",
+          "category": "personal-growth",
+          "image": "thinkers/images/angela-duckworth.jpg",
+          "bio": "Leading researcher on Grit, passion, and long-term perseverance.",
+          "body": [
+            "Angela Duckworth (born 1970) is Rosa Lee and Egbert Chang Professor of Psychology at University of Pennsylvania.",
+            "She is renowned for studying Grit—proving that passion and long-term perseverance outperform raw talent."
+          ],
+          "keyConcept": "Grit & Perseverance",
+          "keyWorks": "Grit: The Power of Passion and Perseverance",
+          "originalName": "Angela Duckworth",
+          "subName": "Penn Professor and Grit Researcher",
+          "country": "United States",
+          "flag": "📊",
+          "heroQuote": "« Effort counts twice: talent times effort equals skill, skill times effort equals achievement. »",
+          "intro": "Angela Duckworth scientifically proved that long-term stamina and passion are the true drivers of achievement.",
+          "bioDetails": {
+            "upbringing": "Born in New Jersey, studying neurobiology at Harvard and sciences at Oxford.",
+            "studies": "After public school teaching, earned PhD in psychology at Penn.",
+            "life": "MacArthur Genius Fellow and founder of Character Lab."
+          },
+          "historicalContext": "Her work redefined success from innate gift to deliberate practice and stamina.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "Grit Outperforms Talent",
+              "text": "Talent counts, but effort counts twice as much to produce achievement."
+            },
+            {
+              "num": "02",
+              "title": "Deliberate Practice",
+              "text": "Improvement requires targeted practice focused on weaknesses with instant feedback."
+            },
+            {
+              "num": "03",
+              "title": "Passion as Long-Term Loyalty",
+              "text": "True passion is not brief intensity but long-term consistency toward a goal."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "term": "Grit",
+              "definition": "The combination of passion and perseverance for long-term goals."
+            }
+          ],
+          "works": [
+            {
+              "title": "Grit: The Power of Passion and Perseverance",
+              "year": "2016",
+              "desc": "Comprehensive study on the power of passion and perseverance."
+            }
+          ],
+          "influence": [
+            "Widely adopted in athletics, education, and executive leadership."
+          ],
+          "quotes": [
+            "« Effort counts twice: talent times effort equals skill, skill times effort equals achievement. »"
+          ],
+          "famousQuote": "« Effort counts twice: talent times effort equals skill, skill times effort equals achievement. »",
+          "didYouKnow": "She taught middle school math in public schools before entering academic research.",
+          "reflectionQuestion": "On what key project are you committed to maintaining your effort this year?",
+          "lessons": [
+            "Engage in deliberate practice.",
+            "Persevere through setbacks.",
+            "Nurture long-term passion."
+          ],
+          "timeline": [
+            {
+              "year": "1970",
+              "title": "Birth",
+              "desc": "Born in New Jersey."
+            },
+            {
+              "year": "2016",
+              "title": "Grit",
+              "desc": "Published worldwide bestseller."
             }
           ]
         }
@@ -10414,6 +11328,560 @@ const TIKTOK_DATA = {
               "desc": "وفاته في القاهرة."
             }
           ]
+        },
+        {
+          "id": "william-james",
+          "featured": true,
+          "name": "ويليام جيمس",
+          "era": "1842 – 1910",
+          "school": "تطوير الذات",
+          "category": "personal-growth",
+          "image": "thinkers/images/william-james.jpg",
+          "bio": "رائد دراسة العادات وتأثير التكرار العصبي والفلسفة البراغماتية في بناء القوة الشخصية.",
+          "body": [
+            "ويليام جيمس (1842-1910) فيلسوف وعالم نفس أمريكي يُعتبر أب علم النفس الأمريكي وأحد مؤسسي المدرسة البراغماتية.",
+            "قدّم تحليلات عميقة لكيفية تشكيل العادات وتأثير الإرادة الحرة في تغيير حياة الإنسان وتطبيق الأفكار عملياً."
+          ],
+          "keyConcept": "العادات والبراغماتية والعمل",
+          "keyWorks": "The Principles of Psychology, Pragmatism",
+          "originalName": "William James",
+          "subName": "أب علم النفس الأمريكي ورائد الفلسفة البراغماتية وهندسة العادات",
+          "country": "الولايات المتحدة",
+          "flag": "🏛️",
+          "heroQuote": "« الأعظم في أي اختراع هو اكتشاف أن الإنسان يستطيع تغيير حياته بتغيير اتجاهات عقله. »",
+          "intro": "ويليام جيمس رائد الفكر البراغماتي وعلم النفس الحديث، وضع الأسس العلمية لكيفية حفر العادات في الجهاز العصبي وتغيير الموقف الذهني لتشكيل السلوك.",
+          "bioDetails": {
+            "upbringing": "ولد في نيويورك لأسرة فكرية مرموقة ونشأ بين أمريكا وأوروبا.",
+            "studies": "درس الطب في جامعة هارفارد وتأثر بالعلوم الطبيعية ثم تحول إلى علم النفس والفلسفة.",
+            "life": "قضى عقوداً في التدريس بجامعة هارفارد وأسس أول مختبر لعلم النفس التجريبي في أمريكا."
+          },
+          "historicalContext": "عاش جيمس في عصر التحول الصناعي وبداية استقلال علم النفس كعلم مستقل عن الفلسفة التقليدية.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "تشكيل العادات والجهاز العصبي",
+              "text": "العادات تُحفر كمسارات عصبيّة في الدماغ؛ التكرار المستمر يثبت الفعل ويجعله تلقائياً."
+            },
+            {
+              "num": "02",
+              "title": "إرادة الاعتقاد والعمل",
+              "text": "الإيمان بالقدرة على التغيير هو الشق الأول المولد للشجاعة ولتحقيق الفعل المطلوب."
+            },
+            {
+              "num": "03",
+              "title": "التغيير عبر الأفعال المادية",
+              "text": "لا ينتظر العقل المشاعر؛ تصرف بشجاعة وهدوء وسيتكيف الشعور الداخلي فوراً مع الفعل."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "term": "تيار الوعي (Stream of Consciousness)",
+              "definition": "الوعي ليس أجزاءً منفصلة بل تدفق مستمر ومتداخل."
+            },
+            {
+              "term": "البراغماتية الأخلاقية",
+              "definition": "صدق الفكرة يُقاس بنتائجها العملية وتأثيرها الإيجابي."
+            }
+          ],
+          "works": [
+            {
+              "title": "The Principles of Psychology",
+              "year": "1890",
+              "desc": "المرجع التأسيسي الشامل لعلم النفس الحديث."
+            },
+            {
+              "title": "Talks to Teachers on Psychology",
+              "year": "1899",
+              "desc": "تطبيقات عملية لبناء العادات والتربية."
+            },
+            {
+              "title": "Pragmatism",
+              "year": "1907",
+              "desc": "تأسيس المذهب البراغماتي في الفلسفة."
+            }
+          ],
+          "influence": [
+            "أثر في جون ديوي، ألبيرت باندورا، وجيمس كلير في دراسة السلوك والعادات."
+          ],
+          "quotes": [
+            "« الأعظم في أي اختراع هو اكتشاف أن الإنسان يستطيع تغيير حياته بتغيير اتجاهات عقله. »",
+            "« تصرف وكأن ما تفعله يصنع فارقاً، لأنه بالفعل يصنع الفارق. »"
+          ],
+          "famousQuote": "« الأعظم في أي اختراع هو اكتشاف أن الإنسان يستطيع تغيير حياته بتغيير اتجاهات عقله. »",
+          "didYouKnow": "كان شقيق الكاتب الروائي الشهير هينري جيمس.",
+          "reflectionQuestion": "كيف يمكنك تطبيق قاعدة الفعل المباشر لتغيير شعور التردد اليوم؟",
+          "lessons": [
+            "ابدأ بالفعل الصغير فوراً.",
+            "صمم بيئتك لتقليل الاحتكاك.",
+            "ثبت العادات بالتكرار."
+          ],
+          "timeline": [
+            {
+              "year": "1842",
+              "title": "المولد",
+              "desc": "ولد في نيويورك."
+            },
+            {
+              "year": "1890",
+              "title": "مبادئ علم النفس",
+              "desc": "نشر كتابه العظيم."
+            },
+            {
+              "year": "1910",
+              "title": "الوفاة",
+              "desc": "توفي في نيوهامبشير."
+            }
+          ]
+        },
+        {
+          "id": "albert-bandura",
+          "featured": true,
+          "name": "ألبرت باندورا",
+          "era": "1925 – 2021",
+          "school": "تطوير الذات",
+          "category": "personal-growth",
+          "image": "thinkers/images/albert-bandura.jpg",
+          "bio": "مبتكر مفهوم الفعالية الذاتية والتعلم الملاحظ ودور الإيمان بالقدرة في الإنجاز.",
+          "body": [
+            "ألبيرت باندورا (1925-2021) عالم نفس كندي-أمريكي رائد، يُعد من أكثر علماء النفس تأثيراً في التاريخ.",
+            "اشتهر بتأسيس مفهوم الكفاءة الذاتية (Self-Efficacy) ونظرية التعلم الاجتماعي بالنمذجة."
+          ],
+          "keyConcept": "الكفاءة الذاتية والنمذجة",
+          "keyWorks": "Social Learning Theory, Self-Efficacy",
+          "originalName": "Albert Bandura",
+          "subName": "عالم النفس الاجتماعي ورائد نظرية الكفاءة الذاتية والتعلم الملاحظ",
+          "country": "كندا / الولايات المتحدة",
+          "flag": "🧠",
+          "heroQuote": "« الأشخاص الذين يمتلكون حس كفاءة عالية يتعاملون مع الصعاب كمهام يجب إتقانها لا كتهديدات يُتجنب. »",
+          "intro": "ألبيرت باندورا غيّر مفهوم علم النفس الاجتماعي باكتشافه أن إيمان الفرد بقدرته الشخصية يحدد مدى صموده ونجاحه.",
+          "bioDetails": {
+            "upbringing": "ولد في بلدة صغيرة في ألبرتا بكندا وتميز بعصاميته الشديدة.",
+            "studies": "حصل على دكتوراه من جامعة آيوا وانضم لأستاذية جامعة ستانفورد.",
+            "life": "قضى عقوداً في البحث والتدريس بستانفورد ونال وسام العلوم الوطني المرموق."
+          },
+          "historicalContext": "ظهرت أبحاثه لتكسر جمود السلوكية الكلاسيكية بإدخال المعرفة والنمذجة الاجتماعية.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "الكفاءة الذاتية محرك الإنجاز",
+              "text": "إيمان الفرد بقدرته على مواجهة المهام هو الذي يحدد مقدار الجهد والصمود عند العقبات."
+            },
+            {
+              "num": "02",
+              "title": "التمذجة والتعلم باللاحظة",
+              "text": "يتعلم الإنسان الكثير من المهارات عبر ملاحظة النماذج الناجحة واقتفاء خطواتها."
+            },
+            {
+              "num": "03",
+              "title": "الحتمية التبادلية",
+              "text": "السلوك والذات والبيئة تؤثر في بعضها البعض في حلقة مستمرة يمكن توجيهها."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "term": "الكفاءة الذاتية (Self-Efficacy)",
+              "definition": "ثقة الإنسان في قدرته على تنظيم وتنفيذ الأفعال الموصلة للهدف."
+            }
+          ],
+          "works": [
+            {
+              "title": "Social Learning Theory",
+              "year": "1977",
+              "desc": "المرجع الرئيسي في التعلم بالنمذجة الاجتماعية."
+            },
+            {
+              "title": "Self-Efficacy: The Exercise of Control",
+              "year": "1997",
+              "desc": "الدراسة الشاملة لبناء الفعالية والسيطرة."
+            }
+          ],
+          "influence": [
+            "أثر في علم النفس التربوي وتطوير القيادة والصلابة الذاتية."
+          ],
+          "quotes": [
+            "« الأشخاص الذين يمتلكون حس كفاءة عالية يتعاملون مع الصعاب كمهام يجب إتقانها لا كتهديدات يُتجنب. »"
+          ],
+          "famousQuote": "« الأشخاص الذين يمتلكون حس كفاءة عالية يتعاملون مع الصعاب كمهام يجب إتقانها لا كتهديدات يُتجنب. »",
+          "didYouKnow": "تُعد تجربة دمية بوبو الخاصة به من أكثر التجارب شهرة في علم النفس.",
+          "reflectionQuestion": "ما المهارة التي تحتاج لرفع كفاءتك الذاتية فيها هذا الأسبوع؟",
+          "lessons": [
+            "ابحث عن نماذج ملهمة.",
+            "قسّم المهام لتجربة نجاحات صغيرة.",
+            "عزز ثقتك عبر الفعل."
+          ],
+          "timeline": [
+            {
+              "year": "1925",
+              "title": "المولد",
+              "desc": "ولد في ألبرتا."
+            },
+            {
+              "year": "1977",
+              "title": "الكفاءة الذاتية",
+              "desc": "نشر إطاره النظري."
+            },
+            {
+              "year": "2021",
+              "title": "الوفاة",
+              "desc": "توفي في ستانفورد."
+            }
+          ]
+        },
+        {
+          "id": "viktor-frankl",
+          "featured": true,
+          "name": "فيكتور فرانكل",
+          "era": "1905 – 1997",
+          "school": "تطوير الذات",
+          "category": "personal-growth",
+          "image": "thinkers/images/viktor-frankl.jpg",
+          "bio": "مؤسس العلاج بالمعنى وصاحب كتاب الإنسان يبحث عن المعنى، ورائد الحرية الروحية.",
+          "body": [
+            "فيكتور فرانكل (1905-1997) طبيب نفسي ونمساوي ومؤسس المدرسة الثالثة في العلاج النفسي (العلاج بالمعنى / Logotherapy).",
+            "صمد في المعتقلات وألهم العالم بكتابه الشهير الإنسان يبحث عن المعنى."
+          ],
+          "keyConcept": "إرادة المعنى والصلابة",
+          "keyWorks": "Man's Search for Meaning, The Will to Meaning",
+          "originalName": "Viktor Frankl",
+          "subName": "طبيب الأعصاب ومؤسس العلاج بالمعنى ومستكشف غاية الوجود",
+          "country": "النمسا",
+          "flag": "🏔️",
+          "heroQuote": "« من يملك سبباً يعيش من أجله، يستطيع تحمّل أي كيف تقريباً. »",
+          "intro": "فيكتور فرانكل أثبت أن المعنى والغاية هما الدرع الأخير للإنسان أمام أعتى ظروف الحياة والمعاناة.",
+          "bioDetails": {
+            "upbringing": "ولد في فيينا وشغف بالطبيعة والطب النفسي مبكراً.",
+            "studies": "درس الطب النفسي وتراسل مع زيغموند فرويد وألفرد أدلر.",
+            "life": "عاش تجربة المعتقلات الرهيبة وحول معاناته لمصدر إلهام للبشرية."
+          },
+          "historicalContext": "عاش أهوال الحرب العالمية الثانية وصاغ مدرسته العلاجية من قلب المعاناة الواقعية.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "إرادة المعنى دافع أساسي",
+              "text": "السعي نحو غاية ومعنى نبيل هو المحرك الأول لبقاء الإنسان وصموده النفسي."
+            },
+            {
+              "num": "02",
+              "title": "حرية اختيار الموقف الداخلي",
+              "text": "يستطيع الإنسان سلب كل شيء منك إلا حرية اختيار موقفك الداخلي تجاه ظروفك."
+            },
+            {
+              "num": "03",
+              "title": "تحويل الأمل إلى مسؤولية",
+              "text": "السؤال ليس ماذا تنتظر من الحياة، بل ماذا تنتظر الحياة منك ليُنجز."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "term": "العلاج بالمعنى (Logotherapy)",
+              "definition": "العلاج النفسي القائم على اكتشاف المعنى والغاية في الحياة والعمل."
+            }
+          ],
+          "works": [
+            {
+              "title": "Man's Search for Meaning",
+              "year": "1946",
+              "desc": "الأثر الخالد في الصمود وإيجاد المعنى."
+            },
+            {
+              "title": "The Will to Meaning",
+              "year": "1969",
+              "desc": "المبادئ النظريّة والتطبيقيّة للتحليل الوجودي."
+            }
+          ],
+          "influence": [
+            "أثر عميق في علم النفس الوجودي، وتطوير الذات، والصلابة النفسية."
+          ],
+          "quotes": [
+            "« من يملك سبباً يعيش من أجله، يستطيع تحمّل أي كيف تقريباً. »"
+          ],
+          "famousQuote": "« من يملك سبباً يعيش من أجله، يستطيع تحمّل أي كيف تقريباً. »",
+          "didYouKnow": "كتب مسودة كتابه الأول سرًا على قصاصات ورقية في المعتقل.",
+          "reflectionQuestion": "ما المعنى أو الغاية التي تمنحك القوة للنهوض اليوم؟",
+          "lessons": [
+            "ابحث عن رسالتك الشخصية.",
+            "اختر الموقف الداخلي الشجاع.",
+            "تحمل مسؤولية حياتك."
+          ],
+          "timeline": [
+            {
+              "year": "1905",
+              "title": "المولد",
+              "desc": "ولد في فيينا."
+            },
+            {
+              "year": "1946",
+              "title": "الإنسان يبحث عن المعنى",
+              "desc": "نشر كتابه الملهم."
+            },
+            {
+              "year": "1997",
+              "title": "الوفاة",
+              "desc": "توفي في فيينا."
+            }
+          ]
+        },
+        {
+          "id": "carol-dweck",
+          "featured": true,
+          "name": "كارول دويك",
+          "era": "1946 – الآن",
+          "school": "تطوير الذات",
+          "category": "personal-growth",
+          "image": "thinkers/images/carol-dweck.jpg",
+          "bio": "صاحبة أبحاث عقلية النمو والتفريق بين الذهنية الثابتة وذهنية التطوير المستمر.",
+          "body": [
+            "كارول دويك (مواليد 1946) أستاذة علم النفس بجامعة ستانفورد، رائدة أبحاث عقلية النمو (Growth Mindset).",
+            "أحدثت ثورة في فهم التعليم والتحفيز الذاتي وقدرة الإنسان على مضاعفة مهاراته بالجهد والممارسة."
+          ],
+          "keyConcept": "عقلية النمو والتطوير",
+          "keyWorks": "Mindset: The New Psychology of Success",
+          "originalName": "Carol Dweck",
+          "subName": "أستاذة ستانفورد ومبتكرة مفهوم عقلية النمو والتعلم المستمر",
+          "country": "الولايات المتحدة",
+          "flag": "💡",
+          "heroQuote": "« في عقلية النمو، الصعوبات هي مجرد فرص للتعلم والارتقاء وليست حكماً على قدراتك. »",
+          "intro": "كارول دويك غيرت النظرة للذكاء والمهارة، مؤكدة أن الإصرار والتعلم المستمر يصنعان الفارق.",
+          "bioDetails": {
+            "upbringing": "ولدت في نيويورك ودرست علم النفس بحب واهتمام دؤوب.",
+            "studies": "نالت الدكتوراه من ييل ودرّست في كولومبيا وستانفورد.",
+            "life": "قادت عقوداً من الأبحاث حول أثر الاعتقادات الذهنية على السلوك والنجاح."
+          },
+          "historicalContext": "ساهمت أبحاثها في إعادة رسم مناهج التعليم والتطوير المؤسسي حول العالم.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "عقلية النمو مقابل العقلية الثابتة",
+              "text": "القدرات ليست ثابتة؛ الجهد والممارسة الذكية يطوران الذكاء والمهارة باستمرار."
+            },
+            {
+              "num": "02",
+              "title": "إعادة تأطير الأخطاء والتعثر",
+              "text": "الفشل ليس وصمة عار بل معلومات ومحطة تغذية راجعة لتعديل الاستراتيجية."
+            },
+            {
+              "num": "03",
+              "title": "قوة كلمة «ليس بعد»",
+              "text": "عندما تستصعب مهارة، لا تقل لا أستطيع بل قل لم أتقنها بعد."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "term": "عقلية النمو (Growth Mindset)",
+              "definition": "القناعة بأن المهارات والذكاء يمكن تطويرهما عبر الجهد والتعلم."
+            }
+          ],
+          "works": [
+            {
+              "title": "Mindset: The New Psychology of Success",
+              "year": "2006",
+              "desc": "الكتاب المرجعي الرائد في عقلية النمو والنجاح."
+            }
+          ],
+          "influence": [
+            "أثرت عالمياً في علم النفس التنموي وإدارة الأعمال والتعليم."
+          ],
+          "quotes": [
+            "« في عقلية النمو، الصعوبات هي مجرد فرص للتعلم والارتقاء وليست حكماً على قدراتك. »"
+          ],
+          "famousQuote": "« في عقلية النمو، الصعوبات هي مجرد فرص للتعلم والارتقاء وليست حكماً على قدراتك. »",
+          "didYouKnow": "تُدرّس مفاهيمها اليوم في أكبر المؤسسات الأكاديمية والشركات العالمية.",
+          "reflectionQuestion": "هل تتعامل مع أخطائك الأخيرة كعقبة أم كمعلومات للتطور؟",
+          "lessons": [
+            "اعتنق عقلية النمو.",
+            "استخدم كلمة ليس بعد.",
+            "تعلم من كل تجربة."
+          ],
+          "timeline": [
+            {
+              "year": "1946",
+              "title": "المولد",
+              "desc": "ولدت في نيويورك."
+            },
+            {
+              "year": "2006",
+              "title": "كتاب عقلية النمو",
+              "desc": "نشرت مؤلفها العالمي."
+            }
+          ]
+        },
+        {
+          "id": "mihaly-csikszentmihalyi",
+          "featured": true,
+          "name": "ميهاي تشيكسينتميهاي",
+          "era": "1934 – 2021",
+          "school": "تطوير الذات",
+          "category": "personal-growth",
+          "image": "thinkers/images/mihaly-csikszentmihalyi.jpg",
+          "bio": "مكتشف حالة التدفق والتركيز التام والاندماج في الإنجاز والعمل الإبداعي.",
+          "body": [
+            "ميهاي سيكسينتميهاي (1934-2021) عالم نفس مجري-أمريكي، أحد مؤسسي علم النفس الإيجابي.",
+            "اشتهر بصياغة مفهوم «التدفق» (Flow) وتحديد شروط الاستغراق الإيجابي الكامل في العمل والتركيز."
+          ],
+          "keyConcept": "التدفق والتركيز العالي",
+          "keyWorks": "Flow: The Psychology of Optimal Experience, Creativity",
+          "originalName": "Mihály Csíkszentmihályi",
+          "subName": "رائد علم النفس الإيجابي ومكتشف حالة التدفق والتركيز الأمثل",
+          "country": "المجر / الولايات المتحدة",
+          "flag": "⏱️",
+          "heroQuote": "« أفضل لحظات الحياة تأتي عند التمدد الإيجابي للجسم أو العقل في جهد طوعي لتحقيق أمر صعب وذات قيمة. »",
+          "intro": "ميهاي سيكسينتميهاي قدم الدليل العلمي لكيفية الوصول لأعلى درجات الاستمتاع والإنتاجية العميقة.",
+          "bioDetails": {
+            "upbringing": "ولد في رييكا وعاش تجارب الحرب التي دفعته للبحث عن أسس السعادة والمعنى.",
+            "studies": "درس في جامعة شيكاغو وحصل على الدكتوراه وترأس قسم علم النفس.",
+            "life": "قضى حياته في دراسة تجارب المبدعين والرياضيين والمفكرين."
+          },
+          "historicalContext": "ساهم في تأسيس علم النفس الإيجابي مع مارتن سيليغمان للتركيز على القوة والازدهار.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "حالة التدفق الاستغراقي",
+              "text": "التدفق يحدث عند انغماس الذهن كلياً في نشاط يوازن بين التحدي العالي والمهارة المرتفعة."
+            },
+            {
+              "num": "02",
+              "title": "الانتباه مركب طاقة محدودة",
+              "text": "الانتباه هو أثمن الموارد الذهنية؛ إدارته وحمايته من التشتت تصنع جودة الحياة والإنتاج."
+            },
+            {
+              "num": "03",
+              "title": "التغذية الراجعة والهدف الواضح",
+              "text": "لاستدامة التركيز، يلزم تحديد هدف فرعي واضح وتلقي إشارات إنجاز مباشرة."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "term": "التدفق (Flow)",
+              "definition": "حالة الذهن المستغرق تماماً بحس من البهجة والسيطرة التامة والتركيز الصافي."
+            }
+          ],
+          "works": [
+            {
+              "title": "Flow: The Psychology of Optimal Experience",
+              "year": "1990",
+              "desc": "الكتاب التأسيسي في السعادة والتركيز والتدفق."
+            },
+            {
+              "title": "Creativity",
+              "year": "1996",
+              "desc": "دراسة الاكتشاف والابتكار الإنساني."
+            }
+          ],
+          "influence": [
+            "أثر في أبحاث العمل العميق والإنتاجية وعلم النفس الرياضي والإبداعي."
+          ],
+          "quotes": [
+            "« أفضل لحظات الحياة تأتي عند التمدد الإيجابي للجسم أو العقل في جهد طوعي لتحقيق أمر صعب وذات قيمة. »"
+          ],
+          "famousQuote": "« أفضل لحظات الحياة تأتي عند التمدد الإيجابي للجسم أو العقل في جهد طوعي لتحقيق أمر صعب وذات قيمة. »",
+          "didYouKnow": "جمع بيانات أبحاثه الأولى عبر الاستبيانات اللحظية لدى المئات من المبدعين.",
+          "reflectionQuestion": "ما النشاط الذي يمنحك حالة التدفق والاندماج الكامل؟",
+          "lessons": [
+            "وازن بين التحديات ومهاراتك.",
+            "احمِ انتباهك من المشتتات.",
+            "ضع أهدافاً جزئية واضحة."
+          ],
+          "timeline": [
+            {
+              "year": "1934",
+              "title": "المولد",
+              "desc": "ولد في رييكا."
+            },
+            {
+              "year": "1990",
+              "title": "كتاب التدفق",
+              "desc": "نشر كتابه المرجعي."
+            },
+            {
+              "year": "2021",
+              "title": "الوفاة",
+              "desc": "توفي في كاليفورنيا."
+            }
+          ]
+        },
+        {
+          "id": "angela-duckworth",
+          "featured": true,
+          "name": "أنجيلا داكورث",
+          "era": "1970 – الآن",
+          "school": "تطوير الذات",
+          "category": "personal-growth",
+          "image": "thinkers/images/angela-duckworth.jpg",
+          "bio": "باحثة مفهوم العزيمة والالتزام الشغوف بالطويل الأجل لتحقيق الإنجاز الفائق.",
+          "body": [
+            "أنجيلا داكورث (مواليد 1970) أستاذة علم النفس بجامعة بنسلفانيا.",
+            "اشتهرت بأبحاثها حول مفهوم «العزيمة» (Grit) والمزج بين الشغف والجهد طويل الأمد كعامل رئيس للإنجاز."
+          ],
+          "keyConcept": "العزيمة والصلابة النفسية",
+          "keyWorks": "Grit: The Power of Passion and Perseverance",
+          "originalName": "Angela Duckworth",
+          "subName": "أستاذة جامعة بنسلفانيا وباحثة العزيمة والإصرار طويل الأمد",
+          "country": "الولايات المتحدة",
+          "flag": "📊",
+          "heroQuote": "« الجهد يضاعف الموهبة ليصنع المهارة، ثم يضاعف المهارة ليصنع الإنجاز. »",
+          "intro": "أنجيلا داكورث أثبتت بالأبحاث أن الشغف والمثابرة طويلة الأجل أهم بكثير من الموهبة المباشرة.",
+          "bioDetails": {
+            "upbringing": "ولدت في نيوجيرسي وشغفت بالتربية وعلم النفس.",
+            "studies": "درست في هارفارد وأوكسفورد ونالت الدكتوراه من بنسلفانيا.",
+            "life": "حازت جائزة ماك آرثر للمبدعين وأسست مؤسسة Character Lab."
+          },
+          "historicalContext": "أعادت تقييم مفاهيم النجاح بالتركيز على السلوك طويل الأجل والممارسة المتعمدة.",
+          "mainIdeas": [
+            {
+              "num": "01",
+              "title": "العزيمة تتفوق على الموهبة",
+              "text": "الموهبة تضاعف الجهد الممارس، لكن الجهد المزدوج هو الذي يبني المهارة والإنجاز النهائي."
+            },
+            {
+              "num": "02",
+              "title": "الممارسة المتعمدة الواعية",
+              "text": "التطور لا يأتي بالتكرار الآلي فقط، بل بالتركيز على الثغرات وتلقي التغذية والتصحيح."
+            },
+            {
+              "num": "03",
+              "title": "الشغف كالتزام طويل الأمد",
+              "text": "الشغف الحقيقي ليس حماساً لحظياً عابراً، بل وفاء دائم لهدف رئيسي لسنوات."
+            }
+          ],
+          "keyConcepts": [
+            {
+              "term": "العزيمة (Grit)",
+              "definition": "المزج بين الشغف الموجه والصلابة في الإصرار طويل الأجل."
+            }
+          ],
+          "works": [
+            {
+              "title": "Grit: The Power of Passion and Perseverance",
+              "year": "2016",
+              "desc": "الدراسة الشاملة في الشغف والصلابة والإصرار."
+            }
+          ],
+          "influence": [
+            "أثرت في علم النفس الرياضي والتربية وبناء شخصيات القيادة."
+          ],
+          "quotes": [
+            "« الجهد يضاعف الموهبة ليصنع المهارة، ثم يضاعف المهارة ليصنع الإنجاز. »"
+          ],
+          "famousQuote": "« الجهد يضاعف الموهبة ليصنع المهارة، ثم يضاعف المهارة ليصنع الإنجاز. »",
+          "didYouKnow": "عملت معلمة رياضيات بالمدارس العامة قبل تحولها للبحث العلمي.",
+          "reflectionQuestion": "ما الهدف الذي تلتزم بالعمل عليه بثبات طوال هذا العام؟",
+          "lessons": [
+            "ركز على الممارسة المتعمدة.",
+            "استمر عند التعثر.",
+            "نمّ شغفك بالالتزام."
+          ],
+          "timeline": [
+            {
+              "year": "1970",
+              "title": "المولد",
+              "desc": "ولدت في نيوجيرسي."
+            },
+            {
+              "year": "2016",
+              "title": "كتاب العزيمة",
+              "desc": "نشرت أبحاثها العالمية."
+            }
+          ]
         }
       ],
       "articles": [
@@ -12397,307 +13865,422 @@ const TIKTOK_DATA = {
         }
       ]
     }
+  },
+  "PSYCHOLOGIE_PARCOURS_V5_2": {
+    "self-psychology": {
+      "id": "self-psychology",
+      "number": "01",
+      "title": {
+        "fr": "Psychologie de soi",
+        "ar": "علم النفس وفهم الذات",
+        "en": "Self-Psychology"
+      },
+      "subtitle": {
+        "fr": "Explorez les profondeurs du psychisme et de la conscience de soi",
+        "ar": "استكشف أعماق النفس والوعي الذاتي",
+        "en": "Explore the depths of the psyche and self-awareness"
+      },
+      "intro": {
+        "fr": "Un parcours dédié à l exploration de la structure psychique, du système inconscient et du développement de l estime personnelle.",
+        "ar": "مسار مخصص لاستكشاف الهيكل النفسي، الوعي واللاوعي، وتطوير تقدير الذات.",
+        "en": "A journey dedicated to exploring psychological structure, the subconscious mind, and building self-esteem."
+      },
+      "principles": [
+        {
+          "fr": "💡 La prise de conscience de l inconscient éclaircit les choix de vie.",
+          "ar": "💡 إدراك اللاوعي يوضح خيارات الحياة.",
+          "en": "💡 Becoming conscious of the unconscious illuminates life choices."
+        },
+        {
+          "fr": "💡 L individuation exige la confrontation avec ses propres ombres.",
+          "ar": "💡 التفرّد يتطلب مواجهة الظلال الذاتية.",
+          "en": "💡 Individuation requires confronting one s own shadow."
+        },
+        {
+          "fr": "💡 La véritable confiance naît de l alignement intérieur.",
+          "ar": "💡 الثقة الحقيقية تنبع من التوافق الداخلي.",
+          "en": "💡 True confidence springs from inner alignment."
+        }
+      ],
+      "articles": [
+        "articles/true-confidence-inside.html",
+        "files/stop-overthinking.html"
+      ],
+      "thinkers": [
+        {
+          "id": "angela-duckworth",
+          "name": "Angela Duckworth",
+          "era": "1970 – Present",
+          "school": "Personal Growth",
+          "category": "personal-growth",
+          "profileUrl": "./angela-duckworth/",
+          "image": "images/angela-duckworth.jpg",
+          "bio": "Pioneer of Grit research, demonstrating passion and perseverance.",
+          "keyConcept": "Grit, Perseverance"
+        },
+        {
+          "id": "mihaly-csikszentmihalyi",
+          "name": "Mihály Csíkszentmihályi",
+          "era": "1934 – 2021",
+          "school": "Personal Growth",
+          "category": "personal-growth",
+          "profileUrl": "./mihaly-csikszentmihalyi/",
+          "image": "images/mihaly-csikszentmihalyi.jpg",
+          "bio": "Pioneer of the Flow concept and optimal cognitive focus.",
+          "keyConcept": "Flow State, Focus"
+        },
+        {
+          "id": "carol-dweck",
+          "name": "Carol Dweck",
+          "era": "1946 – Present",
+          "school": "Personal Growth",
+          "category": "personal-growth",
+          "profileUrl": "./carol-dweck/",
+          "image": "images/carol-dweck.jpg",
+          "bio": "Pioneer of Growth Mindset research and learning through challenges.",
+          "keyConcept": "Growth Mindset"
+        },
+        {
+          "id": "viktor-frankl",
+          "name": "Viktor Frankl",
+          "era": "1905 – 1997",
+          "school": "Personal Growth",
+          "category": "personal-growth",
+          "profileUrl": "./viktor-frankl/",
+          "image": "images/viktor-frankl.jpg",
+          "bio": "Founder of logotherapy and author of Man's Search for Meaning.",
+          "keyConcept": "Search for Meaning, Logotherapy"
+        },
+        {
+          "id": "albert-bandura",
+          "name": "Albert Bandura",
+          "era": "1925 – 2021",
+          "school": "Personal Growth",
+          "category": "personal-growth",
+          "profileUrl": "./albert-bandura/",
+          "image": "images/albert-bandura.jpg",
+          "bio": "Pioneer of the self-efficacy framework and social learning theory.",
+          "keyConcept": "Self-Efficacy, Social Learning"
+        },
+        {
+          "id": "william-james",
+          "name": "William James",
+          "era": "1842 – 1910",
+          "school": "Personal Growth",
+          "category": "personal-growth",
+          "profileUrl": "./william-james/",
+          "image": "images/william-james.jpg",
+          "bio": "Pioneer of habit formation, willpower, and pragmatist psychology.",
+          "keyConcept": "Habits, Willpower, Pragmatism"
+        },
+        {
+          "id": "angela-duckworth",
+          "name": "Angela Duckworth",
+          "era": "1970 – Présent",
+          "school": "Développement personnel",
+          "category": "personal-growth",
+          "profileUrl": "./angela-duckworth/",
+          "image": "images/angela-duckworth.jpg",
+          "bio": "Pionnière des recherches sur le Grit : la combinaison unique de passion et de persévérance.",
+          "keyConcept": "Grit, Persévérance"
+        },
+        {
+          "id": "mihaly-csikszentmihalyi",
+          "name": "Mihály Csíkszentmihályi",
+          "era": "1934 – 2021",
+          "school": "Développement personnel",
+          "category": "personal-growth",
+          "profileUrl": "./mihaly-csikszentmihalyi/",
+          "image": "images/mihaly-csikszentmihalyi.jpg",
+          "bio": "Pionnier du concept de Flow et de l'expérience optimale dans le travail.",
+          "keyConcept": "État de Flow, Concentration"
+        },
+        {
+          "id": "carol-dweck",
+          "name": "Carol Dweck",
+          "era": "1946 – Présent",
+          "school": "Développement personnel",
+          "category": "personal-growth",
+          "profileUrl": "./carol-dweck/",
+          "image": "images/carol-dweck.jpg",
+          "bio": "Pionnière des recherches sur le Growth Mindset et la résilience face à l'échec.",
+          "keyConcept": "Growth Mindset"
+        },
+        {
+          "id": "viktor-frankl",
+          "name": "Viktor Frankl",
+          "era": "1905 – 1997",
+          "school": "Développement personnel",
+          "category": "personal-growth",
+          "profileUrl": "./viktor-frankl/",
+          "image": "images/viktor-frankl.jpg",
+          "bio": "Fondateur de la logothérapie et auteur de \"Man's Search for Meaning\", pionnier du sens.",
+          "keyConcept": "Quête de Sens, Logothérapie"
+        },
+        {
+          "id": "albert-bandura",
+          "name": "Albert Bandura",
+          "era": "1925 – 2021",
+          "school": "Développement personnel",
+          "category": "personal-growth",
+          "profileUrl": "./albert-bandura/",
+          "image": "images/albert-bandura.jpg",
+          "bio": "Pionnier du concept d'auto-efficacité et de l'apprentissage par observation.",
+          "keyConcept": "Auto-efficacité, Apprentissage Social"
+        },
+        {
+          "id": "william-james",
+          "name": "William James",
+          "era": "1842 – 1910",
+          "school": "Développement personnel",
+          "category": "personal-growth",
+          "profileUrl": "./william-james/",
+          "image": "images/william-james.jpg",
+          "bio": "Pionnier de l'étude des habitudes, de la volonté et de la psychologie pragmatique.",
+          "keyConcept": "Habitudes, Volonté, Pragmatisme"
+        },
+        {
+          "id": "angela-duckworth",
+          "name": "أنجيلا داكوورث",
+          "era": "1970 – الآن",
+          "school": "تطوير الذات",
+          "category": "personal-growth",
+          "profileUrl": "./angela-duckworth/",
+          "image": "images/angela-duckworth.jpg",
+          "bio": "صاحبة أبحاث العزيمة والتأكيد على أن الشغف والمثابرة طويلة الأمد يفوقان الموهبة.",
+          "keyConcept": "العزيمة (Grit)، والمثابرة"
+        },
+        {
+          "id": "mihaly-csikszentmihalyi",
+          "name": "ميهاي تشيكسينتميهاي",
+          "era": "1934 – 2021",
+          "school": "تطوير الذات",
+          "category": "personal-growth",
+          "profileUrl": "./mihaly-csikszentmihalyi/",
+          "image": "images/mihaly-csikszentmihalyi.jpg",
+          "bio": "مكتشف حالة التدفق والتركيز التام والاندماج في الإنجاز والعمل الإبداعي.",
+          "keyConcept": "حالة التدفق (Flow)، التركيز"
+        },
+        {
+          "id": "carol-dweck",
+          "name": "كارول دويك",
+          "era": "1946 – الآن",
+          "school": "تطوير الذات",
+          "category": "personal-growth",
+          "profileUrl": "./carol-dweck/",
+          "image": "images/carol-dweck.jpg",
+          "bio": "صاحبة أبحاث عقلية النمو والتفريق بين الذهنية الثابتة وذهنية التطوير المستمر.",
+          "keyConcept": "عقلية النمو (Growth Mindset)"
+        },
+        {
+          "id": "viktor-frankl",
+          "name": "فيكتور فرانكل",
+          "era": "1905 – 1997",
+          "school": "تطوير الذات",
+          "category": "personal-growth",
+          "profileUrl": "./viktor-frankl/",
+          "image": "images/viktor-frankl.jpg",
+          "bio": "مؤسس العلاج بالمعنى وصاحب كتاب الإنسان يبحث عن المعنى، ورائد الحرية الروحية.",
+          "keyConcept": "البحث عن المعنى، الحرية النفسية"
+        },
+        {
+          "id": "albert-bandura",
+          "name": "ألبرت باندورا",
+          "era": "1925 – 2021",
+          "school": "تطوير الذات",
+          "category": "personal-growth",
+          "profileUrl": "./albert-bandura/",
+          "image": "images/albert-bandura.jpg",
+          "bio": "مبتكر مفهوم الفعالية الذاتية والتعلم الملاحظ ودور الإيمان بالقدرة في الإنجاز.",
+          "keyConcept": "الكفاءة الذاتية، التفكير الإيجابي"
+        },
+        {
+          "id": "william-james",
+          "name": "ويليام جيمس",
+          "era": "1842 – 1910",
+          "school": "تطوير الذات",
+          "category": "personal-growth",
+          "profileUrl": "./william-james/",
+          "image": "images/william-james.jpg",
+          "bio": "رائد دراسة العادات وتأثير التكرار العصبي والفلسفة البراغماتية في بناء القوة الشخصية.",
+          "keyConcept": "العادات، الإرادة، البراغماتية"
+        },
+        "freud",
+        "jung",
+        "adler"
+      ]
+    },
+    "emotions-relationships": {
+      "id": "emotions-relationships",
+      "number": "02",
+      "title": {
+        "fr": "Émotions & Relations",
+        "ar": "المشاعر والعلاقات",
+        "en": "Emotions & Relationships"
+      },
+      "subtitle": {
+        "fr": "Comprendre les attachements, la dynamique affective et les liens humains",
+        "ar": "فهم الارتباط، الديناميكية العاطفية، والروابط الإنسانية",
+        "en": "Understand attachments, emotional dynamics, and human bonds"
+      },
+      "intro": {
+        "fr": "Analyse des schémas d attachement, de la régulation émotionnelle et de la communication empathique.",
+        "ar": "تحليل أنماط التعلق، التنظيم العاطفي، والتواصل التعاطفي.",
+        "en": "Analysis of attachment styles, emotional regulation, and empathetic communication."
+      },
+      "principles": [
+        {
+          "fr": "💡 L attachement précoce préfigure le style relationnel adulte.",
+          "ar": "💡 التعلق المبكر يشكل نمط العلاقات عند الكبر.",
+          "en": "💡 Early attachment shapes adult relational patterns."
+        },
+        {
+          "fr": "💡 Reconnaître ses émotions est la première étape de leur régulation.",
+          "ar": "💡 التعرف على المشاعر هو الخطوة الأولى لتنظيمها.",
+          "en": "💡 Recognizing emotions is the first step toward regulation."
+        },
+        {
+          "fr": "💡 L empathie active transforme la qualité des liens sociaux.",
+          "ar": "💡 التعاطف الفعال يغير جودة الروابط الاجتماعية.",
+          "en": "💡 Active empathy transforms the quality of social bonds."
+        }
+      ],
+      "articles": [
+        "articles/why-people-distance-when-you-succeed.html"
+      ],
+      "thinkers": [
+        "freud",
+        "jung"
+      ]
+    },
+    "mind-behavior": {
+      "id": "mind-behavior",
+      "number": "03",
+      "title": {
+        "fr": "Esprit & Comportement",
+        "ar": "العقل والسلوك",
+        "en": "Mind & Behavior"
+      },
+      "subtitle": {
+        "fr": "Étude des processus cognitifs, des schémas de pensée et de l apprentissage",
+        "ar": "دراسة العمليات المعرفية، أنماط التفكير، والتعلم",
+        "en": "Study of cognitive processes, thought patterns, and learning"
+      },
+      "intro": {
+        "fr": "Décryptage des biais cognitifs, de la modification comportementale et de la prise de décision.",
+        "ar": "تفكيك التحيزات المعرفية، تعديل السلوك، واتخاذ القرار.",
+        "en": "Decoding cognitive biases, behavioral modification, and decision-making."
+      },
+      "principles": [
+        {
+          "fr": "💡 Nos pensées influencent directement nos réponses émotionnelles et comportements.",
+          "ar": "💡 أفكارنا تؤثر مباشرة على استجاباتنا العاطفية وسلوكنا.",
+          "en": "💡 Our thoughts directly influence our emotional responses and behavior."
+        },
+        {
+          "fr": "💡 La restructuration cognitive permet de défaire les croyances limitantes.",
+          "ar": "💡 إعادة الهيكلة المعرفية تسمح بتفكيك المعتقدات المقيدة.",
+          "en": "💡 Cognitive restructuring untangles limiting beliefs."
+        },
+        {
+          "fr": "💡 L apprentissage continu modifie la plasticité cérébrale.",
+          "ar": "💡 التعلم المستمر يغير المرونة العصبية للدماغ.",
+          "en": "💡 Continuous learning alters neuroplasticity."
+        }
+      ],
+      "articles": [
+        "files/stop-overthinking.html",
+        "files/self-discipline.html"
+      ],
+      "thinkers": [
+        "freud"
+      ]
+    },
+    "wounds-resilience": {
+      "id": "wounds-resilience",
+      "number": "04",
+      "title": {
+        "fr": "Blessures & Résilience",
+        "ar": "الجروح والصمود النفسي",
+        "en": "Wounds & Resilience"
+      },
+      "subtitle": {
+        "fr": "Transformer le traumatisme, surmonter l adversité et retrouver le sens",
+        "ar": "تحويل الصدمات، تجاوز الشدائد، وإعادة اكتشاف المعنى",
+        "en": "Transforming trauma, overcoming adversity, and discovering meaning"
+      },
+      "intro": {
+        "fr": "Exploration des mécanismes d adaptation face aux épreuves, de la reconstruction de soi et de la croissance post-traumatique.",
+        "ar": "استكشاف آليات التكيف مع الأزمات، إعادة بناء الذات، والنمو بعد الصدمات.",
+        "en": "Exploration of coping mechanisms, self-reconstruction, and post-traumatic growth."
+      },
+      "principles": [
+        {
+          "fr": "💡 La résilience est un processus dynamique qui se cultive au quotidien.",
+          "ar": "💡 الصمود النفسي عملية ديناميكية يتم تنميتها يوميا.",
+          "en": "💡 Resilience is a dynamic process cultivated daily."
+        },
+        {
+          "fr": "💡 Trouver du sens à la souffrance est la clé de la guérison psychique.",
+          "ar": "💡 إيجاد معنى للمعاناة هو مفتاح الشفاء النفسي.",
+          "en": "💡 Finding meaning in suffering is the key to psychological healing."
+        },
+        {
+          "fr": "💡 La solitude choisie peut devenir le berceau de la reconstruction.",
+          "ar": "💡 العزلة الاختيارية قد تكون مهد التجدد والتأهيل.",
+          "en": "💡 Chosen solitude can become the cradle of renewal."
+        }
+      ],
+      "articles": [
+        "articles/solitude-blessing-or-curse.html"
+      ],
+      "thinkers": [
+        "jung"
+      ]
+    },
+    "positive-psychology": {
+      "id": "positive-psychology",
+      "number": "05",
+      "title": {
+        "fr": "Psychologie Positive",
+        "ar": "علم النفس الإيجابي والنمو",
+        "en": "Positive Psychology"
+      },
+      "subtitle": {
+        "fr": "Développer les forces de caractère, le bien-être et l épanouissement",
+        "ar": "تنمية نقاط القوة، الرفاهية، والازدهار الشخصي",
+        "en": "Fostering character strengths, well-being, and flourishing"
+      },
+      "intro": {
+        "fr": "Étude scientifique des facteurs favorisant le bien-être durable, l optimisme lucide et la réalisation de soi.",
+        "ar": "الدراسة العلمية للعوامل المحفزة للرفاهية المستدامة، التفاؤل الواعي، وتحقيق الذات.",
+        "en": "Scientific study of factors fostering sustainable well-being, lucid optimism, and self-actualization."
+      },
+      "principles": [
+        {
+          "fr": "💡 Le bonheur s appuie sur la culture active des forces personnelles.",
+          "ar": "💡 السعادة تعتمد على التنمية النشطة لنقاط القوة الشخصية.",
+          "en": "💡 Happiness relies on actively cultivating personal strengths."
+        },
+        {
+          "fr": "💡 La gratitude et la pleine présence renforcent la santé psychologique.",
+          "ar": "💡 الامتنان والحضور الكامل يعززان الصحة النفسية.",
+          "en": "💡 Gratitude and mindfulness strengthen psychological health."
+        },
+        {
+          "fr": "💡 Le sentiment d accomplissement découle d objectifs alignés sur ses valeurs.",
+          "ar": "💡 الشعور بالإنجاز ينبع من أهداف متوافقة مع القيم.",
+          "en": "💡 A sense of accomplishment flows from goals aligned with values."
+        }
+      ],
+      "articles": [
+        "articles/why-people-respect-silent-person.html"
+      ],
+      "thinkers": [
+        "adler"
+      ]
+    }
   }
 };
 
-
-/* ============================================================
-   PSYCHOLOGIE V5.2 — DATA PARCOURS INTELLECTUELS
-   ============================================================ */
-const PSYCHOLOGIE_PARCOURS_V5_2 = {
-  "self-psychology": {
-    id: "self-psychology",
-    number: "01",
-    title: { fr: "Psychologie de soi", ar: "علم النفس وفهم الذات", en: "Self-Psychology" },
-    subtitle: { fr: "Explorez les profondeurs du psychisme et de la conscience de soi", ar: "استكشف أعماق النفس والوعي الذاتي", en: "Explore the depths of the psyche and self-awareness" },
-    intro: {
-      fr: "Un parcours dédié à l exploration de la structure psychique, du système inconscient et du développement de l estime personnelle.",
-      ar: "مسار مخصص لاستكشاف الهيكل النفسي، الوعي واللاوعي، وتطوير تقدير الذات.",
-      en: "A journey dedicated to exploring psychological structure, the subconscious mind, and building self-esteem."
-    },
-    principles: [
-      { fr: "💡 La prise de conscience de l inconscient éclaircit les choix de vie.", ar: "💡 إدراك اللاوعي يوضح خيارات الحياة.", en: "💡 Becoming conscious of the unconscious illuminates life choices." },
-      { fr: "💡 L individuation exige la confrontation avec ses propres ombres.", ar: "💡 التفرّد يتطلب مواجهة الظلال الذاتية.", en: "💡 Individuation requires confronting one s own shadow." },
-      { fr: "💡 La véritable confiance naît de l alignement intérieur.", ar: "💡 الثقة الحقيقية تنبع من التوافق الداخلي.", en: "💡 True confidence springs from inner alignment." }
-    ],
-    articles: ["articles/true-confidence-inside.html", "files/stop-overthinking.html"],
-    thinkers: [
-      {
-        "id": "angela-duckworth",
-        "name": "Angela Duckworth",
-        "era": "1970 – Present",
-        "school": "Personal Growth",
-        "category": "personal-growth",
-        "profileUrl": "./angela-duckworth/",
-        "image": "images/angela-duckworth.jpg",
-        "bio": "Pioneer of Grit research, demonstrating passion and perseverance.",
-        "keyConcept": "Grit, Perseverance"
-},
-      {
-        "id": "mihaly-csikszentmihalyi",
-        "name": "Mihály Csíkszentmihályi",
-        "era": "1934 – 2021",
-        "school": "Personal Growth",
-        "category": "personal-growth",
-        "profileUrl": "./mihaly-csikszentmihalyi/",
-        "image": "images/mihaly-csikszentmihalyi.jpg",
-        "bio": "Pioneer of the Flow concept and optimal cognitive focus.",
-        "keyConcept": "Flow State, Focus"
-},
-      {
-        "id": "carol-dweck",
-        "name": "Carol Dweck",
-        "era": "1946 – Present",
-        "school": "Personal Growth",
-        "category": "personal-growth",
-        "profileUrl": "./carol-dweck/",
-        "image": "images/carol-dweck.jpg",
-        "bio": "Pioneer of Growth Mindset research and learning through challenges.",
-        "keyConcept": "Growth Mindset"
-},
-      {
-        "id": "viktor-frankl",
-        "name": "Viktor Frankl",
-        "era": "1905 – 1997",
-        "school": "Personal Growth",
-        "category": "personal-growth",
-        "profileUrl": "./viktor-frankl/",
-        "image": "images/viktor-frankl.jpg",
-        "bio": "Founder of logotherapy and author of Man's Search for Meaning.",
-        "keyConcept": "Search for Meaning, Logotherapy"
-},
-      {
-        "id": "albert-bandura",
-        "name": "Albert Bandura",
-        "era": "1925 – 2021",
-        "school": "Personal Growth",
-        "category": "personal-growth",
-        "profileUrl": "./albert-bandura/",
-        "image": "images/albert-bandura.jpg",
-        "bio": "Pioneer of the self-efficacy framework and social learning theory.",
-        "keyConcept": "Self-Efficacy, Social Learning"
-},
-      {
-        "id": "william-james",
-        "name": "William James",
-        "era": "1842 – 1910",
-        "school": "Personal Growth",
-        "category": "personal-growth",
-        "profileUrl": "./william-james/",
-        "image": "images/william-james.jpg",
-        "bio": "Pioneer of habit formation, willpower, and pragmatist psychology.",
-        "keyConcept": "Habits, Willpower, Pragmatism"
-},
-      {
-        "id": "angela-duckworth",
-        "name": "Angela Duckworth",
-        "era": "1970 – Présent",
-        "school": "Développement personnel",
-        "category": "personal-growth",
-        "profileUrl": "./angela-duckworth/",
-        "image": "images/angela-duckworth.jpg",
-        "bio": "Pionnière des recherches sur le Grit : la combinaison unique de passion et de persévérance.",
-        "keyConcept": "Grit, Persévérance"
-},
-      {
-        "id": "mihaly-csikszentmihalyi",
-        "name": "Mihály Csíkszentmihályi",
-        "era": "1934 – 2021",
-        "school": "Développement personnel",
-        "category": "personal-growth",
-        "profileUrl": "./mihaly-csikszentmihalyi/",
-        "image": "images/mihaly-csikszentmihalyi.jpg",
-        "bio": "Pionnier du concept de Flow et de l'expérience optimale dans le travail.",
-        "keyConcept": "État de Flow, Concentration"
-},
-      {
-        "id": "carol-dweck",
-        "name": "Carol Dweck",
-        "era": "1946 – Présent",
-        "school": "Développement personnel",
-        "category": "personal-growth",
-        "profileUrl": "./carol-dweck/",
-        "image": "images/carol-dweck.jpg",
-        "bio": "Pionnière des recherches sur le Growth Mindset et la résilience face à l'échec.",
-        "keyConcept": "Growth Mindset"
-},
-      {
-        "id": "viktor-frankl",
-        "name": "Viktor Frankl",
-        "era": "1905 – 1997",
-        "school": "Développement personnel",
-        "category": "personal-growth",
-        "profileUrl": "./viktor-frankl/",
-        "image": "images/viktor-frankl.jpg",
-        "bio": "Fondateur de la logothérapie et auteur de \"Man's Search for Meaning\", pionnier du sens.",
-        "keyConcept": "Quête de Sens, Logothérapie"
-},
-      {
-        "id": "albert-bandura",
-        "name": "Albert Bandura",
-        "era": "1925 – 2021",
-        "school": "Développement personnel",
-        "category": "personal-growth",
-        "profileUrl": "./albert-bandura/",
-        "image": "images/albert-bandura.jpg",
-        "bio": "Pionnier du concept d'auto-efficacité et de l'apprentissage par observation.",
-        "keyConcept": "Auto-efficacité, Apprentissage Social"
-},
-      {
-        "id": "william-james",
-        "name": "William James",
-        "era": "1842 – 1910",
-        "school": "Développement personnel",
-        "category": "personal-growth",
-        "profileUrl": "./william-james/",
-        "image": "images/william-james.jpg",
-        "bio": "Pionnier de l'étude des habitudes, de la volonté et de la psychologie pragmatique.",
-        "keyConcept": "Habitudes, Volonté, Pragmatisme"
-},
-      {
-        "id": "angela-duckworth",
-        "name": "أنجيلا داكوورث",
-        "era": "1970 – الآن",
-        "school": "تطوير الذات",
-        "category": "personal-growth",
-        "profileUrl": "./angela-duckworth/",
-        "image": "images/angela-duckworth.jpg",
-        "bio": "صاحبة أبحاث العزيمة والتأكيد على أن الشغف والمثابرة طويلة الأمد يفوقان الموهبة.",
-        "keyConcept": "العزيمة (Grit)، والمثابرة"
-},
-      {
-        "id": "mihaly-csikszentmihalyi",
-        "name": "ميهاي تشيكسينتميهاي",
-        "era": "1934 – 2021",
-        "school": "تطوير الذات",
-        "category": "personal-growth",
-        "profileUrl": "./mihaly-csikszentmihalyi/",
-        "image": "images/mihaly-csikszentmihalyi.jpg",
-        "bio": "مكتشف حالة التدفق والتركيز التام والاندماج في الإنجاز والعمل الإبداعي.",
-        "keyConcept": "حالة التدفق (Flow)، التركيز"
-},
-      {
-        "id": "carol-dweck",
-        "name": "كارول دويك",
-        "era": "1946 – الآن",
-        "school": "تطوير الذات",
-        "category": "personal-growth",
-        "profileUrl": "./carol-dweck/",
-        "image": "images/carol-dweck.jpg",
-        "bio": "صاحبة أبحاث عقلية النمو والتفريق بين الذهنية الثابتة وذهنية التطوير المستمر.",
-        "keyConcept": "عقلية النمو (Growth Mindset)"
-},
-      {
-        "id": "viktor-frankl",
-        "name": "فيكتور فرانكل",
-        "era": "1905 – 1997",
-        "school": "تطوير الذات",
-        "category": "personal-growth",
-        "profileUrl": "./viktor-frankl/",
-        "image": "images/viktor-frankl.jpg",
-        "bio": "مؤسس العلاج بالمعنى وصاحب كتاب الإنسان يبحث عن المعنى، ورائد الحرية الروحية.",
-        "keyConcept": "البحث عن المعنى، الحرية النفسية"
-},
-      {
-        "id": "albert-bandura",
-        "name": "ألبرت باندورا",
-        "era": "1925 – 2021",
-        "school": "تطوير الذات",
-        "category": "personal-growth",
-        "profileUrl": "./albert-bandura/",
-        "image": "images/albert-bandura.jpg",
-        "bio": "مبتكر مفهوم الفعالية الذاتية والتعلم الملاحظ ودور الإيمان بالقدرة في الإنجاز.",
-        "keyConcept": "الكفاءة الذاتية، التفكير الإيجابي"
-},
-      {
-        "id": "william-james",
-        "name": "ويليام جيمس",
-        "era": "1842 – 1910",
-        "school": "تطوير الذات",
-        "category": "personal-growth",
-        "profileUrl": "./william-james/",
-        "image": "images/william-james.jpg",
-        "bio": "رائد دراسة العادات وتأثير التكرار العصبي والفلسفة البراغماتية في بناء القوة الشخصية.",
-        "keyConcept": "العادات، الإرادة، البراغماتية"
-},"freud", "jung", "adler"]
-  },
-  "emotions-relationships": {
-    id: "emotions-relationships",
-    number: "02",
-    title: { fr: "Émotions & Relations", ar: "المشاعر والعلاقات", en: "Emotions & Relationships" },
-    subtitle: { fr: "Comprendre les attachements, la dynamique affective et les liens humains", ar: "فهم الارتباط، الديناميكية العاطفية، والروابط الإنسانية", en: "Understand attachments, emotional dynamics, and human bonds" },
-    intro: {
-      fr: "Analyse des schémas d attachement, de la régulation émotionnelle et de la communication empathique.",
-      ar: "تحليل أنماط التعلق، التنظيم العاطفي، والتواصل التعاطفي.",
-      en: "Analysis of attachment styles, emotional regulation, and empathetic communication."
-    },
-    principles: [
-      { fr: "💡 L attachement précoce préfigure le style relationnel adulte.", ar: "💡 التعلق المبكر يشكل نمط العلاقات عند الكبر.", en: "💡 Early attachment shapes adult relational patterns." },
-      { fr: "💡 Reconnaître ses émotions est la première étape de leur régulation.", ar: "💡 التعرف على المشاعر هو الخطوة الأولى لتنظيمها.", en: "💡 Recognizing emotions is the first step toward regulation." },
-      { fr: "💡 L empathie active transforme la qualité des liens sociaux.", ar: "💡 التعاطف الفعال يغير جودة الروابط الاجتماعية.", en: "💡 Active empathy transforms the quality of social bonds." }
-    ],
-    articles: ["articles/why-people-distance-when-you-succeed.html"],
-    thinkers: ["freud", "jung"]
-  },
-  "mind-behavior": {
-    id: "mind-behavior",
-    number: "03",
-    title: { fr: "Esprit & Comportement", ar: "العقل والسلوك", en: "Mind & Behavior" },
-    subtitle: { fr: "Étude des processus cognitifs, des schémas de pensée et de l apprentissage", ar: "دراسة العمليات المعرفية، أنماط التفكير، والتعلم", en: "Study of cognitive processes, thought patterns, and learning" },
-    intro: {
-      fr: "Décryptage des biais cognitifs, de la modification comportementale et de la prise de décision.",
-      ar: "تفكيك التحيزات المعرفية، تعديل السلوك، واتخاذ القرار.",
-      en: "Decoding cognitive biases, behavioral modification, and decision-making."
-    },
-    principles: [
-      { fr: "💡 Nos pensées influencent directement nos réponses émotionnelles et comportements.", ar: "💡 أفكارنا تؤثر مباشرة على استجاباتنا العاطفية وسلوكنا.", en: "💡 Our thoughts directly influence our emotional responses and behavior." },
-      { fr: "💡 La restructuration cognitive permet de défaire les croyances limitantes.", ar: "💡 إعادة الهيكلة المعرفية تسمح بتفكيك المعتقدات المقيدة.", en: "💡 Cognitive restructuring untangles limiting beliefs." },
-      { fr: "💡 L apprentissage continu modifie la plasticité cérébrale.", ar: "💡 التعلم المستمر يغير المرونة العصبية للدماغ.", en: "💡 Continuous learning alters neuroplasticity." }
-    ],
-    articles: ["files/stop-overthinking.html", "files/self-discipline.html"],
-    thinkers: ["freud"]
-  },
-  "wounds-resilience": {
-    id: "wounds-resilience",
-    number: "04",
-    title: { fr: "Blessures & Résilience", ar: "الجروح والصمود النفسي", en: "Wounds & Resilience" },
-    subtitle: { fr: "Transformer le traumatisme, surmonter l adversité et retrouver le sens", ar: "تحويل الصدمات، تجاوز الشدائد، وإعادة اكتشاف المعنى", en: "Transforming trauma, overcoming adversity, and discovering meaning" },
-    intro: {
-      fr: "Exploration des mécanismes d adaptation face aux épreuves, de la reconstruction de soi et de la croissance post-traumatique.",
-      ar: "استكشاف آليات التكيف مع الأزمات، إعادة بناء الذات، والنمو بعد الصدمات.",
-      en: "Exploration of coping mechanisms, self-reconstruction, and post-traumatic growth."
-    },
-    principles: [
-      { fr: "💡 La résilience est un processus dynamique qui se cultive au quotidien.", ar: "💡 الصمود النفسي عملية ديناميكية يتم تنميتها يوميا.", en: "💡 Resilience is a dynamic process cultivated daily." },
-      { fr: "💡 Trouver du sens à la souffrance est la clé de la guérison psychique.", ar: "💡 إيجاد معنى للمعاناة هو مفتاح الشفاء النفسي.", en: "💡 Finding meaning in suffering is the key to psychological healing." },
-      { fr: "💡 La solitude choisie peut devenir le berceau de la reconstruction.", ar: "💡 العزلة الاختيارية قد تكون مهد التجدد والتأهيل.", en: "💡 Chosen solitude can become the cradle of renewal." }
-    ],
-    articles: ["articles/solitude-blessing-or-curse.html"],
-    thinkers: ["jung"]
-  },
-  "positive-psychology": {
-    id: "positive-psychology",
-    number: "05",
-    title: { fr: "Psychologie Positive", ar: "علم النفس الإيجابي والنمو", en: "Positive Psychology" },
-    subtitle: { fr: "Développer les forces de caractère, le bien-être et l épanouissement", ar: "تنمية نقاط القوة، الرفاهية، والازدهار الشخصي", en: "Fostering character strengths, well-being, and flourishing" },
-    intro: {
-      fr: "Étude scientifique des facteurs favorisant le bien-être durable, l optimisme lucide et la réalisation de soi.",
-      ar: "الدراسة العلمية للعوامل المحفزة للرفاهية المستدامة، التفاؤل الواعي، وتحقيق الذات.",
-      en: "Scientific study of factors fostering sustainable well-being, lucid optimism, and self-actualization."
-    },
-    principles: [
-      { fr: "💡 Le bonheur s appuie sur la culture active des forces personnelles.", ar: "💡 السعادة تعتمد على التنمية النشطة لنقاط القوة الشخصية.", en: "💡 Happiness relies on actively cultivating personal strengths." },
-      { fr: "💡 La gratitude et la pleine présence renforcent la santé psychologique.", ar: "💡 الامتنان والحضور الكامل يعززان الصحة النفسية.", en: "💡 Gratitude and mindfulness strengthen psychological health." },
-      { fr: "💡 Le sentiment d accomplissement découle d objectifs alignés sur ses valeurs.", ar: "💡 الشعور بالإنجاز ينبع من أهداف متوافقة مع القيم.", en: "💡 A sense of accomplishment flows from goals aligned with values." }
-    ],
-    articles: ["articles/why-people-respect-silent-person.html"],
-    thinkers: ["adler"]
-  }
-};
-
-TIKTOK_DATA.PSYCHOLOGIE_PARCOURS_V5_2 = PSYCHOLOGIE_PARCOURS_V5_2;
-
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = TIKTOK_DATA;
-}
 export default TIKTOK_DATA;

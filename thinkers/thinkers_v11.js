@@ -234,20 +234,20 @@ function populateFilterTags() {
   const container = document.getElementById('tagsContainer');
   if (!container) return;
   
-  const thinkers = (TIKTOK_DATA.content[currentLang] && TIKTOK_DATA.content[currentLang].thinkers) || [];
-  const seeAllLabel = (THINKERS_PAGE_TRANSLATIONS[currentLang] && THINKERS_PAGE_TRANSLATIONS[currentLang].seeAll) || "Tous les philosophes";
   const pgLabel = currentLang === 'ar' ? 'تطوير الذات' : (currentLang === 'fr' ? 'Développement personnel' : 'Personal Growth');
+  const seeAllLabel = (THINKERS_PAGE_TRANSLATIONS[currentLang] && THINKERS_PAGE_TRANSLATIONS[currentLang].seeAll) || "Tous les philosophes";
   
-  // Extract unique schools
-  const schools = Array.from(new Set(thinkers.map(t => t.school).filter(Boolean))).slice(0, 7);
-  if (!schools.includes('personal-growth') && !schools.includes(pgLabel)) {
-    schools.unshift(pgLabel);
-  }
-
   let html = `<button class="tag-btn ${currentCategory === 'all' ? 'active' : ''}" data-category="all" onclick="window.handleCategoryChange('all')">${seeAllLabel}</button>`;
   
+  html += `<button class="tag-btn ${(currentCategory === 'personal-growth' || currentCategory === 'تطوير الذات' || currentCategory === 'Développement personnel' || currentCategory === 'Personal Growth') ? 'active' : ''}" data-category="personal-growth" data-i18n="catPersonalGrowth" onclick="window.handleCategoryChange('personal-growth')">${pgLabel}</button>`;
+  
+  const thinkers = (TIKTOK_DATA.content[currentLang] && TIKTOK_DATA.content[currentLang].thinkers) || [];
+  const schools = Array.from(new Set(thinkers.map(t => t.school).filter(Boolean)))
+    .filter(s => s !== 'personal-growth' && s !== 'تطوير الذات' && s !== 'Développement personnel' && s !== 'Personal Growth')
+    .slice(0, 6);
+
   schools.forEach(school => {
-    const isActive = (currentCategory === school || currentCategory === 'personal-growth') ? 'active' : '';
+    const isActive = currentCategory === school ? 'active' : '';
     html += `<button class="tag-btn ${isActive}" data-category="${school}" onclick="window.handleCategoryChange('${school}')">${school}</button>`;
   });
   
