@@ -729,7 +729,119 @@
     }
   </style>
 
-    </head>
+    
+/* ============================================================
+   PHILOSOPHIE V5.3 — ÉCOLES PHILOSOPHIQUES GRILLE & CARTE
+   ============================================================ */
+.philo-schools-section {
+  display: block;
+  margin: 80px auto;
+}
+
+.philo-schools-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.philo-school-card,
+.philo-school-card:visited {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  color: #f2eee5;
+  background: #0d1814;
+  border: 1px solid rgba(201, 168, 106, 0.28);
+  border-radius: 14px;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease;
+}
+
+.philo-school-card:hover {
+  color: #fffdf8;
+  border-color: #c9a86a;
+  transform: translateY(-3px);
+}
+
+.philo-school-card:focus-visible {
+  outline: 3px solid rgba(228, 201, 138, 0.5);
+  outline-offset: 4px;
+}
+
+.philo-school-image-box {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.philo-school-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.philo-school-number {
+  position: absolute;
+  top: 12px;
+  inset-inline-start: 12px;
+  padding: 5px 9px;
+  color: #e4c98a;
+  background: rgba(7, 16, 13, 0.88);
+  border: 1px solid rgba(201, 168, 106, 0.4);
+  border-radius: 6px;
+}
+
+.philo-school-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.philo-school-period {
+  color: #c9a86a;
+  font-size: 0.82rem;
+}
+
+.philo-school-title {
+  margin: 8px 0;
+  color: #f2eee5;
+  font-size: 1.2rem;
+}
+
+.philo-school-description {
+  flex: 1;
+  color: #a9aaa4;
+  line-height: 1.65;
+}
+
+.philo-school-link {
+  margin-top: 16px;
+  color: #e4c98a;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .philo-schools-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .philo-schools-section {
+    margin: 56px auto;
+  }
+
+  .philo-schools-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+</head>
 
 <body>
 
@@ -922,6 +1034,46 @@
       </div>
     </section>
 
+
+    <!-- 4. ÉCOLES PHILOSOPHIQUES (7 MAJOR SCHOOLS) -->
+    <section
+      id="ecoles"
+      class="philo-section-block philo-schools-section"
+      aria-labelledby="philoSchoolsHeading"
+    >
+      <div class="philo-section-heading">
+        <span class="philo-section-badge">
+          🏛️
+          <span
+            data-ar="المدارس الفكرية"
+            data-fr="Écoles de pensée"
+            data-en="Schools of Thought"
+          >
+            المدارس الفكرية
+          </span>
+        </span>
+
+        <h2
+          id="philoSchoolsHeading"
+          data-i18n="philoSchoolsTitle"
+        >
+          المدارس الفلسفية الكبرى
+        </h2>
+
+        <p data-i18n="philoSchoolsSubtitle">
+          مدارس وأفكار غيّرت طريقة الإنسان في فهم نفسه والعالم عبر العصور
+        </p>
+      </div>
+
+      <div
+        id="philoSchoolsGrid"
+        class="philo-schools-grid"
+        aria-live="polite"
+      ></div>
+    </section>
+
+
+
     <!-- 4. ARTICLES PHILOSOPHIQUES (3/2/1 GRID, HD IMAGES) -->
     <section id="articles" style="margin: 60px 0;">
       <div class="philo-v4-heading">
@@ -934,17 +1086,7 @@
       </div>
     </section>
 
-    <!-- 5. ÉCOLES PHILOSOPHIQUES (SEPARATED FROM THINKERS) -->
-    <section id="ecoles" style="margin: 60px 0;">
-      <div class="philo-v4-heading">
-        <h2 data-i18n="philoSchoolsTitle">المدارس الفلسفية الكبرى</h2>
-        <p data-i18n="philoSchoolsSubtitle">تيارات وأفكار غيّرت طريقة الإنسان في فهم نفسه والعالم عبر العصور</p>
-      </div>
-
-      <div class="philo-grid-3cols" id="philoSchoolsGrid">
-        <!-- Rendered via Javascript from SCHOOLS_DATA with school buttons pointing to dedicated routes or [ قريبًا ] -->
-      </div>
-    </section>
+    
 
     <!-- 6. PENSEURS (100% REAL PORTRAITS LINKING TO /thinkers/?thinker=ID) -->
     <section id="penseurs" style="margin: 60px 0;">
@@ -1551,36 +1693,79 @@
       localStorage.setItem('lang', lang);
     }
 
+    
     function renderSchoolsGrid(lang) {
       const grid = document.getElementById('philoSchoolsGrid');
-      if (!grid || !SCHOOLS_DATA) return;
 
-      const learnBtnText = lang === 'ar' ? 'تعرّف على المدرسة ←' : (lang === 'fr' ? 'Découvrir l\'école →' : 'Discover school →');
+      if (!grid) {
+        console.error('Section #philoSchoolsGrid introuvable');
+        return;
+      }
 
-      grid.innerHTML = SCHOOLS_DATA.map(s => {
-        const title = s.title[lang] || s.title.ar;
-        const period = s.period[lang] || s.period.ar;
-        const desc = s.desc ? (s.desc[lang] || s.desc.ar) : '';
-        const targetUrl = './ecoles/' + s.slug + '/';
+      if (!Array.isArray(SCHOOLS_DATA) || SCHOOLS_DATA.length !== 7) {
+        console.error(
+          'SCHOOLS_DATA doit contenir exactement 7 écoles',
+          SCHOOLS_DATA
+        );
+        return;
+      }
+
+      const buttonText = {
+        ar: 'تعرّف على المدرسة ←',
+        fr: 'Découvrir l’école →',
+        en: 'Discover the school →'
+      };
+
+      grid.innerHTML = SCHOOLS_DATA.map(school => {
+        const title = school.title[lang] || school.title.ar;
+        const period = school.period[lang] || school.period.ar;
+        const description =
+          school.desc?.[lang] ||
+          school.desc?.ar ||
+          '';
+
+        const targetUrl = `./ecoles/${school.slug}/`;
 
         return `
-          <a href="${targetUrl}" class="philo-school-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
-            <div class="philo-school-imgbox">
-              <img src="${s.image}" alt="${title}" class="philo-school-img" loading="lazy">
-              <div class="philo-school-overlay"></div>
-              <span class="philo-school-num">${s.num}</span>
+          <a
+            class="philo-school-card"
+            href="${targetUrl}"
+            aria-label="${title}"
+          >
+            <div class="philo-school-image-box">
+              <img
+                class="philo-school-image"
+                src="${school.image}"
+                alt="${title}"
+                loading="lazy"
+              >
+              <span class="philo-school-number">
+                ${school.num}
+              </span>
             </div>
-            <div class="philo-school-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <span class="philo-school-badge">${period}</span>
-                <h3 class="philo-school-title">${title}</h3>
-                <p class="philo-school-desc">${desc}</p>
-              </div>
-              <span class="philo-card-link" style="margin-top: 15px;">${learnBtnText}</span>
+
+            <div class="philo-school-body">
+              <span class="philo-school-period">
+                ${period}
+              </span>
+
+              <h3 class="philo-school-title">
+                ${title}
+              </h3>
+
+              <p class="philo-school-description">
+                ${description}
+              </p>
+
+              <span class="philo-school-link">
+                ${buttonText[lang] || buttonText.ar}
+              </span>
             </div>
           </a>
         `;
       }).join('');
+    }
+).join('');
     }
 
         // C. Articles liés
@@ -1758,11 +1943,7 @@
       const currentLang = getSavedLang();
       updateLanguage(currentLang);
     });
-    // Fallback in case DOMContentLoaded already fired
-    if (document.readyState === 'interactive' || document.readyState === 'complete') {
-      const currentLang = getSavedLang();
-      updateLanguage(currentLang);
-    }
+    
 
       // Header Language Dropdown Fix (Floating menu, non-disruptive)
       const langBtn = document.getElementById('langSelectorBtn');
