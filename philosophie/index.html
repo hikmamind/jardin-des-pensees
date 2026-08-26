@@ -836,7 +836,7 @@
       </div>
     </section>
 
-    <!-- 3. PARCOURS PHILOSOPHIQUES (5 EDUCATIONAL PATHS) -->
+    <!-- 3. PARCOURS PHILOSOPHIQUES (5 PHYSICAL PATHWAYS) -->
     <section id="parcours" style="margin: 60px 0;">
       <div class="philo-v4-heading">
         <h2 data-i18n="philoParcoursTitle">المسارات الفلسفية التعليمية</h2>
@@ -845,69 +845,80 @@
 
       <div class="philo-grid-3cols">
         <!-- Parcours 01 -->
-        <article class="philo-parcours-card" onclick="openParcoursModal('p1')" style="cursor: pointer;">
+        <a href="./parcours/ethique-vertu/" class="philo-parcours-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
           <div class="philo-parcours-img-box">
-            <img src="../mind_growth_errors_hero.jpg" alt="مدخل إلى الفلسفة والأخلاق" class="philo-parcours-img" loading="lazy">
+            <img src="../happiness_wrong_place_hero.jpg" alt="العيش الفاضل والسعادة" class="philo-parcours-img" loading="lazy">
           </div>
-          <div class="philo-parcours-body">
-            <span class="philo-parcours-num" data-i18n="p1Num">01 — مدخل إلى الفلسفة</span>
-            <h3 class="philo-parcours-title" data-i18n="p1Title">تأمل الأسئلة الكبرى</h3>
-            <p class="philo-parcours-desc" data-i18n="p1Desc">اكتشف الأسئلة الأولى وتجنب أخطاء التفكير مع دروس من سقراط وأبيقور.</p>
-            <button type="button" onclick="event.stopPropagation(); openParcoursModal('p1');" class="philo-parcours-btn" data-i18n="p1Btn" style="cursor: pointer; width: 100%;">استكشف المسار ←</button>
+          <div class="philo-parcours-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="philo-parcours-num" data-i18n="p1Num">01 — الأخلاق والفضيلة</span>
+              <h3 class="philo-parcours-title" data-i18n="p1Title">العيش الفاضل والسعادة</h3>
+              <p class="philo-parcours-desc" data-i18n="p1Desc">كيف نعيش حياة طيّبة؟ وما هي السعادة الحقيقية؟ رحلة في الأخلاق والعزلة.</p>
+            </div>
+            <span class="philo-parcours-btn" data-i18n="p1Btn" style="margin-top: 15px; text-align: center;">استكشف المسار ←</span>
           </div>
-        </article>
+        </a>
 
         <!-- Parcours 02 -->
-        <article class="philo-parcours-card" onclick="openParcoursModal('p2')" style="cursor: pointer;">
+        <a href="./parcours/connaissance-scepticisme/" class="philo-parcours-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
           <div class="philo-parcours-img-box">
-            <img src="../autumn_forest_solitude_walk.jpg" alt="الإنسان والوجود والمعرفة" class="philo-parcours-img" loading="lazy">
+            <img src="../mind_growth_errors_hero.jpg" alt="تأمل الأسئلة الكبرى" class="philo-parcours-img" loading="lazy">
           </div>
-          <div class="philo-parcours-body">
-            <span class="philo-parcours-num" data-i18n="p2Num">02 — الإنسان والوجود</span>
-            <h3 class="philo-parcours-title" data-i18n="p2Title">الحرية ومعنى الوجود</h3>
-            <p class="philo-parcours-desc" data-i18n="p2Desc">رحلة في الحرية والمسؤولية ومواجهة العبث وصناعة الذات مع سارتر وكامو.</p>
-            <button type="button" onclick="event.stopPropagation(); openParcoursModal('p2');" class="philo-parcours-btn" data-i18n="p2Btn" style="cursor: pointer; width: 100%;">استكشف المسار ←</button>
+          <div class="philo-parcours-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="philo-parcours-num" data-i18n="p2Num">02 — المعرفة والشك</span>
+              <h3 class="philo-parcours-title" data-i18n="p2Title">تأمل الأسئلة الكبرى</h3>
+              <p class="philo-parcours-desc" data-i18n="p2Desc">اكتشف الأسئلة الأولى وتجنب أخطاء التفكير مع دروس من سقراط وأفلاطون.</p>
+            </div>
+            <span class="philo-parcours-btn" data-i18n="p2Btn" style="margin-top: 15px; text-align: center;">استكشف المسار ←</span>
           </div>
-        </article>
+        </a>
 
         <!-- Parcours 03 -->
-        <article class="philo-parcours-card" onclick="openParcoursModal('p3')" style="cursor: pointer;">
+        <a href="./parcours/existence-sens/" class="philo-parcours-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
           <div class="philo-parcours-img-box">
-            <img src="../happiness_wrong_place_hero.jpg" alt="الأخلاق والسعادة والعزلة" class="philo-parcours-img" loading="lazy">
+            <img src="../autumn_forest_solitude_walk.jpg" alt="الحرية ومعنى الوجود" class="philo-parcours-img" loading="lazy">
           </div>
-          <div class="philo-parcours-body">
-            <span class="philo-parcours-num" data-i18n="p3Num">03 — الأخلاق والسعادة</span>
-            <h3 class="philo-parcours-title" data-i18n="p3Title">العيش الفاضل والسعادة</h3>
-            <p class="philo-parcours-desc" data-i18n="p3Desc">كيف نعيش حياة طيّبة؟ وما هي السعادة الحقيقية؟ رحلة في الأخلاق والعزلة.</p>
-            <button type="button" onclick="event.stopPropagation(); openParcoursModal('p3');" class="philo-parcours-btn" data-i18n="p3Btn" style="cursor: pointer; width: 100%;">استكشف المسار ←</button>
+          <div class="philo-parcours-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="philo-parcours-num" data-i18n="p3Num">03 — الوجود والمعنى</span>
+              <h3 class="philo-parcours-title" data-i18n="p3Title">الحرية ومعنى الوجود</h3>
+              <p class="philo-parcours-desc" data-i18n="p3Desc">رحلة في الحرية والمسؤولية ومواجهة العبث وصناعة الذات مع سارتر وكامو.</p>
+            </div>
+            <span class="philo-parcours-btn" data-i18n="p3Btn" style="margin-top: 15px; text-align: center;">استكشف المسار ←</span>
           </div>
-        </article>
+        </a>
 
         <!-- Parcours 04 -->
-        <article class="philo-parcours-card" onclick="openParcoursModal('p4')" style="cursor: pointer;">
+        <a href="./parcours/societe-politique/" class="philo-parcours-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
           <div class="philo-parcours-img-box">
-            <img src="../marc_aurelius_writing.jpg" alt="العقل والسياسة والحرية" class="philo-parcours-img" loading="lazy">
+            <img src="../bookshelves_candle.jpg" alt="المجتمع والسياسة" class="philo-parcours-img" loading="lazy">
           </div>
-          <div class="philo-parcours-body">
-            <span class="philo-parcours-num" data-i18n="p4Num">04 — العقل والمعرفة</span>
-            <h3 class="philo-parcours-title" data-i18n="p4Title">الرواقية والقلعة الداخلية</h3>
-            <p class="philo-parcours-desc" data-i18n="p4Desc">السيطرة على الانفعالات وثنائية التحكم وبناء القوة الذهنية مع أوريليوس وإبيكتيتوس.</p>
-            <button type="button" onclick="event.stopPropagation(); openParcoursModal('p4');" class="philo-parcours-btn" data-i18n="p4Btn" style="cursor: pointer; width: 100%;">استكشف المسار ←</button>
+          <div class="philo-parcours-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="philo-parcours-num" data-i18n="p4Num">04 — المجتمع والسياسة</span>
+              <h3 class="philo-parcours-title" data-i18n="p4Title">المجتمع والسياسة</h3>
+              <p class="philo-parcours-desc" data-i18n="p4Desc">دراسة العقد الاجتماعي، العدالة، فلسفة العمران والروابط البشرية.</p>
+            </div>
+            <span class="philo-parcours-btn" data-i18n="p4Btn" style="margin-top: 15px; text-align: center;">استكشف المسار ←</span>
           </div>
-        </article>
+        </a>
 
         <!-- Parcours 05 -->
-        <article class="philo-parcours-card" onclick="openParcoursModal('p5')" style="cursor: pointer;">
+        <a href="./parcours/logique-metaphysique/" class="philo-parcours-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
           <div class="philo-parcours-img-box">
-            <img src="../schopenhauer_happiness_illusion_hero.jpg" alt="الفلسفة الحديثة ونقد الإرادة" class="philo-parcours-img" loading="lazy">
+            <img src="../schopenhauer_happiness_illusion_hero.jpg" alt="نقد الإرادة وتجاوز الذات" class="philo-parcours-img" loading="lazy">
           </div>
-          <div class="philo-parcours-body">
-            <span class="philo-parcours-num" data-i18n="p5Num">05 — الفلسفة الحديثة والمعاصرة</span>
-            <h3 class="philo-parcours-title" data-i18n="p5Title">نقد الإرادة وتجاوز الذات</h3>
-            <p class="philo-parcours-desc" data-i18n="p5Desc">تشريح أزمات العصر والعدمية والصلابة النفسية عند شوبنهاور ونيتشه.</p>
-            <button type="button" onclick="event.stopPropagation(); openParcoursModal('p5');" class="philo-parcours-btn" data-i18n="p5Btn" style="cursor: pointer; width: 100%;">استكشف المسار ←</button>
+          <div class="philo-parcours-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="philo-parcours-num" data-i18n="p5Num">05 — المنطق والميتافيزيقا</span>
+              <h3 class="philo-parcours-title" data-i18n="p5Title">نقد الإرادة وتجاوز الذات</h3>
+              <p class="philo-parcours-desc" data-i18n="p5Desc">تشريح أزمات العصر والعدمية والصلابة النفسية عند شوبنهاور ونيتشه.</p>
+            </div>
+            <span class="philo-parcours-btn" data-i18n="p5Btn" style="margin-top: 15px; text-align: center;">استكشف المسار ←</span>
           </div>
-        </article>
+        </a>
+
       </div>
     </section>
 
@@ -1542,31 +1553,35 @@
 
     function renderSchoolsGrid(lang) {
       const grid = document.getElementById('philoSchoolsGrid');
-      if (!grid) return;
+      if (!grid || !SCHOOLS_DATA) return;
 
-      const trans = PHILO_TRANSLATIONS[lang] || PHILO_TRANSLATIONS.ar;
-      const allThinkers = (TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].thinkers) || [];
+      const learnBtnText = lang === 'ar' ? 'تعرّف على المدرسة ←' : (lang === 'fr' ? 'Découvrir l\'école →' : 'Discover school →');
 
       grid.innerHTML = SCHOOLS_DATA.map(s => {
         const title = s.title[lang] || s.title.ar;
         const period = s.period[lang] || s.period.ar;
-        const desc = s.desc[lang] || s.desc.ar;
-        const principlesList = (s.principles && (s.principles[lang] || s.principles.ar)) || [];
-        const articlesList = s.articles || [];
-        const thinkerIds = s.thinkerIds || [];
+        const desc = s.desc ? (s.desc[lang] || s.desc.ar) : '';
+        const targetUrl = './ecoles/' + s.slug + '/';
 
-        // B. Principes / Idées clefs
-        let principlesHtml = '';
-        if (principlesList.length > 0) {
-          principlesHtml = `
-            <div class="philo-school-principles" style="margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(223, 177, 91, 0.15);">
-              <div style="font-size: 0.8rem; font-weight: 700; color: #E4C98A; margin-bottom: 8px;">💡 ${trans.principlesHeader}</div>
-              <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px;">
-                ${principlesList.map(p => `<li style="font-size: 0.86rem; color: #D1D2CA; display: flex; align-items: baseline; gap: 6px;"><span style="color: var(--accent-gold);">•</span> <span>${p}</span></li>`).join('')}
-              </ul>
+        return `
+          <a href="${targetUrl}" class="philo-school-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
+            <div class="philo-school-imgbox">
+              <img src="${s.image}" alt="${title}" class="philo-school-img" loading="lazy">
+              <div class="philo-school-overlay"></div>
+              <span class="philo-school-num">${s.num}</span>
             </div>
-          `;
-        }
+            <div class="philo-school-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <span class="philo-school-badge">${period}</span>
+                <h3 class="philo-school-title">${title}</h3>
+                <p class="philo-school-desc">${desc}</p>
+              </div>
+              <span class="philo-card-link" style="margin-top: 15px;">${learnBtnText}</span>
+            </div>
+          </a>
+        `;
+      }).join('');
+    }
 
         // C. Articles liés
         let articlesHtml = '';
