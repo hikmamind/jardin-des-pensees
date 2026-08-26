@@ -289,32 +289,34 @@
   ],
   "figures": [
     {
-      "name": "James Clear",
-      "role": {
-        "ar": "كاتب وباحث في العادات",
-        "fr": "Auteur & Chercheur en Habitudes",
-        "en": "Author & Habit Researcher"
-      },
-      "bio": {
-        "ar": "مؤلف كتاب العادات الذرية، المتخصص في تحسين النظم السلوكية.",
-        "fr": "Auteur d'Atomic Habits, spécialiste de l'amélioration continue.",
-        "en": "Author of Atomic Habits, specialist in continuous self-improvement."
-      },
-      "icon": "📘"
-    },
-    {
       "name": "William James",
+      "href": "../../../thinkers/william-james/",
+      "image": "../../../thinkers/images/william-james.jpg",
       "role": {
         "ar": "فيلسوف وعالم نفس",
         "fr": "Philosophe & Psychologue",
         "en": "Philosopher & Psychologist"
       },
       "bio": {
-        "ar": "رائد دراسة العادات وتأثير التكرار العصبي في تشكيل الشخصية.",
+        "ar": "رائد دراسة العادات وتأثير التكرار العصبي والبراغماتية.",
         "fr": "Pionnier de l'étude des habitudes et de la neuroplasticité.",
         "en": "Pioneer in habit formation and behavioral neuroplasticity."
+      }
+    },
+    {
+      "name": "Angela Duckworth",
+      "href": "../../../thinkers/angela-duckworth/",
+      "image": "../../../thinkers/images/angela-duckworth.jpg",
+      "role": {
+        "ar": "باحثة في علم النفس",
+        "fr": "Chercheuse en Psychologie",
+        "en": "Psychology Researcher"
       },
-      "icon": "🏛️"
+      "bio": {
+        "ar": "صاحبة أبحاث العزيمة والالتزام الشغوف بالطويل الأجل.",
+        "fr": "Autrice des recherches sur la persévérance (Grit).",
+        "en": "Leading researcher on Grit, passion, and long-term perseverance."
+      }
     }
   ],
   "exercise": {
@@ -443,32 +445,19 @@
       // Figures Section
       document.getElementById('figuresHeading').textContent = lang === 'ar' ? '👤 أبحاث ورؤى رواد التفكير والتطوير' : (lang === 'fr' ? '👤 Figures & chercheurs associés' : '👤 Key Researchers & Thinkers');
       const figuresGrid = document.getElementById('figuresGrid');
-      const readProfileText = lang === 'ar' ? 'قراءة الملف الشخصي ←' : (lang === 'fr' ? 'Lire le profil →' : 'Read profile →');
-      const thinkerSlugMap = {
-        'William James': 'william-james',
-        'James Clear': 'william-james',
-        'Albert Bandura': 'albert-bandura',
-        'Viktor Frankl': 'viktor-frankl',
-        'Carol Dweck': 'carol-dweck',
-        'Mihály Csíkszentmihályi': 'mihaly-csikszentmihalyi',
-        'Angela Duckworth': 'angela-duckworth'
-      };
-
+      const readProfileText = lang === 'ar' ? 'اقرأ الملف الشخصي ←' : (lang === 'fr' ? 'Lire le profil →' : 'Read profile →');
       figuresGrid.innerHTML = PAGE_DATA.figures.map(fig => {
         const fRole = fig.role[lang] || fig.role.ar;
         const fBio = fig.bio[lang] || fig.bio.ar;
-        const tSlug = thinkerSlugMap[fig.name] || 'william-james';
-        const avatarImg = `../../../thinkers/images/${tSlug}.jpg`;
-
+        const hrefAttr = fig.href ? 'href="' + fig.href + '"' : '#';
+        const imgTag = fig.image ? '<img src="' + fig.image + '" alt="' + fig.name + '" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">' : (fig.icon || '👤');
         return `
-          <a href="../../../thinkers/${tSlug}/" class="figure-card-visual" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
-            <div class="figure-avatar-box" style="padding: 0; overflow: hidden;">
-              <img src="${avatarImg}" alt="${fig.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" onerror="this.onerror=null; this.src='../../../brand_logo_official.png';">
-            </div>
+          <a ${hrefAttr} class="figure-card-visual" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center;">
+            <div class="figure-avatar-box" style="overflow: hidden;">${imgTag}</div>
             <h3 class="figure-name">${fig.name}</h3>
             <div class="figure-role">${fRole}</div>
             <p class="figure-bio">${fBio}</p>
-            <span class="article-btn-link" style="margin-top: 14px; font-size: 0.84rem; padding: 6px 12px; text-align: center;">${readProfileText}</span>
+            <span class="article-btn-link" style="margin-top: 15px; font-size: 0.82rem; padding: 6px 14px;">${readProfileText}</span>
           </a>
         `;
       }).join('');

@@ -5,261 +5,163 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO Meta Tags -->
-  <title id="pageTitle">فيكتور فرانكل | المعنى والصلابة النفسية والحرية الأخيرة | حكمة ونور</title>
-  <meta name="description" id="pageMetaDesc" content="مؤسس العلاج بالمعنى وصاحب كتاب الإنسان يبحث عن المعنى، ورائد الحرية الروحية أمام المعاناة.">
+  <title id="pageTitle">فيكتور فرانكل | المعنى والمرونة النفسية | حكمة ونور</title>
+  <meta name="description" id="pageMetaDesc" content="سيرة وأفكار فيكتور فرانكل حول العلاج بالمعنى والصلابة النفسية وتجاوز الشدائد.">
   <link rel="canonical" href="https://jardin-des-pensees.onrender.com/thinkers/viktor-frankl/">
   <link rel="icon" type="image/png" href="../../brand_logo_official.png">
 
-  <!-- JSON-LD Structured Data Schema -->
+  <!-- JSON-LD BreadcrumbList Schema -->
   <script type="application/ld+json">
   {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "الرئيسية",
-          "item": "https://jardin-des-pensees.onrender.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "الفلاسفة والمفكرون",
-          "item": "https://jardin-des-pensees.onrender.com/thinkers/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "تطوير الذات",
-          "item": "https://jardin-des-pensees.onrender.com/developpement-personnel/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "فيكتور فرانكل",
-          "item": "https://jardin-des-pensees.onrender.com/thinkers/viktor-frankl/"
-        }
-      ]
-    },
-    {
-      "@type": "Person",
-      "name": "فيكتور فرانكل",
-      "alternateName": [
-        "Viktor Frankl",
-        "Viktor Frankl"
-      ],
-      "description": "مؤسس العلاج بالمعنى وصاحب كتاب الإنسان يبحث عن المعنى، ورائد الحرية الروحية أمام المعاناة.",
-      "image": "https://jardin-des-pensees.onrender.com/thinkers/images/viktor-frankl.jpg"
-    }
-  ]
-}
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://jardin-des-pensees.onrender.com/" },
+      { "@type": "ListItem", "position": 2, "name": "الفلاسفة والمفكرون", "item": "https://jardin-des-pensees.onrender.com/thinkers/" },
+      { "@type": "ListItem", "position": 3, "name": "تطوير الذات", "item": "https://jardin-des-pensees.onrender.com/developpement-personnel/" },
+      { "@type": "ListItem", "position": 4, "name": "Viktor Frankl", "item": "https://jardin-des-pensees.onrender.com/thinkers/viktor-frankl/" }
+    ]
+  }
   </script>
 
   <!-- Shared Stylesheets -->
   <link rel="stylesheet" href="../../style.css?v=16">
   <style>
-    /* Premium Dark Academia Thinker Profile CSS */
     .thinker-profile-container {
       max-width: 1100px;
       margin: 0 auto;
       padding: 110px 24px 80px;
     }
     .thinker-breadcrumb {
-      margin-bottom: 28px;
-      font-size: 0.92rem;
-      color: #8E877B;
+      margin-bottom: 24px;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
       display: flex;
       align-items: center;
       gap: 8px;
       flex-wrap: wrap;
     }
     .thinker-breadcrumb a {
-      color: #C9A86A;
+      color: var(--accent-gold);
       text-decoration: none;
-      transition: opacity 0.2s;
     }
-    .thinker-breadcrumb a:hover {
-      opacity: 0.8;
-      text-decoration: underline;
-    }
-    .thinker-hero-card {
-      background: linear-gradient(135deg, rgba(16, 26, 20, 0.98) 0%, rgba(10, 16, 12, 0.94) 100%);
-      border: 1px solid rgba(201, 168, 106, 0.4);
+    .thinker-hero {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
       border-radius: 24px;
       padding: 40px;
-      margin-bottom: 44px;
-      display: grid;
-      grid-template-columns: 220px 1fr;
+      display: flex;
       gap: 36px;
       align-items: center;
-      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5);
+      margin-bottom: 48px;
+      box-shadow: 0 16px 40px var(--shadow-color);
     }
     @media (max-width: 768px) {
-      .thinker-hero-card {
-        grid-template-columns: 1fr;
+      .thinker-hero {
+        flex-direction: column;
         padding: 28px 20px;
         text-align: center;
       }
     }
-    .thinker-avatar-box {
-      width: 200px;
-      height: 200px;
+    .thinker-portrait-lg {
+      width: 170px;
+      height: 170px;
       border-radius: 50%;
-      overflow: hidden;
-      border: 3px solid #C9A86A;
-      margin: 0 auto;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-    }
-    .thinker-avatar-img {
-      width: 100%;
-      height: 100%;
       object-fit: cover;
-      object-position: center top;
+      border: 3px solid var(--accent-gold);
+      flex-shrink: 0;
     }
-    .thinker-name-title {
-      font-size: clamp(2rem, 3.5vw, 2.7rem);
-      color: #FAF6EF;
+    .thinker-section {
+      margin-bottom: 44px;
+    }
+    .thinker-section-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-primary);
       font-family: 'Playfair Display', 'Amiri', serif;
-      margin: 0 0 10px;
-      font-weight: 900;
-    }
-    .thinker-meta-pills {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 16px;
-    }
-    @media (max-width: 768px) {
-      .thinker-meta-pills {
-        justify-content: center;
-      }
-    }
-    .thinker-pill {
-      background: rgba(201, 168, 106, 0.12);
-      border: 1px solid rgba(201, 168, 106, 0.35);
-      color: #DFB15B;
-      padding: 4px 14px;
-      border-radius: 16px;
-      font-size: 0.84rem;
-      font-weight: 700;
-    }
-    .thinker-bio-text {
-      font-size: 1.05rem;
-      color: #B8AFA0;
-      line-height: 1.85;
-      margin: 0;
-    }
-    .profile-section-heading {
-      font-size: 1.45rem;
-      color: #FAF6EF;
-      font-family: 'Playfair Display', 'Amiri', serif;
-      margin: 0 0 22px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--card-border);
       padding-bottom: 10px;
-      border-bottom: 1px solid rgba(201, 168, 106, 0.22);
-      display: flex;
-      align-items: center;
-      gap: 10px;
     }
     .ideas-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
-      margin-bottom: 48px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
     }
     .idea-card {
-      background: rgba(18, 28, 22, 0.92);
-      border: 1px solid rgba(201, 168, 106, 0.25);
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
       border-radius: 16px;
-      padding: 26px 22px;
+      padding: 24px;
     }
-    .idea-title {
-      font-size: 1.15rem;
-      color: #DFB15B;
-      font-family: 'Playfair Display', 'Amiri', serif;
+    .idea-card h3 {
+      font-size: 1.1rem;
+      color: var(--accent-gold);
       margin: 0 0 10px;
-      font-weight: 700;
-    }
-    .idea-text {
-      font-size: 0.95rem;
-      color: #FAF6EF;
-      line-height: 1.75;
-      margin: 0;
     }
     .quote-box {
       background: rgba(201, 168, 106, 0.08);
-      border: 1px solid rgba(201, 168, 106, 0.35);
-      border-radius: 16px;
-      padding: 30px;
-      margin-bottom: 48px;
-      text-align: center;
-    }
-    .quote-text {
-      font-size: 1.25rem;
-      color: #E4C98A;
-      font-family: 'Amiri', serif;
-      line-height: 1.8;
-      margin: 0 0 10px;
-      font-weight: 700;
-    }
-    .works-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      margin-bottom: 48px;
-    }
-    .work-card {
-      background: rgba(18, 28, 22, 0.9);
-      border: 1px solid rgba(201, 168, 106, 0.2);
-      border-radius: 14px;
-      padding: 20px;
-    }
-    .work-title {
+      border-inline-start: 4px solid var(--accent-gold);
+      padding: 20px 24px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      font-style: italic;
       font-size: 1.05rem;
-      color: #FAF6EF;
-      font-weight: 700;
-      margin: 0 0 8px;
+      color: var(--text-primary);
     }
-    .work-desc {
-      font-size: 0.9rem;
-      color: #B8AFA0;
-      margin: 0;
-      line-height: 1.6;
-    }
-    .pathways-flex {
+    .parcours-links-flex {
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
-      margin-bottom: 48px;
     }
-    .pathway-link-pill {
-      background: rgba(201, 168, 106, 0.1);
-      border: 1px solid rgba(201, 168, 106, 0.35);
-      color: #E4C98A;
+    .parcours-pill-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       padding: 10px 20px;
-      border-radius: 12px;
+      background: rgba(201, 168, 106, 0.12);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      color: var(--accent-gold);
       text-decoration: none;
       font-weight: 700;
-      font-size: 0.95rem;
-      transition: background 0.2s, color 0.2s;
+      font-size: 0.9rem;
+      transition: all 0.25s ease;
     }
-    .pathway-link-pill:hover {
-      background: #C9A86A;
+    .parcours-pill-link:hover {
+      background: var(--accent-gold);
       color: #0B1410;
     }
-    .back-thinkers-section {
-      display: flex;
-      justify-content: center;
-      padding-top: 30px;
-      border-top: 1px solid rgba(201, 168, 106, 0.22);
+    .back-thinkers-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 28px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      color: var(--accent-gold) !important;
+      text-decoration: none !important;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+    }
+    .back-thinkers-btn:hover {
+      background: rgba(201, 168, 106, 0.15);
+      border-color: var(--accent-gold);
     }
   </style>
 </head>
 <body>
 
-  <!-- Header Sticky Navigation Bar -->
+  <!-- Background Orbs -->
+  <div class="glowing-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Header Sticky Navbar -->
   <header class="navbar-header">
     <nav class="navbar" aria-label="Navigation principale">
       <a href="../../" class="nav-brand" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
@@ -286,26 +188,19 @@
       </div>
 
       <div class="nav-actions">
-        <!-- Language Selector -->
         <div class="lang-selector">
           <button class="lang-btn" id="langBtn" aria-label="تغيير اللغة">
-            <svg class="globe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px; height:16px;">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path>
-            </svg>
-            <span id="activeLangName">العربية</span>
+            🌐 <span id="activeLangName">العربية</span>
           </button>
           <div class="lang-dropdown" id="langDropdown">
-            <button class="lang-opt active" data-lang="ar" aria-label="العربية">العربية</button>
-            <button class="lang-opt" data-lang="fr" aria-label="Français">Français</button>
-            <button class="lang-opt" data-lang="en" aria-label="English">English</button>
+            <button class="lang-opt active" data-lang="ar">العربية</button>
+            <button class="lang-opt" data-lang="fr">Français</button>
+            <button class="lang-opt" data-lang="en">English</button>
           </div>
         </div>
 
         <button id="themeToggleBtn" class="theme-btn-nav" aria-label="Changer de thème">
-          <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-          <svg class="moon-icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          🌙
         </button>
       </div>
     </nav>
@@ -313,67 +208,73 @@
 
   <main class="thinker-profile-container">
     
-    <!-- 1. Fil d'Ariane Visible Structure -->
-    <nav class="thinker-breadcrumb" aria-label="Fil d’Ariane">
+    <!-- 1. Fil d'Ariane Visible -->
+    <nav class="thinker-breadcrumb" aria-label="Fil d'Ariane">
       <a href="../../" id="bcHome">الرئيسية</a>
       <span aria-hidden="true">›</span>
       <a href="../" id="bcThinkers">الفلاسفة والمفكرون</a>
       <span aria-hidden="true">›</span>
       <a href="../../developpement-personnel/" id="bcDev">تطوير الذات</a>
       <span aria-hidden="true">›</span>
-      <span aria-current="page" id="bcCurrent">فيكتور فرانكل</span>
+      <span aria-current="page" id="bcName">Viktor Frankl</span>
     </nav>
 
-    <!-- 2. Hero Card -->
-    <section class="thinker-hero-card">
-      <div class="thinker-avatar-box">
-        <img src="../images/viktor-frankl.jpg" alt="فيكتور فرانكل" class="thinker-avatar-img" loading="lazy" onerror="this.onerror=null; this.src='../../brand_logo_official.png';">
-      </div>
+    <!-- 2. Hero Section -->
+    <section class="thinker-hero">
+      <img src="../images/viktor-frankl.jpg" alt="Viktor Frankl" class="thinker-portrait-lg">
       <div>
-        <h1 class="thinker-name-title" id="thinkerName">فيكتور فرانكل</h1>
-        <div class="thinker-meta-pills">
-          <span class="thinker-pill" id="thinkerDates">⌛ 1905 – 1997</span>
-          <span class="thinker-pill" id="thinkerCountry">🌍 النمسا</span>
-          <span class="thinker-pill" id="thinkerField">💡 الطب النفسي والعلاج بالمعنى (Logotherapy)</span>
+        <span style="font-size: 0.85rem; font-weight: 700; color: var(--accent-gold);" id="thinkerMeta">
+          📍 النمسا • ⏳ 1905 – 1997
+        </span>
+        <h1 style="font-size: 2.2rem; font-weight: 900; color: var(--text-primary); font-family: 'Playfair Display', 'Amiri', serif; margin: 8px 0 12px;">
+          Viktor Frankl
+        </h1>
+        <div style="font-size: 0.95rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 14px;" id="thinkerField">
+          📚 الطب النفسي، العلاج بالمعنى، الفلسفة الوجودية
         </div>
-        <p class="thinker-bio-text" id="thinkerBio">فيكتور فرانكل هو طبيب نفسي نمساوي وعاش تجربة المعتقلات الرهيبة في الحرب العالمية الثانية. استنبط من تجربته أن دافع الإنسان الأول ليس اللذة أو القوة، بل البحث عن المعنى، وأن الحرية الأخيرة هي اختيار الموقف تجاه أي ظرف.</p>
+        <p style="font-size: 1.02rem; color: var(--text-secondary); line-height: 1.8; margin: 0;" id="thinkerBio">
+          فيكتور فرانكل (1905-1997) طبيب نفسي ونمساوي ومؤسس المدرسة الثالثة في العلاج النفسي (العلاج بالمعنى / Logotherapy). صمد في المعتقلات وألهم العالم بكتابه «الإنسان يبحث عن المعنى».
+        </p>
       </div>
     </section>
 
-    <!-- 3. Idées Principales -->
-    <section>
-      <h2 class="profile-section-heading" id="ideasHeading">💡 الأفكار والمبادئ الرئيسية</h2>
+    <!-- 3. Trois Idées Principales -->
+    <section class="thinker-section">
+      <h2 class="thinker-section-title" id="ideasHeading">💡 الركائز والأفكار الرئيسية</h2>
       <div class="ideas-grid" id="ideasGrid">
         <!-- Rendered via JS -->
       </div>
     </section>
 
-    <!-- 4. Citation Marquante -->
-    <section class="quote-box">
-      <p class="quote-text" id="quoteText">« من يمتلك سبباً يعيش لأجله، يمكنه تحمّل أي طريقة يعيش بها تقريباً. »</p>
-      <div style="font-size: 0.88rem; color: #C9A86A; font-weight: 700;" id="quoteAuthor">— فيكتور فرانكل —</div>
-    </section>
-
-    <!-- 5. Oeuvres Principales -->
-    <section>
-      <h2 class="profile-section-heading" id="worksHeading">📚 أهم المؤثرات والأعمال</h2>
-      <div class="works-grid" id="worksGrid">
+    <!-- 4. Citations Vérifiées -->
+    <section class="thinker-section">
+      <h2 class="thinker-section-title" id="quotesHeading">💬 اقتباسات مأثورة</h2>
+      <div id="quotesGrid">
         <!-- Rendered via JS -->
       </div>
     </section>
 
-    <!-- 6. Parcours Associés -->
-    <section>
-      <h2 class="profile-section-heading" id="pathwaysHeading">🚀 مسارات تطوير الذات المرتبطة</h2>
-      <div class="pathways-flex" id="pathwaysFlex">
+    <!-- 5. Œuvres Principales -->
+    <section class="thinker-section">
+      <h2 class="thinker-section-title" id="worksHeading">📖 أهم الكتب والأعمال</h2>
+      <div class="ideas-grid" id="worksGrid">
         <!-- Rendered via JS -->
       </div>
     </section>
 
-    <!-- 7. Retour vers la Galerie -->
-    <section class="back-thinkers-section">
-      <a class="pathway-link-pill" href="../" id="backGalleryBtn">
-        ← العودة إلى دليل الفلاسفة والمفكرين
+    <!-- 6. Parcours de Développement Personnel Associés -->
+    <section class="thinker-section">
+      <h2 class="thinker-section-title" id="parcoursHeading">🚀 مسارات تطوير الذات المرتبطة</h2>
+      <div class="parcours-links-flex" id="parcoursLinksFlex">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- 7. Bouton Retour vers la Galerie -->
+    <section style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--card-border);">
+      <a href="../" class="back-thinkers-btn">
+        <span class="back-arrow" aria-hidden="true">←</span>
+        <span id="backThinkersText">العودة إلى دليل المفكرين</span>
       </a>
     </section>
 
@@ -388,7 +289,7 @@
           <span style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 800; color: var(--accent-gold);">HIKMA & NOUR</span>
         </div>
         <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.7; margin-bottom: 14px;" data-i18n="footerBrandDesc">
-          الحكمة • الفلسفة • علم النفس — مساحة للتأمل الرصين، حكمة كبار المفكرين وبناء القوة النفسية والهدوء الداخلي.
+          الحكمة • الفلسفة • علم النفس • تطوير الذات — مساحة للتأمل الرصين، وبناء القوة النفسية والهدوء الداخلي.
         </p>
       </div>
 
@@ -397,24 +298,17 @@
         <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
           <li><a href="../../" style="color: var(--text-secondary); text-decoration: none;" data-i18n="home">الرئيسية</a></li>
           <li><a href="../../articles/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="articles">المقالات</a></li>
-          <li><a href="../" style="color: var(--accent-gold); text-decoration: none; font-weight: 700;" data-i18n="thinkers">الفلاسفة</a></li>
-          <li><a href="../../quotes/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="quotes">اقتباسات</a></li>
-          <li><a href="../../audio/" style="color: var(--text-secondary); text-decoration: none;" data-i18n="audio">الصوتيات</a></li>
+          <li><a href="../" style="color: var(--accent-gold); text-decoration: none; font-weight: 700;" data-i18n="thinkers">الفلاسفة والمفكرون</a></li>
         </ul>
       </div>
     </div>
   </footer>
 
-  <script src="../../app_v11.js?v=28" type="module"></script>
   <script type="module">
-    const THINKER_DATA = {
+    const T = {
   "slug": "viktor-frankl",
   "id": "viktor-frankl",
-  "name": {
-    "ar": "فيكتور فرانكل",
-    "fr": "Viktor Frankl",
-    "en": "Viktor Frankl"
-  },
+  "name": "Viktor Frankl",
   "dates": "1905 – 1997",
   "country": {
     "ar": "النمسا",
@@ -422,126 +316,138 @@
     "en": "Austria"
   },
   "field": {
-    "ar": "الطب النفسي والعلاج بالمعنى (Logotherapy)",
-    "fr": "Psychiatrie & Logothérapie",
-    "en": "Psychiatry & Logotherapy"
+    "ar": "الطب النفسي، العلاج بالمعنى، الفلسفة الوجودية",
+    "fr": "Psychiatrie, Logothérapie, Analyse existentielle",
+    "en": "Psychiatry, Logotherapy, Existential Analysis"
   },
-  "image": "../images/viktor-frankl.jpg",
+  "image": "viktor-frankl.jpg",
   "metaTitle": {
-    "ar": "فيكتور فرانكل | المعنى والصلابة النفسية والحرية الأخيرة | حكمة ونور",
-    "fr": "Viktor Frankl | Sens, Résilience et Logothérapie | Hikma & Nour",
-    "en": "Viktor Frankl | Meaning, Resilience, and Logotherapy | Hikma & Nour"
+    "ar": "فيكتور فرانكل | المعنى والمرونة النفسية | حكمة ونور",
+    "fr": "Viktor Frankl | Sens & Résilience | Hikma & Nour",
+    "en": "Viktor Frankl | Meaning & Resilience | Hikma & Nour"
   },
   "metaDesc": {
-    "ar": "مؤسس العلاج بالمعنى وصاحب كتاب الإنسان يبحث عن المعنى، ورائد الحرية الروحية أمام المعاناة.",
-    "fr": "Fondateur de la logothérapie et auteur de \"Man's Search for Meaning\", pionnier de la quête de sens.",
-    "en": "Founder of logotherapy and author of Man's Search for Meaning, pioneer of spiritual freedom."
+    "ar": "سيرة وأفكار فيكتور فرانكل حول العلاج بالمعنى والصلابة النفسية وتجاوز الشدائد.",
+    "fr": "Biographie et logothérapie de Viktor Frankl sur la quête de sens.",
+    "en": "Biography and logotherapy concepts of Viktor Frankl on meaning."
   },
   "bio": {
-    "ar": "فيكتور فرانكل هو طبيب نفسي نمساوي وعاش تجربة المعتقلات الرهيبة في الحرب العالمية الثانية. استنبط من تجربته أن دافع الإنسان الأول ليس اللذة أو القوة، بل البحث عن المعنى، وأن الحرية الأخيرة هي اختيار الموقف تجاه أي ظرف.",
-    "fr": "Viktor Frankl est un psychiatre autrichien survivant des camps de concentration. Il a fondé la Logothérapie, montrant que la recherche de sens est la force motrice fondamentale de l'être humain.",
-    "en": "Viktor Frankl was an Austrian psychiatrist and Holocaust survivor who founded Logotherapy. He argued that the primary human drive is the search for meaning in life."
+    "ar": "فيكتور فرانكل (1905-1997) طبيب نفسي ونمساوي ومؤسس المدرسة الثالثة في العلاج النفسي (العلاج بالمعنى / Logotherapy). صمد في المعتقلات وألهم العالم بكتابه «الإنسان يبحث عن المعنى».",
+    "fr": "Viktor Frankl (1905-1997) est un neurologue et psychiatre autrichien, fondateur de la logothérapie. Son chef-d'œuvre Découvrir un sens à sa vie a inspiré des millions de personnes.",
+    "en": "Viktor Frankl (1905-1997) was an Austrian neurologist, psychiatrist, Holocaust survivor, and founder of Logotherapy (meaning-centered therapy)."
   },
   "timeline": [
     {
       "year": "1905",
-      "text": {
-        "ar": "ولادته في فيينا، النمسا.",
-        "fr": "Naissance à Vienne, Autriche.",
-        "en": "Born in Vienna, Austria."
+      "desc": {
+        "ar": "مولده في فيينا",
+        "fr": "Naissance à Vienne",
+        "en": "Born in Vienna"
       }
     },
     {
       "year": "1942",
-      "text": {
-        "ar": "اعتقاله في معسكرات الاعتقال وتجربة الصمود.",
-        "fr": "Déportation et expérience de la résilience ultime.",
-        "en": "Imprisoned in concentration camps."
+      "desc": {
+        "ar": "اعتقاله في المعسكرات النمساوية والألمانية",
+        "fr": "Déportation dans les camps de concentration",
+        "en": "Imprisoned in Nazi concentration camps"
       }
     },
     {
       "year": "1946",
-      "text": {
-        "ar": "نشر كتاب \"الإنسان يبحث عن المعنى\".",
-        "fr": "Publication de \"Man's Search for Meaning\".",
-        "en": "Publishes \"Man's Search for Meaning\"."
+      "desc": {
+        "ar": "تأليف كتاب الإنسان يبحث عن المعنى",
+        "fr": "Publication de Découvrir un sens à sa vie",
+        "en": "Published Man's Search for Meaning"
       }
     },
     {
-      "year": "1955",
-      "text": {
-        "ar": "تأسيس مدرسة العلاج بالمعنى عالمياً.",
-        "fr": "Consécration internationale de la Logothérapie.",
-        "en": "Establishes Logotherapy worldwide."
+      "year": "1997",
+      "desc": {
+        "ar": "وفاته في فيينا",
+        "fr": "Décès à Vienne",
+        "en": "Passed away in Vienna"
       }
     }
   ],
   "ideas": [
     {
       "title": {
-        "ar": "البحث عن المعنى كدافع رئيسي",
+        "ar": "إرادة المعنى دافع أساسي",
         "fr": "La volonté de sens comme force vitale",
-        "en": "Will to Meaning as Core Drive"
+        "en": "The Will to Meaning"
       },
       "text": {
-        "ar": "💡 أعمق دافع إنساني ليس اللذة أو السيطرة، بل العثور على هدف ونبل في الحياة.",
-        "fr": "💡 Le désir le plus profond de l'homme est de trouver un sens à son existence.",
-        "en": "💡 Man's primary drive is to discover a purpose and meaning in life."
+        "ar": "💡 السعي نحو غاية ومعنى نبيل هو المحرك الأول لبقاء الإنسان وصموده النفسي.",
+        "fr": "💡 La quête d'un sens à son existence est la motivation première de l'être humain.",
+        "en": "💡 The striving to find meaning in one's life is the primary motivational force."
       }
     },
     {
       "title": {
-        "ar": "الحرية الإنسانية الأخيرة",
-        "fr": "La dernière des libertés humaines",
-        "en": "The Ultimate Human Freedom"
+        "ar": "حرية اختيار الموقف الداخلي",
+        "fr": "La liberté ultime d'attitude",
+        "en": "Ultimate Freedom of Attitude"
       },
       "text": {
-        "ar": "💡 يمكن سلب كل شيء من الإنسان إلا حرية اختيار موقفه الروحي تجاه ظروفه.",
-        "fr": "💡 On peut tout enlever à un homme, sauf la liberté de choisir son attitude.",
-        "en": "💡 Everything can be taken from a man but the freedom to choose his attitude."
+        "ar": "💡 يستطيع الإنسان سلب كل شيء منك إلا حرية اختيار موقفك الداخلي تجاه ظروفك.",
+        "fr": "💡 Tout peut être enlevé à un homme, sauf la liberté de choisir son attitude face aux événements.",
+        "en": "💡 Everything can be taken from a man but the freedom to choose one's attitude in any circumstance."
       }
     },
     {
       "title": {
-        "ar": "تحويل المعاناة إلى نصر روحي",
-        "fr": "La transformation de la souffrance",
-        "en": "Transforming Suffering into Achievement"
+        "ar": "تحويل الأمل إلى مسؤولية",
+        "fr": "La responsabilité envers la vie",
+        "en": "Responsibility to Life"
       },
       "text": {
-        "ar": "💡 عندما نكون عاجزين عن تغيير الموقف، فنحن مدعوون لتغيير أنفسنا.",
-        "fr": "💡 Lorsque nous ne pouvons plus changer une situation, nous sommes défiés de nous changer nous-mêmes.",
-        "en": "💡 When we are no longer able to change a situation, we are challenged to change ourselves."
+        "ar": "💡 السؤال ليس ماذا تنتظر من الحياة، بل ماذا تنتظر الحياة منك ليُنجز.",
+        "fr": "💡 La question n'est pas ce que nous attendons de la vie, mais ce que la vie attend de nous.",
+        "en": "💡 It does not matter what we expect from life, but rather what life expects from us."
+      }
+    }
+  ],
+  "concepts": [
+    {
+      "name": {
+        "ar": "العلاج بالمعنى (Logotherapy)",
+        "fr": "Logothérapie",
+        "en": "Logotherapy"
+      },
+      "desc": {
+        "ar": "العلاج النفسي القائم على اكتشاف المعنى والغاية في الحياة والعمل والتجربة.",
+        "fr": "Psychothérapie fondée sur la recherche et la découverte d'un sens à la vie.",
+        "en": "Psychotherapy focused on discovering meaning in work, love, and suffering."
       }
     }
   ],
   "works": [
     {
-      "title": "Man’s Search for Meaning (1946)",
+      "title": "Man's Search for Meaning (1946)",
       "desc": {
-        "ar": "شاهد على الصمود واكتشاف المعنى.",
-        "fr": "Témoignage universel sur le sens et la résilience.",
-        "en": "Universal testimony on meaning and resilience."
+        "ar": "الأثر الخالد في الصمود وإيجاد المعنى.",
+        "fr": "Découvrir un sens à sa vie : témoignage et méthode.",
+        "en": "Timeless account of survival and purpose."
       }
     },
     {
       "title": "The Will to Meaning (1969)",
       "desc": {
-        "ar": "الركائز الطبية والفلسفية للعلاج بالمعنى.",
-        "fr": "Fondements de la logothérapie.",
-        "en": "Principles and applications of logotherapy."
+        "ar": "المبادئ النظريّة والتطبيقيّة للتحليل الوجودي.",
+        "fr": "Principes fondamentaux de la logothérapie.",
+        "en": "Core foundations of existential analysis."
       }
     }
   ],
   "quotes": [
     {
-      "text": {
-        "ar": "« من يمتلك سبباً يعيش لأجله، يمكنه تحمّل أي طريقة يعيش بها تقريباً. »",
-        "fr": "« Celui qui a un \"pourquoi\" qui lui tient lieu de but peut supporter n'importe quel \"comment\". »",
-        "en": "« Those who have a 'why' to live, can bear with almost any 'how'. »"
-      }
+      "ar": "« من يملك سبباً يعيش من أجله، يستطيع تحمّل أي كيف تقريباً. »",
+      "fr": "« Celui qui a un \"pourquoi\" qui lui tient lieu de but peut vivre avec n'importe quel \"comment\". »",
+      "en": "« Those who have a 'why' to live, can bear almost any 'how'. »"
     }
   ],
-  "pathways": [
+  "associatedParcours": [
     {
       "slug": "resilience-transformation",
       "title": {
@@ -559,8 +465,9 @@
       }
     }
   ],
-  "related": [
+  "relatedThinkers": [
     "carol-dweck",
+    "albert-bandura",
     "angela-duckworth"
   ]
 };
@@ -574,67 +481,71 @@
       document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
 
       // Title & Meta
-      document.getElementById('pageTitle').textContent = THINKER_DATA.metaTitle[lang] || THINKER_DATA.metaTitle.ar;
-      document.getElementById('pageMetaDesc').setAttribute('content', THINKER_DATA.metaDesc[lang] || THINKER_DATA.metaDesc.ar);
+      document.getElementById('pageTitle').textContent = T.metaTitle[lang] || T.metaTitle.ar;
+      document.getElementById('pageMetaDesc').setAttribute('content', T.metaDesc[lang] || T.metaDesc.ar);
 
       // Breadcrumbs
       document.getElementById('bcHome').textContent = lang === 'ar' ? 'الرئيسية' : (lang === 'fr' ? 'Accueil' : 'Home');
       document.getElementById('bcThinkers').textContent = lang === 'ar' ? 'الفلاسفة والمفكرون' : (lang === 'fr' ? 'Penseurs' : 'Thinkers');
-      document.getElementById('bcDev').textContent = lang === 'ar' ? 'تطوير الذات' : (lang === 'fr' ? 'Développement personnel' : 'Personal Growth');
-      document.getElementById('bcCurrent').textContent = THINKER_DATA.name[lang] || THINKER_DATA.name.ar;
+      document.getElementById('bcDev').textContent = lang === 'ar' ? 'تطوير الذات' : (lang === 'fr' ? 'Développement Personnel' : 'Personal Growth');
+      document.getElementById('bcName').textContent = T.name;
 
-      // Hero Content
-      document.getElementById('thinkerName').textContent = THINKER_DATA.name[lang] || THINKER_DATA.name.ar;
-      document.getElementById('thinkerDates').textContent = '⌛ ' + THINKER_DATA.dates;
-      document.getElementById('thinkerCountry').textContent = '🌍 ' + (THINKER_DATA.country[lang] || THINKER_DATA.country.ar);
-      document.getElementById('thinkerField').textContent = '💡 ' + (THINKER_DATA.field[lang] || THINKER_DATA.field.ar);
-      document.getElementById('thinkerBio').textContent = THINKER_DATA.bio[lang] || THINKER_DATA.bio.ar;
+      // Hero
+      document.getElementById('thinkerMeta').textContent = '📍 ' + (T.country[lang] || T.country.ar) + ' • ⏳ ' + T.dates;
+      document.getElementById('thinkerField').textContent = '📚 ' + (T.field[lang] || T.field.ar);
+      document.getElementById('thinkerBio').textContent = T.bio[lang] || T.bio.ar;
 
       // Ideas
-      document.getElementById('ideasHeading').textContent = lang === 'ar' ? '💡 الأفكار والمبادئ الرئيسية' : (lang === 'fr' ? '💡 Idées & principes clés' : '💡 Key Ideas & Principles');
+      document.getElementById('ideasHeading').textContent = lang === 'ar' ? '💡 الركائز والأفكار الرئيسية' : (lang === 'fr' ? '💡 Idées & principes majeurs' : '💡 Core Ideas & Principles');
       const ideasGrid = document.getElementById('ideasGrid');
-      ideasGrid.innerHTML = THINKER_DATA.ideas.map(i => {
+      ideasGrid.innerHTML = T.ideas.map(i => {
         const iTitle = i.title[lang] || i.title.ar;
         const iText = i.text[lang] || i.text.ar;
         return `
           <div class="idea-card">
-            <h3 class="idea-title">${iTitle}</h3>
-            <p class="idea-text">${iText}</p>
+            <h3>${iTitle}</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0;">${iText}</p>
           </div>
         `;
       }).join('');
 
-      // Quote
-      document.getElementById('quoteText').textContent = THINKER_DATA.quotes[0].text[lang] || THINKER_DATA.quotes[0].text.ar;
-      document.getElementById('quoteAuthor').textContent = '— ' + (THINKER_DATA.name[lang] || THINKER_DATA.name.ar) + ' —';
+      // Quotes
+      document.getElementById('quotesHeading').textContent = lang === 'ar' ? '💬 اقتباسات مأثورة' : (lang === 'fr' ? '💬 Citations marquantes' : '💬 Key Quotes');
+      const quotesGrid = document.getElementById('quotesGrid');
+      quotesGrid.innerHTML = T.quotes.map(q => {
+        const qText = q[lang] || q.ar;
+        return `
+          <div class="quote-box">${qText}</div>
+        `;
+      }).join('');
 
       // Works
-      document.getElementById('worksHeading').textContent = lang === 'ar' ? '📚 أهم المؤثرات والأعمال' : (lang === 'fr' ? '📚 Œuvres majeures' : '📚 Major Works');
+      document.getElementById('worksHeading').textContent = lang === 'ar' ? '📖 أهم الكتب والأعمال' : (lang === 'fr' ? '📖 Œuvres principales' : '📖 Major Works');
       const worksGrid = document.getElementById('worksGrid');
-      worksGrid.innerHTML = THINKER_DATA.works.map(w => {
+      worksGrid.innerHTML = T.works.map(w => {
         const wDesc = w.desc[lang] || w.desc.ar;
         return `
-          <div class="work-card">
-            <h3 class="work-title">${w.title}</h3>
-            <p class="work-desc">${wDesc}</p>
+          <div class="idea-card">
+            <h3>${w.title}</h3>
+            <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin: 0;">${wDesc}</p>
           </div>
         `;
       }).join('');
 
-      // Pathways
-      document.getElementById('pathwaysHeading').textContent = lang === 'ar' ? '🚀 مسارات تطوير الذات المرتبطة' : (lang === 'fr' ? '🚀 Parcours associés' : '🚀 Associated Pathways');
-      const pathwaysFlex = document.getElementById('pathwaysFlex');
-      pathwaysFlex.innerHTML = THINKER_DATA.pathways.map(p => {
+      // Associated Parcours
+      document.getElementById('parcoursHeading').textContent = lang === 'ar' ? '🚀 مسارات تطوير الذات المرتبطة' : (lang === 'fr' ? '🚀 Parcours de développement personnel associés' : '🚀 Associated Personal Growth Pathways');
+      const parcoursFlex = document.getElementById('parcoursLinksFlex');
+      parcoursFlex.innerHTML = T.associatedParcours.map(p => {
         const pTitle = p.title[lang] || p.title.ar;
         return `
-          <a href="../../developpement-personnel/parcours/${p.slug}/" class="pathway-link-pill">
-            🎯 ${pTitle} ←
+          <a href="../../developpement-personnel/parcours/${p.slug}/" class="parcours-pill-link">
+            🚀 ${pTitle} ←
           </a>
         `;
       }).join('');
 
-      // Back Button
-      document.getElementById('backGalleryBtn').textContent = lang === 'ar' ? '← العودة إلى دليل الفلاسفة والمفكرين' : (lang === 'fr' ? '← Retour à la galerie des penseurs' : '← Back to Thinkers Gallery');
+      // Back Button Text
+      document.getElementById('backThinkersText').textContent = lang === 'ar' ? 'العودة إلى دليل المفكرين' : (lang === 'fr' ? 'Retour à la Galerie des Penseurs' : 'Back to Thinkers Gallery');
     }
 
     document.addEventListener('DOMContentLoaded', () => {

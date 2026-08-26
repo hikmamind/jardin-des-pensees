@@ -275,31 +275,33 @@
   "figures": [
     {
       "name": "Albert Bandura",
+      "href": "../../../thinkers/albert-bandura/",
+      "image": "../../../thinkers/images/albert-bandura.jpg",
       "role": {
-        "ar": "عالم نفس وباحث الكفاءة الذاتية",
-        "fr": "Psychologue & Chercheur en Auto-efficacité",
-        "en": "Psychologist & Self-Efficacy Researcher"
+        "ar": "عالم نفس اجتماعي",
+        "fr": "Psychologue Social",
+        "en": "Social Psychologist"
       },
       "bio": {
         "ar": "صاحب نظرية الفعالية الذاتية وبناء الإيمان بالقدرة الشخصية.",
         "fr": "Pionnier du concept d'auto-efficacité (Self-Efficacy).",
-        "en": "Pioneer of the Self-Efficacy framework in psychology."
-      },
-      "icon": "🧠"
+        "en": "Pioneer of Self-Efficacy construct in psychology."
+      }
     },
     {
-      "name": "William James",
+      "name": "Viktor Frankl",
+      "href": "../../../thinkers/viktor-frankl/",
+      "image": "../../../thinkers/images/viktor-frankl.jpg",
       "role": {
-        "ar": "فيلسوف ونفساني",
-        "fr": "Philosophe & Psychologue",
-        "en": "Philosopher & Psychologist"
+        "ar": "طبيب نفسي وجودي",
+        "fr": "Psychiatre Existentiel",
+        "en": "Existential Psychiatrist"
       },
       "bio": {
-        "ar": "مؤكد أن الفعل هو الذي يحرك المشاعر ويشكل الشجاعة.",
-        "fr": "Penseur de l'action créatrice et de la maîtrise émotionnelle.",
-        "en": "Promoter of creative action shaping emotional courage."
-      },
-      "icon": "🏛️"
+        "ar": "مؤسس العلاج بالمعنى ومؤكد حرية اختيار الموقف الداخلي.",
+        "fr": "Fondateur de la logothérapie et auteur de Découvrir un sens à sa vie.",
+        "en": "Founder of Logotherapy and defender of inner freedom."
+      }
     }
   ],
   "exercise": {
@@ -428,32 +430,19 @@
       // Figures Section
       document.getElementById('figuresHeading').textContent = lang === 'ar' ? '👤 أبحاث ورؤى رواد التفكير والتطوير' : (lang === 'fr' ? '👤 Figures & chercheurs associés' : '👤 Key Researchers & Thinkers');
       const figuresGrid = document.getElementById('figuresGrid');
-      const readProfileText = lang === 'ar' ? 'قراءة الملف الشخصي ←' : (lang === 'fr' ? 'Lire le profil →' : 'Read profile →');
-      const thinkerSlugMap = {
-        'William James': 'william-james',
-        'James Clear': 'william-james',
-        'Albert Bandura': 'albert-bandura',
-        'Viktor Frankl': 'viktor-frankl',
-        'Carol Dweck': 'carol-dweck',
-        'Mihály Csíkszentmihályi': 'mihaly-csikszentmihalyi',
-        'Angela Duckworth': 'angela-duckworth'
-      };
-
+      const readProfileText = lang === 'ar' ? 'اقرأ الملف الشخصي ←' : (lang === 'fr' ? 'Lire le profil →' : 'Read profile →');
       figuresGrid.innerHTML = PAGE_DATA.figures.map(fig => {
         const fRole = fig.role[lang] || fig.role.ar;
         const fBio = fig.bio[lang] || fig.bio.ar;
-        const tSlug = thinkerSlugMap[fig.name] || 'william-james';
-        const avatarImg = `../../../thinkers/images/${tSlug}.jpg`;
-
+        const hrefAttr = fig.href ? 'href="' + fig.href + '"' : '#';
+        const imgTag = fig.image ? '<img src="' + fig.image + '" alt="' + fig.name + '" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">' : (fig.icon || '👤');
         return `
-          <a href="../../../thinkers/${tSlug}/" class="figure-card-visual" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
-            <div class="figure-avatar-box" style="padding: 0; overflow: hidden;">
-              <img src="${avatarImg}" alt="${fig.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" onerror="this.onerror=null; this.src='../../../brand_logo_official.png';">
-            </div>
+          <a ${hrefAttr} class="figure-card-visual" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center;">
+            <div class="figure-avatar-box" style="overflow: hidden;">${imgTag}</div>
             <h3 class="figure-name">${fig.name}</h3>
             <div class="figure-role">${fRole}</div>
             <p class="figure-bio">${fBio}</p>
-            <span class="article-btn-link" style="margin-top: 14px; font-size: 0.84rem; padding: 6px 12px; text-align: center;">${readProfileText}</span>
+            <span class="article-btn-link" style="margin-top: 15px; font-size: 0.82rem; padding: 6px 14px;">${readProfileText}</span>
           </a>
         `;
       }).join('');

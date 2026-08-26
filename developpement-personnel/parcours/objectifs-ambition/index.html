@@ -274,32 +274,49 @@
   ],
   "figures": [
     {
-      "name": "Mihály Csíkszentmihályi",
+      "name": "Albert Bandura",
+      "href": "../../../thinkers/albert-bandura/",
+      "image": "../../../thinkers/images/albert-bandura.jpg",
       "role": {
-        "ar": "عالم نفس وباحث التدفق",
-        "fr": "Psychologue & Chercheur du Flow",
-        "en": "Psychologist & Flow Researcher"
+        "ar": "عالم نفس اجتماعي",
+        "fr": "Psychologue Social",
+        "en": "Social Psychologist"
       },
       "bio": {
-        "ar": "مكتشف حالة التدفق والاندماج الكامل في تحقيق الأهداف.",
-        "fr": "Pionnier du concept de Flow et de l'engagement total dans l'action.",
-        "en": "Pioneer of the Flow state concept and total focus in goal achievement."
-      },
-      "icon": "🎯"
+        "ar": "مبتكر مفهوم الفعالية الذاتية والتعلم الملاحظ.",
+        "fr": "Pionnier de l'auto-efficacité et de l'apprentissage social.",
+        "en": "Pioneer of Self-Efficacy and Social Learning Theory."
+      }
     },
     {
       "name": "Carol Dweck",
+      "href": "../../../thinkers/carol-dweck/",
+      "image": "../../../thinkers/images/carol-dweck.jpg",
       "role": {
-        "ar": "باحثة في علم النفس التنموي",
-        "fr": "Chercheuse en Psychologie",
+        "ar": "عالمة نفس تنموية",
+        "fr": "Psychologue du Développement",
         "en": "Developmental Psychologist"
       },
       "bio": {
         "ar": "صاحبة أبحاث عقلية النمو والقدرة على تطوير القدرات.",
         "fr": "Autrice des recherches sur l'état d'esprit de croissance (Growth Mindset).",
         "en": "Author of landmark research on Growth Mindset."
+      }
+    },
+    {
+      "name": "Mihály Csíkszentmihályi",
+      "href": "../../../thinkers/mihaly-csikszentmihalyi/",
+      "image": "../../../thinkers/images/mihaly-csikszentmihalyi.jpg",
+      "role": {
+        "ar": "عالم نفس إيجابي",
+        "fr": "Psychologue Positive",
+        "en": "Positive Psychologist"
       },
-      "icon": "💡"
+      "bio": {
+        "ar": "مكتشف حالة التدفق والتركيز التام في تحقيق الأهداف.",
+        "fr": "Pionnier de la théorie du Flow et de l'expérience optimale.",
+        "en": "Pioneer of Flow theory and optimal focus."
+      }
     }
   ],
   "exercise": {
@@ -428,32 +445,19 @@
       // Figures Section
       document.getElementById('figuresHeading').textContent = lang === 'ar' ? '👤 أبحاث ورؤى رواد التفكير والتطوير' : (lang === 'fr' ? '👤 Figures & chercheurs associés' : '👤 Key Researchers & Thinkers');
       const figuresGrid = document.getElementById('figuresGrid');
-      const readProfileText = lang === 'ar' ? 'قراءة الملف الشخصي ←' : (lang === 'fr' ? 'Lire le profil →' : 'Read profile →');
-      const thinkerSlugMap = {
-        'William James': 'william-james',
-        'James Clear': 'william-james',
-        'Albert Bandura': 'albert-bandura',
-        'Viktor Frankl': 'viktor-frankl',
-        'Carol Dweck': 'carol-dweck',
-        'Mihály Csíkszentmihályi': 'mihaly-csikszentmihalyi',
-        'Angela Duckworth': 'angela-duckworth'
-      };
-
+      const readProfileText = lang === 'ar' ? 'اقرأ الملف الشخصي ←' : (lang === 'fr' ? 'Lire le profil →' : 'Read profile →');
       figuresGrid.innerHTML = PAGE_DATA.figures.map(fig => {
         const fRole = fig.role[lang] || fig.role.ar;
         const fBio = fig.bio[lang] || fig.bio.ar;
-        const tSlug = thinkerSlugMap[fig.name] || 'william-james';
-        const avatarImg = `../../../thinkers/images/${tSlug}.jpg`;
-
+        const hrefAttr = fig.href ? 'href="' + fig.href + '"' : '#';
+        const imgTag = fig.image ? '<img src="' + fig.image + '" alt="' + fig.name + '" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">' : (fig.icon || '👤');
         return `
-          <a href="../../../thinkers/${tSlug}/" class="figure-card-visual" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
-            <div class="figure-avatar-box" style="padding: 0; overflow: hidden;">
-              <img src="${avatarImg}" alt="${fig.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" onerror="this.onerror=null; this.src='../../../brand_logo_official.png';">
-            </div>
+          <a ${hrefAttr} class="figure-card-visual" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center;">
+            <div class="figure-avatar-box" style="overflow: hidden;">${imgTag}</div>
             <h3 class="figure-name">${fig.name}</h3>
             <div class="figure-role">${fRole}</div>
             <p class="figure-bio">${fBio}</p>
-            <span class="article-btn-link" style="margin-top: 14px; font-size: 0.84rem; padding: 6px 12px; text-align: center;">${readProfileText}</span>
+            <span class="article-btn-link" style="margin-top: 15px; font-size: 0.82rem; padding: 6px 14px;">${readProfileText}</span>
           </a>
         `;
       }).join('');
