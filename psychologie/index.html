@@ -1317,7 +1317,7 @@
 
       const returnBtnHtml = `
         <div style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid rgba(201, 168, 106, 0.2);">
-          <button type="button" onclick="closePsychologyPathway()" class="psy-btn-gold" style="padding: 14px 36px; font-size: 1.05rem; cursor: pointer; width: auto; display: inline-flex; align-items: center; gap: 10px;">
+          <button type="button" onclick="window.closePsychologyPathway()" class="psy-btn-gold" style="padding: 14px 36px; font-size: 1.05rem; cursor: pointer; width: auto; display: inline-flex; align-items: center; gap: 10px;">
             ${backBtnText}
           </button>
         </div>
@@ -1352,10 +1352,13 @@
 
       // 0.1 Re-render open modals if active
       if (window.activeDomainModalId) {
-        renderDomainModalView(window.activeDomainModalId, lang);
+        window.renderDomainModalView(window.activeDomainModalId, lang);
       }
       if (window.activeParcoursModalId) {
-        renderParcoursModalView(window.activeParcoursModalId, lang);
+        window.renderParcoursModalView(window.activeParcoursModalId, lang);
+      }
+      if (window.activePathwayId) {
+        window.renderPsychologyPathway(window.activePathwayId, lang);
       }
 
       // 1. Render Featured Article
@@ -1550,18 +1553,30 @@
 
       // Hook data-pathway-id cards to Dedicated Psychology Pathway View
       const pathwayCards = document.querySelectorAll('[data-pathway-id]');
+
       pathwayCards.forEach(card => {
         const pid = card.getAttribute('data-pathway-id');
+
         card.setAttribute('tabindex', '0');
         card.setAttribute('role', 'button');
-        card.addEventListener('click', (e) => {
-          e.preventDefault();
-          openPsychologyPathway(pid);
+
+        card.addEventListener('click', event => {
+          event.preventDefault();
+
+          if (typeof window.openPsychologyPathway !== 'function') {
+            console.error('openPsychologyPathway est indisponible');
+            return;
+          }
+
+          window.openPsychologyPathway(pid);
         });
-        card.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            openPsychologyPathway(pid);
+
+        card.addEventListener('keydown', event => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            if (typeof window.openPsychologyPathway === 'function') {
+              window.openPsychologyPathway(pid);
+            }
           }
         });
       });
@@ -1572,7 +1587,9 @@
         trigger.addEventListener('click', (e) => {
           e.preventDefault();
           const parcoursId = trigger.getAttribute('data-parcours-trigger');
-          openPsychologyPathway(parcoursId);
+          if (typeof window.openPsychologyPathway === 'function') {
+            window.openPsychologyPathway(parcoursId);
+          }
         });
       });
 
@@ -1582,7 +1599,9 @@
         trigger.addEventListener('click', (e) => {
           e.preventDefault();
           const parcoursId = trigger.getAttribute('data-filter-trigger');
-          openPsychologyPathway(parcoursId);
+          if (typeof window.openPsychologyPathway === 'function') {
+            window.openPsychologyPathway(parcoursId);
+          }
         });
       });
     }
@@ -1606,14 +1625,22 @@
       const params = new URLSearchParams(location.search);
       if (hash && hash.startsWith('#domaine-')) {
         const id = hash.replace('#domaine-', '');
-        openDomainModal(id);
+        if (typeof window.openDomainModal === 'function') {
+          window.openDomainModal(id);
+        }
       } else if (hash && hash.startsWith('#parcours-')) {
         const id = hash.replace('#parcours-', '');
-        openParcoursModal(id);
+        if (typeof window.openParcoursModal === 'function') {
+          window.openParcoursModal(id);
+        }
       } else if (params.get('parcours')) {
-        openParcoursModal(params.get('parcours'));
+        if (typeof window.openParcoursModal === 'function') {
+          window.openParcoursModal(params.get('parcours'));
+        }
       } else if (params.get('domaine') || params.get('domain')) {
-        openDomainModal(params.get('domaine') || params.get('domain'));
+        if (typeof window.openDomainModal === 'function') {
+          window.openDomainModal(params.get('domaine') || params.get('domain'));
+        }
       }
     }
 
