@@ -615,7 +615,7 @@
     </nav>
   </header>
 
-  <div class="container">
+  <div class="container" id="psychologyMainView">
     <main style="padding-top: 20px;">
       
       <!-- Fil d'Ariane -->
@@ -648,37 +648,35 @@
 
       <!-- 4. INTRODUCTION ÉDITORIALE -->
       <section class="psy-section-block" style="text-align: center; max-width: 760px; margin-left: auto; margin-right: auto;">
-        <span style="font-size: 0.82rem; color: #C9A86A; font-weight: 700; text-transform: uppercase; margin-bottom: 8px; display: block;" data-i18n="psyIntroLabel">مقدمة تحريرية</span>
-        <h2 style="font-size: 2rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin-bottom: 18px;" data-i18n="psyIntroTitle">لماذا نحاول فهم أنفسنا?</h2>
-        <p style="font-size: 1.05rem; color: #A9AAA4; line-height: 1.8; margin-bottom: 0;" data-i18n="psyIntroDesc">
-          الإنسان أكثر تعقيدًا مما يبدو. نحن لا نتأثر بما يحدث لنا فقط، بل بالطريقة التي نفسّر بها ما يحدث. يساعدنا علم النفس على طرح أسئلة أعمق حول أفكارنا ومشاعرنا وعلاقاتنا وسلوكنا، وعلى النظر إلى أنفسنا بقدر أكبر من الوعي والفضول والتوازن.
+        <h2 style="font-size: 1.8rem; font-family: 'Playfair Display', 'Amiri', serif; color: #F2EEE5; margin-bottom: 12px;" data-i18n="psyIntroTitle">لماذا ندرس علم النفس؟</h2>
+        <p style="font-size: 1.05rem; color: #A9AAA4; line-height: 1.8;" data-i18n="psyIntroLead">
+          علم النفس ليس مجرد نظريات أكاديمية، بل هو أداة عملية لفهم ذاتك، إدارة مشاعرك، تحسين علاقاتك، واتخاذ قرارات أفضل في حياتك اليومية.
         </p>
       </section>
 
-      <!-- 4.5. ÉCOLES & DOMAINES PSYCHOLOGIQUES -->
-      <section id="domaines" class="psy-section-block">
+      <!-- 5. ÉCOLES ET DOMAINES PSYCHOLOGIQUES -->
+      <section class="psy-section-block" id="domaines">
         <div class="psy-section-heading">
-          <h2 data-i18n="psyDomainsTitle">المدارس والمجالات النفسية</h2>
-          <p data-i18n="psyDomainsSubtitle">ستة مجالات فكرية وعلمية تشكّل الخريطة الكبرى لفهم العقل والسلوك الإنساني.</p>
+          <h2 data-i18n="psyDomainsTitle">المدارس والمدارس الفكرية في علم النفس</h2>
+          <p data-i18n="psyDomainsSubtitle">تعرّف على أهم المدارس التي شكلت فهمنا الحديث للنفس والسلوك الإنساني</p>
         </div>
-
-        <div class="psy-articles-grid" id="psyDomainsGrid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
-          <!-- Rendered dynamically by Javascript from PSYCHOLOGY_DOMAINS_DATA -->
+        <div class="psy-grid-3cols" id="psyDomainsGrid">
+          <!-- Rendered via Javascript with 5 Major Psychology Domains -->
         </div>
       </section>
 
-      <!-- 5. LES 5 PARCOURS -->
-      <section id="parcours" class="psy-section-block">
+      <!-- 6. PARCOURS DE LECTURE (5 INTERACTIVE PATHWAYS) -->
+      <section class="psy-section-block" id="parcours">
         <div class="psy-section-heading">
-          <h2 data-i18n="psyPathwaysTitle">مسارات علم النفس</h2>
-          <p data-i18n="psyPathwaysSubtitle">خمسة مسارات تساعدك على فهم نفسك والإنسان من حولك.</p>
+          <h2 data-i18n="psyParcoursTitle">مسارات موجهة حسب احتياجك</h2>
+          <p data-i18n="psyParcoursSubtitle">اختر المسار الذي يناسب سؤالك الحالي واستكشف المعرفة خطوة بخطوة</p>
         </div>
         
         <!-- Grid 3 elements top -->
         <div class="psy-parcours-grid">
           
           <!-- Parcours 01 -->
-          <article class="psy-parcours-card" data-parcours-trigger="01" style="cursor: pointer;">
+          <article class="psy-parcours-card" data-pathway-id="self" data-parcours-trigger="self" tabindex="0" role="button" aria-label="استكشف المسار الأول: علم النفس وفهم الذات">
             <div class="psy-parcours-imgbox">
               <img src="../psy_self_awareness_hd.jpg" alt="شخص يتأمل انعكاسه في المرآة ويرمز إلى الوعي بالذات" class="psy-parcours-img" loading="lazy">
               <div class="psy-parcours-overlay"></div>
@@ -690,12 +688,12 @@
                 <h3 class="psy-parcours-title" data-i18n="psyPath1Title">علم النفس وفهم الذات</h3>
                 <p class="psy-parcours-desc" data-i18n="psyPath1Desc">الوعي بالذات، الشخصية، الهوية، ونقاط القوة والضعف.</p>
               </div>
-              <a href="#articles" class="psy-card-link" data-parcours-trigger="01" data-i18n="readMore">استكشف المسار →</a>
+              <button type="button" class="psy-card-link" onclick="event.stopPropagation(); openPsychologyPathway('self');" data-i18n="readMore" style="background:none; border:none; padding:0; font:inherit; cursor:pointer;">استكشف المسار ←</button>
             </div>
           </article>
 
           <!-- Parcours 02 -->
-          <article class="psy-parcours-card" data-parcours-trigger="02" style="cursor: pointer;">
+          <article class="psy-parcours-card" data-pathway-id="emotions-relations" data-parcours-trigger="emotions-relations" tabindex="0" role="button" aria-label="استكشف المسار الثاني: المشاعر والعلاقات">
             <div class="psy-parcours-imgbox">
               <img src="../psy_relationships_hd.jpg" alt="صورتان ظليتان منفصلتان تعبران عن التواصل والعلاقات" class="psy-parcours-img" loading="lazy">
               <div class="psy-parcours-overlay"></div>
@@ -707,12 +705,12 @@
                 <h3 class="psy-parcours-title" data-i18n="psyPath2Title">المشاعر والعلاقات</h3>
                 <p class="psy-parcours-desc" data-i18n="psyPath2Desc">الحب، التعلق، الغيرة، الثقة، والعلاقات الإنسانية.</p>
               </div>
-              <a href="#articles" class="psy-card-link" data-parcours-trigger="02" data-i18n="readMore">استكشف المسار →</a>
+              <button type="button" class="psy-card-link" onclick="event.stopPropagation(); openPsychologyPathway('emotions-relations');" data-i18n="readMore" style="background:none; border:none; padding:0; font:inherit; cursor:pointer;">استكشف المسار ←</button>
             </div>
           </article>
 
           <!-- Parcours 03 -->
-          <article class="psy-parcours-card" data-parcours-trigger="03" style="cursor: pointer;">
+          <article class="psy-parcours-card" data-pathway-id="mind-behavior" data-parcours-trigger="mind-behavior" tabindex="0" role="button" aria-label="استكشف المسار الثالث: العقل والسلوك">
             <div class="psy-parcours-imgbox">
               <img src="../psy_behavior_hd.jpg" alt="صورة ظلية محاطة بمسارات ترمز للتفكير واتخاذ القرار" class="psy-parcours-img" loading="lazy">
               <div class="psy-parcours-overlay"></div>
@@ -724,7 +722,7 @@
                 <h3 class="psy-parcours-title" data-i18n="psyPath3Title">العقل والسلوك</h3>
                 <p class="psy-parcours-desc" data-i18n="psyPath3Desc">التحيزات، العادات، الذاكرة، واتخاذ القرارات وأنماط التفكير.</p>
               </div>
-              <a href="#articles" class="psy-card-link" data-parcours-trigger="03" data-i18n="readMore">استكشف المسار →</a>
+              <button type="button" class="psy-card-link" onclick="event.stopPropagation(); openPsychologyPathway('mind-behavior');" data-i18n="readMore" style="background:none; border:none; padding:0; font:inherit; cursor:pointer;">استكشف المسار ←</button>
             </div>
           </article>
 
@@ -734,7 +732,7 @@
         <div class="psy-parcours-grid-bottom">
           
           <!-- Parcours 04 -->
-          <article class="psy-parcours-card" data-parcours-trigger="04" style="cursor: pointer;">
+          <article class="psy-parcours-card" data-pathway-id="wounds-resilience" data-parcours-trigger="wounds-resilience" tabindex="0" role="button" aria-label="استكشف المسار الرابع: الجروح والصمود النفسي">
             <div class="psy-parcours-imgbox">
               <img src="../dev_resilience_hd.jpg" alt="شجرة صلبة قاومت العواصف ترمز للمرونة النفسية" class="psy-parcours-img" loading="lazy">
               <div class="psy-parcours-overlay"></div>
@@ -746,12 +744,12 @@
                 <h3 class="psy-parcours-title" data-i18n="psyPath4Title">الجروح والصمود النفسي</h3>
                 <p class="psy-parcours-desc" data-i18n="psyPath4Desc">الفشل، الرفض، الوحدة، الألم، والقدرة على التكيف مع الصعوبات.</p>
               </div>
-              <a href="#articles" class="psy-card-link" data-parcours-trigger="04" data-i18n="readMore">استكشف المسار →</a>
+              <button type="button" class="psy-card-link" onclick="event.stopPropagation(); openPsychologyPathway('wounds-resilience');" data-i18n="readMore" style="background:none; border:none; padding:0; font:inherit; cursor:pointer;">استكشف المسار ←</button>
             </div>
           </article>
 
           <!-- Parcours 05 -->
-          <article class="psy-parcours-card" data-parcours-trigger="05" style="cursor: pointer;">
+          <article class="psy-parcours-card" data-pathway-id="positive-psychology" data-parcours-trigger="positive-psychology" tabindex="0" role="button" aria-label="استكشف المسار الخامس: علم النفس الإيجابي والنمو">
             <div class="psy-parcours-imgbox">
               <img src="../dev_growth_hd.jpg" alt="سلم حجري قديم يصعد نحو الضوء يرمز للنمو والارتقاء" class="psy-parcours-img" loading="lazy">
               <div class="psy-parcours-overlay"></div>
@@ -763,7 +761,7 @@
                 <h3 class="psy-parcours-title" data-i18n="psyPath5Title">علم النفس الإيجابي والنمو</h3>
                 <p class="psy-parcours-desc" data-i18n="psyPath5Desc">السعادة، الامتنان، المرونة، المعنى، والنمو الشخصي.</p>
               </div>
-              <a href="#articles" class="psy-card-link" data-parcours-trigger="05" data-i18n="readMore">استكشف المسار →</a>
+              <button type="button" class="psy-card-link" onclick="event.stopPropagation(); openPsychologyPathway('positive-psychology');" data-i18n="readMore" style="background:none; border:none; padding:0; font:inherit; cursor:pointer;">استكشف المسار ←</button>
             </div>
           </article>
 
@@ -874,6 +872,13 @@
     </main>
   </div>
 
+  <!-- Dedicated Psychology Pathway View Container -->
+  <section id="psychologyPathwayView" class="container" style="display:none; padding-top: 30px; padding-bottom: 80px;" aria-live="polite">
+    <div style="max-width: 900px; margin: 0 auto;" id="psychologyPathwayContent">
+      <!-- Dynamically rendered by renderPsychologyPathway -->
+    </div>
+  </section>
+
   <!-- Full Screen Dedicated Domain Modal / View -->
   <div class="full-screen-reader-modal" id="domainModalView" role="dialog" aria-modal="true" aria-label="Vue du Domaine Psychologique">
     <header class="reader-sticky-header">
@@ -923,7 +928,409 @@
     </div>
   </footer>
 
-  <script src="../app_v11.js?v=28" type="module"></script>
+  <script src="../app_v11.js?v=28" type="module">
+    /* ============================================================
+       PSYCHOLOGIE V5.2 — PARCOURS PSYCHOLOGIE DEDICATED VIEW ENGINE
+       ============================================================ */
+    const PARCOURS_PSYCHOLOGIE_DATA = [
+      {
+        id: "self",
+        alias: "01",
+        number: "01",
+        title: { ar: "علم النفس وفهم الذات", fr: "Psychologie de soi", en: "Self-Psychology" },
+        subtitle: { ar: "استكشف أعماق النفس والوعي الذاتي", fr: "Explorez les profondeurs du psychisme et de la conscience de soi", en: "Explore the depths of the psyche and self-awareness" },
+        intro: {
+          ar: "مسار مخصص لاستكشاف الهيكل النفسي، الوعي واللاوعي، وتطوير تقدير الذات والتوافق الداخلي.",
+          fr: "Un parcours dédié à l'exploration de la structure psychique, du système inconscient et du développement de l'estime personnelle.",
+          en: "A journey dedicated to exploring psychological structure, the subconscious mind, and building self-esteem."
+        },
+        principles: {
+          ar: [
+            "💡 إدراك اللاوعي يوضح خيارات الحياة والقرارات المصيرية.",
+            "💡 التفرّد وبناء الشخصية يتطلبان مواجهة الظلال الذاتية.",
+            "💡 الثقة الحقيقية تنبع من التوافق الداخلي الصادق."
+          ],
+          fr: [
+            "💡 La prise de conscience de l'inconscient éclaircit les choix de vie.",
+            "💡 L'individuation exige la confrontation avec ses propres ombres.",
+            "💡 La véritable confiance naît de l'alignement intérieur."
+          ],
+          en: [
+            "💡 Becoming conscious of the unconscious illuminates life choices.",
+            "💡 Individuation requires confronting one's own shadow.",
+            "💡 True confidence springs from inner alignment."
+          ]
+        },
+        articles: [
+          {
+            id: "true-confidence-inside",
+            url: "../articles/true-confidence-inside.html",
+            title: { ar: "الثقة الحقيقية بالنفس تنبع من الداخل", fr: "La Véritable Confiance en Soi Vient de L'Intérieur", en: "True Self-Confidence Comes from Within" },
+            desc: { ar: "دراسة عميقة في بناء الصلابة النفسية وتجاوز الشكوك الذاتية.", fr: "Une étude approfondie sur la construction de la résilience psychologique.", en: "An in-depth study on building psychological resilience." }
+          },
+          {
+            id: "stop-overthinking",
+            url: "../files/stop-overthinking.html",
+            title: { ar: "كيف تتوقف عن التفكير الزائد وترتاح نفسياً", fr: "Comment Stopper les Pensées Obsédantes et Retrouver la Paix", en: "How to Stop Overthinking and Regain Inner Peace" },
+            desc: { ar: "دليل عملي لتخفيف القلق المعرفي والتحكم في تداعي الأفكار.", fr: "Un guide pratique pour soulager l'anxiété cognitive.", en: "A practical guide to relieving cognitive anxiety." }
+          }
+        ],
+        thinkerIds: ["freud", "jung", "adler"]
+      },
+      {
+        id: "emotions-relations",
+        alias: "02",
+        number: "02",
+        title: { ar: "المشاعر والعلاقات", fr: "Émotions & Relations", en: "Emotions & Relationships" },
+        subtitle: { ar: "فهم الارتباط، الديناميكية العاطفية، والروابط الإنسانية", fr: "Comprendre les attachements, la dynamique affective et les liens humains", en: "Understand attachments, emotional dynamics, and human bonds" },
+        intro: {
+          ar: "تحليل أنماط التعلق، التنظيم العاطفي، والتواصل التعاطفي في مواجهة التحولات الاجتماعية.",
+          fr: "Analyse des schémas d'attachement, de la régulation émotionnelle et de la communication empathique.",
+          en: "Analysis of attachment styles, emotional regulation, and empathetic communication."
+        },
+        principles: {
+          ar: [
+            "💡 التعلق المبكر يشكل نمط العلاقات والروابط عند الكبر.",
+            "💡 التعرف الوعي على المشاعر هو الخطوة الأولى لتنظيمها.",
+            "💡 التعاطف الفعال يغير جودة الروابط الاجتماعية والعمق الإنساني."
+          ],
+          fr: [
+            "💡 L'attachement précoce préfigure le style relationnel adulte.",
+            "💡 Reconnaître ses émotions est la première étape de leur régulation.",
+            "💡 L'empathie active transforme la qualité des liens sociaux."
+          ],
+          en: [
+            "💡 Early attachment shapes adult relational patterns.",
+            "💡 Recognizing emotions is the first step toward regulation.",
+            "💡 Active empathy transforms the quality of social bonds."
+          ]
+        },
+        articles: [
+          {
+            id: "why-people-distance-when-you-succeed",
+            url: "../articles/why-people-distance-when-you-succeed.html",
+            title: { ar: "لماذا يبتعد الناس عنك عندما تنجح؟", fr: "Pourquoi les Gens s'Éloignent de Vous Lorsque Vous Réussissez", en: "Why People Distance Themselves When You Succeed" },
+            desc: { ar: "تحليل سيكولوجي للغيرة الاجتماعية والديناميات النفسية في العلاقات.", fr: "Analyse psychologique de l'envie sociale et des dynamiques relationnelles.", en: "Psychological analysis of social envy and relational dynamics." }
+          }
+        ],
+        thinkerIds: ["freud", "jung"]
+      },
+      {
+        id: "mind-behavior",
+        alias: "03",
+        number: "03",
+        title: { ar: "العقل والسلوك", fr: "Esprit & Comportement", en: "Mind & Behavior" },
+        subtitle: { ar: "دراسة العمليات المعرفية، أنماط التفكير، والتعلم", fr: "Étude des processus cognitifs, des schémas de pensée et de l'apprentissage", en: "Study of cognitive processes, thought patterns, and learning" },
+        intro: {
+          ar: "تفكيك التحيزات المعرفية، تعديل السلوك السلبي، وبناء العادات المستدامة واتخاذ القرارات.",
+          fr: "Décryptage des biais cognitifs, de la modification comportementale et de la prise de décision.",
+          en: "Decoding cognitive biases, behavioral modification, and decision-making."
+        },
+        principles: {
+          ar: [
+            "💡 أفكارنا تؤثر مباشرة على استجاباتنا العاطفية وسلوكنا اليومي.",
+            "💡 إعادة الهيكلة المعرفية تسمح بتفكيك المعتقدات المقيدة والرموز الذهنية.",
+            "💡 التعلم المستمر والانضباط يغيران المرونة العصبية للدماغ."
+          ],
+          fr: [
+            "💡 Nos pensées influencent directement nos réponses émotionnelles et comportements.",
+            "💡 La restructuration cognitive permet de défaire les croyances limitantes.",
+            "💡 L'apprentissage continu modifie la plasticité cérébrale."
+          ],
+          en: [
+            "💡 Our thoughts directly influence our emotional responses and behavior.",
+            "💡 Cognitive restructuring untangles limiting beliefs.",
+            "💡 Continuous learning alters neuroplasticity."
+          ]
+        },
+        articles: [
+          {
+            id: "stop-overthinking",
+            url: "../files/stop-overthinking.html",
+            title: { ar: "كيف تتوقف عن التفكير الزائد والقلق", fr: "Comment Stopper les Pensées Obsédantes", en: "How to Stop Overthinking" },
+            desc: { ar: "تجاوز الاجترار المعرفي والتحكم بالتركيز الذهني.", fr: "Surmonter la rumination cognitive et maîtriser la focalisation mentale.", en: "Overcoming cognitive rumination and mastering mental focus." }
+          },
+          {
+            id: "self-discipline",
+            url: "../files/self-discipline.html",
+            title: { ar: "الانضباط الذاتي: كيف تستمر بالعمل عند اختفاء الدافعية", fr: "La Discipline Personnelle: Continuer Quand la Motivation Disparaît", en: "Self-Discipline: How to Keep Going When Motivation Fades" },
+            desc: { ar: "بناء العادات المستدامة وتجاوز التسويف السلوكي.", fr: "Bâtir des habitudes durables et surmonter la procrastination comportementale.", en: "Building sustainable habits and overcoming behavioral procrastination." }
+          }
+        ],
+        thinkerIds: ["freud"]
+      },
+      {
+        id: "wounds-resilience",
+        alias: "04",
+        number: "04",
+        title: { ar: "الجروح والصمود النفسي", fr: "Blessures & Résilience", en: "Wounds & Resilience" },
+        subtitle: { ar: "تحويل الصدمات، تجاوز الشدائد، وإعادة اكتشاف المعنى", fr: "Transformer le traumatisme, surmonter l'adversité et retrouver le sens", en: "Transforming trauma, overcoming adversity, and discovering meaning" },
+        intro: {
+          ar: "استكشاف آليات التكيف مع الأزمات، إعادة بناء الذات، والنمو الوجداني بعد الصدمات.",
+          fr: "Exploration des mécanismes d'adaptation face aux épreuves, de la reconstruction de soi et de la croissance post-traumatique.",
+          en: "Exploration of coping mechanisms, self-reconstruction, and post-traumatic growth."
+        },
+        principles: {
+          ar: [
+            "💡 الصمود النفسي عملية ديناميكية يتم تنميتها بالوعي اليومي.",
+            "💡 إيجاد معنى للمعاناة هو مفتاح الشفاء والتعافي النفسي.",
+            "💡 العزلة الاختيارية قد تكون مهد التجدد والتأهيل الداخلي."
+          ],
+          fr: [
+            "💡 La résilience est un processus dynamique qui se cultive au quotidien.",
+            "💡 Trouver du sens à la souffrance est la clé de la guérison psychique.",
+            "💡 La solitude choisie peut devenir le berceau de la reconstruction."
+          ],
+          en: [
+            "💡 Resilience is a dynamic process cultivated daily.",
+            "💡 Finding meaning in suffering is the key to psychological healing.",
+            "💡 Chosen solitude can become the cradle of renewal."
+          ]
+        },
+        articles: [
+          {
+            id: "solitude-blessing-or-curse",
+            url: "../articles/solitude-blessing-or-curse.html",
+            title: { ar: "هل العزلة نعمة أم عقاب؟", fr: "La Solitude est-elle une Bénédiction ou une Punition ?", en: "Is Solitude a Blessing or a Curse?" },
+            desc: { ar: "تحليل فلسفي ونفسي للوحدة الاختيارية والبناء الوجداني.", fr: "Une analyse philosophique et psychologique de la solitude choisie.", en: "A philosophical and psychological analysis of chosen solitude." }
+          }
+        ],
+        thinkerIds: ["jung"]
+      },
+      {
+        id: "positive-psychology",
+        alias: "05",
+        number: "05",
+        title: { ar: "علم النفس الإيجابي والنمو", fr: "Psychologie Positive", en: "Positive Psychology" },
+        subtitle: { ar: "تنمية نقاط القوة، الرفاهية، والازدهار الشخصي", fr: "Développer les forces de caractère, le bien-être et l'épanouissement", en: "Fostering character strengths, well-being, and flourishing" },
+        intro: {
+          ar: "الدراسة العلمية للعوامل المحفزة للرفاهية المستدامة، التفاؤل الواعي، وتحقيق الذات.",
+          fr: "Étude scientifique des facteurs favorisant le bien-être durable, l'optimisme lucide et la réalisation de soi.",
+          en: "Scientific study of factors fostering sustainable well-being, lucid optimism, and self-actualization."
+        },
+        principles: {
+          ar: [
+            "💡 السعادة تعتمد على التنمية النشطة لنقاط القوة الشخصية.",
+            "💡 الامتنان والحضور الكامل يعززان الصحة والاتزان النفسي.",
+            "💡 الشعور بالإنجاز ينبع من أهداف متوافقة مع القيم الجوهرية."
+          ],
+          fr: [
+            "💡 Le bonheur s'appuie sur la culture active des forces personnelles.",
+            "💡 La gratitude et la pleine présence renforcent la santé psychologique.",
+            "💡 Le sentiment d'accomplissement découle d'objectifs alignés sur ses valeurs."
+          ],
+          en: [
+            "💡 Happiness relies on actively cultivating personal strengths.",
+            "💡 Gratitude and mindfulness strengthen psychological health.",
+            "💡 A sense of accomplishment flows from goals aligned with values."
+          ]
+        },
+        articles: [
+          {
+            id: "why-people-respect-silent-person",
+            url: "../articles/why-people-respect-silent-person.html",
+            title: { ar: "لماذا يحترم الناس الشخص الهادئ والصامت؟", fr: "Pourquoi les Gens Respectent une Personne Silencieuse", en: "Why People Respect a Silent Person" },
+            desc: { ar: "سيكولوجية الحضور وتأثير الاتزان الداخلي في الوسط الاجتماعي.", fr: "La psychologie de la présence et l'impact du calme intérieur dans le milieu social.", en: "The psychology of presence and the impact of inner calm in social environments." }
+          }
+        ],
+        thinkerIds: ["adler"]
+      }
+    ];
+
+    window.openPsychologyPathway = function(pathwayId) {
+      const mainView = document.getElementById('psychologyMainView');
+      const pathwayView = document.getElementById('psychologyPathwayView');
+      if (!mainView || !pathwayView) return;
+
+      const lang = getSavedLang();
+      window.activePathwayId = pathwayId;
+
+      renderPsychologyPathway(pathwayId, lang);
+
+      mainView.style.display = 'none';
+      pathwayView.style.display = 'block';
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      const heading = pathwayView.querySelector('h1');
+      if (heading) {
+        heading.setAttribute('tabindex', '-1');
+        heading.focus();
+      }
+
+      if (history.pushState) {
+        history.pushState(null, '', '#parcours-' + pathwayId);
+      } else {
+        location.hash = '#parcours-' + pathwayId;
+      }
+    };
+
+    window.closePsychologyPathway = function() {
+      const mainView = document.getElementById('psychologyMainView');
+      const pathwayView = document.getElementById('psychologyPathwayView');
+      if (!mainView || !pathwayView) return;
+
+      window.activePathwayId = null;
+
+      pathwayView.style.display = 'none';
+      mainView.style.display = 'block';
+
+      if (history.pushState) {
+        history.pushState(null, '', location.pathname);
+      } else {
+        location.hash = '';
+      }
+
+      const parcoursSec = document.getElementById('parcours');
+      if (parcoursSec) {
+        parcoursSec.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    };
+
+    window.renderPsychologyPathway = function(pathwayId, lang) {
+      const container = document.getElementById('psychologyPathwayContent');
+      if (!container) return;
+
+      const pData = PARCOURS_PSYCHOLOGIE_DATA.find(p => p.id === pathwayId || p.alias === pathwayId) || PARCOURS_PSYCHOLOGIE_DATA[0];
+
+      const transHome = lang === 'ar' ? 'الرئيسية' : (lang === 'fr' ? 'Accueil' : 'Home');
+      const transPsy = lang === 'ar' ? 'علم النفس' : (lang === 'fr' ? 'Psychologie' : 'Psychology');
+      const backBtnText = lang === 'ar' ? '← العودة إلى علم النفس' : (lang === 'fr' ? '← Retour à la Psychologie' : '← Back to Psychology');
+      const readArtText = lang === 'ar' ? 'اقرأ المقال ←' : (lang === 'fr' ? 'Lire l'article →' : 'Read article →');
+      const viewThinkerText = lang === 'ar' ? 'عرض المفكر ←' : (lang === 'fr' ? 'Voir le penseur →' : 'View profile →');
+      const comingSoonMsg = lang === 'ar' ? '⏳ مقالات قادمة قريبًا' : (lang === 'fr' ? '⏳ Articles à venir' : '⏳ Articles coming soon');
+      
+      const principlesHeading = lang === 'ar' ? '💡 الركائز والمبادئ الأساسية للمسار' : (lang === 'fr' ? '💡 Principes & idées clés du parcours' : '💡 Key Principles & Core Ideas');
+      const articlesHeading = lang === 'ar' ? '📚 المقالات والأبحاث المتاحة في هذا المسار' : (lang === 'fr' ? '📚 Articles & études disponibles dans ce parcours' : '📚 Available Articles & Studies');
+      const thinkersHeading = lang === 'ar' ? '👤 المفكرون والفلاسفة المرتبطون بالمسار' : (lang === 'fr' ? '👤 Penseurs & philosophes associés' : '👤 Associated Thinkers');
+
+      const title = pData.title[lang] || pData.title.ar;
+      const subtitle = pData.subtitle[lang] || pData.subtitle.ar;
+      const intro = pData.intro[lang] || pData.intro.ar;
+      const principles = pData.principles[lang] || pData.principles.ar;
+
+      const breadcrumbHtml = `
+        <nav class="breadcrumb-nav" style="margin-bottom: 25px; font-size: 0.9rem; color: #998D7D; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;" aria-label="Fil d'Ariane du parcours">
+          <a href="../" style="color: var(--accent-gold, #C9A86A); text-decoration: none;">${transHome}</a> &gt;
+          <a href="./" onclick="closePsychologyPathway(); return false;" style="color: var(--accent-gold, #C9A86A); text-decoration: none;">${transPsy}</a> &gt;
+          <span style="color: #FAF6EF; font-weight: 700;">${title}</span>
+        </nav>
+      `;
+
+      const heroHtml = `
+        <div style="background: linear-gradient(135deg, rgba(16, 26, 20, 0.98) 0%, rgba(10, 17, 13, 0.95) 100%); border: 1px solid rgba(201, 168, 106, 0.35); border-radius: 24px; padding: 40px 32px; margin-bottom: 35px; box-shadow: 0 16px 40px rgba(0,0,0,0.5);">
+          <div style="display: inline-block; background: rgba(201, 168, 106, 0.15); border: 1px solid rgba(201, 168, 106, 0.4); color: var(--accent-gold, #C9A86A); padding: 5px 18px; border-radius: 20px; font-size: 0.85rem; font-weight: 800; margin-bottom: 14px;">
+            🧠 ${title}
+          </div>
+          <h1 style="font-size: clamp(1.9rem, 3.8vw, 2.6rem); font-weight: 900; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 14px; line-height: 1.3;">
+            ${subtitle}
+          </h1>
+          <p style="font-size: 1.1rem; color: #D1C5B4; line-height: 1.85; margin: 0;">
+            ${intro}
+          </p>
+        </div>
+      `;
+
+      const principlesHtml = `
+        <div style="background: rgba(22, 33, 27, 0.85); border: 1px solid rgba(201, 168, 106, 0.25); border-radius: 20px; padding: 30px 32px; margin-bottom: 35px;">
+          <h2 style="font-size: 1.3rem; font-weight: 800; color: var(--accent-gold, #C9A86A); margin: 0 0 18px; font-family: 'Amiri', serif; display: flex; align-items: center; gap: 10px;">
+            ${principlesHeading}
+          </h2>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px;">
+            ${principles.map(p => `
+              <li style="font-size: 1.05rem; color: #FAF6EF; display: flex; align-items: baseline; gap: 12px; line-height: 1.6;">
+                <span style="color: var(--accent-gold, #C9A86A); font-weight: bold; font-size: 1.2rem;">•</span>
+                <span>${p}</span>
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+      `;
+
+      let articlesHtml = '';
+      if (pData.articles && pData.articles.length > 0) {
+        articlesHtml = `
+          <div style="margin-bottom: 40px;">
+            <h2 style="font-size: 1.4rem; font-weight: 800; color: #F2EEE5; margin: 0 0 22px; font-family: 'Amiri', serif;">
+              ${articlesHeading}
+            </h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px;">
+              ${pData.articles.map(art => {
+                const aTitle = art.title[lang] || art.title.ar;
+                const aDesc = art.desc[lang] || art.desc.ar;
+                return `
+                  <article class="psy-parcours-card" style="padding: 26px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                      <span style="display: inline-block; background: rgba(201, 168, 106, 0.12); color: var(--accent-gold, #C9A86A); padding: 4px 14px; border-radius: 14px; font-size: 0.78rem; font-weight: 700; margin-bottom: 12px;">📜 article</span>
+                      <h3 style="font-size: 1.2rem; color: #FAF6EF; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 12px; font-weight: 700; line-height: 1.4;">${aTitle}</h3>
+                      <p style="font-size: 0.92rem; color: #A9AAA4; line-height: 1.7; margin-bottom: 22px;">${aDesc}</p>
+                    </div>
+                    <a href="${art.url}" class="psy-card-link" style="text-align: center; justify-content: center; width: 100%;">${readArtText}</a>
+                  </article>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        `;
+      } else {
+        articlesHtml = `
+          <div style="margin-bottom: 40px;">
+            <h2 style="font-size: 1.4rem; font-weight: 800; color: #F2EEE5; margin: 0 0 22px; font-family: 'Amiri', serif;">
+              ${articlesHeading}
+            </h2>
+            <div style="background: rgba(201, 168, 106, 0.08); border: 1.5px dashed rgba(201, 168, 106, 0.35); border-radius: 20px; padding: 35px; text-align: center; color: var(--accent-gold, #C9A86A); font-size: 1.15rem; font-weight: 700;">
+              ${comingSoonMsg}
+            </div>
+          </div>
+        `;
+      }
+
+      let thinkersHtml = '';
+      if (pData.thinkerIds && pData.thinkerIds.length > 0) {
+        const allThinkers = (TIKTOK_DATA.content && TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].thinkers) || [];
+        thinkersHtml = `
+          <div style="margin-bottom: 45px;">
+            <h2 style="font-size: 1.4rem; font-weight: 800; color: #F2EEE5; margin: 0 0 22px; font-family: 'Amiri', serif;">
+              ${thinkersHeading}
+            </h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px;">
+              ${pData.thinkerIds.map(tid => {
+                const tObj = allThinkers.find(t => t.id === tid) || { id: tid, name: tid };
+                const avatarImg = `../thinkers/images/${tid}.jpg`;
+                return `
+                  <div class="psy-thinker-card" style="text-align: center; padding: 22px;">
+                    <div class="psy-thinker-avatar" style="width: 76px; height: 76px; margin: 0 auto 14px;">
+                      <img src="${avatarImg}" alt="${tObj.name}" loading="lazy" onerror="this.onerror=null; this.src='../brand_logo_official.png';">
+                    </div>
+                    <h3 style="font-size: 1.15rem; color: #FAF6EF; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 6px;">${tObj.name}</h3>
+                    <div style="font-size: 0.8rem; color: #C9A86A; font-weight: 700; margin-bottom: 16px;">${tObj.school || ''}</div>
+                    <a href="../thinkers/?thinker=${tid}" class="psy-card-link" style="justify-content: center; width: 100%; text-align: center;">${viewThinkerText}</a>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      const returnBtnHtml = `
+        <div style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid rgba(201, 168, 106, 0.2);">
+          <button type="button" onclick="closePsychologyPathway()" class="psy-btn-gold" style="padding: 14px 36px; font-size: 1.05rem; cursor: pointer; width: auto; display: inline-flex; align-items: center; gap: 10px;">
+            ${backBtnText}
+          </button>
+        </div>
+      `;
+
+      container.innerHTML = breadcrumbHtml + heroHtml + principlesHtml + articlesHtml + thinkersHtml + returnBtnHtml;
+    };
+
+    window.openParcoursModal = window.openPsychologyPathway;
+    window.closeParcoursModal = window.closePsychologyPathway;
+    window.renderParcoursModalView = window.renderPsychologyPathway;
+
+  </script>
 
   <!-- Dynamic Rendering and Filtering script for Psychology multilinguality (V4) -->
   <script type="module">
@@ -1141,23 +1548,41 @@
         });
       });
 
-      // Hook parcours cards to Dedicated Parcours View Modal
+      // Hook data-pathway-id cards to Dedicated Psychology Pathway View
+      const pathwayCards = document.querySelectorAll('[data-pathway-id]');
+      pathwayCards.forEach(card => {
+        const pid = card.getAttribute('data-pathway-id');
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
+        card.addEventListener('click', (e) => {
+          e.preventDefault();
+          openPsychologyPathway(pid);
+        });
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openPsychologyPathway(pid);
+          }
+        });
+      });
+
+      // Hook parcours triggers
       const parcoursTriggers = document.querySelectorAll('[data-parcours-trigger]');
       parcoursTriggers.forEach(trigger => {
         trigger.addEventListener('click', (e) => {
           e.preventDefault();
           const parcoursId = trigger.getAttribute('data-parcours-trigger');
-          openParcoursModal(parcoursId);
+          openPsychologyPathway(parcoursId);
         });
       });
 
-      // Hook themes/tags to filters
+      // Hook themes/tags to dedicated pathway view
       const filterTriggers = document.querySelectorAll('[data-filter-trigger]');
       filterTriggers.forEach(trigger => {
         trigger.addEventListener('click', (e) => {
           e.preventDefault();
           const parcoursId = trigger.getAttribute('data-filter-trigger');
-          openParcoursModal(parcoursId);
+          openPsychologyPathway(parcoursId);
         });
       });
     }
