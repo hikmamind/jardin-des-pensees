@@ -10,87 +10,9 @@
   <link rel="canonical" href="https://jardin-des-pensees.onrender.com/psychologie/parcours/emotions-relations/">
   <link rel="icon" type="image/png" href="../../../brand_logo_official.png">
 
-  <!-- Main Stylesheet -->
+  <!-- Main Stylesheet & Shared V5.4 Parcours CSS -->
   <link rel="stylesheet" href="../../../style.css?v=16">
-
-  <style>
-    .parcours-page-container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 100px 24px 80px;
-    }
-    .parcours-hero-box {
-      background: linear-gradient(135deg, rgba(16, 26, 20, 0.98) 0%, rgba(10, 17, 13, 0.95) 100%);
-      border: 1px solid rgba(201, 168, 106, 0.35);
-      border-radius: 24px;
-      padding: 45px 36px;
-      margin-bottom: 40px;
-      box-shadow: 0 16px 40px rgba(0,0,0,0.5);
-      position: relative;
-      overflow: hidden;
-    }
-    .parcours-hero-bg {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.18;
-      filter: saturate(1.2) brightness(0.7);
-    }
-    .parcours-hero-content {
-      position: relative;
-      z-index: 2;
-    }
-    .parcours-badge {
-      display: inline-block;
-      background: rgba(201, 168, 106, 0.15);
-      border: 1px solid rgba(201, 168, 106, 0.4);
-      color: var(--accent-gold, #C9A86A);
-      padding: 6px 20px;
-      border-radius: 20px;
-      font-size: 0.88rem;
-      font-weight: 800;
-      margin-bottom: 16px;
-    }
-    .parcours-h1 {
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      font-weight: 900;
-      color: #F2EEE5;
-      font-family: 'Playfair Display', 'Amiri', serif;
-      margin: 0 0 16px;
-      line-height: 1.3;
-    }
-    .parcours-intro {
-      font-size: 1.12rem;
-      color: #D1C5B4;
-      line-height: 1.85;
-      margin: 0;
-    }
-    .principles-card {
-      background: rgba(22, 33, 27, 0.85);
-      border: 1px solid rgba(201, 168, 106, 0.25);
-      border-radius: 20px;
-      padding: 32px 36px;
-      margin-bottom: 45px;
-    }
-    .principles-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .principles-item {
-      font-size: 1.08rem;
-      color: #FAF6EF;
-      display: flex;
-      align-items: baseline;
-      gap: 12px;
-      line-height: 1.65;
-    }
-  </style>
+  <link rel="stylesheet" href="../parcours.css">
 </head>
 <body>
 
@@ -128,7 +50,7 @@
       </div>
 
       <div class="nav-actions">
-        <!-- Language Selector (AR Primary / FR Secondary) -->
+        <!-- Language Selector -->
         <div class="lang-selector">
           <button class="lang-btn" id="langBtn" aria-label="تغيير اللغة">
             <svg class="globe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px; height:16px;">
@@ -153,18 +75,19 @@
     </nav>
   </header>
 
-  <div class="parcours-page-container">
+  <main class="parcours-page-container">
     
     <!-- 1. Fil d'Ariane -->
-    <nav class="breadcrumb-nav" style="margin-bottom: 30px; font-size: 0.92rem; color: #998D7D; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;" aria-label="Fil d'Ariane du parcours">
-      <a href="../../../" style="color: var(--accent-gold, #C9A86A); text-decoration: none;" id="bcHome">الرئيسية</a> &gt;
-      <a href="../../" style="color: var(--accent-gold, #C9A86A); text-decoration: none;" id="bcPsy">علم النفس</a> &gt;
-      <span style="color: #FAF6EF; font-weight: 700;" id="bcCurrent">المشاعر والعلاقات</span>
+    <nav class="breadcrumb-nav" aria-label="Fil d'Ariane du parcours">
+      <a href="../../../" id="bcHome">الرئيسية</a> &gt;
+      <a href="../../" id="bcPsy">علم النفس</a> &gt;
+      <span id="bcCurrent">المشاعر والعلاقات</span>
     </nav>
 
-    <!-- 2. Hero Section -->
+    <!-- 2. Hero Section V5.4 -->
     <section class="parcours-hero-box">
       <img src="../../../psy_relationships_hd.jpg" alt="المشاعر والعلاقات" class="parcours-hero-bg">
+      <div class="parcours-hero-overlay"></div>
       <div class="parcours-hero-content">
         <div class="parcours-badge" id="parcoursBadge">🧠 المسار 02 • المشاعر والعلاقات</div>
         <h1 class="parcours-h1" id="parcoursSubtitle">فهم الارتباط، الديناميكية العاطفية، والروابط الإنسانية</h1>
@@ -172,68 +95,44 @@
       </div>
     </section>
 
-    <!-- 3. Principes et Idées Clés -->
-    <section class="principles-card">
-      <h2 style="font-size: 1.35rem; font-weight: 800; color: var(--accent-gold, #C9A86A); margin: 0 0 20px; font-family: 'Amiri', serif;" id="principlesHeading">
+    <!-- 3. Principes et Idées Clés V5.4 Grid -->
+    <section class="principles-section">
+      <h2 class="parcours-section-heading" id="principlesHeading">
         💡 الركائز والمبادئ الأساسية للمسار
       </h2>
-      <ul class="principles-list" id="principlesList">
-        
-          <li class="principles-item">
-            <span style="color: var(--accent-gold, #C9A86A); font-weight: bold; font-size: 1.2rem;">•</span>
-            <span>💡 التعلق المبكر يشكل نمط العلاقات والروابط عند الكبر.</span>
-          </li>
-        
-          <li class="principles-item">
-            <span style="color: var(--accent-gold, #C9A86A); font-weight: bold; font-size: 1.2rem;">•</span>
-            <span>💡 التعرف الوعي على المشاعر هو الخطوة الأولى لتنظيمها.</span>
-          </li>
-        
-          <li class="principles-item">
-            <span style="color: var(--accent-gold, #C9A86A); font-weight: bold; font-size: 1.2rem;">•</span>
-            <span>💡 التعاطف الفعال يغير جودة الروابط الاجتماعية والعمق الإنساني.</span>
-          </li>
-        
-      </ul>
-    </section>
-
-    <!-- 4. Articles Réellement Disponibles -->
-    <section style="margin-bottom: 45px;">
-      <h2 style="font-size: 1.45rem; font-weight: 800; color: #F2EEE5; margin: 0 0 24px; font-family: 'Amiri', serif;" id="articlesHeading">
-        📚 المقالات والأبحاث المتاحة في هذا المسار
-      </h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;" id="articlesGrid">
-        
-          <article class="psy-parcours-card" style="padding: 28px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-            <div>
-              <span style="display: inline-block; background: rgba(201, 168, 106, 0.12); color: var(--accent-gold, #C9A86A); padding: 4px 14px; border-radius: 14px; font-size: 0.78rem; font-weight: 700; margin-bottom: 12px;">📜 article</span>
-              <h3 style="font-size: 1.25rem; color: #FAF6EF; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 12px; font-weight: 700; line-height: 1.4;">لماذا يبتعد الناس عنك عندما تنجح؟</h3>
-              <p style="font-size: 0.92rem; color: #A9AAA4; line-height: 1.7; margin-bottom: 22px;">تحليل سيكولوجي للغيرة الاجتماعية والديناميات النفسية في العلاقات.</p>
-            </div>
-            <a href="../../../articles/why-people-distance-when-you-succeed.html" class="psy-card-link" style="text-align: center; justify-content: center; width: 100%;">اقرأ المقال ←</a>
-          </article>
-        
+      <div class="principles-grid" id="principlesGrid">
+        <!-- Rendered via JS -->
       </div>
     </section>
 
-    <!-- 5. Penseurs Associés -->
-    <section style="margin-bottom: 50px;">
-      <h2 style="font-size: 1.45rem; font-weight: 800; color: #F2EEE5; margin: 0 0 24px; font-family: 'Amiri', serif;" id="thinkersHeading">
+    <!-- 4. Articles Réellement Disponibles V5.4 Cards -->
+    <section class="articles-section">
+      <h2 class="parcours-section-heading" id="articlesHeading">
+        📚 المقالات والأبحاث المتاحة في هذا المسار
+      </h2>
+      <div class="articles-grid" id="articlesGrid">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- 5. Penseurs Associés V5.4 Visual Cards -->
+    <section class="thinkers-section">
+      <h2 class="parcours-section-heading" id="thinkersHeading">
         👤 المفكرون والفلاسفة المرتبطون بالمسار
       </h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 24px;" id="thinkersGrid">
+      <div class="thinkers-grid" id="thinkersGrid">
         <!-- Rendered via JS -->
       </div>
     </section>
 
     <!-- 6. Bouton Retour -->
-    <div style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid rgba(201, 168, 106, 0.2);">
+    <div class="return-btn-box">
       <a href="../../" class="psy-btn-gold" style="padding: 14px 36px; font-size: 1.05rem; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;" id="backBtn">
         ← العودة إلى علم النفس
       </a>
     </div>
 
-  </div>
+  </main>
 
   <!-- Footer -->
   <footer class="footer" style="padding: 50px 24px 30px; border-top: 1px solid var(--card-border); margin-top: 48px; background: rgba(10, 15, 12, 0.95);">
@@ -304,27 +203,52 @@
     "fr": "Une analyse approfondie des liens humains, des styles d'attachement et des dynamiques relationnelles face aux transformations de la vie.",
     "en": "A deep analysis of human bonds, attachment styles, and relational dynamics amidst life changes."
   },
-  "principles": {
-    "ar": [
-      "💡 التعلق المبكر يشكل نمط العلاقات والروابط عند الكبر.",
-      "💡 التعرف الوعي على المشاعر هو الخطوة الأولى لتنظيمها.",
-      "💡 التعاطف الفعال يغير جودة الروابط الاجتماعية والعمق الإنساني."
-    ],
-    "fr": [
-      "💡 L'attachement précoce préfigure le style relationnel adulte.",
-      "💡 Reconnaître ses émotions est la première étape de leur régulation.",
-      "💡 L'empathie active transforme la qualité des liens sociaux."
-    ],
-    "en": [
-      "💡 Early attachment shapes adult relational patterns.",
-      "💡 Recognizing emotions is the first step toward regulation.",
-      "💡 Active empathy transforms the quality of social bonds."
-    ]
-  },
+  "principles": [
+    {
+      "num": "01",
+      "title": {
+        "ar": "نمط التعلق",
+        "fr": "Style d'Attachement",
+        "en": "Attachment Style"
+      },
+      "text": {
+        "ar": "💡 التعلق المبكر يشكل نمط العلاقات والروابط عند الكبر.",
+        "fr": "💡 L'attachement précoce préfigure le style relationnel adulte.",
+        "en": "💡 Early attachment shapes adult relational patterns."
+      }
+    },
+    {
+      "num": "02",
+      "title": {
+        "ar": "التنظيم العاطفي",
+        "fr": "Régulation Émotionnelle",
+        "en": "Emotional Regulation"
+      },
+      "text": {
+        "ar": "💡 التعرف الوعي على المشاعر هو الخطوة الأولى لتنظيمها.",
+        "fr": "💡 Reconnaître ses émotions est la première étape de leur régulation.",
+        "en": "💡 Recognizing emotions is the first step toward regulation."
+      }
+    },
+    {
+      "num": "03",
+      "title": {
+        "ar": "التعاطف الفعال",
+        "fr": "Empathie Active",
+        "en": "Active Empathy"
+      },
+      "text": {
+        "ar": "💡 التعاطف الفعال يغير جودة الروابط الاجتماعية والعمق الإنساني.",
+        "fr": "💡 L'empathie active transforme la qualité des liens sociaux.",
+        "en": "💡 Active empathy transforms the quality of social bonds."
+      }
+    }
+  ],
   "articles": [
     {
       "id": "why-people-distance-when-you-succeed",
       "url": "../../../articles/why-people-distance-when-you-succeed.html",
+      "thumb": "../../../articles/why_people_distance_success_hero.jpg",
       "title": {
         "ar": "لماذا يبتعد الناس عنك عندما تنجح؟",
         "fr": "Pourquoi les Gens s'Éloignent de Vous Lorsque Vous Réussissez",
@@ -347,7 +271,7 @@
       return localStorage.getItem('site_lang_v1') || localStorage.getItem('lang') || 'ar';
     }
 
-    function renderPage(lang) {
+    function renderPageV54(lang) {
       document.documentElement.setAttribute('lang', lang);
       document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
 
@@ -365,17 +289,22 @@
       document.getElementById('parcoursSubtitle').textContent = PAGE_DATA.subtitle[lang] || PAGE_DATA.subtitle.ar;
       document.getElementById('parcoursIntro').textContent = PAGE_DATA.intro[lang] || PAGE_DATA.intro.ar;
 
-      // Principles
+      // Principles Grid
       document.getElementById('principlesHeading').textContent = lang === 'ar' ? '💡 الركائز والمبادئ الأساسية للمسار' : (lang === 'fr' ? '💡 Principes & idées clés du parcours' : '💡 Key Principles & Core Ideas');
-      const principles = PAGE_DATA.principles[lang] || PAGE_DATA.principles.ar;
-      document.getElementById('principlesList').innerHTML = principles.map(p => `
-        <li class="principles-item">
-          <span style="color: var(--accent-gold, #C9A86A); font-weight: bold; font-size: 1.2rem;">•</span>
-          <span>${p}</span>
-        </li>
-      `).join('');
+      const principlesGrid = document.getElementById('principlesGrid');
+      principlesGrid.innerHTML = PAGE_DATA.principles.map(p => {
+        const pTitle = p.title[lang] || p.title.ar;
+        const pText = p.text[lang] || p.text.ar;
+        return `
+          <div class="principle-card">
+            <span class="principle-num">${p.num}</span>
+            <h3 style="font-size: 1.15rem; color: var(--accent-gold-bright); font-family: var(--font-serif); margin: 0;">${pTitle}</h3>
+            <p class="principle-text">${pText}</p>
+          </div>
+        `;
+      }).join('');
 
-      // Articles
+      // Articles Visual Grid
       document.getElementById('articlesHeading').textContent = lang === 'ar' ? '📚 المقالات والأبحاث المتاحة في هذا المسار' : (lang === 'fr' ? '📚 Articles & études disponibles dans ce parcours' : '📚 Available Articles & Studies');
       const readArtText = lang === 'ar' ? 'اقرأ المقال ←' : (lang === 'fr' ? 'Lire l\'article →' : 'Read article →');
       
@@ -385,14 +314,19 @@
           const aTitle = art.title[lang] || art.title.ar;
           const aDesc = art.desc[lang] || art.desc.ar;
           return `
-            <article class="psy-parcours-card" style="padding: 28px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <span style="display: inline-block; background: rgba(201, 168, 106, 0.12); color: var(--accent-gold, #C9A86A); padding: 4px 14px; border-radius: 14px; font-size: 0.78rem; font-weight: 700; margin-bottom: 12px;">📜 article</span>
-                <h3 style="font-size: 1.25rem; color: #FAF6EF; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 12px; font-weight: 700; line-height: 1.4;">${aTitle}</h3>
-                <p style="font-size: 0.92rem; color: #A9AAA4; line-height: 1.7; margin-bottom: 22px;">${aDesc}</p>
+            <a href="${art.url}" class="article-card-visual">
+              <div class="article-thumb-box">
+                <img src="${art.thumb}" alt="${aTitle}" class="article-thumb-img" loading="lazy" onerror="this.onerror=null; this.src='../../../articles_page_hero.jpg';">
               </div>
-              <a href="${art.url}" class="psy-card-link" style="text-align: center; justify-content: center; width: 100%;">${readArtText}</a>
-            </article>
+              <div class="article-card-body">
+                <div>
+                  <span class="article-badge">📜 article</span>
+                  <h3 class="article-title">${aTitle}</h3>
+                  <p class="article-desc">${aDesc}</p>
+                </div>
+                <span class="article-btn-link">${readArtText}</span>
+              </div>
+            </a>
           `;
         }).join('');
       } else {
@@ -404,7 +338,7 @@
         `;
       }
 
-      // Thinkers
+      // Thinkers Visual Grid
       document.getElementById('thinkersHeading').textContent = lang === 'ar' ? '👤 المفكرون والفلاسفة المرتبطون بالمسار' : (lang === 'fr' ? '👤 Penseurs & philosophes associés' : '👤 Associated Thinkers');
       const viewThinkerText = lang === 'ar' ? 'عرض المفكر ←' : (lang === 'fr' ? 'Voir le penseur →' : 'View profile →');
       const thinkersGrid = document.getElementById('thinkersGrid');
@@ -415,14 +349,12 @@
           const tObj = allThinkers.find(t => t.id === tid) || { id: tid, name: tid };
           const avatarImg = `../../../thinkers/images/${tid}.jpg`;
           return `
-            <div class="psy-thinker-card" style="text-align: center; padding: 22px;">
-              <div class="psy-thinker-avatar" style="width: 76px; height: 76px; margin: 0 auto 14px;">
-                <img src="${avatarImg}" alt="${tObj.name}" loading="lazy" onerror="this.onerror=null; this.src='../../../brand_logo_official.png';">
-              </div>
-              <h3 style="font-size: 1.15rem; color: #FAF6EF; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 6px;">${tObj.name}</h3>
-              <div style="font-size: 0.8rem; color: #C9A86A; font-weight: 700; margin-bottom: 16px;">${tObj.school || ''}</div>
-              <a href="../../../thinkers/?thinker=${tid}" class="psy-card-link" style="justify-content: center; width: 100%; text-align: center;">${viewThinkerText}</a>
-            </div>
+            <a href="../../../thinkers/?thinker=${tid}" class="thinker-card-visual">
+              <img src="${avatarImg}" alt="${tObj.name}" class="thinker-portrait" loading="lazy" onerror="this.onerror=null; this.src='../../../brand_logo_official.png';">
+              <h3 class="thinker-name">${tObj.name}</h3>
+              <div class="thinker-school">${tObj.school || ''}</div>
+              <span class="thinker-btn-link">${viewThinkerText}</span>
+            </a>
           `;
         }).join('');
       }
@@ -432,17 +364,17 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      renderPage(getSavedLang());
+      renderPageV54(getSavedLang());
     });
     if (document.readyState === 'interactive' || document.readyState === 'complete') {
-      renderPage(getSavedLang());
+      renderPageV54(getSavedLang());
     }
 
     window.addEventListener('siteLanguageChanged', (e) => {
       if (e && e.detail && e.detail.lang) {
-        renderPage(e.detail.lang);
+        renderPageV54(e.detail.lang);
       } else {
-        renderPage(getSavedLang());
+        renderPageV54(getSavedLang());
       }
     });
   </script>
