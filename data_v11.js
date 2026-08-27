@@ -2743,7 +2743,8 @@ const TIKTOK_DATA = {
               "title": "Décès",
               "desc": "Décès dans le New Hampshire."
             }
-          ]
+          ],
+          "profileUrl": "./william-james/"
         },
         {
           "id": "albert-bandura",
@@ -2837,7 +2838,8 @@ const TIKTOK_DATA = {
               "title": "Décès",
               "desc": "Décès à Stanford."
             }
-          ]
+          ],
+          "profileUrl": "./albert-bandura/"
         },
         {
           "id": "viktor-frankl",
@@ -2931,7 +2933,8 @@ const TIKTOK_DATA = {
               "title": "Décès",
               "desc": "Décès à Vienne."
             }
-          ]
+          ],
+          "profileUrl": "./viktor-frankl/"
         },
         {
           "id": "carol-dweck",
@@ -3015,7 +3018,8 @@ const TIKTOK_DATA = {
               "title": "Mindset",
               "desc": "Publication de son ouvrage référence."
             }
-          ]
+          ],
+          "profileUrl": "./carol-dweck/"
         },
         {
           "id": "mihaly-csikszentmihalyi",
@@ -3109,7 +3113,8 @@ const TIKTOK_DATA = {
               "title": "Décès",
               "desc": "Décès en Californie."
             }
-          ]
+          ],
+          "profileUrl": "./mihaly-csikszentmihalyi/"
         },
         {
           "id": "angela-duckworth",
@@ -3193,7 +3198,8 @@ const TIKTOK_DATA = {
               "title": "Grit",
               "desc": "Publication de son livre succès mondial."
             }
-          ]
+          ],
+          "profileUrl": "./angela-duckworth/"
         }
       ],
       "articles": [
@@ -6996,7 +7002,8 @@ const TIKTOK_DATA = {
               "title": "Death",
               "desc": "Passed away in New Hampshire."
             }
-          ]
+          ],
+          "profileUrl": "./william-james/"
         },
         {
           "id": "albert-bandura",
@@ -7090,7 +7097,8 @@ const TIKTOK_DATA = {
               "title": "Death",
               "desc": "Passed away at Stanford."
             }
-          ]
+          ],
+          "profileUrl": "./albert-bandura/"
         },
         {
           "id": "viktor-frankl",
@@ -7184,7 +7192,8 @@ const TIKTOK_DATA = {
               "title": "Death",
               "desc": "Passed away in Vienna."
             }
-          ]
+          ],
+          "profileUrl": "./viktor-frankl/"
         },
         {
           "id": "carol-dweck",
@@ -7268,7 +7277,8 @@ const TIKTOK_DATA = {
               "title": "Mindset",
               "desc": "Published landmark book."
             }
-          ]
+          ],
+          "profileUrl": "./carol-dweck/"
         },
         {
           "id": "mihaly-csikszentmihalyi",
@@ -7362,7 +7372,8 @@ const TIKTOK_DATA = {
               "title": "Death",
               "desc": "Passed away in California."
             }
-          ]
+          ],
+          "profileUrl": "./mihaly-csikszentmihalyi/"
         },
         {
           "id": "angela-duckworth",
@@ -7446,7 +7457,8 @@ const TIKTOK_DATA = {
               "title": "Grit",
               "desc": "Published worldwide bestseller."
             }
-          ]
+          ],
+          "profileUrl": "./angela-duckworth/"
         }
       ],
       "articles": [
@@ -11431,7 +11443,8 @@ const TIKTOK_DATA = {
               "title": "الوفاة",
               "desc": "توفي في نيوهامبشير."
             }
-          ]
+          ],
+          "profileUrl": "./william-james/"
         },
         {
           "id": "albert-bandura",
@@ -11525,7 +11538,8 @@ const TIKTOK_DATA = {
               "title": "الوفاة",
               "desc": "توفي في ستانفورد."
             }
-          ]
+          ],
+          "profileUrl": "./albert-bandura/"
         },
         {
           "id": "viktor-frankl",
@@ -11619,7 +11633,8 @@ const TIKTOK_DATA = {
               "title": "الوفاة",
               "desc": "توفي في فيينا."
             }
-          ]
+          ],
+          "profileUrl": "./viktor-frankl/"
         },
         {
           "id": "carol-dweck",
@@ -11703,7 +11718,8 @@ const TIKTOK_DATA = {
               "title": "كتاب عقلية النمو",
               "desc": "نشرت مؤلفها العالمي."
             }
-          ]
+          ],
+          "profileUrl": "./carol-dweck/"
         },
         {
           "id": "mihaly-csikszentmihalyi",
@@ -11797,7 +11813,8 @@ const TIKTOK_DATA = {
               "title": "الوفاة",
               "desc": "توفي في كاليفورنيا."
             }
-          ]
+          ],
+          "profileUrl": "./mihaly-csikszentmihalyi/"
         },
         {
           "id": "angela-duckworth",
@@ -11881,7 +11898,8 @@ const TIKTOK_DATA = {
               "title": "كتاب العزيمة",
               "desc": "نشرت أبحاثها العالمية."
             }
-          ]
+          ],
+          "profileUrl": "./angela-duckworth/"
         }
       ],
       "articles": [
