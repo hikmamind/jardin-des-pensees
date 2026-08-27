@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Civilisation & ʿUmrān | Pensée islamique | Le Jardin des Pensées</title>
+  <meta name="description" id="pageMetaDesc" content="Comprendre la formation des sociétés, les dynamiques des États, la solidarité collective, l’économie et le changement historique.">
+  <link rel="canonical" href="https://jardin-des-pensees.onrender.com/islam/parcours/civilisation-umran/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Civilisation & ʿUmrān — Pensée islamique">
+  <meta property="og:description" content="Comprendre la formation des sociétés, les dynamiques des États, la solidarité collective, l’économie et le changement historique.">
+  <meta property="og:image" content="https://jardin-des-pensees.onrender.com/islam/images/islam_parcours_05.jpg">
+  <meta property="og:url" content="https://jardin-des-pensees.onrender.com/islam/parcours/civilisation-umran/">
+
+  <!-- Fonts & Shared Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../../style.css?v=16">
+  <link rel="stylesheet" href="../../islam_parcours.css">
+
+  <!-- JSON-LD Breadcrumb -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://jardin-des-pensees.onrender.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Pensée islamique", "item": "https://jardin-des-pensees.onrender.com/islam/" },
+      { "@type": "ListItem", "position": 3, "name": "Civilisation & ʿUmrān", "item": "https://jardin-des-pensees.onrender.com/islam/parcours/civilisation-umran/" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="navbar-header" style="position: sticky; top: 0; z-index: 100; background: rgba(7, 15, 10, 0.95); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(201, 168, 106, 0.22); padding: 14px 24px;">
+    <nav style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;" aria-label="Navigation principale">
+      <a href="../../../" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+        <img src="../../../brand_logo_official.png" alt="Hikma & Nour" style="width: 36px; height: 36px; object-fit: contain;">
+        <span style="font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 800; color: #C9A86A;">HIKMA & NOUR</span>
+      </a>
+
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <a href="../../../" style="color: #B5AFA4; text-decoration: none; font-size: 0.9rem; font-weight: 600;" data-i18n="navHome">Accueil</a>
+        <a href="../../../articles/" style="color: #B5AFA4; text-decoration: none; font-size: 0.9rem; font-weight: 600;" data-i18n="navArticles">Articles</a>
+        <a href="../../../thinkers/" style="color: #B5AFA4; text-decoration: none; font-size: 0.9rem; font-weight: 600;" data-i18n="navThinkers">Penseurs</a>
+        <a href="../../" style="color: #C9A86A; text-decoration: none; font-size: 0.9rem; font-weight: 700;" data-i18n="navIslam">Pensée islamique</a>
+        <button type="button" id="langToggleBtn" onclick="window.cycleLanguage()" style="background: rgba(201, 168, 106, 0.14); border: 1px solid #C9A86A; color: #C9A86A; padding: 6px 14px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 0.85rem;">FR ⇄ AR</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="islam-page-container">
+    
+    <!-- 1. Fil d'Ariane -->
+    <nav class="parcours-breadcrumb" aria-label="Fil d'Ariane">
+      <a href="../../../" data-i18n="breadcrumbHome">Accueil</a>
+      <span aria-hidden="true">›</span>
+      <a href="../../" data-i18n="breadcrumbIslam">Pensée islamique</a>
+      <span aria-hidden="true">›</span>
+      <span aria-current="page" id="breadcrumbCurrent">Civilisation & ʿUmrān</span>
+    </nav>
+
+    <!-- 2. Hero Section -->
+    <section class="islam-hero-box">
+      <img src="../../images/islam_parcours_05.jpg" alt="Civilisation & ʿUmrān" class="islam-hero-bg">
+      <div class="islam-hero-overlay"></div>
+      <div class="islam-hero-content">
+        <div class="islam-badge" id="parcoursBadge">📜 Parcours 05 • Civilisation & ʿUmrān</div>
+        <h1 class="islam-h1" id="parcoursTitle">Civilisation & ʿUmrān</h1>
+        <p class="islam-intro" id="parcoursIntro">Comprendre la formation des sociétés, les dynamiques des États, la solidarité collective, l’économie et le changement historique.</p>
+      </div>
+    </section>
+
+    <!-- 3. Principes Fondamentaux -->
+    <section class="principles-section">
+      <h2 class="islam-section-heading" id="principlesHeading">
+        💡 <span data-i18n="secPrinciplesTitle">Les trois principes fondamentaux du parcours</span>
+      </h2>
+      <div class="principles-grid" id="principlesGrid">
+        
+          <div class="principle-card">
+            <span class="principle-num">01</span>
+            <h3 style="font-size: 1.15rem; color: #FAF6EF; margin: 0 0 8px; font-family: 'Playfair Display', serif;">Étudier les sociétés comme des réalités historiques</h3>
+            <p class="principle-text">Les phénomènes sociaux et politiques obéissent à des lois naturelles et historiques observables, formalisées par la science de l'ʿUmrān.</p>
+          </div>
+        
+          <div class="principle-card">
+            <span class="principle-num">02</span>
+            <h3 style="font-size: 1.15rem; color: #FAF6EF; margin: 0 0 8px; font-family: 'Playfair Display', serif;">Comprendre les cycles de pouvoir et de cohésion</h3>
+            <p class="principle-text">La solidarité de groupe (ʿAsabiyya) est le moteur de la fondation des États, dont l'affaiblissement marque le début du déclin.</p>
+          </div>
+        
+          <div class="principle-card">
+            <span class="principle-num">03</span>
+            <h3 style="font-size: 1.15rem; color: #FAF6EF; margin: 0 0 8px; font-family: 'Playfair Display', serif;">Observer les relations entre justice, économie et institutions</h3>
+            <p class="principle-text">La prospérité matérielle et la pérennité d'une civilisation dépendent avant tout de la justice et de la protection des droits.</p>
+          </div>
+        
+      </div>
+    </section>
+
+    <!-- 4. Notions Clés & Questions Intellectuelles -->
+    <section class="concepts-section">
+      <h2 class="islam-section-heading" id="conceptsHeading" style="border: none; margin-bottom: 8px;">
+        🏛️ <span data-i18n="secConceptsTitle">Notions essentielles & repères intellectuels</span>
+      </h2>
+      <p style="font-size: 0.95rem; color: var(--text-warm-gray); margin-bottom: 16px;" data-i18n="conceptsIntroText">
+        Les concepts fondamentaux développés par les penseurs de ce domaine :
+      </p>
+      <div class="concepts-grid" id="conceptsGrid">
+        
+          <div class="concept-box">
+            <h4 class="concept-name">Al-ʿUmrān al-Basharī (La Civilisation)</h4>
+            <p class="concept-desc">La sociologie historique analysant la vie rurale, urbaine, politique et économique des sociétés humaines.</p>
+          </div>
+        
+          <div class="concept-box">
+            <h4 class="concept-name">Al-ʿAsabiyya (La Cohésion Sociale)</h4>
+            <p class="concept-desc">Le lien de solidarité organique indispensable pour générer la force politique et bâtir un État.</p>
+          </div>
+        
+          <div class="concept-box">
+            <h4 class="concept-name">Kharāb al-ʿUmrān (Ruine du Corps Social)</h4>
+            <p class="concept-desc">La loi sociologique démontrant que la tyrannie et la fiscalité confiscatoire détruisent l'économie et la société.</p>
+          </div>
+        
+      </div>
+    </section>
+
+    <!-- 5. Articles Réels Associés -->
+    <section class="articles-section">
+      <h2 class="islam-section-heading" id="articlesHeading">
+        📚 <span data-i18n="secArticlesTitle">Études et articles de référence</span>
+      </h2>
+      <div class="articles-grid" id="articlesGrid">
+        
+          <a href="../../../files/raison-et-revelation.html" class="article-card-visual">
+            <div class="article-thumb-box">
+              <img src="../../../articles/oil_lamp_library_window.jpg" alt="Ibn Khaldun et la naissance de la sociologie historique" class="article-thumb-img" loading="lazy">
+            </div>
+            <div class="article-card-body">
+              <span class="article-badge">🏛️ Histoire & Société</span>
+              <h3 class="article-title">Ibn Khaldun et la naissance de la sociologie historique</h3>
+              <p class="article-desc">Une analyse de la Muqaddima et de ses intuitions modernes sur les dynamiques des empires.</p>
+              <span class="article-btn-link" data-i18n="btnReadArticle">Lire l’étude →</span>
+            </div>
+          </a>
+        
+          <a href="../../../articles/hikma-citations-philosophiques.html" class="article-card-visual">
+            <div class="article-thumb-box">
+              <img src="../../../articles/happiness_wrong_place_hero.jpg" alt="Maximes et réflexions sur le destin des civilisations" class="article-thumb-img" loading="lazy">
+            </div>
+            <div class="article-card-body">
+              <span class="article-badge">✨ Pensées & Civilisation</span>
+              <h3 class="article-title">Maximes et réflexions sur le destin des civilisations</h3>
+              <p class="article-desc">Citations majeures sur l'histoire, la justice et la pérennité des institutions.</p>
+              <span class="article-btn-link" data-i18n="btnReadArticle">Lire l’étude →</span>
+            </div>
+          </a>
+        
+      </div>
+    </section>
+
+    <!-- 6. Penseurs Associés -->
+    <section class="figures-section">
+      <h2 class="islam-section-heading" id="thinkersHeading">
+        👥 <span data-i18n="secThinkersTitle">Figures intellectuelles associées</span>
+      </h2>
+      <div class="figures-grid" id="thinkersGrid">
+        
+          <a href="../../../thinkers/?thinker=ibnkhaldun" class="figure-card-visual">
+            <div class="figure-avatar-box">
+              <img src="../../../thinkers/images/ibnkhaldun.jpg" alt="Ibn Khaldūn" class="figure-avatar-img" loading="lazy">
+            </div>
+            <h3 class="figure-name">Ibn Khaldūn</h3>
+            <span class="figure-role">Fondateur de la Sociologie & de l'Histoire</span>
+            <p class="figure-bio">Auteur de la célèbre Muqaddima, génie visionnaire ayant formulé les lois sociologiques régissant les civilisations.</p>
+          </a>
+        
+          <a href="../../../thinkers/?thinker=farabi" class="figure-card-visual">
+            <div class="figure-avatar-box">
+              <img src="../../../thinkers/images/farabi.jpg" alt="Al-Fārābī" class="figure-avatar-img" loading="lazy">
+            </div>
+            <h3 class="figure-name">Al-Fārābī</h3>
+            <span class="figure-role">Penseur de la Cité Idéale</span>
+            <p class="figure-bio">A théorisé les structures d'organisation politique et la recherche du bien commun dans la cité vertueuse.</p>
+          </a>
+        
+      </div>
+    </section>
+
+    <!-- 7. Citation Banner -->
+    <section class="parcours-quote-banner">
+      <p class="parcours-quote-text" id="quoteText">« L'injustice annonce la ruine de la civilisation. »</p>
+      <div class="parcours-quote-author" id="quoteAuthor">— Ibn Khaldūn (Al-Muqaddima)</div>
+    </section>
+
+    <!-- 8. Autres Parcours Recommandés -->
+    <section class="related-parcours-section">
+      <h2 class="islam-section-heading" id="relatedHeading">
+        🌱 <span data-i18n="secRelatedTitle">Poursuivre votre exploration</span>
+      </h2>
+      <div class="related-parcours-grid">
+        
+          <a href="../raison-revelation/" class="related-parcours-card">
+            <span style="font-size: 0.8rem; color: var(--accent-gold); font-weight: 800; text-transform: uppercase;">Parcours 01</span>
+            <h4>Raison & Révélation</h4>
+            <p>Étudier les rapports entre démonstration rationnelle, révélation, interprétation et recherche de la vérité dans l’histoire de la pensée islamique.</p>
+            <span>Explorer le parcours →</span>
+          </a>
+        
+          <a href="../philosophie-islamique/" class="related-parcours-card">
+            <span style="font-size: 0.8rem; color: var(--accent-gold); font-weight: 800; text-transform: uppercase;">Parcours 02</span>
+            <h4>Philosophie islamique</h4>
+            <p>Découvrir les questions d’existence, d’essence, de causalité, de logique, d’âme et de métaphysique développées par les philosophes musulmans.</p>
+            <span>Explorer le parcours →</span>
+          </a>
+        
+      </div>
+    </section>
+
+    <!-- 9. Bouton Retour Pensée islamique V5.3 -->
+    <section class="parcours-back-section">
+      <a class="parcours-back-link" href="../../">
+        <span class="back-arrow" aria-hidden="true">←</span>
+        <span id="backBtnText" data-i18n="btnBackIslam">Retour à Pensée islamique</span>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="parcours-footer">
+    <p>© 2026 Le Jardin des Pensées — HIKMA & NOUR. Tous droits réservés.</p>
+  </footer>
+
+  <!-- Multilingual Engine Script -->
+  <script type="module">
+    const PARCOURS_DATA = {
+  "slug": "civilisation-umran",
+  "num": "05",
+  "img": "islam_parcours_05.jpg",
+  "badgeAr": "📜 المسار 05 • الحضارة والعمران",
+  "badgeFr": "📜 Parcours 05 • Civilisation & ʿUmrān",
+  "badgeEn": "📜 Path 05 • Civilization & ʿUmrān",
+  "titleAr": "الحضارة والعمران",
+  "titleFr": "Civilisation & ʿUmrān",
+  "titleEn": "Civilization & ʿUmrān",
+  "descAr": "فهم نشأة المجتمعات والدول، وديناميكيات العصبية والعدالة، والتغير الاجتماعي والاقتصادي في التاريخ البشري.",
+  "descFr": "Comprendre la formation des sociétés, les dynamiques des États, la solidarité collective, l’économie et le changement historique.",
+  "descEn": "Understand social formation, state dynamics, collective cohesion (asabiyya), economic cycles, and historical change.",
+  "principles": {
+    "fr": [
+      {
+        "num": "01",
+        "title": "Étudier les sociétés comme des réalités historiques",
+        "text": "Les phénomènes sociaux et politiques obéissent à des lois naturelles et historiques observables, formalisées par la science de l'ʿUmrān."
+      },
+      {
+        "num": "02",
+        "title": "Comprendre les cycles de pouvoir et de cohésion",
+        "text": "La solidarité de groupe (ʿAsabiyya) est le moteur de la fondation des États, dont l'affaiblissement marque le début du déclin."
+      },
+      {
+        "num": "03",
+        "title": "Observer les relations entre justice, économie et institutions",
+        "text": "La prospérité matérielle et la pérennité d'une civilisation dépendent avant tout de la justice et de la protection des droits."
+      }
+    ],
+    "ar": [
+      {
+        "num": "01",
+        "title": "دراسة المجتمعات كطبائع تاريخية قابلة للفهم",
+        "text": "تخضع الظواهر العمرانية والسياسية لسنن وقوانين اجتماعية مطردة أسس لها علم العمران البشري."
+      },
+      {
+        "num": "02",
+        "title": "استيعاب دور العصبية والتماسك في صعود الدول",
+        "text": "تعتبر العصبية واللحمة الجماعية المحرك الأساسي لنشأة الممالك، وبزوالها يبدأ مسار الأفول."
+      },
+      {
+        "num": "03",
+        "title": "رصد الترابط العضوي بين العدل والاقتصاد والعمران",
+        "text": "ازدهار العمران واستمراره مرهون بتحقيق العدالة؛ فالظلم مؤذن بخراب العمران وانهيار الدول."
+      }
+    ],
+    "en": [
+      {
+        "num": "01",
+        "title": "Study societies as historical realities governed by laws",
+        "text": "Social and political phenomena obey discernible historical laws formalized by the science of human civilization (ʿUmrān)."
+      },
+      {
+        "num": "02",
+        "title": "Understand cycles of power and social cohesion",
+        "text": "Group cohesion (ʿAsabiyya) is the driving force behind state formation, whose decay initiates civilizational decline."
+      },
+      {
+        "num": "03",
+        "title": "Observe the vital link between justice, economics, and institutions",
+        "text": "Material prosperity and institutional endurance depend fundamentally on justice and the protection of rights."
+      }
+    ]
+  },
+  "concepts": {
+    "fr": [
+      {
+        "name": "Al-ʿUmrān al-Basharī (La Civilisation)",
+        "desc": "La sociologie historique analysant la vie rurale, urbaine, politique et économique des sociétés humaines."
+      },
+      {
+        "name": "Al-ʿAsabiyya (La Cohésion Sociale)",
+        "desc": "Le lien de solidarité organique indispensable pour générer la force politique et bâtir un État."
+      },
+      {
+        "name": "Kharāb al-ʿUmrān (Ruine du Corps Social)",
+        "desc": "La loi sociologique démontrant que la tyrannie et la fiscalité confiscatoire détruisent l'économie et la société."
+      }
+    ],
+    "ar": [
+      {
+        "name": "العمران البشري",
+        "desc": "علم الاجتماع التاريخي الذي يبحث في أحوال البشر من بداوة وحضارة وصنائع وسياسة."
+      },
+      {
+        "name": "العصبية الاجتماعية",
+        "desc": "رابطة التضامن والتعاضد الضرورية لإنشاء الملك وتثبيت أركان الدولة."
+      },
+      {
+        "name": "خراب العمران",
+        "desc": "القانون التاريخي الذي يثبت أن العدوان على أموال الناس وحقوقهم يقوض أركان الحضارة."
+      }
+    ],
+    "en": [
+      {
+        "name": "Al-ʿUmrān (Human Civilization)",
+        "desc": "Historical sociology investigating nomadic and urban life, economy, crafts, and statecraft."
+      },
+      {
+        "name": "Al-ʿAsabiyya (Group Cohesion)",
+        "desc": "The organic bond of collective solidarity essential for generating political authority and sustaining a state."
+      },
+      {
+        "name": "Kharāb al-ʿUmrān (Civilizational Ruin)",
+        "desc": "The sociological principle stating that injustice and arbitrary taxation inevitably destroy civilization."
+      }
+    ]
+  },
+  "articles": [
+    {
+      "url": "../../../files/raison-et-revelation.html",
+      "img": "../../../articles/oil_lamp_library_window.jpg",
+      "badge": "🏛️ Histoire & Société",
+      "titleFr": "Ibn Khaldun et la naissance de la sociologie historique",
+      "titleAr": "ابن خلدون ونشأة علم العمران وفلسفة التاريخ",
+      "titleEn": "Ibn Khaldun and the Genesis of Historical Sociology",
+      "descFr": "Une analyse de la Muqaddima et de ses intuitions modernes sur les dynamiques des empires.",
+      "descAr": "تحليل أطروحات المقدمة الخالدة في قوانين قيام الدول وسقوطها وأسباب الرخاء والأفول.",
+      "descEn": "An analysis of The Muqaddimah and its groundbreaking insights on the rise and fall of empires."
+    },
+    {
+      "url": "../../../articles/hikma-citations-philosophiques.html",
+      "img": "../../../articles/happiness_wrong_place_hero.jpg",
+      "badge": "✨ Pensées & Civilisation",
+      "titleFr": "Maximes et réflexions sur le destin des civilisations",
+      "titleAr": "تأملات خالدة في مصائر الأمم وسنن التاريخ",
+      "titleEn": "Maxims on the Destiny of Civilizations",
+      "descFr": "Citations majeures sur l'histoire, la justice et la pérennité des institutions.",
+      "descAr": "مختارات من كبار المفكرين في حكمة تدبر التاريخ والعدالة وبناء المجتمعات.",
+      "descEn": "Major quotes on history, governance, justice, and the endurance of institutions."
+    }
+  ],
+  "thinkers": [
+    {
+      "id": "ibnkhaldun",
+      "nameFr": "Ibn Khaldūn",
+      "nameAr": "عبد الرحمن بن خلدون",
+      "nameEn": "Ibn Khaldun",
+      "roleFr": "Fondateur de la Sociologie & de l'Histoire",
+      "roleAr": "مؤسس علم العمران البشري وفلسفة التاريخ",
+      "roleEn": "Father of Sociology & Philosophy of History",
+      "bioFr": "Auteur de la célèbre Muqaddima, génie visionnaire ayant formulé les lois sociologiques régissant les civilisations.",
+      "bioAr": "صاحب «المقدمة» الخالدة وكتاب «العبر»، العبقري الذي صاغ قوانين العصبية والدولة والتحول الحضاري.",
+      "bioEn": "Author of the legendary Muqaddimah, visionary polymath who articulated the laws governing human civilizations.",
+      "url": "../../../thinkers/?thinker=ibnkhaldun",
+      "img": "../../../thinkers/images/ibnkhaldun.jpg"
+    },
+    {
+      "id": "farabi",
+      "nameFr": "Al-Fārābī",
+      "nameAr": "أبو نصر الفارابي",
+      "nameEn": "Al-Farabi",
+      "roleFr": "Penseur de la Cité Idéale",
+      "roleAr": "فيلسوف المدينة الفاضلة والاجتماع المدني",
+      "roleEn": "Thinker of the Virtuous State",
+      "bioFr": "A théorisé les structures d'organisation politique et la recherche du bien commun dans la cité vertueuse.",
+      "bioAr": "وضع أسس الفلسفة المدنية وبحث في شروط التعاون الإنساني لتحقيق الكمال والسعادة المشتركة.",
+      "bioEn": "Theorized civic organization and collective cooperation toward the supreme good in the virtuous city.",
+      "url": "../../../thinkers/?thinker=farabi",
+      "img": "../../../thinkers/images/farabi.jpg"
+    }
+  ],
+  "quote": {
+    "textFr": "« L'injustice annonce la ruine de la civilisation. »",
+    "authorFr": "— Ibn Khaldūn (Al-Muqaddima)",
+    "textAr": "« الظلم مؤذن بخراب العمران. »",
+    "authorAr": "— عبد الرحمن بن خلدون (المقدمة)",
+    "textEn": "« Injustice heralds the ruin of civilization. »",
+    "authorEn": "— Ibn Khaldun (The Muqaddimah)"
+  }
+};
+    let currentLang = localStorage.getItem('site_lang_v1') || 'fr';
+
+    const UI_TRANSLATIONS = {
+      fr: {
+        navHome: 'Accueil',
+        navArticles: 'Articles',
+        navThinkers: 'Penseurs',
+        navIslam: 'Pensée islamique',
+        breadcrumbHome: 'Accueil',
+        breadcrumbIslam: 'Pensée islamique',
+        secPrinciplesTitle: 'Les trois principes fondamentaux du parcours',
+        secConceptsTitle: 'Notions essentielles & repères intellectuels',
+        conceptsIntroText: 'Les concepts fondamentaux développés par les penseurs de ce domaine :',
+        secArticlesTitle: 'Études et articles de référence',
+        secThinkersTitle: 'Figures intellectuelles associées',
+        secRelatedTitle: 'Poursuivre votre exploration',
+        btnReadArticle: 'Lire l’étude →',
+        btnBackIslam: 'Retour à Pensée islamique',
+        langBtn: 'FR ⇄ AR'
+      },
+      ar: {
+        navHome: 'الرئيسية',
+        navArticles: 'المقالات',
+        navThinkers: 'المفكرون',
+        navIslam: 'الفكر الإسلامي',
+        breadcrumbHome: 'الرئيسية',
+        breadcrumbIslam: 'الفكر الإسلامي',
+        secPrinciplesTitle: 'الركائز الثلاث الأساسية للمسار',
+        secConceptsTitle: 'المفاهيم الجوهرية والمعالم الفكرية',
+        conceptsIntroText: 'أهم المفاهيم والأطروحات الفلسفية والمعرفية في هذا المسار :',
+        secArticlesTitle: 'الدراسات والبحوث المرجعية',
+        secThinkersTitle: 'أعلام ورواد المسار',
+        secRelatedTitle: 'مسارات فكرية موصى بها',
+        btnReadArticle: 'قراءة الدراسة ←',
+        btnBackIslam: 'العودة إلى الفكر الإسلامي',
+        langBtn: 'العربية ⇄ FR'
+      },
+      en: {
+        navHome: 'Home',
+        navArticles: 'Articles',
+        navThinkers: 'Thinkers',
+        navIslam: 'Islamic Thought',
+        breadcrumbHome: 'Home',
+        breadcrumbIslam: 'Islamic Thought',
+        secPrinciplesTitle: 'The Three Core Principles of the Path',
+        secConceptsTitle: 'Essential Notions & Intellectual Landmarks',
+        conceptsIntroText: 'Key philosophical and epistemological concepts in this path:',
+        secArticlesTitle: 'Reference Studies & Articles',
+        secThinkersTitle: 'Associated Intellectual Figures',
+        secRelatedTitle: 'Continue Your Exploration',
+        btnReadArticle: 'Read Study →',
+        btnBackIslam: 'Back to Islamic Thought',
+        langBtn: 'EN ⇄ AR'
+      }
+    };
+
+    function applyLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('site_lang_v1', lang);
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+      const t = UI_TRANSLATIONS[lang] || UI_TRANSLATIONS.fr;
+
+      // Update static UI strings
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key]) el.textContent = t[key];
+      });
+
+      // Update Titles & Hero
+      const titleKey = lang === 'ar' ? 'titleAr' : (lang === 'en' ? 'titleEn' : 'titleFr');
+      const badgeKey = lang === 'ar' ? 'badgeAr' : (lang === 'en' ? 'badgeEn' : 'badgeFr');
+      const descKey = lang === 'ar' ? 'descAr' : (lang === 'en' ? 'descEn' : 'descFr');
+
+      document.title = `${PARCOURS_DATA[titleKey]} | ${t.breadcrumbIslam} | Le Jardin des Pensées`;
+      document.getElementById('breadcrumbCurrent').textContent = PARCOURS_DATA[titleKey];
+      document.getElementById('parcoursBadge').textContent = PARCOURS_DATA[badgeKey];
+      document.getElementById('parcoursTitle').textContent = PARCOURS_DATA[titleKey];
+      document.getElementById('parcoursIntro').textContent = PARCOURS_DATA[descKey];
+
+      // Update Principles
+      const prList = PARCOURS_DATA.principles[lang] || PARCOURS_DATA.principles.fr;
+      document.getElementById('principlesGrid').innerHTML = prList.map(pr => `
+        <div class="principle-card">
+          <span class="principle-num">${pr.num}</span>
+          <h3 style="font-size: 1.15rem; color: #FAF6EF; margin: 0 0 8px; font-family: 'Playfair Display', serif;">${pr.title}</h3>
+          <p class="principle-text">${pr.text}</p>
+        </div>
+      `).join('');
+
+      // Update Concepts
+      const cList = PARCOURS_DATA.concepts[lang] || PARCOURS_DATA.concepts.fr;
+      document.getElementById('conceptsGrid').innerHTML = cList.map(c => `
+        <div class="concept-box">
+          <h4 class="concept-name">${c.name}</h4>
+          <p class="concept-desc">${c.desc}</p>
+        </div>
+      `).join('');
+
+      // Update Articles
+      document.getElementById('articlesGrid').innerHTML = PARCOURS_DATA.articles.map(art => `
+        <a href="${art.url}" class="article-card-visual">
+          <div class="article-thumb-box">
+            <img src="${art.img}" alt="${art[titleKey]}" class="article-thumb-img" loading="lazy">
+          </div>
+          <div class="article-card-body">
+            <span class="article-badge">${art.badge}</span>
+            <h3 class="article-title">${art[titleKey]}</h3>
+            <p class="article-desc">${art[descKey]}</p>
+            <span class="article-btn-link">${t.btnReadArticle}</span>
+          </div>
+        </a>
+      `).join('');
+
+      // Update Thinkers
+      document.getElementById('thinkersGrid').innerHTML = PARCOURS_DATA.thinkers.map(th => {
+        const nameKey = lang === 'ar' ? 'nameAr' : (lang === 'en' ? 'nameEn' : 'nameFr');
+        const roleKey = lang === 'ar' ? 'roleAr' : (lang === 'en' ? 'roleEn' : 'roleFr');
+        const bioKey = lang === 'ar' ? 'bioAr' : (lang === 'en' ? 'bioEn' : 'bioFr');
+        return `
+          <a href="${th.url}" class="figure-card-visual">
+            <div class="figure-avatar-box">
+              <img src="${th.img}" alt="${th[nameKey]}" class="figure-avatar-img" loading="lazy">
+            </div>
+            <h3 class="figure-name">${th[nameKey]}</h3>
+            <span class="figure-role">${th[roleKey]}</span>
+            <p class="figure-bio">${th[bioKey]}</p>
+          </a>
+        `;
+      }).join('');
+
+      // Update Quote
+      const quoteTextKey = lang === 'ar' ? 'textAr' : (lang === 'en' ? 'textEn' : 'textFr');
+      const quoteAuthKey = lang === 'ar' ? 'authorAr' : (lang === 'en' ? 'authorEn' : 'authorFr');
+      document.getElementById('quoteText').textContent = PARCOURS_DATA.quote[quoteTextKey];
+      document.getElementById('quoteAuthor').textContent = PARCOURS_DATA.quote[quoteAuthKey];
+    }
+
+    window.cycleLanguage = function() {
+      const next = currentLang === 'fr' ? 'ar' : (currentLang === 'ar' ? 'en' : 'fr');
+      applyLanguage(next);
+    };
+
+    applyLanguage(currentLang);
+  </script>
+</body>
+</html>

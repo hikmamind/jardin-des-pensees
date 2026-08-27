@@ -186,6 +186,33 @@
       }
     }
 
+    .islam-parcours-card,
+    .islam-parcours-card:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+    .islam-parcours-card {
+      cursor: pointer;
+    }
+    .islam-parcours-card:focus-visible {
+      outline: 3px solid rgba(231, 184, 75, 0.55);
+      outline-offset: 4px;
+    }
+    .islam-parcours-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent-gold, #DFB15B);
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-top: 14px;
+      text-decoration: none;
+      transition: gap 0.2s ease;
+    }
+    .islam-parcours-card:hover .islam-parcours-link {
+      gap: 10px;
+    }
+
     .islam-parcours-card {
       background: rgba(14, 22, 17, 0.85);
       border: 1px solid rgba(223, 177, 91, 0.18);
@@ -606,54 +633,54 @@
 
       <div class="islam-parcours-grid" id="islamParcoursGrid">
         <!-- 01 — Raison & Révélation -->
-        <article class="islam-parcours-card">
+        <a class="islam-parcours-card" href="./parcours/raison-revelation/">
           <div>
             <span class="islam-parcours-number">01</span>
             <h3 class="islam-parcours-title" data-i18n="p1Title">العقل والوحي</h3>
-            <p class="islam-parcours-desc" data-i18n="p1Desc">دراسة جدلية العلاقة بين البرهان العقلي والنقل، والتوفيق المعرفي بين التفكير والوحي والمعرفة.</p>
+            <p class="islam-parcours-desc" data-i18n="p1Desc">دراسة جدلية العلاقة بين البرهان العقلي والنقل، والتوفيق المعرفي بين الفلسفة والشريعة والبحث عن الحقيقة.</p>
           </div>
-          <div class="islam-coming-soon-badge" data-i18n="badgeComingSoon">⏳ محتوى قادم قريبًا</div>
-        </article>
+          <span class="islam-parcours-link" data-i18n="p1Link">استكشف المسار ←</span>
+        </a>
 
         <!-- 02 — Philosophie islamique -->
-        <article class="islam-parcours-card">
+        <a class="islam-parcours-card" href="./parcours/philosophie-islamique/">
           <div>
             <span class="islam-parcours-number">02</span>
             <h3 class="islam-parcours-title" data-i18n="p2Title">الفلسفة الإسلامية</h3>
             <p class="islam-parcours-desc" data-i18n="p2Desc">إسهامات الفلاسفة المسلمين في الوجود والمعرفة والمنطق ونظرية النفس والميتافيزيقا.</p>
           </div>
-          <div class="islam-coming-soon-badge" data-i18n="badgeComingSoon">⏳ مقالات قادمة قريبًا</div>
-        </article>
+          <span class="islam-parcours-link" data-i18n="p2Link">استكشف المسار ←</span>
+        </a>
 
         <!-- 03 — Sagesse & Éthique -->
-        <article class="islam-parcours-card">
+        <a class="islam-parcours-card" href="./parcours/sagesse-ethique/">
           <div>
             <span class="islam-parcours-number">03</span>
             <h3 class="islam-parcours-title" data-i18n="p3Title">الحكمة والأخلاق</h3>
             <p class="islam-parcours-desc" data-i18n="p3Desc">تهذيب النفس، بناء الفضيلة، الحكمة العملية، والمسؤولية في إدارة الذات والمجتمع.</p>
           </div>
-          <div class="islam-coming-soon-badge" data-i18n="badgeComingSoon">⏳ مقالات قادمة قريبًا</div>
-        </article>
+          <span class="islam-parcours-link" data-i18n="p3Link">استكشف المسار ←</span>
+        </a>
 
-        <!-- 04 — Grands penseurs musulmans -->
-        <article class="islam-parcours-card">
+        <!-- 04 — Science & Connaissance -->
+        <a class="islam-parcours-card" href="./parcours/science-connaissance/">
           <div>
             <span class="islam-parcours-number">04</span>
-            <h3 class="islam-parcours-title" data-i18n="p4Title">العلماء والمفكرون</h3>
-            <p class="islam-parcours-desc" data-i18n="p4Desc">أعلام الفكر الإسلامي وصناع النهضة الفلسفية والمعرفية: الغزالي، الفارابي، ابن سينا، ابن رشد، وابن خلدون.</p>
+            <h3 class="islam-parcours-title" data-i18n="p4Title">العلم والمعرفة</h3>
+            <p class="islam-parcours-desc" data-i18n="p4Desc">استكشاف مناهج البحث، والتصنيف التاريخي للعلوم، والتكامل بين البرهان والملاحظة والتجربة العلمية.</p>
           </div>
-          <a href="#thinkersSection" class="islam-coming-soon-badge" style="background: rgba(223, 177, 91, 0.18); color: #FFFDF8; border-color: #DFB15B; text-decoration: none;" data-i18n="p4Link">استكشف المفكرين ↓</a>
-        </article>
+          <span class="islam-parcours-link" data-i18n="p4Link">استكشف المسار ←</span>
+        </a>
 
-        <!-- 05 — Civilisation & Société -->
-        <article class="islam-parcours-card">
+        <!-- 05 — Civilisation & ʿUmrān -->
+        <a class="islam-parcours-card" href="./parcours/civilisation-umran/">
           <div>
             <span class="islam-parcours-number">05</span>
             <h3 class="islam-parcours-title" data-i18n="p5Title">الحضارة والعمران</h3>
-            <p class="islam-parcours-desc" data-i18n="p5Desc">فلسفة العمران البشري، التاريخ الاجتماعي، نشأة الدول والتفاعل الحضاري الثقافي.</p>
+            <p class="islam-parcours-desc" data-i18n="p5Desc">فلسفة العمران البشري، التاريخ الاجتماعي، نشأة الدول والتفاعل الحضاري والتغير التاريخي.</p>
           </div>
-          <div class="islam-coming-soon-badge" data-i18n="badgeComingSoon">⏳ مقالات قادمة قريبًا</div>
-        </article>
+          <span class="islam-parcours-link" data-i18n="p5Link">استكشف المسار ←</span>
+        </a>
       </div>
     </section>
 
@@ -1120,9 +1147,10 @@
       localStorage.setItem('lang', lang);
     }
 
-        const PARCOURS_ISLAM_DATA = [
+            const PARCOURS_ISLAM_DATA = [
       {
         id: 'parcours-01-raison-revelation',
+        slug: 'raison-revelation',
         num: '01',
         image: './images/islam_parcours_01.jpg',
         title: {
@@ -1154,6 +1182,7 @@
       },
       {
         id: 'parcours-02-philosophie-islamique',
+        slug: 'philosophie-islamique',
         num: '02',
         image: './images/islam_parcours_02.jpg',
         title: {
@@ -1167,15 +1196,16 @@
           en: 'Discover major metaphysical, philosophical, and intellectual questions developed by Muslim thinkers.'
         },
         principles: {
-          ar: ['الوجود والماهية', 'العقل والفلسفة', 'الحكمة والمعرفة'],
-          fr: ['Existence et Essence', 'Raison et Philosophie', 'Sagesse et Connaissance'],
-          en: ['Existence and Essence', 'Reason and Philosophy', 'Wisdom and Knowledge']
+          ar: ['الوجود والماهية', 'العقل والمنطق', 'الحكمة والمعرفة'],
+          fr: ['Existence et Essence', 'Raison et Logique', 'Sagesse et Connaissance'],
+          en: ['Existence and Essence', 'Reason and Logic', 'Wisdom and Knowledge']
         },
         articles: [],
         thinkerIds: ['farabi', 'ibnsina', 'ibnrushd']
       },
       {
         id: 'parcours-03-sagesse-ethique',
+        slug: 'sagesse-ethique',
         num: '03',
         image: './images/islam_parcours_03.jpg',
         title: {
@@ -1194,10 +1224,11 @@
           en: ['Inner Purification', 'Ethics and Conduct', 'Practical Wisdom']
         },
         articles: [],
-        thinkerIds: ['ghazali', 'ibnsina']
+        thinkerIds: ['ghazali', 'farabi', 'ibnsina']
       },
       {
         id: 'parcours-04-science-connaissance',
+        slug: 'science-connaissance',
         num: '04',
         image: './images/islam_parcours_04.jpg',
         title: {
@@ -1216,10 +1247,11 @@
           en: ['Sources of Science', 'Research Method', 'Reason and Experience']
         },
         articles: [],
-        thinkerIds: ['farabi', 'ibnsina', 'ghazali']
+        thinkerIds: ['farabi', 'ibnsina', 'ibnrushd', 'ghazali']
       },
       {
         id: 'parcours-05-civilisation-umran',
+        slug: 'civilisation-umran',
         num: '05',
         image: './images/islam_parcours_05.jpg',
         title: {
@@ -1238,7 +1270,7 @@
           en: ['ʿUmrān (Human Civilization)', 'Society and State', 'Civilizational Change']
         },
         articles: [],
-        thinkerIds: ['ibnkhaldun']
+        thinkerIds: ['ibnkhaldun', 'farabi']
       }
     ];
 
@@ -1251,21 +1283,47 @@
           principlesHeader: "الأسس والأفكار الرئيسية",
           articlesHeader: "المقالات والأبحاث المتاحة",
           thinkersHeader: "الفلاسفة والمفكرون المرتبطون",
-          comingSoonBadge: "⏳ مقالات قادمة قريبًا"
+          explorePath: "استكشف المسار ←"
         },
         fr: {
           principlesHeader: "Principes & idées clés",
           articlesHeader: "Articles disponibles",
           thinkersHeader: "Penseurs associés",
-          comingSoonBadge: "⏳ Articles à venir"
+          explorePath: "Explorer le parcours →"
         },
         en: {
           principlesHeader: "Principles & Key Ideas",
           articlesHeader: "Available articles",
           thinkersHeader: "Associated thinkers",
-          comingSoonBadge: "⏳ Articles coming soon"
+          explorePath: "Explore the path →"
         }
       };
+
+      const trans = labels[lang] || labels.ar;
+
+      grid.innerHTML = PARCOURS_ISLAM_DATA.map(p => {
+        const title = p.title[lang] || p.title.ar;
+        const desc = p.desc[lang] || p.desc.ar;
+
+        return `
+          <a class="islam-parcours-card" href="./parcours/${p.slug}/" id="${p.id}">
+            <div style="height: 150px; position: relative; overflow: hidden; border-radius: 14px; margin: -28px -28px 16px -28px;">
+              <img src="${p.image}" alt="${title}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+              <span style="position: absolute; top: 12px; right: 12px; background: rgba(10,15,12,0.85); border: 1px solid rgba(223, 177, 91, 0.4); color: #E4C98A; font-size: 0.82rem; font-weight: 800; padding: 4px 12px; border-radius: 20px;">${p.num}</span>
+            </div>
+
+            <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+              <div>
+                <h3 style="font-size: 1.25rem; color: #FAF6EF; font-family: 'Playfair Display', 'Amiri', serif; font-weight: 700; margin-bottom: 8px;">${title}</h3>
+                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 14px;">${desc}</p>
+              </div>
+
+              <span class="islam-parcours-link">${trans.explorePath}</span>
+            </div>
+          </a>
+        `;
+      }).join('');
+    };
 
       const trans = labels[lang] || labels.ar;
       const allThinkers = (TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].thinkers) || [];
