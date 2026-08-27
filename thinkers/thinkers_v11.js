@@ -1139,6 +1139,32 @@ window.handleSaveThinker = function(thinkerId) {
   }
 };
 
+function openThinkerFromCurrentUrl() {
+  const thinkerId = new URLSearchParams(
+    window.location.search
+  ).get('thinker');
+
+  if (!thinkerId) return;
+
+  const thinkers =
+    TIKTOK_DATA.content[currentLang]?.thinkers || [];
+
+  const thinkerExists = thinkers.some(
+    thinker => thinker.id === thinkerId
+  );
+
+  if (!thinkerExists) {
+    console.error(
+      '[Thinkers] Identifiant absent :',
+      thinkerId,
+      currentLang
+    );
+    return;
+  }
+
+  window.openThinkerModalById(thinkerId);
+}
+
 // --- Initialization ---
 function initThinkersApp() {
   initTheme();
@@ -1172,15 +1198,7 @@ function initThinkersApp() {
     }
   });
 
-  // Check URL parameters on initial load
-  const urlParams = new URLSearchParams(window.location.search);
-  const initialParam = urlParams.get('thinker') || urlParams.get('bio') || urlParams.get('id');
-
-  if (initialParam && initialParam.toLowerCase() !== 'all') {
-    setTimeout(() => {
-      window.openThinkerModalById(initialParam);
-    }, 100);
-  }
+  openThinkerFromCurrentUrl();
 }
 
 if (document.readyState === 'loading') {
