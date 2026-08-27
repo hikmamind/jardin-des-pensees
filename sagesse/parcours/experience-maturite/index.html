@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Expérience & Maturité | Sagesse & Art de Vivre | Le Jardin des Pensées</title>
+  <meta name="description" id="pageMetaDesc" content="Transformer les épreuves, le temps et les erreurs en discernement, prudence et maturité.">
+  <link rel="canonical" href="https://jardin-des-pensees.onrender.com/sagesse/parcours/experience-maturite/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Expérience & Maturité — Le Jardin des Pensées">
+  <meta property="og:description" content="Transformer les épreuves, le temps et les erreurs en discernement, prudence et maturité.">
+  <meta property="og:image" content="https://jardin-des-pensees.onrender.com/wis_philosophers_hd.jpg">
+  <meta property="og:url" content="https://jardin-des-pensees.onrender.com/sagesse/parcours/experience-maturite/">
+
+  <!-- Fonts & Shared Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../../style.css?v=16">
+  <link rel="stylesheet" href="../../sagesse_parcours.css">
+
+  <!-- JSON-LD Breadcrumb -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://jardin-des-pensees.onrender.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Sagesse", "item": "https://jardin-des-pensees.onrender.com/sagesse/" },
+      { "@type": "ListItem", "position": 3, "name": "Expérience & Maturité", "item": "https://jardin-des-pensees.onrender.com/sagesse/parcours/experience-maturite/" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="navbar-header" style="position: sticky; top: 0; z-index: 100; background: rgba(9, 14, 11, 0.95); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(201, 168, 106, 0.22); padding: 14px 24px;">
+    <nav style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;" aria-label="Navigation principale">
+      <a href="../../../" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+        <img src="../../../brand_logo_official.png" alt="Hikma & Nour" style="width: 36px; height: 36px; object-fit: contain;">
+        <span style="font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 800; color: #C9A86A;">HIKMA & NOUR</span>
+      </a>
+
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <a href="../../../" style="color: #B5AFA4; text-decoration: none; font-size: 0.9rem; font-weight: 600;" data-i18n="navHome">Accueil</a>
+        <a href="../../../articles/" style="color: #B5AFA4; text-decoration: none; font-size: 0.9rem; font-weight: 600;" data-i18n="navArticles">Articles</a>
+        <a href="../../../thinkers/" style="color: #B5AFA4; text-decoration: none; font-size: 0.9rem; font-weight: 600;" data-i18n="navThinkers">Penseurs</a>
+        <a href="../../" style="color: #C9A86A; text-decoration: none; font-size: 0.9rem; font-weight: 700;" data-i18n="navWisdom">Sagesse</a>
+        <button type="button" id="langToggleBtn" onclick="window.cycleLanguage()" style="background: rgba(201, 168, 106, 0.14); border: 1px solid #C9A86A; color: #C9A86A; padding: 6px 14px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 0.85rem;">FR ⇄ AR</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wis-page-container">
+    
+    <!-- 1. Fil d'Ariane -->
+    <nav class="parcours-breadcrumb" aria-label="Fil d'Ariane">
+      <a href="../../../" data-i18n="breadcrumbHome">Accueil</a>
+      <span aria-hidden="true">›</span>
+      <a href="../../" data-i18n="breadcrumbWisdom">Sagesse</a>
+      <span aria-hidden="true">›</span>
+      <span aria-current="page" id="breadcrumbCurrent">Expérience & Maturité</span>
+    </nav>
+
+    <!-- 2. Hero Section -->
+    <section class="wis-hero-box">
+      <img src="../../../wis_philosophers_hd.jpg" alt="Expérience & Maturité" class="wis-hero-bg">
+      <div class="wis-hero-overlay"></div>
+      <div class="wis-hero-content">
+        <div class="wis-badge" id="parcoursBadge">🌿 Parcours 04 • Expérience & Maturité</div>
+        <h1 class="wis-h1" id="parcoursTitle">Expérience & Maturité</h1>
+        <p class="wis-intro" id="parcoursIntro">Transformer les épreuves, le temps et les erreurs en discernement, prudence et maturité.</p>
+      </div>
+    </section>
+
+    <!-- 3. Principes Fondamentaux -->
+    <section class="principles-section">
+      <h2 class="wis-section-heading" id="principlesHeading">
+        💡 <span data-i18n="secPrinciplesTitle">Les trois principes fondamentaux du parcours</span>
+      </h2>
+      <div class="principles-grid" id="principlesGrid">
+        
+          <div class="principle-card">
+            <span class="principle-num">01</span>
+            <h3 style="font-size: 1.15rem; color: #FAF6EF; margin: 0 0 8px; font-family: 'Playfair Display', serif;">Tirer une leçon précise de chaque erreur</h3>
+            <p class="principle-text">L'échec n'est stérile que lorsqu'il est nié ; analysé avec honnêteté, il devient le plus grand maître de vie.</p>
+          </div>
+        
+          <div class="principle-card">
+            <span class="principle-num">02</span>
+            <h3 style="font-size: 1.15rem; color: #FAF6EF; margin: 0 0 8px; font-family: 'Playfair Display', serif;">Refuser de confondre âge et maturité</h3>
+            <p class="principle-text">Les années ajoutent du temps, mais seule la réflexion consciente sur nos actes engendre la véritable sagesse.</p>
+          </div>
+        
+          <div class="principle-card">
+            <span class="principle-num">03</span>
+            <h3 style="font-size: 1.15rem; color: #FAF6EF; margin: 0 0 8px; font-family: 'Playfair Display', serif;">Transformer la souffrance vécue en discernement</h3>
+            <p class="principle-text">La douleur traversée avec courage cesse d'être un poids pour devenir une source profonde de compassion et de lucidité.</p>
+          </div>
+        
+      </div>
+    </section>
+
+    <!-- 4. Pratiques et Exercices -->
+    <section class="exercise-section">
+      <h2 class="exercise-title" id="exerciseHeading">
+        🎯 <span data-i18n="secExercisesTitle">Pratiques & Exercices d’Application</span>
+      </h2>
+      <p class="exercise-desc" id="exerciseIntro" data-i18n="exerciseIntroText">
+        Exercices concrets pour ancrer cette sagesse dans votre quotidien :
+      </p>
+      <div class="principles-grid" id="exercisesGrid" style="margin-top: 16px;">
+        
+          <div class="principle-card" style="background: rgba(9, 14, 11, 0.7);">
+            <h3 style="font-size: 1.1rem; color: var(--accent-gold); margin: 0 0 8px; font-family: 'Playfair Display', serif;">Journal des leçons d'épreuves</h3>
+            <p class="principle-text" style="font-size: 0.92rem;">Prenez un événement difficile de votre passé et écrivez trois compétences ou qualités intérieures qu'il vous a forcé à développer.</p>
+          </div>
+        
+          <div class="principle-card" style="background: rgba(9, 14, 11, 0.7);">
+            <h3 style="font-size: 1.1rem; color: var(--accent-gold); margin: 0 0 8px; font-family: 'Playfair Display', serif;">Révision bienveillante d'une ancienne décision</h3>
+            <p class="principle-text" style="font-size: 0.92rem;">Analysez un choix passé que vous regrettez avec le regard de l'époque, en vous accordant le pardon et en extrayant sa sagesse.</p>
+          </div>
+        
+          <div class="principle-card" style="background: rgba(9, 14, 11, 0.7);">
+            <h3 style="font-size: 1.1rem; color: var(--accent-gold); margin: 0 0 8px; font-family: 'Playfair Display', serif;">Identification d'un schéma récurrent</h3>
+            <p class="principle-text" style="font-size: 0.92rem;">Repérez une habitude de pensée ou de réaction qui se répète depuis des années et décidez d'une réponse nouvelle et mature.</p>
+          </div>
+        
+      </div>
+    </section>
+
+    <!-- 5. Articles Réels Associés -->
+    <section class="articles-section">
+      <h2 class="wis-section-heading" id="articlesHeading">
+        📚 <span data-i18n="secArticlesTitle">Articles et études approfondies</span>
+      </h2>
+      <div class="articles-grid" id="articlesGrid">
+        
+          <a href="../../../articles/schopenhauer-happiness-illusion.html" class="article-card-visual">
+            <div class="article-thumb-box">
+              <img src="../../../articles/schopenhauer_happiness_illusion_hero.jpg" alt="Pourquoi Schopenhauer considérait-il le bonheur comme une illusion ?" class="article-thumb-img" loading="lazy">
+            </div>
+            <div class="article-card-body">
+              <span class="article-badge">📜 Maturité & Recul</span>
+              <h3 class="article-title">Pourquoi Schopenhauer considérait-il le bonheur comme une illusion ?</h3>
+              <p class="article-desc">Le regard de la maturité philosophique sur l'apaisement des désirs et la contemplation.</p>
+              <span class="article-btn-link" data-i18n="btnReadArticle">Lire l’article →</span>
+            </div>
+          </a>
+        
+          <a href="../../../articles/nietzsche-psychological-strength.html" class="article-card-visual">
+            <div class="article-thumb-box">
+              <img src="../../../articles/nietzsche_psychological_strength_hero.jpg" alt="Nietzsche et la force psychologique : triompher de l'adversité" class="article-thumb-img" loading="lazy">
+            </div>
+            <div class="article-card-body">
+              <span class="article-badge">⛰️ Épreuves & Force</span>
+              <h3 class="article-title">Nietzsche et la force psychologique : triompher de l'adversité</h3>
+              <p class="article-desc">Comment surmonter les épreuves de l'existence et développer une volonté inébranlable.</p>
+              <span class="article-btn-link" data-i18n="btnReadArticle">Lire l’article →</span>
+            </div>
+          </a>
+        
+          <a href="../../../articles/hikma-citations-philosophiques.html" class="article-card-visual">
+            <div class="article-thumb-box">
+              <img src="../../../articles/oil_lamp_library_window.jpg" alt="Maximes sur le temps, la vieillesse noble et l'expérience" class="article-thumb-img" loading="lazy">
+            </div>
+            <div class="article-card-body">
+              <span class="article-badge">✨ Maximes & Pensées</span>
+              <h3 class="article-title">Maximes sur le temps, la vieillesse noble et l'expérience</h3>
+              <p class="article-desc">Pensées de Montaigne, Cicéron et Schopenhauer sur la beauté de la maturité.</p>
+              <span class="article-btn-link" data-i18n="btnReadArticle">Lire l’article →</span>
+            </div>
+          </a>
+        
+      </div>
+    </section>
+
+    <!-- 6. Sages et Penseurs Associés -->
+    <section class="figures-section">
+      <h2 class="wis-section-heading" id="thinkersHeading">
+        🏛️ <span data-i18n="secThinkersTitle">Sages et penseurs de référence</span>
+      </h2>
+      <div class="figures-grid" id="thinkersGrid">
+        
+          <a href="../../../thinkers/?thinker=montaigne" class="figure-card-visual">
+            <div class="figure-avatar-box">
+              <img src="../../../thinkers/images/montaigne.jpg" alt="Michel de Montaigne" class="figure-avatar-img" loading="lazy">
+            </div>
+            <h3 class="figure-name">Michel de Montaigne</h3>
+            <span class="figure-role">Penseur de l'Expérience Vécue</span>
+            <p class="figure-bio">A consacré sa vie à l'introspection libre, rejetant les dogmes pour célébrer la sagesse du quotidien.</p>
+          </a>
+        
+          <a href="../../../thinkers/?thinker=schopenhauer" class="figure-card-visual">
+            <div class="figure-avatar-box">
+              <img src="../../../thinkers/images/schopenhauer.jpg" alt="Arthur Schopenhauer" class="figure-avatar-img" loading="lazy">
+            </div>
+            <h3 class="figure-name">Arthur Schopenhauer</h3>
+            <span class="figure-role">Philosophe de la Lucidité</span>
+            <p class="figure-bio">Penseur sans fard de la condition humaine, maître du recul et de l'apaisement intérieur.</p>
+          </a>
+        
+          <a href="../../../thinkers/viktor-frankl/" class="figure-card-visual">
+            <div class="figure-avatar-box">
+              <img src="../../../thinkers/images/viktor-frankl.jpg" alt="Viktor Frankl" class="figure-avatar-img" loading="lazy">
+            </div>
+            <h3 class="figure-name">Viktor Frankl</h3>
+            <span class="figure-role">Fondateur de la Logothérapie</span>
+            <p class="figure-bio">Ayant survécu aux camps, il a prouvé que l'homme peut donner un sens à toute souffrance.</p>
+          </a>
+        
+      </div>
+    </section>
+
+    <!-- 7. Citation Banner -->
+    <section class="parcours-quote-banner">
+      <p class="parcours-quote-text" id="quoteText">« La plus grande chose du monde, c'est de savoir être à soi. »</p>
+      <div class="parcours-quote-author" id="quoteAuthor">— Michel de Montaigne</div>
+    </section>
+
+    <!-- 8. Autres Parcours Recommandés -->
+    <section class="related-parcours-section">
+      <h2 class="wis-section-heading" id="relatedHeading">
+        🌱 <span data-i18n="secRelatedTitle">Poursuivre votre exploration</span>
+      </h2>
+      <div class="related-parcours-grid">
+        
+          <a href="../sagesse-de-vie/" class="related-parcours-card">
+            <span style="font-size: 0.8rem; color: var(--accent-gold); font-weight: 800; text-transform: uppercase;">Parcours 01</span>
+            <h4>Sagesse de vie & Art de vivre</h4>
+            <p>Découvrir les enseignements universels permettant de distinguer les besoins réels des illusions du bonheur extérieur.</p>
+            <span>Découvrir le parcours →</span>
+          </a>
+        
+          <a href="../patience-paix-interieure/" class="related-parcours-card">
+            <span style="font-size: 0.8rem; color: var(--accent-gold); font-weight: 800; text-transform: uppercase;">Parcours 02</span>
+            <h4>Patience & Paix intérieure</h4>
+            <p>Construire une stabilité intérieure capable de résister aux difficultés, aux frustrations et à l’incertitude.</p>
+            <span>Découvrir le parcours →</span>
+          </a>
+        
+      </div>
+    </section>
+
+    <!-- 9. Bouton Retour Sagesse V5.3 -->
+    <section class="parcours-back-section">
+      <a class="parcours-back-link" href="../../">
+        <span class="back-arrow" aria-hidden="true">←</span>
+        <span id="backBtnText" data-i18n="btnBackWisdom">Retour à Sagesse</span>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="parcours-footer">
+    <p>© 2026 Le Jardin des Pensées — HIKMA & NOUR. Tous droits réservés.</p>
+  </footer>
+
+  <!-- Multilingual Engine Script -->
+  <script type="module">
+    const PARCOURS_DATA = {
+  "slug": "experience-maturite",
+  "num": "04",
+  "img": "wis_philosophers_hd.jpg",
+  "badgeAr": "🌿 المسار 04 • التجربة والنضج",
+  "badgeFr": "🌿 Parcours 04 • Expérience & Maturité",
+  "badgeEn": "🌿 Path 04 • Experience & Maturity",
+  "titleAr": "التجربة والنضج",
+  "titleFr": "Expérience & Maturité",
+  "titleEn": "Experience & Maturity",
+  "descAr": "تحويل العثرات والزمن والتجارب السابقة إلى بصيرة نيرة وحكمة واتزان.",
+  "descFr": "Transformer les épreuves, le temps et les erreurs en discernement, prudence et maturité.",
+  "descEn": "Transform trials, time, and past mistakes into discernment, prudence, and authentic maturity.",
+  "principles": {
+    "fr": [
+      {
+        "num": "01",
+        "title": "Tirer une leçon précise de chaque erreur",
+        "text": "L'échec n'est stérile que lorsqu'il est nié ; analysé avec honnêteté, il devient le plus grand maître de vie."
+      },
+      {
+        "num": "02",
+        "title": "Refuser de confondre âge et maturité",
+        "text": "Les années ajoutent du temps, mais seule la réflexion consciente sur nos actes engendre la véritable sagesse."
+      },
+      {
+        "num": "03",
+        "title": "Transformer la souffrance vécue en discernement",
+        "text": "La douleur traversée avec courage cesse d'être un poids pour devenir une source profonde de compassion et de lucidité."
+      }
+    ],
+    "ar": [
+      {
+        "num": "01",
+        "title": "استخلاص درس دقيق وبناء من كل عثرة أو خيبة",
+        "text": "لا تكون الأخطاء خسارة إلا إذا تم تجاهلها؛ فالفحص الصادق للتجربة يحولها إلى درس لا يُنسى."
+      },
+      {
+        "num": "02",
+        "title": "عدم الخلط بين تقدم العمر والنضج الحقيقي للروح",
+        "text": "السنوات تضيف عمراً بيولوجياً، لكن التأمل الواعي في التجارب هو وحده ما يثمر حكمة أصيلة."
+      },
+      {
+        "num": "03",
+        "title": "تحويل المعاناة والتجربة إلى بصيرة وتعاطف",
+        "text": "الألم الذي يُعاش بشجاعة يتحول من عبء ثقيل إلى معين لا ينضب من الفهم والرحمة بالآخرين."
+      }
+    ],
+    "en": [
+      {
+        "num": "01",
+        "title": "Extract a precise lesson from every mistake",
+        "text": "Failure is futile only when denied; analyzed with honesty, it becomes life's greatest instructor."
+      },
+      {
+        "num": "02",
+        "title": "Refuse to confuse mere age with maturity",
+        "text": "Years add biological time, but only conscious reflection on our choices produces genuine wisdom."
+      },
+      {
+        "num": "03",
+        "title": "Transform lived suffering into insight",
+        "text": "Pain endured with courage ceases to be a burden and becomes a profound source of compassion."
+      }
+    ]
+  },
+  "exercises": {
+    "fr": [
+      {
+        "title": "Journal des leçons d'épreuves",
+        "text": "Prenez un événement difficile de votre passé et écrivez trois compétences ou qualités intérieures qu'il vous a forcé à développer."
+      },
+      {
+        "title": "Révision bienveillante d'une ancienne décision",
+        "text": "Analysez un choix passé que vous regrettez avec le regard de l'époque, en vous accordant le pardon et en extrayant sa sagesse."
+      },
+      {
+        "title": "Identification d'un schéma récurrent",
+        "text": "Repérez une habitude de pensée ou de réaction qui se répète depuis des années et décidez d'une réponse nouvelle et mature."
+      }
+    ],
+    "ar": [
+      {
+        "title": "سجل الدروس المستخلصة من الشدائد",
+        "text": "اختر ظرفاً صعباً مررت به في الماضي، واكتب ثلاث صفات أو مهارات داخلية اضطررت لتطويرها بسببه."
+      },
+      {
+        "title": "مراجعة قرار قديم بعين الرحمة والحكمة",
+        "text": "حلل قراراً قديماً كنت تلوم نفسك عليه، وتفهم ظروفك آنذاك مع استخلاص العبرة للمستقبل."
+      },
+      {
+        "title": "كشف الأنماط السلوكية المتكررة",
+        "text": "حدد نمطاً انفعالياً تكرر معك لسنوات، وقرر بوعي تجربة استجابة جديدة وأكثر نضجاً هذه المرة."
+      }
+    ],
+    "en": [
+      {
+        "title": "Adversity Lessons Journal",
+        "text": "Take a challenging past event and write down three inner strengths it compelled you to develop."
+      },
+      {
+        "title": "Compassionate Decision Review",
+        "text": "Analyze a past choice you regretted, understanding your mindset at that time while extracting its wisdom."
+      },
+      {
+        "title": "Identifying Recurring Patterns",
+        "text": "Spot a behavioral pattern that has repeated for years and deliberately choose a fresh, mature response."
+      }
+    ]
+  },
+  "articles": [
+    {
+      "url": "../../../articles/schopenhauer-happiness-illusion.html",
+      "img": "../../../articles/schopenhauer_happiness_illusion_hero.jpg",
+      "badge": "📜 Maturité & Recul",
+      "titleFr": "Pourquoi Schopenhauer considérait-il le bonheur comme une illusion ?",
+      "titleAr": "لماذا اعتبر شوبنهاور أن السعادة مجرد وهم ؟",
+      "titleEn": "Why Schopenhauer Considered Happiness an Illusion",
+      "descFr": "Le regard de la maturité philosophique sur l'apaisement des désirs et la contemplation.",
+      "descAr": "نظرة النضج الفلسفي حول تجاوز رغبات الأنا وبلوغ السكينة من خلال التأمل الرصين.",
+      "descEn": "The perspective of philosophical maturity on pacifying desires through contemplation."
+    },
+    {
+      "url": "../../../articles/nietzsche-psychological-strength.html",
+      "img": "../../../articles/nietzsche_psychological_strength_hero.jpg",
+      "badge": "⛰️ Épreuves & Force",
+      "titleFr": "Nietzsche et la force psychologique : triompher de l'adversité",
+      "titleAr": "نيتشه والقوة النفسية : تحويل المعاناة إلى صلابة ونضج",
+      "titleEn": "Nietzsche and Psychological Strength: Overcoming Adversity",
+      "descFr": "Comment surmonter les épreuves de l'existence et développer une volonté inébranlable.",
+      "descAr": "كيف تبني مناعة نفسية صلبة مستلهمة من فكرة قهر الذات ومحبة القدر.",
+      "descEn": "How to overcome existential trials and develop an unshakeable inner will."
+    },
+    {
+      "url": "../../../articles/hikma-citations-philosophiques.html",
+      "img": "../../../articles/oil_lamp_library_window.jpg",
+      "badge": "✨ Maximes & Pensées",
+      "titleFr": "Maximes sur le temps, la vieillesse noble et l'expérience",
+      "titleAr": "حكم في تدبر مرور الزمن والنضج وتجارب الأيام",
+      "titleEn": "Maxims on Time, Noble Aging, and Experience",
+      "descFr": "Pensées de Montaigne, Cicéron et Schopenhauer sur la beauté de la maturité.",
+      "descAr": "مختارات من كبار المفكرين حول قيمة التجربة ورقي النفس مع مرور السنين.",
+      "descEn": "Insights from Montaigne, Cicero, and Schopenhauer on the dignity of maturity."
+    }
+  ],
+  "thinkers": [
+    {
+      "id": "montaigne",
+      "nameFr": "Michel de Montaigne",
+      "nameAr": "ميشيل دي مونتين",
+      "nameEn": "Michel de Montaigne",
+      "roleFr": "Penseur de l'Expérience Vécue",
+      "roleAr": "حكيم التجربة والاعتدال",
+      "roleEn": "Philosopher of Lived Experience",
+      "bioFr": "A consacré sa vie à l'introspection libre, rejetant les dogmes pour célébrer la sagesse du quotidien.",
+      "bioAr": "حول يومياته وتجاربه الخاصة إلى أعظم كتاب في فهم تقلبات النفس البشرية والرضا بالبسيط.",
+      "bioEn": "Devoted his life to free introspection, celebrating the wisdom of daily ordinary life.",
+      "url": "../../../thinkers/?thinker=montaigne",
+      "img": "../../../thinkers/images/montaigne.jpg"
+    },
+    {
+      "id": "schopenhauer",
+      "nameFr": "Arthur Schopenhauer",
+      "nameAr": "آرثر شوبنهاور",
+      "nameEn": "Arthur Schopenhauer",
+      "roleFr": "Philosophe de la Lucidité",
+      "roleAr": "فيلسوف البصيرة والتحرر من الوهم",
+      "roleEn": "Philosopher of Lucid Insight",
+      "bioFr": "Penseur sans fard de la condition humaine, maître du recul et de l'apaisement intérieur.",
+      "bioAr": "قدم قراءة شديدة الصدق للرغبات الإنسانية وطرق النجاة من خلال الفن والعزلة والتأمل.",
+      "bioEn": "Uncompromising thinker on human nature, master of detachment and inner pacification.",
+      "url": "../../../thinkers/?thinker=schopenhauer",
+      "img": "../../../thinkers/images/schopenhauer.jpg"
+    },
+    {
+      "id": "viktor-frankl",
+      "nameFr": "Viktor Frankl",
+      "nameAr": "فيكتور فرانكل",
+      "nameEn": "Viktor Frankl",
+      "roleFr": "Fondateur de la Logothérapie",
+      "roleAr": "مؤسس العلاج بالمعنى والصلابة",
+      "roleEn": "Founder of Logotherapy",
+      "bioFr": "Ayant survécu aux camps, il a prouvé que l'homme peut donner un sens à toute souffrance.",
+      "bioAr": "أثبت عملياً أن الإنسان يستطيع تحويل أقسى المعاناة إلى مصدر لا يُقهر للمعنى والأمل.",
+      "bioEn": "Proved that humans can find and forge profound meaning even in extreme suffering.",
+      "url": "../../../thinkers/viktor-frankl/",
+      "img": "../../../thinkers/images/viktor-frankl.jpg"
+    }
+  ],
+  "quote": {
+    "textFr": "« La plus grande chose du monde, c'est de savoir être à soi. »",
+    "authorFr": "— Michel de Montaigne",
+    "textAr": "« أعظم ما في هذا العالم أن يعرف الإنسان كيف يكون ملكاً لنفسه. »",
+    "authorAr": "— ميشيل دي مونتين",
+    "textEn": "« The greatest thing in the world is to know how to belong to oneself. »",
+    "authorEn": "— Michel de Montaigne"
+  }
+};
+    let currentLang = localStorage.getItem('site_lang_v1') || 'fr';
+
+    const UI_TRANSLATIONS = {
+      fr: {
+        navHome: 'Accueil',
+        navArticles: 'Articles',
+        navThinkers: 'Penseurs',
+        navWisdom: 'Sagesse',
+        breadcrumbHome: 'Accueil',
+        breadcrumbWisdom: 'Sagesse',
+        secPrinciplesTitle: 'Les trois principes fondamentaux du parcours',
+        secExercisesTitle: 'Pratiques & Exercices d’Application',
+        exerciseIntroText: 'Exercices concrets pour ancrer cette sagesse dans votre quotidien :',
+        secArticlesTitle: 'Articles et études approfondies',
+        secThinkersTitle: 'Sages et penseurs de référence',
+        secRelatedTitle: 'Poursuivre votre exploration',
+        btnReadArticle: 'Lire l’article →',
+        btnBackWisdom: 'Retour à Sagesse',
+        langBtn: 'FR ⇄ AR'
+      },
+      ar: {
+        navHome: 'الرئيسية',
+        navArticles: 'المقالات',
+        navThinkers: 'المفكرون',
+        navWisdom: 'الحكمة',
+        breadcrumbHome: 'الرئيسية',
+        breadcrumbWisdom: 'الحكمة',
+        secPrinciplesTitle: 'الركائز الثلاث الأساسية للمسار',
+        secExercisesTitle: 'تطبيقات وتمارين عملية',
+        exerciseIntroText: 'تمارين تطبيقية لترسيخ هذه الحكمة في يومك وعلاقاتك :',
+        secArticlesTitle: 'مقالات ودراسات متعمقة',
+        secThinkersTitle: 'أعلام وحكماء المسار',
+        secRelatedTitle: 'مسارات موصى بها لمواصلة التعلم',
+        btnReadArticle: 'قراءة المقال ←',
+        btnBackWisdom: 'العودة إلى الحكمة',
+        langBtn: 'العربية ⇄ FR'
+      },
+      en: {
+        navHome: 'Home',
+        navArticles: 'Articles',
+        navThinkers: 'Thinkers',
+        navWisdom: 'Wisdom',
+        breadcrumbHome: 'Home',
+        breadcrumbWisdom: 'Wisdom',
+        secPrinciplesTitle: 'The Three Core Principles of the Path',
+        secExercisesTitle: 'Practical Exercises & Applications',
+        exerciseIntroText: 'Concrete exercises to anchor this wisdom in your daily life:',
+        secArticlesTitle: 'In-Depth Articles & Studies',
+        secThinkersTitle: 'Guiding Thinkers & Sages',
+        secRelatedTitle: 'Continue Your Exploration',
+        btnReadArticle: 'Read Article →',
+        btnBackWisdom: 'Back to Wisdom',
+        langBtn: 'EN ⇄ AR'
+      }
+    };
+
+    function applyLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('site_lang_v1', lang);
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+      const t = UI_TRANSLATIONS[lang] || UI_TRANSLATIONS.fr;
+
+      // Update static UI strings
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key]) el.textContent = t[key];
+      });
+
+      // Update Titles & Hero
+      const titleKey = lang === 'ar' ? 'titleAr' : (lang === 'en' ? 'titleEn' : 'titleFr');
+      const badgeKey = lang === 'ar' ? 'badgeAr' : (lang === 'en' ? 'badgeEn' : 'badgeFr');
+      const descKey = lang === 'ar' ? 'descAr' : (lang === 'en' ? 'descEn' : 'descFr');
+
+      document.title = `${PARCOURS_DATA[titleKey]} | ${t.breadcrumbWisdom} | Le Jardin des Pensées`;
+      document.getElementById('breadcrumbCurrent').textContent = PARCOURS_DATA[titleKey];
+      document.getElementById('parcoursBadge').textContent = PARCOURS_DATA[badgeKey];
+      document.getElementById('parcoursTitle').textContent = PARCOURS_DATA[titleKey];
+      document.getElementById('parcoursIntro').textContent = PARCOURS_DATA[descKey];
+
+      // Update Principles
+      const prList = PARCOURS_DATA.principles[lang] || PARCOURS_DATA.principles.fr;
+      document.getElementById('principlesGrid').innerHTML = prList.map(pr => `
+        <div class="principle-card">
+          <span class="principle-num">${pr.num}</span>
+          <h3 style="font-size: 1.15rem; color: #FAF6EF; margin: 0 0 8px; font-family: 'Playfair Display', serif;">${pr.title}</h3>
+          <p class="principle-text">${pr.text}</p>
+        </div>
+      `).join('');
+
+      // Update Exercises
+      const exList = PARCOURS_DATA.exercises[lang] || PARCOURS_DATA.exercises.fr;
+      document.getElementById('exercisesGrid').innerHTML = exList.map(ex => `
+        <div class="principle-card" style="background: rgba(9, 14, 11, 0.7);">
+          <h3 style="font-size: 1.1rem; color: var(--accent-gold); margin: 0 0 8px; font-family: 'Playfair Display', serif;">${ex.title}</h3>
+          <p class="principle-text" style="font-size: 0.92rem;">${ex.text}</p>
+        </div>
+      `).join('');
+
+      // Update Articles
+      document.getElementById('articlesGrid').innerHTML = PARCOURS_DATA.articles.map(art => `
+        <a href="${art.url}" class="article-card-visual">
+          <div class="article-thumb-box">
+            <img src="${art.img}" alt="${art[titleKey]}" class="article-thumb-img" loading="lazy">
+          </div>
+          <div class="article-card-body">
+            <span class="article-badge">${art.badge}</span>
+            <h3 class="article-title">${art[titleKey]}</h3>
+            <p class="article-desc">${art[descKey]}</p>
+            <span class="article-btn-link">${t.btnReadArticle}</span>
+          </div>
+        </a>
+      `).join('');
+
+      // Update Thinkers
+      document.getElementById('thinkersGrid').innerHTML = PARCOURS_DATA.thinkers.map(th => {
+        const nameKey = lang === 'ar' ? 'nameAr' : (lang === 'en' ? 'nameEn' : 'nameFr');
+        const roleKey = lang === 'ar' ? 'roleAr' : (lang === 'en' ? 'roleEn' : 'roleFr');
+        const bioKey = lang === 'ar' ? 'bioAr' : (lang === 'en' ? 'bioEn' : 'bioFr');
+        return `
+          <a href="${th.url}" class="figure-card-visual">
+            <div class="figure-avatar-box">
+              <img src="${th.img}" alt="${th[nameKey]}" class="figure-avatar-img" loading="lazy">
+            </div>
+            <h3 class="figure-name">${th[nameKey]}</h3>
+            <span class="figure-role">${th[roleKey]}</span>
+            <p class="figure-bio">${th[bioKey]}</p>
+          </a>
+        `;
+      }).join('');
+
+      // Update Quote
+      const quoteTextKey = lang === 'ar' ? 'textAr' : (lang === 'en' ? 'textEn' : 'textFr');
+      const quoteAuthKey = lang === 'ar' ? 'authorAr' : (lang === 'en' ? 'authorEn' : 'authorFr');
+      document.getElementById('quoteText').textContent = PARCOURS_DATA.quote[quoteTextKey];
+      document.getElementById('quoteAuthor').textContent = PARCOURS_DATA.quote[quoteAuthKey];
+    }
+
+    window.cycleLanguage = function() {
+      const next = currentLang === 'fr' ? 'ar' : (currentLang === 'ar' ? 'en' : 'fr');
+      applyLanguage(next);
+    };
+
+    applyLanguage(currentLang);
+  </script>
+</body>
+</html>

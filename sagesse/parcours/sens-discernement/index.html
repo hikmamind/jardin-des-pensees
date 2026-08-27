@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Sens & Discernement | Sagesse & Art de Vivre | Le Jardin des Pensées</title>
+  <meta name="description" id="pageMetaDesc" content="Cultiver la simplicité, le détachement conscient et la capacité à reconnaître ce qui mérite réellement notre attention.">
+  <link rel="canonical" href="https://jardin-des-pensees.onrender.com/sagesse/parcours/sens-discernement/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Sens & Discernement — Le Jardin des Pensées">
+  <meta property="og:description" content="Cultiver la simplicité, le détachement conscient et la capacité à reconnaître ce qui mérite réellement notre attention.">
+  <meta property="og:image" content="https://jardin-des-pensees.onrender.com/wis_simplicity_hd.jpg">
+  <meta property="og:url" content="https://jardin-des-pensees.onrender.com/sagesse/parcours/sens-discernement/">
+
+  <!-- Fonts & Shared Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../../style.css?v=16">
+  <link rel="stylesheet" href="../../sagesse_parcours.css">
+
+  <!-- JSON-LD Breadcrumb -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://jardin-des-pensees.onrender.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Sagesse", "item": "https://jardin-des-pensees.onrender.com/sagesse/" },
+      { "@type": "ListItem", "position": 3, "name": "Sens & Discernement", "item": "https://jardin-des-pensees.onrender.com/sagesse/parcours/sens-discernement/" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="navbar-header" style="position: sticky; top: 0; z-index: 100; background: rgba(9, 14, 11, 0.95); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(201, 168, 106, 0.22); padding: 14px 24px;">
+    <nav style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;" aria-label="Navigation principale">
+      <a href="../../../" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+        <img src="../../../brand_logo_official.png" alt="Hikma & Nour" style="width: 36px; height: 36px; object-fit: contain;">
+        <span style="font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 800; color: #C9A86A;">HIKMA & NOUR</span>
+      </a>
+
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <a href="../../../" style="color: #B5AFA4; text-decoration: none; font-size: 0.9rem; font-weight: 600;" data-i18n="navHome">Accueil</a>
+        <a href="../../../articles/" style="color: #B5AFA4; text-decoration: none; font-size: 0.9rem; font-weight: 600;" data-i18n="navArticles">Articles</a>
+        <a href="../../../thinkers/" style="color: #B5AFA4; text-decoration: none; font-size: 0.9rem; font-weight: 600;" data-i18n="navThinkers">Penseurs</a>
+        <a href="../../" style="color: #C9A86A; text-decoration: none; font-size: 0.9rem; font-weight: 700;" data-i18n="navWisdom">Sagesse</a>
+        <button type="button" id="langToggleBtn" onclick="window.cycleLanguage()" style="background: rgba(201, 168, 106, 0.14); border: 1px solid #C9A86A; color: #C9A86A; padding: 6px 14px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 0.85rem;">FR ⇄ AR</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wis-page-container">
+    
+    <!-- 1. Fil d'Ariane -->
+    <nav class="parcours-breadcrumb" aria-label="Fil d'Ariane">
+      <a href="../../../" data-i18n="breadcrumbHome">Accueil</a>
+      <span aria-hidden="true">›</span>
+      <a href="../../" data-i18n="breadcrumbWisdom">Sagesse</a>
+      <span aria-hidden="true">›</span>
+      <span aria-current="page" id="breadcrumbCurrent">Sens & Discernement</span>
+    </nav>
+
+    <!-- 2. Hero Section -->
+    <section class="wis-hero-box">
+      <img src="../../../wis_simplicity_hd.jpg" alt="Sens & Discernement" class="wis-hero-bg">
+      <div class="wis-hero-overlay"></div>
+      <div class="wis-hero-content">
+        <div class="wis-badge" id="parcoursBadge">🌿 Parcours 05 • Sens & Discernement</div>
+        <h1 class="wis-h1" id="parcoursTitle">Sens & Discernement</h1>
+        <p class="wis-intro" id="parcoursIntro">Cultiver la simplicité, le détachement conscient et la capacité à reconnaître ce qui mérite réellement notre attention.</p>
+      </div>
+    </section>
+
+    <!-- 3. Principes Fondamentaux -->
+    <section class="principles-section">
+      <h2 class="wis-section-heading" id="principlesHeading">
+        💡 <span data-i18n="secPrinciplesTitle">Les trois principes fondamentaux du parcours</span>
+      </h2>
+      <div class="principles-grid" id="principlesGrid">
+        
+          <div class="principle-card">
+            <span class="principle-num">01</span>
+            <h3 style="font-size: 1.15rem; color: #FAF6EF; margin: 0 0 8px; font-family: 'Playfair Display', serif;">Examiner ce qui mérite réellement notre énergie</h3>
+            <p class="principle-text">Notre attention est notre ressource la plus précieuse ; la gaspiller dans l'insignifiant détruit notre paix.</p>
+          </div>
+        
+          <div class="principle-card">
+            <span class="principle-num">02</span>
+            <h3 style="font-size: 1.15rem; color: #FAF6EF; margin: 0 0 8px; font-family: 'Playfair Display', serif;">Cultiver une simplicité volontaire</h3>
+            <p class="principle-text">La simplicité n'est pas un manque, mais le raffinement suprême qui fait de la place pour l'essentiel.</p>
+          </div>
+        
+          <div class="principle-card">
+            <span class="principle-num">03</span>
+            <h3 style="font-size: 1.15rem; color: #FAF6EF; margin: 0 0 8px; font-family: 'Playfair Display', serif;">Choisir selon ses valeurs plutôt que selon la pression extérieure</h3>
+            <p class="principle-text">L'alignement entre ce que nous croyons et ce que nous faisons est la source unique de la véritable estime de soi.</p>
+          </div>
+        
+      </div>
+    </section>
+
+    <!-- 4. Pratiques et Exercices -->
+    <section class="exercise-section">
+      <h2 class="exercise-title" id="exerciseHeading">
+        🎯 <span data-i18n="secExercisesTitle">Pratiques & Exercices d’Application</span>
+      </h2>
+      <p class="exercise-desc" id="exerciseIntro" data-i18n="exerciseIntroText">
+        Exercices concrets pour ancrer cette sagesse dans votre quotidien :
+      </p>
+      <div class="principles-grid" id="exercisesGrid" style="margin-top: 16px;">
+        
+          <div class="principle-card" style="background: rgba(9, 14, 11, 0.7);">
+            <h3 style="font-size: 1.1rem; color: var(--accent-gold); margin: 0 0 8px; font-family: 'Playfair Display', serif;">Hiérarchie personnelle des valeurs</h3>
+            <p class="principle-text" style="font-size: 0.92rem;">Sélectionnez vos 5 valeurs fondamentales et évaluez honnêtement si votre emploi du temps actuel les honore.</p>
+          </div>
+        
+          <div class="principle-card" style="background: rgba(9, 14, 11, 0.7);">
+            <h3 style="font-size: 1.1rem; color: var(--accent-gold); margin: 0 0 8px; font-family: 'Playfair Display', serif;">Semaine de désencombrement conscient</h3>
+            <p class="principle-text" style="font-size: 0.92rem;">Chaque jour de la semaine, éliminez une distraction numérique ou un objet superflu pour alléger votre esprit.</p>
+          </div>
+        
+          <div class="principle-card" style="background: rgba(9, 14, 11, 0.7);">
+            <h3 style="font-size: 1.1rem; color: var(--accent-gold); margin: 0 0 8px; font-family: 'Playfair Display', serif;">Audit du temps et de l'attention</h3>
+            <p class="principle-text" style="font-size: 0.92rem;">Notez pendant 3 jours où partent vos heures libres et réallouez consciemment 30 minutes quotidiennes au silence et à la réflexion.</p>
+          </div>
+        
+      </div>
+    </section>
+
+    <!-- 5. Articles Réels Associés -->
+    <section class="articles-section">
+      <h2 class="wis-section-heading" id="articlesHeading">
+        📚 <span data-i18n="secArticlesTitle">Articles et études approfondies</span>
+      </h2>
+      <div class="articles-grid" id="articlesGrid">
+        
+          <a href="../../../files/epicurisme-bonheur.html" class="article-card-visual">
+            <div class="article-thumb-box">
+              <img src="../../../articles/phoenix_strength_suffering.jpg" alt="L'art des plaisirs simples : la sagesse lumineuse d'Épicure" class="article-thumb-img" loading="lazy">
+            </div>
+            <div class="article-card-body">
+              <span class="article-badge">🏛️ Épicurisme & Simplicité</span>
+              <h3 class="article-title">L'art des plaisirs simples : la sagesse lumineuse d'Épicure</h3>
+              <p class="article-desc">Comprendre pourquoi la paix de l'âme naît de la suppression des craintes inutiles et des désirs démesurés.</p>
+              <span class="article-btn-link" data-i18n="btnReadArticle">Lire l’article →</span>
+            </div>
+          </a>
+        
+          <a href="../../../articles/happiness-in-wrong-place.html" class="article-card-visual">
+            <div class="article-thumb-box">
+              <img src="../../../articles/happiness_wrong_place_hero.jpg" alt="Pourquoi nous cherchons le bonheur au mauvais endroit" class="article-thumb-img" loading="lazy">
+            </div>
+            <div class="article-card-body">
+              <span class="article-badge">🌿 Discernement & Vie</span>
+              <h3 class="article-title">Pourquoi nous cherchons le bonheur au mauvais endroit</h3>
+              <p class="article-desc">Démystifier les mirages du statut et de la possession pour retrouver le sens véritable.</p>
+              <span class="article-btn-link" data-i18n="btnReadArticle">Lire l’article →</span>
+            </div>
+          </a>
+        
+          <a href="../../../articles/schopenhauer-happiness-illusion.html" class="article-card-visual">
+            <div class="article-thumb-box">
+              <img src="../../../articles/schopenhauer_happiness_illusion_hero.jpg" alt="Pourquoi Schopenhauer considérait-il le bonheur comme une illusion ?" class="article-thumb-img" loading="lazy">
+            </div>
+            <div class="article-card-body">
+              <span class="article-badge">📜 Lucidité & Paix</span>
+              <h3 class="article-title">Pourquoi Schopenhauer considérait-il le bonheur comme une illusion ?</h3>
+              <p class="article-desc">L'apaisement par la cessation des vaines convoitises et l'élévation de l'esprit.</p>
+              <span class="article-btn-link" data-i18n="btnReadArticle">Lire l’article →</span>
+            </div>
+          </a>
+        
+      </div>
+    </section>
+
+    <!-- 6. Sages et Penseurs Associés -->
+    <section class="figures-section">
+      <h2 class="wis-section-heading" id="thinkersHeading">
+        🏛️ <span data-i18n="secThinkersTitle">Sages et penseurs de référence</span>
+      </h2>
+      <div class="figures-grid" id="thinkersGrid">
+        
+          <a href="../../../thinkers/?thinker=laotseu" class="figure-card-visual">
+            <div class="figure-avatar-box">
+              <img src="../../../thinkers/images/laotseu.jpg" alt="Lao Tseu" class="figure-avatar-img" loading="lazy">
+            </div>
+            <h3 class="figure-name">Lao Tseu</h3>
+            <span class="figure-role">Maître du Détachement</span>
+            <p class="figure-bio">A enseigné que celui qui sait se contenter de ce qu'il a possède un trésor inestimable.</p>
+          </a>
+        
+          <a href="../../../thinkers/?thinker=spinoza" class="figure-card-visual">
+            <div class="figure-avatar-box">
+              <img src="../../../thinkers/images/spinoza.jpg" alt="Baruch Spinoza" class="figure-avatar-img" loading="lazy">
+            </div>
+            <h3 class="figure-name">Baruch Spinoza</h3>
+            <span class="figure-role">Philosophe de la Joie & Raison</span>
+            <p class="figure-bio">A démontré que la liberté suprême réside dans la compréhension rationnelle de la nature et de soi.</p>
+          </a>
+        
+          <a href="../../../thinkers/viktor-frankl/" class="figure-card-visual">
+            <div class="figure-avatar-box">
+              <img src="../../../thinkers/images/viktor-frankl.jpg" alt="Viktor Frankl" class="figure-avatar-img" loading="lazy">
+            </div>
+            <h3 class="figure-name">Viktor Frankl</h3>
+            <span class="figure-role">Penseur du Sens Existentiel</span>
+            <p class="figure-bio">Prouve que l'être humain est motivé par la volonté de trouver un sens à sa vie.</p>
+          </a>
+        
+      </div>
+    </section>
+
+    <!-- 7. Citation Banner -->
+    <section class="parcours-quote-banner">
+      <p class="parcours-quote-text" id="quoteText">« Celui qui sait se contenter de peu est le plus riche, car le contentement est la richesse de la nature. »</p>
+      <div class="parcours-quote-author" id="quoteAuthor">— Socrate</div>
+    </section>
+
+    <!-- 8. Autres Parcours Recommandés -->
+    <section class="related-parcours-section">
+      <h2 class="wis-section-heading" id="relatedHeading">
+        🌱 <span data-i18n="secRelatedTitle">Poursuivre votre exploration</span>
+      </h2>
+      <div class="related-parcours-grid">
+        
+          <a href="../sagesse-de-vie/" class="related-parcours-card">
+            <span style="font-size: 0.8rem; color: var(--accent-gold); font-weight: 800; text-transform: uppercase;">Parcours 01</span>
+            <h4>Sagesse de vie & Art de vivre</h4>
+            <p>Découvrir les enseignements universels permettant de distinguer les besoins réels des illusions du bonheur extérieur.</p>
+            <span>Découvrir le parcours →</span>
+          </a>
+        
+          <a href="../patience-paix-interieure/" class="related-parcours-card">
+            <span style="font-size: 0.8rem; color: var(--accent-gold); font-weight: 800; text-transform: uppercase;">Parcours 02</span>
+            <h4>Patience & Paix intérieure</h4>
+            <p>Construire une stabilité intérieure capable de résister aux difficultés, aux frustrations et à l’incertitude.</p>
+            <span>Découvrir le parcours →</span>
+          </a>
+        
+      </div>
+    </section>
+
+    <!-- 9. Bouton Retour Sagesse V5.3 -->
+    <section class="parcours-back-section">
+      <a class="parcours-back-link" href="../../">
+        <span class="back-arrow" aria-hidden="true">←</span>
+        <span id="backBtnText" data-i18n="btnBackWisdom">Retour à Sagesse</span>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="parcours-footer">
+    <p>© 2026 Le Jardin des Pensées — HIKMA & NOUR. Tous droits réservés.</p>
+  </footer>
+
+  <!-- Multilingual Engine Script -->
+  <script type="module">
+    const PARCOURS_DATA = {
+  "slug": "sens-discernement",
+  "num": "05",
+  "img": "wis_simplicity_hd.jpg",
+  "badgeAr": "🌿 المسار 05 • المعنى والبصيرة",
+  "badgeFr": "🌿 Parcours 05 • Sens & Discernement",
+  "badgeEn": "🌿 Path 05 • Meaning & Discernment",
+  "titleAr": "المعنى والبصيرة",
+  "titleFr": "Sens & Discernement",
+  "titleEn": "Meaning & Discernment",
+  "descAr": "ترسيخ البساطة الواعية، والتحرر من الضغوط الزائفة، وتوجيه الاهتمام لما يستحق حقاً.",
+  "descFr": "Cultiver la simplicité, le détachement conscient et la capacité à reconnaître ce qui mérite réellement notre attention.",
+  "descEn": "Cultivate simplicity, conscious detachment, and the clarity to recognize what truly deserves our focus.",
+  "principles": {
+    "fr": [
+      {
+        "num": "01",
+        "title": "Examiner ce qui mérite réellement notre énergie",
+        "text": "Notre attention est notre ressource la plus précieuse ; la gaspiller dans l'insignifiant détruit notre paix."
+      },
+      {
+        "num": "02",
+        "title": "Cultiver une simplicité volontaire",
+        "text": "La simplicité n'est pas un manque, mais le raffinement suprême qui fait de la place pour l'essentiel."
+      },
+      {
+        "num": "03",
+        "title": "Choisir selon ses valeurs plutôt que selon la pression extérieure",
+        "text": "L'alignement entre ce que nous croyons et ce que nous faisons est la source unique de la véritable estime de soi."
+      }
+    ],
+    "ar": [
+      {
+        "num": "01",
+        "title": "فحص ما يستحق استثمار طاقتنا ووقتنا بدقة",
+        "text": "انتباهك هو أثمن مواردك الذهنية؛ وتبديده في التوافه يسلبك راحة البال وصفاء الذهن."
+      },
+      {
+        "num": "02",
+        "title": "تنمية البساطة الواعية والاستغناء عما لا ينفع",
+        "text": "ليست البساطة حرماناً، بل هي أرقى أشكال الرقي التي تفرغ المساحة لما هو جوهري."
+      },
+      {
+        "num": "03",
+        "title": "اتخاذ القرارات وفق المبادئ الذاتية لا التوقعات الخارجية",
+        "text": "التطابق بين قيمك الراسخة وأفعالك اليومية هو الينبوع الوحيد لتقدير الذات الحقيقي."
+      }
+    ],
+    "en": [
+      {
+        "num": "01",
+        "title": "Examine what truly deserves our finite energy",
+        "text": "Attention is our most precious resource; squandering it on trivialities destroys inner peace."
+      },
+      {
+        "num": "02",
+        "title": "Cultivate voluntary simplicity",
+        "text": "Simplicity is not deprivation, but the supreme refinement that makes room for what is essential."
+      },
+      {
+        "num": "03",
+        "title": "Choose based on core values rather than external pressure",
+        "text": "Alignment between what we believe and how we live is the sole source of genuine self-esteem."
+      }
+    ]
+  },
+  "exercises": {
+    "fr": [
+      {
+        "title": "Hiérarchie personnelle des valeurs",
+        "text": "Sélectionnez vos 5 valeurs fondamentales et évaluez honnêtement si votre emploi du temps actuel les honore."
+      },
+      {
+        "title": "Semaine de désencombrement conscient",
+        "text": "Chaque jour de la semaine, éliminez une distraction numérique ou un objet superflu pour alléger votre esprit."
+      },
+      {
+        "title": "Audit du temps et de l'attention",
+        "text": "Notez pendant 3 jours où partent vos heures libres et réallouez consciemment 30 minutes quotidiennes au silence et à la réflexion."
+      }
+    ],
+    "ar": [
+      {
+        "title": "ترتيب سلم القيم الشخصية",
+        "text": "حدد أهم 5 قيم توجه حياتك وقيم بصدق مدى مطابقة جدول مواعيدك وأولوياتك لها."
+      },
+      {
+        "title": "أسبوع التبسيط والتخفف الواعي",
+        "text": "تخلص يومياً طوال أسبوع من مشتت رقمي أو عبء لا لزوم له لتمنح عقلك متسعاً للتنفس."
+      },
+      {
+        "title": "تدقيق الوقت والانتباه اليومي",
+        "text": "رصد أين تذهب ساعات فراغك لثلاثة أيام، وأعد توجيه 30 دقيقة يومياً للتأمل والقراءة الرصينة."
+      }
+    ],
+    "en": [
+      {
+        "title": "Personal Values Hierarchy",
+        "text": "Select your 5 fundamental values and evaluate honestly whether your current daily calendar honors them."
+      },
+      {
+        "title": "Conscious Simplification Week",
+        "text": "Each day of the week, eliminate one digital distraction or superfluous burden to clear mental space."
+      },
+      {
+        "title": "Time and Attention Audit",
+        "text": "Track where your free hours go for 3 days and intentionally reallocate 30 daily minutes to quiet reflection."
+      }
+    ]
+  },
+  "articles": [
+    {
+      "url": "../../../files/epicurisme-bonheur.html",
+      "img": "../../../articles/phoenix_strength_suffering.jpg",
+      "badge": "🏛️ Épicurisme & Simplicité",
+      "titleFr": "L'art des plaisirs simples : la sagesse lumineuse d'Épicure",
+      "titleAr": "فن اللذات البسيطة : حكمة إبيقور المضيئة في فن العيش",
+      "titleEn": "The Art of Simple Pleasures: Epicurus' Luminous Wisdom",
+      "descFr": "Comprendre pourquoi la paix de l'âme naît de la suppression des craintes inutiles et des désirs démesurés.",
+      "descAr": "كيف تتحقق الطمأنينة النفسية من خلال التحرر من المخاوف الزائفة وتقدير اللذات الطبيعية الهادئة.",
+      "descEn": "Understanding how tranquility arises from removing unnecessary fears and excessive desires."
+    },
+    {
+      "url": "../../../articles/happiness-in-wrong-place.html",
+      "img": "../../../articles/happiness_wrong_place_hero.jpg",
+      "badge": "🌿 Discernement & Vie",
+      "titleFr": "Pourquoi nous cherchons le bonheur au mauvais endroit",
+      "titleAr": "لماذا نبحث عن السعادة في المكان الخاطئ",
+      "titleEn": "Why We Search for Happiness in the Wrong Places",
+      "descFr": "Démystifier les mirages du statut et de la possession pour retrouver le sens véritable.",
+      "descAr": "تفكيك أوهام المظاهر الخارجية والمكانة الزائفة للعودة إلى جوهر الغنى الروحي.",
+      "descEn": "Demystifying the mirages of status and possession to rediscover authentic meaning."
+    },
+    {
+      "url": "../../../articles/schopenhauer-happiness-illusion.html",
+      "img": "../../../articles/schopenhauer_happiness_illusion_hero.jpg",
+      "badge": "📜 Lucidité & Paix",
+      "titleFr": "Pourquoi Schopenhauer considérait-il le bonheur comme une illusion ?",
+      "titleAr": "لماذا اعتبر شوبنهاور أن السعادة مجرد وهم ؟",
+      "titleEn": "Why Schopenhauer Considered Happiness an Illusion",
+      "descFr": "L'apaisement par la cessation des vaines convoitises et l'élévation de l'esprit.",
+      "descAr": "التحرر من قلق الرغبات من خلال الارتقاء الفكري والصفاء الروحي.",
+      "descEn": "Attaining peace through the cessation of futile cravings and elevation of mind."
+    }
+  ],
+  "thinkers": [
+    {
+      "id": "laotseu",
+      "nameFr": "Lao Tseu",
+      "nameAr": "لاو تسي",
+      "nameEn": "Lao Tzu",
+      "roleFr": "Maître du Détachement",
+      "roleAr": "حكيم التبسيط والتخلي",
+      "roleEn": "Master of Detachment",
+      "bioFr": "A enseigné que celui qui sait se contenter de ce qu'il a possède un trésor inestimable.",
+      "bioAr": "علم أن من يعرف الاكتفاء بما لديه يمتلك أعظم ثروة لا تنفد.",
+      "bioEn": "Taught that whoever is content with what they have possesses an inexhaustible treasure.",
+      "url": "../../../thinkers/?thinker=laotseu",
+      "img": "../../../thinkers/images/laotseu.jpg"
+    },
+    {
+      "id": "spinoza",
+      "nameFr": "Baruch Spinoza",
+      "nameAr": "باروخ سبينوزا",
+      "nameEn": "Baruch Spinoza",
+      "roleFr": "Philosophe de la Joie & Raison",
+      "roleAr": "فيلسوف البصيرة والبهجة العقلية",
+      "roleEn": "Philosopher of Joy & Reason",
+      "bioFr": "A démontré que la liberté suprême réside dans la compréhension rationnelle de la nature et de soi.",
+      "bioAr": "أكد أن أعلى درجات الحرية والسعادة تنبع من الفهم العقلي العميق للذات وللكون.",
+      "bioEn": "Demonstrated that supreme freedom lies in rational understanding of nature and oneself.",
+      "url": "../../../thinkers/?thinker=spinoza",
+      "img": "../../../thinkers/images/spinoza.jpg"
+    },
+    {
+      "id": "viktor-frankl",
+      "nameFr": "Viktor Frankl",
+      "nameAr": "فيكتور فرانكل",
+      "nameEn": "Viktor Frankl",
+      "roleFr": "Penseur du Sens Existentiel",
+      "roleAr": "مستكشف غاية الوجود والمعنى",
+      "roleEn": "Thinker of Existential Meaning",
+      "bioFr": "Prouve que l'être humain est motivé par la volonté de trouver un sens à sa vie.",
+      "bioAr": "أثبت أن المحرك الأساسي للإنسان هو البحث عن رسالة وغاية نبيلة يعيش لأجلها.",
+      "bioEn": "Proved that human beings are fundamentally motivated by the will to find meaning.",
+      "url": "../../../thinkers/viktor-frankl/",
+      "img": "../../../thinkers/images/viktor-frankl.jpg"
+    }
+  ],
+  "quote": {
+    "textFr": "« Celui qui sait se contenter de peu est le plus riche, car le contentement est la richesse de la nature. »",
+    "authorFr": "— Socrate",
+    "textAr": "« من يعرف الاكتفاء بالقليل هو الأغنى على الإطلاق، لأن القناعة هي ثروة الطبيعة الفطرية. »",
+    "authorAr": "— سقراط",
+    "textEn": "« He who is contented with the least, is the richest, for contentment is nature's wealth. »",
+    "authorEn": "— Socrates"
+  }
+};
+    let currentLang = localStorage.getItem('site_lang_v1') || 'fr';
+
+    const UI_TRANSLATIONS = {
+      fr: {
+        navHome: 'Accueil',
+        navArticles: 'Articles',
+        navThinkers: 'Penseurs',
+        navWisdom: 'Sagesse',
+        breadcrumbHome: 'Accueil',
+        breadcrumbWisdom: 'Sagesse',
+        secPrinciplesTitle: 'Les trois principes fondamentaux du parcours',
+        secExercisesTitle: 'Pratiques & Exercices d’Application',
+        exerciseIntroText: 'Exercices concrets pour ancrer cette sagesse dans votre quotidien :',
+        secArticlesTitle: 'Articles et études approfondies',
+        secThinkersTitle: 'Sages et penseurs de référence',
+        secRelatedTitle: 'Poursuivre votre exploration',
+        btnReadArticle: 'Lire l’article →',
+        btnBackWisdom: 'Retour à Sagesse',
+        langBtn: 'FR ⇄ AR'
+      },
+      ar: {
+        navHome: 'الرئيسية',
+        navArticles: 'المقالات',
+        navThinkers: 'المفكرون',
+        navWisdom: 'الحكمة',
+        breadcrumbHome: 'الرئيسية',
+        breadcrumbWisdom: 'الحكمة',
+        secPrinciplesTitle: 'الركائز الثلاث الأساسية للمسار',
+        secExercisesTitle: 'تطبيقات وتمارين عملية',
+        exerciseIntroText: 'تمارين تطبيقية لترسيخ هذه الحكمة في يومك وعلاقاتك :',
+        secArticlesTitle: 'مقالات ودراسات متعمقة',
+        secThinkersTitle: 'أعلام وحكماء المسار',
+        secRelatedTitle: 'مسارات موصى بها لمواصلة التعلم',
+        btnReadArticle: 'قراءة المقال ←',
+        btnBackWisdom: 'العودة إلى الحكمة',
+        langBtn: 'العربية ⇄ FR'
+      },
+      en: {
+        navHome: 'Home',
+        navArticles: 'Articles',
+        navThinkers: 'Thinkers',
+        navWisdom: 'Wisdom',
+        breadcrumbHome: 'Home',
+        breadcrumbWisdom: 'Wisdom',
+        secPrinciplesTitle: 'The Three Core Principles of the Path',
+        secExercisesTitle: 'Practical Exercises & Applications',
+        exerciseIntroText: 'Concrete exercises to anchor this wisdom in your daily life:',
+        secArticlesTitle: 'In-Depth Articles & Studies',
+        secThinkersTitle: 'Guiding Thinkers & Sages',
+        secRelatedTitle: 'Continue Your Exploration',
+        btnReadArticle: 'Read Article →',
+        btnBackWisdom: 'Back to Wisdom',
+        langBtn: 'EN ⇄ AR'
+      }
+    };
+
+    function applyLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('site_lang_v1', lang);
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+      const t = UI_TRANSLATIONS[lang] || UI_TRANSLATIONS.fr;
+
+      // Update static UI strings
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key]) el.textContent = t[key];
+      });
+
+      // Update Titles & Hero
+      const titleKey = lang === 'ar' ? 'titleAr' : (lang === 'en' ? 'titleEn' : 'titleFr');
+      const badgeKey = lang === 'ar' ? 'badgeAr' : (lang === 'en' ? 'badgeEn' : 'badgeFr');
+      const descKey = lang === 'ar' ? 'descAr' : (lang === 'en' ? 'descEn' : 'descFr');
+
+      document.title = `${PARCOURS_DATA[titleKey]} | ${t.breadcrumbWisdom} | Le Jardin des Pensées`;
+      document.getElementById('breadcrumbCurrent').textContent = PARCOURS_DATA[titleKey];
+      document.getElementById('parcoursBadge').textContent = PARCOURS_DATA[badgeKey];
+      document.getElementById('parcoursTitle').textContent = PARCOURS_DATA[titleKey];
+      document.getElementById('parcoursIntro').textContent = PARCOURS_DATA[descKey];
+
+      // Update Principles
+      const prList = PARCOURS_DATA.principles[lang] || PARCOURS_DATA.principles.fr;
+      document.getElementById('principlesGrid').innerHTML = prList.map(pr => `
+        <div class="principle-card">
+          <span class="principle-num">${pr.num}</span>
+          <h3 style="font-size: 1.15rem; color: #FAF6EF; margin: 0 0 8px; font-family: 'Playfair Display', serif;">${pr.title}</h3>
+          <p class="principle-text">${pr.text}</p>
+        </div>
+      `).join('');
+
+      // Update Exercises
+      const exList = PARCOURS_DATA.exercises[lang] || PARCOURS_DATA.exercises.fr;
+      document.getElementById('exercisesGrid').innerHTML = exList.map(ex => `
+        <div class="principle-card" style="background: rgba(9, 14, 11, 0.7);">
+          <h3 style="font-size: 1.1rem; color: var(--accent-gold); margin: 0 0 8px; font-family: 'Playfair Display', serif;">${ex.title}</h3>
+          <p class="principle-text" style="font-size: 0.92rem;">${ex.text}</p>
+        </div>
+      `).join('');
+
+      // Update Articles
+      document.getElementById('articlesGrid').innerHTML = PARCOURS_DATA.articles.map(art => `
+        <a href="${art.url}" class="article-card-visual">
+          <div class="article-thumb-box">
+            <img src="${art.img}" alt="${art[titleKey]}" class="article-thumb-img" loading="lazy">
+          </div>
+          <div class="article-card-body">
+            <span class="article-badge">${art.badge}</span>
+            <h3 class="article-title">${art[titleKey]}</h3>
+            <p class="article-desc">${art[descKey]}</p>
+            <span class="article-btn-link">${t.btnReadArticle}</span>
+          </div>
+        </a>
+      `).join('');
+
+      // Update Thinkers
+      document.getElementById('thinkersGrid').innerHTML = PARCOURS_DATA.thinkers.map(th => {
+        const nameKey = lang === 'ar' ? 'nameAr' : (lang === 'en' ? 'nameEn' : 'nameFr');
+        const roleKey = lang === 'ar' ? 'roleAr' : (lang === 'en' ? 'roleEn' : 'roleFr');
+        const bioKey = lang === 'ar' ? 'bioAr' : (lang === 'en' ? 'bioEn' : 'bioFr');
+        return `
+          <a href="${th.url}" class="figure-card-visual">
+            <div class="figure-avatar-box">
+              <img src="${th.img}" alt="${th[nameKey]}" class="figure-avatar-img" loading="lazy">
+            </div>
+            <h3 class="figure-name">${th[nameKey]}</h3>
+            <span class="figure-role">${th[roleKey]}</span>
+            <p class="figure-bio">${th[bioKey]}</p>
+          </a>
+        `;
+      }).join('');
+
+      // Update Quote
+      const quoteTextKey = lang === 'ar' ? 'textAr' : (lang === 'en' ? 'textEn' : 'textFr');
+      const quoteAuthKey = lang === 'ar' ? 'authorAr' : (lang === 'en' ? 'authorEn' : 'authorFr');
+      document.getElementById('quoteText').textContent = PARCOURS_DATA.quote[quoteTextKey];
+      document.getElementById('quoteAuthor').textContent = PARCOURS_DATA.quote[quoteAuthKey];
+    }
+
+    window.cycleLanguage = function() {
+      const next = currentLang === 'fr' ? 'ar' : (currentLang === 'ar' ? 'en' : 'fr');
+      applyLanguage(next);
+    };
+
+    applyLanguage(currentLang);
+  </script>
+</body>
+</html>

@@ -169,6 +169,19 @@
       }
     }
 
+    .wis-parcours-card,
+    .wis-parcours-card:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+    .wis-parcours-card {
+      cursor: pointer;
+    }
+    .wis-parcours-card:focus-visible {
+      outline: 3px solid rgba(231, 184, 75, 0.55);
+      outline-offset: 4px;
+    }
+
     .wis-parcours-card {
       background: rgba(14, 18, 15, 0.88);
       border: 1px solid rgba(223, 177, 91, 0.2);
@@ -563,8 +576,8 @@
         
         <div class="wis-parcours-grid">
           
-          <!-- Parcours 01: الحكمة في الحياة -->
-          <article class="wis-parcours-card">
+          <!-- Parcours 01: الحكمة في الحياة وفن العيش -->
+          <a class="wis-parcours-card" href="./parcours/sagesse-de-vie/">
             <div class="wis-parcours-img-box">
               <img src="../wis_life_hd.jpg" alt="الحكمة في الحياة" class="wis-parcours-img" loading="lazy">
               <div class="wis-parcours-overlay"></div>
@@ -575,12 +588,12 @@
                 <h3 class="wis-parcours-title" id="p1Title">الحكمة في الحياة</h3>
                 <p class="wis-parcours-desc" id="p1Desc">خلاصات الفكر الإنساني الخالدة في البحث عن الرضا والتحرر من أوهام السعادة الخارجية.</p>
               </div>
-              <a href="../articles/happiness-in-wrong-place.html" class="pillar-card-link" id="p1Btn">استكشف المسار ←</a>
+              <span class="pillar-card-link" id="p1Btn">استكشف المسار ←</span>
             </div>
-          </article>
+          </a>
 
           <!-- Parcours 02: الصبر والسكينة -->
-          <article class="wis-parcours-card">
+          <a class="wis-parcours-card" href="./parcours/patience-paix-interieure/">
             <div class="wis-parcours-img-box">
               <img src="../wis_patience_hd.jpg" alt="الصبر والسكينة" class="wis-parcours-img" loading="lazy">
               <div class="wis-parcours-overlay"></div>
@@ -591,12 +604,12 @@
                 <h3 class="wis-parcours-title" id="p2Title">الصبر والسكينة</h3>
                 <p class="wis-parcours-desc" id="p2Desc">بناء القلعة الداخلية الرواقية وتطوير صلابة روحية تحميك من اضطرابات الحياة.</p>
               </div>
-              <a href="../files/wisdom-stoicism-control.html" class="pillar-card-link" id="p2Btn">استكشف المسار ←</a>
+              <span class="pillar-card-link" id="p2Btn">استكشف المسار ←</span>
             </div>
-          </article>
+          </a>
 
-          <!-- Parcours 03: فهم الإنسان والعلاقات (Content Coming Soon - Honest Placeholder) -->
-          <article class="wis-parcours-card">
+          <!-- Parcours 03: فهم الإنسان والعلاقات (Parcours Actif) -->
+          <a class="wis-parcours-card" href="./parcours/humain-relations/">
             <div class="wis-parcours-img-box">
               <img src="../wis_relationships_hd.jpg" alt="فهم الإنسان والعلاقات" class="wis-parcours-img" loading="lazy">
               <div class="wis-parcours-overlay"></div>
@@ -607,12 +620,12 @@
                 <h3 class="wis-parcours-title" id="p3Title">فهم الإنسان والعلاقات</h3>
                 <p class="wis-parcours-desc" id="p3Desc">حكمة التعامل مع طبائع البشر، وضع الحدود الصامتة، والتسامح الرصين في العلاقات.</p>
               </div>
-              <div class="wis-coming-soon-pill" id="p3Btn">⏳ قريبًا</div>
+              <span class="pillar-card-link" id="p3Btn">استكشف المسار ←</span>
             </div>
-          </article>
+          </a>
 
           <!-- Parcours 04: التجربة والنضج -->
-          <article class="wis-parcours-card">
+          <a class="wis-parcours-card" href="./parcours/experience-maturite/">
             <div class="wis-parcours-img-box">
               <img src="../wis_philosophers_hd.jpg" alt="التجربة والنضج" class="wis-parcours-img" loading="lazy">
               <div class="wis-parcours-overlay"></div>
@@ -623,12 +636,12 @@
                 <h3 class="wis-parcours-title" id="p4Title">التجربة والنضج</h3>
                 <p class="wis-parcours-desc" id="p4Desc">دروس عميقة مستخلصة من تجارب كبار المفكرين في التعامل مع الزمن وتقلبات الدهر.</p>
               </div>
-              <a href="../articles/hikma-citations-philosophiques.html" class="pillar-card-link" id="p4Btn">استكشف المسار ←</a>
+              <span class="pillar-card-link" id="p4Btn">استكشف المسار ←</span>
             </div>
-          </article>
+          </a>
 
           <!-- Parcours 05: المعنى والبصيرة -->
-          <article class="wis-parcours-card">
+          <a class="wis-parcours-card" href="./parcours/sens-discernement/">
             <div class="wis-parcours-img-box">
               <img src="../wis_simplicity_hd.jpg" alt="المعنى والبصيرة" class="wis-parcours-img" loading="lazy">
               <div class="wis-parcours-overlay"></div>
@@ -639,9 +652,9 @@
                 <h3 class="wis-parcours-title" id="p5Title">المعنى والبصيرة</h3>
                 <p class="wis-parcours-desc" id="p5Desc">حكمة الاستغناء الواعي، البساطة الراقية، واكتشاف الغنى الحقيقي في طمأنينة الروح.</p>
               </div>
-              <a href="../files/epicurisme-bonheur.html" class="pillar-card-link" id="p5Btn">استكشف المسار ←</a>
+              <span class="pillar-card-link" id="p5Btn">استكشف المسار ←</span>
             </div>
-          </article>
+          </a>
 
         </div>
       </section>
@@ -772,7 +785,7 @@
         p3Num: "03 / المسار الثالث",
         p3Title: "فهم الإنسان والعلاقات",
         p3Desc: "حكمة التعامل مع طبائع البشر، وضع الحدود الصامتة، والتسامح الرصين في العلاقات.",
-        p3Btn: "⏳ قريبًا",
+        p3Btn: "استكشف المسار ←",
         p4Num: "04 / المسار الرابع",
         p4Title: "التجربة والنضج",
         p4Desc: "دروس عميقة مستخلصة من تجارب كبار المفكرين في التعامل مع الزمن وتقلبات الدهر.",
@@ -825,7 +838,7 @@
         p3Num: "03 / Troisième Parcours",
         p3Title: "Comprendre l'Humain & Relations",
         p3Desc: "L'art des limites silencieuses, du recul et de la sérénité dans les relations humaines.",
-        p3Btn: "⏳ Bientôt disponible",
+        p3Btn: "Explorer le parcours →",
         p4Num: "04 / Quatrième Parcours",
         p4Title: "Expérience & Maturité",
         p4Desc: "Leçons profondes tirées du temps qui passe et de l'expérience des grands sédentaires de la pensée.",
@@ -878,7 +891,7 @@
         p3Num: "03 / Path Three",
         p3Title: "Understanding Humans & Relationships",
         p3Desc: "The wisdom of silent boundaries, detachment, and emotional clarity in relationships.",
-        p3Btn: "⏳ Coming Soon",
+        p3Btn: "Explore Path →",
         p4Num: "04 / Path Four",
         p4Title: "Experience & Maturity",
         p4Desc: "Profound lessons drawn from the passage of time and the experience of great thinkers.",
