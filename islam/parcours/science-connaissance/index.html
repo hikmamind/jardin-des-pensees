@@ -50,7 +50,7 @@
         <a href="../../../articles/" style="color: #B5AFA4; text-decoration: none; font-size: 0.9rem; font-weight: 600;" data-i18n="navArticles">Articles</a>
         <a href="../../../thinkers/" style="color: #B5AFA4; text-decoration: none; font-size: 0.9rem; font-weight: 600;" data-i18n="navThinkers">Penseurs</a>
         <a href="../../" style="color: #C9A86A; text-decoration: none; font-size: 0.9rem; font-weight: 700;" data-i18n="navIslam">Pensée islamique</a>
-        <button type="button" id="langToggleBtn" onclick="window.cycleLanguage()" style="background: rgba(201, 168, 106, 0.14); border: 1px solid #C9A86A; color: #C9A86A; padding: 6px 14px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 0.85rem;">FR ⇄ AR</button>
+        <button type="button" id="langToggleBtn" onclick="window.cycleLanguage()" style="background: rgba(201, 168, 106, 0.14); border: 1px solid #C9A86A; color: #C9A86A; padding: 6px 14px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 0.85rem;" data-i18n="langBtn">🌐 اللغة / Langue</button>
       </div>
     </nav>
   </header>
@@ -438,7 +438,7 @@
     "authorEn": "— Al-Ghazali (Letter to a Disciple)"
   }
 };
-    let currentLang = localStorage.getItem('site_lang_v1') || 'fr';
+    let currentLang = localStorage.getItem('site_lang_v1') || localStorage.getItem('lang') || 'ar';
 
     const UI_TRANSLATIONS = {
       fr: {
