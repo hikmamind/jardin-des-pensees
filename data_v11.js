@@ -4350,6 +4350,32 @@ const TIKTOK_DATA = {
           ]
 },
         {
+          "id": "petites-habitudes-grande-decision",
+          "file": "petites-habitudes-grande-decision.html",
+          "title": "Pourquoi les petites habitudes changent plus qu’une grande décision",
+          "category": "development",
+          "categoryName": "Développement & Maîtrise de Soi",
+          "readTime": "8 min de lecture",
+          "date": "15 Janvier 2025",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Découvrez pourquoi les petites habitudes répétées transforment davantage la vie qu’une grande décision isolée, et comment construire un système durable de progression.",
+          "image": "petites_habitudes_hero.jpg",
+          "imageAlt": "Pourquoi les petites habitudes changent plus qu’une grande décision",
+          "quote": "Une décision ouvre une porte ; une habitude construit le chemin.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+                    "Le piège des grandes décisions",
+                    "Pourquoi les petits gestes résistent mieux au temps",
+                    "L’effet composé : quand le minuscule devient puissant",
+                    "Le rôle de l’identité dans les habitudes",
+                    "Pourquoi commencer petit n’est pas manquer d’ambition"
+          ],
+          "body": [
+                    "Une décision donne une direction, mais ce sont les gestes répétés qui construisent réellement le changement.",
+                    "Les petits gestes réduisent la résistance et survivent à la fatigue des journées ordinaires."
+          ]
+},
+        {
           "id": "self-discipline",
           "file": "self-discipline.html",
           "title": "Comment cultiver l'autodiscipline ? L'art de la persévérance",
@@ -8654,6 +8680,32 @@ const TIKTOK_DATA = {
           "body": [
                     "Premature intensity is the primary killer of new habits: always begin smaller than intuition suggests.",
                     "Neural consolidation is driven strictly by repetition frequency rather than flawless execution."
+          ]
+},
+        {
+          "id": "petites-habitudes-grande-decision",
+          "file": "petites-habitudes-grande-decision.html",
+          "title": "Why Small Habits Change More Than One Big Decision",
+          "category": "development",
+          "categoryName": "Personal Growth & Mastery",
+          "readTime": "8 min read",
+          "date": "January 15, 2025",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Discover why repeated small habits transform your life more than one isolated big decision, and how to build a sustainable system of progress.",
+          "image": "petites_habitudes_hero.jpg",
+          "imageAlt": "Why Small Habits Change More Than One Big Decision",
+          "quote": "A decision opens the door; a habit builds the path.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+                    "The trap of big decisions",
+                    "Why small actions last longer",
+                    "The compound effect: when the tiny becomes powerful",
+                    "The role of identity in habits",
+                    "Why starting small is not a lack of ambition"
+          ],
+          "body": [
+                    "A decision opens the door, but repeated small actions make us walk through it every day.",
+                    "Small habits reduce internal resistance and remain practicable even on average, imperfect days."
           ]
 },
         {
@@ -13159,6 +13211,32 @@ const TIKTOK_DATA = {
           "body": [
                     "فخ البدايات المفرطة هو العدو الأول للعادات؛ ابدأ دائماً بأصغر مما تظن.",
                     "ترسيخ المسار العصبي للعادة يرتهن بعدد مرات التكرار وليس بكمال الأداء في كل مرة."
+          ]
+},
+        {
+          "id": "petites-habitudes-grande-decision",
+          "file": "petites-habitudes-grande-decision.html",
+          "title": "لماذا تغيّر العادات الصغيرة حياتنا أكثر من القرارات الكبيرة؟",
+          "category": "development",
+          "categoryName": "تطوير الذات والإنتاجية",
+          "readTime": "٨ دقائق قراءة",
+          "date": "١٥ يناير ٢٠٢٥",
+          "author": "حكمة ونور | Hikma & Nour",
+          "desc": "اكتشف لماذا تغيّر العادات الصغيرة المتكررة حياتنا أكثر من قرار كبير معزول، وكيف تبني نظامًا عمليًا للتقدم المستمر.",
+          "image": "petites_habitudes_hero.jpg",
+          "imageAlt": "لماذا تغيّر العادات الصغيرة حياتنا أكثر من القرارات الكبيرة؟",
+          "quote": "القرار يفتح الباب، لكن العادة تبني الطريق.",
+          "quoteAuthor": "— حكمة ونور",
+          "toc": [
+                    "فخ القرارات الكبيرة",
+                    "لماذا تصمد الأفعال الصغيرة أكثر مع الزمن؟",
+                    "الأثر التراكمي: حين يصبح الشيء الصغير قويًا",
+                    "دور الهوية في بناء العادات",
+                    "لماذا لا يعني البدء صغيرًا ضعف الطموح؟"
+          ],
+          "body": [
+                    "القرار الكبير قد يفتح الباب، لكنه لا يجعلنا نعبره كل يوم. الذي يجعلنا نعبر هو الفعل الصغير المتكرر.",
+                    "الأفعال الصغيرة تقلل المقاومة الداخلية وتحافظ على استمرارية المسار حتى في الأيام الصعبة."
           ]
 },
         {
