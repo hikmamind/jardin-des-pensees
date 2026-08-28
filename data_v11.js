@@ -3214,7 +3214,7 @@ const TIKTOK_DATA = {
           "author": "Hikma & Nour | حكمة ونور",
           "desc": "A philosophical and psychological guide to regaining balance, honoring recovery time, and consciously rebuilding your life after major trials.",
           "image": "developpement-personnel/images/thumb-nouvel-essor-apres-difficultes.jpg",
-          "imageAlt": "Rising and Growing After Adversity",
+          "imageAlt": "نبتة صغيرة تنمو بين شقوق حجر داكن بعد المطر.",
           "quote": "True resilience is not denying the storm, but allowing your roots to run deeper while your branches bend flexibly in the wind.",
           "quoteAuthor": "— Hikma & Nour",
           "toc": [
@@ -7668,7 +7668,7 @@ const TIKTOK_DATA = {
           "author": "Hikma & Nour | حكمة ونور",
           "desc": "A practical and psychological guide to restarting a habit after a break without guilt, perfectionism, or extreme overcompensation.",
           "image": "developpement-personnel/images/thumb-reprendre-habitude-interruption.jpg",
-          "imageAlt": "How to Restart a Habit After a Break",
+          "imageAlt": "A small shoot grows through cracks in a dark stone after the rain.",
           "quote": "A habit does not die upon disruption; it is reborn through the very first modest step.",
           "quoteAuthor": "— Hikma & Nour",
           "toc": [
