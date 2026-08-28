@@ -360,6 +360,148 @@ app.post('/api/audio/:workId/comments/:commentId/helpful', (req, res) => {
   res.json({ success: true, helpfulCount: comment.helpfulCount });
 });
 
+// --- Article Engagement & Social Interactions API ---
+const articleLikesStore = new Map();
+const articleRatingsStore = new Map();
+const articleCommentsStore = new Map();
+
+// 1. Get Article Engagement Summary
+app.get('/api/articles/:articleId/engagement', (req, res) => {
+  const { articleId } = req.params;
+  const visitorId = req.query.visitorId || req.ip;
+
+  const likes = articleLikesStore.get(articleId) || [];
+  const ratings = articleRatingsStore.get(articleId) || [];
+  const comments = articleCommentsStore.get(articleId) || [];
+
+  const userLiked = likes.includes(visitorId);
+  const userRatingObj = ratings.find(r => r.visitorId === visitorId);
+  const userRating = userRatingObj ? userRatingObj.rating : null;
+
+  const totalRatings = ratings.length;
+  const sum = ratings.reduce((acc, r) => acc + r.rating, 0);
+  const avgRating = totalRatings > 0 ? (sum / totalRatings).toFixed(1) : '5.0';
+
+  res.json({
+    articleId,
+    likesCount: likes.length,
+    userLiked,
+    totalRatings,
+    avgRating,
+    userRating,
+    comments
+  });
+});
+
+// 2. Toggle Article Like
+app.post('/api/articles/:articleId/like', (req, res) => {
+  const { articleId } = req.params;
+  const visitorId = req.body.visitorId || req.ip;
+
+  if (!articleLikesStore.has(articleId)) {
+    articleLikesStore.set(articleId, []);
+  }
+
+  let likes = articleLikesStore.get(articleId);
+  let isLiked = false;
+
+  if (likes.includes(visitorId)) {
+    likes = likes.filter(id => id !== visitorId);
+    isLiked = false;
+  } else {
+    likes.push(visitorId);
+    isLiked = true;
+  }
+
+  articleLikesStore.set(articleId, likes);
+
+  res.json({
+    success: true,
+    articleId,
+    isLiked,
+    likesCount: likes.length
+  });
+});
+
+// 3. Save Article Rating (1-5)
+app.post('/api/articles/:articleId/rating', (req, res) => {
+  const { articleId } = req.params;
+  const { rating, visitorId } = req.body;
+  const numRating = parseInt(rating, 10);
+
+  if (isNaN(numRating) || numRating < 1 || numRating > 5) {
+    return res.status(400).json({ error: 'Note invalide (doit être comprise entre 1 et 5).' });
+  }
+
+  if (!articleRatingsStore.has(articleId)) {
+    articleRatingsStore.set(articleId, []);
+  }
+
+  const ratings = articleRatingsStore.get(articleId);
+  const vId = visitorId || req.ip;
+  const existingIdx = ratings.findIndex(r => r.visitorId === vId);
+
+  if (existingIdx >= 0) {
+    ratings[existingIdx].rating = numRating;
+    ratings[existingIdx].updatedAt = Date.now();
+  } else {
+    ratings.push({ visitorId: vId, rating: numRating, createdAt: Date.now() });
+  }
+
+  const totalRatings = ratings.length;
+  const sum = ratings.reduce((acc, r) => acc + r.rating, 0);
+  const avgRating = totalRatings > 0 ? (sum / totalRatings).toFixed(1) : '5.0';
+
+  res.json({
+    success: true,
+    articleId,
+    userRating: numRating,
+    avgRating,
+    totalRatings
+  });
+});
+
+// 4. Submit Article Comment
+app.post('/api/articles/:articleId/comments', (req, res) => {
+  const { articleId } = req.params;
+  const { author, text, rating, lang, visitorId } = req.body;
+
+  const cleanAuthor = (author || '').trim().slice(0, 50);
+  const cleanText = (text || '').trim().slice(0, 1500);
+
+  if (cleanAuthor.length < 2) {
+    return res.status(400).json({ error: 'Le nom doit contenir au moins 2 caractères.' });
+  }
+  if (cleanText.length < 3) {
+    return res.status(400).json({ error: 'Le commentaire doit contenir au moins 3 caractères.' });
+  }
+
+  if (!articleCommentsStore.has(articleId)) {
+    articleCommentsStore.set(articleId, []);
+  }
+
+  const comments = articleCommentsStore.get(articleId);
+  const numRating = parseInt(rating, 10);
+
+  const newComment = {
+    id: `comm_${Date.now().toString(36)}_${Math.random().toString(36).substring(2, 6)}`,
+    articleId,
+    author: cleanAuthor,
+    text: cleanText,
+    rating: (!isNaN(numRating) && numRating >= 1 && numRating <= 5) ? numRating : 5,
+    lang: lang || 'ar',
+    status: 'approved',
+    createdAt: Date.now(),
+    visitorId: visitorId || req.ip
+  };
+
+  comments.unshift(newComment);
+
+  res.json({
+    success: true,
+    comment: newComment
+  });
+});
 
 // Start Server
 app.listen(PORT, '0.0.0.0', () => {
