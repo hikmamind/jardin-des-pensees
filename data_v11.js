@@ -4298,6 +4298,58 @@ const TIKTOK_DATA = {
           "finalQuoteAuthor": "— Socrate | Hikma & Nour"
         },
         {
+          "id": "discipline-vs-motivation",
+          "file": "discipline-vs-motivation.html",
+          "title": "Discipline vs motivation : pourquoi l’élan ne suffit pas",
+          "category": "development",
+          "categoryName": "Développement & Maîtrise de Soi",
+          "readTime": "8 min de lecture",
+          "date": "15 Janvier 2025",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Une analyse approfondie de la psychologie de l’action : pourquoi la motivation s’épuise inévitablement et comment bâtir une discipline consciente et durable.",
+          "image": "discipline_vs_motivation_hero.jpg",
+          "imageAlt": "Discipline vs motivation : pourquoi l’élan ne suffit pas",
+          "quote": "Il n’y a point d’être plus misérable que celui chez qui rien n’est habituel, et pour qui chaque décision et chaque mise au travail dépendent de l’humeur de l’instant.",
+          "quoteAuthor": "— William James",
+          "toc": [
+                    "Pourquoi la motivation s'épuise inévitablement",
+                    "Ce que la discipline signifie réellement",
+                    "Distinguer volonté, émotion et décision",
+                    "Pourquoi attendre l'envie nous rend instables",
+                    "Construire un système plutôt qu'un simple objectif"
+          ],
+          "body": [
+                    "La motivation est une étincelle neurochimique éphémère, incapable de soutenir l’effort sur le temps long.",
+                    "La discipline est la forme suprême de la liberté, soumettant l’impulsion immédiate aux valeurs pérennes."
+          ]
+},
+        {
+          "id": "construire-une-habitude-durable",
+          "file": "construire-une-habitude-durable.html",
+          "title": "Construire une habitude durable : comment transformer un petit geste en mode de vie",
+          "category": "development",
+          "categoryName": "Développement & Maîtrise de Soi",
+          "readTime": "8 min de lecture",
+          "date": "15 Janvier 2025",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Guide approfondi d’ingénierie comportementale : découvrez comment ancrer des rituels pérennes par la répétition, les déclencheurs et l’identité.",
+          "image": "construire_habitude_durable_hero.jpg",
+          "imageAlt": "Construire une habitude durable : comment transformer un petit geste en mode de vie",
+          "quote": "Semez une pensée, vous récolterez un acte ; semez un acte, vous récolterez une habitude ; semez une habitude, vous récolterez un caractère ; semez un caractère, vous récolterez un destin.",
+          "quoteAuthor": "— William James",
+          "toc": [
+                    "Pourquoi les habitudes échouent souvent",
+                    "Commencer plus petit que prévu",
+                    "Le rôle fondamental du déclencheur",
+                    "La répétition sans perfectionnisme",
+                    "Récompense, satisfaction et mémoire"
+          ],
+          "body": [
+                    "Le piège de l’intensité prématurée est le premier ennemi des habitudes : commencez toujours plus petit que prévu.",
+                    "La consolidation neuronale dépend de la fréquence des répétitions et non de la perfection d’exécution."
+          ]
+},
+        {
           "id": "self-discipline",
           "file": "self-discipline.html",
           "title": "Comment cultiver l'autodiscipline ? L'art de la persévérance",
@@ -8552,6 +8604,58 @@ const TIKTOK_DATA = {
           "finalQuote": "« An unexamined life is not worth living. »",
           "finalQuoteAuthor": "— Socrates | Hikma & Nour"
         },
+        {
+          "id": "discipline-vs-motivation",
+          "file": "discipline-vs-motivation.html",
+          "title": "Discipline vs Motivation: Why Drive Alone Is Not Enough",
+          "category": "development",
+          "categoryName": "Personal Growth & Mastery",
+          "readTime": "8 min read",
+          "date": "January 15, 2025",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "An in-depth psychological analysis of action and willpower: why emotional motivation fades and how to construct enduring, system-based self-discipline.",
+          "image": "discipline_vs_motivation_hero.jpg",
+          "imageAlt": "Discipline vs Motivation: Why Drive Alone Is Not Enough",
+          "quote": "There is no more miserable human being than one in whom nothing is habitual, for whom the beginning of every bit of work depends on the mood of the moment.",
+          "quoteAuthor": "— William James",
+          "toc": [
+                    "Why Emotional Motivation Inevitably Fades",
+                    "What Discipline Truly Means",
+                    "Willpower, Emotion, and Decision-Making",
+                    "The Trap of Waiting for Inspiration",
+                    "Building Systems Over Vague Goals"
+          ],
+          "body": [
+                    "Motivation is a transient neurochemical spark that cannot sustain long-term intellectual or physical effort.",
+                    "Conscious discipline represents true autonomy, subordinating impulsive desires to overarching values."
+          ]
+},
+        {
+          "id": "construire-une-habitude-durable",
+          "file": "construire-une-habitude-durable.html",
+          "title": "Building a Lasting Habit: How a Small Action Becomes a Way of Life",
+          "category": "development",
+          "categoryName": "Personal Growth & Mastery",
+          "readTime": "8 min read",
+          "date": "January 15, 2025",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "A comprehensive guide to behavioral engineering: how to transform micro-actions into permanent lifestyle habits through cues, repetition, and identity shift.",
+          "image": "construire_habitude_durable_hero.jpg",
+          "imageAlt": "Building a Lasting Habit: How a Small Action Becomes a Way of Life",
+          "quote": "Sow a thought and you reap an action; sow an act and you reap a habit; sow a habit and you reap a character; sow a character and you reap a destiny.",
+          "quoteAuthor": "— William James",
+          "toc": [
+                    "Why Habit Formation Attempts Often Fail",
+                    "The Micro-Start Rule: Starting Smaller Than You Think",
+                    "The Crucial Role of Cues: Implementation Intentions",
+                    "Repetition Over Perfectionism",
+                    "The Neurobiology of Reward"
+          ],
+          "body": [
+                    "Premature intensity is the primary killer of new habits: always begin smaller than intuition suggests.",
+                    "Neural consolidation is driven strictly by repetition frequency rather than flawless execution."
+          ]
+},
         {
           "id": "self-discipline",
           "file": "self-discipline.html",
@@ -13005,6 +13109,58 @@ const TIKTOK_DATA = {
           "finalQuote": "« إن الحياة غير المفحوصة لا تستحق العيش. »",
           "finalQuoteAuthor": "— سقراط | حكمة ونور"
         },
+        {
+          "id": "discipline-vs-motivation",
+          "file": "discipline-vs-motivation.html",
+          "title": "الانضباط أم الدافعية: لماذا لا يكفي الحماس وحده؟",
+          "category": "development",
+          "categoryName": "تطوير الذات والإنتاجية",
+          "readTime": "٨ دقائق قراءة",
+          "date": "١٥ يناير ٢٠٢٥",
+          "author": "حكمة ونور | Hikma & Nour",
+          "desc": "دراسة شاملة في الفارق الجوهري بين تقلبات الحماس العاطفي وثبات الانضباط الواعي، مع استراتيجيات تحويل الإرادة إلى نظام عمل يومي مستدام.",
+          "image": "discipline_vs_motivation_hero.jpg",
+          "imageAlt": "الانضباط أم الدافعية: لماذا لا يكفي الحماس وحده؟",
+          "quote": "ليس هناك في الوجود إنسان أكثر بؤساً وعبودية من ذلك الذي لا يكون فيه القرار حاسماً، والذي يترك كل فعل وكل بداية انتظاراً لمزاجه اللحظي.",
+          "quoteAuthor": "— ويليام جيمس",
+          "toc": [
+                    "لماذا يتلاشى الحماس العاطفي؟",
+                    "المعنى الحقيقي للانضباط الواعي",
+                    "التمييز بين الإرادة والمشاعر والقرار",
+                    "خطورة انتظار الرغبة",
+                    "بناء النظم عوض الأهداف المجردة"
+          ],
+          "body": [
+                    "الدافعية شحنة عاطفية عابرة تحركها توقعات الدوبامين، ولا يمكن الاعتماد عليها وحدها لبناء إنجاز مستدام.",
+                    "الانضباط هو ممارسة الحرية الحقيقية عبر تقديم الأهداف العليا على الرغبات اللحظية."
+          ]
+},
+        {
+          "id": "construire-une-habitude-durable",
+          "file": "construire-une-habitude-durable.html",
+          "title": "بناء عادة دائمة: كيف يتحول الفعل الصغير إلى نمط حياة؟",
+          "category": "development",
+          "categoryName": "تطوير الذات والإنتاجية",
+          "readTime": "٨ دقائق قراءة",
+          "date": "١٥ يناير ٢٠٢٥",
+          "author": "حكمة ونور | Hikma & Nour",
+          "desc": "دليل منهجي متكامل في هندسة السلوك وتكوين العادات المستدامة عبر المحفزات والتكرار الواعي وتغيير الهوية الشخصية.",
+          "image": "construire_habitude_durable_hero.jpg",
+          "imageAlt": "بناء عادة دائمة: كيف يتحول الفعل الصغير إلى نمط حياة؟",
+          "quote": "ازرع فكرة تحصد فعلاً، ازرع فعلاً تحصد عادة، ازرع عادة تحصد شخصية، ازرع شخصية تحصد مصيراً.",
+          "quoteAuthor": "— ويليام جيمس",
+          "toc": [
+                    "لماذا تفشل محاولات بناء العادات غالباً؟",
+                    "قاعدة البداية المتناهية الصغر",
+                    "هندسة المحفز والإشارة البيئية الواضحة",
+                    "التكرار الواعي وتجاوز فخ المثالية",
+                    "نظام المكافأة والرضا الفوري"
+          ],
+          "body": [
+                    "فخ البدايات المفرطة هو العدو الأول للعادات؛ ابدأ دائماً بأصغر مما تظن.",
+                    "ترسيخ المسار العصبي للعادة يرتهن بعدد مرات التكرار وليس بكمال الأداء في كل مرة."
+          ]
+},
         {
           "id": "self-discipline",
           "file": "self-discipline.html",

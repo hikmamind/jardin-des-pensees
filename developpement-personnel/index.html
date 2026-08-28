@@ -820,7 +820,44 @@
       </div>
 
       <div id="devArticlesGrid" class="dev-grid-3cols">
-        <!-- Rendered via Javascript -->
+        <!-- Article 01: Discipline vs Motivation -->
+        <article class="dev-article-card-hd">
+          <div class="dev-article-img-box">
+            <img src="../articles/discipline_vs_motivation_hero.jpg" alt="الانضباط أم الدافعية: لماذا لا يكفي الحماس وحده؟" loading="lazy">
+          </div>
+          <div class="dev-article-body">
+            <span class="dev-article-tag">⚡ مقال رئيسي • سيكولوجيا الفعل</span>
+            <h3 class="dev-article-title">الانضباط أم الدافعية: لماذا لا يكفي الحماس وحده؟</h3>
+            <p class="dev-article-desc">دراسة شاملة في الفارق الجوهري بين تقلبات الحماس العاطفي وثبات الانضباط الواعي، مع استراتيجيات تحويل الإرادة إلى نظام عمل يومي مستدام.</p>
+            <a href="../files/discipline-vs-motivation.html" class="dev-btn-action">اقرأ المقال ←</a>
+          </div>
+        </article>
+
+        <!-- Article 02: Construire une habitude durable -->
+        <article class="dev-article-card-hd">
+          <div class="dev-article-img-box">
+            <img src="../articles/construire_habitude_durable_hero.jpg" alt="بناء عادة دائمة: كيف يتحول الفعل الصغير إلى نمط حياة؟" loading="lazy">
+          </div>
+          <div class="dev-article-body">
+            <span class="dev-article-tag">⚡ مقال رئيسي • هندسة العادات</span>
+            <h3 class="dev-article-title">بناء عادة دائمة: كيف يتحول الفعل الصغير إلى نمط حياة؟</h3>
+            <p class="dev-article-desc">دليل منهجي متكامل في هندسة السلوك وتكوين العادات المستدامة عبر المحفزات والتكرار الواعي وتغيير الهوية الشخصية.</p>
+            <a href="../files/construire-une-habitude-durable.html" class="dev-btn-action">اقرأ المقال ←</a>
+          </div>
+        </article>
+
+        <!-- Article 03: Self-Discipline Guide -->
+        <article class="dev-article-card-hd">
+          <div class="dev-article-img-box">
+            <img src="../dev_discipline_hd.jpg" alt="كيف تبني الانضباط الذاتي؟" loading="lazy">
+          </div>
+          <div class="dev-article-body">
+            <span class="dev-article-tag">⚡ دليل تطبيقي</span>
+            <h3 class="dev-article-title">كيف تبني الانضباط الذاتي؟ دليل العادة التي تصنع الفارق</h3>
+            <p class="dev-article-desc">دليل تطبيقي شامل يشرح لماذا يتفوق الانضباط على الحماس المؤقت، وكيف تبني عادات يومية تضمن وصولك لأهدافك.</p>
+            <a href="../files/self-discipline.html" class="dev-btn-action">اقرأ المقال ←</a>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -1257,17 +1294,86 @@
       }
     };
 
-    // Article Path Mapping for Valid Personal Growth Content
-    const DEV_ARTICLE_PATHS = {
-      'self-discipline': '../files/self-discipline.html',
-      '7-habits': '../articles/7-habits/',
-      'true-confidence-inside': '../articles/true-confidence-inside.html'
-    };
-
-    const DEV_ARTICLE_IMAGES = {
-      'self-discipline': '../dev_discipline_hd.jpg',
-      '7-habits': '../dev_habits_hd.jpg',
-      'true-confidence-inside': '../dev_confidence_hd.jpg'
+    // Comprehensive Multilingual Articles for Development Pillar
+    const DEV_PILLAR_ARTICLES = {
+      ar: [
+        {
+          id: 'discipline-vs-motivation',
+          title: 'الانضباط أم الدافعية: لماذا لا يكفي الحماس وحده؟',
+          desc: 'دراسة شاملة في الفارق الجوهري بين تقلبات الحماس العاطفي وثبات الانضباط الواعي، مع استراتيجيات تحويل الإرادة إلى نظام عمل يومي مستدام.',
+          url: '../files/discipline-vs-motivation.html',
+          img: '../articles/discipline_vs_motivation_hero.jpg',
+          tag: 'مقال رئيسي • سيكولوجيا الفعل'
+        },
+        {
+          id: 'construire-une-habitude-durable',
+          title: 'بناء عادة دائمة: كيف يتحول الفعل الصغير إلى نمط حياة؟',
+          desc: 'دليل منهجي متكامل في هندسة السلوك وتكوين العادات المستدامة عبر المحفزات والتكرار الواعي وتغيير الهوية الشخصية.',
+          url: '../files/construire-une-habitude-durable.html',
+          img: '../articles/construire_habitude_durable_hero.jpg',
+          tag: 'مقال رئيسي • هندسة العادات'
+        },
+        {
+          id: 'self-discipline',
+          title: 'كيف تبني الانضباط الذاتي؟ دليل العادة التي تصنع الفارق',
+          desc: 'دليل تطبيقي شامل يشرح لماذا يتفوق الانضباط على الحماس المؤقت، وكيف تبني عادات يومية تضمن وصولك لأهدافك.',
+          url: '../files/self-discipline.html',
+          img: '../dev_discipline_hd.jpg',
+          tag: 'دليل تطبيقي'
+        }
+      ],
+      fr: [
+        {
+          id: 'discipline-vs-motivation',
+          title: 'Discipline vs motivation : pourquoi l’élan ne suffit pas',
+          desc: 'Une analyse approfondie de la psychologie de l’action : pourquoi la motivation s’épuise et comment bâtir une discipline consciente et pérenne.',
+          url: '../files/discipline-vs-motivation.html',
+          img: '../articles/discipline_vs_motivation_hero.jpg',
+          tag: 'Article Majeur • Psychologie de l’action'
+        },
+        {
+          id: 'construire-une-habitude-durable',
+          title: 'Construire une habitude durable : comment transformer un petit geste en mode de vie',
+          desc: 'Guide approfondi d’ingénierie comportementale : découvrez comment ancrer des rituels pérennes par la répétition, les déclencheurs et l’identité.',
+          url: '../files/construire-une-habitude-durable.html',
+          img: '../articles/construire_habitude_durable_hero.jpg',
+          tag: 'Article Majeur • Ingénierie des habitudes'
+        },
+        {
+          id: 'self-discipline',
+          title: "Comment cultiver l'autodiscipline ? L'art de la persévérance",
+          desc: "Pourquoi la discipline surpasse toujours la motivation éphémère et comment bâtir des habitudes solides pour accomplir ses projets.",
+          url: '../files/self-discipline.html',
+          img: '../dev_discipline_hd.jpg',
+          tag: 'Guide Pratique'
+        }
+      ],
+      en: [
+        {
+          id: 'discipline-vs-motivation',
+          title: 'Discipline vs Motivation: Why Drive Alone Is Not Enough',
+          desc: 'An in-depth psychological analysis of action and willpower: why motivation fades and how to construct enduring, system-based self-discipline.',
+          url: '../files/discipline-vs-motivation.html',
+          img: '../articles/discipline_vs_motivation_hero.jpg',
+          tag: 'Core Article • Psychology of Action'
+        },
+        {
+          id: 'construire-une-habitude-durable',
+          title: 'Building a Lasting Habit: How a Small Action Becomes a Way of Life',
+          desc: 'A comprehensive guide to behavioral engineering: how to transform micro-actions into permanent lifestyle habits through cues, repetition, and identity shift.',
+          url: '../files/construire-une-habitude-durable.html',
+          img: '../articles/construire_habitude_durable_hero.jpg',
+          tag: 'Core Article • Habit Engineering'
+        },
+        {
+          id: 'self-discipline',
+          title: 'How to Build Self-Discipline: The Habit That Changes Everything',
+          desc: 'Why discipline always surpasses fleeting motivation and how to build solid daily habits to accomplish high-leverage goals.',
+          url: '../files/self-discipline.html',
+          img: '../dev_discipline_hd.jpg',
+          tag: 'Practical Guide'
+        }
+      ]
     };
 
     function getSavedLang() {
@@ -1284,27 +1390,19 @@
       if (!grid) return;
 
       const trans = DEV_TRANSLATIONS[lang] || DEV_TRANSLATIONS.ar;
-      const articles = (TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].articles) || [];
-      
-      // Filter STRICTLY Valid Personal Growth Articles ('self-discipline', '7-habits', 'true-confidence-inside')
-      const validDevIds = ['self-discipline', '7-habits', 'true-confidence-inside'];
-      const filteredArticles = articles.filter(a => validDevIds.includes(a.id));
+      const articles = DEV_PILLAR_ARTICLES[lang] || DEV_PILLAR_ARTICLES.ar;
 
-      grid.innerHTML = filteredArticles.map(art => {
-        const url = DEV_ARTICLE_PATHS[art.id] || `../articles/${art.id}.html`;
-        const img = DEV_ARTICLE_IMAGES[art.id] || '../dev_hero_cinematic.jpg';
-        const tagLabel = lang === 'ar' ? 'تطوير الذات' : 'Développement';
-
+      grid.innerHTML = articles.map(art => {
         return `
           <article class="dev-article-card-hd">
             <div class="dev-article-img-box">
-              <img src="${img}" alt="${art.title}" loading="lazy">
+              <img src="${art.img}" alt="${art.title}" loading="lazy">
             </div>
             <div class="dev-article-body">
-              <span class="dev-article-tag">⚡ ${tagLabel}</span>
+              <span class="dev-article-tag">⚡ ${art.tag}</span>
               <h3 class="dev-article-title">${art.title}</h3>
-              <p class="dev-article-desc">${art.desc ? (art.desc.length > 115 ? art.desc.substring(0, 115) + '...' : art.desc) : (art.summary || 'دليل عملي لبناء الانضباط والعادات.')}</p>
-              <a href="${url}" class="dev-btn-action">${trans.btnReadArticle}</a>
+              <p class="dev-article-desc">${art.desc}</p>
+              <a href="${art.url}" class="dev-btn-action">${trans.btnReadArticle}</a>
             </div>
           </article>
         `;
