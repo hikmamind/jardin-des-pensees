@@ -614,6 +614,16 @@ function openArticleReader(slugOrFile) {
     return;
   }
 
+  if (article && article.file && (
+    article.file.includes('reprendre-habitude-apres-interruption') ||
+    article.file.includes('petites-habitudes-grande-decision') ||
+    article.file.includes('discipline-vs-motivation') ||
+    article.file.includes('construire-une-habitude-durable')
+  )) {
+    window.location.href = '../files/' + (article.file.endsWith('.html') ? article.file : article.file + '.html');
+    return;
+  }
+
   activeArticleFile = article.file || article.id;
   const t = ARTICLES_PAGE_TRANSLATIONS[currentLang] || ARTICLES_PAGE_TRANSLATIONS['ar'];
   const categoryName = article.categoryName || (TIKTOK_DATA.ui[currentLang] && TIKTOK_DATA.ui[currentLang][article.category]) || article.category;

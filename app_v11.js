@@ -1251,78 +1251,78 @@ function populateRecentArticlesHome() {
 
   const articlesData = (currentLang === 'ar') ? [
     {
-      title: 'لماذا اعتبر شوبنهاور أن السعادة مجرد وهم؟',
-      category: '🧠 الفلسفة',
-      readTime: '⏱️ 8 دقائق',
-      desc: 'دراسة فلسفية ونفسية في فلسفة الإرادة عند شوبنهاور: كيف نتحرر من بندول الألم والملل ونصل للسكينة.',
-      image: 'schopenhauer_happiness_illusion_hero.jpg',
-      url: './articles/schopenhauer-happiness-illusion.html'
+      title: 'كيف تستعيد عادة بعد انقطاع؟ سيكولوجيا العودة الذكية',
+      category: '⚡ تطوير الذات • الانضباط والعادات',
+      readTime: '⏱️ ٩ دقائق',
+      desc: 'دليل عملي ونفسي لاستئناف العادات بعد التعثر دون جلد الذات أو الوقوع في فخ التعويض المفرط المرهق.',
+      image: 'developpement-personnel/images/thumb-reprendre-habitude-interruption.jpg',
+      url: './files/reprendre-habitude-apres-interruption.html'
     },
     {
-      title: 'الرواقية: فلسفة القوة والهدوء الداخلي',
-      category: '🏛️ الرواقية',
-      readTime: '⏱️ 6 دقائق',
-      desc: 'دليل عملي لتطبيق ثنائية التحكم، وحب القدر، وبناء قلعة داخلية حصينة في مواجهة تقلبات الحياة.',
-      image: 'marc_aurelius_writing.jpg',
-      url: './files/stoicisme-force-calme.html'
+      title: 'لماذا تغيّر العادات الصغيرة حياتنا أكثر من القرارات الكبيرة؟',
+      category: '⚡ تطوير الذات • أثر التراكم',
+      readTime: '⏱️ ٨ دقائق',
+      desc: 'اكتشف كيف تحول الأفعال البسيطة المتكررة إلى أثر تراكمي يعيد بناء هويتك وثقتك الذاتية ونظام تقدمك المستمر.',
+      image: 'articles/petites_habitudes_hero.jpg',
+      url: './files/petites-habitudes-grande-decision.html'
     },
     {
-      title: 'كيف تتوقف عن التفكير المفرط والقلق المستمر؟',
-      category: 'Ψ علم النفس',
-      readTime: '⏱️ 5 دقائق',
-      desc: 'أساليب نفسية وعقلية مجربة لكسر حلقة الاجترار الفكري واستعادة السكينة والهدوء في الحاضر.',
-      image: 'overthinking_calm.jpg',
-      url: './files/stop-overthinking.html'
+      title: 'الانضباط أم الدافعية: لماذا لا يكفي الحماس وحده؟',
+      category: '⚡ تطوير الذات • سيكولوجيا الفعل',
+      readTime: '⏱️ ٨ دقائق',
+      desc: 'دراسة شاملة في الفارق الجوهري بين تقلبات الحماس العاطفي وثبات الانضباط الواعي وبناء أنظمة عمل يومية.',
+      image: 'articles/discipline_vs_motivation_hero.jpg',
+      url: './files/discipline-vs-motivation.html'
     }
   ] : (currentLang === 'fr') ? [
     {
-      title: 'Pourquoi Schopenhauer considérait-il le bonheur comme une illusion ?',
-      category: '🧠 Philosophie',
+      title: 'Comment reprendre une habitude après une interruption',
+      category: '⚡ Développement • Résilience & Action',
+      readTime: '⏱️ 9 min',
+      desc: 'Guide pratique et psychologique pour relancer une habitude après un arrêt sans culpabilité ni surcompensation.',
+      image: 'developpement-personnel/images/thumb-reprendre-habitude-interruption.jpg',
+      url: './files/reprendre-habitude-apres-interruption.html'
+    },
+    {
+      title: 'Pourquoi les petites habitudes changent plus qu’une grande décision',
+      category: '⚡ Développement • Effet Cumulé',
       readTime: '⏱️ 8 min',
-      desc: 'Une analyse philosophique sur la Volonté chez Schopenhauer et les clés pour atteindre la paix de l\'âme.',
-      image: 'schopenhauer_happiness_illusion_hero.jpg',
-      url: './articles/schopenhauer-happiness-illusion.html'
+      desc: 'Découvrez pourquoi les petits gestes quotidiens surpassent les résolutions héroïques par le pouvoir du cumul.',
+      image: 'articles/petites_habitudes_hero.jpg',
+      url: './files/petites-habitudes-grande-decision.html'
     },
     {
-      title: 'Le Stoïcisme : Philosophie de la Force et du Calme',
-      category: '🏛️ Stoïcisme',
-      readTime: '⏱️ 6 min',
-      desc: 'Un guide pratique pour appliquer la dichotomie du contrôle, l\'amor fati et bâtir une forteresse intérieure.',
-      image: 'marc_aurelius_writing.jpg',
-      url: './files/stoicisme-force-calme.html'
-    },
-    {
-      title: 'Comment Stopper les Pensées Obsédantes et l\'Anxiété ?',
-      category: 'Ψ Psychologie',
-      readTime: '⏱️ 5 min',
-      desc: 'Des méthodes éprouvées pour briser le cycle des ruminations mentales et retrouver la sérénité du présent.',
-      image: 'overthinking_calm.jpg',
-      url: './files/stop-overthinking.html'
+      title: 'Discipline vs motivation : pourquoi l’élan ne suffit pas',
+      category: '⚡ Développement • Psychologie de l’action',
+      readTime: '⏱️ 8 min',
+      desc: 'Une analyse approfondie sur les limites de la motivation émotionnelle et les fondements d’un système d\'action pérenne.',
+      image: 'articles/discipline_vs_motivation_hero.jpg',
+      url: './files/discipline-vs-motivation.html'
     }
   ] : [
     {
-      title: 'Why Did Schopenhauer Consider Happiness an Illusion?',
-      category: '🧠 Philosophy',
+      title: 'How to Restart a Habit After a Break',
+      category: '⚡ Self-Development • Resilience & Action',
+      readTime: '⏱️ 9 min',
+      desc: 'A practical and psychological roadmap to restarting habits after disruptions without guilt or extreme overcompensation.',
+      image: 'developpement-personnel/images/thumb-reprendre-habitude-interruption.jpg',
+      url: './files/reprendre-habitude-apres-interruption.html'
+    },
+    {
+      title: 'Why Small Habits Change More Than One Big Decision',
+      category: '⚡ Self-Development • Compound Effect',
       readTime: '⏱️ 8 min',
-      desc: 'A philosophical inquiry into Schopenhauer\'s Will and how to find serenity beyond pain and boredom.',
-      image: 'schopenhauer_happiness_illusion_hero.jpg',
-      url: './articles/schopenhauer-happiness-illusion.html'
+      desc: 'Discover why repeated small habits transform your life more than one isolated big decision through compounding.',
+      image: 'articles/petites_habitudes_hero.jpg',
+      url: './files/petites-habitudes-grande-decision.html'
     },
     {
-      title: 'Stoicism: A Philosophy of Strength and Inner Calm',
-      category: '🏛️ Stoicism',
-      readTime: '⏱️ 6 min',
-      desc: 'A practical guide to applying the dichotomy of control, Amor Fati, and building an inner fortress.',
-      image: 'marc_aurelius_writing.jpg',
-      url: './files/stoicisme-force-calme.html'
-    },
-    {
-      title: 'How to Stop Overthinking and Continuous Anxiety?',
-      category: 'Ψ Psychology',
-      readTime: '⏱️ 5 min',
-      desc: 'Proven psychological strategies to break mental ruminations and regain peace in the present.',
-      image: 'overthinking_calm.jpg',
-      url: './files/stop-overthinking.html'
+      title: 'Discipline vs Motivation: Why Drive Alone Is Not Enough',
+      category: '⚡ Self-Development • Psychology of Action',
+      readTime: '⏱️ 8 min',
+      desc: 'An in-depth psychological analysis of why emotional drive fades and how to construct enduring, system-based self-discipline.',
+      image: 'articles/discipline_vs_motivation_hero.jpg',
+      url: './files/discipline-vs-motivation.html'
     }
   ];
 

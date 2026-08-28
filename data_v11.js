@@ -3204,6 +3204,108 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "id": "reprendre-habitude-apres-interruption",
+          "file": "reprendre-habitude-apres-interruption.html",
+          "title": "Comment reprendre une habitude après une interruption",
+          "category": "development",
+          "categoryName": "Développement Personnel • Résilience",
+          "readTime": "9 min de lecture",
+          "date": "15 Janvier 2025",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Guide pratique et psychologique pour relancer une habitude après un arrêt sans culpabilité, sans perfectionnisme et sans surcompensation.",
+          "image": "developpement-personnel/images/thumb-reprendre-habitude-interruption.jpg",
+          "imageAlt": "Comment reprendre une habitude après une interruption",
+          "quote": "Une habitude ne s’éteint pas lors d’un arrêt ; elle renaît dès le premier geste humble.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+            "Pourquoi nous interrompons nos habitudes",
+            "Une interruption n’efface pas les progrès",
+            "Le piège du tout ou rien",
+            "Comprendre la culpabilité après une rupture",
+            "Le protocole de reprise en 5 étapes"
+          ],
+          "body": [
+            "Une habitude pérenne ne dépend pas de l’absence totale d’interruptions, mais de la capacité à recommencer rapidement.",
+            "Reprendre avec une version minimale permet de contourner l’inertie et de restaurer la confiance."
+          ]
+        },
+        {
+          "id": "petites-habitudes-grande-decision",
+          "file": "petites-habitudes-grande-decision.html",
+          "title": "Pourquoi les petites habitudes changent plus qu’une grande décision",
+          "category": "development",
+          "categoryName": "Développement Personnel • Effet Cumulé",
+          "readTime": "8 min de lecture",
+          "date": "10 Janvier 2025",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Découvrez pourquoi les petits gestes quotidiens surpassent les résolutions héroïques et comment construire un système de progression durable.",
+          "image": "articles/petites_habitudes_hero.jpg",
+          "imageAlt": "Pourquoi les petites habitudes changent plus qu’une grande décision",
+          "quote": "Les grandes décisions donnent l’étincelle, mais ce sont les petites habitudes répétées qui forgent le destin.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+            "L'illusion des grands départs",
+            "Pourquoi les résolutions héroïques échouent",
+            "Le pouvoir de l'effet cumulé",
+            "Habitudes et identité",
+            "Construire un système durable"
+          ],
+          "body": [
+            "La transformation réelle ne découle pas d'un coup d'éclat isolé, mais de la fidélité patiente à des micro-actions quotidiennes.",
+            "Chaque action répétée est un vote en faveur de la personne que vous souhaitez devenir."
+          ]
+        },
+        {
+          "id": "construire-une-habitude-durable",
+          "file": "construire-une-habitude-durable.html",
+          "title": "Construire une habitude durable : transformer un geste en mode de vie",
+          "category": "development",
+          "categoryName": "Développement Personnel • Ingénierie",
+          "readTime": "7 min de lecture",
+          "date": "05 Janvier 2025",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Guide méthodologique sur l’ancrage des comportements via les déclencheurs, la répétition sans friction et le changement d'identité.",
+          "image": "articles/construire_habitude_durable_hero.jpg",
+          "imageAlt": "Construire une habitude durable",
+          "quote": "Une habitude solide n'est pas un fardeau, mais la liberté d'agir sans épuiser sa volonté.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+            "L'architecture d'une habitude",
+            "L'art des déclencheurs évidents",
+            "Réduire la friction d'entrée",
+            "La consolidation de l'identité"
+          ],
+          "body": [
+            "Une habitude s'installe quand le coût cognitif de démarrage devient négligeable.",
+            "Ancrez chaque nouveau rituel à une routine préexistante solide."
+          ]
+        },
+        {
+          "id": "discipline-vs-motivation",
+          "file": "discipline-vs-motivation.html",
+          "title": "Discipline vs motivation : pourquoi l’élan ne suffit pas",
+          "category": "development",
+          "categoryName": "Développement Personnel • Psychologie de l’action",
+          "readTime": "8 min de lecture",
+          "date": "01 Janvier 2025",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Une analyse approfondie sur les limites de la motivation émotionnelle et les fondements d’un système d'action pérenne.",
+          "image": "articles/discipline_vs_motivation_hero.jpg",
+          "imageAlt": "Discipline vs motivation",
+          "quote": "La motivation vous met en mouvement ; la discipline vous permet d'atteindre le sommet.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+            "Le piège de la motivation émotionnelle",
+            "Pourquoi l'élan s'épuise",
+            "L'ingénierie de la discipline consciente",
+            "Créer un système résistant à la fatigue"
+          ],
+          "body": [
+            "Attendre d'être inspiré pour agir condamne à l'inconstance.",
+            "La discipline est le pont solide entre vos intentions et vos accomplissements réels."
+          ]
+        },
+        {
           "id": "wisdom-stoicism-control",
           "file": "wisdom-stoicism-control.html",
           "title": "La sagesse stoïcienne : apprendre à maîtriser ce qui dépend de nous",
@@ -4297,162 +4399,6 @@ const TIKTOK_DATA = {
           "finalQuote": "« Une vie sans examen ne vaut pas d'être vécue. »",
           "finalQuoteAuthor": "— Socrate | Hikma & Nour"
         },
-        {
-          "id": "discipline-vs-motivation",
-          "file": "discipline-vs-motivation.html",
-          "title": "Discipline vs motivation : pourquoi l’élan ne suffit pas",
-          "category": "development",
-          "categoryName": "Développement & Maîtrise de Soi",
-          "readTime": "8 min de lecture",
-          "date": "15 Janvier 2025",
-          "author": "Hikma & Nour | حكمة ونور",
-          "desc": "Une analyse approfondie de la psychologie de l’action : pourquoi la motivation s’épuise inévitablement et comment bâtir une discipline consciente et durable.",
-          "image": "discipline_vs_motivation_hero.jpg",
-          "imageAlt": "Discipline vs motivation : pourquoi l’élan ne suffit pas",
-          "quote": "Il n’y a point d’être plus misérable que celui chez qui rien n’est habituel, et pour qui chaque décision et chaque mise au travail dépendent de l’humeur de l’instant.",
-          "quoteAuthor": "— William James",
-          "toc": [
-                    "Pourquoi la motivation s'épuise inévitablement",
-                    "Ce que la discipline signifie réellement",
-                    "Distinguer volonté, émotion et décision",
-                    "Pourquoi attendre l'envie nous rend instables",
-                    "Construire un système plutôt qu'un simple objectif"
-          ],
-          "body": [
-                    "La motivation est une étincelle neurochimique éphémère, incapable de soutenir l’effort sur le temps long.",
-                    "La discipline est la forme suprême de la liberté, soumettant l’impulsion immédiate aux valeurs pérennes."
-          ]
-},
-        {
-          "id": "construire-une-habitude-durable",
-          "file": "construire-une-habitude-durable.html",
-          "title": "Construire une habitude durable : comment transformer un petit geste en mode de vie",
-          "category": "development",
-          "categoryName": "Développement & Maîtrise de Soi",
-          "readTime": "8 min de lecture",
-          "date": "15 Janvier 2025",
-          "author": "Hikma & Nour | حكمة ونور",
-          "desc": "Guide approfondi d’ingénierie comportementale : découvrez comment ancrer des rituels pérennes par la répétition, les déclencheurs et l’identité.",
-          "image": "construire_habitude_durable_hero.jpg",
-          "imageAlt": "Construire une habitude durable : comment transformer un petit geste en mode de vie",
-          "quote": "Semez une pensée, vous récolterez un acte ; semez un acte, vous récolterez une habitude ; semez une habitude, vous récolterez un caractère ; semez un caractère, vous récolterez un destin.",
-          "quoteAuthor": "— William James",
-          "toc": [
-                    "Pourquoi les habitudes échouent souvent",
-                    "Commencer plus petit que prévu",
-                    "Le rôle fondamental du déclencheur",
-                    "La répétition sans perfectionnisme",
-                    "Récompense, satisfaction et mémoire"
-          ],
-          "body": [
-                    "Le piège de l’intensité prématurée est le premier ennemi des habitudes : commencez toujours plus petit que prévu.",
-                    "La consolidation neuronale dépend de la fréquence des répétitions et non de la perfection d’exécution."
-          ]
-},
-        {
-          "id": "reprendre-habitude-apres-interruption",
-          "file": "reprendre-habitude-apres-interruption.html",
-          "title": "Comment reprendre une habitude après une interruption",
-          "category": "development",
-          "categoryName": "Développement & Maîtrise de Soi",
-          "readTime": "9 min de lecture",
-          "date": "15 Janvier 2025",
-          "author": "Hikma & Nour | حكمة ونور",
-          "desc": "Guide pratique et psychologique pour relancer une habitude après un arrêt sans culpabilité, sans perfectionnisme et sans surcompensation.",
-          "image": "developpement-personnel/images/thumb-reprendre-habitude-interruption.jpg",
-          "imageAlt": "Comment reprendre une habitude après une interruption",
-          "quote": "Une habitude ne s’éteint pas lors d’un arrêt ; elle renaît dès le premier geste humble.",
-          "quoteAuthor": "— Hikma & Nour",
-          "toc": [
-                    "Pourquoi nous interrompons nos habitudes",
-                    "Une interruption n’efface pas les progrès",
-                    "Le piège du tout ou rien",
-                    "Comprendre la culpabilité après une rupture",
-                    "Le protocole de reprise en 5 étapes"
-          ],
-          "body": [
-                    "Une habitude pérenne ne dépend pas de l’absence totale d’interruptions, mais de la capacité à recommencer rapidement.",
-                    "Reprendre avec une version minimale permet de contourner l’inertie et de restaurer la confiance."
-          ]
-},
-        {
-          "id": "reprendre-habitude-apres-interruption",
-          "file": "reprendre-habitude-apres-interruption.html",
-          "title": "How to Restart a Habit After a Break",
-          "category": "development",
-          "categoryName": "Personal Growth & Mastery",
-          "readTime": "9 min read",
-          "date": "January 15, 2025",
-          "author": "Hikma & Nour | حكمة ونور",
-          "desc": "A practical and psychological guide to restarting a habit after a break without guilt, perfectionism, or extreme overcompensation.",
-          "image": "developpement-personnel/images/thumb-reprendre-habitude-interruption.jpg",
-          "imageAlt": "How to Restart a Habit After a Break",
-          "quote": "A habit does not die upon disruption; it is reborn through the very first modest step.",
-          "quoteAuthor": "— Hikma & Nour",
-          "toc": [
-                    "Why we break our habits",
-                    "A break does not erase progress",
-                    "The all-or-nothing trap",
-                    "Understanding post-break guilt",
-                    "The 5-step restart protocol"
-          ],
-          "body": [
-                    "Sustainable habits do not depend on never breaking the chain, but on mastering the skill of restarting quickly.",
-                    "Restarting with a micro-version bypasses cognitive resistance and restores momentum."
-          ]
-},
-        {
-          "id": "reprendre-habitude-apres-interruption",
-          "file": "reprendre-habitude-apres-interruption.html",
-          "title": "كيف تستعيد عادة بعد انقطاع؟",
-          "category": "development",
-          "categoryName": "تطوير الذات والإنتاجية",
-          "readTime": "٩ دقائق قراءة",
-          "date": "١٥ يناير ٢٠٢٥",
-          "author": "حكمة ونور | Hikma & Nour",
-          "desc": "دليل عملي ونفسي لاستئناف العادات بعد التعثر دون جلد الذات أو الوقوع في فخ التعويض المفرط، مع بروتوكول العودة في 5 خطوات.",
-          "image": "developpement-personnel/images/thumb-reprendre-habitude-interruption.jpg",
-          "imageAlt": "كيف تستعيد عادة بعد انقطاع؟",
-          "quote": "العادة لا تموت بالانقطاع، بل تُبعث من جديد بالخطوة الأولى الهادئة.",
-          "quoteAuthor": "— حكمة ونور",
-          "toc": [
-                    "لماذا تنقطع عاداتنا؟",
-                    "الانقطاع لا يمحو ما بنيته",
-                    "فخ ثنائية كل شيء أو لا شيء",
-                    "تفكيك الشعور بالذنب وجلد الذات",
-                    "بروتوكول العودة في خمس خطوات"
-          ],
-          "body": [
-                    "الانقطاع ليس نقيض الاستمرارية، بل هو جزء طبيعي من أي نظام حي.",
-                    "المهارة الحقيقية ليست في غياب التعثر، بل في سرعة استئناف الحركة دون جلد الذات."
-          ]
-},
-        {
-          "id": "petites-habitudes-grande-decision",
-          "file": "petites-habitudes-grande-decision.html",
-          "title": "Pourquoi les petites habitudes changent plus qu’une grande décision",
-          "category": "development",
-          "categoryName": "Développement & Maîtrise de Soi",
-          "readTime": "8 min de lecture",
-          "date": "15 Janvier 2025",
-          "author": "Hikma & Nour | حكمة ونور",
-          "desc": "Découvrez pourquoi les petites habitudes répétées transforment davantage la vie qu’une grande décision isolée, et comment construire un système durable de progression.",
-          "image": "petites_habitudes_hero.jpg",
-          "imageAlt": "Pourquoi les petites habitudes changent plus qu’une grande décision",
-          "quote": "Une décision ouvre une porte ; une habitude construit le chemin.",
-          "quoteAuthor": "— Hikma & Nour",
-          "toc": [
-                    "Le piège des grandes décisions",
-                    "Pourquoi les petits gestes résistent mieux au temps",
-                    "L’effet composé : quand le minuscule devient puissant",
-                    "Le rôle de l’identité dans les habitudes",
-                    "Pourquoi commencer petit n’est pas manquer d’ambition"
-          ],
-          "body": [
-                    "Une décision donne une direction, mais ce sont les gestes répétés qui construisent réellement le changement.",
-                    "Les petits gestes réduisent la résistance et survivent à la fatigue des journées ordinaires."
-          ]
-},
         {
           "id": "self-discipline",
           "file": "self-discipline.html",
@@ -7619,6 +7565,108 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "id": "reprendre-habitude-apres-interruption",
+          "file": "reprendre-habitude-apres-interruption.html",
+          "title": "How to Restart a Habit After a Break",
+          "category": "development",
+          "categoryName": "Self-Development • Resilience",
+          "readTime": "9 min read",
+          "date": "January 15, 2025",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "A practical and psychological guide to restarting a habit after a break without guilt, perfectionism, or extreme overcompensation.",
+          "image": "developpement-personnel/images/thumb-reprendre-habitude-interruption.jpg",
+          "imageAlt": "How to Restart a Habit After a Break",
+          "quote": "A habit does not die upon disruption; it is reborn through the very first modest step.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+            "Why we break our habits",
+            "A break does not erase progress",
+            "The all-or-nothing trap",
+            "Understanding post-break guilt",
+            "The 5-step restart protocol"
+          ],
+          "body": [
+            "Sustainable habits do not depend on never breaking the chain, but on mastering the skill of restarting quickly.",
+            "Restarting with a micro-version bypasses cognitive resistance and restores momentum."
+          ]
+        },
+        {
+          "id": "petites-habitudes-grande-decision",
+          "file": "petites-habitudes-grande-decision.html",
+          "title": "Why Small Habits Change More Than One Big Decision",
+          "category": "development",
+          "categoryName": "Self-Development • Compound Effect",
+          "readTime": "8 min read",
+          "date": "January 10, 2025",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Discover why repeated small habits transform your life more than one isolated big decision, and how to build a sustainable system of progress.",
+          "image": "articles/petites_habitudes_hero.jpg",
+          "imageAlt": "Why Small Habits Change More Than One Big Decision",
+          "quote": "Big decisions provide the spark, but repeated small habits build destiny.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+            "The illusion of dramatic fresh starts",
+            "Why heroic resolutions collapse",
+            "The power of compounding gains",
+            "Habits as identity reinforcement",
+            "Building a lasting system"
+          ],
+          "body": [
+            "Genuine transformation is not born from rare heroic bursts, but from modest daily consistency.",
+            "Every small habit executed is a vote cast in favor of your ideal self."
+          ]
+        },
+        {
+          "id": "construire-une-habitude-durable",
+          "file": "construire-une-habitude-durable.html",
+          "title": "Building a Lasting Habit: How a Small Action Becomes a Way of Life",
+          "category": "development",
+          "categoryName": "Self-Development • Habit Engineering",
+          "readTime": "7 min read",
+          "date": "January 05, 2025",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "A comprehensive guide to behavioral engineering: transforming micro-actions into permanent lifestyle habits through cues, repetition, and identity shifts.",
+          "image": "articles/construire_habitude_durable_hero.jpg",
+          "imageAlt": "Building a Lasting Habit",
+          "quote": "A solid habit is not a constraint, but the ultimate freedom of effortless action.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+            "The anatomy of daily habits",
+            "The power of unambiguous cues",
+            "Eliminating starting friction",
+            "Identity consolidation"
+          ],
+          "body": [
+            "A habit becomes permanent when the entry friction approaches zero.",
+            "Anchor each new practice to an established, immutable daily landmark."
+          ]
+        },
+        {
+          "id": "discipline-vs-motivation",
+          "file": "discipline-vs-motivation.html",
+          "title": "Discipline vs Motivation: Why Drive Alone Is Not Enough",
+          "category": "development",
+          "categoryName": "Self-Development • Psychology of Action",
+          "readTime": "8 min read",
+          "date": "January 01, 2025",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "An in-depth psychological analysis of action and willpower: why motivation fades and how to construct enduring, system-based self-discipline.",
+          "image": "articles/discipline_vs_motivation_hero.jpg",
+          "imageAlt": "Discipline vs Motivation",
+          "quote": "Motivation gets you started; discipline carries you through when excitement fades.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+            "The trap of emotional drive",
+            "Why motivation inevitably declines",
+            "The architecture of conscious discipline",
+            "Engineering fatigue-resistant systems"
+          ],
+          "body": [
+            "Waiting for motivation before acting is a formula for perpetual inconsistency.",
+            "Discipline is the reliable bridge between your intentions and real achievement."
+          ]
+        },
+        {
           "id": "wisdom-stoicism-control",
           "file": "wisdom-stoicism-control.html",
           "title": "Stoic Wisdom: Learning to Master What Depends on Us",
@@ -8708,84 +8756,6 @@ const TIKTOK_DATA = {
           "finalQuote": "« An unexamined life is not worth living. »",
           "finalQuoteAuthor": "— Socrates | Hikma & Nour"
         },
-        {
-          "id": "discipline-vs-motivation",
-          "file": "discipline-vs-motivation.html",
-          "title": "Discipline vs Motivation: Why Drive Alone Is Not Enough",
-          "category": "development",
-          "categoryName": "Personal Growth & Mastery",
-          "readTime": "8 min read",
-          "date": "January 15, 2025",
-          "author": "Hikma & Nour | حكمة ونور",
-          "desc": "An in-depth psychological analysis of action and willpower: why emotional motivation fades and how to construct enduring, system-based self-discipline.",
-          "image": "discipline_vs_motivation_hero.jpg",
-          "imageAlt": "Discipline vs Motivation: Why Drive Alone Is Not Enough",
-          "quote": "There is no more miserable human being than one in whom nothing is habitual, for whom the beginning of every bit of work depends on the mood of the moment.",
-          "quoteAuthor": "— William James",
-          "toc": [
-                    "Why Emotional Motivation Inevitably Fades",
-                    "What Discipline Truly Means",
-                    "Willpower, Emotion, and Decision-Making",
-                    "The Trap of Waiting for Inspiration",
-                    "Building Systems Over Vague Goals"
-          ],
-          "body": [
-                    "Motivation is a transient neurochemical spark that cannot sustain long-term intellectual or physical effort.",
-                    "Conscious discipline represents true autonomy, subordinating impulsive desires to overarching values."
-          ]
-},
-        {
-          "id": "construire-une-habitude-durable",
-          "file": "construire-une-habitude-durable.html",
-          "title": "Building a Lasting Habit: How a Small Action Becomes a Way of Life",
-          "category": "development",
-          "categoryName": "Personal Growth & Mastery",
-          "readTime": "8 min read",
-          "date": "January 15, 2025",
-          "author": "Hikma & Nour | حكمة ونور",
-          "desc": "A comprehensive guide to behavioral engineering: how to transform micro-actions into permanent lifestyle habits through cues, repetition, and identity shift.",
-          "image": "construire_habitude_durable_hero.jpg",
-          "imageAlt": "Building a Lasting Habit: How a Small Action Becomes a Way of Life",
-          "quote": "Sow a thought and you reap an action; sow an act and you reap a habit; sow a habit and you reap a character; sow a character and you reap a destiny.",
-          "quoteAuthor": "— William James",
-          "toc": [
-                    "Why Habit Formation Attempts Often Fail",
-                    "The Micro-Start Rule: Starting Smaller Than You Think",
-                    "The Crucial Role of Cues: Implementation Intentions",
-                    "Repetition Over Perfectionism",
-                    "The Neurobiology of Reward"
-          ],
-          "body": [
-                    "Premature intensity is the primary killer of new habits: always begin smaller than intuition suggests.",
-                    "Neural consolidation is driven strictly by repetition frequency rather than flawless execution."
-          ]
-},
-        {
-          "id": "petites-habitudes-grande-decision",
-          "file": "petites-habitudes-grande-decision.html",
-          "title": "Why Small Habits Change More Than One Big Decision",
-          "category": "development",
-          "categoryName": "Personal Growth & Mastery",
-          "readTime": "8 min read",
-          "date": "January 15, 2025",
-          "author": "Hikma & Nour | حكمة ونور",
-          "desc": "Discover why repeated small habits transform your life more than one isolated big decision, and how to build a sustainable system of progress.",
-          "image": "petites_habitudes_hero.jpg",
-          "imageAlt": "Why Small Habits Change More Than One Big Decision",
-          "quote": "A decision opens the door; a habit builds the path.",
-          "quoteAuthor": "— Hikma & Nour",
-          "toc": [
-                    "The trap of big decisions",
-                    "Why small actions last longer",
-                    "The compound effect: when the tiny becomes powerful",
-                    "The role of identity in habits",
-                    "Why starting small is not a lack of ambition"
-          ],
-          "body": [
-                    "A decision opens the door, but repeated small actions make us walk through it every day.",
-                    "Small habits reduce internal resistance and remain practicable even on average, imperfect days."
-          ]
-},
         {
           "id": "self-discipline",
           "file": "self-discipline.html",
@@ -12138,6 +12108,108 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "id": "reprendre-habitude-apres-interruption",
+          "file": "reprendre-habitude-apres-interruption.html",
+          "title": "كيف تستعيد عادة بعد انقطاع؟ سيكولوجيا العودة الذكية",
+          "category": "development",
+          "categoryName": "تطوير الذات • الانضباط والعادات",
+          "readTime": "٩ دقائق قراءة",
+          "date": "١٥ يناير ٢٠٢٥",
+          "author": "حكمة ونور | Hikma & Nour",
+          "desc": "دليل عملي ونفسي لاستئناف العادات بعد التعثر دون جلد الذات أو الوقوع في فخ التعويض المفرط، مع بروتوكول العودة في 5 خطوات.",
+          "image": "developpement-personnel/images/thumb-reprendre-habitude-interruption.jpg",
+          "imageAlt": "كيف تستعيد عادة بعد انقطاع؟",
+          "quote": "العادة لا تموت بالانقطاع، بل تُبعث من جديد بالخطوة الأولى الهادئة.",
+          "quoteAuthor": "— حكمة ونور",
+          "toc": [
+            "لماذا تنقطع عاداتنا؟",
+            "الانقطاع لا يمحو ما بنيته",
+            "فخ ثنائية كل شيء أو لا شيء",
+            "تفكيك الشعور بالذنب وجلد الذات",
+            "بروتوكول العودة في خمس خطوات"
+          ],
+          "body": [
+            "الانقطاع ليس نقيض الاستمرارية، بل هو جزء طبيعي من أي نظام حي.",
+            "المهارة الحقيقية ليست في غياب التعثر، بل في سرعة استئناف الحركة دون جلد الذات."
+          ]
+        },
+        {
+          "id": "petites-habitudes-grande-decision",
+          "file": "petites-habitudes-grande-decision.html",
+          "title": "لماذا تغيّر العادات الصغيرة حياتنا أكثر من القرارات الكبيرة؟",
+          "category": "development",
+          "categoryName": "تطوير الذات • الانضباط والعادات",
+          "readTime": "٨ دقائق قراءة",
+          "date": "١٠ يناير ٢٠٢٥",
+          "author": "حكمة ونور | Hikma & Nour",
+          "desc": "اكتشف لماذا تغيّر العادات الصغيرة المتكررة حياتنا أكثر من قرار كبير معزول، وكيف تبني نظامًا عمليًا للتقدم المستمر عبر أثر التراكم.",
+          "image": "articles/petites_habitudes_hero.jpg",
+          "imageAlt": "لماذا تغيّر العادات الصغيرة حياتنا أكثر من القرارات الكبيرة؟",
+          "quote": "القرارات الكبيرة تمنحنا وهج البداية، لكن العادات الصغيرة الصامتة هي التي تصنع المصير.",
+          "quoteAuthor": "— حكمة ونور",
+          "toc": [
+            "سحر البدايات ووهم القرار الكبير",
+            "لماذا تفشل القرارات الكبيرة؟",
+            "قوة التراكم وأثر المركب",
+            "العادات وتغيير الهوية الشخصية",
+            "كيف تبني نظاماً يدوم؟"
+          ],
+          "body": [
+            "التحول الحقيقي لا تصنعه اللحظات الحماسية وحدها، بل تصنعه العادات الصغيرة التي تتكرر بصمت حتى تصبح جزءًا من هويتنا.",
+            "كل تكرار صغير هو صوت انتخابي تدلي به لصالح الهوية التي تريد أن تصبحها."
+          ]
+        },
+        {
+          "id": "construire-une-habitude-durable",
+          "file": "construire-une-habitude-durable.html",
+          "title": "بناء عادة دائمة: كيف يتحول الفعل الصغير إلى نمط حياة؟",
+          "category": "development",
+          "categoryName": "تطوير الذات • هندسة العادات",
+          "readTime": "٧ دقائق قراءة",
+          "date": "٠٥ يناير ٢٠٢٥",
+          "author": "حكمة ونور | Hikma & Nour",
+          "desc": "دليل منهجي متكامل في هندسة السلوك وتكوين العادات المستدامة عبر المحفزات والتكرار الواعي وتغيير الهوية الشخصية.",
+          "image": "articles/construire_habitude_durable_hero.jpg",
+          "imageAlt": "بناء عادة دائمة: كيف يتحول الفعل الصغير إلى نمط حياة؟",
+          "quote": "العادة المستدامة ليست عملاً نقوم به، بل هي هوية نتقمصها يوماً بعد يوم.",
+          "quoteAuthor": "— حكمة ونور",
+          "toc": [
+            "تشريح العادة اليومية",
+            "قوة الإشارات والمحفزات",
+            "تقليل مقاومة البداية",
+            "المكافأة وتثبيت المسار العصبي"
+          ],
+          "body": [
+            "العادات المستدامة تُبنى عندما نجعل الفعل سهلاً لدرجة يصعب معها رفضه.",
+            "السر يكمن في ربط العادة الجديدة بسياق مكاني وزماني واضح."
+          ]
+        },
+        {
+          "id": "discipline-vs-motivation",
+          "file": "discipline-vs-motivation.html",
+          "title": "الانضباط أم الدافعية: لماذا لا يكفي الحماس وحده؟",
+          "category": "development",
+          "categoryName": "تطوير الذات • سيكولوجيا الفعل",
+          "readTime": "٨ دقائق قراءة",
+          "date": "٠١ يناير ٢٠٢٥",
+          "author": "حكمة ونور | Hikma & Nour",
+          "desc": "دراسة شاملة في الفارق الجوهري بين تقلبات الحماس العاطفي وثبات الانضباط الواعي، مع استراتيجيات تحويل الإرادة إلى نظام عمل يومي مستدام.",
+          "image": "articles/discipline_vs_motivation_hero.jpg",
+          "imageAlt": "الانضباط أم الدافعية: لماذا لا يكفي الحماس وحده؟",
+          "quote": "الدافع يجعلك تبدأ، لكن الانضباط هو الذي يجعلك تستمر حين ينطفئ الحماس.",
+          "quoteAuthor": "— حكمة ونور",
+          "toc": [
+            "وهم الدافعية المؤقتة",
+            "لماذا ينطفئ الحماس سريعاً؟",
+            "هندسة الانضباط الواعي",
+            "بناء أنظمة تصمد أمام التعب"
+          ],
+          "body": [
+            "الاعتماد الحصري على المشاعر والحماس هو السبب الأول للتعثر المتكرر.",
+            "الانضباط الحقيقي هو القدرة على تنفيذ ما التزمت به حتى حين تنعدم الرغبة الآنية."
+          ]
+        },
+        {
           "id": "wisdom-stoicism-control",
           "file": "wisdom-stoicism-control.html",
           "title": "الحكمة الرواقية: كيف نتعلم السيطرة على ما يقع ضمن إرادتنا؟",
@@ -13239,84 +13311,6 @@ const TIKTOK_DATA = {
           "finalQuote": "« إن الحياة غير المفحوصة لا تستحق العيش. »",
           "finalQuoteAuthor": "— سقراط | حكمة ونور"
         },
-        {
-          "id": "discipline-vs-motivation",
-          "file": "discipline-vs-motivation.html",
-          "title": "الانضباط أم الدافعية: لماذا لا يكفي الحماس وحده؟",
-          "category": "development",
-          "categoryName": "تطوير الذات والإنتاجية",
-          "readTime": "٨ دقائق قراءة",
-          "date": "١٥ يناير ٢٠٢٥",
-          "author": "حكمة ونور | Hikma & Nour",
-          "desc": "دراسة شاملة في الفارق الجوهري بين تقلبات الحماس العاطفي وثبات الانضباط الواعي، مع استراتيجيات تحويل الإرادة إلى نظام عمل يومي مستدام.",
-          "image": "discipline_vs_motivation_hero.jpg",
-          "imageAlt": "الانضباط أم الدافعية: لماذا لا يكفي الحماس وحده؟",
-          "quote": "ليس هناك في الوجود إنسان أكثر بؤساً وعبودية من ذلك الذي لا يكون فيه القرار حاسماً، والذي يترك كل فعل وكل بداية انتظاراً لمزاجه اللحظي.",
-          "quoteAuthor": "— ويليام جيمس",
-          "toc": [
-                    "لماذا يتلاشى الحماس العاطفي؟",
-                    "المعنى الحقيقي للانضباط الواعي",
-                    "التمييز بين الإرادة والمشاعر والقرار",
-                    "خطورة انتظار الرغبة",
-                    "بناء النظم عوض الأهداف المجردة"
-          ],
-          "body": [
-                    "الدافعية شحنة عاطفية عابرة تحركها توقعات الدوبامين، ولا يمكن الاعتماد عليها وحدها لبناء إنجاز مستدام.",
-                    "الانضباط هو ممارسة الحرية الحقيقية عبر تقديم الأهداف العليا على الرغبات اللحظية."
-          ]
-},
-        {
-          "id": "construire-une-habitude-durable",
-          "file": "construire-une-habitude-durable.html",
-          "title": "بناء عادة دائمة: كيف يتحول الفعل الصغير إلى نمط حياة؟",
-          "category": "development",
-          "categoryName": "تطوير الذات والإنتاجية",
-          "readTime": "٨ دقائق قراءة",
-          "date": "١٥ يناير ٢٠٢٥",
-          "author": "حكمة ونور | Hikma & Nour",
-          "desc": "دليل منهجي متكامل في هندسة السلوك وتكوين العادات المستدامة عبر المحفزات والتكرار الواعي وتغيير الهوية الشخصية.",
-          "image": "construire_habitude_durable_hero.jpg",
-          "imageAlt": "بناء عادة دائمة: كيف يتحول الفعل الصغير إلى نمط حياة؟",
-          "quote": "ازرع فكرة تحصد فعلاً، ازرع فعلاً تحصد عادة، ازرع عادة تحصد شخصية، ازرع شخصية تحصد مصيراً.",
-          "quoteAuthor": "— ويليام جيمس",
-          "toc": [
-                    "لماذا تفشل محاولات بناء العادات غالباً؟",
-                    "قاعدة البداية المتناهية الصغر",
-                    "هندسة المحفز والإشارة البيئية الواضحة",
-                    "التكرار الواعي وتجاوز فخ المثالية",
-                    "نظام المكافأة والرضا الفوري"
-          ],
-          "body": [
-                    "فخ البدايات المفرطة هو العدو الأول للعادات؛ ابدأ دائماً بأصغر مما تظن.",
-                    "ترسيخ المسار العصبي للعادة يرتهن بعدد مرات التكرار وليس بكمال الأداء في كل مرة."
-          ]
-},
-        {
-          "id": "petites-habitudes-grande-decision",
-          "file": "petites-habitudes-grande-decision.html",
-          "title": "لماذا تغيّر العادات الصغيرة حياتنا أكثر من القرارات الكبيرة؟",
-          "category": "development",
-          "categoryName": "تطوير الذات والإنتاجية",
-          "readTime": "٨ دقائق قراءة",
-          "date": "١٥ يناير ٢٠٢٥",
-          "author": "حكمة ونور | Hikma & Nour",
-          "desc": "اكتشف لماذا تغيّر العادات الصغيرة المتكررة حياتنا أكثر من قرار كبير معزول، وكيف تبني نظامًا عمليًا للتقدم المستمر.",
-          "image": "petites_habitudes_hero.jpg",
-          "imageAlt": "لماذا تغيّر العادات الصغيرة حياتنا أكثر من القرارات الكبيرة؟",
-          "quote": "القرار يفتح الباب، لكن العادة تبني الطريق.",
-          "quoteAuthor": "— حكمة ونور",
-          "toc": [
-                    "فخ القرارات الكبيرة",
-                    "لماذا تصمد الأفعال الصغيرة أكثر مع الزمن؟",
-                    "الأثر التراكمي: حين يصبح الشيء الصغير قويًا",
-                    "دور الهوية في بناء العادات",
-                    "لماذا لا يعني البدء صغيرًا ضعف الطموح؟"
-          ],
-          "body": [
-                    "القرار الكبير قد يفتح الباب، لكنه لا يجعلنا نعبره كل يوم. الذي يجعلنا نعبر هو الفعل الصغير المتكرر.",
-                    "الأفعال الصغيرة تقلل المقاومة الداخلية وتحافظ على استمرارية المسار حتى في الأيام الصعبة."
-          ]
-},
         {
           "id": "self-discipline",
           "file": "self-discipline.html",
