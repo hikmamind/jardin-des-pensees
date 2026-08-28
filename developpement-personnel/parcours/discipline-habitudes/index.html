@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- SEO Meta Tags -->
   <title id="pageTitle">الانضباط والعادات | تطوير الذات | حكمة ونور</title>
   <meta name="description" id="pageMetaDesc" content="تأسيس الإرادة وهندسة الروتين اليومي وبناء العادات المستدامة.">
@@ -33,7 +33,7 @@
           <span style="font-size: 0.6rem; font-weight: 600; color: var(--text-secondary); letter-spacing: 0.5px;">الحكمة • الفلسفة • علم النفس</span>
         </div>
       </a>
-      
+
       <button class="nav-hamburger" id="navHamburger" aria-label="Ouvrir le menu">
         <span></span><span></span><span></span>
       </button>
@@ -76,7 +76,7 @@
   </header>
 
   <main class="dev-page-container">
-    
+
     <!-- 1. Fil d'Ariane -->
     <nav class="breadcrumb-nav" aria-label="Fil d'Ariane du parcours">
       <a href="../../../" id="bcHome">الرئيسية</a> &gt;
@@ -302,6 +302,21 @@
       }
     },
     {
+      "id": "reprendre-habitude-apres-interruption",
+      "url": "../../../files/reprendre-habitude-apres-interruption.html",
+      "thumb": "../../images/thumb-reprendre-habitude-interruption.jpg",
+      "title": {
+        "ar": "كيف تستعيد عادة بعد انقطاع؟",
+        "fr": "Comment reprendre une habitude après une interruption",
+        "en": "How to Restart a Habit After a Break"
+      },
+      "desc": {
+        "ar": "دليل عملي لاستئناف العادات بعد التعثر دون جلد الذات أو الوقوع في فخ التعويض المفرط.",
+        "fr": "Guide pratique pour relancer une habitude après un arrêt sans culpabilité ni surcompensation.",
+        "en": "Practical guide to restarting habits after a break without guilt or extreme overcompensation."
+      }
+    },
+    {
       "id": "self-discipline",
       "url": "../../../files/self-discipline.html",
       "thumb": "../../../self_discipline.jpg",
@@ -441,7 +456,7 @@
       // Articles Grid
       document.getElementById('articlesHeading').textContent = lang === 'ar' ? '📚 المقالات والأبحاث المتاحة في هذا المسار' : (lang === 'fr' ? '📚 Articles & études disponibles dans ce parcours' : '📚 Available Articles & Studies');
       const readArtText = lang === 'ar' ? 'اقرأ المقال ←' : (lang === 'fr' ? 'Lire l\'article →' : 'Read article →');
-      
+
       const articlesGrid = document.getElementById('articlesGrid');
       if (PAGE_DATA.articles && PAGE_DATA.articles.length > 0) {
         articlesGrid.innerHTML = PAGE_DATA.articles.map(art => {

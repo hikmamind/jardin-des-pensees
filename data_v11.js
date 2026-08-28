@@ -4350,6 +4350,84 @@ const TIKTOK_DATA = {
           ]
 },
         {
+          "id": "reprendre-habitude-apres-interruption",
+          "file": "reprendre-habitude-apres-interruption.html",
+          "title": "Comment reprendre une habitude après une interruption",
+          "category": "development",
+          "categoryName": "Développement & Maîtrise de Soi",
+          "readTime": "9 min de lecture",
+          "date": "15 Janvier 2025",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Guide pratique et psychologique pour relancer une habitude après un arrêt sans culpabilité, sans perfectionnisme et sans surcompensation.",
+          "image": "developpement-personnel/images/thumb-reprendre-habitude-interruption.jpg",
+          "imageAlt": "Comment reprendre une habitude après une interruption",
+          "quote": "Une habitude ne s’éteint pas lors d’un arrêt ; elle renaît dès le premier geste humble.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+                    "Pourquoi nous interrompons nos habitudes",
+                    "Une interruption n’efface pas les progrès",
+                    "Le piège du tout ou rien",
+                    "Comprendre la culpabilité après une rupture",
+                    "Le protocole de reprise en 5 étapes"
+          ],
+          "body": [
+                    "Une habitude pérenne ne dépend pas de l’absence totale d’interruptions, mais de la capacité à recommencer rapidement.",
+                    "Reprendre avec une version minimale permet de contourner l’inertie et de restaurer la confiance."
+          ]
+},
+        {
+          "id": "reprendre-habitude-apres-interruption",
+          "file": "reprendre-habitude-apres-interruption.html",
+          "title": "How to Restart a Habit After a Break",
+          "category": "development",
+          "categoryName": "Personal Growth & Mastery",
+          "readTime": "9 min read",
+          "date": "January 15, 2025",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "A practical and psychological guide to restarting a habit after a break without guilt, perfectionism, or extreme overcompensation.",
+          "image": "developpement-personnel/images/thumb-reprendre-habitude-interruption.jpg",
+          "imageAlt": "How to Restart a Habit After a Break",
+          "quote": "A habit does not die upon disruption; it is reborn through the very first modest step.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+                    "Why we break our habits",
+                    "A break does not erase progress",
+                    "The all-or-nothing trap",
+                    "Understanding post-break guilt",
+                    "The 5-step restart protocol"
+          ],
+          "body": [
+                    "Sustainable habits do not depend on never breaking the chain, but on mastering the skill of restarting quickly.",
+                    "Restarting with a micro-version bypasses cognitive resistance and restores momentum."
+          ]
+},
+        {
+          "id": "reprendre-habitude-apres-interruption",
+          "file": "reprendre-habitude-apres-interruption.html",
+          "title": "كيف تستعيد عادة بعد انقطاع؟",
+          "category": "development",
+          "categoryName": "تطوير الذات والإنتاجية",
+          "readTime": "٩ دقائق قراءة",
+          "date": "١٥ يناير ٢٠٢٥",
+          "author": "حكمة ونور | Hikma & Nour",
+          "desc": "دليل عملي ونفسي لاستئناف العادات بعد التعثر دون جلد الذات أو الوقوع في فخ التعويض المفرط، مع بروتوكول العودة في 5 خطوات.",
+          "image": "developpement-personnel/images/thumb-reprendre-habitude-interruption.jpg",
+          "imageAlt": "كيف تستعيد عادة بعد انقطاع؟",
+          "quote": "العادة لا تموت بالانقطاع، بل تُبعث من جديد بالخطوة الأولى الهادئة.",
+          "quoteAuthor": "— حكمة ونور",
+          "toc": [
+                    "لماذا تنقطع عاداتنا؟",
+                    "الانقطاع لا يمحو ما بنيته",
+                    "فخ ثنائية كل شيء أو لا شيء",
+                    "تفكيك الشعور بالذنب وجلد الذات",
+                    "بروتوكول العودة في خمس خطوات"
+          ],
+          "body": [
+                    "الانقطاع ليس نقيض الاستمرارية، بل هو جزء طبيعي من أي نظام حي.",
+                    "المهارة الحقيقية ليست في غياب التعثر، بل في سرعة استئناف الحركة دون جلد الذات."
+          ]
+},
+        {
           "id": "petites-habitudes-grande-decision",
           "file": "petites-habitudes-grande-decision.html",
           "title": "Pourquoi les petites habitudes changent plus qu’une grande décision",

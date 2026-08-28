@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- SEO Meta Tags -->
   <title id="devMetaTitle">تطوير الذات | الانضباط والعادات والثقة | حكمة ونور</title>
   <meta name="description" content="اكتشف طرق تطوير الذات، بناء العادات السليمة، تعزيز الثقة بالنفس، تحقيق الأهداف وتطوير القدرة على التغيير والنمو المستمر.">
@@ -516,7 +516,7 @@
       justify-content: center;
       grid-column: 1 / -1;
     }
-  
+
   /* Dev Parcours Physical Link Cards */
   .dev-parcours-card,
   .dev-parcours-card:visited {
@@ -537,7 +537,7 @@
     opacity: 1 !important;
   }
 
-  
+
   /* Dev Thinkers Physical Cards */
   .dev-thinker-card,
   .dev-thinker-card:visited {
@@ -634,14 +634,14 @@
           <span class="brand-tagline-ar" style="font-size: 0.72rem; color: var(--text-secondary);" data-i18n="footerBrandTagline">حكمة • فلسفة • سكينة</span>
         </div>
       </a>
-      
+
       <!-- Hamburger Menu for Mobile -->
       <button class="nav-hamburger" id="navHamburger" aria-label="فتح القائمة">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      
+
       <!-- Navigation Menu -->
       <div class="nav-menu" id="navMenu">
         <a href="../" class="nav-link" data-i18n="navHome">الرئيسية</a>
@@ -674,7 +674,7 @@
 
   <!-- Page Main Container (Strict max-width: 1200px) -->
   <div class="dev-v2-container" style="padding-top: 100px;">
-    
+
     <!-- Breadcrumbs Navigation -->
     <nav class="breadcrumb-container" aria-label="مسار التصفح" style="margin-bottom: 24px;">
       <ol class="breadcrumb-list" style="display: flex; gap: 8px; list-style: none; padding: 0; margin: 0; font-size: 0.88rem; color: var(--text-secondary);">
@@ -712,7 +712,7 @@
         <p style="font-size: 1.05rem; color: #C5C6C0; line-height: 1.85; margin: 0 0 18px;" data-i18n="devIntroLead">
           تطوير الذات في حكمة ونور ليس مجرد شعارات تحفيزية عابرة، بل ممارسة عملية قائمة على تحويل الأفكار إلى أفعال يومية ملموسة:
         </p>
-        
+
         <div class="dev-intro-questions">
           <span class="dev-question-pill" data-i18n="dq1">كيف أبني انضباطاً ذاتياً متيناً؟</span>
           <span class="dev-question-pill" data-i18n="dq2">كيف أتغلب على المماطلة والتردد؟</span>
@@ -859,7 +859,20 @@
           </div>
         </article>
 
-        <!-- Article 04: Self-Discipline Guide -->
+        <!-- Article 04: Reprendre une habitude après interruption -->
+        <article class="dev-article-card-hd">
+          <div class="dev-article-img-box">
+            <img src="images/thumb-reprendre-habitude-interruption.jpg" alt="كيف تستعيد عادة بعد انقطاع؟" loading="lazy">
+          </div>
+          <div class="dev-article-body">
+            <span class="dev-article-tag">⚡ مقال رئيسي • سيكولوجيا الاستمرارية</span>
+            <h3 class="dev-article-title">كيف تستعيد عادة بعد انقطاع؟</h3>
+            <p class="dev-article-desc">دليل عملي لاستئناف العادات بعد التعثر دون جلد الذات أو الوقوع في فخ التعويض المفرط المرهق.</p>
+            <a href="../files/reprendre-habitude-apres-interruption.html" class="dev-btn-action">اقرأ المقال ←</a>
+          </div>
+        </article>
+
+        <!-- Article 05: Self-Discipline Guide -->
         <article class="dev-article-card-hd">
           <div class="dev-article-img-box">
             <img src="../dev_discipline_hd.jpg" alt="كيف تبني الانضباط الذاتي؟" loading="lazy">
@@ -899,7 +912,7 @@
       </div>
 
       <div class="dev-grid-3cols">
-        
+
         <!-- Thinker 01: William James -->
         <a class="dev-thinker-card" href="../thinkers/william-james/">
           <div class="dev-thinker-portrait-box">
@@ -1335,6 +1348,14 @@
           tag: 'مقال رئيسي • أثر التراكم'
         },
         {
+          id: 'reprendre-habitude-apres-interruption',
+          title: 'كيف تستعيد عادة بعد انقطاع؟ سيكولوجيا العودة الذكية',
+          desc: 'دليل عملي لاستئناف العادات بعد التعثر دون جلد الذات أو الوقوع في فخ التعويض المفرط المرهق.',
+          url: '../files/reprendre-habitude-apres-interruption.html',
+          img: '../developpement-personnel/images/thumb-reprendre-habitude-interruption.jpg',
+          tag: 'مقال رئيسي • سيكولوجيا الاستمرارية'
+        },
+        {
           id: 'self-discipline',
           title: 'كيف تبني الانضباط الذاتي؟ دليل العادة التي تصنع الفارق',
           desc: 'دليل تطبيقي شامل يشرح لماذا يتفوق الانضباط على الحماس المؤقت، وكيف تبني عادات يومية تضمن وصولك لأهدافك.',
@@ -1369,6 +1390,14 @@
           tag: 'Article Majeur • Effet Composé'
         },
         {
+          id: 'reprendre-habitude-apres-interruption',
+          title: 'Comment reprendre une habitude après une interruption',
+          desc: 'Guide pratique pour relancer une habitude après un arrêt sans culpabilité, sans perfectionnisme et sans surcompensation.',
+          url: '../files/reprendre-habitude-apres-interruption.html',
+          img: '../developpement-personnel/images/thumb-reprendre-habitude-interruption.jpg',
+          tag: 'Article Majeur • Résilience & Action'
+        },
+        {
           id: 'self-discipline',
           title: "Comment cultiver l'autodiscipline ? L'art de la persévérance",
           desc: "Pourquoi la discipline surpasse toujours la motivation éphémère et comment bâtir des habitudes solides pour accomplir ses projets.",
@@ -1401,6 +1430,14 @@
           url: '../files/petites-habitudes-grande-decision.html',
           img: '../articles/petites_habitudes_hero.jpg',
           tag: 'Core Article • Compound Effect'
+        },
+        {
+          id: 'reprendre-habitude-apres-interruption',
+          title: 'How to Restart a Habit After a Break',
+          desc: 'A psychological and practical roadmap to restarting habits after disruptions without guilt, perfectionism, or overcompensation.',
+          url: '../files/reprendre-habitude-apres-interruption.html',
+          img: '../developpement-personnel/images/thumb-reprendre-habitude-interruption.jpg',
+          tag: 'Core Article • Resilience & Action'
         },
         {
           id: 'self-discipline',
@@ -1448,7 +1485,7 @@
 
     function updateLanguage(lang) {
       const data = DEV_TRANSLATIONS[lang] || DEV_TRANSLATIONS.ar;
-      
+
       document.documentElement.lang = lang;
       document.documentElement.dir = (LANG_METADATA[lang] && LANG_METADATA[lang].dir) || (lang === 'ar' ? 'rtl' : 'ltr');
 
@@ -1493,7 +1530,7 @@
           e.stopPropagation();
           langDropdown.classList.toggle('active');
         });
-        
+
         document.addEventListener('click', (e) => {
           if (!langBtn.contains(e.target) && !langDropdown.contains(e.target)) {
             langDropdown.classList.remove('active');
