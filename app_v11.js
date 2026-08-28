@@ -1251,6 +1251,14 @@ function populateRecentArticlesHome() {
 
   const articlesData = (currentLang === 'ar') ? [
     {
+      title: 'النهوض والنمو بعد الصعوبات: سيكولوجيا التعافي والتحول',
+      category: '⚡ تطوير الذات • المرونة والتحول',
+      readTime: '⏱️ ١٢ دقيقة',
+      desc: 'دليل فلسفي ونفسي في استعادة التوازن، وبناء الصلابة الوجدانية، وإعادة تشكيل الذات بوعي وهدوء بعد الأزمات الكبرى.',
+      image: 'developpement-personnel/images/thumb-nouvel-essor-apres-difficultes.jpg',
+      url: './files/nouvel-essor-apres-difficultes.html'
+    },
+    {
       title: 'كيف تستعيد عادة بعد انقطاع؟ سيكولوجيا العودة الذكية',
       category: '⚡ تطوير الذات • الانضباط والعادات',
       readTime: '⏱️ ٩ دقائق',
@@ -1276,6 +1284,14 @@ function populateRecentArticlesHome() {
     }
   ] : (currentLang === 'fr') ? [
     {
+      title: 'Se relever et grandir après les épreuves : Psychologie de la résilience',
+      category: '⚡ Développement • Résilience & Transformation',
+      readTime: '⏱️ 12 min',
+      desc: 'Un guide philosophique et psychologique pour retrouver son équilibre, honorer son temps de guérison et reconstruire une vie plus consciente.',
+      image: 'developpement-personnel/images/thumb-nouvel-essor-apres-difficultes.jpg',
+      url: './files/nouvel-essor-apres-difficultes.html'
+    },
+    {
       title: 'Comment reprendre une habitude après une interruption',
       category: '⚡ Développement • Résilience & Action',
       readTime: '⏱️ 9 min',
@@ -1300,6 +1316,14 @@ function populateRecentArticlesHome() {
       url: './files/discipline-vs-motivation.html'
     }
   ] : [
+    {
+      title: 'Rising and Growing After Adversity: Psychology of Resilience',
+      category: '⚡ Self-Development • Resilience & Transformation',
+      readTime: '⏱️ 12 min',
+      desc: 'A philosophical and psychological guide to regaining balance, honoring recovery time, and consciously rebuilding your life after major trials.',
+      image: 'developpement-personnel/images/thumb-nouvel-essor-apres-difficultes.jpg',
+      url: './files/nouvel-essor-apres-difficultes.html'
+    },
     {
       title: 'How to Restart a Habit After a Break',
       category: '⚡ Self-Development • Resilience & Action',

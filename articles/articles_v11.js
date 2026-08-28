@@ -615,6 +615,7 @@ function openArticleReader(slugOrFile) {
   }
 
   if (article && article.file && (
+    article.file.includes('nouvel-essor-apres-difficultes') ||
     article.file.includes('reprendre-habitude-apres-interruption') ||
     article.file.includes('petites-habitudes-grande-decision') ||
     article.file.includes('discipline-vs-motivation') ||

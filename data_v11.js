@@ -3204,6 +3204,99 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "id": "nouvel-essor-apres-difficultes",
+          "file": "nouvel-essor-apres-difficultes.html",
+          "title": "Rising and Growing After Adversity: Psychology of Resilience",
+          "category": "development",
+          "categoryName": "Self-Development • Resilience & Transformation",
+          "readTime": "12 min read",
+          "date": "August 28, 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "A philosophical and psychological guide to regaining balance, honoring recovery time, and consciously rebuilding your life after major trials.",
+          "image": "developpement-personnel/images/thumb-nouvel-essor-apres-difficultes.jpg",
+          "imageAlt": "Rising and Growing After Adversity",
+          "quote": "True resilience is not denying the storm, but allowing your roots to run deeper while your branches bend flexibly in the wind.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+                  "When Hardship Disrupts Our Inner Balance",
+                  "Rising Does Not Mean Erasing the Past",
+                  "Honoring the Natural Timeline of Recovery",
+                  "Resilience: A Capacity, Not a Moral Mandate",
+                  "Rebuilding Agency Through Micro-Actions",
+                  "Finding Meaning Without Romanticizing Suffering",
+                  "The Healing Power of Authentic Connection",
+                  "Embracing Setbacks as Normal Parts of Healing",
+                  "How Adversity Transforms Our Outlook on Life",
+                  "A Concrete Roadmap to Move Forward"
+          ],
+          "body": [
+                  "Rising after adversity does not mean pretending nothing happened, but embarking on a conscious journey of active resilience.",
+                  "Manageable daily micro-actions are the most reliable tool to overcome helplessness and restore self-efficacy."
+          ]
+  },
+        {
+          "id": "nouvel-essor-apres-difficultes",
+          "file": "nouvel-essor-apres-difficultes.html",
+          "title": "Se relever et grandir après les épreuves : Psychologie de la résilience",
+          "category": "development",
+          "categoryName": "Développement personnel • Résilience & Transformation",
+          "readTime": "12 min de lecture",
+          "date": "28 Août 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Un guide philosophique et psychologique pour retrouver son équilibre, honorer son temps de guérison et reconstruire une vie plus consciente.",
+          "image": "developpement-personnel/images/thumb-nouvel-essor-apres-difficultes.jpg",
+          "imageAlt": "Se relever et grandir après les épreuves",
+          "quote": "La véritable résilience ne consiste pas à nier la tempête, mais à laisser ses racines s’enfoncer plus profondément.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+                  "Quand une difficulté bouleverse notre équilibre",
+                  "Se relever ne signifie pas effacer ce qui s’est passé",
+                  "Respecter le temps nécessaire à la reconstruction",
+                  "La résilience : une capacité, pas une obligation",
+                  "Retrouver progressivement un pouvoir d’action",
+                  "Donner du sens sans idéaliser la souffrance",
+                  "Le rôle des relations et du soutien",
+                  "Accepter les rechutes pendant la reconstruction",
+                  "Quand l’épreuve transforme notre manière de vivre",
+                  "Un chemin concret pour recommencer à avancer"
+          ],
+          "body": [
+                  "Se relever ne signifie pas faire comme si rien ne s’était passé, mais s’engager dans un processus lucide de résilience active.",
+                  "Les micro-actions quotidiennes sont le levier le plus sûr pour vaincre l’impuissance et reconstruire son autonomie."
+          ]
+  },
+        {
+          "id": "nouvel-essor-apres-difficultes",
+          "file": "nouvel-essor-apres-difficultes.html",
+          "title": "النهوض والنمو بعد الصعوبات: سيكولوجيا التعافي والتحول",
+          "category": "development",
+          "categoryName": "تطوير الذات • المرونة والتحول",
+          "readTime": "١٢ دقيقة قراءة",
+          "date": "٢٨ أغسطس ٢٠٢٦",
+          "author": "حكمة ونور | Hikma & Nour",
+          "desc": "دليل فلسفي ونفسي في استعادة التوازن، وبناء الصلابة الوجدانية، وإعادة تشكيل الذات بوعي وهدوء بعد الأزمات الكبرى.",
+          "image": "developpement-personnel/images/thumb-nouvel-essor-apres-difficultes.jpg",
+          "imageAlt": "النهوض والنمو بعد الصعوبات",
+          "quote": "ليس الصمود أن تنكر العاصفة، بل أن تسمح لجذورك بأن تتعمق في الأرض بينما تنحني أغصانك بمرونة أمام الرياح.",
+          "quoteAuthor": "— حكمة ونور",
+          "toc": [
+                  "عندما تعصف الصعوبات بتوازننا النفسي",
+                  "النهوض لا يعني محو التجربة أو إنكار الأثر",
+                  "احترام زمن التعافي وبطء المسار",
+                  "الصمود النفسي: إمكانية إنسانية لا واجب إجباري",
+                  "استعادة زمام المبادرة عبر الفعل الصغير",
+                  "صناعة المعنى دون تقديس الألم",
+                  "شبكة الروابط الإنسانية وأثر السند الواعي",
+                  "تقبل الانتكاسات العابرة كجزء من المسار",
+                  "التحول الوجودي: كيف تعيد الصعاب صياغة أولوياتنا",
+                  "مسار عملي لاستعادة التوازن وإعادة الانطلاق"
+          ],
+          "body": [
+                  "النهوض الحقيقي لا يعني الادعاء بأن شيئاً لم يحدث، بل يعني خوض مسار واعٍ من المرونة النفسية والترميم الذاتي.",
+                  "الأفعال الصغيرة المستمرة هي الدواء الأكثر فاعلية ضد الشعور بالعجز واستعادة زمام المبادرة."
+          ]
+  },
+        {
           "id": "reprendre-habitude-apres-interruption",
           "file": "reprendre-habitude-apres-interruption.html",
           "title": "Comment reprendre une habitude après une interruption",
