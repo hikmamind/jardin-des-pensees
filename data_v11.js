@@ -3204,6 +3204,99 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "id": "redevenir-constant-apres-abandon",
+          "file": "redevenir-constant-apres-abandon.html",
+          "title": "كيف تستعيد الاستمرارية بعد أن توقفت مرات عديدة؟",
+          "category": "development",
+          "categoryName": "تطوير الذات • الانضباط والعادات",
+          "readTime": "١٠ دقائق قراءة",
+          "date": "٢٩ أغسطس ٢٠٢٦",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "دليل عملي وتأملي لاستعادة الاستمرارية بعد الانقطاع المتكرر، وبناء نظام مرن للعودة دون جلد الذات أو الاعتماد على الحماس المؤقت.",
+          "image": "developpement-personnel/images/thumb-redevenir-constant-apres-abandon.jpg",
+          "imageAlt": "طريق من الأضواء الصغيرة يستأنف مساره بعد انقطاع ويقود نحو شجرة فتية في حديقة هادئة.",
+          "quote": "الاستمرارية الحقيقية لا تقاس بعدد الأيام المثالية، بل بالسرعة التي ننهض بها بعد يوم متعثر.",
+          "quoteAuthor": "— حكمة ونور",
+          "toc": [
+            "لماذا يصبح البدء من جديد أصعب بعد كل توقف؟",
+            "الانقطاع عن العادة لا يحدد هويتك",
+            "فهم السبب الحقيقي الذي أدى إلى انقطاع المسار",
+            "البدء بحجم أصغر مما ترغب به النفس",
+            "إعادة بناء الثقة بأدلة يومية صغيرة",
+            "استبدال الكثافة بالحفاظ على وتيرة مستدامة",
+            "تعلم استئناف المسار بعد يوم ضائع",
+            "تهيئة البيئة بدل الاعتماد على قوة الإرادة",
+            "قياس الاستمرارية دون التحول إلى سجين للمتابعة",
+            "بروتوكول عملي للعودة خلال 14 يومًا"
+          ],
+          "body": [
+            "الاستمرارية الحقيقية لا تعني ألا تنقطع أبدًا، بل تعني بناء نظام مرن وبسيط يُمكّنك من الاستئناف فورًا دون شعور بالذنب.",
+            "الانتظام المتواضع يهزم الحماس المنقطع في كل مرة، وتراكم الأدلة اليومية هو ما يعيد بناء الثقة بالذات."
+          ]
+        },
+        {
+          "id": "redevenir-constant-apres-abandon",
+          "file": "redevenir-constant-apres-abandon.html",
+          "title": "How to Become Consistent Again After Giving Up Several Times",
+          "category": "development",
+          "categoryName": "Self-Growth • Discipline & Habits",
+          "readTime": "10 min read",
+          "date": "August 29, 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "A thoughtful and practical guide to rebuilding lasting consistency after multiple setbacks, without guilt or relying on fleeting motivation.",
+          "image": "developpement-personnel/images/thumb-redevenir-constant-apres-abandon.jpg",
+          "imageAlt": "A path of small lights resumes after an interruption and leads toward a young tree in a peaceful night garden.",
+          "quote": "True consistency is not measured by the number of perfect days, but by how swiftly you get back on track after a missed one.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+            "Why restarting becomes harder after each pause",
+            "Breaking a habit does not define your identity",
+            "Understanding what actually caused the disruption",
+            "Restarting smaller than the ego would like",
+            "Rebuilding trust with small daily evidence",
+            "Replacing intensity with a sustainable pace",
+            "Learning to resume after a missed day",
+            "Designing the environment instead of relying on willpower",
+            "Tracking consistency without becoming trapped by metrics",
+            "A simple 14-day restart protocol"
+          ],
+          "body": [
+            "True consistency is not about never missing a day, but building a system simple enough to restart immediately without guilt.",
+            "By showing up for your minimal version every single day, you provide your mind with tangible proof that you keep your word."
+          ]
+        },
+        {
+          "id": "redevenir-constant-apres-abandon",
+          "file": "redevenir-constant-apres-abandon.html",
+          "title": "Comment redevenir constant après avoir abandonné plusieurs fois",
+          "category": "development",
+          "categoryName": "Développement personnel • Discipline & Habitudes",
+          "readTime": "10 min de lecture",
+          "date": "29 Août 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Un guide philosophique et pratique pour retrouver une constance durable après de multiples abandons, sans culpabilité ni dépendance à la motivation éphémère.",
+          "image": "developpement-personnel/images/thumb-redevenir-constant-apres-abandon.jpg",
+          "imageAlt": "Un chemin de petites lumières reprend après une interruption et conduit vers un jeune arbre dans un jardin nocturne.",
+          "quote": "La véritable constance ne se mesure pas au nombre de jours parfaits, mais à la vitesse avec laquelle on se relève après un jour manqué.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+            "Pourquoi recommencer devient plus difficile après chaque abandon",
+            "Abandonner une habitude ne définit pas notre identité",
+            "Comprendre ce qui a réellement interrompu la progression",
+            "Recommencer plus petit que ce que l’ego voudrait",
+            "Reconstruire la confiance avec de petites preuves quotidiennes",
+            "Remplacer l’intensité par un rythme soutenable",
+            "Apprendre à reprendre après une journée manquée",
+            "Modifier l’environnement plutôt que compter sur la volonté",
+            "Mesurer la constance sans devenir prisonnier du suivi",
+            "Un protocole simple de retour sur quatorze jours"
+          ],
+          "body": [
+            "La véritable constance ne signifie pas ne plus jamais faillir, mais bâtir un système suffisamment souple pour reprendre sans culpabilité.",
+            "En accomplissant votre version minimale chaque jour, vous fournissez à votre esprit la preuve tangible que vous tenez parole."
+          ]
+        },
+        {
           "id": "nouvel-essor-apres-difficultes",
           "file": "nouvel-essor-apres-difficultes.html",
           "title": "Rising and Growing After Adversity: Psychology of Resilience",
