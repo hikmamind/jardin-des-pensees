@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- SEO Meta Tags -->
   <title>الحكمة وفن العيش — السكينة، الصبر وتجارب الحياة | حكمة ونور</title>
   <meta name="description" content="حكم وتأملات وأفكار خالدة تساعدك على رؤية الحياة بعمق أكبر: السكينة، الصبر، القلعة الداخلية، الاستغناء الواعي، وتقويم الحكمة اليومية.">
@@ -72,7 +72,7 @@
 
   <!-- Main Stylesheet (Shared) -->
   <link rel="stylesheet" href="../style.css?v=15">
-  
+
   <style>
     .pillar-breadcrumbs {
       display: flex;
@@ -485,7 +485,7 @@
           <span style="font-size: 0.6rem; font-weight: 600; color: var(--text-secondary); letter-spacing: 0.5px;">الحكمة • الفلسفة • علم النفس</span>
         </div>
       </a>
-      
+
       <button class="nav-hamburger" id="navHamburger" aria-label="Ouvrir le menu">
         <span></span><span></span><span></span>
       </button>
@@ -529,7 +529,7 @@
 
   <div class="wis-container">
     <main style="padding-top: 20px;">
-      
+
       <!-- Breadcrumbs -->
       <nav class="pillar-breadcrumbs" aria-label="Fil d'Ariane">
         <a href="../" id="breadHome">الرئيسية</a>
@@ -573,9 +573,9 @@
         <div class="pillar-section-heading">
           <h2 id="wisParcoursHeading">المسارات الخمسة للحكمة وفن العيش</h2>
         </div>
-        
+
         <div class="wis-parcours-grid">
-          
+
           <!-- Parcours 01: الحكمة في الحياة وفن العيش -->
           <a class="wis-parcours-card" href="./parcours/sagesse-de-vie/">
             <div class="wis-parcours-img-box">
@@ -739,6 +739,12 @@
         </div>
       </section>
 
+
+      <!-- RESSOURCES COMPLÉMENTAIRES (AUDIO, QUIZ, CITATIONS) -->
+      <section class="pillar-resources" id="pillarResourcesSection" aria-labelledby="pillarResourcesTitle">
+        <!-- Dynamically rendered by renderPillarResources -->
+      </section>
+
     </main>
   </div>
 
@@ -756,6 +762,7 @@
   <!-- Dynamic Rendering script for Wisdom Pillar multilinguality (V2) -->
   <script type="module">
     import TIKTOK_DATA from '../data_v11.js';
+    import { renderPillarResources } from '../assets/js/pillar_resources.js';
 
     // Comprehensive Local Multilingual Dictionary for Wisdom V2 Refactor
     const WISDOM_TRANSLATIONS = {
@@ -1008,7 +1015,7 @@
           'hikma-citations-philosophiques'
         ];
         const list = TIKTOK_DATA.content[lang].articles.filter(a => wisdomArticleIds.includes(a.id));
-        
+
         const badgeMap = {
           'wisdom-stoicism-control': lang === 'ar' ? 'حكمة رواقية • ضبط النفس' : lang === 'fr' ? 'Sagesse Stoïcienne • Maîtrise' : 'Stoic Wisdom • Self-Mastery',
           'happiness-in-wrong-place': lang === 'ar' ? 'حكمة وجودية • وضوح' : lang === 'fr' ? 'Sagesse Existentielle • Clarté' : 'Existential Wisdom • Clarity',

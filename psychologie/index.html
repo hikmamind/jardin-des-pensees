@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- SEO Meta Tags -->
   <title>علم النفس وفهم الإنسان | Jardin des Pensées</title>
   <meta name="description" content="اكتشف علم النفس من خلال فهم الذات، المشاعر، العلاقات، السلوك والنمو، مع مقالات وأفكار من أبرز المفكرين.">
@@ -72,15 +72,15 @@
 
   <!-- Main Stylesheet (Shared) -->
   <link rel="stylesheet" href="../style.css?v=28">
-  
+
   <style>
     /* Premium Visual Scoping for Psychologie (V4 Premium Corrections) */
-    html.psychologie-page, 
+    html.psychologie-page,
     body {
       background-color: #07100D !important; /* Deep Forest Dark Academia background */
       color: #F2EEE5;
     }
-    
+
     .psy-section-block {
       margin-top: 100px;
       margin-bottom: 100px;
@@ -573,7 +573,7 @@
           <span style="font-size: 0.6rem; font-weight: 600; color: var(--text-secondary); letter-spacing: 0.5px;">الحكمة • الفلسفة • علم النفس</span>
         </div>
       </a>
-      
+
       <button class="nav-hamburger" id="navHamburger" aria-label="Ouvrir le menu">
         <span></span><span></span><span></span>
       </button>
@@ -617,7 +617,7 @@
 
   <div class="container" id="psychologyMainView">
     <main style="padding-top: 20px;">
-      
+
       <!-- Fil d'Ariane -->
       <nav class="pillar-breadcrumbs" aria-label="Fil d'Ariane">
         <a href="../" data-i18n="home">الرئيسية</a>
@@ -671,10 +671,10 @@
           <h2 data-i18n="psyParcoursTitle">مسارات موجهة حسب احتياجك</h2>
           <p data-i18n="psyParcoursSubtitle">اختر المسار الذي يناسب سؤالك الحالي واستكشف المعرفة خطوة بخطوة</p>
         </div>
-        
+
         <!-- Grid 3 elements top -->
         <div class="psy-parcours-grid">
-          
+
           <!-- Parcours 01 -->
           <a href="./parcours/psychologie-de-soi/" class="psy-parcours-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
             <div class="psy-parcours-imgbox">
@@ -730,7 +730,7 @@
 
         <!-- Grid 2 elements bottom -->
         <div class="psy-parcours-grid-bottom">
-          
+
           <!-- Parcours 04 -->
           <a href="./parcours/blessures-resilience/" class="psy-parcours-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
             <div class="psy-parcours-imgbox">
@@ -849,7 +849,13 @@
       </section>
 
       <!-- 20. SECTION CTA FINAL -->
-      <section class="psy-section-block">
+
+    <!-- RESSOURCES COMPLÉMENTAIRES (AUDIO, QUIZ, CITATIONS) -->
+    <section class="pillar-resources" id="pillarResourcesSection" aria-labelledby="pillarResourcesTitle">
+      <!-- Dynamically rendered by renderPillarResources -->
+    </section>
+
+    <section class="psy-section-block">
         <div style="background: #0D1814; border: 1px solid rgba(201, 168, 106, 0.25); border-radius: 28px; padding: 60px 30px; text-align: center;">
           <h2 style="font-size: 2rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 14px;" data-i18n="psyCtaTitle">
             كل رحلة إلى العالم الخارجي<br>تبدأ بفهم العالم الداخلي.
@@ -871,7 +877,7 @@
     </main>
   </div>
 
-  
+
 
   <!-- Full Screen Dedicated Domain Modal / View -->
   <div class="full-screen-reader-modal" id="domainModalView" role="dialog" aria-modal="true" aria-label="Vue du Domaine Psychologique">
@@ -893,7 +899,7 @@
     </div>
   </div>
 
-  
+
     </header>
 
     <div class="reader-scroll-container" style="padding: 40px 20px 80px;">
@@ -912,6 +918,10 @@
     </div>
   </footer>
 
+  <script type="module">
+    import { renderPillarResources } from '../assets/js/pillar_resources.js';
+    window.renderPillarResources = renderPillarResources;
+  </script>
   <script src="../app_v11.js?v=28" type="module">
     /* ============================================================
        PSYCHOLOGIE V5.2 — PARCOURS PSYCHOLOGIE DEDICATED VIEW ENGINE
@@ -1185,7 +1195,7 @@
       const readArtText = lang === 'ar' ? 'اقرأ المقال ←' : (lang === 'fr' ? 'Lire l'article →' : 'Read article →');
       const viewThinkerText = lang === 'ar' ? 'عرض المفكر ←' : (lang === 'fr' ? 'Voir le penseur →' : 'View profile →');
       const comingSoonMsg = lang === 'ar' ? '⏳ مقالات قادمة قريبًا' : (lang === 'fr' ? '⏳ Articles à venir' : '⏳ Articles coming soon');
-      
+
       const principlesHeading = lang === 'ar' ? '💡 الركائز والمبادئ الأساسية للمسار' : (lang === 'fr' ? '💡 Principes & idées clés du parcours' : '💡 Key Principles & Core Ideas');
       const articlesHeading = lang === 'ar' ? '📚 المقالات والأبحاث المتاحة في هذا المسار' : (lang === 'fr' ? '📚 Articles & études disponibles dans ce parcours' : '📚 Available Articles & Studies');
       const thinkersHeading = lang === 'ar' ? '👤 المفكرون والفلاسفة المرتبطون بالمسار' : (lang === 'fr' ? '👤 Penseurs & philosophes associés' : '👤 Associated Thinkers');
@@ -1330,7 +1340,7 @@
       const lang = (e && e.detail && e.detail.lang) || getSavedLang();
       document.documentElement.setAttribute('lang', lang);
       document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-      
+
       // 0. Render Psychology Domains Grid
       renderDomainsGrid(lang);
 
@@ -1340,6 +1350,9 @@
       }
       if (window.activeParcoursModalId) {
         window.renderParcoursModalView(window.activeParcoursModalId, lang);
+      }
+      if (window.renderPillarResources) {
+        window.renderPillarResources('#pillarResourcesSection', 'psychologie', lang);
       }
       if (window.activePathwayId) {
         window.renderPsychologyPathway(window.activePathwayId, lang);
@@ -1417,7 +1430,7 @@
 
         const targetIds = Object.keys(articleParcoursMap);
         let list = TIKTOK_DATA.content[lang].articles.filter(a => targetIds.includes(a.id));
-        
+
         if (currentFilter !== 'all') {
           list = list.filter(a => articleParcoursMap[a.id] === currentFilter);
         }
@@ -1512,7 +1525,7 @@
 
     function filterArticles(parcoursId) {
       currentFilter = parcoursId;
-      
+
       const filterBtns = document.querySelectorAll('.psy-filter-btn');
       filterBtns.forEach(btn => {
         if (btn.getAttribute('data-filter') === parcoursId) {

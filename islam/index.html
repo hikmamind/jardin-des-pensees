@@ -871,6 +871,12 @@
     </section>
 
     <!-- 8. UPCOMING ROADMAP SECTION -->
+
+    <!-- 5.5. RESSOURCES COMPLÉMENTAIRES (AUDIO, QUIZ, CITATIONS) -->
+    <section class="pillar-resources" id="pillarResourcesSection" aria-labelledby="pillarResourcesTitle">
+      <!-- Dynamically rendered by renderPillarResources -->
+    </section>
+
     <section style="margin: 50px 0 60px;">
       <div style="background: rgba(10, 18, 14, 0.9); border: 1px solid rgba(223, 177, 91, 0.25); border-radius: 24px; padding: 40px 30px; text-align: center;">
         <h2 style="font-size: 1.6rem; color: #FAF6EF; font-family: 'Playfair Display', 'Amiri', serif; margin-bottom: 10px;" data-i18n="roadmapTitle">قريبًا في الفكر الإسلامي</h2>
@@ -943,6 +949,7 @@
   <!-- Multilingual Translation & Interactive Script -->
   <script type="module">
     import TIKTOK_DATA from '../data_v11.js';
+    import { renderPillarResources } from '../assets/js/pillar_resources.js';
 
     const LANG_METADATA = {
       ar: { label: "العربية", dir: "rtl" },
@@ -1339,6 +1346,7 @@
 
       // Re-render Dynamic Parcours
       renderIslamParcours(lang);
+      renderPillarResources('#pillarResourcesSection', 'islam', lang);
 
       // Update all translatable elements
       document.querySelectorAll('[data-i18n]').forEach(el => {

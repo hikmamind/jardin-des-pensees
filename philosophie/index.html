@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- SEO Meta Tags -->
   <title id="philoMetaTitle">الفلسفة | مدارس الفكر وأهم الفلاسفة | حكمة ونور</title>
   <meta name="description" content="اكتشف المدارس الفلسفية الكبرى، أهم المفكرين، والأعمال التي شكلت تاريخ الفكر الإنساني مع حكمة ونور.">
@@ -638,7 +638,7 @@
       margin-bottom: 18px;
       flex-grow: 1;
     }
-  
+
 
     /* Language Dropdown Selector Fix */
     .lang-selector-dropdown,
@@ -727,10 +727,10 @@
       font-weight: 800;
       background: rgba(223, 177, 91, 0.2);
     }
-  
-  
 
-  
+
+
+
   /* Écoles philosophiques (Cartes Physiques Static) */
   .philo-schools-section {
     display: block;
@@ -860,14 +860,14 @@
           <span class="brand-tagline-ar" style="font-size: 0.72rem; color: var(--text-secondary);" data-i18n="footerBrandTagline">حكمة • فلسفة • سكينة</span>
         </div>
       </a>
-      
+
       <!-- Hamburger Menu for Mobile -->
       <button class="nav-hamburger" id="navHamburger" aria-label="فتح القائمة">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      
+
       <!-- Navigation Menu -->
       <div class="nav-menu" id="navMenu">
         <a href="../" class="nav-link" data-i18n="navHome">الرئيسية</a>
@@ -900,7 +900,7 @@
 
   <!-- Page Main Container (Strict max-width: 1200px) -->
   <div class="philo-v4-container" style="padding-top: 100px;">
-    
+
     <!-- Breadcrumbs Navigation -->
     <nav class="breadcrumb-container" aria-label="مسار التصفح" style="margin-bottom: 24px;">
       <ol class="breadcrumb-list" style="display: flex; gap: 8px; list-style: none; padding: 0; margin: 0; font-size: 0.88rem; color: var(--text-secondary);">
@@ -938,7 +938,7 @@
         <p style="font-size: 1.05rem; color: #C5C6C0; line-height: 1.85; margin: 0 0 18px;" data-i18n="philoIntroLead">
           ليست الفلسفة مجرد نظريات قديمة، بل طريقة حية في النظر إلى الحياة والأسئلة التي نعيشها كل يوم:
         </p>
-        
+
         <div class="philo-intro-questions">
           <span class="philo-question-pill" data-i18n="q1">لماذا نعيش؟</span>
           <span class="philo-question-pill" data-i18n="q2">ما معنى الحرية؟</span>
@@ -1461,12 +1461,12 @@
 
 
 
-    
 
 
 
 
-    
+
+
 
 
 
@@ -1482,7 +1482,7 @@
       </div>
     </section>
 
-    
+
 
     <!-- 6. PENSEURS (100% REAL PORTRAITS LINKING TO /thinkers/?thinker=ID) -->
     <section id="penseurs" style="margin: 60px 0;">
@@ -1540,6 +1540,12 @@
           </div>
         </article>
       </div>
+    </section>
+
+
+    <!-- 7.5. RESSOURCES COMPLÉMENTAIRES (AUDIO, QUIZ, CITATIONS) -->
+    <section class="pillar-resources" id="pillarResourcesSection" aria-labelledby="pillarResourcesTitle">
+      <!-- Dynamically rendered by renderPillarResources -->
     </section>
 
     <!-- 8. CONCLUSION & MEDITATION QUOTE -->
@@ -1652,6 +1658,7 @@
   <!-- Dynamic Javascript & Multilingual System -->
   <script type="module">
     import TIKTOK_DATA from '../data_v11.js';
+    import { renderPillarResources } from '../assets/js/pillar_resources.js';
 
     const LANG_METADATA = {
       ar: { label: "العربية", dir: "rtl" },
@@ -2089,7 +2096,7 @@
       localStorage.setItem('lang', lang);
     }
 
-    
+
     function renderSchoolsGrid(lang) {
       const grid = document.getElementById('philoSchoolsGrid');
 
@@ -2219,7 +2226,7 @@
               <div style="font-size: 0.78rem; color: var(--accent-gold); font-weight: 700; margin-bottom: 6px;">⌛ ${period}</div>
               <h3 class="philo-school-title">${title}</h3>
               <p class="philo-school-desc">${desc}</p>
-              
+
               <!-- B. PRINCIPES / IDÉES CLEFS -->
               ${principlesHtml}
 
@@ -2243,7 +2250,7 @@
 
       const trans = PHILO_TRANSLATIONS[lang] || PHILO_TRANSLATIONS.ar;
       const articles = (TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].articles) || [];
-      
+
       // Filter STRICTLY philosophy articles (category === 'philosophy')
       const philoArticles = articles.filter(a => a.category === 'philosophy');
 
@@ -2275,7 +2282,7 @@
       const trans = PHILO_TRANSLATIONS[lang] || PHILO_TRANSLATIONS.ar;
       const thinkers = (TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].thinkers) || [];
       const topThinkerIds = ['socrate', 'nietzsche', 'schopenhauer', 'platon', 'aristote', 'marcaurele', 'epictete', 'seneque', 'descartes', 'spinoza', 'kant', 'sartre', 'camus'];
-      
+
       const filteredThinkers = topThinkerIds.map(id => thinkers.find(t => t.id === id)).filter(Boolean).slice(0, 9);
 
       grid.innerHTML = filteredThinkers.map(t => {
@@ -2310,7 +2317,7 @@
         });
 
       const data = PHILO_TRANSLATIONS[lang] || PHILO_TRANSLATIONS.ar;
-      
+
       document.documentElement.lang = lang;
       document.documentElement.dir = (LANG_METADATA[lang] && LANG_METADATA[lang].dir) || (lang === 'ar' ? 'rtl' : 'ltr');
 
@@ -2342,6 +2349,7 @@
       renderSchoolsGrid(lang);
       renderArticlesGrid(lang);
       renderThinkersGrid(lang);
+      renderPillarResources('#pillarResourcesSection', 'philosophie', lang);
     }
 
     // Initialize Page
@@ -2349,7 +2357,7 @@
       const currentLang = getSavedLang();
       updateLanguage(currentLang);
     });
-    
+
 
       // Header Language Dropdown Fix (Floating menu, non-disruptive)
       const langBtn = document.getElementById('langSelectorBtn');
@@ -2359,7 +2367,7 @@
           e.stopPropagation();
           langDropdown.classList.toggle('active');
         });
-        
+
         // Close dropdown when clicking outside
         document.addEventListener('click', (e) => {
           if (!langBtn.contains(e.target) && !langDropdown.contains(e.target)) {
@@ -2404,7 +2412,7 @@
       const checkHash = () => {
         const hash = location.hash;
         const params = new URLSearchParams(location.search);
-        
+
         if (hash && hash.startsWith('#parcours-')) {
           const key = hash.replace('#parcours-', '');
           if (PARCOURS_DATA[key]) openParcoursModal(key);
