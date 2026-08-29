@@ -1126,6 +1126,14 @@ function populateThinkers() {
     }
   ] : (currentLang === 'fr') ? [
     {
+      title: 'La discipline sans épuisement : travailler moins, mais mieux',
+      category: '⚡ Développement • Discipline Durable',
+      readTime: '⏱️ 11 min',
+      desc: 'Un guide philosophique et pratique pour bâtir une discipline durable, protéger votre énergie vitale et éliminer la dispersion sans culpabilité.',
+      image: 'developpement-personnel/images/thumb-discipline-sans-epuisement.jpg',
+      url: './files/discipline-sans-epuisement.html'
+    },
+    {
       id: 'socrate',
       name: 'Socrate',
       era: '470 – 399 av. J.-C. · Athènes',
@@ -1251,6 +1259,14 @@ function populateRecentArticlesHome() {
 
   const articlesData = (currentLang === 'ar') ? [
     {
+      title: 'الانضباط دون إنهاك: كيف تعمل أقل وتنجز بشكل أفضل؟',
+      category: '⚡ تطوير الذات • انضباط مستدام',
+      readTime: '⏱️ ١١ دقيقة',
+      desc: 'دليل فلسفي وعملي لبناء انضباط مستدام يحمي طاقتك، ويحررك من فخ الإرهاق المستمر والشعور بالذنب أثناء الراحة.',
+      image: 'developpement-personnel/images/thumb-discipline-sans-epuisement.jpg',
+      url: './files/discipline-sans-epuisement.html'
+    },
+    {
       title: 'النهوض والنمو بعد الصعوبات: سيكولوجيا التعافي والتحول',
       category: '⚡ تطوير الذات • المرونة والتحول',
       readTime: '⏱️ ١٢ دقيقة',
@@ -1316,6 +1332,14 @@ function populateRecentArticlesHome() {
       url: './files/discipline-vs-motivation.html'
     }
   ] : [
+    {
+      title: 'Discipline Without Burnout: Work Less, but Better',
+      category: '⚡ Self-Development • Sustainable Discipline',
+      readTime: '⏱️ 11 min',
+      desc: 'A philosophical and actionable guide to building sustainable discipline, protecting your vital energy, and eliminating distraction without guilt.',
+      image: 'developpement-personnel/images/thumb-discipline-sans-epuisement.jpg',
+      url: './files/discipline-sans-epuisement.html'
+    },
     {
       title: 'Rising and Growing After Adversity: Psychology of Resilience',
       category: '⚡ Self-Development • Resilience & Transformation',
