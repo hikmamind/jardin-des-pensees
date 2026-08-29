@@ -3204,6 +3204,102 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "id": "discipline-sans-epuisement",
+          "file": "discipline-sans-epuisement.html",
+          "featured": true,
+          "title": "الانضباط دون إنهاك: كيف تعمل أقل وتنجز بشكل أفضل؟",
+          "category": "development",
+          "categoryName": "تطوير الذات • الانضباط والعادات",
+          "readTime": "١١ دقيقة قراءة",
+          "date": "٢٩ أغسطس ٢٠٢٦",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "دليل فلسفي وعملي لبناء انضباط مستدام يحمي طاقتك، ويحررك من فخ الإرهاق المستمر والشعور بالذنب أثناء الراحة.",
+          "image": "developpement-personnel/images/thumb-discipline-sans-epuisement.jpg",
+          "imageAlt": "مكتب هادئ في حديقة ليلية مضاء بنور ذهبي دافئ مع مساحة فارغة ترمز إلى الوضوح.",
+          "quote": "الانضباط الصادق لا يحمي فقط إنجاز اليوم، بل يحمي قدرتك على العودة المشرقة غداً.",
+          "quoteAuthor": "— حكمة ونور",
+          "toc": [
+            "حين يتحول الانضباط إلى شكل من أشكال الإنهاك",
+            "العمل لساعات أطول لا يعني دائمًا تقدمًا حقيقيًا",
+            "التعرف على الجهد الذي يصنع الفارق الفعلي",
+            "العمل في انسجام مع الطاقة بدلاً من مصارعتها",
+            "بناء فترات عمل مركزة وعميقة",
+            "الحذف والاختزال قبل محاولات التحسين",
+            "جعل الراحة ركنًا أصيلاً في منظومة الانضباط",
+            "فن التوقف الحكيم قبل الوصول إلى الإجهاد",
+            "مؤشرات الإنذار حين يصبح النظام غير قابل للاستمرار",
+            "بروتوكول أسبوعي عملي: إنجاز أعلى بجهد مدروس"
+          ],
+          "body": [
+            "الانضباط الأرسخ والأكثر نضجاً ليس ذلك الذي يطالبنا بجهد بطولي ساحق كل يوم؛ بل هو ذلك الذي يحفظ طاقاتنا بما يسمح لنا بالعودة غداً.",
+            "حين تعمل أقل في المساحات الزائفة وتعمل بتركيز أعمق في المساحات الجوهرية، تصبح الاستمرارية جزءاً من طبيعتك اليومية الهادئة."
+          ]
+        },
+        {
+          "id": "discipline-sans-epuisement",
+          "file": "discipline-sans-epuisement.html",
+          "featured": true,
+          "title": "Discipline Without Burnout: Work Less, but Better",
+          "category": "development",
+          "categoryName": "Self-Growth • Discipline & Habits",
+          "readTime": "11 min read",
+          "date": "August 29, 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "A philosophical and actionable guide to building sustainable discipline, protecting your vital energy, and eliminating distraction without guilt.",
+          "image": "developpement-personnel/images/thumb-discipline-sans-epuisement.jpg",
+          "imageAlt": "A minimalist desk in a nocturnal garden illuminated by soft warm golden light.",
+          "quote": "Good discipline protects tomorrow's return just as much as today's effort.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+            "When discipline becomes a form of exhaustion",
+            "Working longer hours does not always mean more progress",
+            "Identifying the effort that truly matters",
+            "Working with your energy rather than against it",
+            "Building genuinely focused blocks of work",
+            "Subtracting before attempting to optimize",
+            "Making rest a structural part of the system",
+            "Knowing how to stop before reaching exhaustion",
+            "Recognizing a system that has become unsustainable",
+            "A weekly framework to work less, but better"
+          ],
+          "body": [
+            "The most enduring discipline is not the one that demands maximum daily strain. It is the one that protects enough of your energy so you can show up again tomorrow.",
+            "By learning to subtract the non-essential and focus deeply on what matters, you transform work into a sanctuary of mastery and inner peace."
+          ]
+        },
+        {
+          "id": "discipline-sans-epuisement",
+          "file": "discipline-sans-epuisement.html",
+          "featured": true,
+          "title": "La discipline sans épuisement : travailler moins, mais mieux",
+          "category": "development",
+          "categoryName": "Développement personnel • Discipline & Habitudes",
+          "readTime": "11 min de lecture",
+          "date": "29 Août 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Un guide philosophique et pratique pour bâtir une discipline durable, protéger votre énergie vitale et éliminer la dispersion sans culpabilité.",
+          "image": "developpement-personnel/images/thumb-discipline-sans-epuisement.jpg",
+          "imageAlt": "Un bureau sobre dans un jardin nocturne éclairé par une lumière dorée douce.",
+          "quote": "Une bonne discipline protège autant le retour de demain que l'effort d'aujourd'hui.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+            "Quand la discipline devient une forme d’épuisement",
+            "Travailler plus ne signifie pas toujours progresser davantage",
+            "Reconnaître l’effort qui compte réellement",
+            "Travailler avec son énergie plutôt que contre elle",
+            "Construire des périodes de travail réellement concentré",
+            "Réduire avant d’optimiser",
+            "Faire du repos une partie du système",
+            "Savoir s’arrêter avant l’épuisement",
+            "Reconnaître un système devenu insoutenable",
+            "Une méthode hebdomadaire pour travailler moins, mais mieux"
+          ],
+          "body": [
+            "La discipline la plus solide n’est pas celle qui exige de nous un effort maximal chaque jour. C’est celle qui protège suffisamment notre énergie pour nous permettre de revenir demain.",
+            "En apprenant à soustraire le superflu pour ne conserver que les gestes porteurs de sens, vous cessez de subir le travail pour en faire un espace de maîtrise."
+          ]
+        },
+        {
           "id": "redevenir-constant-apres-abandon",
           "file": "redevenir-constant-apres-abandon.html",
           "featured": true,

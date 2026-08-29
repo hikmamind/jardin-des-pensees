@@ -466,7 +466,7 @@ function populateArticles(category, keyword) {
     // Check if we should render Featured Article at the top (when on 'all' and no search filter)
     let gridArticles = filtered;
     if (featuredContainer && category === 'all' && (!keyword || keyword.trim() === '')) {
-      const featuredArt = filtered.find(a => a.id === 'redevenir-constant-apres-abandon' || a.featured) || filtered[0];
+      const featuredArt = filtered.find(a => a.id === 'discipline-sans-epuisement' || a.featured) || filtered[0];
       if (featuredArt) {
         featuredContainer.style.display = 'block';
         const catLabel = featuredArt.categoryName || (TIKTOK_DATA.ui[currentLang] && TIKTOK_DATA.ui[currentLang][featuredArt.category]) || featuredArt.category;
@@ -615,6 +615,7 @@ function openArticleReader(slugOrFile) {
   }
 
   if (article && article.file && (
+    article.file.includes('discipline-sans-epuisement') ||
     article.file.includes('redevenir-constant-apres-abandon') ||
     article.file.includes('nouvel-essor-apres-difficultes') ||
     article.file.includes('reprendre-habitude-apres-interruption') ||
