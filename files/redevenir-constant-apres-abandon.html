@@ -26,12 +26,130 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="../brand_logo_official.png">
 
-  <!-- CSS Stylesheets -->
+  <!-- CSS Stylesheets (V4 Premium Design System) -->
   <link rel="stylesheet" href="../style.css?v=20">
   <link rel="stylesheet" href="../templates/article-premium-v4.css?v=6">
   <link rel="stylesheet" href="../assets/css/article-engagement.css">
 
   <style>
+    /* Strict layout and component styling for Article Premium V4 */
+    html {
+      font-size: 16px;
+    }
+    body.article-premium-body {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    .site-header, .navbar-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      min-height: 64px;
+    }
+    .site-header .site-logo img,
+    .navbar-header .nav-logo {
+      width: 38px;
+      height: 38px;
+      max-width: 150px;
+      max-height: 42px;
+      object-fit: contain;
+    }
+    .article-main-container,
+    .article-container {
+      width: min(100% - 40px, 1120px);
+      margin-inline: auto;
+    }
+    .article-hero,
+    .article-lead-box,
+    .article-toc,
+    .article-editorial-body,
+    .article-conclusion-box,
+    .takeaways-box,
+    .quotes-box,
+    .article-exercise-section,
+    .article-resources-section,
+    .associated-thinkers-box,
+    .related-path-section,
+    .recommended-articles-section,
+    .article-cta-box,
+    .article-reading-container {
+      width: min(100%, 860px);
+      margin-inline: auto;
+    }
+
+    /* Single Hero Media styling */
+    .article-hero-media {
+      width: 100%;
+      margin: 32px 0 0;
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+    }
+    .article-hero-media img {
+      display: block;
+      width: 100%;
+      height: clamp(280px, 42vw, 540px);
+      object-fit: cover;
+      object-position: center;
+    }
+    .hero-caption {
+      padding: 10px 18px;
+      font-size: 0.88rem;
+      color: var(--accent-gold);
+      background: rgba(4, 9, 6, 0.85);
+      border-top: 1px solid rgba(212, 175, 55, 0.15);
+      font-style: italic;
+      text-align: center;
+    }
+
+    /* TOC styling */
+    .article-toc {
+      position: static;
+      width: 100%;
+      margin: 48px auto 56px;
+      padding: 24px 28px;
+      border: 1px solid rgba(212, 175, 55, 0.22);
+      border-radius: 22px;
+      background: rgba(10, 31, 26, 0.72);
+      box-sizing: border-box;
+    }
+    .article-toc .toc-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 20px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .article-toc a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      color: var(--text-sub);
+      text-decoration: none;
+      border-radius: 12px;
+      background: rgba(223, 177, 91, 0.04);
+      border: 1px solid rgba(223, 177, 91, 0.1);
+      transition: all 0.2s ease;
+      font-size: 0.95rem;
+    }
+    .article-toc a:visited {
+      color: var(--text-sub);
+    }
+    .article-toc a:hover {
+      color: var(--accent-gold-bright);
+      background: rgba(212, 175, 55, 0.12);
+      border-color: rgba(212, 175, 55, 0.35);
+      transform: translateY(-2px);
+    }
+    .article-toc .toc-num {
+      color: var(--accent-gold);
+      font-weight: 700;
+      font-family: 'Playfair Display', 'Amiri', serif;
+    }
+
     /* Inline Chapter Illustrations */
     .article-inline-image-box {
       margin: 32px 0;
@@ -62,14 +180,40 @@
       font-style: italic;
       text-align: center;
     }
-    [data-theme="light"] .article-inline-image-box {
-      background: rgba(255, 255, 255, 0.9);
-      border-color: rgba(180, 140, 40, 0.3);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+
+    /* RTL / LTR specific alignments */
+    html[dir="rtl"] .article-hero,
+    html[dir="rtl"] .article-lead-box,
+    html[dir="rtl"] .article-editorial-body,
+    html[dir="rtl"] .article-conclusion-box,
+    html[dir="rtl"] .takeaways-box {
+      direction: rtl;
+      text-align: right;
     }
-    [data-theme="light"] .inline-caption {
-      background: rgba(245, 245, 245, 0.95);
-      color: #8C6D1F;
+    html[dir="ltr"] .article-hero,
+    html[dir="ltr"] .article-lead-box,
+    html[dir="ltr"] .article-editorial-body,
+    html[dir="ltr"] .article-conclusion-box,
+    html[dir="ltr"] .takeaways-box {
+      direction: ltr;
+      text-align: left;
+    }
+
+    @media (max-width: 720px) {
+      .article-main-container,
+      .article-container {
+        width: min(100% - 32px, 1120px);
+      }
+      .article-hero,
+      .article-lead-box,
+      .article-toc,
+      .article-editorial-body,
+      .article-reading-container {
+        width: 100%;
+      }
+      .article-toc .toc-list {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 
@@ -109,10 +253,10 @@
 </head>
 <body class="article-premium-body">
 
-  <!-- 1. NAVBAR / HEADER GLOBAL (MULTI-LINGUE & THEME) -->
-  <header class="navbar-header" id="mainHeader">
+  <!-- 1. COMPOSANT 01 : NAVBAR / HEADER GLOBAL (STACTIC & STICKY) -->
+  <header class="navbar-header site-header" id="mainHeader">
     <div class="nav-container">
-      <a href="../index.html" class="nav-brand">
+      <a href="../index.html" class="nav-brand site-logo">
         <img src="../brand_logo_official.png" alt="Hikma & Nour Logo" class="nav-logo">
         <span class="nav-title">حكمة ونور</span>
       </a>
@@ -146,558 +290,557 @@
     </div>
   </header>
 
-  <!-- Reading Progress Bar -->
-  <div class="reading-progress-bar" id="readingProgressBar" style="width: 0%;"></div>
+  <!-- MAIN ARTICLE CONTAINER (MAX 1120px) -->
+  <main class="article-main-container article-page">
 
-  <!-- Breadcrumbs -->
-  <nav class="article-breadcrumbs" aria-label="Breadcrumb">
-    <div class="container-narrow">
-      <ol class="breadcrumb-list">
-        <li><a href="../index.html" id="bcHomeLink">الرئيسية</a></li>
-        <li><span class="bc-separator">›</span></li>
-        <li><a href="../developpement-personnel/" id="bcPillarLink">تطوير الذات</a></li>
-        <li><span class="bc-separator">›</span></li>
-        <li><a href="../developpement-personnel/parcours/discipline-habitudes/" id="bcPathLink">الانضباط والعادات</a></li>
-        <li><span class="bc-separator">›</span></li>
-        <li class="active" aria-current="page" id="bcArticleCurrent">استعادة الاستمرارية بعد التوقف</li>
+    <!-- 2. COMPOSANT 02 : FIL D'ARIANE (BREADCRUMB) -->
+    <nav class="article-breadcrumb" aria-label="Fil d'Ariane">
+      <a href="../index.html" id="bcHomeLink">الرئيسية</a>
+      <span class="bc-sep">/</span>
+      <a href="../developpement-personnel/" id="bcPillarLink">تطوير الذات</a>
+      <span class="bc-sep">/</span>
+      <a href="../developpement-personnel/parcours/discipline-habitudes/" id="bcPathLink">الانضباط والعادات</a>
+      <span class="bc-sep">/</span>
+      <span class="bc-current" id="bcArticleCurrent">استعادة الاستمرارية بعد التوقف</span>
+    </nav>
+
+    <!-- 3. COMPOSANT 03 : HERO ARTICLE PREMIUM -->
+    <header class="article-hero">
+      <div class="article-category-badge" id="articleCategoryBadge">
+        ⚡ تطوير الذات — مسار الانضباط والعادات (المقال ٠٤)
+      </div>
+      <h1 class="article-title" id="articleTitle">كيف تستعيد الاستمرارية بعد أن توقفت مرات عديدة؟</h1>
+      <p class="article-subtitle" id="articleSubtitle">الاستمرارية الحقيقية لا تعني ألا تنقطع أبدًا، بل تعني بناء نظام مرن وبسيط يُمكّنك من الاستئناف فورًا دون شعور بالذنب ودون انتظار دفعة حماس جديدة.</p>
+
+      <div class="article-meta-bar" id="articleMetaBar">
+        <span class="meta-item author"><strong id="metaAuthorLabel">بواسطة:</strong> <span id="metaAuthor">حكمة ونور | Hikma & Nour</span></span>
+        <span class="meta-item-sep">•</span>
+        <span class="meta-item date">📅 <span id="metaDate">السبت، ٢٩ أغسطس ٢٠٢٦</span></span>
+        <span class="meta-item-sep">•</span>
+        <span class="meta-item read-time">⏱️ <span id="metaReadTime">١٠ دقائق قراءة متأنية</span></span>
+      </div>
+    </header>
+
+    <!-- 4. COMPOSANT 04 : IMAGE HERO HD UNIQUE (FIGURE) -->
+    <figure class="article-hero-media article-hero-image">
+      <img src="../developpement-personnel/images/article-redevenir-constant-apres-abandon.jpg" alt="طريق من الأضواء الصغيرة يستأنف مساره بعد انقطاع ويقود نحو شجرة فتية في حديقة هادئة." id="articleHeroImg" loading="eager">
+      <figcaption class="hero-caption" id="articleHeroCaption">
+        🏛️ حكمة ونور — الاستئناف الهادئ وبناء جسر العودة الواثقة بعد كل عثرة
+      </figcaption>
+    </figure>
+
+    <!-- 5. COMPOSANT 05 : INTRODUCTION LEAD BOX -->
+    <section class="article-lead-box" id="articleLeadBox">
+      <h2 class="lead-title" id="leadTitle">خلاصة المنهج: حكمة العودة السريعة وفخ الكمال الفوري</h2>
+      <div id="introContent">
+        <p class="lead-p" id="introP1">عندما ننقطع عن عادة للمرة الأولى، يبدو الاستئناف ممكنًا. لكن حين تتكرر دورة «البدء بحماس، ثم التعثر، ثم الانقطاع التام» لعدة مرات، ينشأ عبء نفسي إضافي لا يتعلق بصعوبة الفعل ذاته، بل بالذاكرة السلبية للتوقف السابق.</p>
+        <p class="lead-p" id="introP2">في كل مرة نتوقف فيها، يُسجل العقل الباطن تجربة الانقطاع كـ «فشل في الالتزام»، مما يُضعف الثقة في قدرتنا على الاستمرار مستقبلاً. هنا نقع في ما يُسميه علماء النفس «العجز المكتسب الخفيف»: الخوف من تكرار الإحباط يجعلنا نتردد في المحاولة من جديد، أو ننتظر لحظة وهمية من المثالية لن نبدأ بدونها.</p>
+        <p class="lead-p" id="introP3">لكن الانقطاع المتكرر ليس دليلاً على نقص في شخصيتك، بل إشارة واضحة إلى أن النظام القديم كان أثقل من واقعك اليومي. النفس تطمح للكمال الفوري، بينما الاستمرارية تُبنى على أصغر خطوة لا يمكن مقاومتها.</p>
+      </div>
+      <p class="lead-conclusion" id="introConclusion"><strong>الاستمرارية ليست صفة سحرية نولد بها، بل مهارة في إدارة العودة الهادئة: من يتقن الاستئناف بعد يوم ضائع ينتصر دائمًا على من يبحث عن الكمال المستحيل.</strong></p>
+    </section>
+
+    <!-- 6. COMPOSANT 06 : TABLE DES MATIÈRES INTERACTIVE (TOC) -->
+    <nav class="article-toc" id="articleToc">
+      <h2 class="toc-title" id="tocHeading">📑 جدول المحتويات الفكرية والتطبيقية</h2>
+      <ol class="toc-list" id="tocList">
+        <li><a href="#section-01"><span class="toc-num">01.</span> <span class="toc-text">لماذا يصبح البدء من جديد أصعب بعد كل توقف؟</span></a></li>
+        <li><a href="#section-02"><span class="toc-num">02.</span> <span class="toc-text">الانقطاع عن العادة لا يحدد هويتك</span></a></li>
+        <li><a href="#section-03"><span class="toc-num">03.</span> <span class="toc-text">فهم السبب الحقيقي الذي أدى إلى انقطاع المسار</span></a></li>
+        <li><a href="#section-04"><span class="toc-num">04.</span> <span class="toc-text">البدء بحجم أصغر مما ترغب به النفس</span></a></li>
+        <li><a href="#section-05"><span class="toc-num">05.</span> <span class="toc-text">إعادة بناء الثقة بأدلة يومية صغيرة</span></a></li>
+        <li><a href="#section-06"><span class="toc-num">06.</span> <span class="toc-text">استبدال الكثافة بالحفاظ على وتيرة مستدامة</span></a></li>
+        <li><a href="#section-07"><span class="toc-num">07.</span> <span class="toc-text">تعلم استئناف المسار بعد يوم ضائع</span></a></li>
+        <li><a href="#section-08"><span class="toc-num">08.</span> <span class="toc-text">تهيئة البيئة بدل الاعتماد على قوة الإرادة</span></a></li>
+        <li><a href="#section-09"><span class="toc-num">09.</span> <span class="toc-text">قياس الاستمرارية دون التحول إلى سجين للمتابعة</span></a></li>
+        <li><a href="#section-10"><span class="toc-num">10.</span> <span class="toc-text">بروتوكول عملي للعودة خلال 14 يومًا</span></a></li>
       </ol>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- MAIN ARTICLE CONTAINER -->
-  <main class="article-main-container">
-    <article class="article-core">
+    <!-- 7. COMPOSANT 07 : CORPS ÉDITORIAL — LES 10 SECTIONS STRUCTURÉES -->
+    <article class="article-editorial-body article-body" id="editorialBody">
 
-      <!-- 2. HERO ARTICLE HEADER (PHOTO 1 / 5) -->
-      <header class="article-hero-header">
-        <div class="container-narrow">
-          <div class="article-meta-top">
-            <span class="article-pillar-badge" id="articlePillarBadge">⚡ تطوير الذات — مسار الانضباط والعادات (المقال ٠٤)</span>
-            <span class="article-read-time" id="articleReadTime">📖 10 دقائق قراءة متأنية</span>
-          </div>
-
-          <h1 class="article-main-title" id="articleMainTitle">كيف تستعيد الاستمرارية بعد أن توقفت مرات عديدة؟</h1>
-          <p class="article-lead-text" id="articleLeadText">الاستمرارية الحقيقية لا تعني ألا تنقطع أبدًا، بل تعني بناء نظام مرن وبسيط يُمكّنك من الاستئناف فورًا دون شعور بالذنب ودون انتظار دفعة حماس جديدة.</p>
-
-          <div class="article-author-card">
-            <img src="../brand_logo_official.png" alt="Hikma & Nour" class="author-avatar">
-            <div class="author-details">
-              <span class="author-name" id="authorNameText">حكمة ونور</span>
-              <span class="author-role" id="publishDateText">29 أغسطس 2026</span>
-            </div>
-          </div>
-
-          <div class="article-hero-img-box">
-            <img src="../developpement-personnel/images/article-redevenir-constant-apres-abandon.jpg" alt="طريق من الأضواء الصغيرة يستأنف مساره بعد انقطاع ويقود نحو شجرة فتية في حديقة هادئة." class="article-hero-img" id="articleHeroImg" loading="eager">
-          </div>
+      <section class="article-section" id="section-01">
+        <div class="section-header">
+          <span class="section-num">01</span>
+          <h2 class="section-title" id="section-01Heading">لماذا يصبح البدء من جديد أصعب بعد كل توقف؟</h2>
         </div>
-      </header>
-
-      <!-- 3. SUMMARY BOX (L'ESSENTIEL) -->
-      <section class="article-summary-section">
-        <div class="container-narrow">
-          <div class="article-summary-card">
-            <div class="summary-header">
-              <span class="summary-icon">💡</span>
-              <h2 class="summary-title" id="summaryHeading">خلاصة المنهج في دقائق</h2>
-            </div>
-            <ul class="summary-list" id="summaryList">
-              <li>الانقطاع المتكرر ليس دليلاً على نقص في شخصيتك، بل إشارة واضحة إلى أن النظام القديم كان أثقل من واقعك اليومي.</li>
-              <li>فخ البدء بحجم كبير: النفس تطمح للكمال الفوري، بينما الاستمرارية تُبنى على أصغر خطوة لا يمكن مقاومتها.</li>
-              <li>قاعدة عدم تفويت يومين متتاليين: يوم الانقطاع عارض بشري طبيعي، لكن الاستئناف السريع هو ما يحمي الهوية الجديدة.</li>
-              <li>بروتوكول الـ 14 يومًا: خطة تدريجية لاستعادة الثقة بالنفس عبر أدلة إنجاز صغيرة ومستقرة.</li>
-            </ul>
-          </div>
+        <div class="article-section-content" id="section-01Body">
+          <p class="article-p">عندما ننقطع عن عادة للمرة الأولى، يبدو الاستئناف ممكنًا ومتاحًا. لكن حين تتكرر دورة «البدء بحماس، ثم التعثر، ثم الانقطاع التام» لعدة مرات، ينشأ عبء نفسي إضافي لا يتعلق بصعوبة الفعل ذاته، بل بالذاكرة السلبية للتوقف السابق.</p>
+        <p class="article-p">في كل مرة نتوقف فيها، يُسجل العقل الباطن تجربة الانقطاع كـ «فشل في الالتزام»، مما يُضعف الثقة في قدرتنا على الاستمرار مستقبلاً. هنا نقع في ما يُسميه علماء النفس «العجز المكتسب الخفيف»: الخوف من تكرار الإحباط يجعلنا نتردد في المحاولة من جديد، أو ننتظر لحظة وهمية من المثالية لن نبدأ بدونها.</p>
+        <div class="article-callout-quote">
+          <span class="callout-icon">💡</span>
+          <blockquote>ليست المشكلة في أننا توقفنا، بل في الحكم القاسي الذي نُصدره على أنفسنا بعد التوقف، والذي يحوّل العثرة العابرة إلى حاجز نفسي دائم.</blockquote>
+        </div>
         </div>
       </section>
 
-      <!-- 4. TABLE DES MATIÈRES (TOC) -->
-      <section class="article-toc-section">
-        <div class="container-narrow">
-          <div class="article-toc-card">
-            <h3 class="toc-title" id="tocHeading">فهرس المحاور الفكرية والعملية</h3>
-            <nav class="toc-nav">
-              <ol class="toc-list" id="tocList">
-                <li><a href="#section-01">٠١. لماذا يصبح البدء من جديد أصعب بعد كل توقف؟</a></li>
-                <li><a href="#section-02">٠٢. الانقطاع عن العادة لا يحدد هويتك</a></li>
-                <li><a href="#section-03">٠٣. فهم السبب الحقيقي الذي أدى إلى انقطاع المسار</a></li>
-                <li><a href="#section-04">٠٤. البدء بحجم أصغر مما ترغب به النفس</a></li>
-                <li><a href="#section-05">٠٥. إعادة بناء الثقة بأدلة يومية صغيرة</a></li>
-                <li><a href="#section-06">٠٦. استبدال الكثافة بالحفاظ على وتيرة مستدامة</a></li>
-                <li><a href="#section-07">٠٧. تعلم استئناف المسار بعد يوم ضائع</a></li>
-                <li><a href="#section-08">٠٨. تهيئة البيئة بدل الاعتماد على قوة الإرادة</a></li>
-                <li><a href="#section-09">٠٩. قياس الاستمرارية دون التحول إلى سجين للمتابعة</a></li>
-                <li><a href="#section-10">١٠. بروتوكول عملي للعودة خلال 14 يومًا</a></li>
-              </ol>
-            </nav>
-          </div>
+
+      <section class="article-section" id="section-02">
+        <div class="section-header">
+          <span class="section-num">02</span>
+          <h2 class="section-title" id="section-02Heading">الانقطاع عن العادة لا يحدد هويتك</h2>
+        </div>
+        <div class="article-section-content" id="section-02Body">
+          <p class="article-p">من أكبر الأخطاء الإدراكية الخلط بين «سلوك حدث» و«هوية ثابتة». أن تفوتك ثلاثة أيام من القراءة أو التمارين أو العمل المركز لا يعني إطلاقًا أنك «شخص يفتقر إلى الانضباط»، بل يعني ببساطة أن الظروف المحيطة أو حجم المهمة كانا أكبر من طاقتك في تلك الفترة المحددة.</p>
+        <p class="article-p">الانضباط ليس صفة وراثية جامدة نملكها أو نحرم منها، بل هو مهارة نظامية تتطور مع الوقت. تحرير النفس من وصم الذات هو الخطوة الأولى والأهم لفتح الباب أمام استئناف هادئ ومثمر.</p>
+        <div class="article-inline-image-box">
+          <img src="../developpement-personnel/images/escalier-vert-progression.jpg" alt="درجات حجرية وسط الطبيعة الخضراء مضاءة بشموع هادئة تعبر عن الصعود المتدرج." class="article-inline-img" loading="lazy">
+          <span class="inline-caption">كل خطوة تصعدها بهدوء تبدد ضباب الشك وتفسح المجال لاستئناف واثق دون تعجل.</span>
+        </div>
+        <div class="article-callout-quote">
+          <span class="callout-icon">💡</span>
+          <blockquote>العثرة في الطريق لا تعني نهاية المسار، بل هي تذكير بضرورة إعادة ضبط الخطى.</blockquote>
+        </div>
         </div>
       </section>
 
-      <!-- 5. CORPS DE L'ARTICLE — 10 SECTIONS OFFICIELLES (PHOTOS 2, 3, 4, 5 INTÉGRÉES) -->
-      <div class="article-body-content">
-        <div class="container-narrow">
 
-          <!-- SECTION 01 -->
-          <section id="section-01" class="article-chapter">
-            <h2 class="chapter-title" id="s1Heading">٠١. لماذا يصبح البدء من جديد أصعب بعد كل توقف؟</h2>
-            <div class="chapter-text" id="s1Body">
-              <p>عندما ننقطع عن عادة للمرة الأولى، يبدو الاستئناف ممكنًا. لكن حين تتكرر دورة «البدء بحماس، ثم التعثر، ثم الانقطاع التام» لعدة مرات، ينشأ عبء نفسي إضافي لا يتعلق بصعوبة الفعل ذاته، بل بالذاكرة السلبية للتوقف السابق.</p>
-    <p>في كل مرة نتوقف فيها، يُسجل العقل الباطن تجربة الانقطاع كـ «فشل في الالتزام»، مما يُضعف الثقة في قدرتنا على الاستمرار مستقبلاً. هنا نقع في ما يُسميه علماء النفس «العجز المكتسب الخفيف»: الخوف من تكرار الإحباط يجعلنا نتردد في المحاولة من جديد، أو ننتظر لحظة وهمية من المثالية لن نبدأ بدونها.</p>
-    <div class="article-quote-box">
-      <p class="quote-text">« ليست المشكلة في أننا توقفنا، بل في الحكم القاسي الذي نُصدره على أنفسنا بعد التوقف، والذي يحوّل العثرة العابرة إلى حاجز نفسي دائم. »</p>
-    </div>
-            </div>
-          </section>
-
-          <!-- SECTION 02 (PHOTO 2 : escalier-vert-progression.jpg) -->
-          <section id="section-02" class="article-chapter">
-            <h2 class="chapter-title" id="s2Heading">٠٢. الانقطاع عن العادة لا يحدد هويتك</h2>
-            <div class="chapter-text" id="s2Body">
-              <p>من أكبر الأخطاء الإدراكية الخلط بين «سلوك حدث» و«هوية ثابتة». أن تفوتك ثلاثة أيام من القراءة أو التمارين أو العمل المركز لا يعني إطلاقًا أنك «شخص يفتقر إلى الانضباط»، بل يعني ببساطة أن الظروف المحيطة أو حجم المهمة كانا أكبر من طاقتك في تلك الفترة المحددة.</p>
-    <p>الانضباط ليس صفة وراثية جامدة نملكها أو نحرم منها، بل هو مهارة نظامية تتطور مع الوقت. تحرير النفس من وصم الذات هو الخطوة الأولى والأهم لفتح الباب أمام استئناف هادئ ومثمر.</p>
-    <div class="article-inline-image-box">
-      <img src="../developpement-personnel/images/escalier-vert-progression.jpg" alt="درجات حجرية وسط الطبيعة الخضراء مضاءة بشموع هادئة تعبر عن الصعود المتدرج." class="article-inline-img" loading="lazy">
-      <span class="inline-caption">كل خطوة تصعدها بهدوء تبدد ضباب الشك وتفسح المجال لاستئناف واثق دون تعجل.</span>
-    </div>
-            </div>
-          </section>
-
-          <!-- SECTION 03 -->
-          <section id="section-03" class="article-chapter">
-            <h2 class="chapter-title" id="s3Heading">٠٣. فهم السبب الحقيقي الذي أدى إلى انقطاع المسار</h2>
-            <div class="chapter-text" id="s3Body">
-              <p>قبل أن تسارع إلى إطلاق محاولة جديدة بنفس الأدوات السابقة، من الضروري إجراء تشخيص صادق وموضوعي:</p>
-    <ul class="article-rich-list">
-      <li><strong>فخ الطموح المفرط:</strong> هل وضعت لنفسك هدفًا يتطلب ساعة يوميًا في جدول يفتقر بالفعل إلى نصف ساعة راحة؟</li>
-      <li><strong>غموض التوقيت والمكان:</strong> هل كانت العادة معلقة بدون مرسى زمني واضح («سأقرأ في وقت لاحق»)؟</li>
-      <li><strong>الاحتكاك البيئي العالي:</strong> هل كان الوصول إلى أدوات العادة يتطلب طاقة إضافية مسبقة؟</li>
-      <li><strong>الصدمات والظروف الطارئة:</strong> هل توقف المسار بسبب مرض أو سفر أو ظرف عائلي دون وجود خطة دنيا للطوارئ؟</li>
-    </ul>
-    <p>عندما تحدد سبب التعثر بوضوح، يتحول الأمر من مشكلة في إرادتك إلى مشكلة في هندسة النظام، والنظام دائمًا قابل للتعديل والتحسين.</p>
-            </div>
-          </section>
-
-          <!-- SECTION 04 (PHOTO 3 : carnet-reprise-lumiere.jpg) -->
-          <section id="section-04" class="article-chapter">
-            <h2 class="chapter-title" id="s4Heading">٠٤. البدء بحجم أصغر مما ترغب به النفس</h2>
-            <div class="chapter-text" id="s4Body">
-              <p>عندما نقرر العودة، يميل «الأنا» إلى الرغبة في تعويض ما فات عبر البدء بقوة مضاعفة. هذا هو الفخ الأكبر الذي يضمن الانقطاع السريع مرة أخرى.</p>
-    <p>العودة الذكية تتطلب التواضع أمام الواقع: ابدأ بحجم يبدو لك «تافهًا جدًا لدرجة يصعب معها الفشل»:</p>
-    <div class="article-framework-box">
-      <div class="framework-step">
-        <span class="framework-step-badge">مبدأ الحد الأدنى</span>
-        <h4>صفحتان بدل فصل كامل • 5 دقائق تأمل بدل نصف ساعة • تمرين واحد بدل حصة شاقة</h4>
-        <p>الهدف في الأسبوع الأول ليس حرق السعرات أو إنهاء الكتب، بل إحياء شرارة الاستمرارية وترسيخ المسار العصبي للفعل.</p>
-      </div>
-    </div>
-    <div class="article-inline-image-box">
-      <img src="../developpement-personnel/images/carnet-reprise-lumiere.jpg" alt="دفتر الملاحظات وحجر مزخرف بالذهب محاط بأنوار دافئة ونبتة صغيرة نامية." class="article-inline-img" loading="lazy">
-      <span class="inline-caption">البداية البسيطة والرمزية اليومية تمنح العقل وضوحًا كافيًا للاستمرار دون مقاومة.</span>
-    </div>
-            </div>
-          </section>
-
-          <!-- SECTION 05 -->
-          <section id="section-05" class="article-chapter">
-            <h2 class="chapter-title" id="s5Heading">٠٥. إعادة بناء الثقة بأدلة يومية صغيرة</h2>
-            <div class="chapter-text" id="s5Body">
-              <p>كما أوضح عالم النفس ألبرت باندورا في نظريته حول «الكفاءة الذاتية» (Self-Efficacy)، فإن الثقة الحقيقية لا تأتي من التوكيدات اللفظية، بل من <strong>رؤية أدلة ملموسة وواقعية على الإنجاز</strong>.</p>
-    <p>عندما تنجز نسختك المصغرة يوميًا لمدة خمسة أيام متتالية، يرى عقلك دليلاً قاطعًا: «أنا شخص يفي بوعده لنفسه». هذا الشعور المتنامي بالكفاءة هو الوقود النفسي الأصيل الذي يُمكّنك لاحقًا من توسيع العادة بشكل طبيعي ومستدام.</p>
-            </div>
-          </section>
-
-          <!-- SECTION 06 -->
-          <section id="section-06" class="article-chapter">
-            <h2 class="chapter-title" id="s6Heading">٠٦. استبدال الكثافة بالحفاظ على وتيرة مستدامة</h2>
-            <div class="chapter-text" id="s6Body">
-              <p>الكثافة هي ما يمنحنا شعورًا زائفًا بالبطولة في الأيام الأولى، لكن الوتيرة هي ما يبني الإرث والنتائج الدائمة على مدار الأشهر والسنوات.</p>
-    <p>الشخص الذي يقرأ 10 دقائق كل يوم دون انقطاع يقرأ أكثر من 20 كتابًا سنويًا، بينما من يقرأ ساعتين في عطلة نهاية الأسبوع ثم ينقطع شهرين لا ينهي كتابين. تذكّر دائمًا: <strong>الانتظام المتواضع يهزم الحماس المنقطع في كل مرة.</strong></p>
-            </div>
-          </section>
-
-          <!-- SECTION 07 (PHOTO 4 : chemin-lanternes-nuit.jpg) -->
-          <section id="section-07" class="article-chapter">
-            <h2 class="chapter-title" id="s7Heading">٠٧. تعلم استئناف المسار بعد يوم ضائع</h2>
-            <div class="chapter-text" id="s7Body">
-              <p>الحياة بطبيعتها غير خطية؛ ستمر أيام تمرض فيها، أو تسافر، أو تستنزفك الالتزامات العاجلة. الفارق بين من يستمر ومن ينقطع نهائيًا ليس في حدوث اليوم الضائع، بل في التعامل معه:</p>
-    <div class="article-card-highlight">
-      <h4>قاعدة اليوم الواحد: «لا تفوّت مرتين أبدًا»</h4>
-      <p>تفويت يوم واحد هو حدث عارض؛ تفويت يومين متتاليين هو بداية عادة جديدة من التراجع. إذا تعثرت اليوم، فإن مهمتك الوحيدة غدًا هي استعادة الحد الأدنى، حتى لو كان لدقيقة واحدة فقط.</p>
-    </div>
-    <div class="article-inline-image-box">
-      <img src="../developpement-personnel/images/chemin-lanternes-nuit.jpg" alt="طريق هادئ في الغابة مضاء بفوانيس دافئة يرمز إلى الوتيرة المستمرة دون انقطاع." class="article-inline-img" loading="lazy">
-      <span class="inline-caption">الفوانيس المستمرة عبر الدرب تضيء كل خطوة، فالهدف ليس سرعة الوصول بل ثبات الخطى.</span>
-    </div>
-            </div>
-          </section>
-
-          <!-- SECTION 08 -->
-          <section id="section-08" class="article-chapter">
-            <h2 class="chapter-title" id="s8Heading">٠٨. تهيئة البيئة بدل الاعتماد على قوة الإرادة</h2>
-            <div class="chapter-text" id="s8Body">
-              <p>قوة الإرادة بطارية محدودة تُستنزف خلال اليوم مع اتخاذ القرارات ومواجهة الضغوط. الاعتماد عليها لبدء العادات بعد يوم عمل شاق رهان خاسر.</p>
-    <p>الحل هو تقليل الاحتكاك المادي بينك وبين العادة المفيدة، وزيادة الاحتكاك بينك وبين المشتتات:</p>
-    <ul class="article-rich-list">
-      <li>ضع كتابك مفتوحًا على الوسادة أو طاولة القهوة مسبقًا.</li>
-      <li>جهز ملابس المشي قرب السرير قبل النوم.</li>
-      <li>أبعد الهاتف عن غرفة النوم أو ضعه في غرفة أخرى أثناء جلسة القراءة.</li>
-    </ul>
-            </div>
-          </section>
-
-          <!-- SECTION 09 -->
-          <section id="section-09" class="article-chapter">
-            <h2 class="chapter-title" id="s9Heading">٠٩. قياس الاستمرارية دون التحول إلى سجين للمتابعة</h2>
-            <div class="chapter-text" id="s9Body">
-              <p>تطبيقات تتبع العادات مفيدة، لكنها قد تتحول إلى مصدر للضغط السلبي حين نركز على «سلسلة الأيام المتواصلة» (Streak) لدرجة أن انقطاع يوم واحد يُشعرنا بأن كل الجهد السابق قد ضاع.</p>
-    <p>اعتمد مقياسًا مرنًا: بدلاً من حساب النسبة المئوية الصارمة (100%)، استهدف نسبة <strong>80% أو 85%</strong> على مدار الشهر. هذا الهامش يمنحك مرونة نفسية للتعامل مع تقلبات الحياة دون إحساس بالانهيار.</p>
-            </div>
-          </section>
-
-          <!-- SECTION 10 (PHOTO 5 : pas-dore-germe-renaissance.jpg - PROTOCOLE DE 14 JOURS) -->
-          <section id="section-10" class="article-chapter">
-            <h2 class="chapter-title" id="s10Heading">١٠. بروتوكول عملي للعودة خلال 14 يومًا</h2>
-            <div class="chapter-text" id="s10Body">
-              <p>إليك خطة عمل تطبيقية ومجربة لإعادة تشغيل محرك الاستمرارية خطوة بخطوة:</p>
-    <div class="article-inline-image-box">
-      <img src="../developpement-personnel/images/pas-dore-germe-renaissance.jpg" alt="خطوات ذهبية صغيرة على التربة تقود نحو نبتة مضيئة في إشارة إلى بروتوكول الـ 14 يومًا." class="article-inline-img" loading="lazy">
-      <span class="inline-caption">خطوات ذهبية متتالية تنمو معها براعم الإنجاز الحقيقي والتحول الدائم.</span>
-    </div>
-    <div class="article-protocol-grid">
-      <div class="protocol-card">
-        <span class="protocol-num">١</span>
-        <h4>اختر عادة واحدة فقط</h4>
-        <p>لا تحاول إصلاح حياتك بالكامل في يوم واحد. اختر عادة واحدة ذات تأثير محوري (قراءة، مشي، نوم مبكر).</p>
-      </div>
-      <div class="protocol-card">
-        <span class="protocol-num">٢</span>
-        <h4>حدّد النسخة المصغرة (2 إلى 5 دقائق)</h4>
-        <p>عرّف الحد الأدنى الذي لا يمكن لأي كسل أو إرهاق أن يمنعك من تنفيذه.</p>
-      </div>
-      <div class="protocol-card">
-        <span class="protocol-num">٣</span>
-        <h4>اربطها بمحفز يومي موجود مسبقًا</h4>
-        <p>«مباشرة بعد شرب قهوة الصباح» أو «فور الجلوس على مكتبي».</p>
-      </div>
-      <div class="protocol-card">
-        <span class="protocol-num">٤</span>
-        <h4>حدد المكان والنافذة الزمنية بدقة</h4>
-        <p>تجنب العبارات الفضفاضة، حدد الركن المحدد والوقت التقريبي.</p>
-      </div>
-      <div class="protocol-card">
-        <span class="protocol-num">٥</span>
-        <h4>استخدم أداة تتبع ورقية بسيطة</h4>
-        <p>علامة صح (✓) صغيرة في دفتر يوميات أو ورقة على المكتب كافية تمامًا.</p>
-      </div>
-      <div class="protocol-card">
-        <span class="protocol-num">٦</span>
-        <h4>طبّق قاعدة «العودة الفورية»</h4>
-        <p>إذا نسيت يومًا، فاليوم التالي مخصص حصريًا لتثبيت الحضور وليس لتعويض ما فات.</p>
-      </div>
-      <div class="protocol-card">
-        <span class="protocol-num">٧</span>
-        <h4>وقفة تقييم وتعديل في اليوم السابع</h4>
-        <p>هل كانت العادة سهلة ومريحة؟ حافظ عليها. هل كانت صعبة؟ صغّر حجمها أكثر للأسبوع القادم.</p>
-      </div>
-      <div class="protocol-card">
-        <span class="protocol-num">٨</span>
-        <h4>ترسيخ التدرج في الأسبوع الثاني (الأيام 8-13)</h4>
-        <p>أضف زيادة طفيفة لا تتعدى 10% إذا شعرت براحة وثبات تام، أو ابقَ على نفس الوتيرة.</p>
-      </div>
-      <div class="protocol-card">
-        <span class="protocol-num">٩</span>
-        <h4>الاحتفال باكتمال الـ 14 يومًا</h4>
-        <p>أنت الآن لم تعد شخصًا يحاول البدء، بل أعدت تثبيت المسار العصبي والهوية المستقرة للعادة.</p>
-      </div>
-    </div>
-            </div>
-          </section>
-
+      <section class="article-section" id="section-03">
+        <div class="section-header">
+          <span class="section-num">03</span>
+          <h2 class="section-title" id="section-03Heading">فهم السبب الحقيقي الذي أدى إلى انقطاع المسار</h2>
         </div>
-      </div>
-
-      <!-- 6. CONCLUSION & POINTS ESSENTIELS -->
-      <section class="article-conclusion-section">
-        <div class="container-narrow">
-          <div class="conclusion-box">
-            <h3 class="conclusion-heading" id="conclusionHeading">الخلاصة الفكرية والعملية</h3>
-            <p class="conclusion-text" id="conclusionText">الاستمرارية ليست صفة سحرية يمتلكها قلة من المتميزين، بل هي نتيجة احترام الحدود البشرية والبدء بخطوات صغيرة وبناء مسار يسمح بالنهوض السريع بعد كل انقطاع.</p>
-          </div>
-
-          <div class="takeaways-card">
-            <h3 class="takeaways-heading" id="takeawaysHeading">🎯 النقاط المحورية المستفادة</h3>
-            <ul class="takeaways-list" id="takeawaysList">
-              <li>الانقطاع لا يعني الفشل، بل هو فرصة لإعادة ضبط حمولة النظام.</li>
-              <li>البدايات الصغيرة جدًا هي الدرع الحقيقي ضد التسويف والمقاومة الذهنية.</li>
-              <li>قاعدة عدم تفويت يومين تحميك من الانزلاق في التراجع التام.</li>
-              <li>الثقة بالنفس تُبنى بالأدلة اليومية الصغيرة لا بالوعود الكبيرة.</li>
-            </ul>
-          </div>
-
-          <!-- Editorial Quotes -->
-          <div class="editorial-quotes-grid" id="editorialQuotesGrid">
-            
-              <div class="editorial-quote-card">
-                <span class="quote-mark">“</span>
-                <p class="quote-editorial-text">« الاستمرارية الحقيقية لا تقاس بعدد الأيام المثالية، بل بالسرعة التي ننهض بها بعد يوم متعثر. »</p>
-                <span class="quote-editorial-author">— حكمة ونور</span>
-              </div>
-            
-            
-              <div class="editorial-quote-card">
-                <span class="quote-mark">“</span>
-                <p class="quote-editorial-text">« أنت لا تحتاج إلى إرادة خارقة لتبدأ من جديد، بل تحتاج إلى خطوة أصغر من كبريائك وأقرب إلى واقعك. »</p>
-                <span class="quote-editorial-author">— حكمة ونور</span>
-              </div>
-            
-          </div>
+        <div class="article-section-content" id="section-03Body">
+          <p class="article-p">قبل أن تسارع إلى إطلاق محاولة جديدة بنفس الأدوات السابقة، من الضروري إجراء تشخيص صادق وموضوعي للأسباب الجذرية:</p>
+        <ul class="article-rich-list">
+          <li><strong>فخ الطموح المفرط:</strong> هل وضعت لنفسك هدفًا يتطلب ساعة يوميًا في جدول يفتقر بالفعل إلى نصف ساعة راحة؟</li>
+          <li><strong>غموض التوقيت والمكان:</strong> هل كانت العادة معلقة بدون مرسى زمني واضح («سأقرأ في وقت لاحق»)؟</li>
+          <li><strong>الاحتكاك البيئي العالي:</strong> هل كان الوصول إلى أدوات العادة يتطلب طاقة إضافية مسبقة؟</li>
+          <li><strong>الصدمات والظروف الطارئة:</strong> هل توقف المسار بسبب مرض أو سفر أو ظرف عائلي دون وجود خطة دنيا للطوارئ؟</li>
+        </ul>
+        <p class="article-p">عندما تحدد سبب التعثر بوضوح، يتحول الأمر من مشكلة في إرادتك إلى مشكلة في هندسة النظام، والنظام دائمًا قابل للتعديل والتحسين.</p>
         </div>
       </section>
 
-      <!-- 7. EXERCICE : MON CONTRAT DE REPRISE -->
-      <section class="article-exercise-section">
-        <div class="container-narrow">
-          <div class="exercise-card">
-            <div class="exercise-header">
-              <span class="exercise-badge">✍️ تمرين تطبيقي</span>
-              <h3 class="exercise-title" id="contractHeading">تمرين تطبيقي: ميثاق الاستئناف الخاص بي</h3>
-              <p class="exercise-desc" id="contractDesc">املأ هذا العقد البسيط لتثبيت نيتك وتحديد معالم العودة بوضوح تام:</p>
-            </div>
 
-            <form class="contract-form" onsubmit="event.preventDefault();">
-              <div class="form-group">
-                <label for="contractHabit" id="labelHabit">العادة التي اخترت استئنافها:</label>
-                <input type="text" id="contractHabit" class="contract-input" placeholder="مثال: القراءة اليومية المركزة">
-              </div>
-
-              <div class="form-group">
-                <label for="contractMini" id="labelMini">النسخة المصغرة جدًا (الحد الأدنى):</label>
-                <input type="text" id="contractMini" class="contract-input" placeholder="مثال: قراءة صفحتين فقط">
-              </div>
-
-              <div class="form-group">
-                <label for="contractTrigger" id="labelTrigger">المحفز اليومي المحدد:</label>
-                <input type="text" id="contractTrigger" class="contract-input" placeholder="مثال: بعد فنجان قهوة الصباح مباشرة">
-              </div>
-
-              <div class="form-group">
-                <label for="contractRecovery" id="labelRecovery">قاعدتي عند التعثر:</label>
-                <input type="text" id="contractRecovery" class="contract-input" placeholder="مثال: لن أفوّت يومين متتاليين وسأقرأ صفحة واحدة غدًا دون لوم نفسي">
-              </div>
-            </form>
+      <section class="article-section" id="section-04">
+        <div class="section-header">
+          <span class="section-num">04</span>
+          <h2 class="section-title" id="section-04Heading">البدء بحجم أصغر مما ترغب به النفس</h2>
+        </div>
+        <div class="article-section-content" id="section-04Body">
+          <p class="article-p">عندما نقرر العودة، يميل «الأنا» إلى الرغبة في تعويض ما فات عبر البدء بقوة مضاعفة. هذا هو الفخ الأكبر الذي يضمن الانقطاع السريع مرة أخرى.</p>
+        <p class="article-p">العودة الذكية تتطلب التواضع أمام الواقع: ابدأ بحجم يبدو لك «تافهًا جدًا لدرجة يصعب معها الفشل»:</p>
+        <div class="article-framework-box">
+          <div class="framework-step">
+            <span class="framework-step-badge">مبدأ الحد الأدنى</span>
+            <h4>صفحتان بدل فصل كامل • 5 دقائق تأمل بدل نصف ساعة • تمرين واحد بدل حصة شاقة</h4>
+            <p>الهدف في الأسبوع الأول ليس حرق السعرات أو إنهاء الكتب، بل إحياء شرارة الاستمرارية وترسيخ المسار العصبي للفعل.</p>
           </div>
+        </div>
+        <div class="article-inline-image-box">
+          <img src="../developpement-personnel/images/carnet-reprise-lumiere.jpg" alt="دفتر الملاحظات وحجر مزخرف بالذهب محاط بأنوار دافئة ونبتة صغيرة نامية." class="article-inline-img" loading="lazy">
+          <span class="inline-caption">البداية البسيطة والرمزية اليومية تمنح العقل وضوحًا كافيًا للاستمرار دون مقاومة.</span>
+        </div>
         </div>
       </section>
 
-      <!-- 8. ENGAGEMENT MODULE (LIKES, RATING, COMMENTS) -->
-      <section class="article-engagement-section">
-        <div class="container-narrow">
-          <div class="article-engagement-container"
-               data-article-id="redevenir-constant-apres-abandon"
-               data-article-title="Comment redevenir constant après avoir abandonné plusieurs fois">
-          </div>
+
+      <section class="article-section" id="section-05">
+        <div class="section-header">
+          <span class="section-num">05</span>
+          <h2 class="section-title" id="section-05Heading">إعادة بناء الثقة بأدلة يومية صغيرة</h2>
+        </div>
+        <div class="article-section-content" id="section-05Body">
+          <p class="article-p">كما أوضح عالم النفس ألبرت باندورا في نظريته حول «الكفاءة الذاتية» (Self-Efficacy)، فإن الثقة الحقيقية لا تأتي من التوكيدات اللفظية، بل من <strong>رؤية أدلة ملموسة وواقعية على الإنجاز</strong>.</p>
+        <p class="article-p">عندما تنجز نسختك المصغرة يوميًا لمدة خمسة أيام متتالية، يرى عقلك دليلاً قاطعًا: «أنا شخص يفي بوعده لنفسه». هذا الشعور المتنامي بالكفاءة هو الوقود النفسي الأصيل الذي يُمكّنك لاحقًا من توسيع العادة بشكل طبيعي ومستدام.</p>
+        <div class="article-callout-quote">
+          <span class="callout-icon">💡</span>
+          <blockquote>الثقة بالنفس لا تُبنى بالكلام الحماسي، بل تتراكم كحبات الرمل مع كل وفاء بوعد صغير.</blockquote>
+        </div>
         </div>
       </section>
 
-      <!-- 9. RESSOURCES DU PARCOURS (AUDIO / QUIZ / CITATIONS) -->
-      <section class="article-resources-section">
-        <div class="container-narrow">
-          <div class="resources-block">
-            <header class="resources-header">
-              <span class="res-eyebrow" id="resEyebrow">✨ موارد المسار المرتبطة</span>
-              <h2 class="res-title" id="resTitle">موارد تعزيز الانضباط والاستمرارية</h2>
-              <p class="res-intro" id="resIntro">وسائط صوتية واقتباسات ملهمة تدعم رحلتك في ترسيخ العادات والتقدم المستمر.</p>
-            </header>
 
-            <div class="resources-grid">
-              <!-- Audio Card -->
-              <article class="resource-card resource-audio">
-                <div class="res-card-img-box">
-                  <img src="../audio_alchemist_cover.jpg" alt="الخيميائي — باولو كويلو" class="res-card-img" loading="lazy">
-                </div>
-                <div>
-                  <span class="res-badge" id="audioBadge">🎧 كتاب صوتي ملهم</span>
-                  <h3 class="res-card-title" id="audioTitle">الخيميائي — باولو كويلو</h3>
-                  <p class="res-card-desc" id="audioDesc">استمع إلى «الخيميائي»، رحلة رمزية خالدة في الانضباط الذاتي واليقظة والاستمرار في تحقيق الهدف.</p>
-                  <div class="res-card-meta" id="audioMeta">⏱️ 13 دقيقة • 5 فصول</div>
-                </div>
-                <a href="../audio/?book=alchemist" class="res-btn" id="audioBtn">استمع إلى التسجيل الصوتي 🎧</a>
-              </article>
-
-              <!-- Quiz Card (Coming soon) -->
-              <article class="resource-card resource-quiz is-coming-soon">
-                <div class="res-card-img-box">
-                  <img src="../dev_habits_hd.jpg" alt="اختبارات الانضباط والعادات" class="res-card-img" loading="lazy">
-                </div>
-                <div class="coming-soon-body">
-                  <span class="res-badge" id="quizBadge">🧩 اختبار تفاعلي</span>
-                  <h3 class="res-card-title" id="quizTitle">اختبارات الانضباط والعادات</h3>
-                  <p class="res-card-desc" id="quizDesc">أدوات تقييم مستويات التركيز، وقوة العادات اليومية، ومقاومة التسويف قيد الإعداد والإطلاق.</p>
-                  <span class="res-status-badge" id="quizStatus">الاختبار قريبًا ⏳</span>
-                </div>
-              </article>
-
-              <!-- Quotes Card -->
-              <article class="resource-card resource-quotes">
-                <div class="res-card-img-box">
-                  <img src="../continue_advancing_glass_bridge.jpg" alt="اقتباسات في العادات والنجاح المستدام" class="res-card-img" loading="lazy">
-                </div>
-                <div>
-                  <span class="res-badge" id="quotesBadge">📜 مبادئ النمو والانضباط</span>
-                  <h3 class="res-card-title" id="quotesTitle">اقتباسات في العادات والنجاح المستدام</h3>
-                  <p class="res-card-desc" id="quotesDesc">قواعد رصينة في هندسة السلوك وبناء الاستمرارية اليومية وتجاوز العقبات.</p>
-                  <div class="quote-featured-box">
-                    <p class="quote-featured-text" id="quotesFeaturedText">« كل حياتنا، في شكلها العملي، ليست سوى كتلة من العادات المنظمة. »</p>
-                    <span class="quote-featured-author" id="quotesFeaturedAuthor">— <a href="../thinkers/william-james/">ويليام جيمس</a></span>
-                  </div>
-                </div>
-                <a href="../quotes/" class="res-btn" id="quotesBtn">استكشف مكتبة الاقتباسات ←</a>
-              </article>
-            </div>
-          </div>
+      <section class="article-section" id="section-06">
+        <div class="section-header">
+          <span class="section-num">06</span>
+          <h2 class="section-title" id="section-06Heading">استبدال الكثافة بالحفاظ على وتيرة مستدامة</h2>
+        </div>
+        <div class="article-section-content" id="section-06Body">
+          <p class="article-p">الكثافة هي ما يمنحنا شعورًا زائفًا بالبطولة في الأيام الأولى، لكن الوتيرة هي ما يبني الإرث والنتائج الدائمة على مدار الأشهر والسنوات.</p>
+        <p class="article-p">الشخص الذي يقرأ 10 دقائق كل يوم دون انقطاع يقرأ أكثر من 20 كتابًا سنويًا، بينما من يقرأ ساعتين في عطلة نهاية الأسبوع ثم ينقطع شهرين لا ينهي كتابين. تذكّر دائمًا: <strong>الانتظام المتواضع يهزم الحماس المنقطع في كل مرة.</strong></p>
         </div>
       </section>
 
-      <!-- 10. PENSEURS ET PSYCHOLOGUES ASSOCIÉS -->
-      <section class="article-thinkers-section">
-        <div class="container-narrow">
-          <div class="thinkers-header">
-            <h2 class="thinkers-title" id="thinkersHeading">🏛️ مفكرون وعلماء النفس المرتبطون</h2>
-            <p class="thinkers-subtitle" id="thinkersSubtitle">رواد أثروا دراسات السلوك البشري وهندسة العادات والانضباط الذاتي</p>
-          </div>
 
-          <div class="thinkers-grid" id="thinkersGrid">
-            
-              <a class="thinker-card" href="../thinkers/william-james/">
-                <div class="thinker-portrait">
-                  <img src="../thinkers/images/william-james.jpg" alt="ويليام جيمس" loading="lazy">
-                </div>
-                <div class="thinker-info">
-                  <span class="thinker-era">١٨٤٢ — ١٩١٠ م</span>
-                  <h3 class="thinker-name">ويليام جيمس</h3>
-                  <span class="thinker-role">رائد علم النفس الوظيفي</span>
-                  <p class="thinker-desc">صاحب الدراسات الرائدة حول كيفية تشكل المسارات العصبية للعادات وتحويل الأفعال الواعية إلى طبائع تلقائية.</p>
-                </div>
-              </a>
-            
-            
-              <a class="thinker-card" href="../thinkers/albert-bandura/">
-                <div class="thinker-portrait">
-                  <img src="../thinkers/images/albert-bandura.jpg" alt="ألبرت باندورا" loading="lazy">
-                </div>
-                <div class="thinker-info">
-                  <span class="thinker-era">١٩٢٥ — ٢٠٢١ م</span>
-                  <h3 class="thinker-name">ألبرت باندورا</h3>
-                  <span class="thinker-role">عالم النفس السلوكي</span>
-                  <p class="thinker-desc">مؤسس نظرية التعلم الاجتماعي ومفهوم الكفاءة الذاتية المبنية على مراكمة الأدلة اليومية للإنجاز.</p>
-                </div>
-              </a>
-            
-            
-              <a class="thinker-card" href="../thinkers/angela-duckworth/">
-                <div class="thinker-portrait">
-                  <img src="../thinkers/images/angela-duckworth.jpg" alt="أنجيلا داكورث" loading="lazy">
-                </div>
-                <div class="thinker-info">
-                  <span class="thinker-era">معاصرة</span>
-                  <h3 class="thinker-name">أنجيلا داكورث</h3>
-                  <span class="thinker-role">باحثة في علم النفس الإيجابي</span>
-                  <p class="thinker-desc">مؤلفة دراسات العزيمة والجلد (Grit) وأهمية الشغف والمثابرة طويلة الأمد على حساب الحماس المؤقت.</p>
-                </div>
-              </a>
-            
-          </div>
+      <section class="article-section" id="section-07">
+        <div class="section-header">
+          <span class="section-num">07</span>
+          <h2 class="section-title" id="section-07Heading">تعلم استئناف المسار بعد يوم ضائع</h2>
+        </div>
+        <div class="article-section-content" id="section-07Body">
+          <p class="article-p">الحياة بطبيعتها غير خطية؛ ستمر أيام تمرض فيها، أو تسافر، أو تستنزفك الالتزامات العاجلة. الفارق بين من يستمر ومن ينقطع نهائيًا ليس في حدوث اليوم الضائع، بل في التعامل معه:</p>
+        <div class="article-card-highlight">
+          <h4>قاعدة اليوم الواحد: «لا تفوّت مرتين أبدًا»</h4>
+          <p>تفويت يوم واحد هو حدث عارض؛ تفويت يومين متتاليين هو بداية عادة جديدة من التراجع. إذا تعثرت اليوم، فإن مهمتك الوحيدة غدًا هي استعادة الحد الأدنى، حتى لو كان لدقيقة واحدة فقط.</p>
+        </div>
+        <div class="article-inline-image-box">
+          <img src="../developpement-personnel/images/chemin-lanternes-nuit.jpg" alt="طريق هادئ في الغابة مضاء بفوانيس دافئة يرمز إلى الوتيرة المستمرة دون انقطاع." class="article-inline-img" loading="lazy">
+          <span class="inline-caption">الفوانيس المستمرة عبر الدرب تضيء كل خطوة، فالهدف ليس سرعة الوصول بل ثبات الخطى.</span>
+        </div>
         </div>
       </section>
 
-      <!-- 11. PARCOURS ASSOCIÉ -->
-      <section class="article-path-section">
-        <div class="container-narrow">
-          <div class="path-card">
-            <div class="path-badge" id="pathNumBadge">🗺️ المسار ٠١</div>
-            <h3 class="path-title" id="pathTitleHeading">مسار الانضباط وبناء العادات المستدامة</h3>
-            <p class="path-desc" id="pathDescText">رحلة متكاملة من ٤ مقالات تطبيقية تنتقل بك من فخ الحماس العابر إلى بناء نظام يومي قوي ومستدام.</p>
-            <a href="../developpement-personnel/parcours/discipline-habitudes/" class="path-btn" id="pathActionBtn">استكشف كامل مقالات المسار ←</a>
-          </div>
+
+      <section class="article-section" id="section-08">
+        <div class="section-header">
+          <span class="section-num">08</span>
+          <h2 class="section-title" id="section-08Heading">تهيئة البيئة بدل الاعتماد على قوة الإرادة</h2>
+        </div>
+        <div class="article-section-content" id="section-08Body">
+          <p class="article-p">قوة الإرادة بطارية محدودة تُستنزف خلال اليوم مع اتخاذ القرارات ومواجهة الضغوط. الاعتماد عليها لبدء العادات بعد يوم عمل شاق رهان خاسر.</p>
+        <p class="article-p">الحل هو تقليل الاحتكاك المادي بينك وبين العادة المفيدة، وزيادة الاحتكاك بينك وبين المشتتات:</p>
+        <ul class="article-rich-list">
+          <li>ضع كتابك مفتوحًا على الوسادة أو طاولة القهوة مسبقًا.</li>
+          <li>جهز ملابس المشي قرب السرير قبل النوم.</li>
+          <li>أبعد الهاتف عن غرفة النوم أو ضعه في غرفة أخرى أثناء جلسة القراءة.</li>
+        </ul>
         </div>
       </section>
 
-      <!-- 12. ARTICLES RECOMMANDÉS -->
-      <section class="article-recommended-section">
-        <div class="container-narrow">
-          <h2 class="rec-heading" id="recHeading">📚 مقالات يُنصح بقراءتها في هذا المسار</h2>
-          <div class="recommended-grid" id="recommendedArticlesGrid">
-            
-              <article class="rec-article-card">
-                <div class="rec-img-box">
-                  <img src="../articles/discipline_vs_motivation_hero.jpg" alt="الانضباط ضد التحفيز: لماذا تفوز الأنظمة دائمًا على المشاعر؟" loading="lazy">
-                </div>
-                <div class="rec-body">
-                  <span class="rec-tag">⚡ المقال ٠١</span>
-                  <h3 class="rec-title">الانضباط ضد التحفيز: لماذا تفوز الأنظمة دائمًا على المشاعر؟</h3>
-                  <p class="rec-desc">دراسة تحليلية في أسباب فشل الحماس اللحظي وقوة الالتزام بالأنظمة الثابتة.</p>
-                  <a href="discipline-vs-motivation.html" class="rec-btn">اقرأ المقال ←</a>
-                </div>
-              </article>
-            
-            
-              <article class="rec-article-card">
-                <div class="rec-img-box">
-                  <img src="../articles/construire_habitude_durable_hero.jpg" alt="كيف تبني عادة تدوم: العلم وراء التكرار والمرونة" loading="lazy">
-                </div>
-                <div class="rec-body">
-                  <span class="rec-tag">⚡ المقال ٠٢</span>
-                  <h3 class="rec-title">كيف تبني عادة تدوم: العلم وراء التكرار والمرونة</h3>
-                  <p class="rec-desc">دليل تطبيقي في كيمياء العادات اليومية وآليات ترسيخها في الهيكل العصبي.</p>
-                  <a href="construire-une-habitude-durable.html" class="rec-btn">اقرأ المقال ←</a>
-                </div>
-              </article>
-            
-            
-              <article class="rec-article-card">
-                <div class="rec-img-box">
-                  <img src="../articles/petites_habitudes_hero.jpg" alt="لماذا تغيّر العادات الصغيرة حياتنا أكثر من القرارات الكبيرة؟" loading="lazy">
-                </div>
-                <div class="rec-body">
-                  <span class="rec-tag">⚡ المقال ٠٣</span>
-                  <h3 class="rec-title">لماذا تغيّر العادات الصغيرة حياتنا أكثر من القرارات الكبيرة؟</h3>
-                  <p class="rec-desc">كيف تصنع الخطوات المتواضعة المتكررة تحولات كبرى ومستدامة على المدى الطويل.</p>
-                  <a href="petites-habitudes-grande-decision.html" class="rec-btn">اقرأ المقال ←</a>
-                </div>
-              </article>
-            
-          </div>
+
+      <section class="article-section" id="section-09">
+        <div class="section-header">
+          <span class="section-num">09</span>
+          <h2 class="section-title" id="section-09Heading">قياس الاستمرارية دون التحول إلى سجين للمتابعة</h2>
+        </div>
+        <div class="article-section-content" id="section-09Body">
+          <p class="article-p">تطبيقات تتبع العادات مفيدة، لكنها قد تتحول إلى مصدر للضغط السلبي حين نركز على «سلسلة الأيام المتواصلة» (Streak) لدرجة أن انقطاع يوم واحد يُشعرنا بأن كل الجهد السابق قد ضاع.</p>
+        <p class="article-p">اعتمد مقياسًا مرنًا: بدلاً من حساب النسبة المئوية الصارمة (100%)، استهدف نسبة <strong>80% أو 85%</strong> على مدار الشهر. هذا الهامش يمنحك مرونة نفسية للتعامل مع تقلبات الحياة دون إحساس بالانهيار.</p>
         </div>
       </section>
 
-      <!-- 13. CTA BOX -->
-      <section class="article-cta-section">
-        <div class="container-narrow">
-          <div class="cta-box">
-            <h2 class="cta-title" id="ctaHeading">ابدأ خطوتك الأولى اليوم بحكمة وهدوء</h2>
-            <p class="cta-desc" id="ctaDesc">لا تنتظر يوم الاثنين القادم ولا الظروف المثالية؛ اختر عادتك المصغرة الآن وانضم إلى مسار التطوير المستمر.</p>
-            <a href="../developpement-personnel/" class="cta-btn" id="ctaBtn">استكشف كل مسارات تطوير الذات ←</a>
+
+      <section class="article-section" id="section-10">
+        <div class="section-header">
+          <span class="section-num">10</span>
+          <h2 class="section-title" id="section-10Heading">بروتوكول عملي للعودة خلال 14 يومًا</h2>
+        </div>
+        <div class="article-section-content" id="section-10Body">
+          <p class="article-p">إليك خطة عمل تطبيقية ومجربة لإعادة تشغيل محرك الاستمرارية خطوة بخطوة:</p>
+        <div class="article-inline-image-box">
+          <img src="../developpement-personnel/images/pas-dore-germe-renaissance.jpg" alt="خطوات ذهبية صغيرة على التربة تقود نحو نبتة مضيئة في إشارة إلى بروتوكول الـ 14 يومًا." class="article-inline-img" loading="lazy">
+          <span class="inline-caption">خطوات ذهبية متتالية تنمو معها براعم الإنجاز الحقيقي والتحول الدائم.</span>
+        </div>
+        <div class="article-protocol-grid">
+          <div class="protocol-card">
+            <span class="protocol-num">١</span>
+            <h4>اختر عادة واحدة فقط</h4>
+            <p>لا تحاول إصلاح حياتك بالكامل في يوم واحد. اختر عادة واحدة ذات تأثير محوري (قراءة، مشي، نوم مبكر).</p>
           </div>
+          <div class="protocol-card">
+            <span class="protocol-num">٢</span>
+            <h4>حدّد النسخة المصغرة (2 إلى 5 دقائق)</h4>
+            <p>عرّف الحد الأدنى الذي لا يمكن لأي كسل أو إرهاق أن يمنعك من تنفيذه.</p>
+          </div>
+          <div class="protocol-card">
+            <span class="protocol-num">٣</span>
+            <h4>اربطها بمحفز يومي موجود مسبقًا</h4>
+            <p>«مباشرة بعد شرب قهوة الصباح» أو «فور الجلوس على مكتبي».</p>
+          </div>
+          <div class="protocol-card">
+            <span class="protocol-num">٤</span>
+            <h4>حدد المكان والنافذة الزمنية بدقة</h4>
+            <p>تجنب العبارات الفضفاضة، حدد الركن المحدد والوقت التقريبي.</p>
+          </div>
+          <div class="protocol-card">
+            <span class="protocol-num">٥</span>
+            <h4>استخدم أداة تتبع ورقية بسيطة</h4>
+            <p>علامة صح (✓) صغيرة في دفتر يوميات أو ورقة على المكتب كافية تمامًا.</p>
+          </div>
+          <div class="protocol-card">
+            <span class="protocol-num">٦</span>
+            <h4>طبّق قاعدة «العودة الفورية»</h4>
+            <p>إذا نسيت يومًا، فاليوم التالي مخصص حصريًا لتثبيت الحضور وليس لتعويض ما فات.</p>
+          </div>
+          <div class="protocol-card">
+            <span class="protocol-num">٧</span>
+            <h4>وقفة تقييم وتعديل في اليوم السابع</h4>
+            <p>هل كانت العادة سهلة ومريحة؟ حافظ عليها. هل كانت صعبة؟ صغّر حجمها أكثر للأسبوع القادم.</p>
+          </div>
+          <div class="protocol-card">
+            <span class="protocol-num">٨</span>
+            <h4>ترسيخ التدرج في الأسبوع الثاني (الأيام 8-13)</h4>
+            <p>أضف زيادة طفيفة لا تتعدى 10% إذا شعرت براحة وثبات تام، أو ابقَ على نفس الوتيرة.</p>
+          </div>
+          <div class="protocol-card">
+            <span class="protocol-num">٩</span>
+            <h4>الاحتفال باكتمال الـ 14 يومًا</h4>
+            <p>أنت الآن لم تعد شخصًا يحاول البدء، بل أعدت تثبيت المسار العصبي والهوية المستقرة للعادة.</p>
+          </div>
+        </div>
         </div>
       </section>
 
     </article>
+
+    <!-- 8. COMPOSANT 08 : CONCLUSION & SYNTHÈSE -->
+    <section class="article-conclusion-box" id="articleConclusionBox">
+      <h2 class="conclusion-title" id="conclusionHeading">✨ خاتمة: قوة الاستمرارية الصامتة</h2>
+      <div id="conclusionBody">
+        <p class="article-p" id="conclusionP1">الاستمرارية ليست صفة سحرية يمتلكها قلة من المتميزين، بل هي نتيجة احترام الحدود البشرية والبدء بخطوات صغيرة وبناء مسار يسمح بالنهوض السريع بعد كل انقطاع.</p>
+        <p class="article-p" id="conclusionP2"><strong>لا تحتقر الخطوة الصغيرة؛ ربما لا تغير يومك كله فورًا، لكنها تحمي الخيط الرفيع من الانقطاع، وتقول لك بصوت هادئ: أنت لا تزال على الطريق الصحيح.</strong></p>
+      </div>
+    </section>
+
+    <!-- 9. COMPOSANT 09 : POINTS CLÉS À RETENIR (KEY TAKEAWAYS) -->
+    <section class="takeaways-box" id="takeawaysBox">
+      <h2 class="takeaways-title" id="takeawaysHeading">🎯 نقاط أساسية يجب تذكرها</h2>
+      <ul class="takeaways-list" id="takeawaysList">
+        <li><span class="check-icon">✓</span> <span class="takeaway-text">الانقطاع لا يعني الفشل، بل هو فرصة لإعادة ضبط حمولة النظام وتخفيف أعبائه.</span></li>
+        <li><span class="check-icon">✓</span> <span class="takeaway-text">البدايات الصغيرة جدًا هي الدرع الحقيقي ضد التسويف والمقاومة الذهنية.</span></li>
+        <li><span class="check-icon">✓</span> <span class="takeaway-text">قاعدة عدم تفويت يومين تحميك من الانزلاق في التراجع التام وتعيد تثبيت المسار.</span></li>
+        <li><span class="check-icon">✓</span> <span class="takeaway-text">الثقة بالنفس تُبنى بالأدلة اليومية الصغيرة لا بالوعود الكبيرة غير المحققة.</span></li>
+      </ul>
+    </section>
+
+    <!-- 10. COMPOSANT 10 : CITATIONS D'INSPIRATION (QUOTES) -->
+    <section class="quotes-box" id="quotesBox">
+      <h2 class="quotes-heading" id="quotesHeading">📜 اقتباسات في العادات والاستمرارية</h2>
+      <div class="quotes-grid" id="quotesGrid">
+
+        <div class="quote-card">
+          <span class="quote-icon">“</span>
+          <p class="quote-text">« الاستمرارية الحقيقية لا تقاس بعدد الأيام المثالية، بل بالسرعة التي ننهض بها بعد يوم متعثر. »</p>
+          <span class="quote-author">— حكمة ونور</span>
+        </div>
+
+
+        <div class="quote-card">
+          <span class="quote-icon">“</span>
+          <p class="quote-text">« أنت لا تحتاج إلى إرادة خارقة لتبدأ من جديد، بل تحتاج إلى خطوة أصغر من كبريائك وأقرب إلى واقعك. »</p>
+          <span class="quote-author">— حكمة ونور</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 11. COMPOSANT 11 : EXERCICE PRATIQUE (CONTRAT DE REPRISE) -->
+    <section class="article-exercise-section" id="exerciseBox">
+      <div class="exercise-card">
+        <div class="exercise-header">
+          <span class="exercise-badge">✍️ تمرين تطبيقي</span>
+          <h3 class="exercise-title" id="contractHeading">تمرين تطبيقي: ميثاق الاستئناف الخاص بي</h3>
+          <p class="exercise-desc" id="contractDesc">املأ هذا العقد البسيط لتثبيت نيتك وتحديد معالم العودة بوضوح تام:</p>
+        </div>
+
+        <form class="contract-form" onsubmit="event.preventDefault();">
+          <div class="form-group">
+            <label for="contractHabit" id="labelHabit">العادة التي اخترت استئنافها:</label>
+            <input type="text" id="contractHabit" class="contract-input" placeholder="مثال: القراءة اليومية المركزة">
+          </div>
+
+          <div class="form-group">
+            <label for="contractMini" id="labelMini">النسخة المصغرة جدًا (الحد الأدنى):</label>
+            <input type="text" id="contractMini" class="contract-input" placeholder="مثال: قراءة صفحتين فقط">
+          </div>
+
+          <div class="form-group">
+            <label for="contractTrigger" id="labelTrigger">المحفز اليومي المحدد:</label>
+            <input type="text" id="contractTrigger" class="contract-input" placeholder="مثال: بعد فنجان قهوة الصباح مباشرة">
+          </div>
+
+          <div class="form-group">
+            <label for="contractRecovery" id="labelRecovery">قاعدتي عند التعثر:</label>
+            <input type="text" id="contractRecovery" class="contract-input" placeholder="مثال: لن أفوّت يومين متتاليين وسأقرأ صفحة واحدة غدًا دون لوم نفسي">
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- 12. COMPOSANT 12 : MODULE D'ENGAGEMENT (LIKES, RATING, COMMENTS) -->
+    <section class="article-engagement-section">
+      <div class="article-engagement-container"
+           data-article-id="redevenir-constant-apres-abandon"
+           data-article-title="Comment redevenir constant après avoir abandonné plusieurs fois">
+      </div>
+    </section>
+
+    <!-- 13. COMPOSANT 13 : RESSOURCES DU PARCOURS (AUDIO / QUIZ / CITATIONS) -->
+    <section class="article-resources-section" id="resourcesBox">
+      <div class="resources-block">
+        <header class="resources-header">
+          <span class="res-eyebrow" id="resEyebrow">✨ موارد المسار المرتبطة</span>
+          <h2 class="res-title" id="resTitle">موارد تعزيز الانضباط والاستمرارية</h2>
+          <p class="res-intro" id="resIntro">وسائط صوتية واقتباسات ملهمة تدعم رحلتك في ترسيخ العادات والتقدم المستمر.</p>
+        </header>
+
+        <div class="resources-grid">
+          <!-- Audio Card -->
+          <article class="resource-card resource-audio">
+            <div class="res-card-img-box">
+              <img src="../audio_alchemist_cover.jpg" alt="الخيميائي — باولو كويلو" class="res-card-img" loading="lazy">
+            </div>
+            <div>
+              <span class="res-badge" id="audioBadge">🎧 كتاب صوتي ملهم</span>
+              <h3 class="res-card-title" id="audioTitle">الخيميائي — باولو كويلو</h3>
+              <p class="res-card-desc" id="audioDesc">استمع إلى «الخيميائي»، رحلة رمزية خالدة في الانضباط الذاتي واليقظة والاستمرار في تحقيق الهدف.</p>
+              <div class="res-card-meta" id="audioMeta">⏱️ 13 دقيقة • 5 فصول</div>
+            </div>
+            <a href="../audio/?book=alchemist" class="res-btn" id="audioBtn">استمع إلى التسجيل الصوتي 🎧</a>
+          </article>
+
+          <!-- Quiz Card (Coming soon) -->
+          <article class="resource-card resource-quiz is-coming-soon">
+            <div class="res-card-img-box">
+              <img src="../dev_habits_hd.jpg" alt="اختبارات الانضباط والعادات" class="res-card-img" loading="lazy">
+            </div>
+            <div class="coming-soon-body">
+              <span class="res-badge" id="quizBadge">🧩 اختبار تفاعلي</span>
+              <h3 class="res-card-title" id="quizTitle">اختبارات الانضباط والعادات</h3>
+              <p class="res-card-desc" id="quizDesc">أدوات تقييم مستويات التركيز، وقوة العادات اليومية، ومقاومة التسويف قيد الإعداد والإطلاق.</p>
+              <span class="res-status-badge" id="quizStatus">الاختبار قريبًا ⏳</span>
+            </div>
+          </article>
+
+          <!-- Quotes Card -->
+          <article class="resource-card resource-quotes">
+            <div class="res-card-img-box">
+              <img src="../continue_advancing_glass_bridge.jpg" alt="اقتباسات في العادات والنجاح المستدام" class="res-card-img" loading="lazy">
+            </div>
+            <div>
+              <span class="res-badge" id="quotesBadge">📜 مبادئ النمو والانضباط</span>
+              <h3 class="res-card-title" id="quotesTitle">اقتباسات في العادات والنجاح المستدام</h3>
+              <p class="res-card-desc" id="quotesDesc">قواعد رصينة في هندسة السلوك وبناء الاستمرارية اليومية وتجاوز العقبات.</p>
+              <div class="quote-featured-box">
+                <p class="quote-featured-text" id="quotesFeaturedText">« كل حياتنا، في شكلها العملي، ليست سوى كتلة من العادات المنظمة. »</p>
+                <span class="quote-featured-author" id="quotesFeaturedAuthor">— <a href="../thinkers/william-james/">ويليام جيمس</a></span>
+              </div>
+            </div>
+            <a href="../quotes/" class="res-btn" id="quotesBtn">استكشف مكتبة الاقتباسات ←</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. COMPOSANT 14 : PENSEURS ET PSYCHOLOGUES ASSOCIÉS -->
+    <section class="associated-thinkers-box" id="thinkersBox">
+      <div class="section-title-wrap">
+        <h2 class="thinkers-title" id="thinkersHeading">👥 مفكرون وعلماء النفس المرتبطون</h2>
+        <p class="thinkers-sub" id="thinkersSubtitle">رواد أثروا دراسات السلوك البشري وهندسة العادات والانضباط الذاتي</p>
+      </div>
+
+      <div class="thinkers-grid" id="thinkersGrid">
+
+        <a class="thinker-card" href="../thinkers/william-james/">
+          <div class="thinker-portrait">
+            <img src="../thinkers/images/william-james.jpg" alt="ويليام جيمس" loading="lazy">
+          </div>
+          <div class="thinker-info">
+            <span class="thinker-era">١٨٤٢ — ١٩١٠ م</span>
+            <h3 class="thinker-name">ويليام جيمس</h3>
+            <span class="thinker-role">رائد علم النفس الوظيفي</span>
+            <p class="thinker-desc">صاحب الدراسات الرائدة حول كيفية تشكل المسارات العصبية للعادات وتحويل الأفعال الواعية إلى طبائع تلقائية.</p>
+          </div>
+        </a>
+
+
+        <a class="thinker-card" href="../thinkers/albert-bandura/">
+          <div class="thinker-portrait">
+            <img src="../thinkers/images/albert-bandura.jpg" alt="ألبرت باندورا" loading="lazy">
+          </div>
+          <div class="thinker-info">
+            <span class="thinker-era">١٩٢٥ — ٢٠٢١ م</span>
+            <h3 class="thinker-name">ألبرت باندورا</h3>
+            <span class="thinker-role">عالم النفس السلوكي</span>
+            <p class="thinker-desc">مؤسس نظرية التعلم الاجتماعي ومفهوم الكفاءة الذاتية المبنية على مراكمة الأدلة اليومية للإنجاز.</p>
+          </div>
+        </a>
+
+
+        <a class="thinker-card" href="../thinkers/angela-duckworth/">
+          <div class="thinker-portrait">
+            <img src="../thinkers/images/angela-duckworth.jpg" alt="أنجيلا داكورث" loading="lazy">
+          </div>
+          <div class="thinker-info">
+            <span class="thinker-era">معاصرة</span>
+            <h3 class="thinker-name">أنجيلا داكورث</h3>
+            <span class="thinker-role">باحثة في علم النفس الإيجابي</span>
+            <p class="thinker-desc">مؤلفة دراسات العزيمة والجلد (Grit) وأهمية الشغف والمثابرة طويلة الأمد على حساب الحماس المؤقت.</p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- 15. COMPOSANT 15 : PARCOURS ASSOCIÉ -->
+    <section class="related-path-section" id="relatedPathContainer">
+      <div class="path-card-premium">
+        <div class="path-badge" id="pathNumBadge">🗺️ المسار ٠١</div>
+        <h2 class="path-name" id="pathTitleHeading">مسار الانضباط وبناء العادات المستدامة</h2>
+        <p class="path-desc" id="pathDescText">رحلة متكاملة من ٤ مقالات تطبيقية تنتقل بك من فخ الحماس العابر إلى بناء نظام يومي قوي ومستدام.</p>
+        <a href="../developpement-personnel/parcours/discipline-habitudes/" class="path-action-btn" id="pathActionBtn">استكشف كامل مقالات المسار ←</a>
+      </div>
+    </section>
+
+    <!-- 16. COMPOSANT 16 : ARTICLES RECOMMANDÉS -->
+    <section class="recommended-articles-section" id="recommendedArticlesSection">
+      <h2 class="rec-heading" id="recHeading">📚 مقالات يُنصح بقراءتها في هذا المسار</h2>
+      <div class="recommended-grid" id="recommendedArticlesGrid">
+
+        <article class="rec-article-card">
+          <div class="rec-img-box">
+            <img src="../articles/discipline_vs_motivation_hero.jpg" alt="الانضباط ضد التحفيز: لماذا تفوز الأنظمة دائمًا على المشاعر؟" loading="lazy">
+          </div>
+          <div class="rec-body">
+            <span class="rec-tag">⚡ المقال ٠١</span>
+            <h3 class="rec-title">الانضباط ضد التحفيز: لماذا تفوز الأنظمة دائمًا على المشاعر؟</h3>
+            <p class="rec-desc">دراسة تحليلية في أسباب فشل الحماس اللحظي وقوة الالتزام بالأنظمة الثابتة.</p>
+            <a href="discipline-vs-motivation.html" class="rec-btn">اقرأ المقال ←</a>
+          </div>
+        </article>
+
+
+        <article class="rec-article-card">
+          <div class="rec-img-box">
+            <img src="../articles/construire_habitude_durable_hero.jpg" alt="كيف تبني عادة تدوم: العلم وراء التكرار والمرونة" loading="lazy">
+          </div>
+          <div class="rec-body">
+            <span class="rec-tag">⚡ المقال ٠٢</span>
+            <h3 class="rec-title">كيف تبني عادة تدوم: العلم وراء التكرار والمرونة</h3>
+            <p class="rec-desc">دليل تطبيقي في كيمياء العادات اليومية وآليات ترسيخها في الهيكل العصبي.</p>
+            <a href="construire-une-habitude-durable.html" class="rec-btn">اقرأ المقال ←</a>
+          </div>
+        </article>
+
+
+        <article class="rec-article-card">
+          <div class="rec-img-box">
+            <img src="../articles/petites_habitudes_hero.jpg" alt="لماذا تغيّر العادات الصغيرة حياتنا أكثر من القرارات الكبيرة؟" loading="lazy">
+          </div>
+          <div class="rec-body">
+            <span class="rec-tag">⚡ المقال ٠٣</span>
+            <h3 class="rec-title">لماذا تغيّر العادات الصغيرة حياتنا أكثر من القرارات الكبيرة؟</h3>
+            <p class="rec-desc">كيف تصنع الخطوات المتواضعة المتكررة تحولات كبرى ومستدامة على المدى الطويل.</p>
+            <a href="petites-habitudes-grande-decision.html" class="rec-btn">اقرأ المقال ←</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 17. COMPOSANT 17 : CTA BOX -->
+    <section class="article-cta-box" id="articleCtaBox">
+      <h2 class="cta-heading" id="ctaHeading">ابدأ خطوتك الأولى اليوم بحكمة وهدوء</h2>
+      <p class="cta-desc" id="ctaDesc">لا تنتظر يوم الاثنين القادم ولا الظروف المثالية؛ اختر عادتك المصغرة الآن وانضم إلى مسار التطوير المستمر.</p>
+      <a href="../developpement-personnel/" class="cta-btn" id="ctaBtn">استكشف كل مسارات تطوير الذات ←</a>
+    </section>
+
   </main>
 
-  <!-- 14. FOOTER GLOBAL -->
-  <footer class="footer-global">
-    <div class="container-narrow">
-      <div class="footer-content">
+  <!-- 18. COMPOSANT 18 : FOOTER GLOBAL -->
+  <footer class="footer site-footer" id="mainFooter">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="../brand_logo_official.png" alt="Hikma & Nour" class="footer-logo">
+        <h3 class="footer-title">حكمة ونور — Jardin des Pensées</h3>
         <p class="footer-quote" id="footerQuoteText">« إن أعظم اكتشاف في جيلي هو أن الإنسان يمكنه تغيير حياته عبر تغيير مواقفه الذهنية وعاداته اليومية. » — ويليام جيمس</p>
-        <p class="footer-sub" id="footerSubText">صُمم بحكمة وهدوء وسكينة لمرافقة رحلتك الفكرية والشخصية.</p>
-        <div class="footer-links">
-          <a href="../index.html">الرئيسية</a> •
-          <a href="../developpement-personnel/">تطوير الذات</a> •
-          <a href="../privacy-policy.html">سياسة الخصوصية</a> •
-          <a href="../terms-of-service.html">شروط الاستخدام</a>
-        </div>
-        <p class="footer-copy">© 2026 حكمة ونور — Hikma & Nour. جميع الحقوق محفوظة.</p>
+        <span class="footer-sub" id="footerSubText">صُمم بحكمة وهدوء وسكينة لمرافقة رحلتك الفكرية والشخصية.</span>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 حكمة ونور — Hikma & Nour. جميع الحقوق محفوظة.</p>
       </div>
     </div>
   </footer>
@@ -717,92 +860,146 @@
     "bcPathUrl": "../developpement-personnel/parcours/discipline-habitudes/",
     "bcArticle": "استعادة الاستمرارية بعد التوقف",
     "pillarBadge": "⚡ تطوير الذات — مسار الانضباط والعادات (المقال ٠٤)",
-    "readingTime": "📖 10 دقائق قراءة متأنية",
-    "authorName": "حكمة ونور",
-    "publishDate": "29 أغسطس 2026",
+    "readingTime": "١٠ دقائق قراءة متأنية",
+    "authorLabel": "بواسطة:",
+    "authorName": "حكمة ونور | Hikma & Nour",
+    "publishDate": "السبت، ٢٩ أغسطس ٢٠٢٦",
     "heroTitle": "كيف تستعيد الاستمرارية بعد أن توقفت مرات عديدة؟",
-    "heroLead": "الاستمرارية الحقيقية لا تعني ألا تنقطع أبدًا، بل تعني بناء نظام مرن وبسيط يُمكّنك من الاستئناف فورًا دون شعور بالذنب ودون انتظار دفعة حماس جديدة.",
+    "heroSubtitle": "الاستمرارية الحقيقية لا تعني ألا تنقطع أبدًا، بل تعني بناء نظام مرن وبسيط يُمكّنك من الاستئناف فورًا دون شعور بالذنب ودون انتظار دفعة حماس جديدة.",
     "heroImgAlt": "طريق من الأضواء الصغيرة يستأنف مساره بعد انقطاع ويقود نحو شجرة فتية في حديقة هادئة.",
-    "summaryTitle": "خلاصة المنهج في دقائق",
-    "summaryPoints": [
-      "الانقطاع المتكرر ليس دليلاً على نقص في شخصيتك، بل إشارة واضحة إلى أن النظام القديم كان أثقل من واقعك اليومي.",
-      "فخ البدء بحجم كبير: النفس تطمح للكمال الفوري، بينما الاستمرارية تُبنى على أصغر خطوة لا يمكن مقاومتها.",
-      "قاعدة عدم تفويت يومين متتاليين: يوم الانقطاع عارض بشري طبيعي، لكن الاستئناف السريع هو ما يحمي الهوية الجديدة.",
-      "بروتوكول الـ 14 يومًا: خطة تدريجية لاستعادة الثقة بالنفس عبر أدلة إنجاز صغيرة ومستقرة."
-    ],
-    "tocTitle": "فهرس المحاور الفكرية والعملية",
+    "heroCaption": "🏛️ حكمة ونور — الاستئناف الهادئ وبناء جسر العودة الواثقة بعد كل عثرة",
+    "leadTitle": "خلاصة المنهج: حكمة العودة السريعة وفخ الكمال الفوري",
+    "introP1": "عندما ننقطع عن عادة للمرة الأولى، يبدو الاستئناف ممكنًا. لكن حين تتكرر دورة «البدء بحماس، ثم التعثر، ثم الانقطاع التام» لعدة مرات، ينشأ عبء نفسي إضافي لا يتعلق بصعوبة الفعل ذاته، بل بالذاكرة السلبية للتوقف السابق.",
+    "introP2": "في كل مرة نتوقف فيها، يُسجل العقل الباطن تجربة الانقطاع كـ «فشل في الالتزام»، مما يُضعف الثقة في قدرتنا على الاستمرار مستقبلاً. هنا نقع في ما يُسميه علماء النفس «العجز المكتسب الخفيف»: الخوف من تكرار الإحباط يجعلنا نتردد في المحاولة من جديد، أو ننتظر لحظة وهمية من المثالية لن نبدأ بدونها.",
+    "introP3": "لكن الانقطاع المتكرر ليس دليلاً على نقص في شخصيتك، بل إشارة واضحة إلى أن النظام القديم كان أثقل من واقعك اليومي. النفس تطمح للكمال الفوري، بينما الاستمرارية تُبنى على أصغر خطوة لا يمكن مقاومتها.",
+    "introConclusion": "الاستمرارية ليست صفة سحرية نولد بها، بل مهارة في إدارة العودة الهادئة: من يتقن الاستئناف بعد يوم ضائع ينتصر دائمًا على من يبحث عن الكمال المستحيل.",
+    "tocTitle": "جدول المحتويات الفكرية والتطبيقية",
     "tocItems": [
       {
         "id": "section-01",
-        "text": "٠١. لماذا يصبح البدء من جديد أصعب بعد كل توقف؟"
+        "num": "01",
+        "text": "لماذا يصبح البدء من جديد أصعب بعد كل توقف؟"
       },
       {
         "id": "section-02",
-        "text": "٠٢. الانقطاع عن العادة لا يحدد هويتك"
+        "num": "02",
+        "text": "الانقطاع عن العادة لا يحدد هويتك"
       },
       {
         "id": "section-03",
-        "text": "٠٣. فهم السبب الحقيقي الذي أدى إلى انقطاع المسار"
+        "num": "03",
+        "text": "فهم السبب الحقيقي الذي أدى إلى انقطاع المسار"
       },
       {
         "id": "section-04",
-        "text": "٠٤. البدء بحجم أصغر مما ترغب به النفس"
+        "num": "04",
+        "text": "البدء بحجم أصغر مما ترغب به النفس"
       },
       {
         "id": "section-05",
-        "text": "٠٥. إعادة بناء الثقة بأدلة يومية صغيرة"
+        "num": "05",
+        "text": "إعادة بناء الثقة بأدلة يومية صغيرة"
       },
       {
         "id": "section-06",
-        "text": "٠٦. استبدال الكثافة بالحفاظ على وتيرة مستدامة"
+        "num": "06",
+        "text": "استبدال الكثافة بالحفاظ على وتيرة مستدامة"
       },
       {
         "id": "section-07",
-        "text": "٠٧. تعلم استئناف المسار بعد يوم ضائع"
+        "num": "07",
+        "text": "تعلم استئناف المسار بعد يوم ضائع"
       },
       {
         "id": "section-08",
-        "text": "٠٨. تهيئة البيئة بدل الاعتماد على قوة الإرادة"
+        "num": "08",
+        "text": "تهيئة البيئة بدل الاعتماد على قوة الإرادة"
       },
       {
         "id": "section-09",
-        "text": "٠٩. قياس الاستمرارية دون التحول إلى سجين للمتابعة"
+        "num": "09",
+        "text": "قياس الاستمرارية دون التحول إلى سجين للمتابعة"
       },
       {
         "id": "section-10",
-        "text": "١٠. بروتوكول عملي للعودة خلال 14 يومًا"
+        "num": "10",
+        "text": "بروتوكول عملي للعودة خلال 14 يومًا"
       }
     ],
-    "s1Title": "٠١. لماذا يصبح البدء من جديد أصعب بعد كل توقف؟",
-    "s1Content": "<p>عندما ننقطع عن عادة للمرة الأولى، يبدو الاستئناف ممكنًا. لكن حين تتكرر دورة «البدء بحماس، ثم التعثر، ثم الانقطاع التام» لعدة مرات، ينشأ عبء نفسي إضافي لا يتعلق بصعوبة الفعل ذاته، بل بالذاكرة السلبية للتوقف السابق.</p>\n    <p>في كل مرة نتوقف فيها، يُسجل العقل الباطن تجربة الانقطاع كـ «فشل في الالتزام»، مما يُضعف الثقة في قدرتنا على الاستمرار مستقبلاً. هنا نقع في ما يُسميه علماء النفس «العجز المكتسب الخفيف»: الخوف من تكرار الإحباط يجعلنا نتردد في المحاولة من جديد، أو ننتظر لحظة وهمية من المثالية لن نبدأ بدونها.</p>\n    <div class=\"article-quote-box\">\n      <p class=\"quote-text\">« ليست المشكلة في أننا توقفنا، بل في الحكم القاسي الذي نُصدره على أنفسنا بعد التوقف، والذي يحوّل العثرة العابرة إلى حاجز نفسي دائم. »</p>\n    </div>",
-    "s2Title": "٠٢. الانقطاع عن العادة لا يحدد هويتك",
-    "s2Content": "<p>من أكبر الأخطاء الإدراكية الخلط بين «سلوك حدث» و«هوية ثابتة». أن تفوتك ثلاثة أيام من القراءة أو التمارين أو العمل المركز لا يعني إطلاقًا أنك «شخص يفتقر إلى الانضباط»، بل يعني ببساطة أن الظروف المحيطة أو حجم المهمة كانا أكبر من طاقتك في تلك الفترة المحددة.</p>\n    <p>الانضباط ليس صفة وراثية جامدة نملكها أو نحرم منها، بل هو مهارة نظامية تتطور مع الوقت. تحرير النفس من وصم الذات هو الخطوة الأولى والأهم لفتح الباب أمام استئناف هادئ ومثمر.</p>\n    <div class=\"article-inline-image-box\">\n      <img src=\"../developpement-personnel/images/escalier-vert-progression.jpg\" alt=\"درجات حجرية وسط الطبيعة الخضراء مضاءة بشموع هادئة تعبر عن الصعود المتدرج.\" class=\"article-inline-img\" loading=\"lazy\">\n      <span class=\"inline-caption\">كل خطوة تصعدها بهدوء تبدد ضباب الشك وتفسح المجال لاستئناف واثق دون تعجل.</span>\n    </div>",
-    "s3Title": "٠٣. فهم السبب الحقيقي الذي أدى إلى انقطاع المسار",
-    "s3Content": "<p>قبل أن تسارع إلى إطلاق محاولة جديدة بنفس الأدوات السابقة، من الضروري إجراء تشخيص صادق وموضوعي:</p>\n    <ul class=\"article-rich-list\">\n      <li><strong>فخ الطموح المفرط:</strong> هل وضعت لنفسك هدفًا يتطلب ساعة يوميًا في جدول يفتقر بالفعل إلى نصف ساعة راحة؟</li>\n      <li><strong>غموض التوقيت والمكان:</strong> هل كانت العادة معلقة بدون مرسى زمني واضح («سأقرأ في وقت لاحق»)؟</li>\n      <li><strong>الاحتكاك البيئي العالي:</strong> هل كان الوصول إلى أدوات العادة يتطلب طاقة إضافية مسبقة؟</li>\n      <li><strong>الصدمات والظروف الطارئة:</strong> هل توقف المسار بسبب مرض أو سفر أو ظرف عائلي دون وجود خطة دنيا للطوارئ؟</li>\n    </ul>\n    <p>عندما تحدد سبب التعثر بوضوح، يتحول الأمر من مشكلة في إرادتك إلى مشكلة في هندسة النظام، والنظام دائمًا قابل للتعديل والتحسين.</p>",
-    "s4Title": "٠٤. البدء بحجم أصغر مما ترغب به النفس",
-    "s4Content": "<p>عندما نقرر العودة، يميل «الأنا» إلى الرغبة في تعويض ما فات عبر البدء بقوة مضاعفة. هذا هو الفخ الأكبر الذي يضمن الانقطاع السريع مرة أخرى.</p>\n    <p>العودة الذكية تتطلب التواضع أمام الواقع: ابدأ بحجم يبدو لك «تافهًا جدًا لدرجة يصعب معها الفشل»:</p>\n    <div class=\"article-framework-box\">\n      <div class=\"framework-step\">\n        <span class=\"framework-step-badge\">مبدأ الحد الأدنى</span>\n        <h4>صفحتان بدل فصل كامل • 5 دقائق تأمل بدل نصف ساعة • تمرين واحد بدل حصة شاقة</h4>\n        <p>الهدف في الأسبوع الأول ليس حرق السعرات أو إنهاء الكتب، بل إحياء شرارة الاستمرارية وترسيخ المسار العصبي للفعل.</p>\n      </div>\n    </div>\n    <div class=\"article-inline-image-box\">\n      <img src=\"../developpement-personnel/images/carnet-reprise-lumiere.jpg\" alt=\"دفتر الملاحظات وحجر مزخرف بالذهب محاط بأنوار دافئة ونبتة صغيرة نامية.\" class=\"article-inline-img\" loading=\"lazy\">\n      <span class=\"inline-caption\">البداية البسيطة والرمزية اليومية تمنح العقل وضوحًا كافيًا للاستمرار دون مقاومة.</span>\n    </div>",
-    "s5Title": "٠٥. إعادة بناء الثقة بأدلة يومية صغيرة",
-    "s5Content": "<p>كما أوضح عالم النفس ألبرت باندورا في نظريته حول «الكفاءة الذاتية» (Self-Efficacy)، فإن الثقة الحقيقية لا تأتي من التوكيدات اللفظية، بل من <strong>رؤية أدلة ملموسة وواقعية على الإنجاز</strong>.</p>\n    <p>عندما تنجز نسختك المصغرة يوميًا لمدة خمسة أيام متتالية، يرى عقلك دليلاً قاطعًا: «أنا شخص يفي بوعده لنفسه». هذا الشعور المتنامي بالكفاءة هو الوقود النفسي الأصيل الذي يُمكّنك لاحقًا من توسيع العادة بشكل طبيعي ومستدام.</p>",
-    "s6Title": "٠٦. استبدال الكثافة بالحفاظ على وتيرة مستدامة",
-    "s6Content": "<p>الكثافة هي ما يمنحنا شعورًا زائفًا بالبطولة في الأيام الأولى، لكن الوتيرة هي ما يبني الإرث والنتائج الدائمة على مدار الأشهر والسنوات.</p>\n    <p>الشخص الذي يقرأ 10 دقائق كل يوم دون انقطاع يقرأ أكثر من 20 كتابًا سنويًا، بينما من يقرأ ساعتين في عطلة نهاية الأسبوع ثم ينقطع شهرين لا ينهي كتابين. تذكّر دائمًا: <strong>الانتظام المتواضع يهزم الحماس المنقطع في كل مرة.</strong></p>",
-    "s7Title": "٠٧. تعلم استئناف المسار بعد يوم ضائع",
-    "s7Content": "<p>الحياة بطبيعتها غير خطية؛ ستمر أيام تمرض فيها، أو تسافر، أو تستنزفك الالتزامات العاجلة. الفارق بين من يستمر ومن ينقطع نهائيًا ليس في حدوث اليوم الضائع، بل في التعامل معه:</p>\n    <div class=\"article-card-highlight\">\n      <h4>قاعدة اليوم الواحد: «لا تفوّت مرتين أبدًا»</h4>\n      <p>تفويت يوم واحد هو حدث عارض؛ تفويت يومين متتاليين هو بداية عادة جديدة من التراجع. إذا تعثرت اليوم، فإن مهمتك الوحيدة غدًا هي استعادة الحد الأدنى، حتى لو كان لدقيقة واحدة فقط.</p>\n    </div>\n    <div class=\"article-inline-image-box\">\n      <img src=\"../developpement-personnel/images/chemin-lanternes-nuit.jpg\" alt=\"طريق هادئ في الغابة مضاء بفوانيس دافئة يرمز إلى الوتيرة المستمرة دون انقطاع.\" class=\"article-inline-img\" loading=\"lazy\">\n      <span class=\"inline-caption\">الفوانيس المستمرة عبر الدرب تضيء كل خطوة، فالهدف ليس سرعة الوصول بل ثبات الخطى.</span>\n    </div>",
-    "s8Title": "٠٨. تهيئة البيئة بدل الاعتماد على قوة الإرادة",
-    "s8Content": "<p>قوة الإرادة بطارية محدودة تُستنزف خلال اليوم مع اتخاذ القرارات ومواجهة الضغوط. الاعتماد عليها لبدء العادات بعد يوم عمل شاق رهان خاسر.</p>\n    <p>الحل هو تقليل الاحتكاك المادي بينك وبين العادة المفيدة، وزيادة الاحتكاك بينك وبين المشتتات:</p>\n    <ul class=\"article-rich-list\">\n      <li>ضع كتابك مفتوحًا على الوسادة أو طاولة القهوة مسبقًا.</li>\n      <li>جهز ملابس المشي قرب السرير قبل النوم.</li>\n      <li>أبعد الهاتف عن غرفة النوم أو ضعه في غرفة أخرى أثناء جلسة القراءة.</li>\n    </ul>",
-    "s9Title": "٠٩. قياس الاستمرارية دون التحول إلى سجين للمتابعة",
-    "s9Content": "<p>تطبيقات تتبع العادات مفيدة، لكنها قد تتحول إلى مصدر للضغط السلبي حين نركز على «سلسلة الأيام المتواصلة» (Streak) لدرجة أن انقطاع يوم واحد يُشعرنا بأن كل الجهد السابق قد ضاع.</p>\n    <p>اعتمد مقياسًا مرنًا: بدلاً من حساب النسبة المئوية الصارمة (100%)، استهدف نسبة <strong>80% أو 85%</strong> على مدار الشهر. هذا الهامش يمنحك مرونة نفسية للتعامل مع تقلبات الحياة دون إحساس بالانهيار.</p>",
-    "s10Title": "١٠. بروتوكول عملي للعودة خلال 14 يومًا",
-    "s10Content": "<p>إليك خطة عمل تطبيقية ومجربة لإعادة تشغيل محرك الاستمرارية خطوة بخطوة:</p>\n    <div class=\"article-inline-image-box\">\n      <img src=\"../developpement-personnel/images/pas-dore-germe-renaissance.jpg\" alt=\"خطوات ذهبية صغيرة على التربة تقود نحو نبتة مضيئة في إشارة إلى بروتوكول الـ 14 يومًا.\" class=\"article-inline-img\" loading=\"lazy\">\n      <span class=\"inline-caption\">خطوات ذهبية متتالية تنمو معها براعم الإنجاز الحقيقي والتحول الدائم.</span>\n    </div>\n    <div class=\"article-protocol-grid\">\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">١</span>\n        <h4>اختر عادة واحدة فقط</h4>\n        <p>لا تحاول إصلاح حياتك بالكامل في يوم واحد. اختر عادة واحدة ذات تأثير محوري (قراءة، مشي، نوم مبكر).</p>\n      </div>\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">٢</span>\n        <h4>حدّد النسخة المصغرة (2 إلى 5 دقائق)</h4>\n        <p>عرّف الحد الأدنى الذي لا يمكن لأي كسل أو إرهاق أن يمنعك من تنفيذه.</p>\n      </div>\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">٣</span>\n        <h4>اربطها بمحفز يومي موجود مسبقًا</h4>\n        <p>«مباشرة بعد شرب قهوة الصباح» أو «فور الجلوس على مكتبي».</p>\n      </div>\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">٤</span>\n        <h4>حدد المكان والنافذة الزمنية بدقة</h4>\n        <p>تجنب العبارات الفضفاضة، حدد الركن المحدد والوقت التقريبي.</p>\n      </div>\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">٥</span>\n        <h4>استخدم أداة تتبع ورقية بسيطة</h4>\n        <p>علامة صح (✓) صغيرة في دفتر يوميات أو ورقة على المكتب كافية تمامًا.</p>\n      </div>\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">٦</span>\n        <h4>طبّق قاعدة «العودة الفورية»</h4>\n        <p>إذا نسيت يومًا، فاليوم التالي مخصص حصريًا لتثبيت الحضور وليس لتعويض ما فات.</p>\n      </div>\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">٧</span>\n        <h4>وقفة تقييم وتعديل في اليوم السابع</h4>\n        <p>هل كانت العادة سهلة ومريحة؟ حافظ عليها. هل كانت صعبة؟ صغّر حجمها أكثر للأسبوع القادم.</p>\n      </div>\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">٨</span>\n        <h4>ترسيخ التدرج في الأسبوع الثاني (الأيام 8-13)</h4>\n        <p>أضف زيادة طفيفة لا تتعدى 10% إذا شعرت براحة وثبات تام، أو ابقَ على نفس الوتيرة.</p>\n      </div>\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">٩</span>\n        <h4>الاحتفال باكتمال الـ 14 يومًا</h4>\n        <p>أنت الآن لم تعد شخصًا يحاول البدء، بل أعدت تثبيت المسار العصبي والهوية المستقرة للعادة.</p>\n      </div>\n    </div>",
-    "conclusionHeading": "الخلاصة الفكرية والعملية",
-    "conclusionText": "الاستمرارية ليست صفة سحرية يمتلكها قلة من المتميزين، بل هي نتيجة احترام الحدود البشرية والبدء بخطوات صغيرة وبناء مسار يسمح بالنهوض السريع بعد كل انقطاع.",
-    "takeawaysHeading": "النقاط المحورية المستفادة",
-    "takeaways": [
-      "الانقطاع لا يعني الفشل، بل هو فرصة لإعادة ضبط حمولة النظام.",
-      "البدايات الصغيرة جدًا هي الدرع الحقيقي ضد التسويف والمقاومة الذهنية.",
-      "قاعدة عدم تفويت يومين تحميك من الانزلاق في التراجع التام.",
-      "الثقة بالنفس تُبنى بالأدلة اليومية الصغيرة لا بالوعود الكبيرة."
+    "sections": [
+      {
+        "id": "section-01",
+        "num": "01",
+        "title": "لماذا يصبح البدء من جديد أصعب بعد كل توقف؟",
+        "content": "<p class=\"article-p\">عندما ننقطع عن عادة للمرة الأولى، يبدو الاستئناف ممكنًا ومتاحًا. لكن حين تتكرر دورة «البدء بحماس، ثم التعثر، ثم الانقطاع التام» لعدة مرات، ينشأ عبء نفسي إضافي لا يتعلق بصعوبة الفعل ذاته، بل بالذاكرة السلبية للتوقف السابق.</p>\n        <p class=\"article-p\">في كل مرة نتوقف فيها، يُسجل العقل الباطن تجربة الانقطاع كـ «فشل في الالتزام»، مما يُضعف الثقة في قدرتنا على الاستمرار مستقبلاً. هنا نقع في ما يُسميه علماء النفس «العجز المكتسب الخفيف»: الخوف من تكرار الإحباط يجعلنا نتردد في المحاولة من جديد، أو ننتظر لحظة وهمية من المثالية لن نبدأ بدونها.</p>\n        <div class=\"article-callout-quote\">\n          <span class=\"callout-icon\">💡</span>\n          <blockquote>ليست المشكلة في أننا توقفنا، بل في الحكم القاسي الذي نُصدره على أنفسنا بعد التوقف، والذي يحوّل العثرة العابرة إلى حاجز نفسي دائم.</blockquote>\n        </div>"
+      },
+      {
+        "id": "section-02",
+        "num": "02",
+        "title": "الانقطاع عن العادة لا يحدد هويتك",
+        "content": "<p class=\"article-p\">من أكبر الأخطاء الإدراكية الخلط بين «سلوك حدث» و«هوية ثابتة». أن تفوتك ثلاثة أيام من القراءة أو التمارين أو العمل المركز لا يعني إطلاقًا أنك «شخص يفتقر إلى الانضباط»، بل يعني ببساطة أن الظروف المحيطة أو حجم المهمة كانا أكبر من طاقتك في تلك الفترة المحددة.</p>\n        <p class=\"article-p\">الانضباط ليس صفة وراثية جامدة نملكها أو نحرم منها، بل هو مهارة نظامية تتطور مع الوقت. تحرير النفس من وصم الذات هو الخطوة الأولى والأهم لفتح الباب أمام استئناف هادئ ومثمر.</p>\n        <div class=\"article-inline-image-box\">\n          <img src=\"../developpement-personnel/images/escalier-vert-progression.jpg\" alt=\"درجات حجرية وسط الطبيعة الخضراء مضاءة بشموع هادئة تعبر عن الصعود المتدرج.\" class=\"article-inline-img\" loading=\"lazy\">\n          <span class=\"inline-caption\">كل خطوة تصعدها بهدوء تبدد ضباب الشك وتفسح المجال لاستئناف واثق دون تعجل.</span>\n        </div>\n        <div class=\"article-callout-quote\">\n          <span class=\"callout-icon\">💡</span>\n          <blockquote>العثرة في الطريق لا تعني نهاية المسار، بل هي تذكير بضرورة إعادة ضبط الخطى.</blockquote>\n        </div>"
+      },
+      {
+        "id": "section-03",
+        "num": "03",
+        "title": "فهم السبب الحقيقي الذي أدى إلى انقطاع المسار",
+        "content": "<p class=\"article-p\">قبل أن تسارع إلى إطلاق محاولة جديدة بنفس الأدوات السابقة، من الضروري إجراء تشخيص صادق وموضوعي للأسباب الجذرية:</p>\n        <ul class=\"article-rich-list\">\n          <li><strong>فخ الطموح المفرط:</strong> هل وضعت لنفسك هدفًا يتطلب ساعة يوميًا في جدول يفتقر بالفعل إلى نصف ساعة راحة؟</li>\n          <li><strong>غموض التوقيت والمكان:</strong> هل كانت العادة معلقة بدون مرسى زمني واضح («سأقرأ في وقت لاحق»)؟</li>\n          <li><strong>الاحتكاك البيئي العالي:</strong> هل كان الوصول إلى أدوات العادة يتطلب طاقة إضافية مسبقة؟</li>\n          <li><strong>الصدمات والظروف الطارئة:</strong> هل توقف المسار بسبب مرض أو سفر أو ظرف عائلي دون وجود خطة دنيا للطوارئ؟</li>\n        </ul>\n        <p class=\"article-p\">عندما تحدد سبب التعثر بوضوح، يتحول الأمر من مشكلة في إرادتك إلى مشكلة في هندسة النظام، والنظام دائمًا قابل للتعديل والتحسين.</p>"
+      },
+      {
+        "id": "section-04",
+        "num": "04",
+        "title": "البدء بحجم أصغر مما ترغب به النفس",
+        "content": "<p class=\"article-p\">عندما نقرر العودة، يميل «الأنا» إلى الرغبة في تعويض ما فات عبر البدء بقوة مضاعفة. هذا هو الفخ الأكبر الذي يضمن الانقطاع السريع مرة أخرى.</p>\n        <p class=\"article-p\">العودة الذكية تتطلب التواضع أمام الواقع: ابدأ بحجم يبدو لك «تافهًا جدًا لدرجة يصعب معها الفشل»:</p>\n        <div class=\"article-framework-box\">\n          <div class=\"framework-step\">\n            <span class=\"framework-step-badge\">مبدأ الحد الأدنى</span>\n            <h4>صفحتان بدل فصل كامل • 5 دقائق تأمل بدل نصف ساعة • تمرين واحد بدل حصة شاقة</h4>\n            <p>الهدف في الأسبوع الأول ليس حرق السعرات أو إنهاء الكتب، بل إحياء شرارة الاستمرارية وترسيخ المسار العصبي للفعل.</p>\n          </div>\n        </div>\n        <div class=\"article-inline-image-box\">\n          <img src=\"../developpement-personnel/images/carnet-reprise-lumiere.jpg\" alt=\"دفتر الملاحظات وحجر مزخرف بالذهب محاط بأنوار دافئة ونبتة صغيرة نامية.\" class=\"article-inline-img\" loading=\"lazy\">\n          <span class=\"inline-caption\">البداية البسيطة والرمزية اليومية تمنح العقل وضوحًا كافيًا للاستمرار دون مقاومة.</span>\n        </div>"
+      },
+      {
+        "id": "section-05",
+        "num": "05",
+        "title": "إعادة بناء الثقة بأدلة يومية صغيرة",
+        "content": "<p class=\"article-p\">كما أوضح عالم النفس ألبرت باندورا في نظريته حول «الكفاءة الذاتية» (Self-Efficacy)، فإن الثقة الحقيقية لا تأتي من التوكيدات اللفظية، بل من <strong>رؤية أدلة ملموسة وواقعية على الإنجاز</strong>.</p>\n        <p class=\"article-p\">عندما تنجز نسختك المصغرة يوميًا لمدة خمسة أيام متتالية، يرى عقلك دليلاً قاطعًا: «أنا شخص يفي بوعده لنفسه». هذا الشعور المتنامي بالكفاءة هو الوقود النفسي الأصيل الذي يُمكّنك لاحقًا من توسيع العادة بشكل طبيعي ومستدام.</p>\n        <div class=\"article-callout-quote\">\n          <span class=\"callout-icon\">💡</span>\n          <blockquote>الثقة بالنفس لا تُبنى بالكلام الحماسي، بل تتراكم كحبات الرمل مع كل وفاء بوعد صغير.</blockquote>\n        </div>"
+      },
+      {
+        "id": "section-06",
+        "num": "06",
+        "title": "استبدال الكثافة بالحفاظ على وتيرة مستدامة",
+        "content": "<p class=\"article-p\">الكثافة هي ما يمنحنا شعورًا زائفًا بالبطولة في الأيام الأولى، لكن الوتيرة هي ما يبني الإرث والنتائج الدائمة على مدار الأشهر والسنوات.</p>\n        <p class=\"article-p\">الشخص الذي يقرأ 10 دقائق كل يوم دون انقطاع يقرأ أكثر من 20 كتابًا سنويًا، بينما من يقرأ ساعتين في عطلة نهاية الأسبوع ثم ينقطع شهرين لا ينهي كتابين. تذكّر دائمًا: <strong>الانتظام المتواضع يهزم الحماس المنقطع في كل مرة.</strong></p>"
+      },
+      {
+        "id": "section-07",
+        "num": "07",
+        "title": "تعلم استئناف المسار بعد يوم ضائع",
+        "content": "<p class=\"article-p\">الحياة بطبيعتها غير خطية؛ ستمر أيام تمرض فيها، أو تسافر، أو تستنزفك الالتزامات العاجلة. الفارق بين من يستمر ومن ينقطع نهائيًا ليس في حدوث اليوم الضائع، بل في التعامل معه:</p>\n        <div class=\"article-card-highlight\">\n          <h4>قاعدة اليوم الواحد: «لا تفوّت مرتين أبدًا»</h4>\n          <p>تفويت يوم واحد هو حدث عارض؛ تفويت يومين متتاليين هو بداية عادة جديدة من التراجع. إذا تعثرت اليوم، فإن مهمتك الوحيدة غدًا هي استعادة الحد الأدنى، حتى لو كان لدقيقة واحدة فقط.</p>\n        </div>\n        <div class=\"article-inline-image-box\">\n          <img src=\"../developpement-personnel/images/chemin-lanternes-nuit.jpg\" alt=\"طريق هادئ في الغابة مضاء بفوانيس دافئة يرمز إلى الوتيرة المستمرة دون انقطاع.\" class=\"article-inline-img\" loading=\"lazy\">\n          <span class=\"inline-caption\">الفوانيس المستمرة عبر الدرب تضيء كل خطوة، فالهدف ليس سرعة الوصول بل ثبات الخطى.</span>\n        </div>"
+      },
+      {
+        "id": "section-08",
+        "num": "08",
+        "title": "تهيئة البيئة بدل الاعتماد على قوة الإرادة",
+        "content": "<p class=\"article-p\">قوة الإرادة بطارية محدودة تُستنزف خلال اليوم مع اتخاذ القرارات ومواجهة الضغوط. الاعتماد عليها لبدء العادات بعد يوم عمل شاق رهان خاسر.</p>\n        <p class=\"article-p\">الحل هو تقليل الاحتكاك المادي بينك وبين العادة المفيدة، وزيادة الاحتكاك بينك وبين المشتتات:</p>\n        <ul class=\"article-rich-list\">\n          <li>ضع كتابك مفتوحًا على الوسادة أو طاولة القهوة مسبقًا.</li>\n          <li>جهز ملابس المشي قرب السرير قبل النوم.</li>\n          <li>أبعد الهاتف عن غرفة النوم أو ضعه في غرفة أخرى أثناء جلسة القراءة.</li>\n        </ul>"
+      },
+      {
+        "id": "section-09",
+        "num": "09",
+        "title": "قياس الاستمرارية دون التحول إلى سجين للمتابعة",
+        "content": "<p class=\"article-p\">تطبيقات تتبع العادات مفيدة، لكنها قد تتحول إلى مصدر للضغط السلبي حين نركز على «سلسلة الأيام المتواصلة» (Streak) لدرجة أن انقطاع يوم واحد يُشعرنا بأن كل الجهد السابق قد ضاع.</p>\n        <p class=\"article-p\">اعتمد مقياسًا مرنًا: بدلاً من حساب النسبة المئوية الصارمة (100%)، استهدف نسبة <strong>80% أو 85%</strong> على مدار الشهر. هذا الهامش يمنحك مرونة نفسية للتعامل مع تقلبات الحياة دون إحساس بالانهيار.</p>"
+      },
+      {
+        "id": "section-10",
+        "num": "10",
+        "title": "بروتوكول عملي للعودة خلال 14 يومًا",
+        "content": "<p class=\"article-p\">إليك خطة عمل تطبيقية ومجربة لإعادة تشغيل محرك الاستمرارية خطوة بخطوة:</p>\n        <div class=\"article-inline-image-box\">\n          <img src=\"../developpement-personnel/images/pas-dore-germe-renaissance.jpg\" alt=\"خطوات ذهبية صغيرة على التربة تقود نحو نبتة مضيئة في إشارة إلى بروتوكول الـ 14 يومًا.\" class=\"article-inline-img\" loading=\"lazy\">\n          <span class=\"inline-caption\">خطوات ذهبية متتالية تنمو معها براعم الإنجاز الحقيقي والتحول الدائم.</span>\n        </div>\n        <div class=\"article-protocol-grid\">\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">١</span>\n            <h4>اختر عادة واحدة فقط</h4>\n            <p>لا تحاول إصلاح حياتك بالكامل في يوم واحد. اختر عادة واحدة ذات تأثير محوري (قراءة، مشي، نوم مبكر).</p>\n          </div>\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">٢</span>\n            <h4>حدّد النسخة المصغرة (2 إلى 5 دقائق)</h4>\n            <p>عرّف الحد الأدنى الذي لا يمكن لأي كسل أو إرهاق أن يمنعك من تنفيذه.</p>\n          </div>\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">٣</span>\n            <h4>اربطها بمحفز يومي موجود مسبقًا</h4>\n            <p>«مباشرة بعد شرب قهوة الصباح» أو «فور الجلوس على مكتبي».</p>\n          </div>\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">٤</span>\n            <h4>حدد المكان والنافذة الزمنية بدقة</h4>\n            <p>تجنب العبارات الفضفاضة، حدد الركن المحدد والوقت التقريبي.</p>\n          </div>\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">٥</span>\n            <h4>استخدم أداة تتبع ورقية بسيطة</h4>\n            <p>علامة صح (✓) صغيرة في دفتر يوميات أو ورقة على المكتب كافية تمامًا.</p>\n          </div>\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">٦</span>\n            <h4>طبّق قاعدة «العودة الفورية»</h4>\n            <p>إذا نسيت يومًا، فاليوم التالي مخصص حصريًا لتثبيت الحضور وليس لتعويض ما فات.</p>\n          </div>\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">٧</span>\n            <h4>وقفة تقييم وتعديل في اليوم السابع</h4>\n            <p>هل كانت العادة سهلة ومريحة؟ حافظ عليها. هل كانت صعبة؟ صغّر حجمها أكثر للأسبوع القادم.</p>\n          </div>\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">٨</span>\n            <h4>ترسيخ التدرج في الأسبوع الثاني (الأيام 8-13)</h4>\n            <p>أضف زيادة طفيفة لا تتعدى 10% إذا شعرت براحة وثبات تام، أو ابقَ على نفس الوتيرة.</p>\n          </div>\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">٩</span>\n            <h4>الاحتفال باكتمال الـ 14 يومًا</h4>\n            <p>أنت الآن لم تعد شخصًا يحاول البدء، بل أعدت تثبيت المسار العصبي والهوية المستقرة للعادة.</p>\n          </div>\n        </div>"
+      }
     ],
-    "editorialQuotes": [
+    "conclusionHeading": "خاتمة: قوة الاستمرارية الصامتة",
+    "conclusionP1": "الاستمرارية ليست صفة سحرية يمتلكها قلة من المتميزين، بل هي نتيجة احترام الحدود البشرية والبدء بخطوات صغيرة وبناء مسار يسمح بالنهوض السريع بعد كل انقطاع.",
+    "conclusionP2": "لا تحتقر الخطوة الصغيرة؛ ربما لا تغير يومك كله فورًا، لكنها تحمي الخيط الرفيع من الانقطاع، وتقول لك بصوت هادئ: أنت لا تزال على الطريق الصحيح.",
+    "takeawaysHeading": "نقاط أساسية يجب تذكرها",
+    "takeaways": [
+      "الانقطاع لا يعني الفشل، بل هو فرصة لإعادة ضبط حمولة النظام وتخفيف أعبائه.",
+      "البدايات الصغيرة جدًا هي الدرع الحقيقي ضد التسويف والمقاومة الذهنية.",
+      "قاعدة عدم تفويت يومين تحميك من الانزلاق في التراجع التام وتعيد تثبيت المسار.",
+      "الثقة بالنفس تُبنى بالأدلة اليومية الصغيرة لا بالوعود الكبيرة غير المحققة."
+    ],
+    "quotesHeading": "اقتباسات في العادات والاستمرارية",
+    "quotes": [
       {
         "text": "الاستمرارية الحقيقية لا تقاس بعدد الأيام المثالية، بل بالسرعة التي ننهض بها بعد يوم متعثر.",
         "author": "حكمة ونور"
@@ -924,92 +1121,146 @@
     "bcPathUrl": "../developpement-personnel/parcours/discipline-habitudes/",
     "bcArticle": "Retrouver la constance après abandon",
     "pillarBadge": "⚡ Développement personnel — Discipline & Habitudes (Article 04)",
-    "readingTime": "📖 10 min de lecture attentive",
-    "authorName": "Hikma & Nour",
-    "publishDate": "29 août 2026",
+    "readingTime": "10 min de lecture attentive",
+    "authorLabel": "Par :",
+    "authorName": "Hikma & Nour | حكمة ونور",
+    "publishDate": "Samedi 29 août 2026",
     "heroTitle": "Comment redevenir constant après avoir abandonné plusieurs fois",
-    "heroLead": "La véritable constance ne signifie pas ne plus jamais faillir, mais bâtir un système suffisamment souple pour reprendre sans culpabilité, sans drame et sans attendre une nouvelle poussée d'enthousiasme.",
+    "heroSubtitle": "La véritable constance ne signifie pas ne plus jamais faillir, mais bâtir un système suffisamment souple pour reprendre sans culpabilité, sans drame et sans attendre une nouvelle poussée d'enthousiasme.",
     "heroImgAlt": "Un chemin de petites lumières reprend après une interruption et conduit vers un jeune arbre dans un jardin nocturne.",
-    "summaryTitle": "L'essentiel en quelques points",
-    "summaryPoints": [
-      "L'abandon répété n'est pas un défaut de caractère, mais la preuve que le système précédent était trop rigide ou trop lourd.",
-      "Le piège du recommencement excessif : l'ego veut réparer d'un coup, alors que la constance exige le plus petit pas possible.",
-      "La règle de non-cumul : manquer un jour est un aléa humain normal, ne pas manquer deux jours consécutifs préserve l'élan.",
-      "Le protocole des 14 jours : une méthode progressive pour rebâtir la confiance par de petites preuves irréfutables."
-    ],
+    "heroCaption": "🏛️ Hikma & Nour — L'architecture intérieure de la constance sereine et de la reprise d'élan",
+    "leadTitle": "L'essentiel : sortir de l'illusion du recommencement parfait",
+    "introP1": "Après un premier arrêt, recommencer semble aisé. Mais lorsque le cycle « élan initial, rupture, arrêt prolongé » s'est répété maintes fois, chaque tentative future se heurte à une friction mentale accrue, née du souvenir des renoncements passés.",
+    "introP2": "Le cerveau associe l'interruption à un échec d'engagement, ce qui érode la confiance en soi. On entre alors dans une forme d'impuissance acquise légère : la peur d'un nouvel échec pousse à procrastiner ou à attendre une hypothétique conjoncture idéale.",
+    "introP3": "L'abandon répété n'est pas un défaut de caractère, mais la preuve que le système précédent était trop rigide ou trop lourd. L'ego veut réparer d'un coup, alors que la constance exige le plus petit pas possible.",
+    "introConclusion": "La véritable constance n'est pas l'absence d'interruption, mais la capacité à redémarrer sans bruit : celui qui maîtrise l'art de reprendre après un jour manqué triomphe toujours de l'obsession du sans-faute.",
     "tocTitle": "Sommaire de l'article",
     "tocItems": [
       {
         "id": "section-01",
-        "text": "01. Pourquoi recommencer devient plus difficile après chaque abandon"
+        "num": "01",
+        "text": "Pourquoi recommencer devient plus difficile après chaque abandon"
       },
       {
         "id": "section-02",
-        "text": "02. Abandonner une habitude ne définit pas notre identité"
+        "num": "02",
+        "text": "Abandonner une habitude ne définit pas notre identité"
       },
       {
         "id": "section-03",
-        "text": "03. Comprendre ce qui a réellement interrompu la progression"
+        "num": "03",
+        "text": "Comprendre ce qui a réellement interrompu la progression"
       },
       {
         "id": "section-04",
-        "text": "04. Recommencer plus petit que ce que l’ego voudrait"
+        "num": "04",
+        "text": "Recommencer plus petit que ce que l’ego voudrait"
       },
       {
         "id": "section-05",
-        "text": "05. Reconstruire la confiance avec de petites preuves quotidiennes"
+        "num": "05",
+        "text": "Reconstruire la confiance avec de petites preuves quotidiennes"
       },
       {
         "id": "section-06",
-        "text": "06. Remplacer l’intensité par un rythme soutenable"
+        "num": "06",
+        "text": "Remplacer l’intensité par un rythme soutenable"
       },
       {
         "id": "section-07",
-        "text": "07. Apprendre à reprendre après une journée manquée"
+        "num": "07",
+        "text": "Apprendre à reprendre après une journée manquée"
       },
       {
         "id": "section-08",
-        "text": "08. Modifier l’environnement plutôt que compter sur la volonté"
+        "num": "08",
+        "text": "Modifier l’environnement plutôt que compter sur la volonté"
       },
       {
         "id": "section-09",
-        "text": "09. Mesurer la constance sans devenir prisonnier du suivi"
+        "num": "09",
+        "text": "Mesurer la constance sans devenir prisonnier du suivi"
       },
       {
         "id": "section-10",
-        "text": "10. Un protocole simple de retour sur quatorze jours"
+        "num": "10",
+        "text": "Un protocole simple de retour sur quatorze jours"
       }
     ],
-    "s1Title": "01. Pourquoi recommencer devient plus difficile après chaque abandon",
-    "s1Content": "<p>Après un premier arrêt, recommencer semble aisé. Mais lorsque le cycle « élan initial, rupture, arrêt prolongé » s'est répété maintes fois, chaque tentative future se heurte à une friction mentale accrue, née du souvenir des renoncements passés.</p>\n    <p>Le cerveau associe l'interruption à un échec d'engagement, ce qui érode la confiance en soi. On entre alors dans une forme d'impuissance acquise légère : la peur d'un nouvel échec pousse à procrastiner ou à attendre une hypothétique conjoncture idéale.</p>\n    <div class=\"article-quote-box\">\n      <p class=\"quote-text\">« Le problème n'est pas d'avoir trébuché, mais le jugement sévère que l'on porte sur soi-même, qui transforme un faux pas passager en obstacle insurmontable. »</p>\n    </div>",
-    "s2Title": "02. Abandonner une habitude ne définit pas notre identité",
-    "s2Content": "<p>L'une des erreurs cognitives majeures consiste à confondre un événement ponctuel et une identité intrinsèque. Avoir manqué plusieurs jours de lecture, d'écriture ou de sport ne signifie en rien que vous êtes une personne « incapable de discipline ».</p>\n    <p>La discipline n'est pas un trait génétique immuable, mais un savoir-faire systémique qui s'affine avec l'expérience. Se libérer de l'autocritique stérile est la première condition pour amorcer un redémarrage serein.</p>\n    <div class=\"article-inline-image-box\">\n      <img src=\"../developpement-personnel/images/escalier-vert-progression.jpg\" alt=\"Des marches de pierre dans une brume émeraude éclairées de bougies pour symboliser une ascension calme.\" class=\"article-inline-img\" loading=\"lazy\">\n      <span class=\"inline-caption\">Chaque marche franchie dans la clarté dissipe la brume du doute et permet de reprendre l'ascension avec confiance.</span>\n    </div>",
-    "s3Title": "03. Comprendre ce qui a réellement interrompu la progression",
-    "s3Content": "<p>Avant de relancer une nouvelle tentative à l'identique, un diagnostic lucide s'impose :</p>\n    <ul class=\"article-rich-list\">\n      <li><strong>Le piège de la surcharge :</strong> L'objectif exigeait-il 45 minutes dans un emploi du temps déjà saturé ?</li>\n      <li><strong>Le manque d'ancrage :</strong> L'habitude était-elle floue (« je lirai plus tard ») sans déclencheur contextuel ?</li>\n      <li><strong>La friction matérielle :</strong> L'accès aux outils de l'habitude demandait-il un effort préalable ?</li>\n      <li><strong>L'imprévu non anticipé :</strong> Un voyage ou une fatigue passagère a-t-il rompu le rythme faute de version minimale de secours ?</li>\n    </ul>\n    <p>Dès lors que la cause est identifiée, le problème cesse d'être une défaillance morale pour devenir une simple équation logistique à ajuster.</p>",
-    "s4Title": "04. Recommencer plus petit que ce que l’ego voudrait",
-    "s4Content": "<p>Au moment de reprendre, notre amour-propre nous pousse à vouloir compenser le temps perdu en voyant grand. C'est précisément le piège qui garantit un nouvel arrêt prématuré.</p>\n    <p>Une reprise intelligente exige l'humilité de calibrer l'action à un niveau si accessible qu'il en devient impossible d'échouer :</p>\n    <div class=\"article-framework-box\">\n      <div class=\"framework-step\">\n        <span class=\"framework-step-badge\">Le principe du seuil minimal</span>\n        <h4>2 pages plutôt qu'un chapitre • 5 minutes de marche plutôt qu'une séance épuisante</h4>\n        <p>Durant la première semaine, l'enjeu n'est pas le volume d'effort, mais la réactivation du circuit neuronal de la constance.</p>\n      </div>\n    </div>\n    <div class=\"article-inline-image-box\">\n      <img src=\"../developpement-personnel/images/carnet-reprise-lumiere.jpg\" alt=\"Un carnet sobre et une pierre dorée entourés de lumières et d'une jeune pousse.\" class=\"article-inline-img\" loading=\"lazy\">\n      <span class=\"inline-caption\">Un carnet épuré et un ancrage visuel quotidien réduisent la friction de démarrage et réactivent la présence.</span>\n    </div>",
-    "s5Title": "05. Reconstruire la confiance avec de petites preuves quotidiennes",
-    "s5Content": "<p>Comme l'a démontré Albert Bandura dans ses travaux sur le sentiment d'auto-efficacité, la confiance réelle ne se décrète pas par des affirmations positives, mais s'établit par l'observation de <strong>preuves concrètes et régulières</strong>.</p>\n    <p>En accomplissant votre version minimale chaque jour pendant une semaine, vous fournissez à votre esprit la preuve tangible que vous tenez parole. Cette certitude retrouvée constitue le socle indispensable pour élever progressivement le niveau d'exigence.</p>",
-    "s6Title": "06. Remplacer l’intensité par un rythme soutenable",
-    "s6Content": "<p>L'intensité offre l'illusion d'un héroïsme instantané, mais seul le rythme façonne les résultats durables à travers les mois et les années.</p>\n    <p>Celui qui lit 10 minutes par jour termine plus de vingt ouvrages par an, tandis que celui qui lit deux heures d'affilée une fois par trimestre n'en finit aucun. <strong>La régularité modeste triomphe invariablement de l'intensité discontinue.</strong></p>",
-    "s7Title": "07. Apprendre à reprendre après une journée manquée",
-    "s7Content": "<p>L'existence est imprévisible. Il y aura des jours de maladie, de déplacement ou d'urgences familiales. Ce qui distingue les personnes constantes des autres n'est pas l'absence d'interruption, mais leur protocole de reprise :</p>\n    <div class=\"article-card-highlight\">\n      <h4>La règle d'or : « Ne jamais manquer deux fois de suite »</h4>\n      <p>Manquer un jour est un aléa ; manquer deux jours consécutifs est l'amorce d'une nouvelle habitude d'abandon. Si vous avez manqué hier, votre unique priorité aujourd'hui est d'assurer la présence minimale, ne serait-ce que 60 secondes.</p>\n    </div>\n    <div class=\"article-inline-image-box\">\n      <img src=\"../developpement-personnel/images/chemin-lanternes-nuit.jpg\" alt=\"Un sentier forestier éclairé de lanternes symbolisant un rythme soutenable dans l'obscurité.\" class=\"article-inline-img\" loading=\"lazy\">\n      <span class=\"inline-caption\">Chaque lanterne éclaire le pas présent : la constance ne vise pas la vitesse mais la fidélité au chemin.</span>\n    </div>",
-    "s8Title": "08. Modifier l’environnement plutôt que compter sur la volonté",
-    "s8Content": "<p>La volonté est une ressource finie, entamée au fil de la journée par les décisions et le stress. Compter sur elle en fin de journée pour initier une habitude exigeante est un pari risqué.</p>\n    <p>La clé consiste à concevoir un environnement qui réduit l'effort d'amorce :</p>\n    <ul class=\"article-rich-list\">\n      <li>Laissez le livre ouvert sur votre table de chevet ou votre bureau.</li>\n      <li>Préparez votre tenue de sport dès la veille au soir.</li>\n      <li>Éloignez votre smartphone de votre espace de lecture ou de travail profond.</li>\n    </ul>",
-    "s9Title": "09. Mesurer la constance sans devenir prisonnier du suivi",
-    "s9Content": "<p>Les outils de suivi d'habitudes sont précieux, mais ils peuvent générer une anxiété contre-productive lorsque l'on fétichise la chaîne ininterrompue au point où une seule case vide semble tout gâcher.</p>\n    <p>Adoptez une perspective mensuelle : visez un taux d'accomplissement de <strong>80 % à 85 %</strong>. Cette marge d'humanité offre la respiration nécessaire pour traverser les aléas sans sentiment de faillite.</p>",
-    "s10Title": "10. Un protocole simple de retour sur quatorze jours",
-    "s10Content": "<p>Voici une méthodologie en neuf étapes séquentielles pour relancer votre dynamique en douceur :</p>\n    <div class=\"article-inline-image-box\">\n      <img src=\"../developpement-personnel/images/pas-dore-germe-renaissance.jpg\" alt=\"De petits pas dorés sur le sol menant à une pousse lumineuse pour le protocole des 14 jours.\" class=\"article-inline-img\" loading=\"lazy\">\n      <span class=\"inline-caption\">L'accumulation de petits pas dorés fait éclore une progression stable et durable.</span>\n    </div>\n    <div class=\"article-protocol-grid\">\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">1</span>\n        <h4>Choisir une seule habitude</h4>\n        <p>Ne tentez pas de tout réformer simultanément. Focalisez votre énergie sur une unique habitude clé de voûte.</p>\n      </div>\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">2</span>\n        <h4>Définir la version minimale (2 à 5 min)</h4>\n        <p>Établissez un plancher d'action si simple qu'aucune fatigue ne peut justifier son esquive.</p>\n      </div>\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">3</span>\n        <h4>Identifier un déclencheur existant</h4>\n        <p>Ancrez l'habitude à une routine déjà ancrée : « juste après le café du matin » ou « dès que je m'assieds au bureau ».</p>\n      </div>\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">4</span>\n        <h4>Déterminer le lieu et la fenêtre horaire</h4>\n        <p>Évitez toute ambiguïté spatiale ou temporelle pour supprimer le besoin de délibération.</p>\n      </div>\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">5</span>\n        <h4>Utiliser une trace visuelle sobre</h4>\n        <p>Une simple coche (✓) sur un carnet ou un calendrier papier suffit amplement.</p>\n      </div>\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">6</span>\n        <h4>Appliquer la reprise immédiate</h4>\n        <p>En cas d'oubli, le jour suivant est strictement dédié à la présence minimale, sans compensation excessive.</p>\n      </div>\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">7</span>\n        <h4>Bilan d'ajustement au jour 7</h4>\n        <p>L'habitude était-elle fluide ? Maintenez-la. Était-elle trop lourde ? Réduisez-la encore pour la semaine 2.</p>\n      </div>\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">8</span>\n        <h4>Stabilisation progressive (Jours 8 à 13)</h4>\n        <p>N'augmentez le volume que d'un maximum de 10 % si et seulement si l'exécution est devenue parfaitement naturelle.</p>\n      </div>\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">9</span>\n        <h4>Célébration des 14 jours</h4>\n        <p>Vous avez reconstruit votre identité de personne constante et réactivé vos mécanismes d'action durable.</p>\n      </div>\n    </div>",
-    "conclusionHeading": "Conclusion & Enseignements clés",
-    "conclusionText": "La constance n'est pas un don accordé à quelques élus, mais la conséquence d'un système respectueux des limites humaines, qui privilégie la modestie du geste quotidien et la rapidité du retour en selle.",
+    "sections": [
+      {
+        "id": "section-01",
+        "num": "01",
+        "title": "Pourquoi recommencer devient plus difficile après chaque abandon",
+        "content": "<p class=\"article-p\">Après un premier arrêt, recommencer semble aisé. Mais lorsque le cycle « élan initial, rupture, arrêt prolongé » s'est répété maintes fois, chaque tentative future se heurte à une friction mentale accrue, née du souvenir des renoncements passés.</p>\n        <p class=\"article-p\">Le cerveau associe l'interruption à un échec d'engagement, ce qui érode la confiance en soi. On entre alors dans une forme d'impuissance acquise légère : la peur d'un nouvel échec pousse à procrastiner ou à attendre une hypothétique conjoncture idéale.</p>\n        <div class=\"article-callout-quote\">\n          <span class=\"callout-icon\">💡</span>\n          <blockquote>Le problème n'est pas d'avoir trébuché, mais le jugement sévère que l'on porte sur soi-même, qui transforme un faux pas passager en obstacle insurmontable.</blockquote>\n        </div>"
+      },
+      {
+        "id": "section-02",
+        "num": "02",
+        "title": "Abandonner une habitude ne définit pas notre identité",
+        "content": "<p class=\"article-p\">L'une des erreurs cognitives majeures consiste à confondre un événement ponctuel et une identité intrinsèque. Avoir manqué plusieurs jours de lecture, d'écriture ou de sport ne signifie en rien que vous êtes une personne « incapable de discipline ».</p>\n        <p class=\"article-p\">La discipline n'est pas un trait génétique immuable, mais un savoir-faire systémique qui s'affine avec l'expérience. Se libérer de l'autocritique stérile est la première condition pour amorcer un redémarrage serein.</p>\n        <div class=\"article-inline-image-box\">\n          <img src=\"../developpement-personnel/images/escalier-vert-progression.jpg\" alt=\"Des marches de pierre dans une brume émeraude éclairées de bougies pour symboliser une ascension calme.\" class=\"article-inline-img\" loading=\"lazy\">\n          <span class=\"inline-caption\">Chaque marche franchie dans la clarté dissipe la brume du doute et permet de reprendre l'ascension avec confiance.</span>\n        </div>\n        <div class=\"article-callout-quote\">\n          <span class=\"callout-icon\">💡</span>\n          <blockquote>Une interruption de parcours n'est pas un verdict d'incapacité, mais un appel à recalibrer son rythme d'effort.</blockquote>\n        </div>"
+      },
+      {
+        "id": "section-03",
+        "num": "03",
+        "title": "Comprendre ce qui a réellement interrompu la progression",
+        "content": "<p class=\"article-p\">Avant de relancer une nouvelle tentative à l'identique, un diagnostic lucide s'impose :</p>\n        <ul class=\"article-rich-list\">\n          <li><strong>Le piège de la surcharge :</strong> L'objectif exigeait-il 45 minutes dans un emploi du temps déjà saturé ?</li>\n          <li><strong>Le manque d'ancrage :</strong> L'habitude était-elle floue (« je lirai plus tard ») sans déclencheur contextuel ?</li>\n          <li><strong>La friction matérielle :</strong> L'accès aux outils de l'habitude demandait-il un effort préalable ?</li>\n          <li><strong>L'imprévu non anticipé :</strong> Un voyage ou une fatigue passagère a-t-il rompu le rythme faute de version minimale de secours ?</li>\n        </ul>\n        <p class=\"article-p\">Dès lors que la cause est identifiée, le problème cesse d'être une défaillance morale pour devenir une simple équation logistique à ajuster.</p>"
+      },
+      {
+        "id": "section-04",
+        "num": "04",
+        "title": "Recommencer plus petit que ce que l’ego voudrait",
+        "content": "<p class=\"article-p\">Au moment de reprendre, notre amour-propre nous pousse à vouloir compenser le temps perdu en voyant grand. C'est précisément le piège qui garantit un nouvel arrêt prématuré.</p>\n        <p class=\"article-p\">Une reprise intelligente exige l'humilité de calibrer l'action à un niveau si accessible qu'il en devient impossible d'échouer :</p>\n        <div class=\"article-framework-box\">\n          <div class=\"framework-step\">\n            <span class=\"framework-step-badge\">Le principe du seuil minimal</span>\n            <h4>2 pages plutôt qu'un chapitre • 5 minutes de marche plutôt qu'une séance épuisante</h4>\n            <p>Durant la première semaine, l'enjeu n'est pas le volume d'effort, mais la réactivation du circuit neuronal de la constance.</p>\n          </div>\n        </div>\n        <div class=\"article-inline-image-box\">\n          <img src=\"../developpement-personnel/images/carnet-reprise-lumiere.jpg\" alt=\"Un carnet sobre et une pierre dorée entourés de lumières et d'une jeune pousse.\" class=\"article-inline-img\" loading=\"lazy\">\n          <span class=\"inline-caption\">Un carnet épuré et un ancrage visuel quotidien réduisent la friction de démarrage et réactivent la présence.</span>\n        </div>"
+      },
+      {
+        "id": "section-05",
+        "num": "05",
+        "title": "Reconstruire la confiance avec de petites preuves quotidiennes",
+        "content": "<p class=\"article-p\">Comme l'a démontré Albert Bandura dans ses travaux sur le sentiment d'auto-efficacité, la confiance réelle ne se décrète pas par des affirmations positives, mais s'établit par l'observation de <strong>preuves concrètes et régulières</strong>.</p>\n        <p class=\"article-p\">En accomplissant votre version minimale chaque jour pendant une semaine, vous fournissez à votre esprit la preuve tangible que vous tenez parole. Cette certitude retrouvée constitue le socle indispensable pour élever progressivement le niveau d'exigence.</p>\n        <div class=\"article-callout-quote\">\n          <span class=\"callout-icon\">💡</span>\n          <blockquote>La confiance en soi ne s'auto-suggère pas : elle se cimente par la tenue répétée de minuscules promesses.</blockquote>\n        </div>"
+      },
+      {
+        "id": "section-06",
+        "num": "06",
+        "title": "Remplacer l’intensité par un rythme soutenable",
+        "content": "<p class=\"article-p\">L'intensité offre l'illusion d'un héroïsme instantané, mais seul le rythme façonne les résultats durables à travers les mois et les années.</p>\n        <p class=\"article-p\">Celui qui lit 10 minutes par jour termine plus de vingt ouvrages par an, tandis que celui qui lit deux heures d'affilée une fois par trimestre n'en finit aucun. <strong>La régularité modeste triomphe invariablement de l'intensité discontinue.</strong></p>"
+      },
+      {
+        "id": "section-07",
+        "num": "07",
+        "title": "Apprendre à reprendre après une journée manquée",
+        "content": "<p class=\"article-p\">L'existence est imprévisible. Il y aura des jours de maladie, de déplacement ou d'urgences familiales. Ce qui distingue les personnes constantes des autres n'est pas l'absence d'interruption, mais leur protocole de reprise :</p>\n        <div class=\"article-card-highlight\">\n          <h4>La règle d'or : « Ne jamais manquer deux fois de suite »</h4>\n          <p>Manquer un jour est un aléa ; manquer deux jours consécutifs est l'amorce d'une nouvelle habitude d'abandon. Si vous avez manqué hier, votre unique priorité aujourd'hui est d'assurer la présence minimale, ne serait-ce que 60 secondes.</p>\n        </div>\n        <div class=\"article-inline-image-box\">\n          <img src=\"../developpement-personnel/images/chemin-lanternes-nuit.jpg\" alt=\"Un sentier forestier éclairé de lanternes symbolisant un rythme soutenable dans l'obscurité.\" class=\"article-inline-img\" loading=\"lazy\">\n          <span class=\"inline-caption\">Chaque lanterne éclaire le pas présent : la constance ne vise pas la vitesse mais la fidélité au chemin.</span>\n        </div>"
+      },
+      {
+        "id": "section-08",
+        "num": "08",
+        "title": "Modifier l’environnement plutôt que compter sur la volonté",
+        "content": "<p class=\"article-p\">La volonté est une ressource finie, entamée au fil de la journée par les décisions et le stress. Compter sur elle en fin de journée pour initier une habitude exigeante est un pari risqué.</p>\n        <p class=\"article-p\">La clé consiste à concevoir un environnement qui réduit l'effort d'amorce :</p>\n        <ul class=\"article-rich-list\">\n          <li>Laissez le livre ouvert sur votre table de chevet ou votre bureau.</li>\n          <li>Préparez votre tenue de sport dès la veille au soir.</li>\n          <li>Éloignez votre smartphone de votre espace de lecture ou de travail profond.</li>\n        </ul>"
+      },
+      {
+        "id": "section-09",
+        "num": "09",
+        "title": "Mesurer la constance sans devenir prisonnier du suivi",
+        "content": "<p class=\"article-p\">Les outils de suivi d'habitudes sont précieux, mais ils peuvent générer une anxiété contre-productive lorsque l'on fétichise la chaîne ininterrompue au point où une seule case vide semble tout gâcher.</p>\n        <p class=\"article-p\">Adoptez une perspective mensuelle : visez un taux d'accomplissement de <strong>80 % à 85 %</strong>. Cette marge d'humanité offre la respiration nécessaire pour traverser les aléas sans sentiment de faillite.</p>"
+      },
+      {
+        "id": "section-10",
+        "num": "10",
+        "title": "Un protocole simple de retour sur quatorze jours",
+        "content": "<p class=\"article-p\">Voici une méthodologie en neuf étapes séquentielles pour relancer votre dynamique en douceur :</p>\n        <div class=\"article-inline-image-box\">\n          <img src=\"../developpement-personnel/images/pas-dore-germe-renaissance.jpg\" alt=\"De petits pas dorés sur le sol menant à une pousse lumineuse pour le protocole des 14 jours.\" class=\"article-inline-img\" loading=\"lazy\">\n          <span class=\"inline-caption\">L'accumulation de petits pas dorés fait éclore une progression stable et durable.</span>\n        </div>\n        <div class=\"article-protocol-grid\">\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">1</span>\n            <h4>Choisir une seule habitude</h4>\n            <p>Ne tentez pas de tout réformer simultanément. Focalisez votre énergie sur une unique habitude clé de voûte.</p>\n          </div>\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">2</span>\n            <h4>Définir la version minimale (2 à 5 min)</h4>\n            <p>Établissez un plancher d'action si simple qu'aucune fatigue ne peut justifier son esquive.</p>\n          </div>\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">3</span>\n            <h4>Identifier un déclencheur existant</h4>\n            <p>Ancrez l'habitude à une routine déjà ancrée : « juste après le café du matin » ou « dès que je m'assieds au bureau ».</p>\n          </div>\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">4</span>\n            <h4>Déterminer le lieu et la fenêtre horaire</h4>\n            <p>Évitez toute ambiguïté spatiale ou temporelle pour supprimer le besoin de délibération.</p>\n          </div>\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">5</span>\n            <h4>Utiliser une trace visuelle sobre</h4>\n            <p>Une simple coche (✓) sur un carnet ou un calendrier papier suffit amplement.</p>\n          </div>\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">6</span>\n            <h4>Appliquer la reprise immédiate</h4>\n            <p>En cas d'oubli, le jour suivant est strictement dédié à la présence minimale, sans compensation excessive.</p>\n          </div>\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">7</span>\n            <h4>Bilan d'ajustement au jour 7</h4>\n            <p>L'habitude était-elle fluide ? Maintenez-la. Était-elle trop lourde ? Réduisez-la encore pour la semaine 2.</p>\n          </div>\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">8</span>\n            <h4>Stabilisation progressive (Jours 8 à 13)</h4>\n            <p>N'augmentez le volume que d'un maximum de 10 % si et seulement si l'exécution est devenue parfaitement naturelle.</p>\n          </div>\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">9</span>\n            <h4>Célébration des 14 jours</h4>\n            <p>Vous avez reconstruit votre identité de personne constante et réactivé vos mécanismes d'action durable.</p>\n          </div>\n        </div>"
+      }
+    ],
+    "conclusionHeading": "Conclusion : La force de la constance discrète",
+    "conclusionP1": "La constance n'est pas un don accordé à quelques élus, mais la conséquence d'un système respectueux des limites humaines, qui privilégie la modestie du geste quotidien et la rapidité du retour en selle.",
+    "conclusionP2": "Ne méprisez jamais le pas modeste. Il ne bouleverse pas votre journée sur l'instant, mais il empêche le fil de se rompre et vous confirme calmement : vous êtes toujours sur le chemin.",
     "takeawaysHeading": "Points essentiels à retenir",
     "takeaways": [
       "Une interruption n'est pas un échec définitif, mais un signal pour alléger le système.",
       "Les démarrages microscopiques désamorcent la procrastination et la résistance psychologique.",
-      "La règle de ne jamais manquer deux jours protège votre identité d'action.",
+      "La règle de ne jamais manquer deux jours consécutifs protège votre identité d'action.",
       "La confiance en soi s'érige par l'accumulation de petites preuves concrètes, non par des promesses grandioses."
     ],
-    "editorialQuotes": [
+    "quotesHeading": "Citations d'inspiration",
+    "quotes": [
       {
         "text": "La véritable constance ne se mesure pas au nombre de jours parfaits, mais à la vitesse avec laquelle on se relève après un jour manqué.",
         "author": "Hikma & Nour"
@@ -1131,92 +1382,146 @@
     "bcPathUrl": "../developpement-personnel/parcours/discipline-habitudes/",
     "bcArticle": "Rebuilding Consistency After Giving Up",
     "pillarBadge": "⚡ Personal Growth — Discipline & Habits Track (Article 04)",
-    "readingTime": "📖 10 min mindful read",
-    "authorName": "Hikma & Nour",
-    "publishDate": "August 29, 2026",
+    "readingTime": "10 min mindful read",
+    "authorLabel": "By:",
+    "authorName": "Hikma & Nour | حكمة ونور",
+    "publishDate": "Saturday, August 29, 2026",
     "heroTitle": "How to Become Consistent Again After Giving Up Several Times",
-    "heroLead": "True consistency is not about never missing a day; it is about building a system simple enough to continue imperfectly and restart immediately without guilt or dramatic declarations.",
+    "heroSubtitle": "True consistency is not about never missing a day; it is about building a system simple enough to continue imperfectly and restart immediately without guilt or dramatic declarations.",
     "heroImgAlt": "A path of small lights resumes after an interruption and leads toward a young tree in a peaceful night garden.",
-    "summaryTitle": "Key Takeaways in Brief",
-    "summaryPoints": [
-      "Repeated setbacks do not define your character; they simply prove that your past system was too heavy or unrealistic.",
-      "The trap of restarting too big: the ego desires instant perfection, whereas consistency is built on the smallest repeatable action.",
-      "The never-miss-twice rule: missing a single day is normal human variation; resuming quickly protects your emerging identity.",
-      "The 14-Day Protocol: a structured, step-by-step roadmap to rebuild genuine self-trust through undeniable daily proof."
-    ],
+    "heroCaption": "🏛️ Hikma & Nour — The inner architecture of quiet consistency and mindful recovery",
+    "leadTitle": "Core Insight: Escaping the Illusion of the Heroic Start",
+    "introP1": "Stopping once feels easily fixable. But when the cycle of « enthusiastic start, disruption, extended pause » has repeated several times, each future restart carries an invisible psychological weight stemming from the memory of past attempts.",
+    "introP2": "The subconscious registers each interruption as a failed promise, gradually undermining self-trust. This gives rise to mild learned helplessness: the dread of another disappointment makes us hesitate or wait endlessly for an illusory perfect time to begin.",
+    "introP3": "Repeated setbacks do not define your character; they simply prove that your past system was too heavy or unrealistic. The ego desires instant perfection, whereas consistency is built on the smallest repeatable action.",
+    "introConclusion": "True consistency is not about perfection, but mastering recovery: the person who knows how to quietly resume after a missed day will always outperform someone pursuing impossible perfection.",
     "tocTitle": "Table of Contents",
     "tocItems": [
       {
         "id": "section-01",
-        "text": "01. Why restarting becomes harder after each pause"
+        "num": "01",
+        "text": "Why restarting becomes harder after each pause"
       },
       {
         "id": "section-02",
-        "text": "02. Breaking a habit does not define your identity"
+        "num": "02",
+        "text": "Breaking a habit does not define your identity"
       },
       {
         "id": "section-03",
-        "text": "03. Understanding what actually caused the disruption"
+        "num": "03",
+        "text": "Understanding what actually caused the disruption"
       },
       {
         "id": "section-04",
-        "text": "04. Restarting smaller than the ego would like"
+        "num": "04",
+        "text": "Restarting smaller than the ego would like"
       },
       {
         "id": "section-05",
-        "text": "05. Rebuilding trust with small daily evidence"
+        "num": "05",
+        "text": "Rebuilding trust with small daily evidence"
       },
       {
         "id": "section-06",
-        "text": "06. Replacing intensity with a sustainable pace"
+        "num": "06",
+        "text": "Replacing intensity with a sustainable pace"
       },
       {
         "id": "section-07",
-        "text": "07. Learning to resume after a missed day"
+        "num": "07",
+        "text": "Learning to resume after a missed day"
       },
       {
         "id": "section-08",
-        "text": "08. Designing the environment instead of relying on willpower"
+        "num": "08",
+        "text": "Designing the environment instead of relying on willpower"
       },
       {
         "id": "section-09",
-        "text": "09. Tracking consistency without becoming trapped by metrics"
+        "num": "09",
+        "text": "Tracking consistency without becoming trapped by metrics"
       },
       {
         "id": "section-10",
-        "text": "10. A simple 14-day restart protocol"
+        "num": "10",
+        "text": "A simple 14-day restart protocol"
       }
     ],
-    "s1Title": "01. Why restarting becomes harder after each pause",
-    "s1Content": "<p>Stopping once feels easily fixable. But when the cycle of « enthusiastic start, disruption, extended pause » has repeated several times, each future restart carries an invisible psychological weight stemming from the memory of past attempts.</p>\n    <p>The subconscious registers each interruption as a failed promise, gradually undermining self-trust. This gives rise to mild learned helplessness: the dread of another disappointment makes us hesitate or wait endlessly for an illusory perfect time to begin.</p>\n    <div class=\"article-quote-box\">\n      <p class=\"quote-text\">“The real issue is never the stumble itself, but the harsh judgment we cast upon ourselves, turning a minor pause into a lasting mental barrier.”</p>\n    </div>",
-    "s2Title": "02. Breaking a habit does not define your identity",
-    "s2Content": "<p>One of the most damaging cognitive distortions is confusing a temporary event with an intrinsic identity. Missing a few days of reading, fitness, or focused work does not make you an « undisciplined person ».</p>\n    <p>Discipline is not a fixed genetic trait; it is an evolving systemic skill. Freeing yourself from self-condemnation is the very first step toward a calm and productive restart.</p>\n    <div class=\"article-inline-image-box\">\n      <img src=\"../developpement-personnel/images/escalier-vert-progression.jpg\" alt=\"Stone steps in emerald mist lit by calm candles symbolizing steady and patient ascent.\" class=\"article-inline-img\" loading=\"lazy\">\n      <span class=\"inline-caption\">Every quiet step upward pierces the fog of doubt, creating space for a peaceful and grounded restart.</span>\n    </div>",
-    "s3Title": "03. Understanding what actually caused the disruption",
-    "s3Content": "<p>Before rushing into another attempt with the exact same setup, an honest and objective diagnosis is essential:</p>\n    <ul class=\"article-rich-list\">\n      <li><strong>The overload trap:</strong> Did your goal require 45 minutes inside an already overflowing daily schedule?</li>\n      <li><strong>Vague triggering:</strong> Was the habit floating without a clear contextual anchor (« I'll do it later »)?</li>\n      <li><strong>High physical friction:</strong> Did preparing for the habit require too much initial effort?</li>\n      <li><strong>Unplanned friction:</strong> Did an illness or travel derail the routine because you lacked a minimal backup version?</li>\n    </ul>\n    <p>Once the root friction is identified, the challenge shifts from a moral failure to a practical engineering problem that can be cleanly resolved.</p>",
-    "s4Title": "04. Restarting smaller than the ego would like",
-    "s4Content": "<p>When restarting, the ego naturally wants to overcompensate for lost time by making grand gestures. This is the exact trap that triggers yet another premature burnout.</p>\n    <p>A wise restart requires the humility to set the bar so low that it becomes virtually impossible to fail:</p>\n    <div class=\"article-framework-box\">\n      <div class=\"framework-step\">\n        <span class=\"framework-step-badge\">The Minimum Threshold Principle</span>\n        <h4>2 pages instead of a full chapter • 5 minutes of walking instead of an intense workout</h4>\n        <p>During the initial week, the objective is not physical or intellectual volume, but re-igniting the neural pathway of daily consistency.</p>\n      </div>\n    </div>\n    <div class=\"article-inline-image-box\">\n      <img src=\"../developpement-personnel/images/carnet-reprise-lumiere.jpg\" alt=\"A notebook and gilded stone surrounded by warm lights and a young sprout.\" class=\"article-inline-img\" loading=\"lazy\">\n      <span class=\"inline-caption\">A clean notebook and simple daily anchor reduce startup friction and restore momentum.</span>\n    </div>",
-    "s5Title": "05. Rebuilding trust with small daily evidence",
-    "s5Content": "<p>As psychologist Albert Bandura demonstrated in his self-efficacy research, genuine confidence is never built on empty affirmations; it is forged by witnessing <strong>concrete, undeniable proof of accomplishment</strong>.</p>\n    <p>By showing up for your minimal version every single day for five consecutive days, you provide your mind with tangible proof: « I am someone who keeps their word ». This quiet self-assurance becomes the launchpad for natural expansion.</p>",
-    "s6Title": "06. Replacing intensity with a sustainable pace",
-    "s6Content": "<p>Intensity provides a fleeting sense of heroism during the opening days, but only steady cadence builds lasting results across months and years.</p>\n    <p>Someone who reads 10 minutes every day finishes more than 20 books each year, whereas someone who reads for two hours once a quarter finishes none. <strong>Modest consistency defeats sporadic brilliance every single time.</strong></p>",
-    "s7Title": "07. Learning to resume after a missed day",
-    "s7Content": "<p>Life is inherently nonlinear. There will be sick days, travel disruptions, and emergency responsibilities. What sets truly consistent individuals apart is their recovery protocol:</p>\n    <div class=\"article-card-highlight\">\n      <h4>The Golden Rule: « Never Miss Twice »</h4>\n      <p>Missing one day is an accident; missing two days in a row is the start of a new habit of omission. If you missed yesterday, your sole priority today is to log the minimal presence, even if only for 60 seconds.</p>\n    </div>\n    <div class=\"article-inline-image-box\">\n      <img src=\"../developpement-personnel/images/chemin-lanternes-nuit.jpg\" alt=\"A forest path lit by warm lanterns symbolizing a sustainable pace in the dark.\" class=\"article-inline-img\" loading=\"lazy\">\n      <span class=\"inline-caption\">Steady lanterns illuminate each step: consistency is not about speed, but staying true to the path.</span>\n    </div>",
-    "s8Title": "08. Designing the environment instead of relying on willpower",
-    "s8Content": "<p>Willpower is a depletable resource, drained throughout the day by decisions and daily stress. Counting on it at night to initiate a demanding task is a losing gamble.</p>\n    <p>The secret is designing an environment that minimizes startup friction:</p>\n    <ul class=\"article-rich-list\">\n      <li>Leave your book open on your pillow or coffee table in advance.</li>\n      <li>Set out your workout clothes the night before.</li>\n      <li>Keep your phone in another room during your reading or deep-work block.</li>\n    </ul>",
-    "s9Title": "09. Tracking consistency without becoming trapped by metrics",
-    "s9Content": "<p>Habit trackers are useful, but they can generate counterproductive anxiety when we fetishize unbroken streaks to the point where a single empty box feels like total failure.</p>\n    <p>Adopt a monthly perspective: aim for an <strong>80% to 85%</strong> adherence rate. This realistic margin gives you the psychological breathing room to navigate real-life storms without emotional collapse.</p>",
-    "s10Title": "10. A simple 14-day restart protocol",
-    "s10Content": "<p>Here is a battle-tested, 9-step action plan to smoothly reactivate your momentum:</p>\n    <div class=\"article-inline-image-box\">\n      <img src=\"../developpement-personnel/images/pas-dore-germe-renaissance.jpg\" alt=\"Small golden footsteps leading toward a glowing sprout for the 14-day protocol.\" class=\"article-inline-img\" loading=\"lazy\">\n      <span class=\"inline-caption\">Small compound steps lead to real personal transformation and lasting strength.</span>\n    </div>\n    <div class=\"article-protocol-grid\">\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">1</span>\n        <h4>Choose Exactly One Habit</h4>\n        <p>Do not attempt to overhaul your entire life overnight. Focus all your energy on a single keystone routine.</p>\n      </div>\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">2</span>\n        <h4>Define the 2-Minute Minimal Version</h4>\n        <p>Establish a baseline action so small that no amount of fatigue can justify skipping it.</p>\n      </div>\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">3</span>\n        <h4>Anchor to an Existing Trigger</h4>\n        <p>Attach it to a rock-solid daily event: « right after morning coffee » or « the moment I sit at my desk ».</p>\n      </div>\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">4</span>\n        <h4>Set a Precise Time Window & Place</h4>\n        <p>Eliminate all ambiguity to remove the friction of deliberation.</p>\n      </div>\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">5</span>\n        <h4>Use a Simple Physical Tracker</h4>\n        <p>A single checkmark (✓) in a paper journal or desk calendar is more than enough.</p>\n      </div>\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">6</span>\n        <h4>Apply Immediate Recovery</h4>\n        <p>If a day is missed, the very next day is dedicated strictly to baseline presence—no frantic overcompensation.</p>\n      </div>\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">7</span>\n        <h4>Day 7 Check-in & Calibration</h4>\n        <p>Did it feel natural? Keep it steady. Did it feel heavy? Shrink the volume even further for week 2.</p>\n      </div>\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">8</span>\n        <h4>Gradual Stabilization (Days 8-13)</h4>\n        <p>Only increase volume by a maximum of 10% if execution has become completely effortless.</p>\n      </div>\n      <div class=\"protocol-card\">\n        <span class=\"protocol-num\">9</span>\n        <h4>Celebrate Day 14 Completion</h4>\n        <p>You have reclaimed your identity as a consistent person and re-anchored your long-term operating system.</p>\n      </div>\n    </div>",
-    "conclusionHeading": "Conclusion & Core Philosophy",
-    "conclusionText": "Consistency is not a rare superpower reserved for the elite; it is the natural byproduct of a humane system that honors small daily steps and champions quick recovery over impossible perfection.",
+    "sections": [
+      {
+        "id": "section-01",
+        "num": "01",
+        "title": "Why restarting becomes harder after each pause",
+        "content": "<p class=\"article-p\">Stopping once feels easily fixable. But when the cycle of « enthusiastic start, disruption, extended pause » has repeated several times, each future restart carries an invisible psychological weight stemming from the memory of past attempts.</p>\n        <p class=\"article-p\">The subconscious registers each interruption as a failed promise, gradually undermining self-trust. This gives rise to mild learned helplessness: the dread of another disappointment makes us hesitate or wait endlessly for an illusory perfect time to begin.</p>\n        <div class=\"article-callout-quote\">\n          <span class=\"callout-icon\">💡</span>\n          <blockquote>The real issue is never the stumble itself, but the harsh judgment we cast upon ourselves, turning a minor pause into a lasting mental barrier.</blockquote>\n        </div>"
+      },
+      {
+        "id": "section-02",
+        "num": "02",
+        "title": "Breaking a habit does not define your identity",
+        "content": "<p class=\"article-p\">One of the most damaging cognitive distortions is confusing a temporary event with an intrinsic identity. Missing a few days of reading, fitness, or focused work does not make you an « undisciplined person ».</p>\n        <p class=\"article-p\">Discipline is not a fixed genetic trait; it is an evolving systemic skill. Freeing yourself from self-condemnation is the very first step toward a calm and productive restart.</p>\n        <div class=\"article-inline-image-box\">\n          <img src=\"../developpement-personnel/images/escalier-vert-progression.jpg\" alt=\"Stone steps in emerald mist lit by calm candles symbolizing steady and patient ascent.\" class=\"article-inline-img\" loading=\"lazy\">\n          <span class=\"inline-caption\">Every quiet step upward pierces the fog of doubt, creating space for a peaceful and grounded restart.</span>\n        </div>\n        <div class=\"article-callout-quote\">\n          <span class=\"callout-icon\">💡</span>\n          <blockquote>A break on the road does not mean the journey is over; it is simply a reminder to recalibrate your cadence.</blockquote>\n        </div>"
+      },
+      {
+        "id": "section-03",
+        "num": "03",
+        "title": "Understanding what actually caused the disruption",
+        "content": "<p class=\"article-p\">Before rushing into another attempt with the exact same setup, an honest and objective diagnosis is essential:</p>\n        <ul class=\"article-rich-list\">\n          <li><strong>The overload trap:</strong> Did your goal require 45 minutes inside an already overflowing daily schedule?</li>\n          <li><strong>Vague triggering:</strong> Was the habit floating without a clear contextual anchor (« I'll do it later »)?</li>\n          <li><strong>High physical friction:</strong> Did preparing for the habit require too much initial effort?</li>\n          <li><strong>Unplanned friction:</strong> Did an illness or travel derail the routine because you lacked a minimal backup version?</li>\n        </ul>\n        <p class=\"article-p\">Once the root friction is identified, the challenge shifts from a moral failure to a practical engineering problem that can be cleanly resolved.</p>"
+      },
+      {
+        "id": "section-04",
+        "num": "04",
+        "title": "Restarting smaller than the ego would like",
+        "content": "<p class=\"article-p\">When restarting, the ego naturally wants to overcompensate for lost time by making grand gestures. This is the exact trap that triggers yet another premature burnout.</p>\n        <p class=\"article-p\">A wise restart requires the humility to set the bar so low that it becomes virtually impossible to fail:</p>\n        <div class=\"article-framework-box\">\n          <div class=\"framework-step\">\n            <span class=\"framework-step-badge\">The Minimum Threshold Principle</span>\n            <h4>2 pages instead of a full chapter • 5 minutes of walking instead of an intense workout</h4>\n            <p>During the initial week, the objective is not physical or intellectual volume, but re-igniting the neural pathway of daily consistency.</p>\n          </div>\n        </div>\n        <div class=\"article-inline-image-box\">\n          <img src=\"../developpement-personnel/images/carnet-reprise-lumiere.jpg\" alt=\"A notebook and gilded stone surrounded by warm lights and a young sprout.\" class=\"article-inline-img\" loading=\"lazy\">\n          <span class=\"inline-caption\">A clean notebook and simple daily anchor reduce startup friction and restore momentum.</span>\n        </div>"
+      },
+      {
+        "id": "section-05",
+        "num": "05",
+        "title": "Rebuilding trust with small daily evidence",
+        "content": "<p class=\"article-p\">As psychologist Albert Bandura demonstrated in his self-efficacy research, genuine confidence is never built on empty affirmations; it is forged by witnessing <strong>concrete, undeniable proof of accomplishment</strong>.</p>\n        <p class=\"article-p\">By showing up for your minimal version every single day for five consecutive days, you provide your mind with tangible proof: « I am someone who keeps their word ». This quiet self-assurance becomes the launchpad for natural expansion.</p>\n        <div class=\"article-callout-quote\">\n          <span class=\"callout-icon\">💡</span>\n          <blockquote>Self-trust cannot be forced through motivational speeches; it is built grain by grain through kept promises.</blockquote>\n        </div>"
+      },
+      {
+        "id": "section-06",
+        "num": "06",
+        "title": "Replacing intensity with a sustainable pace",
+        "content": "<p class=\"article-p\">Intensity provides a fleeting sense of heroism during the opening days, but only steady cadence builds lasting results across months and years.</p>\n        <p class=\"article-p\">Someone who reads 10 minutes every day finishes more than 20 books each year, whereas someone who reads for two hours once a quarter finishes none. <strong>Modest consistency defeats sporadic brilliance every single time.</strong></p>"
+      },
+      {
+        "id": "section-07",
+        "num": "07",
+        "title": "Learning to resume after a missed day",
+        "content": "<p class=\"article-p\">Life is inherently nonlinear. There will be sick days, travel disruptions, and emergency responsibilities. What sets truly consistent individuals apart is their recovery protocol:</p>\n        <div class=\"article-card-highlight\">\n          <h4>The Golden Rule: « Never Miss Twice »</h4>\n          <p>Missing one day is an accident; missing two days in a row is the start of a new habit of omission. If you missed yesterday, your sole priority today is to log the minimal presence, even if only for 60 seconds.</p>\n        </div>\n        <div class=\"article-inline-image-box\">\n          <img src=\"../developpement-personnel/images/chemin-lanternes-nuit.jpg\" alt=\"A forest path lit by warm lanterns symbolizing a sustainable pace in the dark.\" class=\"article-inline-img\" loading=\"lazy\">\n          <span class=\"inline-caption\">Steady lanterns illuminate each step: consistency is not about speed, but staying true to the path.</span>\n        </div>"
+      },
+      {
+        "id": "section-08",
+        "num": "08",
+        "title": "Designing the environment instead of relying on willpower",
+        "content": "<p class=\"article-p\">Willpower is a depletable resource, drained throughout the day by decisions and daily stress. Counting on it at night to initiate a demanding task is a losing gamble.</p>\n        <p class=\"article-p\">The secret is designing an environment that minimizes startup friction:</p>\n        <ul class=\"article-rich-list\">\n          <li>Leave your book open on your pillow or coffee table in advance.</li>\n          <li>Set out your workout clothes the night before.</li>\n          <li>Keep your phone in another room during your reading or deep-work block.</li>\n        </ul>"
+      },
+      {
+        "id": "section-09",
+        "num": "09",
+        "title": "Tracking consistency without becoming trapped by metrics",
+        "content": "<p class=\"article-p\">Habit trackers are useful, but they can generate counterproductive anxiety when we fetishize unbroken streaks to the point where a single empty box feels like total failure.</p>\n        <p class=\"article-p\">Adopt a monthly perspective: aim for an <strong>80% to 85%</strong> adherence rate. This realistic margin gives you the psychological breathing room to navigate real-life storms without emotional collapse.</p>"
+      },
+      {
+        "id": "section-10",
+        "num": "10",
+        "title": "A simple 14-day restart protocol",
+        "content": "<p class=\"article-p\">Here is a battle-tested, 9-step action plan to smoothly reactivate your momentum:</p>\n        <div class=\"article-inline-image-box\">\n          <img src=\"../developpement-personnel/images/pas-dore-germe-renaissance.jpg\" alt=\"Small golden footsteps leading toward a glowing sprout for the 14-day protocol.\" class=\"article-inline-img\" loading=\"lazy\">\n          <span class=\"inline-caption\">Small compound steps lead to real personal transformation and lasting strength.</span>\n        </div>\n        <div class=\"article-protocol-grid\">\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">1</span>\n            <h4>Choose Exactly One Habit</h4>\n            <p>Do not attempt to overhaul your entire life overnight. Focus all your energy on a single keystone routine.</p>\n          </div>\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">2</span>\n            <h4>Define the 2-Minute Minimal Version</h4>\n            <p>Establish a baseline action so small that no amount of fatigue can justify skipping it.</p>\n          </div>\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">3</span>\n            <h4>Anchor to an Existing Trigger</h4>\n            <p>Attach it to a rock-solid daily event: « right after morning coffee » or « the moment I sit at my desk ».</p>\n          </div>\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">4</span>\n            <h4>Set a Precise Time Window & Place</h4>\n            <p>Eliminate all ambiguity to remove the friction of deliberation.</p>\n          </div>\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">5</span>\n            <h4>Use a Simple Physical Tracker</h4>\n            <p>A single checkmark (✓) in a paper journal or desk calendar is more than enough.</p>\n          </div>\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">6</span>\n            <h4>Apply Immediate Recovery</h4>\n            <p>If a day is missed, the very next day is dedicated strictly to baseline presence—no frantic overcompensation.</p>\n          </div>\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">7</span>\n            <h4>Day 7 Check-in & Calibration</h4>\n            <p>Did it feel natural? Keep it steady. Did it feel heavy? Shrink the volume even further for week 2.</p>\n          </div>\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">8</span>\n            <h4>Gradual Stabilization (Days 8-13)</h4>\n            <p>Only increase volume by a maximum of 10% if execution has become completely effortless.</p>\n          </div>\n          <div class=\"protocol-card\">\n            <span class=\"protocol-num\">9</span>\n            <h4>Celebrate Day 14 Completion</h4>\n            <p>You have reclaimed your identity as a consistent person and re-anchored your long-term operating system.</p>\n          </div>\n        </div>"
+      }
+    ],
+    "conclusionHeading": "Conclusion: The Power of Quiet Consistency",
+    "conclusionP1": "Consistency is not a rare superpower reserved for the elite; it is the natural byproduct of a humane system that honors small daily steps and champions quick recovery over impossible perfection.",
+    "conclusionP2": "Never look down on the modest step. It may not change your whole world in a single instant, but it keeps the thread intact and quietly reminds you: you are still on the right path.",
     "takeawaysHeading": "Key Takeaways to Remember",
     "takeaways": [
-      "A disruption is never a permanent failure; it is an invitation to recalibrate the system.",
-      "Micro-starts disarm procrastination and psychological friction.",
-      "The never-miss-twice rule protects your emerging identity.",
+      "A disruption is never a permanent failure; it is an invitation to recalibrate and lighten the system.",
+      "Micro-starts disarm procrastination and eliminate psychological friction.",
+      "The never-miss-twice rule protects your emerging identity and prevents total relapse.",
       "Self-trust is forged through small, tangible evidence, not grand declarations."
     ],
-    "editorialQuotes": [
+    "quotesHeading": "Inspiring Quotes",
+    "quotes": [
       {
         "text": "True consistency is not measured by the number of perfect days, but by how swiftly you get back on track after a missed one.",
         "author": "Hikma & Nour"
@@ -1353,7 +1658,7 @@
       const langLabel = document.getElementById('currentLangLabel');
       if (langLabel) langLabel.textContent = LANG_LABELS[validLang] || 'العربية';
 
-      // Meta
+      // Meta tags
       document.title = d.metaTitle;
       const metaDesc = document.getElementById('metaPageDesc');
       if (metaDesc) metaDesc.setAttribute('content', d.metaDesc);
@@ -1362,28 +1667,18 @@
       const ogDesc = document.getElementById('ogPageDesc');
       if (ogDesc) ogDesc.setAttribute('content', d.ogDesc);
 
-      // Navbar
-      const navHome = document.getElementById('navLinkHome');
-      const navPhilo = document.getElementById('navLinkPhilo');
-      const navPsy = document.getElementById('navLinkPsy');
-      const navDev = document.getElementById('navLinkDev');
-      const navWisdom = document.getElementById('navLinkWisdom');
-      const navIslamic = document.getElementById('navLinkIslamic');
-      const navThinkers = document.getElementById('navLinkThinkers');
-
+      // Navbar links
       const navLabels = {
         ar: { home: 'الرئيسية', philo: 'الفلسفة', psy: 'علم النفس', dev: 'تطوير الذات', wisdom: 'الحكمة', islam: 'الفكر الإسلامي', thinkers: 'المفكرون' },
         fr: { home: 'Accueil', philo: 'Philosophie', psy: 'Psychologie', dev: 'Dév. personnel', wisdom: 'Sagesse', islam: 'Pensée islamique', thinkers: 'Penseurs' },
         en: { home: 'Home', philo: 'Philosophy', psy: 'Psychology', dev: 'Self-Growth', wisdom: 'Wisdom', islam: 'Islamic Thought', thinkers: 'Thinkers' }
       };
       const nl = navLabels[validLang];
-      if (navHome) navHome.textContent = nl.home;
-      if (navPhilo) navPhilo.textContent = nl.philo;
-      if (navPsy) navPsy.textContent = nl.psy;
-      if (navDev) navDev.textContent = nl.dev;
-      if (navWisdom) navWisdom.textContent = nl.wisdom;
-      if (navIslamic) navIslamic.textContent = nl.islam;
-      if (navThinkers) navThinkers.textContent = nl.thinkers;
+      const navMap = { navLinkHome: 'home', navLinkPhilo: 'philo', navLinkPsy: 'psy', navLinkDev: 'dev', navLinkWisdom: 'wisdom', navLinkIslamic: 'islam', navLinkThinkers: 'thinkers' };
+      for (const [id, key] of Object.entries(navMap)) {
+        const el = document.getElementById(id);
+        if (el && nl[key]) el.textContent = nl[key];
+      }
 
       // Breadcrumbs
       const bcHome = document.getElementById('bcHomeLink');
@@ -1396,70 +1691,94 @@
       if (bcCurrent) bcCurrent.textContent = d.bcArticle;
 
       // Hero
-      const pillarBadge = document.getElementById('articlePillarBadge');
-      if (pillarBadge) pillarBadge.textContent = d.pillarBadge;
-      const readTime = document.getElementById('articleReadTime');
-      if (readTime) readTime.textContent = d.readingTime;
-      const mainTitle = document.getElementById('articleMainTitle');
-      if (mainTitle) mainTitle.textContent = d.heroTitle;
-      const leadText = document.getElementById('articleLeadText');
-      if (leadText) leadText.textContent = d.heroLead;
+      const catBadge = document.getElementById('articleCategoryBadge');
+      if (catBadge) catBadge.textContent = d.pillarBadge;
+      const title = document.getElementById('articleTitle');
+      if (title) title.textContent = d.heroTitle;
+      const sub = document.getElementById('articleSubtitle');
+      if (sub) sub.textContent = d.heroSubtitle;
+
+      const authLbl = document.getElementById('metaAuthorLabel');
+      if (authLbl) authLbl.textContent = d.authorLabel;
+      const auth = document.getElementById('metaAuthor');
+      if (auth) auth.textContent = d.authorName;
+      const dateEl = document.getElementById('metaDate');
+      if (dateEl) dateEl.textContent = d.publishDate;
+      const readEl = document.getElementById('metaReadTime');
+      if (readEl) readEl.textContent = d.readingTime;
+
+      // Hero Media
       const heroImg = document.getElementById('articleHeroImg');
       if (heroImg) heroImg.alt = d.heroImgAlt;
-      const authorName = document.getElementById('authorNameText');
-      if (authorName) authorName.textContent = d.authorName;
-      const pubDate = document.getElementById('publishDateText');
-      if (pubDate) pubDate.textContent = d.publishDate;
+      const heroCap = document.getElementById('articleHeroCaption');
+      if (heroCap) heroCap.textContent = d.heroCaption;
 
-      // Summary
-      const sumHeading = document.getElementById('summaryHeading');
-      if (sumHeading) sumHeading.textContent = d.summaryTitle;
-      const sumList = document.getElementById('summaryList');
-      if (sumList) sumList.innerHTML = d.summaryPoints.map(p => '<li>' + p + '</li>').join('');
+      // Lead Box
+      const leadT = document.getElementById('leadTitle');
+      if (leadT) leadT.textContent = d.leadTitle;
+      const iP1 = document.getElementById('introP1');
+      if (iP1) iP1.textContent = d.introP1;
+      const iP2 = document.getElementById('introP2');
+      if (iP2) iP2.textContent = d.introP2;
+      const iP3 = document.getElementById('introP3');
+      if (iP3) iP3.textContent = d.introP3;
+      const iConc = document.getElementById('introConclusion');
+      if (iConc) iConc.innerHTML = '<strong>' + d.introConclusion + '</strong>';
 
       // TOC
-      const tocHeading = document.getElementById('tocHeading');
-      if (tocHeading) tocHeading.textContent = d.tocTitle;
+      const tocHead = document.getElementById('tocHeading');
+      if (tocHead) tocHead.textContent = '📑 ' + d.tocTitle;
       const tocList = document.getElementById('tocList');
       if (tocList) {
-        tocList.innerHTML = d.tocItems.map(item => '<li><a href="#' + item.id + '">' + item.text + '</a></li>').join('');
+        tocList.innerHTML = d.tocItems.map(item =>
+          '<li><a href="#' + item.id + '"><span class="toc-num">' + item.num + '.</span> <span class="toc-text">' + item.text + '</span></a></li>'
+        ).join('');
       }
 
       // 10 Sections
-      for (let i = 1; i <= 10; i++) {
-        const h = document.getElementById('s' + i + 'Heading');
-        const b = document.getElementById('s' + i + 'Body');
-        if (h && d['s' + i + 'Title']) h.textContent = d['s' + i + 'Title'];
-        if (b && d['s' + i + 'Content']) b.innerHTML = d['s' + i + 'Content'];
-      }
+      d.sections.forEach(sec => {
+        const h = document.getElementById(sec.id + 'Heading');
+        const b = document.getElementById(sec.id + 'Body');
+        if (h) h.textContent = sec.title;
+        if (b) b.innerHTML = sec.content;
+      });
 
       // Conclusion & Takeaways
-      const concHeading = document.getElementById('conclusionHeading');
-      if (concHeading) concHeading.textContent = d.conclusionHeading;
-      const concText = document.getElementById('conclusionText');
-      if (concText) concText.textContent = d.conclusionText;
-      const takeHeading = document.getElementById('takeawaysHeading');
-      if (takeHeading) takeHeading.textContent = '🎯 ' + d.takeawaysHeading;
-      const takeList = document.getElementById('takeawaysList');
-      if (takeList) takeList.innerHTML = d.takeaways.map(t => '<li>' + t + '</li>').join('');
+      const concH = document.getElementById('conclusionHeading');
+      if (concH) concH.textContent = '✨ ' + d.conclusionHeading;
+      const cP1 = document.getElementById('conclusionP1');
+      if (cP1) cP1.textContent = d.conclusionP1;
+      const cP2 = document.getElementById('conclusionP2');
+      if (cP2) cP2.innerHTML = '<strong>' + d.conclusionP2 + '</strong>';
 
-      // Editorial Quotes
-      const eqGrid = document.getElementById('editorialQuotesGrid');
-      if (eqGrid) {
-        eqGrid.innerHTML = d.editorialQuotes.map(q =>
-          '<div class="editorial-quote-card">' +
-          '  <span class="quote-mark">“</span>' +
-          '  <p class="quote-editorial-text">« ' + q.text + ' »</p>' +
-          '  <span class="quote-editorial-author">— ' + q.author + '</span>' +
+      const takeH = document.getElementById('takeawaysHeading');
+      if (takeH) takeH.textContent = '🎯 ' + d.takeawaysHeading;
+      const takeList = document.getElementById('takeawaysList');
+      if (takeList) {
+        takeList.innerHTML = d.takeaways.map(t =>
+          '<li><span class="check-icon">✓</span> <span class="takeaway-text">' + t + '</span></li>'
+        ).join('');
+      }
+
+      // Quotes
+      const qHead = document.getElementById('quotesHeading');
+      if (qHead) qHead.textContent = '📜 ' + d.quotesHeading;
+      const qGrid = document.getElementById('quotesGrid');
+      if (qGrid) {
+        qGrid.innerHTML = d.quotes.map(q =>
+          '<div class="quote-card">' +
+          '  <span class="quote-icon">“</span>' +
+          '  <p class="quote-text">« ' + q.text + ' »</p>' +
+          '  <span class="quote-author">— ' + q.author + '</span>' +
           '</div>'
         ).join('');
       }
 
-      // Contract
-      const contractHeading = document.getElementById('contractHeading');
-      if (contractHeading) contractHeading.textContent = d.contractHeading;
-      const contractDesc = document.getElementById('contractDesc');
-      if (contractDesc) contractDesc.textContent = d.contractDesc;
+      // Contract Exercise
+      const contractH = document.getElementById('contractHeading');
+      if (contractH) contractH.textContent = d.contractHeading;
+      const contractD = document.getElementById('contractDesc');
+      if (contractD) contractD.textContent = d.contractDesc;
       const lHabit = document.getElementById('labelHabit');
       if (lHabit) lHabit.textContent = d.contractFields.habitLabel;
       const iHabit = document.getElementById('contractHabit');
@@ -1520,7 +1839,7 @@
 
       // Thinkers
       const thHeading = document.getElementById('thinkersHeading');
-      if (thHeading) thHeading.textContent = '🏛️ ' + d.thinkersHeading;
+      if (thHeading) thHeading.textContent = '👥 ' + d.thinkersHeading;
       const thSubtitle = document.getElementById('thinkersSubtitle');
       if (thSubtitle) thSubtitle.textContent = d.thinkersSubtitle;
       const thGrid = document.getElementById('thinkersGrid');
@@ -1607,15 +1926,6 @@
       const menu = document.getElementById('navLinksMenu');
       if (menu) menu.classList.toggle('active');
     };
-
-    // Reading Progress Indicator
-    window.addEventListener('scroll', () => {
-      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (height > 0) ? (winScroll / height) * 100 : 0;
-      const bar = document.getElementById('readingProgressBar');
-      if (bar) bar.style.width = scrolled + '%';
-    });
 
     document.addEventListener('DOMContentLoaded', () => {
       const initialLang = getSavedLanguage();
