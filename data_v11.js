@@ -3207,70 +3207,6 @@ const TIKTOK_DATA = {
           "id": "discipline-sans-epuisement",
           "file": "discipline-sans-epuisement.html",
           "featured": true,
-          "title": "الانضباط دون إنهاك: كيف تعمل أقل وتنجز بشكل أفضل؟",
-          "category": "development",
-          "categoryName": "تطوير الذات • الانضباط والعادات",
-          "readTime": "١١ دقيقة قراءة",
-          "date": "٢٩ أغسطس ٢٠٢٦",
-          "author": "Hikma & Nour | حكمة ونور",
-          "desc": "دليل فلسفي وعملي لبناء انضباط مستدام يحمي طاقتك، ويحررك من فخ الإرهاق المستمر والشعور بالذنب أثناء الراحة.",
-          "image": "developpement-personnel/images/thumb-discipline-sans-epuisement.jpg",
-          "imageAlt": "مكتب هادئ في حديقة ليلية مضاء بنور ذهبي دافئ مع مساحة فارغة ترمز إلى الوضوح.",
-          "quote": "الانضباط الصادق لا يحمي فقط إنجاز اليوم، بل يحمي قدرتك على العودة المشرقة غداً.",
-          "quoteAuthor": "— حكمة ونور",
-          "toc": [
-            "حين يتحول الانضباط إلى شكل من أشكال الإنهاك",
-            "العمل لساعات أطول لا يعني دائمًا تقدمًا حقيقيًا",
-            "التعرف على الجهد الذي يصنع الفارق الفعلي",
-            "العمل في انسجام مع الطاقة بدلاً من مصارعتها",
-            "بناء فترات عمل مركزة وعميقة",
-            "الحذف والاختزال قبل محاولات التحسين",
-            "جعل الراحة ركنًا أصيلاً في منظومة الانضباط",
-            "فن التوقف الحكيم قبل الوصول إلى الإجهاد",
-            "مؤشرات الإنذار حين يصبح النظام غير قابل للاستمرار",
-            "بروتوكول أسبوعي عملي: إنجاز أعلى بجهد مدروس"
-          ],
-          "body": [
-            "الانضباط الأرسخ والأكثر نضجاً ليس ذلك الذي يطالبنا بجهد بطولي ساحق كل يوم؛ بل هو ذلك الذي يحفظ طاقاتنا بما يسمح لنا بالعودة غداً.",
-            "حين تعمل أقل في المساحات الزائفة وتعمل بتركيز أعمق في المساحات الجوهرية، تصبح الاستمرارية جزءاً من طبيعتك اليومية الهادئة."
-          ]
-        },
-        {
-          "id": "discipline-sans-epuisement",
-          "file": "discipline-sans-epuisement.html",
-          "featured": true,
-          "title": "Discipline Without Burnout: Work Less, but Better",
-          "category": "development",
-          "categoryName": "Self-Growth • Discipline & Habits",
-          "readTime": "11 min read",
-          "date": "August 29, 2026",
-          "author": "Hikma & Nour | حكمة ونور",
-          "desc": "A philosophical and actionable guide to building sustainable discipline, protecting your vital energy, and eliminating distraction without guilt.",
-          "image": "developpement-personnel/images/thumb-discipline-sans-epuisement.jpg",
-          "imageAlt": "A minimalist desk in a nocturnal garden illuminated by soft warm golden light.",
-          "quote": "Good discipline protects tomorrow's return just as much as today's effort.",
-          "quoteAuthor": "— Hikma & Nour",
-          "toc": [
-            "When discipline becomes a form of exhaustion",
-            "Working longer hours does not always mean more progress",
-            "Identifying the effort that truly matters",
-            "Working with your energy rather than against it",
-            "Building genuinely focused blocks of work",
-            "Subtracting before attempting to optimize",
-            "Making rest a structural part of the system",
-            "Knowing how to stop before reaching exhaustion",
-            "Recognizing a system that has become unsustainable",
-            "A weekly framework to work less, but better"
-          ],
-          "body": [
-            "The most enduring discipline is not the one that demands maximum daily strain. It is the one that protects enough of your energy so you can show up again tomorrow.",
-            "By learning to subtract the non-essential and focus deeply on what matters, you transform work into a sanctuary of mastery and inner peace."
-          ]
-        },
-        {
-          "id": "discipline-sans-epuisement",
-          "file": "discipline-sans-epuisement.html",
-          "featured": true,
           "title": "La discipline sans épuisement : travailler moins, mais mieux",
           "category": "development",
           "categoryName": "Développement personnel • Discipline & Habitudes",
@@ -3302,71 +3238,7 @@ const TIKTOK_DATA = {
         {
           "id": "redevenir-constant-apres-abandon",
           "file": "redevenir-constant-apres-abandon.html",
-          "featured": true,
-          "title": "كيف تستعيد الاستمرارية بعد أن توقفت مرات عديدة؟",
-          "category": "development",
-          "categoryName": "تطوير الذات • الانضباط والعادات",
-          "readTime": "١٠ دقائق قراءة",
-          "date": "٢٩ أغسطس ٢٠٢٦",
-          "author": "Hikma & Nour | حكمة ونور",
-          "desc": "دليل عملي وتأملي لاستعادة الاستمرارية بعد الانقطاع المتكرر، وبناء نظام مرن للعودة دون جلد الذات أو الاعتماد على الحماس المؤقت.",
-          "image": "developpement-personnel/images/thumb-redevenir-constant-apres-abandon.jpg",
-          "imageAlt": "طريق من الأضواء الصغيرة يستأنف مساره بعد انقطاع ويقود نحو شجرة فتية في حديقة هادئة.",
-          "quote": "الاستمرارية الحقيقية لا تقاس بعدد الأيام المثالية، بل بالسرعة التي ننهض بها بعد يوم متعثر.",
-          "quoteAuthor": "— حكمة ونور",
-          "toc": [
-            "لماذا يصبح البدء من جديد أصعب بعد كل توقف؟",
-            "الانقطاع عن العادة لا يحدد هويتك",
-            "فهم السبب الحقيقي الذي أدى إلى انقطاع المسار",
-            "البدء بحجم أصغر مما ترغب به النفس",
-            "إعادة بناء الثقة بأدلة يومية صغيرة",
-            "استبدال الكثافة بالحفاظ على وتيرة مستدامة",
-            "تعلم استئناف المسار بعد يوم ضائع",
-            "تهيئة البيئة بدل الاعتماد على قوة الإرادة",
-            "قياس الاستمرارية دون التحول إلى سجين للمتابعة",
-            "بروتوكول عملي للعودة خلال 14 يومًا"
-          ],
-          "body": [
-            "الاستمرارية الحقيقية لا تعني ألا تنقطع أبدًا، بل تعني بناء نظام مرن وبسيط يُمكّنك من الاستئناف فورًا دون شعور بالذنب.",
-            "الانتظام المتواضع يهزم الحماس المنقطع في كل مرة، وتراكم الأدلة اليومية هو ما يعيد بناء الثقة بالذات."
-          ]
-        },
-        {
-          "id": "redevenir-constant-apres-abandon",
-          "file": "redevenir-constant-apres-abandon.html",
-          "featured": true,
-          "title": "How to Become Consistent Again After Giving Up Several Times",
-          "category": "development",
-          "categoryName": "Self-Growth • Discipline & Habits",
-          "readTime": "10 min read",
-          "date": "August 29, 2026",
-          "author": "Hikma & Nour | حكمة ونور",
-          "desc": "A thoughtful and practical guide to rebuilding lasting consistency after multiple setbacks, without guilt or relying on fleeting motivation.",
-          "image": "developpement-personnel/images/thumb-redevenir-constant-apres-abandon.jpg",
-          "imageAlt": "A path of small lights resumes after an interruption and leads toward a young tree in a peaceful night garden.",
-          "quote": "True consistency is not measured by the number of perfect days, but by how swiftly you get back on track after a missed one.",
-          "quoteAuthor": "— Hikma & Nour",
-          "toc": [
-            "Why restarting becomes harder after each pause",
-            "Breaking a habit does not define your identity",
-            "Understanding what actually caused the disruption",
-            "Restarting smaller than the ego would like",
-            "Rebuilding trust with small daily evidence",
-            "Replacing intensity with a sustainable pace",
-            "Learning to resume after a missed day",
-            "Designing the environment instead of relying on willpower",
-            "Tracking consistency without becoming trapped by metrics",
-            "A simple 14-day restart protocol"
-          ],
-          "body": [
-            "True consistency is not about never missing a day, but building a system simple enough to restart immediately without guilt.",
-            "By showing up for your minimal version every single day, you provide your mind with tangible proof that you keep your word."
-          ]
-        },
-        {
-          "id": "redevenir-constant-apres-abandon",
-          "file": "redevenir-constant-apres-abandon.html",
-          "featured": true,
+          "featured": false,
           "title": "Comment redevenir constant après avoir abandonné plusieurs fois",
           "category": "development",
           "categoryName": "Développement personnel • Discipline & Habitudes",
@@ -3410,22 +3282,22 @@ const TIKTOK_DATA = {
           "quote": "True resilience is not denying the storm, but allowing your roots to run deeper while your branches bend flexibly in the wind.",
           "quoteAuthor": "— Hikma & Nour",
           "toc": [
-                  "When Hardship Disrupts Our Inner Balance",
-                  "Rising Does Not Mean Erasing the Past",
-                  "Honoring the Natural Timeline of Recovery",
-                  "Resilience: A Capacity, Not a Moral Mandate",
-                  "Rebuilding Agency Through Micro-Actions",
-                  "Finding Meaning Without Romanticizing Suffering",
-                  "The Healing Power of Authentic Connection",
-                  "Embracing Setbacks as Normal Parts of Healing",
-                  "How Adversity Transforms Our Outlook on Life",
-                  "A Concrete Roadmap to Move Forward"
+            "When Hardship Disrupts Our Inner Balance",
+            "Rising Does Not Mean Erasing the Past",
+            "Honoring the Natural Timeline of Recovery",
+            "Resilience: A Capacity, Not a Moral Mandate",
+            "Rebuilding Agency Through Micro-Actions",
+            "Finding Meaning Without Romanticizing Suffering",
+            "The Healing Power of Authentic Connection",
+            "Embracing Setbacks as Normal Parts of Healing",
+            "How Adversity Transforms Our Outlook on Life",
+            "A Concrete Roadmap to Move Forward"
           ],
           "body": [
-                  "Rising after adversity does not mean pretending nothing happened, but embarking on a conscious journey of active resilience.",
-                  "Manageable daily micro-actions are the most reliable tool to overcome helplessness and restore self-efficacy."
+            "Rising after adversity does not mean pretending nothing happened, but embarking on a conscious journey of active resilience.",
+            "Manageable daily micro-actions are the most reliable tool to overcome helplessness and restore self-efficacy."
           ]
-  },
+        },
         {
           "id": "nouvel-essor-apres-difficultes",
           "file": "nouvel-essor-apres-difficultes.html",
@@ -3441,22 +3313,22 @@ const TIKTOK_DATA = {
           "quote": "La véritable résilience ne consiste pas à nier la tempête, mais à laisser ses racines s’enfoncer plus profondément.",
           "quoteAuthor": "— Hikma & Nour",
           "toc": [
-                  "Quand une difficulté bouleverse notre équilibre",
-                  "Se relever ne signifie pas effacer ce qui s’est passé",
-                  "Respecter le temps nécessaire à la reconstruction",
-                  "La résilience : une capacité, pas une obligation",
-                  "Retrouver progressivement un pouvoir d’action",
-                  "Donner du sens sans idéaliser la souffrance",
-                  "Le rôle des relations et du soutien",
-                  "Accepter les rechutes pendant la reconstruction",
-                  "Quand l’épreuve transforme notre manière de vivre",
-                  "Un chemin concret pour recommencer à avancer"
+            "Quand une difficulté bouleverse notre équilibre",
+            "Se relever ne signifie pas effacer ce qui s’est passé",
+            "Respecter le temps nécessaire à la reconstruction",
+            "La résilience : une capacité, pas une obligation",
+            "Retrouver progressivement un pouvoir d’action",
+            "Donner du sens sans idéaliser la souffrance",
+            "Le rôle des relations et du soutien",
+            "Accepter les rechutes pendant la reconstruction",
+            "Quand l’épreuve transforme notre manière de vivre",
+            "Un chemin concret pour recommencer à avancer"
           ],
           "body": [
-                  "Se relever ne signifie pas faire comme si rien ne s’était passé, mais s’engager dans un processus lucide de résilience active.",
-                  "Les micro-actions quotidiennes sont le levier le plus sûr pour vaincre l’impuissance et reconstruire son autonomie."
+            "Se relever ne signifie pas faire comme si rien ne s’était passé, mais s’engager dans un processus lucide de résilience active.",
+            "Les micro-actions quotidiennes sont le levier le plus sûr pour vaincre l’impuissance et reconstruire son autonomie."
           ]
-  },
+        },
         {
           "id": "nouvel-essor-apres-difficultes",
           "file": "nouvel-essor-apres-difficultes.html",
@@ -3472,22 +3344,22 @@ const TIKTOK_DATA = {
           "quote": "ليس الصمود أن تنكر العاصفة، بل أن تسمح لجذورك بأن تتعمق في الأرض بينما تنحني أغصانك بمرونة أمام الرياح.",
           "quoteAuthor": "— حكمة ونور",
           "toc": [
-                  "عندما تعصف الصعوبات بتوازننا النفسي",
-                  "النهوض لا يعني محو التجربة أو إنكار الأثر",
-                  "احترام زمن التعافي وبطء المسار",
-                  "الصمود النفسي: إمكانية إنسانية لا واجب إجباري",
-                  "استعادة زمام المبادرة عبر الفعل الصغير",
-                  "صناعة المعنى دون تقديس الألم",
-                  "شبكة الروابط الإنسانية وأثر السند الواعي",
-                  "تقبل الانتكاسات العابرة كجزء من المسار",
-                  "التحول الوجودي: كيف تعيد الصعاب صياغة أولوياتنا",
-                  "مسار عملي لاستعادة التوازن وإعادة الانطلاق"
+            "عندما تعصف الصعوبات بتوازننا النفسي",
+            "النهوض لا يعني محو التجربة أو إنكار الأثر",
+            "احترام زمن التعافي وبطء المسار",
+            "الصمود النفسي: إمكانية إنسانية لا واجب إجباري",
+            "استعادة زمام المبادرة عبر الفعل الصغير",
+            "صناعة المعنى دون تقديس الألم",
+            "شبكة الروابط الإنسانية وأثر السند الواعي",
+            "تقبل الانتكاسات العابرة كجزء من المسار",
+            "التحول الوجودي: كيف تعيد الصعاب صياغة أولوياتنا",
+            "مسار عملي لاستعادة التوازن وإعادة الانطلاق"
           ],
           "body": [
-                  "النهوض الحقيقي لا يعني الادعاء بأن شيئاً لم يحدث، بل يعني خوض مسار واعٍ من المرونة النفسية والترميم الذاتي.",
-                  "الأفعال الصغيرة المستمرة هي الدواء الأكثر فاعلية ضد الشعور بالعجز واستعادة زمام المبادرة."
+            "النهوض الحقيقي لا يعني الادعاء بأن شيئاً لم يحدث، بل يعني خوض مسار واعٍ من المرونة النفسية والترميم الذاتي.",
+            "الأفعال الصغيرة المستمرة هي الدواء الأكثر فاعلية ضد الشعور بالعجز واستعادة زمام المبادرة."
           ]
-  },
+        },
         {
           "id": "reprendre-habitude-apres-interruption",
           "file": "reprendre-habitude-apres-interruption.html",
@@ -7849,6 +7721,70 @@ const TIKTOK_DATA = {
         }
       ],
       "articles": [
+        {
+          "id": "discipline-sans-epuisement",
+          "file": "discipline-sans-epuisement.html",
+          "featured": true,
+          "title": "Discipline Without Burnout: Work Less, but Better",
+          "category": "development",
+          "categoryName": "Self-Growth • Discipline & Habits",
+          "readTime": "11 min read",
+          "date": "August 29, 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "A philosophical and actionable guide to building sustainable discipline, protecting your vital energy, and eliminating distraction without guilt.",
+          "image": "developpement-personnel/images/thumb-discipline-sans-epuisement.jpg",
+          "imageAlt": "A minimalist desk in a nocturnal garden illuminated by soft warm golden light.",
+          "quote": "Good discipline protects tomorrow's return just as much as today's effort.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+            "When discipline becomes a form of exhaustion",
+            "Working longer hours does not always mean more progress",
+            "Identifying the effort that truly matters",
+            "Working with your energy rather than against it",
+            "Building genuinely focused blocks of work",
+            "Subtracting before attempting to optimize",
+            "Making rest a structural part of the system",
+            "Knowing how to stop before reaching exhaustion",
+            "Recognizing a system that has become unsustainable",
+            "A weekly framework to work less, but better"
+          ],
+          "body": [
+            "The most enduring discipline is not the one that demands maximum daily strain. It is the one that protects enough of your energy so you can show up again tomorrow.",
+            "By learning to subtract the non-essential and focus deeply on what matters, you transform work into a sanctuary of mastery and inner peace."
+          ]
+        },
+        {
+          "id": "redevenir-constant-apres-abandon",
+          "file": "redevenir-constant-apres-abandon.html",
+          "featured": false,
+          "title": "How to Become Consistent Again After Giving Up Several Times",
+          "category": "development",
+          "categoryName": "Self-Growth • Discipline & Habits",
+          "readTime": "10 min read",
+          "date": "August 29, 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "A thoughtful and practical guide to rebuilding lasting consistency after multiple setbacks, without guilt or relying on fleeting motivation.",
+          "image": "developpement-personnel/images/thumb-redevenir-constant-apres-abandon.jpg",
+          "imageAlt": "A path of small lights resumes after an interruption and leads toward a young tree in a peaceful night garden.",
+          "quote": "True consistency is not measured by the number of perfect days, but by how swiftly you get back on track after a missed one.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+            "Why restarting becomes harder after each pause",
+            "Breaking a habit does not define your identity",
+            "Understanding what actually caused the disruption",
+            "Restarting smaller than the ego would like",
+            "Rebuilding trust with small daily evidence",
+            "Replacing intensity with a sustainable pace",
+            "Learning to resume after a missed day",
+            "Designing the environment instead of relying on willpower",
+            "Tracking consistency without becoming trapped by metrics",
+            "A simple 14-day restart protocol"
+          ],
+          "body": [
+            "True consistency is not about never missing a day, but building a system simple enough to restart immediately without guilt.",
+            "By showing up for your minimal version every single day, you provide your mind with tangible proof that you keep your word."
+          ]
+        },
         {
           "id": "reprendre-habitude-apres-interruption",
           "file": "reprendre-habitude-apres-interruption.html",
@@ -12392,6 +12328,70 @@ const TIKTOK_DATA = {
         }
       ],
       "articles": [
+        {
+          "id": "discipline-sans-epuisement",
+          "file": "discipline-sans-epuisement.html",
+          "featured": true,
+          "title": "الانضباط دون إنهاك: كيف تعمل أقل وتنجز بشكل أفضل؟",
+          "category": "development",
+          "categoryName": "تطوير الذات • الانضباط والعادات",
+          "readTime": "١١ دقيقة قراءة",
+          "date": "٢٩ أغسطس ٢٠٢٦",
+          "author": "حكمة ونور | Hikma & Nour",
+          "desc": "دليل فلسفي وعملي لبناء انضباط مستدام يحمي طاقتك، ويحررك من فخ الإرهاق المستمر والشعور بالذنب أثناء الراحة.",
+          "image": "developpement-personnel/images/thumb-discipline-sans-epuisement.jpg",
+          "imageAlt": "مكتب هادئ في حديقة ليلية مضاء بنور ذهبي دافئ مع مساحة فارغة ترمز إلى الوضوح.",
+          "quote": "الانضباط الصادق لا يحمي فقط إنجاز اليوم، بل يحمي قدرتك على العودة المشرقة غداً.",
+          "quoteAuthor": "— حكمة ونور",
+          "toc": [
+            "حين يتحول الانضباط إلى شكل من أشكال الإنهاك",
+            "العمل لساعات أطول لا يعني دائمًا تقدمًا حقيقيًا",
+            "التعرف على الجهد الذي يصنع الفارق الفعلي",
+            "العمل في انسجام مع الطاقة بدلاً من مصارعتها",
+            "بناء فترات عمل مركزة وعميقة",
+            "الحذف والاختزال قبل محاولات التحسين",
+            "جعل الراحة ركنًا أصيلاً في منظومة الانضباط",
+            "فن التوقف الحكيم قبل الوصول إلى الإجهاد",
+            "مؤشرات الإنذار حين يصبح النظام غير قابل للاستمرار",
+            "بروتوكول أسبوعي عملي: إنجاز أعلى بجهد مدروس"
+          ],
+          "body": [
+            "الانضباط الأرسخ والأكثر نضجاً ليس ذلك الذي يطالبنا بجهد بطولي ساحق كل يوم؛ بل هو ذلك الذي يحفظ طاقاتنا بما يسمح لنا بالعودة غداً.",
+            "حين تعمل أقل في المساحات الزائفة وتعمل بتركيز أعمق في المساحات الجوهرية، تصبح الاستمرارية جزءاً من طبيعتك اليومية الهادئة."
+          ]
+        },
+        {
+          "id": "redevenir-constant-apres-abandon",
+          "file": "redevenir-constant-apres-abandon.html",
+          "featured": false,
+          "title": "كيف تستعيد الاستمرارية بعد أن توقفت مرات عديدة؟",
+          "category": "development",
+          "categoryName": "تطوير الذات • الانضباط والعادات",
+          "readTime": "١٠ دقائق قراءة",
+          "date": "٢٩ أغسطس ٢٠٢٦",
+          "author": "حكمة ونور | Hikma & Nour",
+          "desc": "دليل عملي وتأملي لاستعادة الاستمرارية بعد الانقطاع المتكرر، وبناء نظام مرن للعودة دون جلد الذات أو الاعتماد على الحماس المؤقت.",
+          "image": "developpement-personnel/images/thumb-redevenir-constant-apres-abandon.jpg",
+          "imageAlt": "طريق من الأضواء الصغيرة يستأنف مساره بعد انقطاع ويقود نحو شجرة فتية في حديقة هادئة.",
+          "quote": "الاستمرارية الحقيقية لا تقاس بعدد الأيام المثالية، بل بالسرعة التي ننهض بها بعد يوم متعثر.",
+          "quoteAuthor": "— حكمة ونور",
+          "toc": [
+            "لماذا يصبح البدء من جديد أصعب بعد كل توقف؟",
+            "الانقطاع عن العادة لا يحدد هويتك",
+            "فهم السبب الحقيقي الذي أدى إلى انقطاع المسار",
+            "البدء بحجم أصغر مما ترغب به النفس",
+            "إعادة بناء الثقة بأدلة يومية صغيرة",
+            "استبدال الكثافة بالحفاظ على وتيرة مستدامة",
+            "تعلم استئناف المسار بعد يوم ضائع",
+            "تهيئة البيئة بدل الاعتماد على قوة الإرادة",
+            "قياس الاستمرارية دون التحول إلى سجين للمتابعة",
+            "بروتوكول عملي للعودة خلال 14 يومًا"
+          ],
+          "body": [
+            "الاستمرارية الحقيقية لا تعني ألا تنقطع أبدًا، بل تعني بناء نظام مرن وبسيط يُمكّنك من الاستئناف فورًا دون شعور بالذنب.",
+            "الانتظام المتواضع يهزم الحماس المنقطع في كل مرة، وتراكم الأدلة اليومية هو ما يعيد بناء الثقة بالذات."
+          ]
+        },
         {
           "id": "reprendre-habitude-apres-interruption",
           "file": "reprendre-habitude-apres-interruption.html",
