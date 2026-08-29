@@ -9910,68 +9910,76 @@ textarea.form-control {
    PILLAR RESOURCES SECTION (AUDIO / QUIZ / QUOTES) — V6 PREMIUM
    ============================================================ */
 .pillar-resources {
-  padding: clamp(50px, 7vw, 90px) 0;
+  padding-block: clamp(72px, 9vw, 112px);
   position: relative;
-  border-top: 1px solid rgba(223, 177, 91, 0.15);
-  margin-top: 40px;
+  border-top: 1px solid rgba(223, 177, 91, 0.18);
+  margin-top: 48px;
 }
 
-.pillar-resources-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
+.pillar-resources .pillar-resources-container,
+.pillar-resources .section-container {
+  width: min(100% - 40px, 1120px);
+  max-width: 1120px;
+  margin-inline: auto;
+  padding: 0;
 }
 
 .pillar-resources-header {
   text-align: center;
-  margin-bottom: 44px;
+  margin-bottom: 40px;
 }
 
 .pillar-resources-eyebrow {
-  display: inline-block;
-  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--accent-gold, #D4AF37);
-  background: rgba(212, 175, 55, 0.1);
-  border: 1px solid rgba(212, 175, 55, 0.25);
-  padding: 5px 16px;
-  border-radius: 20px;
-  margin-bottom: 14px;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 6px 18px;
+  border-radius: 999px;
+  margin-bottom: 16px;
 }
 
-.pillar-resources-title {
+.pillar-resources-title,
+.pillar-resources-header h2 {
   font-family: 'Playfair Display', 'Amiri', serif;
-  font-size: clamp(1.75rem, 3.5vw, 2.35rem);
-  font-weight: 700;
-  color: var(--text-primary, #F3F4F6);
-  margin: 0 0 12px;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.2;
+  font-weight: 800;
+  color: var(--text-primary, #FAF6EF);
+  margin: 0 0 14px;
   letter-spacing: -0.01em;
 }
 
 .pillar-resources-intro {
-  font-size: 1rem;
-  color: var(--text-secondary, #9CA3AF);
-  max-width: 640px;
-  margin: 0 auto;
-  line-height: 1.6;
+  max-width: 720px;
+  margin-inline: auto;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-secondary, #D1D5DB);
 }
 
 .pillar-resources-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
   gap: 24px;
   align-items: stretch;
+  margin-top: 36px;
 }
 
 .pillar-resource-card {
   min-width: 0;
-  padding: 28px 24px;
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  min-height: 320px;
+  padding: 28px;
+  border: 1px solid rgba(212, 175, 55, 0.22);
   border-radius: 22px;
-  background: rgba(10, 31, 26, 0.65);
-  backdrop-filter: blur(12px);
+  background: rgba(10, 31, 26, 0.75);
+  backdrop-filter: blur(14px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -9981,8 +9989,8 @@ textarea.form-control {
 }
 
 [data-theme="light"] .pillar-resource-card {
-  background: rgba(255, 255, 255, 0.85);
-  border-color: rgba(180, 140, 40, 0.25);
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(180, 140, 40, 0.28);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
 }
 
@@ -9993,140 +10001,192 @@ textarea.form-control {
 }
 
 .pillar-resource-card.is-coming-soon {
-  opacity: 0.78;
+  opacity: 0.82;
   border-style: dashed;
-  background: rgba(10, 24, 20, 0.4);
+  background: rgba(10, 24, 20, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 [data-theme="light"] .pillar-resource-card.is-coming-soon {
-  background: rgba(245, 245, 245, 0.6);
+  background: rgba(245, 245, 245, 0.65);
+}
+
+.pillar-resource-card.is-coming-soon .pillar-coming-soon-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.pillar-resource-card.is-coming-soon .pillar-card-badge {
+  justify-content: center;
 }
 
 .pillar-card-badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 700;
   color: var(--accent-gold, #D4AF37);
   margin-bottom: 14px;
 }
 
+.pillar-resource-card h3,
 .pillar-card-title {
   font-family: 'Playfair Display', 'Amiri', serif;
   font-size: 1.25rem;
+  line-height: 1.45;
   font-weight: 700;
-  color: var(--text-primary, #F3F4F6);
-  margin: 0 0 10px;
-  line-height: 1.35;
+  color: var(--text-primary, #FAF6EF);
+  margin: 0 0 12px;
 }
 
+.pillar-resource-card p,
 .pillar-card-desc {
-  font-size: 0.92rem;
-  color: var(--text-secondary, #9CA3AF);
-  line-height: 1.55;
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: var(--text-secondary, #D1D5DB);
   margin: 0 0 18px;
   flex-grow: 1;
+}
+
+html[lang="ar"] .pillar-resource-card p,
+html[dir="rtl"] .pillar-resource-card p {
+  font-size: 1rem;
+  line-height: 1.95;
 }
 
 .pillar-card-meta {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 0.82rem;
+  gap: 12px;
+  font-size: 0.88rem;
+  font-weight: 600;
   color: var(--accent-gold, #D4AF37);
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
-.pillar-card-btn {
+.pillar-card-btn,
+.pillar-resource-card .button,
+.pillar-resource-card a[role="button"] {
+  min-height: 44px;
+  padding: 11px 22px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 999px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   background: var(--accent-gold, #D4AF37);
   color: #070F0A;
-  font-weight: 700;
-  font-size: 0.9rem;
-  padding: 10px 20px;
-  border-radius: 20px;
   text-decoration: none;
-  transition: all 0.2s ease;
-  margin-top: auto;
+  transition: all 0.25s ease;
   width: fit-content;
+  margin-top: auto;
 }
 
 .pillar-card-btn:hover {
   background: var(--accent-gold-bright, #E5C158);
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(212, 175, 55, 0.25);
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.3);
 }
 
 .pillar-resource-status {
+  min-height: 40px;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  margin-top: auto;
-  padding: 7px 16px;
-  border: 1px solid rgba(212, 175, 55, 0.28);
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 20px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
   border-radius: 999px;
   color: var(--accent-gold, #D4AF37);
-  font-size: 0.84rem;
-  font-weight: 600;
-  background: rgba(212, 175, 55, 0.08);
+  font-size: 0.9rem;
+  font-weight: 700;
+  background: rgba(212, 175, 55, 0.12);
   width: fit-content;
+  margin-top: 14px;
 }
 
-/* Citations list inside Quotes Card */
-.pillar-quotes-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 20px;
-  flex-grow: 1;
+/* Quotes Card Styling */
+.pillar-quote-featured {
+  padding: 18px 20px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  border-radius: 16px;
+  margin-bottom: 22px;
+  position: relative;
 }
 
-.pillar-quote-item {
-  padding: 10px 14px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(212, 175, 55, 0.12);
-  border-radius: 12px;
-  font-size: 0.86rem;
-  line-height: 1.5;
+[data-theme="light"] .pillar-quote-featured {
+  background: rgba(0, 0, 0, 0.025);
+  border-color: rgba(180, 140, 40, 0.22);
 }
 
-[data-theme="light"] .pillar-quote-item {
-  background: rgba(0, 0, 0, 0.02);
-}
-
-.pillar-quote-text {
-  color: var(--text-primary, #E5E7EB);
+.pillar-quote-featured-text {
+  font-family: 'Playfair Display', 'Amiri', serif;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--text-primary, #FAF6EF);
   font-style: italic;
-  margin: 0 0 4px;
+  margin: 0 0 10px;
 }
 
-.pillar-quote-author {
-  font-size: 0.8rem;
-  font-weight: 600;
+html[lang="ar"] .pillar-quote-featured-text,
+html[dir="rtl"] .pillar-quote-featured-text {
+  font-size: 1.1rem;
+  line-height: 2.0;
+}
+
+.pillar-quote-featured-author {
+  font-size: 0.88rem;
+  font-weight: 700;
   color: var(--accent-gold, #D4AF37);
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
-.pillar-quote-author a {
+.pillar-quote-featured-author a {
   color: var(--accent-gold, #D4AF37);
   text-decoration: none;
   transition: text-decoration 0.2s;
 }
 
-.pillar-quote-author a:hover {
+.pillar-quote-featured-author a:hover {
   text-decoration: underline;
+}
+
+/* RTL Specific Rules */
+html[dir="rtl"] .pillar-resource-card {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .pillar-resource-card.is-coming-soon {
+  text-align: center;
+}
+
+html[dir="rtl"] .pillar-card-meta {
+  justify-content: flex-start;
+}
+
+html[dir="rtl"] .pillar-resources-header {
+  text-align: center;
 }
 
 @media (max-width: 960px) {
   .pillar-resources-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 22px;
   }
   .pillar-resource-card {
     min-height: auto;

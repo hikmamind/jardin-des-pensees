@@ -64,68 +64,35 @@ export const PILLAR_RESOURCES_DATA = {
       ar: {
         badge: '📜 مختارات فلسفية',
         title: 'اقتباسات في الوجود والمعنى',
+        desc: 'مجموعة من أعمق الرؤى والحكم الفلسفية حول جوهر الحياة والحرية والأخلاق.',
         btn: 'استكشف مكتبة الاقتباسات ←',
-        items: [
-          {
-            text: 'في عمق الشتاء، تعلمت أخيرًا أن في داخلي صيفًا لا يُقهر.',
-            author: 'ألبير كامو',
-            link: null
-          },
-          {
-            text: 'من يملك "لماذا" يعيش من أجلها، يمكنه تحمل أي "كيف" تقريبًا.',
-            author: 'فريدريك نيتشه',
-            link: null
-          },
-          {
-            text: 'الحياة التي لا تُفحص لا تستحق أن تُعاش.',
-            author: 'سقراط',
-            link: null
-          }
-        ]
+        featured: {
+          text: 'في عمق الشتاء، تعلمت أخيرًا أن في داخلي صيفًا لا يُقهر.',
+          author: 'ألبير كامو',
+          link: null
+        }
       },
       fr: {
         badge: '📜 Sélection philosophique',
         title: 'Citations sur l\'existence & la liberté',
+        desc: 'Une sélection de réflexions majeures sur la condition humaine, le sens et la liberté intérieure.',
         btn: 'Explorer toutes les citations ←',
-        items: [
-          {
-            text: 'Au milieu de l\'hiver, j\'ai découvert en moi un invincible été.',
-            author: 'Albert Camus',
-            link: null
-          },
-          {
-            text: 'Celui qui a un pourquoi qui lui tient lieu de but peut s\'accommoder de presque tous les comment.',
-            author: 'Friedrich Nietzsche',
-            link: null
-          },
-          {
-            text: 'Une vie sans examen ne vaut pas la peine d\'être vécue.',
-            author: 'Socrate',
-            link: null
-          }
-        ]
+        featured: {
+          text: 'Au milieu de l\'hiver, j\'ai découvert en moi un invincible été.',
+          author: 'Albert Camus',
+          link: null
+        }
       },
       en: {
         badge: '📜 Philosophical Selection',
         title: 'Quotes on Existence & Meaning',
+        desc: 'A curated selection of timeless insights into human existence, reason, and inner freedom.',
         btn: 'Explore All Quotes ←',
-        items: [
-          {
-            text: 'In the depth of winter, I finally learned that within me there lay an invincible summer.',
-            author: 'Albert Camus',
-            link: null
-          },
-          {
-            text: 'He who has a why to live can bear almost any how.',
-            author: 'Friedrich Nietzsche',
-            link: null
-          },
-          {
-            text: 'The unexamined life is not worth living.',
-            author: 'Socrates',
-            link: null
-          }
-        ]
+        featured: {
+          text: 'In the depth of winter, I finally learned that within me there lay an invincible summer.',
+          author: 'Albert Camus',
+          link: null
+        }
       }
     }
   },
@@ -184,68 +151,35 @@ export const PILLAR_RESOURCES_DATA = {
       ar: {
         badge: '📜 إضاءات سيكولوجية',
         title: 'اقتباسات في النفس والسلوك',
+        desc: 'حكم ملهمة تسبر أغوار العقل البشري، وتكشف أسرار التوازن العاطفي والنمو النفسي.',
         btn: 'استكشف مكتبة الاقتباسات ←',
-        items: [
-          {
-            text: 'من ينظر إلى الخارج يحلم، ومن ينظر إلى الداخل يستيقظ.',
-            author: 'كارل يونغ',
-            link: null
-          },
-          {
-            text: 'من مواطن ضعفك ستخرج قوتك الأعمق.',
-            author: 'سيغموند فرويد',
-            link: null
-          },
-          {
-            text: 'بين المثير والاستجابة توجد مساحة، وفي تلك المساحة تكمن حريتنا في الاختيار.',
-            author: 'فيكتور فرانكل',
-            link: '../thinkers/viktor-frankl/'
-          }
-        ]
+        featured: {
+          text: 'بين المثير والاستجابة توجد مساحة، وفي تلك المساحة تكمن حريتنا في الاختيار.',
+          author: 'فيكتور فرانكل',
+          link: '../thinkers/viktor-frankl/'
+        }
       },
       fr: {
         badge: '📜 Éclairages psychologiques',
         title: 'Citations sur la psyché & les émotions',
+        desc: 'Des pensées fondatrices sur les ressorts profonds de l\'esprit humain, la résilience et la liberté de choix.',
         btn: 'Explorer toutes les citations ←',
-        items: [
-          {
-            text: 'Celui qui regarde à l\'extérieur rêve, celui qui regarde à l\'intérieur s\'éveille.',
-            author: 'Carl Jung',
-            link: null
-          },
-          {
-            text: 'C\'est de vos vulnérabilités que sortira votre force.',
-            author: 'Sigmund Freud',
-            link: null
-          },
-          {
-            text: 'Entre le stimulus et la réponse, il y a un espace où réside notre pouvoir de choisir.',
-            author: 'Viktor Frankl',
-            link: '../thinkers/viktor-frankl/'
-          }
-        ]
+        featured: {
+          text: 'Entre le stimulus et la réponse, il y a un espace où réside notre pouvoir de choisir.',
+          author: 'Viktor Frankl',
+          link: '../thinkers/viktor-frankl/'
+        }
       },
       en: {
         badge: '📜 Psychological Insights',
         title: 'Quotes on Mind & Emotions',
+        desc: 'Foundational thoughts exploring the depths of human behavior, emotional resilience, and consciousness.',
         btn: 'Explore All Quotes ←',
-        items: [
-          {
-            text: 'Who looks outside, dreams; who looks inside, awakes.',
-            author: 'Carl Jung',
-            link: null
-          },
-          {
-            text: 'Out of your vulnerabilities will come your strength.',
-            author: 'Sigmund Freud',
-            link: null
-          },
-          {
-            text: 'Between stimulus and response there is a space. In that space is our power to choose.',
-            author: 'Viktor Frankl',
-            link: '../thinkers/viktor-frankl/'
-          }
-        ]
+        featured: {
+          text: 'Between stimulus and response there is a space. In that space is our power to choose.',
+          author: 'Viktor Frankl',
+          link: '../thinkers/viktor-frankl/'
+        }
       }
     }
   },
@@ -304,68 +238,35 @@ export const PILLAR_RESOURCES_DATA = {
       ar: {
         badge: '📜 مبادئ النمو والانضباط',
         title: 'اقتباسات في العادات والنجاح المستدام',
+        desc: 'قواعد رصينة في هندسة السلوك وبناء الاستمرارية اليومية وتجاوز التسويف والعقبات.',
         btn: 'استكشف مكتبة الاقتباسات ←',
-        items: [
-          {
-            text: 'كل حياتنا، في شكلها العملي، ليست سوى كتلة من العادات المنظمة.',
-            author: 'ويليام جيمس',
-            link: '../thinkers/william-james/'
-          },
-          {
-            text: 'الإيمان بقدرتك على النجاح هو المحرك الأساسي لتحقيق الأهداف وتجاوز الصعاب.',
-            author: 'ألبرت باندورا',
-            link: '../thinkers/albert-bandura/'
-          },
-          {
-            text: 'الحماس شائع، لكن العزيمة والجلد هما العملة النادرة للنجاح المستدام.',
-            author: 'أنجيلا داكورث',
-            link: '../thinkers/angela-duckworth/'
-          }
-        ]
+        featured: {
+          text: 'كل حياتنا، في شكلها العملي، ليست سوى كتلة من العادات المنظمة.',
+          author: 'ويليام جيمس',
+          link: '../thinkers/william-james/'
+        }
       },
       fr: {
         badge: '📜 Principes d\'action',
         title: 'Citations sur la discipline & la constance',
+        desc: 'Des clés éprouvées sur l\'ingénierie des habitudes, la persévérance quotidienne et la maîtrise de soi.',
         btn: 'Explorer toutes les citations ←',
-        items: [
-          {
-            text: 'Toute notre vie, pour autant qu\'elle a une forme définie, n\'est qu\'une masse d\'habitudes.',
-            author: 'William James',
-            link: '../thinkers/william-james/'
-          },
-          {
-            text: 'La croyance en sa propre efficacité détermine la façon dont les individus pensent et agissent.',
-            author: 'Albert Bandura',
-            link: '../thinkers/albert-bandura/'
-          },
-          {
-            text: 'L\'enthousiasme est courant. La persévérance et la ténacité sont rares.',
-            author: 'Angela Duckworth',
-            link: '../thinkers/angela-duckworth/'
-          }
-        ]
+        featured: {
+          text: 'Toute notre vie, pour autant qu\'elle a une forme définie, n\'est qu\'une masse d\'habitudes.',
+          author: 'William James',
+          link: '../thinkers/william-james/'
+        }
       },
       en: {
         badge: '📜 Principles of Growth',
         title: 'Quotes on Discipline & Consistency',
+        desc: 'Actionable principles on habit architecture, daily perseverance, and long-term mastery.',
         btn: 'Explore All Quotes ←',
-        items: [
-          {
-            text: 'All our life, so far as it has definite form, is but a mass of habits.',
-            author: 'William James',
-            link: '../thinkers/william-james/'
-          },
-          {
-            text: 'Self-belief does not ensure success, but self-disbelief assuredly spawns failure.',
-            author: 'Albert Bandura',
-            link: '../thinkers/albert-bandura/'
-          },
-          {
-            text: 'Enthusiasm is common. Endurance is rare.',
-            author: 'Angela Duckworth',
-            link: '../thinkers/angela-duckworth/'
-          }
-        ]
+        featured: {
+          text: 'All our life, so far as it has definite form, is but a mass of habits.',
+          author: 'William James',
+          link: '../thinkers/william-james/'
+        }
       }
     }
   },
@@ -428,68 +329,35 @@ export const PILLAR_RESOURCES_DATA = {
       ar: {
         badge: '📜 حكمة خالدة',
         title: 'اقتباسات في الصبر والسكينة',
+        desc: 'تأملات عميقة في الرضا، والهدوء الداخلي، وفن العيش بسلام مع تقلبات الحياة.',
         btn: 'استكشف مكتبة الاقتباسات ←',
-        items: [
-          {
-            text: 'أنت تملك السيطرة على عقلك، لا على الأحداث الخارجية؛ أدرك هذا وستجد القوة والسكينة.',
-            author: 'ماركوس أوريليوس',
-            link: null
-          },
-          {
-            text: 'رحلة الألف ميل تبدأ بخطوة واحدة.',
-            author: 'لاوتسو',
-            link: null
-          },
-          {
-            text: 'الصمت صديق مخلص لا يخون أبدًا.',
-            author: 'كونفوشيوس',
-            link: null
-          }
-        ]
+        featured: {
+          text: 'أنت تملك السيطرة على عقلك، لا على الأحداث الخارجية؛ أدرك هذا وستجد القوة والسكينة.',
+          author: 'ماركوس أوريليوس',
+          link: null
+        }
       },
       fr: {
         badge: '📜 Sagesse intemporelle',
         title: 'Citations sur le calme & la patience',
+        desc: 'Des méditations lumineuses sur la sérénité, la patience face aux épreuves et l\'art de la paix intérieure.',
         btn: 'Explorer toutes les citations ←',
-        items: [
-          {
-            text: 'Tu as le pouvoir sur ton esprit, non sur les événements extérieurs. Comprends cela, et tu trouveras la force.',
-            author: 'Marc Aurèle',
-            link: null
-          },
-          {
-            text: 'Un voyage de mille lieues commence toujours par un premier pas.',
-            author: 'Lao Tseu',
-            link: null
-          },
-          {
-            text: 'Le silence est un ami qui ne trahit jamais.',
-            author: 'Confucius',
-            link: null
-          }
-        ]
+        featured: {
+          text: 'Tu as le pouvoir sur ton esprit, non sur les événements extérieurs. Comprends cela, et tu trouveras la force.',
+          author: 'Marc Aurèle',
+          link: null
+        }
       },
       en: {
         badge: '📜 Timeless Wisdom',
         title: 'Quotes on Serenity & Patience',
+        desc: 'Profound reflections on inner peace, quiet endurance, and the noble art of living mindfully.',
         btn: 'Explore All Quotes ←',
-        items: [
-          {
-            text: 'You have power over your mind - not outside events. Realize this, and you will find strength.',
-            author: 'Marcus Aurelius',
-            link: null
-          },
-          {
-            text: 'A journey of a thousand miles begins with a single step.',
-            author: 'Lao Tzu',
-            link: null
-          },
-          {
-            text: 'Silence is a true friend who never betrays.',
-            author: 'Confucius',
-            link: null
-          }
-        ]
+        featured: {
+          text: 'You have power over your mind - not outside events. Realize this, and you will find strength.',
+          author: 'Marcus Aurelius',
+          link: null
+        }
       }
     }
   },
@@ -543,68 +411,35 @@ export const PILLAR_RESOURCES_DATA = {
       ar: {
         badge: '📜 حكم التراث الإسلامي',
         title: 'اقتباسات في المعرفة وتزكية النفس',
+        desc: 'جواهر فكرية وروحية من أعلام الحضارة الإسلامية في ترسيخ العدل، ونشر العلم، وبناء النفس الإنسانية.',
         btn: 'استكشف مكتبة الاقتباسات ←',
-        items: [
-          {
-            text: 'العلم بلا عمل جنون، والعمل بغير علم لا يكون.',
-            author: 'أبو حامد الغزالي',
-            link: null
-          },
-          {
-            text: 'العدل أساس العمران، والظلم مؤذن بخراب البنيان.',
-            author: 'ابن خلدون',
-            link: null
-          },
-          {
-            text: 'الوهم نصف الداء، والاطمئنان نصف الدواء، والصبر أول خطوات الشفاء.',
-            author: 'ابن سينا',
-            link: null
-          }
-        ]
+        featured: {
+          text: 'العلم بلا عمل جنون، والعمل بغير علم لا يكون.',
+          author: 'أبو حامد الغزالي',
+          link: null
+        }
       },
       fr: {
         badge: '📜 Sagesse & Pensée islamique',
         title: 'Citations sur le savoir & la spiritualité',
+        desc: 'Des joyaux de réflexion issus des grands penseurs musulmans sur la justice, l\'action féconde et l\'élévation de l\'âme.',
         btn: 'Explorer toutes les citations ←',
-        items: [
-          {
-            text: 'Le savoir sans action est folie, et l\'action sans savoir est vaine.',
-            author: 'Al-Ghazali',
-            link: null
-          },
-          {
-            text: 'La justice est le fondement de la civilisation, et l\'injustice annonce son déclin.',
-            author: 'Ibn Khaldoun',
-            link: null
-          },
-          {
-            text: 'L\'illusion est la moitié du mal, la quiétude est la moitié du remède, et la patience est le premier pas vers la guérison.',
-            author: 'Ibn Sina (Avicenne)',
-            link: null
-          }
-        ]
+        featured: {
+          text: 'Le savoir sans action est folie, et l\'action sans savoir est vaine.',
+          author: 'Al-Ghazali',
+          link: null
+        }
       },
       en: {
         badge: '📜 Islamic Heritage & Wisdom',
         title: 'Quotes on Knowledge & Spirituality',
+        desc: 'Timeless gems of spiritual and ethical wisdom from great Islamic scholars on justice, knowledge, and inner purpose.',
         btn: 'Explore All Quotes ←',
-        items: [
-          {
-            text: 'Knowledge without action is vanity, and action without knowledge is futile.',
-            author: 'Al-Ghazali',
-            link: null
-          },
-          {
-            text: 'Justice is the foundation of civilization, and injustice heralds its ruin.',
-            author: 'Ibn Khaldun',
-            link: null
-          },
-          {
-            text: 'Illusion is half the disease, tranquility is half the cure, and patience is the first step toward healing.',
-            author: 'Ibn Sina (Avicenna)',
-            link: null
-          }
-        ]
+        featured: {
+          text: 'Knowledge without action is vanity, and action without knowledge is futile.',
+          author: 'Al-Ghazali',
+          link: null
+        }
       }
     }
   }
@@ -612,19 +447,19 @@ export const PILLAR_RESOURCES_DATA = {
 
 const PILLAR_HEADERS = {
   ar: {
-    eyebrow: 'موارد إضافية',
+    eyebrow: '✨ موارد إضافية',
     title: 'استكشف بطرق أخرى',
     intro: 'تعمق في هذا الركن الفكري عبر الوسائط الصوتية، والاختبارات التفاعلية، والاقتباسات الخالدة.'
   },
   fr: {
-    eyebrow: 'Ressources complémentaires',
+    eyebrow: '✨ Ressources complémentaires',
     title: 'Explorer autrement',
-    intro: 'Approfondissez ce pilier grâce aux formats audio, aux quiz et aux citations.'
+    intro: 'Approfondissez ce pilier grâce aux formats audio, aux quiz interactifs et aux citations inspirantes.'
   },
   en: {
-    eyebrow: 'Additional Resources',
+    eyebrow: '✨ Additional Resources',
     title: 'Explore Further',
-    intro: 'Deepen this pillar through audio formats, interactive quizzes, and timeless quotes.'
+    intro: 'Deepen your journey into this pillar through audiobooks, interactive quizzes, and timeless quotes.'
   }
 };
 
@@ -651,7 +486,7 @@ export function renderPillarResources(container, pillarKey, lang = 'ar') {
   const quotesContent = quotes[validLang] || quotes['ar'];
 
   el.innerHTML = `
-  <div class="pillar-resources-container">
+  <div class="pillar-resources-container section-container">
     <header class="pillar-resources-header">
       <span class="pillar-resources-eyebrow" id="pillarResEyebrow">${header.eyebrow}</span>
       <h2 class="pillar-resources-title" id="pillarResourcesTitle">${header.title}</h2>
@@ -661,30 +496,42 @@ export function renderPillarResources(container, pillarKey, lang = 'ar') {
     <div class="pillar-resources-grid">
       <!-- 1. CARTE AUDIO -->
       <article class="pillar-resource-card pillar-resource-audio ${audio.status === 'coming_soon' ? 'is-coming-soon' : ''}">
-        <div>
-          <span class="pillar-card-badge">${audioContent.badge}</span>
-          <h3 class="pillar-card-title">${audioContent.title}</h3>
-          <p class="pillar-card-desc">${audioContent.desc}</p>
-          ${audio.status === 'available' ? `<div class="pillar-card-meta">${audioContent.meta}</div>` : ''}
-        </div>
-        ${audio.status === 'available' ?
-          `<a href="${audio.url}" class="pillar-card-btn" aria-label="${audioContent.btn}">${audioContent.btn}</a>` :
-          `<span class="pillar-resource-status">${audioContent.statusLabel || 'قريبًا ⏳'}</span>`
-        }
+        ${audio.status === 'coming_soon' ? `
+          <div class="pillar-coming-soon-body">
+            <span class="pillar-card-badge">${audioContent.badge}</span>
+            <h3 class="pillar-card-title">${audioContent.title}</h3>
+            <p class="pillar-card-desc">${audioContent.desc}</p>
+            <span class="pillar-resource-status">${audioContent.statusLabel || 'قريبًا ⏳'}</span>
+          </div>
+        ` : `
+          <div>
+            <span class="pillar-card-badge">${audioContent.badge}</span>
+            <h3 class="pillar-card-title">${audioContent.title}</h3>
+            <p class="pillar-card-desc">${audioContent.desc}</p>
+            <div class="pillar-card-meta">${audioContent.meta}</div>
+          </div>
+          <a href="${audio.url}" class="pillar-card-btn" aria-label="${audioContent.btn}">${audioContent.btn}</a>
+        `}
       </article>
 
       <!-- 2. CARTE QUIZ -->
       <article class="pillar-resource-card pillar-resource-quiz ${quiz.status === 'coming_soon' ? 'is-coming-soon' : ''}">
-        <div>
-          <span class="pillar-card-badge">${quizContent.badge}</span>
-          <h3 class="pillar-card-title">${quizContent.title}</h3>
-          <p class="pillar-card-desc">${quizContent.desc}</p>
-          ${quiz.status === 'available' ? `<div class="pillar-card-meta">${quizContent.meta}</div>` : ''}
-        </div>
-        ${quiz.status === 'available' ?
-          `<a href="${quiz.url}" class="pillar-card-btn" aria-label="${quizContent.btn}">${quizContent.btn}</a>` :
-          `<span class="pillar-resource-status">${quizContent.statusLabel || 'قريبًا ⏳'}</span>`
-        }
+        ${quiz.status === 'coming_soon' ? `
+          <div class="pillar-coming-soon-body">
+            <span class="pillar-card-badge">${quizContent.badge}</span>
+            <h3 class="pillar-card-title">${quizContent.title}</h3>
+            <p class="pillar-card-desc">${quizContent.desc}</p>
+            <span class="pillar-resource-status">${quizContent.statusLabel || 'قريبًا ⏳'}</span>
+          </div>
+        ` : `
+          <div>
+            <span class="pillar-card-badge">${quizContent.badge}</span>
+            <h3 class="pillar-card-title">${quizContent.title}</h3>
+            <p class="pillar-card-desc">${quizContent.desc}</p>
+            <div class="pillar-card-meta">${quizContent.meta}</div>
+          </div>
+          <a href="${quiz.url}" class="pillar-card-btn" aria-label="${quizContent.btn}">${quizContent.btn}</a>
+        `}
       </article>
 
       <!-- 3. CARTE CITATIONS -->
@@ -692,21 +539,15 @@ export function renderPillarResources(container, pillarKey, lang = 'ar') {
         <div>
           <span class="pillar-card-badge">${quotesContent.badge}</span>
           <h3 class="pillar-card-title">${quotesContent.title}</h3>
-          <div class="pillar-quotes-list">
-            ${quotesContent.items.map(item => `
-              <div class="pillar-quote-item">
-                <p class="pillar-quote-text">« ${item.text} »</p>
-                <div class="pillar-quote-author">
-                  ${item.link ? `<a href="${item.link}">— ${item.author}</a>` : `<span>— ${item.author}</span>`}
-                </div>
-              </div>
-            `).join('')}
+          <p class="pillar-card-desc">${quotesContent.desc}</p>
+          <div class="pillar-quote-featured">
+            <p class="pillar-quote-featured-text">« ${quotesContent.featured.text} »</p>
+            <div class="pillar-quote-featured-author">
+              ${quotesContent.featured.link ? `<a href="${quotesContent.featured.link}">— ${quotesContent.featured.author}</a>` : `<span>— ${quotesContent.featured.author}</span>`}
+            </div>
           </div>
         </div>
-        ${quotes.status === 'available' ?
-          `<a href="${quotes.url}" class="pillar-card-btn" aria-label="${quotesContent.btn}">${quotesContent.btn}</a>` :
-          `<span class="pillar-resource-status">${quotesContent.statusLabel || 'قريبًا ⏳'}</span>`
-        }
+        <a href="${quotes.url}" class="pillar-card-btn" aria-label="${quotesContent.btn}">${quotesContent.btn}</a>
       </article>
     </div>
   </div>
