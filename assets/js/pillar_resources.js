@@ -1,7 +1,7 @@
 /**
  * ============================================================
  * HIKMA & NOUR — PILLAR RESOURCES MODULE (V6 PREMIUM)
- * Compléments Audio, Quiz & Citations pour toutes les pages piliers
+ * Compléments Audio, Quiz & Citations avec Illustrations HD
  * ============================================================
  */
 
@@ -10,6 +10,7 @@ export const PILLAR_RESOURCES_DATA = {
     audio: {
       status: 'available',
       bookKey: 'etranger',
+      image: '../audio_etranger_cover.jpg',
       url: '../audio/?book=etranger',
       ar: {
         badge: '🎧 كتاب صوتي فلسفي',
@@ -35,6 +36,7 @@ export const PILLAR_RESOURCES_DATA = {
     },
     quiz: {
       status: 'available',
+      image: '../featured_philosopher.jpg',
       url: '../quizzes/which-philosopher-are-you.html',
       ar: {
         badge: '🧩 اختبار تفاعلي',
@@ -60,6 +62,7 @@ export const PILLAR_RESOURCES_DATA = {
     },
     quotes: {
       status: 'available',
+      image: '../autumn_forest_solitude_walk.jpg',
       url: '../quotes/',
       ar: {
         badge: '📜 مختارات فلسفية',
@@ -101,6 +104,7 @@ export const PILLAR_RESOURCES_DATA = {
     audio: {
       status: 'available',
       bookKey: 'crime_punishment',
+      image: '../audio_crime_punishment_cover.jpg',
       url: '../audio/?book=crime_punishment',
       ar: {
         badge: '🎧 كتاب صوتي سيكولوجي',
@@ -126,6 +130,7 @@ export const PILLAR_RESOURCES_DATA = {
     },
     quiz: {
       status: 'coming_soon',
+      image: '../carl-jung-shadow.jpg',
       ar: {
         badge: '🧩 اختبار سيكولوجي',
         title: 'اختبارات علم النفس',
@@ -147,6 +152,7 @@ export const PILLAR_RESOURCES_DATA = {
     },
     quotes: {
       status: 'available',
+      image: '../silence_wisdom_action.jpg',
       url: '../quotes/',
       ar: {
         badge: '📜 إضاءات سيكولوجية',
@@ -188,6 +194,7 @@ export const PILLAR_RESOURCES_DATA = {
     audio: {
       status: 'available',
       bookKey: 'alchemist',
+      image: '../audio_alchemist_cover.jpg',
       url: '../audio/?book=alchemist',
       ar: {
         badge: '🎧 كتاب صوتي ملهم',
@@ -213,6 +220,7 @@ export const PILLAR_RESOURCES_DATA = {
     },
     quiz: {
       status: 'coming_soon',
+      image: '../dev_habits_hd.jpg',
       ar: {
         badge: '🧩 اختبار العادات والإنتاجية',
         title: 'اختبارات الانضباط والعادات',
@@ -234,6 +242,7 @@ export const PILLAR_RESOURCES_DATA = {
     },
     quotes: {
       status: 'available',
+      image: '../continue_advancing_glass_bridge.jpg',
       url: '../quotes/',
       ar: {
         badge: '📜 مبادئ النمو والانضباط',
@@ -275,6 +284,7 @@ export const PILLAR_RESOURCES_DATA = {
     audio: {
       status: 'available',
       bookKey: 'vieux',
+      image: '../audio_vieux_cover.jpg',
       url: '../audio/?book=vieux',
       ar: {
         badge: '🎧 قصة صوتية تأملية',
@@ -300,6 +310,7 @@ export const PILLAR_RESOURCES_DATA = {
     },
     quiz: {
       status: 'available',
+      image: '../inner_peace_lake_sunrise.jpg',
       url: '../quizzes/inner-peace-level.html',
       ar: {
         badge: '🧩 اختبار السلام الداخلي',
@@ -325,6 +336,7 @@ export const PILLAR_RESOURCES_DATA = {
     },
     quotes: {
       status: 'available',
+      image: '../pillar_wisdom_hd.jpg',
       url: '../quotes/',
       ar: {
         badge: '📜 حكمة خالدة',
@@ -365,6 +377,7 @@ export const PILLAR_RESOURCES_DATA = {
   islam: {
     audio: {
       status: 'coming_soon',
+      image: '../islamic_thought_hd.jpg',
       ar: {
         badge: '🎧 صوتيات روحية',
         title: 'الصوتيات الروحية والفكرية',
@@ -386,6 +399,7 @@ export const PILLAR_RESOURCES_DATA = {
     },
     quiz: {
       status: 'coming_soon',
+      image: '../islam_parcours_01.jpg',
       ar: {
         badge: '🧩 اختبارات الفكر الإسلامي',
         title: 'اختبار المعرفة والحكمة',
@@ -407,6 +421,7 @@ export const PILLAR_RESOURCES_DATA = {
     },
     quotes: {
       status: 'available',
+      image: '../bookshelves_candle.jpg',
       url: '../quotes/',
       ar: {
         badge: '📜 حكم التراث الإسلامي',
@@ -496,6 +511,11 @@ export function renderPillarResources(container, pillarKey, lang = 'ar') {
     <div class="pillar-resources-grid">
       <!-- 1. CARTE AUDIO -->
       <article class="pillar-resource-card pillar-resource-audio ${audio.status === 'coming_soon' ? 'is-coming-soon' : ''}">
+        ${audio.image ? `
+          <div class="pillar-card-img-box">
+            <img src="${audio.image}" alt="${audioContent.title}" class="pillar-card-img" loading="lazy" />
+          </div>
+        ` : ''}
         ${audio.status === 'coming_soon' ? `
           <div class="pillar-coming-soon-body">
             <span class="pillar-card-badge">${audioContent.badge}</span>
@@ -516,6 +536,11 @@ export function renderPillarResources(container, pillarKey, lang = 'ar') {
 
       <!-- 2. CARTE QUIZ -->
       <article class="pillar-resource-card pillar-resource-quiz ${quiz.status === 'coming_soon' ? 'is-coming-soon' : ''}">
+        ${quiz.image ? `
+          <div class="pillar-card-img-box">
+            <img src="${quiz.image}" alt="${quizContent.title}" class="pillar-card-img" loading="lazy" />
+          </div>
+        ` : ''}
         ${quiz.status === 'coming_soon' ? `
           <div class="pillar-coming-soon-body">
             <span class="pillar-card-badge">${quizContent.badge}</span>
@@ -536,6 +561,11 @@ export function renderPillarResources(container, pillarKey, lang = 'ar') {
 
       <!-- 3. CARTE CITATIONS -->
       <article class="pillar-resource-card pillar-resource-quotes ${quotes.status === 'coming_soon' ? 'is-coming-soon' : ''}">
+        ${quotes.image ? `
+          <div class="pillar-card-img-box">
+            <img src="${quotes.image}" alt="${quotesContent.title}" class="pillar-card-img" loading="lazy" />
+          </div>
+        ` : ''}
         <div>
           <span class="pillar-card-badge">${quotesContent.badge}</span>
           <h3 class="pillar-card-title">${quotesContent.title}</h3>
