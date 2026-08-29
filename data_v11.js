@@ -3206,6 +3206,7 @@ const TIKTOK_DATA = {
         {
           "id": "redevenir-constant-apres-abandon",
           "file": "redevenir-constant-apres-abandon.html",
+          "featured": true,
           "title": "كيف تستعيد الاستمرارية بعد أن توقفت مرات عديدة؟",
           "category": "development",
           "categoryName": "تطوير الذات • الانضباط والعادات",
@@ -3237,6 +3238,7 @@ const TIKTOK_DATA = {
         {
           "id": "redevenir-constant-apres-abandon",
           "file": "redevenir-constant-apres-abandon.html",
+          "featured": true,
           "title": "How to Become Consistent Again After Giving Up Several Times",
           "category": "development",
           "categoryName": "Self-Growth • Discipline & Habits",
@@ -3268,6 +3270,7 @@ const TIKTOK_DATA = {
         {
           "id": "redevenir-constant-apres-abandon",
           "file": "redevenir-constant-apres-abandon.html",
+          "featured": true,
           "title": "Comment redevenir constant après avoir abandonné plusieurs fois",
           "category": "development",
           "categoryName": "Développement personnel • Discipline & Habitudes",
