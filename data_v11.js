@@ -4856,6 +4856,20 @@ const TIKTOK_DATA = {
           "pillar": "psychologie",
           "published": true,
           "featured": false
+        },
+        {
+          "id": "pourquoi-cherchons-nous-approbation",
+          "title": "Pourquoi cherchons-nous l’approbation des autres ?",
+          "desc": "Comprendre le besoin de validation et retrouver une direction plus intérieure sans dépendre du regard d'autrui.",
+          "file": "pourquoi-cherchons-nous-approbation.html",
+          "image": "psychologie/images/thumb-besoin-approbation.jpg",
+          "imageAlt": "Une lampe dorée se reflète dans une succession de miroirs anciens.",
+          "readTime": "13 min de lecture",
+          "date": "Dimanche 30 août 2026",
+          "category": "psychology",
+          "pillar": "psychologie",
+          "published": true,
+          "featured": false
         }
       ],
       "faq": [
@@ -9233,6 +9247,20 @@ const TIKTOK_DATA = {
           "image": "psychologie/images/thumb-esprit-imagine-le-pire.jpg",
           "imageAlt": "A lamp illuminates a stone while branch shadows remain blurred.",
           "readTime": "12 min read",
+          "date": "Sunday, August 30, 2026",
+          "category": "psychology",
+          "pillar": "psychologie",
+          "published": true,
+          "featured": false
+        },
+        {
+          "id": "pourquoi-cherchons-nous-approbation",
+          "title": "Why Do We Seek Other People’s Approval?",
+          "desc": "Understanding the need for validation and developing a steadier inner direction without external dependency.",
+          "file": "pourquoi-cherchons-nous-approbation.html",
+          "image": "psychologie/images/thumb-besoin-approbation.jpg",
+          "imageAlt": "A golden lamp is reflected through a series of antique mirrors.",
+          "readTime": "13 min read",
           "date": "Sunday, August 30, 2026",
           "category": "psychology",
           "pillar": "psychologie",
@@ -13814,6 +13842,20 @@ const TIKTOK_DATA = {
           "image": "psychologie/images/thumb-esprit-imagine-le-pire.jpg",
           "imageAlt": "مصباح يضيء حجرًا بينما تبقى ظلال الأغصان ضبابية.",
           "readTime": "١٢ دقيقة قراءة",
+          "date": "الأحد، ٣٠ أغسطس ٢٠٢٦",
+          "category": "psychology",
+          "pillar": "psychologie",
+          "published": true,
+          "featured": false
+        },
+        {
+          "id": "pourquoi-cherchons-nous-approbation",
+          "title": "لماذا نبحث عن استحسان الآخرين؟",
+          "desc": "فهم الحاجة إلى القبول واستعادة اتجاه داخلي أكثر ثباتًا: تفكيك التبعية لنظرة الناس وبناء تقدير ذاتي مستقل.",
+          "file": "pourquoi-cherchons-nous-approbation.html",
+          "image": "psychologie/images/thumb-besoin-approbation.jpg",
+          "imageAlt": "مصباح ذهبي ينعكس في سلسلة من المرايا القديمة.",
+          "readTime": "١٣ دقيقة قراءة",
           "date": "الأحد، ٣٠ أغسطس ٢٠٢٦",
           "category": "psychology",
           "pillar": "psychologie",

@@ -615,6 +615,7 @@ function openArticleReader(slugOrFile) {
   }
 
   if (article && article.file && (
+    article.file.includes('pourquoi-cherchons-nous-approbation') ||
     article.file.includes('pourquoi-esprit-imagine-le-pire') ||
     article.file.includes('deja-vu-familiarite-memoire') ||
     article.file.includes('stop-overthinking') ||
