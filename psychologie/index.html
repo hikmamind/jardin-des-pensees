@@ -1641,8 +1641,9 @@
         let html = '';
         if (list.length > 0) {
           html = list.map(art => {
-            const readBtn = TIKTOK_DATA.ui[lang].readArticleBtn || 'اقرأ المقال →';
-            const readTimeText = lang === 'ar' ? `⏱️ ${art.readTime}` : `⏱️ ${art.readTime}`;
+            const readBtn = (TIKTOK_DATA.ui[lang] && TIKTOK_DATA.ui[lang].readArticleBtn) || (lang === 'ar' ? 'اقرأ المقال ←' : (lang === 'fr' ? 'Lire l\'article →' : 'Read article →'));
+            const readTimeText = art.readTime ? (lang === 'ar' ? `⏱️ ${art.readTime}` : `⏱️ ${art.readTime}`) : '';
+            const descText = art.desc || art.summary || '';
             return `
               <article class="psy-parcours-card" data-parcours="${articleParcoursMap[art.id]}">
                 <div class="psy-parcours-imgbox" style="height: 160px;">
@@ -1655,7 +1656,7 @@
                     <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 10px; line-height: 1.4;">
                       <a href="${articlePathMap[art.id]}" style="color: inherit; text-decoration: none;">${art.title}</a>
                     </h3>
-                    <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.65; margin-bottom: 20px;">${art.summary}</p>
+                    <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.65; margin-bottom: 20px;">${descText}</p>
                   </div>
                   <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(201, 168, 106, 0.15); padding-top: 14px; margin-top: auto;">
                     <span style="font-size: 0.82rem; color: #A9AAA4;">${readTimeText}</span>
@@ -2497,7 +2498,7 @@
               ${targetArticleIds.map(artId => {
                 const artObj = allArticles.find(a => a.id === artId);
                 const aTitle = artObj ? artObj.title : artId;
-                const aSummary = artObj ? artObj.summary : '';
+                const aSummary = artObj ? (artObj.desc || artObj.summary || '') : '';
                 const aUrl = articlePathMap[artId] || `../articles/${artId}.html`;
                 return `
                   <article class="psy-parcours-card" style="padding: 24px; display: flex; flex-direction: column;">
