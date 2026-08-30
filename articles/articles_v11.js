@@ -615,6 +615,7 @@ function openArticleReader(slugOrFile) {
   }
 
   if (article && article.file && (
+    article.file.includes('stop-overthinking') ||
     article.file.includes('discipline-sans-epuisement') ||
     article.file.includes('redevenir-constant-apres-abandon') ||
     article.file.includes('nouvel-essor-apres-difficultes') ||

@@ -4678,123 +4678,34 @@ const TIKTOK_DATA = {
         {
           "id": "stop-overthinking",
           "file": "stop-overthinking.html",
-          "title": "Comment Stopper les Pensées Obsédantes et l'Anxiété ?",
+          "featured": false,
+          "title": "La pensée excessive et le retour au calme : comment apaiser le flux mental",
           "category": "psychology",
-          "categoryName": "Psychologie & Sérénité",
-          "readTime": "6 min de lecture",
-          "date": "20 Mai 2026",
+          "categoryName": "Psychologie • Esprit & Comportement",
+          "readTime": "12 min de lecture",
+          "date": "30 Août 2026",
           "author": "Hikma & Nour | حكمة ونور",
-          "desc": "Un guide pratique et éprouvé pour briser le cycle des ruminations mentales, calmer le système nerveux et retrouver la sérénité du moment présent.",
-          "image": "overthinking_calm.jpg",
-          "imageAlt": "Une personne méditant sereinement au lever du soleil libérée de l'anxiété et des ruminations",
-          "quote": "L'anxiété ne vide pas demain de ses peines, elle vide seulement aujourd'hui de sa force.",
-          "quoteAuthor": "— Arthur Schopenhauer",
+          "desc": "Un guide psychologique et pratique pour comprendre la rumination, désamorcer les boucles mentales et retrouver une présence apaisée sans culpabilité.",
+          "image": "psychologie/images/thumb-pensee-excessive-calme.jpg",
+          "imageAlt": "Une silhouette observe un lac tandis que des fils lumineux désordonnés deviennent progressivement calmes.",
+          "quote": "Le calme ne vient pas de la possession de toutes les réponses, mais de l'acceptation de l'incertitude.",
+          "quoteAuthor": "— Hikma & Nour",
           "toc": [
-            "Introduction",
-            "1. Qu'est-ce que l'anxiété et le surmenage mental ?",
-            "2. Pourquoi ruminons-nous sans cesse ?",
-            "3. La dichotomie du contrôle stoïcienne",
-            "4. 7 étapes pratiques pour retrouver le calme",
-            "Conclusion : Vivre dans l'instant présent"
+            "Quand la réflexion devient une boucle",
+            "Pourquoi le cerveau cherche sans cesse une réponse",
+            "Réflexion utile, inquiétude et rumination",
+            "Les déclencheurs qui relancent la pensée excessive",
+            "Créer une distance avec ses pensées",
+            "Revenir au corps et au moment présent",
+            "Transformer une inquiétude en prochaine action",
+            "Protéger son attention et son environnement",
+            "Savoir quand demander du soutien",
+            "Une méthode douce sur sept jours pour retrouver du calme"
           ],
           "body": [
-            "Vous est-il déjà arrivé de vous réveiller en pleine nuit parce que votre esprit refusait de s'arrêter ? Vous avez peut-être rejoué la même scène des dizaines de fois ou imaginé des scénarios catastrophes qui ne se produiront jamais. Cette surcharge mentale et cette anxiété chronique sont parmi les plus grands voleurs de paix intérieure de notre époque.",
-            "Trop penser n'est pas un gage d'intelligence, mais un piège circulaire qui épuise votre énergie sans apporter de solution concrète. Sa racine provient souvent de la peur de l'échec ou d'un besoin irréaliste de tout contrôler.",
-            "La philosophie stoïcienne offre un remède souverain avec la 'dichotomie du contrôle' : séparez vos pensées entre ce qui dépend de vous (vos actions, votre attitude, vos choix présents) et ce qui ne dépend pas de vous (le passé, l'avenir, l'opinion des autres). Concentrez 100 % de votre énergie sur ce qui est en votre pouvoir.",
-            "Pour apaiser immédiatement votre esprit : 1. Notez vos pensées par écrit pour désencombrer votre cerveau. 2. Accordez-vous une 'fenêtre d'inquiétude' de 15 minutes par jour, puis passez à autre chose. 3. Marchez et bougez pour libérer les tensions corporelles. 4. Pratiquez la respiration lente pour reconnecter votre corps à l'instant présent."
-          ],
-          "comments": [
-            {
-              "author": "Maxime R.",
-              "time": "Il y a 1 heure",
-              "text": "La respiration carrée et l'ancrage sensoriel m'ont sauvé d'une crise d'angoisse. Merci pour cet article d'utilité publique."
-            },
-            {
-              "author": "Laura P.",
-              "time": "Il y a 3 heures",
-              "text": "La défusion cognitive est une technique révolutionnaire quand on a tendance à trop analyser."
-            }
-          ],
-          "chapo": "Combien de nuits précieuses sont dévorées par la rumination mentale et l'analyse sans fin de scénarios imaginaires qui ne se réaliseront jamais ? Comment briser l'engrenage du sur-penser et retrouver un esprit limpide et serein ?",
-          "summaryBox": {
-            "title": "✦ L'Antidote au sur-penser",
-            "summary": "L'overthinking n'est pas une preuve d'intelligence, mais un piège de l'anxiété. La délivrance réside dans le passage immédiat de la rumination abstraite à l'action concrète et à l'ancrage sensoriel dans le présent.",
-            "question": "Vos ruminations résolvent-elles vos défis, ou créent-elles des tourments qui n'existaient pas ?"
-          },
-          "sections": [
-            {
-              "num": "01",
-              "title": "L'engrenage de la rumination mentale",
-              "content": [
-                "L'esprit anxieux rejoue les regrets du passé ou échafaude des catastrophes futures. Cette boucle infernale draine le glucose cérébral et inonde le corps de cortisol sans jamais produire la moindre solution.",
-                "Trop penser est une tentative désespérée et illusoire d'exercer un contrôle sur l'imprévisible."
-              ]
-            },
-            {
-              "num": "02",
-              "title": "L'action physique comme antidote souverain",
-              "content": [
-                "Le cerveau ne peut pas à la fois ruminer et être pleinement engagé dans une action corporelle précise. Dès que le tourbillon mental s'amorce, bougez : marchez, écrivez, respirez ou accomplissez une tâche manuelle.",
-                "Le doute et l'angoisse naissent dans la stagnation ; la clarté et le courage jaillissent dans le mouvement."
-              ]
-            },
-            {
-              "type": "insight",
-              "badge": "🧠 Clé de thérapie cognitive (ACT)",
-              "title": "La défusion cognitive : vous n'êtes pas vos pensées",
-              "text": "Vous n'êtes pas l'orateur de vos pensées, mais l'espace conscient dans lequel elles passent. En formulant : 'Je remarque que mon esprit produit une pensée d'échec', vous retirez instantanément à la pensée son pouvoir toxique."
-            },
-            {
-              "num": "03",
-              "title": "L'art de l'ancrage dans l'instant présent",
-              "content": [
-                "Nos souffrances se situent presque toutes dans deux temps inexistants : un passé révolu ou un futur imaginaire. Le seul espace où réside votre puissance d'action est l'Ici et Maintenant.",
-                "Rééduquer son attention sur ses sensations physiques coupe court au bavardage névrotique de l'égo."
-              ]
-            },
-            {
-              "type": "practical",
-              "title": "5 réflexes pour stopper l'overthinking sur-le-champ",
-              "desc": "Protocole d'urgence pour apaiser l'esprit :",
-              "tips": [
-                {
-                  "num": "1",
-                  "title": "La règle des 5 secondes",
-                  "text": "Comptez 5-4-3-2-1 et passez immédiatement à une action physique pour court-circuiter le mental."
-                },
-                {
-                  "num": "2",
-                  "title": "La vidange cérébrale (Brain Dump)",
-                  "text": "Écrivez tout sur papier : voir les pensées posées dégonfle leur charge anxiogène."
-                },
-                {
-                  "num": "3",
-                  "title": "Le rendez-vous d'inquiétude",
-                  "text": "Allouez 15 minutes par jour aux soucis ; en dehors de ce créneau, reportez-les."
-                },
-                {
-                  "num": "4",
-                  "title": "L'ancrage 5-4-3-2-1",
-                  "text": "Nommez 5 choses visibles, 4 tactiles, 3 audibles, 2 olfactives et 1 gustative pour revenir au réel."
-                },
-                {
-                  "num": "5",
-                  "title": "La respiration carrée",
-                  "text": "Inspirez 4s, bloquez 4s, expirez 4s, bloquez 4s pour calmer le système nerveux parasympathique."
-                }
-              ]
-            }
-          ],
-          "inBrief": [
-            "Le sur-penser est une fuite anxieuse qui ne résout aucun problème réel.",
-            "L'action concrète est le remède le plus rapide contre la paralysie mentale.",
-            "La défusion cognitive rappelle que vous êtes l'observateur lucide de vos pensées.",
-            "Poser ses inquiétudes sur papier permet de les relativiser instantanément.",
-            "L'ancrage dans le présent désamorce les fantômes du passé et du futur."
-          ],
-          "conclusion": "Votre esprit est un outil sublime destiné à vous servir, non un geôlier qui vous tyrannise. Lorsque vous apprenez à apaiser la tempête intérieure, vous découvrez une paix aussi profonde et limpide qu'une eau calme.",
-          "finalQuote": "« L'inquiétude ne vide pas demain de ses chagrins, elle vide aujourd'hui de sa force. »",
-          "finalQuoteAuthor": "— Corrie ten Boom | Hikma & Nour"
+            "Le calme véritable ne consiste pas à avoir un esprit totalement vide, mais à entretenir un rapport apaisé avec ce qui le traverse.",
+            "En renonçant au besoin compulsif de tout contrôler pour vous ancrer dans l'action utile, vous découvrez une puissance sereine."
+          ]
         },
         {
           "id": "when-heart-loses-sweetness-of-faith",
@@ -9099,123 +9010,34 @@ const TIKTOK_DATA = {
         {
           "id": "stop-overthinking",
           "file": "stop-overthinking.html",
-          "title": "How to Stop Overthinking and Continuous Anxiety?",
+          "featured": false,
+          "title": "Overcoming Overthinking: A Mindful Guide to Inner Calm",
           "category": "psychology",
-          "categoryName": "Psychology & Serenity",
-          "readTime": "6 min read",
-          "date": "May 20, 2026",
+          "categoryName": "Psychology • Mind & Behavior",
+          "readTime": "12 min read",
+          "date": "August 30, 2026",
           "author": "Hikma & Nour | حكمة ونور",
-          "desc": "A proven psychological guide to break the cycle of mental rumination, calm the nervous system, and reclaim peaceful clarity in the present moment.",
-          "image": "overthinking_calm.jpg",
-          "imageAlt": "A person meditating peacefully at sunrise, free from anxiety and overthinking",
-          "quote": "Anxiety does not empty tomorrow of its sorrows, but only empties today of its strength.",
-          "quoteAuthor": "— Arthur Schopenhauer",
+          "desc": "A psychological and actionable guide to understanding rumination, breaking repetitive mental loops, and regaining calm presence without guilt.",
+          "image": "psychologie/images/thumb-pensee-excessive-calme.jpg",
+          "imageAlt": "A person watches a lake as tangled luminous threads gradually become calm lines.",
+          "quote": "Calm does not come from having all the answers, but from making peace with uncertainty.",
+          "quoteAuthor": "— Hikma & Nour",
           "toc": [
-            "Introduction",
-            "1. What is Overthinking and Chronic Anxiety?",
-            "2. Why Do We Fall into the Rumination Trap?",
-            "3. The Stoic Dichotomy of Control",
-            "4. 7 Practical Steps to Regain Peace Immediately",
-            "Conclusion: Inhabiting the Present Moment"
+            "When thinking turns into an endless loop",
+            "Why the brain relentlessly seeks absolute certainty",
+            "Useful reflection, adaptive worry, and rumination",
+            "Triggers that reignite overthinking",
+            "Creating healthy distance from your thoughts",
+            "Returning to the body and the present moment",
+            "Transforming worry into concrete next actions",
+            "Guarding attention and structuring your environment",
+            "Knowing when to seek professional support",
+            "A gentle 7-day protocol to reclaim inner calm"
           ],
           "body": [
-            "Have you ever woken up in the middle of the night because your mind refused to stop replaying old conversations or inventing catastrophic future scenarios? This mental overload and continuous anxiety are among the greatest thieves of peace in our modern world.",
-            "Overthinking is not a sign of deep intellect; it is a circular trap of hesitation and fear that drains your energy without offering any real solution. Its roots often lie in fear of failure or an unrealistic urge to control the uncontrollable.",
-            "Stoic philosophy provides a definitive remedy with the 'Dichotomy of Control': divide everything into what is within your control (your actions, choices, present responses) and what is outside your control (the past, other people's opinions, the future). Direct 100% of your energy to what is in your power, and release the rest.",
-            "To regain calm immediately: 1. Write down your thoughts to clear mental clutter. 2. Set a dedicated 15-minute 'worry window' per day, then close the notebook. 3. Engage in physical movement to release stored stress. 4. Practice deep slow breathing to ground your nervous system in the present moment."
-          ],
-          "comments": [
-            {
-              "author": "Brian Kelly",
-              "time": "1 hour ago",
-              "text": "Box breathing and sensory grounding saved my day. A life-changing article."
-            },
-            {
-              "author": "Samantha Wright",
-              "time": "4 hours ago",
-              "text": "Cognitive defusion is so powerful. Thank you for this masterpiece."
-            }
-          ],
-          "chapo": "How many precious nights are swallowed by the endless spiral of overthinking and analyzing catastrophe scenarios that will never happen? How do you break the loop of mental rumination and reclaim supreme clarity and peace of mind?",
-          "summaryBox": {
-            "title": "✦ The Antidote to Overthinking",
-            "summary": "Overthinking is not analytical intelligence, but an anxiety loop. Liberation lies in shifting immediately from abstract rumination into concrete physical action and sensory presence in the now.",
-            "question": "Does continuous overthinking solve your challenges, or invent troubles that never existed?"
-          },
-          "sections": [
-            {
-              "num": "01",
-              "title": "The Anatomy of Mental Rumination",
-              "content": [
-                "An anxious mind continually replays past regrets or anticipates future disasters. This loop drains neural energy and floods the body with stress hormones without delivering a single workable solution.",
-                "Overthinking is a desperate, illusory attempt to exert control over the fundamentally unpredictable nature of reality."
-              ]
-            },
-            {
-              "num": "02",
-              "title": "Physical Action as the Ultimate Cure",
-              "content": [
-                "The human brain cannot simultaneously ruminate and be fully immersed in physical movement. When the mental spiral begins, move: walk, write, breathe, or tackle a hands-on task.",
-                "Doubt and dread breed in stagnation; clarity and courage are born in motion."
-              ]
-            },
-            {
-              "type": "insight",
-              "badge": "🧠 Cognitive Behavioral Technique (ACT)",
-              "title": "Cognitive Defusion : You Are Not Your Thoughts",
-              "text": "You are not the noisy speaker in your head; you are the conscious space in which thoughts arise and pass. By framing: 'I notice my mind is generating a thought of failure', you instantly disarm its toxic grip."
-            },
-            {
-              "num": "03",
-              "title": "Anchoring Deeply in the Present Moment",
-              "content": [
-                "Almost all suffering lives in two nonexistent realms: a past that is gone, and an imaginary future that has not arrived. The only place where your power resides is the Present.",
-                "Training your attention on physical sensations short-circuits the neurotic chatter of the ego."
-              ]
-            },
-            {
-              "type": "practical",
-              "title": "5 Immediate Steps to Stop Overthinking",
-              "desc": "Emergency mental toolkit for instant calm :",
-              "tips": [
-                {
-                  "num": "1",
-                  "title": "The 5-Second Rule",
-                  "text": "Count 5-4-3-2-1 and take immediate physical action to interrupt mental looping."
-                },
-                {
-                  "num": "2",
-                  "title": "Paper Brain Dump",
-                  "text": "Write all anxieties on paper; seeing them externalized strips away their power."
-                },
-                {
-                  "num": "3",
-                  "title": "Designated Worry Time",
-                  "text": "Allocate 15 minutes in the afternoon for problem-solving; postpone worries outside this window."
-                },
-                {
-                  "num": "4",
-                  "title": "5-4-3-2-1 Sensory Grounding",
-                  "text": "Name 5 things you see, 4 you feel, 3 you hear, 2 you smell, and 1 you taste."
-                },
-                {
-                  "num": "5",
-                  "title": "Box Breathing",
-                  "text": "Inhale 4s, hold 4s, exhale 4s, hold 4s to immediately reset your parasympathetic nervous system."
-                }
-              ]
-            }
-          ],
-          "inBrief": [
-            "Overthinking is an anxious trap that solves zero real problems.",
-            "Physical action is the fastest antidote to analysis paralysis.",
-            "Cognitive defusion reminds you that you are the conscious observer, not the thought.",
-            "Dumping fears onto paper shrinks them into manageable realities.",
-            "Grounding in the present moment dissolves the illusions of past and future."
-          ],
-          "conclusion": "Your mind is a magnificent instrument designed to serve you, not a prison to hold you captive. When you quiet the inner noise, you discover a tranquil peace as still and clear as undisturbed water.",
-          "finalQuote": "« Worry does not empty tomorrow of its sorrow, it empties today of its strength. »",
-          "finalQuoteAuthor": "— Corrie ten Boom | Hikma & Nour"
+            "True peace does not require a mind completely devoid of thought, but a mature and quiet relationship with whatever arises.",
+            "When you stop fighting with your mind and ground your presence in purposeful action, anxiety fades into steady confidence."
+          ]
         },
         {
           "id": "when-heart-loses-sweetness-of-faith",
@@ -13719,123 +13541,34 @@ const TIKTOK_DATA = {
         {
           "id": "stop-overthinking",
           "file": "stop-overthinking.html",
-          "title": "كيف تتوقف عن التفكير الزائد والقلق المستمر؟",
+          "featured": false,
+          "title": "كيف تتوقف عن التفكير الزائد وتستعيد هدوءك الداخلي؟",
           "category": "psychology",
-          "categoryName": "علم النفس والسكينة",
-          "readTime": "٦ دقائق قراءة",
-          "date": "٢٠ مايو ٢٠٢٦",
+          "categoryName": "علم النفس • العقل والسلوك",
+          "readTime": "١٢ دقيقة قراءة",
+          "date": "٣٠ أغسطس ٢٠٢٦",
           "author": "حكمة ونور | Hikma & Nour",
-          "desc": "دليل عملي لاستعادة هدوء العقل، تفكيك دورة القلق المرهقة والسيطرة على الأفكار الدائرية لعيش اللحظة الحالية بسلام.",
-          "image": "overthinking_calm.jpg",
-          "imageAlt": "شخص يتأمل في هدوء عند شروق الشمس متحرراً من القلق والتفكير الزائد",
-          "quote": "القلق لا يفرغ الغد من همومه، لكنه يفرغ اليوم من قوته وسكينته.",
-          "quoteAuthor": "— آرثر شوبنهاور",
+          "desc": "دليل نفسي وعملي لفهم الاجترار المعرفي وتفكيك الحلقات الفكرية المرهقة دون جلد الذات، مع أدوات واقعية لاستعادة السكينة الذهنية.",
+          "image": "psychologie/images/thumb-pensee-excessive-calme.jpg",
+          "imageAlt": "شخص يتأمل بحيرة بينما تتحول خيوط ضوئية متشابكة تدريجيًا إلى خطوط هادئة.",
+          "quote": "السكينة لا تأتي من إيجاد إجابة لكل سؤال، بل من التصالح مع ما لا يمكن معرفته الآن.",
+          "quoteAuthor": "— حكمة ونور",
           "toc": [
-            "المقدمة",
-            "١. ما هو التفكير الزائد والقلق المستمر؟",
-            "٢. لماذا نقع في فخ الاجترار الفكري؟",
-            "٣. ثنائية التحكم الرواقية لتحرير الذهن",
-            "٤. ٧ خطوات عملية للتخلص من القلق فوراً",
-            "خاتمة: العيش في اللحظة الحالية"
+            "حين تصبح الأفكار حلقة مغلقة",
+            "لماذا يبحث الدماغ باستمرار عن إجابة مطلقة؟",
+            "التفكير البنّاء، القلق الطبيعي، والاجترار المستنزف",
+            "المحفزات التي تشعل فتيل التفكير المفرط",
+            "صناعة مسافة واعية مع تيار الأفكار",
+            "العودة إلى الجسد وتثبيت الحضور في اللحظة",
+            "تحويل القلق الذهني إلى خطوة عملية ملموسة",
+            "حماية الانتباه وهندسة البيئة المحيطة",
+            "متى تستدعي الحالة طلب مساندة متخصصة؟",
+            "بروتوكول هادئ على مدار سبعة أيام لاستعادة السكينة"
           ],
           "body": [
-            "هل سبق أن استيقظت في منتصف الليل لأن عقلك يرفض التوقف عن استرجاع مواقف قديمة أو تخيل سيناريوهات كارثية للمستقبل؟ هذه الحالة تُعرف بالتفكير الزائد (Overthinking)، وهي من أكثر مصادر استنزاف الطاقة النفسية في عصرنا.",
-            "التفكير الزائد ليس علامة على الذكاء بل هو حلقة مفرغة من القلق والتردد تجعلك تدور حول المشكلة دون أن تخطو خطوة واحدة نحو الحل. جذوره غالباً ما تكون في الخوف من الفشل أو الرغبة المفرطة في السيطرة على المجهول.",
-            "الفلسفة الرواقية تقدم لنا علاجاً حاسماً عبر 'ثنائية التحكم': قسّم كل ما يشغلك إلى فئتين: أمور تخضع لسيطرتك المباشرة (أفعالك، قراراتك، استجابتك)، وأمور خارجة عن إرادتك تماماً (آراء الناس، الماضي، المستقبل). ركّز طاقتك بالكامل على الفئة الأولى ودع ما سواها بسلام.",
-            "للتخلص من القلق فوراً: أولاً، اكتب أفكارك على ورقة لتفريغ الشحنة الذهنية. ثانياً، خصص ١٥ دقيقة يومياً فقط للتفكير والحلول ثم أغلق الملف. ثالثاً، تحرك ومارس الرياضة لكسر الحالة الجسدية للتوتر. ورابعاً، ركز على التنفس العميق واستحضر اللحظة الحالية."
-          ],
-          "comments": [
-            {
-              "author": "سامي القاضي",
-              "time": "منذ ساعة",
-              "text": "تمرين الحواس وتنفس المربع أوقف نوبة قلق كادت تدمر يومي. شكراً من القلب."
-            },
-            {
-              "author": "هند الغامدي",
-              "time": "منذ ٣ ساعات",
-              "text": "مقال في قمة الإفادة والروعة. تقنية فك الاندماج المعرفي عبقرية."
-            }
-          ],
-          "chapo": "كم من الليالي سُرقت منا في دوامة التفكير المفرط وتحليل سيناريوهات لم تحدث ولن تحدث أبداً؟ كيف تكسر حلقة الاجترار الذهني وتستعيد صفاء عقلك وسلامك الداخلي؟",
-          "summaryBox": {
-            "title": "✦ علاج الإفراط في التفكير",
-            "summary": "الإفراط في التفكير ليس ذكاءً تحليلياً، بل هو فخ القلق والشك. الحل يكمن في الانتقال الفوري من التفكير النظري المكرر إلى الفعل الحركي والتواجد في اللحظة الراهنة.",
-            "question": "هل يحل التفكير المستمر مشاكلك، أم يخلق في عقلك مشاكل لم تكن موجودة أصلاً؟"
-          },
-          "sections": [
-            {
-              "num": "01",
-              "title": "تشريح فخ الاجترار الذهني (Rumination)",
-              "content": [
-                "يميل العقل القلق إلى إعادة تمثيل أحداث الماضي بحسرة أو توقع كوارث المستقبل برعب. هذا النمط يستنزف طاقة الدماغ ويفرز هرمونات التوتر دون تقديم أي حل عملي.",
-                "التفكير الزائد هو محاولة وهمية للسيطرة على ما لا يمكن التنبؤ به."
-              ]
-            },
-            {
-              "num": "02",
-              "title": "العمل الحركي كترياق مباشر للشلل الفكري",
-              "content": [
-                "العقل لا يستطيع القلق والتصرف الحركي بكفاءة في نفس اللحظة. عندما تشعر بدوامة الأفكار تسحبك للأسفل، تحرك فوراً: تنفس، اكتب، امشِ، أو ابدأ مهمة صغيرة.",
-                "كما يقول حكماء الفلسفة: الشك يولد في الركود، واليقين يولد في خضم الحركة والعمل."
-              ]
-            },
-            {
-              "type": "insight",
-              "badge": "🧠 تقنية في العلاج المعرفي",
-              "title": "تقنية فك الاندماج المعرفي (Cognitive Defusion)",
-              "text": "في العلاج بالقبول والالتزام (ACT)، تذكر أنك 'لست أفكارك، بل أنت المراقب الواعي لتلك الأفكار'. حين تقول لنفسك 'أنا ألاحظ أن عقلي يفكر في الفشل'، تفقد الفكرة سلطتها المخيفة عليك فوراً."
-            },
-            {
-              "num": "03",
-              "title": "ترويض العقل بالحضور واليقظة الذهنية",
-              "content": [
-                "معظم آلامنا تقع في زمنين غير موجودين: ماضٍ رحل ومستقبل لم يأتِ. المكان الوحيد الذي تملك فيه القوة والسيطرة هو 'الآن'.",
-                "تدريب العقل على التركيز على الحواس الخمس في اللحظة الحالية يقطع شلال الأفكار السلبية ويعيد الهدوء فوراً."
-              ]
-            },
-            {
-              "type": "practical",
-              "title": "٥ خطوات حاسمة لإيقاف التفكير المفرط فوراً",
-              "desc": "إسعافات أولية عقلية لاستعادة السكينة والتركيز :",
-              "tips": [
-                {
-                  "num": "1",
-                  "title": "قاعدة الـ ٥ ثوانٍ والفعل الفوري",
-                  "text": "عندما تجد نفسك غارقاً في التحليل، عد تنازلياً ٥-٤-٣-٢-١ وتحرك فوراً لفعل شيء ملموس."
-                },
-                {
-                  "num": "2",
-                  "title": "تفريغ الأفكار على الورق (Brain Dump)",
-                  "text": "اكتب كل مخاوفك في ورقة؛ حين تراها مكتوبة يدرك عقلك أنها أقل حجماً مما كان يتخيل."
-                },
-                {
-                  "num": "3",
-                  "title": "حدد وقتاً مخصصاً للقلق",
-                  "text": "خصص ١٥ دقيقة عصراً للتفكير في مشاكلك، وإذا راودك قلق خارج هذا الوقت أجله لتلك الجلسة."
-                },
-                {
-                  "num": "4",
-                  "title": "تمرين الحواس ٥-٤-٣-٢-١",
-                  "text": "لاحظ ٥ أشياء تراها، ٤ تلمسها، ٣ تسمعها، ٢ تشمها، وواحدة تتذوقها لتعود للحاضر."
-                },
-                {
-                  "num": "5",
-                  "title": "تنفس المربع (Box Breathing)",
-                  "text": "استنشق ٤ ثوانٍ، احبس ٤ ثوانٍ، ازفر ٤ ثوانٍ، واحبس ٤ ثوانٍ لإعادة ضبط جهازك العصبي."
-                }
-              ]
-            }
-          ],
-          "inBrief": [
-            "الإفراط في التفكير استنزاف طاقة وليس حلاً عملياً للمشكلات.",
-            "الحركة والفعل الملموس هما الترياق الأسرع لشلل التحليل.",
-            "أنت لست أفكارك، بل المراقب الواعي الذي يملك حرية تجاهلها.",
-            "تفريغ المخاوف على الورق يكشف تضاؤلها ويسهل معالجتها.",
-            "الحضور في اللحظة الراهنة ينهي معارك الماضي ومخاوف المستقبل."
-          ],
-          "conclusion": "عقلك أداة عظيمة خُلقت لتخدمك، لا لتكون سجيناً لوساوسها. حين تتعلم كيف تسكت الضجيج الداخلي، يولد في أعماقك سلام هادئ كصفحة بحيرة ساكنة.",
-          "finalQuote": "« القلق لا يفرغ الغد من همومه، لكنه يفرغ اليوم من قوته وسكينته. »",
-          "finalQuoteAuthor": "— كورين تين بوم | حكمة ونور"
+            "السكينة الحقيقية لا تعني عقلاً فارغاً تماماً من الأفكار، بل تعني علاقة جديدة وناضجة مع تلك الأفكار.",
+            "حين تتوقف عن خوض معارك عبثية مع عقلك وتمنح انتباهك لما يقع تحت يديك اليوم، تتلاشى الهواجس تلقائياً."
+          ]
         },
         {
           "id": "when-heart-loses-sweetness-of-faith",
