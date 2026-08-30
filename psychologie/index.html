@@ -552,6 +552,103 @@
       margin: 40px auto 0;
       line-height: 1.6;
     }
+
+    /* Pillar Featured Articles Grid & Cards */
+    .pillar-featured {
+      margin: 50px 0;
+    }
+    .featured-articles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .featured-article-card {
+      background: #0D1814;
+      border: 1px solid rgba(201, 168, 106, 0.25);
+      border-radius: 22px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      position: relative;
+    }
+    .featured-article-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(201, 168, 106, 0.6);
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.6);
+    }
+    .featured-article-card .featured-img-box {
+      width: 100%;
+      height: 230px;
+      overflow: hidden;
+      position: relative;
+      background: #070F0A;
+    }
+    .featured-article-card .featured-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .featured-article-card:hover .featured-img {
+      transform: scale(1.04);
+    }
+    .featured-article-card .featured-card-body {
+      padding: 26px 28px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+    .featured-article-card .featured-card-tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      color: #C9A86A;
+      font-weight: 700;
+      border: 1px solid rgba(201, 168, 106, 0.3);
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      align-self: flex-start;
+    }
+    .featured-article-card .featured-card-title {
+      font-size: 1.35rem;
+      color: #F2EEE5;
+      font-family: 'Playfair Display', 'Amiri', serif;
+      margin: 0 0 12px;
+      line-height: 1.4;
+      font-weight: 700;
+    }
+    .featured-article-card .featured-card-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .featured-article-card .featured-card-title a:hover {
+      color: #DFB15B;
+    }
+    .featured-article-card .featured-card-desc {
+      font-size: 0.92rem;
+      color: #A9AAA4;
+      line-height: 1.75;
+      margin-bottom: 22px;
+      flex-grow: 1;
+    }
+    .featured-article-card .featured-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(201, 168, 106, 0.15);
+      padding-top: 16px;
+      margin-top: auto;
+    }
+    @media (max-width: 768px) {
+      .featured-articles-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -769,14 +866,17 @@
       </section>
 
       <!-- 7. ARTICLE À LA UNE (دراسة مميزة) -->
-      <section class="psy-section-block psy-featured-study-section" id="psyFeaturedSection">
-        <div class="psy-section-heading">
-          <h2 data-i18n="psyFeaturedTitle">دراسة مميزة</h2>
-          <p data-i18n="psyFeaturedSubtitle">تحليل معرفي رصيد لديناميكيات العلاقات الاجتماعية</p>
-        </div>
+      <section class="pillar-featured psy-section-block" id="psyFeaturedSection" aria-labelledby="psychology-featured-title">
+        <div class="section-container">
+          <div class="psy-section-heading">
+            <span class="section-eyebrow" data-i18n="featuredEyebrow" style="display: inline-block; font-size: 0.8rem; color: #C9A86A; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 8px;">مختارات • Sélection</span>
+            <h2 id="psychology-featured-title" data-i18n="psyFeaturedTitle">مقالات مميزة في علم النفس</h2>
+            <p data-i18n="psyFeaturedSubtitle">دراسات وأدلة تطبيقية لاستعادة الهدوء وفهم أسرار الذاكرة والوعي</p>
+          </div>
 
-        <div class="psy-featured-study" id="psyFeaturedBox">
-          <!-- Rendered dynamically by Javascript -->
+          <div class="featured-articles-grid" id="psychology-featured-articles">
+            <!-- Cartes générées dynamiquement par Javascript -->
+          </div>
         </div>
       </section>
 
@@ -1429,36 +1529,64 @@
         window.renderPsychologyPathway(window.activePathwayId, lang);
       }
 
-      // 1. Render Featured Article
+      // 1. Render Featured Articles (2 cards: Pensée excessive & Déjà-vu)
       const featuredSection = document.getElementById('psyFeaturedSection');
-      const featuredBox = document.getElementById('psyFeaturedBox');
-      if (featuredBox && featuredSection) {
-        if (currentFilter === 'all' || currentFilter === '02') {
+      const featuredContainer = document.getElementById('psychology-featured-articles');
+      if (featuredSection && featuredContainer) {
+        if (currentFilter === 'all' || currentFilter === '03') {
           featuredSection.style.display = 'block';
-          const art = TIKTOK_DATA.content[lang].articles.find(a => a.id === 'why-people-distance-when-you-succeed');
-          if (art) {
-            const badge = TIKTOK_DATA.ui[lang].psyFeaturedBadge || 'مقال مميز • سيكولوجية العلاقات';
-            const readBtn = TIKTOK_DATA.ui[lang].readArticleBtn || 'اقرأ المقال →';
-            const readTimeText = lang === 'ar' ? `⏱️ ${art.readTime}` : `⏱️ ${art.readTime}`;
-            featuredBox.innerHTML = `
-              <div class="psy-featured-imgbox">
-                <img src="../why_people_distance_success_hero.jpg" alt="${art.title}" class="psy-featured-img" loading="lazy">
-              </div>
-              <div class="psy-featured-body">
-                <div>
-                  <span style="font-size: 0.8rem; color: #C9A86A; border: 1px solid rgba(201, 168, 106, 0.3); padding: 4px 14px; border-radius: 20px; font-weight: 700;">${badge}</span>
-                  <h3 style="font-size: 1.55rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 14px 0 16px; line-height: 1.4;">
-                    <a href="../articles/why-people-distance-when-you-succeed.html" style="color: inherit; text-decoration: none;">${art.title}</a>
-                  </h3>
-                  <p style="font-size: 0.95rem; color: #A9AAA4; line-height: 1.8; margin-bottom: 25px;">${art.summary}</p>
+
+          const targetFeaturedIds = ['stop-overthinking', 'deja-vu-familiarite-memoire'];
+          const articlesSource = (TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].articles) ? TIKTOK_DATA.content[lang].articles : [];
+          const featuredList = targetFeaturedIds.map(id => articlesSource.find(a => a.id === id)).filter(Boolean);
+
+          const badgeLabels = {
+            'stop-overthinking': lang === 'ar' ? 'مقال مميز • العقل والسلوك' : lang === 'fr' ? 'Article à la une • Esprit & Comportement' : 'Featured • Mind & Behavior',
+            'deja-vu-familiarite-memoire': lang === 'ar' ? 'مقال مميز • الذاكرة والألفة' : lang === 'fr' ? 'Article à la une • Mémoire & Perception' : 'Featured • Memory & Perception'
+          };
+
+          const pathMap = {
+            'stop-overthinking': '../files/stop-overthinking.html',
+            'deja-vu-familiarite-memoire': '../files/deja-vu-familiarite-memoire.html'
+          };
+
+          const imgMap = {
+            'stop-overthinking': '../psychologie/images/thumb-pensee-excessive-calme.jpg',
+            'deja-vu-familiarite-memoire': '../psychologie/images/thumb-deja-vu-familiarite-memoire.jpg'
+          };
+
+          const readBtnLabel = lang === 'ar' ? 'اقرأ المقال →' : lang === 'fr' ? 'Lire l\'article →' : 'Read Article →';
+
+          featuredContainer.innerHTML = featuredList.map(art => {
+            const readTimeText = art.readTime ? `⏱️ ${art.readTime}` : '';
+            const desc = art.desc || art.summary || '';
+            const targetUrl = pathMap[art.id] || `../files/${art.file || art.id + '.html'}`;
+            const imgSrc = imgMap[art.id] || (art.image ? (art.image.startsWith('../') ? art.image : '../' + art.image) : '../main_home_hd_bg.jpg');
+            const badge = badgeLabels[art.id] || (lang === 'ar' ? 'مقال مميز' : lang === 'fr' ? 'Article à la une' : 'Featured Article');
+
+            return `
+              <article class="featured-article-card" data-article-id="${art.id}">
+                <div class="featured-img-box">
+                  <a href="${targetUrl}" tabindex="-1" aria-hidden="true">
+                    <img src="${imgSrc}" alt="${art.imageAlt || art.title}" class="featured-img" loading="lazy">
+                  </a>
                 </div>
-                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px; border-top: 1px solid rgba(201, 168, 106, 0.2); padding-top: 18px;">
-                  <span style="font-size: 0.85rem; color: #A9AAA4;">${readTimeText}</span>
-                  <a href="../articles/why-people-distance-when-you-succeed.html" class="psy-card-link" style="font-size: 0.98rem;">${readBtn}</a>
+                <div class="featured-card-body">
+                  <div>
+                    <span class="featured-card-tag">${badge}</span>
+                    <h3 class="featured-card-title">
+                      <a href="${targetUrl}">${art.title}</a>
+                    </h3>
+                    <p class="featured-card-desc">${desc}</p>
+                  </div>
+                  <div class="featured-card-footer">
+                    <span style="font-size: 0.82rem; color: #A9AAA4;">${readTimeText}</span>
+                    <a href="${targetUrl}" class="psy-card-link">${readBtnLabel}</a>
+                  </div>
                 </div>
-              </div>
+              </article>
             `;
-          }
+          }).join('');
         } else {
           featuredSection.style.display = 'none';
         }

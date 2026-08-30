@@ -3206,7 +3206,7 @@ const TIKTOK_DATA = {
         {
           "id": "deja-vu-familiarite-memoire",
           "file": "deja-vu-familiarite-memoire.html",
-          "featured": false,
+          "featured": true,
           "title": "Le déjà-vu et la familiarité : comment la mémoire reconstruit le présent",
           "category": "psychology",
           "categoryName": "Psychologie • Esprit & Comportement",
@@ -3233,7 +3233,9 @@ const TIKTOK_DATA = {
           "body": [
             "Loin d'être une anomalie inquiétante, le déjà-vu témoigne de la vitalité des réseaux neuronaux qui comparent sans relâche le présent au passé.",
             "En abordant cette expérience avec une curiosité scientifique et philosophique éclairée, nous apprenons à habiter le présent avec discernement."
-          ]
+          ],
+          "published": true,
+          "pillar": "psychologie"
         },
         {
           "id": "discipline-sans-epuisement",
@@ -4710,7 +4712,7 @@ const TIKTOK_DATA = {
         {
           "id": "stop-overthinking",
           "file": "stop-overthinking.html",
-          "featured": false,
+          "featured": true,
           "title": "La pensée excessive et le retour au calme : comment apaiser le flux mental",
           "category": "psychology",
           "categoryName": "Psychologie • Esprit & Comportement",
@@ -4737,7 +4739,9 @@ const TIKTOK_DATA = {
           "body": [
             "Le calme véritable ne consiste pas à avoir un esprit totalement vide, mais à entretenir un rapport apaisé avec ce qui le traverse.",
             "En renonçant au besoin compulsif de tout contrôler pour vous ancrer dans l'action utile, vous découvrez une puissance sereine."
-          ]
+          ],
+          "published": true,
+          "pillar": "psychologie"
         },
         {
           "id": "when-heart-loses-sweetness-of-faith",
@@ -7667,7 +7671,7 @@ const TIKTOK_DATA = {
         {
           "id": "deja-vu-familiarite-memoire",
           "file": "deja-vu-familiarite-memoire.html",
-          "featured": false,
+          "featured": true,
           "title": "Déjà-Vu, Familiarity, and Memory: How the Mind Reconstructs the Present",
           "category": "psychology",
           "categoryName": "Psychology • Mind & Behavior",
@@ -7694,7 +7698,9 @@ const TIKTOK_DATA = {
           "body": [
             "Far from being an alarming malfunction, déjà-vu showcases the restless vitality of neural circuits that continually compare the present with the past.",
             "By exploring these phenomena with scientific rigor and philosophical calm, we learn to inhabit the present with greater clarity and peace."
-          ]
+          ],
+          "published": true,
+          "pillar": "psychologie"
         },
         {
           "id": "discipline-sans-epuisement",
@@ -9074,7 +9080,7 @@ const TIKTOK_DATA = {
         {
           "id": "stop-overthinking",
           "file": "stop-overthinking.html",
-          "featured": false,
+          "featured": true,
           "title": "Overcoming Overthinking: A Mindful Guide to Inner Calm",
           "category": "psychology",
           "categoryName": "Psychology • Mind & Behavior",
@@ -9101,7 +9107,9 @@ const TIKTOK_DATA = {
           "body": [
             "True peace does not require a mind completely devoid of thought, but a mature and quiet relationship with whatever arises.",
             "When you stop fighting with your mind and ground your presence in purposeful action, anxiety fades into steady confidence."
-          ]
+          ],
+          "published": true,
+          "pillar": "psychologie"
         },
         {
           "id": "when-heart-loses-sweetness-of-faith",
@@ -12217,7 +12225,7 @@ const TIKTOK_DATA = {
         {
           "id": "deja-vu-familiarite-memoire",
           "file": "deja-vu-familiarite-memoire.html",
-          "featured": false,
+          "featured": true,
           "title": "ظاهرة الديجافو والألفة: كيف تعيد الذاكرة بناء الحاضر؟",
           "category": "psychology",
           "categoryName": "علم النفس • العقل والسلوك",
@@ -12244,7 +12252,9 @@ const TIKTOK_DATA = {
           "body": [
             "ظاهرة الديجافو ليست خللاً معيباً في العقل، بل هي دليل حي على حيوية الشبكات العصبية التي تسعى بلا انقطاع لربط الحاضر بالماضي.",
             "حين نفهم جذور التجربة بعقل علمي وتأملي رصين، نتحرر من الخوف والخرافة، ونزداد إعجاباً بقدرة العقل على نسج المعنى."
-          ]
+          ],
+          "published": true,
+          "pillar": "psychologie"
         },
         {
           "id": "discipline-sans-epuisement",
@@ -13637,7 +13647,7 @@ const TIKTOK_DATA = {
         {
           "id": "stop-overthinking",
           "file": "stop-overthinking.html",
-          "featured": false,
+          "featured": true,
           "title": "كيف تتوقف عن التفكير الزائد وتستعيد هدوءك الداخلي؟",
           "category": "psychology",
           "categoryName": "علم النفس • العقل والسلوك",
@@ -13664,7 +13674,9 @@ const TIKTOK_DATA = {
           "body": [
             "السكينة الحقيقية لا تعني عقلاً فارغاً تماماً من الأفكار، بل تعني علاقة جديدة وناضجة مع تلك الأفكار.",
             "حين تتوقف عن خوض معارك عبثية مع عقلك وتمنح انتباهك لما يقع تحت يديك اليوم، تتلاشى الهواجس تلقائياً."
-          ]
+          ],
+          "published": true,
+          "pillar": "psychologie"
         },
         {
           "id": "when-heart-loses-sweetness-of-faith",
