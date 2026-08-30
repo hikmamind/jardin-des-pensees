@@ -3204,6 +3204,38 @@ const TIKTOK_DATA = {
       ],
       "articles": [
         {
+          "id": "deja-vu-familiarite-memoire",
+          "file": "deja-vu-familiarite-memoire.html",
+          "featured": false,
+          "title": "Le déjà-vu et la familiarité : comment la mémoire reconstruit le présent",
+          "category": "psychology",
+          "categoryName": "Psychologie • Esprit & Comportement",
+          "readTime": "11 min de lecture",
+          "date": "30 Août 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "Un guide psychologique et cognitif pour comprendre le phénomène de déjà-vu, la mémoire reconstructive et la séparation entre familiarité et souvenir.",
+          "image": "psychologie/images/thumb-deja-vu-familiarite-memoire.jpg",
+          "imageAlt": "Deux portes presque identiques, dont une laisse passer une lumière dorée.",
+          "quote": "La mémoire n'est pas seulement le miroir d'hier, mais le métier à tisser sur lequel l'esprit façonne le présent.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+            "Cette étrange impression d’avoir déjà vécu la scène",
+            "Familiarité et souvenir ne sont pas la même chose",
+            "Comment la mémoire reconstruit une expérience",
+            "Quand un détail présent ressemble à une trace ancienne",
+            "Le rôle possible de l’attention et du traitement de l’information",
+            "Pourquoi l’impression paraît si convaincante",
+            "Ce que le déjà-vu ne permet pas de conclure",
+            "Observer l’expérience sans lui donner un sens excessif",
+            "Quand une fréquence inhabituelle mérite un avis professionnel",
+            "Ce que le déjà-vu révèle sur notre rapport à la mémoire"
+          ],
+          "body": [
+            "Loin d'être une anomalie inquiétante, le déjà-vu témoigne de la vitalité des réseaux neuronaux qui comparent sans relâche le présent au passé.",
+            "En abordant cette expérience avec une curiosité scientifique et philosophique éclairée, nous apprenons à habiter le présent avec discernement."
+          ]
+        },
+        {
           "id": "discipline-sans-epuisement",
           "file": "discipline-sans-epuisement.html",
           "featured": true,
@@ -7632,6 +7664,38 @@ const TIKTOK_DATA = {
         }
       ],
       "articles": [
+        {
+          "id": "deja-vu-familiarite-memoire",
+          "file": "deja-vu-familiarite-memoire.html",
+          "featured": false,
+          "title": "Déjà-Vu, Familiarity, and Memory: How the Mind Reconstructs the Present",
+          "category": "psychology",
+          "categoryName": "Psychology • Mind & Behavior",
+          "readTime": "11 min read",
+          "date": "August 30, 2026",
+          "author": "Hikma & Nour | حكمة ونور",
+          "desc": "A psychological and cognitive exploration of the déjà-vu phenomenon, reconstructive memory, and the gap between familiarity and recollection.",
+          "image": "psychologie/images/thumb-deja-vu-familiarite-memoire.jpg",
+          "imageAlt": "Two nearly identical doors, one revealing golden light.",
+          "quote": "Memory is not merely a window into yesterday, but the loom upon which the mind weaves the present.",
+          "quoteAuthor": "— Hikma & Nour",
+          "toc": [
+            "That uncanny feeling of having lived this before",
+            "Familiarity and recollection are not the same thing",
+            "How memory dynamically reconstructs experience",
+            "When a present layout resembles a past trace",
+            "The role of attention and dual processing",
+            "Why the impression feels so profoundly convincing",
+            "What déjà-vu does not prove",
+            "Observing the experience without over-interpreting",
+            "When unusual frequency warrants professional consultation",
+            "What déjà-vu reveals about our relationship with memory"
+          ],
+          "body": [
+            "Far from being an alarming malfunction, déjà-vu showcases the restless vitality of neural circuits that continually compare the present with the past.",
+            "By exploring these phenomena with scientific rigor and philosophical calm, we learn to inhabit the present with greater clarity and peace."
+          ]
+        },
         {
           "id": "discipline-sans-epuisement",
           "file": "discipline-sans-epuisement.html",
@@ -12150,6 +12214,38 @@ const TIKTOK_DATA = {
         }
       ],
       "articles": [
+        {
+          "id": "deja-vu-familiarite-memoire",
+          "file": "deja-vu-familiarite-memoire.html",
+          "featured": false,
+          "title": "ظاهرة الديجافو والألفة: كيف تعيد الذاكرة بناء الحاضر؟",
+          "category": "psychology",
+          "categoryName": "علم النفس • العقل والسلوك",
+          "readTime": "١١ دقيقة قراءة",
+          "date": "٣٠ أغسطس ٢٠٢٦",
+          "author": "حكمة ونور | Hikma & Nour",
+          "desc": "دليل نفسي وعلمي رصين يشرح ظاهرة الديجافو (Déjà-vu)، ويفكك الفارق بين إشارة الألفة والذكرى الحقيقية دون تفسيرات خارقة.",
+          "image": "psychologie/images/thumb-deja-vu-familiarite-memoire.jpg",
+          "imageAlt": "بابان متشابهان، يتسلل ضوء ذهبي من أحدهما.",
+          "quote": "الذاكرة ليست مجرد نافذة نطل بها على الأمس، بل هي النول الذي ينسج به العقل حاضرنا كل يوم.",
+          "quoteAuthor": "— حكمة ونور",
+          "toc": [
+            "هذا الشعور الغريب بأن المشهد قد عشته من قبل",
+            "الشعور بالألفة واسترجاع الذكرى ليسا شيئاً واحداً",
+            "كيف تعيد الذاكرة بناء التجربة؟",
+            "حين يشبه تفصيل حاضر أثراً قديماً",
+            "الدور المحتمل للانتباه ومعالجة المعلومات",
+            "لماذا يبدو هذا الانطباع مقنعاً إلى هذا الحد؟",
+            "ما لا يمكن استنتاجه من ظاهرة الديجافو",
+            "ملاحظة التجربة دون إضفاء دلالات مفرطة عليها",
+            "متى يستدعي التكرار غير المعتاد استشارة متخصصة؟",
+            "ما يكشفه الديجافو عن علاقتنا العميقة بالذاكرة"
+          ],
+          "body": [
+            "ظاهرة الديجافو ليست خللاً معيباً في العقل، بل هي دليل حي على حيوية الشبكات العصبية التي تسعى بلا انقطاع لربط الحاضر بالماضي.",
+            "حين نفهم جذور التجربة بعقل علمي وتأملي رصين، نتحرر من الخوف والخرافة، ونزداد إعجاباً بقدرة العقل على نسج المعنى."
+          ]
+        },
         {
           "id": "discipline-sans-epuisement",
           "file": "discipline-sans-epuisement.html",
