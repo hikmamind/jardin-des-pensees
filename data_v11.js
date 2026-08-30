@@ -4842,6 +4842,20 @@ const TIKTOK_DATA = {
           "conclusion": "La sérénité du cœur n'est pas une conquête brutale, mais le fruit d'un cheminement bienveillant qui accepte la fragilité humaine tout en cherchant la lumière. Ne soyez pas sévère avec vous-même : chaque instant de sincérité est une pierre posée pour rebâtir votre paix intérieure.",
           "finalQuote": "Le retour ne commence pas toujours par un grand changement, mais par un instant de sincérité où le cœur reconnaît son besoin de lumière.",
           "finalQuoteAuthor": "Hikma & Nour"
+        },
+        {
+          "id": "pourquoi-esprit-imagine-le-pire",
+          "title": "Pourquoi notre esprit imagine toujours le pire ?",
+          "desc": "Comprendre l’anticipation anxieuse et retrouver une perception plus équilibrée de la réalité.",
+          "file": "pourquoi-esprit-imagine-le-pire.html",
+          "image": "psychologie/images/thumb-esprit-imagine-le-pire.jpg",
+          "imageAlt": "Une lampe éclaire un galet tandis que des ombres de branches restent floues.",
+          "readTime": "12 min de lecture",
+          "date": "Dimanche 30 août 2026",
+          "category": "psychology",
+          "pillar": "psychologie",
+          "published": true,
+          "featured": false
         }
       ],
       "faq": [
@@ -9210,6 +9224,20 @@ const TIKTOK_DATA = {
           "conclusion": "Peace of heart is not achieved through force, but nurtured through a compassionate journey that acknowledges human weakness while seeking divine light. Be gentle with yourself: every moment of sincerity is a brick in rebuilding your inner serenity.",
           "finalQuote": "The return does not always begin with a great change, but with a sincere moment in which the heart acknowledges its need for light.",
           "finalQuoteAuthor": "Hikma & Nour"
+        },
+        {
+          "id": "pourquoi-esprit-imagine-le-pire",
+          "title": "Why Does Our Mind Always Expect the Worst?",
+          "desc": "Understanding anxious anticipation and developing a more balanced view of reality.",
+          "file": "pourquoi-esprit-imagine-le-pire.html",
+          "image": "psychologie/images/thumb-esprit-imagine-le-pire.jpg",
+          "imageAlt": "A lamp illuminates a stone while branch shadows remain blurred.",
+          "readTime": "12 min read",
+          "date": "Sunday, August 30, 2026",
+          "category": "psychology",
+          "pillar": "psychologie",
+          "published": true,
+          "featured": false
         }
       ],
       "faq": [
@@ -13777,6 +13805,20 @@ const TIKTOK_DATA = {
           "conclusion": "إن طمأنينة القلب ليست مكسباً عابراً، بل هي ثمرة مسار متوازن يعترف بالضعف البشري ويتطلع إلى الرحمة الإلهية. لا تقسى على نفسك في أوقات الجفاف الفكري أو الروحي، فكل دقيقة صدق تمضيها في محاولة الاقتراب هي حجر أساس في بناء سلامك الداخلي.",
           "finalQuote": "قد لا يبدأ الرجوع بخطوة كبيرة، بل بلحظة صدق يعترف فيها القلب بحاجته إلى النور.",
           "finalQuoteAuthor": "حكمة ونور"
+        },
+        {
+          "id": "pourquoi-esprit-imagine-le-pire",
+          "title": "لماذا يتوقع عقلنا الأسوأ دائمًا؟",
+          "desc": "دليل نفسي وعملي لفهم التوقع الكارثي، والتمييز بين الإمكانية واليقين، واستعادة رؤية متوازنة للواقع دون استنزاف.",
+          "file": "pourquoi-esprit-imagine-le-pire.html",
+          "image": "psychologie/images/thumb-esprit-imagine-le-pire.jpg",
+          "imageAlt": "مصباح يضيء حجرًا بينما تبقى ظلال الأغصان ضبابية.",
+          "readTime": "١٢ دقيقة قراءة",
+          "date": "الأحد، ٣٠ أغسطس ٢٠٢٦",
+          "category": "psychology",
+          "pillar": "psychologie",
+          "published": true,
+          "featured": false
         }
       ],
       "faq": [

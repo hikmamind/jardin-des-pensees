@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- SEO Meta Tags -->
   <title id="pageTitle">العقل والسلوك | مسار فكري | حكمة ونور</title>
   <meta name="description" id="pageMetaDesc" content="دراسة العمليات المعرفية، أنماط التفكير، والتعلم والتحيزات العقلية.">
@@ -33,7 +33,7 @@
           <span style="font-size: 0.6rem; font-weight: 600; color: var(--text-secondary); letter-spacing: 0.5px;">الحكمة • الفلسفة • علم النفس</span>
         </div>
       </a>
-      
+
       <button class="nav-hamburger" id="navHamburger" aria-label="Ouvrir le menu">
         <span></span><span></span><span></span>
       </button>
@@ -76,7 +76,7 @@
   </header>
 
   <main class="parcours-page-container">
-    
+
     <!-- 1. Fil d'Ariane -->
     <nav class="breadcrumb-nav" aria-label="Fil d'Ariane du parcours">
       <a href="../../../" id="bcHome">الرئيسية</a> &gt;
@@ -247,6 +247,21 @@
   ],
     "articles": [
     {
+      "id": "pourquoi-esprit-imagine-le-pire",
+      "url": "../../../files/pourquoi-esprit-imagine-le-pire.html",
+      "thumb": "../../../psychologie/images/thumb-esprit-imagine-le-pire.jpg",
+      "title": {
+        "ar": "لماذا يتوقع عقلنا الأسوأ دائمًا؟",
+        "fr": "Pourquoi notre esprit imagine toujours le pire ?",
+        "en": "Why Does Our Mind Always Expect the Worst?"
+      },
+      "desc": {
+        "ar": "دليل نفسي وعملي لفهم التوقع الكارثي، والتمييز بين الإمكانية واليقين، واستعادة رؤية متوازنة للواقع دون استنزاف.",
+        "fr": "Comprendre l’anticipation anxieuse et retrouver une perception plus équilibrée de la réalité.",
+        "en": "Understanding anxious anticipation and developing a more balanced view of reality."
+      }
+    },
+    {
       "id": "stop-overthinking",
       "url": "../../../files/stop-overthinking.html",
       "thumb": "../../../psychologie/images/thumb-pensee-excessive-calme.jpg",
@@ -339,7 +354,7 @@
       // Articles Visual Grid
       document.getElementById('articlesHeading').textContent = lang === 'ar' ? '📚 المقالات والأبحاث المتاحة في هذا المسار' : (lang === 'fr' ? '📚 Articles & études disponibles dans ce parcours' : '📚 Available Articles & Studies');
       const readArtText = lang === 'ar' ? 'اقرأ المقال ←' : (lang === 'fr' ? 'Lire l\'article →' : 'Read article →');
-      
+
       const articlesGrid = document.getElementById('articlesGrid');
       if (PAGE_DATA.articles && PAGE_DATA.articles.length > 0) {
         articlesGrid.innerHTML = PAGE_DATA.articles.map(art => {
@@ -374,7 +389,7 @@
       document.getElementById('thinkersHeading').textContent = lang === 'ar' ? '👤 المفكرون والفلاسفة المرتبطون بالمسار' : (lang === 'fr' ? '👤 Penseurs & philosophes associés' : '👤 Associated Thinkers');
       const viewThinkerText = lang === 'ar' ? 'عرض المفكر ←' : (lang === 'fr' ? 'Voir le penseur →' : 'View profile →');
       const thinkersGrid = document.getElementById('thinkersGrid');
-      
+
       if (PAGE_DATA.thinkerIds && PAGE_DATA.thinkerIds.length > 0) {
         const allThinkers = (TIKTOK_DATA.content && TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].thinkers) || [];
         thinkersGrid.innerHTML = PAGE_DATA.thinkerIds.map(tid => {
