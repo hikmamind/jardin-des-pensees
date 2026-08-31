@@ -26,7 +26,23 @@ body.pillar-body {
   line-height: 1.7;
   margin: 0;
   padding: 0;
+  padding-top: 85px !important; /* Offset for fixed top navbar */
   overflow-x: hidden;
+}
+
+/* Header & Brand Logo Strict Protection */
+img[src*="brand_logo_official"],
+.brand-logo-img,
+.nav-brand-logo,
+.nav-brand img {
+  width: 48px !important;
+  max-width: 48px !important;
+  height: 48px !important;
+  max-height: 48px !important;
+  object-fit: contain !important;
+  border-radius: 50% !important;
+  flex-shrink: 0 !important;
+  display: inline-block !important;
 }
 
 html[lang="ar"] body.pillar-body {

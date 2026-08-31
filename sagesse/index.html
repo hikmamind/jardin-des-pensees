@@ -14,13 +14,13 @@
   
   <!-- Universal Stylesheets -->
   <link rel="stylesheet" href="../style.css?v=28">
-  <link rel="stylesheet" href="../assets/css/pillar.css?v=1">
+  <link rel="stylesheet" href="../assets/css/pillar.css?v=2">
   <link rel="stylesheet" href="../assets/css/rtl.css?v=1">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="الحكمة وفن العيش | حكمة ونور">
-  <meta property="og:description" content="خلاصات التجارب الإنسانية الخالدة للعيش باتزان وهدوء.">
+  <meta property="og:title" content="الحكمة وفن العيش | حكمة ونور — Le Jardin des Pensées">
+  <meta property="og:description" content="خلاصات التجارب الإنسانية الخالدة للعيش باتزان ووعي وهدوء من خلال حكمة الفلاسفة وأدلة التأمل.">
   <meta property="og:image" content="https://lejardindespensees.com/silence_wisdom_action.jpg">
   <meta property="og:url" content="https://lejardindespensees.com/sagesse/">
 
@@ -33,8 +33,8 @@
         "@type": "CollectionPage",
         "@id": "https://lejardindespensees.com/sagesse/#webpage",
         "url": "https://lejardindespensees.com/sagesse/",
-        "name": "الحكمة وفن العيش | حكمة ونور",
-        "description": "نصوص الحكمة والتأملات الخالدة في فن العيش والسلام الداخلي.",
+        "name": "الحكمة وفن العيش | حكمة ونور — Le Jardin des Pensées",
+        "description": "خلاصات التجارب الإنسانية الخالدة للعيش باتزان ووعي وهدوء من خلال حكمة الفلاسفة وأدلة التأمل.",
         "isPartOf": {
           "@type": "WebSite",
           "@id": "https://lejardindespensees.com/#website",
@@ -47,57 +47,86 @@
 </head>
 <body class="pillar-body" data-pillar="wisdom">
 
-  <!-- ============================================================
-       1. GLOBAL HEADER
-       ============================================================ -->
-  <header class="navbar-header site-header" id="mainHeader">
-    <div class="nav-container">
-      <div class="nav-brand-box">
-        <a href="../index.html" class="nav-brand-link">
-          <img src="../brand_logo_official.png" alt="Le Jardin des Pensées" class="nav-brand-logo" onerror="this.style.display='none'">
-          <span class="nav-brand-text">Le Jardin des Pensées</span>
-        </a>
-      </div>
+  <!-- Background Decorative Glowing Orbs -->
+  <div class="glowing-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
 
-      <nav class="nav-links" id="navMenu" aria-label="Navigation principale">
+  <!-- ============================================================
+       1. GLOBAL HEADER / NAVBAR (STANDARD HIKMA & NOUR ARCHITECTURE)
+       ============================================================ -->
+  <header class="navbar-header" id="mainHeader">
+    <nav class="navbar" aria-label="التنقل الرئيسي">
+      <a href="../index.html" class="nav-brand">
+        <img src="../brand_logo_official.png" alt="شعار حكمة ونور" class="brand-logo-img">
+        <div style="display: flex; flex-direction: column; line-height: 1.15;">
+          <span class="brand-name" id="navBrandName">HIKMA & NOUR</span>
+          <span class="brand-tagline-ar" style="font-size: 0.72rem; color: var(--text-secondary);" data-i18n="footerBrandTagline">حكمة • فلسفة • سكينة</span>
+        </div>
+      </a>
+      
+      <!-- Hamburger Menu for Mobile -->
+      <button class="nav-hamburger" id="navHamburger" aria-label="فتح القائمة">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <!-- Navigation Menu (Pillars & Sections) -->
+      <div class="nav-menu" id="navMenu">
         <a href="../index.html" class="nav-link" data-i18n="home">الرئيسية</a>
-        <a href="../philosophie/" class="nav-link" data-i18n="philosophy">الفلسفة</a>
-        <a href="../psychologie/" class="nav-link" data-i18n="psychologySub">علم النفس</a>
-        <a href="../developpement-personnel/" class="nav-link" data-i18n="catPersonalGrowth">تطوير الذات</a>
-        <a href="index.html" class="nav-link active" data-i18n="wisdom">الحكمة</a>
-        <a href="../islam/" class="nav-link" data-i18n="islamicThought">الفكر الإسلامي</a>
+        <a href="../philosophie/" class="nav-link " data-i18n="philosophy">الفلسفة</a>
+        <a href="../psychologie/" class="nav-link " data-i18n="psychologySub">علم النفس</a>
+        <a href="../developpement-personnel/" class="nav-link " data-i18n="catPersonalGrowth">تطوير الذات</a>
+        <a href="../sagesse/" class="nav-link active" data-i18n="wisdom">الحكمة</a>
+        <a href="../islam/" class="nav-link " data-i18n="islamicThought">الفكر الإسلامي</a>
         <a href="../thinkers/" class="nav-link" data-i18n="thinkers">المفكرون</a>
         <a href="../quotes/" class="nav-link" data-i18n="quotes">الأقوال</a>
-      </nav>
-
-      <div class="nav-controls">
-        <!-- Language Dropdown -->
-        <div class="lang-dropdown-wrapper">
-          <button type="button" class="lang-selector-btn" id="langSelectorBtn" aria-label="Choisir la langue">
-            <span class="lang-globe-icon">🌐</span>
-            <span class="lang-current-label" id="currentLangLabel">العربية</span>
-            <span class="lang-caret">▾</span>
+      </div>
+        
+      <div class="nav-actions">
+        <!-- Language Selector -->
+        <div class="lang-selector">
+          <button class="lang-btn" id="langBtn" aria-label="تغيير اللغة">
+            <svg class="globe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px; height:16px;">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="activeLangName">العربية</span>
           </button>
-          <div class="lang-dropdown-menu" id="langDropdown">
-            <button type="button" class="lang-opt" data-lang="ar">العربية (AR)</button>
-            <button type="button" class="lang-opt" data-lang="fr">Français (FR)</button>
-            <button type="button" class="lang-opt" data-lang="en">English (EN)</button>
+          <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-opt active" data-lang="ar" aria-label="العربية">العربية</button>
+            <button class="lang-opt" data-lang="fr" aria-label="Français">Français</button>
+            <button class="lang-opt" data-lang="en" aria-label="English">English</button>
           </div>
         </div>
-
+        
         <!-- Theme Toggle -->
-        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Mode sombre/clair">🌙</button>
-
-        <!-- Mobile Hamburger -->
-        <button type="button" class="nav-hamburger" id="navHamburger" aria-label="Ouvrir le menu">
-          <span></span><span></span><span></span>
+        <button id="themeToggleBtn" class="theme-btn-nav" aria-label="تغيير المظهر">
+          <svg class="sun-icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" style="display:none;">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
         </button>
       </div>
-    </div>
+    </nav>
   </header>
 
   <!-- ============================================================
-       2. PILLAR MAIN CONTENT (UNIVERSAL SECTIONS)
+       2. PILLAR MAIN CONTAINER (DATA-DRIVEN UNIVERSAL SECTIONS)
        ============================================================ -->
   <main class="pillar-main-container">
     
@@ -111,8 +140,8 @@
     <section class="pillar-section" id="featured-articles-section">
       <div class="pillar-section-heading">
         <span class="pillar-eyebrow">مختارات • SÉLECTION</span>
-        <h2 class="pillar-section-title">دروس الحكمة الخالدة</h2>
-        <p class="pillar-section-subtitle">تأملات في الفضيلة، الصمت، وبناء السلام الداخلي</p>
+        <h2 class="pillar-section-title">دراسات مميزة</h2>
+        <p class="pillar-section-subtitle">أدلة تطبيقية وبحوث معرفية مختارة بعناية</p>
       </div>
       <div class="featured-articles-grid" id="featured-articles"></div>
     </section>
@@ -120,8 +149,8 @@
     <!-- Section 4 : All Articles with Filter Tabs -->
     <section class="pillar-section" id="all-articles-section">
       <div class="pillar-section-heading">
-        <h2 class="pillar-section-title">كافة نصوص الحكمة</h2>
-        <p class="pillar-section-subtitle">استكشف النصوص المصنفة حسب مسارات التأمل</p>
+        <h2 class="pillar-section-title">كافة الدراسات والمقالات</h2>
+        <p class="pillar-section-subtitle">استكشف المقالات مصنفة حسب المسارات المتخصصة</p>
       </div>
       <div class="pillar-filters" id="pillar-filters"></div>
       <div class="articles-grid" id="all-articles"></div>
@@ -130,7 +159,7 @@
     <!-- Section 5 : Thinkers & Pioneers -->
     <section class="pillar-section" id="pillar-thinkers"></section>
 
-    <!-- Section 6 : Pillar Interactive Resources -->
+    <!-- Section 6 : Pillar Interactive Resources (Audio / Quiz) -->
     <section class="pillar-section" id="pillar-resources-section"></section>
 
     <!-- Section 7 : Cross-Navigation to other Pillars -->
@@ -155,12 +184,67 @@
   </style>
 
   <!-- ============================================================
-       4. GLOBAL FOOTER
+       4. GLOBAL FOOTER (STANDARD HIKMA & NOUR ARCHITECTURE)
        ============================================================ -->
-  <footer class="footer site-footer" id="mainFooter">
-    <div class="footer-container" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px; text-align: center; border-top: 1px solid rgba(223, 177, 91, 0.15);">
-      <p style="color: #A9AAA4; font-size: 0.9rem; margin-bottom: 12px;">© 2026 حكمة ونور — Le Jardin des Pensées. جميع الحقوق محفوظة.</p>
-      <p style="color: #7E8580; font-size: 0.8rem;">صُمم بحكمة وهدوء لتعزيز الوعي والفكر الإنساني. ✨🌿</p>
+  <footer class="footer site-footer" id="mainFooter" style="background: rgba(4, 8, 5, 0.95); border-top: 1px solid rgba(223, 177, 91, 0.18); padding: 50px 20px 30px; margin-top: 60px;">
+    <div class="footer-container" style="max-width: 1200px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 35px; text-align: right; margin-bottom: 40px;">
+        
+        <!-- Col 1: Brand Info -->
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+            <img src="../brand_logo_official.png" alt="Hikma & Nour" style="width: 38px; height: 38px; object-fit: contain; border-radius: 50%;">
+            <span style="font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 800; color: #DFB15B;">HIKMA & NOUR</span>
+          </div>
+          <p style="color: #A9AAA4; font-size: 0.88rem; line-height: 1.7;" data-i18n="footerBrandDesc">
+            حكمة • فلسفة • سكينة<br>
+            مساحة للتأمل الهادئ مستوحاة من كبار الفلاسفة لتعزيز السلام الداخلي وقوة العقل.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div>
+          <h3 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;" data-i18n="footerExplorer">🧭 استكشف</h3>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
+            <li><a href="../index.html" style="color: #A9AAA4; text-decoration: none;" data-i18n="home">الرئيسية</a></li>
+            <li><a href="../philosophie/" style="color: #A9AAA4; text-decoration: none;" data-i18n="philosophy">الفلسفة</a></li>
+            <li><a href="../psychologie/" style="color: #A9AAA4; text-decoration: none;" data-i18n="psychologySub">علم النفس</a></li>
+            <li><a href="../developpement-personnel/" style="color: #A9AAA4; text-decoration: none;" data-i18n="catPersonalGrowth">تطوير الذات</a></li>
+            <li><a href="../sagesse/" style="color: #A9AAA4; text-decoration: none;" data-i18n="wisdom">الحكمة</a></li>
+            <li><a href="../islam/" style="color: #A9AAA4; text-decoration: none;" data-i18n="islamicThought">الفكر الإسلامي</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Sections -->
+        <div>
+          <h3 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;" data-i18n="footerDiscover">✨ اكتشف المزيد</h3>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
+            <li><a href="../thinkers/" style="color: #A9AAA4; text-decoration: none;" data-i18n="thinkers">المفكرون</a></li>
+            <li><a href="../quotes/" style="color: #A9AAA4; text-decoration: none;" data-i18n="quotes">الأقوال</a></li>
+            <li><a href="../audio/" style="color: #A9AAA4; text-decoration: none;" data-i18n="audio">المكتبة الصوتية</a></li>
+            <li><a href="../quizzes/" style="color: #A9AAA4; text-decoration: none;" data-i18n="quiz">الاختبارات الفلسفية</a></li>
+            <li><a href="../calendar/" style="color: #A9AAA4; text-decoration: none;" data-i18n="calendar">التقويم الفلسفي</a></li>
+            <li><a href="../shop/" style="color: #A9AAA4; text-decoration: none;" data-i18n="shop">المتجر</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Legal & Info -->
+        <div>
+          <h3 style="color: #FFFDF8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 700; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 6px;" data-i18n="footerLegal">🔒 قانوني</h3>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
+            <li><a href="../privacy-policy.html" style="color: #DFB15B; text-decoration: none; font-weight: 600;" data-i18n="privacyPolicy">سياسة الخصوصية</a></li>
+            <li><a href="../terms-of-service.html" style="color: #A9AAA4; text-decoration: none;" data-i18n="termsOfService">شروط الاستخدام</a></li>
+            <li><a href="../cookie-policy.html" style="color: #A9AAA4; text-decoration: none;" data-i18n="cookiePolicy">سياسة ملفات تعريف الارتباط</a></li>
+            <li><a href="../contact.html" style="color: #A9AAA4; text-decoration: none;" data-i18n="contactNav">تواصل معنا</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center;">
+        <p style="color: #A9AAA4; font-size: 0.85rem; margin-bottom: 6px;">© 2026 حكمة ونور — Le Jardin des Pensées. جميع الحقوق محفوظة.</p>
+        <p style="color: #7E8580; font-size: 0.78rem; margin: 0;">صُمم بحكمة وهدوء لتعزيز الوعي والفكر الإنساني. ✨🌿</p>
+      </div>
     </div>
   </footer>
 
@@ -168,6 +252,6 @@
        5. UNIVERSAL ENGINES
        ============================================================ -->
   <script src="../app_v11.js?v=28" type="module"></script>
-  <script type="module" src="../assets/js/pillar-renderer.js?v=1"></script>
+  <script type="module" src="../assets/js/pillar-renderer.js?v=2"></script>
 </body>
 </html>
