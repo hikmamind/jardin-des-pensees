@@ -1087,7 +1087,8 @@
     import { renderPillarResources } from '../assets/js/pillar_resources.js';
     window.renderPillarResources = renderPillarResources;
   </script>
-  <script src="../app_v11.js?v=28" type="module">
+  <script src="../app_v11.js?v=28" type="module"></script>
+  <script type="module">
     /* ============================================================
        PSYCHOLOGIE V5.2 — PARCOURS PSYCHOLOGIE DEDICATED VIEW ENGINE
        ============================================================ */
@@ -1363,7 +1364,7 @@
       const transHome = lang === 'ar' ? 'الرئيسية' : (lang === 'fr' ? 'Accueil' : 'Home');
       const transPsy = lang === 'ar' ? 'علم النفس' : (lang === 'fr' ? 'Psychologie' : 'Psychology');
       const backBtnText = lang === 'ar' ? '← العودة إلى علم النفس' : (lang === 'fr' ? '← Retour à la Psychologie' : '← Back to Psychology');
-      const readArtText = lang === 'ar' ? 'اقرأ المقال ←' : (lang === 'fr' ? 'Lire l'article →' : 'Read article →');
+      const readArtText = lang === 'ar' ? 'اقرأ المقال ←' : (lang === 'fr' ? 'Lire l\'article →' : 'Read article →');
       const viewThinkerText = lang === 'ar' ? 'عرض المفكر ←' : (lang === 'fr' ? 'Voir le penseur →' : 'View profile →');
       const comingSoonMsg = lang === 'ar' ? '⏳ مقالات قادمة قريبًا' : (lang === 'fr' ? '⏳ Articles à venir' : '⏳ Articles coming soon');
 
@@ -1854,6 +1855,10 @@
       checkDomainHash();
     }
     window.addEventListener('hashchange', checkDomainHash);
+    window.addEventListener('languageChanged', renderDynamicElements);
+    window.addEventListener('siteLanguageChanged', renderDynamicElements);
+    window.addEventListener('site_lang_v1_changed', renderDynamicElements);
+    window.renderDynamicElements = renderDynamicElements;
 
     function checkDomainHash() {
       const hash = location.hash;
@@ -1927,7 +1932,10 @@
         articles: [
           { id: 'stop-overthinking', url: '../files/stop-overthinking.html', title: { ar: 'كيف تتوقف عن التفكير الزائد وتستعيد هدوءك الداخلي؟', fr: 'La pensée excessive et le retour au calme : comment apaiser le flux mental', en: 'Overcoming Overthinking: A Mindful Guide to Inner Calm' } },
             { id: 'pourquoi-esprit-imagine-le-pire', url: '../files/pourquoi-esprit-imagine-le-pire.html', title: { ar: 'لماذا يتوقع عقلنا الأسوأ دائمًا؟', fr: 'Pourquoi notre esprit imagine toujours le pire ?', en: 'Why Does Our Mind Always Expect the Worst?' } },
-            { id: 'deja-vu-familiarite-memoire', url: '../files/deja-vu-familiarite-memoire.html', title: { ar: 'ظاهرة الديجافو والألفة: كيف تعيد الذاكرة بناء الحاضر؟', fr: 'Le déjà-vu et la familiarité : comment la mémoire reconstruit le présent', en: 'Déjà-Vu, Familiarity, and Memory: How the Mind Reconstructs the Present' } },
+            { id: 'deja-vu-familiarite-memoire', url: '../files/deja-vu-familiarite-memoire.html', title: { ar: 'ظاهرة الديجافو والألفة: كيف تعيد الذاكرة بناء الحاضر؟', fr: 'Le déjà-vu et la familiarité : comment la mémoire reconstruit le présent', en: 'Déjà-Vu, Familiarity, and Memory: How the Mind Reconstructs the Present' } }
+        ],
+        thinkerIds: ['freud', 'william-james', 'jung']
+      },
       {
         id: 'domain-humaniste',
         num: '03',
@@ -2619,5 +2627,6 @@
         history.pushState(null, '', location.pathname);
       }
     };
+  </script>
 </body>
 </html>
