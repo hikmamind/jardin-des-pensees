@@ -4855,7 +4855,7 @@ const TIKTOK_DATA = {
           "category": "psychology",
           "pillar": "psychologie",
           "published": true,
-          "featured": false
+          "featured": true
         },
         {
           "id": "pourquoi-cherchons-nous-approbation",
@@ -4869,7 +4869,7 @@ const TIKTOK_DATA = {
           "category": "psychology",
           "pillar": "psychologie",
           "published": true,
-          "featured": false
+          "featured": true
         }
       ],
       "faq": [
@@ -9251,7 +9251,7 @@ const TIKTOK_DATA = {
           "category": "psychology",
           "pillar": "psychologie",
           "published": true,
-          "featured": false
+          "featured": true
         },
         {
           "id": "pourquoi-cherchons-nous-approbation",
@@ -9265,7 +9265,7 @@ const TIKTOK_DATA = {
           "category": "psychology",
           "pillar": "psychologie",
           "published": true,
-          "featured": false
+          "featured": true
         }
       ],
       "faq": [
@@ -13846,7 +13846,7 @@ const TIKTOK_DATA = {
           "category": "psychology",
           "pillar": "psychologie",
           "published": true,
-          "featured": false
+          "featured": true
         },
         {
           "id": "pourquoi-cherchons-nous-approbation",
@@ -13860,7 +13860,7 @@ const TIKTOK_DATA = {
           "category": "psychology",
           "pillar": "psychologie",
           "published": true,
-          "featured": false
+          "featured": true
         }
       ],
       "faq": [

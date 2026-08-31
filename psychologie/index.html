@@ -1529,45 +1529,71 @@
         window.renderPsychologyPathway(window.activePathwayId, lang);
       }
 
-      // 1. Render Featured Articles (2 cards: Pensée excessive & Déjà-vu)
+      // 1. Render Featured Articles from central data store (all published featured psychology articles)
       const featuredSection = document.getElementById('psyFeaturedSection');
-      const featuredContainer = document.getElementById('psychology-featured-articles');
+      const featuredContainer = document.getElementById('psychology-featured-articles') || document.getElementById('featured-articles') || document.querySelector('.featured-articles-grid');
+
       if (featuredSection && featuredContainer) {
-        if (currentFilter === 'all' || currentFilter === '03') {
+        const articlesSource = (TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].articles) ? TIKTOK_DATA.content[lang].articles : [];
+
+        // Dynamic query matching pillar: "psychologie" and featured: true
+        let featuredList = articlesSource.filter(a =>
+          (a.pillar === 'psychologie' || a.category === 'psychology') &&
+          (a.featured === true || a.isFeatured === true) &&
+          (a.published !== false)
+        );
+
+        const articleParcoursMap = {
+          'why-people-respect-silent-person': '01',
+          'stop-overthinking': '03',
+          'pourquoi-esprit-imagine-le-pire': '03',
+          'deja-vu-familiarite-memoire': '03',
+          'true-confidence-inside': '01',
+          'pourquoi-cherchons-nous-approbation': '01',
+          'self-discipline': '03',
+          'solitude-blessing-or-curse': '04'
+        };
+
+        // Filter if specific parcours filter is active
+        if (currentFilter !== 'all') {
+          featuredList = featuredList.filter(a => articleParcoursMap[a.id] === currentFilter);
+        }
+
+        if (featuredList.length > 0) {
           featuredSection.style.display = 'block';
 
-          const targetFeaturedIds = ['stop-overthinking', 'deja-vu-familiarite-memoire'];
-          const articlesSource = (TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].articles) ? TIKTOK_DATA.content[lang].articles : [];
-          const featuredList = targetFeaturedIds.map(id => articlesSource.find(a => a.id === id)).filter(Boolean);
-
           const badgeLabels = {
-            'stop-overthinking': lang === 'ar' ? 'مقال مميز • العقل والسلوك' : lang === 'fr' ? 'Article à la une • Esprit & Comportement' : 'Featured • Mind & Behavior',
-            'deja-vu-familiarite-memoire': lang === 'ar' ? 'مقال مميز • الذاكرة والألفة' : lang === 'fr' ? 'Article à la une • Mémoire & Perception' : 'Featured • Memory & Perception'
+            'stop-overthinking': lang === 'ar' ? 'مقال مميز • العقل والسلوك' : (lang === 'fr' ? 'Article à la une • Esprit & Comportement' : 'Featured • Mind & Behavior'),
+            'deja-vu-familiarite-memoire': lang === 'ar' ? 'مقال مميز • الذاكرة والألفة' : (lang === 'fr' ? 'Article à la une • Mémoire & Perception' : 'Featured • Memory & Perception'),
+            'pourquoi-esprit-imagine-le-pire': lang === 'ar' ? 'مقال مميز • العقل والسلوك' : (lang === 'fr' ? 'Article à la une • Esprit & Comportement' : 'Featured • Mind & Behavior'),
+            'pourquoi-cherchons-nous-approbation': lang === 'ar' ? 'مقال مميز • علم النفس الذاتي' : (lang === 'fr' ? 'Article à la une • Psychologie de soi' : 'Featured • Psychology of Self')
           };
 
           const pathMap = {
             'stop-overthinking': '../files/stop-overthinking.html',
-          'pourquoi-esprit-imagine-le-pire': '../files/pourquoi-esprit-imagine-le-pire.html',
-            'deja-vu-familiarite-memoire': '../files/deja-vu-familiarite-memoire.html'
+            'deja-vu-familiarite-memoire': '../files/deja-vu-familiarite-memoire.html',
+            'pourquoi-esprit-imagine-le-pire': '../files/pourquoi-esprit-imagine-le-pire.html',
+            'pourquoi-cherchons-nous-approbation': '../files/pourquoi-cherchons-nous-approbation.html'
           };
 
           const imgMap = {
             'stop-overthinking': '../psychologie/images/thumb-pensee-excessive-calme.jpg',
-          'pourquoi-esprit-imagine-le-pire': '../psychologie/images/thumb-esprit-imagine-le-pire.jpg',
-            'deja-vu-familiarite-memoire': '../psychologie/images/thumb-deja-vu-familiarite-memoire.jpg'
+            'deja-vu-familiarite-memoire': '../psychologie/images/thumb-deja-vu-familiarite-memoire.jpg',
+            'pourquoi-esprit-imagine-le-pire': '../psychologie/images/thumb-esprit-imagine-le-pire.jpg',
+            'pourquoi-cherchons-nous-approbation': '../psychologie/images/thumb-besoin-approbation.jpg'
           };
 
-          const readBtnLabel = lang === 'ar' ? 'اقرأ المقال →' : lang === 'fr' ? 'Lire l\'article →' : 'Read Article →';
+          const readBtnLabel = (TIKTOK_DATA.ui[lang] && TIKTOK_DATA.ui[lang].readArticleBtn) || (lang === 'ar' ? 'اقرأ المقال ←' : (lang === 'fr' ? 'Lire l\'article →' : 'Read Article →'));
 
           featuredContainer.innerHTML = featuredList.map(art => {
             const readTimeText = art.readTime ? `⏱️ ${art.readTime}` : '';
             const desc = art.desc || art.summary || '';
-            const targetUrl = pathMap[art.id] || `../files/${art.file || art.id + '.html'}`;
-            const imgSrc = imgMap[art.id] || (art.image ? (art.image.startsWith('../') ? art.image : '../' + art.image) : '../main_home_hd_bg.jpg');
-            const badge = badgeLabels[art.id] || (lang === 'ar' ? 'مقال مميز' : lang === 'fr' ? 'Article à la une' : 'Featured Article');
+            const targetUrl = pathMap[art.id] || (art.file ? (art.file.startsWith('../') ? art.file : `../files/${art.file}`) : `../files/${art.id}.html`);
+            const imgSrc = imgMap[art.id] || (art.image ? (art.image.startsWith('../') ? art.image : `../${art.image}`) : '../main_home_hd_bg.jpg');
+            const badge = badgeLabels[art.id] || (lang === 'ar' ? 'مقال مميز' : (lang === 'fr' ? 'Article à la une' : 'Featured Article'));
 
             return `
-              <article class="featured-article-card" data-article-id="${art.id}">
+              <article class="featured-article-card featured-card article-card" data-article-id="${art.id}">
                 <div class="featured-img-box">
                   <a href="${targetUrl}" tabindex="-1" aria-hidden="true">
                     <img src="${imgSrc}" alt="${art.imageAlt || art.title}" class="featured-img" loading="lazy">
