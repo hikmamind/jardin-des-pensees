@@ -1083,15 +1083,20 @@
     </div>
   </footer>
 
-  <script type="module">
-    import { renderPillarResources } from '../assets/js/pillar_resources.js';
-    window.renderPillarResources = renderPillarResources;
-  </script>
+  <!-- External App Script -->
   <script src="../app_v11.js?v=28" type="module"></script>
+
+  <!-- Complete Psychology Pillar Engine (V5.4) -->
   <script type="module">
-    /* ============================================================
-       PSYCHOLOGIE V5.2 — PARCOURS PSYCHOLOGIE DEDICATED VIEW ENGINE
-       ============================================================ */
+    import { renderPillarResources } from "../assets/js/pillar_resources.js";
+    import TIKTOK_DATA from "../data_v11.js";
+
+    window.renderPillarResources = renderPillarResources;
+    window.TIKTOK_DATA = TIKTOK_DATA;
+
+    let currentFilter = "all";
+
+    // 1. DATA: 5 PSYCHOLOGY PATHWAYS (PARCOURS)
     const PARCOURS_PSYCHOLOGIE_DATA = [
       {
         id: "self",
@@ -1104,923 +1109,492 @@
           fr: "Un parcours dédié à l'exploration de la structure psychique, du système inconscient et du développement de l'estime personnelle.",
           en: "A journey dedicated to exploring psychological structure, the subconscious mind, and building self-esteem."
         },
-        principles: {
-          ar: [
-            "💡 إدراك اللاوعي يوضح خيارات الحياة والقرارات المصيرية.",
-            "💡 التفرّد وبناء الشخصية يتطلبان مواجهة الظلال الذاتية.",
-            "💡 الثقة الحقيقية تنبع من التوافق الداخلي الصادق."
-          ],
-          fr: [
-            "💡 La prise de conscience de l'inconscient éclaircit les choix de vie.",
-            "💡 L'individuation exige la confrontation avec ses propres ombres.",
-            "💡 La véritable confiance naît de l'alignement intérieur."
-          ],
-          en: [
-            "💡 Becoming conscious of the unconscious illuminates life choices.",
-            "💡 Individuation requires confronting one's own shadow.",
-            "💡 True confidence springs from inner alignment."
-          ]
-        },
+        principles: [
+          {
+            num: "01",
+            title: { ar: "إدراك اللاوعي", fr: "Prise de conscience", en: "Subconscious awareness" },
+            desc: { ar: "إدراك الدوافع اللاواعية هو الخطوة الأولى نحو الحرية النفسية.", fr: "Prendre conscience des pulsions inconscientes est le premier pas vers la liberté intérieure.", en: "Becoming conscious of unconscious drives is the first step toward inner freedom." }
+          },
+          {
+            num: "02",
+            title: { ar: "التفرد ومواجهة الظل", fr: "Individuation & Ombre", en: "Individuation & Shadow" },
+            desc: { ar: "التكامل النفسي يتطلب دمج الجوانب المظلمة والمكبوتة من الشخصية.", fr: "L'intégration psychique exige d'accueillir et d'éclairer sa part d'ombre.", en: "Psychological integration requires embracing and illuminating one's shadow." }
+          },
+          {
+            num: "03",
+            title: { ar: "التوافق الداخلي", fr: "Alignement intérieur", en: "Inner alignment" },
+            desc: { ar: "الثقة الحقيقية تنبع من التوافق بين القيم والأفعال.", fr: "La véritable confiance naît de la cohérence entre valeurs et actions.", en: "True confidence stems from coherence between values and actions." }
+          }
+        ],
         articles: [
           {
             id: "true-confidence-inside",
             url: "../articles/true-confidence-inside.html",
-            title: { ar: "الثقة الحقيقية بالنفس تنبع من الداخل", fr: "La Véritable Confiance en Soi Vient de L'Intérieur", en: "True Self-Confidence Comes from Within" },
+            thumb: "../dev_confidence_hd.jpg",
+            title: { ar: "كيف تبني ثقة حقيقية بنفسك من الداخل؟", fr: "Comment construire une vraie confiance en soi de l'intérieur", en: "How to Build True Inner Self-Confidence" },
             desc: { ar: "دراسة عميقة في بناء الصلابة النفسية وتجاوز الشكوك الذاتية.", fr: "Une étude approfondie sur la construction de la résilience psychologique.", en: "An in-depth study on building psychological resilience." }
           },
           {
-            id: "stop-overthinking",
-            url: "../files/stop-overthinking.html",
-            title: { ar: "كيف تتوقف عن التفكير الزائد وترتاح نفسياً", fr: "Comment Stopper les Pensées Obsédantes et Retrouver la Paix", en: "How to Stop Overthinking and Regain Inner Peace" },
-            desc: { ar: "دليل عملي لتخفيف القلق المعرفي والتحكم في تداعي الأفكار.", fr: "Un guide pratique pour soulager l'anxiété cognitive.", en: "A practical guide to relieving cognitive anxiety." }
+            id: "why-people-respect-silent-person",
+            url: "../articles/why-people-respect-silent-person.html",
+            thumb: "../silence_respect_hero.jpg",
+            title: { ar: "لماذا يحترم الناس الشخص الصامت أكثر من كثير الكلام؟", fr: "Pourquoi les gens respectent une personne silencieuse", en: "Why People Respect a Silent Person" },
+            desc: { ar: "سيكولوجية الحضور، والاتزان العاطفي، وقوة الصمت الواعي.", fr: "La psychologie de la présence et la puissance du silence conscient.", en: "The psychology of presence and the power of mindful silence." }
+          },
+          {
+            id: "pourquoi-cherchons-nous-approbation",
+            url: "../files/pourquoi-cherchons-nous-approbation.html",
+            thumb: "../psychologie/images/thumb-besoin-approbation.jpg",
+            title: { ar: "لماذا نبحث عن استحسان الآخرين؟", fr: "Pourquoi cherchons-nous l’approbation des autres ?", en: "Why Do We Seek Other People’s Approval?" },
+            desc: { ar: "فهم الحاجة إلى القبول واستعادة اتجاه داخلي أكثر ثباتًا دون ارتهان بنظرة الآخرين.", fr: "Comprendre le besoin de validation et retrouver une direction plus intérieure.", en: "Understanding the need for validation and developing a steadier inner direction." }
           }
         ],
         thinkerIds: ["freud", "jung", "adler"]
       },
       {
-        id: "emotions-relations",
+        id: "relations",
         alias: "02",
         number: "02",
         title: { ar: "المشاعر والعلاقات", fr: "Émotions & Relations", en: "Emotions & Relationships" },
-        subtitle: { ar: "فهم الارتباط، الديناميكية العاطفية، والروابط الإنسانية", fr: "Comprendre les attachements, la dynamique affective et les liens humains", en: "Understand attachments, emotional dynamics, and human bonds" },
+        subtitle: { ar: "فهم لغة المشاعر وبناء روابط إنسانية عميقة", fr: "Comprendre le langage émotionnel et tisser des liens authentiques", en: "Understanding emotional language and cultivating deep connections" },
         intro: {
-          ar: "تحليل أنماط التعلق، التنظيم العاطفي، والتواصل التعاطفي في مواجهة التحولات الاجتماعية.",
-          fr: "Analyse des schémas d'attachement, de la régulation émotionnelle et de la communication empathique.",
-          en: "Analysis of attachment styles, emotional regulation, and empathetic communication."
+          ar: "دراسة آليات التعلق، التواصل التعاطفي، وإدارة الصراعات في العلاقات الإنسانية.",
+          fr: "Une exploration des styles d'attachement, de la communication empathique et de la régulation émotionnelle.",
+          en: "An exploration of attachment styles, empathic communication, and emotional regulation."
         },
-        principles: {
-          ar: [
-            "💡 التعلق المبكر يشكل نمط العلاقات والروابط عند الكبر.",
-            "💡 التعرف الوعي على المشاعر هو الخطوة الأولى لتنظيمها.",
-            "💡 التعاطف الفعال يغير جودة الروابط الاجتماعية والعمق الإنساني."
-          ],
-          fr: [
-            "💡 L'attachement précoce préfigure le style relationnel adulte.",
-            "💡 Reconnaître ses émotions est la première étape de leur régulation.",
-            "💡 L'empathie active transforme la qualité des liens sociaux."
-          ],
-          en: [
-            "💡 Early attachment shapes adult relational patterns.",
-            "💡 Recognizing emotions is the first step toward regulation.",
-            "💡 Active empathy transforms the quality of social bonds."
-          ]
-        },
+        principles: [
+          {
+            num: "01",
+            title: { ar: "أنماط التعلق", fr: "Styles d'attachement", en: "Attachment Styles" },
+            desc: { ar: "فهم نمط تعلقك يضيء جذور مخاوفك ورغباتك في العلاقات.", fr: "Comprendre son style d'attachement éclaire ses réactions relationnelles.", en: "Understanding your attachment style illuminates your relationship patterns." }
+          },
+          {
+            num: "02",
+            title: { ar: "الذكاء العاطفي", fr: "Intelligence émotionnelle", en: "Emotional Intelligence" },
+            desc: { ar: "تسمية المشاعر بدقة تخفف من حدتها وتمنحك سيطرة واعية.", fr: "Nommer précisément ses émotions permet de mieux les réguler.", en: "Accurately naming emotions is the first step to regulating them." }
+          },
+          {
+            num: "03",
+            title: { ar: "الحدود الصحية", fr: "Frontières saines", en: "Healthy Boundaries" },
+            desc: { ar: "الحدود ليست جدران عزل، بل شروط استمرار الحب والاحترام.", fr: "Les limites saines préservent l'intégrité et la qualité du lien.", en: "Healthy boundaries preserve personal integrity and connection quality." }
+          }
+        ],
         articles: [
           {
             id: "why-people-distance-when-you-succeed",
             url: "../articles/why-people-distance-when-you-succeed.html",
-            title: { ar: "لماذا يبتعد الناس عنك عندما تنجح؟", fr: "Pourquoi les Gens s'Éloignent de Vous Lorsque Vous Réussissez", en: "Why People Distance Themselves When You Succeed" },
-            desc: { ar: "تحليل سيكولوجي للغيرة الاجتماعية والديناميات النفسية في العلاقات.", fr: "Analyse psychologique de l'envie sociale et des dynamiques relationnelles.", en: "Psychological analysis of social envy and relational dynamics." }
+            thumb: "../why_people_distance_success_hero.jpg",
+            title: { ar: "لماذا يبتعد الناس عنك عندما تبدأ بالنجاح؟", fr: "Pourquoi les gens s'éloignent lorsque vous réussissez", en: "Why People Distance Themselves When You Succeed" },
+            desc: { ar: "تحليل سيكولوجي للغيرة الاجتماعية، والمسافات النفسية في العلاقات.", fr: "Analyse psychologique de l'insécurité relationnelle et des dynamiques sociales.", en: "Psychological analysis of relational insecurity and social dynamics." }
           }
         ],
-        thinkerIds: ["freud", "jung"]
+        thinkerIds: ["william-james", "adler"]
       },
       {
         id: "mind-behavior",
         alias: "03",
         number: "03",
         title: { ar: "العقل والسلوك", fr: "Esprit & Comportement", en: "Mind & Behavior" },
-        subtitle: { ar: "دراسة العمليات المعرفية، أنماط التفكير، والتعلم", fr: "Étude des processus cognitifs, des schémas de pensée et de l'apprentissage", en: "Study of cognitive processes, thought patterns, and learning" },
+        subtitle: { ar: "تفكيك التحيزات المعرفية وفهم ميكانيزمات التفكير", fr: "Décoder les biais cognitifs et maîtriser les flux de pensée", en: "Decoding cognitive biases and mastering thought patterns" },
         intro: {
-          ar: "تفكيك التحيزات المعرفية، تعديل السلوك السلبي، وبناء العادات المستدامة واتخاذ القرارات.",
-          fr: "Décryptage des biais cognitifs, de la modification comportementale et de la prise de décision.",
-          en: "Decoding cognitive biases, behavioral modification, and decision-making."
+          ar: "التعمق في علم النفس المعرفي، كشف فخاخ التفكير الزائد، واستعادة التوازن العقلي.",
+          fr: "Une plongée dans la psychologie cognitive pour déjouer les ruminations et affûter la lucidité.",
+          en: "A deep dive into cognitive psychology to overcome overthinking and sharpen mental clarity."
         },
-        principles: {
-          ar: [
-            "💡 أفكارنا تؤثر مباشرة على استجاباتنا العاطفية وسلوكنا اليومي.",
-            "💡 إعادة الهيكلة المعرفية تسمح بتفكيك المعتقدات المقيدة والرموز الذهنية.",
-            "💡 التعلم المستمر والانضباط يغيران المرونة العصبية للدماغ."
-          ],
-          fr: [
-            "💡 Nos pensées influencent directement nos réponses émotionnelles et comportements.",
-            "💡 La restructuration cognitive permet de défaire les croyances limitantes.",
-            "💡 L'apprentissage continu modifie la plasticité cérébrale."
-          ],
-          en: [
-            "💡 Our thoughts directly influence our emotional responses and behavior.",
-            "💡 Cognitive restructuring untangles limiting beliefs.",
-            "💡 Continuous learning alters neuroplasticity."
-          ]
-        },
+        principles: [
+          {
+            num: "01",
+            title: { ar: "فصل الذات عن الفكرة", fr: "Défusion cognitive", en: "Cognitive Defusion" },
+            desc: { ar: "لست أفكارك؛ أنت الوعي الهادئ الذي يراقب تدفقها.", fr: "Vous n'êtes pas vos pensées, mais la conscience qui les observe.", en: "You are not your thoughts, but the awareness observing them." }
+          },
+          {
+            num: "02",
+            title: { ar: "التحيزات المعرفية", fr: "Biais cognitifs", en: "Cognitive Biases" },
+            desc: { ar: "إدراك فخاخ العقل يحميك من استنتاجات القلق والتسرع.", fr: "Identifier les distorsions cognitives protège des conclusions hâtives.", en: "Identifying cognitive distortions protects against anxious conclusions." }
+          },
+          {
+            num: "03",
+            title: { ar: "الحضور الواعي", fr: "Présence attentive", en: "Mindful Presence" },
+            desc: { ar: "التركيز على اللحظة الحاضرة هو العلاج الأقوى للاجترار.", fr: "L'ancrage dans le présent est le meilleur antidote à la rumination.", en: "Anchoring in the present moment is the ultimate antidote to rumination." }
+          }
+        ],
         articles: [
           {
             id: "stop-overthinking",
             url: "../files/stop-overthinking.html",
+            thumb: "../psychologie/images/thumb-pensee-excessive-calme.jpg",
             title: { ar: "كيف تتوقف عن التفكير الزائد وتستعيد هدوءك الداخلي؟", fr: "La pensée excessive et le retour au calme : comment apaiser le flux mental", en: "Overcoming Overthinking: A Mindful Guide to Inner Calm" },
-            desc: { ar: "دليل نفسي وعملي لفهم الاجترار المعرفي وتفكيك الحلقات الفكرية المرهقة دون جلد الذات.", fr: "Un guide psychologique et pratique pour comprendre la rumination et désamorcer les boucles mentales.", en: "A psychological and actionable guide to understanding rumination and breaking repetitive mental loops." }
+            desc: { ar: "دليل نفسي وعملي لفهم الاجترار المعرفي وتفكيك الحلقات الفكرية المرهقة.", fr: "Un guide cognitif pour comprendre la rumination et désamorcer les boucles mentales.", en: "A cognitive guide to understanding rumination and calming mental loops." }
+          },
+          {
+            id: "pourquoi-esprit-imagine-le-pire",
+            url: "../files/pourquoi-esprit-imagine-le-pire.html",
+            thumb: "../psychologie/images/thumb-esprit-imagine-le-pire.jpg",
+            title: { ar: "لماذا يتوقع عقلنا الأسوأ دائمًا؟", fr: "Pourquoi notre esprit imagine toujours le pire ?", en: "Why Does Our Mind Always Expect the Worst?" },
+            desc: { ar: "فهم التوقع الكارثي والتمييز بين الإمكانية واليقين الواقعي.", fr: "Comprendre l’anticipation anxieuse et retrouver une perception plus équilibrée de la réalité.", en: "Understanding anxious anticipation and developing a more balanced view of reality." }
           },
           {
             id: "deja-vu-familiarite-memoire",
             url: "../files/deja-vu-familiarite-memoire.html",
+            thumb: "../psychologie/images/thumb-deja-vu-familiarite-memoire.jpg",
             title: { ar: "ظاهرة الديجافو والألفة: كيف تعيد الذاكرة بناء الحاضر؟", fr: "Le déjà-vu et la familiarité : comment la mémoire reconstruit le présent", en: "Déjà-Vu, Familiarity, and Memory: How the Mind Reconstructs the Present" },
-            desc: { ar: "دليل نفسي وعلمي رصين يشرح ظاهرة الديجافو والذاكرة التوليدية دون تفسيرات خارقة.", fr: "Un guide cognitif pour comprendre le phénomène de déjà-vu et la mémoire reconstructive.", en: "A cognitive exploration of the déjà-vu phenomenon and reconstructive memory." }
+            desc: { ar: "دليل معرفي رصين يشرح ظاهرة الديجافو والذاكرة التوليدية دون أوهام.", fr: "Une exploration scientifique du déjà-vu et de la mémoire reconstructive.", en: "A scientific exploration of déjà-vu and reconstructive memory." }
           },
           {
             id: "self-discipline",
             url: "../files/self-discipline.html",
-            title: { ar: "الانضباط الذاتي: كيف تستمر بالعمل عند اختفاء الدافعية", fr: "La Discipline Personnelle: Continuer Quand la Motivation Disparaît", en: "Self-Discipline: How to Keep Going When Motivation Fades" },
-            desc: { ar: "بناء العادات المستدامة وتجاوز التسويف السلوكي.", fr: "Bâtir des habitudes durables et surmonter la procrastination comportementale.", en: "Building sustainable habits and overcoming behavioral procrastination." }
+            thumb: "../dev_discipline_hd.jpg",
+            title: { ar: "كيف تبني الانضباط الذاتي؟", fr: "Comment cultiver l'autodiscipline", en: "How to Build Self-Discipline" },
+            desc: { ar: "توجيه الإرادة وبناء العادات المعرفية المستدامة.", fr: "Structurer la volonté et automatiser les habitudes constructives.", en: "Structuring will and automating constructive habits." }
           }
         ],
-        thinkerIds: ["freud"]
+        thinkerIds: ["william-james", "jung"]
       },
       {
-        id: "wounds-resilience",
+        id: "resilience",
         alias: "04",
         number: "04",
         title: { ar: "الجروح والصمود النفسي", fr: "Blessures & Résilience", en: "Wounds & Resilience" },
-        subtitle: { ar: "تحويل الصدمات، تجاوز الشدائد، وإعادة اكتشاف المعنى", fr: "Transformer le traumatisme, surmonter l'adversité et retrouver le sens", en: "Transforming trauma, overcoming adversity, and discovering meaning" },
+        subtitle: { ar: "تحويل الألم إلى معنى وبناء القوة الداخلية", fr: "Transformer l'adversité en sens et forger une force intérieure", en: "Transforming adversity into meaning and forging inner strength" },
         intro: {
-          ar: "استكشاف آليات التكيف مع الأزمات، إعادة بناء الذات، والنمو الوجداني بعد الصدمات.",
-          fr: "Exploration des mécanismes d'adaptation face aux épreuves, de la reconstruction de soi et de la croissance post-traumatique.",
-          en: "Exploration of coping mechanisms, self-reconstruction, and post-traumatic growth."
+          ar: "رحلة في سيكولوجيا التعافي، التكيف مع الصدمات، وبناء المناعة النفسية أمام تقلبات الحياة.",
+          fr: "Un cheminement dans la psychologie de la guérison, l'acceptation et la reconstruction après l'épreuve.",
+          en: "A journey into the psychology of healing, acceptance, and growth through adversity."
         },
-        principles: {
-          ar: [
-            "💡 الصمود النفسي عملية ديناميكية يتم تنميتها بالوعي اليومي.",
-            "💡 إيجاد معنى للمعاناة هو مفتاح الشفاء والتعافي النفسي.",
-            "💡 العزلة الاختيارية قد تكون مهد التجدد والتأهيل الداخلي."
-          ],
-          fr: [
-            "💡 La résilience est un processus dynamique qui se cultive au quotidien.",
-            "💡 Trouver du sens à la souffrance est la clé de la guérison psychique.",
-            "💡 La solitude choisie peut devenir le berceau de la reconstruction."
-          ],
-          en: [
-            "💡 Resilience is a dynamic process cultivated daily.",
-            "💡 Finding meaning in suffering is the key to psychological healing.",
-            "💡 Chosen solitude can become the cradle of renewal."
-          ]
-        },
+        principles: [
+          {
+            num: "01",
+            title: { ar: "إيجاد المعنى", fr: "Quête de sens", en: "Search for Meaning" },
+            desc: { ar: "من يملك سبباً يعيش لأجله، يمكنه تحمل أي مشقة.", fr: "Celui qui a un pourquoi peut supporter presque tous les comment.", en: "He who has a why to live can bear almost any how." }
+          },
+          {
+            num: "02",
+            title: { ar: "المرونة التكيفية", fr: "Flexibilité adaptative", en: "Adaptive Flexibility" },
+            desc: { ar: "الصلابة الحقيقية ليست عدم الانكسار، بل القدرة على النهوض مجدداً.", fr: "La résilience n'est pas l'invulnérabilité, mais la capacité de rebond.", en: "True resilience is not invulnerability, but the capacity to rebound." }
+          },
+          {
+            num: "03",
+            title: { ar: "تقبل الواقع", fr: "Acceptation radicale", en: "Radical Acceptance" },
+            desc: { ar: "مقاومة ما لا يمكن تغييره تضاعف المعاناة دون طائل.", fr: "L'acceptation de la réalité telle qu'elle est désamorce la souffrance inutile.", en: "Accepting reality as it is defuses unnecessary suffering." }
+          }
+        ],
         articles: [
           {
             id: "solitude-blessing-or-curse",
             url: "../articles/solitude-blessing-or-curse.html",
-            title: { ar: "هل العزلة نعمة أم عقاب؟", fr: "La Solitude est-elle une Bénédiction ou une Punition ?", en: "Is Solitude a Blessing or a Curse?" },
-            desc: { ar: "تحليل فلسفي ونفسي للوحدة الاختيارية والبناء الوجداني.", fr: "Une analyse philosophique et psychologique de la solitude choisie.", en: "A philosophical and psychological analysis of chosen solitude." }
+            thumb: "../solitude_blessing_curse_hero.jpg",
+            title: { ar: "هل العزلة نعمة أم عقاب؟", fr: "La Solitude : Bénédiction ou Malédiction", en: "Solitude: Blessing or Curse?" },
+            desc: { ar: "دراسة في الفارق بين العزلة الخصبة والوحدة المؤلمة وكيفية بناء الصمود.", fr: "Étude sur la distinction entre solitude fertile et isolement douloureux.", en: "Study on the distinction between fertile solitude and painful isolation." }
           }
         ],
-        thinkerIds: ["jung"]
+        thinkerIds: ["freud", "adler"]
       },
       {
-        id: "positive-psychology",
+        id: "positive-growth",
         alias: "05",
         number: "05",
-        title: { ar: "علم النفس الإيجابي والنمو", fr: "Psychologie Positive", en: "Positive Psychology" },
-        subtitle: { ar: "تنمية نقاط القوة، الرفاهية، والازدهار الشخصي", fr: "Développer les forces de caractère, le bien-être et l'épanouissement", en: "Fostering character strengths, well-being, and flourishing" },
+        title: { ar: "علم النفس الإيجابي والنمو", fr: "Psychologie positive & Épanouissement", en: "Positive Psychology & Growth" },
+        subtitle: { ar: "تنمية مكامن القوة وجودة الحياة الإنسانية", fr: "Cultiver les forces de caractère et le bien-être durable", en: "Cultivating character strengths and sustainable well-being" },
         intro: {
-          ar: "الدراسة العلمية للعوامل المحفزة للرفاهية المستدامة، التفاؤل الواعي، وتحقيق الذات.",
-          fr: "Étude scientifique des facteurs favorisant le bien-être durable, l'optimisme lucide et la réalisation de soi.",
-          en: "Scientific study of factors fostering sustainable well-being, lucid optimism, and self-actualization."
+          ar: "دراسة علمية للسعادة، الامتنان، الفضائل الإنسانية، وتحقيق أقصى إمكانات الذات.",
+          fr: "Une approche scientifique du bonheur, de la gratitude et de l'actualisation du potentiel humain.",
+          en: "A scientific approach to happiness, gratitude, and actualizing human potential."
         },
-        principles: {
-          ar: [
-            "💡 السعادة تعتمد على التنمية النشطة لنقاط القوة الشخصية.",
-            "💡 الامتنان والحضور الكامل يعززان الصحة والاتزان النفسي.",
-            "💡 الشعور بالإنجاز ينبع من أهداف متوافقة مع القيم الجوهرية."
-          ],
-          fr: [
-            "💡 Le bonheur s'appuie sur la culture active des forces personnelles.",
-            "💡 La gratitude et la pleine présence renforcent la santé psychologique.",
-            "💡 Le sentiment d'accomplissement découle d'objectifs alignés sur ses valeurs."
-          ],
-          en: [
-            "💡 Happiness relies on actively cultivating personal strengths.",
-            "💡 Gratitude and mindfulness strengthen psychological health.",
-            "💡 A sense of accomplishment flows from goals aligned with values."
-          ]
-        },
-        articles: [
+        principles: [
           {
-            id: "why-people-respect-silent-person",
-            url: "../articles/why-people-respect-silent-person.html",
-            title: { ar: "لماذا يحترم الناس الشخص الهادئ والصامت؟", fr: "Pourquoi les Gens Respectent une Personne Silencieuse", en: "Why People Respect a Silent Person" },
-            desc: { ar: "سيكولوجية الحضور وتأثير الاتزان الداخلي في الوسط الاجتماعي.", fr: "La psychologie de la présence et l'impact du calme intérieur dans le milieu social.", en: "The psychology of presence and the impact of inner calm in social environments." }
+            num: "01",
+            title: { ar: "مكامن القوة", fr: "Forces de caractère", en: "Character Strengths" },
+            desc: { ar: "التركيز على نقاط قوتك يولد إنجازاً أكبر من مجرد معالجة نقاط ضعفك.", fr: "Capitaliser sur ses forces produit plus d'épanouissement que compenser ses faiblesses.", en: "Capitalizing on strengths yields more fulfillment than fixing weaknesses." }
+          },
+          {
+            num: "02",
+            title: { ar: "ممارسة الامتنان", fr: "Pratique de la gratitude", en: "Gratitude Practice" },
+            desc: { ar: "الامتنان اليومي يعيد توجيه الدماغ لرؤية الفرص والجمال الكامن.", fr: "La gratitude réoriente l'attention vers l'abondance et les opportunités.", en: "Gratitude redirects attention toward abundance and opportunity." }
+          },
+          {
+            num: "03",
+            title: { ar: "حالة التدفق", fr: "État de Flow", en: "Flow State" },
+            desc: { ar: "الانغماس الكامل في العمل ذي المعنى هو قمة السعادة الإنسانية.", fr: "L'immersion totale dans une activité stimulante procure une joie profonde.", en: "Total immersion in meaningful activity yields profound joy." }
           }
         ],
-        thinkerIds: ["adler"]
+        articles: [],
+        thinkerIds: ["william-james"]
       }
     ];
 
-    window.openPsychologyPathway = function(pathwayId) {
-      const mainView = document.getElementById('psychologyMainView');
-      const pathwayView = document.getElementById('psychologyPathwayView');
-      if (!mainView || !pathwayView) return;
-
-      const lang = getSavedLang();
-      window.activePathwayId = pathwayId;
-
-      renderPsychologyPathway(pathwayId, lang);
-
-      mainView.style.display = 'none';
-      pathwayView.style.display = 'block';
-
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-
-      const heading = pathwayView.querySelector('h1');
-      if (heading) {
-        heading.setAttribute('tabindex', '-1');
-        heading.focus();
-      }
-
-      if (history.pushState) {
-        history.pushState(null, '', '#parcours-' + pathwayId);
-      } else {
-        location.hash = '#parcours-' + pathwayId;
-      }
-    };
-
-    window.closePsychologyPathway = function() {
-      const mainView = document.getElementById('psychologyMainView');
-      const pathwayView = document.getElementById('psychologyPathwayView');
-      if (!mainView || !pathwayView) return;
-
-      window.activePathwayId = null;
-
-      pathwayView.style.display = 'none';
-      mainView.style.display = 'block';
-
-      if (history.pushState) {
-        history.pushState(null, '', location.pathname);
-      } else {
-        location.hash = '';
-      }
-
-      const parcoursSec = document.getElementById('parcours');
-      if (parcoursSec) {
-        parcoursSec.scrollIntoView({ behavior: 'smooth' });
-      } else {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    };
-
-    window.renderPsychologyPathway = function(pathwayId, lang) {
-      const container = document.getElementById('psychologyPathwayContent');
-      if (!container) return;
-
-      const pData = PARCOURS_PSYCHOLOGIE_DATA.find(p => p.id === pathwayId || p.alias === pathwayId) || PARCOURS_PSYCHOLOGIE_DATA[0];
-
-      const transHome = lang === 'ar' ? 'الرئيسية' : (lang === 'fr' ? 'Accueil' : 'Home');
-      const transPsy = lang === 'ar' ? 'علم النفس' : (lang === 'fr' ? 'Psychologie' : 'Psychology');
-      const backBtnText = lang === 'ar' ? '← العودة إلى علم النفس' : (lang === 'fr' ? '← Retour à la Psychologie' : '← Back to Psychology');
-      const readArtText = lang === 'ar' ? 'اقرأ المقال ←' : (lang === 'fr' ? 'Lire l\'article →' : 'Read article →');
-      const viewThinkerText = lang === 'ar' ? 'عرض المفكر ←' : (lang === 'fr' ? 'Voir le penseur →' : 'View profile →');
-      const comingSoonMsg = lang === 'ar' ? '⏳ مقالات قادمة قريبًا' : (lang === 'fr' ? '⏳ Articles à venir' : '⏳ Articles coming soon');
-
-      const principlesHeading = lang === 'ar' ? '💡 الركائز والمبادئ الأساسية للمسار' : (lang === 'fr' ? '💡 Principes & idées clés du parcours' : '💡 Key Principles & Core Ideas');
-      const articlesHeading = lang === 'ar' ? '📚 المقالات والأبحاث المتاحة في هذا المسار' : (lang === 'fr' ? '📚 Articles & études disponibles dans ce parcours' : '📚 Available Articles & Studies');
-      const thinkersHeading = lang === 'ar' ? '👤 المفكرون والفلاسفة المرتبطون بالمسار' : (lang === 'fr' ? '👤 Penseurs & philosophes associés' : '👤 Associated Thinkers');
-
-      const title = pData.title[lang] || pData.title.ar;
-      const subtitle = pData.subtitle[lang] || pData.subtitle.ar;
-      const intro = pData.intro[lang] || pData.intro.ar;
-      const principles = pData.principles[lang] || pData.principles.ar;
-
-      const breadcrumbHtml = `
-        <nav class="breadcrumb-nav" style="margin-bottom: 25px; font-size: 0.9rem; color: #998D7D; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;" aria-label="Fil d'Ariane du parcours">
-          <a href="../" style="color: var(--accent-gold, #C9A86A); text-decoration: none;">${transHome}</a> &gt;
-          <a href="./" onclick="closePsychologyPathway(); return false;" style="color: var(--accent-gold, #C9A86A); text-decoration: none;">${transPsy}</a> &gt;
-          <span style="color: #FAF6EF; font-weight: 700;">${title}</span>
-        </nav>
-      `;
-
-      const heroHtml = `
-        <div style="background: linear-gradient(135deg, rgba(16, 26, 20, 0.98) 0%, rgba(10, 17, 13, 0.95) 100%); border: 1px solid rgba(201, 168, 106, 0.35); border-radius: 24px; padding: 40px 32px; margin-bottom: 35px; box-shadow: 0 16px 40px rgba(0,0,0,0.5);">
-          <div style="display: inline-block; background: rgba(201, 168, 106, 0.15); border: 1px solid rgba(201, 168, 106, 0.4); color: var(--accent-gold, #C9A86A); padding: 5px 18px; border-radius: 20px; font-size: 0.85rem; font-weight: 800; margin-bottom: 14px;">
-            🧠 ${title}
-          </div>
-          <h1 style="font-size: clamp(1.9rem, 3.8vw, 2.6rem); font-weight: 900; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 14px; line-height: 1.3;">
-            ${subtitle}
-          </h1>
-          <p style="font-size: 1.1rem; color: #D1C5B4; line-height: 1.85; margin: 0;">
-            ${intro}
-          </p>
-        </div>
-      `;
-
-      const principlesHtml = `
-        <div style="background: rgba(22, 33, 27, 0.85); border: 1px solid rgba(201, 168, 106, 0.25); border-radius: 20px; padding: 30px 32px; margin-bottom: 35px;">
-          <h2 style="font-size: 1.3rem; font-weight: 800; color: var(--accent-gold, #C9A86A); margin: 0 0 18px; font-family: 'Amiri', serif; display: flex; align-items: center; gap: 10px;">
-            ${principlesHeading}
-          </h2>
-          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px;">
-            ${principles.map(p => `
-              <li style="font-size: 1.05rem; color: #FAF6EF; display: flex; align-items: baseline; gap: 12px; line-height: 1.6;">
-                <span style="color: var(--accent-gold, #C9A86A); font-weight: bold; font-size: 1.2rem;">•</span>
-                <span>${p}</span>
-              </li>
-            `).join('')}
-          </ul>
-        </div>
-      `;
-
-      let articlesHtml = '';
-      if (pData.articles && pData.articles.length > 0) {
-        articlesHtml = `
-          <div style="margin-bottom: 40px;">
-            <h2 style="font-size: 1.4rem; font-weight: 800; color: #F2EEE5; margin: 0 0 22px; font-family: 'Amiri', serif;">
-              ${articlesHeading}
-            </h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px;">
-              ${pData.articles.map(art => {
-                const aTitle = art.title[lang] || art.title.ar;
-                const aDesc = art.desc[lang] || art.desc.ar;
-                return `
-                  <article class="psy-parcours-card" style="padding: 26px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                      <span style="display: inline-block; background: rgba(201, 168, 106, 0.12); color: var(--accent-gold, #C9A86A); padding: 4px 14px; border-radius: 14px; font-size: 0.78rem; font-weight: 700; margin-bottom: 12px;">📜 article</span>
-                      <h3 style="font-size: 1.2rem; color: #FAF6EF; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 12px; font-weight: 700; line-height: 1.4;">${aTitle}</h3>
-                      <p style="font-size: 0.92rem; color: #A9AAA4; line-height: 1.7; margin-bottom: 22px;">${aDesc}</p>
-                    </div>
-                    <a href="${art.url}" class="psy-card-link" style="text-align: center; justify-content: center; width: 100%;">${readArtText}</a>
-                  </article>
-                `;
-              }).join('')}
-            </div>
-          </div>
-        `;
-      } else {
-        articlesHtml = `
-          <div style="margin-bottom: 40px;">
-            <h2 style="font-size: 1.4rem; font-weight: 800; color: #F2EEE5; margin: 0 0 22px; font-family: 'Amiri', serif;">
-              ${articlesHeading}
-            </h2>
-            <div style="background: rgba(201, 168, 106, 0.08); border: 1.5px dashed rgba(201, 168, 106, 0.35); border-radius: 20px; padding: 35px; text-align: center; color: var(--accent-gold, #C9A86A); font-size: 1.15rem; font-weight: 700;">
-              ${comingSoonMsg}
-            </div>
-          </div>
-        `;
-      }
-
-      let thinkersHtml = '';
-      if (pData.thinkerIds && pData.thinkerIds.length > 0) {
-        const allThinkers = (TIKTOK_DATA.content && TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].thinkers) || [];
-        thinkersHtml = `
-          <div style="margin-bottom: 45px;">
-            <h2 style="font-size: 1.4rem; font-weight: 800; color: #F2EEE5; margin: 0 0 22px; font-family: 'Amiri', serif;">
-              ${thinkersHeading}
-            </h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px;">
-              ${pData.thinkerIds.map(tid => {
-                const tObj = allThinkers.find(t => t.id === tid) || { id: tid, name: tid };
-                const avatarImg = `../thinkers/images/${tid}.jpg`;
-                return `
-                  <div class="psy-thinker-card" style="text-align: center; padding: 22px;">
-                    <div class="psy-thinker-avatar" style="width: 76px; height: 76px; margin: 0 auto 14px;">
-                      <img src="${avatarImg}" alt="${tObj.name}" loading="lazy" onerror="this.onerror=null; this.src='../brand_logo_official.png';">
-                    </div>
-                    <h3 style="font-size: 1.15rem; color: #FAF6EF; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 6px;">${tObj.name}</h3>
-                    <div style="font-size: 0.8rem; color: #C9A86A; font-weight: 700; margin-bottom: 16px;">${tObj.school || ''}</div>
-                    <a href="../thinkers/?thinker=${tid}" class="psy-card-link" style="justify-content: center; width: 100%; text-align: center;">${viewThinkerText}</a>
-                  </div>
-                `;
-              }).join('')}
-            </div>
-          </div>
-        `;
-      }
-
-      const returnBtnHtml = `
-        <div style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid rgba(201, 168, 106, 0.2);">
-          <button type="button" onclick="window.closePsychologyPathway()" class="psy-btn-gold" style="padding: 14px 36px; font-size: 1.05rem; cursor: pointer; width: auto; display: inline-flex; align-items: center; gap: 10px;">
-            ${backBtnText}
-          </button>
-        </div>
-      `;
-
-      container.innerHTML = breadcrumbHtml + heroHtml + principlesHtml + articlesHtml + thinkersHtml + returnBtnHtml;
-    };
-
-    window.openParcoursModal = window.openPsychologyPathway;
-    window.closeParcoursModal = window.closePsychologyPathway;
-    window.renderParcoursModalView = window.renderPsychologyPathway;
-
-  </script>
-
-  <!-- Dynamic Rendering and Filtering script for Psychology multilinguality (V4) -->
-  <script type="module">
-    import TIKTOK_DATA from '../data_v11.js';
-
-    let currentFilter = 'all';
-
-    function getSavedLang() {
-      return localStorage.getItem('site_lang_v1') || localStorage.getItem('lang') || localStorage.getItem('preferredLang') || 'ar';
-    }
-
-    function renderDynamicElements(e) {
-      const lang = (e && e.detail && e.detail.lang) || getSavedLang();
-      document.documentElement.setAttribute('lang', lang);
-      document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-
-      // 0. Render Psychology Domains Grid
-      renderDomainsGrid(lang);
-
-      // 0.1 Re-render open modals if active
-      if (window.activeDomainModalId) {
-        window.renderDomainModalView(window.activeDomainModalId, lang);
-      }
-      if (window.activeParcoursModalId) {
-        window.renderParcoursModalView(window.activeParcoursModalId, lang);
-      }
-      if (window.renderPillarResources) {
-        window.renderPillarResources('#pillarResourcesSection', 'psychologie', lang);
-      }
-      if (window.activePathwayId) {
-        window.renderPsychologyPathway(window.activePathwayId, lang);
-      }
-
-      // 1. Render Featured Articles from central data store (all published featured psychology articles)
-      const featuredSection = document.getElementById('psyFeaturedSection');
-      const featuredContainer = document.getElementById('psychology-featured-articles') || document.getElementById('featured-articles') || document.querySelector('.featured-articles-grid');
-
-      if (featuredSection && featuredContainer) {
-        const articlesSource = (TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].articles) ? TIKTOK_DATA.content[lang].articles : [];
-
-        // Dynamic query matching pillar: "psychologie" and featured: true
-        let featuredList = articlesSource.filter(a =>
-          (a.pillar === 'psychologie' || a.category === 'psychology') &&
-          (a.featured === true || a.isFeatured === true) &&
-          (a.published !== false)
-        );
-
-        const articleParcoursMap = {
-          'why-people-respect-silent-person': '01',
-          'stop-overthinking': '03',
-          'pourquoi-esprit-imagine-le-pire': '03',
-          'deja-vu-familiarite-memoire': '03',
-          'true-confidence-inside': '01',
-          'pourquoi-cherchons-nous-approbation': '01',
-          'self-discipline': '03',
-          'solitude-blessing-or-curse': '04'
-        };
-
-        // Filter if specific parcours filter is active
-        if (currentFilter !== 'all') {
-          featuredList = featuredList.filter(a => articleParcoursMap[a.id] === currentFilter);
-        }
-
-        if (featuredList.length > 0) {
-          featuredSection.style.display = 'block';
-
-          const badgeLabels = {
-            'stop-overthinking': lang === 'ar' ? 'مقال مميز • العقل والسلوك' : (lang === 'fr' ? 'Article à la une • Esprit & Comportement' : 'Featured • Mind & Behavior'),
-            'deja-vu-familiarite-memoire': lang === 'ar' ? 'مقال مميز • الذاكرة والألفة' : (lang === 'fr' ? 'Article à la une • Mémoire & Perception' : 'Featured • Memory & Perception'),
-            'pourquoi-esprit-imagine-le-pire': lang === 'ar' ? 'مقال مميز • العقل والسلوك' : (lang === 'fr' ? 'Article à la une • Esprit & Comportement' : 'Featured • Mind & Behavior'),
-            'pourquoi-cherchons-nous-approbation': lang === 'ar' ? 'مقال مميز • علم النفس الذاتي' : (lang === 'fr' ? 'Article à la une • Psychologie de soi' : 'Featured • Psychology of Self')
-          };
-
-          const pathMap = {
-            'stop-overthinking': '../files/stop-overthinking.html',
-            'deja-vu-familiarite-memoire': '../files/deja-vu-familiarite-memoire.html',
-            'pourquoi-esprit-imagine-le-pire': '../files/pourquoi-esprit-imagine-le-pire.html',
-            'pourquoi-cherchons-nous-approbation': '../files/pourquoi-cherchons-nous-approbation.html'
-          };
-
-          const imgMap = {
-            'stop-overthinking': '../psychologie/images/thumb-pensee-excessive-calme.jpg',
-            'deja-vu-familiarite-memoire': '../psychologie/images/thumb-deja-vu-familiarite-memoire.jpg',
-            'pourquoi-esprit-imagine-le-pire': '../psychologie/images/thumb-esprit-imagine-le-pire.jpg',
-            'pourquoi-cherchons-nous-approbation': '../psychologie/images/thumb-besoin-approbation.jpg'
-          };
-
-          const readBtnLabel = (TIKTOK_DATA.ui[lang] && TIKTOK_DATA.ui[lang].readArticleBtn) || (lang === 'ar' ? 'اقرأ المقال ←' : (lang === 'fr' ? 'Lire l\'article →' : 'Read Article →'));
-
-          featuredContainer.innerHTML = featuredList.map(art => {
-            const readTimeText = art.readTime ? `⏱️ ${art.readTime}` : '';
-            const desc = art.desc || art.summary || '';
-            const targetUrl = pathMap[art.id] || (art.file ? (art.file.startsWith('../') ? art.file : `../files/${art.file}`) : `../files/${art.id}.html`);
-            const imgSrc = imgMap[art.id] || (art.image ? (art.image.startsWith('../') ? art.image : `../${art.image}`) : '../main_home_hd_bg.jpg');
-            const badge = badgeLabels[art.id] || (lang === 'ar' ? 'مقال مميز' : (lang === 'fr' ? 'Article à la une' : 'Featured Article'));
-
-            return `
-              <article class="featured-article-card featured-card article-card" data-article-id="${art.id}">
-                <div class="featured-img-box">
-                  <a href="${targetUrl}" tabindex="-1" aria-hidden="true">
-                    <img src="${imgSrc}" alt="${art.imageAlt || art.title}" class="featured-img" loading="lazy">
-                  </a>
-                </div>
-                <div class="featured-card-body">
-                  <div>
-                    <span class="featured-card-tag">${badge}</span>
-                    <h3 class="featured-card-title">
-                      <a href="${targetUrl}">${art.title}</a>
-                    </h3>
-                    <p class="featured-card-desc">${desc}</p>
-                  </div>
-                  <div class="featured-card-footer">
-                    <span style="font-size: 0.82rem; color: #A9AAA4;">${readTimeText}</span>
-                    <a href="${targetUrl}" class="psy-card-link">${readBtnLabel}</a>
-                  </div>
-                </div>
-              </article>
-            `;
-          }).join('');
-        } else {
-          featuredSection.style.display = 'none';
-        }
-      }
-
-      // 2. Render Secondary Articles
-      const articlesGrid = document.getElementById('psyArticlesGrid');
-      if (articlesGrid) {
-        const articlePathMap = {
-          'why-people-respect-silent-person': '../articles/why-people-respect-silent-person.html',
-          'stop-overthinking': '../files/stop-overthinking.html',
-          'deja-vu-familiarite-memoire': '../files/deja-vu-familiarite-memoire.html',
-          'true-confidence-inside': '../articles/true-confidence-inside.html',
-          'pourquoi-cherchons-nous-approbation': '../files/pourquoi-cherchons-nous-approbation.html',
-          'self-discipline': '../files/self-discipline.html',
-          'solitude-blessing-or-curse': '../articles/solitude-blessing-or-curse.html'
-        };
-
-        const articleParcoursMap = {
-          'why-people-respect-silent-person': '01',
-          'stop-overthinking': '03',
-          'pourquoi-esprit-imagine-le-pire': '03',
-          'deja-vu-familiarite-memoire': '03',
-          'true-confidence-inside': '01',
-          'pourquoi-cherchons-nous-approbation': '01',
-          'self-discipline': '03',
-          'solitude-blessing-or-curse': '04'
-        };
-
-        const imgMap = {
-          'why-people-respect-silent-person': '../silence_respect_hero.jpg',
-          'stop-overthinking': '../psychologie/images/thumb-pensee-excessive-calme.jpg',
-          'deja-vu-familiarite-memoire': '../psychologie/images/thumb-deja-vu-familiarite-memoire.jpg',
-          'true-confidence-inside': '../dev_confidence_hd.jpg',
-          'pourquoi-cherchons-nous-approbation': '../psychologie/images/thumb-besoin-approbation.jpg',
-          'self-discipline': '../self_discipline.jpg',
-          'solitude-blessing-or-curse': '../solitude_blessing_curse_hero.jpg'
-        };
-
-        const badgeMap = {
-          'why-people-respect-silent-person': lang === 'ar' ? 'سيكولوجية الحضور • الصمت' : lang === 'fr' ? 'Silence & Présence' : 'Silence & Presence',
-          'stop-overthinking': lang === 'ar' ? 'صحة نفسية • السلام الداخلي' : lang === 'fr' ? 'Santé Mentale • Paix Intérieure' : 'Mental Health • Inner Peace',
-          'pourquoi-esprit-imagine-le-pire': lang === 'ar' ? 'العقل والسلوك • التوقع القلق' : lang === 'fr' ? 'Esprit & Comportement • Anticipation' : 'Mind & Behavior • Anticipation',
-          'deja-vu-familiarite-memoire': lang === 'ar' ? 'الذاكرة والإدراك • الألفة' : lang === 'fr' ? 'Mémoire & Déjà-vu' : 'Memory & Déjà-vu',
-          'true-confidence-inside': lang === 'ar' ? 'تقدير الذات • علم النفس الذاتي' : lang === 'fr' ? 'Estime de Soi • Confiance' : 'Self-Esteem • Confidence',
-          'pourquoi-cherchons-nous-approbation': lang === 'ar' ? 'علم النفس الذاتي • الاستحسان' : lang === 'fr' ? 'Psychologie de soi • Approbation' : 'Self-Psychology • Approval',
-          'self-discipline': lang === 'ar' ? 'الانضباط • العادات والسلوك' : lang === 'fr' ? 'Discipline & Comportement' : 'Discipline & Behavior',
-          'solitude-blessing-or-curse': lang === 'ar' ? 'العزلة والوجدان • الصمود' : lang === 'fr' ? 'Solitude & Résilience' : 'Solitude & Resilience'
-        };
-
-        const targetIds = Object.keys(articleParcoursMap);
-        let list = TIKTOK_DATA.content[lang].articles.filter(a => targetIds.includes(a.id));
-
-        if (currentFilter !== 'all') {
-          list = list.filter(a => articleParcoursMap[a.id] === currentFilter);
-        }
-
-        let html = '';
-        if (list.length > 0) {
-          html = list.map(art => {
-            const readBtn = (TIKTOK_DATA.ui[lang] && TIKTOK_DATA.ui[lang].readArticleBtn) || (lang === 'ar' ? 'اقرأ المقال ←' : (lang === 'fr' ? 'Lire l\'article →' : 'Read article →'));
-            const readTimeText = art.readTime ? (lang === 'ar' ? `⏱️ ${art.readTime}` : `⏱️ ${art.readTime}`) : '';
-            const descText = art.desc || art.summary || '';
-            return `
-              <article class="psy-parcours-card" data-parcours="${articleParcoursMap[art.id]}">
-                <div class="psy-parcours-imgbox" style="height: 160px;">
-                  <img src="${imgMap[art.id]}" alt="${art.title}" class="psy-parcours-img" loading="lazy">
-                  <div class="psy-parcours-overlay"></div>
-                </div>
-                <div class="psy-parcours-body">
-                  <div>
-                    <span style="font-size: 0.78rem; color: #C9A86A; font-weight: 700; margin-bottom: 8px; display: block;">${badgeMap[art.id]}</span>
-                    <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 10px; line-height: 1.4;">
-                      <a href="${articlePathMap[art.id]}" style="color: inherit; text-decoration: none;">${art.title}</a>
-                    </h3>
-                    <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.65; margin-bottom: 20px;">${descText}</p>
-                  </div>
-                  <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(201, 168, 106, 0.15); padding-top: 14px; margin-top: auto;">
-                    <span style="font-size: 0.82rem; color: #A9AAA4;">${readTimeText}</span>
-                    <a href="${articlePathMap[art.id]}" class="psy-card-link">${readBtn}</a>
-                  </div>
-                </div>
-              </article>
-            `;
-          }).join('');
-        } else {
-          if (currentFilter === '05') {
-            const comingSoon = TIKTOK_DATA.ui[lang].psyComingSoon || 'محتوى جديد قريبًا';
-            const comingSoonDesc = TIKTOK_DATA.ui[lang].psyComingSoonDesc || 'اكتشف المقالات والبحوث المرتبطة بهذا المسار قريبًا.';
-            html = `
-              <div class="psy-parcours-card" id="parcours-05-fallback" data-parcours="05" style="display: flex; border-style: dashed; opacity: 0.8; justify-content: center; align-items: center; min-height: 300px; text-align: center; padding: 40px 20px; grid-column: 1 / -1;">
-                <div>
-                  <div style="font-size: 3rem; margin-bottom: 15px; color: rgba(201, 168, 106, 0.4);">🌱</div>
-                  <h3 style="font-size: 1.3rem; color: #C9A86A; margin-bottom: 10px; font-family: 'Amiri', serif;">${comingSoon}</h3>
-                  <p style="font-size: 0.9rem; color: #A9AAA4; max-width: 280px; margin: 0 auto;">${comingSoonDesc}</p>
-                </div>
-              </div>
-            `;
-          } else {
-            const noArticles = TIKTOK_DATA.ui[lang].psyNoArticles || 'اكتشف المقالات المرتبطة بهذا الموضوع قريبًا';
-            html = `
-              <div id="psy-no-articles" style="display: block; grid-column: 1 / -1; text-align: center; padding: 50px 20px;">
-                <p style="font-size: 1.1rem; color: #A9AAA4;">${noArticles}</p>
-              </div>
-            `;
-          }
-        }
-        articlesGrid.innerHTML = html;
-      }
-
-      // 3. Render Thinkers
-      const thinkersGrid = document.getElementById('psyThinkersGrid');
-      if (thinkersGrid) {
-        const targetThinkerIds = ['freud', 'jung', 'adler'];
-        const list = TIKTOK_DATA.content[lang].thinkers.filter(t => targetThinkerIds.includes(t.id));
-        list.sort((a, b) => targetThinkerIds.indexOf(a.id) - targetThinkerIds.indexOf(b.id));
-
-        const avatarMap = {
-          'freud': '../thinkers/images/freud.jpg',
-          'jung': '../thinkers/images/jung.jpg',
-          'adler': '../thinkers/images/adler.jpg'
-        };
-
-        const domainMap = {
-          'freud': lang === 'ar' ? 'التحليل النفسي' : lang === 'fr' ? 'Psychanalyse' : 'Psychoanalysis',
-          'jung': lang === 'ar' ? 'علم نفس الأعماق' : lang === 'fr' ? 'Psychologie Analytique' : 'Analytical Psychology',
-          'adler': lang === 'ar' ? 'علم النفس الفردي' : lang === 'fr' ? 'Psychologie Individuelle' : 'Individual Psychology'
-        };
-
-        thinkersGrid.innerHTML = list.map(t => {
-          const discBtn = TIKTOK_DATA.ui[lang].discoverThinkerBtn || 'اكتشف أفكاره →';
-          return `
-            <div class="psy-thinker-card">
-              <div class="psy-thinker-avatar">
-                <img src="${avatarMap[t.id]}" alt="${t.name}" loading="lazy" onerror="this.src='../brand_logo_official.png'">
-              </div>
-              <h3 style="font-size: 1.15rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 4px;">${t.name}</h3>
-              <div style="font-size: 0.78rem; color: #C9A86A; font-weight: 700; margin-bottom: 8px;">${domainMap[t.id]}</div>
-              <p style="font-size: 0.85rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px; flex-grow: 1;">${t.quote || t.summary}</p>
-              <a href="../thinkers/?thinker=${t.id}" class="psy-card-link">${discBtn}</a>
-            </div>
-          `;
-        }).join('');
-      }
-    }
-
-    function filterArticles(parcoursId) {
-      currentFilter = parcoursId;
-
-      const filterBtns = document.querySelectorAll('.psy-filter-btn');
-      filterBtns.forEach(btn => {
-        if (btn.getAttribute('data-filter') === parcoursId) {
-          btn.classList.add('active');
-        } else {
-          btn.classList.remove('active');
-        }
-      });
-
-      renderDynamicElements();
-    }
-
-    // Set up filter button click listeners
-    function setupFilters() {
-      const filterBtns = document.querySelectorAll('.psy-filter-btn');
-      filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const filter = btn.getAttribute('data-filter');
-          filterArticles(filter);
-        });
-      });
-
-      // Hook data-pathway-id cards to Dedicated Psychology Pathway View
-      const pathwayCards = document.querySelectorAll('[data-pathway-id]');
-
-      pathwayCards.forEach(card => {
-        const pid = card.getAttribute('data-pathway-id');
-
-        card.setAttribute('tabindex', '0');
-        card.setAttribute('role', 'button');
-
-        card.addEventListener('click', event => {
-          event.preventDefault();
-
-          if (typeof window.openPsychologyPathway !== 'function') {
-            console.error('openPsychologyPathway est indisponible');
-            return;
-          }
-
-          window.openPsychologyPathway(pid);
-        });
-
-        card.addEventListener('keydown', event => {
-          if (event.key === 'Enter' || event.key === ' ') {
-            event.preventDefault();
-            if (typeof window.openPsychologyPathway === 'function') {
-              window.openPsychologyPathway(pid);
-            }
-          }
-        });
-      });
-
-      // Hook parcours triggers
-      const parcoursTriggers = document.querySelectorAll('[data-parcours-trigger]');
-      parcoursTriggers.forEach(trigger => {
-        trigger.addEventListener('click', (e) => {
-          e.preventDefault();
-          const parcoursId = trigger.getAttribute('data-parcours-trigger');
-          if (typeof window.openPsychologyPathway === 'function') {
-            window.openPsychologyPathway(parcoursId);
-          }
-        });
-      });
-
-      // Hook themes/tags to dedicated pathway view
-      const filterTriggers = document.querySelectorAll('[data-filter-trigger]');
-      filterTriggers.forEach(trigger => {
-        trigger.addEventListener('click', (e) => {
-          e.preventDefault();
-          const parcoursId = trigger.getAttribute('data-filter-trigger');
-          if (typeof window.openPsychologyPathway === 'function') {
-            window.openPsychologyPathway(parcoursId);
-          }
-        });
-      });
-    }
-
-    // Initial render and filter setup
-    document.addEventListener('DOMContentLoaded', () => {
-      setupFilters();
-      renderDynamicElements();
-      checkDomainHash();
-    });
-    // Fallback in case DOMContentLoaded already fired
-    if (document.readyState === 'interactive' || document.readyState === 'complete') {
-      setupFilters();
-      renderDynamicElements();
-      checkDomainHash();
-    }
-    window.addEventListener('hashchange', checkDomainHash);
-    window.addEventListener('languageChanged', renderDynamicElements);
-    window.addEventListener('siteLanguageChanged', renderDynamicElements);
-    window.addEventListener('site_lang_v1_changed', renderDynamicElements);
-    window.renderDynamicElements = renderDynamicElements;
-
-    function checkDomainHash() {
-      const hash = location.hash;
-      const params = new URLSearchParams(location.search);
-      if (hash && hash.startsWith('#domaine-')) {
-        const id = hash.replace('#domaine-', '');
-        if (typeof window.openDomainModal === 'function') {
-          window.openDomainModal(id);
-        }
-      } else if (hash && hash.startsWith('#parcours-')) {
-        const id = hash.replace('#parcours-', '');
-        if (typeof window.openParcoursModal === 'function') {
-          window.openParcoursModal(id);
-        }
-      } else if (params.get('parcours')) {
-        if (typeof window.openParcoursModal === 'function') {
-          window.openParcoursModal(params.get('parcours'));
-        }
-      } else if (params.get('domaine') || params.get('domain')) {
-        if (typeof window.openDomainModal === 'function') {
-          window.openDomainModal(params.get('domaine') || params.get('domain'));
-        }
-      }
-    }
-
-    // PSYCHOLOGY DOMAINS DATA (5 MAJOR DOMAINS)
+    // 2. DATA: 5 PSYCHOLOGY DOMAINS
     const PSYCHOLOGY_DOMAINS_DATA = [
       {
-        id: 'domain-psychanalyse',
-        num: '01',
-        image: '../psy_hero_cinematic.jpg',
-        title: {
-          ar: '٠١ — التحليل النفسي',
-          fr: '01 — Psychanalyse',
-          en: '01 — Psychoanalysis'
-        },
-        desc: {
-          ar: 'دراسة اللاشعور، الدوافع الخفية، والصراعات النفسية وتأثير تجارب الطفولة على السلوك.',
-          fr: 'L\'exploration de l\'inconscient, des pulsions cachées et des conflits psychiques profonds.',
-          en: 'Exploring the unconscious mind, hidden drives, and deep psychological conflicts.'
-        },
+        id: "domain-psychanalyse",
+        num: "01",
+        image: "../psy_hero_cinematic.jpg",
+        title: { ar: "٠١ — التحليل النفسي", fr: "01 — Psychanalyse", en: "01 — Psychoanalysis" },
+        desc: { ar: "دراسة اللاشعور، الدوافع الخفية، والصراعات النفسية وتأثير تجارب الطفولة.", fr: "L'exploration de l'inconscient, des pulsions cachées et des conflits psychiques profonds.", en: "Exploring the unconscious mind, hidden drives, and deep psychological conflicts." },
         principles: {
-          ar: ['اللاوعي', 'الصراعات النفسية', 'تأثير تجارب الطفولة'],
-          fr: ['Inconscient', 'Conflits psychiques', 'Influence des expériences de l\'enfance'],
-          en: ['Unconscious', 'Psychological conflicts', 'Influence of childhood experiences']
+          ar: ["اللاوعي", "الصراعات النفسية", "تأثير تجارب الطفولة"],
+          fr: ["Inconscient", "Conflits psychiques", "Influence des expériences de l'enfance"],
+          en: ["Unconscious", "Psychological conflicts", "Influence of childhood experiences"]
         },
         articles: [
-          { id: 'solitude-blessing-or-curse', url: '../articles/solitude-blessing-or-curse.html', title: { ar: 'هل العزلة نعمة أم عقاب؟', fr: 'La Solitude : Bénédiction ou Malédiction', en: 'Solitude: Blessing or Curse?' } }
+          { id: "solitude-blessing-or-curse", url: "../articles/solitude-blessing-or-curse.html", title: { ar: "هل العزلة نعمة أم عقاب؟", fr: "La Solitude : Bénédiction ou Malédiction", en: "Solitude: Blessing or Curse?" } }
         ],
-        thinkerIds: ['freud', 'jung', 'adler']
+        thinkerIds: ["freud", "jung", "adler"]
       },
       {
-        id: 'domain-cognitive',
-        num: '02',
-        image: '../overthinking_calm.jpg',
-        title: {
-          ar: '٠٢ — علم النفس المعرفي',
-          fr: '02 — Psychologie cognitive',
-          en: '02 — Cognitive Psychology'
-        },
-        desc: {
-          ar: 'كيف يعالج العقل المعلومات، تشريح التفكير الزائد، والتحيزات المعرفية التي تشكل إدراكنا للواقع.',
-          fr: 'Étude du traitement de l\'information par le cerveau, des biais cognitifs et des ruminations mentales.',
-          en: 'Study of brain information processing, cognitive biases, and mental ruminations.'
-        },
+        id: "domain-cognitive",
+        num: "02",
+        image: "../overthinking_calm.jpg",
+        title: { ar: "٠٢ — علم النفس المعرفي", fr: "02 — Psychologie cognitive", en: "02 — Cognitive Psychology" },
+        desc: { ar: "كيف يعالج العقل المعلومات، تشريح التفكير الزائد، والتحيزات المعرفية.", fr: "Étude du traitement de l'information par le cerveau, des biais cognitifs et des ruminations mentales.", en: "Study of brain information processing, cognitive biases, and mental ruminations." },
         principles: {
-          ar: ['التحيزات المعرفية', 'معالجة المعلومات', 'تشويه الواقع'],
-          fr: ['Biais cognitifs', 'Traitement de l\'information', 'Distorsions cognitives'],
-          en: ['Cognitive biases', 'Information processing', 'Cognitive distortions']
+          ar: ["التحيزات المعرفية", "معالجة المعلومات", "تشويه الواقع"],
+          fr: ["Biais cognitifs", "Traitement de l'information", "Distorsions cognitives"],
+          en: ["Cognitive biases", "Information processing", "Cognitive distortions"]
         },
         articles: [
-          { id: 'stop-overthinking', url: '../files/stop-overthinking.html', title: { ar: 'كيف تتوقف عن التفكير الزائد وتستعيد هدوءك الداخلي؟', fr: 'La pensée excessive et le retour au calme : comment apaiser le flux mental', en: 'Overcoming Overthinking: A Mindful Guide to Inner Calm' } },
-            { id: 'pourquoi-esprit-imagine-le-pire', url: '../files/pourquoi-esprit-imagine-le-pire.html', title: { ar: 'لماذا يتوقع عقلنا الأسوأ دائمًا؟', fr: 'Pourquoi notre esprit imagine toujours le pire ?', en: 'Why Does Our Mind Always Expect the Worst?' } },
-            { id: 'deja-vu-familiarite-memoire', url: '../files/deja-vu-familiarite-memoire.html', title: { ar: 'ظاهرة الديجافو والألفة: كيف تعيد الذاكرة بناء الحاضر؟', fr: 'Le déjà-vu et la familiarité : comment la mémoire reconstruit le présent', en: 'Déjà-Vu, Familiarity, and Memory: How the Mind Reconstructs the Present' } }
+          { id: "stop-overthinking", url: "../files/stop-overthinking.html", title: { ar: "كيف تتوقف عن التفكير الزائد وتستعيد هدوءك الداخلي؟", fr: "La pensée excessive et le retour au calme : comment apaiser le flux mental", en: "Overcoming Overthinking: A Mindful Guide to Inner Calm" } },
+          { id: "pourquoi-esprit-imagine-le-pire", url: "../files/pourquoi-esprit-imagine-le-pire.html", title: { ar: "لماذا يتوقع عقلنا الأسوأ دائمًا؟", fr: "Pourquoi notre esprit imagine toujours le pire ?", en: "Why Does Our Mind Always Expect the Worst?" } },
+          { id: "deja-vu-familiarite-memoire", url: "../files/deja-vu-familiarite-memoire.html", title: { ar: "ظاهرة الديجافو والألفة: كيف تعيد الذاكرة بناء الحاضر؟", fr: "Le déjà-vu et la familiarité : comment la mémoire reconstruit le présent", en: "Déjà-Vu, Familiarity, and Memory: How the Mind Reconstructs the Present" } }
         ],
-        thinkerIds: ['freud', 'william-james', 'jung']
+        thinkerIds: ["freud", "william-james", "jung"]
       },
       {
-        id: 'domain-humaniste',
-        num: '03',
-        image: '../dev_confidence_hd.jpg',
-        title: {
-          ar: '٠٣ — علم النفس الإنساني',
-          fr: '03 — Psychologie humaniste',
-          en: '03 — Humanistic Psychology'
-        },
-        desc: {
-          ar: 'التركيز على النمو الشخصي، الثقة الداخلية، تقدير الذات، والبحث عن المعنى والتحقيق الذاتي.',
-          fr: 'Focus sur l\'épanouissement personnel, l\'estime de soi, l\'authenticité et la réalisation de soi.',
-          en: 'Focusing on personal growth, self-esteem, authenticity, and self-actualization.'
-        },
+        id: "domain-humaniste",
+        num: "03",
+        image: "../dev_confidence_hd.jpg",
+        title: { ar: "٠٣ — علم النفس الإنساني", fr: "03 — Psychologie humaniste", en: "03 — Humanistic Psychology" },
+        desc: { ar: "التركيز على النمو الشخصي، الثقة الداخلية، تقدير الذات، والبحث عن المعنى.", fr: "Focus sur l'épanouissement personnel, l'estime de soi, l'authenticité et la réalisation de soi.", en: "Focusing on personal growth, self-esteem, authenticity, and self-actualization." },
         principles: {
-          ar: ['تحقيق الذات', 'القبول غير المشروط', 'النمو الشخصي'],
-          fr: ['Réalisation de soi', 'Acceptation inconditionnelle', 'Épanouissement personnel'],
-          en: ['Self-actualization', 'Unconditional acceptance', 'Personal growth']
+          ar: ["تحقيق الذات", "القبول غير المشروط", "النمو الشخصي"],
+          fr: ["Réalisation de soi", "Acceptation inconditionnelle", "Épanouissement personnel"],
+          en: ["Self-actualization", "Unconditional acceptance", "Personal growth"]
         },
         articles: [
-          { id: 'true-confidence-inside', url: '../articles/true-confidence-inside.html', title: { ar: 'كيف تبني ثقة حقيقية بنفسك من الداخل؟', fr: 'Comment construire une vraie confiance en soi', en: 'How to Build True Inner Self-Confidence' } }
+          { id: "true-confidence-inside", url: "../articles/true-confidence-inside.html", title: { ar: "كيف تبني ثقة حقيقية بنفسك من الداخل؟", fr: "Comment construire une vraie confiance en soi", en: "How to Build True Inner Self-Confidence" } },
+          { id: "pourquoi-cherchons-nous-approbation", url: "../files/pourquoi-cherchons-nous-approbation.html", title: { ar: "لماذا نبحث عن استحسان الآخرين؟", fr: "Pourquoi cherchons-nous l’approbation des autres ?", en: "Why Do We Seek Other People’s Approval?" } }
         ],
-        thinkerIds: ['adler']
+        thinkerIds: ["adler"]
       },
       {
-        id: 'domain-sociale',
-        num: '04',
-        image: '../why_people_distance_success_hero.jpg',
-        title: {
-          ar: '٠٤ — علم النفس الاجتماعي',
-          fr: '04 — Psychologie sociale',
-          en: '04 — Social Psychology'
-        },
-        desc: {
-          ar: 'فهم تأثير المجتمع والمحيط على سلوك الفرد، سيكولوجية الحضور، والتعلق والتغير في العلاقات.',
-          fr: 'Étude de l\'influence sociale, de la présence, du comportement des groupes et des dynamiques relationnelles.',
-          en: 'Study of social influence, presence, group dynamics, and interpersonal relationships.'
-        },
+        id: "domain-sociale",
+        num: "04",
+        image: "../why_people_distance_success_hero.jpg",
+        title: { ar: "٠٤ — علم النفس الاجتماعي", fr: "04 — Psychologie sociale", en: "04 — Social Psychology" },
+        desc: { ar: "فهم تأثير المجتمع والمحيط على سلوك الفرد، وسيكولوجية الحضور والعلاقات.", fr: "Étude de l'influence sociale, de la présence, du comportement des groupes et des relations.", en: "Study of social influence, presence, group dynamics, and interpersonal relationships." },
         principles: {
-          ar: ['التأثير الاجتماعي', 'ديناميات العلاقات', 'سيكولوجية الحضور'],
-          fr: ['Influence sociale', 'Dynamique des relations', 'Psychologie de la présence'],
-          en: ['Social influence', 'Relationship dynamics', 'Psychology of presence']
+          ar: ["التأثير الاجتماعي", "ديناميات العلاقات", "سيكولوجية الحضور"],
+          fr: ["Influence sociale", "Dynamique des relations", "Psychologie de la présence"],
+          en: ["Social influence", "Relationship dynamics", "Psychology of presence"]
         },
         articles: [
-          { id: 'why-people-distance-when-you-succeed', url: '../articles/why-people-distance-when-you-succeed.html', title: { ar: 'لماذا يبتعد الناس عنك عندما تبدأ بالنجاح؟', fr: 'Pourquoi les gens s\'éloignent lors du succès', en: 'Why Do People Distance When You Succeed' } },
-          { id: 'why-people-respect-silent-person', url: '../articles/why-people-respect-silent-person.html', title: { ar: 'لماذا يحترم الناس الشخص الصامت أكثر؟', fr: 'Pourquoi les gens respectent une personne silencieuse', en: 'Why People Respect a Silent Person' } }
+          { id: "why-people-distance-when-you-succeed", url: "../articles/why-people-distance-when-you-succeed.html", title: { ar: "لماذا يبتعد الناس عنك عندما تبدأ بالنجاح؟", fr: "Pourquoi les gens s'éloignent lors du succès", en: "Why Do People Distance When You Succeed" } },
+          { id: "why-people-respect-silent-person", url: "../articles/why-people-respect-silent-person.html", title: { ar: "لماذا يحترم الناس الشخص الصامت أكثر؟", fr: "Pourquoi les gens respectent une personne silencieuse", en: "Why People Respect a Silent Person" } }
         ],
         thinkerIds: []
       },
       {
-        id: 'domain-positive',
-        num: '05',
-        image: '../dev_growth_hd.jpg',
-        title: {
-          ar: '٠٥ — علم النفس الإيجابي',
-          fr: '05 — Psychologie positive',
-          en: '05 — Positive Psychology'
-        },
-        desc: {
-          ar: 'دراسة مكامن القوة الإنسانية، الامتنان، جودة الحياة، الصمود أمام المحن وبناء المعنى.',
-          fr: 'Étude des forces de caractère, de la gratitude, de l\'épanouissement et de la résilience.',
-          en: 'Studying human character strengths, gratitude, well-being, and psychological resilience.'
-        },
+        id: "domain-positive",
+        num: "05",
+        image: "../dev_growth_hd.jpg",
+        title: { ar: "٠٥ — علم النفس الإيجابي", fr: "05 — Psychologie positive", en: "05 — Positive Psychology" },
+        desc: { ar: "دراسة مكامن القوة الإنسانية، الامتنان، جودة الحياة، وبناء المعنى.", fr: "Étude des forces de caractère, de la gratitude, de l'épanouissement et de la résilience.", en: "Studying human character strengths, gratitude, well-being, and psychological resilience." },
         principles: {
-          ar: ['الصلابة النفسية', 'مكامن القوة والامتنان', 'جودة الحياة'],
-          fr: ['Résilience psychologique', 'Forces de caractère & gratitude', 'Bien-être & épanouissement'],
-          en: ['Psychological resilience', 'Character strengths & gratitude', 'Well-being & flourishing']
+          ar: ["الصلابة النفسية", "مكامن القوة والامتنان", "جودة الحياة"],
+          fr: ["Résilience psychologique", "Forces de caractère & gratitude", "Bien-être & épanouissement"],
+          en: ["Psychological resilience", "Character strengths & gratitude", "Well-being & flourishing"]
         },
         articles: [
-          { id: 'self-discipline', url: '../files/self-discipline.html', title: { ar: 'كيف تبني الانضباط الذاتي؟', fr: 'Comment cultiver l\'autodiscipline ?', en: 'How to Build Self-Discipline' } }
+          { id: "self-discipline", url: "../files/self-discipline.html", title: { ar: "كيف تبني الانضباط الذاتي؟", fr: "Comment cultiver l'autodiscipline ?", en: "How to Build Self-Discipline" } }
         ],
         thinkerIds: []
       }
     ];
 
+    // 3. MAPPINGS
+    const articlePathMap = {
+      "why-people-respect-silent-person": "../articles/why-people-respect-silent-person.html",
+      "stop-overthinking": "../files/stop-overthinking.html",
+      "pourquoi-esprit-imagine-le-pire": "../files/pourquoi-esprit-imagine-le-pire.html",
+      "deja-vu-familiarite-memoire": "../files/deja-vu-familiarite-memoire.html",
+      "true-confidence-inside": "../articles/true-confidence-inside.html",
+      "pourquoi-cherchons-nous-approbation": "../files/pourquoi-cherchons-nous-approbation.html",
+      "self-discipline": "../files/self-discipline.html",
+      "solitude-blessing-or-curse": "../articles/solitude-blessing-or-curse.html",
+      "why-people-distance-when-you-succeed": "../articles/why-people-distance-when-you-succeed.html"
+    };
+
+    const articleParcoursMap = {
+      "why-people-respect-silent-person": "01",
+      "stop-overthinking": "03",
+      "pourquoi-esprit-imagine-le-pire": "03",
+      "deja-vu-familiarite-memoire": "03",
+      "true-confidence-inside": "01",
+      "pourquoi-cherchons-nous-approbation": "01",
+      "self-discipline": "03",
+      "solitude-blessing-or-curse": "04",
+      "why-people-distance-when-you-succeed": "02"
+    };
+
+    const imgMap = {
+      "why-people-respect-silent-person": "../silence_respect_hero.jpg",
+      "stop-overthinking": "../psychologie/images/thumb-pensee-excessive-calme.jpg",
+      "pourquoi-esprit-imagine-le-pire": "../psychologie/images/thumb-esprit-imagine-le-pire.jpg",
+      "deja-vu-familiarite-memoire": "../psychologie/images/thumb-deja-vu-familiarite-memoire.jpg",
+      "true-confidence-inside": "../dev_confidence_hd.jpg",
+      "pourquoi-cherchons-nous-approbation": "../psychologie/images/thumb-besoin-approbation.jpg",
+      "self-discipline": "../dev_discipline_hd.jpg",
+      "solitude-blessing-or-curse": "../solitude_blessing_curse_hero.jpg",
+      "why-people-distance-when-you-succeed": "../why_people_distance_success_hero.jpg"
+    };
+
+    function getSavedLang() {
+      return localStorage.getItem("site_lang_v1") || localStorage.getItem("lang") || localStorage.getItem("preferredLang") || "ar";
+    }
+
+    // 4. RENDERING FUNCTIONS
+    function renderFeaturedArticles(lang) {
+      const featuredSection = document.getElementById("psyFeaturedSection");
+      const featuredContainer = document.getElementById("psychology-featured-articles") || document.getElementById("featured-articles") || document.querySelector(".featured-articles-grid");
+
+      if (!featuredSection || !featuredContainer) return;
+
+      const articlesSource = (TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].articles) ? TIKTOK_DATA.content[lang].articles : [];
+
+      let featuredList = articlesSource.filter(a =>
+        (a.pillar === "psychologie" || a.category === "psychology") &&
+        (a.featured === true || a.isFeatured === true) &&
+        (a.published !== false)
+      );
+
+      if (currentFilter !== "all") {
+        featuredList = featuredList.filter(a => articleParcoursMap[a.id] === currentFilter);
+      }
+
+      if (featuredList.length > 0) {
+        featuredSection.style.display = "block";
+
+        const badgeLabels = {
+          "stop-overthinking": lang === "ar" ? "مقال مميز • العقل والسلوك" : (lang === "fr" ? "Article à la une • Esprit & Comportement" : "Featured • Mind & Behavior"),
+          "deja-vu-familiarite-memoire": lang === "ar" ? "مقال مميز • الذاكرة والألفة" : (lang === "fr" ? "Article à la une • Mémoire & Perception" : "Featured • Memory & Perception"),
+          "pourquoi-esprit-imagine-le-pire": lang === "ar" ? "مقال مميز • العقل والسلوك" : (lang === "fr" ? "Article à la une • Esprit & Comportement" : "Featured • Mind & Behavior"),
+          "pourquoi-cherchons-nous-approbation": lang === "ar" ? "مقال مميز • علم النفس الذاتي" : (lang === "fr" ? "Article à la une • Psychologie de soi" : "Featured • Psychology of Self")
+        };
+
+        const readBtnLabel = (TIKTOK_DATA.ui[lang] && TIKTOK_DATA.ui[lang].readArticleBtn) || (lang === "ar" ? "اقرأ المقال ←" : (lang === "fr" ? "Lire l'article →" : "Read Article →"));
+
+        featuredContainer.innerHTML = featuredList.map(art => {
+          const readTimeText = art.readTime ? ("⏱️ " + art.readTime) : "";
+          const desc = art.desc || art.summary || "";
+          const targetUrl = articlePathMap[art.id] || (art.file ? (art.file.startsWith("../") ? art.file : ("../files/" + art.file)) : ("../files/" + art.id + ".html"));
+          const imgSrc = imgMap[art.id] || (art.image ? (art.image.startsWith("../") ? art.image : ("../" + art.image)) : "../main_home_hd_bg.jpg");
+          const badge = badgeLabels[art.id] || (lang === "ar" ? "مقال مميز" : (lang === "fr" ? "Article à la une" : "Featured Article"));
+
+          return `
+            <article class="featured-article-card featured-card article-card" data-article-id="${art.id}">
+              <div class="featured-img-box">
+                <a href="${targetUrl}" tabindex="-1" aria-hidden="true">
+                  <img src="${imgSrc}" alt="${art.imageAlt || art.title}" class="featured-img" loading="lazy">
+                </a>
+              </div>
+              <div class="featured-card-body">
+                <div>
+                  <span class="featured-card-tag">${badge}</span>
+                  <h3 class="featured-card-title">
+                    <a href="${targetUrl}">${art.title}</a>
+                  </h3>
+                  <p class="featured-card-desc">${desc}</p>
+                </div>
+                <div class="featured-card-footer">
+                  <span style="font-size: 0.82rem; color: #A9AAA4;">${readTimeText}</span>
+                  <a href="${targetUrl}" class="psy-card-link">${readBtnLabel}</a>
+                </div>
+              </div>
+            </article>
+          `;
+        }).join("");
+      } else {
+        featuredSection.style.display = "none";
+      }
+    }
+
+    function renderSecondaryArticles(lang) {
+      const articlesGrid = document.getElementById("psyArticlesGrid");
+      if (!articlesGrid) return;
+
+      const badgeMap = {
+        "why-people-respect-silent-person": lang === "ar" ? "سيكولوجية الحضور • الصمت" : (lang === "fr" ? "Silence & Présence" : "Silence & Presence"),
+        "stop-overthinking": lang === "ar" ? "صحة نفسية • السلام الداخلي" : (lang === "fr" ? "Santé Mentale • Paix Intérieure" : "Mental Health • Inner Peace"),
+        "pourquoi-esprit-imagine-le-pire": lang === "ar" ? "العقل والسلوك • التوقع القلق" : (lang === "fr" ? "Esprit & Comportement • Anticipation" : "Mind & Behavior • Anticipation"),
+        "deja-vu-familiarite-memoire": lang === "ar" ? "الذاكرة والإدراك • الألفة" : (lang === "fr" ? "Mémoire & Déjà-vu" : "Memory & Déjà-vu"),
+        "true-confidence-inside": lang === "ar" ? "تقدير الذات • علم النفس الذاتي" : (lang === "fr" ? "Estime de Soi • Confiance" : "Self-Esteem • Confidence"),
+        "pourquoi-cherchons-nous-approbation": lang === "ar" ? "علم النفس الذاتي • الاستحسان" : (lang === "fr" ? "Psychologie de soi • Approbation" : "Self-Psychology • Approval"),
+        "self-discipline": lang === "ar" ? "الانضباط • العادات والسلوك" : (lang === "fr" ? "Discipline & Comportement" : "Discipline & Behavior"),
+        "solitude-blessing-or-curse": lang === "ar" ? "العزلة والوجدان • الصمود" : (lang === "fr" ? "Solitude & Résilience" : "Solitude & Resilience"),
+        "why-people-distance-when-you-succeed": lang === "ar" ? "العلاقات • المسافة النفسية" : (lang === "fr" ? "Relations & Distance" : "Relationships & Distance")
+      };
+
+      const targetIds = Object.keys(articleParcoursMap);
+      const allArticles = (TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].articles) ? TIKTOK_DATA.content[lang].articles : [];
+      let list = allArticles.filter(a => targetIds.includes(a.id));
+
+      if (currentFilter !== "all") {
+        list = list.filter(a => articleParcoursMap[a.id] === currentFilter);
+      }
+
+      if (list.length > 0) {
+        articlesGrid.innerHTML = list.map(art => {
+          const readBtn = (TIKTOK_DATA.ui[lang] && TIKTOK_DATA.ui[lang].readArticleBtn) || (lang === "ar" ? "اقرأ المقال ←" : (lang === "fr" ? "Lire l'article →" : "Read article →"));
+          const readTimeText = art.readTime ? ("⏱️ " + art.readTime) : "";
+          const descText = art.desc || art.summary || "";
+          const targetUrl = articlePathMap[art.id] || ("../files/" + art.id + ".html");
+          const imgSrc = imgMap[art.id] || "../main_home_hd_bg.jpg";
+          const badgeText = badgeMap[art.id] || (lang === "ar" ? "علم النفس" : "Psychologie");
+
+          return `
+            <article class="psy-parcours-card" data-parcours="${articleParcoursMap[art.id]}">
+              <div class="psy-parcours-imgbox" style="height: 160px;">
+                <img src="${imgSrc}" alt="${art.title}" class="psy-parcours-img" loading="lazy">
+                <div class="psy-parcours-overlay"></div>
+              </div>
+              <div class="psy-parcours-body">
+                <div>
+                  <span style="font-size: 0.78rem; color: #C9A86A; font-weight: 700; margin-bottom: 8px; display: block;">${badgeText}</span>
+                  <h3 style="font-size: 1.25rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 10px; line-height: 1.4;">
+                    <a href="${targetUrl}" style="color: inherit; text-decoration: none;">${art.title}</a>
+                  </h3>
+                  <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.65; margin-bottom: 20px;">${descText}</p>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(201, 168, 106, 0.15); padding-top: 14px; margin-top: auto;">
+                  <span style="font-size: 0.82rem; color: #A9AAA4;">${readTimeText}</span>
+                  <a href="${targetUrl}" class="psy-card-link">${readBtn}</a>
+                </div>
+              </div>
+            </article>
+          `;
+        }).join("");
+      } else {
+        if (currentFilter === "05") {
+          const comingSoon = (TIKTOK_DATA.ui[lang] && TIKTOK_DATA.ui[lang].psyComingSoon) || (lang === "ar" ? "محتوى جديد قريبًا" : "Nouveau contenu bientôt disponible");
+          const comingSoonDesc = (TIKTOK_DATA.ui[lang] && TIKTOK_DATA.ui[lang].psyComingSoonDesc) || (lang === "ar" ? "اكتشف المقالات والبحوث المرتبطة بهذا المسار قريبًا." : "Découvrez bientôt les articles liés à ce parcours.");
+          articlesGrid.innerHTML = `
+            <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: rgba(201, 168, 106, 0.03); border: 1px dashed rgba(201, 168, 106, 0.25); border-radius: 20px;">
+              <span style="font-size: 2.5rem; display: block; margin-bottom: 12px;">⏳</span>
+              <h3 style="font-size: 1.3rem; color: #C9A86A; margin-bottom: 8px; font-family: 'Playfair Display', 'Amiri', serif;">${comingSoon}</h3>
+              <p style="color: #A9AAA4; font-size: 0.95rem; max-width: 500px; margin: 0 auto;">${comingSoonDesc}</p>
+            </div>
+          `;
+        }
+      }
+    }
+
     function renderDomainsGrid(lang) {
-      const grid = document.getElementById('psyDomainsGrid');
+      const grid = document.getElementById("psyDomainsGrid");
       if (!grid) return;
 
-      const readBtnText = lang === 'ar' ? 'اقرأ المقال ←' : (lang === 'fr' ? 'Lire l\'article →' : 'Read article →');
-      const exploreBtnText = lang === 'ar' ? 'استكشف المجال ←' : (lang === 'fr' ? 'Explorer le domaine →' : 'Explore domain →');
-      const comingSoonText = lang === 'ar' ? '⏳ مقالات قادمة قريبًا' : (lang === 'fr' ? '⏳ Articles à venir' : '⏳ Articles coming soon');
-      const conceptsLabel = lang === 'ar' ? '💡 المفاهيم والأسس:' : (lang === 'fr' ? '💡 Concepts clés :' : '💡 Key concepts:');
-      const articlesLabel = lang === 'ar' ? '📖 المقالات المتاحة:' : (lang === 'fr' ? '📖 Articles liés :' : '📖 Linked articles:');
-      const thinkersLabel = lang === 'ar' ? '👥 المفكرون والباحثون:' : (lang === 'fr' ? '👥 Penseurs associés :' : '👥 Associated thinkers:');
+      const conceptsLabel = lang === "ar" ? "💡 المفاهيم والأسس:" : (lang === "fr" ? "💡 Concepts clés :" : "💡 Key concepts:");
+      const articlesLabel = lang === "ar" ? "📖 المقالات المتاحة:" : (lang === "fr" ? "📖 Articles liés :" : "📖 Linked articles:");
+      const thinkersLabel = lang === "ar" ? "👥 المفكرون والباحثون:" : (lang === "fr" ? "👥 Penseurs associés :" : "👥 Associated thinkers:");
+      const exploreBtnText = lang === "ar" ? "استكشف المجال ←" : (lang === "fr" ? "Explorer le domaine →" : "Explore domain →");
       const allThinkers = (TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].thinkers) || [];
 
       grid.innerHTML = PSYCHOLOGY_DOMAINS_DATA.map(d => {
@@ -2034,599 +1608,435 @@
           <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(201, 168, 106, 0.15);">
             <div style="font-size: 0.8rem; font-weight: 700; color: #E4C98A; margin-bottom: 6px;">${conceptsLabel}</div>
             <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px;">
-              ${principles.map(p => `<li style="font-size: 0.84rem; color: #A9AAA4; display: flex; align-items: baseline; gap: 6px;"><span style="color: #C9A86A;">•</span><span>${p}</span></li>`).join('')}
+              ${principles.map(p => `<li style="font-size: 0.84rem; color: #A9AAA4; display: flex; align-items: baseline; gap: 6px;"><span style="color: #C9A86A;">•</span><span>${p}</span></li>`).join("")}
             </ul>
           </div>
-        ` : '';
+        ` : "";
 
-        let articlesHtml = '';
-        if (articles.length > 0) {
-          articlesHtml = `
-            <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(201, 168, 106, 0.15);">
-              <div style="font-size: 0.8rem; font-weight: 700; color: #E4C98A; margin-bottom: 6px;">${articlesLabel}</div>
-              <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px;">
-                ${articles.map(a => {
-                  const aTitle = (a.title && (a.title[lang] || a.title.ar)) || a.id;
-                  return `<li style="font-size: 0.84rem;"><a href="${a.url}" onclick="event.stopPropagation();" style="color: #E4C98A; text-decoration: none; font-weight: 600;">📄 ${aTitle} ←</a></li>`;
-                }).join('')}
-              </ul>
-            </div>
-          `;
-        } else {
-          articlesHtml = `
-            <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(201, 168, 106, 0.15);">
-              <div style="font-size: 0.8rem; font-weight: 700; color: #E4C98A; margin-bottom: 6px;">${articlesLabel}</div>
-              <div style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 16px; background: rgba(201, 168, 106, 0.08); border: 1px solid rgba(201, 168, 106, 0.25); color: #E4C98A; font-size: 0.8rem; font-weight: 700;">
-                ${comingSoonText}
-              </div>
-            </div>
-          `;
-        }
+        const articlesHtml = articles.length > 0 ? `
+          <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(201, 168, 106, 0.15);">
+            <div style="font-size: 0.8rem; font-weight: 700; color: #E4C98A; margin-bottom: 6px;">${articlesLabel}</div>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px;">
+              ${articles.map(a => {
+                const aTitle = (a.title && (a.title[lang] || a.title.ar)) || a.id;
+                return `<li style="font-size: 0.84rem;"><a href="${a.url}" onclick="event.stopPropagation();" style="color: #E4C98A; text-decoration: none; font-weight: 600;">📄 ${aTitle} ←</a></li>`;
+              }).join("")}
+            </ul>
+          </div>
+        ` : "";
 
-        let thinkersHtml = '';
-        if (thinkerIds.length > 0) {
-          thinkersHtml = `
-            <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(201, 168, 106, 0.15);">
-              <div style="font-size: 0.8rem; font-weight: 700; color: #E4C98A; margin-bottom: 6px;">${thinkersLabel}</div>
-              <div style="display: flex; flex-wrap: wrap; gap: 6px;">
-                ${thinkerIds.map(tid => {
-                  const tObj = allThinkers.find(t => t.id === tid);
-                  const thinkerName = tObj ? tObj.name : tid;
-                  return `<a href="../thinkers/?thinker=${tid}" onclick="event.stopPropagation();" style="display: inline-flex; align-items: center; padding: 4px 10px; border-radius: 14px; background: rgba(201, 168, 106, 0.12); border: 1px solid rgba(201, 168, 106, 0.3); color: #F2EEE5; font-size: 0.8rem; font-weight: 700; text-decoration: none;">${thinkerName}</a>`;
-                }).join('')}
-              </div>
+        const thinkersHtml = thinkerIds.length > 0 ? `
+          <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(201, 168, 106, 0.15);">
+            <div style="font-size: 0.8rem; font-weight: 700; color: #E4C98A; margin-bottom: 8px;">${thinkersLabel}</div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              ${thinkerIds.map(tid => {
+                const tObj = allThinkers.find(t => t.id === tid) || { id: tid, name: tid };
+                return `<a href="../thinkers/?thinker=${tid}" onclick="event.stopPropagation();" class="psy-tag" style="font-size: 0.75rem; padding: 4px 10px; border-radius: 12px; background: rgba(201, 168, 106, 0.08); border: 1px solid rgba(201, 168, 106, 0.2); color: #FAF6EF; text-decoration: none;">👤 ${tObj.name}</a>`;
+              }).join("")}
             </div>
-          `;
-        }
+          </div>
+        ` : "";
 
         return `
-          <article class="psy-parcours-card" onclick="openDomainModal('${d.id}')" style="cursor: pointer; height: 100%; display: flex; flex-direction: column;">
-            <div class="psy-parcours-imgbox" style="height: 160px;">
-              <img src="${d.image}" alt="${title}" class="psy-parcours-img" loading="lazy">
-              <div class="psy-parcours-overlay"></div>
-              <span class="psy-parcours-num">${d.num}</span>
+          <div class="psy-school-card" onclick="window.openDomainModal('${d.id}')" style="cursor: pointer; display: flex; flex-direction: column; height: 100%;">
+            <div class="psy-school-imgbox" style="height: 180px; position: relative; overflow: hidden; border-radius: 16px 16px 0 0;">
+              <img src="${d.image}" alt="${title}" class="psy-school-img" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+              <div class="psy-school-overlay"></div>
             </div>
-            <div class="psy-parcours-body" style="flex-grow: 1; display: flex; flex-direction: column;">
-              <div>
-                <h3 style="font-size: 1.22rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 8px; line-height: 1.35;">${title}</h3>
-                <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.65; margin: 0;">${desc}</p>
-              </div>
-
+            <div class="psy-school-body" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
+              <h3 style="font-size: 1.3rem; color: #FAF6EF; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 8px;">${title}</h3>
+              <p style="font-size: 0.9rem; color: #A9AAA4; line-height: 1.65; margin: 0;">${desc}</p>
               ${principlesHtml}
               ${articlesHtml}
               ${thinkersHtml}
-
-              <button type="button" onclick="event.stopPropagation(); openDomainModal('${d.id}');" class="psy-btn-gold" style="width: 100%; justify-content: center; margin-top: auto; padding: 10px 18px; font-size: 0.88rem; cursor: pointer;">
-                ${exploreBtnText}
-              </button>
+              <div style="margin-top: auto; padding-top: 18px;">
+                <span class="psy-card-link">${exploreBtnText}</span>
+              </div>
             </div>
-          </article>
+          </div>
         `;
-      }).join('');
+      }).join("");
     }
 
-    function renderDomainModalView(domainId, lang) {
-      const container = document.getElementById('domainModalContent');
+    function renderThinkersGrid(lang) {
+      const grid = document.getElementById("psyThinkersGrid");
+      if (!grid) return;
+
+      const thinkersData = [
+        {
+          id: "freud",
+          name: { ar: "سيغموند فرويد", fr: "Sigmund Freud", en: "Sigmund Freud" },
+          era: "1856 – 1939",
+          school: { ar: "مؤسس التحليل النفسي", fr: "Fondateur de la psychanalyse", en: "Founder of Psychoanalysis" },
+          bio: {
+            ar: "رائد استكشاف اللاشعور، وبنية الشخصية (الأنا، الهو، الأنا الأعلى)، وتأثير الدوافع المكبوتة.",
+            fr: "Pionnier de l'exploration de l'inconscient, de la structure de la personnalité et des pulsions.",
+            en: "Pioneer of the unconscious, personality structure, and repressed drives."
+          },
+          url: "../thinkers/?thinker=freud",
+          img: "../thinkers/images/freud.jpg"
+        },
+        {
+          id: "jung",
+          name: { ar: "كارل غوستاف يونغ", fr: "Carl Gustav Jung", en: "Carl Gustav Jung" },
+          era: "1875 – 1961",
+          school: { ar: "مؤسس علم النفس التحليلي", fr: "Fondateur de la psychologie analytique", en: "Founder of Analytical Psychology" },
+          bio: {
+            ar: "مكتشف اللاوعي الجمعي، والأنماط الأولية (الظل، القناع)، ورحلة التفرد وتحقيق الذات.",
+            fr: "Explorateur de l'inconscient collectif, des archétypes et du processus d'individuation.",
+            en: "Explorer of the collective unconscious, archetypes, and the process of individuation."
+          },
+          url: "../thinkers/?thinker=jung",
+          img: "../thinkers/images/jung.jpg"
+        },
+        {
+          id: "adler",
+          name: { ar: "ألفريد أدلر", fr: "Alfred Adler", en: "Alfred Adler" },
+          era: "1870 – 1937",
+          school: { ar: "مؤسس علم النفس الفردي", fr: "Fondateur de la psychologie individuelle", en: "Founder of Individual Psychology" },
+          bio: {
+            ar: "رائد دراسة عقدة النقص، والدافع نحو التفوق، وأهمية الشعور الاجتماعي والشجاعة النفسية.",
+            fr: "Théoricien du sentiment d'infériorité, du courage d'être imparfait et du sentiment communautaire.",
+            en: "Theorist of inferiority complex, social interest, and the courage of being oneself."
+          },
+          url: "../thinkers/?thinker=adler",
+          img: "../thinkers/images/adler.jpg"
+        }
+      ];
+
+      const readProfileLabel = (TIKTOK_DATA.ui[lang] && TIKTOK_DATA.ui[lang].readThinkerProfile) || (lang === "ar" ? "اقرأ الملف الشخصي ←" : (lang === "fr" ? "Lire le profil →" : "Read profile →"));
+
+      grid.innerHTML = thinkersData.map(t => `
+        <a class="psy-thinker-card" href="${t.url}">
+          <div class="psy-thinker-avatar">
+            <img src="${t.img}" alt="${t.name[lang] || t.name.ar}" loading="lazy" onerror="this.onerror=null; this.src='../brand_logo_official.png';">
+          </div>
+          <span class="psy-thinker-era">${t.era}</span>
+          <h3 class="psy-thinker-name">${t.name[lang] || t.name.ar}</h3>
+          <span class="psy-thinker-school">${t.school[lang] || t.school.ar}</span>
+          <p class="psy-thinker-bio">${t.bio[lang] || t.bio.ar}</p>
+          <span class="psy-thinker-btn">${readProfileLabel}</span>
+        </a>
+      `).join("");
+    }
+
+    function renderDynamicElements(e) {
+      const lang = (e && e.detail && e.detail.lang) || getSavedLang();
+      document.documentElement.setAttribute("lang", lang);
+      document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+
+      // 0. Render Domains Grid
+      renderDomainsGrid(lang);
+
+      // 1. Render Featured Articles
+      renderFeaturedArticles(lang);
+
+      // 2. Render Secondary Articles
+      renderSecondaryArticles(lang);
+
+      // 3. Render Thinkers Grid
+      renderThinkersGrid(lang);
+
+      // 4. Render Pillar Resources
+      if (window.renderPillarResources) {
+        window.renderPillarResources("#pillarResourcesSection", "psychologie", lang);
+      }
+
+      // 5. Re-render active modals if opened
+      if (window.activeDomainModalId) {
+        window.renderDomainModalView(window.activeDomainModalId, lang);
+      }
+      if (window.activeParcoursModalId) {
+        window.renderParcoursModalView(window.activeParcoursModalId, lang);
+      }
+      if (window.activePathwayId) {
+        window.renderPsychologyPathway(window.activePathwayId, lang);
+      }
+    }
+
+    function filterArticles(filter) {
+      currentFilter = filter;
+      const filterBtns = document.querySelectorAll(".psy-filter-btn");
+      filterBtns.forEach(btn => {
+        if (btn.getAttribute("data-filter") === filter) {
+          btn.classList.add("active");
+        } else {
+          btn.classList.remove("active");
+        }
+      });
+      const lang = getSavedLang();
+      renderFeaturedArticles(lang);
+      renderSecondaryArticles(lang);
+    }
+
+    function setupFilters() {
+      const filterBtns = document.querySelectorAll(".psy-filter-btn");
+      filterBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const filter = btn.getAttribute("data-filter");
+          filterArticles(filter);
+        });
+      });
+
+      // Hook pathway cards
+      const pathwayCards = document.querySelectorAll("[data-pathway-id]");
+      pathwayCards.forEach(card => {
+        const pid = card.getAttribute("data-pathway-id");
+        card.setAttribute("tabindex", "0");
+        card.setAttribute("role", "button");
+        card.addEventListener("click", event => {
+          event.preventDefault();
+          window.openPsychologyPathway(pid);
+        });
+        card.addEventListener("keydown", event => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            window.openPsychologyPathway(pid);
+          }
+        });
+      });
+
+      // Hook parcours triggers
+      const parcoursTriggers = document.querySelectorAll("[data-parcours-trigger]");
+      parcoursTriggers.forEach(trigger => {
+        trigger.addEventListener("click", (e) => {
+          e.preventDefault();
+          const parcoursId = trigger.getAttribute("data-parcours-trigger");
+          window.openPsychologyPathway(parcoursId);
+        });
+      });
+    }
+
+    // Modal & Pathway View Handlers
+    window.openPsychologyPathway = function(pathwayId) {
+      const modal = document.getElementById("parcoursModalView");
+      if (!modal) return;
+      window.activePathwayId = pathwayId;
+      window.activeParcoursModalId = pathwayId;
+      const lang = getSavedLang();
+      window.renderPsychologyPathway(pathwayId, lang);
+      modal.classList.add("active");
+      document.body.style.overflow = "hidden";
+      history.pushState(null, "", "#parcours-" + pathwayId);
+    };
+
+    window.closePsychologyPathway = function() {
+      const modal = document.getElementById("parcoursModalView");
+      if (!modal) return;
+      window.activePathwayId = null;
+      window.activeParcoursModalId = null;
+      modal.classList.remove("active");
+      document.body.style.overflow = "";
+      if (location.hash.startsWith("#parcours-")) {
+        history.pushState(null, "", location.pathname);
+      }
+    };
+
+    window.renderPsychologyPathway = function(pathwayId, lang) {
+      const container = document.getElementById("parcoursModalContent");
       if (!container) return;
 
-      const domain = PSYCHOLOGY_DOMAINS_DATA.find(d => d.id === domainId) || PSYCHOLOGY_DOMAINS_DATA[0];
-      const allThinkers = (TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].thinkers) || [];
+      const pData = PARCOURS_PSYCHOLOGIE_DATA.find(p => p.id === pathwayId || p.alias === pathwayId || p.number === pathwayId) || PARCOURS_PSYCHOLOGIE_DATA[0];
 
-      const title = domain.title[lang] || domain.title.ar;
-      const desc = domain.desc[lang] || domain.desc.ar;
-      const principles = domain.principles[lang] || domain.principles.ar || [];
-      const articles = domain.articles || [];
-      const thinkerIds = domain.thinkerIds || [];
+      const transHome = lang === "ar" ? "الرئيسية" : (lang === "fr" ? "Accueil" : "Home");
+      const transPsy = lang === "ar" ? "علم النفس" : (lang === "fr" ? "Psychologie" : "Psychology");
+      const backBtnText = lang === "ar" ? "← العودة إلى علم النفس" : (lang === "fr" ? "← Retour à la Psychologie" : "← Back to Psychology");
+      const readArtText = lang === "ar" ? "اقرأ المقال ←" : (lang === "fr" ? "Lire l'article →" : "Read article →");
+      const viewThinkerText = lang === "ar" ? "عرض المفكر ←" : (lang === "fr" ? "Voir le penseur →" : "View profile →");
+      const comingSoonMsg = lang === "ar" ? "⏳ مقالات قادمة قريبًا" : (lang === "fr" ? "⏳ Articles à venir" : "⏳ Articles coming soon");
+      const principlesHeading = lang === "ar" ? "💡 الركائز والمبادئ الأساسية للمسار" : (lang === "fr" ? "💡 Principes & idées clés du parcours" : "💡 Key Principles & Core Ideas");
+      const articlesHeading = lang === "ar" ? "📖 دراسات ومقالات هذا المسار" : (lang === "fr" ? "📖 Études & articles de ce parcours" : "📖 Track Studies & Articles");
+      const thinkersHeading = lang === "ar" ? "👥 أبرز المفكرين والعلماء في هذا المسار" : (lang === "fr" ? "👥 Penseurs & figures clés de ce parcours" : "👥 Featured Thinkers & Figures");
 
-      const backText = lang === 'ar' ? '→ العودة إلى علم النفس' : (lang === 'fr' ? '← Retour au pilier Psychologie' : '← Back to Psychology');
-      const readArtText = lang === 'ar' ? 'اقرأ المقال ←' : (lang === 'fr' ? 'Lire l\'article →' : 'Read article →');
-      const viewThinkerText = lang === 'ar' ? 'عرض المفكر ←' : (lang === 'fr' ? 'Voir le profil →' : 'View profile →');
-      const comingSoonMsg = lang === 'ar' ? '⏳ مقالات قادمة قريبًا' : (lang === 'fr' ? '⏳ Articles à venir' : '⏳ Articles coming soon');
-      const principlesHeading = lang === 'ar' ? '💡 الأسس والمفاهيم الرئيسية للمجال' : (lang === 'fr' ? '💡 Principes & concepts clés du domaine' : '💡 Key Principles & Core Concepts');
-      const articlesHeading = lang === 'ar' ? '📚 المقالات والأبحاث المتاحة' : (lang === 'fr' ? '📚 Articles & études disponibles' : '📚 Available Articles & Studies');
-      const thinkersHeading = lang === 'ar' ? '👤 المفكرون والباحثون المرتبطون بالمجال' : (lang === 'fr' ? '👤 Penseurs & chercheurs associés' : '👤 Associated Thinkers');
+      const title = pData.title[lang] || pData.title.ar;
+      const subtitle = pData.subtitle[lang] || pData.subtitle.ar;
+      const intro = pData.intro[lang] || pData.intro.ar;
 
       const breadcrumbHtml = `
-        <nav class="breadcrumb-nav" style="margin-bottom: 20px; font-size: 0.9rem; color: #998D7D; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-          <a href="../" style="color: #C9A86A; text-decoration: none;">الرئيسية</a> &gt;
-          <a href="./" onclick="closeDomainModal(); return false;" style="color: #C9A86A; text-decoration: none;">علم النفس</a> &gt;
-          <span style="color: #F2EEE5; font-weight: 700;">${title}</span>
-        </nav>
+        <div class="psy-modal-breadcrumb" style="display: flex; align-items: center; gap: 8px; font-size: 0.88rem; color: #A9AAA4; margin-bottom: 24px;">
+          <a href="../index.html" style="color: #C9A86A; text-decoration: none;">${transHome}</a>
+          <span>/</span>
+          <a href="index.html" onclick="window.closePsychologyPathway(); return false;" style="color: #C9A86A; text-decoration: none;">${transPsy}</a>
+          <span>/</span>
+          <span style="color: #FAF6EF;">${title}</span>
+        </div>
       `;
 
       const heroHtml = `
-        <div style="background: #0D1814; border: 1px solid rgba(201, 168, 106, 0.3); border-radius: 24px; padding: 35px 30px; margin-bottom: 35px; box-shadow: 0 12px 35px rgba(0,0,0,0.4);">
-          <div style="display: inline-block; background: rgba(201, 168, 106, 0.15); border: 1px solid rgba(201, 168, 106, 0.4); color: #C9A86A; padding: 4px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 800; margin-bottom: 12px;">
-            🏛️ المجال ${domain.num}
-          </div>
-          <h1 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 900; color: #F0C775; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 14px; line-height: 1.3;">
-            ${title}
-          </h1>
-          <p style="font-size: 1.1rem; color: #D1C5B4; line-height: 1.8; margin: 0;">
-            ${desc}
-          </p>
+        <div class="psy-modal-hero" style="background: linear-gradient(135deg, rgba(201, 168, 106, 0.12) 0%, rgba(10, 31, 26, 0.7) 100%); border: 1px solid rgba(201, 168, 106, 0.3); border-radius: 20px; padding: 32px 28px; margin-bottom: 35px;">
+          <span class="psy-badge" style="display: inline-block; padding: 4px 12px; border-radius: 12px; background: rgba(201, 168, 106, 0.18); color: #E4C98A; font-weight: 700; font-size: 0.8rem; margin-bottom: 12px;">
+            المسار ${pData.number}
+          </span>
+          <h1 style="font-size: 1.8rem; color: #FAF6EF; margin: 0 0 10px; font-family: 'Playfair Display', 'Amiri', serif;">${title}</h1>
+          <p style="font-size: 1.05rem; color: #E4C98A; margin: 0 0 14px; font-weight: 600;">${subtitle}</p>
+          <p style="font-size: 0.95rem; color: #B8AFA0; line-height: 1.7; margin: 0;">${intro}</p>
         </div>
       `;
 
-      const principlesHtml = `
-        <div style="background: rgba(13, 24, 20, 0.85); border: 1px solid rgba(201, 168, 106, 0.25); border-radius: 20px; padding: 28px 30px; margin-bottom: 35px;">
-          <h2 style="font-size: 1.25rem; font-weight: 800; color: #C9A86A; margin: 0 0 16px; font-family: 'Amiri', serif;">
-            ${principlesHeading}
-          </h2>
-          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
-            ${principles.map(p => `
-              <li style="font-size: 1.02rem; color: #F2EEE5; display: flex; align-items: baseline; gap: 10px;">
-                <span style="color: #C9A86A; font-weight: bold; font-size: 1.2rem;">•</span>
-                <span>${p}</span>
-              </li>
-            `).join('')}
-          </ul>
-        </div>
-      `;
-
-      let articlesHtml = '';
-      if (articles.length > 0) {
-        articlesHtml = `
+      let principlesHtml = "";
+      if (pData.principles && pData.principles.length > 0) {
+        principlesHtml = `
           <div style="margin-bottom: 40px;">
-            <h2 style="font-size: 1.4rem; font-weight: 800; color: #F0C775; margin: 0 0 20px; font-family: 'Amiri', serif;">
-              ${articlesHeading}
-            </h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-              ${articles.map(art => {
-                const aTitle = (art.title && (art.title[lang] || art.title.ar)) || art.id;
-                return `
-                  <article class="psy-parcours-card" style="padding: 24px;">
-                    <span style="display: inline-block; background: rgba(201, 168, 106, 0.12); color: #C9A86A; padding: 3px 12px; border-radius: 14px; font-size: 0.78rem; font-weight: 700; margin-bottom: 10px;">📜 article</span>
-                    <h3 style="font-size: 1.18rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 14px; font-weight: 700;">${aTitle}</h3>
-                    <a href="${art.url}" class="psy-card-link" style="font-size: 0.95rem;">${readArtText}</a>
-                  </article>
-                `;
-              }).join('')}
-            </div>
-          </div>
-        `;
-      } else {
-        articlesHtml = `
-          <div style="margin-bottom: 40px;">
-            <h2 style="font-size: 1.4rem; font-weight: 800; color: #F0C775; margin: 0 0 20px; font-family: 'Amiri', serif;">
-              ${articlesHeading}
-            </h2>
-            <div style="background: rgba(201, 168, 106, 0.08); border: 1.5px dashed rgba(201, 168, 106, 0.35); border-radius: 20px; padding: 30px; text-align: center; color: #C9A86A; font-size: 1.1rem; font-weight: 700;">
-              ${comingSoonMsg}
+            <h2 style="font-size: 1.35rem; color: #FAF6EF; margin: 0 0 20px; font-family: 'Playfair Display', 'Amiri', serif;">${principlesHeading}</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px;">
+              ${pData.principles.map(pr => `
+                <div style="background: rgba(14, 22, 17, 0.8); border: 1px solid rgba(201, 168, 106, 0.2); border-radius: 16px; padding: 20px;">
+                  <span style="font-size: 0.8rem; color: #C9A86A; font-weight: 800; display: block; margin-bottom: 6px;">${pr.num}</span>
+                  <h3 style="font-size: 1.1rem; color: #FAF6EF; margin: 0 0 8px; font-family: 'Playfair Display', 'Amiri', serif;">${pr.title[lang] || pr.title.ar}</h3>
+                  <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin: 0;">${pr.desc[lang] || pr.desc.ar}</p>
+                </div>
+              `).join("")}
             </div>
           </div>
         `;
       }
 
-      let thinkersHtml = '';
-      if (thinkerIds.length > 0) {
-        thinkersHtml = `
+      let articlesHtml = "";
+      if (pData.articles && pData.articles.length > 0) {
+        articlesHtml = `
           <div style="margin-bottom: 40px;">
-            <h2 style="font-size: 1.4rem; font-weight: 800; color: #F0C775; margin: 0 0 20px; font-family: 'Amiri', serif;">
-              ${thinkersHeading}
-            </h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
-              ${thinkerIds.map(tid => {
-                const tObj = allThinkers.find(t => t.id === tid) || { id: tid, name: tid };
-                const portraitImg = `../thinkers/images/${tid}.jpg`;
+            <h2 style="font-size: 1.35rem; color: #FAF6EF; margin: 0 0 20px; font-family: 'Playfair Display', 'Amiri', serif;">${articlesHeading}</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+              ${pData.articles.map(art => {
+                const aTitle = art.title[lang] || art.title.ar;
+                const aDesc = art.desc[lang] || art.desc.ar;
                 return `
-                  <article class="psy-thinker-card">
-                    <div class="psy-thinker-avatar">
-                      <img src="${portraitImg}" alt="${tObj.name}" loading="lazy" onerror="this.src='../brand_logo_official.png'">
+                  <article class="psy-parcours-card" style="display: flex; flex-direction: column;">
+                    <div class="psy-parcours-imgbox" style="height: 150px;">
+                      <img src="${art.thumb}" alt="${aTitle}" class="psy-parcours-img" loading="lazy">
                     </div>
-                    <h3 style="font-size: 1.15rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 4px;">${tObj.name}</h3>
-                    <div style="font-size: 0.78rem; color: #C9A86A; font-weight: 700; margin-bottom: 12px;">${tObj.school || ''}</div>
-                    <a href="../thinkers/?thinker=${tid}" class="psy-card-link">${viewThinkerText}</a>
+                    <div class="psy-parcours-body" style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+                      <h3 style="font-size: 1.15rem; color: #FAF6EF; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 8px;">
+                        <a href="${art.url}" style="color: inherit; text-decoration: none;">${aTitle}</a>
+                      </h3>
+                      <p style="font-size: 0.85rem; color: #A9AAA4; line-height: 1.6; margin-bottom: 16px;">${aDesc}</p>
+                      <a href="${art.url}" class="psy-card-link" style="margin-top: auto;">${readArtText}</a>
+                    </div>
                   </article>
                 `;
-              }).join('')}
+              }).join("")}
+            </div>
+          </div>
+        `;
+      }
+
+      let thinkersHtml = "";
+      if (pData.thinkerIds && pData.thinkerIds.length > 0) {
+        const allThinkers = (TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].thinkers) || [];
+        thinkersHtml = `
+          <div style="margin-bottom: 40px;">
+            <h2 style="font-size: 1.35rem; color: #FAF6EF; margin: 0 0 20px; font-family: 'Playfair Display', 'Amiri', serif;">${thinkersHeading}</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px;">
+              ${pData.thinkerIds.map(tid => {
+                const tObj = allThinkers.find(t => t.id === tid) || { id: tid, name: tid };
+                return `
+                  <div class="psy-thinker-card" style="text-align: center; padding: 20px;">
+                    <div class="psy-thinker-avatar" style="width: 70px; height: 70px; margin: 0 auto 12px;">
+                      <img src="../thinkers/images/${tid}.jpg" alt="${tObj.name}" loading="lazy" onerror="this.onerror=null; this.src='../brand_logo_official.png';">
+                    </div>
+                    <h3 style="font-size: 1.1rem; color: #FAF6EF; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 4px;">${tObj.name}</h3>
+                    <div style="font-size: 0.78rem; color: #C9A86A; font-weight: 700; margin-bottom: 12px;">${tObj.school || ''}</div>
+                    <a href="../thinkers/?thinker=${tid}" class="psy-card-link" style="justify-content: center; width: 100%; text-align: center;">${viewThinkerText}</a>
+                  </div>
+                `;
+              }).join("")}
             </div>
           </div>
         `;
       }
 
       const returnBtnHtml = `
-        <div style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid rgba(201, 168, 106, 0.2);">
-          <button onclick="closeDomainModal()" class="psy-btn-gold" style="padding: 12px 30px; font-size: 1.05rem; cursor: pointer; width: auto; display: inline-flex; align-items: center; gap: 8px;">
-            ${backText}
+        <div style="text-align: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(201, 168, 106, 0.2);">
+          <button type="button" onclick="window.closePsychologyPathway()" class="psy-btn-gold" style="padding: 12px 32px; font-size: 1rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
+            ${backBtnText}
           </button>
         </div>
       `;
 
       container.innerHTML = breadcrumbHtml + heroHtml + principlesHtml + articlesHtml + thinkersHtml + returnBtnHtml;
-    }
+    };
 
-    window.openDomainModal = function(domainId) {
-      const modal = document.getElementById('domainModalView');
+    window.openParcoursModal = window.openPsychologyPathway;
+    window.closeParcoursModal = window.closePsychologyPathway;
+    window.renderParcoursModalView = window.renderPsychologyPathway;
+
+    window.openDomainModal = function(id) {
+      const modal = document.getElementById("domainModalView");
       if (!modal) return;
-      window.activeDomainModalId = domainId;
+      window.activeDomainModalId = id;
       const lang = getSavedLang();
-      renderDomainModalView(domainId, lang);
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-      history.pushState(null, '', `#domaine-${domainId}`);
+      window.renderDomainModalView(id, lang);
+      modal.classList.add("active");
+      document.body.style.overflow = "hidden";
+      history.pushState(null, "", "#domaine-" + id);
     };
 
     window.closeDomainModal = function() {
-      const modal = document.getElementById('domainModalView');
+      const modal = document.getElementById("domainModalView");
       if (!modal) return;
       window.activeDomainModalId = null;
-      modal.classList.remove('active');
-      document.body.style.overflow = '';
-      if (location.hash.startsWith('#domaine-')) {
-        history.pushState(null, '', location.pathname);
+      modal.classList.remove("active");
+      document.body.style.overflow = "";
+      if (location.hash.startsWith("#domaine-")) {
+        history.pushState(null, "", location.pathname);
       }
     };
 
-    // PSYCHOLOGY PARCOURS DATA
-    const PSYCHOLOGY_PARCOURS_DATA = [
-      {
-        id: '01',
-        num: '01',
-        image: '../psy_self_awareness_hd.jpg',
-        title: {
-          ar: 'علم النفس وفهم الذات',
-          fr: 'Psychologie de soi',
-          en: 'Self-Psychology'
-        },
-        desc: {
-          ar: 'الوعي بالذات، الشخصية، الهوية، ونقاط القوة والضعف.',
-          fr: 'Connaissance de soi, identité, forces et limites de la personnalité.',
-          en: 'Self-awareness, identity, personality strengths and boundaries.'
-        },
-        intro: {
-          ar: 'رحلة استكشافية إلى أعماق النفس الإنسانية، تفكك آليات الوعي بالذات، وبناء الهوية، وفهم كيفية تشكّل الصورة الذهنية التي يحملها الفرد عن نفسه.',
-          fr: 'Un voyage d\'exploration au cœur de la psyché humaine pour déconstruire les mécanismes de la conscience de soi et de la construction de l\'identité.',
-          en: 'A journey of exploration into the human psyche to understand self-awareness mechanisms and identity formation.'
-        },
-        principles: {
-          ar: [
-            'تفكيك مفهوم الوعي الذاتي والصورة الذهنية',
-            'فهم بواعث الثقة بالنفس والتقدير الداخلي',
-            'التمييز بين الذات الحقيقية والذات المثالية'
-          ],
-          fr: [
-            'Déconstruction de la conscience de soi et de l\'image mentale',
-            'Compréhension des leviers de la confiance et de l\'estime de soi',
-            'Distinction entre le Soi réel et le Soi idéal'
-          ],
-          en: [
-            'Deconstructing self-awareness and mental self-image',
-            'Understanding levers of self-confidence and self-esteem',
-            'Distinction between real self and ideal self'
-          ]
-        },
-        articleIds: ['why-people-respect-silent-person', 'true-confidence-inside'],
-        thinkerIds: ['freud', 'adler']
-      },
-      {
-        id: '02',
-        num: '02',
-        image: '../psy_relationships_hd.jpg',
-        title: {
-          ar: 'المشاعر والعلاقات',
-          fr: 'Émotions & Relations',
-          en: 'Emotions & Relationships'
-        },
-        desc: {
-          ar: 'الحب، التعلق، الغيرة، الثقة، والعلاقات الإنسانية.',
-          fr: 'Amour, attachement, jalousie, confiance et dynamiques relationnelles.',
-          en: 'Love, attachment, jealousy, trust, and relationship dynamics.'
-        },
-        intro: {
-          ar: 'تحليل عميق للروابط الإنسانية، أنماط التعلق، وديناميات التواصل العاطفي وكيف يؤثر النجاح والتغير في العلاقات.',
-          fr: 'Une analyse approfondie des liens humains, des styles d\'attachement et des dynamiques relationnelles face aux transformations de la vie.',
-          en: 'A deep analysis of human bonds, attachment styles, and relational dynamics amidst life changes.'
-        },
-        principles: {
-          ar: [
-            'تشريح أنماط التعلق والروابط العاطفية',
-            'فهم ديناميكيات التباعد والتقارب عند التغير والنجاح',
-            'بناء الحدود النفسية والتواصل الصحي'
-          ],
-          fr: [
-            'Analyse des styles d\'attachement et des liens affectifs',
-            'Compréhension des dynamiques de distance et de succès',
-            'Établissement de limites psychologiques saines'
-          ],
-          en: [
-            'Analyzing attachment styles and emotional bonds',
-            'Understanding distance and attraction dynamics during success',
-            'Establishing healthy psychological boundaries'
-          ]
-        },
-        articleIds: ['why-people-distance-when-you-succeed'],
-        thinkerIds: ['jung']
-      },
-      {
-        id: '03',
-        num: '03',
-        image: '../psy_behavior_hd.jpg',
-        title: {
-          ar: 'العقل والسلوك',
-          fr: 'Esprit & Comportement',
-          en: 'Mind & Behavior'
-        },
-        desc: {
-          ar: 'التحيزات، العادات، الذاكرة، واتخاذ القرارات وأنماط التفكير.',
-          fr: 'Biais cognitifs, habitudes, mémoire, prise de décision et modes de pensée.',
-          en: 'Cognitive biases, habits, memory, decision making, and thought patterns.'
-        },
-        intro: {
-          ar: 'استكشاف لآليات التفكير اليومية، التغلب على الاجترار الذهني والتفكير الزائد، وتشكيل الانضباط والعادات الاستراتيجية.',
-          fr: 'Une étude des mécanismes de la pensée quotidienne, du dépassement de la rumination mentale et de la formation d\'habitudes stratégiques.',
-          en: 'Studying daily cognitive mechanisms, overcoming overthinking, and forming strategic habits.'
-        },
-        principles: {
-          ar: [
-            'إدارة التفكير الزائد والقلق والاجترار الذهني',
-            'آليات الانضباط الذاتي وتشكيل العادات المستدامة',
-            'فك تحيزات القرار والسيطرة على الروتين'
-          ],
-          fr: [
-            'Gestion du surpenser et des ruminations mentales',
-            'Mécanismes d\'autodiscipline et ancrage d\'habitudes',
-            'Maîtrise des biais de décision'
-          ],
-          en: [
-            'Managing overthinking and mental ruminations',
-            'Self-discipline mechanisms and habit anchoring',
-            'Mastering decision biases'
-          ]
-        },
-        articleIds: ['stop-overthinking', 'self-discipline'],
-        thinkerIds: ['freud']
-      },
-      {
-        id: '04',
-        num: '04',
-        image: '../dev_resilience_hd.jpg',
-        title: {
-          ar: 'الجروح والصمود النفسي',
-          fr: 'Blessures & Résilience',
-          en: 'Wounds & Resilience'
-        },
-        desc: {
-          ar: 'الفشل، الرفض، الوحدة، الألم، والقدرة على التكيف مع الصعوبات.',
-          fr: 'Échecs, rejet, solitude, douleur et capacité d\'adaptation face aux épreuves.',
-          en: 'Failures, rejection, solitude, pain, and adaptation capacity facing hardship.'
-        },
-        intro: {
-          ar: 'نظرة متعمقة في كيفية تحويل الألم والعزلة والتجارب القاسية إلى مصدر للنمو والصمود والسكينة الداخلية.',
-          fr: 'Une plongée dans l\'art de transformer la solitude et les épreuves en levier de croissance et de résilience intérieure.',
-          en: 'A deep dive into transforming solitude and hardship into resilience and inner strength.'
-        },
-        principles: {
-          ar: [
-            'فهم العزلة والتمييز بين الوحدة والنمو الفردي',
-            'تحويل الصدمات والرفض إلى صلابة نفسية',
-            'إعادة بناء المعنى وتطوير التكيف'
-          ],
-          fr: [
-            'Compréhension de la solitude constructive vs l\'isolement',
-            'Transformation du rejet en résilience psychologique',
-            'Reconstruction du sens et adaptabilité'
-          ],
-          en: [
-            'Understanding constructive solitude vs isolation',
-            'Transforming rejection into psychological resilience',
-            'Reconstructing meaning and adaptability'
-          ]
-        },
-        articleIds: ['solitude-blessing-or-curse'],
-        thinkerIds: ['jung']
-      },
-      {
-        id: '05',
-        num: '05',
-        image: '../dev_growth_hd.jpg',
-        title: {
-          ar: 'علم النفس الإيجابي والنمو',
-          fr: 'Psychologie Positive',
-          en: 'Positive Psychology'
-        },
-        desc: {
-          ar: 'السعادة، الامتنان، المرونة، المعنى، والنمو الشخصي.',
-          fr: 'Bonheur, gratitude, résilience, quête de sens et croissance personnelle.',
-          en: 'Happiness, gratitude, resilience, search for meaning, and personal growth.'
-        },
-        intro: {
-          ar: 'دراسة علمية وعملية لمكامن القوة الإنسانية، صناعة المعنى، وممارسة الامتنان والنمو الذاتي المتوازن.',
-          fr: 'Une approche scientifique des forces de caractère, de la quête de sens et de la pratique de la gratitude.',
-          en: 'A scientific approach to character strengths, search for meaning, and gratitude practice.'
-        },
-        principles: {
-          ar: [
-            'بناء مكامن القوة الذاتية والامتنان اليومي',
-            'البحث عن المعنى والهدف الأسمى في الحياة',
-            'تعزيز جودة الحياة والنمو المستمر'
-          ],
-          fr: [
-            'Développement des forces de caractère et gratitude',
-            'Quête de sens et accomplissement personnel',
-            'Amélioration du bien-être et croissance continue'
-          ],
-          en: [
-            'Developing character strengths and daily gratitude',
-            'Search for meaning and personal accomplishment',
-            'Enhancing well-being and continuous growth'
-          ]
-        },
-        articleIds: [],
-        thinkerIds: ['adler']
-      }
-    ];
-
-    function renderParcoursModalView(pathId, lang) {
-      const container = document.getElementById('parcoursModalContent');
+    window.renderDomainModalView = function(id, lang) {
+      const container = document.getElementById("domainModalContent");
       if (!container) return;
 
-      const pObj = PSYCHOLOGY_PARCOURS_DATA.find(p => p.id === pathId) || PSYCHOLOGY_PARCOURS_DATA[0];
-      const allArticles = (TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].articles) || [];
-      const allThinkers = (TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].thinkers) || [];
+      const d = PSYCHOLOGY_DOMAINS_DATA.find(x => x.id === id) || PSYCHOLOGY_DOMAINS_DATA[0];
+      const title = d.title[lang] || d.title.ar;
+      const desc = d.desc[lang] || d.desc.ar;
+      const backText = lang === "ar" ? "← العودة إلى علم النفس" : (lang === "fr" ? "← Retour à la Psychologie" : "← Back to Psychology");
 
-      const title = pObj.title[lang] || pObj.title.ar;
-      const desc = pObj.desc[lang] || pObj.desc.ar;
-      const intro = pObj.intro[lang] || pObj.intro.ar;
-      const principles = pObj.principles[lang] || pObj.principles.ar || [];
-      const targetArticleIds = pObj.articleIds || [];
-      const targetThinkerIds = pObj.thinkerIds || [];
-
-      const backText = lang === 'ar' ? '→ العودة إلى علم النفس' : (lang === 'fr' ? '← Retour au pilier Psychologie' : '← Back to Psychology');
-      const readArtText = lang === 'ar' ? 'اقرأ المقال ←' : (lang === 'fr' ? 'Lire l\'article →' : 'Read article →');
-      const viewThinkerText = lang === 'ar' ? 'عرض المفكر ←' : (lang === 'fr' ? 'Voir le profil →' : 'View profile →');
-      const comingSoonMsg = lang === 'ar' ? '⏳ مقالات قادمة قريبًا' : (lang === 'fr' ? '⏳ Articles à venir' : '⏳ Articles coming soon');
-      const principlesHeading = lang === 'ar' ? '💡 الأسس والمفاهيم الرئيسية للمسار' : (lang === 'fr' ? '💡 Principes & idées clés du parcours' : '💡 Key Principles & Core Ideas');
-      const articlesHeading = lang === 'ar' ? '📚 المقالات والأبحاث المتاحة في هذا المسار' : (lang === 'fr' ? '📚 Articles & études disponibles dans ce parcours' : '📚 Available Articles & Studies in this Pathway');
-      const thinkersHeading = lang === 'ar' ? '👤 المفكرون والباحثون المرتبطون بهذا المسار' : (lang === 'fr' ? '👤 Penseurs & chercheurs associés' : '👤 Associated Thinkers');
-
-      const articlePathMap = {
-        'why-people-distance-when-you-succeed': '../articles/why-people-distance-when-you-succeed.html',
-        'why-people-respect-silent-person': '../articles/why-people-respect-silent-person.html',
-        'stop-overthinking': '../files/stop-overthinking.html',
-        'true-confidence-inside': '../articles/true-confidence-inside.html',
-        'self-discipline': '../files/self-discipline.html',
-        'solitude-blessing-or-curse': '../articles/solitude-blessing-or-curse.html'
-      };
-
-      const breadcrumbHtml = `
-        <nav class="breadcrumb-nav" style="margin-bottom: 20px; font-size: 0.9rem; color: #998D7D; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-          <a href="../" style="color: #C9A86A; text-decoration: none;">الرئيسية</a> &gt;
-          <a href="./" onclick="closeParcoursModal(); return false;" style="color: #C9A86A; text-decoration: none;">علم النفس</a> &gt;
-          <span style="color: #F2EEE5; font-weight: 700;">${title}</span>
-        </nav>
-      `;
-
-      const heroHtml = `
-        <div style="background: #0D1814; border: 1px solid rgba(201, 168, 106, 0.3); border-radius: 24px; padding: 35px 30px; margin-bottom: 35px; box-shadow: 0 12px 35px rgba(0,0,0,0.4);">
-          <div style="display: inline-block; background: rgba(201, 168, 106, 0.15); border: 1px solid rgba(201, 168, 106, 0.4); color: #C9A86A; padding: 4px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 800; margin-bottom: 12px;">
-            🧭 المسار ${pObj.num}
-          </div>
-          <h1 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 900; color: #F0C775; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 14px; line-height: 1.3;">
-            ${title}
-          </h1>
-          <p style="font-size: 1.1rem; color: #D1C5B4; line-height: 1.8; margin: 0 0 14px;">
-            ${desc}
-          </p>
-          <p style="font-size: 0.98rem; color: #A9AAA4; line-height: 1.7; margin: 0; border-top: 1px solid rgba(201, 168, 106, 0.15); padding-top: 14px;">
-            ${intro}
-          </p>
+      container.innerHTML = `
+        <div style="margin-bottom: 24px;">
+          <span style="font-size: 0.8rem; color: #C9A86A; font-weight: 800;">${d.num}</span>
+          <h2 style="font-size: 1.8rem; color: #FAF6EF; font-family: 'Playfair Display', 'Amiri', serif; margin: 6px 0 12px;">${title}</h2>
+          <p style="font-size: 1rem; color: #B8AFA0; line-height: 1.7;">${desc}</p>
+        </div>
+        <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(201, 168, 106, 0.2);">
+          <button onclick="window.closeDomainModal()" class="psy-btn-gold" style="padding: 10px 28px; cursor: pointer;">${backText}</button>
         </div>
       `;
+    };
 
-      const principlesHtml = `
-        <div style="background: rgba(13, 24, 20, 0.85); border: 1px solid rgba(201, 168, 106, 0.25); border-radius: 20px; padding: 28px 30px; margin-bottom: 35px;">
-          <h2 style="font-size: 1.25rem; font-weight: 800; color: #C9A86A; margin: 0 0 16px; font-family: 'Amiri', serif;">
-            ${principlesHeading}
-          </h2>
-          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
-            ${principles.map(p => `
-              <li style="font-size: 1.02rem; color: #F2EEE5; display: flex; align-items: baseline; gap: 10px;">
-                <span style="color: #C9A86A; font-weight: bold; font-size: 1.2rem;">💡</span>
-                <span>${p}</span>
-              </li>
-            `).join('')}
-          </ul>
-        </div>
-      `;
-
-      let articlesHtml = '';
-      if (targetArticleIds.length > 0) {
-        articlesHtml = `
-          <div style="margin-bottom: 40px;">
-            <h2 style="font-size: 1.4rem; font-weight: 800; color: #F0C775; margin: 0 0 20px; font-family: 'Amiri', serif;">
-              ${articlesHeading}
-            </h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-              ${targetArticleIds.map(artId => {
-                const artObj = allArticles.find(a => a.id === artId);
-                const aTitle = artObj ? artObj.title : artId;
-                const aSummary = artObj ? (artObj.desc || artObj.summary || '') : '';
-                const aUrl = articlePathMap[artId] || `../articles/${artId}.html`;
-                return `
-                  <article class="psy-parcours-card" style="padding: 24px; display: flex; flex-direction: column;">
-                    <span style="display: inline-block; background: rgba(201, 168, 106, 0.12); color: #C9A86A; padding: 3px 12px; border-radius: 14px; font-size: 0.78rem; font-weight: 700; margin-bottom: 10px; align-self: start;">📜 article</span>
-                    <h3 style="font-size: 1.18rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 10px; font-weight: 700;">${aTitle}</h3>
-                    <p style="font-size: 0.88rem; color: #A9AAA4; line-height: 1.6; margin: 0 0 18px; flex-grow: 1;">${aSummary}</p>
-                    <a href="${aUrl}" class="psy-card-link" style="font-size: 0.95rem; margin-top: auto;">${readArtText}</a>
-                  </article>
-                `;
-              }).join('')}
-            </div>
-          </div>
-        `;
-      } else {
-        articlesHtml = `
-          <div style="margin-bottom: 40px;">
-            <h2 style="font-size: 1.4rem; font-weight: 800; color: #F0C775; margin: 0 0 20px; font-family: 'Amiri', serif;">
-              ${articlesHeading}
-            </h2>
-            <div style="background: rgba(201, 168, 106, 0.08); border: 1.5px dashed rgba(201, 168, 106, 0.35); border-radius: 20px; padding: 30px; text-align: center; color: #C9A86A; font-size: 1.1rem; font-weight: 700;">
-              ${comingSoonMsg}
-            </div>
-          </div>
-        `;
+    function checkDomainHash() {
+      const hash = location.hash;
+      const params = new URLSearchParams(location.search);
+      if (hash && hash.startsWith("#domaine-")) {
+        const id = hash.replace("#domaine-", "");
+        window.openDomainModal(id);
+      } else if (hash && hash.startsWith("#parcours-")) {
+        const id = hash.replace("#parcours-", "");
+        window.openPsychologyPathway(id);
+      } else if (params.get("parcours")) {
+        window.openPsychologyPathway(params.get("parcours"));
+      } else if (params.get("domaine") || params.get("domain")) {
+        window.openDomainModal(params.get("domaine") || params.get("domain"));
       }
-
-      let thinkersHtml = '';
-      if (targetThinkerIds.length > 0) {
-        thinkersHtml = `
-          <div style="margin-bottom: 40px;">
-            <h2 style="font-size: 1.4rem; font-weight: 800; color: #F0C775; margin: 0 0 20px; font-family: 'Amiri', serif;">
-              ${thinkersHeading}
-            </h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
-              ${targetThinkerIds.map(tid => {
-                const tObj = allThinkers.find(t => t.id === tid) || { id: tid, name: tid };
-                const portraitImg = `../thinkers/images/${tid}.jpg`;
-                return `
-                  <article class="psy-thinker-card">
-                    <div class="psy-thinker-avatar">
-                      <img src="${portraitImg}" alt="${tObj.name}" loading="lazy" onerror="this.src='../brand_logo_official.png'">
-                    </div>
-                    <h3 style="font-size: 1.15rem; color: #F2EEE5; font-family: 'Playfair Display', 'Amiri', serif; margin: 0 0 4px;">${tObj.name}</h3>
-                    <div style="font-size: 0.78rem; color: #C9A86A; font-weight: 700; margin-bottom: 12px;">${tObj.school || ''}</div>
-                    <a href="../thinkers/?thinker=${tid}" class="psy-card-link">${viewThinkerText}</a>
-                  </article>
-                `;
-              }).join('')}
-            </div>
-          </div>
-        `;
-      }
-
-      const returnBtnHtml = `
-        <div style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid rgba(201, 168, 106, 0.2);">
-          <button onclick="closeParcoursModal()" class="psy-btn-gold" style="padding: 12px 30px; font-size: 1.05rem; cursor: pointer; width: auto; display: inline-flex; align-items: center; gap: 8px;">
-            ${backText}
-          </button>
-        </div>
-      `;
-
-      container.innerHTML = breadcrumbHtml + heroHtml + principlesHtml + articlesHtml + thinkersHtml + returnBtnHtml;
     }
 
-    window.openParcoursModal = function(pathId) {
-      const modal = document.getElementById('parcoursModalView');
-      if (!modal) return;
-      window.activeParcoursModalId = pathId;
-      const lang = getSavedLang();
-      renderParcoursModalView(pathId, lang);
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-      history.pushState(null, '', `#parcours-${pathId}`);
-    };
+    // 5. EVENT LISTENERS & INITIALIZATION
+    window.addEventListener("languageChanged", renderDynamicElements);
+    window.addEventListener("siteLanguageChanged", renderDynamicElements);
+    window.addEventListener("site_lang_v1_changed", renderDynamicElements);
+    window.addEventListener("hashchange", checkDomainHash);
+    window.renderDynamicElements = renderDynamicElements;
 
-    window.closeParcoursModal = function() {
-      const modal = document.getElementById('parcoursModalView');
-      if (!modal) return;
-      window.activeParcoursModalId = null;
-      modal.classList.remove('active');
-      document.body.style.overflow = '';
-      if (location.hash.startsWith('#parcours-')) {
-        history.pushState(null, '', location.pathname);
-      }
-    };
+    function initPsychologyPage() {
+      setupFilters();
+      renderDynamicElements();
+      checkDomainHash();
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initPsychologyPage);
+    } else {
+      initPsychologyPage();
+    }
   </script>
 </body>
 </html>
