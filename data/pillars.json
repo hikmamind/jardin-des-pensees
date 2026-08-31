@@ -1,0 +1,601 @@
+{
+  "psychology": {
+    "id": "psychology",
+    "slug": "psychologie",
+    "folder": "psychologie",
+    "theme": {
+      "accent": "#C9A86A",
+      "accentGlow": "rgba(201, 168, 106, 0.15)",
+      "heroBg": "../psy_hero_cinematic.jpg"
+    },
+    "titles": {
+      "ar": "علم النفس وفهم الإنسان",
+      "fr": "Psychologie & Conscience de Soi",
+      "en": "Psychology & Self-Awareness"
+    },
+    "subtitles": {
+      "ar": "رحلة لفهم العقل، المشاعر، السلوك، وبناء الاستقلالية النفسية الأصيلة.",
+      "fr": "Un voyage d'exploration au cœur de l'esprit, des émotions et des dynamiques humaines.",
+      "en": "A journey exploring the human mind, emotions, behavior, and relationships."
+    },
+    "badge": {
+      "ar": "ركن علم النفس",
+      "fr": "Pilier Psychologie",
+      "en": "Psychology Pillar"
+    },
+    "featuredSection": {
+      "eyebrow": {
+        "ar": "مختارات • SÉLECTION",
+        "fr": "Sélection • À la une",
+        "en": "Curated • Featured"
+      },
+      "title": {
+        "ar": "دراسات مميزة في علم النفس",
+        "fr": "Études à la une en psychologie",
+        "en": "Featured Psychology Studies"
+      },
+      "subtitle": {
+        "ar": "أدلة تطبيقية وبحوث معرفية لاستعادة الهدوء وفهم أسرار الذات والذاكرة",
+        "fr": "Analyses approfondies et guides pratiques pour apaiser l'esprit et comprendre la psyché",
+        "en": "In-depth insights and actionable guides to master the mind and understand selfhood"
+      }
+    },
+    "recentSection": {
+      "title": {
+        "ar": "أحدث المقالات والأبحاث",
+        "fr": "Dernières parutions",
+        "en": "Latest Publications"
+      },
+      "subtitle": {
+        "ar": "جديد الأبحاث والتأملات النفسية المضافة حديثًا",
+        "fr": "Les réflexions et analyses récemment publiées",
+        "en": "Recently published reflections and analyses"
+      }
+    },
+    "allSection": {
+      "title": {
+        "ar": "كافة دراسات علم النفس",
+        "fr": "Toutes les études de psychologie",
+        "en": "All Psychology Articles"
+      },
+      "subtitle": {
+        "ar": "استكشف المقالات مصنفة حسب المسارات النفسية المتخصصة",
+        "fr": "Explorez l'ensemble des publications par parcours thématique",
+        "en": "Explore all publications organized by thematic tracks"
+      }
+    },
+    "pathways": [
+      {
+        "id": "01",
+        "slug": "self",
+        "title": {
+          "ar": "علم النفس وفهم الذات",
+          "fr": "Psychologie de soi",
+          "en": "Self-Psychology"
+        },
+        "desc": {
+          "ar": "الوعي بالذات، الشخصية، الهوية، والاستقلالية النفسية.",
+          "fr": "Conscience de soi, identité et souveraineté intérieure.",
+          "en": "Self-awareness, identity, and psychological sovereignty."
+        },
+        "image": "../psychologie/images/thumb-besoin-approbation.jpg"
+      },
+      {
+        "id": "02",
+        "slug": "relations",
+        "title": {
+          "ar": "المشاعر والعلاقات",
+          "fr": "Émotions & Relations",
+          "en": "Emotions & Relationships"
+        },
+        "desc": {
+          "ar": "الحب، التعلق، الغيرة، والروابط الإنسانية.",
+          "fr": "Attachement, dynamique relationnelle et intelligence émotionnelle.",
+          "en": "Attachment, relationship dynamics, and emotional intelligence."
+        },
+        "image": "../why_people_distance_success_hero.jpg"
+      },
+      {
+        "id": "03",
+        "slug": "mind-behavior",
+        "title": {
+          "ar": "العقل والسلوك",
+          "fr": "Esprit & Comportement",
+          "en": "Mind & Behavior"
+        },
+        "desc": {
+          "ar": "التحيزات المعرفية، التفكير الزائد، والذاكرة.",
+          "fr": "Biais cognitifs, rumination et fonctionnement de la mémoire.",
+          "en": "Cognitive biases, overthinking, and memory mechanics."
+        },
+        "image": "../psychologie/images/thumb-pensee-excessive-calme.jpg"
+      },
+      {
+        "id": "04",
+        "slug": "resilience",
+        "title": {
+          "ar": "الجروح والصمود النفسي",
+          "fr": "Blessures & Résilience",
+          "en": "Wounds & Resilience"
+        },
+        "desc": {
+          "ar": "التعافي من الصدمات، العزلة، وبناء المناعة النفسية.",
+          "fr": "Guérison des blessures, solitude féconde et reconstruction.",
+          "en": "Trauma recovery, fruitful solitude, and psychological resilience."
+        },
+        "image": "../solitude_blessing_curse_hero.jpg"
+      },
+      {
+        "id": "05",
+        "slug": "positive-growth",
+        "title": {
+          "ar": "علم النفس الإيجابي والنمو",
+          "fr": "Psychologie positive & Épanouissement",
+          "en": "Positive Psychology & Growth"
+        },
+        "desc": {
+          "ar": "مكامن القوة، الامتنان، وجودة الحياة.",
+          "fr": "Forces de caractère, gratitude et accomplissement personnel.",
+          "en": "Character strengths, gratitude, and flourishing."
+        },
+        "image": "../dev_growth_hd.jpg"
+      }
+    ],
+    "thinkers": [
+      "freud",
+      "jung",
+      "adler"
+    ]
+  },
+  "philosophy": {
+    "id": "philosophy",
+    "slug": "philosophie",
+    "folder": "philosophie",
+    "theme": {
+      "accent": "#DFB15B",
+      "accentGlow": "rgba(223, 177, 91, 0.15)",
+      "heroBg": "../philo_hero_cinematic.jpg"
+    },
+    "titles": {
+      "ar": "الفلسفة والبحث عن الحقيقة",
+      "fr": "Philosophie & Quête de Vérité",
+      "en": "Philosophy & The Pursuit of Truth"
+    },
+    "subtitles": {
+      "ar": "تأملات عقلانية في الوجود، المعرفة، الأخلاق، ومعنى الحياة.",
+      "fr": "Une exploration rationnelle de l'existence, de l'éthique et des grandes écoles de pensée.",
+      "en": "Rational reflections on existence, ethics, and enduring schools of thought."
+    },
+    "badge": {
+      "ar": "ركن الفلسفة",
+      "fr": "Pilier Philosophie",
+      "en": "Philosophy Pillar"
+    },
+    "featuredSection": {
+      "eyebrow": {
+        "ar": "مختارات • SÉLECTION",
+        "fr": "Sélection • À la une",
+        "en": "Curated • Featured"
+      },
+      "title": {
+        "ar": "دراسات فلسفية كبرى",
+        "fr": "Grandes études philosophiques",
+        "en": "Major Philosophical Studies"
+      },
+      "subtitle": {
+        "ar": "نصوص تأسيسية وأفكار غيّرت تاريخ الفكر الإنساني",
+        "fr": "Des concepts fondateurs qui ont transformé l'histoire de la pensée",
+        "en": "Foundational insights that transformed the history of ideas"
+      }
+    },
+    "recentSection": {
+      "title": {
+        "ar": "أحدث المقالات الفلسفية",
+        "fr": "Dernières parutions",
+        "en": "Latest Publications"
+      },
+      "subtitle": {
+        "ar": "تأملات فلسفية ونقدية مضافة حديثًا",
+        "fr": "Nouvelles analyses et réflexions philosophiques",
+        "en": "Newly published philosophical analyses and reflections"
+      }
+    },
+    "allSection": {
+      "title": {
+        "ar": "كافة الدراسات الفلسفية",
+        "fr": "Tous les articles de philosophie",
+        "en": "All Philosophy Articles"
+      },
+      "subtitle": {
+        "ar": "استكشف المقالات مصنفة حسب المدارس الفلسفية",
+        "fr": "Explorez les publications par école de pensée",
+        "en": "Explore articles categorized by philosophical schools"
+      }
+    },
+    "pathways": [
+      {
+        "id": "01",
+        "slug": "stoicism",
+        "title": {
+          "ar": "الرواقية وحكمة الصمود",
+          "fr": "Stoïcisme & Sérénité",
+          "en": "Stoicism & Equanimity"
+        },
+        "desc": {
+          "ar": "التحكم في الذات، قبول الأقدار، وبناء الطمأنينة العقلية.",
+          "fr": "Maîtrise de soi, dichotomie du contrôle et paix intérieure.",
+          "en": "Self-mastery, dichotomy of control, and inner tranquility."
+        },
+        "image": "../articles/discipline_vs_motivation_hero.jpg"
+      },
+      {
+        "id": "02",
+        "slug": "existentialism",
+        "title": {
+          "ar": "الوجودية والحرية",
+          "fr": "Existentialisme & Liberté",
+          "en": "Existentialism & Freedom"
+        },
+        "desc": {
+          "ar": "المسؤولية الفردية، قلق الحرية، وصناعة المعنى.",
+          "fr": "Liberté radicale, angoisse existentielle et création de sens.",
+          "en": "Radical freedom, existential anxiety, and meaning-making."
+        },
+        "image": "../nietzsche_portrait.jpg"
+      },
+      {
+        "id": "03",
+        "slug": "ethics",
+        "title": {
+          "ar": "الأخلاق والواجب",
+          "fr": "Éthique & Vertu",
+          "en": "Ethics & Duty"
+        },
+        "desc": {
+          "ar": "معايير الخير والشر، الضمير، والعدالة الإنسانية.",
+          "fr": "L'impératif moral, la justice et la quête de la vie bonne.",
+          "en": "Moral duty, justice, and the pursuit of the good life."
+        },
+        "image": "../schopenhauer_portrait.jpg"
+      }
+    ],
+    "thinkers": [
+      "socrate",
+      "seneque",
+      "marcaurele",
+      "kant",
+      "nietzsche",
+      "camus"
+    ]
+  },
+  "wellbeing": {
+    "id": "wellbeing",
+    "slug": "developpement-personnel",
+    "folder": "developpement-personnel",
+    "theme": {
+      "accent": "#DFB15B",
+      "accentGlow": "rgba(223, 177, 91, 0.15)",
+      "heroBg": "../dev_hero_cinematic.jpg"
+    },
+    "titles": {
+      "ar": "تطوير الذات وبناء العادات",
+      "fr": "Développement Personnel & Habitudes",
+      "en": "Personal Growth & Mastery"
+    },
+    "subtitles": {
+      "ar": "أدلة منهجية لتنظيم الطاقة، إتقان الانضباط، وبناء حياة واعية ومتزنة.",
+      "fr": "Des guides méthodiques pour forger une discipline durable et sculpter vos habitudes.",
+      "en": "Actionable frameworks for sustainable discipline, habit design, and conscious living."
+    },
+    "badge": {
+      "ar": "ركن تطوير الذات",
+      "fr": "Pilier Développement Personnel",
+      "en": "Personal Growth Pillar"
+    },
+    "featuredSection": {
+      "eyebrow": {
+        "ar": "مختارات • SÉLECTION",
+        "fr": "Sélection • À la une",
+        "en": "Curated • Featured"
+      },
+      "title": {
+        "ar": "أدلة رئيسية في الانضباط والعادات",
+        "fr": "Guides à la une en discipline & habitudes",
+        "en": "Featured Habit & Discipline Guides"
+      },
+      "subtitle": {
+        "ar": "منهجيات عملية لإعادة البناء الذاتي والعمل بذكاء دون استنزاف",
+        "fr": "Méthodes concrètes pour transformer son quotidien sans s'épuiser",
+        "en": "Actionable frameworks to build consistency without burning out"
+      }
+    },
+    "recentSection": {
+      "title": {
+        "ar": "أحدث الأدلة التطبيقية",
+        "fr": "Dernières parutions",
+        "en": "Latest Publications"
+      },
+      "subtitle": {
+        "ar": "أدلة ونماذج عمل مضافة حديثًا لمسارك اليومي",
+        "fr": "Nouveaux protocoles et guides pratiques pour votre progression",
+        "en": "New practical protocols and actionable guides for your growth"
+      }
+    },
+    "allSection": {
+      "title": {
+        "ar": "كافة أدلة تطوير الذات",
+        "fr": "Tous les articles de développement personnel",
+        "en": "All Personal Growth Articles"
+      },
+      "subtitle": {
+        "ar": "تصفح الأدلة حسب مسارات الانضباط، التركيز، والإنتاجية الواعية",
+        "fr": "Parcourez nos articles classés par axes de développement",
+        "en": "Browse guides organized by growth and productivity pathways"
+      }
+    },
+    "pathways": [
+      {
+        "id": "01",
+        "slug": "habits",
+        "title": {
+          "ar": "الانضباط والعادات",
+          "fr": "Discipline & Habitudes",
+          "en": "Discipline & Habits"
+        },
+        "desc": {
+          "ar": "هندسة السلوك اليومي وتجاوز التسويف وبناء الاستمرارية.",
+          "fr": "Architecture des habitudes, régularité et fin de la procrastination.",
+          "en": "Habit architecture, consistency, and overcoming procrastination."
+        },
+        "image": "../developpement-personnel/images/thumb-discipline-sans-epuisement.jpg"
+      },
+      {
+        "id": "02",
+        "slug": "focus",
+        "title": {
+          "ar": "التركيز والإنتاجية العميقة",
+          "fr": "Focus & Productivité Profonde",
+          "en": "Focus & Deep Work"
+        },
+        "desc": {
+          "ar": "إدارة الانتباه وحماية الوقت في عصر التشتت الرقمي.",
+          "fr": "Maîtrise de l'attention et travail en profondeur à l'ère numérique.",
+          "en": "Attention management and deep work in the digital age."
+        },
+        "image": "../dev_discipline_hd.jpg"
+      },
+      {
+        "id": "03",
+        "slug": "mindset",
+        "title": {
+          "ar": "عقلية النمو والمرونة",
+          "fr": "État d'Esprit & Résilience",
+          "en": "Mindset & Growth"
+        },
+        "desc": {
+          "ar": "تحويل التحديات إلى فرص وتعزيز الفعالية الذاتية.",
+          "fr": "Cultiver l'état d'esprit de croissance et la confiance en soi.",
+          "en": "Cultivating growth mindset and self-efficacy."
+        },
+        "image": "../dev_growth_hd.jpg"
+      }
+    ],
+    "thinkers": [
+      "william-james",
+      "albert-bandura",
+      "viktor-frankl",
+      "carol-dweck",
+      "mihaly-csikszentmihalyi"
+    ]
+  },
+  "wisdom": {
+    "id": "wisdom",
+    "slug": "sagesse",
+    "folder": "sagesse",
+    "theme": {
+      "accent": "#C9A86A",
+      "accentGlow": "rgba(201, 168, 106, 0.15)",
+      "heroBg": "../silence_wisdom_action.jpg"
+    },
+    "titles": {
+      "ar": "الحكمة وفن العيش",
+      "fr": "Sagesse & Art de Vivre",
+      "en": "Wisdom & The Art of Living"
+    },
+    "subtitles": {
+      "ar": "خلاصات التجارب الإنسانية الخالدة للعيش باتزان ووعي وهدوء.",
+      "fr": "La quintessence des pensées universelles pour cultiver la paix intérieure et la lucidité.",
+      "en": "Timeless universal wisdom to cultivate inner peace, balance, and clarity."
+    },
+    "badge": {
+      "ar": "ركن الحكمة",
+      "fr": "Pilier Sagesse",
+      "en": "Wisdom Pillar"
+    },
+    "featuredSection": {
+      "eyebrow": {
+        "ar": "مختارات • SÉLECTION",
+        "fr": "Sélection • À la une",
+        "en": "Curated • Featured"
+      },
+      "title": {
+        "ar": "دروس الحكمة الخالدة",
+        "fr": "Enseignements de sagesse",
+        "en": "Timeless Wisdom Lessons"
+      },
+      "subtitle": {
+        "ar": "تأملات في الفضيلة، الصمت، وبناء السلام الداخلي",
+        "fr": "Méditations sur la tempérance, le silence et l'harmonie intérieure",
+        "en": "Reflections on virtue, mindful silence, and inner harmony"
+      }
+    },
+    "recentSection": {
+      "title": {
+        "ar": "أحدث التأملات",
+        "fr": "Dernières réflexions",
+        "en": "Latest Reflections"
+      },
+      "subtitle": {
+        "ar": "إضاءات جديدة في فن العيش الحكيم",
+        "fr": "Nouveaux aperçus sur l'art de vivre",
+        "en": "New insights on the art of conscious living"
+      }
+    },
+    "allSection": {
+      "title": {
+        "ar": "كافة نصوص الحكمة",
+        "fr": "Tous les écrits de sagesse",
+        "en": "All Wisdom Writings"
+      },
+      "subtitle": {
+        "ar": "استكشف النصوص المصنفة حسب مسارات التأمل",
+        "fr": "Explorez nos méditations par parcours de sagesse",
+        "en": "Explore meditative essays categorized by tracks"
+      }
+    },
+    "pathways": [
+      {
+        "id": "01",
+        "slug": "serenity",
+        "title": {
+          "ar": "السكينة والسلام الداخلي",
+          "fr": "Sérénité & Paix Intérieure",
+          "en": "Serenity & Inner Peace"
+        },
+        "desc": {
+          "ar": "التحرر من القلق الزائد وتذوق اللحظة الحاضرة.",
+          "fr": "Détachement des tourments superflus et présence sereine.",
+          "en": "Detachment from needless agitation and mindful peace."
+        },
+        "image": "../silence_respect_hero.jpg"
+      },
+      {
+        "id": "02",
+        "slug": "discernment",
+        "title": {
+          "ar": "البصيرة وفن التمييز",
+          "fr": "Discernement & Clarté",
+          "en": "Discernment & Clarity"
+        },
+        "desc": {
+          "ar": "الرؤية العميقة لما يستحق طاقتك واهتمامك.",
+          "fr": "L'art de distinguer l'essentiel de l'accessoire.",
+          "en": "The art of distinguishing the essential from the trivial."
+        },
+        "image": "../silence_wisdom_action.jpg"
+      }
+    ],
+    "thinkers": [
+      "seneque",
+      "epictete",
+      "marcaurele",
+      "laotse",
+      "montaigne"
+    ]
+  },
+  "spirituality": {
+    "id": "spirituality",
+    "slug": "islam",
+    "folder": "islam",
+    "theme": {
+      "accent": "#DFB15B",
+      "accentGlow": "rgba(223, 177, 91, 0.15)",
+      "heroBg": "../islamic_hero_cinematic.jpg"
+    },
+    "titles": {
+      "ar": "الفكر الإسلامي والروحانية",
+      "fr": "Pensée Islamique & Spiritualité",
+      "en": "Islamic Thought & Spirituality"
+    },
+    "subtitles": {
+      "ar": "تأملات في تزكية النفس، فقه القلوب، وإشراقات الحكمة الإسلامية الخالدة.",
+      "fr": "Méditations sur la purification du cœur, la foi vivante et l'héritage intellectuel islamique.",
+      "en": "Reflections on spiritual purification, faith, and the enduring intellectual Islamic legacy."
+    },
+    "badge": {
+      "ar": "ركن الفكر الإسلامي",
+      "fr": "Pilier Pensée Islamique",
+      "en": "Islamic Thought Pillar"
+    },
+    "featuredSection": {
+      "eyebrow": {
+        "ar": "مختارات • SÉLECTION",
+        "fr": "Sélection • À la une",
+        "en": "Curated • Featured"
+      },
+      "title": {
+        "ar": "دراسات في تزكية النفس والإيمان",
+        "fr": "Études de spiritualité & foi",
+        "en": "Spiritual & Theological Studies"
+      },
+      "subtitle": {
+        "ar": "أدلة تأصيلية لاستعادة حلاوة الإيمان وسكينة القلب",
+        "fr": "Guides de cheminement spirituel et de purification du cœur",
+        "en": "Guidance on spiritual purification and the peace of the heart"
+      }
+    },
+    "recentSection": {
+      "title": {
+        "ar": "أحدث المقالات الروحية",
+        "fr": "Dernières parutions",
+        "en": "Latest Publications"
+      },
+      "subtitle": {
+        "ar": "جديد الدراسات والتأملات الإيمانية",
+        "fr": "Nouvelles réflexions et méditations spirituelles",
+        "en": "Newly published spiritual and philosophical reflections"
+      }
+    },
+    "allSection": {
+      "title": {
+        "ar": "كافة مقالات الفكر الإسلامي",
+        "fr": "Tous les articles de pensée islamique",
+        "en": "All Islamic Thought Articles"
+      },
+      "subtitle": {
+        "ar": "تصفح المقالات المصنفة حسب مسارات التزكية والفكر",
+        "fr": "Parcourez les écrits classés par axes spirituels et intellectuels",
+        "en": "Browse articles categorized by spiritual and intellectual pathways"
+      }
+    },
+    "pathways": [
+      {
+        "id": "01",
+        "slug": "tazkiya",
+        "title": {
+          "ar": "تزكية النفس وأمراض القلوب",
+          "fr": "Purification de l'Âme (Tazkiya)",
+          "en": "Spiritual Purification (Tazkiya)"
+        },
+        "desc": {
+          "ar": "معالجة أمراض القلوب وبناء الإخلاص واليقين.",
+          "fr": "Remèdes aux maux du cœur, sincérité et élévation spirituelle.",
+          "en": "Healing spiritual ailments, sincerity, and certitude."
+        },
+        "image": "../when_heart_loses_sweetness_hero.jpg"
+      },
+      {
+        "id": "02",
+        "slug": "islamic-philosophy",
+        "title": {
+          "ar": "فلسفة الفكر والحضارة",
+          "fr": "Philosophie & Civilisation",
+          "en": "Philosophy & Civilization"
+        },
+        "desc": {
+          "ar": "إسهامات كبار علماء الإسلام في العقل والمنطق.",
+          "fr": "Les apports majeurs des penseurs musulmans à la raison et à la sagesse.",
+          "en": "Major contributions of Islamic scholars to reason and wisdom."
+        },
+        "image": "../al_ghazali_portrait.jpg"
+      }
+    ],
+    "thinkers": [
+      "al-ghazali",
+      "ibn-arabi",
+      "ibn-khaldun",
+      "rumi",
+      "ibn-sina"
+    ]
+  }
+}

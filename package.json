@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
-    "build": "node -c data_v11.js app_v11.js articles/articles_v11.js thinkers/thinkers_v11.js quotes/quotes_v11.js quotes/calendar/calendar_v11.js"
+    "validate": "node scripts/validate-content.js && node scripts/validate-links.js",
+    "build": "npm run validate && node -c data_v11.js app_v11.js articles/articles_v11.js thinkers/thinkers_v11.js quotes/quotes_v11.js quotes/calendar/calendar_v11.js"
   },
   "keywords": [
     "sagesse",

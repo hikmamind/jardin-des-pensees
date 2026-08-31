@@ -1,0 +1,945 @@
+[
+  {
+    "id": "deja-vu-familiarite-memoire",
+    "pillar": "psychology",
+    "category": "psychology",
+    "parcoursId": "03",
+    "status": "published",
+    "featured": true,
+    "featuredOrder": 1,
+    "publishedAt": "30 Août 2026",
+    "readingTime": {
+      "ar": "١١ دقيقة قراءة",
+      "fr": "11 min de lecture",
+      "en": "11 min read"
+    },
+    "urls": {
+      "ar": "../files/deja-vu-familiarite-memoire.html",
+      "fr": "../files/deja-vu-familiarite-memoire.html",
+      "en": "../files/deja-vu-familiarite-memoire.html"
+    },
+    "titles": {
+      "ar": "ظاهرة الديجافو والألفة: كيف تعيد الذاكرة بناء الحاضر؟",
+      "fr": "Le déjà-vu et la familiarité : comment la mémoire reconstruit le présent",
+      "en": "Déjà-Vu, Familiarity, and Memory: How the Mind Reconstructs the Present"
+    },
+    "excerpts": {
+      "ar": "دليل نفسي وعلمي رصين يشرح ظاهرة الديجافو (Déjà-vu)، ويفكك الفارق بين إشارة الألفة والذكرى الحقيقية دون تفسيرات خارقة.",
+      "fr": "Un guide psychologique et cognitif pour comprendre le phénomène de déjà-vu, la mémoire reconstructive et la séparation entre familiarité et souvenir.",
+      "en": "A psychological and cognitive exploration of the déjà-vu phenomenon, reconstructive memory, and the gap between familiarity and recollection."
+    },
+    "thumbnail": "psychologie/images/thumb-deja-vu-familiarite-memoire.jpg",
+    "thumbnailAlt": {
+      "ar": "بابان متشابهان، يتسلل ضوء ذهبي من أحدهما.",
+      "fr": "Deux portes presque identiques, dont une laisse passer une lumière dorée.",
+      "en": "Two nearly identical doors, one revealing golden light."
+    },
+    "badges": {
+      "ar": "مقال مميز",
+      "fr": "Article à la une",
+      "en": "Featured Article"
+    }
+  },
+  {
+    "id": "discipline-sans-epuisement",
+    "pillar": "wellbeing",
+    "category": "development",
+    "parcoursId": "01",
+    "status": "published",
+    "featured": true,
+    "featuredOrder": 1,
+    "publishedAt": "29 Août 2026",
+    "readingTime": {
+      "ar": "١١ دقيقة قراءة",
+      "fr": "11 min de lecture",
+      "en": "11 min read"
+    },
+    "urls": {
+      "ar": "../files/discipline-sans-epuisement.html",
+      "fr": "../files/discipline-sans-epuisement.html",
+      "en": "../files/discipline-sans-epuisement.html"
+    },
+    "titles": {
+      "ar": "الانضباط دون إنهاك: كيف تعمل أقل وتنجز بشكل أفضل؟",
+      "fr": "La discipline sans épuisement : travailler moins, mais mieux",
+      "en": "Discipline Without Burnout: Work Less, but Better"
+    },
+    "excerpts": {
+      "ar": "دليل فلسفي وعملي لبناء انضباط مستدام يحمي طاقتك، ويحررك من فخ الإرهاق المستمر والشعور بالذنب أثناء الراحة.",
+      "fr": "Un guide philosophique et pratique pour bâtir une discipline durable, protéger votre énergie vitale et éliminer la dispersion sans culpabilité.",
+      "en": "A philosophical and actionable guide to building sustainable discipline, protecting your vital energy, and eliminating distraction without guilt."
+    },
+    "thumbnail": "developpement-personnel/images/thumb-discipline-sans-epuisement.jpg",
+    "thumbnailAlt": {
+      "ar": "مكتب هادئ في حديقة ليلية مضاء بنور ذهبي دافئ مع مساحة فارغة ترمز إلى الوضوح.",
+      "fr": "Un bureau sobre dans un jardin nocturne éclairé par une lumière dorée douce.",
+      "en": "A minimalist desk in a nocturnal garden illuminated by soft warm golden light."
+    },
+    "badges": {
+      "ar": "مقال مميز",
+      "fr": "Article à la une",
+      "en": "Featured Article"
+    }
+  },
+  {
+    "id": "redevenir-constant-apres-abandon",
+    "pillar": "wellbeing",
+    "category": "development",
+    "parcoursId": "01",
+    "status": "published",
+    "featured": false,
+    "featuredOrder": null,
+    "publishedAt": "29 Août 2026",
+    "readingTime": {
+      "ar": "١٠ دقائق قراءة",
+      "fr": "10 min de lecture",
+      "en": "10 min read"
+    },
+    "urls": {
+      "ar": "../files/redevenir-constant-apres-abandon.html",
+      "fr": "../files/redevenir-constant-apres-abandon.html",
+      "en": "../files/redevenir-constant-apres-abandon.html"
+    },
+    "titles": {
+      "ar": "كيف تستعيد الاستمرارية بعد أن توقفت مرات عديدة؟",
+      "fr": "Comment redevenir constant après avoir abandonné plusieurs fois",
+      "en": "How to Become Consistent Again After Giving Up Several Times"
+    },
+    "excerpts": {
+      "ar": "دليل عملي وتأملي لاستعادة الاستمرارية بعد الانقطاع المتكرر، وبناء نظام مرن للعودة دون جلد الذات أو الاعتماد على الحماس المؤقت.",
+      "fr": "Un guide philosophique et pratique pour retrouver une constance durable après de multiples abandons, sans culpabilité ni dépendance à la motivation éphémère.",
+      "en": "A thoughtful and practical guide to rebuilding lasting consistency after multiple setbacks, without guilt or relying on fleeting motivation."
+    },
+    "thumbnail": "developpement-personnel/images/thumb-redevenir-constant-apres-abandon.jpg",
+    "thumbnailAlt": {
+      "ar": "طريق من الأضواء الصغيرة يستأنف مساره بعد انقطاع ويقود نحو شجرة فتية في حديقة هادئة.",
+      "fr": "Un chemin de petites lumières reprend après une interruption et conduit vers un jeune arbre dans un jardin nocturne.",
+      "en": "A path of small lights resumes after an interruption and leads toward a young tree in a peaceful night garden."
+    },
+    "badges": {
+      "ar": "مقال رئيسي",
+      "fr": "Article",
+      "en": "Article"
+    }
+  },
+  {
+    "id": "nouvel-essor-apres-difficultes",
+    "pillar": "wellbeing",
+    "category": "development",
+    "parcoursId": "03",
+    "status": "published",
+    "featured": false,
+    "featuredOrder": null,
+    "publishedAt": "August 28, 2026",
+    "readingTime": {
+      "ar": "١٢ دقيقة قراءة",
+      "fr": "12 min read",
+      "en": "12 min read"
+    },
+    "urls": {
+      "ar": "../files/nouvel-essor-apres-difficultes.html",
+      "fr": "../files/nouvel-essor-apres-difficultes.html",
+      "en": "../files/nouvel-essor-apres-difficultes.html"
+    },
+    "titles": {
+      "ar": "Rising and Growing After Adversity: Psychology of Resilience",
+      "fr": "Rising and Growing After Adversity: Psychology of Resilience",
+      "en": "Rising and Growing After Adversity: Psychology of Resilience"
+    },
+    "excerpts": {
+      "ar": "دراسة معرفية وفلسفية متعمقة تضيء مسار الفكر والوعي الذاتي.",
+      "fr": "A philosophical and psychological guide to regaining balance, honoring recovery time, and consciously rebuilding your life after major trials.",
+      "en": "An in-depth and accessible study to enrich your understanding."
+    },
+    "thumbnail": "developpement-personnel/images/thumb-nouvel-essor-apres-difficultes.jpg",
+    "thumbnailAlt": {
+      "ar": "Rising and Growing After Adversity: Psychology of Resilience",
+      "fr": "نبتة صغيرة تنمو بين شقوق حجر داكن بعد المطر.",
+      "en": "Rising and Growing After Adversity: Psychology of Resilience"
+    },
+    "badges": {
+      "ar": "مقال رئيسي",
+      "fr": "Article",
+      "en": "Article"
+    }
+  },
+  {
+    "id": "reprendre-habitude-apres-interruption",
+    "pillar": "wellbeing",
+    "category": "development",
+    "parcoursId": "01",
+    "status": "published",
+    "featured": false,
+    "featuredOrder": null,
+    "publishedAt": "15 Janvier 2025",
+    "readingTime": {
+      "ar": "٩ دقائق قراءة",
+      "fr": "9 min de lecture",
+      "en": "9 min read"
+    },
+    "urls": {
+      "ar": "../files/reprendre-habitude-apres-interruption.html",
+      "fr": "../files/reprendre-habitude-apres-interruption.html",
+      "en": "../files/reprendre-habitude-apres-interruption.html"
+    },
+    "titles": {
+      "ar": "كيف تستعيد عادة بعد انقطاع؟ سيكولوجيا العودة الذكية",
+      "fr": "Comment reprendre une habitude après une interruption",
+      "en": "How to Restart a Habit After a Break"
+    },
+    "excerpts": {
+      "ar": "دليل عملي ونفسي لاستئناف العادات بعد التعثر دون جلد الذات أو الوقوع في فخ التعويض المفرط، مع بروتوكول العودة في 5 خطوات.",
+      "fr": "Guide pratique et psychologique pour relancer une habitude après un arrêt sans culpabilité, sans perfectionnisme et sans surcompensation.",
+      "en": "A practical and psychological guide to restarting a habit after a break without guilt, perfectionism, or extreme overcompensation."
+    },
+    "thumbnail": "developpement-personnel/images/thumb-reprendre-habitude-interruption.jpg",
+    "thumbnailAlt": {
+      "ar": "كيف تستعيد عادة بعد انقطاع؟",
+      "fr": "Comment reprendre une habitude après une interruption",
+      "en": "A small shoot grows through cracks in a dark stone after the rain."
+    },
+    "badges": {
+      "ar": "مقال رئيسي",
+      "fr": "Article",
+      "en": "Article"
+    }
+  },
+  {
+    "id": "petites-habitudes-grande-decision",
+    "pillar": "wellbeing",
+    "category": "development",
+    "parcoursId": "01",
+    "status": "published",
+    "featured": false,
+    "featuredOrder": null,
+    "publishedAt": "10 Janvier 2025",
+    "readingTime": {
+      "ar": "٨ دقائق قراءة",
+      "fr": "8 min de lecture",
+      "en": "8 min read"
+    },
+    "urls": {
+      "ar": "../files/petites-habitudes-grande-decision.html",
+      "fr": "../files/petites-habitudes-grande-decision.html",
+      "en": "../files/petites-habitudes-grande-decision.html"
+    },
+    "titles": {
+      "ar": "لماذا تغيّر العادات الصغيرة حياتنا أكثر من القرارات الكبيرة؟",
+      "fr": "Pourquoi les petites habitudes changent plus qu’une grande décision",
+      "en": "Why Small Habits Change More Than One Big Decision"
+    },
+    "excerpts": {
+      "ar": "اكتشف لماذا تغيّر العادات الصغيرة المتكررة حياتنا أكثر من قرار كبير معزول، وكيف تبني نظامًا عمليًا للتقدم المستمر عبر أثر التراكم.",
+      "fr": "Découvrez pourquoi les petits gestes quotidiens surpassent les résolutions héroïques et comment construire un système de progression durable.",
+      "en": "Discover why repeated small habits transform your life more than one isolated big decision, and how to build a sustainable system of progress."
+    },
+    "thumbnail": "articles/petites_habitudes_hero.jpg",
+    "thumbnailAlt": {
+      "ar": "لماذا تغيّر العادات الصغيرة حياتنا أكثر من القرارات الكبيرة؟",
+      "fr": "Pourquoi les petites habitudes changent plus qu’une grande décision",
+      "en": "Why Small Habits Change More Than One Big Decision"
+    },
+    "badges": {
+      "ar": "مقال رئيسي",
+      "fr": "Article",
+      "en": "Article"
+    }
+  },
+  {
+    "id": "construire-une-habitude-durable",
+    "pillar": "wellbeing",
+    "category": "development",
+    "parcoursId": "01",
+    "status": "published",
+    "featured": true,
+    "featuredOrder": 2,
+    "publishedAt": "05 Janvier 2025",
+    "readingTime": {
+      "ar": "٧ دقائق قراءة",
+      "fr": "7 min de lecture",
+      "en": "7 min read"
+    },
+    "urls": {
+      "ar": "../files/construire-une-habitude-durable.html",
+      "fr": "../files/construire-une-habitude-durable.html",
+      "en": "../files/construire-une-habitude-durable.html"
+    },
+    "titles": {
+      "ar": "بناء عادة دائمة: كيف يتحول الفعل الصغير إلى نمط حياة؟",
+      "fr": "Construire une habitude durable : transformer un geste en mode de vie",
+      "en": "Building a Lasting Habit: How a Small Action Becomes a Way of Life"
+    },
+    "excerpts": {
+      "ar": "دليل منهجي متكامل في هندسة السلوك وتكوين العادات المستدامة عبر المحفزات والتكرار الواعي وتغيير الهوية الشخصية.",
+      "fr": "Guide méthodologique sur l’ancrage des comportements via les déclencheurs, la répétition sans friction et le changement d'identité.",
+      "en": "A comprehensive guide to behavioral engineering: transforming micro-actions into permanent lifestyle habits through cues, repetition, and identity shifts."
+    },
+    "thumbnail": "articles/construire_habitude_durable_hero.jpg",
+    "thumbnailAlt": {
+      "ar": "بناء عادة دائمة: كيف يتحول الفعل الصغير إلى نمط حياة؟",
+      "fr": "Construire une habitude durable",
+      "en": "Building a Lasting Habit"
+    },
+    "badges": {
+      "ar": "مقال مميز",
+      "fr": "Article à la une",
+      "en": "Featured Article"
+    }
+  },
+  {
+    "id": "discipline-vs-motivation",
+    "pillar": "wellbeing",
+    "category": "development",
+    "parcoursId": "01",
+    "status": "published",
+    "featured": true,
+    "featuredOrder": 3,
+    "publishedAt": "01 Janvier 2025",
+    "readingTime": {
+      "ar": "٨ دقائق قراءة",
+      "fr": "8 min de lecture",
+      "en": "8 min read"
+    },
+    "urls": {
+      "ar": "../files/discipline-vs-motivation.html",
+      "fr": "../files/discipline-vs-motivation.html",
+      "en": "../files/discipline-vs-motivation.html"
+    },
+    "titles": {
+      "ar": "الانضباط أم الدافعية: لماذا لا يكفي الحماس وحده؟",
+      "fr": "Discipline vs motivation : pourquoi l’élan ne suffit pas",
+      "en": "Discipline vs Motivation: Why Drive Alone Is Not Enough"
+    },
+    "excerpts": {
+      "ar": "دراسة شاملة في الفارق الجوهري بين تقلبات الحماس العاطفي وثبات الانضباط الواعي، مع استراتيجيات تحويل الإرادة إلى نظام عمل يومي مستدام.",
+      "fr": "Une analyse approfondie sur les limites de la motivation émotionnelle et les fondements d’un système d'action pérenne.",
+      "en": "An in-depth psychological analysis of action and willpower: why motivation fades and how to construct enduring, system-based self-discipline."
+    },
+    "thumbnail": "articles/discipline_vs_motivation_hero.jpg",
+    "thumbnailAlt": {
+      "ar": "الانضباط أم الدافعية: لماذا لا يكفي الحماس وحده؟",
+      "fr": "Discipline vs motivation",
+      "en": "Discipline vs Motivation"
+    },
+    "badges": {
+      "ar": "مقال مميز",
+      "fr": "Article à la une",
+      "en": "Featured Article"
+    }
+  },
+  {
+    "id": "wisdom-stoicism-control",
+    "pillar": "wisdom",
+    "category": "sagesse",
+    "parcoursId": "01",
+    "status": "published",
+    "featured": true,
+    "featuredOrder": 1,
+    "publishedAt": "24 Août 2026",
+    "readingTime": {
+      "ar": "٩ دقائق قراءة",
+      "fr": "9 min de lecture",
+      "en": "9 min read"
+    },
+    "urls": {
+      "ar": "../files/wisdom-stoicism-control.html",
+      "fr": "../files/wisdom-stoicism-control.html",
+      "en": "../files/wisdom-stoicism-control.html"
+    },
+    "titles": {
+      "ar": "الحكمة الرواقية: كيف نتعلم السيطرة على ما يقع ضمن إرادتنا؟",
+      "fr": "La sagesse stoïcienne : apprendre à maîtriser ce qui dépend de nous",
+      "en": "Stoic Wisdom: Learning to Master What Depends on Us"
+    },
+    "excerpts": {
+      "ar": "دراسة شاملة ودليل عملي في الفلسفة الرواقية، ثنائية التحكم، وبناء القلعة الباطنية لدى إبيكتيتوس وسينيكا وماركوس أوريليوس.",
+      "fr": "Une étude approfondie et un guide pratique sur la dichotomie du contrôle, la citadelle intérieure et l'art de vivre stoïcien.",
+      "en": "A comprehensive study and practical guide on the dichotomy of control, the inner citadel, and daily Stoic practice."
+    },
+    "thumbnail": "wis_hero_cinematic.jpg",
+    "thumbnailAlt": {
+      "ar": "تمثال فلسفي رواقي يرمز للسكينة وضبط النفس",
+      "fr": "Buste stoïcien symbolisant la citadelle intérieure et la maîtrise de soi",
+      "en": "Stoic bust symbolizing inner citadel and emotional mastery"
+    },
+    "badges": {
+      "ar": "مقال مميز",
+      "fr": "Article à la une",
+      "en": "Featured Article"
+    }
+  },
+  {
+    "id": "why-people-distance-when-you-succeed",
+    "pillar": "psychology",
+    "category": "psychology",
+    "parcoursId": "02",
+    "status": "published",
+    "featured": false,
+    "featuredOrder": null,
+    "publishedAt": "20 Mai 2026",
+    "readingTime": {
+      "ar": "٨ دقائق قراءة",
+      "fr": "8 min de lecture",
+      "en": "8 min read"
+    },
+    "urls": {
+      "ar": "../articles/why-people-distance-when-you-succeed.html",
+      "fr": "../articles/why-people-distance-when-you-succeed.html",
+      "en": "../articles/why-people-distance-when-you-succeed.html"
+    },
+    "titles": {
+      "ar": "لماذا يبتعد الناس عنك عندما تبدأ بالنجاح؟",
+      "fr": "Pourquoi les gens s'éloignent-ils lorsque vous réussissez ?",
+      "en": "Why Do People Distance Themselves When You Succeed?"
+    },
+    "excerpts": {
+      "ar": "تحليل نفسي عميق يكشف أسرار تغير العلاقات عند التقدم، ولماذا يتحول الإعجاب إلى برود أو غيرة، وكيف تحمي سلامك الداخلي.",
+      "fr": "Une analyse psychologique lucide qui dévoile la dynamique des relations face au succès, l'envie inconsciente et l'art de préserver sa paix intérieure.",
+      "en": "A deep psychological analysis revealing the dynamics of relationships when you advance, unconscious envy, and the art of preserving inner peace."
+    },
+    "thumbnail": "why_people_distance_success_hero.jpg",
+    "thumbnailAlt": {
+      "ar": "شخص ينظر إلى الأفق من قمة عالية متأملاً في حقيقة العلاقات بعد النجاح",
+      "fr": "Une personne observant la ville depuis les hauteurs, méditant sur les relations humaines après la réussite",
+      "en": "A person standing on a high viewpoint overlooking the city, contemplating human relationships after success"
+    },
+    "badges": {
+      "ar": "مقال رئيسي",
+      "fr": "Article",
+      "en": "Article"
+    }
+  },
+  {
+    "id": "why-people-respect-silent-person",
+    "pillar": "psychology",
+    "category": "psychology",
+    "parcoursId": "01",
+    "status": "published",
+    "featured": false,
+    "featuredOrder": null,
+    "publishedAt": "18 Mai 2026",
+    "readingTime": {
+      "ar": "٧ دقائق قراءة",
+      "fr": "7 min de lecture",
+      "en": "7 min read"
+    },
+    "urls": {
+      "ar": "../articles/why-people-respect-silent-person.html",
+      "fr": "../articles/why-people-respect-silent-person.html",
+      "en": "../articles/why-people-respect-silent-person.html"
+    },
+    "titles": {
+      "ar": "لماذا يحترم الناس الشخص الصامت أكثر من كثير الكلام؟",
+      "fr": "Pourquoi les gens respectent-ils plus une personne silencieuse ?",
+      "en": "Why Do People Respect a Silent Person More Than a Talkative One?"
+    },
+    "excerpts": {
+      "ar": "كيف يمنحك الصمت الواعي هيبة غير مرئية وقدرة على التحكم في المواقف، ولماذا يعد فن الاستماع سلاح الأقوياء.",
+      "fr": "Comment le silence maîtrisé forge une autorité naturelle et pourquoi l'écoute attentive est l'arme suprême des esprits forts.",
+      "en": "How mindful silence builds natural charisma, invisible authority, and why deep listening is the ultimate strength in human interactions."
+    },
+    "thumbnail": "silence_respect_hero.jpg",
+    "thumbnailAlt": {
+      "ar": "تمثال كلاسيكي في وضعية التأمل الصامت يجسد عمق الحكمة والرزانة",
+      "fr": "Buste classique dans une attitude de recueillement et de profonde sérénité",
+      "en": "Classical statue in silent contemplative pose embodying profound wisdom and composure"
+    },
+    "badges": {
+      "ar": "مقال رئيسي",
+      "fr": "Article",
+      "en": "Article"
+    }
+  },
+  {
+    "id": "nietzsche-psychological-strength",
+    "pillar": "philosophy",
+    "category": "philosophy",
+    "parcoursId": "02",
+    "status": "published",
+    "featured": false,
+    "featuredOrder": null,
+    "publishedAt": "15 Mai 2026",
+    "readingTime": {
+      "ar": "٨ دقائق قراءة",
+      "fr": "8 min de lecture",
+      "en": "8 min read"
+    },
+    "urls": {
+      "ar": "../articles/nietzsche-psychological-strength.html",
+      "fr": "../articles/nietzsche-psychological-strength.html",
+      "en": "../articles/nietzsche-psychological-strength.html"
+    },
+    "titles": {
+      "ar": "ماذا يمكن أن تتعلم من نيتشه لتصبح أقوى نفسياً؟",
+      "fr": "Que pouvez-vous apprendre de Nietzsche pour devenir plus fort ?",
+      "en": "What Can You Learn from Nietzsche to Become Psychologically Stronger?"
+    },
+    "excerpts": {
+      "ar": "دروس خالدة من فريدريش نيتشه حول تحويل المعاناة إلى وقود، وتجاوز القيود الفكرية وصياغة الذات المتفوقة.",
+      "fr": "Les enseignements majeurs de Friedrich Nietzsche pour transcender l'adversité, forger son autonomie et sculpter une volonté inébranlable.",
+      "en": "Key teachings from Friedrich Nietzsche on turning adversity into fuel, overcoming herd mentality, and building uncompromising self-mastery."
+    },
+    "thumbnail": "nietzsche_psychological_strength_hero.jpg",
+    "thumbnailAlt": {
+      "ar": "متسلق جبال يقف على قمة وعرة فوق السحاب في إشارة لقوة نيتشه الفلسفية",
+      "fr": "Un alpiniste face à un sommet escarpé au-dessus des nuages, symbole de dépassement nietzschéen",
+      "en": "A mountaineer overlooking majestic peaks above the clouds, embodying Nietzschean psychological elevation"
+    },
+    "badges": {
+      "ar": "مقال رئيسي",
+      "fr": "Article",
+      "en": "Article"
+    }
+  },
+  {
+    "id": "schopenhauer-happiness-illusion",
+    "pillar": "philosophy",
+    "category": "philosophy",
+    "parcoursId": "01",
+    "status": "published",
+    "featured": true,
+    "featuredOrder": 1,
+    "publishedAt": "12 Mai 2026",
+    "readingTime": {
+      "ar": "٩ دقائق قراءة",
+      "fr": "9 min de lecture",
+      "en": "9 min read"
+    },
+    "urls": {
+      "ar": "../articles/schopenhauer-happiness-illusion.html",
+      "fr": "../articles/schopenhauer-happiness-illusion.html",
+      "en": "../articles/schopenhauer-happiness-illusion.html"
+    },
+    "titles": {
+      "ar": "لماذا اعتبر شوبنهاور أن السعادة مجرد وهم؟",
+      "fr": "Pourquoi Schopenhauer considérait-il le bonheur comme une illusion ?",
+      "en": "Why Did Schopenhauer Consider Happiness to Be a Mere Illusion?"
+    },
+    "excerpts": {
+      "ar": "دراسة فلسفية ونفسية عميقة في فلسفة آرثر شوبنهاور: دورة الرغبات، وهم الامتلاك، وكيفية الوصول إلى السلام والسكينة.",
+      "fr": "Une exploration profonde de la pensée d'Arthur Schopenhauer : la tyrannie des désirs, l'ennui et le véritable chemin vers la paix de l'âme.",
+      "en": "A deep philosophical exploration of Arthur Schopenhauer: the endless cycle of desires, boredom, and the true path to tranquility."
+    },
+    "thumbnail": "schopenhauer_happiness_illusion_hero.jpg",
+    "thumbnailAlt": {
+      "ar": "بحر هادئ وغروب تأملي يعكس فلسفة شوبنهاور في السكينة والتحرر من الرغبات",
+      "fr": "Un lac serein au soleil couchant reflétant la contemplation et l'apaisement intérieur",
+      "en": "A peaceful calm lake at sunset reflecting serene contemplation and release from superficial desires"
+    },
+    "badges": {
+      "ar": "مقال مميز",
+      "fr": "Article à la une",
+      "en": "Featured Article"
+    }
+  },
+  {
+    "id": "solitude-blessing-or-curse",
+    "pillar": "philosophy",
+    "category": "philosophy",
+    "parcoursId": "04",
+    "status": "published",
+    "featured": false,
+    "featuredOrder": null,
+    "publishedAt": "10 Mai 2026",
+    "readingTime": {
+      "ar": "٨ دقائق قراءة",
+      "fr": "8 min de lecture",
+      "en": "8 min read"
+    },
+    "urls": {
+      "ar": "../articles/solitude-blessing-or-curse.html",
+      "fr": "../articles/solitude-blessing-or-curse.html",
+      "en": "../articles/solitude-blessing-or-curse.html"
+    },
+    "titles": {
+      "ar": "هل العزلة نعمة أم عقاب؟ طريق الفلاسفة لاكتشاف الذات",
+      "fr": "La solitude est-elle une bénédiction ou une punition ?",
+      "en": "Is Solitude a Blessing or a Curse? The Path to Self-Discovery"
+    },
+    "excerpts": {
+      "ar": "كيف يرى الفلاسفة أن الوحدة الإيجابية طريق لاكتشاف الذات وبناء السلام الداخلي في عالم مليء بالضوضاء.",
+      "fr": "La voie des philosophes pour faire de la solitude choisie un sanctuaire d'introspection et de paix au cœur d'un monde frénétique.",
+      "en": "How great philosophers see intentional solitude as a sanctuary of self-discovery, clarity, and renewal in an overstimulated world."
+    },
+    "thumbnail": "solitude_blessing_curse_hero.jpg",
+    "thumbnailAlt": {
+      "ar": "غابة خريفية هادئة وشخص يسير في سكينة متأملاً في رحلة العزلة",
+      "fr": "Forêt d'automne paisible avec un marcheur solitaire contemplant la beauté du silence",
+      "en": "Autumn forest trail with a lone traveler walking peacefully in contemplation"
+    },
+    "badges": {
+      "ar": "مقال رئيسي",
+      "fr": "Article",
+      "en": "Article"
+    }
+  },
+  {
+    "id": "7-errors-mind-growth",
+    "pillar": "philosophy",
+    "category": "history",
+    "parcoursId": "03",
+    "status": "published",
+    "featured": false,
+    "featuredOrder": null,
+    "publishedAt": "8 Mai 2026",
+    "readingTime": {
+      "ar": "٨ دقائق قراءة",
+      "fr": "8 min de lecture",
+      "en": "8 min read"
+    },
+    "urls": {
+      "ar": "../articles/7-errors-mind-growth.html",
+      "fr": "../articles/7-errors-mind-growth.html",
+      "en": "../articles/7-errors-mind-growth.html"
+    },
+    "titles": {
+      "ar": "٧ أخطاء تمنعك من تنمية عقلك: دروس من سقراط ونيتشه وأوريليوس",
+      "fr": "7 erreurs qui empêchent votre esprit de grandir",
+      "en": "7 Mistakes Preventing You from Developing Your Mind"
+    },
+    "excerpts": {
+      "ar": "دروس عقلية خالدة لتفكيك التحيزات الذهنية والتخلص من العادات التي تعيق التفكير النقدي وتطور الحكمة.",
+      "fr": "Leçons de Socrate, Nietzsche et Marc Aurèle pour éliminer les biais mentaux et cultiver un esprit critique rigoureux et libre.",
+      "en": "Timeless lessons from Socrates, Nietzsche, and Marcus Aurelius to dismantle cognitive biases and cultivate sharp critical thinking."
+    },
+    "thumbnail": "mind_growth_errors_hero.jpg",
+    "thumbnailAlt": {
+      "ar": "مكتبة تاريخية تفيض بالكتب القديمة والمصابيح الكلاسيكية الموحية بالمعرفة",
+      "fr": "Bibliothèque classique éclairée à la lanterne avec de précieux volumes philosophiques",
+      "en": "Vintage lantern-lit library with timeless philosophical volumes"
+    },
+    "badges": {
+      "ar": "مقال رئيسي",
+      "fr": "Article",
+      "en": "Article"
+    }
+  },
+  {
+    "id": "happiness-in-wrong-place",
+    "pillar": "philosophy",
+    "category": "philosophy",
+    "parcoursId": "03",
+    "status": "published",
+    "featured": false,
+    "featuredOrder": null,
+    "publishedAt": "5 Mai 2026",
+    "readingTime": {
+      "ar": "٧ دقائق قراءة",
+      "fr": "7 min de lecture",
+      "en": "7 min read"
+    },
+    "urls": {
+      "ar": "../articles/happiness-in-wrong-place.html",
+      "fr": "../articles/happiness-in-wrong-place.html",
+      "en": "../articles/happiness-in-wrong-place.html"
+    },
+    "titles": {
+      "ar": "لماذا نبحث عن السعادة في المكان الخطأ؟ رحلة فلسفية",
+      "fr": "Pourquoi cherchons-nous le bonheur au mauvais endroit ?",
+      "en": "Why Do We Search for Happiness in the Wrong Place?"
+    },
+    "excerpts": {
+      "ar": "رحلة تجمع بين حكمة الرواقيين وإبيقور وشوبنهاور لفهم معنى السعادة والتوقف عن البحث عنها في المظاهر الزائلة.",
+      "fr": "Un voyage au cœur des sagesses stoïcienne et épicurienne pour cesser de courir après les mirages extérieurs.",
+      "en": "A journey through Stoicism, Epicureanism, and Schopenhauer to stop chasing external mirages and embrace authentic peace."
+    },
+    "thumbnail": "happiness_wrong_place_hero.jpg",
+    "thumbnailAlt": {
+      "ar": "نافذة تعكس أضواء الصباح والسكينة كرمز للسلام الداخلي الحقيقي",
+      "fr": "Une fenêtre donnant sur les premières lueurs du jour symbolisant la paix intérieure",
+      "en": "A sunlit window morning view symbolizing genuine internal peace and clarity"
+    },
+    "badges": {
+      "ar": "مقال رئيسي",
+      "fr": "Article",
+      "en": "Article"
+    }
+  },
+  {
+    "id": "true-confidence-inside",
+    "pillar": "psychology",
+    "category": "psychology",
+    "parcoursId": "01",
+    "status": "published",
+    "featured": false,
+    "featuredOrder": null,
+    "publishedAt": "1 Mai 2026",
+    "readingTime": {
+      "ar": "٥ دقائق قراءة",
+      "fr": "5 min de lecture",
+      "en": "5 min read"
+    },
+    "urls": {
+      "ar": "../articles/true-confidence-inside.html",
+      "fr": "../articles/true-confidence-inside.html",
+      "en": "../articles/true-confidence-inside.html"
+    },
+    "titles": {
+      "ar": "كيف تبني ثقة حقيقية بنفسك من الداخل؟",
+      "fr": "Comment construire une vraie confiance en soi de l'intérieur ?",
+      "en": "How to Build True Inner Self-Confidence?"
+    },
+    "excerpts": {
+      "ar": "دليل عملي لبناء الثقة بالنفس خطوة بخطوة والتخلص من الحاجة المستمرة لإرضاء الآخرين أو انتظار تقييمهم.",
+      "fr": "Un guide concret pour forger une sécurité intérieure inaltérable sans dépendre de l'approbation d'autrui.",
+      "en": "A practical guide to cultivating unshakeable inner security without relying on external validation or pleasing others."
+    },
+    "thumbnail": "person_window_sunrise.jpg",
+    "thumbnailAlt": {
+      "ar": "شخص يجلس أمام النافذة عند الشروق في تأمل وثقة داخلية هادئة",
+      "fr": "Une personne assise calmement face au lever du soleil incarnant la sérénité et l'assurance intérieure",
+      "en": "A person sitting peacefully by a morning window embodying deep quiet self-assurance"
+    },
+    "badges": {
+      "ar": "مقال رئيسي",
+      "fr": "Article",
+      "en": "Article"
+    }
+  },
+  {
+    "id": "hikma-citations-philosophiques",
+    "pillar": "philosophy",
+    "category": "history",
+    "parcoursId": "01",
+    "status": "published",
+    "featured": false,
+    "featuredOrder": null,
+    "publishedAt": "28 Avril 2026",
+    "readingTime": {
+      "ar": "٨ دقائق قراءة",
+      "fr": "8 min de lecture",
+      "en": "8 min read"
+    },
+    "urls": {
+      "ar": "../articles/hikma-citations-philosophiques.html",
+      "fr": "../articles/hikma-citations-philosophiques.html",
+      "en": "../articles/hikma-citations-philosophiques.html"
+    },
+    "titles": {
+      "ar": "حكم وأقوال خالدة من عظماء الفكر الإنساني",
+      "fr": "Sagesses et Citations Immortelles des Grands Penseurs",
+      "en": "Timeless Wisdom & Quotes from the Greatest Thinkers"
+    },
+    "excerpts": {
+      "ar": "مختارات من أعظم المقولات الفلسفية التي غيرت مجرى التفكير الإنساني مع تحليل عميق لمعانيها وتطبيقاتها المعاصرة.",
+      "fr": "20 maximes philosophiques intemporelles de Socrate, Marc Aurèle, Sénèque et Nietzsche décryptées pour éclairer notre quotidien.",
+      "en": "20 immortal quotes from Socrates, Marcus Aurelius, Seneca, and Nietzsche decoded to guide and inspire your daily life."
+    },
+    "thumbnail": "quotes_article_hero.jpg",
+    "thumbnailAlt": {
+      "ar": "مجموعة من الاقتباسات والكتب الفلسفية القديمة مع ضوء شمعة دافئ",
+      "fr": "Manuscrit philosophique et livres anciens à la lumière chaleureuse d'une bougie",
+      "en": "Philosophical manuscript and classic antique books under warm candle glow"
+    },
+    "badges": {
+      "ar": "مقال رئيسي",
+      "fr": "Article",
+      "en": "Article"
+    }
+  },
+  {
+    "id": "self-discipline",
+    "pillar": "wellbeing",
+    "category": "development",
+    "parcoursId": "03",
+    "status": "published",
+    "featured": false,
+    "featuredOrder": null,
+    "publishedAt": "25 Avril 2026",
+    "readingTime": {
+      "ar": "٩ دقائق قراءة",
+      "fr": "9 min de lecture",
+      "en": "9 min read"
+    },
+    "urls": {
+      "ar": "../files/self-discipline.html",
+      "fr": "../files/self-discipline.html",
+      "en": "../files/self-discipline.html"
+    },
+    "titles": {
+      "ar": "كيف تبني الانضباط الذاتي؟ دليل العادة التي تصنع الفارق",
+      "fr": "Comment cultiver l'autodiscipline ? L'art de la persévérance",
+      "en": "How to Build Self-Discipline: The Habit That Changes Everything"
+    },
+    "excerpts": {
+      "ar": "دليل تطبيقي شامل يشرح لماذا يتفوق الانضباط على الحماس المؤقت، وكيف تبني عادات يومية حديدية تضمن وصولك لأهدافك.",
+      "fr": "Pourquoi la discipline surpasse toujours la motivation éphémère et comment bâtir des habitudes solides pour accomplir ses projets.",
+      "en": "Why disciplined habits outshine fleeting motivation and how to build daily consistency to achieve your highest goals."
+    },
+    "thumbnail": "self_discipline.jpg",
+    "thumbnailAlt": {
+      "ar": "طريق مرصوف يمتد نحو الأفق يرمز للاستمرارية والانضباط الذاتي اليومي",
+      "fr": "Un chemin pavé s'étendant vers l'horizon symbolisant la constance et l'autodiscipline quotidienne",
+      "en": "A stone pathway stretching toward the horizon symbolizing steady daily discipline and persistence"
+    },
+    "badges": {
+      "ar": "مقال رئيسي",
+      "fr": "Article",
+      "en": "Article"
+    }
+  },
+  {
+    "id": "stop-overthinking",
+    "pillar": "psychology",
+    "category": "psychology",
+    "parcoursId": "03",
+    "status": "published",
+    "featured": true,
+    "featuredOrder": 2,
+    "publishedAt": "30 Août 2026",
+    "readingTime": {
+      "ar": "١٢ دقيقة قراءة",
+      "fr": "12 min de lecture",
+      "en": "12 min read"
+    },
+    "urls": {
+      "ar": "../files/stop-overthinking.html",
+      "fr": "../files/stop-overthinking.html",
+      "en": "../files/stop-overthinking.html"
+    },
+    "titles": {
+      "ar": "كيف تتوقف عن التفكير الزائد وتستعيد هدوءك الداخلي؟",
+      "fr": "La pensée excessive et le retour au calme : comment apaiser le flux mental",
+      "en": "Overcoming Overthinking: A Mindful Guide to Inner Calm"
+    },
+    "excerpts": {
+      "ar": "دليل نفسي وعملي لفهم الاجترار المعرفي وتفكيك الحلقات الفكرية المرهقة دون جلد الذات، مع أدوات واقعية لاستعادة السكينة الذهنية.",
+      "fr": "Un guide psychologique et pratique pour comprendre la rumination, désamorcer les boucles mentales et retrouver une présence apaisée sans culpabilité.",
+      "en": "A psychological and actionable guide to understanding rumination, breaking repetitive mental loops, and regaining calm presence without guilt."
+    },
+    "thumbnail": "psychologie/images/thumb-pensee-excessive-calme.jpg",
+    "thumbnailAlt": {
+      "ar": "شخص يتأمل بحيرة بينما تتحول خيوط ضوئية متشابكة تدريجيًا إلى خطوط هادئة.",
+      "fr": "Une silhouette observe un lac tandis que des fils lumineux désordonnés deviennent progressivement calmes.",
+      "en": "A person watches a lake as tangled luminous threads gradually become calm lines."
+    },
+    "badges": {
+      "ar": "مقال مميز",
+      "fr": "Article à la une",
+      "en": "Featured Article"
+    }
+  },
+  {
+    "id": "when-heart-loses-sweetness-of-faith",
+    "pillar": "spirituality",
+    "category": "islamic-thought",
+    "parcoursId": "01",
+    "status": "published",
+    "featured": true,
+    "featuredOrder": 1,
+    "publishedAt": "19 août 2026",
+    "readingTime": {
+      "ar": "9 دقائق قراءة",
+      "fr": "9 min de lecture",
+      "en": "9 min read"
+    },
+    "urls": {
+      "ar": "../articles/when-heart-loses-sweetness-of-faith.html",
+      "fr": "../articles/when-heart-loses-sweetness-of-faith.html",
+      "en": "../articles/when-heart-loses-sweetness-of-faith.html"
+    },
+    "titles": {
+      "ar": "لماذا يفقد القلب لذّة الإيمان أحيانًا؟",
+      "fr": "Pourquoi le cœur perd-il parfois le goût de la foi ?",
+      "en": "Why Does the Heart Sometimes Lose the Sweetness of Faith?"
+    },
+    "excerpts": {
+      "ar": "لماذا تمرّ قلوبنا أحيانًا بفترات من الفتور الروحي؟ قراءة هادئة في أسباب غياب لذّة الإيمان، والفرق بين ضعف الشعور وفقدان الطريق، وكيف نعود إلى الله بخطوات صادقة ومتوازنة.",
+      "fr": "Pourquoi traversons-nous parfois une période de sécheresse spirituelle ? Une réflexion apaisée sur la perte du goût de la foi et les chemins d’un retour progressif et sincère.",
+      "en": "Why do we sometimes experience spiritual dryness? A compassionate reflection on losing the sweetness of faith and finding a gradual, sincere path back."
+    },
+    "thumbnail": "islam_parcours_03.jpg",
+    "thumbnailAlt": {
+      "ar": "ضوء هادئ يتسلل إلى مكان مظلم في مشهد يرمز إلى عودة السكينة إلى القلب",
+      "fr": "Une lumière douce traverse un espace sombre, symbole du retour progressif de la sérénité intérieure",
+      "en": "Soft light entering a dark space, symbolizing the gradual return of inner serenity"
+    },
+    "badges": {
+      "ar": "مقال مميز",
+      "fr": "Article à la une",
+      "en": "Featured Article"
+    }
+  },
+  {
+    "id": "pourquoi-esprit-imagine-le-pire",
+    "pillar": "psychology",
+    "category": "psychology",
+    "parcoursId": "03",
+    "status": "published",
+    "featured": true,
+    "featuredOrder": 3,
+    "publishedAt": "Dimanche 30 août 2026",
+    "readingTime": {
+      "ar": "١٢ دقيقة قراءة",
+      "fr": "12 min de lecture",
+      "en": "12 min read"
+    },
+    "urls": {
+      "ar": "../files/pourquoi-esprit-imagine-le-pire.html",
+      "fr": "../files/pourquoi-esprit-imagine-le-pire.html",
+      "en": "../files/pourquoi-esprit-imagine-le-pire.html"
+    },
+    "titles": {
+      "ar": "لماذا يتوقع عقلنا الأسوأ دائمًا؟",
+      "fr": "Pourquoi notre esprit imagine toujours le pire ?",
+      "en": "Why Does Our Mind Always Expect the Worst?"
+    },
+    "excerpts": {
+      "ar": "دليل نفسي وعملي لفهم التوقع الكارثي، والتمييز بين الإمكانية واليقين، واستعادة رؤية متوازنة للواقع دون استنزاف.",
+      "fr": "Comprendre l’anticipation anxieuse et retrouver une perception plus équilibrée de la réalité.",
+      "en": "Understanding anxious anticipation and developing a more balanced view of reality."
+    },
+    "thumbnail": "psychologie/images/thumb-esprit-imagine-le-pire.jpg",
+    "thumbnailAlt": {
+      "ar": "مصباح يضيء حجرًا بينما تبقى ظلال الأغصان ضبابية.",
+      "fr": "Une lampe éclaire un galet tandis que des ombres de branches restent floues.",
+      "en": "A lamp illuminates a stone while branch shadows remain blurred."
+    },
+    "badges": {
+      "ar": "مقال مميز",
+      "fr": "Article à la une",
+      "en": "Featured Article"
+    }
+  },
+  {
+    "id": "pourquoi-cherchons-nous-approbation",
+    "pillar": "psychology",
+    "category": "psychology",
+    "parcoursId": "01",
+    "status": "published",
+    "featured": true,
+    "featuredOrder": 4,
+    "publishedAt": "Dimanche 30 août 2026",
+    "readingTime": {
+      "ar": "١٣ دقيقة قراءة",
+      "fr": "13 min de lecture",
+      "en": "13 min read"
+    },
+    "urls": {
+      "ar": "../files/pourquoi-cherchons-nous-approbation.html",
+      "fr": "../files/pourquoi-cherchons-nous-approbation.html",
+      "en": "../files/pourquoi-cherchons-nous-approbation.html"
+    },
+    "titles": {
+      "ar": "لماذا نبحث عن استحسان الآخرين؟",
+      "fr": "Pourquoi cherchons-nous l’approbation des autres ?",
+      "en": "Why Do We Seek Other People’s Approval?"
+    },
+    "excerpts": {
+      "ar": "فهم الحاجة إلى القبول واستعادة اتجاه داخلي أكثر ثباتًا: تفكيك التبعية لنظرة الناس وبناء تقدير ذاتي مستقل.",
+      "fr": "Comprendre le besoin de validation et retrouver une direction plus intérieure sans dépendre du regard d'autrui.",
+      "en": "Understanding the need for validation and developing a steadier inner direction without external dependency."
+    },
+    "thumbnail": "psychologie/images/thumb-besoin-approbation.jpg",
+    "thumbnailAlt": {
+      "ar": "مصباح ذهبي ينعكس في سلسلة من المرايا القديمة.",
+      "fr": "Une lampe dorée se reflète dans une succession de miroirs anciens.",
+      "en": "A golden lamp is reflected through a series of antique mirrors."
+    },
+    "badges": {
+      "ar": "مقال مميز",
+      "fr": "Article à la une",
+      "en": "Featured Article"
+    }
+  }
+]
