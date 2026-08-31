@@ -1,7 +1,3 @@
-// ============================================================
-// HIKMA & NOUR (حكمة ونور) — MULTILINGUAL DATA STORE (V11)
-// ============================================================
-
 const TIKTOK_DATA = {
   "username": "@lejardindespensees",
   "stats": {
@@ -3207,13 +3203,13 @@ const TIKTOK_DATA = {
           "id": "deja-vu-familiarite-memoire",
           "file": "deja-vu-familiarite-memoire.html",
           "featured": true,
-          "title": "Le déjà-vu et la familiarité : comment la mémoire reconstruit le présent",
+          "title": "Déjà-vu, familiarité et mémoire",
           "category": "psychology",
           "categoryName": "Psychologie • Esprit & Comportement",
-          "readTime": "11 min de lecture",
+          "readTime": "7 min",
           "date": "30 Août 2026",
           "author": "Hikma & Nour | حكمة ونور",
-          "desc": "Un guide psychologique et cognitif pour comprendre le phénomène de déjà-vu, la mémoire reconstructive et la séparation entre familiarité et souvenir.",
+          "desc": "Une exploration scientifique du déjà-vu et de la mémoire reconstructive pour comprendre les illusions d'optique cérébrales.",
           "image": "psychologie/images/thumb-deja-vu-familiarite-memoire.jpg",
           "imageAlt": "Deux portes presque identiques, dont une laisse passer une lumière dorée.",
           "quote": "La mémoire n'est pas seulement le miroir d'hier, mais le métier à tisser sur lequel l'esprit façonne le présent.",
@@ -3235,7 +3231,8 @@ const TIKTOK_DATA = {
             "En abordant cette expérience avec une curiosité scientifique et philosophique éclairée, nous apprenons à habiter le présent avec discernement."
           ],
           "published": true,
-          "pillar": "psychologie"
+          "pillar": "psychologie",
+          "url": "../articles/deja-vu-familiarite-memoire.html"
         },
         {
           "id": "discipline-sans-epuisement",
@@ -4710,16 +4707,16 @@ const TIKTOK_DATA = {
           "finalQuoteAuthor": "— Theodore Roosevelt | Hikma & Nour"
         },
         {
-          "id": "stop-overthinking",
+          "id": "overthinking-retour-au-calme",
           "file": "stop-overthinking.html",
           "featured": true,
-          "title": "La pensée excessive et le retour au calme : comment apaiser le flux mental",
+          "title": "La pensée excessive et le retour au calme",
           "category": "psychology",
           "categoryName": "Psychologie • Esprit & Comportement",
-          "readTime": "12 min de lecture",
+          "readTime": "8 min",
           "date": "30 Août 2026",
           "author": "Hikma & Nour | حكمة ونور",
-          "desc": "Un guide psychologique et pratique pour comprendre la rumination, désamorcer les boucles mentales et retrouver une présence apaisée sans culpabilité.",
+          "desc": "Un guide cognitif et pratique pour comprendre la rumination mentale et apaiser durablement le flux des pensées.",
           "image": "psychologie/images/thumb-pensee-excessive-calme.jpg",
           "imageAlt": "Une silhouette observe un lac tandis que des fils lumineux désordonnés deviennent progressivement calmes.",
           "quote": "Le calme ne vient pas de la possession de toutes les réponses, mais de l'acceptation de l'incertitude.",
@@ -4741,7 +4738,8 @@ const TIKTOK_DATA = {
             "En renonçant au besoin compulsif de tout contrôler pour vous ancrer dans l'action utile, vous découvrez une puissance sereine."
           ],
           "published": true,
-          "pillar": "psychologie"
+          "pillar": "psychologie",
+          "url": "../articles/overthinking-retour-au-calme.html"
         },
         {
           "id": "when-heart-loses-sweetness-of-faith",
@@ -4844,32 +4842,34 @@ const TIKTOK_DATA = {
           "finalQuoteAuthor": "Hikma & Nour"
         },
         {
-          "id": "pourquoi-esprit-imagine-le-pire",
-          "title": "Pourquoi notre esprit imagine toujours le pire ?",
-          "desc": "Comprendre l’anticipation anxieuse et retrouver une perception plus équilibrée de la réalité.",
+          "id": "esprit-imagine-toujours-le-pire",
+          "title": "Pourquoi notre esprit imagine toujours le pire",
+          "desc": "Une analyse psychologique de l'anticipation anxieuse et du biais de négativité pour retrouver une perception sereine.",
           "file": "pourquoi-esprit-imagine-le-pire.html",
           "image": "psychologie/images/thumb-esprit-imagine-le-pire.jpg",
           "imageAlt": "Une lampe éclaire un galet tandis que des ombres de branches restent floues.",
-          "readTime": "12 min de lecture",
+          "readTime": "9 min",
           "date": "Dimanche 30 août 2026",
           "category": "psychology",
           "pillar": "psychologie",
           "published": true,
-          "featured": true
+          "featured": true,
+          "url": "../articles/esprit-imagine-toujours-le-pire.html"
         },
         {
-          "id": "pourquoi-cherchons-nous-approbation",
-          "title": "Pourquoi cherchons-nous l’approbation des autres ?",
-          "desc": "Comprendre le besoin de validation et retrouver une direction plus intérieure sans dépendre du regard d'autrui.",
+          "id": "pourquoi-approbation-des-autres",
+          "title": "Pourquoi cherchons-nous l'approbation des autres ?",
+          "desc": "Une étude approfondie du besoin de validation sociale et des moyens d'ancrer une estime de soi indépendante.",
           "file": "pourquoi-cherchons-nous-approbation.html",
           "image": "psychologie/images/thumb-besoin-approbation.jpg",
           "imageAlt": "Une lampe dorée se reflète dans une succession de miroirs anciens.",
-          "readTime": "13 min de lecture",
+          "readTime": "8 min",
           "date": "Dimanche 30 août 2026",
           "category": "psychology",
           "pillar": "psychologie",
           "published": true,
-          "featured": true
+          "featured": true,
+          "url": "../articles/pourquoi-approbation-des-autres.html"
         }
       ],
       "faq": [
@@ -7700,13 +7700,13 @@ const TIKTOK_DATA = {
           "id": "deja-vu-familiarite-memoire",
           "file": "deja-vu-familiarite-memoire.html",
           "featured": true,
-          "title": "Déjà-Vu, Familiarity, and Memory: How the Mind Reconstructs the Present",
+          "title": "Déjà-vu, Familiarity and Memory",
           "category": "psychology",
           "categoryName": "Psychology • Mind & Behavior",
-          "readTime": "11 min read",
+          "readTime": "7 min",
           "date": "August 30, 2026",
           "author": "Hikma & Nour | حكمة ونور",
-          "desc": "A psychological and cognitive exploration of the déjà-vu phenomenon, reconstructive memory, and the gap between familiarity and recollection.",
+          "desc": "A scientific exploration of déjà-vu and reconstructive memory to understand how the brain rebuilds the present.",
           "image": "psychologie/images/thumb-deja-vu-familiarite-memoire.jpg",
           "imageAlt": "Two nearly identical doors, one revealing golden light.",
           "quote": "Memory is not merely a window into yesterday, but the loom upon which the mind weaves the present.",
@@ -7728,7 +7728,8 @@ const TIKTOK_DATA = {
             "By exploring these phenomena with scientific rigor and philosophical calm, we learn to inhabit the present with greater clarity and peace."
           ],
           "published": true,
-          "pillar": "psychologie"
+          "pillar": "psychologie",
+          "url": "../articles/deja-vu-familiarite-memoire.html"
         },
         {
           "id": "discipline-sans-epuisement",
@@ -9106,16 +9107,16 @@ const TIKTOK_DATA = {
           "finalQuoteAuthor": "— Theodore Roosevelt | Hikma & Nour"
         },
         {
-          "id": "stop-overthinking",
+          "id": "overthinking-retour-au-calme",
           "file": "stop-overthinking.html",
           "featured": true,
-          "title": "Overcoming Overthinking: A Mindful Guide to Inner Calm",
+          "title": "Overthinking and the Return to Calm",
           "category": "psychology",
           "categoryName": "Psychology • Mind & Behavior",
-          "readTime": "12 min read",
+          "readTime": "8 min",
           "date": "August 30, 2026",
           "author": "Hikma & Nour | حكمة ونور",
-          "desc": "A psychological and actionable guide to understanding rumination, breaking repetitive mental loops, and regaining calm presence without guilt.",
+          "desc": "A cognitive and practical guide to understanding mental rumination and restoring lasting inner peace.",
           "image": "psychologie/images/thumb-pensee-excessive-calme.jpg",
           "imageAlt": "A person watches a lake as tangled luminous threads gradually become calm lines.",
           "quote": "Calm does not come from having all the answers, but from making peace with uncertainty.",
@@ -9137,7 +9138,8 @@ const TIKTOK_DATA = {
             "When you stop fighting with your mind and ground your presence in purposeful action, anxiety fades into steady confidence."
           ],
           "published": true,
-          "pillar": "psychologie"
+          "pillar": "psychologie",
+          "url": "../articles/overthinking-retour-au-calme.html"
         },
         {
           "id": "when-heart-loses-sweetness-of-faith",
@@ -9240,32 +9242,34 @@ const TIKTOK_DATA = {
           "finalQuoteAuthor": "Hikma & Nour"
         },
         {
-          "id": "pourquoi-esprit-imagine-le-pire",
-          "title": "Why Does Our Mind Always Expect the Worst?",
-          "desc": "Understanding anxious anticipation and developing a more balanced view of reality.",
+          "id": "esprit-imagine-toujours-le-pire",
+          "title": "Why Our Mind Always Imagines the Worst",
+          "desc": "A psychological analysis of anxious anticipation and negativity bias to regain a balanced perception of reality.",
           "file": "pourquoi-esprit-imagine-le-pire.html",
           "image": "psychologie/images/thumb-esprit-imagine-le-pire.jpg",
           "imageAlt": "A lamp illuminates a stone while branch shadows remain blurred.",
-          "readTime": "12 min read",
+          "readTime": "9 min",
           "date": "Sunday, August 30, 2026",
           "category": "psychology",
           "pillar": "psychologie",
           "published": true,
-          "featured": true
+          "featured": true,
+          "url": "../articles/esprit-imagine-toujours-le-pire.html"
         },
         {
-          "id": "pourquoi-cherchons-nous-approbation",
-          "title": "Why Do We Seek Other People’s Approval?",
-          "desc": "Understanding the need for validation and developing a steadier inner direction without external dependency.",
+          "id": "pourquoi-approbation-des-autres",
+          "title": "Why Do We Seek Other People's Approval?",
+          "desc": "An in-depth study of social validation needs and practical ways to cultivate independent self-esteem.",
           "file": "pourquoi-cherchons-nous-approbation.html",
           "image": "psychologie/images/thumb-besoin-approbation.jpg",
           "imageAlt": "A golden lamp is reflected through a series of antique mirrors.",
-          "readTime": "13 min read",
+          "readTime": "8 min",
           "date": "Sunday, August 30, 2026",
           "category": "psychology",
           "pillar": "psychologie",
           "published": true,
-          "featured": true
+          "featured": true,
+          "url": "../articles/pourquoi-approbation-des-autres.html"
         }
       ],
       "faq": [
@@ -12282,13 +12286,13 @@ const TIKTOK_DATA = {
           "id": "deja-vu-familiarite-memoire",
           "file": "deja-vu-familiarite-memoire.html",
           "featured": true,
-          "title": "ظاهرة الديجافو والألفة: كيف تعيد الذاكرة بناء الحاضر؟",
+          "title": "الديجا فو: الألفة والذاكرة",
           "category": "psychology",
           "categoryName": "علم النفس • العقل والسلوك",
-          "readTime": "١١ دقيقة قراءة",
+          "readTime": "7 min",
           "date": "٣٠ أغسطس ٢٠٢٦",
           "author": "حكمة ونور | Hikma & Nour",
-          "desc": "دليل نفسي وعلمي رصين يشرح ظاهرة الديجافو (Déjà-vu)، ويفكك الفارق بين إشارة الألفة والذكرى الحقيقية دون تفسيرات خارقة.",
+          "desc": "دليل معرفي رصين يشرح ظاهرة الديجافو والذاكرة التوليدية دون أوهام وكيف يعيد الدماغ بناء الحاضر.",
           "image": "psychologie/images/thumb-deja-vu-familiarite-memoire.jpg",
           "imageAlt": "بابان متشابهان، يتسلل ضوء ذهبي من أحدهما.",
           "quote": "الذاكرة ليست مجرد نافذة نطل بها على الأمس، بل هي النول الذي ينسج به العقل حاضرنا كل يوم.",
@@ -12310,7 +12314,8 @@ const TIKTOK_DATA = {
             "حين نفهم جذور التجربة بعقل علمي وتأملي رصين، نتحرر من الخوف والخرافة، ونزداد إعجاباً بقدرة العقل على نسج المعنى."
           ],
           "published": true,
-          "pillar": "psychologie"
+          "pillar": "psychologie",
+          "url": "../articles/deja-vu-familiarite-memoire.html"
         },
         {
           "id": "discipline-sans-epuisement",
@@ -13701,16 +13706,16 @@ const TIKTOK_DATA = {
           "finalQuoteAuthor": "— ثيودور روزفلت | حكمة ونور"
         },
         {
-          "id": "stop-overthinking",
+          "id": "overthinking-retour-au-calme",
           "file": "stop-overthinking.html",
           "featured": true,
-          "title": "كيف تتوقف عن التفكير الزائد وتستعيد هدوءك الداخلي؟",
+          "title": "التفكير الزائد والعودة إلى الهدوء",
           "category": "psychology",
           "categoryName": "علم النفس • العقل والسلوك",
-          "readTime": "١٢ دقيقة قراءة",
+          "readTime": "8 min",
           "date": "٣٠ أغسطس ٢٠٢٦",
           "author": "حكمة ونور | Hikma & Nour",
-          "desc": "دليل نفسي وعملي لفهم الاجترار المعرفي وتفكيك الحلقات الفكرية المرهقة دون جلد الذات، مع أدوات واقعية لاستعادة السكينة الذهنية.",
+          "desc": "دليل نفسي وعملي لفهم الاجترار المعرفي وتفكيك الحلقات الفكرية المرهقة واستعادة الهدوء الداخلي.",
           "image": "psychologie/images/thumb-pensee-excessive-calme.jpg",
           "imageAlt": "شخص يتأمل بحيرة بينما تتحول خيوط ضوئية متشابكة تدريجيًا إلى خطوط هادئة.",
           "quote": "السكينة لا تأتي من إيجاد إجابة لكل سؤال، بل من التصالح مع ما لا يمكن معرفته الآن.",
@@ -13732,7 +13737,8 @@ const TIKTOK_DATA = {
             "حين تتوقف عن خوض معارك عبثية مع عقلك وتمنح انتباهك لما يقع تحت يديك اليوم، تتلاشى الهواجس تلقائياً."
           ],
           "published": true,
-          "pillar": "psychologie"
+          "pillar": "psychologie",
+          "url": "../articles/overthinking-retour-au-calme.html"
         },
         {
           "id": "when-heart-loses-sweetness-of-faith",
@@ -13835,32 +13841,34 @@ const TIKTOK_DATA = {
           "finalQuoteAuthor": "حكمة ونور"
         },
         {
-          "id": "pourquoi-esprit-imagine-le-pire",
-          "title": "لماذا يتوقع عقلنا الأسوأ دائمًا؟",
-          "desc": "دليل نفسي وعملي لفهم التوقع الكارثي، والتمييز بين الإمكانية واليقين، واستعادة رؤية متوازنة للواقع دون استنزاف.",
+          "id": "esprit-imagine-toujours-le-pire",
+          "title": "لماذا يتخيل عقلنا الأسوأ دائمًا؟",
+          "desc": "تحليل سيكولوجي للتوقع الكارثي وآليات التكيف العصبي وكيفية استعادة رؤية متزنة للواقع.",
           "file": "pourquoi-esprit-imagine-le-pire.html",
           "image": "psychologie/images/thumb-esprit-imagine-le-pire.jpg",
           "imageAlt": "مصباح يضيء حجرًا بينما تبقى ظلال الأغصان ضبابية.",
-          "readTime": "١٢ دقيقة قراءة",
+          "readTime": "9 min",
           "date": "الأحد، ٣٠ أغسطس ٢٠٢٦",
           "category": "psychology",
           "pillar": "psychologie",
           "published": true,
-          "featured": true
+          "featured": true,
+          "url": "../articles/esprit-imagine-toujours-le-pire.html"
         },
         {
-          "id": "pourquoi-cherchons-nous-approbation",
+          "id": "pourquoi-approbation-des-autres",
           "title": "لماذا نبحث عن استحسان الآخرين؟",
-          "desc": "فهم الحاجة إلى القبول واستعادة اتجاه داخلي أكثر ثباتًا: تفكيك التبعية لنظرة الناس وبناء تقدير ذاتي مستقل.",
+          "desc": "دراسة عميقة في فخ التقييم الخارجي والبحث عن القبول الاجتماعي وكيفية بناء الثبات الذاتي.",
           "file": "pourquoi-cherchons-nous-approbation.html",
           "image": "psychologie/images/thumb-besoin-approbation.jpg",
           "imageAlt": "مصباح ذهبي ينعكس في سلسلة من المرايا القديمة.",
-          "readTime": "١٣ دقيقة قراءة",
+          "readTime": "8 min",
           "date": "الأحد، ٣٠ أغسطس ٢٠٢٦",
           "category": "psychology",
           "pillar": "psychologie",
           "published": true,
-          "featured": true
+          "featured": true,
+          "url": "../articles/pourquoi-approbation-des-autres.html"
         }
       ],
       "faq": [
