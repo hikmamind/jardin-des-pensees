@@ -1727,7 +1727,7 @@
     import { renderPillarResources } from '../assets/js/pillar_resources.js';
     import { getSchoolsData } from './schools_data.js';
 
-    const SCHOOLS_DATA = getSchoolsData('./');
+    const SCHOOLS_DATA = getSchoolsData('../');
 
     const LANG_METADATA = {
       ar: { label: "العربية", dir: "rtl" },
@@ -2014,7 +2014,7 @@
         return `
           <a class="philo-school-card" href="${targetUrl}" aria-label="${title}" style="text-decoration: none;">
             <div class="philo-school-image-box">
-              <img class="philo-school-image" src="${s.image}" alt="${title}" loading="lazy">
+              <img class="philo-school-image" src="${s.image}" alt="${title}" loading="lazy" onerror="this.onerror=null; this.src='../pillar_philosophy_hd.jpg';">
               <span class="philo-school-number">${s.num}</span>
             </div>
             <div class="philo-school-body">
