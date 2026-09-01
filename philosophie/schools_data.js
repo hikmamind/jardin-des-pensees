@@ -7,7 +7,7 @@ export const SCHOOLS_DATA = [
     "num": "01",
     "id": "school-stoicism",
     "slug": "stoicisme",
-    "image": "marc_aurelius_writing.jpg",
+    "image": "school_stoicisme_citadel.jpg",
     "hasDedicatedPage": true,
     "thinkerIds": [
       "marcaurele",
@@ -152,7 +152,7 @@ export const SCHOOLS_DATA = [
     "num": "02",
     "id": "school-ancient",
     "slug": "platonisme",
-    "image": "socrates_delphi_temple.jpg",
+    "image": "school_platonisme_cave.jpg",
     "hasDedicatedPage": true,
     "thinkerIds": [
       "socrate",
@@ -267,7 +267,7 @@ export const SCHOOLS_DATA = [
     "num": "03",
     "id": "school-islamic",
     "slug": "islamique",
-    "image": "bookshelves_candle.jpg",
+    "image": "school_islamique_niche_lumieres.jpg",
     "hasDedicatedPage": true,
     "thinkerIds": [
       "ghazali",
@@ -353,7 +353,7 @@ export const SCHOOLS_DATA = [
     "num": "04",
     "id": "school-modern",
     "slug": "rationalisme",
-    "image": "desk_coffee_book.jpg",
+    "image": "school_rationalisme_geometrie.jpg",
     "hasDedicatedPage": true,
     "thinkerIds": [
       "descartes",
@@ -437,7 +437,7 @@ export const SCHOOLS_DATA = [
     "num": "05",
     "id": "school-existentialism",
     "slug": "existentialisme",
-    "image": "autumn_forest_solitude_walk.jpg",
+    "image": "school_existentialisme_sisyphe.jpg",
     "hasDedicatedPage": true,
     "thinkerIds": [
       "sartre",
@@ -552,7 +552,7 @@ export const SCHOOLS_DATA = [
     "num": "06",
     "id": "school-moral",
     "slug": "morale",
-    "image": "luxury_window_reflection.jpg",
+    "image": "school_morale_ciel_etoile.jpg",
     "hasDedicatedPage": true,
     "thinkerIds": [
       "kant",
@@ -667,7 +667,7 @@ export const SCHOOLS_DATA = [
     "num": "07",
     "id": "school-contemporary",
     "slug": "contemporaine",
-    "image": "person_window_sunrise.jpg",
+    "image": "school_contemporaine_sommet.jpg",
     "hasDedicatedPage": true,
     "thinkerIds": [
       "schopenhauer",
@@ -783,11 +783,11 @@ export function getSchoolsData(basePath = '../') {
   const cleanBase = basePath.endsWith('/') ? basePath : basePath + '/';
   return SCHOOLS_DATA.map(school => ({
     ...school,
-    image: cleanBase + school.image,
+    image: school.image ? cleanBase + school.image : cleanBase + 'pillar_philosophy_hd.jpg',
     articles: (school.articles || []).map(art => ({
       ...art,
       path: cleanBase + art.path,
-      thumb: cleanBase + art.thumb
+      thumb: art.thumb ? cleanBase + art.thumb : cleanBase + 'pillar_philosophy_hd.jpg'
     }))
   }));
 }
