@@ -173,106 +173,10 @@
   <script src="../../../app_v11.js?v=28" type="module"></script>
   <script type="module">
     import TIKTOK_DATA from '../../../data_v11.js';
+    import { getSchoolsData } from '../../schools_data.js';
 
-    const PAGE_DATA = {
-  "slug": "existentialisme",
-  "id": "school-existentialism",
-  "num": "05",
-  "image": "autumn_forest_solitude_walk.jpg",
-  "metaTitle": {
-    "ar": "الفلسفة الوجودية والعبثية | المدارس الفلسفية | حكمة ونور",
-    "fr": "Philosophie Existentielle & Absurde | École Philosophique | Hikma & Nour",
-    "en": "Existential Philosophy & Absurdity | Philosophical School | Hikma & Nour"
-  },
-  "metaDesc": {
-    "ar": "الوجود يسبق الماهية، الحرية المطلقة، ومواجهة العبث وصناعة المعنى.",
-    "fr": "L'existence précède l'essence : liberté absolue et création du sens.",
-    "en": "Existence precedes essence: absolute freedom and creating meaning."
-  },
-  "title": {
-    "ar": "الفلسفة الوجودية والعبثية",
-    "fr": "Philosophie Existentielle & Absurde",
-    "en": "Existential Philosophy & Absurdity"
-  },
-  "period": {
-    "ar": "القرن ١٩ م — القرن ٢٠ م",
-    "fr": "XIXe s. — XXe s.",
-    "en": "19th c. — 20th c."
-  },
-  "subtitle": {
-    "ar": "الوجود يسبق الماهية : الحرية المطلقة، المسؤولية، وصناعة المعنى",
-    "fr": "L'existence précède l'essence : liberté absolue, responsabilité et création du sens",
-    "en": "Existence precedes essence: absolute freedom, responsibility, and meaning"
-  },
-  "intro": {
-    "ar": "مدرسة ركّزت على التجربة الإنسانية المباشرة، والقلق الوجودي، وكيف يواجه الإنسان الحرية وصناعة مصيره بشجاعة وأصالة.",
-    "fr": "Une pensée centrée sur la liberté radicale de l'individu, l'angoisse existentielle et le devoir d'inventer sa propre vie.",
-    "en": "A philosophy centered on radical individual freedom, existential anxiety, and inventing one's own life."
-  },
-  "principles": [
-    {
-      "num": "01",
-      "title": {
-        "ar": "الوجود يسبق الماهية",
-        "fr": "L'Existence Précède l'Essence",
-        "en": "Existence Precedes Essence"
-      },
-      "text": {
-        "ar": "💡 الإنسان يبدأ بالوجود في العالم، ثم يصنع هويته بأفعاله وخياراته.",
-        "fr": "💡 L'homme existe d'abord, se rencontre, et se définit ensuite par ses actes.",
-        "en": "💡 Man exists first, encounters himself, and then defines himself by acts."
-      }
-    },
-    {
-      "num": "02",
-      "title": {
-        "ar": "مواجهة العبث بالشجاعة",
-        "fr": "La Confrontation à l'Absurde",
-        "en": "Confronting the Absurd"
-      },
-      "text": {
-        "ar": "💡 العبث هو التوتر بين رغبة الإنسان في المعنى وصمت العالم.",
-        "fr": "💡 L'absurde naît du face-à-face entre l'appel humain et le silence du monde.",
-        "en": "💡 The absurd lies in the conflict between human desire and world silence."
-      }
-    },
-    {
-      "num": "03",
-      "title": {
-        "ar": "الأصالة ورفض النفاق الوجودي",
-        "fr": "L'Authenticité Existentielle",
-        "en": "Existential Authenticity"
-      },
-      "text": {
-        "ar": "💡 العيش بأصالة يرفض الهروب خلف الأعذار وتحمّل نتائج الحرية.",
-        "fr": "💡 Vivre authentiquement exige d'assumer pleinement le poids de ses choix.",
-        "en": "💡 Authentic living requires taking full ownership of one's freedom."
-      }
-    }
-  ],
-  "articles": [
-    {
-      "id": "solitude-blessing-or-curse",
-      "url": "../../../articles/solitude-blessing-or-curse.html",
-      "thumb": "../../../articles/solitude_blessing_curse_hero.jpg",
-      "title": {
-        "ar": "هل العزلة نعمة أم عقاب؟",
-        "fr": "La Solitude est-elle une Bénédiction ou une Punition ?",
-        "en": "Is Solitude a Blessing or a Curse?"
-      },
-      "desc": {
-        "ar": "تحليل فلسفي ونفسي للوحدة الاختيارية والبناء الوجداني.",
-        "fr": "Une analyse philosophique de la solitude choisie.",
-        "en": "A philosophical analysis of chosen solitude."
-      }
-    }
-  ],
-  "thinkerIds": [
-    "sartre",
-    "camus",
-    "kierkegaard"
-  ]
-};
+    const ALL_SCHOOLS = getSchoolsData('../../../');
+    const PAGE_DATA = ALL_SCHOOLS.find(s => s.slug === 'existentialisme') || ALL_SCHOOLS[0];
 
     function getSavedLang() {
       return localStorage.getItem('site_lang_v1') || localStorage.getItem('lang') || 'ar';
@@ -283,8 +187,10 @@
       document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
 
       // Title & Meta
-      document.getElementById('pageTitle').textContent = PAGE_DATA.metaTitle[lang] || PAGE_DATA.metaTitle.ar;
-      document.getElementById('pageMetaDesc').setAttribute('content', PAGE_DATA.metaDesc[lang] || PAGE_DATA.metaDesc.ar);
+      const metaTitleStr = PAGE_DATA.metaTitle[lang] || PAGE_DATA.metaTitle.ar;
+      const metaDescStr = PAGE_DATA.metaDesc[lang] || PAGE_DATA.metaDesc.ar;
+      document.getElementById('pageTitle').textContent = metaTitleStr;
+      document.getElementById('pageMetaDesc').setAttribute('content', metaDescStr);
 
       // Breadcrumbs
       document.getElementById('bcHome').textContent = lang === 'ar' ? 'الرئيسية' : (lang === 'fr' ? 'Accueil' : 'Home');
@@ -297,66 +203,79 @@
       document.getElementById('schoolIntro').textContent = PAGE_DATA.intro[lang] || PAGE_DATA.intro.ar;
 
       // Principles Grid
-      document.getElementById('principlesHeading').textContent = lang === 'ar' ? '💡 الركائز والمبادئ الأساسية للمدرسة' : (lang === 'fr' ? '💡 Principes & idées clés de l\'école' : '💡 Key Principles & Core Ideas');
+      const pHeading = document.getElementById('principlesHeading');
+      if (pHeading) {
+        pHeading.textContent = lang === 'ar' ? '💡 الركائز والمبادئ الأساسية للمدرسة' : (lang === 'fr' ? "💡 Principes & idées clés de l'école" : '💡 Key Principles & Core Ideas');
+      }
       const principlesGrid = document.getElementById('principlesGrid');
-      principlesGrid.innerHTML = PAGE_DATA.principles.map(p => {
-        const pTitle = p.title[lang] || p.title.ar;
-        const pText = p.text[lang] || p.text.ar;
-        return `
-          <div class="principle-card">
-            <span class="principle-num">${p.num}</span>
-            <h3 style="font-size: 1.15rem; color: var(--accent-gold-bright); font-family: var(--font-serif); margin: 0;">${pTitle}</h3>
-            <p class="principle-text">${pText}</p>
-          </div>
-        `;
-      }).join('');
+      if (principlesGrid) {
+        principlesGrid.innerHTML = (PAGE_DATA.principles || []).map(p => {
+          const pTitle = (p.title && (p.title[lang] || p.title.ar)) || '';
+          const pText = (p.text && (p.text[lang] || p.text.ar)) || '';
+          return `
+            <div class="principle-card">
+              <span class="principle-num">${p.num || ''}</span>
+              <h3 style="font-size: 1.15rem; color: var(--accent-gold-bright, #E4C98A); font-family: var(--font-serif, 'Amiri', serif); margin: 0 0 6px;">${pTitle}</h3>
+              <p class="principle-text" style="margin: 0; color: #A9AAA4; font-size: 0.9rem; line-height: 1.6;">${pText}</p>
+            </div>
+          `;
+        }).join('');
+      }
 
       // Articles Grid
-      document.getElementById('articlesHeading').textContent = lang === 'ar' ? '📚 المقالات والأبحاث المتاحة في هذه المدرسة' : (lang === 'fr' ? '📚 Articles & études disponibles dans cette école' : '📚 Available Articles & Studies');
+      const aHeading = document.getElementById('articlesHeading');
+      if (aHeading) {
+        aHeading.textContent = lang === 'ar' ? '📚 المقالات والأبحاث المتاحة في هذه المدرسة' : (lang === 'fr' ? "📚 Articles & études disponibles dans cette école" : '📚 Available Articles & Studies');
+      }
       const readArtText = lang === 'ar' ? 'اقرأ المقال ←' : (lang === 'fr' ? 'Lire l\'article →' : 'Read article →');
       
       const articlesGrid = document.getElementById('articlesGrid');
-      if (PAGE_DATA.articles && PAGE_DATA.articles.length > 0) {
-        articlesGrid.innerHTML = PAGE_DATA.articles.map(art => {
-          const aTitle = art.title[lang] || art.title.ar;
-          const aDesc = art.desc[lang] || art.desc.ar;
-          return `
-            <a href="${art.url}" class="article-card-visual">
-              <div class="article-thumb-box">
-                <img src="${art.thumb}" alt="${aTitle}" class="article-thumb-img" loading="lazy" onerror="this.onerror=null; this.src='../../../articles_page_hero.jpg';">
-              </div>
-              <div class="article-card-body">
-                <div>
-                  <span class="article-badge">📜 article</span>
-                  <h3 class="article-title">${aTitle}</h3>
-                  <p class="article-desc">${aDesc}</p>
+      if (articlesGrid) {
+        if (PAGE_DATA.articles && PAGE_DATA.articles.length > 0) {
+          articlesGrid.innerHTML = PAGE_DATA.articles.map(art => {
+            const aTitle = art.title[lang] || art.title.ar;
+            const aDesc = art.desc[lang] || art.desc.ar;
+            return `
+              <a href="${art.path}" class="article-card-visual" style="text-decoration: none;">
+                <div class="article-thumb-box">
+                  <img src="${art.thumb}" alt="${aTitle}" class="article-thumb-img" loading="lazy" onerror="this.onerror=null; this.src='../../../pillar_philosophy_hd.jpg';">
                 </div>
-                <span class="article-btn-link">${readArtText}</span>
-              </div>
-            </a>
+                <div class="article-card-body">
+                  <div>
+                    <span class="article-badge">📜 article</span>
+                    <h3 class="article-title">${aTitle}</h3>
+                    <p class="article-desc">${aDesc}</p>
+                  </div>
+                  <span class="article-btn-link">${readArtText}</span>
+                </div>
+              </a>
+            `;
+          }).join('');
+        } else {
+          const comingSoonMsg = lang === 'ar' ? '⏳ مقالات قادمة قريبًا' : (lang === 'fr' ? '⏳ Articles à venir' : '⏳ Articles coming soon');
+          articlesGrid.innerHTML = `
+            <div style="background: rgba(201, 168, 106, 0.08); border: 1.5px dashed rgba(201, 168, 106, 0.35); border-radius: 20px; padding: 35px; text-align: center; color: var(--accent-gold, #C9A86A); font-size: 1.15rem; font-weight: 700; grid-column: 1 / -1;">
+              ${comingSoonMsg}
+            </div>
           `;
-        }).join('');
-      } else {
-        const comingSoonMsg = lang === 'ar' ? '⏳ مقالات قادمة قريبًا' : (lang === 'fr' ? '⏳ Articles à venir' : '⏳ Articles coming soon');
-        articlesGrid.innerHTML = `
-          <div style="background: rgba(201, 168, 106, 0.08); border: 1.5px dashed rgba(201, 168, 106, 0.35); border-radius: 20px; padding: 35px; text-align: center; color: var(--accent-gold, #C9A86A); font-size: 1.15rem; font-weight: 700; grid-column: 1 / -1;">
-            ${comingSoonMsg}
-          </div>
-        `;
+        }
       }
 
       // Thinkers Grid
-      document.getElementById('thinkersHeading').textContent = lang === 'ar' ? '👤 المفكرون والفلاسفة المرتبطون بالمدرسة' : (lang === 'fr' ? '👤 Penseurs & philosophes associés' : '👤 Associated Thinkers');
+      const tHeading = document.getElementById('thinkersHeading');
+      if (tHeading) {
+        tHeading.textContent = lang === 'ar' ? '👤 المفكرون والفلاسفة المرتبطون بالمدرسة' : (lang === 'fr' ? '👤 Penseurs & philosophes associés' : '👤 Associated Thinkers');
+      }
       const viewThinkerText = lang === 'ar' ? 'عرض المفكر ←' : (lang === 'fr' ? 'Voir le penseur →' : 'View profile →');
       const thinkersGrid = document.getElementById('thinkersGrid');
       
-      if (PAGE_DATA.thinkerIds && PAGE_DATA.thinkerIds.length > 0) {
+      if (thinkersGrid && PAGE_DATA.thinkerIds && PAGE_DATA.thinkerIds.length > 0) {
         const allThinkers = (TIKTOK_DATA.content && TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].thinkers) || [];
         thinkersGrid.innerHTML = PAGE_DATA.thinkerIds.map(tid => {
           const tObj = allThinkers.find(t => t.id === tid) || { id: tid, name: tid };
           const avatarImg = `../../../thinkers/images/${tid}.jpg`;
           return `
-            <a href="../../../thinkers/?thinker=${tid}" class="thinker-card-visual">
+            <a href="../../../thinkers/?thinker=${tid}" class="thinker-card-visual" style="text-decoration: none;">
               <img src="${avatarImg}" alt="${tObj.name}" class="thinker-portrait" loading="lazy" onerror="this.onerror=null; this.src='../../../brand_logo_official.png';">
               <h3 class="thinker-name">${tObj.name}</h3>
               <div class="thinker-school">${tObj.school || ''}</div>
@@ -367,7 +286,10 @@
       }
 
       // Back Button Text
-      document.getElementById('backBtnText').textContent = lang === 'ar' ? 'العودة إلى الفلسفة' : (lang === 'fr' ? 'Retour à la Philosophie' : 'Back to Philosophy');
+      const backBtn = document.getElementById('backBtnText');
+      if (backBtn) {
+        backBtn.textContent = lang === 'ar' ? 'العودة إلى الفلسفة' : (lang === 'fr' ? 'Retour à la Philosophie' : 'Back to Philosophy');
+      }
     }
 
     document.addEventListener('DOMContentLoaded', () => {

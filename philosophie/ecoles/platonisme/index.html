@@ -173,106 +173,10 @@
   <script src="../../../app_v11.js?v=28" type="module"></script>
   <script type="module">
     import TIKTOK_DATA from '../../../data_v11.js';
+    import { getSchoolsData } from '../../schools_data.js';
 
-    const PAGE_DATA = {
-  "slug": "platonisme",
-  "id": "school-ancient",
-  "num": "02",
-  "image": "socrates_delphi_temple.jpg",
-  "metaTitle": {
-    "ar": "الفلسفة اليونانية القديمة والأفلاطونية | المدارس الفلسفية | حكمة ونور",
-    "fr": "Philosophie Antique & Platonisme | École Philosophique | Hikma & Nour",
-    "en": "Ancient Philosophy & Platonism | Philosophical School | Hikma & Nour"
-  },
-  "metaDesc": {
-    "ar": "استكشاف المبادئ الأولى، أسطورة الكهف، وعالم المُثل والفضيلة.",
-    "fr": "L'exploration des premiers principes, de l'allégorie de la caverne et du monde des Idées.",
-    "en": "Exploring first principles, the allegory of the cave, and the world of Ideas."
-  },
-  "title": {
-    "ar": "الفلسفة اليونانية القديمة والأفلاطونية",
-    "fr": "Philosophie Antique & Platonisme",
-    "en": "Ancient Philosophy & Platonism"
-  },
-  "period": {
-    "ar": "القرن ٦ ق.م — القرن ٤ م",
-    "fr": "VIe s. av. J.-C. — IVe s. ap. J.-C.",
-    "en": "6th c. BC — 4th c. AD"
-  },
-  "subtitle": {
-    "ar": "استكشاف المبادئ الأولى، أسطورة الكهف، وعالم المُثل والفضيلة",
-    "fr": "L'exploration des premiers principes, de l'allégorie de la caverne et du monde des Idées",
-    "en": "Exploring first principles, the allegory of the cave, and the world of Ideas"
-  },
-  "intro": {
-    "ar": "مهد الفكر الفلسفي الغربي، يركز على السؤال السقراطي المباشر، ونظرية المُثل عند أفلاطون، وتصنيف العلوم والفضائل عند أرسطو.",
-    "fr": "Le berceau de la philosophie, caractérisé par la méthode socratique, la théorie des Idées de Platon et la logique d'Aristote.",
-    "en": "The cradle of philosophy, featuring Socratic dialogue, Platonist theory of Forms, and Aristotelian virtue ethics."
-  },
-  "principles": [
-    {
-      "num": "01",
-      "title": {
-        "ar": "الحوار السقراطي والبحث عن الحقيقة",
-        "fr": "Le Dialogue Socratique",
-        "en": "Socratic Dialogue"
-      },
-      "text": {
-        "ar": "💡 توليد الأفكار عبر الأسئلة الدقيقة وتفكيك الادعاءات الزائفة.",
-        "fr": "💡 La maïeutique socratique : accoucher des esprits par le questionnement.",
-        "en": "💡 Midwifing knowledge through relentless questioning."
-      }
-    },
-    {
-      "num": "02",
-      "title": {
-        "ar": "عالم المُثل وأسطورة الكهف",
-        "fr": "Le Monde des Idées",
-        "en": "The World of Ideas"
-      },
-      "text": {
-        "ar": "💡 العالم المحسوس ظل متغير، بينما الحقيقة الخالدة تكمن في المعقولات.",
-        "fr": "💡 Le monde sensible est l'ombre des Idées intelligibles et éternelles.",
-        "en": "💡 The sensible world is but a shadow of eternal intelligible Ideas."
-      }
-    },
-    {
-      "num": "03",
-      "title": {
-        "ar": "أخلاق الفضيلة والوسط الذهبي",
-        "fr": "Le Juste Milieu",
-        "en": "The Golden Mean"
-      },
-      "text": {
-        "ar": "💡 الفضيلة هي الاتزان المعرفي والأخلاقي بين طرفين رديئين.",
-        "fr": "💡 La vertu aristotélicienne est un juste milieu entre l'excès et le défaut.",
-        "en": "💡 Aristotelian virtue is a mean between excess and deficiency."
-      }
-    }
-  ],
-  "articles": [
-    {
-      "id": "why-people-respect-silent-person",
-      "url": "../../../articles/why-people-respect-silent-person.html",
-      "thumb": "../../../articles/silence_respect_hero.jpg",
-      "title": {
-        "ar": "لماذا يحترم الناس الشخص الهادئ والصامت؟",
-        "fr": "Pourquoi les Gens Respectent une Personne Silencieuse",
-        "en": "Why People Respect a Silent Person"
-      },
-      "desc": {
-        "ar": "سيكولوجية الحضور وتأثير الاتزان الداخلي في الوسط الاجتماعي.",
-        "fr": "La psychologie de la présence et l'impact du calme intérieur.",
-        "en": "The psychology of presence and inner calm."
-      }
-    }
-  ],
-  "thinkerIds": [
-    "socrate",
-    "platon",
-    "aristote"
-  ]
-};
+    const ALL_SCHOOLS = getSchoolsData('../../../');
+    const PAGE_DATA = ALL_SCHOOLS.find(s => s.slug === 'platonisme') || ALL_SCHOOLS[0];
 
     function getSavedLang() {
       return localStorage.getItem('site_lang_v1') || localStorage.getItem('lang') || 'ar';
@@ -283,8 +187,10 @@
       document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
 
       // Title & Meta
-      document.getElementById('pageTitle').textContent = PAGE_DATA.metaTitle[lang] || PAGE_DATA.metaTitle.ar;
-      document.getElementById('pageMetaDesc').setAttribute('content', PAGE_DATA.metaDesc[lang] || PAGE_DATA.metaDesc.ar);
+      const metaTitleStr = PAGE_DATA.metaTitle[lang] || PAGE_DATA.metaTitle.ar;
+      const metaDescStr = PAGE_DATA.metaDesc[lang] || PAGE_DATA.metaDesc.ar;
+      document.getElementById('pageTitle').textContent = metaTitleStr;
+      document.getElementById('pageMetaDesc').setAttribute('content', metaDescStr);
 
       // Breadcrumbs
       document.getElementById('bcHome').textContent = lang === 'ar' ? 'الرئيسية' : (lang === 'fr' ? 'Accueil' : 'Home');
@@ -297,66 +203,79 @@
       document.getElementById('schoolIntro').textContent = PAGE_DATA.intro[lang] || PAGE_DATA.intro.ar;
 
       // Principles Grid
-      document.getElementById('principlesHeading').textContent = lang === 'ar' ? '💡 الركائز والمبادئ الأساسية للمدرسة' : (lang === 'fr' ? '💡 Principes & idées clés de l\'école' : '💡 Key Principles & Core Ideas');
+      const pHeading = document.getElementById('principlesHeading');
+      if (pHeading) {
+        pHeading.textContent = lang === 'ar' ? '💡 الركائز والمبادئ الأساسية للمدرسة' : (lang === 'fr' ? "💡 Principes & idées clés de l'école" : '💡 Key Principles & Core Ideas');
+      }
       const principlesGrid = document.getElementById('principlesGrid');
-      principlesGrid.innerHTML = PAGE_DATA.principles.map(p => {
-        const pTitle = p.title[lang] || p.title.ar;
-        const pText = p.text[lang] || p.text.ar;
-        return `
-          <div class="principle-card">
-            <span class="principle-num">${p.num}</span>
-            <h3 style="font-size: 1.15rem; color: var(--accent-gold-bright); font-family: var(--font-serif); margin: 0;">${pTitle}</h3>
-            <p class="principle-text">${pText}</p>
-          </div>
-        `;
-      }).join('');
+      if (principlesGrid) {
+        principlesGrid.innerHTML = (PAGE_DATA.principles || []).map(p => {
+          const pTitle = (p.title && (p.title[lang] || p.title.ar)) || '';
+          const pText = (p.text && (p.text[lang] || p.text.ar)) || '';
+          return `
+            <div class="principle-card">
+              <span class="principle-num">${p.num || ''}</span>
+              <h3 style="font-size: 1.15rem; color: var(--accent-gold-bright, #E4C98A); font-family: var(--font-serif, 'Amiri', serif); margin: 0 0 6px;">${pTitle}</h3>
+              <p class="principle-text" style="margin: 0; color: #A9AAA4; font-size: 0.9rem; line-height: 1.6;">${pText}</p>
+            </div>
+          `;
+        }).join('');
+      }
 
       // Articles Grid
-      document.getElementById('articlesHeading').textContent = lang === 'ar' ? '📚 المقالات والأبحاث المتاحة في هذه المدرسة' : (lang === 'fr' ? '📚 Articles & études disponibles dans cette école' : '📚 Available Articles & Studies');
+      const aHeading = document.getElementById('articlesHeading');
+      if (aHeading) {
+        aHeading.textContent = lang === 'ar' ? '📚 المقالات والأبحاث المتاحة في هذه المدرسة' : (lang === 'fr' ? "📚 Articles & études disponibles dans cette école" : '📚 Available Articles & Studies');
+      }
       const readArtText = lang === 'ar' ? 'اقرأ المقال ←' : (lang === 'fr' ? 'Lire l\'article →' : 'Read article →');
       
       const articlesGrid = document.getElementById('articlesGrid');
-      if (PAGE_DATA.articles && PAGE_DATA.articles.length > 0) {
-        articlesGrid.innerHTML = PAGE_DATA.articles.map(art => {
-          const aTitle = art.title[lang] || art.title.ar;
-          const aDesc = art.desc[lang] || art.desc.ar;
-          return `
-            <a href="${art.url}" class="article-card-visual">
-              <div class="article-thumb-box">
-                <img src="${art.thumb}" alt="${aTitle}" class="article-thumb-img" loading="lazy" onerror="this.onerror=null; this.src='../../../articles_page_hero.jpg';">
-              </div>
-              <div class="article-card-body">
-                <div>
-                  <span class="article-badge">📜 article</span>
-                  <h3 class="article-title">${aTitle}</h3>
-                  <p class="article-desc">${aDesc}</p>
+      if (articlesGrid) {
+        if (PAGE_DATA.articles && PAGE_DATA.articles.length > 0) {
+          articlesGrid.innerHTML = PAGE_DATA.articles.map(art => {
+            const aTitle = art.title[lang] || art.title.ar;
+            const aDesc = art.desc[lang] || art.desc.ar;
+            return `
+              <a href="${art.path}" class="article-card-visual" style="text-decoration: none;">
+                <div class="article-thumb-box">
+                  <img src="${art.thumb}" alt="${aTitle}" class="article-thumb-img" loading="lazy" onerror="this.onerror=null; this.src='../../../pillar_philosophy_hd.jpg';">
                 </div>
-                <span class="article-btn-link">${readArtText}</span>
-              </div>
-            </a>
+                <div class="article-card-body">
+                  <div>
+                    <span class="article-badge">📜 article</span>
+                    <h3 class="article-title">${aTitle}</h3>
+                    <p class="article-desc">${aDesc}</p>
+                  </div>
+                  <span class="article-btn-link">${readArtText}</span>
+                </div>
+              </a>
+            `;
+          }).join('');
+        } else {
+          const comingSoonMsg = lang === 'ar' ? '⏳ مقالات قادمة قريبًا' : (lang === 'fr' ? '⏳ Articles à venir' : '⏳ Articles coming soon');
+          articlesGrid.innerHTML = `
+            <div style="background: rgba(201, 168, 106, 0.08); border: 1.5px dashed rgba(201, 168, 106, 0.35); border-radius: 20px; padding: 35px; text-align: center; color: var(--accent-gold, #C9A86A); font-size: 1.15rem; font-weight: 700; grid-column: 1 / -1;">
+              ${comingSoonMsg}
+            </div>
           `;
-        }).join('');
-      } else {
-        const comingSoonMsg = lang === 'ar' ? '⏳ مقالات قادمة قريبًا' : (lang === 'fr' ? '⏳ Articles à venir' : '⏳ Articles coming soon');
-        articlesGrid.innerHTML = `
-          <div style="background: rgba(201, 168, 106, 0.08); border: 1.5px dashed rgba(201, 168, 106, 0.35); border-radius: 20px; padding: 35px; text-align: center; color: var(--accent-gold, #C9A86A); font-size: 1.15rem; font-weight: 700; grid-column: 1 / -1;">
-            ${comingSoonMsg}
-          </div>
-        `;
+        }
       }
 
       // Thinkers Grid
-      document.getElementById('thinkersHeading').textContent = lang === 'ar' ? '👤 المفكرون والفلاسفة المرتبطون بالمدرسة' : (lang === 'fr' ? '👤 Penseurs & philosophes associés' : '👤 Associated Thinkers');
+      const tHeading = document.getElementById('thinkersHeading');
+      if (tHeading) {
+        tHeading.textContent = lang === 'ar' ? '👤 المفكرون والفلاسفة المرتبطون بالمدرسة' : (lang === 'fr' ? '👤 Penseurs & philosophes associés' : '👤 Associated Thinkers');
+      }
       const viewThinkerText = lang === 'ar' ? 'عرض المفكر ←' : (lang === 'fr' ? 'Voir le penseur →' : 'View profile →');
       const thinkersGrid = document.getElementById('thinkersGrid');
       
-      if (PAGE_DATA.thinkerIds && PAGE_DATA.thinkerIds.length > 0) {
+      if (thinkersGrid && PAGE_DATA.thinkerIds && PAGE_DATA.thinkerIds.length > 0) {
         const allThinkers = (TIKTOK_DATA.content && TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].thinkers) || [];
         thinkersGrid.innerHTML = PAGE_DATA.thinkerIds.map(tid => {
           const tObj = allThinkers.find(t => t.id === tid) || { id: tid, name: tid };
           const avatarImg = `../../../thinkers/images/${tid}.jpg`;
           return `
-            <a href="../../../thinkers/?thinker=${tid}" class="thinker-card-visual">
+            <a href="../../../thinkers/?thinker=${tid}" class="thinker-card-visual" style="text-decoration: none;">
               <img src="${avatarImg}" alt="${tObj.name}" class="thinker-portrait" loading="lazy" onerror="this.onerror=null; this.src='../../../brand_logo_official.png';">
               <h3 class="thinker-name">${tObj.name}</h3>
               <div class="thinker-school">${tObj.school || ''}</div>
@@ -367,7 +286,10 @@
       }
 
       // Back Button Text
-      document.getElementById('backBtnText').textContent = lang === 'ar' ? 'العودة إلى الفلسفة' : (lang === 'fr' ? 'Retour à la Philosophie' : 'Back to Philosophy');
+      const backBtn = document.getElementById('backBtnText');
+      if (backBtn) {
+        backBtn.textContent = lang === 'ar' ? 'العودة إلى الفلسفة' : (lang === 'fr' ? 'Retour à la Philosophie' : 'Back to Philosophy');
+      }
     }
 
     document.addEventListener('DOMContentLoaded', () => {

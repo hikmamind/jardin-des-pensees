@@ -1075,7 +1075,7 @@
       </div>
 
       <div
-        id="philoSchoolsStatic"
+        id="philoSchoolsGrid"
         class="philo-schools-grid"
       >
         <!-- École 01 -->
@@ -1725,6 +1725,9 @@
   <script type="module">
     import TIKTOK_DATA from '../data_v11.js';
     import { renderPillarResources } from '../assets/js/pillar_resources.js';
+    import { getSchoolsData } from './schools_data.js';
+
+    const SCHOOLS_DATA = getSchoolsData('./');
 
     const LANG_METADATA = {
       ar: { label: "العربية", dir: "rtl" },
@@ -1970,175 +1973,7 @@
     };
 
     // SCHOOLS_DATA Definition (With Dedicated Page Links, Principles, Articles, and Associated Thinkers)
-    const SCHOOLS_DATA = [
-      {
-        id: 'school-stoicism',
-        slug: 'stoicisme',
-        num: '01',
-        image: '../marc_aurelius_writing.jpg',
-        title: { ar: 'الرواقية', fr: 'Stoïcisme', en: 'Stoicism' },
-        period: { ar: 'القرن ٣ ق.م — القرن ٢ م', fr: 'IIIe s. av. J.-C. — IIe s. ap. J.-C.', en: '3rd c. BCE — 2nd c. CE' },
-        desc: {
-          ar: 'فن السيطرة على العقل، التمييز بين ما يخضع لسيطرتنا وما لا يخضع لها، وبناء القلعة الداخلية.',
-          fr: 'La maîtrise des réactions, le discernement du contrôle et la citadelle intérieure.',
-          en: 'Mastering the mind, distinguishing what is under our control, and inner citadel.'
-        },
-        principles: {
-          ar: ['التمييز بين ما نتحكم به وما لا نتحكم به', 'الهدوء الداخلي والسيطرة على الانفعالات', 'العيش وفقاً للطبيعة والعقل'],
-          fr: ['Dichotomie du contrôle', 'Citadelle intérieure et maîtrise des émotions', 'Vivre en harmonie avec la nature'],
-          en: ['Dichotomy of control', 'Inner citadel and emotional mastery', 'Living in accordance with nature']
-        },
-        articles: [
-          { id: 'introduction-stoicisme', url: '../files/introduction-stoicisme.html', title: { ar: 'مدخل شامخ إلى الرواقية', fr: 'Introduction au Stoïcisme', en: 'Introduction to Stoicism' } },
-          { id: 'stoicisme-force-calme', url: '../files/stoicisme-force-calme.html', title: { ar: 'الرواقية: قوة الهدوء الداخلي', fr: 'Le Stoïcisme: La Force du Calme', en: 'Stoicism: The Power of Calm' } },
-          { id: 'intelligence-emotionnelle-stoicisme', url: '../files/intelligence-emotionnelle-stoicisme.html', title: { ar: 'الذكاء العاطفي والرواقية', fr: 'Intelligence Émotionnelle & Stoïcisme', en: 'Emotional Intelligence & Stoicism' } }
-        ],
-        thinkerIds: ['marcaurele', 'epictete', 'seneque'],
-        hasDedicatedPage: true,
-        pageUrl: './ecoles/stoicisme/'
-      },
-      {
-        id: 'school-ancient',
-        slug: 'platonisme',
-        num: '02',
-        image: '../socrates_delphi_temple.jpg',
-        title: { ar: 'الفلسفة اليونانية القديمة والأفلاطونية', fr: 'Philosophie Antique & Platonisme', en: 'Ancient Philosophy & Platonism' },
-        period: { ar: 'القرن ٦ ق.م — القرن ٤ م', fr: 'VIe s. av. J.-C. — IVe s. ap. J.-C.', en: '6th c. BCE — 4th c. CE' },
-        desc: {
-          ar: 'البحث في أصل الوجود والفضيلة والعقل، رمزيّة الكهف عالم المُثل والحوار السقراطي.',
-          fr: 'L\'exploration des premiers principes, de l\'allégorie de la caverne et du monde des Idées.',
-          en: 'Exploring first principles, virtue, the cave allegory, and the world of Forms.'
-        },
-        principles: {
-          ar: ['الحوار السقراطي والبحث عن الحق', 'عالم المُثل وأسطورة الكهف عند أفلاطون', 'الأخلاق الفاضلة والوسط الذهبي عند أرسطو'],
-          fr: ['Dialogue socratique et quête de vérité', 'Monde des Idées et allégorie de la caverne', 'Éthique de la vertu et juste milieu'],
-          en: ['Socratic dialogue & truth seeking', 'World of Forms & cave allegory', 'Virtue ethics & golden mean']
-        },
-        articles: [
-          { id: 'epicurisme-bonheur', url: '../files/epicurisme-bonheur.html', title: { ar: 'الإبيقورية والبحث عن السعادة الحقيقية', fr: 'L\'Épicurisme et le Bonheur', en: 'Epicureanism & True Happiness' } },
-          { id: '7-errors-mind-growth', url: '../articles/7-errors-mind-growth.html', title: { ar: '7 أخطاء تمنع النمو الفكري', fr: '7 Erreurs de la Pensée', en: '7 Errors that Block Mind Growth' } }
-        ],
-        thinkerIds: ['socrate', 'platon', 'aristote'],
-        hasDedicatedPage: false
-      },
-      {
-        id: 'school-islamic',
-        slug: 'islamique',
-        num: '03',
-        image: '../bookshelves_candle.jpg',
-        title: { ar: 'الفلسفة الإسلامية والحكمة الشرقية', fr: 'Philosophie Islamique & Sagesse Orientale', en: 'Islamic Philosophy & Eastern Wisdom' },
-        period: { ar: 'القرن ٨ م — القرن ١٥ م', fr: 'VIIIe s. — XVe s.', en: '8th c. — 15th c.' },
-        desc: {
-          ar: 'التوفيق بين العقل والنقل، الفلسفة المشائية والإشراقية، ونقد المناهج ونشأة علم العمران.',
-          fr: 'L\'harmonie entre Raison et Foi, la métaphysique peripatétique et la naissance de la sociologie.',
-          en: 'Harmonizing Reason and Faith, metaphysics, and the origin of philosophy of civilization.'
-        },
-        principles: {
-          ar: ['التوفيق بين العقل والشريعة', 'إصلاح النفوس ومراقي السلوك والتحلية', 'منطق المنهج وتاريخ العمران البشري'],
-          fr: ['Harmonie entre Raison et Foi', 'Purification de l\'âme et éthique spirituelle', 'Méthode scientifique et philosophie de la civilisation'],
-          en: ['Harmony of Reason and Faith', 'Purification of the soul & spiritual ethics', 'Scientific method & philosophy of civilization']
-        },
-        articles: [
-          { id: 'philosophie-islamique-introduction', url: '../files/philosophie-islamique-introduction.html', title: { ar: 'مدخل إلى الفلسفة الإسلامية', fr: 'Introduction à la Philosophie Islamique', en: 'Introduction to Islamic Philosophy' } },
-          { id: 'al-ghazali-quete-verite', url: '../files/al-ghazali-quete-verite.html', title: { ar: 'الغزالي ورحلة البحث عن اليقين', fr: 'Al-Ghazali et la Quête de Vérité', en: 'Al-Ghazali & The Quest for Truth' } }
-        ],
-        thinkerIds: ['ghazali', 'farabi', 'ibnsina', 'ibnrushd', 'ibnkhaldun'],
-        hasDedicatedPage: false
-      },
-      {
-        id: 'school-modern',
-        slug: 'rationalisme',
-        num: '04',
-        image: '../desk_coffee_book.jpg',
-        title: { ar: 'العقلانية والفلسفة الحديثة', fr: 'Rationalisme & Philosophie Moderne', en: 'Rationalism & Modern Philosophy' },
-        period: { ar: 'القرن ١٧ م — القرن ١٨ م', fr: 'XVIIe s. — XVIIIe s.', en: '17th c. — 18th c.' },
-        desc: {
-          ar: 'رحلة التفكير العقلاني والمنهج العلمي من الشك الديكارتي إلى نقد العقل والأنوار.',
-          fr: 'L\'essor du rationalisme, du doute méthodique et des Lumières.',
-          en: 'The rise of rationalism, scientific method, and Enlightenment thought.'
-        },
-        principles: {
-          ar: ['الشك المنهجي و"أنا أفكر إذاً أنا موجود"', 'وحدة الوجود والعقلانيّة عند سبينوزا', 'نقد العقل والواجب الأخلاقي عند كانت'],
-          fr: ['Doute méthodique et cogito', 'Monisme et rationalisme spinoziste', 'Impératif catégorique et critique de la raison'],
-          en: ['Methodical doubt & the Cogito', 'Monism & Spinozan rationalism', 'Categorical imperative & critique of reason']
-        },
-        articles: [],
-        thinkerIds: ['descartes', 'spinoza', 'kant'],
-        hasDedicatedPage: false
-      },
-      {
-        id: 'school-existentialism',
-        slug: 'existentialisme',
-        num: '05',
-        image: '../autumn_forest_solitude_walk.jpg',
-        title: { ar: 'الفلسفة الوجودية والعبثية', fr: 'Philosophie Existentielle & Absurde', en: 'Existential Philosophy & Absurdity' },
-        period: { ar: 'القرن ١٩ م — القرن ٢٠ م', fr: 'XIXe s. — XXe s.', en: '19th c. — 20th c.' },
-        desc: {
-          ar: 'الفلسفة التي تضع الوجود سابقاً على الماهية، وتدعو الإنسان لصناعة معناه بنفسه.',
-          fr: 'La philosophie où l\'existence précède l\'essence : liberté absolue et création du sens.',
-          en: 'The philosophy holding that existence precedes essence: absolute freedom and self-made meaning.'
-        },
-        principles: {
-          ar: ['الوجود يسبق الماهية والحرية المطلقة', 'مواجهة العبث والتمرد وحرية الاختيار', 'القلق الوجودي والأصالة الذاتية'],
-          fr: ['L\'existence précède l\'essence', 'Confrontation à l\'absurde et révolte', 'Angoisse existentielle et authenticité'],
-          en: ['Existence precedes essence', 'Confronting the absurd & revolt', 'Existential anxiety & authenticity']
-        },
-        articles: [
-          { id: 'existentialisme-sens-sartre', url: '../files/existentialisme-sens-sartre.html', title: { ar: 'الوجودية والبحث عن المعنى', fr: 'Existentialisme: La Quête du Sens', en: 'Existentialism: Search for Meaning' } },
-          { id: 'absurde-camus', url: '../files/absurde-camus.html', title: { ar: 'فلسفة العبث عند ألبير كامو', fr: 'La Philosophie de l\'Absurde selon Camus', en: 'Camus and Philosophy of Absurd' } }
-        ],
-        thinkerIds: ['sartre', 'camus', 'kierkegaard'],
-        hasDedicatedPage: false
-      },
-      {
-        id: 'school-moral',
-        slug: 'morale',
-        num: '06',
-        image: '../luxury_window_reflection.jpg',
-        title: { ar: 'الفلسفة الأخلاقية', fr: 'Philosophie Morale', en: 'Moral Philosophy' },
-        period: { ar: 'الفلسفة الأخلاقية عبر العصور', fr: 'Philosophie Morale à travers les âges', en: 'Moral Philosophy through Ages' },
-        desc: {
-          ar: 'مساءلة طبيعة الخير والواجب الإنساني والبحث عن السعادة والعيش الفاضل والعزلة.',
-          fr: 'L\'examen du bien, du devoir, de la justice et d\'une vie vertueuse.',
-          en: 'Inquiring into good, moral duty, justice, and a virtuous life.'
-        },
-        principles: {
-          ar: ['البحث عن السعادة الحقيقية والفضيلة', 'تشريح العزلة: بركة أم نقمة؟', 'الواجب الأخلاقي وغايات الإنسان'],
-          fr: ['Quête du bonheur véritable et vertu', 'Analyse de la solitude : bénédiction ou malédiction', 'Devoir moral et fins de l\'homme'],
-          en: ['Pursuit of genuine happiness & virtue', 'Dissecting solitude: blessing or curse', 'Moral duty and human purpose']
-        },
-        articles: [
-          { id: 'happiness-in-wrong-place', url: '../articles/happiness-in-wrong-place.html', title: { ar: 'البحث عن السعادة في المكان الخاطئ', fr: 'Le Bonheur au Mauvais Endroit', en: 'Looking for Happiness in Wrong Places' } },
-          { id: 'solitude-blessing-or-curse', url: '../articles/solitude-blessing-or-curse.html', title: { ar: 'العزلة: نعمة أم نقمة؟', fr: 'La Solitude : Bénédiction ou Malédiction', en: 'Solitude: Blessing or Curse?' } }
-        ],
-        thinkerIds: ['kant', 'aristote', 'spinoza'],
-        hasDedicatedPage: false
-      },
-      {
-        id: 'school-contemporary',
-        slug: 'contemporaine',
-        num: '07',
-        image: '../person_window_sunrise.jpg',
-        title: { ar: 'الفلسفة المعاصرة والعدمية', fr: 'Philosophie Contemporaine & Nihilisme', en: 'Contemporary Philosophy & Nihilism' },
-        period: { ar: 'القرن ١٩ م — العصر الحالي', fr: 'XIXe s. — Époque Contemporaine', en: '19th c. — Contemporary Era' },
-        desc: {
-          ar: 'تشريح أزمات الحداثة، نقد الإرادة والعدمية عند شوبنهاور ونيتشه، وتجاوز الذات.',
-          fr: 'La critique de la modernité, l\'analyse de la Volonté et du Nihilisme.',
-          en: 'Critique of modernity, analysis of the Will and Nihilism.'
-        },
-        principles: {
-          ar: ['تشريح العدمية وإرادة القوة عند نيتشه', 'عالم الإرادة والفكرة عند شوبنهاور', 'نقد الحداثة وتجاوز الذات'],
-          fr: ['Volonté de puissance et dépassement de soi', 'Le Monde comme Volonté et Représentation', 'Critique de la modernité et nihilisme'],
-          en: ['Will to power & self-overcoming', 'World as Will and Representation', 'Critique of modernity & nihilism']
-        },
-        articles: [
-          { id: 'schopenhauer-happiness-illusion', url: '../articles/schopenhauer-happiness-illusion.html', title: { ar: 'وهم السعادة عند شوبنهاور', fr: 'Schopenhauer: L\'Illusion du Bonheur', en: 'Schopenhauer: Illusion of Happiness' } },
-          { id: 'nietzsche-psychological-strength', url: '../articles/nietzsche-psychological-strength.html', title: { ar: 'الصلابة النفسية عند نيتشه', fr: 'Nietzsche: Force Psychologique', en: 'Nietzsche: Psychological Strength' } }
-        ],
-        thinkerIds: ['schopenhauer', 'nietzsche'],
-        hasDedicatedPage: false
-      }
-    ];
+    
 
     // HD Article Image Assets Mapping
     const ARTICLE_HD_IMAGES = {
@@ -2163,154 +1998,37 @@
     }
 
 
-    function renderSchoolsGrid(lang) {
-      const grid = document.getElementById('philoSchoolsGrid');
+        function renderSchoolsGrid(lang) {
+      const grid = document.getElementById('philoSchoolsGrid') || document.getElementById('philoSchoolsStatic') || document.getElementById('schoolsGrid');
+      if (!grid) return;
 
-      if (!grid) {
-        console.error('Section #philoSchoolsGrid introuvable');
-        return;
-      }
+      const trans = PHILO_TRANSLATIONS[lang] || PHILO_TRANSLATIONS.ar;
+      const allThinkers = (TIKTOK_DATA.content && TIKTOK_DATA.content[lang] && TIKTOK_DATA.content[lang].thinkers) || [];
 
-      if (!Array.isArray(SCHOOLS_DATA) || SCHOOLS_DATA.length !== 7) {
-        console.error(
-          'SCHOOLS_DATA doit contenir exactement 7 écoles',
-          SCHOOLS_DATA
-        );
-        return;
-      }
-
-      const buttonText = {
-        ar: 'تعرّف على المدرسة ←',
-        fr: 'Découvrir l’école →',
-        en: 'Discover the school →'
-      };
-
-      grid.innerHTML = SCHOOLS_DATA.map(school => {
-        const title = school.title[lang] || school.title.ar;
-        const period = school.period[lang] || school.period.ar;
-        const description =
-          school.desc?.[lang] ||
-          school.desc?.ar ||
-          '';
-
-        const targetUrl = `./ecoles/${school.slug}/`;
+      grid.innerHTML = SCHOOLS_DATA.map(s => {
+        const title = (s.title && (s.title[lang] || s.title.ar)) || s.id;
+        const period = (s.period && (s.period[lang] || s.period.ar)) || '';
+        const desc = (s.subtitle && (s.subtitle[lang] || s.subtitle.ar)) || (s.desc && (s.desc[lang] || s.desc.ar)) || '';
+        const targetUrl = `./ecoles/${s.slug}/`;
 
         return `
-          <a
-            class="philo-school-card"
-            href="${targetUrl}"
-            aria-label="${title}"
-          >
+          <a class="philo-school-card" href="${targetUrl}" aria-label="${title}" style="text-decoration: none;">
             <div class="philo-school-image-box">
-              <img
-                class="philo-school-image"
-                src="${school.image}"
-                alt="${title}"
-                loading="lazy"
-              >
-              <span class="philo-school-number">
-                ${school.num}
-              </span>
+              <img class="philo-school-image" src="${s.image}" alt="${title}" loading="lazy">
+              <span class="philo-school-number">${s.num}</span>
             </div>
-
             <div class="philo-school-body">
-              <span class="philo-school-period">
-                ${period}
-              </span>
-
-              <h3 class="philo-school-title">
-                ${title}
-              </h3>
-
-              <p class="philo-school-description">
-                ${description}
-              </p>
-
-              <span class="philo-school-link">
-                ${buttonText[lang] || buttonText.ar}
-              </span>
+              <span class="philo-school-period">${period}</span>
+              <h3 class="philo-school-title">${title}</h3>
+              <p class="philo-school-description">${desc}</p>
+              <span class="philo-school-link">${trans.btnExploreSchool}</span>
             </div>
           </a>
         `;
       }).join('');
     }
-).join('');
-    }
 
-        // C. Articles liés
-        let articlesHtml = '';
-        if (articlesList.length > 0) {
-          articlesHtml = `
-            <div class="philo-school-articles" style="margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(223, 177, 91, 0.15);">
-              <div style="font-size: 0.8rem; font-weight: 700; color: #E4C98A; margin-bottom: 8px;">📖 ${trans.articlesHeader}</div>
-              <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px;">
-                ${articlesList.map(a => {
-                  const aTitle = (a.title && (a.title[lang] || a.title.ar)) || a.id;
-                  return `<li style="font-size: 0.86rem;"><a href="${a.url}" onclick="event.stopPropagation();" style="color: #E4C98A; text-decoration: none; font-weight: 600; transition: color 0.2s;">📄 ${aTitle} ←</a></li>`;
-                }).join('')}
-              </ul>
-            </div>
-          `;
-        } else {
-          articlesHtml = `
-            <div class="philo-school-articles" style="margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(223, 177, 91, 0.15);">
-              <div style="font-size: 0.8rem; font-weight: 700; color: #E4C98A; margin-bottom: 8px;">📖 ${trans.articlesHeader}</div>
-              <div style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 20px; background: rgba(223, 177, 91, 0.08); border: 1px solid rgba(223, 177, 91, 0.25); color: #E4C98A; font-size: 0.82rem; font-weight: 700;">
-                ${trans.comingSoonArticles}
-              </div>
-            </div>
-          `;
-        }
-
-        // D. Penseurs associés
-        let thinkersHtml = '';
-        if (thinkerIds.length > 0) {
-          thinkersHtml = `
-            <div class="philo-school-thinkers" style="margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(223, 177, 91, 0.15);">
-              <div style="font-size: 0.8rem; font-weight: 700; color: #E4C98A; margin-bottom: 8px;">👥 ${trans.thinkersHeader}</div>
-              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                ${thinkerIds.map(tid => {
-                  const tObj = allThinkers.find(t => t.id === tid);
-                  const thinkerName = tObj ? tObj.name : tid;
-                  return `<a href="../thinkers/?thinker=${tid}" onclick="event.stopPropagation();" style="display: inline-flex; align-items: center; padding: 5px 12px; border-radius: 16px; background: rgba(223, 177, 91, 0.12); border: 1px solid rgba(223, 177, 91, 0.3); color: #FAF6EF; font-size: 0.82rem; font-weight: 700; text-decoration: none; transition: all 0.2s ease;">${thinkerName}</a>`;
-                }).join('')}
-              </div>
-            </div>
-          `;
-        }
-
-        // Explore School Button
-        const exploreBtnHtml = `<button type="button" onclick="event.stopPropagation(); openSchoolModal('${s.id}');" class="philo-parcours-btn" style="margin-top: 20px; width: 100%; text-align: center; box-sizing: border-box; cursor: pointer;">${trans.btnExploreSchool}</button>`;
-
-        return `
-          <article class="philo-school-card-v4" id="${s.id}" onclick="openSchoolModal('${s.id}')" style="cursor: pointer;">
-            <div class="philo-school-header-img">
-              <img src="${s.image}" alt="${title}" loading="lazy">
-              <span class="philo-school-num-badge">${s.num}</span>
-            </div>
-            <div class="philo-school-body">
-              <div style="font-size: 0.78rem; color: var(--accent-gold); font-weight: 700; margin-bottom: 6px;">⌛ ${period}</div>
-              <h3 class="philo-school-title">${title}</h3>
-              <p class="philo-school-desc">${desc}</p>
-
-              <!-- B. PRINCIPES / IDÉES CLEFS -->
-              ${principlesHtml}
-
-              <!-- C. ARTICLES LIÉS -->
-              ${articlesHtml}
-
-              <!-- D. PENSEURS ASSOCIÉS -->
-              ${thinkersHtml}
-
-              ${exploreBtnHtml}
-            </div>
-          </article>
-        `;
-      }).join('');
-    }
-
-
-        function renderArticlesGrid(lang) {
+    function renderArticlesGrid(lang) {
       const grid = document.getElementById('philoArticlesGrid');
       if (!grid) return;
 
@@ -2493,7 +2211,6 @@
       };
       checkHash();
       window.addEventListener('hashchange', checkHash);
-    });
 
     // PARCOURS ENGINE DATA & RENDERER
     const PARCOURS_DATA = {
