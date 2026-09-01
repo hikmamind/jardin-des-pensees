@@ -1,440 +1,420 @@
-﻿<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <title>الرواقية: فلسفة القوة والهدوء الداخلي | Hikma & Nour</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
-    
-    :root {
-      --bg-cream: #FAF6F0;
-      --dark-green: #0D1E13;
-      --accent-gold: #DFB15B;
-      --text-charcoal: #2C3E35;
-    }
-    
-    body {
-      background-color: var(--bg-cream);
-      color: var(--text-charcoal);
-      font-family: 'Amiri', serif;
-      margin: 0;
-      padding: 0;
-      direction: rtl;
-    }
-    
-    .no-print {
-      background: var(--dark-green);
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-      border-bottom: 2px solid var(--accent-gold);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    
-    .no-print button {
-      background: var(--accent-gold);
-      color: var(--dark-green);
-      border: none;
-      padding: 10px 25px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      border-radius: 30px;
-      cursor: pointer;
-      font-family: 'Amiri', serif;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-    
-    .no-print button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(223, 177, 91, 0.4);
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .book-container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    
-    .page {
-      background: white;
-      border: 3px double var(--accent-gold);
-      border-radius: 12px;
-      padding: 50px 60px;
-      margin-bottom: 50px;
-      box-shadow: 0 10px 30px rgba(13, 30, 19, 0.05);
-      position: relative;
-      min-height: 850px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-sizing: border-box;
-    }
-    
-    .cover-page {
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      min-height: 850px;
-    }
-    
-    .cover-title {
-      font-size: 3.5rem;
-      color: var(--dark-green);
-      margin: 20px 0;
-      font-weight: bold;
-    }
-    
-    .cover-subtitle {
-      font-size: 1.8rem;
-      color: var(--accent-gold);
-      margin-bottom: 40px;
-      border-bottom: 2px solid var(--accent-gold);
-      padding-bottom: 20px;
-      width: 80%;
-    }
-    
-    .cover-desc {
-      font-size: 1.3rem;
-      color: var(--text-charcoal);
-      line-height: 1.8;
-      max-width: 600px;
-      margin: 20px auto;
-    }
-    
-    .cover-footer {
-      font-size: 1.2rem;
-      color: var(--dark-green);
-      font-weight: bold;
-      margin-top: 60px;
-    }
-    
-    .page-content-row {
-      display: flex;
-      gap: 40px;
-      align-items: stretch;
-      margin-top: 20px;
-    }
-    
-    .text-column {
-      flex: 1.6;
-    }
-    
-    .illustration-column {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #FAF7F2;
-      border-radius: 12px;
-      border: 1px solid rgba(223, 177, 91, 0.15);
-      padding: 30px;
-      box-shadow: inset 0 0 15px rgba(13, 30, 19, 0.02);
-    }
-    
-    .paragraph-text {
-      font-size: 1.25rem;
-      line-height: 1.8;
-      text-align: justify;
-      color: var(--text-charcoal);
-      margin-bottom: 20px;
-    }
-    
-    .page-footer {
-      border-top: 1px solid #f0f0f0;
-      padding-top: 15px;
-      display: flex;
-      justify-content: space-between;
+  <title id="metaPageTitle">الرواقية: قوة الهدوء الداخلي وصناعة السكينة الباطنية | حكمة ونور</title>
+  <meta name="description" id="metaPageDesc" content="دليل فلسفي وعملي يفصل كيف يمنح الهدوء الداخلي القوة الحقيقية، وكيف تبني القلعة الباطنية في مواجهة الأزمات.">
+  <meta name="author" content="Hikma & Nour | حكمة ونور">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" id="ogPageTitle" content="الرواقية: قوة الهدوء الداخلي وصناعة السكينة الباطنية">
+  <meta property="og:description" id="ogPageDesc" content="الهدوء الرواقي ليس سلبية أو انطواءً، بل قوة واعية للسيطرة على الانفعالات وتوجيه الطاقة النبيلة.">
+  <meta property="og:image" content="https://jardin-des-pensees.onrender.com/stoicism_calm_strength_hero.jpg">
+  <meta property="og:site_name" content="Hikma & Nour — حكمة ونور">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" id="twPageTitle" content="الرواقية: قوة الهدوء الداخلي وصناعة السكينة الباطنية">
+  <meta name="twitter:description" id="twPageDesc" content="الهدوء الرواقي ليس سلبية، بل قوة واعية للسيطرة على الانفعالات.">
+  <meta name="twitter:image" content="https://jardin-des-pensees.onrender.com/stoicism_calm_strength_hero.jpg">
+
+  <link rel="icon" type="image/png" href="../brand_logo_official.png">
+  <link rel="stylesheet" href="../style.css?v=20">
+  <link rel="stylesheet" href="../templates/article-premium-v4.css?v=6">
+  <link rel="stylesheet" href="../assets/css/article-engagement.css">
+
+  <style>
+    body.article-premium-body {
+      background-color: #070F0A !important;
+      color: #FAF6EF;
       font-size: 1rem;
-      color: #999;
-      margin-top: 40px;
+      line-height: 1.8;
     }
-    
-    @media (max-width: 768px) {
-      .page-content-row {
-        flex-direction: column;
-      }
-      .illustration-column {
-        min-height: 200px;
-        order: -1;
-      }
+    .article-hero-media img {
+      width: 100%;
+      height: clamp(280px, 42vw, 540px);
+      object-fit: cover;
+      border-radius: 18px;
     }
-    
-    @media print {
-      body {
-        background: white;
-      }
-      .no-print {
-        display: none;
-      }
-      .book-container {
-        margin: 0;
-        max-width: 100%;
-        padding: 0;
-      }
-      .page {
-        border: none;
-        box-shadow: none;
-        margin: 0;
-        padding: 40px;
-        page-break-after: always;
-        min-height: 100vh;
-      }
+    .article-figure {
+      margin-block: 2.5rem;
+      margin-inline: 0;
+    }
+    .article-figure img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid rgba(201, 168, 106, 0.24);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.36);
+    }
+    .article-figure figcaption {
+      margin-block-start: 0.75rem;
+      color: #A9AAA4;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      text-align: center;
     }
   </style>
 
-  <!-- PWA & Mobile Web App Meta -->
-  <link rel="manifest" href="./manifest.json">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="حكمة ونور">
-  <link rel="apple-touch-icon" href="./icon-192.png">
-  <meta name="theme-color" content="#0D1410">
-
-
-  <meta name="description" content="دليل عملي لتطبيق ثنائية التحكم وحب القدر وبناء قلعة داخلية حصينة في مواجهة تقلبات الحياة اليومية.">
-  <link rel="canonical" href="https://jardin-des-pensees.onrender.com/files/stoicisme-force-calme.html">
-  <link rel="icon" type="image/png" href="https://jardin-des-pensees.onrender.com/brand_logo_official.png">
-  
-  <!-- Open Graph -->
-  <meta property="og:site_name" content="Hikma & Nour — حكمة ونور">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="الرواقية: فلسفة القوة والهدوء الداخلي | Hikma & Nour">
-  <meta property="og:description" content="دليل عملي لتطبيق ثنائية التحكم وحب القدر وبناء قلعة داخلية حصينة في مواجهة تقلبات الحياة اليومية.">
-  <meta property="og:image" content="https://jardin-des-pensees.onrender.com/stoicisme-modern.jpg">
-  <meta property="og:url" content="https://jardin-des-pensees.onrender.com/files/stoicisme-force-calme.html">
-  <meta property="og:locale" content="ar_AR">
-  
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="الرواقية: فلسفة القوة والهدوء الداخلي | Hikma & Nour">
-  <meta name="twitter:description" content="دليل عملي لتطبيق ثنائية التحكم وحب القدر وبناء قلعة داخلية حصينة في مواجهة تقلبات الحياة اليومية.">
-  <meta name="twitter:image" content="https://jardin-des-pensees.onrender.com/stoicisme-modern.jpg">
-  
-  <!-- JSON-LD Structured Data Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "الرواقية: فلسفة القوة والهدوء الداخلي",
-    "description": "دليل عملي لتطبيق ثنائية التحكم وحب القدر وبناء قلعة داخلية حصينة في مواجهة تقلبات الحياة اليومية.",
-    "image": "https://jardin-des-pensees.onrender.com/stoicisme-modern.jpg",
-    "datePublished": "2026-08-01",
-    "dateModified": "2026-08-14",
-    "inLanguage": "ar",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://jardin-des-pensees.onrender.com/files/stoicisme-force-calme.html"
-    },
-    "author": {
-      "@type": "Organization",
-      "name": "حكمة ونور — Hikma & Nour",
-      "url": "https://jardin-des-pensees.onrender.com/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Hikma & Nour",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://jardin-des-pensees.onrender.com/brand_logo_official.png"
-      }
-    }
+    "headline": "الرواقية: قوة الهدوء الداخلي وصناعة السكينة الباطنية",
+    "image": ["https://jardin-des-pensees.onrender.com/stoicism_calm_strength_hero.jpg"],
+    "inLanguage": ["ar", "fr", "en"],
+    "author": { "@type": "Organization", "name": "Hikma & Nour" },
+    "publisher": { "@type": "Organization", "name": "Hikma & Nour", "logo": { "@type": "ImageObject", "url": "https://jardin-des-pensees.onrender.com/brand_logo_official.png" } }
   }
   </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "الرئيسية",
-        "item": "https://jardin-des-pensees.onrender.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "المقالات",
-        "item": "https://jardin-des-pensees.onrender.com/articles/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "الرواقية: فلسفة القوة والهدوء الداخلي",
-        "item": "https://jardin-des-pensees.onrender.com/files/stoicisme-force-calme.html"
-      }
-    ]
-  }
-  </script>
-  <link rel="stylesheet" href="../assets/css/article-engagement.css">
 </head>
-<body>
+<body class="article-premium-body">
 
-  <div class="no-print">
-    <button onclick="window.print()">🖨️ طباعة أو حفظ كملف PDF</button>
-  </div>
-
-  <div class="book-container">
-    
-    <!-- Cover Page -->
-    <div class="page cover-page">
-      <h1 class="cover-title">الرواقية: فلسفة القوة والهدوء في مواجهة الحياة</h1>
-      <div class="cover-subtitle">دليل المرونة النفسية والسلام الداخلي</div>
-      <div style="margin: 30px 0;">
-        
-  <svg viewBox="0 0 100 100" width="100%" height="240">
-    <circle cx="50" cy="50" r="28" fill="none" stroke="var(--dark-green)" stroke-width="3"/>
-    <circle cx="50" cy="50" r="3" fill="var(--accent-gold)"/>
-    <line x1="50" y1="22" x2="50" y2="27" stroke="var(--dark-green)" stroke-width="2"/>
-    <line x1="50" y1="73" x2="50" y2="78" stroke="var(--dark-green)" stroke-width="2"/>
-    <line x1="22" y1="50" x2="27" y2="50" stroke="var(--dark-green)" stroke-width="2"/>
-    <line x1="73" y1="50" x2="78" y2="50" stroke="var(--dark-green)" stroke-width="2"/>
-    <path d="M 50,50 L 56,38 L 50,26 L 44,38 Z" fill="var(--accent-gold)"/>
-    <path d="M 50,50 L 56,62 L 50,74 L 44,62 Z" fill="var(--dark-green)"/>
-  </svg>
-
+  <header class="navbar-header" id="mainHeader">
+    <nav class="navbar" aria-label="Navigation principale">
+      <a href="../" class="nav-brand" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+        <img src="../brand_logo_official.png" alt="Hikma & Nour" class="brand-logo-img" style="width:38px; height:38px;">
+        <span class="brand-name" style="font-family: 'Playfair Display', serif; font-weight:800; color:var(--accent-gold);">HIKMA & NOUR</span>
+      </a>
+      <div class="nav-menu" id="navMenu">
+        <a href="../" class="nav-link" data-i18n="navHome">الرئيسية</a>
+        <a href="../philosophie/" class="nav-link active" data-i18n="navPhilosophy">الفلسفة</a>
+        <a href="../psychologie/" class="nav-link" data-i18n="navPsychology">علم النفس</a>
+        <a href="../developpement-personnel/" class="nav-link" data-i18n="navDevelopment">تطوير الذات</a>
+        <a href="../thinkers/" class="nav-link" data-i18n="navThinkers">المفكرون</a>
       </div>
-      <div class="cover-footer">HIKMA & NOUR | الحكمة • الفلسفة • علم النفس</div>
-    </div>
-    
-    <!-- Reading Page -->
-    <div class="page">
-      <div>
-        <h1 class="cover-title" style="font-size: 2.2rem; text-align: center;">الرواقية: فلسفة القوة والهدوء في مواجهة الحياة</div>
-        <div class="cover-subtitle" style="font-size: 1.4rem; text-align: center; margin: 10px auto 30px; width: 60%;">دليل المرونة النفسية والسلام الداخلي</div>
-        
-        <div class="page-content-row">
-          <!-- Text side -->
-          <div class="text-column">
-            <p class="paragraph-text">في عالمنا المعاصر الذي يتسم بالتدفق المستمر للمعلومات، والضغوط المهنية المتزايدة، وحالة عدم اليقين العام، أصبحت مسألة البحث عن طمأنينة النفس وسلامها الداخلي أولوية قصوى. في هذا السياق بالذات، تشهد الفلسفة الرواقية (Stoicism) — وهي مدرسة فلسفية أسسها زينون الكيتيومي في أثينا في القرن الثالث قبل الميلاد — نهضة استثنائية متجددة. لقد صُممت هذه الفلسفة في الأصل لتكون بمثابة طب للروح وتدريب عملي للعقل، وليس مجرد نظريات ميتافيزيقية مجردة، وهي تقدم اليوم حلولاً عملية لمواجهة أزمات الحياة بشجاعة ووضوح عقلاني.</p><p class="paragraph-text">وتوضح لنا سير الرموز الكبار للرواقية الرومانية الإمبراطورية — وهم العبد المحرر إبيكتيتوس، والكاتب ومستشار الدولة سينيكا، والإمبراطور الروماني ماركوس أوريليوس — مدى مرونة هذا المذهب وقابليته للتطبيق في شتى الظروف. فسواء كان الأمر يتعلق بتحمل قيود العبودية، أو الإبحار في دهاليز السياسة المضطربة في القصر الإمبراطوري، أو حكم أعتى إمبراطورية في التاريخ وسط انتشار الوباء والحروب، فإن الرواقية تدرس دائماً نفس المنهج: إعادة صياغة علاقتنا الذهنية بالعالم الخارجي وتصحيح أحكامنا.</p><p class="paragraph-text">يرتكز المبدأ الأساسي للرواقية، كما صاغه إبيكتيتوس في كتابه 'الدليل' (Enchiridion)، على التمييز الشهير المعروف بـ 'ثنائية التحكم'. يقسم الرواقيون العالم إلى فئتين لا تداخل بينهما. الأولى: أشياء تقع تحت سيطرتنا الكاملة والمباشرة، وتشمل آرائنا، رغباتنا، أحكامنا العقلية، وقراراتنا الشخصية. والثانية: أشياء خارجة تماماً عن إرادتنا، مثل طبيعة أجسادنا، الثروة، سمعتنا في المجتمع، الماضي، المستقبل، وتصرفات الآخرين. ويرى الرواقيون أن كل المعاناة النفسية والقلق لا ينبعان من الأحداث ذاتها، بل من محاولتنا الواهمة للسيطرة على ما لا نملك سلطاناً عليه.</p><p class="paragraph-text">من خلال تحرير طاقتنا الذهنية من هاجس التحكم في النتائج الخارجية، يمكننا إعادة توجيهها بالكامل نحو خياراتنا الأخلاقية وتطوير فضائلنا الشخصية. لا تعني الرواقية السلبية أو تبلد المشاعر (وهو فهم خاطئ شائع تاريخياً)، بل تعني العمل بنشاط من أجل الصالح العام مع قبول النتائج برضا تام دون سخط. هذا هو جوهر مبدأ 'حب القدر' (Amor Fati): قبول الواقع ليس كعقاب، بل كمادة خام لبناء الفضيلة والقوة النفسية.</p><p class="paragraph-text">ممارسة أخرى رواقية هامة هي التأمل في فكرة الموت والزوال (Memento Mori). تذكير أنفسنا يومياً بأن وقتنا في هذا العالم محدود ومؤقت ليس دعوة للتشاؤم أو الكآبة، بل هو بمثابة مصفاة تمنحنا رؤية واضحة للحياة. إنها تساعدنا على تجاهل الخلافات التافهة، والتخلص من صراعات الأنا غير المجدية، والاستمتاع الحقيقي باللحظة الراهنة. يذكرنا سينيكا في كتابه 'قصر الحياة' بأننا لا نملك عمراً قصيراً، ولكننا نهدر الكثير منه في التوافه والانتظار.</p><p class="paragraph-text">أخيراً، ممارسة 'توقع الأزمات قبل حدوثها' (Premeditatio Malorum) تعني تخيل العقبات أو الإخفاقات المحتملة ذهنياً بشكل هادئ وعقلاني. من خلال تصور أسوأ السيناريوهات الممكنة مسبقاً، يستطيع الإنسان التغلب على صدمة المفاجأة ويستعد بوضع خطط بديلة وعقلانية. عندما تقع الأزمة، لا تفاجئ الفيلسوف الرواقي لأنه قد واجهها وتغلب عليها ذهنياً بالفعل. الرواقية المعاصرة هي حصن عقلي متين، يعلمنا الحفاظ على ثباتنا وكرامتنا وسلامنا الداخلي في جميع ظروف الحياة.</p>
-          </div>
-          
-          <!-- Illustration side -->
-          <div class="illustration-column">
-            
-  <svg viewBox="0 0 100 100" width="100%" height="240">
-    <circle cx="50" cy="50" r="28" fill="none" stroke="var(--dark-green)" stroke-width="3"/>
-    <circle cx="50" cy="50" r="3" fill="var(--accent-gold)"/>
-    <line x1="50" y1="22" x2="50" y2="27" stroke="var(--dark-green)" stroke-width="2"/>
-    <line x1="50" y1="73" x2="50" y2="78" stroke="var(--dark-green)" stroke-width="2"/>
-    <line x1="22" y1="50" x2="27" y2="50" stroke="var(--dark-green)" stroke-width="2"/>
-    <line x1="73" y1="50" x2="78" y2="50" stroke="var(--dark-green)" stroke-width="2"/>
-    <path d="M 50,50 L 56,38 L 50,26 L 44,38 Z" fill="var(--accent-gold)"/>
-    <path d="M 50,50 L 56,62 L 50,74 L 44,62 Z" fill="var(--dark-green)"/>
-  </svg>
-
-          </div>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <button class="lang-selector-btn" id="langBtn" aria-label="تغيير اللغة">🌐 <span id="activeLangName">العربية</span> ▾</button>
+        <div class="lang-dropdown" id="langDropdown">
+          <button class="lang-opt active" data-lang="ar">العربية (AR)</button>
+          <button class="lang-opt" data-lang="fr">Français (FR)</button>
+          <button class="lang-opt" data-lang="en">English (EN)</button>
         </div>
       </div>
-      
-      <div class="page-footer">
-        <span>دليل الرواقية الكامل</span>
-        <span>2</span>
+    </nav>
+  </header>
+
+  <main class="article-main-container" style="padding-top: 40px;">
+    <nav class="breadcrumb-container" aria-label="Fil d'Ariane">
+      <ol class="breadcrumb-list" style="display: flex; gap: 8px; list-style: none; padding: 0; font-size: 0.88rem; color: #A9AAA4;">
+        <li><a href="../" style="color: #A9AAA4; text-decoration: none;" data-i18n="bcHome">الرئيسية</a></li>
+        <li>‹</li>
+        <li><a href="../philosophie/" style="color: #A9AAA4; text-decoration: none;" data-i18n="bcPhilo">الفلسفة</a></li>
+        <li>‹</li>
+        <li><a href="../philosophie/ecoles/stoicisme/" style="color: #A9AAA4; text-decoration: none;" data-i18n="bcStoic">الرواقية</a></li>
+        <li>‹</li>
+        <li style="color: #DFB15B; font-weight: 700;" id="bcCurrent">قوة الهدوء الداخلي</li>
+      </ol>
+    </nav>
+
+    <header class="article-hero" style="text-align: center; margin-bottom: 32px;">
+      <span class="featured-card-tag" style="background: rgba(223, 177, 91, 0.1); border: 1px solid rgba(223, 177, 91, 0.3); color: #DFB15B; padding: 4px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">🏛️ الفلسفة الرواقية • INNER CALM</span>
+      <h1 class="article-title" id="artTitle" style="font-size: clamp(2.2rem, 4vw, 3.2rem); font-family: 'Playfair Display', 'Amiri', serif; color: #FAF6EF; margin: 16px 0 12px; line-height: 1.3;">الرواقية: قوة الهدوء الداخلي وصناعة السكينة الباطنية</h1>
+      <p class="article-subtitle" id="artSubtitle" style="font-size: 1.15rem; color: #A9AAA4; max-width: 800px; margin: 0 auto 20px;">كيف يصنع التماسك الذهني قوة فاعلة تتجاوز ردود الأفعال العشوائية وتثبّت القلعة الباطنية.</p>
+      <div style="display: flex; justify-content: center; gap: 20px; font-size: 0.85rem; color: #DFB15B;">
+        <span>✍️ Hikma & Nour</span>
+        <span>⏱️ 11 min read</span>
+        <span>📜 Document V4</span>
       </div>
+      <div class="article-hero-media" style="margin-top: 24px;">
+        <img src="../stoicism_calm_strength_hero.jpg" alt="تمثال رخامي صامد وسط العاصفة" id="heroImg">
+        <div class="hero-caption" id="heroCaption">الصمود الرواقي: وجه رخامي صامت وسط عاصفة المطر والرياح، يرمز للهدوء الثابت المضاء بشعاع نوري.</div>
+      </div>
+    </header>
+
+    <nav class="article-toc">
+      <h3 style="font-size: 1.1rem; color: #E4C98A; margin: 0 0 14px; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 8px;" data-i18n="tocTitle">📑 محتويات الدراسة</h3>
+      <ol class="toc-list" id="tocList">
+        <li><a href="#sec1">1. الهدوء ليس سلبية أو انسحابًا</a></li>
+        <li><a href="#sec2">2. الفارق بين الحدث والتقييم الذهني</a></li>
+        <li><a href="#sec3">3. خلق المساحة الزمانية بين المثير والاستجابة</a></li>
+        <li><a href="#sec4">4. انضباط الموافقة المعرفية (Assent)</a></li>
+        <li><a href="#sec5">5. استقبال الانفعال دون الانقياد له</a></li>
+        <li><a href="#sec6">6. التوقع المسبق للمصاعب (Premeditatio Malorum)</a></li>
+        <li><a href="#sec7">7. بناء القلعة الباطنية (Inner Citadel)</a></li>
+        <li><a href="#sec8">8. تمرين عملي في ثلاث خطوات</a></li>
+        <li><a href="#sec9">9. الخاتمة والتأمل النهائي</a></li>
+      </ol>
+    </nav>
+
+    <div class="article-editorial-body" id="artBody" style="font-size: 1.05rem; line-height: 1.85; color: #E0DDD5;">
     </div>
 
-  </div>
+    <section class="recommended-articles-section" style="margin-top: 60px; border-top: 1px solid rgba(223, 177, 91, 0.2); padding-top: 40px;">
+      <h3 style="font-size: 1.3rem; color: #E4C98A; font-family: 'Amiri', serif; text-align: center; margin-bottom: 24px;" data-i18n="relatedTitle">📚 دراسات متعلقة</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+        <a href="introduction-stoicisme.html" style="background: #0D1814; border: 1px solid rgba(201, 168, 106, 0.2); border-radius: 16px; padding: 18px; text-decoration: none; color: inherit;">
+          <h4 style="color: #F2EEE5; font-size: 1rem; margin: 0 0 8px;">مدخل شامخ إلى الرواقية ←</h4>
+          <p style="font-size: 0.85rem; color: #A9AAA4; margin: 0;">تاريخ وأصول وأركان الفلسفة الرواقية الخالدة.</p>
+        </a>
+        <a href="wisdom-stoicism-control.html" style="background: #0D1814; border: 1px solid rgba(201, 168, 106, 0.2); border-radius: 16px; padding: 18px; text-decoration: none; color: inherit;">
+          <h4 style="color: #F2EEE5; font-size: 1rem; margin: 0 0 8px;">ثنائية التحكم والسيطرة ←</h4>
+          <p style="font-size: 0.85rem; color: #A9AAA4; margin: 0;">التمييز الحاسِم بين ما يخضع لإرادتنا وما يخرج عنها.</p>
+        </a>
+      </div>
+    </section>
+  </main>
 
+  <footer class="footer" style="padding: 50px 24px 30px; border-top: 1px solid var(--card-border); margin-top: 60px; background: rgba(7, 15, 10, 0.98);">
+    <div style="max-width: 1120px; margin: 0 auto; text-align: center; color: #A9AAA4; font-size: 0.85rem;">
+      <p>© 2026 حكمة ونور | Hikma & Nour — حديقة الأفكار.</p>
+    </div>
+  </footer>
 
-  <!-- Service Worker PWA Registration -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js')
-          .then(reg => console.log('[PWA] Service Worker registered:', reg.scope))
-          .catch(err => console.log('[PWA] Service Worker registration failed:', err));
+  <script type="module">
+    import TIKTOK_DATA from '../data_v11.js';
+
+    const ARTICLE_TEXTS = {
+      ar: {
+        title: "الرواقية: قوة الهدوء الداخلي وصناعة السكينة الباطنية",
+        subtitle: "كيف يصنع التماسك الذهني قوة فاعلة تتجاوز ردود الأفعال العشوائية وتثبّت القلعة الباطنية.",
+        heroCaption: "الصمود الرواقي: وجه رخامي صامت وسط عاصفة المطر والرياح، يرمز للهدوء الثابت المضاء بشعاع نوري.",
+        body: `
+          <section id="sec1" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Amiri', serif; font-size: 1.7rem; margin-top: 30px;">١. الهدوء ليس سلبية أو انسحابًا</h2>
+            <p>يظن الكثيرون أن الهدوء الرواقي يعني البرود التام أو الضعف، لكن الحقيقة الفلسفية على عكس ذلك تمامًا. الهدوء الرواقي هو <strong>قوة حية ومكتنزة</strong> تسمح للإنسان بادخار طاقته الذهنية وتوجيهها نحو القرار الصائب بدلاً من استهلاكها في الفزع أو الانفعال الهوجاء.</p>
+          </section>
+
+          <figure class="article-figure">
+            <img src="../stoicism_calm_inline_1.jpg" alt="شمعة محمية بفانوس زجاجي وسط المطر">
+            <figcaption>النور المحفوظ: الفانوس الرواقي الذي يحمي شعلة العقل الباطنية من رياح الظروف الخارجية.</figcaption>
+          </figure>
+
+          <section id="sec2" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Amiri', serif; font-size: 1.7rem; margin-top: 30px;">٢. الفارق بين الحدث والتقييم الذهني</h2>
+            <p>يؤكد إبيكتيتوس في مقولته الخالدة: <em>"ليست الأشياء هي ما يربك البشر، بل أحكامهم وانطباعاتهم عن تلك الأشياء."</em> عندما تقع مشكلة ما، فإن الحدث المادي محايد، أما المعاناة أو الغضب فيتولدان من التأويل الذهني الذي يخلعه العقل عليه.</p>
+          </section>
+
+          <section id="sec3" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Amiri', serif; font-size: 1.7rem; margin-top: 30px;">٣. خلق المساحة الزمانية بين المثير والاستجابة</h2>
+            <p>الانضباط الرواقي يتيح للإنسان إيقاف التدافع التلقائي لردود الأفعال، وخلق مسافة واعية بين المثير الخارجي والاستجابة الداخلية، حيث يكمن نضج الإنسان وحريته الاختيارية.</p>
+          </section>
+
+          <figure class="article-figure">
+            <img src="../stoicism_calm_inline_2.jpg" alt="بحيرة جبلية هادئة بعد العاصفة">
+            <figcaption>صفاء السطح الباطني: بحيرة العقل بعد العاصفة حيث تعود المياه إلى انعاكسها النقاط النقي.</figcaption>
+          </figure>
+
+          <section id="sec4" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Amiri', serif; font-size: 1.7rem; margin-top: 30px;">٤. انضباط الموافقة المعرفية (Assent)</h2>
+            <p>يرى الرواقيون أن العقل يستقبل الانطباعات الأوّلية تلقائيًا، لكن الانضباط يقتضي عدم إعطاء "الموافقة المعرفية" لأي انطباع مظلل إلا بعد فحصه وتفكيكه بحكمة.</p>
+          </section>
+
+          <section id="sec5" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Amiri', serif; font-size: 1.7rem; margin-top: 30px;">٥. استقبال الانفعال دون الانقياد له</h2>
+            <p>الرواقية لا تنكر المشاعر البشرية الطبيعية كالحزن أو الخوف المبدئي، بل تمنع هذه المشاعر من التحول إلى عواطف جارفة تحرك سلوك الإنسان وتفسد اتزانه.</p>
+          </section>
+
+          <section id="sec6" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Amiri', serif; font-size: 1.7rem; margin-top: 30px;">٦. التوقع المسبق للمصاعب (Premeditatio Malorum)</h2>
+            <p>ممارسة ترويض النفس على استحضار احتمال وقوع الأزمات والتحديات قبل حدوثها، حتى لا تفاجئ العقل بل تجده مستعدًا وثابتًا.</p>
+          </section>
+
+          <section id="sec7" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Amiri', serif; font-size: 1.7rem; margin-top: 30px;">٧. بناء القلعة الباطنية (Inner Citadel)</h2>
+            <p>القلعة الباطنية مفهوم صاغه ماركوس أوريليوس، ويعبر عن المساحة المقدسة داخل عقل الإنسان والتي لا يمكن لأي قوة خارجية اختراقها ما لم يسمح صاحبها بذلك.</p>
+          </section>
+
+          <section id="sec8" class="article-editorial-section" style="background: rgba(223, 177, 91, 0.05); border: 1px solid rgba(223, 177, 91, 0.25); border-radius: 18px; padding: 28px; margin-block: 30px;">
+            <h2 style="color: #E4C98A; font-family: 'Amiri', serif; font-size: 1.4rem; margin-top: 0;">🛠️ تمرين عملي: تثبيت الهدوء الباطني في 3 خطوات</h2>
+            <ol style="padding-inline-start: 20px; color: #FAF6EF;">
+              <li><strong>التوقف الفوري:</strong> عند وقوع أي استفزاز، خذ أنفاسًا بطيئة ولا تتكلم لمستودع 10 ثوانٍ.</li>
+              <li><strong>الفصل الذاتي:</strong> قل لنفسك: "هذا حدث خارجي، أما انزعاجي فهو رأيي الشخصي عنه."</li>
+              <li><strong>التصرف الفاضل:</strong> اختر الاستجابة التي تحقق العدل والحكمة بدلاً من التدافع الغاضب.</li>
+            </ol>
+          </section>
+
+          <section id="sec9" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Amiri', serif; font-size: 1.7rem; margin-top: 30px;">٩. الخاتمة والتأمل النهائي</h2>
+            <p>الهدوء الداخلي هو الهدية الكبرى التي يمنحها العقل الرواقي للإنسان الراغب في العيش برزانة وسيادة ذاتية.</p>
+          </section>
+        `
+      },
+      fr: {
+        title: "Le Stoïcisme : La force du calme intérieur",
+        subtitle: "Comment la maîtrise mentale construit une puissance agissante et érige la citadelle intérieure.",
+        heroCaption: "La résistance stoïcienne : un buste en marbre sous la pluie battante éclairé par la lumière dorée.",
+        body: `
+          <section id="sec1" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">1. Le calme n'est pas la passivité</h2>
+            <p>Le calme stoïcien est une <strong>force active et lucide</strong> qui permet d'économiser l'énergie psychique pour l'investir dans des choix vertueux.</p>
+          </section>
+
+          <figure class="article-figure">
+            <img src="../stoicism_calm_inline_1.jpg" alt="Lanterne protégeant une bougie sous la pluie">
+            <figcaption>La lumière préservée : la lanterne stoïcienne protégeant l'esprit des tempêtes extérieures.</figcaption>
+          </figure>
+
+          <section id="sec2" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">2. L'événement et le jugement</h2>
+            <p>Ce ne sont pas les choses qui nous troublent, mais l'opinion et le jugement que nous portons sur elles.</p>
+          </section>
+
+          <section id="sec3" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">3. Créer un espace avant la réaction</h2>
+            <p>Créer un espace conscient entre le stimulus extérieur et la réponse intérieure.</p>
+          </section>
+
+          <figure class="article-figure">
+            <img src="../stoicism_calm_inline_2.jpg" alt="Lac paisible de montagne après la tempête">
+            <figcaption>La sérénité intérieure : le lac de la pensée retrouvé après la tempête.</figcaption>
+          </figure>
+
+          <section id="sec4" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">4. La discipline de l'assentiment</h2>
+            <p>Examiner les impressions initiales avant de leur accorder une adhésion irréfléchie.</p>
+          </section>
+
+          <section id="sec5" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">5. Accueillir l'émotion sans lui obéir</h2>
+            <p>Reconnaître les mouvements affectifs naturels sans les laisser gouverner nos actes.</p>
+          </section>
+
+          <section id="sec6" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">6. La préméditation des difficultés</h2>
+            <p>Anticiper sereinement les épreuves pour prémunir l'esprit contre la surprise et la déstabilisation.</p>
+          </section>
+
+          <section id="sec7" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">7. Construire la citadelle intérieure</h2>
+            <p>Le sanctuaire inexpugnable de l'esprit conceptualisé par Marc Aurèle.</p>
+          </section>
+
+          <section id="sec8" class="article-editorial-section" style="background: rgba(223, 177, 91, 0.05); border: 1px solid rgba(223, 177, 91, 0.25); border-radius: 18px; padding: 28px; margin-block: 30px;">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-top: 0;">🛠️ Exercice pratique : Ancrer le calme en 3 étapes</h2>
+            <ol style="padding-inline-start: 20px;">
+              <li>Faites une pause de 10 secondes face à la provocation.</li>
+              <li>Distinguez l'événement brut de votre interprétation.</li>
+              <li>Choisissez une réponse guidée par la sagesse.</li>
+            </ol>
+          </section>
+
+          <section id="sec9" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">9. Conclusion et méditation finale</h2>
+            <p>La paix intérieure est le plus grand présent offert par la sagesse stoïcienne.</p>
+          </section>
+        `
+      },
+      en: {
+        title: "Stoicism: The Power of Inner Calm",
+        subtitle: "How mental composure builds active strength and fortifies the inner citadel.",
+        heroCaption: "Stoic endurance: A weathered marble bust amidst rain and wind illuminated by golden light.",
+        body: `
+          <section id="sec1" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">1. Calm is Not Passivity</h2>
+            <p>Stoic calm is an active strength preserving mental clarity for virtuous choices.</p>
+          </section>
+
+          <figure class="article-figure">
+            <img src="../stoicism_calm_inline_1.jpg" alt="Lantern protecting candle in rain">
+            <figcaption>Preserved flame: the lantern protecting the inner light from external storms.</figcaption>
+          </figure>
+
+          <section id="sec2" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">2. Events vs Judgments</h2>
+            <p>Men are disturbed not by things, but by the views which they take of things.</p>
+          </section>
+
+          <section id="sec3" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">3. Creating Space Before Response</h2>
+            <p>Cultivating a conscious interval between stimulus and reaction.</p>
+          </section>
+
+          <figure class="article-figure">
+            <img src="../stoicism_calm_inline_2.jpg" alt="Still mountain lake after storm">
+            <figcaption>Inner tranquility: the quieted lake of the mind after the storm clears.</figcaption>
+          </figure>
+
+          <section id="sec4" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">4. Discipline of Assent</h2>
+            <p>Examining initial impressions before granting unreflective agreement.</p>
+          </section>
+
+          <section id="sec5" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">6. Premeditation of Adversity</h2>
+            <p>Anticipating difficulties to prepare the mind for steadfast resolution.</p>
+          </section>
+
+          <section id="sec7" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">7. The Inner Citadel</h2>
+            <p>The unshakeable mental sanctuary described by Marcus Aurelius.</p>
+          </section>
+
+          <section id="sec8" class="article-editorial-section" style="background: rgba(223, 177, 91, 0.05); border: 1px solid rgba(223, 177, 91, 0.25); border-radius: 18px; padding: 28px; margin-block: 30px;">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-top: 0;">🛠️ Practical Exercise: 3 Steps to Calm</h2>
+            <ol style="padding-inline-start: 20px;">
+              <li>Pause for 10 seconds before reacting.</li>
+              <li>Separate external event from internal impression.</li>
+              <li>Respond with wisdom and justice.</li>
+            </ol>
+          </section>
+
+          <section id="sec9" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">9. Conclusion</h2>
+            <p>Inner peace is the supreme gift of Stoic wisdom.</p>
+          </section>
+        `
+      }
+    };
+
+    function getSavedLang() {
+      return localStorage.getItem('site_lang_v1') || localStorage.getItem('lang') || 'ar';
+    }
+
+    function saveLang(lang) {
+      localStorage.setItem('site_lang_v1', lang);
+      localStorage.setItem('lang', lang);
+    }
+
+    function updateLanguage(lang) {
+      const data = ARTICLE_TEXTS[lang] || ARTICLE_TEXTS.ar;
+
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+      document.getElementById('metaPageTitle').textContent = data.title + ' | Hikma & Nour';
+      document.getElementById('artTitle').textContent = data.title;
+      document.getElementById('artSubtitle').textContent = data.subtitle;
+      document.getElementById('heroCaption').textContent = data.heroCaption;
+      document.getElementById('artBody').innerHTML = data.body;
+      document.getElementById('activeLangName').textContent = lang === 'ar' ? 'العربية' : (lang === 'fr' ? 'Français' : 'English');
+
+      document.querySelectorAll('.lang-opt').forEach(opt => {
+        if (opt.getAttribute('data-lang') === lang) opt.classList.add('active');
+        else opt.classList.remove('active');
       });
     }
 
-    // PWA Install Prompt Handler
-    let deferredPrompt;
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      const installBtn = document.getElementById('pwaInstallBtn');
-      if (installBtn) {
-        installBtn.style.display = 'inline-flex';
-      }
-    });
+    document.addEventListener('DOMContentLoaded', () => {
+      updateLanguage(getSavedLang());
 
-    function triggerPwaInstall() {
-      if (deferredPrompt) {
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') {
-            console.log('[PWA] User accepted the install prompt');
-          }
-          deferredPrompt = null;
+      const langBtn = document.getElementById('langBtn');
+      const langDropdown = document.getElementById('langDropdown');
+      if (langBtn && langDropdown) {
+        langBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          langDropdown.classList.toggle('active');
         });
-      } else {
-        alert('لتثبيت التطبيق على هاتفك:\n1. اضغط على خيارات المتصفح (⋮ أو 📤)\n2. اختر "إضافة إلى الشاشة الرئيسية" (Add to Home Screen)');
+        document.addEventListener('click', (e) => {
+          if (!langBtn.contains(e.target) && !langDropdown.contains(e.target)) {
+            langDropdown.classList.remove('active');
+          }
+        });
       }
-    }
+
+      document.querySelectorAll('.lang-opt').forEach(opt => {
+        opt.addEventListener('click', (e) => {
+          const l = e.target.getAttribute('data-lang');
+          saveLang(l);
+          updateLanguage(l);
+          if (langDropdown) langDropdown.classList.remove('active');
+        });
+      });
+    });
   </script>
-<!-- Editorial V2: Rich Interlinking, Thinkers, Audio & Read Next -->
-  
-    <!-- Editorial V2: Maillage Penseur & Audio -->
-    <div class="editorial-connection-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 900px; margin: 40px auto;">
-      
-        <div style="padding: 22px; background: white; border: 1px solid var(--accent-gold); border-radius: 18px; display: flex; align-items: center; gap: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.04);">
-          <div style="font-size: 2.2rem;">🏛️</div>
-          <div style="flex-grow: 1;">
-            <span style="font-size: 0.75rem; color: var(--accent-gold); font-weight: 700; text-transform: uppercase;">فيلسوف المحور</span>
-            <h4 style="margin: 4px 0; font-size: 1.15rem; color: var(--dark-green);">ماركوس أوريليوس وسينيكا</h4>
-            <span style="font-size: 0.85rem; color: var(--text-charcoal);">أعمدة الفلسفة الرواقية الكلاسيكية</span>
-          </div>
-          <a href="../thinkers/" style="padding: 8px 14px; background: rgba(223, 177, 91, 0.15); border: 1px solid var(--accent-gold); color: var(--dark-green); border-radius: 20px; text-decoration: none; font-size: 0.85rem; font-weight: bold;">السيرة →</a>
-        </div>
-      
-      
-        <div style="padding: 22px; background: white; border: 1px solid var(--accent-gold); border-radius: 18px; display: flex; align-items: center; gap: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.04);">
-          <div style="font-size: 2.2rem;">🎧</div>
-          <div style="flex-grow: 1;">
-            <span style="font-size: 0.75rem; color: var(--accent-gold); font-weight: 700; text-transform: uppercase;">كتاب صوتي مرتبط</span>
-            <h4 style="margin: 4px 0; font-size: 1.15rem; color: var(--dark-green);">الأمير الصغير (Le Petit Prince)</h4>
-            <span style="font-size: 0.85rem; color: var(--text-charcoal);">حكمة البساطة والنظر بالقلب.</span>
-          </div>
-          <a href="../audio/?book=petit_prince" style="padding: 8px 14px; background: var(--accent-gold); color: var(--dark-green); border-radius: 20px; text-decoration: none; font-size: 0.85rem; font-weight: bold;">استمع 🎙️</a>
-        </div>
-      
-    </div>
-    
-  
-  
-    <!-- Editorial V2: Section À lire ensuite -->
-    <div class="editorial-read-next-box" style="margin: 50px auto 30px; max-width: 900px; padding: 28px; background: white; border: 2px solid var(--accent-gold); border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.06);">
-      <div style="font-size: 1.25rem; font-weight: bold; color: var(--dark-green); margin-bottom: 20px; display: flex; align-items: center; gap: 8px;">
-        <span>📚 مقالات وتأملات موصى بها لك :</span>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
-        
-          <a href="introduction-stoicisme.html" style="display: block; padding: 18px; background: var(--bg-cream); border: 1px solid rgba(223, 177, 91, 0.4); border-radius: 14px; text-decoration: none; color: inherit; transition: all 0.2s ease;">
-            <span style="font-size: 0.75rem; color: var(--accent-gold); font-weight: 700; display: block; margin-bottom: 6px;">أصول الرواقية</span>
-            <span style="font-size: 1rem; font-weight: 600; line-height: 1.4; color: var(--text-charcoal); display: block;">مدخل شامل إلى الفلسفة الرواقية ←</span>
-          </a>
-        
-          <a href="intelligence-emotionnelle-stoicisme.html" style="display: block; padding: 18px; background: var(--bg-cream); border: 1px solid rgba(223, 177, 91, 0.4); border-radius: 14px; text-decoration: none; color: inherit; transition: all 0.2s ease;">
-            <span style="font-size: 0.75rem; color: var(--accent-gold); font-weight: 700; display: block; margin-bottom: 6px;">ذكاء عاطفي</span>
-            <span style="font-size: 1rem; font-weight: 600; line-height: 1.4; color: var(--text-charcoal); display: block;">الذكاء العاطفي والتحكم بالانفعالات ←</span>
-          </a>
-        
-          <a href="../quotes/calendar/" style="display: block; padding: 18px; background: var(--bg-cream); border: 1px solid rgba(223, 177, 91, 0.4); border-radius: 14px; text-decoration: none; color: inherit; transition: all 0.2s ease;">
-            <span style="font-size: 0.75rem; color: var(--accent-gold); font-weight: 700; display: block; margin-bottom: 6px;">تقويم الحكمة</span>
-            <span style="font-size: 1rem; font-weight: 600; line-height: 1.4; color: var(--text-charcoal); display: block;">تقويم الحكمة ٣٦٥ يوماً من التأمل ←</span>
-          </a>
-        
-      </div>
-    </div>
-  
-  <!-- End Editorial V2 -->
-  
-  <section class="article-engagement" data-article-id="stoicisme-force-calme" data-article-title-fr="" data-article-title-ar="" data-article-title-en=""></section>
-  <script src="../assets/js/article-engagement.js"></script>
 </body>
 </html>

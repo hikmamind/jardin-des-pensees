@@ -1,422 +1,443 @@
-﻿<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <title>مدخل شامل إلى الفلسفة الرواقية | Hikma & Nour</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
-    
-    :root {
-      --bg-cream: #FAF6F0;
-      --dark-green: #0D1E13;
-      --accent-gold: #DFB15B;
-      --text-charcoal: #2C3E35;
-    }
-    
-    body {
-      background-color: var(--bg-cream);
-      color: var(--text-charcoal);
-      font-family: 'Amiri', serif;
-      margin: 0;
-      padding: 0;
-      direction: rtl;
-    }
-    
-    .no-print {
-      background: var(--dark-green);
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-      border-bottom: 2px solid var(--accent-gold);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    
-    .no-print button {
-      background: var(--accent-gold);
-      color: var(--dark-green);
-      border: none;
-      padding: 10px 25px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      border-radius: 30px;
-      cursor: pointer;
-      font-family: 'Amiri', serif;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-    
-    .no-print button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(223, 177, 91, 0.4);
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .book-container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    
-    .page {
-      background: white;
-      border: 3px double var(--accent-gold);
-      border-radius: 12px;
-      padding: 50px 60px;
-      margin-bottom: 50px;
-      box-shadow: 0 10px 30px rgba(13, 30, 19, 0.05);
-      position: relative;
-      min-height: 850px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-sizing: border-box;
-    }
-    
-    .cover-page {
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      min-height: 850px;
-    }
-    
-    .cover-title {
-      font-size: 3.5rem;
-      color: var(--dark-green);
-      margin: 20px 0;
-      font-weight: bold;
-    }
-    
-    .cover-subtitle {
-      font-size: 1.8rem;
-      color: var(--accent-gold);
-      margin-bottom: 40px;
-      border-bottom: 2px solid var(--accent-gold);
-      padding-bottom: 20px;
-      width: 80%;
-    }
-    
-    .cover-desc {
-      font-size: 1.3rem;
-      color: var(--text-charcoal);
-      line-height: 1.8;
-      max-width: 600px;
-      margin: 20px auto;
-    }
-    
-    .cover-footer {
-      font-size: 1.2rem;
-      color: var(--dark-green);
-      font-weight: bold;
-      margin-top: 60px;
-    }
-    
-    .page-content-row {
-      display: flex;
-      gap: 40px;
-      align-items: stretch;
-      margin-top: 20px;
-    }
-    
-    .text-column {
-      flex: 1.6;
-    }
-    
-    .illustration-column {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #FAF7F2;
-      border-radius: 12px;
-      border: 1px solid rgba(223, 177, 91, 0.15);
-      padding: 30px;
-      box-shadow: inset 0 0 15px rgba(13, 30, 19, 0.02);
-    }
-    
-    .paragraph-text {
-      font-size: 1.25rem;
-      line-height: 1.8;
-      text-align: justify;
-      color: var(--text-charcoal);
-      margin-bottom: 20px;
-    }
-    
-    .page-footer {
-      border-top: 1px solid #f0f0f0;
-      padding-top: 15px;
-      display: flex;
-      justify-content: space-between;
+  <!-- Primary Meta Tags -->
+  <title id="metaPageTitle">مدخل شامخ إلى الرواقية: تاريخ، أصول وركائز الفلسفة الخالدة | حكمة ونور</title>
+  <meta name="description" id="metaPageDesc" content="دراسة فلسفية رصينة تشرح نشأة الرواقية، من رواق زينون حتى ماركوس أوريليوس، وتفكك التناغم بين العقل والأخلاق والفيزياء.">
+  <meta name="author" content="Hikma & Nour | حكمة ونور">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" id="ogPageTitle" content="مدخل شامخ إلى الرواقية: تاريخ، أصول وركائز الفلسفة الخالدة">
+  <meta property="og:description" id="ogPageDesc" content="استكشاف تاريخي وفلسفي عميق لنشأة الفلسفة الرواقية، وتفكيك الانطباعات الخاطئة حولها.">
+  <meta property="og:image" content="https://jardin-des-pensees.onrender.com/stoicism_intro_stoa_hero.jpg">
+  <meta property="og:site_name" content="Hikma & Nour — حكمة ونور">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" id="twPageTitle" content="مدخل شامخ إلى الرواقية: تاريخ، أصول وركائز الفلسفة الخالدة">
+  <meta name="twitter:description" id="twPageDesc" content="استكشاف تاريخي وفلسفي عميق لنشأة الفلسفة الرواقية.">
+  <meta name="twitter:image" content="https://jardin-des-pensees.onrender.com/stoicism_intro_stoa_hero.jpg">
+
+  <link rel="icon" type="image/png" href="../brand_logo_official.png">
+  <link rel="stylesheet" href="../style.css?v=20">
+  <link rel="stylesheet" href="../templates/article-premium-v4.css?v=6">
+  <link rel="stylesheet" href="../assets/css/article-engagement.css">
+
+  <style>
+    body.article-premium-body {
+      background-color: #070F0A !important;
+      color: #FAF6EF;
       font-size: 1rem;
-      color: #999;
-      margin-top: 40px;
+      line-height: 1.8;
     }
-    
-    @media (max-width: 768px) {
-      .page-content-row {
-        flex-direction: column;
-      }
-      .illustration-column {
-        min-height: 200px;
-        order: -1;
-      }
+    .article-hero-media img {
+      width: 100%;
+      height: clamp(280px, 42vw, 540px);
+      object-fit: cover;
+      border-radius: 18px;
     }
-    
-    @media print {
-      body {
-        background: white;
-      }
-      .no-print {
-        display: none;
-      }
-      .book-container {
-        margin: 0;
-        max-width: 100%;
-        padding: 0;
-      }
-      .page {
-        border: none;
-        box-shadow: none;
-        margin: 0;
-        padding: 40px;
-        page-break-after: always;
-        min-height: 100vh;
-      }
+    .article-figure {
+      margin-block: 2.5rem;
+      margin-inline: 0;
+    }
+    .article-figure img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid rgba(201, 168, 106, 0.24);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.36);
+    }
+    .article-figure figcaption {
+      margin-block-start: 0.75rem;
+      color: #A9AAA4;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      text-align: center;
     }
   </style>
 
-  <!-- PWA & Mobile Web App Meta -->
-  <link rel="manifest" href="./manifest.json">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="حكمة ونور">
-  <link rel="apple-touch-icon" href="./icon-192.png">
-  <meta name="theme-color" content="#0D1410">
-
-
-  <meta name="description" content="أصول الفلسفة الرواقية من زينون إلى ماركوس أوريليوس وأهم مبادئ العيش بانسجام مع الطبيعة والعقل.">
-  <link rel="canonical" href="https://jardin-des-pensees.onrender.com/files/introduction-stoicisme.html">
-  <link rel="icon" type="image/png" href="https://jardin-des-pensees.onrender.com/brand_logo_official.png">
-  
-  <!-- Open Graph -->
-  <meta property="og:site_name" content="Hikma & Nour — حكمة ونور">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="مدخل شامل إلى الفلسفة الرواقية | Hikma & Nour">
-  <meta property="og:description" content="أصول الفلسفة الرواقية من زينون إلى ماركوس أوريليوس وأهم مبادئ العيش بانسجام مع الطبيعة والعقل.">
-  <meta property="og:image" content="https://jardin-des-pensees.onrender.com/marc_aurelius_writing.jpg">
-  <meta property="og:url" content="https://jardin-des-pensees.onrender.com/files/introduction-stoicisme.html">
-  <meta property="og:locale" content="ar_AR">
-  
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="مدخل شامل إلى الفلسفة الرواقية | Hikma & Nour">
-  <meta name="twitter:description" content="أصول الفلسفة الرواقية من زينون إلى ماركوس أوريليوس وأهم مبادئ العيش بانسجام مع الطبيعة والعقل.">
-  <meta name="twitter:image" content="https://jardin-des-pensees.onrender.com/marc_aurelius_writing.jpg">
-  
-  <!-- JSON-LD Structured Data Schema -->
+  <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "مدخل شامل إلى الفلسفة الرواقية",
-    "description": "أصول الفلسفة الرواقية من زينون إلى ماركوس أوريليوس وأهم مبادئ العيش بانسجام مع الطبيعة والعقل.",
-    "image": "https://jardin-des-pensees.onrender.com/marc_aurelius_writing.jpg",
-    "datePublished": "2026-08-01",
-    "dateModified": "2026-08-14",
-    "inLanguage": "ar",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://jardin-des-pensees.onrender.com/files/introduction-stoicisme.html"
-    },
-    "author": {
-      "@type": "Organization",
-      "name": "حكمة ونور — Hikma & Nour",
-      "url": "https://jardin-des-pensees.onrender.com/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Hikma & Nour",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://jardin-des-pensees.onrender.com/brand_logo_official.png"
-      }
-    }
+    "headline": "مدخل شامخ إلى الرواقية: تاريخ، أصول وركائز الفلسفة الخالدة",
+    "image": ["https://jardin-des-pensees.onrender.com/stoicism_intro_stoa_hero.jpg"],
+    "inLanguage": ["ar", "fr", "en"],
+    "author": { "@type": "Organization", "name": "Hikma & Nour" },
+    "publisher": { "@type": "Organization", "name": "Hikma & Nour", "logo": { "@type": "ImageObject", "url": "https://jardin-des-pensees.onrender.com/brand_logo_official.png" } }
   }
   </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "الرئيسية",
-        "item": "https://jardin-des-pensees.onrender.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "المقالات",
-        "item": "https://jardin-des-pensees.onrender.com/articles/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "مدخل شامل إلى الفلسفة الرواقية",
-        "item": "https://jardin-des-pensees.onrender.com/files/introduction-stoicisme.html"
-      }
-    ]
-  }
-  </script>
-  <link rel="stylesheet" href="../assets/css/article-engagement.css">
 </head>
-<body>
+<body class="article-premium-body">
 
-  <div class="no-print">
-    <button onclick="window.print()">🖨️ طباعة أو حفظ كملف PDF</button>
-  </div>
-
-  <div class="book-container">
-    
-    <!-- Cover Page -->
-    <div class="page cover-page">
-      <h1 class="cover-title">دليل عملي لتطبيق الرواقية الحديثة</h1>
-      <div class="cover-subtitle">تمارين يومية للتغلب على القلق وتطوير الذات</div>
-      <div style="margin: 30px 0;">
-        
-  <svg viewBox="0 0 100 100" width="100%" height="240">
-    <path d="M 50,15 C 65,15 80,20 80,20 L 80,50 C 80,70 65,82 50,88 C 35,82 20,70 20,50 L 20,20 C 20,20 35,15 50,15 Z" fill="none" stroke="var(--dark-green)" stroke-width="3"/>
-    <path d="M 50,20 C 62,20 74,24 74,24 L 74,48 C 74,64 62,75 50,81 C 38,75 26,64 26,48 L 26,24 C 26,24 38,20 50,20 Z" fill="var(--accent-gold)" opacity="0.8"/>
-    <line x1="50" y1="20" x2="50" y2="81" stroke="var(--dark-green)" stroke-width="2"/>
-    <line x1="26" y1="48" x2="74" y2="48" stroke="var(--dark-green)" stroke-width="2"/>
-  </svg>
-
+  <header class="navbar-header" id="mainHeader">
+    <nav class="navbar" aria-label="Navigation principale">
+      <a href="../" class="nav-brand" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+        <img src="../brand_logo_official.png" alt="Hikma & Nour" class="brand-logo-img" style="width:38px; height:38px;">
+        <span class="brand-name" style="font-family: 'Playfair Display', serif; font-weight:800; color:var(--accent-gold);">HIKMA & NOUR</span>
+      </a>
+      <div class="nav-menu" id="navMenu">
+        <a href="../" class="nav-link" data-i18n="navHome">الرئيسية</a>
+        <a href="../philosophie/" class="nav-link active" data-i18n="navPhilosophy">الفلسفة</a>
+        <a href="../psychologie/" class="nav-link" data-i18n="navPsychology">علم النفس</a>
+        <a href="../developpement-personnel/" class="nav-link" data-i18n="navDevelopment">تطوير الذات</a>
+        <a href="../thinkers/" class="nav-link" data-i18n="navThinkers">المفكرون</a>
       </div>
-      <div class="cover-footer">HIKMA & NOUR | الحكمة • الفلسفة • علم النفس</div>
-    </div>
-    
-    <!-- Reading Page -->
-    <div class="page">
-      <div>
-        <h1 class="cover-title" style="font-size: 2.2rem; text-align: center;">دليل عملي لتطبيق الرواقية الحديثة</div>
-        <div class="cover-subtitle" style="font-size: 1.4rem; text-align: center; margin: 10px auto 30px; width: 60%;">تمارين يومية للتغلب على القلق وتطوير الذات</div>
-        
-        <div class="page-content-row">
-          <!-- Text side -->
-          <div class="text-column">
-            <p class="paragraph-text">لم تُصمم الفلسفة الرواقية لتكون مادة للجدل في قاعات الجامعات، بل لتكون ممارسة حية في شوارع المدن وفي أعماق الضمير الإنساني. في عصرنا الحالي المليء بالقلق والتشتت الرقمي والضغوط المستمرة، تقدم الرواقية دليلاً عملياً لحماية توازننا النفسي. يستعرض هذا الدليل ثلاثة تمارين رواقية أساسية وسهلة التطبيق لدمجها في جدولك اليومي وتغيير جودة حياتك.</p><p class="paragraph-text">التمرين الأول هو التأمل الصباحي الاستباقي. بمجرد استيقاظك، وقبل أن تفتح شاشة هاتفك، خذ بضع دقائق لتتخيل يومك وتستعد له نفسياً. طبق نصيحة ماركوس أوريليوس الذهبية: 'قل لنفسك في الصباح: سأقابل اليوم أشخاصاً مزعجين، وجاحدين، وحاسدين، وكاذبين. لكن لا أحد منهم يستطيع أن يؤذيني لأنني أدرك طبيعة الخير والجميل'. هذا التوقع الذكي يحميك من الانفعال السريع والغضب ويجعلك تقود المواقف بحكمة.</p><p class="paragraph-text">التمرين الثاني هو التدوين الفلسفي المستمر وكتابة المذكرات. على خطى ماركوس أوريليوس، يساعدك تدوين مشاعرك وأفكارك في خلق مسافة صحية بين الحدث الخارجي رد فعلك العاطفي. عندما تشعر بموجة من الغضب أو القلق، اكتبها بأسلوب موضوعي وكأنك مراقب خارجي محايد. اسأل نفسك دائماً سؤال إبيكتيتوس: 'هل هذا الأمر تحت سيطرتي؟' إذا كانت الإجابة لا، قل لنفسك: 'هذا لا يعنيني' وركز طاقتك على ما يمكنك فعله بالفعل.</p><p class="paragraph-text">التمرين الثالث هو مراجعة النفس المسائية قبل النوم. قيّم يومك بطرح ثلاثة أسئلة واضحة وصادقة: ما الذي قمت به بشكل جيد اليوم؟ أين خالفت مبادئي الأخلاقية؟ وكيف يمكنني تحسين تصرفاتي غداً؟ يساعدك هذا التقييم الهادئ والخالي من جلد الذات على إغلاق يومك بسلام وتصفية ذهنك لنوم عميق ومريح. الاستمرار على هذه التمارين الثلاثة يبني لك درعاً نفسياً لا يخترق.</p>
-          </div>
-          
-          <!-- Illustration side -->
-          <div class="illustration-column">
-            
-  <svg viewBox="0 0 100 100" width="100%" height="240">
-    <path d="M 50,15 C 65,15 80,20 80,20 L 80,50 C 80,70 65,82 50,88 C 35,82 20,70 20,50 L 20,20 C 20,20 35,15 50,15 Z" fill="none" stroke="var(--dark-green)" stroke-width="3"/>
-    <path d="M 50,20 C 62,20 74,24 74,24 L 74,48 C 74,64 62,75 50,81 C 38,75 26,64 26,48 L 26,24 C 26,24 38,20 50,20 Z" fill="var(--accent-gold)" opacity="0.8"/>
-    <line x1="50" y1="20" x2="50" y2="81" stroke="var(--dark-green)" stroke-width="2"/>
-    <line x1="26" y1="48" x2="74" y2="48" stroke="var(--dark-green)" stroke-width="2"/>
-  </svg>
-
-          </div>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <button class="lang-selector-btn" id="langBtn" aria-label="تغيير اللغة">🌐 <span id="activeLangName">العربية</span> ▾</button>
+        <div class="lang-dropdown" id="langDropdown">
+          <button class="lang-opt active" data-lang="ar">العربية (AR)</button>
+          <button class="lang-opt" data-lang="fr">Français (FR)</button>
+          <button class="lang-opt" data-lang="en">English (EN)</button>
         </div>
       </div>
-      
-      <div class="page-footer">
-        <span>دليل الرواقية التطبيقي</span>
-        <span>2</span>
+    </nav>
+  </header>
+
+  <main class="article-main-container" style="padding-top: 40px;">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumb-container" aria-label="Fil d'Ariane">
+      <ol class="breadcrumb-list" style="display: flex; gap: 8px; list-style: none; padding: 0; font-size: 0.88rem; color: #A9AAA4;">
+        <li><a href="../" style="color: #A9AAA4; text-decoration: none;" data-i18n="bcHome">الرئيسية</a></li>
+        <li>‹</li>
+        <li><a href="../philosophie/" style="color: #A9AAA4; text-decoration: none;" data-i18n="bcPhilo">الفلسفة</a></li>
+        <li>‹</li>
+        <li><a href="../philosophie/ecoles/stoicisme/" style="color: #A9AAA4; text-decoration: none;" data-i18n="bcStoic">الرواقية</a></li>
+        <li>‹</li>
+        <li style="color: #DFB15B; font-weight: 700;" id="bcCurrent">مدخل شامخ إلى الرواقية</li>
+      </ol>
+    </nav>
+
+    <!-- Article Hero -->
+    <header class="article-hero" style="text-align: center; margin-bottom: 32px;">
+      <span class="featured-card-tag" style="background: rgba(223, 177, 91, 0.1); border: 1px solid rgba(223, 177, 91, 0.3); color: #DFB15B; padding: 4px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">🏛️ الفلسفة الرواقية • STOICISM</span>
+      <h1 class="article-title" id="artTitle" style="font-size: clamp(2.2rem, 4vw, 3.2rem); font-family: 'Playfair Display', 'Amiri', serif; color: #FAF6EF; margin: 16px 0 12px; line-height: 1.3;">مدخل شامخ إلى الرواقية: أصول وركائز الفلسفة الخالدة</h1>
+      <p class="article-subtitle" id="artSubtitle" style="font-size: 1.15rem; color: #A9AAA4; max-width: 800px; margin: 0 auto 20px;">تاريخ نشأة المدرسة الرواقية، ثلاثية الفيزياء والمنطق والأخلاق، وكيف تصنع القلعة الباطنية في مواجهة تقلّبات الحياة.</p>
+      <div style="display: flex; justify-content: center; gap: 20px; font-size: 0.85rem; color: #DFB15B;">
+        <span>✍️ Hikma & Nour</span>
+        <span>⏱️ 12 min read</span>
+        <span>📜 Document V4</span>
       </div>
+      <div class="article-hero-media" style="margin-top: 24px;">
+        <img src="../stoicism_intro_stoa_hero.jpg" alt="رواق الفلسفة الرواقية القديم" id="heroImg">
+        <div class="hero-caption" id="heroCaption">الرواق المعمّد (Stoa Poikilè) في أثينا، حيث انطلقت الفلسفة الرواقية على يد زينون الكيتيومي.</div>
+      </div>
+    </header>
+
+    <!-- Article TOC -->
+    <nav class="article-toc">
+      <h3 style="font-size: 1.1rem; color: #E4C98A; margin: 0 0 14px; border-bottom: 1px solid rgba(223, 177, 91, 0.2); padding-bottom: 8px;" data-i18n="tocTitle">📑 محتويات الدراسة</h3>
+      <ol class="toc-list" id="tocList">
+        <li><a href="#sec1">1. المدخل الفلسفي: البحث عن السكينة</a></li>
+        <li><a href="#sec2">2. نشأة المدرسة تحت الرواق (Stoa Poikilè)</a></li>
+        <li><a href="#sec3">3. أضلاع الفلسفة الثلاثة: المنطق، الفيزياء، والأخلاق</a></li>
+        <li><a href="#sec4">4. العيش وفق الطبيعة والعقل الكوني</a></li>
+        <li><a href="#sec5">5. الفضيلة كخير مطلق والتمييز بين المؤثرات</a></li>
+        <li><a href="#sec6">6. تصحيح المفاهيم: الرواقية ليست جفافًا عاطفيًا</a></li>
+        <li><a href="#sec7">7. رحلة الفلسفة من أثينا إلى رومية المعاصرة</a></li>
+        <li><a href="#sec8">8. تمرين عملي: فحص انطباعات الصباح</a></li>
+        <li><a href="#sec9">9. الخاتمة والتأمل النهائي</a></li>
+      </ol>
+    </nav>
+
+    <!-- Editorial Body Content Container -->
+    <div class="article-editorial-body" id="artBody" style="font-size: 1.05rem; line-height: 1.85; color: #E0DDD5;">
+      <!-- Content populated dynamically via JS Module for AR, FR, EN -->
     </div>
 
-  </div>
+    <!-- Related Articles -->
+    <section class="recommended-articles-section" style="margin-top: 60px; border-top: 1px solid rgba(223, 177, 91, 0.2); padding-top: 40px;">
+      <h3 style="font-size: 1.3rem; color: #E4C98A; font-family: 'Amiri', serif; text-align: center; margin-bottom: 24px;" data-i18n="relatedTitle">📚 دراسات متعلقة في المدرسة الرواقية</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+        <a href="stoicisme-force-calme.html" style="background: #0D1814; border: 1px solid rgba(201, 168, 106, 0.2); border-radius: 16px; padding: 18px; text-decoration: none; color: inherit;">
+          <h4 style="color: #F2EEE5; font-size: 1rem; margin: 0 0 8px;">الرواقية: قوة الهدوء الداخلي ←</h4>
+          <p style="font-size: 0.85rem; color: #A9AAA4; margin: 0;">كيف تسيطر على الانفعالات وتواجه التحديات برزانة وثبات.</p>
+        </a>
+        <a href="intelligence-emotionnelle-stoicisme.html" style="background: #0D1814; border: 1px solid rgba(201, 168, 106, 0.2); border-radius: 16px; padding: 18px; text-decoration: none; color: inherit;">
+          <h4 style="color: #F2EEE5; font-size: 1rem; margin: 0 0 8px;">الذكاء العاطفي والرواقية ←</h4>
+          <p style="font-size: 0.85rem; color: #A9AAA4; margin: 0;">فحص الانطباعات وتنظيم المشاعر دون كبت عاطفي.</p>
+        </a>
+      </div>
+    </section>
+  </main>
 
+  <footer class="footer" style="padding: 50px 24px 30px; border-top: 1px solid var(--card-border); margin-top: 60px; background: rgba(7, 15, 10, 0.98);">
+    <div style="max-width: 1120px; margin: 0 auto; text-align: center; color: #A9AAA4; font-size: 0.85rem;">
+      <p>© 2026 حكمة ونور | Hikma & Nour — حديقة الأفكار. مساحة للتأمل الفلسفي الرصين.</p>
+    </div>
+  </footer>
 
-  <!-- Service Worker PWA Registration -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js')
-          .then(reg => console.log('[PWA] Service Worker registered:', reg.scope))
-          .catch(err => console.log('[PWA] Service Worker registration failed:', err));
+  <script type="module">
+    import TIKTOK_DATA from '../data_v11.js';
+
+    const ARTICLE_TEXTS = {
+      ar: {
+        title: "مدخل شامخ إلى الرواقية: أصول وركائز الفلسفة الخالدة",
+        subtitle: "تاريخ نشأة المدرسة الرواقية، ثلاثية الفيزياء والمنطق والأخلاق، وكيف تصنع القلعة الباطنية في مواجهة تقلّبات الحياة.",
+        heroCaption: "الروق المعمّد (Stoa Poikilè) في أثينا، حيث انطلقت الفلسفة الرواقية على يد زينون الكيتيومي.",
+        body: `
+          <section id="sec1" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Amiri', serif; font-size: 1.7rem; margin-top: 30px;">١. المدخل الفلسفي: البحث عن السكينة وسط اضطراب العالم</h2>
+            <p>لم تكن الرواقية مجرد ترف فكري يخوض فيه الفلاسفة في قاعات مكيّفة، بل ولدت في أثينا العتيقة خلال فترة اتسمت بالتحولات السياسية الصاخبة والانهيارات الاجتماعية. جاءت الرواقية لتجيب عن سؤال ملحّ يواجه كل إنسان: <strong>كيف يحافظ المرء على هدوء قلبه وصفاء عقله عندما تعصف به الأقدار وتتداخل الأمور خارج إرادته؟</strong></p>
+            <p>تتمحور الفلسفة الرواقية حول فكرة أساسية مفادها أن المعاناة الإنسانية لا تنشأ من الأحداث الخارجية بذاتها، بل من التقييمات والأحكام الذهنية التي نخلعها على تلك الأحداث. ومن هنا، فإن الاستقلال الباطني وبناء القلعة الداخلية يمثلان الغاية الأسمى لكل من يسعى وراء الحكمة.</p>
+          </section>
+
+          <figure class="article-figure">
+            <img src="../stoicism_intro_inline_1.jpg" alt="عمود يوناني قديم بعد المطر">
+            <figcaption>الصمود أمام عواصف الزمان: رمزية العمود الرواقي الذي يرتكز على قاعدته الثابتة مهام تعاقبت الفصول.</figcaption>
+          </figure>
+
+          <section id="sec2" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Amiri', serif; font-size: 1.7rem; margin-top: 30px;">٢. نشأة المدرسة تحت الرواق (Stoa Poikilè)</h2>
+            <p>في نحو عام 300 قبل الميلاد، أسس زينون الكيتيومي (Zeno of Citium) مدرسته في قلب أثينا. وعلى عكس الأكاديميات المغلقة، كان زينون يلقي دروسه تحت رواق أثري مزيّن باللوحات يُعرف باسم <em>الرواق المزخرف (Stoa Poikilè)</em>، ومن هذا المكان اكتسبت المدرسة اسمها الشهير: <strong>الرواقية (Stoicism)</strong>.</p>
+            <p>كان اختيار الرواق المفتوح يعكس فلسفة عميقة: الفلسفة ليست معزولة عن الشارع، بل هي أداة يومية مشاعة لكل مواطن يبحث عن الانضباط الأخلاقي واستعادة زمام النفس.</p>
+          </section>
+
+          <section id="sec3" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Amiri', serif; font-size: 1.7rem; margin-top: 30px;">٣. أضلاع الفلسفة الثلاثة: المنطق، الفيزياء، والأخلاق</h2>
+            <p>شبّه الرواقيون الأوائل الفلسفة ببستان مثمر: المنطق هو السور الذي يحمي البستان، والفيزياء هي التربة والأشجار، والأخلاق هي الثمار التي يجنيها الإنسان. فلا قيمة لمنطق بلا أخلاق، ولا استقامة لأخلاق بلا فهم عميق لقوانين الطبيعة والكون.</p>
+            <ul style="padding-inline-start: 24px; color: #FAF6EF;">
+              <li><strong>المنطق الرواقي:</strong> تدريب الذهن على تمحيص الانطباعات الأولية وتفنيك المغالطات قبل إعطاء الاعتماد القلبي.</li>
+              <li><strong>الفيزياء الرواقية:</strong> فهم النظام الكوني الكلي (Logos) والإيمان بأن العالم يسير وفق نظام عقلاني متسق.</li>
+              <li><strong>الأخلاق الرواقية:</strong> توجيه الإرادة نحو الفضيلة والعمل النافع والمحافظة على الواجب الاجتماعي.</li>
+            </ul>
+          </section>
+
+          <figure class="article-figure">
+            <img src="../stoicism_intro_inline_2.jpg" alt="مخطوطة قديمة ومصباح زيت زيتي">
+            <figcaption>أدوات التأمل الرواقي: المخطوط والمصباح الزيتي يرمزان إلى السهر والمراجعة الذاتية المستمرة.</figcaption>
+          </figure>
+
+          <section id="sec4" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Amiri', serif; font-size: 1.7rem; margin-top: 30px;">٤. العيش وفق الطبيعة والعقل الكوني</h2>
+            <p>عبارة <em>"العيش وفق الطبيعة"</em> عند الرواقيين لا تعني الانعزال في الغابات، بل تعني استخدام العقل الفطري الذي ميّز الله به الإنسان، والتناغم مع النظام الكوني السائد. بما أن الإنسان كائن عاقل واجتماعي، فإن العيش الطبيعي يتطلب ممارسة العقل والتعاون مع بني البشر لبناء مجتمع فاضل.</p>
+          </section>
+
+          <section id="sec5" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Amiri', serif; font-size: 1.7rem; margin-top: 30px;">٥. الفضيلة كخير مطلق والتمييز بين المؤثرات</h2>
+            <p>تضع الرواقية الفضيلة (Virtue) في مقام الخير الوحيد والكامل، وتقسم الفضائل إلى أربع ركائز رئيسية: <strong>الحكمة، الشجاعة، العدل، والاعتدال</strong>. وتعتبر الرواقية أن الصحة والثروة والجاه هي أُمور "مفضّلة ولكنها غير حاسمة" (Preferred Indifferents)، فلا تمنح الإنسان السعادة الذاتية ولا تسلبها منه إذا غابت.</p>
+          </section>
+
+          <section id="sec6" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Amiri', serif; font-size: 1.7rem; margin-top: 30px;">٦. تصحيح المفاهيم: الرواقية ليست جفافًا عاطفيًا</h2>
+            <p>من الخطأ الشائع خلط الرواقية بالجمود أو قسوة القلب. الرواقي لا يقمع عواطفه بل يفهم مصدرها، ولا ينعزل عن مجتمعه بل يمارس واجبه الإنساني بأعلى درجات المسؤولية والرحمة الواعية.</p>
+          </section>
+
+          <section id="sec7" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Amiri', serif; font-size: 1.7rem; margin-top: 30px;">٧. رحلة الفلسفة من أثينا إلى رومية المعاصرة</h2>
+            <p>انتقلت الفلسفة الرواقية من أثينا إلى الإمبراطورية الرومانية، وتجسّدت في ثلاثة أعلام كبار: <strong>سنيكا (Seneca)</strong> السياسي والكاتب المسرحي، و<strong>إبيكتيتوس (Epictetus)</strong> العبد المحرر الذي أصبح معلمًا شامخًا، و<strong>ماركوس أوريليوس (Marcus Aurelius)</strong> الإمبراطور الفيلسوف الذي كتب يومياته الباطنية في ثكنات الحرب.</p>
+          </section>
+
+          <section id="sec8" class="article-editorial-section" style="background: rgba(223, 177, 91, 0.05); border: 1px solid rgba(223, 177, 91, 0.25); border-radius: 18px; padding: 28px; margin-block: 30px;">
+            <h2 style="color: #E4C98A; font-family: 'Amiri', serif; font-size: 1.4rem; margin-top: 0;">🛠️ تمرين عملي: فحص انطباعات الصباح (Morning Audit)</h2>
+            <ol style="padding-inline-start: 20px; color: #FAF6EF;">
+              <li>عند الاستيقاظ، استحضر الفكرة التالية: "قد أواجه اليوم أمورًا مزعجة أو أشخاصًا قساة، لكن ذلك لن ينال من سلامي الداخلي."</li>
+              <li>قسّم مهامك إلى ما يقع ضمن قدرتك المباشرة وما لا يقع ضمن إرادتك.</li>
+              <li>وجّه كامل تركيزك واهتمامك نحو جودة أفعالك وقراراتك الفردية.</li>
+            </ol>
+          </section>
+
+          <section id="sec9" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Amiri', serif; font-size: 1.7rem; margin-top: 30px;">٩. الخاتمة والتأمل النهائي</h2>
+            <p>إن الرواقية ليست مجرد أطروحة تاريخية، بل هي مدرسة حياة حية تمنح الإنسان المعاصر البوصلة الأخلاقية والقلعة الذهنية الصامدة أمام متطلبات العصر واضطراباته.</p>
+          </section>
+        `
+      },
+      fr: {
+        title: "Introduction au Stoïcisme : Origines, Principes et Sagesse Immortelle",
+        subtitle: "Histoire de la fondation du Stoïcisme, la triade physique-logique-éthique et la construction de la citadelle intérieure.",
+        heroCaption: "Le Portique Peint (Stoa Poikilè) à Athènes où Zénon de Citium fonda l'école stoïcienne.",
+        body: `
+          <section id="sec1" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">1. Introduction philosophique : La quête de la sérénité</h2>
+            <p>Le Stoïcisme n'est pas une pure théorie spéculative. Né à Athènes dans une période de profonds bouleversements politiques et sociaux, il apporte une réponse concrète à une question universelle : <strong>Comment conserver sa sérénité lorsque le monde extérieur s'agite et échappe à notre contrôle ?</strong></p>
+            <p>Au cœur de la doctrine stoïcienne réside le principe selon lequel ce ne sont pas les événements qui nous troublent, mais les jugements que nous portons sur eux.</p>
+          </section>
+
+          <figure class="article-figure">
+            <img src="../stoicism_intro_inline_1.jpg" alt="Colonne grecque antique après la pluie">
+            <figcaption>La résistance à l'épreuve du temps : le symbole de la colonne stoïcienne ancrée sur sa base.</figcaption>
+          </figure>
+
+          <section id="sec2" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">2. Naissance sous le portique (Stoa Poikilè)</h2>
+            <p>Vers 300 avant J.-C., Zénon de Citium fonda son école au cœur d'Athènes. Contrairement aux académies fermées, Zénon enseignait sous un portique public bordé de fresques, la <em>Stoa Poikilè</em>, donnant ainsi son nom au <strong>Stoïcisme</strong>.</p>
+          </section>
+
+          <section id="sec3" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">3. Les trois disciplines stoïciennes</h2>
+            <p>Les anciens Stoïciens comparaient la philosophie à un verger : la Logique est le mur protecteur, la Physique est le sol et les arbres, et l'Éthique est le fruit savoureux.</p>
+          </section>
+
+          <figure class="article-figure">
+            <img src="../stoicism_intro_inline_2.jpg" alt="Papyrus ancien et lampe à huile">
+            <figcaption>Les instruments de l'introspection stoïcienne : le manuscrit et la lampe symbolisent la vigilance constante.</figcaption>
+          </figure>
+
+          <section id="sec4" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">4. Vivre selon la nature et la raison</h2>
+            <p>Vivre selon la nature signifie déployer notre faculté rationnelle et vivre en harmonie avec l'ordre cosmologique et la communauté humaine.</p>
+          </section>
+
+          <section id="sec5" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">5. La vertu comme bien suprême</h2>
+            <p>Le Stoïcisme identifie la vertu comme le seul bien véritable, déclinée en quatre piliers : <strong>Sagesse, Courage, Justice et Tempérance</strong>.</p>
+          </section>
+
+          <section id="sec6" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">6. Ce que le Stoïcisme n'est pas</h2>
+            <p>Le Stoïcien ne supprime pas ses émotions de façon froide et insensible ; il apprend à les comprendre et à ne pas se laisser asservir par elles.</p>
+          </section>
+
+          <section id="sec7" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">7. De Rome antique à notre époque</h2>
+            <p>Incarné par Sénèque, Épictète et l'empereur Marc Aurèle, le Stoïcisme offre des outils d'une modernité saisissante pour le monde contemporain.</p>
+          </section>
+
+          <section id="sec8" class="article-editorial-section" style="background: rgba(223, 177, 91, 0.05); border: 1px solid rgba(223, 177, 91, 0.25); border-radius: 18px; padding: 28px; margin-block: 30px;">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-top: 0;">🛠️ Exercice pratique : La préparation matinale</h2>
+            <ol style="padding-inline-start: 20px;">
+              <li>Anticipez les difficultés potentielles de la journée avec sérénité.</li>
+              <li>Distinguez ce qui dépend de vous de ce qui échappe à votre contrôle.</li>
+              <li>Concentrez vos efforts sur la rectitude de vos choix personnels.</li>
+            </ol>
+          </section>
+
+          <section id="sec9" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">9. Conclusion et méditation finale</h2>
+            <p>Le Stoïcisme est une boussole éthique vivante pour développer une force intérieure inébranlable.</p>
+          </section>
+        `
+      },
+      en: {
+        title: "Introduction to Stoicism: History, Pillars and Timeless Wisdom",
+        subtitle: "The birth of the Stoic school, the triad of physics, logic, and ethics, and building the inner citadel.",
+        heroCaption: "The Stoa Poikilè in Athens, where Zeno of Citium founded the Stoic school.",
+        body: `
+          <section id="sec1" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">1. Philosophical Introduction: The Search for Calm</h2>
+            <p>Stoicism is a practical philosophy of life born in ancient Athens during times of social uncertainty, answering how to maintain mental clarity amidst adversity.</p>
+          </section>
+
+          <figure class="article-figure">
+            <img src="../stoicism_intro_inline_1.jpg" alt="Ancient Doric column after rain">
+            <figcaption>Standing firm against storms: the symbolism of the Stoic column anchored on solid rock.</figcaption>
+          </figure>
+
+          <section id="sec2" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">2. Birth at the Stoa Poikilè</h2>
+            <p>Around 300 BC, Zeno of Citium established the school at the public painted porch in Athens, giving Stoicism its name.</p>
+          </section>
+
+          <section id="sec3" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">3. The Three Stoic Disciplines</h2>
+            <p>Logic as the protective wall, Physics as the fertile soil, and Ethics as the harvested fruit.</p>
+          </section>
+
+          <figure class="article-figure">
+            <img src="../stoicism_intro_inline_2.jpg" alt="Ancient scroll and oil lamp">
+            <figcaption>Instruments of Stoic self-reflection: the manuscript and lamp symbolizing continuous vigilance.</figcaption>
+          </figure>
+
+          <section id="sec4" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">4. Living in Accordance with Nature</h2>
+            <p>Using reason to align human actions with cosmic order and social responsibility.</p>
+          </section>
+
+          <section id="sec5" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">5. Virtue as the Sole Good</h2>
+            <p>Focusing on the four cardinal virtues: Wisdom, Courage, Justice, and Temperance.</p>
+          </section>
+
+          <section id="sec6" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">6. Common Misconceptions</h2>
+            <p>Stoicism is not emotional numbness, but intelligent regulation and active engagement.</p>
+          </section>
+
+          <section id="sec7" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">7. From Ancient Rome to Today</h2>
+            <p>Transmitted by Seneca, Epictetus, and Marcus Aurelius into enduring modern wisdom.</p>
+          </section>
+
+          <section id="sec8" class="article-editorial-section" style="background: rgba(223, 177, 91, 0.05); border: 1px solid rgba(223, 177, 91, 0.25); border-radius: 18px; padding: 28px; margin-block: 30px;">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-top: 0;">🛠️ Practical Exercise: Morning Reflection</h2>
+            <ol style="padding-inline-start: 20px;">
+              <li>Prepare your mind for daily challenges.</li>
+              <li>Separate what is up to you from what is not.</li>
+              <li>Focus entirely on the quality of your choices.</li>
+            </ol>
+          </section>
+
+          <section id="sec9" class="article-editorial-section">
+            <h2 style="color: #E4C98A; font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-top: 30px;">9. Conclusion</h2>
+            <p>An enduring philosophy for building inner resilience and moral clarity.</p>
+          </section>
+        `
+      }
+    };
+
+    function getSavedLang() {
+      return localStorage.getItem('site_lang_v1') || localStorage.getItem('lang') || 'ar';
+    }
+
+    function saveLang(lang) {
+      localStorage.setItem('site_lang_v1', lang);
+      localStorage.setItem('lang', lang);
+    }
+
+    function updateLanguage(lang) {
+      const data = ARTICLE_TEXTS[lang] || ARTICLE_TEXTS.ar;
+
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+      document.getElementById('metaPageTitle').textContent = data.title + ' | Hikma & Nour';
+      document.getElementById('artTitle').textContent = data.title;
+      document.getElementById('artSubtitle').textContent = data.subtitle;
+      document.getElementById('heroCaption').textContent = data.heroCaption;
+      document.getElementById('artBody').innerHTML = data.body;
+      document.getElementById('activeLangName').textContent = lang === 'ar' ? 'العربية' : (lang === 'fr' ? 'Français' : 'English');
+
+      document.querySelectorAll('.lang-opt').forEach(opt => {
+        if (opt.getAttribute('data-lang') === lang) opt.classList.add('active');
+        else opt.classList.remove('active');
       });
     }
 
-    // PWA Install Prompt Handler
-    let deferredPrompt;
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      const installBtn = document.getElementById('pwaInstallBtn');
-      if (installBtn) {
-        installBtn.style.display = 'inline-flex';
-      }
-    });
+    document.addEventListener('DOMContentLoaded', () => {
+      updateLanguage(getSavedLang());
 
-    function triggerPwaInstall() {
-      if (deferredPrompt) {
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') {
-            console.log('[PWA] User accepted the install prompt');
-          }
-          deferredPrompt = null;
+      const langBtn = document.getElementById('langBtn');
+      const langDropdown = document.getElementById('langDropdown');
+      if (langBtn && langDropdown) {
+        langBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          langDropdown.classList.toggle('active');
         });
-      } else {
-        alert('لتثبيت التطبيق على هاتفك:\n1. اضغط على خيارات المتصفح (⋮ أو 📤)\n2. اختر "إضافة إلى الشاشة الرئيسية" (Add to Home Screen)');
+        document.addEventListener('click', (e) => {
+          if (!langBtn.contains(e.target) && !langDropdown.contains(e.target)) {
+            langDropdown.classList.remove('active');
+          }
+        });
       }
-    }
+
+      document.querySelectorAll('.lang-opt').forEach(opt => {
+        opt.addEventListener('click', (e) => {
+          const l = e.target.getAttribute('data-lang');
+          saveLang(l);
+          updateLanguage(l);
+          if (langDropdown) langDropdown.classList.remove('active');
+        });
+      });
+    });
   </script>
-<!-- Editorial V2: Rich Interlinking, Thinkers, Audio & Read Next -->
-  
-    <!-- Editorial V2: Maillage Penseur & Audio -->
-    <div class="editorial-connection-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 900px; margin: 40px auto;">
-      
-        <div style="padding: 22px; background: white; border: 1px solid var(--accent-gold); border-radius: 18px; display: flex; align-items: center; gap: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.04);">
-          <div style="font-size: 2.2rem;">🏛️</div>
-          <div style="flex-grow: 1;">
-            <span style="font-size: 0.75rem; color: var(--accent-gold); font-weight: 700; text-transform: uppercase;">فيلسوف المحور</span>
-            <h4 style="margin: 4px 0; font-size: 1.15rem; color: var(--dark-green);">زينون وإبيكتيتوس</h4>
-            <span style="font-size: 0.85rem; color: var(--text-charcoal);">مؤسسو ورواد الفكر الرواقي</span>
-          </div>
-          <a href="../thinkers/" style="padding: 8px 14px; background: rgba(223, 177, 91, 0.15); border: 1px solid var(--accent-gold); color: var(--dark-green); border-radius: 20px; text-decoration: none; font-size: 0.85rem; font-weight: bold;">السيرة →</a>
-        </div>
-      
-      
-    </div>
-    
-  
-  
-    <!-- Editorial V2: Section À lire ensuite -->
-    <div class="editorial-read-next-box" style="margin: 50px auto 30px; max-width: 900px; padding: 28px; background: white; border: 2px solid var(--accent-gold); border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.06);">
-      <div style="font-size: 1.25rem; font-weight: bold; color: var(--dark-green); margin-bottom: 20px; display: flex; align-items: center; gap: 8px;">
-        <span>📚 مقالات وتأملات موصى بها لك :</span>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
-        
-          <a href="stoicisme-force-calme.html" style="display: block; padding: 18px; background: var(--bg-cream); border: 1px solid rgba(223, 177, 91, 0.4); border-radius: 14px; text-decoration: none; color: inherit; transition: all 0.2s ease;">
-            <span style="font-size: 0.75rem; color: var(--accent-gold); font-weight: 700; display: block; margin-bottom: 6px;">رواقية</span>
-            <span style="font-size: 1rem; font-weight: 600; line-height: 1.4; color: var(--text-charcoal); display: block;">الرواقية: فلسفة القوة والهدوء الداخلي ←</span>
-          </a>
-        
-          <a href="intelligence-emotionnelle-stoicisme.html" style="display: block; padding: 18px; background: var(--bg-cream); border: 1px solid rgba(223, 177, 91, 0.4); border-radius: 14px; text-decoration: none; color: inherit; transition: all 0.2s ease;">
-            <span style="font-size: 0.75rem; color: var(--accent-gold); font-weight: 700; display: block; margin-bottom: 6px;">اتزان عاطفي</span>
-            <span style="font-size: 1rem; font-weight: 600; line-height: 1.4; color: var(--text-charcoal); display: block;">الذكاء العاطفي والتحكم بالانفعالات ←</span>
-          </a>
-        
-          <a href="../quotes/calendar/" style="display: block; padding: 18px; background: var(--bg-cream); border: 1px solid rgba(223, 177, 91, 0.4); border-radius: 14px; text-decoration: none; color: inherit; transition: all 0.2s ease;">
-            <span style="font-size: 0.75rem; color: var(--accent-gold); font-weight: 700; display: block; margin-bottom: 6px;">تأملات يومية</span>
-            <span style="font-size: 1rem; font-weight: 600; line-height: 1.4; color: var(--text-charcoal); display: block;">تقويم الحكمة ٣٦٥ يوماً ←</span>
-          </a>
-        
-      </div>
-    </div>
-  
-  <!-- End Editorial V2 -->
-  
-  <section class="article-engagement" data-article-id="introduction-stoicisme" data-article-title-fr="" data-article-title-ar="" data-article-title-en=""></section>
-  <script src="../assets/js/article-engagement.js"></script>
 </body>
 </html>

@@ -18,7 +18,7 @@ export const SCHOOLS_DATA = [
       {
         "id": "introduction-stoicisme",
         "path": "files/introduction-stoicisme.html",
-        "thumb": "marc_aurelius_writing.jpg",
+        "thumb": "stoicism_intro_stoa_hero.jpg",
         "title": {
           "ar": "مدخل شامخ إلى الرواقية",
           "fr": "Introduction au Stoïcisme",
@@ -33,7 +33,7 @@ export const SCHOOLS_DATA = [
       {
         "id": "stoicisme-force-calme",
         "path": "files/stoicisme-force-calme.html",
-        "thumb": "marc_aurelius_writing.jpg",
+        "thumb": "stoicism_calm_strength_hero.jpg",
         "title": {
           "ar": "الرواقية: قوة الهدوء الداخلي",
           "fr": "Le Stoïcisme : La Force du Calme",
@@ -48,7 +48,7 @@ export const SCHOOLS_DATA = [
       {
         "id": "intelligence-emotionnelle-stoicisme",
         "path": "files/intelligence-emotionnelle-stoicisme.html",
-        "thumb": "marc_aurelius_writing.jpg",
+        "thumb": "stoicism_emotional_intelligence_hero.jpg",
         "title": {
           "ar": "الذكاء العاطفي والرواقية",
           "fr": "Intelligence Émotionnelle & Stoïcisme",
@@ -63,7 +63,7 @@ export const SCHOOLS_DATA = [
       {
         "id": "wisdom-stoicism-control",
         "path": "files/wisdom-stoicism-control.html",
-        "thumb": "marc_aurelius_writing.jpg",
+        "thumb": "stoicism_dichotomy_control_hero.jpg",
         "title": {
           "ar": "الحكمة الرواقية: السيطرة على ما يقع ضمن إرادتنا",
           "fr": "Sagesse stoïcienne : maîtriser ce qui dépend de nous",
